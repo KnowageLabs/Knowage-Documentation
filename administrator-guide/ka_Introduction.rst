@@ -1,47 +1,4 @@
-Documentation structure
-
--  **General User Manual**: it is aimed at end users. It provides a
-      first approach to Knowage interface and functionalities. It can be
-      used as a first approach to Knowage. It focus on all those
-      elements which are shared among the products and involves the end
-      user.
-
--  **General Administrator Manual**: it is aimed at Knowage
-      admnistrator. It describes all the management and configuration
-      tools shared by all Knowage products.
-
--  **Product Manuals**: as we mentioned above, these books are specific
-      for each product. They are aimed both at end users and Knowage
-      developers. Almost each chapter is divided in two parts: the first
-      one can be interesting for both users and developers, while the
-      second one is for developers only. The developer parts are marked
-      by a \* to be easy recognised. We can conlcude that you just need
-      to read all the parts not marked by \* to have a complete
-      introduction to all BI functionalities included in your products.
-
-About conventions
-=================
-
-Some graphical conventions have been adopted to allow readers to easily
-identify special contents such as notes, summaries and essential
-information. All conventions are explained hereafter.
-
-   |image1|
-
-Documentation structure
-
-The following fonts have been adopted, to easily identify special words
-and expressions:
-
--  **Menu**, **Menu items** and **static label** refer to specific
-      element of Knowage GUI;
-
--  Input field is a label referencing input fields in Knowage GUI;
-
--  Code example is a piece of code showing configuration patterns or
-      parts of document template.
-
-2.1 Discovering Knowage
+Discovering Knowage
 =======================
 
 Knowage is the business intelligence suite developed and managed by
@@ -49,7 +6,7 @@ Engineering Group.
 
 Knowage is *flexible*, since it is based on a modular architecture and
 open standards in order to facilitates its customization and integration
-according to users’ needs. It also provides a *comprehensive* set of
+according to usersâ€™ needs. It also provides a *comprehensive* set of
 analytical features and capabilities, listed in section Analytical and
 operational functionalities, ranging from traditional reporting and
 charting tools, to more advanced analytics.
@@ -60,7 +17,7 @@ multi-tenancy architecture, each tenant owns and manages his own users,
 documents, configuration and parameters, which are completely
 independent from those owned by other tenants.
 
-2.2 Modules
+Modules
 ===========
 
 Knowage suite is based on five modules, as shown in Figure 2.1:
@@ -150,7 +107,7 @@ It can be accessed in different ways::
    and specific views for each end user type.
 
    BI Mobile: Thanks to the interaction between Knowage Server and the
-   remote client interface, users’ reports, charts or cockpits can also
+   remote client interface, usersâ€™ reports, charts or cockpits can also
    be accessed and displayed on mobile devices, such as tablets and
    smartphones.
 
@@ -181,7 +138,7 @@ mode. Its main components are:
    lookup domains;
 
    Behavioural Model, which regulates the visibility over documents and
-   data, according to end users’ roles.
+   data, according to end usersâ€™ roles.
 
 Offering multiple solutions for the same analytical requirement and/or
 multiple instances for the same engine, Knowage logic and architecture
@@ -198,7 +155,7 @@ Data layer
 
 The data layer allows data and metadata storage and usage. BI data is
 often located in a data warehouse, whose design is out of the BI product
-scope and strictly related to the specific customer’s world. Most of
+scope and strictly related to the specific customerâ€™s world. Most of
 Knowage products offer a specific ETL tool allowing to load data at this
 level, covering the whole BI stack.
 
@@ -215,7 +172,7 @@ generic RDBMS and accessed by means of a generic description based on
 hibernate technology. Knowage metadata contains technical information,
 business metadata and metamodels registry.
 
-2.4 What you can do with Knowage
+What you can do with Knowage
 ================================
 
 This section focuses on Knowage analytical and operational
