@@ -29,10 +29,6 @@ Each book is thought to be delivered to different users.
    the optional use of CAS as a SSO solution and the use of HTTPS
    protocol.
 
-..
-
-   Documentation structure
-
 -  **General User Manual**: it is aimed at end users. It provides a
    first approach to Knowage interface and functionalities. It can be
    used as a first approach to Knowage. It focus on all those elements
