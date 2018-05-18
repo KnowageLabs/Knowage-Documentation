@@ -1,4 +1,3 @@
-.. include:: ../common/ka_BooksStructure.rst
 .. include:: ka_inst_intro.rst
 .. include:: ka_inst_prereq.rst
 .. include:: ka_inst_relFiles.rst
