@@ -1,7 +1,7 @@
 Documentation structure
 ===========================
 
-   KnowAge documentation is composed by:
+KnowAge documentation is composed by:
 
 -  **Installation Manual**;
 
