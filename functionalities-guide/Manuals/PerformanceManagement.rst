@@ -1,0 +1,9 @@
+.. include:: ../bookStructures/bookStructureForPerformanceManagement.rst
+.. include:: ../MyData/ka_user_my_data.rst
+.. include:: ../Dataset/ka_dev_dataset.rst
+.. include:: ../BehavioralModel/ka_dev_behavioralmodel.rst
+.. include:: ../AnalyticalDocument/ka_dev_analyticaldoc.rst
+.. include:: ../Chart/ka_dev_chart.rst
+.. include:: ../KPI/ka_KPI.rst
+.. include:: ../ScoreCard/ka_Scorecard.rst
+.. include:: ../Alert/ka_Alert.rst

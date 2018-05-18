@@ -1,0 +1,9 @@
+.. include:: BigDataManual.rst
+.. include:: EnterpriseReportingManual.rst
+.. include:: GeneralAdministratorManual.rst
+.. include:: GeneralUserManual.rst
+.. include:: InstallationManual.rst
+.. include:: LocationInteligenceManual.rst
+.. include:: PerformanceManagementManual.rst
+.. include:: PredictiveAnalysisManual.rst
+.. include:: SmartIntelligenceManual.rst

@@ -1,0 +1,12 @@
+.. include:: ../bookStructures/ka_booksStructureForLocationInteligence.rst
+.. include:: ../MyData/ka_user_my_data.rst
+.. include:: ../Dataset/ka_dev_dataset.rst
+.. include:: ../BehavioralModel/ka_dev_behavioralmodel.rst
+.. include:: ../AnalyticalDocument/ka_dev_analyticaldoc.rst
+.. include:: ../QbeMeta/ka_dev_introqbemeta.rst
+.. include:: ../FreeInquiry/ka_user_freeinquiry.rst
+.. include:: ../LocationIntelligence/ka_dev_introlocationintelligence.rst
+.. include:: ../LocationIntelligence/ka_user_locationintelligence.rst
+.. include:: ../LocationIntelligence/ka_dev_locationintelligence.rst
+.. include:: ../SVG/ka_user_svg.rst
+.. include:: ../SVG/ka_dev_svg.rst
