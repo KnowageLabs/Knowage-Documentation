@@ -1,4 +1,4 @@
-Knowage at glance
+Knowage at a glance
 =======================
 
 Discovering Knowage
