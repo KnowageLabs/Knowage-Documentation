@@ -8,7 +8,7 @@ Knowage is the business intelligence suite developed and managed by Engineering 
 
 Knowage is *flexible*, since it is based on a modular architecture and open standards in order to facilitates its customization and integration according to users’ needs. It also provides a *comprehensive* set of analytical features and capabilities, listed in section Analytical and operational functionalities, ranging from traditional reporting and charting tools, to more advanced analytics.
 
-KnowageER and KnowageSI also supports multi-tenancy, i.e. a single Knowage instance serving multiple organizations, called tenants. In a multi-tenancy architecture, each tenant owns and manages his own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
+KnowageER and KnowageSI also supports **multi-tenancy**, i.e. a single Knowage instance serving multiple organizations, called tenants. In a multi-tenancy architecture, each tenant owns and manages his own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
 
 Modules
 -----------------
@@ -117,4 +117,4 @@ Knowage instance, as well as several cross-product services to make its features
 
 The **administrative tools** support developers, testers and administrators in their daily work, providing various functionalities, such as: scheduler, profiling system, import/export capabilities, menu designer, map catalogue, management of repository, analytical model, behavioural model and engines, configuration of data sources and data sets, audit & monitoring analysis, subscriptions, management of value domains, configuration settings and metadata, management of user data, hierarchies editor and community management.
 
-The cross services include the common features of the product, shared by all analytical engines and documents. They are: single sign on, alert and notification, workflow, search engine, collaborative tools, sending e-mails, ranking, multiformat exporter, RT events, document browser, personal folders, cross navigation, subscription service, hot link, metadata view.
+The **cross services** include the common features of the product, shared by all analytical engines and documents. They are: single sign on, alert and notification, workflow, search engine, collaborative tools, sending e-mails, ranking, multiformat exporter, RT events, document browser, personal folders, cross navigation, subscription service, hot link, metadata view.
