@@ -31,11 +31,7 @@ Knowage suite is based on five modules, as shown in Figure 2.1:
 
    Knowage Studio, the environment that allows BI developers to
    configure analysis and related analytical features that are then
-   released and made available to the end user on
-
-2.3. Layers
-
-   the Server.
+   released and made available to the end user on the Server.
 
    Knowage SDK, set of APIs compliant with the SOA architecture,
    allowing external applications to interact with the Knowage Server
@@ -63,9 +59,7 @@ trend in terms of features, services and delivery models.
 ==========
 
 Knowage Server architecture is functionally layered on three main
-levels, as shown in Figure
-
-2.2:
+levels, as shown in Figure 2.2:
 
    Deliverylayer, which manages all possible usages of the Server by end
    users or from external applications.
