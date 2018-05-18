@@ -1,4 +1,3 @@
-.. include:: ../common/ka_booksStructure.rst
 .. include:: ka_Introduction.rst
 .. include:: ka_gam_userInterface.rst
 .. include:: ka_datasource.rst
