@@ -1,5 +1,8 @@
-Discovering Knowage
+Knowage at glance
 =======================
+
+Discovering Knowage
+-----------------
 
 Knowage is the business intelligence suite developed and managed by Engineering Group.
 
@@ -8,7 +11,7 @@ Knowage is *flexible*, since it is based on a modular architecture and open stan
 KnowageER and KnowageSI also supports multi-tenancy, i.e. a single Knowage instance serving multiple organizations, called tenants. In a multi-tenancy architecture, each tenant owns and manages his own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
 
 Modules
-===========
+-----------------
 
 Knowage suite is based on five modules, as shown in Figure 2.1:
 
@@ -28,7 +31,7 @@ It represents an enterprise level solution for BI, supporting the whole project 
    Figure 2.1: Knowage modules.
 
 Layers
-==========
+-----------------
 
 Knowage Server architecture is functionally layered on three main levels, as shown in Figure 2.2:
 
@@ -47,7 +50,7 @@ Every layer of the functional architecture is composed of different application 
    Figure 2.3: Knowage Server architecture detail.
 
 Delivery layer
---------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 The delivery layer covers all publication requirements. It can be accessed by third-party applications, and it offers end users all features and services needed to perform their BI analysis.
 
@@ -61,7 +64,7 @@ It can be accessed in different ways::
 - **BI API**: for the integration of enterprise applications behind or without the end user GUI.
 
 Analytical layer
-----------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 The analytical layer is the core of the Server. It provides all analytical features and capabilities, in a secure and role-based access
 mode. Its main components are:
@@ -73,7 +76,7 @@ mode. Its main components are:
 Offering multiple solutions for the same analytical requirement and/or multiple instances for the same engine, Knowage logic and architecture provide various benefits, such as: limited workload on each engine, guaranteeing high performances; openness to improve or extend the suite and its capabilities, minimizing the impact on exiting environments; high flexibility and modularity; high scalability, with minimum economic, infrastructural and applicationlevel impact.
 
 Data layer
-----------
+~~~~~~~~~~~~~~~~~~~~~~
 
 The data layer allows data and metadata storage and usage. BI data is often located in a data warehouse, whose design is out of the BI product scope and strictly related to the specific customer’s world. Most of Knowage products offer a specific ETL tool allowing to load data at this level, covering the whole BI stack.
 
@@ -84,7 +87,7 @@ As described in the next chapters, Knowage can also access less traditional data
 All Knowage metadata are stored in a private repository hosted on a generic RDBMS and accessed by means of a generic description based on Hibernate technology. Knowage metadata contains technical information, business metadata and metamodels registry.
 
 What you can do with Knowage
-================================
+-----------------
 
 This section focuses on Knowage analytical and operational funciontalities, administration tools and cross services.
 
@@ -95,7 +98,7 @@ consistency, thanks to the independence of the behavioural model that regulates 
 Moreover, Knowage has a distributed logic and handles more instances of a same engine. This allows the workload distribution on several servers, ensuring the linear system scalability.
 
 Analytical and operational functionalities
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage server provides a wide range of analytical functionalities,
 covered by the different products of the suite.
@@ -107,7 +110,7 @@ Concerning the operative level, Knowage Server works with:
 - **Master data**, to manually manage domain data.
 
 Administrative tools and cross services
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Besides its analytical, delivery and data access capabilities, Knowage Server provides all the administration tool needed to handle your
 Knowage instance, as well as several cross-product services to make its features even more powerful.
