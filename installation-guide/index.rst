@@ -7,4 +7,6 @@ Installation Manual
 .. include:: ka_inst_man.rst
 .. include:: ka_inst_R.rst
 .. include:: ka_inst_Python.rst
+.. include:: ka_inst_CAS.rst
+.. include:: ka_inst_advanced.rst
 .. include:: ImageThumbinals.rst
