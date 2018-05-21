@@ -202,21 +202,16 @@ In both case cases, costants have the following meaning:
 
 -**sso_class**:SSO connector class name,
 
--**service\ \_\ url**:backend services address, typically set to
-   `http://localhost:8080/knowage, <http://localhost:8080/knowage>`__
+-**service\ \_\ url**:backend services address, typically set to `http://localhost:8080/knowage, <http://localhost:8080/knowage>`__
 
--**host\_\ url**: frontend services address, the one the user types in
-   his browser.
+-**host\_\ url**: frontend services address, the one the user types in his browser.
 
 Applications deploy
 ----------------
 
 For the JBoss istance, execute the following steps:
 
--  copy all the WAR files inside the JBOSS_HOME/standalone/deployments;
-
-Datasource link within the applications
------------------
+-copy all the WAR files inside the JBOSS_HOME/standalone/deployments;
 
 -extract the content of each WAR file into (using for instance the
    unzip utility) one directory with the same name, including the “.war”
@@ -228,6 +223,7 @@ Datasource link within the applications
    suffix “.dodeploy” (for example, “knowage.war.dodeploy“).
 
 Please refer to the instructions that are written in the JBOSS_HOME/standalone/deployments/README.txt. For Tomcat, simply copy all the WAR files inside the TOMCAT_HOME/webapps folder. Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
+
 
 Datasource link within the applications
 ------------------------
@@ -243,8 +239,7 @@ For JBoss instance, control that in all the JBOSS_HOME/standalone/deployments/kn
 +-----------------------------------------------------------------------+
 Code 5.8: DataSource link syntax.
 
-While for the Tomcat instance, control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same
-   links as in Code 5.8. Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
+While for the Tomcat instance, control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same links as in Code 5.8. Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
 
 Configuration of the metadata db dialect
 ---------------------
@@ -252,9 +247,6 @@ In the JBoss instance, verify that the right dialect has been set in all JBOSS_H
 In the Tomcat instance, verify that the right dialect has been set in all TOMCAT_HOME/webapps/knowage*/WEB-INF/classes/hibernate.cfg.xml files. We list all the possible dialects that can be used:
 
 -  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
-
-Modification of the Quartz configuration
------------------------
 
 -  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
 
@@ -277,36 +269,18 @@ The scheduler is configured by the following file: knowage.war/WEB-INF/classes/q
 +-----------------------------------------------------------------------+
 | # Hsqldb delegate class                                               |
 |                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore |
-| .                                                                     |
-|                                                                       |
-|    HSQLDBDelegate                                                     |
-|                                                                       |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate |
 | # Mysql/Ingres delegate class                                         |
-| org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore. |
-|                                                                       |
-|    StdJDBCDelegate                                                    |
+| org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate |
 |                                                                       |
 | # Postgres delegate class                                             |
-|                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore |
-| .                                                                     |
-|                                                                       |
-|    PostgreSQLDelegate                                                 |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate |
 |                                                                       |
 | # Oracle delegate class                                               |
-|                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore |
-| .oracle.                                                              |
-|                                                                       |
-|    OracleDelegate                                                     |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate |
 |                                                                       |
 | # SQLServer delegate class                                            |
-|                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore |
-| .                                                                     |
-|                                                                       |
-|    MSSQLDelegate                                                      |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.MSSQLDelegate |
 +-----------------------------------------------------------------------+
 
 Code 5.9: Values for the Quartz file.
@@ -364,13 +338,7 @@ Similarly, in the Tomcat case it is possible to enable it by editing the configu
 |                                                                       |
 |    factory="de.myfoo.commonj.work.FooWorkManagerFactory"              |
 |    maxThreads="5" name="wm/SpagoWorkManager"                          |
-+-----------------------------------------------------------------------+
-
-Check of the memory settings
-----------------
-
-+-----------------------------------+
-| type="commonj.work.WorkManager"/> |
+|    type="commonj.work.WorkManager"/> |
 +-----------------------------------+
 Code 5.12: Thread of pool configuration for Tomcat.
 
