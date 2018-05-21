@@ -9,7 +9,7 @@ Main menu
 
 Knowage menu gives you access to all its functionalities. By default you find the menu button at the left bottom corner of the home page, click it to open the menu, as shown in Figure 3.1. You can minimize it by clicking somewhere else outside the menu. In this way the menu button appears and you can reopen the menu according to your needs. You can move this button around the page by dragging and dropping it. Choose the position that best fits with your work.
 
-.. image:: media/image5.png
+   .. image:: media/image9.png
 
    Figure 3.1: Home page
 
