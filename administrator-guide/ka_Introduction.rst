@@ -54,7 +54,7 @@ Delivery layer
 
 The delivery layer covers all publication requirements. It can be accessed by third-party applications, and it offers end users all features and services needed to perform their BI analysis.
 
-It can be accessed in different ways::
+It can be accessed in different ways:
 
 - **BI Webapp*: it is the default use mode. Knowage suite provides a web application, working on a standard application server A customizable web application is provided, working on a standard application server (e.g. Tomcat, JBoss, WAS). The administrator can define the layout and specific views for each end user type.
 
