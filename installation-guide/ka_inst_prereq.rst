@@ -18,9 +18,6 @@ The Operation Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 +---------------------------+-------------+
 |    Windows                | 7           |
 +---------------------------+-------------+
-
-
-
    Table 3.1: Certified Environments.
 
 
@@ -33,10 +30,8 @@ The Operation Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 +-----------------------------+-------------+
 |    Windows server           | 2012, 2008  |
 +-----------------------------+-------------+
-
-
-
    Table 3.2: Compatible Environments.
+   
 Disk usage
 --------------------
 The Knowage installation requires 2 GB of free space on file system. This memory does not include the space relative to the data and the metadata storage.
@@ -46,9 +41,7 @@ JDK version
 The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK installation. Be sure that the JDK component is
    successfully installed and that the environment variable JAVA_HOME is properly configured.
 
-   |image1| 
-
-Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
+   |image1| Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
 
 +-----------------------------------------------------------------------+
 | export JAVA_HOME=<root path of the Java installation> export          |
@@ -58,19 +51,15 @@ Define the JAVA_HOME variable inside the users’ file .bash_profile used in the
 
 Code 3.1: Instructions to set the JAVA_HOME variable for Linux environment.
 
-   |image2| 
+   |image2| Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
+
+
+
+   |image3| Figure 3.1: Setting the path for the JAVA_HOME variable for Windows.
    
-Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
-
-JDK version
---------------
-
-   |image3|
-
-   Figure 3.1: Setting the path for the JAVA_HOME variable for Windows.
 
 Application server
-=======================
+---------------------
 
    The following Table 3.3 displays the compatibility with the supported
    application servers:
