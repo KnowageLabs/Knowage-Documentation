@@ -11,9 +11,7 @@ JPY is a connector that make possible a bidirectional communication between Pyth
 -  Python 3.3 or higher (3.2 may work as well but is not tested),
 -  Oracle JDK 7 or higher (JDK 6 may work as well),
 -  Maven 3 or higher,
--  Microsoft Windows SDK 7.1 or higher If you build for a 32-bit Python,
-      make sure to also install a 32-bit JDK. Accordingly, for a 64-bit
-      Python, you will need a 64-bit JDK.
+-  Microsoft Windows SDK 7.1 or higher If you build for a 32-bit Python, make sure to also install a 32-bit JDK. Accordingly, for a 64-bit Python, you will need a 64-bit JDK.
 
 The Python setup tools (distutils) can make use of the command-line C/C++ compilers of the free Microsoft Windows SDK. These will by used by distutils if the DISTUTILS_USE_SDK environment variable is set. The compilers are made accessible via the command-line by using the setenv tool of the Windows SDK. In order to install the Windows SDK execute the following steps.
 
@@ -25,7 +23,7 @@ The Python setup tools (distutils) can make use of the command-line C/C++ compil
    -"C:*\\*\ Program Files\ *\\* Microsoft SDKs\ *\\* Windows\ *\\* v7.1\ *\\* bin\ *\\* setenv" /x64 /release toprepare a build of the 64-bit version of jpy.
    -Use: "C:Program Files\ *\\* Microsoft SDKs\ *\\* Windows\ *\\* v7.1\ *\\* bin\ *\\* setenv" /x86 /release to prepare a build of the 32-bit version of jpy. Now set other environment variables:
    
-.. code : console
+.. code:: bash
 
 SET DISTUTILS_USE_SDK=1
 SET JAVA_HOME=%JDK_HOME%
@@ -37,17 +35,20 @@ To use JPY you need to replace the jpyconfig.properties file on your project, wi
 
 Datamining engine supports the use of all Python libraries: before import a library in your script install it on your native Python environment (for example using pip). To use Python YOU NEED TO INSTALL the following libraries: matplotlib, pandas, numpy, scipy. You can install them using pip typing the following commands on your native Python console:
 
-.. code : console
+.. code:: bash
+
 pip install pandas 
 pip install numpy 
 pip install scipy 
 pip install matplotlib
 
 JPY installation Furthermore, to give an idea of what Python template is refer to Code
-Example of Python Template 
-.. code : xml
 
- <?xml version="1.0" encoding="ISO-8859-15"?> 
+Example of Python Template 
+
+.. code:: xml
+
+<?xml version="1.0" encoding="ISO-8859-15"?> 
  <DATA_MINING>            
      <LANGUAGE name="Python"/>                                          
      <DATASETS>                                                         
@@ -66,9 +67,6 @@ Example of Python Template
     </OUTPUTS>                                                         
     </COMMAND>                                                         
     </COMMANDS>                                                        
- </DATA_MINING>|
+ </DATA_MINING>
 
-   Note that the LANGUAGE tag is used to specify the language to use:
-   name=Python and name=R are supported. If the LANGUAGE tag is not
-   present or name is not specified correctly, the default language is
-   set to R.
+Note that the LANGUAGE tag is used to specify the language to use: name=Python and name=R are supported. If the LANGUAGE tag is not present or name is not specified correctly, the default language is set to R.
