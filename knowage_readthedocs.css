@@ -1,0 +1,60 @@
+/* highlight styles */
+
+@import url("monokai_sublime_.css");
+@import url("pygments-monokai.css");
+
+/* Estilos ogilvy v2 */
+.wy-nav-content {max-width: none !important}
+body{font-family:verdana !important}
+h1{color:#00275a !important;font-family:"Neo Tech W02 Medium" !important}
+h2{color:#00275a !important;font-family:"Neo Tech W02 Medium" !important}
+h3{color:#00275a !important;font-family:"Neo Tech W02 Medium" !important}
+h4{color:#00275a !important;font-family:"Neo Tech W02 Medium" !important}
+a{color:#00275a !important}
+a:hover{color:#5dc0cf !important}
+a.icon-home{color:#fff !important;font-family:"Neo Tech W02 light" !important; font-weight:normal !important;color:#aeadb3 !important; text-transform:uppercase !important; margin:0 0 0 0 !important}
+.fa-home:before, .icon-home:before{content:None !important}
+.wy-menu-vertical {background-color:#f5f5f5 !important}
+.wy-menu-vertical li.current a{background-color:#b1b2b4 !important;border-right:0 !important}
+.wy-menu-vertical li.current a:hover{background-color:#b1b2b4 !important;border-right:0 !important}
+.wy-menu-vertical li a:hover{color:#ffffff !important}
+.wy-side-nav-search {background-color:#002e67 !important}
+.wy-side-nav-search a{background-color:#002e67 !important; }
+.wy-menu-vertical span{font-weight:bold !important; color:#002e67 !important;}
+nav > div.wy-menu.wy-menu-vertical > ul > li > a{font-weight:bold !important; color:#002e67 !important}
+.wy-side-nav-search{margin-bottom:0 !important; text-align:left !important}
+nav > div.wy-menu.wy-menu-vertical > ul > li > a:hover{color:#ffffff !important}
+.btn-neutral{background-color:#5dc0cf !important}
+.btn-neutral:hover{background-color:#5dc0cf !important; color:#ffffff !important}
+.btn-neutral:visited{color:#002e67 !important}
+.btn-neutral:visited:hover{color:#ffffff !important}
+.rst-versions{background:#00275a none !important;border-top:0 !important;font-family:Verdana !important}
+.rst-versions .rst-current-version{background-color:#00275a !important}
+.rst-versions a{color:#fff !important; text-decoration:underline !important}
+.rst-versions a:hover{color:#00d3de !important}
+.fa-book,.fa{font-family:verdana !important}
+.rst-versions .rst-other-versions{color:#fff !important}
+.rst-versions .rst-other-versions hr{border-color:#fff !important}
+.fa-home:before, .icon-home:after{content:}
+a.icon-home{color:#fff !important; font-weight:normal !important;color:#aeadb3 !important; text-transform:uppercase !important}
+a.icon-home {color:#fff !important;font-size:25px !important;font-weight:normal !important;color:#aeadb3 !important; text-transform:uppercase !important; margin-top:-5px !important; display:block !important;}
+.fa-home, .icon-home,.fa-home:hover, a.icon-home:hover{clear:both !important; background-image: url('https://www.knowage-suite.com/site/wp-content/uploads/2016/03/KNOWAGE_logo_color.png') !important; background-position: 0 5px; background-repeat: no-repeat;height:65px !important; padding:10px 0 10px 50px!important  }
+b, strong {font-weight:normal !important}
+.rst-versions .rst-other-versions dt{font-weight:bold !important}
+.wy-body-for-nav{background-image:none !important}
+.wy-nav-side{background-color:transparent !important}
+
+/* Custom width read the docs */
+.wy-nav-content {
+  max-width: none !important;
+    }
+
+	 /* to avoid display version when generated from rst */
+	 .wy-side-nav-search .version {
+	   display:none;
+		}
+
+		/* Allow multiline project names in side navigation bar */
+		.wy-side-nav-search a.icon-home {
+		    white-space: pre-wrap;
+			 }
