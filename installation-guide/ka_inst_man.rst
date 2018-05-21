@@ -104,10 +104,8 @@ In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information
 | type="javax.sql.DataSource" username="<user name>"                    |
 | password="<password>" driverClassName="<JDBC driver>" url="<JDBC      |
 | URL>" maxActive="20" maxIdle="4" validationQuery="<a query to         |
-| validate the connection, for example "select 1                        |
-|                                                                       |
-|    from dual" on Oracle>" removeAbandoned="true"                      |
-|    removeAbandonedTimeout="3600"/>                                    |
+| validate the connection, for example "select 1 from dual" on Oracle>" |
+| removeAbandoned="true" removeAbandonedTimeout="3600"/>                |
 +-----------------------------------------------------------------------+
 
 Code 5.3: Setting the metadata datasource.
@@ -117,32 +115,20 @@ Data database connection
 
 In the JBoss case, edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the data database inside the datasources tag. Specify: username, password, driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 shows an example:
 
-+-------------------------------------------------------------+
-| <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage"> |
-|                                                             |
-|    <connection-url> <JDBC URL> </connection-url>            |
-|                                                             |
-|    <driver> <JDBC driver> </driver>                         |
-|                                                             |
-|    <security>                                               |
-|                                                             |
-|    <user-name> <user name> </user-name>                     |
++-----------------------------------------------------------------------+
+| <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage">           |
+|    <connection-url> <JDBC URL> </connection-url>                      |
+|    <driver> <JDBC driver> </driver>                                   |
+|    <security>                                                         |
+|    <user-name> <user name> </user-name>                               |
 |    <password> <password> </password>                                  |
-|                                                                       |
 |    </security>                                                        |
-|                                                                       |
 |    <validation>                                                       |
-|                                                                       |
 |    <validate-on-match>true</validate-on-match>                        |
-|                                                                       |
 |    <background-validation>false</background-validation>               |
-|                                                                       |
-|    <valid-connection-checker class-name="<connection checker          |
-|    class>"/>                                                          |
-|                                                                       |
+|    <valid-connection-checker class-name="<connection checker class>"/>|
 |    <exception-sorter class-name="<exception sorter class>"/>          |
 |    </validation>                                                      |
-|                                                                       |
 | </datasource>                                                         |
 +-----------------------------------------------------------------------+
 
@@ -161,9 +147,8 @@ In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information
 | type="javax.sql.DataSource" username="<user name>"                    |
 | password="<password>" driverClassName="<JDBC driver>" url="<JDBC      |
 | URL>" maxActive="20" maxIdle="4" validationQuery="<query to validate  |
-| the connection, for instance "select 1                                |
-|                                                                       |
-|    from dual" on Oracle>" removeAbandoned="true"                      |
+| the connection, for instance "select 1  from dual" on Oracle>"        |
+|      removeAbandoned="true"                      |
 |    removeAbandonedTimeout="3600"/>                                    |
 +-----------------------------------------------------------------------+
 
@@ -180,18 +165,14 @@ Applications deploy
 
 +-----------------------------------------------------------------------+
 | <bindings>                                                            |
-|                                                                       |
 |    <simple name="java:/urls/resource_path" type="java.lang.String"    |
 |    value="${jboss.server.data.dir}/resources" />                      |
-|                                                                       |
 |    <simple name="java:/urls/sso_class" type="java.lang.String"        |
 |    value="it.eng.spagobi.services.common.FakeSsoService" /> <simple   |
 |    name="java:/urls/service_url" type="java.lang.String"              |
 |    value="http:// localhost:8080/knowage" />                          |
-|                                                                       |
 |    <simple name="java:/urls/host_url" type="java.lang.String"         |
 |    value="<server url which is hosting knowage>"/>                    |
-|                                                                       |
 | </bindings>                                                           |
 +-----------------------------------------------------------------------+
 
@@ -201,13 +182,11 @@ On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and 
 
 +-----------------------------------------------------------------------+
 | <Environment name="resource_path" type="java.lang.String"             |
-| value="${catalina.                                                    |
-|                                                                       |
-|    home}/resources"/>                                                 |
+| value="${catalina.home}/resources"/>                                  |
 |                                                                       |
 | <Environment name=" sso_class" type="java.lang.String"                |
 | value="it.eng.spagobi.services.common.FakeSsoService"/>               |
-|                                                                       |
+
 | <Environment name="service_url" type="java.lang.String"               |
 | value="http://localhost :8080/knowage"/>                              |
 |                                                                       |
