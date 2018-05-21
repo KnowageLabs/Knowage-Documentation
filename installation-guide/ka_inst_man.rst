@@ -374,14 +374,15 @@ LOG files
 --------------
 
 It is necessary to arrange a folder where Knowage and its analytical engines can store their respective log files. From now on, we will call LOG_DIR such folder and LOG_DIR_PATH the path that leads to it. This path is configured in file log4j.properties located inside the *\\*\ WEB-INF\ *\\*\ classes\ *\\* available in each web application.
-In short, to configure the Knowage log folder the user must execute the following steps: • create the LOG_DIR folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The LOG_DIR_PATH string must be the same for every node;
+In short, to configure the Knowage log folder the user must execute the following steps:
 
--|image32| verify that Knowage has write permissions on this folder; set the property :sub:`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
+-create the LOG_DIR folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The LOG_DIR_PATH string must be the same for every node;
 
--set the property :sub:`log4j.appender.knowageXXXXXEngine.File` inside the :sub:`WEB-INF/classes/log4j.properties` file of each engine to LOG_DIR_PATH/knwoageXXXXXEngine.log;
+|image32| verify that Knowage has write permissions on this folder; set the property :`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
 
--  only for the Birt Engine, to set the property logDirectory inside the WEB-INF/classes/BirtLogConfig.properties file of the
-   knowagebirtreportengine application toLOG\ :sup:`\_`\ DIR\ :sup:`\_`\ PATH.
+-set the property :`log4j.appender.knowageXXXXXEngine.File` inside the :`WEB-INF/classes/log4j.properties` file of each engine to LOG_DIR_PATH/knwoageXXXXXEngine.log;
+
+- only for the Birt Engine, to set the property logDirectory inside the WEB-INF/classes/BirtLogConfig.properties file of the knowagebirtreportengine application toLOG\ :`\_`\ DIR\ :`\_`\ PATH.
 
 In case you are using JBoss , in all configuration log4j.properties files substitute the string ”catalina.base/logs“ with "jboss.server.log.dir”.
 
@@ -424,12 +425,8 @@ Configuration file
 
  Table 5.2: String replacements according to the web application.
 
-JAR library file
----------------
 
-**Remark.** The configs.xml file is used to initialize some configuration tables on the database, therefore the user must set
-   these adjustments before the server is launched. Furthermore, the user must apply the modifications listed below in
-   all configuration web.xml files of each web application:
+**Remark.** The configs.xml file is used to initialize some configuration tables on the database, therefore the user must set these adjustments before the server is launched. Furthermore, the user must apply the modifications listed below in all configuration web.xml files of each web application:
 
 -  uncomment all blocks bounded by the comments “START JBOSS RES” and “END JBOSS RES”;
 
