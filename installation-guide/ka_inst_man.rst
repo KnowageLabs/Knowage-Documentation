@@ -464,6 +464,4 @@ In Knowage server the core and its analytical engines exchange information throu
 +------------------------------------------------------------------+
    Code 5.17: Configuration of the files.
 
-server-config.wsdd tests
-
 Obviously it is possible to modify the folder path, but the user who starts the application server is required to have indeed write permissions in the configured folder.
