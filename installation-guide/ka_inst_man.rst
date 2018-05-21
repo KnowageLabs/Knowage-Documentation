@@ -175,7 +175,8 @@ On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and 
 |                                                                                                                |
 | <Environment name="service_url" type="java.lang.String" value="http://localhost :8080/knowage"/>               |
 |                                                                                                                |
-| <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>           |                                  +----------------------------------------------------------------------------------------------------------------+
+| <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>           | 
++----------------------------------------------------------------------------------------------------------------+
 
 Code 5.7: Tomcat environment variables configuration.
 
@@ -196,14 +197,11 @@ For the JBoss istance, execute the following steps:
 
 -copy all the WAR files inside the JBOSS_HOME/standalone/deployments;
 
--extract the content of each WAR file into (using for instance the
-   unzip utility) one directory with the same name, including the “.war”
-   suffix (for istance, “knowage.war”;
+-extract the content of each WAR file into (using for instance the unzip utility) one directory with the same name, including the “.war” suffix (for istance, “knowage.war”;
 
 -delete the WAR files;
 
--create an empty file for each WAR file with the same name plus the
-   suffix “.dodeploy” (for example, “knowage.war.dodeploy“).
+-create an empty file for each WAR file with the same name plus the suffix “.dodeploy” (for example, “knowage.war.dodeploy“).
 
 Please refer to the instructions that are written in the JBOSS_HOME/standalone/deployments/README.txt. For Tomcat, simply copy all the WAR files inside the TOMCAT_HOME/webapps folder. Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
 
@@ -249,22 +247,22 @@ Modification of the Quartz configuration
 -------------------------
 The scheduler is configured by the following file: knowage.war/WEB-INF/classes/quartz.properties. It is essential to enhance in this file the property ”org.quartz.jobStore.driverDelegateClass“ with the right value, according to the metadata database in use. These in Code 5.9 the possible values:
 
-+-----------------------------------------------------------------------+
-| # Hsqldb delegate class                                               |
-|                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate |
-| # Mysql/Ingres delegate class                                         |
-| org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate |
-|                                                                       |
-| # Postgres delegate class                                             |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate |
-|                                                                       |
-| # Oracle delegate class                                               |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate |
-|                                                                       |
-| # SQLServer delegate class                                            |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.MSSQLDelegate |
-+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+| # Hsqldb delegate class                                                                       |
+|                                                                                               |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          |
+| # Mysql/Ingres delegate class                                                                 |
+| org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          |
+|                                                                                               |
+| # Postgres delegate class                                                                     |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      |
+|                                                                                               |
+| # Oracle delegate class                                                                       |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate   |
+|                                                                                               |
+| # SQLServer delegate class                                                                    |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.MSSQLDelegate           |
++-----------------------------------------------------------------------------------------------+
 
 Code 5.9: Values for the Quartz file.
 
