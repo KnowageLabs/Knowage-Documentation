@@ -53,9 +53,6 @@ Clicking on the **Configuration** page you will found seven different blocks as 
 
    Figure 6.4: Chart configuration.
 
-Structure
-~~~~~~
-
 In detail these blocks concern:
 
 -  Generic Details, as the orientation of the chart, the family and the size font.
