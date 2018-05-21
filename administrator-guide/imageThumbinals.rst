@@ -45,8 +45,8 @@
    :width: 0.2756in
    :height: 0.27559in
 .. |image15| image:: media/image15.png
-   :width: 4.95443in
-   :height: 0.52495in
+   :width: 0.2756in
+   :height: 0.27559in
 .. |image16| image:: media/image16.png
    :width: 0.2756in
    :height: 0.2756in
