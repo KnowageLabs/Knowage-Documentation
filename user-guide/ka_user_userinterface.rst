@@ -1,11 +1,9 @@
-This chapter focuses on Knowage user interface, providing detailed
-information on the
+User Interface
+=============
 
-Main Menu, the Document Browser and some general settings concerning
-analytical documents. First of all, a short introduction on profiling
-rules its provided.
+This chapter focuses on Knowage user interface, providing detailed information on the Main Menu, the Document Browser and some general settings concerning analytical documents. First of all, a short introduction on profiling rules its provided.
 
-2.1 Preliminary information
+Preliminary information
 ---------------------------
 
 The administrator will provide you a username and a password to log in
@@ -24,20 +22,14 @@ documents and data, according to their business profile.
 
 This is what is called *Behavioural Model*. It allows to:
 
-2.2. Main menu
-
 -  reduce the required number of analytical documents,
-
 -  code only once the behavioural and visibility rules on data,
-
 -  guarantee the uniform growth of the project over time,
-
--  guarantee the respect of the visibility rules over time, with no
-      limit on the number analytical documents that can be added.
+-  guarantee the respect of the visibility rules over time, with no limit on the number analytical documents that can be added.
 
 All the analytical documents are strictly related to the behavioural
 model. In fact, the behavioural model guides the behaviour of the
-analytical documents according to the userís role, managing the
+analytical documents according to the user‚Äôs role, managing the
 visibility of documents and data.
 
 Every role belongs to a predefined *role type* and In Table 2.1, the
@@ -66,10 +58,10 @@ different available role types are listed and described.
 
    Table 2.1: Knowage Role Types.
 
-From now on we suppose the reader has a role of type ìEnd userî. If some
+From now on we suppose the reader has a role of type ‚ÄúEnd user‚Äù. If some
 grants are optional for this role we will state it.
 
-2.2 Main menu
+Main menu
 -------------
 
 Knowage Menu gives you access to documents, data and all the
@@ -84,9 +76,7 @@ corresponding elements are summed up .
 
 It is important to underline that not all the components of the menu are
 mandatory, but they may be configured by the administrator according to
-userís needs.
-
-Main menu
+user‚Äôs needs.
 
    |image3|
 
@@ -153,8 +143,6 @@ Main menu
 
    Table 2.3: Menu components - BI functionalities menu.
 
-Main menu
-
 In the following we describe all the features the main menu could
 contain, namely:
 
@@ -165,11 +153,11 @@ enables you to
 
 Workspace This is available only for KnowageBD and KnowageSI. Entering
 the Workspace you will find the sections: **Recent**, **Documents**,
-**Data** and **Analysis**. The ìRecentî area shows the latest documents
-you were working on, while ìDocumentsî contains the analytical documents
+**Data** and **Analysis**. The ‚ÄúRecent‚Äù area shows the latest documents
+you were working on, while ‚ÄúDocuments‚Äù contains the analytical documents
 the user asks to be archived on this area. This way the user has a more
 rapid and efficient way to retrieve the documents of his interest. The
-ìDataî section is made up of the ìDatasetî and the ìModelsî subsections.
+‚ÄúData‚Äù section is made up of the ‚ÄúDataset‚Äù and the ‚ÄúModels‚Äù subsections.
 In the **Dataset** one you can access all the self-service BI features.
 Once entered this section, your datasets appear (see Figure 2.3) divided
 into four categories:
@@ -204,8 +192,6 @@ into four categories:
 
    analytical documents, navigate the document folders tree, search,
    sort and execute documents.
-
-2.3. Document Browser overview
 
    Finally selecting **My Analysis** section, available only for
    KnowageBD and KnowageSI, you enter a new page where you can navigate
@@ -249,13 +235,11 @@ that you can close/open it according to your needs. You can move this
 button around the page by dragging and dropping it. Choose the position
 that best fits with your work.
 
-2.3 Document Browser overview
+Document Browser overview
 -----------------------------
 
 From BI functionalities Menu, select |image26| to open the Document
 Browser.
-
-Document Browser overview
 
    |image27|
 
