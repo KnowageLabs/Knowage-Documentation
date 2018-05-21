@@ -50,8 +50,8 @@ Meanwhile the package is installed, remember to answer NO when asked   to create
 
 Finally, edit the TOMCAT_HOME/bin/setenv.sh adding the instructions in Code 6.2:
 
-+-------------------------------------------------------+
-| export R_HOME=/usr/lib64/R                            |
-|                                                       |
-| export LD_LIBRARY_PATH=/usr/lib64/R/library/rJava/jri |
-+-------------------------------------------------------+
+.. code:: console
+
+ export R_HOME=/usr/lib64/R                          
+ export LD_LIBRARY_PATH=/usr/lib64/R/library/rJava/jri
+
