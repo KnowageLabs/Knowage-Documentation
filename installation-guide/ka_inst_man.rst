@@ -127,12 +127,6 @@ In the JBoss case, edit the JBOSS_HOME/standalone/configuration/standalone.xml a
 |    <security>                                               |
 |                                                             |
 |    <user-name> <user name> </user-name>                     |
-+-------------------------------------------------------------+
-
-Environment variables definition
---------------------------
-
-+-----------------------------------------------------------------------+
 |    <password> <password> </password>                                  |
 |                                                                       |
 |    </security>                                                        |
