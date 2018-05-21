@@ -4,10 +4,10 @@ Prerequisite
  
 Before going into details on Knowage installation, it is necessary to check if certain prerequisites are satisfied. We start to distinguish between the certified environments and the compatible ones. The first are those where check tests take place. The latter are those environments technically compatibles but where integration tests are not executed.
 
-Operative systems
+Operation systems
 ------------------
 
-The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit with Knowage platform.
+The Operation Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit with Knowage platform.
 
 +---------------------------+-------------+
 |    Certified Environments               |
@@ -19,14 +19,13 @@ The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 |    Windows                | 7           |
 +---------------------------+-------------+
 
-..
+
 
    Table 3.1: Certified Environments.
 
-   3.2. Disk usage
 
 +-----------------------------+-------------+
-|    Compatible Environments  |             |
+|    Compatible Environments                |
 +=============================+=============+
 |    **Operative System**     | **Version** |
 +-----------------------------+-------------+
@@ -35,28 +34,21 @@ The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 |    Windows server           | 2012, 2008  |
 +-----------------------------+-------------+
 
-..
+
 
    Table 3.2: Compatible Environments.
+Disk usage
+--------------------
+The Knowage installation requires 2 GB of free space on file system. This memory does not include the space relative to the data and the metadata storage.
 
- 3.2 Disk usage
-===============
+JDK version
+--------------------
+The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK installation. Be sure that the JDK component is
+   successfully installed and that the environment variable JAVA_HOME is properly configured.
 
-   The Knowage installation requires 2 GB of free space on file system.
-   This memory does not include the space relative to the data and the
-   metadata storage.
+   |image1| 
 
- 3.3 JDK version
-================
-
-   The enviroment in which Knowage will be installed must include a 1.7
-   or 1.8 JDK installation. Be sure that the JDK component is
-   successfully installed and that the environment variable JAVA_HOME is
-   properly configured.
-
-   |image1| Define the JAVA_HOME variable inside the users’ file
-   .bash_profile used in the installation process (root and tomcat, as
-   shown in the following Code 3.1):
+Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
 
 +-----------------------------------------------------------------------+
 | export JAVA_HOME=<root path of the Java installation> export          |
@@ -64,22 +56,20 @@ The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 +-----------------------------------------------------------------------+
 
 
-   Code 3.1: Instructions to set the JAVA_HOME variable for Linux
-   environment.
+Code 3.1: Instructions to set the JAVA_HOME variable for Linux environment.
 
-   |image2| Define the JAVA_HOME variable and PATH in the section
-   "Environment variables“ which can be reached from the ”System“. You
-   can refer to Figure 3.1.
+   |image2| 
+   
+Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
 
-   JDK version
+JDK version
+--------------
 
    |image3|
 
    Figure 3.1: Setting the path for the JAVA_HOME variable for Windows.
 
-   3.4. Application server
-
- 3.4 Application server
+Application server
 =======================
 
    The following Table 3.3 displays the compatibility with the supported
@@ -99,17 +89,17 @@ The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 
    Table 3.3: Supported application server.
 
-   For each application server installation please refer to each
-   official user guide.
+For each application server installation please refer to each official user guide.
 
- 3.5 JBoss Enterprise Application Platform (EAP) 6
-==================================================
+JBoss Enterprise Application Platform (EAP) 6
+-----------------------
 
    In the following we will refer to the JBoss installation folder as
    JBOSS_HOME.
 
-   |image4| It is recommended to create a proper user for the execution
-   of JBoss. We state the main steps to reach this purpose.
+   |image4| 
+   
+It is recommended to create a proper user for the execution of JBoss. We state the main steps to reach this purpose.
 
 -  Create the JBoss user.
 
@@ -139,22 +129,19 @@ The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 | export JAVA_HOME=<JDK 1.8 installation root folder> |
 +-----------------------------------------------------+
 
-
-
-   3.6. Tomcat 7
-
    |image5| It is recommended to install JBoss as a service, using the
    dedicated user guide available on the Red Hat web site
    `www.redhat.com/en. <http://www.redhat.com/en>`__
 
- 3.6 Tomcat 7
-=============
 
-   In the following we will refer to Tomcat installation folder as
-   TOMCAT_HOME.
+Tomcat 7
+------------------
 
-   |image6| It is recommended to create a proper user for the execution
-   of Tomcat. We state the main steps to follow for this purpose.
+In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
+
+   |image6| 
+   
+ It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
 -  Create the Tomcat user.
 
@@ -166,24 +153,16 @@ The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 
 
 
--  Install the Tomcat using the Tomcat user. Remeber to define the
-      TOMCAT_HOME variable.
+-  Install the Tomcat using the Tomcat user. Remeber to define the TOMCAT_HOME variable.
 
 +-------------------------------------------------------------------+
 | export TOMCAT_HOME=<path of the installation Tomcat root folder > |
 +-------------------------------------------------------------------+
 
 
--  Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat
-      settings are defined in the TOMCAT_HOME/bin/setenv.sh file,
-      therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the
-      user must create it and insert it in the content as shown in Code
-      3.6.
-
-..
-
-   Note that CATALINA_PID contains the ID of the Tomcat process and it
-   kills the process if needed.
+-  Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown in Code
+      
+Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
 
 +-----------------------------------------------------------------------+
 | export CATALINA_PID=<root folder of the Tomcat                        |
@@ -200,20 +179,17 @@ The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
 | exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@" |
 +-------------------------------------------+
 
-1
 
-   |image7| It is recommended to install Tomcat as a service using the
-   installer available on the Apache web site httpd.apache.org/.
 
-   3.7. Database schema for metadata
+   |image7| 
+   
+It is recommended to install Tomcat as a service using the installer available on the Apache web site httpd.apache.org/.
 
- 3.7 Database schema for metadata
-=================================
+ 
+Database schema for metadata
+---------------------
 
-   Knowage uses a schema to manage metadata, that is all those
-   information required for its operation. These concern the
-   configuration, the users and the analytical documents. It is possible
-   to use the DBMSs listed in Table 3.4 for the creation of this schema.
+Knowage uses a schema to manage metadata, that is all those information required for its operation. These concern the configuration, the users and the analytical documents. It is possible to use the DBMSs listed in Table 3.4 for the creation of this schema.
 
 +---------------------+---------------+--------------+
 |    **Support Type** | **DBMS**      | **Version**  |
@@ -244,23 +220,18 @@ The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
    be called "metadata DB” in the following. Observe that Knowage
    includes all the DDL for table creation.
 
-3.8 Database schema for data.
+Database schema for data.
+---------------------
 
-   A schema for data must be also available. It can be queried through
-   Knowage and can be reached through the JDBC protocol by the Knowage
-   installation server; such a schema will be called "data DB” in the
-   following .
+A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called "data DB” in the following .
 
-   To correctly use the Knowage data mining engine it is necessary to
-   install R, R Studio and rJava on the target server. Please refer to
-   `http://cranr-project.org/. <http://cranr-project.org/>`__
+   To correctly use the Knowage data mining engine it is necessary to install R, R Studio and rJava on the target server. Please refer to  `http://cranr-project.org/. <http://cranr-project.org/>`__
 
- 3.9 R
-======
+R
+-----------
 
    Be sure to use the following versions:
 
-   R
 
 -  version 3.2.2 for R,
 
