@@ -151,7 +151,7 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 |image7|It is recommended to install Tomcat as a service using the installer available on the Apache web site httpd.apache.org/.
 
  
-Database schema for metadata
+ Database schema for metadata
 ---------------------
 
 Knowage uses a schema to manage metadata, that is all those information required for its operation. These concern the configuration, the users and the analytical documents. It is possible to use the DBMSs listed in Table 3.4 for the creation of this schema.
@@ -176,45 +176,39 @@ Knowage uses a schema to manage metadata, that is all those information required
 |    Certified        | PostgreSQL    | 9.1          |
 +---------------------+---------------+--------------+
 
-..
+Table 3.4: Exploitable DBMSs for the metadata schema creation.
 
-   Table 3.4: Exploitable DBMSs for the metadata schema creation.
+Therefore, a schema must be available. It can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called "metadata DB” in the following. Observe that Knowage includes all the DDL for table creation.
 
-   Therefore, a schema must be available. It can be reached through the
-   JDBC protocol by the Knowage installation server; such a schema will
-   be called "metadata DB” in the following. Observe that Knowage
-   includes all the DDL for table creation.
 
 Database schema for data.
 ---------------------
 
 A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called "data DB” in the following .
+To correctly use the Knowage data mining engine it is necessary to install R, R Studio and rJava on the target server. Please refer to  `http://cranr-project.org/. <http://cranr-project.org/>`__
 
-   To correctly use the Knowage data mining engine it is necessary to install R, R Studio and rJava on the target server. Please refer to  `http://cranr-project.org/. <http://cranr-project.org/>`__
 
 R
 -----------
 
-   Be sure to use the following versions:
+Be sure to use the following versions:
+
+-version 3.2.2 for R,
+
+-version 0.99 for R Studio,
+
+-version 0.98 for rJava (library to connect Knowage to the R server)
 
 
--  version 3.2.2 for R,
+Released file description
+=========================
 
--  version 0.99 for R Studio,
+It is possible to download the software in the web site `www.knowage-suite.com/portal <http://www.knowage-suite.com/portal>`__ where we can find all resources for the installation, the single packages and the DDL.
 
--  version 0.98 for rJava (library to connect Knowage to the R server)
+Here the essential elements for the installation:
 
-..
+-Installer,
 
-   It is possible to download the software in the web site
-   `www.knowage-suite.com/portal <http://www.knowage-suite.com/portal>`__
-   where we can find all resources for the installation, the single
-   packages and the DDL.
+-DDL (see Table 4.1),
 
-   Here the essential elements for the installation:
-
--  Installer,
-
--  DDL (see Table 4.1),
-
--  the single software packages.
+-the single software packages.
