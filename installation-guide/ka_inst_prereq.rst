@@ -41,7 +41,7 @@ JDK version
 
 The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
 
-|image1| Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
+**[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
 
 +-----------------------------------------------------------------------+
 | export JAVA_HOME=<root path of the Java installation>                 |
@@ -51,9 +51,9 @@ The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK 
 
 Code 3.1: Instructions to set the JAVA_HOME variable for Linux environment.
 
-   |image2| Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
+**[WIN]** Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
 
-   |image3| 
+ .. image:: media/image6.png
 
 Figure 3.1: Setting the path for the JAVA_HOME variable for Windows.
    
