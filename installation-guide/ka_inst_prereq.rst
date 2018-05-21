@@ -33,12 +33,13 @@ The Operation Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit
    
 Disk usage
 --------------------
+
 The Knowage installation requires 2 GB of free space on file system. This memory does not include the space relative to the data and the metadata storage.
 
 JDK version
 --------------------
-The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK installation. Be sure that the JDK component is
-   successfully installed and that the environment variable JAVA_HOME is properly configured.
+
+The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
 
    |image1| Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
 
@@ -51,7 +52,9 @@ Code 3.1: Instructions to set the JAVA_HOME variable for Linux environment.
 
    |image2| Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
 
-   |image3| Figure 3.1: Setting the path for the JAVA_HOME variable for Windows.
+   |image3| 
+
+Figure 3.1: Setting the path for the JAVA_HOME variable for Windows.
    
 
 Application server
@@ -73,9 +76,11 @@ For each application server installation please refer to each official user guid
 
 JBoss Enterprise Application Platform (EAP) 6
 -----------------------
+
 In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
-   |image4| It is recommended to create a proper user for the execution of JBoss. We state the main steps to reach this purpose.
+|image4|It is recommended to create a proper user for the execution of JBoss. We state the main steps to reach this purpose.
+   
 
 -  Create the JBoss user.
 
