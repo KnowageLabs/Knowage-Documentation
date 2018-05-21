@@ -1,76 +1,51 @@
 
- 5.1 Metadata database
-======================
+Manual Installation
 
-   The metadata database must contains a schema which will collect all
-   Knowage metadata.
+Metadata database
+-------------------
 
-   For configuring such a schema, the user must execute the creation
-   scripts provided for the
-
-   DBMS in use. The package which includes the DDL will contain the
-   following scripts in Code
-
-   3.1:
+The metadata database must contains a schema which will collect all Knowage metadata.
+For configuring such a schema, the user must execute the creation scripts provided for the
+DBMS in use. The package which includes the DDL will contain the following scripts in Code 3.1:
 
 +------------------------------+
 | XXX_create.sql               |
 |                              |
 | XXX_create_quartz_schema.sql |
 +------------------------------+
+Code 5.1: Scripts for metadata schema.
 
+where XXX represents the DBMS type, for instance ORA stands for Oracle. Inside the packages there are the corresponding files for deleting tables.
 
+Dependencies
+-------------------
+If you are using JBoss as application server, you must add some modules inside the folder JBOSS_HOME/modules/system/layers/base:
 
-   Code 5.1: Scripts for metadata schema.
-
-   where XXX represents the DBMS type, for instance ORA stands for
-   Oracle. Inside the packages there are the corresponding files for
-   deleting tables.
-
- 5.2 Dependencies
-=================
-
-   If you are using JBoss as application server, you must add some
-   modules inside the folder
-
-   JBOSS_HOME/modules/system/layers/base:
-
--  the JDBC module of the metadata database with its dependencies (if
+-the JDBC module of the metadata database with its dependencies (if
    any);
+
+-the JDBC module of the data database with its dependencies (if any);
+
+-the module which includes the commonj library with its dependencies
+   (if any):
+
+   ‚Äì geronimo-commonj_1.1_spec-1.0.jar,
+
+   -  concurrent.jar,
+
+   -  foo-commonj.jar;
+
+-the Resteasy Jackson2 Provider module;
+
+-the fasterxml Classmate, Jackson Core e Jackson JAXRS modules.
+
+Instead, if you are using Tomcat as application server, you must add some libraries inside the TOMCAT_HOME/lib folder:
+
+-  the JDBC module of the metadata database with its dependencies (if any);
 
 -  the JDBC module of the data database with its dependencies (if any);
 
--  the module which includes the commonj library with its dependencies
-   (if any):
-
-..
-
-   ñ geronimo-commonj_1.1_spec-1.0.jar,
-
-   5.3. File system resources
-
--  concurrent.jar,
-
--  foo-commonj.jar;
-
--  the Resteasy Jackson2 Provider module;
-
--  the fasterxml Classmate, Jackson Core e Jackson JAXRS modules.
-
-..
-
-   Instead, if you are using Tomcat as application server, you must add
-   some libraries inside the
-
-   TOMCAT_HOME/lib folder:
-
--  the JDBC module of the metadata database with its dependencies (if
-   any);
-
--  the JDBC module of the data database with its dependencies (if any);
-
--  the module which includes the commonj library with its dependencies
-   (if any):
+-  the module which includes the commonj library with its dependencies (if any):
 
    -  geronimo-commonj_1.1_spec-1.0.jar,
 
@@ -78,24 +53,14 @@
 
    -  foo-commonj.jar.
 
- 5.3 File system resources
-==========================
+File system resources
+--------------------
 
-   In the JBoss instance, create the folder
-   JBOSS_HOME/standalone/data/resources. Equally in the Tomcat instance,
-   create the folder TOMCAT_HOME/resources. Such a folder will contain
-   some useful static resources and the indexes for the research engine
-   used by Knowage.
+In the JBoss instance, create the folder JBOSS_HOME/standalone/data/resources. Equally in the Tomcat instance, create the folder TOMCAT_HOME/resources. Such a folder will contain some useful static resources and the indexes for the research engine used by Knowage.
 
- 5.4 Metadata database connection
-=================================
-
-   In the JBoss case, edit the file
-   JBOSS_HOME/standalone/configuration/standalone.xml and add the
-   information related to the metadata database inside the ìdatasourcesî
-   tag: specify the username, the password and driver class name, URL,
-   connection checker class and exception sorter class. The following
-   Code 3.6 is an example:
+Metadata database connection
+-----------------------
+In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the metadata database inside the ‚Äúdatasources‚Äù tag: specify the username, the password and driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 is an example:
 
 +-----------------------------------------------------------------+
 | <datasource jndi-name="java:/jdbc/knowage" pool-name="knowage"> |
@@ -119,9 +84,8 @@
 | <background-validation>false</background-validation>            |
 +-----------------------------------------------------------------+
 
-
-
-   5.5. Data database connection
+Data database connection
+-------------
 
 +-----------------------------------------------------------------------+
 |    <valid-connection-checker class-name="<connection checker          |
@@ -136,20 +100,13 @@
 
    Code 5.2: Setting the metadata datasource.
 
-   In addition, remember to type the information related to the JDBC
-   driver inside the drivers tag before defining the connection. Here in
-   Code 3.6 is an example:
+In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Here in Code 3.6 is an example:
 
 +---------------------------------------------------------+
 | <driver name="<driver class>" module="<module name>" /> |
 +---------------------------------------------------------+
 
-
-
-   In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the
-   information related to the metadata database inside the
-   GlobalNamingResources tag. Specify: username, password, driver class
-   name and URL. The following Code 3.6 shows an example:
+In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following Code 3.6 shows an example:
 
 +-----------------------------------------------------------------------+
 | <Resource name="jdbc/knowage" auth="Container"                        |
@@ -162,18 +119,12 @@
 |    removeAbandonedTimeout="3600"/>                                    |
 +-----------------------------------------------------------------------+
 
+Code 5.3: Setting the metadata datasource.
 
-   Code 5.3: Setting the metadata datasource.
+Data database connection
+-------------------
 
- 5.5 Data database connection
-=============================
-
-   In the JBoss case, edit the
-   JBOSS_HOME/standalone/configuration/standalone.xml and add the
-   information related to the data database inside the datasources tag.
-   Specify: username, password, driver class name, URL, connection
-   checker class and exception sorter class. The following Code 3.6
-   shows an example:
+In the JBoss case, edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the data database inside the datasources tag. Specify: username, password, driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 shows an example:
 
 +-------------------------------------------------------------+
 | <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage"> |
@@ -187,9 +138,8 @@
 |    <user-name> <user name> </user-name>                     |
 +-------------------------------------------------------------+
 
-
-
-   5.6. Environment variables definition
+Environment variables definition
+--------------------------
 
 +-----------------------------------------------------------------------+
 |    <password> <password> </password>                                  |
@@ -211,24 +161,15 @@
 | </datasource>                                                         |
 +-----------------------------------------------------------------------+
 
+Code 5.4: Setting the data datasource.
 
-
-   Code 5.4: Setting the data datasource.
-
-   In addition, remember to type the information related to the JDBC
-   driver inside the drivers tag before defining the connection. Code ??
-   is an example:
+In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Code is an example:
 
 +---------------------------------------------------------+
 | <driver name="<driver class>" module="<module name>" /> |
 +---------------------------------------------------------+
 
-
-
-   In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the
-   information related to the metadata database inside the
-   GlobalNamingResources tag. Specify: username, password, driver class
-   name and URL. The following Code 3.6 shows an example:
+In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following Code 3.6 shows an example:
 
 +-----------------------------------------------------------------------+
 | <Resource name="jdbc/dwh" auth="Container"                            |
@@ -243,19 +184,14 @@
 
 
 
-   Code 5.5: Setting the metadata datasource.
+Code 5.5: Setting the metadata datasource.
 
- 5.6 Environment variables definition
-=====================================
+Environment variables definition
+------------------------
+Concerning JBoss, edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the following constants inside the subsystem domain naming tab, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in Code 5.6:
 
-   Concerning JBoss, edit the
-   JBOSS_HOME/standalone/configuration/standalone.xml and add the
-   following constants inside the subsystem domain naming tab, by
-   setting the domain within the host_url value. That domain will be
-   used by the browser to call Knowage server, as we can see in Code
-   5.6:
-
-   5.7. Applications deploy
+Applications deploy
+-------------
 
 +-----------------------------------------------------------------------+
 | <bindings>                                                            |
@@ -274,15 +210,9 @@
 | </bindings>                                                           |
 +-----------------------------------------------------------------------+
 
+Code 5.6: JBoss environment variables configuration.
 
-
-   Code 5.6: JBoss environment variables configuration.
-
-   On the other hand, edit the file TOMCAT_HOME/conf/server.xml in
-   Tomcat case and add the following constants in the
-   GlobalNamingResources tag, by setting the domain within the host_url
-   value. That domain will be used by the browser to call Knowage
-   server, as we can see in Code 5.7:
+On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and add the following constants in the GlobalNamingResources tag, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in Code 5.7:
 
 +-----------------------------------------------------------------------+
 | <Environment name="resource_path" type="java.lang.String"             |
@@ -300,56 +230,45 @@
 | URL which is hosting knowage>"/>                                      |
 +-----------------------------------------------------------------------+
 
+Code 5.7: Tomcat environment variables configuration.
 
-   Code 5.7: Tomcat environment variables configuration.
+In both case cases, costants have the following meaning:
 
-   In both case cases, costants have the following meaning:
+-**resource\ \_\ path**: resources folder path,
 
--  **resource\ \_\ path**: resources folder path,
+-**sso_class**:SSO connector class name,
 
--  **sso_class**:SSO connector class name,
-
--  **service\ \_\ url**:backend services address, typically set to
+-**service\ \_\ url**:backend services address, typically set to
    `http://localhost:8080/knowage, <http://localhost:8080/knowage>`__
 
--  **host\_\ url**: frontend services address, the one the user types in
+-**host\_\ url**: frontend services address, the one the user types in
    his browser.
 
- 5.7 Applications deploy
-========================
+Applications deploy
+----------------
 
-   For the JBoss istance, execute the following steps:
+For the JBoss istance, execute the following steps:
 
 -  copy all the WAR files inside the JBOSS_HOME/standalone/deployments;
 
-..
+Datasource link within the applications
+-----------------
 
-   5.8. Datasource link within the applications
+-extract the content of each WAR file into (using for instance the
+   unzip utility) one directory with the same name, including the ‚Äú.war‚Äù
+   suffix (for istance, ‚Äúknowage.war‚Äù;
 
--  extract the content of each WAR file into (using for instance the
-   unzip utility) one directory with the same name, including the ì.warî
-   suffix (for istance, ìknowage.warî;
+-delete the WAR files;
 
--  delete the WAR files;
+-create an empty file for each WAR file with the same name plus the
+   suffix ‚Äú.dodeploy‚Äù (for example, ‚Äúknowage.war.dodeploy‚Äú).
 
--  create an empty file for each WAR file with the same name plus the
-   suffix ì.dodeployî (for example, ìknowage.war.dodeployì).
+Please refer to the instructions that are written in the JBOSS_HOME/standalone/deployments/README.txt. For Tomcat, simply copy all the WAR files inside the TOMCAT_HOME/webapps folder. Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
 
-..
+Datasource link within the applications
+------------------------
 
-   Please refer to the instructions that are written in the
-   JBOSS_HOME/standalone/deployments/README.txt. For Tomcat, simply copy
-   all the WAR files inside the TOMCAT_HOME/webapps folder. Once the
-   first start is ended each WAR file will be unzipped. It is also
-   possible to unzip the WAR files manually using the unzip utility.
-
- 5.8 Datasource link within the applications
-============================================
-
-For JBoss instance, control that in all the
-
-   JBOSS_HOME/standalone/deployments/knowage*.war/META-INF/context.xml
-   files there are the links reported in Code 5.8:
+For JBoss instance, control that in all the JBOSS_HOME/standalone/deployments/knowage*.war/META-INF/context.xml files there are the links reported in Code 5.8:
 
 +-----------------------------------------------------------------------+
 | <ResourceLink global="jdbc/knowage" name="jdbc/knowage"               |
@@ -358,73 +277,38 @@ For JBoss instance, control that in all the
 | <ResourceLink global="jdbc/dwh" name="jdbc/dwh"                       |
 | type="javax.sql.DataSource"/>                                         |
 +-----------------------------------------------------------------------+
+Code 5.8: DataSource link syntax.
 
+While for the Tomcat instance, control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same
+   links as in Code 5.8. Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
 
-   Code 5.8: DataSource link syntax.
+Configuration of the metadata db dialect
+---------------------
+In the JBoss instance, verify that the right dialect has been set in all JBOSS_HOME/standalone/deployments/knowage*.war/WEB-INF/classes/hibernate.cfg.xml files.
+In the Tomcat instance, verify that the right dialect has been set in all TOMCAT_HOME/webapps/knowage*/WEB-INF/classes/hibernate.cfg.xml files. We list all the possible dialects that can be used:
 
-   While for the Tomcat instance, control in the
-   TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same
-   links as in Code 5.8.
+-  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
 
-   Inside the released packages there are already two links: one for the
-   jdbc/knowage resource, which the user must keep, and the other for
-   the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
+Modification of the Quartz configuration
+-----------------------
 
- 5.9 Configuration of the metadata db dialect
-=============================================
+-  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
 
-In the JBoss instance, verify that the right dialect has been set in all
+-  <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
-   JBOSS_HOME/standalone/deployments/knowage*.war/WEB-INF/classes/hibernate.cfg.xml
-   files.
+-  <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
 
-In the Tomcat instance, verify that the right dialect has been set in
-all
+-  <property name="hibernate.dialect">org.hibernate.dialect.IngresDialect</property>
 
-   TOMCAT_HOME/webapps/knowage*/WEB-INF/classes/hibernate.cfg.xml files.
-   We list all the possible dialects that can be used:
+-  <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
 
--  <property
-   name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
+-  <property name="hibernate.dialect">org.hibernate.dialect.DB2400Dialect</property>
 
-..
+**Remark.** The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
-   5.10. Modification of the Quartz configuration
-
--  <property
-   name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
-
--  <property
-   name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-
--  <property
-   name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
-
--  <property
-   name="hibernate.dialect">org.hibernate.dialect.IngresDialect</property>
-
--  <property
-   name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
-
--  <property
-   name="hibernate.dialect">org.hibernate.dialect.DB2400Dialect</property>
-
-..
-
-   **Remark.** The modification of these files will be effective as soon
-   as the web application is reloaded or the application server is
-   restarted.
-
- 5.10 Modification of the Quartz configuration
-==============================================
-
-   The scheduler is configured by the following file:
-   knowage.war/WEB-INF/classes/quartz.properties. It is essential to
-   enhance in this file the property
-   îorg.quartz.jobStore.driverDelegateClassì with the right value,
-   according to the metadata database in use.
-
-   These in Code 5.9 the possible values:
+Modification of the Quartz configuration
+-------------------------
+The scheduler is configured by the following file: knowage.war/WEB-INF/classes/quartz.properties. It is essential to enhance in this file the property ‚Äùorg.quartz.jobStore.driverDelegateClass‚Äú with the right value, according to the metadata database in use. These in Code 5.9 the possible values:
 
 +-----------------------------------------------------------------------+
 | # Hsqldb delegate class                                               |
@@ -461,15 +345,12 @@ all
 |    MSSQLDelegate                                                      |
 +-----------------------------------------------------------------------+
 
+Code 5.9: Values for the Quartz file.
 
-   Code 5.9: Values for the Quartz file.
+Pool of thread definition
+-----------------
 
-   5.11. Pool of thread definition
-
-   When Knowage is installed in cluster with several nodes, it is
-   necessary to activate the Cluster modality, adding these parameters,
-   in Code 5.10, to the quartz.properties file of every involved
-   machines:
+When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters, in Code 5.10, to the quartz.properties file of every involved machines:
 
 +-----------------------------------------------------------------------+
 | org.quartz.jobStore.isClustered = true                                |
@@ -480,16 +361,12 @@ all
 +-----------------------------------------------------------------------+
 
 
-   Code 5.10: Cluster modality manual activation.
+Code 5.10: Cluster modality manual activation.
 
- 5.11 Pool of thread definition
-===============================
+Pool of thread definition
+--------------
 
-   For the execution of the batch processing ,Knowage uses a thread
-   pool. In the JBoss case it is possible to modify the configuration by
-   editing the JBOSS_HOME/standalone/configuration/standalone.xml and
-   adding the configuration related to thread pool inside the
-   **subsystem domain naming** tag, as showed in Code 5.11:
+For the execution of the batch processing ,Knowage uses a thread pool. In the JBoss case it is possible to modify the configuration by editing the JBOSS_HOME/standalone/configuration/standalone.xml and adding the configuration related to thread pool inside the **subsystem domain naming** tag, as showed in Code 5.11:
 
 +-----------------------------------------------------------------------+
 | <bindings>                                                            |
@@ -515,16 +392,8 @@ all
 | </bindings>                                                           |
 +-----------------------------------------------------------------------+
 
-
-
-   Code 5.11: Thread pool configuration for JBoss.
-
-   Similarly, in the Tomcat case it is possible to enable it by editing
-   the configuration of the
-
-   TOMCAT_HOME/conf/server.xml file and add the settings related to the
-   pool of thread editing the **GlobalNamingResources** tag, as shown in
-   Code 5.12
+Code 5.11: Thread pool configuration for JBoss.
+Similarly, in the Tomcat case it is possible to enable it by editing the configuration of the TOMCAT_HOME/conf/server.xml file and add the settings related to the pool of thread editing the **GlobalNamingResources** tag, as shown in Code 5.12
 
 +-----------------------------------------------------------------------+
 | <Resource auth="Container"                                            |
@@ -533,26 +402,18 @@ all
 |    maxThreads="5" name="wm/SpagoWorkManager"                          |
 +-----------------------------------------------------------------------+
 
-
-
-   5.12. Check of the memory settings
+Check of the memory settings
+----------------
 
 +-----------------------------------+
 | type="commonj.work.WorkManager"/> |
 +-----------------------------------+
+Code 5.12: Thread of pool configuration for Tomcat.
 
+Check of the memory settings
+--------------------
 
-
-   Code 5.12: Thread of pool configuration for Tomcat.
-
- 5.12 Check of the memory settings
-==================================
-
-   It is recommended to increase the memory dimension used by the
-   application server; this can be done by adjusting some properties.
-   The memory space required by each application server depends on
-   several different factors: number of users, analysis type, amount of
-   handled data, etc. The smallest memory requirements are:
+It is recommended to increase the memory dimension used by the application server; this can be done by adjusting some properties. The memory space required by each application server depends on several different factors: number of users, analysis type, amount of handled data, etc. The smallest memory requirements are:
 
 -  Xms1024m;
 
@@ -560,118 +421,63 @@ all
 
 -  XX:MaxPermSize=512m (only for JDK 1.7).
 
-..
+**JBoss**
 
-   **JBoss**
-
-   |image28| Insert at the beginning of the JBOSS_HOME/bin/run.conf.sh
-   file the row in Code 5.15:
+|image28| Insert at the beginning of the JBOSS_HOME/bin/run.conf.sh file the row in Code 5.15:
 
 +------------------------------------------------------------------------+
 | export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" |
 +------------------------------------------------------------------------+
+Code 5.13: Memory settings for JBoss in Linux environment.
 
+|image29| Insert at the beginning of the JBOSS_HOME/bin/run.conf.bat file the row in Code
 
-
-   Code 5.13: Memory settings for JBoss in Linux environment.
-
-   |image29| Insert at the beginning of the JBOSS_HOME/bin/run.conf.bat
-   file the row in Code
-
-   5.16:
 
 +--------------------------------------------------------------------+
 | set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m |
 +--------------------------------------------------------------------+
+Code 5.14: Memory settings for JBoss in Windows environment.
 
+**Tomcat**
 
-
-   Code 5.14: Memory settings for JBoss in Windows environment.
-
-   **Tomcat**
-
-   |image30| Insert at the beginning of the TOMCAT_HOME/bin/setenv.sh
-   file the row in Code 5.15:
+|image30| Insert at the beginning of the TOMCAT_HOME/bin/setenv.sh file the row in Code 5.15:
 
 +------------------------------------------------------------------------+
 | export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" |
 +------------------------------------------------------------------------+
+Code 5.15: Memory settings for Tomcat in Linux environment.
 
+|image31| Insert at the beginning of the TOMCAT_HOME/bin/setenv.bat file the row in Code 5.16:
 
-   Code 5.15: Memory settings for Tomcat in Linux environment.
-
-   |image31| Insert at the beginning of the TOMCAT_HOME/bin/setenv.bat
-   file the row in Code 5.16:
-
-   5.13. LOG files
 
 +--------------------------------------------------------------------+
 | set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m |
 +--------------------------------------------------------------------+
+Code 5.16: Memory settings for Tomcat in Windows environment.
 
+If one uses Tomcat as a service it is important to modify those settings through the GUI. For that we refer to the documents available on the web page `www.apache.org. <http://www.apache.org/>`__
 
+LOG files
+--------------
 
-   Code 5.16: Memory settings for Tomcat in Windows environment.
+It is necessary to arrange a folder where Knowage and its analytical engines can store their respective log files. From now on, we will call LOG_DIR such folder and LOG_DIR_PATH the path that leads to it. This path is configured in file log4j.properties located inside the *\\*\ WEB-INF\ *\\*\ classes\ *\\* available in each web application.
+In short, to configure the Knowage log folder the user must execute the following steps: ‚Ä¢ create the LOG_DIR folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The LOG_DIR_PATH string must be the same for every node;
 
-   If one uses Tomcat as a service it is important to modify those
-   settings through the GUI. For that we refer to the documents
-   available on the web page
-   `www.apache.org. <http://www.apache.org/>`__
+-|image32| verify that Knowage has write permissions on this folder; set the property :sub:`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
 
- 5.13 LOG files
-===============
+-set the property :sub:`log4j.appender.knowageXXXXXEngine.File` inside the :sub:`WEB-INF/classes/log4j.properties` file of each engine to LOG_DIR_PATH/knwoageXXXXXEngine.log;
 
-   It is necessary to arrange a folder where Knowage and its analytical
-   engines can store their respective log files. From now on, we will
-   call LOG_DIR such folder and LOG_DIR_PATH the path that leads to it.
-   This path is configured in file log4j.properties located inside the
-   *\\*\ WEB-INF\ *\\*\ classes\ *\\* available in each web application.
+-  only for the Birt Engine, to set the property logDirectory inside the WEB-INF/classes/BirtLogConfig.properties file of the
+   knowagebirtreportengine application toLOG\ :sup:`\_`\ DIR\ :sup:`\_`\ PATH.
 
-   In short, to configure the Knowage log folder the user must execute
-   the following steps: ï create the LOG_DIR folder on all cluster nodes
-   on which it is intended to deploy Knowage
+In case you are using JBoss , in all configuration log4j.properties files substitute the string ‚Äùcatalina.base/logs‚Äú with "jboss.server.log.dir‚Äù.
 
-   Server and/or one of its analytical engines. The LOG_DIR_PATH string
-   must be the same for every node;
+Configuration file
+------------------
+For the JBoss case, it is necessary to modify some configuration files reported in Table 5.1. Apply the string replacements for each web application.
+Moreover, apply the string substitutions to the configs.xml file included in the JBOSS_HOME/standalone/deploymen file, as reported in Table 9.2:
 
--  |image32| verify that Knowage has write permissions on this folder; ï
-   set the property :sub:`log4j.appender.knowage.File` inside the
-
-
-
-   WEB-INF/classes/log4j.properties Knowage file to
-   LOG_DIR_PATH/knowage.log;
-
--  set the property :sub:`log4j.appender.knowageXXXXXEngine.File` inside
-   the :sub:`WEB-INF/classes/log4j.properties` file of each engine to
-
-..
-
-   LOG_DIR_PATH/knwoageXXXXXEngine.log;
-
--  only for the Birt Engine, to set the property logDirectory inside the
-   WEB-INF/classes/BirtLogConfig.properties file of the
-   knowagebirtreportengine application to
-   LOG\ :sup:`\_`\ DIR\ :sup:`\_`\ PATH.
-
-..
-
-   In case you are using JBoss , in all configuration log4j.properties
-   files substitute the string îcatalina.base/logsì with
-   "jboss.server.log.dirî.
-
- 5.14 Configuration file
-========================
-
-   For the JBoss case, it is necessary to modify some configuration
-   files reported in Table 5.1. Apply the string replacements for each
-   web application.
-
-   Moreover, apply the string substitutions to the configs.xml file
-   included in the JBOSS_HOME/standalone/deploymen file, as reported in
-   Table 9.2:
-
-   Configuration file
+Configuration file
 
 +----------------------+------------------------------+--------------------------+
 |    **File name**     | **Original string**          | **New string**           |
@@ -689,9 +495,7 @@ all
 |                      | java:/comp/env/hmacKey       | java:/urls/hmacKey       |
 +----------------------+------------------------------+--------------------------+
 
-..
-
-   Table 5.1: String replacements according to the web application.
+ Table 5.1: String replacements according to the web application.
 
 +------------------+------------------------------+--------------------------+
 |    **File name** | **Original string**          | **New string**           |
@@ -705,33 +509,25 @@ all
 |                  | java:/comp/env/hmacKey       | java:/urls/hmacKey       |
 +------------------+------------------------------+--------------------------+
 
-..
+ Table 5.2: String replacements according to the web application.
 
-   Table 5.2: String replacements according to the web application.
+JAR library file
+---------------
 
-   5.15. JAR library file
-
-   **Remark.** The configs.xml file is used to initialize some
-   configuration tables on the database, therefore the user must set
-   these adjustments before the server is launched.
-
-   Furthermore, the user must apply the modifications listed below in
+**Remark.** The configs.xml file is used to initialize some configuration tables on the database, therefore the user must set
+   these adjustments before the server is launched. Furthermore, the user must apply the modifications listed below in
    all configuration web.xml files of each web application:
 
--  uncomment all blocks bounded by the comments ìSTART JBOSS RESî and
-   ìEND JBOSS RESî;
+-  uncomment all blocks bounded by the comments ‚ÄúSTART JBOSS RES‚Äù and ‚ÄúEND JBOSS RES‚Äù;
 
--  comment all blocks bounded by the comments ìSTART TOMCAT RESî and
-   ìEND TOMCAT RESî;
+-  comment all blocks bounded by the comments ‚ÄúSTART TOMCAT RES‚Äù and ‚ÄúEND TOMCAT RES‚Äù;
 
--  comment all blocks bounded by the comments ìSTART
-   ProxyTicketReceptorî and ìEND ProxyTicketReceptorî.
+-  comment all blocks bounded by the comments ‚ÄúSTART ProxyTicketReceptor‚Äù and ‚ÄúEND ProxyTicketReceptor‚Äù.
 
- 5.15 JAR library file
-======================
+JAR library file
+--------------
 
-   Considering the JBoss instance, delete all of the following files
-   from each web application:
+Considering the JBoss instance, delete all of the following files from each web application:
 
 -  WEB-INF/lib/jaxrs-api-2.3.5.Final.jar;
 
@@ -741,10 +537,7 @@ all
 
 -  WEB-INF/lib/resteasy-multipart-provider-2.3.5.final.jar.
 
-..
-
-   Moreover, still for JBoss delete only from the Knowage web
-   application the following files:
+Moreover, still for JBoss delete only from the Knowage web application the following files:
 
 -  WEB-INF/tlds/liferay-portlet.tld;
 
@@ -752,25 +545,15 @@ all
 
 -  WEB-INF/lib/resteasy-jackson2-provider-3.0.9.Final.jar.
 
- 5.16 server-config.wsdd tests
-==============================
-
-   In Knowage server the core and its analytical engines exchange
-   information through some SOAP services. Those services can
-   send/receive attached files: those files are temporarely stored in a
-   folder that is configured in the knowage/WEB-INF/server-config.wsdd
-   file. The Code 5.17 shows the syntax.
+server-config.wsdd tests
+--------------
+In Knowage server the core and its analytical engines exchange information through some SOAP services. Those services can send/receive attached files: those files are temporarely stored in a folder that is configured in the knowage/WEB-INF/server-config.wsdd file. The Code 5.17 shows the syntax.
 
 +------------------------------------------------------------------+
 | <parameter name="attachments.Directory" value="../attachments"/> |
 +------------------------------------------------------------------+
-
-1
-
    Code 5.17: Configuration of the files.
 
-   server-config.wsdd tests
+server-config.wsdd tests
 
-   Obviously it is possible to modify the folder path, but the user who
-   starts the application server is required to have indeed write
-   permissions in the configured folder.
+Obviously it is possible to modify the folder path, but the user who starts the application server is required to have indeed write permissions in the configured folder.
