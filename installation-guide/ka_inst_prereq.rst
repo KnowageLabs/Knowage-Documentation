@@ -41,13 +41,14 @@ JDK version
 
 The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
 
-   |image1| Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
+|image1| Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
 
 +-----------------------------------------------------------------------+
 | export JAVA_HOME=<root path of the Java installation>                 |
 | export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            |
 | export PATH=$JAVA_HOME/bin:$PATH                                      |
 +-----------------------------------------------------------------------+
+
 Code 3.1: Instructions to set the JAVA_HOME variable for Linux environment.
 
    |image2| Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
@@ -92,14 +93,14 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
 
 
--Install the JBoss using the JBoss user. Remeber to define the JBOSS_HOME variable.
+-Install the JBoss using the JBoss user, remeber to define the JBOSS_HOME variable.
 
 +-----------------------------------------------------------------+
 | export JBOSS_HOME=<path of the installation JBoss root folder > |
 +-----------------------------------------------------------------+
 
 
--  Be sure that the JBoss uses the JDK 1.7 o 1.8: usually the JBoss settings are defined in the JBOSS_HOME/bin/run.conf.sh file, therefore if the JBOSS_HOME/bin/run.conf.sh file does not exit, the user must create it and insert it in the content as shown in Code 3.6:
+- Be sure that the JBoss uses the JDK 1.7 o 1.8: usually the JBoss settings are defined in the JBOSS_HOME/bin/run.conf.sh file, therefore if the JBOSS_HOME/bin/run.conf.sh file does not exit, the user must create it and insert it in the content as shown in Code 3.6:
 
 +-----------------------------------------------------+
 | export JAVA_HOME=<JDK 1.8 installation root folder> |
@@ -115,7 +116,7 @@ Tomcat 7
 
 In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 
-   |image6|It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
+|image6|It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
 -Create the Tomcat user.
 
@@ -132,16 +133,13 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 | export TOMCAT_HOME=<path of the installation Tomcat root folder > |
 +-------------------------------------------------------------------+
 
--Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown in Code
-      
-Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
+-Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown in Code 3.6. Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
 
-+-----------------------------------------------------------------------+
-| export CATALINA_PID=<root folder of the Tomcat                        |
-| installation>/logs/tomcat7.                                           |
-|                                                                       |
-| pid export JAVA_HOME=<root folder of the JDK 1.8 installation>        |
-+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+| export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat7.  |
+| pid                                                                         |
+| export JAVA_HOME=<root folder of the JDK 1.8 installation>                  |
++-----------------------------------------------------------------------------+
 
    **Remark.** Modify the TOMCAT_HOME/bin/shutdown.sh file to force the
    shut down of the application in case of hanging:
