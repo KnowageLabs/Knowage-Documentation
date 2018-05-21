@@ -1,3 +1,6 @@
+My first analytical Document
+===============
+
 The *analytical model* is the core of Knowage Server and covers the
 whole range of analytical needs, providing many solutions for each
 analytical area, like reports, charts, OLAP documents, KPIs and so on.
@@ -12,13 +15,13 @@ document. There exist many different document types, each with its own
 peculiarities. Here we provide a generic overview on common features,
 will focus on available types peculiarities in each dedicated part.
 
- Main concepts
+Main concepts
 -----------------
 
 The creation and management of analytical documents in Knowage involves
 different elements:
 
-   Template. The template defines the standard layout of a document,
+   Template.The template defines the standard layout of a document,
    including specific information on its appearance and the way contents
    should be displayed. Templates can be encoded by hand or using
    Knowage Studio designers, when available. For each analytical
@@ -33,8 +36,6 @@ different elements:
    the defined template. That is to say, the dataset provides the actual
    content of the analysis and the template is in charge of giving it a
    meaningful structure.
-
-Document types
 
    Data source. In order to retrieve data via the dataset, a source of
    information must be defined. Depending on the type of document, the
@@ -103,7 +104,7 @@ new engine that is developed or integrated into Knowage.
 In the next sections we describe in detail how to create and manage
 analytical documents in Knowage.
 
- Register an analytical document
+Register an analytical document
 -----------------------------------
 
 There are two different ways to create a new document on Knowage Server.
@@ -215,8 +216,6 @@ It is advisable to regularly save the document in this process, by
 clicking the related icon at the top right corner of the window.
 
 Document lifecycle
-
-Document lifecycle
 ^^^^^^^^^^^^^^^^^^
 
    The next step is to choose the status of the document using the
@@ -249,7 +248,7 @@ Document lifecycle
    execute only documents in released state. Note that a tester may
    change the state of a document from test back to development.
 
-   In KnowageER you may also decide to temporary “lock” a document while
+   In KnowageER you may also decide to temporary Â“lockÂ” a document while
    he is working with it: it is enough to set the **Lock by user** item
    to True. This prevent other developers from modifying the same
    document you are working on.
@@ -272,8 +271,6 @@ Template Versioning
    deleted. To restore a template, choose it in the list by clicking on
    the selector, then remember to save: the new template will be
    uploaded. Using the same list you can download or delete a template.
-
-Document Visibility
 
    |image68|
 
@@ -302,8 +299,6 @@ Document Visibility
    tree. If you wish to save it at multiple locations, tick all of them
    before saving. Each user having access to the containing folder will
    see the document.
-
- Visibility rules
 
    |image70|
 
@@ -381,13 +376,11 @@ Association with analytical drivers
    that can be performed on drivers associated to a document.
 
 Associating a Spatial driver
-
-Associating a Spatial driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    As just seen, to filter on data visualization a user needs to
-   associate an ananlytical driver using the “Document analytical driver
-   details” area. As well as for the other driver you can use this
+   associate an ananlytical driver using the "Document analytical driver
+   details" area. As well as for the other driver you can use this
    interface to associate a spatial driver to the document. The
    procedure is right the same. When launching the document and opening
    the filter panel you will find the filter just set. Click on the icon
@@ -399,7 +392,7 @@ Associating a Spatial driver
 
    Figure 5.12: Map filtering selection.
 
-   Click on “Close” button to confirm your selection. An example of the
+   Click on "Close" button to confirm your selection. An example of the
    output is shown in Figure 5.13.
 
    |image77|
@@ -464,15 +457,13 @@ Correlation between parameters
    labels during the runtime in italics.
 
 Correlation through LOV and drivers
-
-Correlation through LOV and drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    In previous Section 5.4 we saw how to set correlation through the GUI
    available in the document detail panel, but there is also the
    possibility to get the same result using the link between LOV and
    analytical drivers. More in depth, the user must have previously
-   configured a driver that runs values that can be used in the “where”
+   configured a driver that runs values that can be used in the Â“whereÂ”
    clause of a SQL query. Then the user must set a query-type LOV using
    the syntax in Syntax for setting correlation through LOV configuration
    We stress that the *AD_name* is the name of
@@ -492,7 +483,7 @@ Correlation through LOV and drivers
    Figure 5.16: Correlation passing driver values to LOV query .
 
    As a result, at document execution, as soon as the user pick up a
-   value from the “free” parameter, the other one is filtered and will
+   value from the "free" parameter, the other one is filtered and will
    show only the value related to the previous selection, as shown in
    Figure 5.17.
 
@@ -504,8 +495,6 @@ Controlled visibility
    hiding or showing of a child parameter in the parameters mask. Note
    that in the first case, the child parameter is hidden by default,
    while in the second case the parameter is shown by default.
-
-Cross Navigation
 
    |image83|
 
@@ -541,12 +530,12 @@ Cross Navigation
    *internal* and *external*.
 
    *Internal cross navigation* updates one or more areas of a document
-   by clicking on a series, a text, an image or — in general — on a
+   by clicking on a series, a text, an image or in general on a
    selected element of the document.
 
    *External cross navigation* opens another document by clicking on an
    element of the main document, allowing in this way the definition of
-   a “navigation path” throughout analytical documents (usually, from
+   a *navigation path* throughout analytical documents (usually, from
    very general and aggregated information down to the more detailed and
    specific information)). Indeed, you can add cross navigation also to
    a document reached by cross navigation. This can be helpful to go
@@ -635,7 +624,7 @@ Once set, the association is highlighted as in Figure 5.23.
    Figure 5.23: Association betweeen parameters.
 
 To assign fixed values to target parameters it is necessary to edit
-first the box labeled **Fixed value parameter** and click on the “plus”
+first the box labeled **Fixed value parameter** and click on the Â“plusÂ”
 icon. Then the value can be associated as fixed value of the one or more
 target parameters. Remember to click on the **Ok** button to save the
 cross navigation just set.
