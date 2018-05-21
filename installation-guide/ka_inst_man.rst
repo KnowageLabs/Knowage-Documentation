@@ -1,5 +1,6 @@
 
 Manual Installation
+==========================
 
 Metadata database
 -------------------
