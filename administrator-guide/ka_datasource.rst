@@ -66,7 +66,7 @@ Now you are connected to your data and you can start a new Business Intelligence
 Big Data and NoSQL
 -------------------
 
-In this section we describe how you can connect Knowage to different Big Data data sources. Plese note that these connections are available for products KnowageBD and KnowagePM.
+In this section we describe how you can connect Knowage to different Big Data data sources. Plese note that these connections are available for products *KnowageBD* and *KnowagePM*.
 
 Hive
 ~~~~~~
@@ -81,95 +81,18 @@ For example suppose you want to connect to Hive using Apache driver you should i
 
    Figure 4.2: Libraries to include in the apache driver.
 
-If you forget to add one or more libraries you will have a *NoClassDefFoundError* like this:
+If you forget to add one or more libraries, you will likely get a *NoClassDefFoundError* or *ClassNofFoundException*.
 
-.. code-block:: console
-   :linenos: inline
-   java.lang.NoClassDefFoundError: org/apache/log4j/Level at
-   org.slf4j.LoggerFactory.bind(LoggerFactory.java:121) at
-   org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:111) at                                                           |
-   org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:268)  at 
-   org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:241) at
-   org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:254) at
-   org.apache.hive.service.auth.HiveAuthFactory.<clinit>(   
-   
-+-----------------------------------------------------------------------+
-| java.lang.NoClassDefFoundError: org/apache/log4j/Level at             |
-| org.slf4j.LoggerFactory.bind(LoggerFactory.java:121) at               |
-| org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java      |
-|                                                                       |
-|    :111) at                                                           |
-|    org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:268)  |
-|    at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:241) at    |
-|    org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:254) at       |
-|    org.apache.hive.service.auth.HiveAuthFactory.<clinit>(             |
-|                                                                       |
-|    HiveAuthFactory.java:58) at                                        |
-|    org.apache.hive.jdbc.HiveConnection.createBinaryTransport(         |
-|                                                                       |
-|    HiveConnection.java:393) at                                        |
-|    org.apache.hive.jdbc.HiveConnection.openTransport(HiveConnection.  |
-|    java:187) at                                                       |
-|    org.apache.hive.jdbc.HiveConnection.<init>(HiveConnection.java:163 |
-| )                                                                     |
-|    at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105) at |
-|    org.eclipse.datatools.connectivity.drivers.jdbc.JDBCConnection.    |
-|                                                                       |
-|    createConnection(JDBCConnection.java:214) at                       |
-|    org.eclipse.datatools.connectivity.DriverConnectionBase.           |
-|    internalCreateConnection(DriverConnectionBase.java:105) at         |
-|    org.eclipse.datatools.connectivity.DriverConnectionBase.open(      |
-|                                                                       |
-|    DriverConnectionBase.java:54) at                                   |
-|    org.eclipse.datatools.connectivity.drivers.jdbc.JDBCConnection.ope |
-| n(                                                                    |
-|                                                                       |
-|    JDBCConnection.java:73) at                                         |
-|    org.eclipse.datatools.connectivity.drivers.jdbc.                   |
-|                                                                       |
-|    JDBCConnectionFactory.createConnection(JDBCConnectionFactory.java: |
-| 53)                                                                   |
-|    at org.eclipse.datatools.connectivity.internal.                    |
-|                                                                       |
-|    ConnectionFactoryProvider.createConnection(ConnectionFactoryProvid |
-| er.java                                                               |
-+-----------------------------------------------------------------------+
-
-
-
-Spark SQL
-
-+------------------------------------------------------------------------+
-| :83) at org.eclipse.datatools.connectivity.internal.ConnectionProfile. |
-|                                                                        |
-| createConnection(ConnectionProfile.java:359)                           |
-+------------------------------------------------------------------------+
-
-..
-
-   18
-
-   Code 4.1: NoClassDefFoundError.
-
-   The parameters for the Hive connection are:
+The parameters for the Hive connection are:
 
 -  **Dialect:** Hive QL;
 
--  **Driver Class:** org.apache.hive.jdbc.HiveDriver (if you are not
-   using some specific driver of some distribution. In this case search
-   in the documentation of the distribution);
+-  **Driver Class:** *org.apache.hive.jdbc.HiveDriver* (if you are not using some specific driver of some distribution. In this case search in the documentation of the distribution);
+-  **Connection URL:** *jdbc:\hive2:\//<host1>:<port1>,<host2>:<port2>/dbName;sess\\_var_list?hive_conf_list#hive_var_list**.
 
--  **Connection URL:**
-   jdbc:hive2://<host1>:<port1>,<host2>:<port2>/dbName;sess\_
-   var_list?hive_conf_list#hive_var_list.
+Here <host1>:<port1>,<host2>:<port2> is a server instance or a comma separated list of server instances to connect to (if dynamic service discovery is enabled). If empty, the embedded server will be used.
 
-..
-
-   Here <host1>:<port1>,<host2>:<port2> is a server instance or a comma
-   separated list of server instances to connect to (if dynamic service
-   discovery is enabled). If empty, the embedded server will be used.
-
-   A simple example is: jdbc:hive2://192.168.0.125:10000.
+A simple example of connetction url is: *jdbc:\hive2://192.168.0.125:10000*.
 
 Spark SQL
 ---------
