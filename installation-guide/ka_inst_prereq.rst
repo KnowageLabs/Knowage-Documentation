@@ -1,18 +1,16 @@
-   Before going into details on Knowage installation, it is necessary to
-   check if certain prerequisites are satisfied. We start to distinguish
-   between the certified environments and the compatible ones. The first
-   are those where check tests take place. The latter are those
-   environments technically compatibles but where integration tests are
-   not executed.
+ 
+Prerequisite
+====================
+ 
+Before going into details on Knowage installation, it is necessary to check if certain prerequisites are satisfied. We start to distinguish between the certified environments and the compatible ones. The first are those where check tests take place. The latter are those environments technically compatibles but where integration tests are not executed.
 
- 3.1 Operative systems
-======================
+Operative systems
+------------------
 
-   The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones
-   which suit with Knowage platform.
+The Operative Systems (OS) showed in Table 3.1 and 3.2 are those ones which suit with Knowage platform.
 
 +---------------------------+-------------+
-|    Certified Environments |             |
+|    Certified Environments               |
 +===========================+=============+
 |    **Operative System**   | **Version** |
 +---------------------------+-------------+
@@ -56,7 +54,7 @@
    successfully installed and that the environment variable JAVA_HOME is
    properly configured.
 
-   |image1| Define the JAVA_HOME variable inside the usersí file
+   |image1| Define the JAVA_HOME variable inside the users‚Äô file
    .bash_profile used in the installation process (root and tomcat, as
    shown in the following Code 3.1):
 
@@ -70,7 +68,7 @@
    environment.
 
    |image2| Define the JAVA_HOME variable and PATH in the section
-   "Environment variablesì which can be reached from the îSystemì. You
+   "Environment variables‚Äú which can be reached from the ‚ÄùSystem‚Äú. You
    can refer to Figure 3.1.
 
    JDK version
@@ -243,14 +241,14 @@
 
    Therefore, a schema must be available. It can be reached through the
    JDBC protocol by the Knowage installation server; such a schema will
-   be called "metadata DBî in the following. Observe that Knowage
+   be called "metadata DB‚Äù in the following. Observe that Knowage
    includes all the DDL for table creation.
 
 3.8 Database schema for data.
 
    A schema for data must be also available. It can be queried through
    Knowage and can be reached through the JDBC protocol by the Knowage
-   installation server; such a schema will be called "data DBî in the
+   installation server; such a schema will be called "data DB‚Äù in the
    following .
 
    To correctly use the Knowage data mining engine it is necessary to
