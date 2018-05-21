@@ -20,37 +20,44 @@ The second type of connection is the one recommended in real projects.
 
 To add a new connection, first add the relative JDBC driver to the folder KnowageServer-<version>/lib and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
-   .. image:: media/image25.png
+   .. figure:: media/image25.png
+      :alt: Left: Add a new data source. Right: Data source details.
 
-   Figure 4.1: Left: Add a new data source, Right: Data source details.
+      Add a new data source, Right: Data source details.
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
-The detail page of each data source (on the right side as shown in Figure 4.1) includes the following properties:
+The detail page of each data source (on the right side as shown in the figure above) includes the following properties:
 
-- **Label** Mandatory identifier of the data source.
-- **Description** Description of the data source.
-- **Dialect** The dialect used to access the database. Supported dialects are: 
-   + Oracle
-   + SQL Server
-   + HyperSQL
-   + MySQL
-   + PostgreSQL
-   + Ingres
-   + DB2
-   + AS400
-- **Read Only** Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
-- **Write** Default If a data source is set as *Write Default* then it is used by Knowage for writing temporary tables also coming from other *Read Only* data sources. Note that each Knowage installation can have only one *Write Default* data source.
-- **Type** The available options are 
-   + **JDBC** If you want to define a direct *JDBC* connection, then you have to also set the following fields:
-      - **URL** Database URL. An example for MySQL databases is *jdbc:mysql://localhost:3306/foodmart_key*
-      - **User** Database username
-      - **Password** Database password.
-      - **Driver** Driver class name. An example for MySQL databases is *com.mysql. jdbc.Driver*.
-   + **JNDI** If instead you want to define a JNDI connection, fill in the following fields:
-      - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
-      - **Schema attribute** The name of the profile attribute that determines the schema name.
-      - **JNDI NAME** It depends on the application server. For instance, for Tomcat 7 it has the format java:comp/env/jdbc/<resource_name>. If the data source is multischema, then the string is java:comp/env/jdbc/<prefix>.
+Label
+   Mandatory identifier of the data source.
+Description
+   Description of the data source.
+Dialect
+   The dialect used to access the database. Supported dialects are: 
+      + Oracle
+      + SQL Server
+      + HyperSQL
+      + MySQL
+      + PostgreSQL
+      + Ingres
+      + DB2
+      + AS400
+Read Only
+   Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
+Write
+   Default If a data source is set as *Write Default* then it is used by Knowage for writing temporary tables also coming from other *Read Only* data sources. Note that each Knowage installation can have only one *Write Default* data source.
+Type
+   The available options are 
+      + **JDBC** If you want to define a direct *JDBC* connection, then you have to also set the following fields:
+         - **URL** Database URL. An example for MySQL databases is *jdbc:mysql://localhost:3306/foodmart_key*
+         - **User** Database username
+         - **Password** Database password.
+         - **Driver** Driver class name. An example for MySQL databases is *com.mysql. jdbc.Driver*.
+      + **JNDI** If instead you want to define a JNDI connection, fill in the following fields:
+         - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
+         - **Schema attribute** The name of the profile attribute that determines the schema name.
+         - **JNDI NAME** It depends on the application server. For instance, for Tomcat 7 it has the format java:comp/env/jdbc/<resource_name>. If the data source is multischema, then the string is java:comp/env/jdbc/<prefix>.
 
 Once you have filled the form, you can test the new data source by clicking on the *Test* button at the top right corner of the page and then save it.
 
@@ -77,7 +84,7 @@ For example suppose you want to connect to Hive using Apache driver you should i
 If you forget to add one or more libraries you will have a *NoClassDefFoundError* like this:
 
 .. code-block:: console
-   :linenos:
+   :linenos: inline
    java.lang.NoClassDefFoundError: org/apache/log4j/Level at
    org.slf4j.LoggerFactory.bind(LoggerFactory.java:121) at
    org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:111) at                                                           |
