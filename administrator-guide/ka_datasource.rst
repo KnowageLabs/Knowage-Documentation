@@ -2,8 +2,9 @@ Configure data sources
 =========================
 
 To let all the BI tools work properly you need to configure DB connection. There are two different options available for the configuration:
+
 - **JNDI** (recommended)
-- **JDBC**. 
+- **JDBC**.
 Let’s have a look on these two types.
 
 Connect to your data
@@ -39,12 +40,7 @@ The detail page of each data source (on the right side as shown in Figure 4.1) i
    + DB2
    + AS400
 - **Read Only** Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
-
-- **Write** Default If a data source is set as *Write Default* then it is
-   used by Knowage for writing temporary tables also coming from other
-   *Read Only* data sources. Note that each Knowage installation can
-   have only one *Write Default* data source.
-
+- **Write** Default If a data source is set as *Write Default* then it is used by Knowage for writing temporary tables also coming from other *Read Only* data sources. Note that each Knowage installation can have only one *Write Default* data source.
 - **Type** The available options are 
    + **JDBC** If you want to define a direct *JDBC* connection, then you have to also set the following fields:
       - **URL** Database URL. An example for MySQL databases is *jdbc:mysql://localhost:3306/foodmart_key*
@@ -53,63 +49,43 @@ The detail page of each data source (on the right side as shown in Figure 4.1) i
       - **Driver** Driver class name. An example for MySQL databases is *com.mysql. jdbc.Driver*.
    + **JNDI** If instead you want to define a JNDI connection, fill in the following fields:
       - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
+      - **Schema attribute** The name of the profile attribute that determines the schema name.
+      - **JNDI NAME** It depends on the application server. For instance, for Tomcat 7 it has the format java:comp/env/jdbc/<resource_name>. If the data source is multischema, then the string is java:comp/env/jdbc/<prefix>.
 
-Big Data and NoSQL
--------------------
-   Schema attribute The name of the profile attribute that determines
-   the schema name.
+Once you have filled the form, you can test the new data source by clicking on the *Test* button at the top right corner of the page and then save it.
 
-   JNDI NAME It depends on the application server. For instance, for
-   Tomcat 7 it has the format java:comp/env/jdbc/<resource_name>. If the
-   data source is multischema, then the string is
-   java:comp/env/jdbc/<prefix>.
-
-   Once you have filled the form, you can test the new data source by
-   clicking on the **Test** button at the top right corner of the page
-   and then save it.
-
-   Now you are connected to your data and you can start a new Business
-   Intelligence project with Knowage!
+Now you are connected to your data and you can start a new Business Intelligence project with Knowage!
 
 Big Data and NoSQL
 -------------------
 
-In this section we describe how you can connect Knowage to different
-   Big Data data sources. Plese note that these connections are
-   available for products KnowageBD and KnowagePM.
+In this section we describe how you can connect Knowage to different Big Data data sources. Plese note that these connections are available for products KnowageBD and KnowagePM.
 
 Hive
-----
+~~~~~~
 
-   Apache Hive is a data warehouse infrastructure built on top of Hadoop
-   for providing data summarization, query, and analysis. Apache Hive
-   supports analysis of large datasets stored in Hadoop’s HDFS and
-   compatible file systems such as Amazon S3 filesystem. It provides an
-   SQL-like language called HiveQL with schema on read and transparently
-   converts queries to map/reduce, Apache Tez and Spark. All three
-   execution engines can run in Hadoop YARN.
+Apache Hive is a data warehouse infrastructure built on top of Hadoop for providing data summarization, query, and analysis. Apache Hive supports analysis of large datasets stored in Hadoop’s HDFS and compatible file systems such as Amazon S3 filesystem. It provides an   SQL-like language called HiveQL with schema on read and transparently converts queries to map/reduce, Apache Tez and Spark. All three execution engines can run in Hadoop YARN.
 
-   Every distribution of Hadoop provides its JDBC driver for Hive. We
-   suggest you to use or the Apache one or the one specific of your
-   distribution. In general the JDBC driver for Hive is composed by
-   different .jars, and so you should deploy the JDBC driver with all
-   dependencies in your application server. If you are creating a model
-   you should create a new **Data Source Connection** and import the
-   JDBC driver and all the dependencies.
+Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you to use or the Apache one or the one specific of your distribution. In general the JDBC driver for Hive is composed by different .jars, and so you should deploy the JDBC driver with all dependencies in your application server. If you are creating a model you should create a new *Data Source Connection* and import the JDBC driver and all the dependencies.
 
-   For example suppose you want to connect to Hive using Apache driver
-   you should include these libraries (according to your Hive version)
-   shown in Figure 4.2.
-
-Hive
+For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure 4.2.
 
    |image35|
 
    Figure 4.2: Libraries to include in the apache driver.
 
-   If you forget to add one or more libraries youll have a
-   NoClassDefFoundError like this:
+If you forget to add one or more libraries you will have a *NoClassDefFoundError* like this:
 
+.. code-block:: console
+   :linenos:
+   java.lang.NoClassDefFoundError: org/apache/log4j/Level at
+   org.slf4j.LoggerFactory.bind(LoggerFactory.java:121) at
+   org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:111) at                                                           |
+   org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:268)  at 
+   org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:241) at
+   org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:254) at
+   org.apache.hive.service.auth.HiveAuthFactory.<clinit>(   
+   
 +-----------------------------------------------------------------------+
 | java.lang.NoClassDefFoundError: org/apache/log4j/Level at             |
 | org.slf4j.LoggerFactory.bind(LoggerFactory.java:121) at               |
