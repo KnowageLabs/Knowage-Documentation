@@ -61,32 +61,20 @@ Metadata database connection
 -----------------------
 In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the metadata database inside the “datasources” tag: specify the username, the password and driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 is an example:
 
-+-----------------------------------------------------------------+
-| <datasource jndi-name="java:/jdbc/knowage" pool-name="knowage"> |
-|                                                                 |
-| <connection-url> <JDBC URL> </connection-url>                   |
-|                                                                 |
-| <driver> <JDBC driver> </driver>                                |
-|                                                                 |
-| <security>                                                      |
-|                                                                 |
-| <user-name> user name> </user-name>                             |
-|                                                                 |
-| <password> <password> </password>                               |
-|                                                                 |
-| </security>                                                     |
-|                                                                 |
-| <validation>                                                    |
-|                                                                 |
-| <validate-on-match>true</validate-on-match>                     |
-|                                                                 |
-| <background-validation>false</background-validation>            |
-|    <valid-connection-checker class-name="<connection checker          |
-|    class>"/>                                                          |
-|                                                                       |
++-----------------------------------------------------------------------+
+| <datasource jndi-name="java:/jdbc/knowage" pool-name="knowage">       |
+| <connection-url> <JDBC URL> </connection-url>                         |
+| <driver> <JDBC driver> </driver>                                      |
+| <security>                                                            |
+| <user-name> user name> </user-name>                                   |
+| <password> <password> </password>                                     |
+| </security>                                                           |
+| <validation>                                                          |
+| <validate-on-match>true</validate-on-match>                           |
+| <background-validation>false</background-validation>                  |
+|    <valid-connection-checker class-name="<connection checkerclass>"/> |
 |    <exception-sorter class-name="<exception sorter class>"/>          |
 |    </validation>                                                      |
-|                                                                       |
 | </datasource>                                                         |
 +-----------------------------------------------------------------------+
    Code 5.2: Setting the metadata datasource.
@@ -180,19 +168,15 @@ Code 5.6: JBoss environment variables configuration.
 
 On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and add the following constants in the GlobalNamingResources tag, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in Code 5.7:
 
-+-----------------------------------------------------------------------+
-| <Environment name="resource_path" type="java.lang.String"             |
-| value="${catalina.home}/resources"/>                                  |
-|                                                                       |
-| <Environment name=" sso_class" type="java.lang.String"                |
-| value="it.eng.spagobi.services.common.FakeSsoService"/>               |
-
-| <Environment name="service_url" type="java.lang.String"               |
-| value="http://localhost :8080/knowage"/>                              |
-|                                                                       |
-| <Environment name="host_url" type="java.lang.String" value="<server   |
-| URL which is hosting knowage>"/>                                      |
-+-----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+| <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>       |                                            |                                                                                                      |
+| <Environment name=" sso_class" type="java.lang.String"                                               |
+| value="it.eng.spagobi.services.common.FakeSsoService"/>                                              |
+|                                                                                                      |
+| <Environment name="service_url" type="java.lang.String"                                              |
+| value="http://localhost :8080/knowage"/>                                                             |
+|                                                                                                      |
+| <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/> |                                  +------------------------------------------------------------------------------------------------------+
 
 Code 5.7: Tomcat environment variables configuration.
 
