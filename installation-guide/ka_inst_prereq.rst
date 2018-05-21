@@ -200,15 +200,3 @@ Be sure to use the following versions:
 -version 0.98 for rJava (library to connect Knowage to the R server)
 
 
-Released file description
-=========================
-
-It is possible to download the software in the web site `www.knowage-suite.com/portal <http://www.knowage-suite.com/portal>`__ where we can find all resources for the installation, the single packages and the DDL.
-
-Here the essential elements for the installation:
-
--Installer,
-
--DDL (see Table 4.1),
-
--the single software packages.
