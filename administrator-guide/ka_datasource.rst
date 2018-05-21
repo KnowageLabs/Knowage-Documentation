@@ -1,92 +1,61 @@
-
-   To let all the BI tools work properly you need to configure DB
-   connection. There are two different options available for the
-   configuration: **JNDI** (raccomanded) and **JDBC**. Letís have a look
-   on these two typologies.
-
- 4.1 Connect to your data
+Configure data sources
 =========================
 
-   In order to connect to your data, you have to define a new data
-   source connection. Defining a data source allows Knowage to access
-   data transparently without the need to redefine the connection to the
-   database in case some of its configuration properties change over
-   time. Knowage manages two types of data source connections:
-
--  direct JDBC connections, which are directly managed by Knowage;
-
--  connections retrived as JNDI resources, which are managed by the
-   application server on which Knowage is working. This allows the
-   application server to optimize data access, e.g., by defining
-   connection pools.
-
-..
-
-   The second type of connection is the one recommended in real
-   projects.
-
-To add a new connection, first add the relative JDBC driver to the
-folder
-
-   KnowageServer-<version>/lib and restart Knowage. Then, login as
-   administrator (**biadmin**/**biadmin** in the standard distribution)
-   and select the **Data source** item from the **Data provider** panel
-   in the administrator menu.
-
-   By clicking the **Add** button on the top right corner of the left
-   panel, an empty form will be displayed on the right.
-
-   The detail page of each data source (on the right side as shown in
-   Figure 4.1) includes the following properties:
+To let all the BI tools work properly you need to configure DB connection. There are two different options available for the configuration:
+- **JNDI** (recommended)
+- **JDBC**. 
+Let‚Äôs have a look on these two types.
 
 Connect to your data
+--------------------
 
-   |image34|
+In order to connect to your data, you have to define a new data source connection. Defining a data source allows Knowage to access data transparently without the need to redefine the connection to the database in case some of its configuration properties change over time. 
+
+Knowage manages two types of data source connections:
+- direct JDBC connections, which are directly managed by Knowage;
+- connections retrived as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access, e.g., by defining connection pools.
+
+The second type of connection is the one recommended in real projects.
+
+To add a new connection, first add the relative JDBC driver to the folder KnowageServer-<version>/lib and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
+
+By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
+
+The detail page of each data source (on the right side as shown in Figure 4.1) includes the following properties:
+
+   .. image:: media/image25.png
 
    Figure 4.1: Left: Add a new data source, Right: Data source details.
 
-   Label Mandatory identifier of the data source.
+- **Label** Mandatory identifier of the data source.
+- **Description** Description of the data source.
+- **Dialect** The dialect used to access the database. Supported dialects are: 
+   + Oracle
+   + SQL Server
+   + HyperSQL
+   + MySQL
+   + PostgreSQL
+   + Ingres
+   + DB2
+   + AS400
+- **Read Only** Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
 
-   Description Description of the data source.
-
-   Dialect The dialect used to access the database. Supported dialects
-   are: Oracle, SQL Server, HSQL, MySQL, PostgreSQL, Ingres, DB2, AS400.
-
-Read Only Available options are: **Read Only** and **Read-and-write**.
-In case the data source is defined as read-and-write, it can be used by
-Knowage to write temporary tables.
-
-   Write Default If a data source is set as **Write Default** then it is
+- **Write** Default If a data source is set as *Write Default* then it is
    used by Knowage for writing temporary tables also coming from other
-   **Read Only** data sources. Note that each Knowage installation can
-   have only one **Write Default** data source.
+   *Read Only* data sources. Note that each Knowage installation can
+   have only one *Write Default* data source.
 
-   Type The available options are **JDBC** or **JNDI**.
+- **Type** The available options are 
+   + **JDBC** If you want to define a direct *JDBC* connection, then you have to also set the following fields:
+      - **URL** Database URL. An example for MySQL databases is *jdbc:mysql://localhost:3306/foodmart_key*
+      - **User** Database username
+      - **Password** Database password.
+      - **Driver** Driver class name. An example for MySQL databases is *com.mysql. jdbc.Driver*.
+   + **JNDI** If instead you want to define a JNDI connection, fill in the following fields:
+      - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user‚Äôs profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
 
-   If you want to define a direct JDBC connection, then you have to also
-   set the following fields:
-
-URL Database URL. An example for MySQL databases is jdbc:mysql://
-
-   localhost:3306/foodmart_key. User Database username.
-
-   Password Database password.
-
-   Driver Driver class name. An example for MySQL databases is
-   com.mysql. jdbc.Driver.
-
-   If instead you want to define a JNDI connection, fill in the
-   following fields:
-
-   Multischema Available options are **Yes** or **No**. If **Yes**, the
-   JNDI resource full name is calculated at runtime by appending a
-   userís profile attribute (specified in the **Multischema attribute**
-   field) to the JNDI base name defined in the server.xml, we suppose it
-   has been told at the end of installation or during server
-   configuration.
-
-4.2. Big Data and NoSQL
-
+Big Data and NoSQL
+-------------------
    Schema attribute The name of the profile attribute that determines
    the schema name.
 
@@ -102,10 +71,10 @@ URL Database URL. An example for MySQL databases is jdbc:mysql://
    Now you are connected to your data and you can start a new Business
    Intelligence project with Knowage!
 
- 4.2 Big Data and NoSQL
-=======================
+Big Data and NoSQL
+-------------------
 
-   In this section we describe how you can connect Knowage to different
+In this section we describe how you can connect Knowage to different
    Big Data data sources. Plese note that these connections are
    available for products KnowageBD and KnowagePM.
 
@@ -114,7 +83,7 @@ Hive
 
    Apache Hive is a data warehouse infrastructure built on top of Hadoop
    for providing data summarization, query, and analysis. Apache Hive
-   supports analysis of large datasets stored in Hadoopís HDFS and
+   supports analysis of large datasets stored in Hadoop‚Äôs HDFS and
    compatible file systems such as Amazon S3 filesystem. It provides an
    SQL-like language called HiveQL with schema on read and transparently
    converts queries to map/reduce, Apache Tez and Spark. All three
@@ -249,12 +218,12 @@ HBase
 
    ApacheHBase\ :sup:`TM` is theHadoop columnar database, a distributed,
    scalable, big data store. Use Apache HBase\ :sup:`TM` when you need
-   random, realtime read/write access to your Big Data. This projectís
+   random, realtime read/write access to your Big Data. This project‚Äôs
    goal is the hosting of very large tables (billions of rows, millions
    of columns) atop clusters of commodity hardware. Apache HBase is an
    open-source, distributed, versioned, non-relational database modeled
-   after GoogleísBigtable (see article ìA Distributed Storage System for
-   Structured Dataîby Chang et al.). Just as Bigtable leverages the
+   after Google‚ÄôsBigtable (see article ‚ÄúA Distributed Storage System for
+   Structured Data‚Äùby Chang et al.). Just as Bigtable leverages the
    distributed data Impala
 
    storage provided by the Google File System, Apache HBase provides
