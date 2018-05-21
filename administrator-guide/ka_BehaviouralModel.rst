@@ -80,7 +80,7 @@ When a user logs in into Knowage, his profile is automatically loaded. The full 
 
 Authentication can be handled internally by Knowage or delegated to an external Single Sign On (SSO) system.
 
-   .. admonition:: Authentication Management
+   .. note:: Authentication Management
       The choice of handling authentication internally or delegating it to an external SSO system typically depends on the presence of an authentication system already in place. If this is the case, Knowage can seamlessly integrate with the existing authentication infrastructure.
 
 Once the user has logged in, his role is loaded. Roles are managed
