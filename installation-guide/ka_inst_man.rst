@@ -168,15 +168,14 @@ Code 5.6: JBoss environment variables configuration.
 
 On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and add the following constants in the GlobalNamingResources tag, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in Code 5.7:
 
-+------------------------------------------------------------------------------------------------------+
-| <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>       |                                            |                                                                                                      |
-| <Environment name=" sso_class" type="java.lang.String"                                               |
-| value="it.eng.spagobi.services.common.FakeSsoService"/>                                              |
-|                                                                                                      |
-| <Environment name="service_url" type="java.lang.String"                                              |
-| value="http://localhost :8080/knowage"/>                                                             |
-|                                                                                                      |
-| <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/> |                                  +------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+| <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>                 |
+|                                                                                                                |
+| <Environment name=" sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/> |
+|                                                                                                                |
+| <Environment name="service_url" type="java.lang.String" value="http://localhost :8080/knowage"/>               |
+|                                                                                                                |
+| <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>           |                                  +----------------------------------------------------------------------------------------------------------------+
 
 Code 5.7: Tomcat environment variables configuration.
 
