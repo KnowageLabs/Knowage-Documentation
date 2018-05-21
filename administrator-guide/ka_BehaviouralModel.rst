@@ -1,70 +1,39 @@
-An important topic to explore before starting a new project is the
-creation and managing the so-called *behavioural model*.
+Behavioural Model
+====================
 
-The *behavioural model* regulates the visibility on documents and data
-according to the roles and profiles of the end users. It offers many
-advantages in a BI project, including: reducing the required number of
-analytical documents to be developed and maintained; coding visibility
-rules once only and apply them to several documents, each one with its
-own analytical logics; ensuring a uniform growth of the project over
-time; guaranteeing the respect of the visibility rules over time, with
-no limitation on the number of engines and analytical documents that can
-be added over time.
+An important topic to explore before starting a new project is the creation and managing the so-called *behavioural model*.
+
+It regulates the visibility on documents and data according to the roles and profiles of the end users. It offers many advantages in a BI project, including: reducing the required number of analytical documents to be developed and maintained; coding visibility rules once only and apply them to several documents, each one with its own analytical logics; ensuring a uniform growth of the project over time; guaranteeing the respect of the visibility rules over time, with no limitation on the number of engines and analytical documents that can be added over time.
 
 The bevioural model is based on four main concepts:
 
--  user profile, defining the userís roles and attributes;
-
--  repository rights, defining the usersí rights in terms of document
-      accessibility;
-
--  analytical drivers, defining which data of a document can be shown to
-      the user;
-
--  presentation environment settings, defining how the user can reach
-      and run his own documents.
+-  *user profile*, defining the user‚Äôs roles and attributes;
+-  *repository rights*, defining the users‚Äô rights in terms of document accessibility;
+-  *analytical drivers*, defining which data of a document can be shown to the user;
+-  *presentation environment* settings, defining how the user can reach and run his own documents.
 
 In other words, the bevioural model mainly answers the following
 questions:
 
--  WHO uses the business intelligence solution (user profile);
+-  *WHO* uses the business intelligence solution (user profile);
+-  *WHAT* is visible to users, in terms of documents and data (repository rights and analytical drivers);
+-  *HOW* users work with their documents (analytical drivers and presentation environment settings).
 
--  WHAT is visible to users, in terms of documents and data (repository
-      rights and analytical drivers);
-
--  HOW users work with their documents (analytical drivers and
-      presentation environment settings).
-
-5.1. Roles, users and attributes
-
-5.1 Roles, users and attributes
-===============================
+Roles, users and attributes
+-------------------------------
 
 Knowage users are defined by:
 
 -  identities,
-
 -  roles,
-
 -  profiles.
 
-The *identity* of a user consists of all data used to identify that
-user, i.e., a username and a password, as well as a human readable full
-name.
+The *identity* of a user consists of all data used to identify that user, i.e., a username and a password, as well as a human readable full name.
 
-The *profile* of a user consists of a set of properties called
-attributes, describing general information about the user, e.g., age and
-gender, but also domain-specific properties, such as the organizational
-unit to which he belongs. Some attributes, such as name and email, are
-defined by default in Knowage. Others can be added by the model
-administrator, as explained in the following sections.
+The *profile* of a user consists of a set of properties called attributes, describing general information about the user, e.g., age and
+gender, but also domain-specific properties, such as the organizational unit to which he belongs. Some attributes, such as name and email, are defined by default in Knowage. Others can be added by the model administrator, as explained in the following sections.
 
-The *role* of a user represents a categorization of a group of users.
-These roles may correspond to specific positions in the company, e.g.,
-ìgeneral managerî or a ìsales directorî, or to a position with respect
-to the BI project, e.g., ìdata administratorî and ìBI developerî.
-Different users may have the same role, as well as the same user may
-have multiple roles.
+The *role* of a user represents a categorization of a group of users. These roles may correspond to specific positions in the company, e.g., ‚Äúgeneral manager‚Äù or a ‚Äúsales director‚Äù, or to a position with respect to the BI project, e.g., ‚Äúdata administrator‚Äù and ‚ÄúBI developer‚Äù. Different users may have the same role, as well as the same user may have multiple roles.
 
 +-----------------------+-----------------------+-----------------------+
 |    Role Type          | Description           | Standard User         |
@@ -101,34 +70,18 @@ have multiple roles.
 |                       | reporting analysis.   |                       |
 +-----------------------+-----------------------+-----------------------+
 
-..
-
    Table 5.1: Knowage Role Types.
 
-Knowage allows you to create several roles, according to your project
-needs. However, all roles must belong to a specific *role type*. A role
-type is a higher-level categorization used by Knowage, in order to map
-roles for the different features of the suite.
+Knowage allows you to create several roles, according to your project needs. However, all roles must belong to a specific *role type*. A role type is a higher-level categorization used by Knowage, in order to map roles for the different features of the suite.
 
-Pre-defined roles are summarized in the Table 5.1. The first four roles
-are technical roles, while the last one, the user, is the actual end
-user. Each role type has a default user associated to it. Other users
-can be created and associated to a role type.
+Pre-defined roles are summarized in the Table 5.1. The first four roles are technical roles, while the last one, the user, is the actual end user. Each role type has a default user associated to it. Other users can be created and associated to a role type.
 
-When a user logs in into Knowage, his profile is automatically loaded.
-The full name is visible by clicking on the info button at the bottom
-left corner of the page.
+When a user logs in into Knowage, his profile is automatically loaded. The full name is visible by clicking on the info button at the bottom left corner of the page.
 
-Authentication can be handled internally by Knowage or delegated to an
-external Single SignOn (SSO) system.
+Authentication can be handled internally by Knowage or delegated to an external Single Sign On (SSO) system.
 
-   Authentication Management
-
-   |image36|\ The choice of handling authentication internally or
-   delegating it to an external SSO system typically depends on the
-   presence of an authentication system already in place. If this is the
-   case, Knowage can seamlessly integrate with the existing
-   authentication infrastructure.
+   .. admonition:: Authentication Management
+      The choice of handling authentication internally or delegating it to an external SSO system typically depends on the presence of an authentication system already in place. If this is the case, Knowage can seamlessly integrate with the existing authentication infrastructure.
 
 Once the user has logged in, his role is loaded. Roles are managed
 internally. In case the user is associated with multiple roles, he will
@@ -192,7 +145,7 @@ tool is two-sided: on the left you can see the list of already defined
 roles. At the beginning of a project, only default roles are visible. To
 add a new role, click the **Add** button and move to the right panel. To
 delete a role, simply click the **Delete** button at the end of the
-roleís row.
+role‚Äôs row.
 
    Role Management
 
