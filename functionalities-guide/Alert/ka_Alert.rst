@@ -12,8 +12,8 @@ will see in details how to configure the alarms using the Alert feature.
 
    Figure 9.1: Alert functionality from contextual menu.
 
- Alert implementation
-------------------------
+Alert implementation
+------------
 
 The Alert definition window (refer to Figure 9.2) diplays the list of
 existing alerts and a search box at the top of the page to facilitate to
@@ -83,10 +83,6 @@ server. An example is given in Figure 9.6.
 Save both the action and the alert configuration settings to store your
 alert. Remember that it is possible to schedule more than one monitoring
 over the same alert definition.
-
-   Knowage Engineering Group
-
-Alert implementation
 
 |image179|
 
