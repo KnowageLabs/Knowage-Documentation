@@ -21,7 +21,7 @@ Installer usage
 ------------------
 Knowage installer is an application which steers the user to the installation and the first configuration of the product. It works in both Linux and Windows operating systems.
 
-|image8| To launch the installer, it is necessary to enable the flag execution on the installation file, typing the command in the bash:
+ **[LINUX]** To launch the installer, it is necessary to enable the flag execution on the installation file, typing the command in the bash:
 
 +----------------------------------+
 | chmod +x <Knowage_unix_1_0_0.sh> |
@@ -40,7 +40,7 @@ while in the second case he must type the command:
 +----------------------------+
 
 
-|image9| On Windows systems the installer requires some administrator permissions.
+ **[WIN]** On Windows systems the installer requires some administrator permissions.
 
 Let’s describe the main steps of the execution:
 
@@ -54,25 +54,24 @@ Let’s describe the main steps of the execution:
 
 The user can insert a new product key until there are components to activate.
 
-|image10|
-
+      .. image:: media/image8.png 
 Figure 4.1: Installer GUI.
 
-|image11|
+      .. image:: media/image9.png 
 
 Figure 4.2: Licence acceptance.
 
-|image12|
+.. image:: media/image10.png 
 
 Figure 4.3: Internet connection.
 
-|image13|
+.. image:: media/image11.png 
 
 Figure 4.4: Insert the product key.
 
 -**Step 5.**\ (Figure 4.5) If the user has chosen the online activation, the products corresponding to the purchased product keys are selected automatically and are not changeable by the user. If the user has chosen the offline procedure he/she must manually select at least one component to be installed.
       
-|image14|
+.. image:: media/image12.png 
 
 Figure 4.5: Select components.
 
@@ -87,15 +86,15 @@ To configure a data DB the user must check the relative feature of the wizard, a
 
 -**Step 8.**\ (Figure 4.9) The setting for clustering is deselected by default, that is Knowage executes on a single node if not otherwise specified.
 
-|image15|
+.. image:: media/image13.png 
 
 Figure 4.6: Application server configuration.
 
-|image16|
+.. image:: media/image14.png 
 
 Figure 4.7: Configuration of the metadata database.
 
-|image17|
+.. image:: media/image15.png 
 
 Figure 4.8: Configuration of the metadata database.
 
@@ -105,19 +104,19 @@ To enable the clustering, select the number of nodes and set up the related IP a
 
 -**Step 9.**\ (Figure 4.12) The installation succeded. The user can now choose if to visit the Knowage website and click "Finish" to exit setup.
 
-|image18|
+.. image:: media/image16.png 
 
 Figure 4.9: Clustering.
 
-|image19|
+.. image:: media/image17.png 
 
 Figure 4.10: Additional tasks.
 
-|image20|
+.. image:: media/image18.png 
 
 Figure 4.11: Offline manual activation.
 
-|image21|
+.. image:: media/image19.png 
 
 Figure 4.12: End of the installation.
 
@@ -127,16 +126,14 @@ Uninstaller
 --------------
 
 At the end of the installation, the user can find the **uninstaller** file inside the installation folder. This can be executed to unistall Knowage.
-
-|image22| The uninstaller is executable from the Knowage installation folder:
+**[LINUX]** The uninstaller is executable from the Knowage installation folder:
 
 -  using the GUI if a desktop environment is available;
 
 -  using the bash if it is executed typing the parameter “-c”.
+**[WIN]** On Windows Systems the uninstaller requires administrator permissions. It can be executed from Windows menu or from the Windows control panel.
 
-|image23| On Windows Systems the uninstaller requires administrator permissions. It can be executed from Windows menu or from the Windows control panel.
-
-|image24|
+.. image:: media/image20.png 
 
 Figure 4.13: Knowage uninstaller.
 
@@ -146,16 +143,16 @@ The uninstaller removes also the previous installed files, restores the database
 
 Uninstaller
 
-|image25|
+.. image:: media/image21.png 
 
 Figure 4.14: Knowage uninstaller.
 
-|image26|
+.. image:: media/image22.png 
 
 Figure 4.15: Knowage uninstaller.
 
 Uninstaller
 
-|image27|
+.. image:: media/image23.png 
 
 Figure 4.16: Knowage uninstaller.
