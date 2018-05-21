@@ -1,4 +1,4 @@
-My first analytical document
+Analytical Document
 ===============
 
 The *analytical model* is the core of Knowage Server and covers the
