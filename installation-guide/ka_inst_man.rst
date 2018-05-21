@@ -22,19 +22,17 @@ Dependencies
 -------------------
 If you are using JBoss as application server, you must add some modules inside the folder JBOSS_HOME/modules/system/layers/base:
 
--the JDBC module of the metadata database with its dependencies (if
-   any);
+-the JDBC module of the metadata database with its dependencies (if any);
 
 -the JDBC module of the data database with its dependencies (if any);
 
--the module which includes the commonj library with its dependencies
-   (if any):
+-the module which includes the commonj library with its dependencies (if any):
 
-   – geronimo-commonj_1.1_spec-1.0.jar,
+   –geronimo-commonj_1.1_spec-1.0.jar,
 
-   -  concurrent.jar,
+   -concurrent.jar,
 
-   -  foo-commonj.jar;
+   -foo-commonj.jar;
 
 -the Resteasy Jackson2 Provider module;
 
@@ -83,12 +81,6 @@ In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.
 | <validate-on-match>true</validate-on-match>                     |
 |                                                                 |
 | <background-validation>false</background-validation>            |
-+-----------------------------------------------------------------+
-
-Data database connection
--------------
-
-+-----------------------------------------------------------------------+
 |    <valid-connection-checker class-name="<connection checker          |
 |    class>"/>                                                          |
 |                                                                       |
@@ -97,8 +89,6 @@ Data database connection
 |                                                                       |
 | </datasource>                                                         |
 +-----------------------------------------------------------------------+
-
-
    Code 5.2: Setting the metadata datasource.
 
 In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Here in Code 3.6 is an example:
