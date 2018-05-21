@@ -82,7 +82,7 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 |image4|It is recommended to create a proper user for the execution of JBoss. We state the main steps to reach this purpose.
    
 
--  Create the JBoss user.
+-Create the JBoss user.
 
 +--------------------------------------+
 | useradd -m jboss                     |
@@ -92,19 +92,14 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
 
 
--  Install the JBoss using the JBoss user. Remeber to define the
-      JBOSS_HOME variable.
+-Install the JBoss using the JBoss user. Remeber to define the JBOSS_HOME variable.
 
 +-----------------------------------------------------------------+
 | export JBOSS_HOME=<path of the installation JBoss root folder > |
 +-----------------------------------------------------------------+
 
 
--  Be sure that the JBoss uses the JDK 1.7 o 1.8: usually the JBoss
-      settings are defined in the JBOSS_HOME/bin/run.conf.sh file,
-      therefore if the JBOSS_HOME/bin/run.conf.sh file does not exit,
-      the user must create it and insert it in the content as shown in
-      Code 3.6:
+-  Be sure that the JBoss uses the JDK 1.7 o 1.8: usually the JBoss settings are defined in the JBOSS_HOME/bin/run.conf.sh file, therefore if the JBOSS_HOME/bin/run.conf.sh file does not exit, the user must create it and insert it in the content as shown in Code 3.6:
 
 +-----------------------------------------------------+
 | export JAVA_HOME=<JDK 1.8 installation root folder> |
@@ -120,11 +115,9 @@ Tomcat 7
 
 In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 
-   |image6| 
-   
- It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
+   |image6|It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
--  Create the Tomcat user.
+-Create the Tomcat user.
 
 +---------------------------------------+
 | useradd -m tomcat                     |
@@ -133,15 +126,13 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 +---------------------------------------+
 
 
-
--  Install the Tomcat using the Tomcat user. Remeber to define the TOMCAT_HOME variable.
+-Install the Tomcat using the Tomcat user. Remeber to define the TOMCAT_HOME variable.
 
 +-------------------------------------------------------------------+
 | export TOMCAT_HOME=<path of the installation Tomcat root folder > |
 +-------------------------------------------------------------------+
 
-
--  Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown in Code
+-Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown in Code
       
 Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
 
@@ -152,7 +143,6 @@ Note that CATALINA_PID contains the ID of the Tomcat process and it kills the pr
 | pid export JAVA_HOME=<root folder of the JDK 1.8 installation>        |
 +-----------------------------------------------------------------------+
 
-
    **Remark.** Modify the TOMCAT_HOME/bin/shutdown.sh file to force the
    shut down of the application in case of hanging:
 
@@ -160,11 +150,7 @@ Note that CATALINA_PID contains the ID of the Tomcat process and it kills the pr
 | exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@" |
 +-------------------------------------------+
 
-
-
-   |image7| 
-   
-It is recommended to install Tomcat as a service using the installer available on the Apache web site httpd.apache.org/.
+|image7|It is recommended to install Tomcat as a service using the installer available on the Apache web site httpd.apache.org/.
 
  
 Database schema for metadata
