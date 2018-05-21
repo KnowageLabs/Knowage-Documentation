@@ -1,119 +1,67 @@
+CAS Installation
+==============
 
-   CAS is an application that implements a Single-Sign-On (SSO)
-   mechanism. It is a good practise in production environments to
-   install it and configure it so to have secure access to the Knowage
-   server applications. CAS expects the use of the HTTPS protocol.
+CAS is an application that implements a Single-Sign-On (SSO) mechanism. It is a good practise in production environments to install it and configure it so to have secure access to the Knowage server applications. CAS expects the use of the HTTPS protocol.
 
- 8.1 Deploy of the CAS application
-==================================
+Deploy of the CAS application
+---------------
+Carry out the following steps:
 
-   Carry out the following steps:
+* shut down the server if running,
 
--  shut down the server if running,
+* deploy CAS application,
 
--  deploy CAS application,
+* for Tomcat: unzip the cas.war file inside the TOMCAT_HOME/webapps/cas
 
--  for Tomcat: unzip the cas.war file inside the TOMCAT_HOME/webapps/cas
+* for JBoss: copy the cas.war file inside the JBOSS_HOME/standalone/deployments
 
--  for JBoss: copy the cas.war file inside the
-   JBOSS_HOME/standalone/deployments
+* edit /cas/WEB-INF/classes/cas_spagobi.properties inserting the connection parameters for the metadata database of Knowage, as shown in Figure 8.1:
 
--  edit /cas/WEB-INF/classes/cas_spagobi.properties inserting the
-   connection parameters for the metadata database of Knowage, as shown
-   in Figure 8.1:
+.. code:: console
 
-+-----------------------------------------------------------------------+
-| spagobi.datasource.driver=<driver JDBC> spagobi.datasource.url=<URL   |
-| JDBC> spagobi.datasource.user=<user_name>                             |
-| spagobi.datasource.pwd=<password> encript.password=true               |
-+-----------------------------------------------------------------------+
+   spagobi.datasource.driver=<driver JDBC> spagobi.datasource.url=<URL   
+   JDBC> spagobi.datasource.user=<user_name>                             
+   spagobi.datasource.pwd=<password> encript.password=true               
 
+Code 8.1: Connection parameters for Knowage metadata db.
 
-
-   Code 8.1: Connection parameters for Knowage metadata db.
-
-   For further details please refer to the official documents available
-   on CAS website `http://
-   jasig.github.io/cas/. <http://jasig.github.io/cas/>`__
-
-   8.2. HTTPS certificate
+For further details please refer to the official documents available on CAS website `http://jasig.github.io/cas/. <http://jasig.github.io/cas/>`__
 
  8.2 HTTPS certificate
-======================
+----------------
+Since CAS application requires the use of the HTTPS protocol, the user must own an SSL certificate: it can be released a Certification Authority (CA) or it can be self-signed (it is recommended the use of the ‚Äúkeytool‚Äù utility -`http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html- <http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html>`__available in the JDK).
 
-   Since CAS application requires the use of the HTTPS protocol, the
-   user must own an SSL certificate: it can be released a Certification
-   Authority (CA) or it can be self-signed (it is recommended the use of
-   the ìkeytoolî utility
-   -`http://docs.oracle.com/javase/7/docs/technotes/
-   tools/solaris/keytool.html- <http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html>`__
-   available in the JDK).
+In case the certificate ‚Äúself-signed‚Äù, it must be inserted in the CA repository of the JDK (usually such a repository is located in the JDK_HOME/jre/lib/security) or in an ad-hoc repository, called **truststore**, and conviniently configured in the application server in use: it is sufficient to set the two properties of the Java process:
 
-   In case the certificate ìself-signedî, it must be inserted in the CA
-   repository of the JDK (usually such a repository is located in the
-   JDK_HOME/jre/lib/security) or in an ad-hoc repository, called
-   **truststore**, and conviniently configured in the application server
-   in use: it is sufficient to set the two properties of the Java
-   process:
+* Djavax.net.ssl.trustStore=<truststore path>
 
--  Djavax.net.ssl.trustStore=<truststore path>
+* Djavax.net.ssl.trustStorePassword=<truststore password>
 
--  Djavax.net.ssl.trustStorePassword=<truststore password>
+We suggest to refer to the Java documents for more details. In the following we will restrict on give some useful commands of the ‚Äúkeytool‚Äù utility if the user intends to install a self-signed certificate:
 
-..
+* generate a copy of the public/private key-pair into a repository (keystore) called keystore.jks, as in Code 8.2:
 
-   We suggest to refer to the Java documents for more details. In the
-   following we will restrict on give some useful commands of the
-   ìkeytoolî utility if the user intends to install a self-signed
-   certificate:
+.. code:: console
 
--  generate a copy of the public/private key-pair into a repository
-   (keystore) called keystore.jks, as in Code 8.2:
+    $JAVA_HOME/bin/keytool -genkeypair -keystore keystore.jks -storepass                                                       <keystore password> -alias <certificate alias> -keyalg RSA -keysize 2048 -validity 5000 -dname CN=<server name that hosts Knowage >, OU=<organization unit>, O=<organization name>,L=<locality name>, ST=<state name>, C=<country>                    
 
-+-----------------------------------------------------------------------+
-|    $JAVA_HOME/bin/keytool -genkeypair -keystore keystore.jks          |
-|    -storepass                                                         |
-|                                                                       |
-| <keystore password> -alias <certificate alias>                        |
-|                                                                       |
-| -keyalg RSA -keysize 2048 -validity 5000 -dname CN=<server name that  |
-| hosts Knowage >, OU=<organization unit>, O=<organization name>,       |
-|                                                                       |
-|    L=<locality name>, ST=<state name>, C=<country>                    |
-+-----------------------------------------------------------------------+
+Code 8.2: keystore.jks creation.
 
+* export a certificate in a cert.crt file, as suggested in Code 8.3:
 
+.. code:: console
 
- 
-   Code 8.2: keystore.jks creation.
+   $JAVA_HOME/bin/keytool -export -alias <alias of the certificate> -file cert.crt                                                        
+Code 8.3: Certificate export.
 
--  export a certificate in a cert.crt file, as suggested in Code 8.3:
+* set the certificate inside the CA certificates of the JDK to make it accessible (the user will be asked the CA certificates password; the default one is "changeit‚Äú refer to Code
 
-+-----------------------------------------------------------------------+
-| $JAVA_HOME/bin/keytool -export -alias <alias of the certificate>      |
-| -file cert.crt                                                        |
-+-----------------------------------------------------------------------+
+.. code:: console
 
+  $JAVA_HOME/bin/keytool -import -trustcacerts -alias <alias del certificato> -file cert.crt -keystore                                 
 
-
-   Code 8.3: Certificate export.
-
--  set the certificate inside the CA certificates of the JDK to make it
-   accessible (the user will be asked the CA certificates password; the
-   default one is "changeitì refer to Code
-
-
-   8.4:
-
-+-----------------------------------------------------------------------+
-| $JAVA_HOME/bin/keytool -import -trustcacerts -alias <alias del        |
-| certificato> -file cert.crt -keystore                                 |
-+-----------------------------------------------------------------------+
-
-
-   1
-
-   8.3. Configuration of the HTTPS protocol for Tomcat
+Configuration of the HTTPS protocol for Tomcat
+-----------------------
 
 +-------------------------------------+
 | $JAVA_HOME/jre/lib/security/cacerts |
@@ -364,4 +312,4 @@
 
    All web.xml files have CAS filters already configured, but they are
    commented. The user must uncomment them, looking for the strings
-   "START-CASî, "END-CASì and adjust the URL as the Code 8.8 reports.
+   "START-CAS‚Äù, "END-CAS‚Äú and adjust the URL as the Code 8.8 reports.
