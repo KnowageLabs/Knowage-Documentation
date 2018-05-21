@@ -12,17 +12,17 @@ It is required the installation of the following components for the
 
 |image33| The first two components, needed for the functionality of the Knowage data mining engine, has to be installed through the rpm comand, and, the third, through the RStudio GUI. Once retrieved the RPM file, open the folder and launch the comands:
 
-+-----------------------------------------------------------------------+
-| rpm -Uvh ./R-3.2.2-1.el6.x86_64.rpm yum install --nogpgcheck          |
-| rstudio-server-rhel-0.99.486-x86_64.rpm cp                            |
-| ./RStudio/rJava_0.9-8.tar.gz $TOMCAT_HOME chown tomcat                |
-| $TOMCAT_HOME/rJava_0.98.tar.gz                                        |
-|                                                                       |
-| chown -R tomcat.root /usr/lib64/R/library && chmod -R 775             |
-| /usr/lib64/R/library chown -R tomcat.root /usr/share/doc/R-3.2.2 &&   |
-| chmod -R 775 /usr/share/doc/R -3.2.2                                  |
-+-----------------------------------------------------------------------+
-   Code 6.1: Commands for the rpm file.
+.. code:: console
+  
+   rpm -Uvh ./R-3.2.2-1.el6.x86_64.rpm               
+   yum install --nogpgcheck rstudio-server-rhel-0.99.486-x86_64.rpm
+   cp ./RStudio/rJava_0.9-8.tar.gz $TOMCAT_HOME
+   chown tomcat $TOMCAT_HOME/rJava_0.98.tar.gz
+   chown -R tomcat.root /usr/lib64/R/library && chmod -R 775 /usr/lib64/R/library 
+   chown -R tomcat.root /usr/share/doc/R-3.2.2 && chmod -R 775 /usr/share/doc/R
+
+   
+Code 6.1: Commands for the rpm file.
 
 Typing the address http://<server_ipormachine_name>:8787/ in the browser, the user gets on screen the page showed in Figure 6.1
 
