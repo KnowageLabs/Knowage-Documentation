@@ -3,8 +3,8 @@ Configure data sources
 
 To let all the BI tools work properly you need to configure DB connection. There are two different options available for the configuration:
 
-- **JNDI** (recommended)
-- **JDBC**.
+- JNDI (**recommended**)
+- JDBC.
 Let’s have a look on these two types.
 
 Connect to your data
@@ -95,279 +95,89 @@ Here <host1>:<port1>,<host2>:<port2> is a server instance or a comma separated l
 A simple example of connetction url is: *jdbc:\hive2://192.168.0.125:10000*.
 
 Spark SQL
----------
+~~~~~~
 
-   Spark SQL reuses the Hive front end and metastore, giving you full
-   compatibility with existing Hive data, queries and UDFs. Simply
-   install it alongside Hive. For the installation of Spark we suggest
-   you to look at the spark webstite
-   `http://spark.apache.org/. <http://spark.apache.org/>`__ To create a
-   connection to the Spark SQL Apache Thrift server you should use the
-   same JDBC driver of Hive. So:
+Spark SQL reuses the Hive front end and metastore, giving you full compatibility with existing Hive data, queries and UDFs. Simply install it alongside Hive. For the installation of Spark we suggest you to look at the spark website `http://spark.apache.org/. <http://spark.apache.org/>`__ To create a connection to the Spark SQL Apache Thrift server you should use the same JDBC driver of Hive. 
 
--  **Driver Class:**\ org.apache.hive.jdbc.HiveDriver (if you are not
-      using some specific driver of some distro. In this case search in
-      the documentation of the distro);
+-  **Driver Class:** org.apache.hive.jdbc.HiveDriver (if you are not using some specific driver of some distro. In this case search in the documentation of the distro);
 
--  **Connection URL:**
-      jdbc:hive2://<host1>:<port1>,<host2>:<port2>/dbName;sess\_
-      var_list?hive_conf_list#hive_var_list.
+-  **Connection URL:** jdbc:\hive2://<host1>:<port1>,<host2>:<port2>/dbName;sess\\_var_list?hive_conf_list#hive_var_list.
 
-..
-
-   Look at the Hive section for the details about parameters. The port
-   in this case is not the port of Hive but the one of Spark SQL thrift
-   server (usually 10001)
-
-HBase
------
-
-   ApacheHBase\ :sup:`TM` is theHadoop columnar database, a distributed,
-   scalable, big data store. Use Apache HBase\ :sup:`TM` when you need
-   random, realtime read/write access to your Big Data. This project’s
-   goal is the hosting of very large tables (billions of rows, millions
-   of columns) atop clusters of commodity hardware. Apache HBase is an
-   open-source, distributed, versioned, non-relational database modeled
-   after Google’sBigtable (see article “A Distributed Storage System for
-   Structured Data”by Chang et al.). Just as Bigtable leverages the
-   distributed data Impala
-
-   storage provided by the Google File System, Apache HBase provides
-   Bigtable-like capabilities on top of Hadoop and HDFS. HBase doesnt
-   provide natively a JDBC driver so a common approach is to use Apache
-   Phoenix https://phoenix.apache.org/ as layer to perform SQL on HBase.
-
-   If you use Phoenix you should deploy the JDBC driver of Phoenix on
-   the Knowage application server.
-
-   The parameters for the Phoenix connection are:
-
--  **Dialect:** Hive QL;
-
--  **Driver Class:** org.apache.phoenix.jdbc.PhoenixDriver;
-
--  **Connection URL:**
-   jdbc:phoenix[:<zookeeperquorum>[:<portnumber>][:<rootnode>
-   ][:<principal>][:<keytabfile>]].
-
-..
-
-   The definition of a business model over HBase data using Knowage Meta
-   will be available in the next releases.
+Look at the Hive section for the details about parameters. The port in this case is not the port of Hive but the one of Spark SQL thrift server (usually 10001).
 
 Impala
-------
+~~~~~~
 
-   Impala (currently an Apache Incubator project) is the open source,
-   analytic MPP database for Apache Hadoop. To create a connection to
-   Impala you should download the jdbc driver from the Cloudera web site
-   and deploy it, with all dependencies, on the application server. The
-   definition of the url can be different between versions of the
-   driver, please double check on the Cloudera web site.
+Impala (currently an Apache Incubator project) is the open source,   analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it, with all dependencies, on the application server. The definition of the url can be different between versions of the driver, please check on the Cloudera web site.
 
-   Example parameters for Impala connection are:
+Example parameters for Impala connection are:
 
 -  **Dialect:** Hive SQL;
-
 -  **Driver Class:** com.cloudera.impala.jdbc4.Driver;
-
 -  **Connection URL:** jdbc:impala://dn03:21050/default.
 
 MongoDB
--------
+~~~~~~
 
-   MongoDB is an open-sourcedocument databasethat provides high
-   performance, high availability, and automatic scaling. MongoDB
-   obviates the need for an Object Relational Mapping (ORM) to
-   facilitate development.
+MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling. MongoDB obviates the need for an Object Relational Mapping (ORM) to facilitate development.
 
-   MongoDB is different from the other dbs Knowage can handle, because
-   it doesnt provide a JDBC driver, but a java connector. So to create a
-   connection to MongoDB you should download the java connector and
-   deploy on the Knowage application server (youll find it in the
-   connectors web page of MongoDB web site).
+MongoDB is different from the other dbs Knowage can handle, because it doesnt provide a JDBC driver, but a java connector. So to create a connection to MongoDB you should download the java connector and deploy on the Knowage application server (you'll find it in the connectors web page of MongoDB web site).
 
-   Example parameters for the connection are:
-
-Cassandra
+Example parameters for the connection are:
 
 -  **Dialect:** MongoDB;
-
 -  **Driver Class:** mongo;
-
 -  **Connection URL:** localhost:27017/foodamrt.
 
-..
-
-   The definition of a business model over MongoBD data using Knowage
-   Meta will be available in the next releases.
+The definition of a business model over MongoBD data using Knowage Meta will be available in the next releases.
 
 Cassandra
----------
+~~~~~~
 
-   Apache Cassandra is an open source distributed database management
-   system designed to handle large amounts of data across many commodity
-   servers, providing high availability with no single point of failure.
-   Cassandra offers robust support for clusters spanning multiple
-   datacenters, with asynchronous masterless replication allowing low
-   latency operations for all clients.
+Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple  datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
 
-   There are different ways to connect Knowage to Cassandra.
+There are different ways to connect Knowage to Cassandra. If you are using Datastax Enterprise you can use Spark SQL connector and query Cassandra using pseudo standard SQL (`https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md) <https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md>`__
 
-   If you are using Datastax Enrterprise you can use Spark SQL connector
-   and query Cassandra using pseudo standard SQL
-   (`https://github.com/datastax/spark-cassandra-connector/
-   blob/master/doc/2_loading.md) <https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md>`__
+Another solution is to download the Apache JDBC Driver and query Cassandra using the language CQL. Also in this case the JDBC driver is composed by different jars, and so you should deploy the JDBC driver with all dependencies in your application server.
 
-   Another solution is to download the Apache JDBC Driver and query
-   Cassandra using the language CQL. Also in this case the JDBC driver
-   is composed by different jars, and so you should deploy the JDBC
-   driver with all dependencies in your application server.
-
-   An example of Cassandra Apache driver (with dependencies) is:
+An example of Cassandra Apache driver (with dependencies) is:
 
 -  apache-cassandra-clientutil-1.2.6.jar
-
 -  apache-cassandra-thrift-1.2.6.jar
-
 -  cassandra-all-1.2.9.jar
-
 -  cassandra-jdbc-2.1.1.jar
-
 -  guava-15.0.jar
-
 -  jackson-core-asl-1.9.2.jar
-
 -  jackson-mapper-asl-1.9.2.jar
-
 -  libthrift-0.7.0.jar
-
 -  log4j-1.2.16.jar
-
 -  sfl4j-api-1.6.1.jar
-
 -  sfl4j-log4j12-1.6.1.jar
 
-..
-
-   Example parameters for the connection are:
-
-Neo4j
+Example parameters for the connection are:
 
 -  **Dialect:** Cassandra;
-
 -  **Driver Class:** org.apache.cassandra.cql.jdbc.CassandraDriver;
-
 -  **Connection URL:** jdbc:cassandra://193.109.207.65:9160/foodmart.
 
-..
-
-   Unless you are using Spark SQL to read from Cassandra, the definition
-   of a business model over Cassandra data using Knowage Meta will be
-   available in the next releases.
+Unless you are using Spark SQL to read from Cassandra, the definition of a business model over Cassandra data using Knowage Meta will be available in the next releases.
 
 Neo4j
------
+~~~~~~
 
-   Neo4j is a graph database management system developed by Neo
-   Technology, Inc., described by its developers as an ACID-compliant
-   transactional database with native graph storage and processing.
-   Neo4j is available in a GPL3-licensed open-source "community
-   edition", with online backup and high availability extensions
-   licensed under the terms of the Affero General Public License. Neo
-   also licenses Neo4j with these extensions under closed-source
-   commercial terms. Neo4j is implemented in Java and accessible from
-   software written in other languages using the Cypher Query Language.
-   Here is a simple example of a cypher query (cast of movies starting
-   with T)
+Neo4j is a graph database management system developed by Neo Technology, Inc., described by its developers as an ACID-compliant transactional database with native graph storage and processing. Neo4j is available in a GPL3-licensed open-source "community edition", with online backup and high availability extensions licensed under the terms of the Affero General Public License. Neo also licenses Neo4j with these extensions under closed-source commercial terms. Neo4j is implemented in Java and accessible from software written in other languages using the Cypher Query Language.
 
-+----------------------------------------------------------+
-| MATCH (actor:Person)-[:ACTED_IN]->(movie:Movie)          |
-|                                                          |
-| WHERE movie.title =~ "T.*"                               |
-|                                                          |
-| RETURN movie.title as title, collect(actor.name) as cast |
-|                                                          |
-| ORDER BY title ASC LIMIT 10;                             |
-+----------------------------------------------------------+
+To Use Neo4J in Knowage you should download the JDBC driver from Neo4J web site and than deploy the driver with all dependencies on your application server. In Neo4J official website you can find a distribution of the JDBC driver with all dependencies included.
 
-..
-
-
-   Code 4.2: Cypher query example.
-
-   To Use Neo4J in Knowage you should download the JDBC driver from
-   Neo4J web site and than deploy the driver with all dependencies on
-   your application server. In Neo4J official website you can find a
-   distribution of the JDBC driver with all dependencies included.
-
-   Example parameters for the connection are:
+Example parameters for the connection are:
 
 -  **Dialect:** Neo4j;
-
 -  **Driver Class:** org.neo4j.jdbc.Driver;
-
 -  **Connection URL:** jdbc:neo4j://MN03:7474.
 
-..
+The definition of a business model over Neo4j data using Knowage Meta will be available in the next releases.
 
-   The definition of a business model over Neo4j data using Knowage Meta
-   will be available in the next releases.
+Others not listed
+~~~~~~
 
-Drill
------
-
-   Drill is an Apache open-source SQL query engine for Big Data
-   exploration. Drill is designed from the ground up to support
-   high-performance analysis on the semi-structured and rapidly VoltDB
-
-   evolving data coming from modern Big Data applications, while still
-   providing the familiarity and ecosystem of ANSI SQL, the
-   industry-standard query language. Drill provides plug-andplay
-   integration with existing Apache Hive and Apache HBase deployments.
-   To use Drill in Knowage you should download the JDBC driver from
-   Apache Drill web site and than deploy the driver with all
-   dependencies on your application server.
-
-   Example parameters for the connection are:
-
--  **Dialect:** Drill;
-
--  **Driver Class:** org.apache.drill.jdbc.Driver;
-
--  **Connection URL:** jdbc:drill:zk=maprdemo:5181/drill/demo_mapr.
-
-VoltDB
-------
-
-   ltDB is an in-memory database designed by several well-known database
-   system researchers, including A.C.M. Turing Award winner Michael
-   Stonebraker (who was involved in Ingres and POSTGRES), Sam Madden,
-   and Daniel Abadi. It is an ACID-compliant RDBMS which uses a shared
-   nothing architecture. It includes both enterprise and community
-   editions. The community edition is licensed under the GNU Affero
-   General Public License. Additional features in the commercially
-   licensed VoltDB Enterprise version include durability, high
-   availability, and Export integrations. To use VoltDB in Knowage you
-   should download the JDBC driver from VoltDB web site and than deploy
-   the driver with all dependencies on your application server.
-
-   Example parameters for the connection are:
-
--  **Dialect:** Drill;
-
--  **Driver Class:** org.voltdb.jdbc.Driver;
-
--  **Connection URL:** jdbc:voltdb://MN05:21212.
-
-Others
-------
-
-   Knowage can connect to several other data sources using JDBC drivers
-   (for example Big SQL,
-
-   Vertica,) without any modification of the platform. The standard
-   approach is to deploy the JDBC driver with all dependencies on the
-   application server and than configure a connection in the data source
-   catalogue. For big data data sources we suggest you to use HiveQL as
-   dialect.
+Knowage can connect to several other data sources using JDBC drivers (for example Big SQL, Vertica) without any modification of the platform. The standard approach is to deploy the JDBC driver with all dependencies on the application server and than configure a connection in the data source catalogue. For big data data sources we suggest you to use HiveQL as dialect.
