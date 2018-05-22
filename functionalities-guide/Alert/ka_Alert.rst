@@ -1,3 +1,5 @@
+Alert
+===========
 
 The **Alert** functionality available under the **Tool** section of
 Knowage main menu, as shown in Figure 9.1, allows you to implement a
@@ -10,15 +12,15 @@ will see in details how to configure the alarms using the Alert feature.
 
    Figure 9.1: Alert functionality from contextual menu.
 
- Alert implementation
-------------------------
+Alert implementation
+------------
 
 The Alert definition window (refer to Figure 9.2) diplays the list of
 existing alerts and a search box at the top of the page to facilitate to
 browse over the items. In the right top corner it is available the
-ìPlusî icon to configure a new alert.
+‚ÄúPlus‚Äù icon to configure a new alert.
 
-Clicking on the ìPlusî icon the page in Figure 9.3 opens. Give a name
+Clicking on the ‚ÄúPlus‚Äù icon the page in Figure 9.3 opens. Give a name
 and select the **KPI listener** from the combobox. Then indicate the
 start date, the start time and eventually the Alert implementation
 
@@ -43,20 +45,20 @@ At the bottom of the page associate the KPI of interest and select the
 action by clicking on the **Add action** button. Here you can choose
 between **Send mail** or **Execute a document**.
 
-If the ìSend mailî is chosen, the user is asked to insert the thresholds
+If the ‚ÄúSend mail‚Äù is chosen, the user is asked to insert the thresholds
 that should be monitored: in case the latter are overcomed the
 functionality sends the email to the indicated subjects. Remember to
 insert all mandatory fields (name, thresholds and subjects of the mail)
 and, in particular, to select the user to which the email is sent. Note
 that in the mail subjects box you can type both mail addresses or
-usernames (for example ìuser_adminî), helped by the automatic insertion
+usernames (for example ‚Äúuser_admin‚Äù), helped by the automatic insertion
 text is as shown in Figure 9.4. In fact, Knowage server will pick out
 the mail address from the profile attribute associated to that user.
 Therefore, we recommend to set the profile attribute previously. In
 particular, remember that the profile attribute *must* be Alert
 implementation
 
-called ì\ *email*\ î.
+called ‚Äú\ *email*\ ‚Äù.
 
    |image177|
 
@@ -71,7 +73,7 @@ enable table visualization option you must insert the placeholder
 
    Figure 9.5: Send email containing a table with detected values.
 
-If the ìExecute a documentî option is selected, the alert will launch an
+If the ‚ÄúExecute a document‚Äù option is selected, the alert will launch an
 ETL process when the chosen thresholds are ovecomed. Namely, the
 functionality will launch a process to execute batch actions as the
 writing of proper tables of a DWH, creation of a file, the call to a log
@@ -81,10 +83,6 @@ server. An example is given in Figure 9.6.
 Save both the action and the alert configuration settings to store your
 alert. Remember that it is possible to schedule more than one monitoring
 over the same alert definition.
-
-   Knowage Engineering Group
-
-Alert implementation
 
 |image179|
 

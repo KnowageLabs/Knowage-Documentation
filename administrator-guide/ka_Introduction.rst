@@ -15,11 +15,16 @@ Modules
 
 Knowage suite is based on five modules, as shown in Figure 2.1:
 
-- **Knowage Server**, the core of the suite, which includes all analytical features. This is the reference environment for the end user and the administrator;
-- **Knowage Meta**, the environment supporting the creation and management of metadata models. This module is conceived for BI developers.
-- **Knowage Studio**, the environment that allows BI developers to configure analysis and related analytical features that are then released and made available to the end user on the Server.
-- **Knowage SDK**, set of APIs compliant with the SOA architecture, allowing external applications to interact with the Knowage Server   and its metadata.
-- **Knowage Applications**, set of analytical models ready to use in specific business domains. Here we focus on Knowage Server considering the administrator perspective.
+Knowage Server
+   The core of the suite, which includes all analytical features. This is the reference environment for the end user and the administrator;
+Knowage Meta
+   The environment supporting the creation and management of metadata models. This module is conceived for BI developers.
+Knowage Studio
+   The environment that allows BI developers to configure analysis and related analytical features that are then released and made available to the end user on the Server.
+Knowage SDK
+   A set of APIs compliant with the SOA architecture, allowing external applications to interact with the Knowage Server   and its metadata.
+Knowage Applications
+   A set of analytical models ready to use in specific business domains. Here we focus on Knowage Server considering the administrator perspective.
 
 It is the main module of the suite, which provides, as we will see, the whole analytical power of the product and all administrative
 functionalities.
@@ -35,9 +40,12 @@ Layers
 
 Knowage Server architecture is functionally layered on three main levels, as shown in Figure 2.2:
 
-- **Delivery layer**, which manages all possible usages of the Server by end users or from external applications.
-- **Analytical layer**, providing all analytical functionalities of the product.
-- **Data layer**, which regulates data loading through many access strategies.
+Delivery layer
+   It manages all possible usages of the Server by end users or from external applications.
+Analytical layer
+   It provides all analytical functionalities of the product.
+Data layer
+   It regulates data loading through many access strategies.
 
 Every layer of the functional architecture is composed of different application modules, as shown in Figure 2.3.
 
@@ -54,14 +62,18 @@ Delivery layer
 
 The delivery layer covers all publication requirements. It can be accessed by third-party applications, and it offers end users all features and services needed to perform their BI analysis.
 
-It can be accessed in different ways::
+It can be accessed in different ways:
 
-- **BI Webapp*: it is the default use mode. Knowage suite provides a web application, working on a standard application server A customizable web application is provided, working on a standard application server (e.g. Tomcat, JBoss, WAS). The administrator can define the layout and specific views for each end user type.
-
-- **BI Mobile**: thanks to the interaction between Knowage Server and the remote client interface, users’ reports, charts or cockpits can also be accessed and displayed on mobile devices, such as tablets and smartphones.
-- **BI Service**: web services allowing Knowage components to interact with external applications or to collect the results of static documents (report, image of a chart, etc.).
-- **BI Tag**: tag libraries allowing you to encapsulate a dynamic document (OLAP, GEO, etc.) into a different context.
-- **BI API**: for the integration of enterprise applications behind or without the end user GUI.
+BI Webapp
+   It is the default use mode. Knowage suite provides a web application, working on a standard application server A customizable web application is provided, working on a standard application server (e.g. Tomcat, JBoss, WAS). The administrator can define the layout and specific views for each end user type.
+BI Mobile
+   Thanks to the interaction between Knowage Server and the remote client interface, users’ reports, charts or cockpits can also be accessed and displayed on mobile devices, such as tablets and smartphones.
+BI Service
+   Web services allowing Knowage components to interact with external applications or to collect the results of static documents (report, image of a chart, etc.).
+BI Tag
+   Tag libraries allowing you to encapsulate a dynamic document (OLAP, GEO, etc.) into a different context.
+BI API
+   For the integration of enterprise applications behind or without the end user GUI.
 
 Analytical layer
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -69,9 +81,12 @@ Analytical layer
 The analytical layer is the core of the Server. It provides all analytical features and capabilities, in a secure and role-based access
 mode. Its main components are:
 
-- **Analytical Engines**, covering all analytical requirements, it provides different tools for each type of analysis (e.g. reports, charts, cockpits), in order to ensure high flexibility and end users satisfaction.
-- **Operational Engines**, to interact with OLTP systems by means of ETL or processes, and manage basic BI registries such as master data or lookup domains;
-- **Behavioural Model**, which regulates the visibility over documents and data, according to end users’ roles.
+Analytical Engines
+   covering all analytical requirements, it provides different tools for each type of analysis (e.g. reports, charts, cockpits), in order to ensure high flexibility and end users satisfaction.
+Operational Engines
+   to interact with OLTP systems by means of ETL or processes, and manage basic BI registries such as master data or lookup domains;
+Behavioural Model
+   which regulates the visibility over documents and data, according to end users’ roles.
 
 Offering multiple solutions for the same analytical requirement and/or multiple instances for the same engine, Knowage logic and architecture provide various benefits, such as: limited workload on each engine, guaranteeing high performances; openness to improve or extend the suite and its capabilities, minimizing the impact on exiting environments; high flexibility and modularity; high scalability, with minimum economic, infrastructural and applicationlevel impact.
 

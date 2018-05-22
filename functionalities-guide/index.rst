@@ -1,5 +1,5 @@
-Fuctionalities
-######################
+Functionalities
+##################
 
 .. include:: Alert/ka_Alert.rst
 .. include:: AnalyticalDocument/ka_dev_analyticaldoc.rst

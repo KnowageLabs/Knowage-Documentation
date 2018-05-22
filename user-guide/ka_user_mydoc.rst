@@ -1,3 +1,6 @@
+Document Execution
+=================
+
 In this chapter we describe all the features related to Knowage
 analytical documents, such as parameters management, printing, exporting
 and so on.
@@ -11,11 +14,11 @@ icon located at the top left, as shown in Figure 3.1.
 
    Figure 3.1: Back to Document Browser.
 
-3.1 Parameters management
+Parameters management
 -------------------------
 
 Knowage documents may have associated parameters. If any, you will be
-asked to select the chosen parameter’s values in a collapsible panel
+asked to select the chosen parameterâ€™s values in a collapsible panel
 located at the top or on the right side of the page. If this is the
 case, choose the parameters values and then click the **Execute** button
 to run the document. In case there are only optional parameters or
@@ -28,8 +31,6 @@ shaped.
 It is possible to show or hide the parameter panel by clicking on the
 filter button located in the document toolbar. With the **Reset** button
 at the top of the panel you can clear the form.
-
-3.2. Document Toolbar
 
    |image32|
 
@@ -49,7 +50,7 @@ located at the top right corner of the parameters panel.
       **Public** means visible to all the other users that share your
       role while **Private** means visible only to you.
 
-3.2 Document Toolbar
+Document Toolbar
 --------------------
 
 All documents inside Knowage environment share the same toolbar with
@@ -71,13 +72,12 @@ visible only if there are parameters associated to the document.
 The |image37| opens the contextual menu shown in Figure 3.4. We describe
 the main functionalities provided by this menu in the following.
 
-Exporters
-
    |image38|
 
    Figure 3.4: Toolbar contextual menu.
 
 Exporters
+~~~~~~~~~~~~
 
 Each Knowage document can be exported into several formats, depending on
 the options offered by the engine.
@@ -87,6 +87,7 @@ will see the available formats for the current document. Select one and
 check the exported document.
 
 Business and structural metadata
+~~~~~~~~~~~~
 
 Knowage allows the definition of business metadata to describe an
 object, in our case a document. Business metadata, unlike technical
@@ -137,6 +138,7 @@ button. We provide an example in Figure 3.6
    metadata.
 
 Notes
+~~~~~~~~~~~~
 
 Knowage offers a simple collaborative tool to share notes and comments
 on documents, allowing users to share information and receive feedback.
@@ -157,6 +159,7 @@ corresponding symbols in the **Note list** tab. You can also export the
 note in PDF or RTF format.
 
 Rate document
+~~~~~~~~~~~~
 
    |image41|
 
@@ -176,6 +179,7 @@ click **Save**. The administrator can exploit the result of votes, in
 order to evaluate and improve the quality of the document.
 
 Scheduled Execution
+~~~~~~~~~~~~
 
 The administrator has the possibility to set schedulation for documents.
 These schedulations can be accessed by **Show Scheduled executions**.
@@ -187,5 +191,3 @@ Scheduled Execution
    |image43|
 
    Figure 3.7: Share notes and comments.
-
-   17

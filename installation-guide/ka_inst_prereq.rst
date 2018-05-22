@@ -41,7 +41,7 @@ JDK version
 
 The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
 
-|image1| Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
+**[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
 
 +-----------------------------------------------------------------------+
 | export JAVA_HOME=<root path of the Java installation>                 |
@@ -51,9 +51,9 @@ The enviroment in which Knowage will be installed must include a 1.7 or 1.8 JDK 
 
 Code 3.1: Instructions to set the JAVA_HOME variable for Linux environment.
 
-   |image2| Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
+**[WIN]** Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
 
-   |image3| 
+ .. image:: media/image7.png
 
 Figure 3.1: Setting the path for the JAVA_HOME variable for Windows.
    
@@ -80,7 +80,7 @@ JBoss Enterprise Application Platform (EAP) 6
 
 In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
-|image4|It is recommended to create a proper user for the execution of JBoss. We state the main steps to reach this purpose.
+**[LINUX]** It is recommended to create a proper user for the execution of JBoss. We state the main steps to reach this purpose.
    
 
 -Create the JBoss user.
@@ -106,7 +106,7 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 | export JAVA_HOME=<JDK 1.8 installation root folder> |
 +-----------------------------------------------------+
 
-   |image5| It is recommended to install JBoss as a service, using the
+**[WIN]** It is recommended to install JBoss as a service, using the
    dedicated user guide available on the Red Hat web site
    `www.redhat.com/en. <http://www.redhat.com/en>`__
 
@@ -116,7 +116,7 @@ Tomcat 7
 
 In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 
-|image6|It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
+**[LINUX]** It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
 -Create the Tomcat user.
 
@@ -148,7 +148,7 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 | exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@" |
 +-------------------------------------------+
 
-|image7|It is recommended to install Tomcat as a service using the installer available on the Apache web site httpd.apache.org/.
+**[WIN]** It is recommended to install Tomcat as a service using the installer available on the Apache web site httpd.apache.org/.
 
  
  Database schema for metadata

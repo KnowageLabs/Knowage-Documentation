@@ -1,8 +1,9 @@
 Before starting
-===========================
+#################
+
 
 Documentation structure
------------------
+===========================
 
 Knowage documentation is composed by:
 
@@ -14,7 +15,7 @@ Knowage documentation is composed by:
 The books focusing on products describe all the BI functionalities included in your installation. For example if you have purchased KnowageBD subscription, you will get the installation and the two general manuals plus a third one which focus on the BI functionalities provided by this product.
 
 Target
------------------
+===========================
 
 Each book is thought to be delivered to different users.
 
@@ -28,13 +29,25 @@ Each book is thought to be delivered to different users.
    read all the parts not marked by \* to have a complete introduction to all BI functionalities included in your products.
 
 About conventions
------------------
+===========================
 
-Some graphical conventions have been adopted to allow readers to easily identify special contents such as notes, summaries and essential information. All conventions are explained hereafter.
+Some graphical conventions have been adopted to allow readers to easily identify special contents such as notes, summaries and essential information. All conventions are explained here after.
 
-   |image0|
-
-
+      .. note::
+         **Read more**
+         This icon refers to additional documentation, internal or external sources that may be useful for the reader.
+         
+      .. warning::
+         **Warning**
+         This icon warns the reader about possible errors and issues using Knowage.
+         
+      .. hint::
+         **Advice**
+         This icon provides best practices and suggestions.
+         
+      .. important::
+         **Notable content**
+         This icon highlights relevant content, to be drawn to the reader’s attention.
 
 The following fonts have been adopted, to easily identify special words
 and expressions:

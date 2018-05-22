@@ -61,32 +61,20 @@ Metadata database connection
 -----------------------
 In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the metadata database inside the “datasources” tag: specify the username, the password and driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 is an example:
 
-+-----------------------------------------------------------------+
-| <datasource jndi-name="java:/jdbc/knowage" pool-name="knowage"> |
-|                                                                 |
-| <connection-url> <JDBC URL> </connection-url>                   |
-|                                                                 |
-| <driver> <JDBC driver> </driver>                                |
-|                                                                 |
-| <security>                                                      |
-|                                                                 |
-| <user-name> user name> </user-name>                             |
-|                                                                 |
-| <password> <password> </password>                               |
-|                                                                 |
-| </security>                                                     |
-|                                                                 |
-| <validation>                                                    |
-|                                                                 |
-| <validate-on-match>true</validate-on-match>                     |
-|                                                                 |
-| <background-validation>false</background-validation>            |
-|    <valid-connection-checker class-name="<connection checker          |
-|    class>"/>                                                          |
-|                                                                       |
++-----------------------------------------------------------------------+
+| <datasource jndi-name="java:/jdbc/knowage" pool-name="knowage">       |
+| <connection-url> <JDBC URL> </connection-url>                         |
+| <driver> <JDBC driver> </driver>                                      |
+| <security>                                                            |
+| <user-name> user name> </user-name>                                   |
+| <password> <password> </password>                                     |
+| </security>                                                           |
+| <validation>                                                          |
+| <validate-on-match>true</validate-on-match>                           |
+| <background-validation>false</background-validation>                  |
+|    <valid-connection-checker class-name="<connection checkerclass>"/> |
 |    <exception-sorter class-name="<exception sorter class>"/>          |
 |    </validation>                                                      |
-|                                                                       |
 | </datasource>                                                         |
 +-----------------------------------------------------------------------+
    Code 5.2: Setting the metadata datasource.
@@ -180,19 +168,15 @@ Code 5.6: JBoss environment variables configuration.
 
 On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and add the following constants in the GlobalNamingResources tag, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in Code 5.7:
 
-+-----------------------------------------------------------------------+
-| <Environment name="resource_path" type="java.lang.String"             |
-| value="${catalina.home}/resources"/>                                  |
-|                                                                       |
-| <Environment name=" sso_class" type="java.lang.String"                |
-| value="it.eng.spagobi.services.common.FakeSsoService"/>               |
-
-| <Environment name="service_url" type="java.lang.String"               |
-| value="http://localhost :8080/knowage"/>                              |
-|                                                                       |
-| <Environment name="host_url" type="java.lang.String" value="<server   |
-| URL which is hosting knowage>"/>                                      |
-+-----------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+| <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>                 |
+|                                                                                                                |
+| <Environment name=" sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/> |
+|                                                                                                                |
+| <Environment name="service_url" type="java.lang.String" value="http://localhost :8080/knowage"/>               |
+|                                                                                                                |
+| <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>           | 
++----------------------------------------------------------------------------------------------------------------+
 
 Code 5.7: Tomcat environment variables configuration.
 
@@ -202,32 +186,25 @@ In both case cases, costants have the following meaning:
 
 -**sso_class**:SSO connector class name,
 
--**service\ \_\ url**:backend services address, typically set to
-   `http://localhost:8080/knowage, <http://localhost:8080/knowage>`__
+-**service\ \_\ url**:backend services address, typically set to `http://localhost:8080/knowage, <http://localhost:8080/knowage>`__
 
--**host\_\ url**: frontend services address, the one the user types in
-   his browser.
+-**host\_\ url**: frontend services address, the one the user types in his browser.
 
 Applications deploy
 ----------------
 
 For the JBoss istance, execute the following steps:
 
--  copy all the WAR files inside the JBOSS_HOME/standalone/deployments;
+-copy all the WAR files inside the JBOSS_HOME/standalone/deployments;
 
-Datasource link within the applications
------------------
-
--extract the content of each WAR file into (using for instance the
-   unzip utility) one directory with the same name, including the “.war”
-   suffix (for istance, “knowage.war”;
+-extract the content of each WAR file into (using for instance the unzip utility) one directory with the same name, including the “.war” suffix (for istance, “knowage.war”;
 
 -delete the WAR files;
 
--create an empty file for each WAR file with the same name plus the
-   suffix “.dodeploy” (for example, “knowage.war.dodeploy“).
+-create an empty file for each WAR file with the same name plus the suffix “.dodeploy” (for example, “knowage.war.dodeploy“).
 
 Please refer to the instructions that are written in the JBOSS_HOME/standalone/deployments/README.txt. For Tomcat, simply copy all the WAR files inside the TOMCAT_HOME/webapps folder. Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
+
 
 Datasource link within the applications
 ------------------------
@@ -243,8 +220,7 @@ For JBoss instance, control that in all the JBOSS_HOME/standalone/deployments/kn
 +-----------------------------------------------------------------------+
 Code 5.8: DataSource link syntax.
 
-While for the Tomcat instance, control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same
-   links as in Code 5.8. Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
+While for the Tomcat instance, control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same links as in Code 5.8. Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
 
 Configuration of the metadata db dialect
 ---------------------
@@ -252,9 +228,6 @@ In the JBoss instance, verify that the right dialect has been set in all JBOSS_H
 In the Tomcat instance, verify that the right dialect has been set in all TOMCAT_HOME/webapps/knowage*/WEB-INF/classes/hibernate.cfg.xml files. We list all the possible dialects that can be used:
 
 -  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
-
-Modification of the Quartz configuration
------------------------
 
 -  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
 
@@ -274,40 +247,22 @@ Modification of the Quartz configuration
 -------------------------
 The scheduler is configured by the following file: knowage.war/WEB-INF/classes/quartz.properties. It is essential to enhance in this file the property ”org.quartz.jobStore.driverDelegateClass“ with the right value, according to the metadata database in use. These in Code 5.9 the possible values:
 
-+-----------------------------------------------------------------------+
-| # Hsqldb delegate class                                               |
-|                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore |
-| .                                                                     |
-|                                                                       |
-|    HSQLDBDelegate                                                     |
-|                                                                       |
-| # Mysql/Ingres delegate class                                         |
-| org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore. |
-|                                                                       |
-|    StdJDBCDelegate                                                    |
-|                                                                       |
-| # Postgres delegate class                                             |
-|                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore |
-| .                                                                     |
-|                                                                       |
-|    PostgreSQLDelegate                                                 |
-|                                                                       |
-| # Oracle delegate class                                               |
-|                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore |
-| .oracle.                                                              |
-|                                                                       |
-|    OracleDelegate                                                     |
-|                                                                       |
-| # SQLServer delegate class                                            |
-|                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore |
-| .                                                                     |
-|                                                                       |
-|    MSSQLDelegate                                                      |
-+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+| # Hsqldb delegate class                                                                       |
+|                                                                                               |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          |
+| # Mysql/Ingres delegate class                                                                 |
+| org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          |
+|                                                                                               |
+| # Postgres delegate class                                                                     |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      |
+|                                                                                               |
+| # Oracle delegate class                                                                       |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate   |
+|                                                                                               |
+| # SQLServer delegate class                                                                    |
+| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.MSSQLDelegate           |
++-----------------------------------------------------------------------------------------------+
 
 Code 5.9: Values for the Quartz file.
 
@@ -364,13 +319,7 @@ Similarly, in the Tomcat case it is possible to enable it by editing the configu
 |                                                                       |
 |    factory="de.myfoo.commonj.work.FooWorkManagerFactory"              |
 |    maxThreads="5" name="wm/SpagoWorkManager"                          |
-+-----------------------------------------------------------------------+
-
-Check of the memory settings
-----------------
-
-+-----------------------------------+
-| type="commonj.work.WorkManager"/> |
+|    type="commonj.work.WorkManager"/> |
 +-----------------------------------+
 Code 5.12: Thread of pool configuration for Tomcat.
 
@@ -425,14 +374,15 @@ LOG files
 --------------
 
 It is necessary to arrange a folder where Knowage and its analytical engines can store their respective log files. From now on, we will call LOG_DIR such folder and LOG_DIR_PATH the path that leads to it. This path is configured in file log4j.properties located inside the *\\*\ WEB-INF\ *\\*\ classes\ *\\* available in each web application.
-In short, to configure the Knowage log folder the user must execute the following steps: • create the LOG_DIR folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The LOG_DIR_PATH string must be the same for every node;
+In short, to configure the Knowage log folder the user must execute the following steps:
 
--|image32| verify that Knowage has write permissions on this folder; set the property :sub:`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
+-create the LOG_DIR folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The LOG_DIR_PATH string must be the same for every node;
 
--set the property :sub:`log4j.appender.knowageXXXXXEngine.File` inside the :sub:`WEB-INF/classes/log4j.properties` file of each engine to LOG_DIR_PATH/knwoageXXXXXEngine.log;
+|image32| verify that Knowage has write permissions on this folder; set the property :`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
 
--  only for the Birt Engine, to set the property logDirectory inside the WEB-INF/classes/BirtLogConfig.properties file of the
-   knowagebirtreportengine application toLOG\ :sup:`\_`\ DIR\ :sup:`\_`\ PATH.
+-set the property :`log4j.appender.knowageXXXXXEngine.File` inside the :`WEB-INF/classes/log4j.properties` file of each engine to LOG_DIR_PATH/knwoageXXXXXEngine.log;
+
+- only for the Birt Engine, to set the property logDirectory inside the WEB-INF/classes/BirtLogConfig.properties file of the knowagebirtreportengine application toLOG\ :`\_`\ DIR\ :`\_`\ PATH.
 
 In case you are using JBoss , in all configuration log4j.properties files substitute the string ”catalina.base/logs“ with "jboss.server.log.dir”.
 
@@ -475,12 +425,8 @@ Configuration file
 
  Table 5.2: String replacements according to the web application.
 
-JAR library file
----------------
 
-**Remark.** The configs.xml file is used to initialize some configuration tables on the database, therefore the user must set
-   these adjustments before the server is launched. Furthermore, the user must apply the modifications listed below in
-   all configuration web.xml files of each web application:
+**Remark.** The configs.xml file is used to initialize some configuration tables on the database, therefore the user must set these adjustments before the server is launched. Furthermore, the user must apply the modifications listed below in all configuration web.xml files of each web application:
 
 -  uncomment all blocks bounded by the comments “START JBOSS RES” and “END JBOSS RES”;
 
@@ -517,7 +463,5 @@ In Knowage server the core and its analytical engines exchange information throu
 | <parameter name="attachments.Directory" value="../attachments"/> |
 +------------------------------------------------------------------+
    Code 5.17: Configuration of the files.
-
-server-config.wsdd tests
 
 Obviously it is possible to modify the folder path, but the user who starts the application server is required to have indeed write permissions in the configured folder.
