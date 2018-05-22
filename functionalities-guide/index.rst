@@ -1,6 +1,5 @@
-=====================================
 Fuctionalities
-=====================================
+######################
 
 .. include:: Alert/ka_Alert.rst
 .. include:: AnalyticalDocument/ka_dev_analyticaldoc.rst
@@ -29,8 +28,6 @@ Fuctionalities
 .. include:: Reporting/ka_dev_reporting.rst
 .. include:: Reporting/ka_user_reporting.rst
 .. include:: ScoreCard/ka_Scorecard.rst
-.. include:: SmartFilter/ka_dev_smartfilter.rst
-.. include:: SmartFilter/ka_user_smartfilter.rst
 .. include:: SVG/ka_dev_svg.rst
 .. include:: SVG/ka_user_svg.rst
 .. include:: WhatIf/ka_dev_whatif.rst
