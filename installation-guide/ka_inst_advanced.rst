@@ -53,18 +53,18 @@ First of all, the user must configure the distributed cache. This helps to coord
 
 Cache parameters
 
++-----------------------+-----------------------+---------------------------------+
+|    **Values name**    | **Description**       | **Default**                     |
++=======================+=======================+=================================+
+|    **SPAGOBI.CACHE.NAMEPREFIX** | It configures the     | ”sbicache“            |
+|                                 | prefix of temporary   |                       |
+|                                 | table in the cache    |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **Values name**    | **Description**       | **Default**           |
-+=======================+=======================+=======================+
-|    **SPAGOBI.CACHE.NA | It configures the     | ”sbicache“            |
-| MEPREFIX**            | prefix of temporary   |                       |
-|                       | table in the cache    |                       |
+|    **SPAGOBI.CACHE.SPACE_AVAILABLE** | It resizes cache      | 1073741824            |
+|                                      | dimension (bytes)     |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.SP | It resizes cache      | 1073741824            |
-| ACE_AVAILABLE**       | dimension (bytes)     |                       |
-+-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.LI | It configures the     | 50                    |
-| MIT_FOR_CLEAN**       | maximum cache section |                       |
+|    **SPAGOBI.CACHE.LIMIT_FOR_CLEAN** | It configures the     | 50                    |
+|                       | maximum cache section |                       |
 |                       | (in percentage) that  |                       |
 |                       | can be cleaned at     |                       |
 |                       | runtime when the      |                       |
@@ -72,8 +72,8 @@ Cache parameters
 |                       | space to store a      |                       |
 |                       | dataset               |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.SC | It schedules the      | DAILY                 |
-| HEDULING_FULL_CLEAN** | recurring operation   |                       |
+|    **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN** | It schedules the      | DAILY                 |
+|                       | recurring operation   |                       |
 |                       | of complete cleaning  |                       |
 |                       | of the cache. This    |                       |
 |                       | periodic cleaning     |                       |
@@ -98,8 +98,8 @@ Cache parameters
 |                       | listed unenable the   |                       |
 |                       | periodic cleaning.    |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.DS | It configures the     | 600                   |
-| _LAST_ACCESS_TTL**    | Time To Live of a     |                       |
+|    **SPAGOBI.CACHE.DS_LAST_ACCESS_TTL** | It configures the     | 600                   |
+|                       | Time To Live of a     |                       |
 |                       | dataset inside the    |                       |
 |                       | cache. This parameter |                       |
 |                       | defines the minimum   |                       |
@@ -119,8 +119,8 @@ Cache parameters
 |                       | stability of the      |                       |
 |                       | dataset in the cache. |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.DA | Name of the schema on | <empty>               |
-| TABASE_SCHEMA**       | which the tables are  |                       |
+|    **SPAGOBI.CACHE.DATABASE_SCHEMA** | Name of the schema on | <empty>               |
+|                       | which the tables are  |                       |
 |                       | created. Such schema  |                       |
 |                       | is defined by the     |                       |
 |                       | datasource when it is |                       |
@@ -132,14 +132,14 @@ Cache parameters
 |                       | calculated at         |                       |
 |                       | runtime.              |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.CR | It defines the        | 120                   |
-| EATE_AND_PERSIST_TABL | maximum time applied  |                       |
-| E.TIMEOUT**           | (in seconds) to       |                       |
+|    **SPAGOBI.CACHE.CREATE_AND_PERSIST_TABLE.TIMEOUT** | It defines the        | 120                   |
+|                       | maximum time applied  |                       |
+|                       | (in seconds) to       |                       |
 |                       | create and persist a  |                       |
 |                       | table of the cache.   |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.LI | It configures the     | 10                    |
-| MIT_FOR_STORE**       | ratio (in percentage) |                       |
+|    **SPAGOBI.CACHE.LIMIT_FOR_STORE** | It configures the     | 10                    |
+|                       | ratio (in percentage) |                       |
 |                       | between the dimension |                       |
 |                       | of the cache and the  |                       |
 |                       | maximum dimension of  |                       |
@@ -155,18 +155,18 @@ Cache parameters
 |                       | that persistance      |                       |
 |                       | attempt.              |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.WORKMANA | It represents the     | 180000                |
-| GER.SQLDBCACHE.TIMEOU | maximum waiting time  |                       |
-| T**                   | (in milliseconds) of  |                       |
+|    **SPAGOBI.WORKMANAGER.SQLDBCACHE.TIMEOUT** | It represents the     | 180000                |
+|                       | maximum waiting time  |                       |
+|                       | (in milliseconds) of  |                       |
 |                       | an asynchronus work.  |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.HA | It represents the     | 120                   |
-| ZELCAST.TIMEOUT**     | maximum time (in      |                       |
+|    **SPAGOBI.CACHE.HAZELCAST.TIMEOUT**  | It represents the     | 120                   |
+|                       | maximum time (in      |                       |
 |                       | seconds) to get a     |                       |
 |                       | distributed lock.     |                       |
 +-----------------------+-----------------------+-----------------------+
-|    **SPAGOBI.CACHE.HA | It represents the     | 240                   |
-| ZELCAST.LEASETIME**   | maximum time (in      |                       |
+|    **SPAGOBI.CACHE.HAZELCAST.LEASETIME** | It represents the     | 240                   |
+|                       | maximum time (in      |                       |
 |                       | seconds) for          |                       |
 |                       | releasing a           |                       |
 |                       | distributed lock      |                       |
@@ -180,7 +180,7 @@ Logging
 Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in Code 9.3, we analize the log file of Knowage. In the first part we can set the generation mechanism of the log file, while ih the second one the level of tracing.
 
 +-----------------------------------------------------------------------+
-|    log4j.rootLogger=ERROR, SpagoBI                                    |
+|log4j.rootLogger=ERROR, SpagoBI                                        |
 |                                                                       |
 | # SpagoBI Appender                                                    |
 | log4j.appender.SpagoBI=org.apache.log4j.RollingFileAppender           |
@@ -188,32 +188,27 @@ Knowage uses the component Log4J to create the log applications. Each web applic
 | log4j.appender.SpagoBI.MaxFileSize=10000KB                            |
 | log4j.appender.SpagoBI.MaxBackupIndex=0                               |
 | log4j.appender.SpagoBI.layout=org.apache.log4j.PatternLayout          |
-| log4j.appender.SpagoBI.layout.ConversionPattern=[%t] %d{DATE} %5p     |
-| %c.%M:%L - %m                                                         |
+| log4j.appender.SpagoBI.layout.ConversionPattern=[%t] %d{DATE} %5p %c.%M:%L - %m %n     |
 |                                                                       |
-| %n log4j.appender.SpagoBI.append=false                                |
+| log4j.appender.SpagoBI.append=false                                |
 |                                                                       |
 | log4j.appender.Quartz=org.apache.log4j.RollingFileAppender            |
 | log4j.appender.Quartz.File=${catalina.base}/logs/Quartz.log           |
 | log4j.appender.Quartz.MaxFileSize=10000KB                             |
 | log4j.appender.Quartz.MaxBackupIndex=10                               |
 | log4j.appender.Quartz.layout=org.apache.log4j.PatternLayout           |
-| log4j.appender.Quartz.layout.ConversionPattern= [%t] %d{DATE} %5p     |
-| %c.%M:%L - %m                                                         |
-|                                                                       |
-|    %n                                                                 |
+| log4j.appender.Quartz.layout.ConversionPattern= [%t] %d{DATE} %5p %c.%M:%L - %m  %n    |
 |                                                                       |
 | log4j.appender.SpagoBI_Audit=org.apache.log4j.FileAppender            |
-| log4j.appender.SpagoBI_Audit.File=${catalina.base}/logs/knowage_[1]   |
+| log4j.appender.SpagoBI_Audit.File=${catalina.base}/logs/knowage_[1]\_OperatorTrace.log    |
 |                                                                       |
-| \_OperatorTrace.log                                                   |
 | log4j.appender.SpagoBI_Audit.layout=org.apache.log4j.PatternLayout    |
 | log4j.appender.SpagoBI_Audit.layout.ConversionPattern=%m%n            |
 |                                                                       |
 | log4j.appender.CONSOLE = org.apache.log4j.ConsoleAppender             |
 | log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout          |
 | log4j.appender.CONSOLE.layout.ConversionPattern=%c.%M: %m%n #         |
-| Logger...                                                             |
+|                                                            |
 |                                                                       |
 | #log4j.logger.org.hibernate=WARN                                      |
 |                                                                       |
@@ -226,10 +221,7 @@ Knowage uses the component Log4J to create the log applications. Each web applic
 | log4j.additivity.it.eng.spagobi=false                                 |
 |                                                                       |
 | log4j.logger.it.eng.spagobi.commons.utilities.messages=ERROR, SpagoBI |
-| log4j.logger.it.eng.spagobi.commons.utilities.urls.WebUrlBuilder=ERRO |
-| R,                                                                    |
-| SpagoBI                                                               |
-|                                                                       |
+| log4j.logger.it.eng.spagobi.commons.utilities.urls.WebUrlBuilder=ERROR,SpagoBI  |
 | log4j.logger.org.quartz=ERROR, Quartz, CONSOLE                        |
 | log4j.logger.org.hibernate=ERROR, SpagoBI                             |
 |                                                                       |
@@ -239,13 +231,11 @@ Code 9.3: Logg appender.
 
 If the user wishes to enable the tracing of the information to **DEBUG** level it is enough to modify the following line
 
-+---------------------------------------+---------------------+
-| log4j.logger.it.eng.spagobi=ERROR,    |    SpagoBI, CONSOLE |
-+=======================================+=====================+
-|    in                                 |                     |
-+---------------------------------------+---------------------+
-|    log4j.logger.it.eng.spagobi=DEBUG, | SpagoBI, CONSOLE    |
-+---------------------------------------+---------------------+
+log4j.logger.it.eng.spagobi=ERROR,  SpagoBI, CONSOLE
+
+in
+
+log4j.logger.it.eng.spagobi=DEBUG, SpagoBI, CONSOLE    
 
 For further details we refer to the official Log4J documents.
 
@@ -260,8 +250,7 @@ Selecting the category MAIL the user gets the list of parameters to configure fo
 
 * scheduler, used by the scheduler to send a report by mail;
 
-* user, used directly by the user when he intends to send a report by
-   mail;
+* user, used directly by the user when he intends to send a report by mail;
 
 Maximum file size
 ---------------
@@ -326,7 +315,7 @@ Knowage manages the multi-language. The list of all languages is manageable from
 
 * SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default: the default value is [en,US].
 
- Security connectors
+Security connectors
 --------------------
 
 **Remark.** Be sure that the SpagoBI users have been taken under LDAP census, administrator with the highest number of authorizations. The LDAP security connector controls the user that is accessing Knowage, but the user himself must be already registered inside of SpagoBI. Therefore, the users must cohesist in both authentication systems.
@@ -341,14 +330,12 @@ Knowage manages the multi-language. The list of all languages is manageable from
 
 * DN_POSTFIX: this is the postfix that will be concatenated with the user name to create the DN;
 
-* the environment to use the class
-   :sub:`it.eng.spagobi.adam.AdamAuthorization` as follow:
+* the environment to use the class :sub:`it.eng.spagobi.adam.AdamAuthorization` as follow:
 
 * access Knowage as administrator,
 
 * browse until the "Configuration Management” is reached,
 
-* set the value SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className to it.eng.spagobi.adam.AdamAuthorization and confirm, – log out of
-      Knowage.
+* set the value SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className to it.eng.spagobi.adam.AdamAuthorization and confirm, – log out of Knowage.
 
 * Knowage is now ready to authenticate the users through the LDAP.
