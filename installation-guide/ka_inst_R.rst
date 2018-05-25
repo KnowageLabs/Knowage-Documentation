@@ -10,7 +10,7 @@ It is required the installation of the following components for the
 
 -  rJava
 
-|image33| The first two components, needed for the functionality of the Knowage data mining engine, has to be installed through the rpm comand, and, the third, through the RStudio GUI. Once retrieved the RPM file, open the folder and launch the comands:
+**[LINUX]** The first two components, needed for the functionality of the Knowage data mining engine, has to be installed through the rpm comand, and, the third, through the RStudio GUI. Once retrieved the RPM file, open the folder and launch the comands:
 
 .. code:: console
   
@@ -30,19 +30,19 @@ Then log in with the user credentials used for the Tomcat 7 installation: tomcat
 
 In the following, Figure 6.2, Figure 6.3 and Figure 6.4 show the sequence of steps the user will encounter:
 
-|image34|
+.. image:: media/image24.png
 
 Figure 6.1: Sign in RStudio.
 
-|image35|
+.. image:: media/image25.png
 
 Figure 6.2
 
-|image36|
+.. image:: media/image26.png
 
 Figure 6.3
 
-|image37|
+.. image:: media/image27.png
 
 Figure 6.4
 
