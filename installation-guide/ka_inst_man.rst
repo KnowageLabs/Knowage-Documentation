@@ -9,11 +9,11 @@ The metadata database must contains a schema which will collect all Knowage meta
 For configuring such a schema, the user must execute the creation scripts provided for the
 DBMS in use. The package which includes the DDL will contain the following scripts in Code 3.1:
 
-+------------------------------+
-| XXX_create.sql               |
-|                              |
-| XXX_create_quartz_schema.sql |
-+------------------------------+
+.. code:: console
+ 
+ XXX_create.sql                                            
+ XXX_create_quartz_schema.sql 
+
 Code 5.1: Scripts for metadata schema.
 
 where XXX represents the DBMS type, for instance ORA stands for Oracle. Inside the packages there are the corresponding files for deleting tables.
@@ -61,40 +61,40 @@ Metadata database connection
 -----------------------
 In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the metadata database inside the “datasources” tag: specify the username, the password and driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 is an example:
 
-+-----------------------------------------------------------------------+
-| <datasource jndi-name="java:/jdbc/knowage" pool-name="knowage">       |
-| <connection-url> <JDBC URL> </connection-url>                         |
-| <driver> <JDBC driver> </driver>                                      |
-| <security>                                                            |
-| <user-name> user name> </user-name>                                   |
-| <password> <password> </password>                                     |
-| </security>                                                           |
-| <validation>                                                          |
-| <validate-on-match>true</validate-on-match>                           |
-| <background-validation>false</background-validation>                  |
-|    <valid-connection-checker class-name="<connection checkerclass>"/> |
-|    <exception-sorter class-name="<exception sorter class>"/>          |
-|    </validation>                                                      |
-| </datasource>                                                         |
-+-----------------------------------------------------------------------+
-   Code 5.2: Setting the metadata datasource.
+.. code:: xml
+
+ <datasource jndi-name="java:/jdbc/knowage" pool-name="knowage">       
+ <connection-url> <JDBC URL> </connection-url>                         
+ <driver> <JDBC driver> </driver>                                      
+ <security>                                                            
+ <user-name> user name> </user-name>                                   
+ <password> <password> </password>                                     
+ </security>                                                           
+ <validation>                                                          
+ <validate-on-match>true</validate-on-match>                           
+ <background-validation>false</background-validation>                  
+    <valid-connection-checker class-name="<connection checkerclass>"/> 
+    <exception-sorter class-name="<exception sorter class>"/>          
+    </validation>                                                      
+ </datasource>                                                         
+
+Code 5.2: Setting the metadata datasource.
 
 In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Here in Code 3.6 is an example:
 
-+---------------------------------------------------------+
-| <driver name="<driver class>" module="<module name>" /> |
-+---------------------------------------------------------+
+.. code:: xml
+
+<driver name="<driver class>" module="<module name>" /> 
+
 
 In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following Code 3.6 shows an example:
 
-+-----------------------------------------------------------------------+
-| <Resource name="jdbc/knowage" auth="Container"                        |
-| type="javax.sql.DataSource" username="<user name>"                    |
-| password="<password>" driverClassName="<JDBC driver>" url="<JDBC      |
-| URL>" maxActive="20" maxIdle="4" validationQuery="<a query to         |
-| validate the connection, for example "select 1 from dual" on Oracle>" |
-| removeAbandoned="true" removeAbandonedTimeout="3600"/>                |
-+-----------------------------------------------------------------------+
+.. code:: xml
+
+ <Resource name="jdbc/knowage" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
+ password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
+ validationQuery="<a query to validate the connection, for example "select 1 from dual" on Oracle>" 
+ removeAbandoned="true" removeAbandonedTimeout="3600"/>                
 
 Code 5.3: Setting the metadata datasource.
 
@@ -103,42 +103,40 @@ Data database connection
 
 In the JBoss case, edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the data database inside the datasources tag. Specify: username, password, driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 shows an example:
 
-+-----------------------------------------------------------------------+
-| <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage">           |
-|    <connection-url> <JDBC URL> </connection-url>                      |
-|    <driver> <JDBC driver> </driver>                                   |
-|    <security>                                                         |
-|    <user-name> <user name> </user-name>                               |
-|    <password> <password> </password>                                  |
-|    </security>                                                        |
-|    <validation>                                                       |
-|    <validate-on-match>true</validate-on-match>                        |
-|    <background-validation>false</background-validation>               |
-|    <valid-connection-checker class-name="<connection checker class>"/>|
-|    <exception-sorter class-name="<exception sorter class>"/>          |
-|    </validation>                                                      |
-| </datasource>                                                         |
-+-----------------------------------------------------------------------+
+.. code:: xml
+
+ <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage">           
+    <connection-url> <JDBC URL> </connection-url>                      
+    <driver> <JDBC driver> </driver>                                   
+    <security>                                                         
+    <user-name> <user name> </user-name>                               
+    <password> <password> </password>                                  
+    </security>                                                        
+    <validation>                                                       
+    <validate-on-match>true</validate-on-match>                        
+    <background-validation>false</background-validation>               
+    <valid-connection-checker class-name="<connection checker class>"/>
+    <exception-sorter class-name="<exception sorter class>"/>          
+    </validation>                                                      
+ </datasource>                                                         
 
 Code 5.4: Setting the data datasource.
 
 In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Code is an example:
 
-+---------------------------------------------------------+
-| <driver name="<driver class>" module="<module name>" /> |
-+---------------------------------------------------------+
+.. code:: xml
+
+ <driver name="<driver class>" module="<module name>" /> 
 
 In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following Code 3.6 shows an example:
 
-+-----------------------------------------------------------------------+
-| <Resource name="jdbc/dwh" auth="Container"                            |
-| type="javax.sql.DataSource" username="<user name>"                    |
-| password="<password>" driverClassName="<JDBC driver>" url="<JDBC      |
-| URL>" maxActive="20" maxIdle="4" validationQuery="<query to validate  |
-| the connection, for instance "select 1  from dual" on Oracle>"        |
-|      removeAbandoned="true"                      |
-|    removeAbandonedTimeout="3600"/>                                    |
-+-----------------------------------------------------------------------+
+.. code:: xml
+
+ <Resource name="jdbc/dwh" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
+ password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
+ validationQuery="<query to validate the connection, for instance "select 1  from dual" on Oracle>"        
+      removeAbandoned="true"                      
+    removeAbandonedTimeout="3600"/>                                    
 
 
 
@@ -151,32 +149,33 @@ Concerning JBoss, edit the JBOSS_HOME/standalone/configuration/standalone.xml an
 Applications deploy
 -------------
 
-+-----------------------------------------------------------------------+
-| <bindings>                                                            |
-|    <simple name="java:/urls/resource_path" type="java.lang.String"    |
-|    value="${jboss.server.data.dir}/resources" />                      |
-|    <simple name="java:/urls/sso_class" type="java.lang.String"        |
-|    value="it.eng.spagobi.services.common.FakeSsoService" /> <simple   |
-|    name="java:/urls/service_url" type="java.lang.String"              |
-|    value="http:// localhost:8080/knowage" />                          |
-|    <simple name="java:/urls/host_url" type="java.lang.String"         |
-|    value="<server url which is hosting knowage>"/>                    |
-| </bindings>                                                           |
-+-----------------------------------------------------------------------+
+.. code:: xml
+
+ <bindings>                                                            
+    <simple name="java:/urls/resource_path" type="java.lang.String"    
+    value="${jboss.server.data.dir}/resources" />                      
+    <simple name="java:/urls/sso_class" type="java.lang.String"        
+    value="it.eng.spagobi.services.common.FakeSsoService" /> <simple   
+    name="java:/urls/service_url" type="java.lang.String"              
+    value="http:// localhost:8080/knowage" />                          
+    <simple name="java:/urls/host_url" type="java.lang.String"         
+    value="<server url which is hosting knowage>"/>                    
+ </bindings>                                                           
+
 
 Code 5.6: JBoss environment variables configuration.
 
 On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and add the following constants in the GlobalNamingResources tag, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in Code 5.7:
 
-+----------------------------------------------------------------------------------------------------------------+
-| <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>                 |
-|                                                                                                                |
-| <Environment name=" sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/> |
-|                                                                                                                |
-| <Environment name="service_url" type="java.lang.String" value="http://localhost :8080/knowage"/>               |
-|                                                                                                                |
-| <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>           | 
-+----------------------------------------------------------------------------------------------------------------+
+.. code:: xml
+
+ <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>                 
+                                                                                                                
+ <Environment name=" sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/> 
+                                                                                                                
+ <Environment name="service_url" type="java.lang.String" value="http://localhost :8080/knowage"/>               
+                                                                                                                
+ <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>            
 
 Code 5.7: Tomcat environment variables configuration.
 
@@ -211,13 +210,14 @@ Datasource link within the applications
 
 For JBoss instance, control that in all the JBOSS_HOME/standalone/deployments/knowage*.war/META-INF/context.xml files there are the links reported in Code 5.8:
 
-+-----------------------------------------------------------------------+
-| <ResourceLink global="jdbc/knowage" name="jdbc/knowage"               |
-| type="javax.sql. DataSource"/>                                        |
-|                                                                       |
-| <ResourceLink global="jdbc/dwh" name="jdbc/dwh"                       |
-| type="javax.sql.DataSource"/>                                         |
-+-----------------------------------------------------------------------+
+.. code:: xml
+
+ <ResourceLink global="jdbc/knowage" name="jdbc/knowage"               
+ type="javax.sql. DataSource"/>                                        
+                                                                       
+ <ResourceLink global="jdbc/dwh" name="jdbc/dwh"                       
+ type="javax.sql.DataSource"/>                                         
+
 Code 5.8: DataSource link syntax.
 
 While for the Tomcat instance, control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same links as in Code 5.8. Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
@@ -247,22 +247,18 @@ Modification of the Quartz configuration
 -------------------------
 The scheduler is configured by the following file: knowage.war/WEB-INF/classes/quartz.properties. It is essential to enhance in this file the property ”org.quartz.jobStore.driverDelegateClass“ with the right value, according to the metadata database in use. These in Code 5.9 the possible values:
 
-+-----------------------------------------------------------------------------------------------+
-| # Hsqldb delegate class                                                                       |
-|                                                                                               |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          |
-| # Mysql/Ingres delegate class                                                                 |
-| org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          |
-|                                                                                               |
-| # Postgres delegate class                                                                     |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      |
-|                                                                                               |
-| # Oracle delegate class                                                                       |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate   |
-|                                                                                               |
-| # SQLServer delegate class                                                                    |
-| #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.MSSQLDelegate           |
-+-----------------------------------------------------------------------------------------------+
+.. code:: console
+
+ # Hsqldb delegate class                                                                                
+ #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          
+ # Mysql/Ingres delegate class                                                                 
+ org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
+ # Postgres delegate class                                                                     
+ #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      
+ # Oracle delegate class                                                                       
+ #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate                                             
+ # SQLServer delegate class                                                                    
+ #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.MSSQLDelegate           
 
 Code 5.9: Values for the Quartz file.
 
@@ -287,40 +283,34 @@ Pool of thread definition
 
 For the execution of the batch processing ,Knowage uses a thread pool. In the JBoss case it is possible to modify the configuration by editing the JBOSS_HOME/standalone/configuration/standalone.xml and adding the configuration related to thread pool inside the **subsystem domain naming** tag, as showed in Code 5.11:
 
-+-----------------------------------------------------------------------+
-| <bindings>                                                            |
-|                                                                       |
-| <object-factory name="java:/global/SpagoWorkManager"                  |
-| module="de.myfoo.commonj" class="de.myfoo.commonj.work.               |
-| MyFooWorkManagerFactory">                                             |
-|                                                                       |
-| <environment>                                                         |
-|                                                                       |
-| <property name="maxThreads" value="5"/>                               |
-|                                                                       |
-| <property name="minThreads" value="1"/>                               |
-|                                                                       |
-| <property name="queueLength" value="10"/>                             |
-|                                                                       |
-| <property name="maxDaemons" value="10"/>                              |
-|                                                                       |
-| </environment>                                                        |
-|                                                                       |
-| </object-factory>                                                     |
-|                                                                       |
-| </bindings>                                                           |
-+-----------------------------------------------------------------------+
+.. code:: xml
+
+ <bindings>                                                            
+                                                                       
+ <object-factory name="java:/global/SpagoWorkManager" module="de.myfoo.commonj" class="de.myfoo.commonj.work.MyFooWorkManagerFactory">                                                                                                                   
+ <environment>                                                         
+                                                                       
+ <property name="maxThreads" value="5"/>                               
+                                                                       
+ <property name="minThreads" value="1"/>                               
+                                                                       
+ <property name="queueLength" value="10"/>                             
+                                                                       
+ <property name="maxDaemons" value="10"/>                              
+                                                                       
+ </environment>                                                        
+                                                                       
+ </object-factory>                                                     
+                                                                       
+ </bindings>                                                           
 
 Code 5.11: Thread pool configuration for JBoss.
 Similarly, in the Tomcat case it is possible to enable it by editing the configuration of the TOMCAT_HOME/conf/server.xml file and add the settings related to the pool of thread editing the **GlobalNamingResources** tag, as shown in Code 5.12
 
-+-----------------------------------------------------------------------+
-| <Resource auth="Container"                                            |
-|                                                                       |
-|    factory="de.myfoo.commonj.work.FooWorkManagerFactory"              |
-|    maxThreads="5" name="wm/SpagoWorkManager"                          |
-|    type="commonj.work.WorkManager"/> |
-+-----------------------------------+
+.. code:: xml
+
+ <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/> 
+
 Code 5.12: Thread of pool configuration for Tomcat.
 
 Check of the memory settings
@@ -336,14 +326,14 @@ It is recommended to increase the memory dimension used by the application serve
 
 **JBoss**
 
-|image28| Insert at the beginning of the JBOSS_HOME/bin/run.conf.sh file the row in Code 5.15:
+**[WIN]** Insert at the beginning of the JBOSS_HOME/bin/run.conf.sh file the row in Code 5.15:
 
 +------------------------------------------------------------------------+
 | export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" |
 +------------------------------------------------------------------------+
 Code 5.13: Memory settings for JBoss in Linux environment.
 
-|image29| Insert at the beginning of the JBOSS_HOME/bin/run.conf.bat file the row in Code
+**[LINUX]** Insert at the beginning of the JBOSS_HOME/bin/run.conf.bat file the row in Code
 
 
 +--------------------------------------------------------------------+
@@ -353,14 +343,14 @@ Code 5.14: Memory settings for JBoss in Windows environment.
 
 **Tomcat**
 
-|image30| Insert at the beginning of the TOMCAT_HOME/bin/setenv.sh file the row in Code 5.15:
+**[LINUX]** Insert at the beginning of the TOMCAT_HOME/bin/setenv.sh file the row in Code 5.15:
 
 +------------------------------------------------------------------------+
 | export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" |
 +------------------------------------------------------------------------+
 Code 5.15: Memory settings for Tomcat in Linux environment.
 
-|image31| Insert at the beginning of the TOMCAT_HOME/bin/setenv.bat file the row in Code 5.16:
+**[WIN]** Insert at the beginning of the TOMCAT_HOME/bin/setenv.bat file the row in Code 5.16:
 
 
 +--------------------------------------------------------------------+
@@ -368,7 +358,7 @@ Code 5.15: Memory settings for Tomcat in Linux environment.
 +--------------------------------------------------------------------+
 Code 5.16: Memory settings for Tomcat in Windows environment.
 
-If one uses Tomcat as a service it is important to modify those settings through the GUI. For that we refer to the documents available on the web page `www.apache.org. <http://www.apache.org/>`__
+If one uses Tomcat as a service it is important to modify those settings through the GUI. For that we refer to the documents available on the web page  http://www.apache.org/ 
 
 LOG files
 --------------
@@ -378,7 +368,7 @@ In short, to configure the Knowage log folder the user must execute the followin
 
 -create the LOG_DIR folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The LOG_DIR_PATH string must be the same for every node;
 
-|image32| verify that Knowage has write permissions on this folder; set the property :`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
+**[LINUX]** verify that Knowage has write permissions on this folder; set the property :`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
 
 -set the property :`log4j.appender.knowageXXXXXEngine.File` inside the :`WEB-INF/classes/log4j.properties` file of each engine to LOG_DIR_PATH/knwoageXXXXXEngine.log;
 
