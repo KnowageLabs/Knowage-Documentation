@@ -1,102 +1,62 @@
+Advanced Configuration
+==============================
 
-   In this chapter we will describe all the advanced configuration
-   parameters of Knowage.
-
- 9.1 Thread manager
-===================
-
-   For Tomcat: the configuration of the pool of thread is available
-   inside the TOMCAT_HOME/conf/server.xml. Refer to Code 9.1.
-
-+-----------------------------------------------------------------------+
-| <Resource auth="Container"                                            |
-| factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5"  |
-| minThreads="1" queueLength="10" maxDaemons="10"                       |
-|                                                                       |
-|    name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/>       |
-+-----------------------------------------------------------------------+
+In this chapter we will describe all the advanced configuration parameters of Knowage.
 
 
-   Code 9.1: Configuration of the pool of thread for Tomcat.
+Thread manager
+------------------
+For Tomcat: the configuration of the pool of thread is available inside the TOMCAT_HOME/conf/server.xml. Refer to Code 9.1.
 
-   For JBoss: the configuration of the pool of thread is available
-   inside the JBOSS_HOME/ standalone/configuration/s Refer to Code 9.2.
+.. code:: xml
 
-+-----------------------------------------------------------------------+
-| <object-factory name="java:global/SpagoWorkManager"                   |
-| module="de.myfoo.commonj"                                             |
-|                                                                       |
-|    class="de.myfoo.commonj.work.MyFooWorkManagerFactory">             |
-|                                                                       |
-|    <environment>                                                      |
-|                                                                       |
-|    <property name="maxThreads" value="5"/>                            |
-+-----------------------------------------------------------------------+
+   <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" 
+     maxThreads="5" 
+     minThreads="1" 
+     queueLength="10"   
+     maxDaemons="10" 
+     name="wm/SpagoWorkManager" 
+     type="commonj.work.WorkManager"/>       
 
 
+Code 9.1: Configuration of the pool of thread for Tomcat.
 
-   9.2. Cache parameters
+For JBoss: the configuration of the pool of thread is available inside the JBOSS_HOME/ standalone/configuration/s Refer to Code 9.2.
 
-+----------------------------------------------+
-|    <property name="minThreads" value="1"/>   |
-|                                              |
-|    <property name="queueLength" value="10"/> |
-|                                              |
-|    <property name="maxDaemons" value="10"/>  |
-|                                              |
-|    </environment>                            |
-|                                              |
-| </object-factory>                            |
-+----------------------------------------------+
+.. code:: xml
 
+   <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"                
+    class="de.myfoo.commonj.work.MyFooWorkManagerFactory">              
+    <environment>                                                                  
+    <property name="maxThreads" value="5"/>                            
+    <property name="minThreads" value="1"/>   
+    <property name="queueLength" value="10"/> 
+    <property name="maxDaemons" value="10"/>  
+    </environment>                            
+   </object-factory>                            
 
+Code 9.2: Configuration of the pool of thread for JBoss.
 
-   Code 9.2: Configuration of the pool of thread for JBoss.
+In both cases, the meaning of the configuration parameters is the following:
 
-   In both cases, the meaning of the configuration parameters is the
-   following:
+* minThreads: the mininum number of threads in the thread pool. Default: 2;
 
--  minThreads: the mininum number of threads in the thread pool.
-   Default: 2;
+* maxThreads: the maximum number of threads in the thread pool. Default: 10;
 
--  maxThreads: the maximum number of threads in the thread pool.
-   Default: 10;
+* queueLenght: the number of work items that can be queued - 0 means no queuing. Default: 10;
 
--  queueLenght: the number of work items that can be queued - 0 means no
-   queuing.
+* maxDaemons: the maximum number of daemon threads to allow for this work manager. Default: 10.
 
-..
+Cache parameters
+------------------
+First of all, the user must configure the distributed cache. This helps to coordinate the parallel access to the distributed cache, guaranteeing a thread-safe access. It is necessary to configure the hazelcast.xml file (available in the knowage/WEB-INF/classes/) typing in the ‚Äùmember‚Äú tag the IP address or hostname of the machine on which Knowage is installed (for example  <member> 192.168.29.43</member>). In case of multi-node configuration, it is obviously important to report all cluster members. This operation must be carried out on every node. Furthermore, it is possible to implement a finer tuning of the cache behaviour, changing the Knowage configuration. The user must edit some values of the SBI_CONFIG table using the specific administrator interface.
 
-   Default: 10;
-
--  maxDaemons: the maximum number of daemon threads to allow for this
-   work manager. Default: 10.
-
- 9.2 Cache parameters
-=====================
-
-   First of all, the user must configure the distributed cache. This
-   helps to coordinate the parallel access to the distributed cache,
-   guaranteeing a thread-safe access. It is necessary to configure the
-   hazelcast.xml file (available in the knowage/WEB-INF/classes/) typing
-   in the îmemberì tag the IP address or hostname of the machine on
-   which Knowage is installed (for example
-
-   <member> 192.168.29.43</member>). In case of multi-node
-   configuration, it is obviously important to report all cluster
-   members. This operation must be carried out on every node.
-   Furthermore, it is possible to implement a finer tuning of the cache
-   behaviour, changing the
-
-   Knowage configuration. The user must edit some values of the
-   SBI_CONFIG table using the specific administrator interface.
-
-   Cache parameters
+Cache parameters
 
 +-----------------------+-----------------------+-----------------------+
 |    **Values name**    | **Description**       | **Default**           |
 +=======================+=======================+=======================+
-|    **SPAGOBI.CACHE.NA | It configures the     | îsbicacheì            |
+|    **SPAGOBI.CACHE.NA | It configures the     | ‚Äùsbicache‚Äú            |
 | MEPREFIX**            | prefix of temporary   |                       |
 |                       | table in the cache    |                       |
 +-----------------------+-----------------------+-----------------------+
@@ -159,16 +119,6 @@
 |                       | stability of the      |                       |
 |                       | dataset in the cache. |                       |
 +-----------------------+-----------------------+-----------------------+
-
-..
-
-   Table 9.1: Values of the SBI_CONFIG table.
-
-   Cache parameters
-
-+-----------------------+-----------------------+-----------------------+
-|    **Values name**    | **Description**       | **Default**           |
-+=======================+=======================+=======================+
 |    **SPAGOBI.CACHE.DA | Name of the schema on | <empty>               |
 | TABASE_SCHEMA**       | which the tables are  |                       |
 |                       | created. Such schema  |                       |
@@ -223,23 +173,11 @@
 |                       | already got.          |                       |
 +-----------------------+-----------------------+-----------------------+
 
-..
-
    Table 9.2: Values of the SBI_CONFIG table.
 
-   9.3. Logging
-
- 9.3 Logging
-============
-
-   Knowage uses the component Log4J to create the log applications. Each
-   web application has its own file inside the folder
-   /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this
-   file change accordingly to the settings: the **appenders** allows to
-   modify the level of the log. As an example, in Code 9.3, we analize
-   the log file of Knowage. In the first part we can set the generation
-   mechanism of the log file, while ih the second one the level of
-   tracing.
+Logging
+-----------------
+Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in Code 9.3, we analize the log file of Knowage. In the first part we can set the generation mechanism of the log file, while ih the second one the level of tracing.
 
 +-----------------------------------------------------------------------+
 |    log4j.rootLogger=ERROR, SpagoBI                                    |
@@ -280,11 +218,6 @@
 | #log4j.logger.org.hibernate=WARN                                      |
 |                                                                       |
 | #log4j.logger.org.hibernate.SQL=DEBUG, SpagoBI, CONSOLE               |
-+-----------------------------------------------------------------------+
-
-   9.4. Mail server
-
-+-----------------------------------------------------------------------+
 | #log4j.logger.org.hibernate.type=TRACE, SpagoBI, CONSOLE              |
 |                                                                       |
 | log4j.logger.Spago=ERROR, SpagoBI log4j.additivity.Spago=false        |
@@ -302,13 +235,9 @@
 |                                                                       |
 | log4j.logger.audit=INFO, SpagoBI_Audit log4j.additivity.audit=false   |
 +-----------------------------------------------------------------------+
+Code 9.3: Logg appender.
 
-
-
-   Code 9.3: Logg appender.
-
-   If the user wishes to enable the tracing of the information to
-   **DEBUG** level it is enough to modify the following line
+If the user wishes to enable the tracing of the information to **DEBUG** level it is enough to modify the following line
 
 +---------------------------------------+---------------------+
 | log4j.logger.it.eng.spagobi=ERROR,    |    SpagoBI, CONSOLE |
@@ -318,166 +247,108 @@
 |    log4j.logger.it.eng.spagobi=DEBUG, | SpagoBI, CONSOLE    |
 +---------------------------------------+---------------------+
 
-1
+For further details we refer to the official Log4J documents.
 
-1
+Mail server
+--------------------
 
-   For further details we refer to the official Log4J documents.
+Knowage uses in some situations the mail server to send emails. The configuration of this feature can be done right straight through the Knowage GUI, after accessing with administrator credentials.
 
- 9.4 Mail server
-================
+Selecting the category MAIL the user gets the list of parameters to configure for the following profiles:
 
-   Knowage uses in some situations the mail server to send emails. The
-   configuration of this feature can be done right straight through the
-   Knowage GUI, after accessing with administrator credentials.
+* trustedStore;
 
-   Selecting the category MAIL the user gets the list of parameters to
-   configure for the following profiles:
+* scheduler, used by the scheduler to send a report by mail;
 
--  trustedStore;
-
--  scheduler, used by the scheduler to send a report by mail;
-
--  user, used directly by the user when he intends to send a report by
+* user, used directly by the user when he intends to send a report by
    mail;
 
-..
-
-   9.5. Maximum file size
+Maximum file size
+---------------
 
    |image38|
 
-   Figure 9.1: Mail server configuration.
+Figure 9.1: Mail server configuration.
 
--  kpi_alarm, used by the alarm component to send mails.
+* kpi_alarm, used by the alarm component to send mails.
 
-..
+Moreover, each profile has the following values:
 
-   Moreover, each profile has the following values:
+* smtphost: the smpt server,
 
--  smtphost: the smpt server,
+* Smtpport: the port in use,
 
--  Smtpport: the port in use,
+* from: the address to which the mail will be associated,
 
--  from: the address to which the mail will be associated,
+* user: the user of the server connection,
 
--  user: the user of the server connection,
+* password: user‚Äôs password,
 
--  password: userís password,
+* useSSL: in case the SSl is in use.
 
--  useSSL: in case the SSl is in use.
+Maximum file size
+----------------
+For security reasons, Knowage has a series of parameters which manage the maximum file size that can be loaded on the server through the web GUI. To modify those parameters, it is required to enter the Knowage server application as administrator and access the ‚Äùserver settings‚Äú section and then ‚Äùconfiguration management‚Äú. The parameters at issue are the following:
 
- 9.5 Maximum file size
-======================
+* SPAGOBI.TEMPLATE_MAX_SIZE : TEMPLATE MAX SIZE: it is the maximum template dimension of an anlytical document, expressed in bytes; the default value is 5MB;
 
-   For security reasons, Knowage has a series of parameters which manage
-   the maximum file size that can be loaded on the server through the
-   web GUI. To modify those parameters, it is required to enter the
-   Knowage server application as administrator and access the îserver
-   settingsì section and then îconfiguration managementì. The parameters
-   at issue are the following:
+* SPAGOBI.DATASET_FILE_MAX_SIZE : DATASET FILE MAX SIZE: it is the maximum dimension of a file used as a dataset, expressed in bytes; the default value is 10MB;
 
--  SPAGOBI.TEMPLATE_MAX_SIZE : TEMPLATE MAX SIZE: it is the maximum
-   template dimension of an anlytical document, expressed in bytes; the
-   default value is 5MB;
+* SPAGOBI.DOCUMENTS.MAX_PREVIEW_IMAGE_SIZE : Max preview image size: it is the maximum dimension of an image used as document preview (in the document browser, for instance), expressed in bytes; the default is 1MB;
 
--  SPAGOBI.DATASET_FILE_MAX_SIZE : DATASET FILE MAX SIZE: it is the
-   maximum dimension of a file used as a dataset, expressed in bytes;
-   the default value is 10MB;
+-  IMAGE_GALLERY.MAX_IMAGE_SIZE_KB : Max image size in Kb:it is the maximum size of the images that can be used in a cockpit creation; the default is 1MB;
 
-..
+Date format
+------------
 
-   9.6. Date format ï SPAGOBI.DOCUMENTS.MAX_PREVIEW_IMAGE_SIZE : Max
-   preview image size: it is the maximum dimension of an image used as
-   document preview (in the document browser, for instance), expressed
-   in bytes; the default is 1MB;
+Knowage allows the user to visualize the date time in a format that depends on the selected language. To change the visualization of such formats, the user must enter Knowage as administrator and access the "Server Settings‚Äú section and, consequently, the ‚ÄùConfiguration management‚Äú. Then finally select ‚Äù\ **DATE-FORMAT**\ ‚Äú.
 
--  IMAGE_GALLERY.MAX_IMAGE_SIZE_KB : Max image size in Kb:it is the
-   maximum size of the images that can be used in a cockpit creation;
-   the default is 1MB;
+|image39|
 
- 9.6 Date format
-================
+Figure 9.2: Date format configuration.
 
-   Knowage allows the user to visualize the date time in a format that
-   depends on the selected language. To change the visualization of such
-   formats, the user must enter Knowage as administrator and access the
-   "Server Settingsì section and, consequently, the îConfiguration
-   managementì. Then finally select î\ **DATE-FORMAT**\ ì.
+For each available language there are two parameters:
 
-   |image39|
+* SPAGOBI.DATE-FORMAT-<lingua>_<nazione>.format: it rules the back-end role;
 
-   Figure 9.2: Date format configuration.
+* SPAGOBI.DATE-FORMAT-<lingua>_<nazione>.extJsFormat: it rules the front-end role.
 
-   For each available language there are two parameters:
+We suggest to valorize the parameters in compliance with each other, according to a local data.
 
--  SPAGOBI.DATE-FORMAT-<lingua>_<nazione>.format: it rules the back-end
-   role;
+The parameters SPAGOBI.DATE-FORMAT-SERVER.format and SPAGOBI.DATE-FORMAT-SERVER.extJsFormat control the link between back-end and front-end. The adjustment of these parameters do not affect the web GUI.
 
--  SPAGOBI.DATE-FORMAT-<lingua>_<nazione>.extJsFormat: it rules the
-   front-end role.
+Language
+--------------
 
-..
+Knowage manages the multi-language. The list of all languages is manageable from the "Server  Settings‚Äù section. Go to "Configuration management‚Äú and select the LANGUAGE_SUPPORTED category. Here there are two properties:
 
-   We suggest to valorize the parameters in compliance with each other,
-   according to a local data.
+* SPAGOBI.LANGUAGE\ :sup:`\_`\ SUPPORTED.LANGUAGES :the list of all supported languages underneath this formalism are: [it,IT],[en,US],[fr,FR],[es,ES];
 
-   The parameters SPAGOBI.DATE-FORMAT-SERVER.format and
-   SPAGOBI.DATE-FORMAT-SERVER.extJsFormat control the link between
-   back-end and front-end. The adjustment of these parameters do not
-   affect the web GUI.
+* SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default: the default value is [en,US].
 
- 9.7 Language
-=============
+ Security connectors
+--------------------
 
-   Knowage manages the multi-language. The list of all languages is
-   manageable from the "Server
+**Remark.** Be sure that the SpagoBI users have been taken under LDAP census, administrator with the highest number of authorizations. The LDAP security connector controls the user that is accessing Knowage, but the user himself must be already registered inside of SpagoBI. Therefore, the users must cohesist in both authentication systems.
 
-   Settingsî section. Go to "Configuration managementì and select the
-   LANGUAGE_SUPPORTED category. Here there are two properties:
+* Modify the adam_authorizations.xml file located inside the SpagoBI/WEB-INF/conf/webapp folder, according to the parameters to configure:
 
-   9.8. Security connectors
+* PROVIDER_URL: LDAP server IP,
 
--  SPAGOBI.LANGUAGE\ :sup:`\_`\ SUPPORTED.LANGUAGES :the list of all
-   supported languages underneath this formalism are:
-   [it,IT],[en,US],[fr,FR],[es,ES];
+* SECURITY_AUTHENTICATION: authentication type,
 
--  SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default: the default value is
-   [en,US].
+* DN_PREFIX: this is the prefix that will be concatenated with the user name to create the DN,
 
- 9.8 Security connectors
-========================
+* DN_POSTFIX: this is the postfix that will be concatenated with the user name to create the DN;
 
-   **Remark.** Be sure that the SpagoBI users have been taken under LDAP
-   census, administrator with the highest number of authorizations. The
-   LDAP security connector controls the user that is accessing Knowage,
-   but the user himself must be already registered inside of SpagoBI.
-   Therefore, the users must cohesist in both authentication systems.
-
--  Modify the adam_authorizations.xml file located inside the
-   SpagoBI/WEB-INF/conf/webapp folder, according to the parameters to
-   configure:
-
-   -  PROVIDER_URL: LDAP server IP,
-
-   -  SECURITY_AUTHENTICATION: authentication type,
-
-   -  DN_PREFIX: this is the prefix that will be concatenated with the
-      user name to create the DN,
-
-   -  DN_POSTFIX: this is the postfix that will be concatenated with the
-      user name to create the DN;
-
--  the environment to use the class
+* the environment to use the class
    :sub:`it.eng.spagobi.adam.AdamAuthorization` as follow:
 
-   -  access Knowage as administrator,
+* access Knowage as administrator,
 
-   -  browse until the "Configuration Managementî is reached,
+* browse until the "Configuration Management‚Äù is reached,
 
-   -  set the value
-      SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className to
-      it.eng.spagobi.adam.AdamAuthorization and confirm, ñ log out of
+* set the value SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className to it.eng.spagobi.adam.AdamAuthorization and confirm, ‚Äì log out of
       Knowage.
 
--  Knowage is now ready to authenticate the users through the LDAP.
+* Knowage is now ready to authenticate the users through the LDAP.
