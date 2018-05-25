@@ -104,9 +104,7 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
  
  export JAVA_HOME=<JDK 1.8 installation root folder> 
 
-**[WIN]** It is recommended to install JBoss as a service, using the
-   dedicated user guide available on the Red Hat web site
-   `www.redhat.com/en. <http://www.redhat.com/en>`__
+**[WIN]** It is recommended to install JBoss as a service, using the dedicated user guide available on the Red Hat web site http://www.redhat.com
 
 
 Tomcat 7
@@ -147,10 +145,10 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 
  exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@" 
 
-**[WIN]** It is recommended to install Tomcat as a service using the installer available on the Apache web site httpd.apache.org/.
+**[WIN]** It is recommended to install Tomcat as a service using the installer available on the Apache web site http://www.apache.org.
 
  
- Database schema for metadata
+Database schema for metadata
 ---------------------
 
 Knowage uses a schema to manage metadata, that is all those information required for its operation. These concern the configuration, the users and the analytical documents. It is possible to use the DBMSs listed in Table 3.4 for the creation of this schema.
