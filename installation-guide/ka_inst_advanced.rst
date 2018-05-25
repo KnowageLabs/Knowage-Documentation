@@ -150,7 +150,7 @@ Selecting the category MAIL the user gets the list of parameters to configure fo
 Maximum file size
 ---------------
 
-   |image38|
+.. image:: media/image28.png
 
 Figure 9.1: Mail server configuration.
 
@@ -187,7 +187,7 @@ Date format
 
 Knowage allows the user to visualize the date time in a format that depends on the selected language. To change the visualization of such formats, the user must enter Knowage as administrator and access the "Server Settings“ section and, consequently, the ”Configuration management“. Then finally select ”\ **DATE-FORMAT**\ “.
 
-|image39|
+.. image:: media/image29.png
 
 Figure 9.2: Date format configuration.
 
