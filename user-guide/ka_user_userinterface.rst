@@ -128,9 +128,9 @@ It is important to underline that not all the components of the menu are mandato
 
 In the following we describe all the features the main menu could contain, namely:
 
-Document Browser This is a standard functionality of Knowage Server. It enables you to access
+**Document Browser** This is a standard functionality of Knowage Server. It enables you to access
 
-Workspace This is available only for KnowageBD and KnowageSI. Entering the Workspace you will find the sections: **Recent**,                   **Documents**, **Data** and **Analysis**. The “Recent” area shows the latest documents you were working on, while “Documents”           contains the analytical documents the user asks to be archived on this area. This way the user has a more rapid and efficient way       to retrieve the documents of his interest. The “Data” section is made up of the “Dataset” and the “Models” subsections. In the **Dataset** one you can access all the self-service BI features. Once entered this section, your datasets appear (see Figure 2.3) divided into four categories:
+**Workspace** This is available only for KnowageBD and KnowageSI. Entering the Workspace you will find the sections: **Recent**,                   **Documents**, **Data** and **Analysis**. The “Recent” area shows the latest documents you were working on, while “Documents”           contains the analytical documents the user asks to be archived on this area. This way the user has a more rapid and efficient way to retrieve the documents of his interest. The “Data” section is made up of the “Dataset” and the “Models” subsections. In the **Dataset** one you can access all the self-service BI features. Once entered this section, your datasets appear (see Figure 2.3) divided into four categories:
 
 -  **MY DATA SET**, containing all the datasets created by you,
 -  **ENTERPRISE DATA SET**, where you can find the datasets created by the developer and released to the users,
@@ -159,11 +159,11 @@ Workspace This is available only for KnowageBD and KnowageSI. Entering the Works
 
 The **general menu** is identified with the first icon in Table 2.2 and a label containing your user name. Opening the general menu you have the following extra buttons:
 
-Select role If your user is associated with more than one role, Knowage requests you to specify the default role. You can select it when executing a document, or right after authentication by clicking on this icon and choosing a default role.
+**Select role** If your user is associated with more than one role, Knowage requests you to specify the default role. You can select it when executing a document, or right after authentication by clicking on this icon and choosing a default role.
 
-Languages Select the language of Knowage environment.
+**Languages** Select the language of Knowage environment.
 
-Info View the details of current Knowage version.
+**Info** View the details of current Knowage version.
 
 To conclude the overview of this area we describe a not mandatory element. When configured by the Knowage administrator, you can have quick links to a static page, a document, a folder or an external application, like for instance a web page. These links are displayed below the BI functionalities menu, as shown in Figure 2.4.
 
