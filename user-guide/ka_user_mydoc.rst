@@ -22,14 +22,11 @@ It is possible to show or hide the parameter panel by clicking on the filter but
 
 Furthermore, the parameter configuration can be saved for future use. This is particularly useful when the document includes several customized parameters. This feature is accessible from the toolbar located at the top right corner of the parameters panel.
 
--  Reset inserted values for parameters;
+-  **Reset** inserted values for parameters;
 
--  Open saved a window listing the saved parameters, so that you can
-      select or modify them;
+-  **Open saved** a window listing the **saved parameters**, so that you can select or modify them;
 
--  Save the parameters. Here you can choose between two options:
-      **Public** means visible to all the other users that share your
-      role while **Private** means visible only to you.
+-  **Save** the parameters. Here you can choose between two options: **Public** means visible to all the other users that share your role while **Private** means visible only to you.
 
 Document Toolbar
 --------------------
