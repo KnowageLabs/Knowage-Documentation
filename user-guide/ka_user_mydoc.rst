@@ -5,9 +5,9 @@ In this chapter we describe all the features related to Knowage analytical docum
 
 First of all, notice that once you execute a document from the document browser or from the menu, it is visualized full screen. In the first case, you can return to the document browser by clicking on the folder icon located at the top left, as shown in Figure 3.1.
 
-   |image31|
+ |image31|
 
-   Figure 3.1: Back to Document Browser.
+ Figure 3.1: Back to Document Browser.
 
 Parameters management
 -------------------------
