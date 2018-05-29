@@ -1,8 +1,7 @@
 User Interface
 ================
 
-This chapter focuses on Knowage user interface, providing detailed
-information on the Main Menu.
+This chapter focuses on Knowage user interface, providing detailed information on the Main Menu.
 
 Main menu
 -----------------
