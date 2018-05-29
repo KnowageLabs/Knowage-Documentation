@@ -37,7 +37,6 @@ Knowage source code repository is available on GitHub: visit the `repository`_.
    administrator-guide/index.rst
    user-guide/index.rst
    functionalities-guide/index.rst
-   indexThumbinals.rst
 
 .. Indices and tables
 .. ==================
