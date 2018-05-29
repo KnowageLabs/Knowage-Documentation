@@ -9,7 +9,6 @@ Installation Manual
 .. include:: ka_inst_Python.rst
 .. include:: ka_inst_CAS.rst
 .. include:: ka_inst_advanced.rst
-.. include:: ImageThumbinals.rst
 
 .. |image0| image:: media/image1.png
    :width: 5.0075in
