@@ -338,8 +338,6 @@ Template definition
 | </COMMONJ>                                                            |
 +-----------------------------------------------------------------------+
 
-.
-
    Code 7.5: ProcessTest
 
    Where:
@@ -373,11 +371,11 @@ Template definition
 |                                   | the job (i.e., the extension of   |
 |                                   | CmdWorkExec or KnowageWork).      |
 +-----------------------------------+-----------------------------------+
-
-..
-
-   Optional and repeatable. Each line with this attribute defines an sbi_analytical_driver analytical driver that should be associated with the process.
-
+|    sbi_analytical_driver          | Optional and repeatable. Each line|
+|                                   | with this attribute defines an    |
+|                                   | analytical driver that should be  |
+|                                   | associated with the process.      |
++-----------------------------------+-----------------------------------+
    Table 7.2: CommonJ document template parameters.
 
    The class CmdExecWork (and its extensions) allows the execution of the command specified in the template. In particular, the template above would produce the following command at runtime:
@@ -387,4 +385,4 @@ Template definition
 | update=<val> level=<val>                                              |
 +-----------------------------------------------------------------------+
 
-..
+Code 7.5: Runtime command line
