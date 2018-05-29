@@ -4,9 +4,7 @@ Knowage at a glance
 Discovering Knowage
 -----------------
 
-Knowage is the business intelligence suite developed and managed by Engineering Group.
-
-Knowage is *flexible*, since it is based on a modular architecture and open standards in order to facilitates its customization and integration according to users’ needs. It also provides a *comprehensive* set of analytical features and capabilities, listed in section Analytical and operational functionalities, ranging from traditional reporting and charting tools, to more advanced analytics.
+Knowage is the business intelligence suite developed and managed by Engineering Group. Knowage is *flexible*, since it is based on a modular architecture and open standards in order to facilitates its customization and integration according to users’ needs. It also provides a *comprehensive* set of analytical features and capabilities, listed in section Analytical and operational functionalities, ranging from traditional reporting and charting tools, to more advanced analytics.
 
 KnowageER and KnowageSI also supports **multi-tenancy**, i.e. a single Knowage instance serving multiple organizations, called tenants. In a multi-tenancy architecture, each tenant owns and manages his own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
 
@@ -24,7 +22,9 @@ Knowage Studio
 Knowage SDK
    A set of APIs compliant with the SOA architecture, allowing external applications to interact with the Knowage Server   and its metadata.
 Knowage Applications
-   A set of analytical models ready to use in specific business domains. Here we focus on Knowage Server considering the administrator perspective.
+   A set of analytical models ready to use in specific business domains. 
+   
+Here we focus on Knowage Server considering the administrator perspective.
 
 It is the main module of the suite, which provides, as we will see, the whole analytical power of the product and all administrative
 functionalities.
