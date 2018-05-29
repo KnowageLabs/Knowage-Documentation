@@ -1,7 +1,10 @@
+Analytical Model
+====================
+
 The *analytical model* let you organize analytical documents in hierarchies and folders. Let’s have a look on its structure.
 
 Repository structure and rights
-===================================
+--------------------------------
 
 Knowage adopts a virtual folder structure to organize analytical documents in hierarchies and folders. This structure is called the Functionalities tree and is accessible via **Profile**
 
@@ -48,7 +51,7 @@ To assign permissions to roles, check the related boxes. Each user with that rol
 |image43|
 
 Menu configuration
-======================
+-------------------
 
 Knowage allows the definition of a menu for the end user. This menu will be displayed in the left bar of Knowage homepage, under the Knowage icon. It is possible to associate to each node a static page, a document, a functionality (as a folder) or nothing (empty node). Every node can be associated to different roles. This menu structure can be created and modified exclusively by the administrator in the **Tools** area. To access the Menu configuration area, go to **Profile Management** > **Menu Configuration** from the Main Menu.
 
