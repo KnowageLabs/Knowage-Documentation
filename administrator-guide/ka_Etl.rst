@@ -1,5 +1,5 @@
 
-7.1 ETL
+ETL
 =======
 
 KnowageBD and KnowageSI allow the upload of data from source systems according to a common ETL logic, as well as the monitoring of data flows continuously feeding the data warehouse. To this end, Knowage provides an ETL engine: KnowageTalendEngine.
@@ -140,7 +140,7 @@ Job scheduling
 
    While defining a scheduled execution, you can set a notification option which will send an email to a set of recipients or a mailing list once the job has completed its execution. To enable this option, check the flag **Send Mail**.
 
- 7.2 External processes
+External processes
 =======================
 
    KnowageBD and KnowageSI support the execution of processes that are external to its own activity. When analyzing data, for example through the real time console, it may be useful to perform activities such as sending notification emails or taking actions on the components of the monitored system (e.g., business processes, network nodes).
