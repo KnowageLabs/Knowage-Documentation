@@ -77,7 +77,7 @@ Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you t
 
 For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure 4.2.
 
-   |image35c|
+   |image35|
 
    Figure 4.2: Libraries to include in the apache driver.
 
