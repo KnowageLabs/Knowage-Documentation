@@ -3,8 +3,8 @@ Configure data sources
 
 To let all the BI tools work properly you need to configure DB connection. There are two different options available for the configuration:
 
-- JNDI (**recommended**)
-- JDBC.
+- **JNDI** (recommended)
+- **JDBC**.
 Let’s have a look on these two types.
 
 Connect to your data
@@ -13,6 +13,7 @@ Connect to your data
 In order to connect to your data, you have to define a new data source connection. Defining a data source allows Knowage to access data transparently without the need to redefine the connection to the database in case some of its configuration properties change over time. 
 
 Knowage manages two types of data source connections:
+
 - direct JDBC connections, which are directly managed by Knowage;
 - connections retrived as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access, e.g., by defining connection pools.
 
@@ -21,9 +22,9 @@ The second type of connection is the one recommended in real projects.
 To add a new connection, first add the relative JDBC driver to the folder KnowageServer-<version>/lib and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
    .. figure:: media/image25.png
-      :alt: Left: Add a new data source. Right: Data source details.
-
-      Add a new data source, Right: Data source details.
+      :alt: 
+      
+      Left: Add a new data source. Right: Data source details.
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
