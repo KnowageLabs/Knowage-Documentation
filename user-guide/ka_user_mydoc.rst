@@ -102,10 +102,6 @@ Scheduled Execution
 
 The administrator has the possibility to set schedulation for documents. These schedulations can be accessed by **Show Scheduled executions**.
 
-|image42|
-
-Scheduled Execution
-
    |image43|
 
    Figure 3.7: Share notes and comments.
