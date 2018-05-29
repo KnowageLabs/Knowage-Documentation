@@ -31,7 +31,7 @@ if on_rtd:
         'css_files': [
             'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
             'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
-            'https://raw.githubusercontent.com/KnowageLabs/Knowage-Documentation/master/style/knowage_readthedocs.css',
+            'https://www.knowage-suite.com/landing/external_resources/knowage_readthedocs.css',
         ],
     }
 else:
