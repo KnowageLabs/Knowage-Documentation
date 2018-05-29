@@ -80,7 +80,8 @@ When a user logs in into Knowage, his profile is automatically loaded. The full 
 Authentication can be handled internally by Knowage or delegated to an external Single Sign On (SSO) system.
 
    .. hint::
-      The choice of handling authentication internally or delegating it to an external SSO system typically depends on the presence of an authentication system already in place. If this is the case, Knowage can seamlessly integrate with the existing authentication infrastructure.
+      **Authentication Management**:
+         The choice of handling authentication internally or delegating it to an external SSO system typically depends on the presence of an authentication system already in place. If this is the case, Knowage can seamlessly integrate with the existing authentication infrastructure.
 
 Once the user has logged in, his role is loaded. Roles are managed
 internally. In case the user is associated with multiple roles, he will
@@ -103,11 +104,11 @@ Knowage supports the management of user profiles and roles through the **Profile
 
 The **Profile Management** menu section contains three sub-menu items:
 
--  Profile Attribute Management: to define new profile attributes and manage the existing ones.
+-  **Profile Attribute Management**: to define new profile attributes and manage the existing ones.
 
--  Role Management: to create new roles and manage permissions for each role.
+-  **Role Management**: to create new roles and manage permissions for each role.
 
--  User Management: to create users, manage their identities, assign values to their profile attributes and associate them with roles.
+-  **User Management**: to create users, manage their identities, assign values to their profile attributes and associate them with roles.
 
 In the following, we show how the model administrator can define user profiles and roles using these functionalities. Remember that Knowage profile management can also be integrated with external profiling systems.
 
@@ -122,8 +123,8 @@ Attributes defined in this section will be available to all user profiles. It is
 Once the attributes are defined, the model administrator can define roles, using the **Role Management** functionality. The role management tool is two-sided: on the left you can see the list of already defined roles. At the beginning of a project, only default roles are visible. To add a new role, click the **Add** button and move to the right panel. To delete a role, simply click the **Delete** button at the end of the role’s row.
 
    .. hint::
-      **Role Management**
-      The behavioural model should be built taking into account the specificity of each organization and the needs of the BI project.    Therefore, it is a good practice to define specific roles for the BI project and avoid using Knowage technical roles only.
+      **Role Management**:
+         The behavioural model should be built taking into account the specificity of each organization and the needs of the BI project.    Therefore, it is a good practice to define specific roles for the BI project and avoid using Knowage technical roles only.
 
 In the right panel there are three tabs. The **Detail** tab allows the administrator to define role name and role type (mandatory). The role type regulates the visibility of that role based on the categorization described in Table 5.1. A code and a description can be added too, as shown in Figure 5.3.
 
