@@ -50,13 +50,13 @@ Write
 Type
    The available options are 
    
-      + If you want to define a direct *JDBC* connection, then you have to also set the following fields:
+      + If you want to define a direct **JDBC** connection, then you have to also set the following fields:
       
          - **URL** Database URL. An example for MySQL databases is *jdbc:mysql://localhost:3306/foodmart_key*
          - **User** Database username
          - **Password** Database password.
          - **Driver** Driver class name. An example for MySQL databases is *com.mysql. jdbc.Driver*.
-      + If instead you want to define a JNDI connection, fill in the following fields:
+      + If instead you want to define a **JNDI** connection, fill in the following fields:
       
          - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
          - **Schema attribute** The name of the profile attribute that determines the schema name.
@@ -139,7 +139,9 @@ Cassandra
 
 Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple  datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
 
-There are different ways to connect Knowage to Cassandra. If you are using Datastax Enterprise you can use Spark SQL connector and query Cassandra using pseudo standard SQL (`https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md) <https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md>`__
+There are different ways to connect Knowage to Cassandra. 
+
+If you are using Datastax Enterprise you can use Spark SQL connector and query Cassandra using pseudo standard SQL (`https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md) <https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md>`__
 
 Another solution is to download the Apache JDBC Driver and query Cassandra using the language CQL. Also in this case the JDBC driver is composed by different jars, and so you should deploy the JDBC driver with all dependencies in your application server.
 
