@@ -385,4 +385,4 @@ Template definition
 | update=<val> level=<val>                                              |
 +-----------------------------------------------------------------------+
 
-Code 7.5: Runtime command line
+Code 7.6: Runtime command line
