@@ -100,11 +100,10 @@ The BI functionalities menu consists in a set of icons associated with basic fea
    Table 3.3: Menu components - Administrator Menu.
 
 - **Documents development** This is a standard functionality of Knowage Server. It enables you to create the analytical document as well as access and execute them.
-- **Workspace** From this section you can access the **Models** and create
-datasets and federations.
 
-The administrator menu is divided in subpanels which maps the different
-managing areas:
+- **Workspace** From this section you can access the **Models** and create datasets and federations.
+
+The administrator menu is divided in subpanels which maps the different managing areas:
 
 - **Data Providers** Here you can set and manage Data Sources.
 
@@ -112,9 +111,7 @@ managing areas:
 
 - **Behavioural model** Here you manage all the Behavioural model, which means create analytical drivers and lov. In this area you can access the contraints configuration too.
 
-- **Catalogs** In this area you manage different catalogs, that may vary from product to product: 
-+ the **Business Model** catalogues used for QbE;
-+ the **Layer Catalogs** for the creation of GIS analitycal documents and so on.
+- **Catalogs** In this area you manage different catalogs, that may vary from product to product: the **Business Model** catalogues used for QbE; the **Layer Catalogs** for the creation of GIS analitycal documents and so on.
 
 - **Tools** In this area you can access the different scheduler options.
 
