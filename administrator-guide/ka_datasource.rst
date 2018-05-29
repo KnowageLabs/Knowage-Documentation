@@ -21,11 +21,9 @@ The second type of connection is the one recommended in real projects.
 
 To add a new connection, first add the relative JDBC driver to the folder KnowageServer-<version>/lib and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
-   .. figure:: media/image25.png
-      :alt: 
+   .. image:: media/image25.png  image:: media/image26.png
+      :alt: Figure 4.1: Left: Add a new data source. Right: Data source details.
       
-      Left: Add a new data source. Right: Data source details.
-
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
 The detail page of each data source (on the right side as shown in the figure above) includes the following properties:
