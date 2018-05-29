@@ -21,9 +21,7 @@ Furthermore, the analytical model for monitoring ETL flows can be successfully a
 
 -  Template building;
 
-Job design
-
-   Analytical document building;
+-  Analytical document building;
 
 -  Job execution.
 
@@ -65,14 +63,10 @@ Once you have set the connection, you can right click on a job and select **Depl
 |    Host                           | Host name or IP address of the    |
 |                                   | connection URL to Knowage         |
 +-----------------------------------+-----------------------------------+
-
-..
-
-   Password of the user that will perform the deploy
-
-   Password
-
-   Table 7.1: Connection Settings
+|    Password                       | Password of the user that will    |
+|                                   | perform the deploy                |
++-----------------------------------+-----------------------------------+ 
+  Table 7.1: Connection Settings
 
 Template building
 ~~~~~~~~~~~~~~~~~~
@@ -108,9 +102,7 @@ Template building
 
 -  language is the chosen language for code generation. The two possible options are: Java and Perl.
 
-Creating the analytical document
-
-   Values in the template must be consistent with those defined in Talend, in order to ensure the proper execution of the ETL document
+Values in the template must be consistent with those defined in Talend, in order to ensure the proper execution of the ETL document
    on Knowage Server.
 
 Creating the analytical document
