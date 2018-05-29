@@ -28,12 +28,12 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 
 The detail page of each data source (on the right side as shown in the figure above) includes the following properties:
 
- Label: 
-   Mandatory identifier of the data source.
- Description: 
-   Description of the data source.
- Dialect: 
-   The dialect used to access the database. Supported dialects are: 
+Label: 
+  Mandatory identifier of the data source.
+Description: 
+  Description of the data source.
+Dialect: 
+  The dialect used to access the database. Supported dialects are: 
       
       + Oracle
       + SQL Server
