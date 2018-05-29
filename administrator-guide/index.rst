@@ -10,7 +10,6 @@ Administration Manual
 .. include:: ka_Scheduler.rst
 .. include:: ka_ServerManager.rst
 .. include:: ka_ServerSettings.rst
-.. include:: imageThumbinals.rst
 
 
 .. |image0| image:: media/image1.png
