@@ -3,7 +3,6 @@ User Guide
 .. include:: ka_user_intro.rst
 .. include:: ka_user_userinterface.rst
 .. include:: ka_user_mydoc.rst
-.. include:: imageThumnbinals.rst
 
 .. |image0| image:: media/image1.png
    :width: 8.25in
