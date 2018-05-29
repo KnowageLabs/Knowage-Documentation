@@ -1428,49 +1428,6 @@ Functionalities
    :width: 4.05123in
    :height: 1.91118in
 
-.. |image319| image:: SmartFilter/media/image327.png
-   :width: 4.05122in
-   :height: 1.91275in
-.. |image320| image:: SmartFilter/media/media/image328.png
-   :width: 4.05119in
-   :height: 1.91289in
-.. |image321| image:: SmartFilter/media/media/image329.png
-   :width: 4.0511in
-   :height: 1.82924in
-.. |image322| image:: SmartFilter/media/media/image330.png
-   :width: 3.47239in
-   :height: 0.87052in
-.. |image323| image:: Common/media/image1.png
-   :width: 5.0075in
-   :height: 1.25635in
-.. |image324| image:: SmartFilter/media/media/image331.png
-   :width: 4.05119in
-   :height: 1.91289in
-.. |image325| image:: Common/media/image2.png
-   :width: 5.0075in
-   :height: 0.88795in
-.. |image326| image:: SmartFilter/media/media/image332.png
-   :width: 2.60433in
-   :height: 2.46181in
-.. |image327| image:: SmartFilter/media/media/image333.png
-   :width: 3.18308in
-   :height: 1.99233in
-.. |image328| image:: SmartFilter/media/media/image334.png
-   :width: 3.1831in
-   :height: 1.97843in
-.. |image329| image:: SmartFilter/media/media/image335.png
-   :width: 4.0511in
-   :height: 1.92442in
-.. |image330| image:: SmartFilter/media/media/image336.png
-   :width: 3.18298in
-   :height: 0.86481in
-.. |image331| image:: SmartFilter/media/media/image337.png
-   :width: 4.05122in
-   :height: 1.90681in
-.. |image332| image:: SmartFilter/media/media/image338.png
-   :width: 3.76175in
-   :height: 1.7717in
-
 .. |image333| image:: Registry/media/image339.png
    :width: 4.05119in
    :height: 1.92179in
