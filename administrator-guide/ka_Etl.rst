@@ -133,11 +133,9 @@ Job scheduling
    While defining a scheduled execution, you can set a notification option which will send an email to a set of recipients or a mailing list once the job has completed its execution. To enable this option, check the flag **Send Mail**.
 
 External processes
-------------------
+~~~~~~~~~~~~~~~~~~~
 
    KnowageBD and KnowageSI support the execution of processes that are external to its own activity. When analyzing data, for example through the real time console, it may be useful to perform activities such as sending notification emails or taking actions on the components of the monitored system (e.g., business processes, network nodes).
-
-Class definition
 
    These products provide the KnowageProcessEngine, which supports the execution and management of external processes.
 
@@ -163,24 +161,27 @@ Class definition
 
    First of all, the developer should write a Java class that defines the desired logics for processing start and stop. In particular, this class must extend one of these two classes of the engine:
 
-   KnowageWork. In this case the class to be defined only needs to reimplement the run() method. This class is the base case: the logic of the external process will be contained in the run() method.
+   **KnowageWork**. In this case the class to be defined only needs to reimplement the run() method. This class is the base case: the logic of the external process will be contained in the run() method.
 
-   CmdExecWork. In this case, the class to be defined must implement the method execCommand(). The logic of the external process can be delegated to an external class, which will be invoked by the execCommand() method, as specified in the document template (see Code 7.2). To stop the process, the developer is in charge of checking programmatically whether the process is still running, using the method isRunning(), or not.
+   **CmdExecWork**. In this case, the class to be defined must implement the method execCommand(). The logic of the external process can be delegated to an external class, which will be invoked by the execCommand() method, as specified in the document template (see Code 7.2). To stop the process, the developer is in charge of checking programmatically whether the process is still running, using the method isRunning(), or not.
 
    Note that the class CmdExecWork extends KnowageWork by providing additional methods. To better understand the difference between the two options, let us have a look at some code snippets. Here you can see a class implemented as an extension of KnowageWork:
 
 +-----------------------------------------------------------------------+
-| package it.eng.spagobi.job; import java.util.Iterator; import         |
-| it.eng.spagobi.engines.commonj.process.SpagoBIWork; public class      |
-| CommandJob extends SpagoBIWork{                                       |
+| package it.eng.spagobi.job;                                           |
 |                                                                       |
-| @Override public boolean isDaemon() { return true;}                   |
-+-----------------------------------------------------------------------+
-
-
-Class definition
-
-+-----------------------------------------------------------------------+
+| import java.util.Iterator;                                            |  
+|                                                                       |
+| import it.eng.spagobi.engines.commonj.process.SpagoBIWork;            |
+|                                                                       |
+| public class CommandJob extends SpagoBIWork{                          |
+|                                                                       |
+| @Override                                                             |
+|                                                                       |
+| public boolean isDaemon() {                                           |
+|                                                                       |
+| return true;}                                                         |
+|                                                                       |
 | @Override                                                             |
 |                                                                       |
 | public void release() {                                               |
@@ -217,13 +218,29 @@ Class definition
    Note that we only implement the run() method, embedding the logic of the process in it. Below you can see an example extension of CmqExecWork, called CommandJob:
 
 +-----------------------------------------------------------------------+
-| package it.eng.spagobi.job; import                                    |
-| it.eng.spagobi.engines.commonj.process.CmdExecWork; import            |
-| java.io.IOException;                                                  |
+| package it.eng.spagobi.job;                                           |
+|                                                                       |  
+| import it.eng.spagobi.engines.commonj.process.CmdExecWork;            |
 |                                                                       |
-| public class CommandJob extends CmdExecWork{ public boolean           |
-| isDaemon() { return true;} public void release() { super.release();}  |
-| public void run() { super.run(); if(isRunning()){ try {               |
+| import java.io.IOException;                                           |
+|                                                                       |
+| public class CommandJob extends CmdExecWork{                          |
+|                                                                       |
+| public boolean isDaemon() {                                           |  
+|                                                                       |
+| return true;}                                                         |
+|                                                                       |
+| public void release() {                                               |
+|                                                                       |
+| super.release();}                                                     |
+|                                                                       |
+| public void run() {                                                   |
+|                                                                       |
+| super.run();                                                          |
+|                                                                       |
+| if(isRunning()){                                                      |
+|                                                                       |
+| try {                                                                 | 
 |                                                                       |
 | execCommand();                                                        |
 |                                                                       |
@@ -232,40 +249,60 @@ Class definition
 | } catch (IOException e) {}}}}                                         |
 +-----------------------------------------------------------------------+
 
-
-
    Code 7.3: Example extension of CmqExecWork.
 
    Note that this class implements the execCommand() method and uses the isRunning() method. No logic is directly embedded in this class.
    Therefore, we also define an external class, called ProcessTest, which contains the actual logic (in our example printing the content of a file):
 
 +-----------------------------------------------------------------------+
-| package it.eng.test; import java.io.FileNotFoundException; import     |
-| java.io.FileOutputStream; import java.io.PrintStream; public class    |
-| ProcessTest {                                                         |
+| package it.eng.test;                                                  | 
+|                                                                       |  
+| import java.io.FileNotFoundException;                                 |  
 |                                                                       |
-| public static void main(String[] args) { FileOutputStream file=null;  |
-| try { file = new FileOutputStream("C:/file.txt");                     |
+| import java.io.FileOutputStream;                                      |
 |                                                                       |
-| } catch (FileNotFoundException e) { // TODO Auto-generated catch      |
-| block e.printStackTrace();}                                           |
+| import java.io.PrintStream;                                           |
 |                                                                       |
-| PrintStream output = new PrintStream(file); while (true){             |
-| output.println("New row"); output.flush(); try {                      |
+| public class ProcessTest {                                            |
+|                                                                       |
+| public static void main(String[] args) {                              |
+|                                                                       |
+| FileOutputStream file=null;                                           |              
+|                                                                       |
+| try {                                                                 |
+|                                                                       |
+| file = new FileOutputStream("C:/file.txt");                           |
+|                                                                       |
+| } catch (FileNotFoundException e) {                                   |
+|                                                                       |
+| // TODO Auto-generated catch block                                    |
+|                                                                       |
+| e.printStackTrace();}                                                 |
+|                                                                       |
+| PrintStream output = new PrintStream(file);                           |
+|                                                                       |
+| while (true){                                                         |
+|                                                                       |
+| output.println("New row");                                            |
+|                                                                       |
+| output.flush();                                                       |  
+|                                                                       |
+| try {                                                                 |
 |                                                                       |
 | Thread.currentThread().sleep(5000l);                                  |
 |                                                                       |
-| } catch (InterruptedException e) { // TODO Auto-generated catch block |
-| e.printStackTrace(); output.close();}}}}                              |
+| } catch (InterruptedException e) {                                    |
+|                                                                       |
+| // TODO Auto-generated catch block                                    |
+|                                                                       |
+| e.printStackTrace();                                                  |
+|                                                                       |
+| output.close();}}}}                                                   |
 +-----------------------------------------------------------------------+
 
+Code 7.4: ProcessTest
 
-
-   Code 7.4: ProcessTest Now that classes are ready, we pack them in .jar file containing all classes and their paths.
-
-   Then we copy the jar file under the resource folder of Knowage at: [RESOURCE_PATH]/commonj/
-
-   CommonjRepository/[JAR\_NAME]. In the next section we will explain how to define the template, based on the class definition chosen above.
+   Now that classes are ready, we pack them in .jar file containing all classes and their paths. Then we copy the jar file under the resource folder of Knowage at: [RESOURCE_PATH]/commonj/ CommonjRepository/[JAR\_NAME]. In the next section we will explain how to define the template, based on the class definition chosen above.
 
 Template definition
 ~~~~~~~~~~~~~~~~~~~
