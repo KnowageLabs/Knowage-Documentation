@@ -20,26 +20,26 @@ Knowage main menu is divided in three submenus: the user menu, the BI functional
 
 In Table 3.1, 3.2 and 3.3 the different elements are summed up.
 
-+-----------------------+-----------------------+-----------------------+
-|    Icon               | Name                  | Description           |
-+=======================+=======================+=======================+
-|    |image11|          | Knowage user          | It opens a hidden     |
-|                       |                       | menu with extra       |
-|                       |                       | functionalities.      |
-+-----------------------+-----------------------+-----------------------+
-|    |image12|          | Select role           | To select the default |
-|                       |                       | role (available if    |
-|                       |                       | the user is           |
-|                       |                       | associated to more    |
-|                       |                       | than one role).       |
-+-----------------------+-----------------------+-----------------------+
-|    |image13|          | Languages             | Language options.     |
-+-----------------------+-----------------------+-----------------------+
-|    |image14|          | Info                  | Info on Knowage       |
-|                       |                       | version.              |
-+-----------------------+-----------------------+-----------------------+
-|    |image15|          | Log out               | log out.              |
-+-----------------------+-----------------------+-----------------------+
++----------------+-----------------------+-----------------------+
+|    Icon        | Name                  | Description           |
++================+=======================+=======================+
+|    |image11|   | Knowage user          | It opens a hidden     |
+|                |                       | menu with extra       |
+|                |                       | functionalities.      |
++----------------+-----------------------+-----------------------+
+|    |image12|   | Select role           | To select the default |
+|                |                       | role (available if    |
+|                |                       | the user is           |
+|                |                       | associated to more    |
+|                |                       | than one role).       |
++----------------+-----------------------+-----------------------+
+|    |image13|   | Languages             | Language options.     |
++----------------+-----------------------+-----------------------+
+|    |image14|   | Info                  | Info on Knowage       |
+|                |                       | version.              |
++----------------+-----------------------+-----------------------+
+|    |image15|   | Log out               | log out.              |
++----------------+-----------------------+-----------------------+
 
 ..
 
