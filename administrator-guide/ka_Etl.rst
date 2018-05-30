@@ -146,14 +146,13 @@ External processes
 
    To enable the management of an external process, the following steps are required:
 
--  Create a Java class defining the execution logic;
+    -  Create a Java class defining the execution logic;
 
--  If needed, create a Java class defining the logic of the process,
-   i.e., which tasks the process is supposed to perform (optional);
+    -  If needed, create a Java class defining the logic of the process, i.e., which tasks the process is supposed to perform (optional);
 
--  Create a template that will be associated to the Knowage document;
+    -  Create a template that will be associated to the Knowage document;
 
--  Create the Knowage CommonJ analytical document;
+    -  Create the Knowage CommonJ analytical document;
 
 ..
 
