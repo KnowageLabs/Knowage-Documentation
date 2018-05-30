@@ -225,9 +225,9 @@ Send to Java class
 |                                                                                      |
 | } else {                                                                             |
 |                                                                                      |
-| throw new SpagoBIRuntimeException( "Impossible to create outputd dir ["              |
+| throw new SpagoBIRuntimeException( "Impossible to create outputd dir                 |
 |                                                                                      |
-| + OUTPUT_FILE_DIR + "]");                                                            |
+| [" + OUTPUT_FILE_DIR + "]");                                                         |
 |                                                                                      |
 | }                                                                                    |
 |                                                                                      |
@@ -237,7 +237,7 @@ Send to Java class
 |                                                                                      |
 | throw new SpagoBIRuntimeException( "Outputd dir [" + OUTPUT_FILE_DIR + "]            |
 |                                                                                      |
-|  is not a valid directory");                                                         |
+| is not a valid directory");                                                          |
 |                                                                                      |
 | }                                                                                    |
 |                                                                                      |
@@ -251,9 +251,9 @@ Send to Java class
 |                                                                                      |
 | throw new SpagoBIRuntimeException(                                                   |
 |                                                                                      |
-| "Impossible to open a byte stream to file ["                                         |
+| "Impossible to open a byte stream to file                                            |
 |                                                                                      |
-| + outputFile.getName() + "]", e);                                                    |
+| [" + outputFile.getName() + "]", e);                                                 |
 |                                                                                      |
 | } try {                                                                              |
 |                                                                                      |
@@ -271,7 +271,8 @@ Send to Java class
 |                                                                                      |
 | throw new SpagoBIRuntimeException( "An unexpected error occurs while saving          |
 |                                                                                      |
-|  document" + " to file [" + outputFile.getName() + "]", t);                          |
+| document" + " to file [" + outputFile.getName() + "]", t);                           |
+|                                                                                      |
 | } finally {                                                                          |
 |                                                                                      |
 | if(out != null) {                                                                    |
@@ -346,7 +347,7 @@ Send to Java class
 
    Code 8.2: JavaClassDestination example.
 
-   The class FileDestination copies the executed documents to the local filesystem in a folder named D:\textbackslashScheduledRpts . The name of the report file is generated concatenating all the parameter values used by the scheduler during execution. Once implemented and properly compiled, the Java class must be exposed to the classpath of Knowage web application. For example, you can pack the compiled class into a .jar file, copy it into the lib folder of Knowage web application and restart the server. As a last step, it is necessary to assign the fully qualified name of the new class, e.g., it.eng.spagobi.tools.DestinationFile., to the configuration property classpath.
+   The class FileDestination copies the executed documents to the local filesystem in a folder named D:\\textbackslashScheduledRpts . The name of the report file is generated concatenating all the parameter values used by the scheduler during execution. Once implemented and properly compiled, the Java class must be exposed to the classpath of Knowage web application. For example, you can pack the compiled class into a .jar file, copy it into the lib folder of Knowage web application and restart the server. As a last step, it is necessary to assign the fully qualified name of the new class, e.g., it.eng.spagobi.tools.DestinationFile., to the configuration property classpath.
 
 Send mail
 ~~~~~~~~~
@@ -377,7 +378,7 @@ Static list
 Dynamic list with mapping dataset
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   In this case, you have to define a two-column dataset:
+In this case, you have to define a two-column dataset:
 
 -  the first containing a specific parameter value;
 
@@ -438,7 +439,7 @@ Schedulation panel
 Scheduler Monitor
 ----------------------
 
-   You can monitor the whole scheduling situation by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a Scheduler Monitor certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
+   You can monitor the whole scheduling situation by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
 
 
    |image58|
