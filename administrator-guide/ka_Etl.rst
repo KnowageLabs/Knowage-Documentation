@@ -165,7 +165,7 @@ Class definition
 
    **KnowageWork**. In this case the class to be defined only needs to reimplement the run() method. This class is the base case: the logic of the external process will be contained in the run() method.
 
-   **CmdExecWork**. In this case, the class to be defined must implement the method execCommand(). The logic of the external process can be delegated to an external class, which will be invoked by the execCommand() method, as specified in the document template (see Code 7.2). To stop the process, the developer is in charge of checking programmatically whether the process is still running, using the method isRunning(), or not.
+   **CmdExecWork**. In this case, the class to be defined must implement the method execCommand(). The logic of the external process can    be delegated to an external class, which will be invoked by the execCommand() method, as specified in the document template (see Code 7.2). To stop the process, the developer is in charge of checking programmatically whether the process is still running, using the method isRunning(), or not.
 
    Note that the class CmdExecWork extends KnowageWork by providing additional methods. To better understand the difference between the two options, let us have a look at some code snippets. Here you can see a class implemented as an extension of KnowageWork:
 
