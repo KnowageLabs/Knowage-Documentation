@@ -8,9 +8,12 @@ User Guide
    :width: 5.0075in
    :height: 4.14184in
    
-.. |image2| image:: media/image6.png
+.. |image2| figure:: media/image6.png
    :width: 3.47231in
    :height: 1.81604in
+   
+   Login page
+   
 .. |image3| image:: media/image7.png
    :width: 3.47231in
    :height: 1.8187in
