@@ -76,9 +76,15 @@ Template building
 +-----------------------------------------------------------------------+
 | <etl>                                                                 |
 |                                                                       |
-| <job project="Foodmart"                                               |
-| jobName="sales_by_month_country_product_familiy" context="Default"    |
-| version="0.1" language="java"/>                                       |
+| <job project="Foodmart"                                               |                  
+|                                                                       |
+| jobName="sales_by_month_country_product_familiy"                      |
+|                                                                       |  
+| context="Default"                                                     |
+|                                                                       |
+| version="0.1"                                                         |
+|                                                                       |  
+| language="java"/>                                                     |
 |                                                                       |
 | </etl>                                                                |
 +-----------------------------------------------------------------------+
