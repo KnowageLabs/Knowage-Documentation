@@ -36,7 +36,7 @@ The workflow has an impact on data visualization. A user can understand the stat
 
    Figure 9.3: The What-If is finished.
 
-   We briefly recall the fuctionality of the main buttons:
+We briefly recall the fuctionality of the main buttons:
 
 -  Unlock model: it changes the state of the workflow in order to move control to next user.
 
@@ -50,8 +50,8 @@ The workflow has an impact on data visualization. A user can understand the stat
 
 -  Output wizard: it allows user to export the edit cube in two different formats, table and csv in the specific.
 
- Meta-language description
------------------------------
+Meta-language description
+---------------------------
 
 We saw that the What-If engine allows the final user to change data values. Here we see how it is possible to modify a cell value through a formula, unconditionally from the aggragation level of the cell. The formula must be written using a particular language called **meta-language** that is described below. Firstly the available arithmetic symbols are: + - :sub:`\*` / ( ) %.
 
