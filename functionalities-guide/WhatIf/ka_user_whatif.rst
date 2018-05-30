@@ -1,8 +1,6 @@
 
-   The **What-if** analysis is the capability to make hypothesis and see
-   how these impacts on the business. In practise user can perform
-   What-if analysis using an extension of the OLAP tool. The process of
-   What-if is composed in three phases:
+   The **What-if** analysis is the capability to make hypothesis and see how these impacts on the business. In practise user can perform
+   What-if analysis using an extension of the OLAP tool. The process of What-if is composed in three phases:
 
 -  data preparation,
 
@@ -13,33 +11,27 @@
    We start then focusing on this last phase.
 
 Interface details
----------------------
+-----------------
 
-   The workflow has an impact on data visualization. A user can
-   understand the state of the workflow looking at the What-if section
-   of the sidebar. There are three possibilities described in the
-   following.
+The workflow has an impact on data visualization. A user can understand the state of the workflow looking at the What-if section of the sidebar. There are three possibilities described in the following.
 
--  The user can perform the What-if analysis: in this case the What-If
-      section contains the buttons to edit values; see Figure 9.1 to
-      check those buttons.
-
-   Interface details
+-  The user can perform the What-if analysis: in this case the What-If section contains the buttons to edit values; see Figure 9.1 to
+   check those buttons.
+      
 
    |image209|
 
    Figure 9.1: What-If buttons inside the sidebar.
 
--  The schema is locked by another user. In this case a message appears
-      with the name of the active user in the workflow as shown in
-      Figure 9.2.
+-  The schema is locked by another user. In this case a message appears with the name of the active user in the workflow as shown in
+   Figure 9.2.
 
 
    |image210|
 
    Figure 9.2: The What-If is used by another user.
-
-    Meta-language description • The workflow is finished.
+    
+-   The workflow is finished.
 
    |image211|
 
@@ -47,58 +39,38 @@ Interface details
 
    We briefly recall the fuctionality of the main buttons:
 
--  Unlock model: it changes the state of the workflow in order to move
-      control to next user.
+-  Unlock model: it changes the state of the workflow in order to move control to next user.
 
 -  Save: it persists modification in the database.
 
--  Save as new version: it persists modification in the database in a
-      new version.
+-  Save as new version: it persists modification in the database in a new version.
 
 -  Undo: it undoes last modification.
 
 -  Delete versions: it opens a wizard user can use to delete versions.
 
--  Output wizard: it allows user to export the edit cube in two
-      different formats, table and csv in the specific.
+-  Output wizard: it allows user to export the edit cube in two different formats, table and csv in the specific.
 
  Meta-language description
 -----------------------------
 
-   We saw that the What-If engine allows the final user to change data
-   values. Here we see how it is possible to modify a cell value through
-   a formula, unconditionally from the aggragation level of the cell.
-   The formula must be written using a particular language called
-   **meta-language** that is described below. Firstly the available
-   arithmetic symbols are: + - :sub:`\*` / ( ) %.
+We saw that the What-If engine allows the final user to change data values. Here we see how it is possible to modify a cell value through a formula, unconditionally from the aggragation level of the cell. The formula must be written using a particular language called **meta-language** that is described below. Firstly the available arithmetic symbols are: + - :sub:`\*` / ( ) %.
 
-   The computation 100 + 10% is a simple example of usage of the
-   operation %. Note that the formula can start with "=", but this is
-   not mandatory.
+The computation 100 + 10% is a simple example of usage of the operation %. Note that the formula can start with "=", but this is not mandatory.
 
-   To activate the editing of a measure cell that is not shown in the
-   OLAP you must first click on the filter icon of the measure filter
-   card and check the target measure. Then select the version you want
-   to use and change values of Figure 9.4 shows where are available
-   these objects in the interface.
+To activate the editing of a measure cell that is not shown in the OLAP you must first click on the filter icon of the measure filter card and check the target measure. Then select the version you want to use and change values of Figure 9.4 shows where are available these objects in the interface.
 
-   |image212|
+|image212|
 
-   Figure 9.4: Checking measures and selecting version.
+Figure 9.4: Checking measures and selecting version.
 
-   Then double-click on the target measure cell and a box will appear
-   allowing you to insert a formula. Type the computation syntax and
-   click on the *f*\ (*x*) icon to convalidate it or cancel it, as shown
-   in Figure 9.5.
+Then double-click on the target measure cell and a box will appear allowing you to insert a formula. Type the computation syntax and click on the *f*\ (*x*) icon to convalidate it or cancel it, as shown in Figure 9.5.
 
-   |image213|
+|image213|
 
-   Figure 9.5: Inserting formula and its convalidation.
+Figure 9.5: Inserting formula and its convalidation.
 
-   We stress that you can also refer to members that are not included in
-   the tuple represented by the cell that is going to be modified. Let’s
-   see some examples. For example suppose the cell refers to the
-   following tuple reported in Code 9.1:
+We stress that you can also refer to members that are not included in the tuple represented by the cell that is going to be modified. Letâ€™s see some examples. For example suppose the cell refers to the following tuple reported in Code 9.1:
 
 +-----------------------------------------------------------------------+
 | [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],     |
@@ -108,12 +80,9 @@ Interface details
 |    Customers]                                                         |
 +-----------------------------------------------------------------------+
 
+   Code 9.1: Product.Deli
 
-    Product.Deli
-
-   you can refer to the tuple in Product.Eggs with just Product.Eggs and at
-   the same time to the tuple in Product.Eggs; Measures.Unit Sales with just :sub:`Product.Eggs;
-   Measures.Unit Sales`.
+you can refer to the tuple in Code 9.2 with just Product.Eggs and at the same time to the tuple in Code 9.3 with just Product.Eggs; Measures.Unit Sales 
 
 +-----------------------------------------------------------------------+
 | [Measures].[Store Sales], [Product].[Food].[Eggs], [Version].[0],     |
@@ -123,9 +92,7 @@ Interface details
 |    Customers]                                                         |
 +-----------------------------------------------------------------------+
 
-
-
-   Product.Eggs
+   Code 9.2: Product.Eggs
 
 +-----------------------------------------------------------------------+
 | [Measures].[Unit Sales], [Product].[Food].[Eggs], [Version].[0],      |
@@ -135,39 +102,28 @@ Interface details
 |    Customers]                                                         |
 +-----------------------------------------------------------------------+
 
+   Code 9.3: Product.Eggs; Measures.Unit Sales
 
-   Product.Eggs; Measures.Unit Sales
+Note that if you create a formula on a cell and you want to move it along a dimension (for example the cell refers to member Time.2016 and you want to get value for Time.2017) you have to refer to a member of same level. So for example you can get value of the cell for Time.2017, but not for Time.2017.May.
 
-   Note that if you create a formula on a cell and you want to move it
-   along a dimension (for example the cell refers to member Time.2016
-   and you want to get value for Time.2017) you have to refer to a
-   member of same level. So for example you can get value of the cell
-   for Time.2017, but not for Time.2017.May.
-
-   The syntax is as the one shown in Referring to different members or, in case you are using
-   another hierarchy, as in Code 9.5 where you can concatenate different
-   members with ";".
+The syntax is as the one shown in Referring to different members or, in case you are using another hierarchy, as in Code 9.5 where you can concatenate different members with ";".
 
 +-----------------------------------------------------------------------+
 | <dimension's name>.<member's name>or[<dimension's name>].[<member's   |
 | name>]                                                                |
 +-----------------------------------------------------------------------+
 
-    Referring to different members.
+   Code 9.4: Referring to different members.
 
 +-----------------------------------------------------------------------+
 | <dimension's name>.<hierarchy's name>.<member's name>or[<dimension's  |
 | name>].[< hierarchy's name>].[<member's name>]                        |
 +-----------------------------------------------------------------------+
 
+   Code 9.5: Referring to different members of another hierarchy.
 
-
-    Referring to different members of another hierarchy.
-
-   You can also refer to members that are on the same level but they are
-   not sibling members:
-
-   suppose that, for example, the cell’s tuple is as in  Example of cell’s tuple.
+You can also refer to members that are on the same level but they are not sibling members:
+suppose that, for example, the cellâ€™s tuple is as in   Code 9.6:.
 
 +-----------------------------------------------------------------------+
 | [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],     |
@@ -177,10 +133,9 @@ Interface details
 |    Customers]                                                         |
 +-----------------------------------------------------------------------+
 
+  Code 9.6: Example of cellâ€™s tuple.
 
-   Example of cell’s tuple.
-
-   Note that you can refer to the tuple
+Note that you can refer to the tuple
 
 +-----------------------------------------------------------------------+
 | [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages],    |
@@ -192,20 +147,17 @@ Interface details
 |    ].[All Customers]                                                  |
 +-----------------------------------------------------------------------+
 
+   Code 9.7: Example of cellâ€™s tuple
 
-    Example of cell’s tuple
-
-   just with:
+just with:
 
 +---------------------------------------+
 | [Product].[Drink.Alcoholic Beverages] |
 +---------------------------------------+
 
+   Code 9.8: Shorten syntax code.
 
-
-   Shorten syntax code.
-
-
+Another example from Code 9.9
 
 +-----------------------------------------------------------------------+
 | [Measures].[Store Sales], [Product].[Food].[Deli].[Meat],             |
@@ -217,10 +169,9 @@ Interface details
 |    Customers]                                                         |
 +-----------------------------------------------------------------------+
 
+   Code 9.9: Example of cellâ€™s tuple
 
-    Example of cell’s tuple
-
-
+to Code 9.10
 
 +-----------------------------------------------------------------------+
 | [Measures].[Store Sales], [Product].[Drink].[Alcoholic                |
@@ -233,28 +184,22 @@ Interface details
 +-----------------------------------------------------------------------+
 
 
-    Example of shorten cell’s tuple
+   Code 9.10: Example of shorten cellâ€™s tuple
 
-   is as in Used expression.
+   is as in Code 9.11
 
 +-----------------------------------------------------+
 | [Product].[Drink.Alcoholic Beverages.Beer and Wine] |
 +-----------------------------------------------------+
 
+   Code 9.11: Used expression.
 
-
-   Used expression.
-
-   Note that the last part of the expression is the portion of the path
-   to the target member that differs from the path of the cell’s member.
-   Some other examples:
+Note that the last part of the expression is the portion of the path to the target member that differs from the path of the cellâ€™s member. Some other examples:
 
 +------------------+
 | [Product].[Food] |
 +------------------+
 
-
-
-   Further example.
+  Code 9.12:Further example.
    
      .. include:: whatIfThumbinals.rst
