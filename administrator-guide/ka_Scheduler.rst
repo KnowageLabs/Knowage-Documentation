@@ -14,15 +14,14 @@ In order to define a new scheduled activity the administrator must specify which
 
 Give a name and a description to the new activity. Then select the documents that compose it by clicking on the “Plus” icon and selecting them from the pop up wizard, see Figure 8.2
 
-Now you need to specify how the scheduler must handle the analytical drivers of each selected document having parameters, as shown in Figure 8.3. There are two possibilities:
-
-Create an Activity
-
    |image48|
 
    Figure 8.2: Adding a document to an activity.
 
-   • selecting a value from those available for the specific analytical driver at definition time; • executing the report one time for each possible values of the analytical driver.
+Now you need to specify how the scheduler must handle the analytical drivers of each selected document having parameters, as shown in Figure 8.3. There are two possibilities:
+
+   • selecting a value from those available for the specific analytical driver at definition time; 
+   • executing the report one time for each possible values of the analytical driver.
 
    |image49|
 
@@ -31,8 +30,6 @@ Create an Activity
 A scheduled activity can be composed by more than one report. It is also possible to add the same report to a scheduled activity more times. You can use the icon |image50| to easily duplicate a document. Once all esired documents have been added and the management configuration of their parameters has been set up, save the activity by clicking on the save button. The new activity is shown in the list and can be modified or deleted using intended specifically icons.
 
 You can manage your activity at any time just clicking on the name of the scheduling item (left side of the window) and all its features will be displayed aside (right half part of the window).
-
-Create an Activity
 
 To see and modify the list of the schedules associated to an activity, click on the “Plus” icon you find in the schedulation area in the bottom right side. Similarly, click on the same button to associate schedules
 to newly created activities.
@@ -72,8 +69,6 @@ You can choose among these event types:
 
 -  ContextBroker messge,
 
-Save as snapshot
-
 -  Dataset verification.
 
 If you choose **Dataset verification**, you have to select a right structured dataset. It has to give as results only true or false. Then set the frequency in seconds. This is the frequency the dataset will be verified. For example if you set it on 10 seconds it means that each 10 seconds the dataset is executed. If the result of its execution is true, the schedulation is trigged otherwise it isn’t.
@@ -102,9 +97,7 @@ In the following sections we explain them in detail.
 Save as snapshot
 ~~~~~~~~~~~~~~~~~~
 
-The executed document can be saved as snapshots in cyclic buffers of configurable size. For example, it is possible to store in the buffer the last 12 snapshots (the **History Length** field) Save as file
-
-of one report, scheduled to be executed one per month, in order to have a one-year long history.
+The executed document can be saved as snapshots in cyclic buffers of configurable size. For example, it is possible to store in the buffer the last 12 snapshots (the **History Length** field) of one report, scheduled to be executed one per month, in order to have a one-year long history.
 
 The list of all snapshots contained in the buffer can be accessed from the **Show scheduled executions** contained in the **Shortcuts** menu. You can find it in the document toolbar at the top right corner. Each snapshot can be opened or deleted from this panel. These steps are shown in Figure 8.6. A snapshot contains data queried from the database at the moment of its execution performed by the scheduler.
 
@@ -117,24 +110,20 @@ Save as file
 
 The executed document can be saved as file on the filesystem in the path /knowage-<version> /resources (if no destination folder is specified). Otherwise, you can create the relative path of this subfolder by writing your subfolder name. For instance, if you write “MyFirstScheduler” as file name and “Schedulation” as destination folder, after the schedulation execution a subfolder Schedulation containg the file “MyFirstScheduler” is created in /knowage-<version> /resources. If the subfolder Schedulation already exist your file is added to this subfolder. You can have a look at the form in Figure 8.7.
 
+|image54|
+
+   Figure 8.7: Save as File form.
+   
 If you prefer to generate a .zip file containing the scheduled documents, you can check the dedicated mark.
 
 Save as document
 ~~~~~~~~~~~~~~~~~~
 
-The executed document can be saved as an **Ad hoc reporting** document in the Knowage functionality tree. The document execution will be saved in the specified folder and will be visible to all yous that can access that particular folder. For those documents whose execution is iterated over a parameter value, it is also possible to use the value of the parameter to
-
-   |image54|
-
-   Figure 8.7: Save as File form.
-
-   decide to which folder the document shall be dispatched. To do so, define a mapping dataset composed of two columns:
+The executed document can be saved as an **Ad hoc reporting** document in the Knowage functionality tree. The document execution will be saved in the specified folder and will be visible to all yous that can access that particular folder. For those documents whose execution is iterated over a parameter value, it is also possible to use the value of the parameter to decide to which folder the document shall be dispatched. To do so, define a mapping dataset composed of two columns:
 
 -  the first containing a specific parameter value;
 
 -  the second containing the label of the folder where the document shall be dispatched when the document is executed with the corresponding parameter value.
-
-..
 
    Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. Like in the previous case, the scheduler will execute the report one time for each possible value of the parameter. This time, however, execution results will be dispatched in different folders, according to the mapping defined in the dataset.
 
