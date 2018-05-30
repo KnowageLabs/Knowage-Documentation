@@ -142,6 +142,11 @@ Once completed the form, click on **Preview** button to enable the **Test** butt
 
    |image42|
 
+   .. note::
+      **Correlating analytical drivers**
+     
+Drivers can be correlated so that the value of the first driver is used as a parameter to select values in the second. Read more at Chapter 5.
+
 We stress that the visibility of specific fields serve to improved human readability when applying filters to documents handled by third users. Moreover it is possible to choose (refer to Figure 4.9) between **simple**, **tree** and **tree with selectable internal nodes** typology of LOV. The last two are hierarchical and let the user visualize the parameters together with their logical tree structure.
 
    |image43|
@@ -153,10 +158,13 @@ We stress that the visibility of specific fields serve to improved human readabi
 Parametrizing LOVs
 ~~~~~~~~~~~~~~~~~~
 
-   Suppose that you need to retrieve a list of values representing all
-   brand names of your products. Then you can use a Query LOV like in
-  Query LOV example
+Suppose that you need to retrieve a list of values representing all brand names of your products. Then you can use a Query LOV like in  Query LOV example:
 
+..code-block:: bash
+         :caption: Qery LOV example
+         :linenos:
+ 
+         blablabla
 +--------------------------------------------+
 | SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME |
 |                                            |
