@@ -14,17 +14,13 @@ Configuration Management
 
 By clicking on the **Server Settings** > **Configuration Management**, you can manage many configuration elements. For example here you can set default language as well as mail settings. Start typing DEFAULT in the search form, as shown in Figure 10.2, to filter among available items and find what you are interested it.
 
-We provide an example to let you understand the usage of the interface. Suppose you want to set italian as default language. Select the row with SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.
-
    |image88|
 
    Figure 10.2: Configuration categories list.
 
-default as label and click the pencil icon at the end of the row to edit the element. Insert it,IT as **Value Check** as click **Save**.
+We provide an example to let you understand the usage of the interface. Suppose you want to set italian as default language. Select the row with SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE. default as label and click the pencil icon at the end of the row to edit the element. Insert it,IT as **Value Check** as click **Save**.
 
-You can view available languages and their code (**Value Check column)** in the row SPAGOBI.
-
-LANGUAGE_SUPPORTED.LANGUAGES.
+You can view available languages and their code (**Value Check column)** in the row SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES.
 
 Domain Management
 -----------------
@@ -41,11 +37,7 @@ We provide an example to describe how it works. Suppose you want to add a new ca
 
    Figure 10.4: Business Model Categories already existing.
 
-Click on the plus red button in the top right corner and by default a new page opens with the
-
-10.3. Metadata
-
-form you need to fill in. An example is shown in Figure 10.5. Fill the columns as follow:
+Click on the plus red button in the top right corner and by default a new page opens with the form you need to fill in. An example is shown in Figure 10.5. Fill the columns as follow:
 
    |image91|
 
@@ -78,8 +70,4 @@ In the metadata page, shown in Figure 10.6, you can see the list of existing met
 
 You define a new metadata by giving it a **Label**, a **Name**, a **Description** and a **Type**. The **Label** is a unique identifier, the **Name** is what will be shown to the end user and the **Type** can be either SHORT TEXT or LONG TEXT.
 
-Metadata
-
 We recall that metadata visibility is one of the authorization you can set while creating roles. Only the users associated to roles which have this authorization will view metadata. In addition, in order to edit metadata the user roles need to have another authorization called **Save Metadata**.
-
-|image93|
