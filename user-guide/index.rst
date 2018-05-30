@@ -3,12 +3,6 @@ User Guide
 .. include:: ka_user_intro.rst
 .. include:: ka_user_userinterface.rst
 .. include:: ka_user_mydoc.rst
-
-.. |image0| figure:: media/image1.png
-   :width: 8.25in
-   :height: 10.97333in
-   
-   Test figure
    
 .. |image1| image:: media/image2.png
    :width: 5.0075in
