@@ -35,18 +35,22 @@ Some graphical conventions have been adopted to allow readers to easily identify
 
       .. note::
          **Read more**
+         
          This icon refers to additional documentation, internal or external sources that may be useful for the reader.
          
       .. warning::
          **Warning**
+         
          This icon warns the reader about possible errors and issues using Knowage.
          
       .. hint::
          **Advice**
+         
          This icon provides best practices and suggestions.
          
       .. important::
          **Notable content**
+         
          This icon highlights relevant content, to be drawn to the reader’s attention.
 
 The following fonts have been adopted, to easily identify special words
