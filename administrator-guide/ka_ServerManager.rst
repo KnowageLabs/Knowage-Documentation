@@ -1,17 +1,18 @@
-9.1.
+Server Manager
+==============
 
+In teh **Server Manager** menu panel you find some management functionalities, as Figure 9.1.
+   
    |image61|
 
    Figure 9.1: Server Manager Panel
 
 Those about **Import/Export** let you export some configurations or elements from one istallation to another. This can be helpful for example in managing a test and a production areas. We are going to give the full description of these funtionalities in the following.
 
-9.1 Tenants Management
-======================
+Tenants Management
+------------------
 
-We start this Section undeling that only those users who have the superadmin role can use this functionality. In addition, although implemented, this menu item is not visible in Figure 9.1. In fact, the **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product Tenants Management
-
-types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones. The Tenants Management window is shown in Figure 9.2. On the left you have the list of existing tenants. On the top of such list it is available the **Search** box to help users to browse the tenants. When clicking on the “Plus” icon you can create a new tenant. A form opens on the right area. Insert a **Name** and a **Theme**. Then change tabs to set product types access and select which datasources are achievable. An example is given in Figure 9.3.
+We start this Section undeling that only those users who have the superadmin role can use this functionality. In addition, although implemented, this menu item is not visible in Figure 9.1. In fact, the **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones. The Tenants Management window is shown in Figure 9.2. On the left you have the list of existing tenants. On the top of such list it is available the **Search** box to help users to browse the tenants. When clicking on the “Plus” icon you can create a new tenant. A form opens on the right area. Insert a **Name** and a **Theme**. Then change tabs to set product types access and select which datasources are achievable. An example is given in Figure 9.3.
 
    |image62|
 
@@ -23,10 +24,8 @@ types or access some (or all) datasources inside the same environment. Then, thi
 
 Note that, in a single-tentant environment admin and superadmin coincides. In a multitenants environment (developed then through the Server Manager functionality), only *one* user has the superadmin role for each tenant, while there can be one or more users with admin role. In particular compared to the admin case, the superadmin has the possibility to manage the multi-tenancy. Moreover, he is the only one who can configure the JNDI datasources and access the cache configuration (through the cache manager menu item).
 
-9.2. Template Management
-
-9.2 Template Management
-=======================
+Template Management
+-------------------
 
 Each Knowage document is associated to a *template*. The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage Studio designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.
 
@@ -34,13 +33,13 @@ The **Template Management** let you choose a starting date before which delete t
 
 First of all you are asked to insert a date by clicking on the calendar icon. Then click the magnifier icon and select the documents you are interested in. The list displayed contains only documents created before the selected date. Clicking the trash icon you delete the template of the selected documents which were uploaded before the chosen date. If all the templates of a document precede the chosen date, the last template uploaded will be kept, so that no document is deleted accidentally. We sum up the steps described in Figure 9.4.
 
-9.3 Import\Export
-=================
+Import\Export
+-------------
 
 These options are about Import\Export of Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
 
 Documents
----------
+~~~~~~~~~
 
 This feature let you create and download a .zip of whole or a part of the documents existing in your Knowage installation. In this way you can upload it in another istallation or keep it as backup.
 
@@ -77,7 +76,7 @@ Suppose you want to upload MyFirstExport.zip in another installation. Log in it 
 Choose the .zip obtained from the **Export** phase and click on the import icon. Few steps guide you trought importation. You are asked to map from source to target: the Roles, the Engines and the Metadata. If a role doesn’t map any of the existing among the target one, it will be created. Please keep attention during the metadata step beacause you can choose to overwrite or don’t the target metadata. By default this option is set to false. If you change to yes documents, lov, driver, etc. which has the same label of the exported ones will have metadata overwritten at the end of import procedure.
 
 Menu
-----
+~~~~~
 
 This feature let you export the menu structure.
 
@@ -98,7 +97,7 @@ To upload it in another istallation, accede to the **Import\Export** Menu area a
 Then choose between the two import modes: **Override** and **Add Missing**. If you choose **Override**, the menu items which match with existing ones will be override by the imported. If you choose **Add missing** only the menu items which don’t match with the existing one will be added. You are ready to start importation by clicking on **Start Import**.
 
 Users
------
+~~~~~
 
 In this area you can export the users from an installation to another, see Figure 9.9.
 
@@ -119,7 +118,7 @@ To import the .zip in another installation, log in and open the **Server Manager
 displayed in the left side of the screen. Choose among the users displayed the one you want to import, mark them and click on the arrow to move them in the other side. Now click on **Start import** button and your users are successfully created in this installation too. Keep attention in marking personal folder checkbox if you want that personal folders are imported. In Figure 9.10 you can see **User Import** interface.
 
 Catalogs
---------
+~~~~~~~~~~~~
 
 In this area you can export the different catalogs (such as datasets catalogs, business models catalogs and so on) from one installation to another, see Figure 9.11.
 
