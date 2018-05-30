@@ -1,6 +1,6 @@
 In this chapter we will deal with some technical fetaures of the What-If analysis that can be handled only by expert users.
 
-Workflow description
+Workflow description\*
 ----------------------
 
 When you perform a what-if analysis the schema is shared in order to be used as a data source. Therefore each time a document linked to a schema can be edited only by one user per time. This behaviour is managed by the Workflow of the schema. The administrator can configure a workflow opening the details of the model in OLAP schema catalogue, selecting the schema and going on the workflow tab available on the top of the right sided area. The tab is red circled in Figure 10.1.
@@ -13,10 +13,7 @@ Referring to Figure 10.2, the interface for the definition of the workflow is co
 
 -  the **available users** area contains all the users,
 
--  the **workflow** area contains the sequence of users for the
-  workflow.
-
-..
+-  the **workflow** area contains the sequence of users for the workflow.
 
    |image215|
 
@@ -33,8 +30,7 @@ As we foresaid, the What-If analysis requires some modification on the database.
 
 Therefore the structure of the new fact table should contain:
 
--  all the foreign keys to the dimensions (all the ones visible in the
-      cube),
+-  all the foreign keys to the dimensions (all the ones visible in the cube),
 
    |image216|
 
