@@ -1,10 +1,10 @@
-
-Code 7.6: Runtime command line
+Scheduler
+=========
 
 KnowAge scheduler allows to schedule the execution of one or more analytical documents published on the Server. Documents executed by the scheduler can then be distributed along different dispatching channels. In the following we describe how to create an activity, schedule it and dispatch the results.
 
-8.1 Create an Activity
-======================
+Create an Activity
+------------------
 
 In order to define a new scheduled activity the administrator must specify which documents compose the activity and how to execute them. The list of all scheduled activities can be seen selecting **Tools** >\ **Scheduler**. To create a new activity click on the “Plus” icon at the top of the page in the left area. In Figure 8.1 you can see the main scheduler page and the new activity GUI.
 
@@ -100,7 +100,7 @@ Here you can find the dispatch configurations, that can be different for all the
 In the following sections we explain them in detail.
 
 Save as snapshot
-----------------
+~~~~~~~~~~~~~~~~~~
 
 The executed document can be saved as snapshots in cyclic buffers of configurable size. For example, it is possible to store in the buffer the last 12 snapshots (the **History Length** field) Save as file
 
@@ -113,14 +113,14 @@ The list of all snapshots contained in the buffer can be accessed from the **Sho
    Figure 8.6: Steps to open saved snapshots
 
 Save as file
-------------
+~~~~~~~~~~~~
 
 The executed document can be saved as file on the filesystem in the path /knowage-<version> /resources (if no destination folder is specified). Otherwise, you can create the relative path of this subfolder by writing your subfolder name. For instance, if you write “MyFirstScheduler” as file name and “Schedulation” as destination folder, after the schedulation execution a subfolder Schedulation containg the file “MyFirstScheduler” is created in /knowage-<version> /resources. If the subfolder Schedulation already exist your file is added to this subfolder. You can have a look at the form in Figure 8.7.
 
 If you prefer to generate a .zip file containing the scheduled documents, you can check the dedicated mark.
 
 Save as document
-----------------
+~~~~~~~~~~~~~~~~~~
 
 The executed document can be saved as an **Ad hoc reporting** document in the Knowage functionality tree. The document execution will be saved in the specified folder and will be visible to all yous that can access that particular folder. For those documents whose execution is iterated over a parameter value, it is also possible to use the value of the parameter to
 
@@ -139,7 +139,7 @@ The executed document can be saved as an **Ad hoc reporting** document in the Kn
    Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. Like in the previous case, the scheduler will execute the report one time for each possible value of the parameter. This time, however, execution results will be dispatched in different folders, according to the mapping defined in the dataset.
 
 Send to Java class
-------------------
+~~~~~~~~~~~~~~~~~~
 
    The executed document can be sent to a Java class implementing a custom dispatch logic. The custom class must extend the abstract class JavaClassDestination that implements the method execute. This method is called by the scheduler after document execution. Below an example of Java class.
 
@@ -310,7 +310,7 @@ Send to Java class
 Send mail
 
 Send mail
----------
+~~~~~~~~~~~~
 
    We remind that this feature is available only for KnowageER and KnowageSI.
 
@@ -331,12 +331,12 @@ Send mail
    Figure 8.8: Sending mail form.
 
 Static list
-~~~~~~~~~~~
+^^^^^^^^^^^^
 
    If you want to choose a static list, check the option **Fixed list of recipients** and fill the configuration property **Mail to** with the list of desired mail addresses separated by a comma. An mail for each executed document will be sent to all the mail addresses contained in the list.
 
 Dynamic list with mapping dataset
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    In this case, you have to define a two-column dataset:
 
@@ -355,7 +355,7 @@ Dynamic List with script
    Basically, when the parameter has a given value, the document will be sent to the corresponding email address. Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. With this configuration, the scheduler will execute the report one time for each possible value of the parameter **Position**, then dispatching the results to different recipients. Specifically, all execution results passing a value of the **Position** parameter to the report starting with VP will be sent to name1surname1@gmail.com, the ones starting with HQ will sent to name2surname2@gmail.com and the ones starting with President will be sent to namesurname@gmail.com.
 
 Dynamic List with script
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
    Check the option **Use an expression** and assign a value to the configuration property **Expression** with a parameter-dependent expression like the following:
 
@@ -369,14 +369,12 @@ Dynamic List with script
 
    Here dealer is a document parameter label ($P{dealer} will be replaced by the parameter value of the scheduled execution).
 
- 8.2 Schedulation panel
-=======================
+Schedulation panel
+------------------
 
    To conclude our overview on the scheduler features, save your settings and go back to the main scheduler page.
 
    Here you can select one of the available scheduled activities to explore details. We show an example in Figure 8.10. A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind
-
-8.3. Scheduler Monitor
 
    |image57|
 
@@ -402,8 +400,8 @@ Dynamic List with script
 
    In the **Detail** tab you can analyze the settings on document, that is which parameters are associated to it and how to manage them. The detail tab is showed in Figure 8.12.
 
- 8.3 Scheduler Monitor
-======================
+Scheduler Monitor
+----------------------
 
    You can monitor the whole scheduling situation by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a Scheduler Monitor
 
