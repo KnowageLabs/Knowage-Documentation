@@ -16,8 +16,6 @@ By clicking on the **Server Settings** > **Configuration Management**, you can m
 
 We provide an example to let you understand the usage of the interface. Suppose you want to set italian as default language. Select the row with SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.
 
-10.2. Domain Management
-
    |image88|
 
    Figure 10.2: Configuration categories list.
