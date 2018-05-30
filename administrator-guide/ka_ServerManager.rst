@@ -33,7 +33,11 @@ The **Template Management** let you choose a starting date before which delete t
 
 First of all you are asked to insert a date by clicking on the calendar icon. Then click the magnifier icon and select the documents you are interested in. The list displayed contains only documents created before the selected date. Clicking the trash icon you delete the template of the selected documents which were uploaded before the chosen date. If all the templates of a document precede the chosen date, the last template uploaded will be kept, so that no document is deleted accidentally. We sum up the steps described in Figure 9.4.
 
-Import\Export
+   |image64|
+
+   Figure 9.4: Deleting templates
+
+Import\\Export
 -------------
 
 These options are about Import\Export of Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
@@ -49,25 +53,17 @@ Let’s have a look on the steps to create the .zip.
 
 In Figure 9.5, we show the export editor.
 
-First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the MyFirstExport.zip.
-
-Documents
-
-   |image64|
-
-   Figure 9.4: Deleting templates
-
    |image65|
 
    Figure 9.5: Document Export
-
-Menu
+   
+First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the MyFirstExport.zip.
 
 Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its childer folders/leaves.
 
 When you have chose a name and select some documents the export icon change colour from gray to pink. This means all elements are set to start exporting. Before going on decide if you want to export **Subviews** and **Snapshot** as well one or both of them. Now you are ready to click on the export icon to generate and download the .zip.
 
-Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** >\ **Import\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure 9.6 we show the document import interface.
+Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** > **Import\\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure 9.6 we show the document import interface.
 
    |image66|
 
@@ -88,7 +84,7 @@ To start the export you need only to insert the Export name. Once inserted the n
 
 start the export were filled. Click on this icon and the related .zip is downloaded.
 
-To upload it in another istallation, accede to the **Import\Export** Menu area and switch to the tab **import**. Here click on **Browse** to search in your folders the .zip previously created, see Figure 9.8.
+To upload it in another istallation, accede to the **Import\\Export** Menu area and switch to the tab **import**. Here click on **Browse** to search in your folders the .zip previously created, see Figure 9.8.
 
    |image68|
 
@@ -107,15 +103,11 @@ In this area you can export the users from an installation to another, see Figur
 
 To generate the .zip you have to mark the user to include in the export and insert an export name. Save the export in the folders of your pc and move to the other installation. You have the chance to include the personal folder of the chosen users in the Export. Put a mark in the **Export Personal folder** checkbox and choose if you want to include snapshots and subviews too.
 
-To import the .zip in another installation, log in and open the **Server Manager** > **Import\\**
-
-**Export Users**, switching to **Import** area. Here click on **Browse** to choose the .zip created by exportation. Then click on the import icon. The users contained in your file are uploaded and Catalogs
+To import the .zip in another installation, log in and open the **Server Manager** > **Import\\Export Users**, switching to **Import** area. Here click on **Browse** to choose the .zip created by exportation. Then click on the import icon. The users contained in your file are uploaded and Catalogs displayed in the left side of the screen. Choose among the users displayed the one you want to import, mark them and click on the arrow to move them in the other side. Now click on **Start import** button and your users are successfully created in this installation too. Keep attention in marking personal folder checkbox if you want that personal folders are imported. In Figure 9.10 you can see **User Import** interface.
 
    |image70|
 
    Figure 9.10: User Import
-
-displayed in the left side of the screen. Choose among the users displayed the one you want to import, mark them and click on the arrow to move them in the other side. Now click on **Start import** button and your users are successfully created in this installation too. Keep attention in marking personal folder checkbox if you want that personal folders are imported. In Figure 9.10 you can see **User Import** interface.
 
 Catalogs
 ~~~~~~~~
@@ -134,7 +126,6 @@ To import the .zip in another instance, log in and open the **Server Manager** >
 
    Figure 9.12: Catalogs Import
    
-   
 KPIs
 ~~~~
 
@@ -147,8 +138,6 @@ The user must enter Knowage as administrator of source tenant and click on **Imp
    Figure 9.13: KPIs Import/Export from menu
 
 The window in Figure 9.14 opens. The page contains the **Export** and the **Import** tab, where the user can select the KPIs for the export/import respectively.
-
-KPIs
 
    |image74|
 
@@ -172,23 +161,19 @@ Once the .zip file is downloaded, the user has to switch tenant (the one on whic
 
 The user must therefore browse the personal folder to catch the zipped folder and click on the red upload button just aside, as shown in Figure 9.16.
 
-Referring to Figure 9.17, the user has to specify if:
-
--  to overwrite the existing KPIs and their related formulas,
-
-..
-
    |image76|
 
    Figure 9.16: Import tab
+
+Referring to Figure 9.17, the user has to specify if:
+
+-  to overwrite the existing KPIs and their related formulas,
 
 -  to import targets,
 
 -  to import scorecards,
 
 -  to import schedulations.
-
-..
 
    |image77|
 
@@ -202,28 +187,30 @@ Once the import is started, the GUI leads the user to finalise the import proced
 
 The process ends successfully when the wizard in Figure 9.19 shows up.
 
+   |image79|
+
+   Figure 9.19: Import KPIs ended successfully
+
 Analytical Drivers
 ~~~~~~~~~~~~~~~~~~~~
 
 This option allows to import/export the analytical drivers and their related LOV.
 
-   |image79|
-
-   Figure 9.19: Import KPIs ended successfully
-
    |image80|
 
-   Figure 9.20: Import/Export of analytical drivers As shown in Figure 9.20, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
+   Figure 9.20: Import/Export of analytical drivers 
+   
+   As shown in Figure 9.20, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
 
 To produce suce a file, the user has to log in as administrator of the source tentant. Then he has to assign a name to the export, check the analytical drivers of interest and click on the red download button available at the top right corner of the page. Note that it is possible to slim down the research of the analytical drivers by filtering on their data of creation.
 
 Switch tenant and log in as administrator. Use the Import tab to upload the zipped folder and finalise the import.
 
+Use the GUI exhibited in Figure 9.21 to upload the zipped folder, to specify if to overwrite on the existind analytical drivers or add missing. Then click on next and continue by mapping roles among tenants and data sources.
+
    |image81|
 
    Figure 9.21: Import of analytical drivers
-
-Use the GUI exhibited in Figure 9.21 to upload the zipped folder, to specify if to overwrite on the existind analytical drivers or add missing. Then click on next and continue by mapping roles among tenants and data sources.
 
    |image82|
 
@@ -233,26 +220,20 @@ Use the GUI exhibited in Figure 9.21 to upload the zipped folder, to specify if 
 
    Figure 9.23: Import of analytical drivers
 
-The process ends with a message containing the information about the
-import.
+The process ends with a message containing the information about the import.
 
-Glossay
-
-Glossay
+Glossary
 ~~~~~~~~
 
-The export/import of glossary allows the user to allign glossaries among
-tenants.
+The export/import of glossary allows the user to allign glossaries among tenants.
 
    |image84|
 
    Figure 9.24: Export/Import of glossaries window
 
-There are the two tabs of Export and Import in this instance too (Figure 9.24). The user is asked to select the glossaries to export and to type a name that will be assigned to the zipped folder. The user can help himself/herself by using the filter on data (of creation of the
-glossary).
+There are the two tabs of Export and Import in this instance too (Figure 9.24). The user is asked to select the glossaries to export and to type a name that will be assigned to the zipped folder. The user can help himself/herself by using the filter on data (of creation of the glossary).
 
-Once the user has got the zipped folder he/she must switch tenant and enter as its admin. Then select the import tab from the Export/Import
-main window.
+Once the user has got the zipped folder he/she must switch tenant and enter as its admin. Then select the import tab from the Export/Import main window.
 
    |image85|
 
