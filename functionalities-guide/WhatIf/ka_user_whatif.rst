@@ -104,29 +104,29 @@ The syntax is as the one shown in Referring to different members or, in case you
 
    Code 9.4: Referring to different members.
 
-+----------------------------------------------------------------------------------------------------------------------+
-| <dimension's name>.<hierarchy's name>.<member's name>or[<dimension's name>].[< hierarchy's name>].[<member's name>]  |                 
-+----------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+| <dimension's name>.<hierarchy's name>.<member's name>or[<dimension's name>].[< hierarchy's name>].[<member's name>]                 |
++-------------------------------------------------------------------------------------------------------------------------------------+
 
    Code 9.5: Referring to different members of another hierarchy.
 
 You can also refer to members that are on the same level but they are not sibling members:
 suppose that, for example, the cell’s tuple is as in   Code 9.6:.
 
-+--------------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],                    |
-| [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]  |                                                 
-+--------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+| [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],                            |
+| [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]          |   
++----------------------------------------------------------------------------------------------+
 
   Code 9.6: Example of cell’s tuple.
 
 Note that you can refer to the tuple
 
-+------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages],           |
-| [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],       |
-|    [Customers].[All Customers]                                               |
-+------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+| [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages],                           |
+| [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],                       |
+| [Customers].[All Customers]                                                                  |
++----------------------------------------------------------------------------------------------+
 
    Code 9.7: Example of cell’s tuple
 
@@ -140,19 +140,19 @@ just with:
 
 Another example from Code 9.9
 
-+------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Food].[Deli].[Meat],              |
-| [Version].[0], [Region].[Mexico Central], [Customers].[All Customers], |
-| [Customers].[AllCustomers]                                             |
-+------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+| [Measures].[Store Sales], [Product].[Food].[Deli].[Meat],                            |
+| [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],               |
+| [Customers].[AllCustomers]                                                           |
++--------------------------------------------------------------------------------------+
 
    Code 9.9: Example of cell’s tuple
 
 to Code 9.10
 
-+------------------------------------------------------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0], [Region].[Mexico Central], |          | [Customers].[AllCustomers], [Customers].[All Customers]                                                                      |
-+------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+| [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0], [Region].[Mexico Central],       |   | [Customers].[AllCustomers], [Customers].[All Customers]                                                                            |
++------------------------------------------------------------------------------------------------------------------------------------+
 
 
    Code 9.10: Example of shorten cell’s tuple
@@ -171,6 +171,6 @@ Note that the last part of the expression is the portion of the path to the targ
 | [Product].[Food] |
 +------------------+
 
-  Code 9.12:Further example.
+  Code 9.12: Further example.
    
      .. include:: whatIfThumbinals.rst
