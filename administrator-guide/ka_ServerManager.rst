@@ -40,7 +40,7 @@ First of all you are asked to insert a date by clicking on the calendar icon. Th
 Import\\Export
 -------------
 
-These options are about Import\Export of Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
+These options are about Import\\Export of Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
 
 Documents
 ~~~~~~~~~
@@ -80,9 +80,7 @@ This feature let you export the menu structure.
 
    Figure 9.7: Menu Export
 
-To start the export you need only to insert the Export name. Once inserted the name, the export icon changes colour from grey to pink to let you understand all mandatory fields to Users
-
-start the export were filled. Click on this icon and the related .zip is downloaded.
+To start the export you need only to insert the Export name. Once inserted the name, the export icon changes colour from grey to pink to let you understand all mandatory fields to start the export were filled. Click on this icon and the related .zip is downloaded.
 
 To upload it in another istallation, accede to the **Import\\Export** Menu area and switch to the tab **import**. Here click on **Browse** to search in your folders the .zip previously created, see Figure 9.8.
 
@@ -200,7 +198,7 @@ This option allows to import/export the analytical drivers and their related LOV
 
    Figure 9.20: Import/Export of analytical drivers 
    
-   As shown in Figure 9.20, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
+As shown in Figure 9.20, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
 
 To produce suce a file, the user has to log in as administrator of the source tentant. Then he has to assign a name to the export, check the analytical drivers of interest and click on the red download button available at the top right corner of the page. Note that it is possible to slim down the research of the analytical drivers by filtering on their data of creation.
 
