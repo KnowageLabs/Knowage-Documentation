@@ -383,13 +383,11 @@ Dynamic list with mapping dataset
 
 -  the second containing each mail address the executed document should be dispatched to.
 
-Dynamic List with script
-
-   |image56|
+   You can see an example of dataset in Figure 8.9.
+   
+      |image56|
 
    Figure 8.9: Example of mapping dataset for dynamic distribution list
-
-   You can see an example of dataset in Figure 8.9.
 
    Basically, when the parameter has a given value, the document will be sent to the corresponding email address. Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. With this configuration, the scheduler will execute the report one time for each possible value of the parameter **Position**, then dispatching the results to different recipients. Specifically, all execution results passing a value of the **Position** parameter to the report starting with VP will be sent to name1surname1@gmail.com, the ones starting with HQ will sent to name2surname2@gmail.com and the ones starting with President will be sent to namesurname@gmail.com.
 
@@ -413,13 +411,11 @@ Schedulation panel
 
    To conclude our overview on the scheduler features, save your settings and go back to the main scheduler page.
 
-   Here you can select one of the available scheduled activities to explore details. We show an example in Figure 8.10. A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind
-
-   |image57|
+   Here you can select one of the available scheduled activities to explore details. We show an example in Figure 8.10. A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind of scheduling has been chosen (Single Execution, Customized Execution or Event Exectution), the start date and so on. Note that at the end of the row you have the possibilities to explore more details by clicking on the “three dots” icon (see Figure 8.10).
+   
+      |image57|
 
    Figure 8.10: Exploring the detailed of a scheduled activity.
-
-   of scheduling has been chosen (Single Execution, Customized Execution or Event Exectution), the start date and so on. Note that at the end of the row you have the possibilities to explore more details by clicking on the “three dots” icon (see Figure 8.10).
 
    Here you find the following information:
 
@@ -442,7 +438,8 @@ Schedulation panel
 Scheduler Monitor
 ----------------------
 
-   You can monitor the whole scheduling situation by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a Scheduler Monitor
+   You can monitor the whole scheduling situation by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a Scheduler Monitor certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
+
 
    |image58|
 
@@ -451,13 +448,7 @@ Scheduler Monitor
    |image59|
 
    Figure 8.12: Schedulation detail tab
-
-Scheduler Monitor
-
-   certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
-
+  
    |image60|
 
    Figure 8.13: Schedulation detail tab
-
-In the **Server Manager** menu panel you find some management functionalities, as Figure
