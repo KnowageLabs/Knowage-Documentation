@@ -12,7 +12,9 @@ It is required the installation of the following components for the
 
 **[LINUX]** The first two components, needed for the functionality of the Knowage data mining engine, has to be installed through the rpm comand, and, the third, through the RStudio GUI. Once retrieved the RPM file, open the folder and launch the comands:
 
-.. code:: console
+.. code-block:: bash
+   :caption: Commands for the rpm file
+   :linenos:
   
    rpm -Uvh ./R-3.2.2-1.el6.x86_64.rpm               
    yum install --nogpgcheck rstudio-server-rhel-0.99.486-x86_64.rpm
@@ -21,7 +23,6 @@ It is required the installation of the following components for the
    chown -R tomcat.root /usr/lib64/R/library && chmod -R 775 /usr/lib64/R/library 
    chown -R tomcat.root /usr/share/doc/R-3.2.2 && chmod -R 775 /usr/share/doc/R
 
-   
 Code 6.1: Commands for the rpm file.
 
 Typing the address http://<server_ipormachine_name>:8787/ in the browser, the user gets on screen the page showed in Figure 6.1
