@@ -49,10 +49,11 @@ Figure 6.4
 
 Meanwhile the package is installed, remember to answer NO when asked   to create a personal library in the user home (that can be found under $HOME/RStudio/log). This way, rJava will be installed in the directory /usr/lib64/R/library/rJava.
 
-Finally, edit the TOMCAT_HOME/bin/setenv.sh adding the instructions in Code 6.2:
+Finally, edit the TOMCAT_HOME/bin/setenv.sh adding the following commands:
 
 .. code:: console
+   :linenos:
 
- export R_HOME=/usr/lib64/R                          
- export LD_LIBRARY_PATH=/usr/lib64/R/library/rJava/jri
+   export R_HOME=/usr/lib64/R                          
+   export LD_LIBRARY_PATH=/usr/lib64/R/library/rJava/jri
 
