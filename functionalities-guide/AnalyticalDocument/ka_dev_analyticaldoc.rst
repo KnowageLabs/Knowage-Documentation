@@ -265,16 +265,16 @@ Correlation through LOV and drivers
 
 In previous Section 5.4 we saw how to set correlation through the GUI available in the document detail panel, but there is also the   possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously   configured a driver that runs values that can be used in the "where" clause of a SQL query. Then the user must set a query-type LOV using the syntax 
 
-We stress that the *AD_name* is the name of the driver the administrator is trying to reach.
+We stress that the *AD_name* is the name of the driver the administrator is trying to reach. Syntax for setting correlation through LOV configuration is:
 
-.. code:: console
-   :linenos:
+.. code-block:: bash
+  :caption: Retrieve values from driver 
+  :linenos:
   
    $P{AD_name}
 
-Syntax for setting correlation through LOV configuration
 
-   Figure 5.16 depicts the all procedure.
+Figure 5.16 depicts the all procedure.
 
    |image82|
 
@@ -285,21 +285,13 @@ As a result, at document execution, as soon as the user pick up a value from the
 Controlled visibility
 ~~~~~~~~~~~~~~~~~~~~~
 
-   Another type of relation between parameters is supported by Knowage.
-   It is possible to define values of a parent parameter that force the
-   hiding or showing of a child parameter in the parameters mask. Note
-   that in the first case, the child parameter is hidden by default,
-   while in the second case the parameter is shown by default.
+Another type of relation between parameters is supported by Knowage. It is possible to define values of a parent parameter that force the hiding or showing of a child parameter in the parameters mask. Note that in the first case, the child parameter is hidden by default, while in the second case the parameter is shown by default.
 
    |image83|
 
    Figure 5.17: Filtering with correlation.
 
-   To set a visibility expression, click always on the correlation
-   button in the detail tab of the desired parameter, but then click on
-   the plus icon |image84| in the **Visibility Expression** area. In the
-   graphical editor you can define visibility rules similarly to
-   correlation ones, as shown in Figure 5.18.
+To set a visibility expression, click always on the correlation button in the detail tab of the desired parameter, but then click on   the plus icon |image84| in the **Visibility Expression** area. In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in Figure 5.18.
 
    |image85|
 
@@ -308,75 +300,33 @@ Controlled visibility
 Cross Navigation
 ---------------------
 
-   A powerful feature of Knowage analytical documents is
-   cross-navigation, i.e., the ability to navigate documents in a
-   browser-like fashion following logical data flows. Although
-   crossnavigation is uniformly provided on all documents executed in
-   Knowage Server, each type of document has its own modality to set the
-   link pointing to another document.
+A powerful feature of Knowage analytical documents is cross-navigation, i.e., the ability to navigate documents in a browser-like fashion following logical data flows. Although crossnavigation is uniformly provided on all documents executed in Knowage Server, each type of document has its own modality to set the link pointing to another document.
 
-   Notice that the pointer can reference any Knowage document,
-   regardless of the source docuDeclaration of the output parameters
+Notice that the pointer can reference any Knowage document, regardless of the source document. For example, a BIRT report can point to a chart, a console, a geo or any other analytical document.
 
-   ment. For example, a BIRT report can point to a chart, a console, a
-   geo or any other analytical document.
+In Knowage there are two main typologies of cross navigation: *internal* and *external*.
 
-   In Knowage there are two main typologies of cross navigation:
-   *internal* and *external*.
+*Internal cross navigation* updates one or more areas of a document by clicking on a series, a text, an image or in general on a   selected element of the document.
 
-   *Internal cross navigation* updates one or more areas of a document
-   by clicking on a series, a text, an image or in general on a
-   selected element of the document.
+*External cross navigation* opens another document by clicking on an element of the main document, allowing in this way the definition of a *navigation path* throughout analytical documents (usually, from very general and aggregated information down to the more detailed and specific information)). Indeed, you can add cross navigation also to a document reached by cross navigation. This can be helpful to go deeper into an analysis, since each cross navigation step could be a deeper visualization of the data displayed in the starting document.
 
-   *External cross navigation* opens another document by clicking on an
-   element of the main document, allowing in this way the definition of
-   a *navigation path* throughout analytical documents (usually, from
-   very general and aggregated information down to the more detailed and
-   specific information)). Indeed, you can add cross navigation also to
-   a document reached by cross navigation. This can be helpful to go
-   deeper into an analysis, since each cross navigation step could be a
-   deeper visualization of the data displayed in the starting document.
+It is obviously possible to associate more than one cross navigation to a single document. It means that by clicking on different elements of the same document the user can be directed to different documents.
 
-   It is obviously possible to associate more than one cross navigation
-   to a single document. It means that by clicking on different elements
-   of the same document the user can be directed to different documents.
+In this chapter we will examine in depth how to set output/input parameters on documents and, consequently, how to activate the cross navigation.
 
-   In this chapter we will examine in depth how to set output/input
-   parameters on documents and, consequently, how to activate the cross
-   navigation.
+The first step is to define the parameters of the target document. These do not necessarly coincide with all the filters applied to the
+document. Please refer to Chapter of Behavioural model for more detail on how to manage parameters and their association to documents.
 
-   The first step is to define the parameters of the target document.
-   These do not necessarly coincide with all the filters applied to the
-   document. Please refer to Chapter of Behavioural model for more detail on
-   how to manage parameters and their association to documents.
+Therefore it is required to state which parameters among the ones associated to the target document are going to be involved in the   navigation. Parameters coming out from the source document are said **output parameters** while the ones that receive values through the association (with the source document) are said **input parameters**. By the way, when declaring the parameters they will be called equally **output parameters** at first, since there is no criterion to distinguish output from input before the navigation is configured.
 
-   Therefore it is required to state which parameters among the ones
-   associated to the target document are going to be involved in the
-   navigation. Parameters coming out from the source document are said
-   **output parameters** while the ones that receive values through the
-   association (with the source document) are said **input parameters**.
-   By the way, when declaring the parameters they will be called equally
-   **output parameters** at first, since there is no criterion to
-   distinguish output from input before the navigation is configured.
-
-   The definition of the output parameters is performed using the
-   **Manage outputparameters** button (see Figure 5.10) but it differs
-   from document to document, according to its type. We will describe
-   these differences in detail in each dedicated chapter, here we
-   explain the common steps.
+The definition of the output parameters is performed using the **Manage outputparameters** button (see Figure 5.10) but it differs   from document to document, according to its type. We will describe these differences in detail in each dedicated chapter, here we   explain the common steps.
 
 Declaration of the output parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Enter the **Document details** of the document of interest. Then
-   click on **Manage outputparameters** and the **Output parameters**
-   dialog will open.
+Enter the **Document details** of the document of interest. Then click on **Manage outputparameters** and the **Output parameters**   dialog will open.
 
-   Here you have to state which parameters are going to be used as
-   output parameters. If, for instance, you select the Date type (Figure
-   5.19), it is possible to choose the format in which your date has
-   been coded. The default value is related to the location defined in
-   (**Menu**>\ **Languages**).
+Here you have to state which parameters are going to be used as output parameters. If, for instance, you select the Date type (Figure   5.19), it is possible to choose the format in which your date has been coded. The default value is related to the location defined in   (**Menu**>\ **Languages**).
 
    |image86|
 
@@ -385,24 +335,15 @@ Declaration of the output parameters
 Cross navigation definition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally you need to select the **Cross Navigation Definition** item from
-the menu to configure the cross navigation. Figure 5.20 shows the cross
-navigation definition window.
+Finally you need to select the **Cross Navigation Definition** item from the menu to configure the cross navigation. Figure 5.20 shows the cross navigation definition window.
 
    |image87|
 
    Figure 5.20: Cross navigation GUI.
 
-It is required to give a name to the navigation; then select the
-document from which to start the navigation and the target document. The
-selecting of a document will cause the loading of input/output
-parameters related to the starting document in the left column and of
-the possible input parameters of the target document in the right
-column.
+It is required to give a name to the navigation; then select the document from which to start the navigation and the target document. The selecting of a document will cause the loading of input/output parameters related to the starting document in the left column and of the possible input parameters of the target document in the right column.
 
-It is possible to configure the associations betweeen input/output
-parameters by simply dragging and dropping a parameter from the left
-column on another of the right column.
+It is possible to configure the associations betweeen input/output parameters by simply dragging and dropping a parameter from the left column on another of the right column.
 
 Once set, the association is highlighted as in Figure 5.23.
 
@@ -418,10 +359,6 @@ Once set, the association is highlighted as in Figure 5.23.
 
    Figure 5.23: Association betweeen parameters.
 
-To assign fixed values to target parameters it is necessary to edit
-first the box labeled **Fixed value parameter** and click on the plus
-icon. Then the value can be associated as fixed value of the one or more
-target parameters. Remember to click on the **Ok** button to save the
-cross navigation just set.
+To assign fixed values to target parameters it is necessary to edit first the box labeled **Fixed value parameter** and click on the **plus** icon. Then the value can be associated as fixed value of the one or more target parameters. Remember to click on the **Ok** button to save the cross navigation just set.
 
 .. include:: AnalyticalDocumentThumbinals.rst
