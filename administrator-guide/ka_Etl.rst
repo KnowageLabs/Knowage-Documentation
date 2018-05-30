@@ -44,7 +44,7 @@ It is also possible to design parametric ETL jobs. We will see how to manage the
 
 Once you have designed the ETL job, you should deploy it on Knowage Server. First of all, configure connections properties to Knowage Server. Select **Preferences** > **Taned** > **Import/export** from within Talend. Then set connection options as described in Table 7.1.
 
-Once you have set the connection, you can right click on a job and select **Deploy on Knowage**. This will produce the Java code implementing the ETL and make a copy of the corresponding jar file at \\resources\talend\RuntimeRepository\java\Talend project name of Knowage Server. It is possible to deploy multiple jobs at the same time. Exported code is consistent and self-standing. It may include libraries referenced by ETL operators and default values of job parameters, for each context defined in the job. On its side, Knowage manages Talend jobs from an internal repository at resources/talend/RuntimeRepository, under the installation root folder.
+Once you have set the connection, you can right click on a job and select **Deploy on Knowage**. This will produce the Java code implementing the ETL and make a copy of the corresponding jar file at \\resources\\talend\\RuntimeRepository\\java\\Talend project name of Knowage Server. It is possible to deploy multiple jobs at the same time. Exported code is consistent and self-standing. It may include libraries referenced by ETL operators and default values of job parameters, for each context defined in the job. On its side, Knowage manages Talend jobs from an internal repository at resources/talend/RuntimeRepository, under the installation root folder.
 
 +-----------------------------------+-----------------------------------+
 |    Parameter                      | Value                             |
@@ -163,9 +163,11 @@ Class definition
 
    First of all, the developer should write a Java class that defines the desired logics for processing start and stop. In particular, this class must extend one of these two classes of the engine:
 
-   **KnowageWork**. In this case the class to be defined only needs to reimplement the run() method. This class is the base case: the logic of the external process will be contained in the run() method.
+   **KnowageWork**.
+    In this case the class to be defined only needs to reimplement the run() method. This class is the base case: the logic of the external process will be contained in the run() method.
 
-   **CmdExecWork**. In this case, the class to be defined must implement the method execCommand(). The logic of the external process can    be delegated to an external class, which will be invoked by the execCommand() method, as specified in the document template (see Code 7.2). To stop the process, the developer is in charge of checking programmatically whether the process is still running, using the method isRunning(), or not.
+   **CmdExecWork**. 
+    In this case, the class to be defined must implement the method execCommand(). The logic of the external process can be delegated to an external class, which will be invoked by the execCommand() method, as specified in the document template (see Code 7.2). To stop the process, the developer is in charge of checking programmatically whether the process is still running, using the method isRunning(), or not.
 
    Note that the class CmdExecWork extends KnowageWork by providing additional methods. To better understand the difference between the two options, let us have a look at some code snippets. Here you can see a class implemented as an extension of KnowageWork:
 
@@ -304,7 +306,7 @@ Class definition
 
 Code 7.4: ProcessTest
 
-   Now that classes are ready, we pack them in .jar file containing all classes and their paths. Then we copy the jar file under the resource folder of Knowage at: [RESOURCE_PATH]/commonj/ CommonjRepository/[JAR\_NAME]. In the next section we will explain how to define the template, based on the class definition chosen above.
+   Now that classes are ready, we pack them in .jar file containing all classes and their paths. Then we copy the jar file under the resource folder of Knowage at: [RESOURCE_PATH]/commonj/ CommonjRepository/[JAR\\_NAME]. In the next section we will explain how to define the template, based on the class definition chosen above.
 
 Template definition
 ~~~~~~~~~~~~~~~~~~~
