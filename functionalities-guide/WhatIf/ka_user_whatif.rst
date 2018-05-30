@@ -20,7 +20,7 @@ The workflow has an impact on data visualization. A user can understand the stat
 
    |image209|
 
-   Figure 9.1: What-If buttons inside the sidebar.
+      Figure 9.1: What-If buttons inside the sidebar.
 
 -  The schema is locked by another user. In this case a message appears with the name of the active user in the workflow as shown in
    Figure 9.2.
@@ -28,13 +28,13 @@ The workflow has an impact on data visualization. A user can understand the stat
 
    |image210|
 
-   Figure 9.2: The What-If is used by another user.
+      Figure 9.2: The What-If is used by another user.
     
 -   The workflow is finished.
 
    |image211|
 
-   Figure 9.3: The What-If is finished.
+      Figure 9.3: The What-If is finished.
 
 We briefly recall the fuctionality of the main buttons:
 
@@ -61,7 +61,7 @@ To activate the editing of a measure cell that is not shown in the OLAP you must
 
 |image212|
 
-Figure 9.4: Checking measures and selecting version.
+   Figure 9.4: Checking measures and selecting version.
 
 Then double-click on the target measure cell and a box will appear allowing you to insert a formula. Type the computation syntax and click on the *f*\ (*x*) icon to convalidate it or cancel it, as shown in Figure 9.5.
 
