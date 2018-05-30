@@ -108,17 +108,14 @@ Template building
 
 -  language is the chosen language for code generation. The two possible options are: Java and Perl.
 
-Values in the template must be consistent with those defined in Talend, in order to ensure the proper execution of the ETL document
-   on Knowage Server.
+Values in the template must be consistent with those defined in Talend, in order to ensure the proper execution of the ETL documen on Knowage Server.
 
 Creating the analytical document
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Once we have created the template, we can create a new analytical document.
 
-   Before starting to create the document, it is recommended to check whether the engine is properly installed and configured. In case the engine is not visible in the Engine Configuration list (**Data Providers** > **Engine Management**), you should check that the web
-   application is active by invoking the following URL:
-   http://myhost:myport/KnowageTalendEngine
+   Before starting to create the document, it is recommended to check whether the engine is properly installed and configured. In case the engine is not visible in the Engine Configuration list (**Data Providers** > **Engine Management**), you should check that the web application is active by invoking the following URL: http://myhost:myport/KnowageTalendEngine
 
    Now you can create the analytical document on the Server, following the standard procedure. The template for this document is the one we have just created.
 
