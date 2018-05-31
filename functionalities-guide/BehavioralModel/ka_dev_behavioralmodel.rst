@@ -46,8 +46,7 @@ The Figure 4.1 represents a report with two parameters:
 
 - the Age Range, a mandatory field, displayed as list of values and with possible values 0-10, 10-20 and so on.
 
-All these aspects are regulated by the analytical driver behind each parameter. In particular, each driver provides many *use modes*,
-defining:
+All these aspects are regulated by the analytical driver behind each parameter. In particular, each driver provides many *use modes*, defining:
 
 - Who is involved in a specific use mode, in terms of a list of end user roles, considering that a role can be associated to a single use mode only.
 
@@ -79,11 +78,9 @@ Thanks to analytical drivers, a single document is able to cover the analytical 
 
 -  consistency in the request for parameters,
 
--  complexity reduction in the development of documents, thanks to the
-      separation between security matters and massive development,
+-  complexity reduction in the development of documents, thanks to the separation between security matters and massive development,
 
--  simple maintenance of the security (visibility over data) over time,
-      despite the increase of developed documents or added engines.
+-  simple maintenance of the security (visibility over data) over time, despite the increase of developed documents or added engines.
 
 In the next paragraphs we explain how to create a new analytical driver together with its basic components.
 
@@ -161,75 +158,36 @@ Parametrizing LOVs
 Suppose that you need to retrieve a list of values representing all brand names of your products. Then you can use a Query LOV like in  Query LOV example:
 
 ..code-block:: bash
-         :caption: Qery LOV example
+         :caption: Query LOV example
          :linenos:
  
-         blablabla
-+--------------------------------------------+
-| SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME |
-|                                            |
-| FROM PRODUCT                               |
-+--------------------------------------------+
+SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME                                         |
+FROM PRODUCT                               
 
+This is suitable for end users like the general manager who need to see all brands for every product family. Suppose now that another end user is, for example, the food manager. He should not see every brand name, but only those related to the Food product family. This could be done using user’s profile attributes.
 
+In particular, all query except the *List of fixed values* type can be parameterized using profile attributes. This means that, at LOV   execution time, the value of the attribute in the user’s profile is assigned to a placeholder in the LOV query/script. Suppose that, in our example, the food manager user has the profile attribute *pr_family* equal to *Food*. You can write this second Query LOV using the placeholder with the standar syntax **${profile_attribute_name}**, as shown in Parametric query.
 
-    Query LOV example
+..code-block:: bash
+         :caption: Parametric query
+         :linenos:
+SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
+FROM PRODUCT
+WHERE C.PRODUCT_FAMILY = '${pr_family}'  
 
-   This is suitable for end users like the general manager who need to
-   see all brands for every product family. Suppose now that another end
-   user is, for example, the food manager. He should not see every brand
-   name, but only those related to the Food product family. This could
-   be done using user’s profile attributes.
+Then, at LOV execution time, for the user food manager the query becomes as shown in Runtime placeholder substitute and hence the corresponding LOV will return only the brand names related to the Food product family.
 
-   In particular, all query except the *List of fixed values* type can
-   be parameterized using profile attributes. This means that, at LOV
-   execution time, the value of the attribute in the user’s profile is
-   assigned to a placeholder in the LOV query/script. Suppose that, in
-   our example, the food manager user has the profile attribute
-   pr_family equal to Food. You can write this second
+..code-block:: bash
+         :caption: Runtime placeholder substitute
+         :linenos:
+       
+ SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
+ FROM PRODUCT
+ WHERE C.PRODUCT_FAMILY = 'Food'
 
-   Query LOV using the placeholder with the standar syntax
-   ${profile_attribute_name}, as shown in Parametric query.
+This means that if you are the food manager and your user has the profile attribute pr_family=Food, then you will see only the brand   related to the food family as a result of this LOV; while if you are the drink manager and your user has consequently the profile   attribute pr_family=Drink, you will see only the brand related to drink family products.
 
-+--------------------------------------------+
-| SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME |
-|                                            |
-| FROM PRODUCT                               |
-|                                            |
-| WHERE C.PRODUCT_FAMILY = '${pr_family}'    |
-+--------------------------------------------+
-
-
-
-    Parametric query
-
-   Then, at LOV execution time, for the user food manager the query
-   becomes as shown in Runtime placeholder substitute and hence the corresponding LOV will
-   return only the brand names related to the Food product family.
-
-+--------------------------------------------+
-| SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME |
-|                                            |
-| FROM PRODUCT                               |
-|                                            |
-| WHERE C.PRODUCT_FAMILY = 'Food'            |
-+--------------------------------------------+
-
-
- Runtime placeholder substitute
-
-   This means that if you are the food manager and your user has the
-   profile attribute pr_family=Food, then you will see only the brand
-   related to the food family as a result of this LOV; while if you are
-   the drink manager and your user has consequently the profile
-   attribute pr_family=Drink, you will see only the brand related to
-   drink family products.
-
-   Note that an information button and a profile attribute button are
-   available to guide user in writing the code properly, using the
-   syntax correctly and typing the right profile attribute name.
-
-Creating a validation rule
+Note that an information button and a profile attribute button are available to guide user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
 
    |image44|
 
@@ -238,214 +196,111 @@ Creating a validation rule
 Creating a validation rule
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Knowage supports the validation of the document’s input parameters
-   via validation rules. Validation rules can be defined in
-   **Behavioural model** > **Constraints Management**. A validation rule
-   checks parameter values as given by LOVs to verify that they comply
-   with the defined constraints.
+Knowage supports the validation of the document’s input parameters via validation rules. Validation rules can be defined in  **Behavioural model** > **Constraints Management**. A validation rule checks parameter values as given by LOVs to verify that they comply with the defined constraints.
 
    |image45|
 
    Figure 4.11: Contraints Management.
 
-   Knowage default checks are:
+Knowage default checks are:
 
-   Alfanumeric: it checks if the parameter is alfanumeric;
+   **Alfanumeric**: it checks if the parameter is alfanumeric;
 
-   Numeric: it checks if the parameter is numeric;
+   **Numeric**: it checks if the parameter is numeric;
 
-   Letter String: it checks if the parameter is a letter string;
+   **Letter String**: it checks if the parameter is a letter string;
 
-   E-Mail: it checks if the parameter is an e-mail;
+   **E-Mail**: it checks if the parameter is an e-mail;
 
-   Fiscal Code: it checks if the parameter has the correct syntax of a
-   fiscal code; Internet Address: it checks if the parameter is an
-   internet address.
+   **Fiscal Code**: it checks if the parameter has the correct syntax of a fiscal code; Internet Address: it checks if the parameter is an internet address.
 
-   If the administrator needs to create additional validation rules, he
-   can click on |image46| to open the rule creation interface. Here he
-   can define a customized validation rule using the available check
-   options:
+If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
 
-   Date: here you can set a costumized format type of date;
+   **Date**: here you can set a costumized format type of date;
 
-   Regular Expression: to set a regular expression validation rule;
+   **Regular Expression**: to set a regular expression validation rule;
 
-   Max/Min Length: it lets you set the maximum and/or minimum character
-   parameters length;
+   **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
 
-   Range: to set a range the parameters value has to satisfy;
+   **Range**: to set a range the parameters value has to satisfy;
 
-   Decimal: to set a maximal decimal places for the parameters.
+   **Decimal**: to set a maximal decimal places for the parameters.
+
 
 Creating an analytical driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   As explained at the beginning of this section, analytical drivers use
-   information about users, their roles and profiles to filter data
-   returned by their associated LOVs. Users, roles and profiles must
-   have been already defined in the project context so that they are
-   available to the driver.
+As explained at the beginning of this section, analytical drivers use nformation about users, their roles and profiles to filter data   returned by their associated LOVs. Users, roles and profiles must have been already defined in the project context so that they are   available to the driver.
 
    |image47|
 
    Figure 4.12: Analytical Driver Management.
 
-   To create a driver, select Behavioural Model > Analytical Drivers
-   Management from the developer menu. Here, you will see the entire
-   list of available drivers. For each driver, the list shows unique
-   label, description and type. To explore details the user must just
-   select one menu item from the list and they will appear in the half
-   right side, as shown in Figure 4.12. Otherwise to delete one
-   analytical driver the user must use the icon |image48| available at
-   the end
+To create a driver, select Behavioural Model > Analytical Drivers Management from the developer menu. Here, you will see the entire   list of available drivers. For each driver, the list shows unique label, description and type. To explore details the user must just   select one menu item from the list and they will appear in the half right side, as shown in Figure 4.12. Otherwise to delete one   analytical driver the user must use the icon |image48| available at the end of each row of the list. Notice that you cannot delete a driver if adocument is currently using it.
 
-of each row of the list. Notice that you cannot delete a driver if a
-document is currently using it.
-
-To create a new driver, click on |image49| at the top right corner. The
-driver creation interface will open. At first execution only the upper
-part of the window is visible, as shown in Figure 4.13. The upper part
-is the **Detail** section, where you can set the label, name and
-description. Choose the type between Date, String or Number depending on
-the type of expected data. Select Functional or Temporal if the driver
-is used by an end user or a scheduler, respectively. A click on the save
-botton, enabled as soon as the form is filled in, will save the driver
-and let the section below appear.
+To create a new driver, click on |image49| at the top right corner. The driver creation interface will open. At first execution only the upper part of the window is visible, as shown in Figure 4.13. The upper part is the **Detail** section, where you can set the label, name and description. Choose the type between Date, String or Number depending on the type of expected data. Select Functional or Temporal if the driver is used by an end user or a scheduler, respectively. A click on the save botton, enabled as soon as the form is filled in, will save the driver and let the section below appear.
 
    |image50|
 
    Figure 4.13: Driver creation.
 
-In the Analytical Driver Use Mode Details section, one or more LOVs are
-linked to the current driver, as well as roles and checks are assigned
-via the so-called *use modes*.
+In the Analytical Driver Use Mode Details section, one or more LOVs are linked to the current driver, as well as roles and checks are assigned via the so-called *use modes*.
 
-To associate LOVs to the driver, switch to the “Analytical Driver Use
-Mode Details” tab. Here the user must set label and name of that
-specific use mode, the kind of input among **LOV input**, **Manual
-input** and **Map input**, as shown in Figure 4.14.
-
-The first type allows the user to pick values from a previously defined
-LOV. When selecting this option the interface spread out the
-configuration panel where the user is asked to select a LOV from the
-list and a **Modality**. The latter defines how values are selectable at
-document execution. In fact the user can choose among:
-
-   List values selection: the filter will look like a lookup table;
-
-   Pop up: the filter will look like a lookup table;
-
-   Slider: the user can drag the slider to choose the parameter;
-
-   Tree: made for hierarchical LOV, lets the users navigate the
-   parameters in a hierarchical way;
+To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Details” tab. Here the user must set label and name of that specific use mode, the kind of input among **LOV input**, **Manual input** and **Map input**, as shown in Figure 4.14.
 
    |image51|
 
    Figure 4.14: Detail panel of LOV creation, second step.
+   
+The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are selectable at document execution. In fact the user can choose among:
 
-   Combo Box values selection: the filter will look like a drop down
-   menu.
+   **List values selection**: the filter will look like a lookup table;
 
-The second kind of input expects the user to type manually the value.
-Otherwise the third opens a map from which the user must select one or
-more regions accordingly to the layer property. When selecting this
-option the interface spread out the configuration panel where the user
-is asked to choose a layer and the layer property. More details are
-supplied in next Sections 4.2 for this kind of input .
+   **Pop up**: the filter will look like a lookup table;
 
-Moreover the user can add default values (namely values that will be
-passed to the document at its first execution) using the dedicated area.
-Here it is possible to pick default values from another LOV or to pick
-the first or the latter value of the current LOV (if the LOV input type
-was selected).
+   **Slider**: the user can drag the slider to choose the parameter;
 
-At the bottom of the page the user must associate roles to the “use
-mode”. This action is mandatory. The user connects the user’s roles that
-he/she wants to be allowed to see a certain list of values or certain
-regions or be able to type values at his/her convenience.
+   **Tree**: made for hierarchical LOV, lets the users navigate the parameters in a hierarchical way;
 
-Therefore, since an admin user can decide to separate values according
-to the other users’ roles, the analytical driver definition allows to
-configure different use mode. We can also set validation checks if
-needed. Then it is sufficient to save each use mode and click on **new
-usemode** to set a new one. We repeat the same procedure for all the use
-modes. Each use mode is represented in a separate tab. We will go deeper
-into this at the end of the section.
+   **Combo Box values selection**: the filter will look like a drop down menu.
 
-All the selections can be multi-valued, but note that this option has to
-be set directly on the document detail during analytical driver
+The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next Sections 4.2 for this kind of input.
+
+Moreover the user can add default values (namely values that will be passed to the document at its first execution) using the dedicated area. Here it is possible to pick default values from another LOV or to pick the first or the latter value of the current LOV (if the LOV input type was selected).
+
+At the bottom of the page the user must associate roles to the “use mode”. This action is mandatory. The user connects the user’s roles that he/she wants to be allowed to see a certain list of values or certain regions or be able to type values at his/her convenience.
+
+Therefore, since an admin user can decide to separate values according to the other users’ roles, the analytical driver definition allows to configure different use mode. We can also set validation checks if needed. Then it is sufficient to save each use mode and click on **new usemode** to set a new one. We repeat the same procedure for all the use modes. Each use mode is represented in a separate tab. We will go deeper into this at the end of the section.
+
+All the selections can be multi-valued, but note that this option has to be set directly on the document detail during analytical driver
 association.
 
-Creating an analytical driver for a spatial filter
 
 Creating an analytical driver for a spatial filter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In previous section we explained how to configure a driver and how it
-can be linked to different kind of inputs. In this part we linger on the
-possibility to define a spatial analytical driver. Referring to Figure
-4.15, we notice that for setting the geographical driver we must select
-the **map input** option: here, expanding the combobox you choose the
-layer on which the filter will act. It is then necessary that the layer
-has been previously created and uploaded into Knowage **Layers
-catalog**. Then it is mandatory to specify the property name of the
-geometry in use using the manual text box just below. Remember that the
-property name must be exactly the same, therefore respect the upper and
-the lowercase of the string.
+In previous section we explained how to configure a driver and how it can be linked to different kind of inputs. In this part we linger on the possibility to define a spatial analytical driver. Referring to Figure 4.15, we notice that for setting the geographical driver we must select the **map input** option: here, expanding the combobox you choose the layer on which the filter will act. It is then necessary that the layer has been previously created and uploaded into Knowage **Layers catalog**. Then it is mandatory to specify the property name of the geometry in use using the manual text box just below. Remember that the property name must be exactly the same, therefore respect the upper and the lowercase of the string.
 
    |image52|
 
    Figure 4.15: Spatial analytical driver settings.
 
-These few steps will implent the spatial analytical driver to be
-associated to a document and be used to set a spatial filter.
+These few steps will implent the spatial analytical driver to be associated to a document and be used to set a spatial filter.
 
 Analytical driver’s use modes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sometimes the same analytical driver (i.e., the same concept, like the
-concept of product brand) should display different values according to
-the user that is executing it.
+Sometimes the same analytical driver (i.e., the same concept, like the concept of product brand) should display different values according to the user that is executing it.
 
-Suppose you have a report on sales and costs like the one in Figure 4.1
-and you want to add to it the possibility to filter also on product
-brands. If you load the report as the general manager, you should choose
-between all the possible product brands in the corresponding parameter.
-If instead you load it as, for instance, the food manager, then you
-should be able to filter only on product brands related to the Food
-familiy.
+Suppose you have a report on sales and costs like the one in Figure 4.1 and you want to add to it the possibility to filter also on product brands. If you load the report as the general manager, you should choose between all the possible product brands in the corresponding parameter. If instead you load it as, for instance, the food manager, then you should be able to filter only on product brands related to the Food familiy.
 
-In order to do this, let us focus again on the definition of the LOV and
-check that the already defined use mode All Brands is associated to the
-correct role general_manager. Here you can add a second tab, called for
-instance Profiled_Brands, and associate it to the role product_manager.
-This is because the food manager user has product_manager role with
-profile attribute pr_family = Food.
+In order to do this, let us focus again on the definition of the LOV and check that the already defined use mode All Brands is associated to the correct role general_manager. Here you can add a second tab, called for instance Profiled_Brands, and associate it to the role product_manager. This is because the food manager user has product_manager role with profile attribute *pr_family = Food*.
 
-Analytical driver’s use modes
+Finally, we choose the second LOV created, the one returning only those brands that belong to a specific family (see the code example in section Parametrizing LOVs). The family is selected by checking the value of the family attribute in the user profile.
 
-Finally, we choose the second LOV created, the one returning only those
-brands that belong to a specific family (see the code example in section
-Parametrizing LOVs). The family is selected by checking the value of the
-family attribute in the user profile.
+Notice that here you can also choose a different type of display mode for the LOV. In other terms, different use modes correspond not only to different LOVs, but also to (possibly) different display mode (pop-up windows, combobox, ...). For instance, you can select a combobox display mode for the All Brands use mode and the pop up window display mode for the Profiled_Brands use mode.
 
-Notice that here you can also choose a different type of display mode
-for the LOV. In other terms, different use modes correspond not only to
-different LOVs, but also to (possibly) different display mode (pop-up
-windows, combobox, ...). For instance, you can select a combobox display
-mode for the All Brands use mode and the pop up window display mode for
-the Profiled_Brands use mode.
-
-Once you have saved the LOV, just log out from Knowage and log in with a
-different user role, i.e. as a general manager, food manager and drink
-manager. Executing your report on sales and costs you can now notice the
-differences on the values and on the display mode of the Product Brand
-parameters according to the different users. Notice that, for food
-manager and drink manager, the parameters are always displayed as a
-pop-up window, while for the general manager also the display mode of
-the parameter varies.
+Once you have saved the LOV, just log out from Knowage and log in with a different user role, i.e. as a general manager, food manager and drink manager. Executing your report on sales and costs you can now notice the differences on the values and on the display mode of the Product Brand parameters according to the different users. Notice that, for food manager and drink manager, the parameters are always displayed as a pop-up window, while for the general manager also the display mode of the parameter varies.
 
    |image53|
 
