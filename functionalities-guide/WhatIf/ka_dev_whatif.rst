@@ -7,7 +7,7 @@ When you perform a what-if analysis the schema is shared in order to be used as 
 
    |image214|
 
-       Figure 10.1: Workflow tab.
+   Figure 10.1: Workflow tab.
 
 Referring to Figure 10.2, the interface for the definition of the workflow is composed of a double list where
 
@@ -17,7 +17,7 @@ Referring to Figure 10.2, the interface for the definition of the workflow is co
 
    |image215|
 
-       Figure 10.2: Workflow tab interface.
+   Figure 10.2: Workflow tab interface.
 
 When an administrator clicks on the user in the list “available users” the user will be added in the workflow as shown in Figure 10.3.
 
@@ -34,11 +34,11 @@ Therefore the structure of the new fact table should contain:
 
    |image216|
 
-        Figure 10.3: Selecting users for workflows.
+   Figure 10.3: Selecting users for workflows.
 
    |image217|
 
-        Figure 10.4: Selecting users for workflows. 
+   Figure 10.4: Selecting users for workflows. 
 
 -  all the editable measures,
 
@@ -47,9 +47,9 @@ Therefore the structure of the new fact table should contain:
 
 In Figure 10.5 there is an example where the cube is sales_fact_1998 and the new table is sales_fact_1998_virtual.
 
-|image218|
+  |image218|
 
-    Figure 10.5: Cube and new virtual table example.
+  Figure 10.5: Cube and new virtual table example.
 
 The sales_fact_1998_virtual table should be initialized with the same data contained in sales_fact_1998 plus 0 as version; the wbversion table should be initialized with one record with wbversion = 0 and a name plus a description for the “original values”.
 
