@@ -32,9 +32,9 @@ The workflow has an impact on data visualization. A user can understand the stat
     
 -   The workflow is finished.
 
-    |image211|
+     |image211|
 
-    Figure 9.3: The What-If is finished.
+     Figure 9.3: The What-If is finished.
 
 We briefly recall the fuctionality of the main buttons:
 
