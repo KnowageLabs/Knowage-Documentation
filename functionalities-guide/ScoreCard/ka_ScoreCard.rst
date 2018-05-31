@@ -15,6 +15,9 @@
 
    Figure 7.39: KPI List.
 
+Scorecard\*
+===========
+
 The **Scorecard** feature, available in Knowage suite as highlighted in Figure 8.1, allows to supervise different KPIs at the same time. This option gives an exclusive complete overview of the KPIs situation when the user is not interested in a single threshold check. This tool is in fact useful when concern is addressed to monitoring the overcoming of two or more critical KPI values.
 
    |image162|
