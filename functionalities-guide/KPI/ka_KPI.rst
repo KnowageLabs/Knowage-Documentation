@@ -53,9 +53,9 @@ Each rule is based on a query to which you can add placeholders. A placeholder r
 
 Generally the rule such a query can return one or more measures and possibly an attribute. An example is given in Figure 7.4.
 
-A typology (measure, attribute and temporal attribute) and a category can be assigned to each fields returned by the query using the **Metadata** tab as highlighted in Figure 7.5. The typology
+A typology (measure, attribute and temporal attribute) and a category can be assigned to each fields returned by the query using the **Metadata** tab as highlighted in Figure 7.5. The typology is required to associate a type to each field returned by the query. In particular, if the field is a temporal one, it is mandatory to specify to which level you want it to be considered, that is if it corresponds to a day, a month, a year, a century or a millennium. For measures and attribute it is possible to assign also a category to easily look them up in a second moment.
 
-   |image123|
+  |image123|
 
    Figure 7.2: Editing the query when defining a KPI.
 
@@ -67,13 +67,16 @@ A typology (measure, attribute and temporal attribute) and a category can be ass
 
    Figure 7.4: Query definition.
 
-is required to associate a type to each field returned by the query. In particular, if the field is a temporal one, it is mandatory to specify to which level you want it to be considered, that is if it corresponds to a day, a month, a year, a century or a millennium. For measures and attribute it is possible to assign also a category to easily look them up in a second moment.
-
    |image126|
 
    Figure 7.5: Metadata settings.
 
 We say in advance that, it is important to distinguish these metedata categories from the required field “Category” that occurs while saving the KPI definition (see Figure 7.18). In fact, the category assigned when saving the KPI definition will be added (if it doesn’t exist) in the “KPI categories“ list, used to profile KPIs on roles (see Figure 7.6).
+
+      .. warning::
+         **Do not mistake metadata category with the KPI category**
+         
+         The category defined in the metadata tab of the "Measure definition" functionally are not the same categories selected in the tab area of the "Roles management" functionality (see Figure 7.6). The first serve to classify the metadata while the second serve the profiling issue.
 
    |image127|
 
@@ -95,6 +98,7 @@ Let’s now examine extra features available on the right top corner. There you 
    |image129|
 
    Figure 7.8: Checking aliases.
+   
 
 -  **Placeholder**: here you can check the existing placeholders. These are set in the query you’re editing or in other ones. Figure 7.9 gives an example.
 
@@ -102,6 +106,7 @@ Let’s now examine extra features available on the right top corner. There you 
    |image130|
 
    Figure 7.9: Setting placeholders in a query.
+   
 
 -  **Save**: to save the query and other settings just configured.
 
@@ -158,8 +163,16 @@ Remember to save once all thresholds have been set.
    |image138|
 
    Figure 7.17: Setting thresholds.
+   
+   .. warning::
+         **"Standard" colors for thresholds**
+         
+         Well call **standard colors** for thresholds the ones listed below (in terms of hexadecimals):
+         
+            - green: #00FF00,
+            - yellow: #FFF00,
+            - red: #FF0000.
 
-   |image139|
 
 Finally the user must save the KPI definition clicking on the “Save” button, available at the right top corner of the page. Once the user clicks on the “Save” button, the “Add KPI associations” wizard opens, as you can see from Figure 7.18. Here, it is mandatory to assign a name to the KPI. In addition, the user can set the KPI category so that only users whose roles have the permmissions to this specific category can access the KPI. Remember that it is possible to assign permissions over KPI when defining roles using the “Roles management” functionality available on Knowage main page. Furthermore, the user can check or uncheck the “\ **Enable Versioning**\ ” button if he/she wishes to keep track of the rules/measures/targets that generate the KPI response at each KPI execution.
 
@@ -167,9 +180,7 @@ Finally the user must save the KPI definition clicking on the “Save” button,
 
    Figure 7.18: Save the KPI definition and set category.
 
-**Target.** This step is not mandatory. Enter the **Target Definition** menu item as shown in
-
-Figure 7.19.
+**Target.** This step is not mandatory. Enter the **Target Definition** menu item as shown in Figure 7.19.
 
    |image141|
 
@@ -201,15 +212,13 @@ Note that once targets are set, the window in Figure 7.20 gets populated with a 
 
 As for the other interfaces it is enough to click on the “Plus” icon to create a new schedulation. The new schedulation window presents several tabs.
 
--  **KPI**: it is possible to associate one or more KPI to the schedulation clicking on “Add KPI Association”.
+ -  **KPI**: it is possible to associate one or more KPI to the schedulation clicking on “Add KPI Association”.
 
--  **Filters**: here you assign values to the filters (if configured) associated to the schedu-
+ -  **Filters**: here you assign values to the filters (if configured) associated to the schedulation. Note that it is possibile to assign values to the filters by means of a LOV, a fixed list of values or a temporal function. In case the LOV option is chosen, remember that the LOV must return one unique value. This choice can be useful for profiling tasks.
 
    |image146|
 
    Figure 7.24: KPI tab window.
-
-   lation. Note that it is possibile to assign values to the filters by means of a LOV, a fixed list of values or a temporal function. In case the LOV option is chosen, remember that the LOV must return one unique value. This choice can be useful for profiling tasks.
 
    |image147|
 
@@ -236,7 +245,7 @@ In Figure 7.28 we sum up the example case we have referred to since now.
 
 Once the schedulation is completed click on the “Save” button. Remember to give a name to the schedulation as in Figure 7.29.
 
- Creation of a KPI document
+Creation of a KPI document
 ------------------------------
 
 **Document creation.** Now the schedulation has been set and it is possible to visualize the results. We need at this point to create a new analytical document of type KPI and that uses the KPI engine (Figure 7.30). Then we save.
@@ -257,11 +266,11 @@ Click on the **Template build** icon to develop the template. Here you can choos
 
 Then practically you must add the KPI association using the KPI List area of the interface. As you can see from Figure 7.31 here you select the KPI after clicking on the “ADD KPI ASSOCIATION” link. The latter opens a wizard that allows to pick up a multiple choice of the KPIs. Once chosen, you need to specify all empty fields of the form, like “Category”, “View as” and so on (refer to Figure 7.31). Note that the “View as” field is were you can decide if the widget will be a Speedometer or a KPI Card.
 
-Moreover, you can set the other properties of the KPI document using the **Options** and the **Style** areas (Figure 7.32).
-
    |image153|
 
    Figure 7.31: Setting the KPI associations using the dedicated area.
+   
+Moreover, you can set the other properties of the KPI document using the **Options** and the **Style** areas (Figure 7.32).
 
    |image154|
 
