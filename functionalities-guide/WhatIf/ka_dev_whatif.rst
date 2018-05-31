@@ -1,3 +1,6 @@
+What-if analysis implementation
+-------------------------------
+
 In this chapter we will deal with some technical fetaures of the What-If analysis that can be handled only by expert users.
 
 Workflow description\*
