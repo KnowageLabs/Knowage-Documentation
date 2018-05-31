@@ -12,14 +12,12 @@ Jasper Reporting
 Document defintion\*
 ----------------------
 
-   Unlike the BIRT designer, iReport is not integrated in Eclipse. Therefore, before starting developing the report, you must download it from the website `http://community.jaspersoft.com/project/ireport-designer/releases. 
+   Unlike the BIRT designer, iReport is not integrated in Eclipse. Therefore, before starting developing the report, you must download it from the website http://community.jaspersoft.com/project/ireport-designer/releases.
    
    .. note::
          **iReport download**
          
-         Download the iReport designer at <http://community.jaspersoft.com/project/ireport-designer/releases>`. Knowage support any kind of version.
-
-   |image346|
+         Download the iReport designer at <http://community.jaspersoft.com/project/ireport-designer/releases>. Knowage support any kind of version.
 
    Then you will have to set the path to the iReport designer in Knowage Studio. Open Window > Preferences > iReport Editor Configuration and set the correct path to the ireport.exe file.
 
