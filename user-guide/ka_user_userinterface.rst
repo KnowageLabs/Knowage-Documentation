@@ -64,66 +64,64 @@ It is important to underline that not all the components of the menu are mandato
    
    Home page
 
-+-----------------------+-----------------------+-----------------------+
-|    Icon               | Name                  | Description           |
-+=======================+=======================+=======================+
-|    |image9|           | Knowage user          | Open a hidden menu    |
-|                       |                       | with extra            |
-|                       |                       | functionalities.      |
-+-----------------------+-----------------------+-----------------------+
-|    |image10|          | Select role           | Select the            |
-|                       |                       | authentication role   |
-|                       |                       | (available if you are |
-|                       |                       | associated to more    |
-|                       |                       | than one role).       |
-+-----------------------+-----------------------+-----------------------+
-|    |image11|          | Languages             | Language options.     |
-+-----------------------+-----------------------+-----------------------+
-|    |image12|          | Info                  | Infos about Knowage   |
-|                       |                       | version.              |
-+-----------------------+-----------------------+-----------------------+
-|    |image13|          | Log Out               | Log out.              |
-+-----------------------+-----------------------+-----------------------+
+.. table:: Menu components - General menu
+   :widths: auto
+   
+   +-----------------------+-----------------------+-----------------------+
+   |    Icon               | Name                  | Description           |
+   +=======================+=======================+=======================+
+   |    |image9|           | Knowage user          | Open a hidden menu    |
+   |                       |                       | with extra            |
+   |                       |                       | functionalities.      |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image10|          | Select role           | Select the            |
+   |                       |                       | authentication role   |
+   |                       |                       | (available if you are |
+   |                       |                       | associated to more    |
+   |                       |                       | than one role).       |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image11|          | Languages             | Language options.     |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image12|          | Info                  | Infos about Knowage   |
+   |                       |                       | version.              |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image13|          | Log Out               | Log out.              |
+   +-----------------------+-----------------------+-----------------------+
 
-..
-
-   Table 2.2: Menu components - General menu.
-
-+-----------------------+-----------------------+-----------------------+
-|    Icon               | Name                  | Description           |
-+=======================+=======================+=======================+
-|    |image19|          | Document browser      | Show the archive      |
-|                       |                       | folders and related   |
-|                       |                       | documents.            |
-+-----------------------+-----------------------+-----------------------+
-|    |image20|          | Workspace             | Inquiry, navigate and |
-|                       |                       | create your data.     |
-|                       |                       |                       |
-|                       |                       | Available only for    |
-|                       |                       | KnowageBD and         |
-|                       |                       | KnowageSI.            |
-+-----------------------+-----------------------+-----------------------+
-|    |image21|          | Functions catalog     | Access data mining    |
-|                       |                       | functions.            |
-+-----------------------+-----------------------+-----------------------+
-|    |image22|          | Glossary definition   | Access the glossary   |
-|                       |                       | area.                 |
-|                       |                       |                       |
-|                       |                       | Visualise the         |
-|                       |                       | existing words and    |
-|                       |                       | glossaries.           |
-|                       |                       |                       |
-|                       |                       | Create new words and  |
-|                       |                       | glossaries.           |
-+-----------------------+-----------------------+-----------------------+
-|    |image23|          | Calendar              | Access the calendar   |
-|                       |                       | list. Create a new    |
-|                       |                       | calendar.             |
-+-----------------------+-----------------------+-----------------------+
-
-..
-
-   Table 2.3: Menu components - BI functionalities menu.
+.. table:: Menu components - BI functionalities menu
+   :widths: auto
+   
+   +-----------------------+-----------------------+-----------------------+
+   |    Icon               | Name                  | Description           |
+   +=======================+=======================+=======================+
+   |    |image19|          | Document browser      | Show the archive      |
+   |                       |                       | folders and related   |
+   |                       |                       | documents.            |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image20|          | Workspace             | Inquiry, navigate and |
+   |                       |                       | create your data.     |
+   |                       |                       |                       |
+   |                       |                       | Available only for    |
+   |                       |                       | KnowageBD and         |
+   |                       |                       | KnowageSI.            |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image21|          | Functions catalog     | Access data mining    |
+   |                       |                       | functions.            |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image22|          | Glossary definition   | Access the glossary   |
+   |                       |                       | area.                 |
+   |                       |                       |                       |
+   |                       |                       | Visualise the         |
+   |                       |                       | existing words and    |
+   |                       |                       | glossaries.           |
+   |                       |                       |                       |
+   |                       |                       | Create new words and  |
+   |                       |                       | glossaries.           |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image23|          | Calendar              | Access the calendar   |
+   |                       |                       | list. Create a new    |
+   |                       |                       | calendar.             |
+   +-----------------------+-----------------------+-----------------------+
 
 In the following we describe all the features the main menu could contain, namely:
 
