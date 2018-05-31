@@ -15,8 +15,8 @@ Functionalities
 .. include:: Jasper/ka_dev_jasper.rst
 .. include:: KPI/ka_KPI.rst
 .. include:: LocationIntelligence/ka_dev_introlocationintelligence.rst
-.. include:: LocationIntelligence/ka_dev_locationintelligence.rst
 .. include:: LocationIntelligence/ka_user_locationintelligence.rst
+.. include:: LocationIntelligence/ka_dev_locationintelligence.rst
 .. include:: MetaWeb/ka_dev_metaweb.rst
 .. include:: MyData/ka_user_my_data.rst
 .. include:: Network/ka_dev_network.rst
