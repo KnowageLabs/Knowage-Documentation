@@ -26,7 +26,7 @@ Now set other environment variables:
 .. code-block:: bash
     :linenos:
 
-	SET DISTUTILS_USE_SDK=1
+    SET DISTUTILS_USE_SDK=1
 	SET JAVA_HOME=%JDK_HOME%
 	SET PATH=%JDK_HOME%\jre\bin\server;%PATH%
 
