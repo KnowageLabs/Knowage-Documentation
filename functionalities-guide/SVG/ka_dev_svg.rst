@@ -85,23 +85,22 @@ At the moment there is not yet a designer to create a template for this engine, 
 
 An example is in Code 11.1.
 
-+-------------------------------------------------------------------------+
-| <?xml version="1.0" encoding="UTF-8"?>                                  |
-|                                                                         |
-|    <MAP>                                                                |
-|                                                                         |
-|    <DATAMART_PROVIDER>                                                  |
-|                                                                         |
-|    <HIERARCHY name="USA">                                               |
-|                                                                         |
-|    <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >   |
-|    <MEMBER name ="states" measure_dataset = "ds_states" level="2" >     |
-|    <HIERARCHY>                                                          |
-|                                                                         |
-|    <DATAMART_PROVIDER>                                                  |
-|                                                                         |
-| <MAP>                                                                   |
-+-------------------------------------------------------------------------+
+.. code-block:: xml
+   :linenos:
+   
+   <?xml version="1.0" encoding="UTF-8"?>                                  
+                                                                        
+    <MAP>                                                                                                                              
+       <DATAMART_PROVIDER>                                                                                                                    
+       <HIERARCHY name="USA">                                               
+
+       <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >   
+       <MEMBER name ="states" measure_dataset = "ds_states" level="2" >     
+       <HIERARCHY>                                                          
+
+       <DATAMART_PROVIDER>                                                                                                       
+   <MAP>                                                                   
+
 
     Code 11.1: Example of SVG code for template file.
 
