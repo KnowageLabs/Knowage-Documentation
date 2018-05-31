@@ -24,7 +24,7 @@ For these reasons, KPIs are always defined by expert analysts and then used to a
 
 Knowage allows the configuration of a KPI document thanks to a specific **KPI engine**. The critical value (or values) can be computed and visualized through the functionalities available in the ’KPI model’ section of Knowage menu area (see Figure 7.1).
 
-7.1 KPI development
+KPI development
 -------------------
 
 We introduce the KPI tool by splitting the topic in steps. We briefly sum up here the arguments that we will cover in the following sections in order to have a general overview of the KPI implemetation.
