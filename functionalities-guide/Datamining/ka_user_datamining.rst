@@ -124,7 +124,7 @@ The actions that a user can perform depend on the user’s role. However, indipe
       .. hint::
          **Add or modify the categories**
          
-The admin can add a new category using the Domain management available on Knowage Server under the Server Settings section. To know more about this section, please refer to Section “Server settings” of the General Administration Manual.
+         The admin can add a new category using the Domain management available on Knowage Server under the Server Settings section. To know more about this section, please refer to Section “Server settings” of the General Administration Manual.
 
 The categories for functions depends on an admin user. Taking Figure 16.13 as an example, we have:
 
@@ -274,145 +274,88 @@ The function that you are defining must be a REST service, in particular of POST
         .. code-block:: json
          :caption: JSON answer of a remote function
          :linenos:
-+-------------------------------------------+
-|    {                                      |
-|                                           |
-|    "resultType":"Image",                  |
-|                                           |
-|    "result":".image content in base64.",  |
-|                                           |
-|    "resultName":"res"                     |
-|                                           |
-|    },                                     |
-|                                           |
-|    {                                      |
-|                                           |
-|    "resultType":"Dataset",                |
-|                                           |
-|    "result":"outDatasetLabel",            |
-|                                           |
-|    "resultName":"datasetName"             |
-|                                           |
-|    },                                     |
-|                                           |
-|    { "resultType":"File", "result":       |
-|                                           |
-|    {                                      |
-|                                           |
-| "filesize":"54836", --optional            |
-|                                           |
-| "filetype":"image/jpeg", --optional       |
-|                                           |
-| "filename":"chart.jpg", --optional        |
-|                                           |
-|    "base64":".file content in base64." }, |
-|                                           |
-|    "resultName":"fileToBeSave"            |
-|                                           |
-| }                                         |
-+-------------------------------------------+
+
+         {                                                                           
+         "resultType":"Image",                  
+         "result":".image content in base64.",  
+         "resultName":"res"                     
+         },                                                                               
+        {                                      
+         "resultType":"Dataset",                
+         "result":"outDatasetLabel",            
+         "resultName":"datasetName"             
+        },                                     
+         { "resultType":"File", "result":       
+        {                                      
+         "filesize":"54836", --optional            
+         "filetype":"image/jpeg", --optional      
+         "filename":"chart.jpg", --optional        
+         "base64":".file content in base64." }, 
+         "resultName":"fileToBeSave"            
+        }                                         
 
 
 If an error occur the function must returns the lines as shown in JSON format for remote function.
 
-+---+
-| { |
-+---+
+        .. code-block:: json
+         :caption: JSON answer of a remote function
+         :linenos:
 
+         { 
+            "service":"",                                                                          
+            errors":[                            
+              {                                     
+               "message":"Here the error message."  
+               ]                                     
+         }
 
-
-The Output tab\*
-
-+------+------------------------------------------+
-|    } | "service":"",                            |
-|      |                                          |
-|      |    "errors":[                            |
-|      |                                          |
-|      |    {                                     |
-|      |                                          |
-|      |    "message":"Here the error message." } |
-|      |                                          |
-|      |    ]                                     |
-+------+------------------------------------------+
-
-
-    JSON format for remote function.
 
 The Output tab\*
 ~~~~~~~~~~~~~~~~
 
-   Finally it is important to specify what kind of outputs the function
-   will produce. Using the “Output“ tab shown in Figure 16.26, you can
-   choose between:
+Finally it is important to specify what kind of outputs the function will produce. Using the “Output“ tab shown in Figure 16.26, you can choose between:
 
    |image428|
 
    Figure 16.26: Choosing the output type in the function definition.
 
--  **Dataset**: the function will return a set of records as a the
-      Knowage dataset way;
+-  **Dataset**: the function will return a set of records as a the Knowage dataset way;
 
--  **Image**: the function will return one or more graphics showing the
-      results through bar or pie charts or other kind of visual tools;
+-  **Image**: the function will return one or more graphics showing the results through bar or pie charts or other kind of visual tools;
 
 -  **Text**: the function will return a window containing some text;
 
 -  **File**: the function will return a file.
 
-..
 
-   It is possible to define more than one output for the same function.
-   As an example, in Figure 16.27 you can see the execution of the demo
-   for a function called “Heart diseases”. The latter was set to have
-   two outputs, one is of type “Dataset” and the other of type “Image”.
-   The execution opens then a window with two tabs. The first tab
-   contains the Dataset type output, which is translated visually with a
-   table. While the second tab contains the Image output namely a set of
-   graphics as configured to.
-
-The Output tab\*
+It is possible to define more than one output for the same function. As an example, in Figure 16.27 you can see the execution of the demo for a function called “Heart diseases”. The latter was set to have two outputs, one is of type “Dataset” and the other of type “Image”. The execution opens then a window with two tabs. The first tab contains the Dataset type output, which is translated visually with a table. While the second tab contains the Image output namely a set of graphics as configured to.
 
    |image429|
 
    Figure 16.27: Execution of demo for a function.
 
-   Clicking on the second execution icon you be asked to insert the new
-   value and run the function after filling all boxes in. Figure 16.28
-   shows the window opening when one asks for inserting new data values.
+Clicking on the second execution icon you be asked to insert the new value and run the function after filling all boxes in. Figure 16.28  shows the window opening when one asks for inserting new data values.
 
    |image430|
 
    Figure 16.28: Inserting new data values for function.
 
-   Finally clicking on the function name as shown in Figure 16.29 you
-   can enter function configuration details and modify them.
+Finally clicking on the function name as shown in Figure 16.29 you can enter function configuration details and modify them.
 
    |image431|
 
    Figure 16.29: Clicking on function name to modify it.
 
-   As well as for the input case, the script can recall the output
-   elements. We need to distinguish between the R and the Python
-   language. Note that, in the dataset case, the user needs to name the
-   output as reported in the script body. Figure 16.23 and Figure 16.30
-   show an example.
-
-   When using Python the datasetOut variable is a “pandas” dataframe
-   while, when using R it is a dataframe. Then it is important in fact
-   to consider the objects’ stucture (input and output type must match).
-
-   When the script runs using a certain output dataset Knowage server
-   produces a dataset whose
-
-Engine description\*
+As well as for the input case, the script can recall the output elements. We need to distinguish between the R and the Python language. Note that, in the dataset case, the user needs to name the output as reported in the script body. Figure 16.23 and Figure 16.30 show an example.
 
    |image432|
 
    Figure 16.30: Defining the output example.
 
-   name and label is label<User_Name>_functionsCatalog_<label specified
-   in the Output tab>.
+When using Python the datasetOut variable is a “pandas” dataframe while, when using R it is a dataframe. Then it is important in fact  to consider the objects’ stucture (input and output type must match).
 
-   As an example the function of Figure 16.23 produces a dataFrame whose
-   label and name are biadmin_functionsCatalog_datasetOut.
+When the script runs using a certain output dataset Knowage server produces a dataset whose name and label is label <User_Name> functionsCatalog <label specified in the Output tab>.
+
+As an example the function of Figure 16.23 produces a dataFrame whose label and name are biadmin_functionsCatalog_datasetOut.
+
    .. include:: dataminingThumbinals.rst
