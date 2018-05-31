@@ -1,11 +1,5 @@
 
 More on GIS and Spatial Data\*
-
-   |image383|
-
-   Figure 15.20: Map in edit mode with save template available.
-
-More on GIS and Spatial Data\*
 -----------------------------------
 
 Spatial Data
@@ -13,8 +7,8 @@ Spatial Data
 
 The term *spatial data* refers to any kind of information that can be
 placed in a real or virtual geometric space. In particular, if the
-spatial data is located in a real geometric space ó which is a geometric
-space that models the real space ó it can be defined as *geo-referenced*
+spatial data is located in a real geometric space ‚Äî which is a geometric
+space that models the real space ‚Äî it can be defined as *geo-referenced*
 data.
 
    |image384|
@@ -135,13 +129,13 @@ GIS systems, still keeping them completely separated. The integration
 between spatial data and business data is performed by a dedicated
 application that acts as a *bridge* between the GIS and the BI suite.
 This application extracts the spatial data from the GIS system and the
-business data from the BI suite, to answer the usersí requests.
+business data from the BI suite, to answer the users‚Äô requests.
 Afterwards, it joins them and provides the desired results.
 
 In particular, the **GEOReport Engine** extracts spatial data from an
 external GIS system and join them dynamically with the business data
 extracted from the Data Ware House, in order to produce a thematic map,
-according to the userís request. In other words, it acts as a *bridge*
+according to the user‚Äôs request. In other words, it acts as a *bridge*
 between the two systems, which can consequently be kept totally
 decoupled.
 
@@ -413,7 +407,7 @@ Template building
 -  datasetJoinColumns. It is the dataset column used to join with the
    feature of layer property.
 
--  layerJoinColumns. Itís the featureís name which has to join with the
+-  layerJoinColumns. It‚Äôs the feature‚Äôs name which has to join with the
    dataset column.
 
    Join columns between dataset and Layer
@@ -439,7 +433,7 @@ Template building
 
    Join on multiple columns sintax
 
--  targetLayerConf. This attribute contains the layerís label.
+-  targetLayerConf. This attribute contains the layer‚Äôs label.
 
 -  indicators. It specifies the measures that can be used to perform the
    thematization of the map. Each measure is defined by an array (e.g.
@@ -456,13 +450,13 @@ Template building
 
    The following, instead, are some of the optional attributes:
 
--  mapName, it is a string field and it is the mapís name.
+-  mapName, it is a string field and it is the map‚Äôs name.
 
 -  analysisType, this attribute allows to specify the type of
    thematization that the user wants to produce the first time the
    document is executed. The engine supports two types of thematization:
    **choropleth**: it changes the intensity of fill colours of the
-   features included in the target layer, according to usersí needs. It
+   features included in the target layer, according to users‚Äô needs. It
    can only be applied to target layers that are composed of features
    whose geometry is represented by a plane figure.
 
@@ -516,7 +510,7 @@ Template building
    * CLASSIFY_BY_EQUAL_INTERVALS: divide the range of values into
    equal-sized subranges. For example, if you specify three classes for
    a indicator whose values range from 0 to 300, you will obtain three
-   classes with ranges of 0ñ100, 101ñ200 and 201ñ300.
+   classes with ranges of 0‚Äì100, 101‚Äì200 and 201‚Äì300.
 
 -  the toColor and fromColor attributes specifies the ranges of colours
    to be used in case of choropleth thematization. Similarly, the
@@ -542,7 +536,7 @@ Template building
 Analytical document creation
 
 -  selectedBaseLayer, it specifies the base layer for the map. It can be
-   in the catalogue or between ìOpenstreetmapî and ìOSMî. Please notice
+   in the catalogue or between ‚ÄúOpenstreetmap‚Äù and ‚ÄúOSM‚Äù. Please notice
    that this attribute is not mandatory, if it is not specified
    OpenstreetMap is set by default.
 
@@ -611,11 +605,11 @@ Cross navigation definition\*
 
    parameterName:ReferenciatedAttribute
 
-   The parameterName must be the target documentís parameter url, while
+   The parameterName must be the target document‚Äôs parameter url, while
    ReferenciatedAttribute defines where to recover its value and may be
    different depending on the value of the attribute scope:
 
--  feature: the value of the parameter is the featureís value of the
+-  feature: the value of the parameter is the feature‚Äôs value of the
       selected element. The ReferenciatedAttribute is the name of
       feature. For example, the row
 
