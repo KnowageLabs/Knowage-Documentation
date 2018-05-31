@@ -1,85 +1,45 @@
-The SVG Viewer Engine is a tool that lets you develop documents based on
-the SVG, acronym for Scalable Vector Graphics, format. It permits to
-show different business information directly on each area, and permits
-the drill action to other more detailed SVG files using a logical
-hierarchy. This viewer is divided into two sections:
+My first SVG Map or design
+---------------------------
 
--  a panel with many dynamic details such measures, layers and legend
-      plus an optional section with specific information about the
-      active document,
+The SVG Viewer Engine is a tool that lets you develop documents based on the SVG, acronym for Scalable Vector Graphics, format. It permits to show different business information directly on each area, and permits the drill action to other more detailed SVG files using a logical hierarchy. This viewer is divided into two sections:
+
+-  a panel with many dynamic details such measures, layers and legend plus an optional section with specific information about the
+   active document,
 
 -  the svg document.
 
-To give an example, we can imagine to visualize throught an SVG the USA
-map. At first we can show data at the ìRegionsî level and then throught
-the click / drill - show the same or other information at the States
-ìlevelî. We give an example of map document produced with the SVG engine
-in Figure 11.1 and Figure 11.2.
+To give an example, we can imagine to visualize throught an SVG the USA map. At first we can show data at the ‚ÄúRegions‚Äù level and then throught the click / drill - show the same or other information at the States ‚Äúlevel‚Äù. We give an example of map document produced with the SVG engine in Figure 11.1 and Figure 11.2.
 
    |image235|
 
    Figure 11.1: SVG document example at the USA Regions level.
 
-Like other Knowage documents type there is a set of activities managed
-by the technical users and others used by the final users. These last
-ones are specifically about consulting.
-
-
+Like other Knowage documents type there is a set of activities managed by the technical users and others used by the final users. These last ones are specifically about consulting.
 
    |image236|
 
-   Figure 11.2: SVG document example at the States level after the
-   selection of the ìCenter Westî Region.
+   Figure 11.2: SVG document example at the States level after the selection of the ‚ÄúCenter West‚Äù Region.
 
 Technical activities
 --------------------------
 
-   First of all, a technical user needs to configure the logical
-   hierarchy of the SVG and to define datasets with the business data
-   he/she wishes to show. Finally he/she must type the document
-   template. We will give details about these points in the following
-   sections.
+First of all, a technical user needs to configure the logical hierarchy of the SVG and to define datasets with the business data he/she wishes to show. Finally he/she must type the document template. We will give details about these points in the following sections.
 
 SVG Catalogue
 ~~~~~~~~~~~~~
 
-   The first activity that you need to do as administrator is to find or
-   create an SVG file. Any file saved in SVG format is a text file in
-   XML format. As a consequence, they can easily be queried, indexed,
-   enriched with scripts and, if necessary, zipped. The SVG final output
-   could represent everything: geographical areas (like USA in the
-   previous example in Figure 11.1), concepts (like the item production
-   steps) and so on.
+The first activity that you need to do as administrator is to find or create an SVG file. Any file saved in SVG format is a text file in XML format. As a consequence, they can easily be queried, indexed, enriched with scripts and, if necessary, zipped. The SVG final output could represent everything: geographical areas (like USA in the previous example in Figure 11.1), concepts (like the item production steps) and so on.
 
 SVG Format
 ~~~~~~~~~~
 
-   The Scalable Vector Graphics, SVG, refers to an XML-based encoding
-   format, used to describe two dimensional vector graphical objects.
-   SVG is an open standard, defined by the World Wide Web Consortium
-   (W3C), which released its first version in 1999. Read more at
-   `http: <http://www.w3.org/Graphics/SVG/>`__
+The Scalable Vector Graphics, SVG, refers to an XML-based encoding format, used to describe two dimensional vector graphical objects. SVG is an open standard, defined by the World Wide Web Consortium (W3C), which released its first version in 1999. Read more at `http: <http://www.w3.org/Graphics/SVG/>`__ .
 
-   `//www.w3.org/Graphics/SVG/. <http://www.w3.org/Graphics/SVG/>`__
+Not all graphical objects of an SVG can be thematized. Using the SVG grouping operator <g>, the developer can create one or more subsets of graphical objects and specify which groups should be subject to thematization. Each group has an unique name, corresponding to the value of the id attribute of the <g> tag (e.g. <g id=‚Äúregions‚Äù>). Considering that, graphical objects grouped in an SVG file are usually homogeneous elements (in other words, they model a same category of objects: regions, towns, streets, etc.), we can consider these groups as layers and the objects can be considered as features.
 
-   Not all graphical objects of an SVG can be thematized. Using the SVG
-   grouping operator <g>, the developer can create one or more subsets
-   of graphical objects and specify which groups should be subject to
-   thematization. Each group has an unique name, corresponding to the
-   value of the id attribute of the <g> tag (e.g. <g id=ìregionsî>).
-   Considering that, graphical objects grouped in an SVG file are
-   usually homogeneous elements (in other words, they model a same
-   category of objects: regions, towns, streets, etc.), we can consider
-   these groups as layers and the objects can be considered as features.
+Once obtained the SVG file, you should register it into Knowage SVG catalogue.
 
-SVG Format
-
-   Once obtained the SVG file, you should register it into Knowage SVG
-   catalogue.
-
-   The Svg catalogue contains all SVG that can be used with this engine
-   throught specific hierarchies. In this context a hierarchy is a
-   definition of three concepts:
+The Svg catalogue contains all SVG that can be used with this engine throught specific hierarchies. In this context a hierarchy is a definition of three concepts:
 
 -  the hierarchy itself,
 
@@ -87,129 +47,87 @@ SVG Format
 
 -  the member.
 
-..
-
-   These three information are used from the system to recover the
-   correct SVG into the catalogue.
+These three information are used from the system to recover the correct SVG into the catalogue.
 
    |image237|
 
    Figure 11.3: Entering the hierarchy details.
 
-   As you can see in Figure 11.3, you must insert a name and an optional
-   description of the new SVG component, then you need to specify a
-   logical hierarchyís label, its number of the level and a logical name
-   for the member that it represents. At last you need to upload the SVG
-   file. When this configuration will be saved, the system will read the
-   SVG content and for each group (or tag <g>) will be created a layer.
-   All layers will be shown into the ìFeature Detailî section (read only
-   section).
+As you can see in Figure 11.3, you must insert a name and an optional description of the new SVG component, then you need to specify a logical hierarchy‚Äôs label, its number of the level and a logical name for the member that it represents. At last you need to upload the SVG file. When this configuration will be saved, the system will read the SVG content and for each group (or tag <g>) will be created a layer. All layers will be shown into the ‚ÄúFeature Detail‚Äù section (read only section).
 
-   In this first example in Figure 11.3 we defined an SVG component for
-   the USA regions specifying that itís the first level (in other words
-   itís the first SVG of the ìUSAî hierarchy).
+In this first example in Figure 11.3 we defined an SVG component for the USA regions specifying that it‚Äôs the first level (in other words it‚Äôs the first SVG of the ‚ÄúUSA‚Äù hierarchy).
 
-   The second level (the more detailed SVG) is about the USA states and
-   itís defined like the next example in Figure 11.4:
-
-   As you can see the principal differences between these configurations
-   are only about the level content and the member label. This means
-   that both will be used in the same hierarchyís context and that from
-   the ìRegionsî SVG will be possible to drill on the ìStatesî SVG.
-   Anyway it is not mandatory to define more than one level: it depends
-   from each project implementation.
-
-Datasets definition
+The second level (the more detailed SVG) is about the USA states and it‚Äôs defined like the next example in Figure 11.4:
 
    |image238|
 
    Figure 11.4: Entering the hierarchy details.
 
-Datasets definition
-~~~~~~~~~~~~~~~~~~~
+As you can see the principal differences between these configurations are only about the level content and the member label. This means that both will be used in the same hierarchy‚Äôs context and that from the ‚ÄúRegions‚Äù SVG will be possible to drill on the ‚ÄúStates‚Äù SVG. Anyway it is not mandatory to define more than one level: it depends from each project implementation.
 
-   After that all SVG was loaded, you must define a dataset (one for
-   each level) that you want to use for getting and showing business
-   information from your DWH. You can refer to Chapter 3 of this manual
-   to know how to create datasets. Here in Figure 11.5 a dataset of our
-   example:
+Datasets definition
+~~~~~~~~~~~~~~~~~~~~
+
+After that all SVG was loaded, you must define a dataset (one for each level) that you want to use for getting and showing business information from your DWH. You can refer to Chapter 3 of this manual to know how to create datasets. Here in Figure 11.5 a dataset of our example:
 
    |image239|
 
-   Figure 11.5: Left. Dataset behind the SVG document. Right. Dataset
-   preview.
+   Figure 11.5: Left. Dataset behind the SVG document. Right. Dataset preview.
 
 .. _template-building-1:
 
 Template building
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
-   The template allows the SVG viewer to properly join business data
-   (Knowage dataset) and spatial data (SVG included in the catalog), in
-   order to produce the analytical documents.
+The template allows the SVG viewer to properly join business data (Knowage dataset) and spatial data (SVG included in the catalog), in order to produce the analytical documents.
 
-   At the moment there is not yet a designer to create a template for
-   this engine, anyway, itís an XML file very simple to define.
+At the moment there is not yet a designer to create a template for this engine, anyway, it‚Äôs an XML file very simple to define.
 
-   An example is in Example of SVG code for template file.
+An example is in Code 11.1.
 
-+-----------------------------------------------------------------------+
-| <?xml version="1.0" encoding="UTF-8"?>                                |
-|                                                                       |
-|    <MAP>                                                              |
-|                                                                       |
-|    <DATAMART_PROVIDER>                                                |
-|                                                                       |
-|    <HIERARCHY name="USA">                                             |
-|                                                                       |
-|    <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" > |
-+-----------------------------------------------------------------------+
++-------------------------------------------------------------------------+
+| <?xml version="1.0" encoding="UTF-8"?>                                  |
+|                                                                         |
+|    <MAP>                                                                |
+|                                                                         |
+|    <DATAMART_PROVIDER>                                                  |
+|                                                                         |
+|    <HIERARCHY name="USA">                                               |
+|                                                                         |
+|    <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >   |
+|    <MEMBER name ="states" measure_dataset = "ds_states" level="2" >     |
+|    <HIERARCHY>                                                          |
+|                                                                         |
+|    <DATAMART_PROVIDER>                                                  |
+|                                                                         |
+| <MAP>                                                                   |
++-------------------------------------------------------------------------+
 
+    Code 11.1: Example of SVG code for template file.
 
-+-----------------------------------------------------------------------+
-|    <MEMBER name ="states" measure_dataset = "ds_states" level="2" >   |
-|    <HIERARCHY>                                                        |
-|                                                                       |
-|    <DATAMART_PROVIDER>                                                |
-|                                                                       |
-| <MAP>                                                                 |
-+-----------------------------------------------------------------------+
+Basically, it‚Äôs necessary to specify the hierarchy that we want to use, as well as its members (remember that with member we are considering a specific SVG).
 
+We recap in Table 11.1 the meaning of the main tag.
 
-
-   Example of SVG code for template file.
-
-   Basically, itís necessary to specify the hierarchy that we want to
-   use, as well as its members (remember that with member we are
-   considering a specific SVG).
-
-   We recap in Table 11.1 the meaning of the main tag.
-
-   After, we need to define each member and first of all we can note
-   that is composed by three sections: METADATA, LAYERS and MEASURE
+After, we need to define each member and first of all we can note that is composed by three sections: METADATA, LAYERS and MEASURE, as in Code 11.2:
    
-+--------------------------------------------------------------------+
-| <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" > |
-|                                                                    |
-| <METADATA>                                                         |
-|                                                                    |
-| <LAYERS>                                                           |
-|                                                                    |
-| <MEASURES default_kpi="UNIT_SALES">                                |
-|                                                                    |
-| <MEMBER>                                                           |
-+--------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+| <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >    |
+|                                                                       |
+| <METADATA>                                                            |
+|                                                                       |
+| <LAYERS>                                                              |
+|                                                                       |
+| <MEASURES default_kpi="UNIT_SALES">                                   |
+|                                                                       |
+| <MEMBER>                                                              |
++-----------------------------------------------------------------------+
 
+    Code 11.2: Example of SVG code for template file.
 
+Let us see each of them in more depth.
 
-    Example of SVG code for template file.
-
-   Let us see each of them in more depth.
-
--  **METADATA.** This is the section where we define the dataset
-   metadata, in fact, each COLUMN tag defines the dataset columns that
-   we want to use as attribute, as measure (used for thematize the SVG)
-   or other technical meaning usefull for the engine.
+-  **METADATA.** This is the section where we define the dataset metadata, in fact, each COLUMN tag defines the dataset columns that        we want to use as attribute, as measure (used for thematize the SVG) or other technical meaning usefull for the engine.
 
 +-----------------------------------------------------------------------+
 | <METADATA>                                                            |
@@ -226,15 +144,28 @@ Template building
 | <COLUMN TYPE="info" column_id="info_text" />                          |
 +-----------------------------------------------------------------------+
 
+    Code 11.3: Example of SVG code for template file.
 
+Once again we give some details on metadata in next Table 11.5.
 
-   Example of SVG code for template file.
+-  **LAYERS.** In this section we define all layers that we want to enable in the document. Each layer will be shown into the detail        panel ‚ÄúLayers section‚Äù as you can see in Figure 11.6 and could be actived or disactived directly by an action of the the final user.    At least one layer must be defined.
 
-   Once again we give some details on metadata in next Table 11.5.
+      |image240|
 
--  **LAYERS.** In this section we define all layers that we want to
-   enable in the document. Each layer will be shown into the detail
-   panel ìLayers sectionî as you can see in Figure
+      Figure 11.6: Available layers set by a technical user.
+
++-----------------------------------------------------------------------+
+|    <LAYERS>                                                           |
+|                                                                       |
+|    <LAYER name="regions" description="Regions" selected="true" />     |
+|                                                                       |
+| <LAYER name="Labels_Regions_Name" description="Labels_Regions_Name"   |
+| selected="false" />                                                   |
+|                                                                       |
+|    <LAYERS>                                                           |
++-----------------------------------------------------------------------+
+
+   Code 11.4: Code relative to the LAYER setting.
 
 +-----------------------+-----------------------+-----------------------+
 |    Tag                | Property              | Note                  |
@@ -279,7 +210,6 @@ Template building
 |                       |                       | member specified.     |
 +-----------------------+-----------------------+-----------------------+
 
-
    Table 11.1: Recap of tag properties and function.
 
 +-----------------------+-----------------------+-----------------------+
@@ -298,7 +228,7 @@ Template building
 |                       |                       |    and the            |
 |                       |                       |    corresponding      |
 |                       |                       |    features in the    |
-|                       |                       |    svg. Also, itís    |
+|                       |                       |    svg. Also, it‚Äôs    |
 |                       |                       |    the default value  |
 |                       |                       |    passed within the  |
 |                       |                       |    drill action to    |
@@ -342,10 +272,10 @@ Template building
 |                       |                       |    set the cross      |
 |                       |                       |    navigation type.   |
 |                       |                       |    Possible values    |
-|                       |                       |    are ìcrossî for    |
+|                       |                       |    are ‚Äúcross‚Äù for    |
 |                       |                       |    external           |
 |                       |                       |    navigation or      |
-|                       |                       |    ìdrillî for        |
+|                       |                       |    ‚Äúdrill‚Äù for        |
 |                       |                       |    internal           |
 |                       |                       |    navigation. If the |
 |                       |                       |    single element     |
@@ -358,7 +288,7 @@ Template building
 |                       |                       |    the column that    |
 |                       |                       |    throught a boolean |
 |                       |                       |    value (string with |
-|                       |                       |    ìtrueî / ìfalseî)  |
+|                       |                       |    ‚Äútrue‚Äù / ‚Äúfalse‚Äù)  |
 |                       |                       |    guides the         |
 |                       |                       |    visibility of each |
 |                       |                       |    svg element.       |
@@ -386,29 +316,7 @@ Template building
 |                       |                       | setting.              |
 +-----------------------+-----------------------+-----------------------+
 
-
    Table 11.2: Recap of column tag properties and function.
-
-   11.6 and could be actived or disactived directly by an action of the
-   the final user. At least one layer must be defined.
-
-   |image240|
-
-   Figure 11.6: Available layers set by a technical user.
-
-+-----------------------------------------------------------------------+
-|    <LAYERS>                                                           |
-|                                                                       |
-|    <LAYER name="regions" description="Regions" selected="true" />     |
-|                                                                       |
-| <LAYER name="Labels_Regions_Name" description="Labels_Regions_Name"   |
-| selected="false" />                                                   |
-|                                                                       |
-|    <LAYERS>                                                           |
-+-----------------------------------------------------------------------+
-
-
-    Code relative to the LAYER setting.
 
 +-----------------------+-----------------------+-----------------------+
 |    Tag                | Property              | Note                  |
@@ -426,77 +334,46 @@ Template building
 |                       |                       | panel.                |
 +-----------------------+-----------------------+-----------------------+
 
-..
-
    Table 11.3: Recap of layer tag properties and function.
 
--  **MEASURES** Measures are all the business values (KPI) that the user
-   want to monitor throught this document type. Each measure defined in
-   this section will be shown into the detail panel (ìMeasuresî section)
-   with a specific thematization and could be enabled or disabled
-   directly by an action of the the final user. When the measure is
-   active all its values are shown onto the SVG and each area has a
-   specific tonality of the color in according to the threshold
-   definition and its real value. All thresholds range are visualized
-   into the ìLegendî section of the detail panel as highlight in Figure
-   11.7. Is possibile to choose the thematization logic that it could be
-   as quantile, percentage, uniform or static. Next, weíll see both
-   definitions (see Thresholds details).Remember, that at least one
-   measure must be defined.
-
-+-------------------------------------+
-| <MEASURES default_kpi="UNIT_SALES"> |
-+-------------------------------------+
-
-
+-  **MEASURES** Measures are all the business values (KPI) that the user want to monitor throught this document type. Each measure defined in this section will be shown into the detail panel (‚ÄúMeasures‚Äù section) with a specific thematization and could be enabled or disabled directly by an action of the the final user. When the measure is active all its values are shown onto the SVG and each area has a specific tonality of the color in according to the threshold definition and its real value. All thresholds range are visualized    into the ‚ÄúLegend‚Äù section of the detail panel as highlight in Figure 11.7. Is possibile to choose the thematization logic that it could be as quantile, percentage, uniform or static. Next, we‚Äôll see both definitions (see Thresholds details).Remember, that at least one    measure must be defined.
 
    |image241|
 
    Figure 11.7: Left. Measure panel. Right. Legend panel.
 
-+------------------------------------------------------------------------+
-|    <KPI column_id="STORE_SALES" description="Store Sales" >            |
-|                                                                        |
-|    <TRESHOLDS type="quantile" lb_value="0" ub_value="none" >           |
-|                                                                        |
-|    <PARAM name="GROUPS_NUMBER" value="5" />                            |
-|                                                                        |
-|    </TRESHOLDS>                                                        |
-|                                                                        |
-|    <COLOURS type="grad" outbound_colour="#FFFFFF" null_values_color="# |
-|                                                                        |
-|    CCCCCC" >                                                           |
-|                                                                        |
-|    <PARAM name="BASE_COLOR" value="#009900" />                         |
-|                                                                        |
-|    <!--<PARAM name="opacity" value="0.5" />--> </COLOURS>              |
-|                                                                        |
-|    </KPI>                                                              |
-|                                                                        |
-|    <KPI column_id="STORE_COST" description="Store Cost" >              |
-|                                                                        |
-|    <KPI column_id="UNIT_SALES" description="Unit Sales" >              |
-|                                                                        |
-| <MEASURE>                                                              |
-+------------------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+| <MEASURES default_kpi="UNIT_SALES">                                                |
+|      <KPI column_id="STORE_SALES" description="Store Sales" >                      |
+|                                                                                    |
+|    <TRESHOLDS type="quantile" lb_value="0" ub_value="none" >                       |
+|                                                                                    |
+|    <PARAM name="GROUPS_NUMBER" value="5" />                                        |
+|                                                                                    |
+|    </TRESHOLDS>                                                                    |
+|                                                                                    |
+|    <COLOURS type="grad" outbound_colour="#FFFFFF" null_values_color="#CCCCCC" >    |                                                   
+|                                                                                    |
+|    <PARAM name="BASE_COLOR" value="#009900" />                                     |
+|                                                                                    |
+|    <!--<PARAM name="opacity" value="0.5" />--> </COLOURS>                          |
+|                                                                                    |
+|    </KPI>                                                                          |
+|                                                                                    |
+|    <KPI column_id="STORE_COST" description="Store Cost" >                          |
+|                                                                                    |
+|    <KPI column_id="UNIT_SALES" description="Unit Sales" >                          |
+|                                                                                    |
+| <MEASURE>                                                                          |
++------------------------------------------------------------------------------------+
 
+   Code 11.4: Code for setting the KPI into SVG document.
 
-   Code for setting the KPI into SVG document.
+We report Table 11.6 for further details on THRESHOLDS and COLOURS tag. This table includes the heuristics supporting value interval partition into a finite number of subintervals (type attribute of the THRESHOLDS tag).
 
-   We report Table 11.6 for further details on THRESHOLDS and COLOURS
-   tag. This table includes the heuristics supporting value interval
-   partition into a finite number of subintervals (type attribute of the
-   THRESHOLDS tag).
+While the following Table 11.7 defines the heuristics supporting color definition for each value sub-interval (type attribute of the COLOURS tag).
 
-   While the following Table 11.7 defines the heuristics supporting
-   color definition for each value sub-interval (type attribute of the
-   COLOURS tag).
-
-   Sometimes users need to color the map and, at the same time, to
-   continue to see the underlying objects, through a transparency effect
-   (e.g. a raster image). In this case, specify the opacity parameter in
-   order to properly regulate the transparency level of colors (1 = no
-   transparency;
+Sometimes users need to color the map and, at the same time, to continue to see the underlying objects, through a transparency effect (e.g. a raster image). In this case, specify the opacity parameter in order to properly regulate the transparency level of colors (1 = no transparency; 0 = invisible).
 
 +-----------------------+-----------------------+-----------------------+
 |    Tag                | Property              | Note                  |
@@ -583,16 +460,16 @@ Template building
 |                       |                       | be present more than  |
 |                       |                       | once.                 |
 +-----------------------+-----------------------+-----------------------+
-|    PARAM              | value                 | Mandatory. Itís the   |
+|    PARAM              | value                 | Mandatory. It‚Äôs the   |
 |                       |                       | parameter name value. |
 +-----------------------+-----------------------+-----------------------+
 |    PARAM              | label                 | Optional. Specify the |
 |                       |                       | static labels for the |
 |                       |                       | legend when           |
 |                       |                       | thresholds type is    |
-|                       |                       | ìstaticî.             |
+|                       |                       | ‚Äústatic‚Äù.             |
 +-----------------------+-----------------------+-----------------------+
-|    PARAM              | value                 | Optional. Itís the    |
+|    PARAM              | value                 | Optional. It‚Äôs the    |
 |                       |                       | parameter label       |
 |                       |                       | value.                |
 +-----------------------+-----------------------+-----------------------+
@@ -625,7 +502,6 @@ Template building
 |                       |                       | maximum range.165     |
 +-----------------------+-----------------------+-----------------------+
 
-
    Table 11.4: Recap of layer tag properties and function.
 
 +-----------------------------------+-----------------------------------+
@@ -646,7 +522,6 @@ Template building
 |                                   | specified for the THRESHOLD nalue |
 |                                   | tag.                              |
 +-----------------------------------+-----------------------------------+
-
 
    Table 11.5: Recap of layer tag properties and function.
 
@@ -739,10 +614,7 @@ Template building
 |                       |                       | </TRESHOLDS>          |
 +-----------------------+-----------------------+-----------------------+
 
-
    Table 11.6: Recap of layer tag properties and function.
-
-Advanced functionalities
 
 +-----------------------+-----------------------+-----------------------+
 |    Tag                | Property              | Note                  |
@@ -787,54 +659,29 @@ Advanced functionalities
 |                       |                       | </COLOURS>            |
 +-----------------------+-----------------------+-----------------------+
 
-..
-
    Table 11.7: Recap of layer tag properties and function.
 
-   0 = invisible).
-
-   Now, after the template definiton, you can create it into Knowage.
-   Remember that it must be a ìLocation Intelligenceî document type with
-   the engine ìSVG Viewer Engineî.
+Now, after the template definiton, you can create it into Knowage. Remember that it must be a ‚ÄúLocation Intelligence‚Äù document type with the engine ‚ÄúSVG Viewer Engine‚Äù.
 
 Advanced functionalities
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Other the default drill navigation that you have if for the document
-   are defined more than one member, is it possible to cross versus
-   other Knowage documents. To enable this feature, is necessary to set
-   the enableExternalCross property for the MEMBER tag. Here an example
-   in Code Code for enabling external cross navigation:
+Other the default drill navigation that you have if for the document are defined more than one member, is it possible to cross versus other Knowage documents. To enable this feature, is necessary to set the enableExternalCross property for the MEMBER tag. Here an example in Code 11.5:
 
-+-----------------------------------+-----------------------------------+
-|    <MEMBER name="states"          | level="2"                         |
-|    measure_dataset="ds_states"    |                                   |
-|    enableExternalCross="true">    |                                   |
-+-----------------------------------+-----------------------------------+
++----------------------------------------------------------------------+
+|    <MEMBER name="states" level="2"                                   |
+|      measure_dataset="ds_states"                                     |
+|      enableExternalCross="true">                                     |
++----------------------------------------------------------------------+
 
+    Code 11.5: Code for enabling external cross navigation.
+    
+    |image242|
+    
+    Figure 11.8: Using the Cross Navigation definition to link to external documents.
 
-    Code for enabling external cross navigation.
+With this setting, you are able to create a ‚ÄúCross Navigation Definition‚Äù with the standard Knowage functionality, where for default you‚Äôll find the element_id as outuput parameter as shown in Figure 11.8. It means that the identifer of the area selected is able to be passed. Other default output parameters are **Hierarchy**, **Member** and **Level**.
 
-   With this setting, you are able to create a ìCross Navigation
-   Definitionî with the standard Knowage functionality, where for
-   default youíll find the element_id as outuput parameter as shown in
-   Figure 11.8. It means that the identifer of the area selected is able
-   to be passed. Other default output parameters are **Hierarchy**,
-   **Member** and **Level**.
-
-   In a cross navigation it is also possible to pass the dataset column
-   values. It is only necessary that a technical user prepares specific
-   output parameters, setting the name like the alias of
-
-Advanced functionalities
-
-   |image242|
-
-   Figure 11.8: Using the Cross Navigation definition to link to
-   external documents.
-
-the dataset columns.
-
-   Knowage Engineering Group
+In a cross navigation it is also possible to pass the dataset column values. It is only necessary that a technical user prepares specific output parameters, setting the name like the alias of the dataset columns.
    
      .. include:: svgThumbinals.rst
