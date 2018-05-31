@@ -8,9 +8,9 @@ Preliminary information
 
 The administrator will provide you a username and a password to log in Knowage environment.
 
-   |image2|
-
-   Figure 2.1: Log in page.
+.. figure:: media/image6.png
+   
+   Login page
 
 These credential identifies you as user and are associated to your *role*.
 
@@ -27,28 +27,27 @@ All the analytical documents are strictly related to the behavioural model. In f
 
 Every role belongs to a predefined *role type* and In Table 2.1, the different available role types are listed and described.
 
-+-----------------------------------+-----------------------------------+
-|    Role Type                      | Description                       |
-+===================================+===================================+
-|    General administrator.         | Manages all Knowage               |
-|                                   | functionalities.                  |
-+-----------------------------------+-----------------------------------+
-|    Model administrator.           | Manages the behavioural model and |
-|                                   | its associated functionalities.   |
-+-----------------------------------+-----------------------------------+
-|    Developer.                     | Creates and modifies datasets and |
-|                                   | documents.                        |
-+-----------------------------------+-----------------------------------+
-|    Test user.                     | Tests analytical documents.       |
-+-----------------------------------+-----------------------------------+
-|    End user.                      | Executes documents visible to him |
-|                                   | and creates ad-hoc reporting      |
-|                                   | analysis.                         |
-+-----------------------------------+-----------------------------------+
+.. table:: Role types
+   :widths: auto
 
-..
-
-   Table 2.1: Knowage Role Types.
+   +-----------------------------------+-----------------------------------+
+   |    Role Type                      | Description                       |
+   +===================================+===================================+
+   |    General administrator.         | Manages all Knowage               |
+   |                                   | functionalities.                  |
+   +-----------------------------------+-----------------------------------+
+   |    Model administrator.           | Manages the behavioural model and |
+   |                                   | its associated functionalities.   |
+   +-----------------------------------+-----------------------------------+
+   |    Developer.                     | Creates and modifies datasets and |
+   |                                   | documents.                        |
+   +-----------------------------------+-----------------------------------+
+   |    Test user.                     | Tests analytical documents.       |
+   +-----------------------------------+-----------------------------------+
+   |    End user.                      | Executes documents visible to him |
+   |                                   | and creates ad-hoc reporting      |
+   |                                   | analysis.                         |
+   +-----------------------------------+-----------------------------------+
 
 From now on we suppose the reader has a role of type “End user”. If some grants are optional for this role we will state it.
 
@@ -61,9 +60,9 @@ Knowage main menu consists in a set of icons associated with basic features. It 
 
 It is important to underline that not all the components of the menu are mandatory, but they may be configured by the administrator according to user’s needs.
 
-   |image3|
-
-   Figure 2.2: Home page
+.. figure:: media/image7.png
+   
+   Home page
 
 +-----------------------+-----------------------+-----------------------+
 |    Icon               | Name                  | Description           |
@@ -139,15 +138,13 @@ Workspace
    -  **SHARED DATA SET**, containing datasets created by other users and shared with you,
    -  **CKAN DATA SET**, available only for KnowageBD, where you can search for open data among different portals and save the selected        ones in your environment.
 
-..
-
    From here you can also modify your existing datasets or create new ones for instance uploading a CSV or XLS file.
 
    In the **Models** one instead you have two tabs on the right side of the interface. The **Business** tab allows you to access models    built up for you by the developer and inquiry them using the QbE interface. In the **Federation definition** tab you can create          federation between one or more existing dataset using the specific GUI or just access the exiting ones as well.
 
-   |image24|
+   .. figure:: media/image18.png
 
-   Figure 2.3: User Datasets.
+      User Datasets
 
    Analytical documents, navigate the document folders tree, search, sort and execute documents.
 
@@ -175,9 +172,9 @@ Info
 
 To conclude the overview of this area we describe a not mandatory element. When configured by the Knowage administrator, you can have quick links to a static page, a document, a folder or an external application, like for instance a web page. These links are displayed below the BI functionalities menu, as shown in Figure 2.4.
 
-   |image25|
+.. figure:: media/image19.png
 
-   Figure 2.4: Quick links.
+   Quick links
 
 You can minimize the main menu by clicking the right arrow at its bottom right corner. This way the main menu is replaced by the menu button, so that you can close/open it according to your needs. You can move this button around the page by dragging and dropping it. Choose the position that best fits with your work.
 
@@ -186,22 +183,22 @@ Document Browser overview
 
 From BI functionalities Menu, select |image26| to open the Document Browser.
 
-   |image27|
-
-   Figure 2.5: Document Browser.
+.. figure:: media/image21.png
+   
+   Document Browser
 
 By default the page is divided in two parts, as shown in Figure 2.5: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
 
 You can switch to the document preview view by clicking on grid icon in the top right corner, as shown in Figure 2.6.
 
-   |image28|
+.. figure:: media/image22.png
 
-   Figure 2.6: Changing documents view.
+   Changing documents view
 
 Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date (see Figure 2.7).
 
-   |image29|
+.. figure:: media/image23.png
 
-   Figure 2.7: Documents details expanded.
+   Documents details expanded.
 
 At the top of this side panel you find the |image30| button, the same one you see at the end of each document line. Click on it to execute the document.
