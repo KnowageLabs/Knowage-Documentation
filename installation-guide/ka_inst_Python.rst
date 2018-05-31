@@ -38,7 +38,7 @@ Datamining engine supports the use of all Python libraries: before import a libr
 .. code-block:: python
     :linenos:
     
-	pip install pandas 
+	pip install pandas
 	pip install numpy 
 	pip install scipy 
 	pip install matplotlib.
