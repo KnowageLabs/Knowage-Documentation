@@ -99,8 +99,7 @@ An example is in Code 11.1.
        <HIERARCHY>                                                          
 
        <DATAMART_PROVIDER>                                                                                                       
-   <MAP>                                                                   
-
+    <MAP>                                                                   
 
     Code 11.1: Example of SVG code for template file.
 
@@ -110,17 +109,15 @@ We recap in Table 11.1 the meaning of the main tag.
 
 After, we need to define each member and first of all we can note that is composed by three sections: METADATA, LAYERS and MEASURE, as in Code 11.2:
    
-+-----------------------------------------------------------------------+
-| <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >    |
-|                                                                       |
-| <METADATA>                                                            |
-|                                                                       |
-| <LAYERS>                                                              |
-|                                                                       |
-| <MEASURES default_kpi="UNIT_SALES">                                   |
-|                                                                       |
-| <MEMBER>                                                              |
-+-----------------------------------------------------------------------+
+.. code-block:: xml
+   :linenos:
+   
+   <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >                        
+     <METADATA>                                                                                                                        
+     <LAYERS>                                                                                                                          
+     <MEASURES default_kpi="UNIT_SALES">                                                                                                 
+   <MEMBER>                                                              
+
 
     Code 11.2: Example of SVG code for template file.
 
@@ -128,20 +125,16 @@ Let us see each of them in more depth.
 
 -  **METADATA.** This is the section where we define the dataset metadata, in fact, each COLUMN tag defines the dataset columns that        we want to use as attribute, as measure (used for thematize the SVG) or other technical meaning usefull for the engine.
 
-+-----------------------------------------------------------------------+
-| <METADATA>                                                            |
-|                                                                       |
-| <COLUMN TYPE="geoid" column_id="sales_region" />                      |
-|                                                                       |
-| <COLUMN TYPE="measure" column_id="store_sales" />                     |
-|                                                                       |
-| <COLUMN TYPE="measure" column_id="store_costs" /> <COLUMN             |
-| TYPE="measure" column_id="unit_sales" />                              |
-|                                                                       |
-| <COLUMN TYPE="drillid" column_id="member_name" />                     |
-|                                                                       |
-| <COLUMN TYPE="info" column_id="info_text" />                          |
-+-----------------------------------------------------------------------+
+.. code-block:: xml
+   :linenos:
+   
+   <METADATA>                                                                                                                    
+     <COLUMN TYPE="geoid" column_id="sales_region" />                                                                                 
+     <COLUMN TYPE="measure" column_id="store_sales" />                                                                                   
+     <COLUMN TYPE="measure" column_id="store_costs" /> 
+     <COLUMN TYPE="measure" column_id="unit_sales" />                                                                                  
+     <COLUMN TYPE="drillid" column_id="member_name" />                                                                                 
+     <COLUMN TYPE="info" column_id="info_text" />                          
 
     Code 11.3: Example of SVG code for template file.
 
@@ -153,16 +146,15 @@ Once again we give some details on metadata in next Table 11.5.
 
       Figure 11.6: Available layers set by a technical user.
 
-+-----------------------------------------------------------------------+
-|    <LAYERS>                                                           |
-|                                                                       |
-|    <LAYER name="regions" description="Regions" selected="true" />     |
-|                                                                       |
-| <LAYER name="Labels_Regions_Name" description="Labels_Regions_Name"   |
-| selected="false" />                                                   |
-|                                                                       |
-|    <LAYERS>                                                           |
-+-----------------------------------------------------------------------+
+.. code-block:: xml
+   :linenos:
+   
+   <LAYERS>                                                                                                                       
+     <LAYER name="regions" description="Regions" selected="true" />                                               
+     <LAYER name="Labels_Regions_Name" description="Labels_Regions_Name"   
+            selected="false" />                                                                             
+   <LAYERS>                                                           
+
 
    Code 11.4: Code relative to the LAYER setting.
 
@@ -341,30 +333,22 @@ Once again we give some details on metadata in next Table 11.5.
 
    Figure 11.7: Left. Measure panel. Right. Legend panel.
 
-+------------------------------------------------------------------------------------+
-| <MEASURES default_kpi="UNIT_SALES">                                                |
-|      <KPI column_id="STORE_SALES" description="Store Sales" >                      |
-|                                                                                    |
-|    <TRESHOLDS type="quantile" lb_value="0" ub_value="none" >                       |
-|                                                                                    |
-|    <PARAM name="GROUPS_NUMBER" value="5" />                                        |
-|                                                                                    |
-|    </TRESHOLDS>                                                                    |
-|                                                                                    |
-|    <COLOURS type="grad" outbound_colour="#FFFFFF" null_values_color="#CCCCCC" >    |                                                   
-|                                                                                    |
-|    <PARAM name="BASE_COLOR" value="#009900" />                                     |
-|                                                                                    |
-|    <!--<PARAM name="opacity" value="0.5" />--> </COLOURS>                          |
-|                                                                                    |
-|    </KPI>                                                                          |
-|                                                                                    |
-|    <KPI column_id="STORE_COST" description="Store Cost" >                          |
-|                                                                                    |
-|    <KPI column_id="UNIT_SALES" description="Unit Sales" >                          |
-|                                                                                    |
-| <MEASURE>                                                                          |
-+------------------------------------------------------------------------------------+
+.. code-block:: xml
+   :linenos:
+   
+   <MEASURES default_kpi="UNIT_SALES">                                                
+      <KPI column_id="STORE_SALES" description="Store Sales" >                                                    
+        <TRESHOLDS type="quantile" lb_value="0" ub_value="none" >                                                         
+           <PARAM name="GROUPS_NUMBER" value="5" />                                                                                   
+        </TRESHOLDS>                                                                                 
+        <COLOURS type="grad" outbound_colour="#FFFFFF" null_values_color="#CCCCCC" >              
+        <PARAM name="BASE_COLOR" value="#009900" />                                                                                 
+        <!--<PARAM name="opacity" value="0.5" />--> </COLOURS>                                                                   
+      </KPI>                                                                           
+     <KPI column_id="STORE_COST" description="Store Cost" >                                                                           
+     <KPI column_id="UNIT_SALES" description="Unit Sales" >   
+   <MEASURE>                                                                          
+
 
    Code 11.4: Code for setting the KPI into SVG document.
 
@@ -667,11 +651,12 @@ Advanced functionalities
 
 Other the default drill navigation that you have if for the document are defined more than one member, is it possible to cross versus other Knowage documents. To enable this feature, is necessary to set the enableExternalCross property for the MEMBER tag. Here an example in Code 11.5:
 
-+----------------------------------------------------------------------+
-|    <MEMBER name="states" level="2"                                   |
-|      measure_dataset="ds_states"                                     |
-|      enableExternalCross="true">                                     |
-+----------------------------------------------------------------------+
+.. code-block:: xml
+   :linenos:
+   
+   <MEMBER name="states" level="2"                                  
+      measure_dataset="ds_states"                                     
+      enableExternalCross="true">                                     
 
     Code 11.5: Code for enabling external cross navigation.
     
