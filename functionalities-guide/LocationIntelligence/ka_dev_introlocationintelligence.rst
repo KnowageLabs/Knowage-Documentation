@@ -1,5 +1,3 @@
-
-
 LOCATION INTELLIGENCE
 =====================
 
@@ -21,7 +19,7 @@ Location Intelligence usually guarantees:
 -  an immediate perception of a phenomena distribution over a
       geographical area,
 
--  interactivity, • multivariate analysis,
+-  interactivity, â€¢ multivariate analysis,
 
 -  temporal snapshots.
 
@@ -44,16 +42,6 @@ support decisional processes and to optimize business activities.
 At the technological level, this correlation is the result of the
 integration between the software systems that manage these two
 heterogeneous types of data: geographic information systems (GIS), which
-manage spatial data, and Business Intelligence systems (BI), which
-manage business data. This integration gives rise to new technological
-tools supporting decision-making processes, and the analysis on those
-business data that are directly or indirectly related to a geographic
-dimension.
+manage spatial data, and Business Intelligence systems (BI), which manage business data. This integration gives rise to new technological tools supporting decision-making processes, and the analysis on those business data that are directly or indirectly related to a geographic dimension.
 
-Location Intelligence applications significantly improve the quality of
-users’ analysis based on a geographic dimension. Indeed, a Data
-Warehouse (DWH) almost always included such information. By representing
-the geographic distribution of one or more business measures on
-interactive thematic maps , users can quickly identify patterns, trends
-or critical areas, with an effectiveness that would be unfeasible using
-traditional analytical tools.
+Location Intelligence applications significantly improve the quality of usersâ€™ analysis based on a geographic dimension. Indeed, a Data Warehouse (DWH) almost always included such information. By representing the geographic distribution of one or more business measures on interactive thematic maps , users can quickly identify patterns, trends or critical areas, with an effectiveness that would be unfeasible using traditional analytical tools.
