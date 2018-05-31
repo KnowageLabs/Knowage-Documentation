@@ -1,3 +1,5 @@
+SVG
+====
 
 In this chapter we will suppose that a technical user has created an SVG document and that the final user is enabled to visualize and use it. He can choose which KPI to show on the “map” and analyze its values, then could drill down into sub-members or other Knowage documents to view other details and other analysis.
 
