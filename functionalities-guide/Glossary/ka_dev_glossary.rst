@@ -17,8 +17,7 @@ The Glossary management is split in two section. Once logged in, the user can fi
 To create a new glossary, click on the Glossary Definition menu item that you can find under the **Catalogs** section of the Knowage
 interface. As shown in Figure 19.2 the page contains two areas:
 
-- **Word**: here there is a list of terms. The latter are used as labels to attach to analytical objects as datasets or documents in
-      order to link those objects to the glossary;
+- **Word**: here there is a list of terms. The latter are used as labels to attach to analytical objects as datasets or documents in order to link those objects to the glossary;
       
 - **Glossary**: it is intended a hierarchical structure made up of “Words”.
 
