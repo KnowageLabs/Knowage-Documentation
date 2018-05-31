@@ -5,8 +5,8 @@ GLOSSARY AND DATA LINAGE
 
 The **Glossary** functionality offers a way to find documents by browsing an index page.
 
- Glossary management
-------------------------
+Glossary management
+---------------------
 
 The Glossary management is split in two section. Once logged in, the user can find the two menu items: **Glossary Definition** and **Glossary Usage**, as showed in Figure 19.1.
 
@@ -17,12 +17,11 @@ The Glossary management is split in two section. Once logged in, the user can fi
 To create a new glossary, click on the Glossary Definition menu item that you can find under the **Catalogs** section of the Knowage
 interface. As shown in Figure 19.2 the page contains two areas:
 
-Glossary management
+- **Word**: here there is a list of terms. The latter are used as labels to attach to analytical objects as datasets or documents in
+      order to link those objects to the glossary;
+      
+- **Glossary**: it is intended a hierarchical structure made up of “Words”.
 
--  **Word**: here there is a list of terms. The latter are used as labels to attach to analytical objects as datasets or documents in
-      order to link those objects to the glossary; • **Glossary**: it is intended a hierarchical structure made up of “Words”.
-
-..
 
    |image465|
 
@@ -30,13 +29,14 @@ Glossary management
 
 In the following we give some more technical information about these two sections.
 
-In the “Word” area are listed, if any, the words created in a previous moment. To explore the detail of each of them, the user just has to right click on it. A panel containing three features will be shown, as Figure 19.3 highlights . When exploring the detail a wizard will pop up
+In the “Word” area are listed, if any, the words created in a previous moment. To explore the detail of each of them, the user just has to right click on it. A panel containing three features will be shown, as Figure 19.3 highlights .
+
 
    |image466|
 
    Figure 19.3: Exploring an existing word.
 
-showing the following characteristics:
+When exploring the detail a wizard will pop up showing the following characteristics:
 
 -  description,
 
@@ -52,32 +52,23 @@ showing the following characteristics:
 
 The same panel can be used to modify or delete the word.
 
-To add a new word, click on the “Plus” icon available in the right up corner of the “Word” area as Figure 19.4 shows. A format will be open in the right half part of the screen. Insert “Name”
+To add a new word, click on the “Plus” icon available in the right up corner of the “Word” area as Figure 19.4 shows. A format will be open in the right half part of the screen. Insert “Name” and “Description”, which are all mandatory fields and add additional details by necessity. Then click on the Save button. Observe that it is possible to look a “Word” up using the dedicated filter available at the top of the Words list. Type a string in the box and the research will start automatically. Remember to cancel the string from the box to get back to the entire list.
 
    |image467|
 
    Figure 19.4: Add a new word.
 
-and “Description”, which are all mandatory fields and add additional details by necessity. Then click on the Save button. Observe that it is possible to look a “Word” up using the dedicated filter available at the top of the Words list. Type a string in the box and the research will start automatically. Remember to cancel the string from the box to get back to the entire list.
-
-In the “Glossary” area are listed, if any, all glossaries created in a previous moment. To explore an existing glossary the user must simply click on the item. Figure 19.5 shows an example. Here the hierarchical structure of the glossary is underlined. To add a new glossary click on
+In the “Glossary” area are listed, if any, all glossaries created in a previous moment. To explore an existing glossary the user must simply click on the item. Figure 19.5 shows an example. Here the hierarchical structure of the glossary is underlined. To add a new glossary click on the “Plus” icon at the right top corner of the designated area.
 
    |image468|
 
    Figure 19.5: Exploring a glossary from the menu.
 
-the “Plus” icon at the right top corner of the designated area.
-
-Right clicking on the glossary label as shown in Figure 19.6 (right side) the user can add a new child. The “New Node” wizard will open. It is mandatory to give a Name to the node while it is recommended to add a Code and a Description. Once the user has set the nodes, it is possible to add children or words to each of them. In particular, if one right clicks on the node name, as in Figure 19.7, a panel will be opened. It allows the user to add one (or more) child or word to the node. In both cases, the user must fill in the mandatory fields. We remark that if the user chooses to add a word through the panel item, the word will be created from scratch and added to the Word list after saving it. To add an existing word the user has to drag and drop
-
- Glossary Usage
+Right clicking on the glossary label as shown in Figure 19.6 (right side) the user can add a new child. The “New Node” wizard will open. It is mandatory to give a Name to the node while it is recommended to add a Code and a Description. Once the user has set the nodes, it is possible to add children or words to each of them. In particular, if one right clicks on the node name, as in Figure 19.7, a panel will be opened. It allows the user to add one (or more) child or word to the node. In both cases, the user must fill in the mandatory fields. We remark that if the user chooses to add a word through the panel item, the word will be created from scratch and added to the Word list after saving it. To add an existing word the user has to drag and drop the word from the list to the node. Notice that at the right top corner of the designated area a **Safe Mode** button is available. Select it if you want to assure that it cannot be modified by a user with no administrator permissions.
 
    |image469|
 
-   Figure 19.6: (Left) New glossary wizard. (Right) Add a new child to
-   the glossary.
-
-the word from the list to the node. Notice that at the right top corner of the designated area a **Safe Mode** button is available. Select it if you want to assure that it cannot be modified by a user with no administrator permissions.
+   Figure 19.6: (Left) New glossary wizard. (Right) Add a new child to the glossary.
 
    |image470|
 
@@ -150,8 +141,8 @@ Once the datasets or the documents are linked to the glossaries, the user can en
 elements inside the Knowage suite.
 
 
- Help Online functionality
-------------------------------
+Help Online functionality
+---------------------------
 
 The user can inspect the association of a specific analytical element (dataset, document or model) by using the **Help Online** funcitonality. The latter can be reached:
 
