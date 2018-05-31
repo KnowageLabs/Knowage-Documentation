@@ -182,7 +182,7 @@ Clicking the edit map button will open created map. An example is given in Figur
 
    Figure 15.19: interface for name and description of new geo document for end user.
    
-      |image382|
+      |image383|
 
    Figure 15.20: Map in edit mode with save template available.
 
