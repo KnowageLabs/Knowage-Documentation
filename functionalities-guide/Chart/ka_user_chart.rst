@@ -20,30 +20,32 @@ Knowage provides a chart engine to create several types of charts, including:
 -  Chord
 -  Gauge
 
+
 My first Chart
 ------------------
 
-Once you enter the Knowage environment as a final user, enter the **Analysis** area under the
-
-**Workspace** menu item, click on the **Create Analysis** icon and choose **Cockpit**. Please note that this operation is available only in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create charts document, as explained in Stand alone charts.
+Once you enter the Knowage environment as a final user, enter the **Analysis** area under the **Workspace** menu item, click on the **Create Analysis** icon and choose **Cockpit**. Please note that this operation is available only in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create charts document, as explained in **Stand alone charts** chapter.
 
 Once opened, the cockpit interface is an empty page with a toolbar containing different options, the second of which is the **Add chart** feature.
 
    |image91|
 
    Figure 6.1: Add a chart to a cockpit.
-
-   |image92|
+   
+      .. note::
+         **Cockpit**
+         
+         The Cockpit Engine allows the user to self-build interactive cockpits through an intuitive and dynamic interface. Read more in Chapter 7.
 
 Clicking on the **Add Chart** icon, you will be asked to choose among some available widgets. Pick out the **Chart** one and let’s now go into details on how to build a chart from scratch. The designer editor is divided into four principal tabs: **Dataset**, **Chart Engine Designer**, **Style**, **Cross** and **Filters**. As soon as the user clicks on the “Add Chart” button, he/she enters the “Dataset” tab editor. Here the user must select, using the “little plus” icon placed just aside the combobox line, one dataset. Then the user must switch to the “Chart Engine Designer” tab and choose a chart type among the available ones, as shown in Figure 6.2.
-
-After choosing the appropriate chart type you must go into the **Structure** page. Here it is possible to select the measures and the attributes chosen for the chart.
-
-Clicking on the **Configuration** page you will found seven different blocks as you can see in Figure 6.4
 
    |image93|
 
    Figure 6.2: Chart editor.
+
+After choosing the appropriate chart type you must go into the **Structure** page. Here it is possible to select the measures and the attributes chosen for the chart.
+
+Clicking on the **Configuration** page you will found seven different blocks as you can see in Figure 6.4
 
    |image94|
 
@@ -55,13 +57,13 @@ Clicking on the **Configuration** page you will found seven different blocks as 
 
 In detail these blocks concern:
 
--  Generic Details, as the orientation of the chart, the family and the size font.
--  Title and Subtitle details
--  No data message where it is possible to put a message where the data are not founded.
--  Legend Title
--  Legend Items
--  Color Palette
--  Advanced Series Configuration
+-  **Generic Details**, as the orientation of the chart, the family and the size font.
+-  **Title and Subtitle details**
+-  **No data message** where it is possible to put a message where the data are not founded.
+-  **Legend Title**
+-  **Legend Items**
+-  **Color Palette**
+-  **Advanced Series Configuration**
 
 These seven blocks are common to all chart types; anyway, some chart types may have additional blocks.
 
@@ -76,12 +78,12 @@ In the next subsections, the available functionalities of the Structure and the 
 Structure
 ~~~~~~~~~
 
-The “Structure” tab of the designer is the core of the Chart development. Here it is possible and mandatory to choose the measures
-and the attributes. When selected, the tab shows a two axes panel. The horizontal axis indicates the X-axis where you must choose one or more attributes. As well, the left axis is the Y-axis and here you must choose measures. You can also insert manually the axis title for both the X and the Y axis if the chart is configured to have axis titles.
+The “Structure” tab of the designer is the core of the Chart development. Here it is possible and mandatory to choose the measures and the attributes. When selected, the tab shows a two axes panel. The horizontal axis indicates the X-axis where you must choose one or more attributes. As well, the left axis is the Y-axis and here you must choose measures. You can also insert manually the axis title for both the X and the Y axis if the chart is configured to have axis titles.
 
    .. warning::
-    **Chart type changemens may cause broke down**
-    Before creating any chart, it is convenient to be sure of    what kind of chart you want to develop. We stress that the user can    change the chart type afterwards, but at the expense of a loss of just defined settings.
+      **Chart type changemens may cause broke down**
+    
+      Before creating any chart, it is convenient to be sure of    what kind of chart you want to develop. We stress that the user can    change the chart type afterwards, but at the expense of a loss of just defined settings.
 
 In this section it’s possible to customize the labels of the axis, titleand grid style clicking on different buttons. With the arrow button, on the top of the Y-axis and X-axis, it’s possible to choose the axis configuration detail, the axis title configuration, the major and minor grid configuration (just for Y-axis) and ordering column (just for X-axis). With the pencil button opens a window on the right with the series configuration details where it’s possible to choose the aggregation way, the order type of the series, if the data will be shown e so on. Finally, with the strip cartoon button you can choose the features of the tooltip (font color, text alignment, ecc). If the chart in place does not allow the customization of the axes the specific button will be disabled or not visible. The Figure below will show in detail the three buttons above explained:
 
@@ -113,8 +115,7 @@ Indeed, the options available in this tab change according to the chart selected
  Chart types in detail
 -------------------------
 
-This section describes the different types of chart and how to create
-them within the **Chart Engine** of Knowage.
+This section describes the different types of chart and how to create them within the **Chart Engine** of Knowage.
 
 Traditional charts
 ~~~~~~~~~~~~~~~~~~
@@ -127,8 +128,7 @@ Once you have selected the attributes and measures you can edit the series style
 
 Some charts are endowed with datetime and grouping functions. In particular, it is possible to enable the grouping/splitting functions to **Bar** and **Line** charts.
 
-The user can reach those functions just clicking on the “little arrow”
-located at the right end of category bar.
+The user can reach those functions just clicking on the “little arrow” located at the right end of category bar.
 
 The grouping functions can be implemented only through specific categories and series configurations. As shown in Figure 6.11, the grouping function cannot be applied with just one attribute as category. To allow the function to be applied, the user must define two attributes as category fields.
 
@@ -254,8 +254,7 @@ In Figure 6.20 we show the Treemap resulting with data of our example
 
    |image113|
 
-   Figure 6.20: From left to right: (a) Treemap. (b) Treemap
-   sub-branches.
+   Figure 6.20: From left to right: (a) Treemap. (b) Treemap sub-branches.
 
 Parallel chart
 ~~~~~~~~~~~~~~
@@ -322,11 +321,9 @@ In this example three different classes of iris are studied. Combining the value
 
    |image114|
 
-   Figure 6.21: From left to right: (a) Parallel. (b) Parallel chart
-   selection.
+   Figure 6.21: From left to right: (a) Parallel. (b) Parallel chart selection.
 
-Therefore, select **parallel** as chart type using the designer interface, then choose one or more attributes in the X-axis panel and
-one or more measures in the Y-axis panel.
+Therefore, select **parallel** as chart type using the designer interface, then choose one or more attributes in the X-axis panel and one or more measures in the Y-axis panel.
 
 On the **Configuration** tab you can set the generic configuration for the chart and you must fill the **Series as filter column** filed under ”Limit configuration”.
 
@@ -339,8 +336,7 @@ Heatmap chart uses a chromatic Cartesian coordinate system to represent a measur
 
    Figure 6.22: Heatmap example.
 
-Before configuring a heatmap chart, be sure that your dataset returns at least two attributes, one of which **must** be a datetime one, and (at least) one measure. Once entered the chart designer, choose the “Heatmap” type and move to the “Structure” tab. Use the datetime
-attribute and an other attribute as category fields and one measure as series fields. Figure 6.23 shows an example.
+Before configuring a heatmap chart, be sure that your dataset returns at least two attributes, one of which **must** be a datetime one, and (at least) one measure. Once entered the chart designer, choose the “Heatmap” type and move to the “Structure” tab. Use the datetime attribute and an other attribute as category fields and one measure as series fields. Figure 6.23 shows an example.
 
 Note that for series axis it is possible to specify the values’ range by assigning a minimun and the maximum value, as shown in Figure 6.24. Otherwise, the engine will automatically link the axis scale to dataset results set.
 
@@ -366,8 +362,7 @@ some intermediate color to leave more contrast between them.
 
    Figure 6.26: Custom color scale.
 
-Remember to edit both **Legend** and **Tooltip** configuration in the
-**Tooltip details** panel to improve the readability of the chart.
+Remember to edit both **Legend** and **Tooltip** configuration in the **Tooltip details** panel to improve the readability of the chart.
 
 Chord chart
 ~~~~~~~~~~~
@@ -377,8 +372,6 @@ Chord diagram is a graph which allows to show relationship between entities and 
 The chord diagram requires a dataset that have a column with numerical values. These represent the weight of the arc connecting two points. It also must have two columns with the entries for the entities to be connected in the diagram. These two columns must have the same set of values so that the engine can understand the relation between all the entities. If there is not a relation between two entities the weight of the arc is zero. Note that when you create a directed chord diagram with two different categories, all the relations between entities of the same category have a zero weight.
 
 An example of dataset for the chord chart is represented in Table 6.3
-
-Once you have selected the dataset open the designer and select chord chart type. Then choose the two entities in the X-axis panel and the value in the Y-axis panel as showed in Figure 6.27. Now you are ready to customize the chart setting the generic configuration and the palette on **Configuration**.
 
 +--------------------+--------------+-----------+
 |    CUSTOMER\_ CITY | STORE\_ CITY | VALUE     |
@@ -427,6 +420,9 @@ Once you have selected the dataset open the designer and select chord chart type
 +--------------------+--------------+-----------+
 
    Table 6.3: Example of dataset for the chord chart.
+   
+
+Once you have selected the dataset open the designer and select chord chart type. Then choose the two entities in the X-axis panel and the value in the Y-axis panel as showed in Figure 6.27. Now you are ready to customize the chart setting the generic configuration and the palette on **Configuration**.
 
    |image120|
 
@@ -441,7 +437,7 @@ For gauge chart you should have only series items, the one that gives you values
 
 When you finished to set all the mandatory and optional parameters and configurations in the **Structure** tab you can select the **Configuration** tab and set the generic configuration of the chart.
 
-Chart drill down
+A short comment on chart drill down
 ---------------------------------------
 
 Knowage **Chart Engine** allows you to drill down into categories. This means that the user can explore the details of each category as many times as configured. Indeed, to let the chart admits the drill down, it is necessary first that the chart in place allows it. Secondly the user must have dragged and dropped multiple attributes into the category axis in the **Configuration** tab. The order of the attributes in the X-axis panel determines the sequence in which the categories are going to be showed. When executing the chart the label of the category is linkable and it is possible to click on the label to drill down.
