@@ -57,10 +57,12 @@ In fact, each perspective manages one or more targets accordingly to the user’
 
     .. warning::
        **Thresholds of selected KPIs must have the right colors**
+       
        Note that the scorecard shows the right colors accordingly with the selected policy only if the KPIs which compose the targets          have **no filters** and **standard colors** (see Section 7.1, Step 2 for definitions) to highlight the threshold.
 
     .. warning:: 
        **“Standard” colors for thresholds**
+       
        When the targets contain parametric KPIs the target/perspective evaluation cannot be completed for value absence. Therefore the          warning lights turn grey. The right visualization of the scorecard must be implemented through a scorecard document. Check              Section 8.2 to have more details on how to develop a scorecard document.
 
 An example is showed in Figure 8.6.
