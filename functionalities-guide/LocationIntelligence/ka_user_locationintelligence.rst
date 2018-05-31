@@ -15,8 +15,6 @@ Click on the arrow on the top right to open the Location Inteligence options pan
 
    Figure 15.2: Arrow button (left) Location Inteligence options panel (right) .
 
-Analytical document execution
-
 The **Map Type** available are:
 
 -  **Map Zone**: the different map zone are filled with different colour range according to the indicator values
@@ -38,16 +36,14 @@ Here click on **select form catalog**, choose the layers you want to add. Mark t
    |image367|
 
    Figure 15.4: Steps for layer adding
+   
+      |image368|
+
+   Figure 15.5: Map with two layers
 
 Now let’s focus on **Configuration** tab of Location Inteligence panel option. Here you can set some extra configurations. Let’s have a look them for each data visualization typology.
 
 For the **Map Zone** you can set:
-
-Analytical document execution
-
-   |image368|
-
-   Figure 15.5: Map with two layers
 
 -  **Method**: the available ones are quantiles or equal intervals. If you choose quantiles data are classified into a certain number of classes with an equal number of units in each classe. If you choose equal Intervals the value are divided in ranges for each classe, the classes are equal in size and their number can be set. The entire range of data values (max - min) is divided equally into however many classes have been chosen.
 
@@ -69,8 +65,6 @@ For the **Map Chart** you can set the colour of each chart’s bar.
 
 The last tab of the panel is dedicate to the template preview, it is provided for advanced user who want to have an approach on generated code.
 
-Extra functionalities
-
 We can conclude our overview on GIS document describing the buttons located at the bottom right corner, you can see them underlined in Figure 15.7. From the left to the right this bottons can be used for: have a look at the legend, compute a measure of an area of the map and do the .pdf export of the map.
 
    |image370|
@@ -87,7 +81,7 @@ Select **Cross Navigation**, the **Spatial Item** tab appears. In this tab you c
 When selection is made, a box appears. In this box you find cross navigation information. The number of features selected and a botton to perform the cross navigation with the active selection.
 
 
- Template building with GIS designer
+Template building with GIS designer
 ----------------------------------------
 
 GIS engine document templates can now be built using GIS designer. Designer is available from administrator document detail page (for this part refer to Section 15.8) and also for end users workspace. The creation process and designer sections are described in the text below.
@@ -130,9 +124,7 @@ In case when there is no dataset multiple layers can be selected as in Figure 15
 Dataset join columns
 ~~~~~~~~~~~~~~~~~~~~
 
-Dataset join columns section is for configuring joining spatial data and business data. This section is only present when the dataset is selected for the document. Designer data structure Indicators
-
-for joining is represented by the pairs of dataset columns and corresponding layer columns. Clicking on add join column that you can see in Figure15.13 new empty pair appears. Dataset join column can be selected from columns on selected dataset by choosing an option from combo box. Layer join column should be added as a free text by editing corresponding table column.
+Dataset join columns section is for configuring joining spatial data and business data. This section is only present when the dataset is selected for the document. Designer data structure for joining is represented by the pairs of dataset columns and corresponding layer columns. Clicking on add join column that you can see in Figure15.13 new empty pair appears. Dataset join column can be selected from columns on selected dataset by choosing an option from combo box. Layer join column should be added as a free text by editing corresponding table column.
 
    |image376|
 
@@ -152,8 +144,6 @@ Filters
 ~~~~~~~
 
 Using the filtering dedicated area of Figure 15.16 you define which dataset attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "store_country", label:"COUNTRY"). The first value (name : "store_country") is the name of the attribute as it is displayed among the properties. The second one label: "COUNTRY" is the label which will be displayed to the user. This section is only present when dataset is chosen for the document. Clicking on add filter creates empty pair. Label field should be selected by picking one option from combobox that contains attribute fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
-
-Map menu configuration
 
    |image378|
 
@@ -182,8 +172,6 @@ Edit map
 
 When all required fields are filled basic template can be saved. From workspace user is first asked to enter name and description of new created document as in Figure 15.19. When the template is saved successfuly EDIT MAP button is enabled in the right part of the main toolbar.
 
-Edit map
-
    |image381|
 
    Figure 15.18: List of available filters.
@@ -193,6 +181,10 @@ Clicking the edit map button will open created map. An example is given in Figur
    |image382|
 
    Figure 15.19: interface for name and description of new geo document for end user.
+   
+      |image382|
+
+   Figure 15.20: Map in edit mode with save template available.
 
    
    .. include:: locationIntelligenceThumbinals.rst
