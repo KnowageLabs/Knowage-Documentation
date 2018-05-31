@@ -1,5 +1,5 @@
-SVG 
-====
+My first SVG Map or design
+----------------------------
 
 The SVG Viewer Engine is a tool that lets you develop documents based on the SVG, acronym for Scalable Vector Graphics, format. It permits to show different business information directly on each area, and permits the drill action to other more detailed SVG files using a logical hierarchy. This viewer is divided into two sections:
 
