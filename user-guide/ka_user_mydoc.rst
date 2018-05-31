@@ -5,9 +5,9 @@ In this chapter we describe all the features related to Knowage analytical docum
 
 First of all, notice that once you execute a document from the document browser or from the menu, it is visualized full screen. In the first case, you can return to the document browser by clicking on the folder icon located at the top left, as shown in Figure 3.1.
 
- |image31|
-
- Figure 3.1: Back to Document Browser.
+.. figure:: media/image25.png
+ 
+    Back to Document Browser
 
 Parameters management
 -------------------------
@@ -16,9 +16,9 @@ Knowage documents may have associated parameters. If any, you will be asked to s
 
 It is possible to show or hide the parameter panel by clicking on the filter button located in the document toolbar. With the **Reset** button at the top of the panel you can clear the form.
 
-   |image32|
+.. figure:: media/image26.png
 
-   Figure 3.2: Parameters panel.
+   Parameters panel
 
 Furthermore, the parameter configuration can be saved for future use. This is particularly useful when the document includes several customized parameters. This feature is accessible from the toolbar located at the top right corner of the parameters panel.
 
@@ -33,9 +33,9 @@ Document Toolbar
 
 All documents inside Knowage environment share the same toolbar with different features, see Figure 3.3. We provide first a short description and next a detailed explanation.
 
-   |image33|
+.. figure:: media/image27.png
 
-   Figure 3.3: Document Toolbar.
+   Document Toolbar
 
 The |image34| button is to access the help online as defined in the Glossary and it is available only in KnowageSI.
 
@@ -45,9 +45,9 @@ The |image36| opens the parameters panel (see Figure 3.2) and it is visible only
 
 The |image37| opens the contextual menu shown in Figure 3.4. We describe the main functionalities provided by this menu in the following.
 
-   |image38|
+.. figure:: media/image32.png
 
-   Figure 3.4: Toolbar contextual menu.
+   Toolbar contextual menu
 
 Exporters
 ~~~~~~~~~~~~
@@ -61,9 +61,9 @@ Business and structural metadata
 
 Knowage allows the definition of business metadata to describe an object, in our case a document. Business metadata, unlike technical metadata used in Knowage Meta to build the metamodel, are business information associated to the document intended to help users to understand, access and classify it. As such, they have been mainly conceived for the end user understanding.
 
-   |image39|
+.. figure:: media/image33.png
 
-   Figure 3.5: View document metadata
+   View document metadata
 
 There are three types of business metadata, some of them are editable while others can only be read. In particular, general metadata are read-only, while short and long text metadata are editable. General metadata contain basic information about the document, which cannot Notes be altered because they are related to the structure of the document (e.g., type, engine, label). They provide useful and synthetic information on the document. Short and long text metadata should be used to add relevant business information: all the allowed users will see this information, which will help them understand the purpose and context of that document.
 
@@ -75,9 +75,9 @@ As stated before, in order to see and/or edit metadata the user roles need some 
 
 When you are satisfied with what you wrote just click on the **SAVE** button. We provide an example in Figure 3.6
 
-   |image40|
+.. figure:: media/image34.png
 
-   Figure 3.6: Left: General and short metadata, Right: editing long metadata.
+   Left: General and short metadata, Right: editing long metadata
 
 Notes
 ~~~~~~~~~~~~
@@ -89,9 +89,9 @@ Click on **Notes** in the contextual menu of the document toolbar, see Figure 3.
 Rate document
 ~~~~~~~~~~~~
 
-   |image41|
+.. figure:: media/image36.png
 
-   Figure 3.8: Rating a document.
+   Figure 3.8: Rating a document
 
 The aim of this functionality is to acquire explicit quality data that can be further used. Specifically, it allows the administrator to identify anomalies about the use of an analytical document by end users. Rating a document means assigning it a value from the end user perspective. This brings additional information with respect to traditional audit and monitoring data, which can track the number of executions but cannot interpret users motivations and feelings.
 
@@ -102,6 +102,6 @@ Scheduled Execution
 
 The administrator has the possibility to set schedulation for documents. These schedulations can be accessed by **Show Scheduled executions**.
 
-   |image43|
+.. figure:: media/image38.png
 
-   Figure 3.7: Share notes and comments.
+   Share notes and comments
