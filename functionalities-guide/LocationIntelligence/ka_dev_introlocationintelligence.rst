@@ -13,10 +13,11 @@ Location intelligence is based on the idea that geographical spaces are a partic
 
 Location Intelligence usually guarantees:
 
--  an immediate perception of a phenomena distribution over a
-      geographical area,
+-  an immediate perception of a phenomena distribution over a geographical area,
 
--  interactivity, • multivariate analysis,
+-  interactivity, 
+
+-  multivariate analysis,
 
 -  temporal snapshots.
 
@@ -26,8 +27,6 @@ Basic concepts
 -------------------
 
 The term Location Intelligence refers to all those processes, technologies, applications and practices capable to join spatial data with business data, in order to gain critical insights, to better support decisional processes and to optimize business activities.
-
- Analytical document execution
 
 At the technological level, this correlation is the result of the integration between the software systems that manage these two heterogeneous types of data: geographic information systems (GIS), which manage spatial data, and Business Intelligence systems (BI), which manage business data. This integration gives rise to new technological tools supporting decision-making processes, and the analysis on those business data that are directly or indirectly related to a geographic dimension.
 
