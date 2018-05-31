@@ -30,7 +30,7 @@ outline only meaningful information.
 
 Knowage allows the configuration of a KPI document thanks to a specific
 **KPI engine**. The critical value (or values) can be computed and
-visualized through the functionalities available in the ’KPI model’
+visualized through the functionalities available in the â€™KPI modelâ€™
 section of Knowage menu area (see Figure 7.1).
 
 7.1 KPI development
@@ -66,7 +66,7 @@ main page, as shown in Figure 7.1.
 
    Figure 7.1: Measure/Rule Definition menu item.
 
-Click on the “Plus” icon to set a new measure/rule. A query editor page
+Click on the â€œPlusâ€ icon to set a new measure/rule. A query editor page
 is opened. Note that once the data source is selected, pressing
 simultaneously the CRTL key and the space bar opens a contextual menu
 containing the available datasource columns and the database keywords.
@@ -76,7 +76,7 @@ Each rule is based on a query to which you can add placeholders. A
 placeholder represents a filter that you can add to your rule and that
 can be useful for profiling tasks. It is possible to assign value to a
 placeholder while configuring the schedulation of the KPI (this
-procedure will be further examined in “Document creation” paragraph).
+procedure will be further examined in â€œDocument creationâ€ paragraph).
 The syntax to use in queries for setting a placeholder is
 columnName=@placeholderName, as the example in Figure 7.3 shows.
 
@@ -111,10 +111,10 @@ up in a second moment.
    Figure 7.5: Metadata settings.
 
 We say in advance that, it is important to distinguish these metedata
-categories from the required field “Category” that occurs while saving
+categories from the required field â€œCategoryâ€ that occurs while saving
 the KPI definition (see Figure 7.18). In fact, the category assigned
-when saving the KPI definition will be added (if it doesn’t exist) in
-the “KPI categories“ list, used to profile KPIs on roles (see Figure
+when saving the KPI definition will be added (if it doesnâ€™t exist) in
+the â€œKPI categoriesâ€œ list, used to profile KPIs on roles (see Figure
 7.6).
 
    |image127|
@@ -122,12 +122,12 @@ the “KPI categories“ list, used to profile KPIs on roles (see Figure
    Figure 7.6: KPI category.
 
 As we told, a proper categorization exists for the aggregations of type
-temporal. In fact, when associating “temporal attribute” as metadata
+temporal. In fact, when associating â€œtemporal attributeâ€ as metadata
 typology, the technical user must indicate the hierarchy level of the
 data: day, month or year. You can see an example in Figure 7.7. Note
 that the field set as temporal type must contains numbers (therefore
 string types are not allowed). For example, if one wants to set a field
-as “month”, such a field must contain {01,02,03,...,12} that will be
+as â€œmonthâ€, such a field must contain {01,02,03,...,12} that will be
 considered as {January, February, March,...,December}.
 
    |image128|
@@ -137,7 +137,7 @@ considered as {January, February, March,...,December}.
 The **Preview** tab allows you to check the query execution and have a
 look on a part of the result set.
 
-Let’s now examine extra features available on the right top corner.
+Letâ€™s now examine extra features available on the right top corner.
 There you can find the following tab:
 
 -  **Alias**: as in Figure 7.8, you can see the aliases defined in other
@@ -152,7 +152,7 @@ There you can find the following tab:
    Figure 7.8: Checking aliases.
 
 -  **Placeholder**: here you can check the existing placeholders. These
-      are set in the query you’re editing or in other ones. Figure 7.9
+      are set in the query youâ€™re editing or in other ones. Figure 7.9
       gives an example.
 
 
@@ -166,7 +166,7 @@ There you can find the following tab:
 
 **KPI definition.** Select the **KPI definition** item from the
 contextual menu of the main page of Knowage, as shown in Figure 7.10.
-Click on the “Plus” icon to configure a new KPI.
+Click on the â€œPlusâ€ icon to configure a new KPI.
 
    |image131|
 
@@ -219,7 +219,7 @@ grouped on each product_name; otherwise no grouping will be done.
 Limit values can be set using the Threshold tab (Figure 7.17). It is
 mandatory to set at least one threshold otherwise the KPI cannot be
 saved. You can choose a threshold already defined clicking on
-“Threshold” list or create a new one.
+â€œThresholdâ€ list or create a new one.
 
 To insert a new threshold it is mandatory to insert a name and assign a
 type, while the description is optional. Clicking on **Add new
@@ -243,16 +243,16 @@ Remember to save once all thresholds have been set.
 
    |image139|
 
-Finally the user must save the KPI definition clicking on the “Save”
+Finally the user must save the KPI definition clicking on the â€œSaveâ€
 button, available at the right top corner of the page. Once the user
-clicks on the “Save” button, the “Add KPI associations” wizard opens, as
+clicks on the â€œSaveâ€ button, the â€œAdd KPI associationsâ€ wizard opens, as
 you can see from Figure 7.18. Here, it is mandatory to assign a name to
 the KPI. In addition, the user can set the KPI category so that only
 users whose roles have the permmissions to this specific category can
 access the KPI. Remember that it is possible to assign permissions over
-KPI when defining roles using the “Roles management” functionality
+KPI when defining roles using the â€œRoles managementâ€ functionality
 available on Knowage main page. Furthermore, the user can check or
-uncheck the “\ **Enable Versioning**\ ” button if he/she wishes to keep
+uncheck the â€œ\ **Enable Versioning**\ â€ button if he/she wishes to keep
 track of the rules/measures/targets that generate the KPI response at
 each KPI execution.
 
@@ -269,7 +269,7 @@ Figure 7.19.
 
    Figure 7.19: Target Definition menu item.
 
-Clicking on the “Plus” icon you can add a new target (Figure 7.20).
+Clicking on the â€œPlusâ€ icon you can add a new target (Figure 7.20).
 
    |image142|
 
@@ -278,7 +278,7 @@ Clicking on the “Plus” icon you can add a new target (Figure 7.20).
 The definition of a new target requires to type a name, a validity start
 date/end date and the association to at least one target. It is
 possibile to associate a target clicking on the item **Add KPI** and
-selecting the KPI of interest. Once the association is set, the “Value”
+selecting the KPI of interest. Once the association is set, the â€œValueâ€
 box gets editable and you can insert the value you wish to send to the
 selected KPI. An example is given in Figure 7.21. In the KPI
 visualization phase, a red bold thick will be displayed on the indicated
@@ -305,12 +305,12 @@ menu that you can see in Figure 7.23.
 
    Figure 7.23: KPI Scheduler menu item.
 
-As for the other interfaces it is enough to click on the “Plus” icon to
+As for the other interfaces it is enough to click on the â€œPlusâ€ icon to
 create a new schedulation. The new schedulation window presents several
 tabs.
 
 -  **KPI**: it is possible to associate one or more KPI to the
-      schedulation clicking on “Add KPI Association”.
+      schedulation clicking on â€œAdd KPI Associationâ€.
 
 -  **Filters**: here you assign values to the filters (if configured)
       associated to the schedu-
@@ -359,7 +359,7 @@ In Figure 7.28 we sum up the example case we have referred to since now.
 
    Figure 7.28: Overview of the KPI case.
 
-Once the schedulation is completed click on the “Save” button. Remember
+Once the schedulation is completed click on the â€œSaveâ€ button. Remember
 to give a name to the schedulation as in Figure 7.29.
 
  Creation of a KPI document
@@ -399,11 +399,11 @@ between the two following type of document, as you can see in Figure
 
 Then practically you must add the KPI association using the KPI List
 area of the interface. As you can see from Figure 7.31 here you select
-the KPI after clicking on the “ADD KPI ASSOCIATION” link. The latter
+the KPI after clicking on the â€œADD KPI ASSOCIATIONâ€ link. The latter
 opens a wizard that allows to pick up a multiple choice of the KPIs.
 Once chosen, you need to specify all empty fields of the form, like
-“Category”, “View as” and so on (refer to Figure 7.31). Note that the
-“View as” field is were you can decide if the widget will be a
+â€œCategoryâ€, â€œView asâ€ and so on (refer to Figure 7.31). Note that the
+â€œView asâ€ field is were you can decide if the widget will be a
 Speedometer or a KPI Card.
 
 Moreover, you can set the other properties of the KPI document using the
@@ -419,14 +419,14 @@ Moreover, you can set the other properties of the KPI document using the
 
 In particular, it is possible to steer the time granularity used by the
 KPI engine to improve the performances. For this purpose, in the
-“Options” area (Figure 7.33) the user is invited to indicate the level
-of aggregation choosing among “day”, “week”, “month”, “quarter”, “year”.
+â€œOptionsâ€ area (Figure 7.33) the user is invited to indicate the level
+of aggregation choosing among â€œdayâ€, â€œweekâ€, â€œmonthâ€, â€œquarterâ€, â€œyearâ€.
 
    |image155|
 
    Figure 7.33: Choose the time granularity.
 
-Finally in the “Style” area the user can customize the size of the
+Finally in the â€œStyleâ€ area the user can customize the size of the
 widget, the font, the color and size of texts.
 
    |image156|
@@ -442,11 +442,6 @@ Figure 7.38 and Figure
 
 7.39.
 
-In case the document contains grouping functions upon them, it is
-necessary to add the proper analytical drivers. Refer to Section 5.4 to
-get more information about how to associate an analytical driver to a
-document (and therefore to a KPI document). We stress that the URL of
-the analytical driver *must* coincide with the *attribute aliases* on
-which you have defined the grouping.
+In case the document contains grouping functions upon them, it is necessary to add the proper analytical drivers. Refer to Section 5.4 to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). We stress that the URL of the analytical driver *must* coincide with the *attribute aliases* on which you have defined the grouping.
 
 .. include:: kpiThumbinals.rst
