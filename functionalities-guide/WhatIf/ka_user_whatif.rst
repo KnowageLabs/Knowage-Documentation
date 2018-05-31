@@ -1,3 +1,5 @@
+What-if analysis
+=================
 
 The **What-if** analysis is the capability to make hypothesis and see how these impacts on the business. In practise user can perform What-if analysis using an extension of the OLAP tool. The process of What-if is composed in three phases:
 
