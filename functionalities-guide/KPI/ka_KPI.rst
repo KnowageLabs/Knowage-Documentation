@@ -296,4 +296,22 @@ Then save and run the document. Examples are shown in Figure 7.37,Figure 7.38 an
 
 In case the document contains grouping functions upon them, it is necessary to add the proper analytical drivers. Refer to Section 5.4 to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). We stress that the URL of the analytical driver *must* coincide with the *attribute aliases* on which you have defined the grouping.
 
+
+   |image158|
+
+   Figure 7.36: Widget document.
+
+   |image159|
+
+   Figure 7.37: KPI Speedometer.
+
+   |image160|
+
+   Figure 7.38: KPI Card.
+
+   |image161|
+
+   Figure 7.39: KPI List.
+
+
 .. include:: kpiThumbinals.rst
