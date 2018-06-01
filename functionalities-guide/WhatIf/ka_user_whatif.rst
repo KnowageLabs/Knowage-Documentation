@@ -73,106 +73,124 @@ Then double-click on the target measure cell and a box will appear allowing you 
 
 We stress that you can also refer to members that are not included in the tuple represented by the cell that is going to be modified. Let’s see some examples. For example suppose the cell refers to the following tuple reported in Code 9.1:
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],                                                                    |
-| [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]                                                  |
-+--------------------------------------------------------------------------------------------------------------------------------------+
+.. code-block:: 
+   :linenos:
 
-   Code 9.1: Product.Deli
+    [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],   
+    [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]
+
+
+  Code 9.1: Product.Deli
 
 you can refer to the tuple in Code 9.2 with just Product.Eggs and at the same time to the tuple in Code 9.3 with just Product.Eggs; Measures.Unit Sales 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Food].[Eggs], [Version].[0],                                                                    |
-| [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]                                                  |
-+--------------------------------------------------------------------------------------------------------------------------------------+
+.. code-block:: 
+   :linenos:
+   
+    [Measures].[Store Sales], [Product].[Food].[Eggs], [Version].[0],        
+    [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]   
 
-   Code 9.2: Product.Eggs
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-| [Measures].[Unit Sales], [Product].[Food].[Eggs], [Version].[0],                                                                     |
-| [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]                                                  |
-+--------------------------------------------------------------------------------------------------------------------------------------+
+ Code 9.2: Product.Eggs
 
-   Code 9.3: Product.Eggs; Measures.Unit Sales
+.. code-block:: 
+   :linenos:
+   
+      [Measures].[Unit Sales], [Product].[Food].[Eggs], [Version].[0],                              
+      [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers] 
+
+
+  Code 9.3: Product.Eggs; Measures.Unit Sales
 
 Note that if you create a formula on a cell and you want to move it along a dimension (for example the cell refers to member Time.2016 and you want to get value for Time.2017) you have to refer to a member of same level. So for example you can get value of the cell for Time.2017, but not for Time.2017.May.
 
 The syntax is as the one shown in Referring to different members or, in case you are using another hierarchy, as in Code 9.5 where you can concatenate different members with ";".
 
-+------------------------------------------------------------------------------+
-| <dimension's name>.<member's name>or[<dimension's name>].[<member's name>]   |                                                         
-+------------------------------------------------------------------------------+
+.. code-block:: 
+   :linenos:
+   
+      <dimension's name>.<member's name>or[<dimension's name>].[<member's name>]                      
 
-   Code 9.4: Referring to different members.
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-| <dimension's name>.<hierarchy's name>.<member's name>or[<dimension's name>].[< hierarchy's name>].[<member's name>]                 |
-+-------------------------------------------------------------------------------------------------------------------------------------+
+  Code 9.4: Referring to different members.
+
+.. code-block:: 
+   :linenos:
+   
+      <dimension's name>.<hierarchy's name>.<member's name>or[<dimension's name>].[< hierarchy's name>].[<member's name>]  
+
 
    Code 9.5: Referring to different members of another hierarchy.
 
 You can also refer to members that are on the same level but they are not sibling members:
 suppose that, for example, the cell’s tuple is as in   Code 9.6:.
 
-+----------------------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],                            |
-| [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]          |   
-+----------------------------------------------------------------------------------------------+
+.. code-block:: 
+   :linenos:
+   
+   [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],        
+   [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]
+
 
   Code 9.6: Example of cell’s tuple.
 
 Note that you can refer to the tuple
 
-+----------------------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages],                           |
-| [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],                       |
-| [Customers].[All Customers]                                                                  |
-+----------------------------------------------------------------------------------------------+
+.. code-block:: 
+   :linenos:
+   
+      [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages],  
+      [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],  
+      [Customers].[All Customers]                                                  
 
-   Code 9.7: Example of cell’s tuple
+
+  Code 9.7: Example of cell’s tuple
 
 just with:
 
-+---------------------------------------+
-| [Product].[Drink.Alcoholic Beverages] |
-+---------------------------------------+
+.. code-block:: 
+   :linenos:
+   
+      [Product].[Drink.Alcoholic Beverages] 
 
-   Code 9.8: Shorten syntax code.
+  Code 9.8: Shorten syntax code.
 
 Another example from Code 9.9
 
-+--------------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Food].[Deli].[Meat],                            |
-| [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],               |
-| [Customers].[AllCustomers]                                                           |
-+--------------------------------------------------------------------------------------+
+.. code-block:: 
+   :linenos:
+   
+       [Measures].[Store Sales], [Product].[Food].[Deli].[Meat],            
+       [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],
 
-   Code 9.9: Example of cell’s tuple
+
+ Code 9.9: Example of cell’s tuple
 
 to Code 9.10
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-| [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0], [Region].[Mexico Central],       |   | [Customers].[AllCustomers], [Customers].[All Customers]                                                                            |
-+------------------------------------------------------------------------------------------------------------------------------------+
+.. code-block:: 
+   :linenos:
+   
+     [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0], [Region].[Mexico Central],            [Customers].[AllCustomers], [Customers].[All Customers]                                                                          
 
-
-   Code 9.10: Example of shorten cell’s tuple
+ Code 9.10: Example of shorten cell’s tuple
 
 is as in Code 9.11
 
-+-----------------------------------------------------+
-| [Product].[Drink.Alcoholic Beverages.Beer and Wine] |
-+-----------------------------------------------------+
+.. code-block:: 
+   :linenos:
+   
+      [Product].[Drink.Alcoholic Beverages.Beer and Wine] 
 
-   Code 9.11: Used expression.
+ Code 9.11: Used expression.
 
 Note that the last part of the expression is the portion of the path to the target member that differs from the path of the cell’s member. Some other examples:
 
-+------------------+
-| [Product].[Food] |
-+------------------+
+.. code-block:: 
+   :linenos:
+   
+     [Product].[Food]
 
-  Code 9.12: Further example.
+ Code 9.12: Further example.
    
      .. include:: whatIfThumbinals.rst
