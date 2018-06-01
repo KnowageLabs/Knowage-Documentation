@@ -123,7 +123,7 @@ The syntax is as the one shown in Referring to different members or, in case you
    Code 9.5: Referring to different members of another hierarchy.
 
 You can also refer to members that are on the same level but they are not sibling members:
-suppose that, for example, the cell’s tuple is as in   Code 9.6:.
+suppose that, for example, the cell’s tuple is as in Code 9.6:
 
 .. code-block:: 
    :linenos:
