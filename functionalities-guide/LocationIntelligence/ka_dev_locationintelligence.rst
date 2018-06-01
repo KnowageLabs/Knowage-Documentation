@@ -187,7 +187,6 @@ In Code9.3 we provide a more complex version of the previous template code. The 
        :caption: Advanced template definition.
        :linenos:
        
-			{
 			mapName:"Test",
 			
 			analysisType:"choropleth",
