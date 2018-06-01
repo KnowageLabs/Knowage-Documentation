@@ -118,23 +118,23 @@ For example you can use a query dataset, connected to the foodmart data source, 
       	 :caption: GeojSON file except.
          :linenos:
 	 
-                  SELECT r.region_id as region_id
-                       , s.store_country
-                       , r.sales_state as sales_state
-                       , r.sales_region
-                       , s.store_city
-                       , sum(f.store_sales) + (CAST(RAND() \*60 AS UNSIGNED) + 1) store_sales
-                       , avg (f.unit_sales)+(CAST(RAND()\* 60 AS UNSIGNED) + 1) unit_sales
-                       , sum(f. store_cost) store_cost
-                  FROM sales_fact_1998 f
-                     , store s
-                     , time_by_day t
-                     , sales_region r 
-                  WHERE s.store_id=f.store_id 
-                  AND f.time_id=t.time_id 
-                  AND s.region_id = r.region_id                  
-                  AND STORE_COUNTRY = 'USA' 
-                  GROUP BY region_id, s.store_country,r.sales_state, r.sales_region, s.store_city                                     
+         SELECT r.region_id as region_id
+              , s.store_country
+              , r.sales_state as sales_state
+              , r.sales_region
+              , s.store_city
+              , sum(f.store_sales) + (CAST(RAND() \*60 AS UNSIGNED) + 1) store_sales
+              , avg (f.unit_sales)+(CAST(RAND()\* 60 AS UNSIGNED) + 1) unit_sales
+              , sum(f. store_cost) store_cost
+         FROM sales_fact_1998 f
+            , store s
+            , time_by_day t
+            , sales_region r 
+         WHERE s.store_id=f.store_id 
+         AND f.time_id=t.time_id 
+         AND s.region_id = r.region_id                  
+         AND STORE_COUNTRY = 'USA' 
+         GROUP BY region_id, s.store_country,r.sales_state, r.sales_region, s.store_city                                     
 
    
 Create and save the dataset you want to use and go on preparing the document template.
