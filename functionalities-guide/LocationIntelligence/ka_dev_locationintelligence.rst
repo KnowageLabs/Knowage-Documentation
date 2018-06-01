@@ -149,6 +149,7 @@ In order to describe the basic structure of the template, we refer to Minimal te
 .. code-block:: json
       	 :caption: Minimal template definition.
          :linenos:
+	 
 	  {
 				
 	  "datasetJoinColumns" : "sales_state", 
