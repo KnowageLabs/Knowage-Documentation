@@ -1,10 +1,10 @@
 
-MULTIDIMENSIONAL ANALYSIS
+Multidimensional Analysis
 =========================
 
 OLAP tools enable users to analyse multidimensional data interactively from multiple perspectives. OLAP consists of basic analytical operations: slice and dice, roll up, drill down and pivot.
 
- OLAP user manual step by step
+OLAP user manual step by step
 -------------------------------
 
 We start our lecture on the OLAP engine by analysing an existing OLAP document. Open the document browser folder of the Knowage suite as in Figure 7.1 and launch an OLAP document. Figure 7.2 exhibits an example.
