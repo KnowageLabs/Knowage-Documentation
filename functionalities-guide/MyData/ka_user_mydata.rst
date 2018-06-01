@@ -1,4 +1,4 @@
-STARTING YOUR PROJECT
+Starting your project
 ======================
 
 This chapter describes advanced features, i.e. available only in KnowageBD and KnowageSI products, to access data as end user.
