@@ -467,8 +467,8 @@ Let us have a look at the template. Syntax used to set cross navigation shows ho
       <PARAMETERS>                                                       
           <PARAMETER name="family" dimension="Product" hierarchy="[Product]" 
                      level="[Product].[Product Family]" />                             
-          <PARAMETER name="year" dimension="Time" hierarchy="[ Time]"        
-          level="[ Time].[Year]" />                                                          
+          <PARAMETER name="year" dimension="Time" hierarchy="[Time]"        
+                     level="[Time].[Year]" />                                                          
       </PARAMETERS>                                                      
    </CROSS_NAVIGATION>                                                   
 
