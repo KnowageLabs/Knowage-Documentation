@@ -282,11 +282,11 @@ Parameters can also be used within some graphical elements, such as dynamic text
 
   Code 11.1: Parameters syntax
 
-   .. warning:: 
-   
-      **Transfer reports from Studio to Server and vice versa**
+.. warning:: 
 
-      We saw that developers can use Knowage Studio deployment service to easily register the report with its template on Knowage             Server. Alternatively, any valid BIRT template (developed with or without Knowage Studio) can be directly uploaded in Knowage           Server using the web interface for document management.
+   **Transfer reports from Studio to Server and vice versa**
+
+   We saw that developers can use Knowage Studio deployment service to easily register the report with its template on Knowage              Server. Alternatively, any valid BIRT template (developed with or without Knowage Studio) can be directly uploaded in Knowage            Server using the web interface for document management.
 
 Download and deploy
 ---------------------------
@@ -382,9 +382,9 @@ In Cross Navigation syntax we give an idea of how the syntax should be like:
     
        **Type the right cross navigation name**
 
-       It is important to underline that the Cross_Navigation_Name of Cross Navigation syntax is the cross navigation name                    related to the document and set using the Cross Navigation Definition feature we described in Chapter 5, Section 5.5. 
+       It is important to underline that the "Cross_Navigation_Name" of Cross Navigation syntax is the cross navigation name                    related to the document and set using the "Cross Navigation Definition" feature we described in Chapter 5, Section 5.5. 
        
-It will be necessary to type the right cross navigation name related to the document as defined using the Tool settings of Knowage      server and to define those parameters (OUT_PAR, OUT_STRING, etc.) as output parameters in the deployed document on the Server            (see Section 5.5 of Chapter 5).
+It will be necessary to type the right cross navigation name related to the document as defined using the "Tool" settings of Knowage      server and to define those parameters (OUT_PAR, OUT_STRING, etc.) as output parameters in the deployed document on the Server            (see Section 5.5 of Chapter 5).
 
 Note that the syntax of the string is fixed, while you need to assign values to the parameters that will be passed to the destination document. The JavaScript editor helps you to insert dataset column bindings, as shown in Figure 11.15, and report parameters automatically.
 
