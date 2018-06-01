@@ -1,28 +1,19 @@
 
-  
-
 MULTIDIMENSIONAL ANALYSIS
 =========================
 
-   OLAP tools enable users to analyse multidimensional data
-   interactively from multiple perspectives. OLAP consists of basic
-   analytical operations: slice and dice, roll up, drill down and pivot.
+OLAP tools enable users to analyse multidimensional data interactively from multiple perspectives. OLAP consists of basic analytical operations: slice and dice, roll up, drill down and pivot.
 
  OLAP user manual step by step
----------------------------------
+-------------------------------
 
-   We start our lecture on the OLAP engine by analysing an existing OLAP
-   document. Open the document browser folder of the Knowage suite as in
-   Figure 7.1 and launch an OLAP document. Figure 7.2 exhibits an
-   example.
+We start our lecture on the OLAP engine by analysing an existing OLAP document. Open the document browser folder of the Knowage suite as in Figure 7.1 and launch an OLAP document. Figure 7.2 exhibits an example.
 
    |image134|
 
    Figure 7.1: Browse the documents and select an OLAP document.
 
-   We will describe the main parts of the OLAP page in the following.
-
-   The filter panel
+We will describe the main parts of the OLAP page in the following.
 
    |image135|
 
@@ -31,38 +22,28 @@ MULTIDIMENSIONAL ANALYSIS
 The filter panel
 ~~~~~~~~~~~~~~~~
 
-   Once the document is executed, the central area of the window
-   contains the table whose measures are aggregated on dimensions. At
-   the top of this area, panels are available to configure filters on
-   attributes. We see in Figure 7.3 that the filter panel is made up of
-   **Filter cards**. Here you can find the cube dimensions and their
-   hierarchies as defined in the OLAP schema by the developer.
+Once the document is executed, the central area of the window contains the table whose measures are aggregated on dimensions. At the top of this area, panels are available to configure filters on attributes. We see in Figure 7.3 that the filter panel is made up of **Filter cards**. Here you can find the cube dimensions and their hierarchies as defined in the OLAP schema by the developer.
 
-|image136|
+   |image136|
 
    Figure 7.3: The filter panel.
 
 The filter cards
 ~~~~~~~~~~~~~~~~
 
-   Filter cards can be placed on the filter panel (Figure 7.4) or on
-   column axis. You can switch their position dragging and dropping them
-   from one place to the other.
+Filter cards can be placed on the filter panel (Figure 7.4) or on column axis. You can switch their position dragging and dropping them from one place to the other.
 
    |image137|
 
    Figure 7.4: The filter card inside the filter panel.
 
-   Filter cards are used to:
+Filter cards are used to:
 
 -  inform the user about available dimensions defined in OLAP schema,
 
--  inform the user about dimensionís name,
+-  inform the user about dimension‚Äôs name,
 
 -  perfom slices,
-
-
-   Axes panel
 
 -  Add the dimensions to the cube visualization,
 
@@ -70,8 +51,7 @@ The filter cards
 
 -  filter visible members.
 
-
-   Considering Figure 7.5, we can see that a filter card is made up of:
+Considering Figure 7.5, we can see that a filter card is made up of:
 
 -  (a) an icon for opening dimension chooser dialog,
 
@@ -89,7 +69,7 @@ The filter cards
 Axes panel
 ~~~~~~~~~~
 
-   In the panel axes you can:
+In the panel axes you can:
 
 -  drag and drop one or more dimensions,
 
@@ -97,9 +77,7 @@ Axes panel
 
 -  swap axes.
 
-
-   Referring to Figure 7.6, the axes panel consists of the following
-   items:
+Referring to Figure 7.6, the axes panel consists of the following items:
 
 -  (a) columns axis,
 
@@ -111,9 +89,6 @@ Axes panel
 
 -  (e) icon for hierarchy order.
 
-
-   Pivot table
-
    |image139|
 
    Figure 7.6: Axes panel features.
@@ -121,18 +96,17 @@ Axes panel
 Pivot table
 ~~~~~~~~~~~
 
-   The Pivot table is the central part of the OLAP page. In Figure 7.7
-   is shown an example. Pivot
+The Pivot table is the central part of the OLAP page. In Figure 7.7 is shown an example. 
 
    |image140|
 
    Figure 7.7: Pivot table.
 
-   table is used to:
+Pivot table is used to:
 
 -  show data based on MDX query sent from the interface,
 
--  drill down/up hierarchiesí dimensions ,
+-  drill down/up hierarchies‚Äô dimensions,
 
 -  drill through,
 
@@ -145,7 +119,7 @@ Pivot table
 -  perform cross navigation to other documents.
 
 
-   Referring to Figure 7.8, Pivot table consists of:
+Referring to Figure 7.8, Pivot table consists of:
 
 -  (a) dimensions involved in the analysis,
 
@@ -155,11 +129,9 @@ Pivot table
 
 -  (d) icons for sorting (only if enabled by the developer),
 
--  (e) icons for showing properties (only if enabled and configured by
-      the developer),
+-  (e) icons for showing properties (only if enabled and configured by the developer),
 
--  links for cross navigation (only if enabled and configured by the
-      developer)
+-  links for cross navigation (only if enabled and configured by the developer)
 
 
    |image141|
@@ -169,15 +141,13 @@ Pivot table
 Side bar
 ~~~~~~~~
 
-   You can open the side bar by clicking on the icon positioned on the
-   top right side of the page (Figure 7.9). Side bar will be shown on
-   the right side (Figure 7.10).
+You can open the side bar by clicking on the icon positioned on the top right side of the page (Figure 7.9). Side bar will be shown on the right side (Figure 7.10).
 
    |image142|
 
    Figure 7.9: Open the side bar.
 
-   Side bar is used to:
+Side bar is used to:
 
 -  choose between different data representations,
 
@@ -192,24 +162,22 @@ Side bar
 
    Figure 7.10: Side bar.
 
-   The side bar shows the **Menu**. This area let you customize the Olap
-   layout. As highlighted in Figure 7.11, the Menu is divided in three
-   subsections:
+The side bar shows the **Menu**. This area let you customize the Olap layout. As highlighted in Figure 7.11, the Menu is divided in three subsections:
 
 -  (a) drill options,
 
 -  (b) OLAP functions,
 
--  (c) table functions, ï what if.
+-  (c) table functions, 
+
+-  what if.
 
 
    |image144|
 
    Figure 7.11: Side bar Menu.
 
-   We start introducing the interface and leave the description to the
-   next Section 7.2. In particular, referring to Figure 7.12, drill
-   types consists of:
+We start introducing the interface and leave the description to the next Section 7.2. In particular, referring to Figure 7.12, drill types consists of:
 
 -  (a) position,
 
@@ -223,7 +191,7 @@ Side bar
 
    Figure 7.12: Drill types.
 
-   Meanwhile, referring to Figure 7.13, the OLAP functions consist of:
+Meanwhile, referring to Figure 7.13, the OLAP functions consist of:
 
 -  (a) reload model,
 
@@ -232,7 +200,7 @@ Side bar
 -  (c) send MDX.
 
 
-   Referring to Figure 7.14, table functions consist of:
+Referring to Figure 7.14, table functions consist of:
 
 -  (a) show parent members,
 
@@ -259,9 +227,8 @@ Side bar
 
    Figure 7.14: Table functions.
 
-   7.2. Functionalities
 
-   Referring to Figure 7.15, what if consists of:
+Referring to Figure 7.15, what if consists of:
 
 -  (a) lock/unlock model,
 
@@ -269,31 +236,29 @@ Side bar
 
 -  (c) save as new version,
 
--  (d) undo, ï (e) delete versions, ï (f) output wizard.
+-  (d) undo, 
+
+- (e) delete versions, 
+
+- (f) output wizard.
 
 
    |image148|
 
    Figure 7.15: Table functions.
 
+
  Functionalities
--------------------
+-----------------
 
 Placing hierarchies on axes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   As we already told, the user can easily move a dimension from the
-   filter bar to the axis or viceversa dragging and dropping it to the
-   desired place.
+As we already told, the user can easily move a dimension from the filter bar to the axis or viceversa dragging and dropping it to the desired place.
 
-   Let us suppose we want to move a dimension from the filter panel to
-   the columns axis. The steps are summarized in Figure 7.16
+Let us suppose we want to move a dimension from the filter panel to the columns axis. The steps are summarized in Figure 7.16
 
-   Vice versa, to move back the dimension from the columns axis to the
-   filter panel the user must simply drag and drop the dimension from
-   one place to the other as in Figure 7.17.
-
-   Placing hierarchies on axes
+Vice versa, to move back the dimension from the columns axis to the filter panel the user must simply drag and drop the dimension from one place to the other as in Figure 7.17.
 
    |image149|
 
@@ -301,19 +266,15 @@ Placing hierarchies on axes
 
    |image150|
 
-   Figure 7.17: Move a dimension from the columns axis to the filter
-   panel.
+   Figure 7.17: Move a dimension from the columns axis to the filter panel.
 
-   Swaping axes
 
-   Similarly, a dimension can be moved from the filter panel to the rows
-   axis simply dragging and dropping it from one place to the other.
+Similarly, a dimension can be moved from the filter panel to the rows axis simply dragging and dropping it from one place to the other.
 
 Swaping axes
 ~~~~~~~~~~~~
 
-   To swap axes the user should click on the icon |image151|. The user
-   will get the outcome showed in Figure 7.18.
+To swap axes the user should click on the icon |image151|. The user will get the outcome showed in Figure 7.18.
 
    |image152|
 
@@ -322,18 +283,13 @@ Swaping axes
 Selecting different hierarchies on dimension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   If an OLAP schema is defined, the user can choose different
-   hierarchies of the same dimension. The icon for opening the dialog is
-   positioned on the top left corner of the filter card (if the
-   dimension has more than one hierarchy). Select the hierarchies icon
-   underlined in Figure 7.19.
+If an OLAP schema is defined, the user can choose different hierarchies of the same dimension. The icon for opening the dialog is positioned on the top left corner of the filter card (if the dimension has more than one hierarchy). Select the hierarchies icon underlined in Figure 7.19.
 
    |image153|
 
    Figure 7.19: Hierarchies icon.
 
-   A pop up will be displayed. Figure 7.20 shows its characteristics.
-   The window will present:
+A pop up will be displayed. Figure 7.20 shows its characteristics. The window will present:
 
 -  (a) the dimension name,
 
@@ -343,36 +299,24 @@ Selecting different hierarchies on dimension
 
 -  (d) save button,
 
-
-   Slicing ï (e) cancel button.
+- (e) cancel button.
 
    |image154|
 
    Figure 7.20: Hierarchies dialog pop up.
 
-   After selecting the hierarchy and saving userís choice, that
-   hierarchy will be used by the pivot table.
+After selecting the hierarchy and saving user‚Äôs choice, that hierarchy will be used by the pivot table.
 
-   If the user re-opens the dialog window, he/she sees the selected
-   hieararchies and has the chance to change it if needed to, as shown
-   in Figure 7.21.
+If the user re-opens the dialog window, he/she sees the selected hieararchies and has the chance to change it if needed to, as shown in Figure 7.21.
 
-   We give an example of the output when the hierarchy ìTimeî is
-   selected in Figure 7.22 and hierarchy ìTime Weeklyî in Figure 7.23.
+We give an example of the output when the hierarchy ‚ÄúTime‚Äù is selected in Figure 7.22 and hierarchy ‚ÄúTime Weekly‚Äù in Figure 7.23.
 
 Slicing
 ~~~~~~~
 
-   The slicing operation consists in the analysis of a subset of a
-   multi-dimensional array corresponding to a single value for one or
-   more members of the dimensions. In order to perform this operation
-   you need to drag and drop the dimesion of interest in the axis panel.
-   Then clicking on the filter icon choose the new single focus and
-   apply it. Once concluded these steps the cube will show only the
-   selected level of the dimension, while the others have been sliced
-   out.
+The slicing operation consists in the analysis of a subset of a multi-dimensional array corresponding to a single value for one or more members of the dimensions. In order to perform this operation you need to drag and drop the dimesion of interest in the axis panel.  Then clicking on the filter icon choose the new single focus and apply it. Once concluded these steps the cube will show only the selected level of the dimension, while the others have been sliced out.
 
-   Figure 7.24 shows the slicer option panel which consists of::
+Figure 7.24 shows the slicer option panel which consists of:
 
 -  (a) a dimension name,
 
@@ -387,8 +331,6 @@ Slicing
 -  (f) a selected member icon,
 
 
-   Slicing
-
    |image155|
 
    Figure 7.21: Changing the hierarchies.
@@ -401,41 +343,29 @@ Slicing
 
    Figure 7.23: Time Weekly hierachy: table shows weeks in the month.
 
-   Filtering
 
--  (g) a highlighted member (result of searching), ï (h) a save and a
-      cancel buttons.
+-  (g) a highlighted member (result of searching), 
+
+- (h) a save and a cancel buttons.
 
    |image158|
 
    Figure 7.24: Dialog for slicer choosing.
 
-   In particular, it is possible to search for a member in three ways:
+In particular, it is possible to search for a member in three ways:
 
 1. by browsing the member tree (Figure 7.25);
 
-2. by typing memberís name or itís part in the input field and clicking
-      on the search button. The research will be possible if the user
-      enters at least four letters. If the user wishes to include
-      memberís siblings to the research, the checkbox (Figure 7.24, (d))
-      needs to be checked (Figure 7.26);
+2. by typing member‚Äôs name or it‚Äôs part in the input field and clicking on the search button. The research will be possible if the user    enters at least four letters. If the user wishes to include member‚Äôs siblings to the research, the checkbox (Figure 7.24, (d))          needs to be checked (Figure 7.26);
 
-3. after the first research, if the user types some other memberís name
-      before clicking on the search button, visible members whose names
-      contains a entered text will be highlighted (Figure 7.27).
+3. after the first research, if the user types some other member‚Äôs name before clicking on the search button, visible members whose        names contains a entered text will be highlighted (Figure 7.27).
 
-
-   Once the selection has been saved, the users choice will affect the
-   pivot table and the filter cards slicer name will rearrange.
+Once the selection has been saved, the users choice will affect the pivot table and the filter cards slicer name will rearrange.
 
 Filtering
 ~~~~~~~~~
 
-   To filter dimension members in a pivot table, the user should click
-   on a button (see Figure 7.5) located on the right side of dimensionís
-   filter card placed in the filter area.
-
-   Filtering
+To filter dimension members in a pivot table, the user should click on a button (see Figure 7.5) located on the right side of dimension‚Äôs filter card placed in the filter area.
 
    |image159|
 
@@ -449,36 +379,21 @@ Filtering
 
    Figure 7.27: Using the research box after a first investigation.
 
-   The procedure to search for a member using the filter dialog has no
-   meaningful differences with the one described for the slicer chooser
-   dialog. The pop up interface is the one showed in Figure 7.28. After
-   selecting a member, the user should click on the save button. The
-   pivot
+The procedure to search for a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog. The pop up interface is the one showed in Figure 7.28. After selecting a member, the user should click on the save button. The pivot table will display the changements. Otherwise click on the cancel button to discard changes.
 
    |image162|
 
    Figure 7.28: Filter dialog.
 
-   table will display the changements. Otherwise click on the cancel
-   button to discard changes.
 
 Drill down and drill up
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-   User can choose between drill types by clicking on one of the three
-   buttons in the drill types section of the side bar (Figure 7.10).
-   There are three drill types. In the following we give some details on
-   them.
+User can choose between drill types by clicking on one of the three buttons in the drill types section of the side bar (Figure 7.10). There are three drill types. In the following we give some details on them.
 
-1. **Position**: this is the default drill type. Clicking on a drill
-      down/drill up command will expand/collapse a pivot table with
-      child members of a member with that particular command. See Figure
-      7.30.
+1. **Position**: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with          child members of a member with that particular command. See Figure 7.30.
 
-2. **Member**: if the user wants to perform drill operation not only on
-      one member per time but on all members of the same name and level
-      at the same time it is needed to select
-
+2. **Member**: if the user wants to perform drill operation not only on one member per time but on all members of the same name and        level at the same time it is needed to select member drill type. See Figure 7.31.
 
    |image163|
 
@@ -486,50 +401,34 @@ Drill down and drill up
 
    |image164|
 
-   Figure 7.30: ìPositionî drill down. member drill type. See Figure
-   7.31.
+   Figure 7.30: ‚ÄúPosition‚Äù drill down.
 
    |image165|
 
-   Figure 7.31: ìMemberî drill down.
+   Figure 7.31: ‚ÄúMember‚Äù drill down.
 
-3. **Replace**: This option lets the user replace the parent member with
-      his child member during drill down operation. To drill up the user
-      should click on the arrow icon next to the dimension name on which
-      to perform operation. See Figure 7.32.
-
-
-   Drill through
+3. **Replace**: This option lets the user replace the parent member with his child member during drill down operation. To drill up the      user should click on the arrow icon next to the dimension name on which to perform operation. See Figure 7.32.
 
    |image166|
 
-   Figure 7.32: ìReplaceî drill down.
+   Figure 7.32: ‚ÄúReplace‚Äù drill down.
 
 Drill through
 ~~~~~~~~~~~~~
 
-   To perform drill through operation the user needs first to select a
-   cell, as in Figure 7.33, on which to perform operations. Then
-   clicking on the button for a drill through in the side bar, a
+To perform drill through operation the user needs first to select a cell, as in Figure 7.33, on which to perform operations. Then clicking on the button for a drill through in the side bar, a dialog will open with results (this pop up could take some time to    open).
 
    |image167|
 
    Figure 7.33: Drill thorugh option.
 
-   dialog will open with results (this pop up could take some time to
-   open).
-
-   In particular, referring to Figure 7.34, drill though dialog consists
-   of:
+In particular, referring to Figure 7.34, drill though dialog consists of:
 
 -  (a) a hierarchy menu,
 
 -  (b) a table of values,
 
 -  (c) a maximum rows drop down list,
-
-
-   Refreshing model
 
 -  (d) a pagination,
 
@@ -544,38 +443,26 @@ Drill through
 
    Figure 7.34: Drill thorugh window.
 
-   The user must therefore select a cell, open the side bar and select
-   the drill through item from the panel. A pop up will show up: here
-   the user can choose the level of detail with which data will be
-   displayed. The steps to follow are:
+The user must therefore select a cell, open the side bar and select the drill through item from the panel. A pop up will show up: here the user can choose the level of detail with which data will be displayed. The steps to follow are:
 
 1. to click on hierarchy in hierarchy menu,
 
 2. to check the checkbox of the level,
 
-3. to click on the ìApplyî button (after checking the checkbox, remember
-      to click outside of the level list and then select apply).
+3. to click on the ‚ÄúApply‚Äù button (after checking the checkbox, remember to click outside of the level list and then select apply).
 
-
-   The user can also select the maximum rows to load by choosing one of
-   the options in the drop down list (see Figure 7.34, (c)). Finally,
-   loaded data can be exported in csv format by clicking on the ìExportî
-   button.
+The user can also select the maximum rows to load by choosing one of the options in the drop down list (see Figure 7.34, (c)). Finally, loaded data can be exported in csv format by clicking on the ‚ÄúExport‚Äù button.
 
 Refreshing model
 ~~~~~~~~~~~~~~~~
 
-   To refresh a loaded model the user needs to click on the ìRefreshî
-   button available in the side bar panel. This action will clear the
-   cash, load pivot table and the rest of data again.
+To refresh a loaded model the user needs to click on the ‚ÄúRefresh‚Äù button available in the side bar panel. This action will clear the cash, load pivot table and the rest of data again.
 
-   Showing MDX
 
 Showing MDX
 ~~~~~~~~~~~
 
-   To show current mdx query user should click on show mdx button in the
-   side bar. Figure 7.35 shows an example.
+To show current mdx query user should click on show mdx button in the side bar. Figure 7.35 shows an example.
 
    |image169|
 
@@ -585,38 +472,30 @@ Showing MDX
 Sending MDX
 ~~~~~~~~~~~
 
-   If you want to execute an MDX query you need to:
+If you want to execute an MDX query you need to:
 
 -  click on send MDX button in the sidebar,
 
--  type a query in a text area of send MDX dialogs (Figure 7.36), ï
-      click on the save button (Figure 7.36).
+-  type a query in a text area of send MDX dialogs (Figure 7.36), 
+
+-  click on the save button (Figure 7.36).
 
 
    |image170|
 
    Figure 7.36: Sending MDX query example.
 
-   Result of the MDX query ìshouldî appear in pivot table as in Figure
-   7.37. In fact, the user is responsable for entering *valid* MDX
-   query.
-
-   Sending MDX
+Result of the MDX query ‚Äúshould‚Äù appear in pivot table as in Figure 7.37. In fact, the user is responsable for entering *valid* MDX query.
 
    |image171|
 
    Figure 7.37: Sending MDX query example.
 
-   Showing parent members
 
 Showing parent members
 ~~~~~~~~~~~~~~~~~~~~~~
 
-   If a user wants to see additional information about members shown in
-   the pivot table (for example: memberís hierarchy, level or parent
-   member) he should click on a show parent members button in the side
-   bar panel. The result will be visible in the pivot table. An example
-   is shown in Figure 7.38 and Figure 7.39.
+If a user wants to see additional information about members shown in the pivot table (for example: member‚Äôs hierarchy, level or parent member) he should click on a show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in Figure 7.38 and Figure 7.39.
 
    |image172|
 
@@ -629,11 +508,7 @@ Showing parent members
 Hiding/showing spans
 ~~~~~~~~~~~~~~~~~~~~
 
-   To hide or show spans the user should click on show/hide spans button
-   in the side bar. The result will be visible in pivot table as in
-   Figure 7.40.
-
-   Showing properties
+To hide or show spans the user should click on show/hide spans button in the side bar. The result will be visible in pivot table as in Figure 7.40.
 
    |image174|
 
@@ -642,27 +517,16 @@ Hiding/showing spans
 Showing properties
 ~~~~~~~~~~~~~~~~~~
 
-   In OLAP schema the XML member properties, if configured, could be
-   represented in two possible ways:
+In OLAP schema the XML member properties, if configured, could be represented in two possible ways:
 
-1. as part of pivot table where a property values are placed in rows and
-      columns. To get these values, the user needs to click on show
-      properties button in the side bar. Results will be shown in the
-      pivot table;
+1. as part of pivot table where a property values are placed in rows and columns. To get these values, the user needs to click on show      properties button in the side bar. Results will be shown in the pivot table;
 
 
    |image175|
 
    Figure 7.41: Show properties.
 
-2. in a pop up as compact properties. To enable compact properties user
-      should click on enable compact properties button in the side bar.
-      In this way in all the cells of members Suppressing empty
-      colunms/rows
-
-
-   which has property set, a table icon appears. This icon lets the
-   property pop up opens. Figure 7.42 shows an example.
+2. in a pop up as compact properties. To enable compact properties user should click on enable compact properties button in the side bar. In this way in all the cells of members Suppressing empty colunms/rows which has property set, a table icon appears. This icon lets the property pop up opens. Figure 7.42 shows an example.
 
    |image176|
 
@@ -671,13 +535,8 @@ Showing properties
 Suppressing empty colunms/rows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   To hide the empty rows and/or colums, if any, from pivot table the
-   user can click on the
+To hide the empty rows and/or colums, if any, from pivot table the user can click on the ‚ÄúSuppress empty rows/colums‚Äù button in the side bar panel. An example is given in Figure 7.43.
 
-   ìSuppress empty rows/columsî button in the side bar panel. An example
-   is given in Figure 7.43.
-
-   Sorting
 
    |image177|
 
@@ -690,27 +549,15 @@ Suppressing empty colunms/rows
 Sorting
 ~~~~~~~
 
-   To enable member ordering the user must click on the ìEnable sortingî
-   button in the side bar panel. The command for sorting will appear
-   next to the memberís name in the pivot table. In addition, the
-   sorting command will show the members of ìMeasuresî hieararchy or
-   members that are crossjoined with them, as shown in Figure 7.44.
+To enable member ordering the user must click on the ‚ÄúEnable sorting‚Äù button in the side bar panel. The command for sorting will appear next to the member‚Äôs name in the pivot table. In addition, the sorting command will show the members of ‚ÄúMeasures‚Äù hieararchy or members that are crossjoined with them, as shown in Figure 7.44. 
 
-   To sort members the user needs to click on the sorting command
-   |image179|, available next to each member of the pivot table. Note
-   that the sorting criteria is ascending at first execution. If the
-   user clicks on the sorting icon, criteria will change to descending
-   and the result will be shown in pivot table.
+To sort members the user needs to click on the sorting command |image179|, available next to each member of the pivot table. Note that the sorting criteria is ascending at first execution. If the user clicks on the sorting icon, criteria will change to descending and the result will be shown in pivot table.
 
-   To remove the sorting, the user just have to click on the icon again.
-   To change sorting mode
-
+To remove the sorting, the user just have to click on the icon again. To change sorting mode user should click on sorting settings button in the side bar. Referring to Figure 7.45, dialog sorting settings consists of:
+   
    |image180|
 
    Figure 7.45: Sorting settings window.
-
-   user should click on sorting settings button in the side bar.
-   Referring to Figure 7.45, dialog sorting settings consists of:
 
 -  (a) sorting modes:
 
@@ -725,31 +572,24 @@ Sorting
 -  (f) a save button.
 
 
-   Note that ìbreaking modeî means that the hierarchy will be broken.
+Note that ‚Äúbreaking mode‚Äù means that the hierarchy will be broken.
 
-   If the user selects ìCount sortingî mode the top or last 10 members
-   will be shown by default in the pivot table. Furthermore, the user
-   can also define a custom number of members that should be shown.
+If the user selects ‚ÄúCount sorting‚Äù mode the top or last 10 members will be shown by default in the pivot table. Furthermore, the user can also define a custom number of members that should be shown. 
 
 Calculated members and sets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Firstly we stress that to enable **Calculated fields** in your Olap
-   document a proper button tag is needed in your Olap template. Such a
-   tag is <BUTTON_CC visible="true"/>.
+Firstly we stress that to enable **Calculated fields** in your Olap document a proper button tag is needed in your Olap template. Such a tag is <BUTTON_CC visible="true"/>.
 
-   Once enabled, to create a calculated member/set the user should:
+Once enabled, to create a calculated member/set the user should:
 
    |image181|
 
    Figure 7.46: Calculated member.
 
-1. select a member of the pivot table, as in Figure 7.46, which will be
-      the parent of the calculated member,
+1. select a member of the pivot table, as in Figure 7.46, which will be the parent of the calculated member,
 
-2. click on the ìcalculated fieldî button in the side bar panel: a
-      ìSelect functionî dialog will appear. The latter consists of
-      (refer to Figure 7.47):
+2. click on the ‚Äúcalculated field‚Äù button in the side bar panel: a ‚ÄúSelect function‚Äù dialog will appear. The latter consists of            (refer to Figure 7.47):
 
    -  (a) a name input field,
 
@@ -772,32 +612,15 @@ Calculated members and sets
 
    Figure 7.47: Select function dialog.
 
-   The function definition used to create calculated members are read
-   from the formula.xml file, located at:
-   ROOT/resources/yourTennant/Olap folder. Functions are divided by few
-   different tabs. In particular,\ **Tab Recent** contains calculated
-   members and calculated sets created by user and saved in cookies . If
-   there are no sets/members stored in the cookies, that tab will be
-   empty. **Tab Custom** is where to define custom functions. These
-   functions can be used to make really complex operations that are not
-   part of predefined MDX functions. There you can use combination of
-   few functions together or use operators for complex mathematical
-   calculations. They are also defined in formulas xml. If a specific
-   tab doesnít contain any formula, it will not be displayed. The ìNameî
-   field is mandatory, indeed the creation of a function without a name
-   is forbidden. In **Recent tab**, the ìNameî field is hidden for
-   Figure 7.48 provides an example of edited formula in the formulas.xml
-   file.
+The function definition used to create calculated members are read from the formula.xml file, located at: ROOT/resources/yourTennant/Olap folder. Functions are divided by few different tabs. In particular,\ **Tab Recent** contains calculated members and calculated sets created by user and saved in cookies. If there are no sets/members stored in the cookies, that tab will be empty. **Tab Custom** is where to define custom functions. These functions can be used to make really complex operations that are not part of predefined MDX functions. There you can use combination of few functions together or use operators for complex mathematical  calculations. They are also defined in formulas xml. If a specific tab doesn‚Äôt contain any formula, it will not be displayed. The ‚ÄúName‚Äù field is mandatory, indeed the creation of a function without a name is forbidden. In **Recent tab**, the ‚ÄúName‚Äù field is hidden for  Figure 7.48 provides an example of edited formula in the formulas.xml file.
 
-3. Select a function and enter a calculated member/set name and click on
-      ìOkî. A dialog for arguments defintion will show up ,as shown in
-      Figure 7.49. This is made up of the following elements:
+3. Select a function and enter a calculated member/set name and click on ‚ÄúOk‚Äù. A dialog for arguments defintion will show up, as shown in Figure 7.49. This is made up of the following elements:
 
-   -  (a) selected function name,
+-  (a) selected function name,
 
-   -  (b) function description,
+-  (b) function description,
 
-|image183|
+   |image183|
 
    Figure 7.48: Example of one formula inside of formulas xml.
 
@@ -805,9 +628,11 @@ Calculated members and sets
 
 -  (d) expected MDX expression return type,
 
--  (e) argumentís MDX expression description,
+-  (e) argument‚Äôs MDX expression description,
 
--  (f) open saved button, ï (g) select from table button,
+-  (f) open saved button, 
+
+-  (g) select from table button,
 
 -  (h) ok and cancel buttons.
 
@@ -824,13 +649,11 @@ Calculated members and sets
 
    Figure 7.51: Expression of the selected members.
 
-   In particular, to input MDX expression argument, the user has three
-   options, listed in the following.
+In particular, to input MDX expression argument, the user has three options, listed in the following.
 
 1. Type it manually (for advance users).
 
-2. Select members from the pivot table: to select a members that are
-      going to be included in a set, the user should (see Figure 7.50):
+2. Select members from the pivot table: to select a members that are going to be included in a set, the user should (see Figure 7.50):
 
    -  click on select from table button,
 
@@ -839,49 +662,42 @@ Calculated members and sets
    -  click ok in dialog to finish selection.
 
 
-   The expression of selected members will be imported in text input
-   fields for argument expression as Figure 7.51 shows.
-
-   Figure 7.52: Saved sets dialog.
+The expression of selected members will be imported in text input fields for argument expression as Figure 7.51 shows.
 
    |image187|
+   
+   Figure 7.52: Saved sets dialog.
+
+   |image188|
 
    Figure 7.53: Expression of the saved/calculated member/set.
 
-3. |image188|\ Import expression from saved calculated members or sets.
-      To import calculated member/set, the user should:
+3. Import expression from saved calculated members or sets. To import calculated member/set, the user should:
 
 
-   ï Click on open saved button. Then the dialog of saved calculated
-   members/sets will appear (Figure 7.52) and it consists of:
+   ‚Ä¢ Click on open saved button. Then the dialog of saved calculated members/sets will appear (Figure 7.52) and it consists of:
 
--  a list of saved calculated members and sets,
+     -  a list of saved calculated members and sets,
 
--  a calculated member/set name,
+     -  a calculated member/set name,
 
--  calculated member/set return type is shown by round icon.
+     -  calculated member/set return type is shown by round icon.
 
--  Click on calculated member/set. The expression of saved calculated
-      member/set will be imported in text input fields for argument
-      expression, as highlighted in Figure 7.53 .
+   ‚Ä¢  Click on calculated member/set. The expression of saved calculated member/set will be imported in text input fields for argument         expression, as highlighted in Figure 7.53.
 
--  After filling all the arguments of function, clicking on OK button
-      will:
+   ‚Ä¢  After filling all the arguments of function, clicking on OK button will:
 
-   -  add calculated member in a pivot table,
+      -  add calculated member in a pivot table,
 
-   -  save calculated set and it will be available for creation of other
-         calculated member and sets.
+      -  save calculated set and it will be available for creation of other calculated member and sets.
 
 
-   In tab ìRecentî, opening the ìSelect functionî dialog the user can
-   find a list of saved calculated member and sets which can be edited
-   or deleted. Editing is done by clicking on one of them.
+In tab ‚ÄúRecent‚Äù, opening the ‚ÄúSelect function‚Äù dialog the user can find a list of saved calculated member and sets which can be edited or deleted. Editing is done by clicking on one of them. 
 
    |image189|
 
    Figure 7.54: Edit a calculated member.
 
-   Deleting is done by Delete button as shown in Figure 7.54.
+Deleting is done by Delete button as shown in Figure 7.54.
 
   .. include:: olapThumbinals.rst
