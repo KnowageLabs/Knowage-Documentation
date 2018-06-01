@@ -38,6 +38,21 @@ Building a QbE query does not require any technical knowledge, but data domain k
 
 Let’s suppose that an administrator has built a business model and a Qbe document and, consequently, released it on Knowage Server. This permits the user to perform the following tasks:
 
+• from the model you can save a query as a dataset, usable later in other Knowage documents, such as cockpits;
+
+• since the QbE document has all the features of all other Knowage analytical documents, you can
+  - add to the QbE document parameters,
+  - add profiling logics to the model.
+
+In the following we discuss each step in detail, showing basic and advanced functionalities of the **QbE Editor**.
+
+Qery design and execution
+--------------------------
+
+You can open the QbE editor for querying a model:
+
+
+
 
 
 
