@@ -15,13 +15,11 @@ Spatial data are represented through graphical objects called maps. Maps are a p
 
 According to the *Open Geospatial Consortium* (OGC) definition, a map is made of overlapping *layers*: a *base layer* in raster format (e.g. satellite photo) is integrated with other layers (*overlays*) in vector format. Each overlay is made of homogeneous spatial information, which models a same category of objects, called *features*.
 
-A feature is called *geographic feature* when the constituting objects are abstractions of realSpatial Data
+A feature is called *geographic feature* when the constituting objects are abstractions of real-world physical objects and can be located univocally within a referencez coordinate system, according to their relative position.
 
    |image385|
 
    Figure 15.22: Overlapping layer.
-
-world physical objects and can be located univocally within a referencez coordinate system, according to their relative position.
 
 A feature includes:
 
@@ -34,8 +32,6 @@ A feature includes:
    |image386|
 
    Figure 15.23: Examples of feature.
-
-GIS
 
 There is a wide range of standards that can be used for the vector encoding of spatial data (e.g. GeoJSON, GML, Shape File, etc.). Most geographic information systems can perform the needed conversions among various encodings.
 
@@ -52,11 +48,11 @@ From a logical point of view, the key functionalities of a GIS do not differ fro
 
 Unlike the market of BI suites, the market of GIS is characterized by a wide spread of open standards, adopted by all main vendors, which regulate the interaction among the various components of the system at all architectural levels.
 
-   Open Gesospatial Consortium (OGC)
+        .. note::
+         **Open Gesospatial Consortium (OGC)**
 
-   |image388|\ The most important International organization for standardization in the GIS domain is the Open Geospatial Consortium (OGC), involving 370 commercial, governmental, non-profit and research organizations. Read more at `www.opengeospatial.org. <http://www.opengeospatial.org/>`__
+            The most important International organization for standardization in the GIS domain is the Open Geospatial Consortium (OGC), involving 370 commercial, governmental, non-profit and research organizations. Read more at `www.opengeospatial.org. <http://www.opengeospatial.org/>`__
 
- GEOReport Engine\*
 
 As for the integration between GIS and BI systems, the OGC has defined two main standards supporting the re-distribution of the spatial data:
 
@@ -64,10 +60,11 @@ As for the integration between GIS and BI systems, the OGC has defined two main 
 
 -  the *Web Feature Service* (WFS). It describes the interface of services that allow to query a GIS, in order to get the geographic features in a format that allows their transformation and/or spatial analysis (e.g. GML, GeoJson, etc.).
 
-   |image389|\ WMS and WFS standards for spatial data distribution Full documentation about the WMS and WFS standards can be found at `www.opengeospatial.org/standards/wms <http://www.opengeospatial.org/standards/wms>`__
-   and `www.
-   opengeospatial.org/standards/wfs. <http://www.opengeospatial.org/standards/wfs>`__
+        .. note::
+         **WMS and WFS standards for spatial data distribution**
 
+            Full documentation about the WMS and WFS standards can be found at `www.opengeospatial.org/standards/wms <http://www.opengeospatial.org/standards/wms>`__ and `www.opengeospatial.org/standards/wfs. <http://www.opengeospatial.org/standards/wfs>`__
+ 
 Knowage suite offers an engine supporting the Location Intelligence analytical area, the **GEOReport Engine**, generating thematic maps.
 
 GEOReport Engine\*
@@ -79,6 +76,10 @@ Generally speaking, a bridge integration involves both the BI and the GIS system
 
 In particular, the **GEOReport Engine** extracts spatial data from an external GIS system and join them dynamically with the business data extracted from the Data Ware House, in order to produce a thematic map, according to the user’s request. In other words, it acts as a *bridge* between the two systems, which can consequently be kept totally decoupled.
 
+   |image390|
+
+   Figure 15.25: Bridge integration architecture of the **GEOReport Engine**.
+
 The thematic map is composed of different overlapping layers that can be uploaded from various GIS engines at the same time. Among them just one layer is used to produce the effective thematization of the map: this is called *target layer*.
 
 You can manage your layers inside the **Layers Catalogue**.
@@ -89,12 +90,6 @@ Here you can upload the following layer types:
 
 -  WFS;
 
-GEOReport Engine
-
-   |image390|
-
-   Figure 15.25: Bridge integration architecture of the **GEOReport Engine**.
-
 -  WMS;
 
 -  TMS;
@@ -102,7 +97,7 @@ GEOReport Engine
 -  Google;
 
 -  OSM.
-
+   
 Create a new layer clicking on the dedicated plus icon. On the right side you are asked to fill few settings before saving the new layer. Among these settings the firsts are equals for all types of layers. Once you choose the layer type, instead, some fields may change. This happens to manage all layers types from the same interface. For example if you choose **File** as type you have the possibility to chose your own .json file and upload it. After having done this, the path where your file is been uploaded is shown among the setting.
 
 If you chose **WFS** or **WMS** you are asked to insert a specific url.
@@ -115,11 +110,31 @@ Once you have set all layer configuration you can switch to filter setting. Clic
 
    Figure 15.26: Filter tab
 
-   Here you can choose which filters will be active during visualization phase. Choose among the properties of your layer, the available ones are only the string type.
+Here you can choose which filters will be active during visualization phase. Choose among the properties of your layer, the available ones are only the string type.
 
-   Now you need to have a well-configured dataset to work with the base layer. The dataset has to contain one column matching a property field as type and contents otherwise you will not be able to correctly visualize your data on the map.
+Now you need to have a well-configured dataset to work with the base layer. The dataset has to contain one column matching a property field as type and contents otherwise you will not be able to correctly visualize your data on the map.
 
-   For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in GeoJSON file excerpt.
+For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in GeoJSON file excerpt.
+
+      .. code-block::sql
+         :linenos:
+                  SELECT r.region_id as region_id
+                       , s.store_country
+                       , r.sales_state as sales_state
+                       , r.sales_region
+                       , s.store_city
+                       , sum(f.store_sales) + (CAST(RAND() \*60 AS UNSIGNED) + 1) store_sales
+                       , avg (f.unit_sales)+(CAST(RAND()\* 60 AS UNSIGNED) + 1) unit_sales
+                       , sum(f. store_cost) store_cost
+                  FROM sales_fact_1998 f
+                     , store s
+                     , time_by_day t
+                     , sales_region r 
+                  WHERE s.store_id=f.store_id 
+                  AND f.time_id=t.time_id 
+                  AND s.region_id = r.region_id                  
+                  AND STORE_COUNTRY = 'USA' 
+                  GROUP BY region_id, s.store_country,r.sales_state, r.sales_region, s.store_city                                     
 
 +-----------------------------------------------------------------------+
 | SELECT r.region_id as region_id, s.store_country,r.sales_state as     |
@@ -143,11 +158,7 @@ Once you have set all layer configuration you can switch to filter setting. Clic
 |    store_city                                                         |
 +-----------------------------------------------------------------------+
 
-
-
-   GeoJSON file excerpt.
-
-   Create and save the dataset you want to use and go on preparing the document template.
+Create and save the dataset you want to use and go on preparing the document template.
 
 Template building
 ~~~~~~~~~~~~~~~~~
