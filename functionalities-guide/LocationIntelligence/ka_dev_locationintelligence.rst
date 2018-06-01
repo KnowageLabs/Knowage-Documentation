@@ -114,7 +114,7 @@ Here you can choose which filters will be active during visualization phase. Cho
 
 Now you need to have a well-configured dataset to work with the base layer. The dataset has to contain one column matching a property field as type and contents otherwise you will not be able to correctly visualize your data on the map.
 
-For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in GeoJSON file excerpt.
+For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in Code15.1.
 
       .. code-block::sql
          :linenos:
@@ -136,180 +136,126 @@ For example you can use a query dataset, connected to the foodmart data source, 
                   AND STORE_COUNTRY = 'USA' 
                   GROUP BY region_id, s.store_country,r.sales_state, r.sales_region, s.store_city                                     
 
-+-----------------------------------------------------------------------+
-| SELECT r.region_id as region_id, s.store_country,r.sales_state as     |
-| sales_state,                                                          |
-|                                                                       |
-|    r.sales_region, s.store_city, sum(f.store_sales) + (CAST(RAND() \* |
-|    60 AS UNSIGNED) + 1) store_sales, avg (f.unit_sales)+(CAST(RAND()  |
-|    \* 60 AS UNSIGNED) + 1) unit_sales,sum(f. store_cost) store_cost   |
-|                                                                       |
-|    FROM sales_fact_1998 f, store s, time_by_day t, sales_region r     |
-|                                                                       |
-|    where                                                              |
-|                                                                       |
-|    s.store_id=f.store_id and                                          |
-|                                                                       |
-|    f.time_id=t.time_id AND s.region_id = r.region_id                  |
-|                                                                       |
-|    AND STORE_COUNTRY = 'USA' group by region_id,                      |
-|    s.store_country,r.sales_state, r.sales_region, s.                  |
-|                                                                       |
-|    store_city                                                         |
-+-----------------------------------------------------------------------+
-
+   Code15.1: GeojSON file except.
+   
 Create and save the dataset you want to use and go on preparing the document template.
 
 Template building
 ~~~~~~~~~~~~~~~~~
 
-   The template of the analytical documents executed by the GeoReport engine allows this engine to properly join business data (dataset) and spatial data (target layer) in order to produce and visualize the output map.
+The template of the analytical documents executed by the GeoReport engine allows this engine to properly join business data (dataset) and spatial data (target layer) in order to produce and visualize the output map.
 
-   In order to describe the basic structure of the template, we refer to Minimal template definition which provide a sample of template. The template shown is the minimal to let the GIS analysis works.
+In order to describe the basic structure of the template, we refer to Minimal template definition which provide a sample of template. The template shown is the minimal to let the GIS analysis works.
 
-+---------------------------------------+
-|    {                                  |
-|                                       |
-| "datasetJoinColumns" : "sales_state", |
-|                                       |
-| "layerJoinColumns" : "STATE_ABBR",    |
-|                                       |
-| "targetLayerConf" : {                 |
-+---------------------------------------+
+      .. code-block::json
+         :linenos:
+				{
+				
+				"datasetJoinColumns" : "sales_state", 
+				
+				"layerJoinColumns" : "STATE_ABBR",
+				
+				"targetLayerConf" : {
+				"label" : "usa_states_file"  
+				},
+				{ 
+				indicators:[
+				{"name":"store_sales","label":"Store sales"},
+				{"name":"unit_sales","label":"Unit Sales"},
+				{"name":"store_cost","label":"Store cost"} ]}
+				
+				}
 
+    Code9.2: Minimal template definition.
 
-
-+--------------------------------------------------+
-|    "label" : "usa_states_file"                   |
-|                                                  |
-| },                                               |
-|                                                  |
-| { indicators:[                                   |
-|                                                  |
-|    {"name":"store_sales","label":"Store sales"}, |
-|                                                  |
-|    {"name":"unit_sales","label":"Unit Sales"},   |
-|                                                  |
-|    {"name":"store_cost","label":"Store cost"} ]} |
-|                                                  |
-| }                                                |
-+--------------------------------------------------+
-
-
-
-    Minimal template definition.
-
-   In this template, we will include information that allows the engine to produce a thematic map identical to the one shown in Figure 15.27. The colour intensity of each feature included in the usa_states.json file proportionally increases according to the value of the selected measure (one of the three measures of the dataset) in the corresponding record.
+In this template, we will include information that allows the engine to produce a thematic map identical to the one shown in Figure 15.27. The colour intensity of each feature included in the usa_states.json file proportionally increases according to the value of the selected measure (one of the three measures of the dataset) in the corresponding record.
 
    |image392|
 
    Figure 15.27: Location intelligence document.
 
-   The template of the **GEOReport Engine** is a JSON file. The key information included in this file are:
+The template of the **GEOReport Engine** is a JSON file. The key information included in this file are:
 
 -  method for joining spatial data and business data,
 
 -  measures definition,
 
--  definition of the target layer,
+-  definition of the target layer.
 
-..
+In Code9.3 we provide a more complex version of the previous template code. The results will be similar to the one obtained in Figure 15.27, but you will provide to the user extra features like filters and cross navigation. Moreover you see how to configure some elements from template, i.e. visualization coordinates, analysis customization, etc.
 
-   In Advanced template definition we provide a more complex version of the previous template code. The results will be similar to the one obtained in Figure 15.27, but you will provide to the user extra features like filters and cross navigation. Moreover you see how to configure some elements from template, i.e. visualization coordinates, analysis customization, etc.
+    .. code-block::json
+       :linenos:
+       
+			{
+			mapName:"Test",
+			
+			analysisType:"choropleth",
+			
+			targetLayerConf:{"label":"usa_states_file"},
+			
+			datasetJoinColumns:"sales_state",
+			
+			layerJoinColumns:"STATE_ABBR",
+			
+			indicators:[
+			
+				{"name":"store_sales","label":"Store sales"},
+				{"name":"unit_sales","label":"Unit Sales"},
+				{"name":"store_cost","label":"Store cost"}
+				],
+			
+			filters:[
+				{"name":"store_country","label":"Nazione"}, 
+				{"name":"sales_region","label":"Regione"} 
+				],
+			
+			analysisConf:{
+				choropleth:{
+					"method":"CLASSIFY_BY_EQUAL_INTERVALS", 
+					"classes":3,
+					"fromColor":"rgb(255, 255, 0)","toColor":"rgb(0, 128, 0)" 
+				},
+				"proportionalSymbol":{
+					"minRadiusSize":2,
+					"maxRadiusSize":20,
+					"color":"rgb(255, 255, 0)"
+				}, 
+			chart:{
+				"indicator_1":"red",
+				"indicator_2":"green",
+				"indicator_3":"blue"} 
+				},
+				
+			"currentView":{"center":[-1.1192826925855E7,4648063.947363],"zoom":4},
+			
+			indicatorContainer:"store","storeType":"physicalStore",
+			
+			
+			"overLayersConf":[],
+			
+			"selectedBaseLayer":"OpenStreetMap" 
+			}
+			
+				crossnav : { 
+					label : 'arrive chart', 
+					multiSelect: true,
+					staticParams : { 
+						product_family : 'Food' 
+				},
+			
+					dynamicParams : [{ 
+						state : 'STATE_ABBR', 
+						scope : 'feature'
+					} , {
+						inputpar : 'PAR1', 
+						scope : 'env', 
+						outputpar: 'output_par'
+				}] 
+				} 
+			}
 
-+-----------------+
-| {               |
-|                 |
-| mapName:"Test", |
-+-----------------+
-
-
-+-----------------------------------------------------------------------+
-| analysisType:"choropleth",                                            |
-|                                                                       |
-| targetLayerConf:{"label":"usa_states_file"},                          |
-|                                                                       |
-| datasetJoinColumns:"sales_state",                                     |
-|                                                                       |
-| layerJoinColumns:"STATE_ABBR",                                        |
-|                                                                       |
-| indicators:[                                                          |
-|                                                                       |
-|    {"name":"store_sales","label":"Store sales"},                      |
-|                                                                       |
-|    {"name":"unit_sales","label":"Unit Sales"},                        |
-|                                                                       |
-|    {"name":"store_cost","label":"Store cost"}                         |
-|                                                                       |
-|    ],                                                                 |
-|                                                                       |
-| filters:[                                                             |
-|                                                                       |
-|    {"name":"store_country","label":"Nazione"},                        |
-|                                                                       |
-|    {"name":"sales_region","label":"Regione"}                          |
-|                                                                       |
-|    ],                                                                 |
-|                                                                       |
-| analysisConf:{ choropleth:{                                           |
-|                                                                       |
-|    "method":"CLASSIFY_BY_EQUAL_INTERVALS",                            |
-|                                                                       |
-|    "classes":3,                                                       |
-|                                                                       |
-|    "fromColor":"rgb(255, 255, 0)","toColor":"rgb(0, 128, 0)" },       |
-|                                                                       |
-|    "proportionalSymbol":{                                             |
-|                                                                       |
-|    "minRadiusSize":2,                                                 |
-|                                                                       |
-|    "maxRadiusSize":20,                                                |
-|                                                                       |
-|    "color":"rgb(255, 255, 0)"                                         |
-|                                                                       |
-|    }, chart:{                                                         |
-|                                                                       |
-|    "indicator_1":"red",                                               |
-|                                                                       |
-|    "indicator_2":"green",                                             |
-|                                                                       |
-|    "indicator_3":"blue"}                                              |
-|                                                                       |
-| },                                                                    |
-| "currentView":{"center":[-1.1192826925855E7,4648063.947363],"zoom":4} |
-| ,                                                                     |
-|                                                                       |
-| indicatorContainer:"store","storeType":"physicalStore",               |
-|                                                                       |
-| "overLayersConf":[],                                                  |
-+-----------------------------------------------------------------------+
-
-
-
-+-----------------------------------------------------------------------+
-| "selectedBaseLayer":"OpenStreetMap" }                                 |
-|                                                                       |
-|    crossnav : { label : 'arrive chart', multiSelect: true,            |
-|    staticParams : { product_family : 'Food'                           |
-|                                                                       |
-|    },                                                                 |
-|                                                                       |
-|    dynamicParams : [{ state : 'STATE_ABBR', scope : 'feature'         |
-|                                                                       |
-|    } , {                                                              |
-|                                                                       |
-|    inputpar : 'PAR1', scope : 'env', outputpar: 'output_par'          |
-|                                                                       |
-|    }]                                                                 |
-|                                                                       |
-|    }                                                                  |
-|                                                                       |
-| }                                                                     |
-+-----------------------------------------------------------------------+
-
-
-
-    Advanced template definition.
+   Code9.3: Advanced template definition.
 
    Let us describe these codes in detail we will describe the Minimal template definition at first and then we will go on with the extra features contained in advanced template definition. So the following are the mandatory template information:
 
@@ -317,43 +263,36 @@ Template building
 
 -  layerJoinColumns. It’s the feature’s name which has to join with the dataset column.
 
-   Join columns between dataset and Layer
+      .. warning::
+         **Join columns between dataset and Layer**
+         
+         You can match the dataset and the layer on more then one colum. The correct sintax for doing this is shown in join on multiple columns sintax. In this way you match *sales_state* with STATE_ABBR and *other_column* with OTHER_COLUMN.
+         
+      .. code-block::json
+           :linenos:
 
-   You can match the dataset and the layer on more then one colum. The correct sintax for doing this is shown in join on multiple columns sintax. In this way
+               datasetJoinColumns : ["sales_state",other_coloumns] 
 
-   |image393|\ you match sales_state with STATE_ABBR and other_coloumn with OTHER_COLOUMN.
+               layerJoinColumns : ["STATE_ABBR","OTHER_COLOUMN"] 
 
-+-----------------------------------------------------+
-| datasetJoinColumns : ["sales_state",other_coloumns] |
-+-----------------------------------------------------+
-
-  
-
-+---------------------------------------------------+
-| layerJoinColumns : ["STATE_ABBR","OTHER_COLOUMN"] |
-+---------------------------------------------------+
-
-  
-
-   Join on multiple columns sintax
+   Code 9.4: Join on multiple columns sintax
 
 -  targetLayerConf. This attribute contains the layer’s label.
 
--  indicators. It specifies the measures that can be used to perform the thematization of the map. Each measure is defined by an array (e.g. ["unit_sales", "Unit sales"]) in which the first value
+-  indicators. It specifies the measures that can be used to perform the thematization of the map. Each measure is defined by an array (e.g. ["unit_sales", "Unit sales"]) in which the first value ("unit_sales") represents the name of the column of the input dataset that includes the measure. The second value ("Unit sales") includes the description of the measures that will be listed in the Indicators section, through the engine interface.
 
-..
-
-   ("unit_sales") represents the name of the column of the input dataset that includes the measure. The second value ("Unit sales") includes the description of the measures that will be listed in the Indicators section, through the engine interface.
-
-   |image394|
-
-   The following, instead, are some of the optional attributes:
+      .. warning::
+         **Referring to dataset column's name**
+         
+         Beware that feature’s aribute name, indicators’ aribute names,the datasetJoinColumns and layerJoinColumns are case sensitive.
+         
+The following, instead, are some of the optional attributes:
 
 -  mapName, it is a string field and it is the map’s name.
 
--  analysisType, this attribute allows to specify the type of thematization that the user wants to produce the first time the document is executed. The engine supports two types of thematization: **choropleth**: it changes the intensity of fill colours of the features included in the target layer, according to users’ needs. It can only be applied to target layers that are composed of features whose geometry is represented by a plane figure.
+-  analysisType, this attribute allows to specify the type of thematization that the user wants to produce the first time the document is executed. The engine supports two types of thematization: 
 
-..
+   **choropleth**: it changes the intensity of fill colours of the features included in the target layer, according to users’ needs. It can only be applied to target layers that are composed of features whose geometry is represented by a plane figure.
 
    **proportionalSymbols**: it changes the dimension of graphical objects. It can be applied to target layers that are composed of features whose geometry is represented by a dot point. The symbol used to perform the thematization of features is a circle whose center is located in the feature itself and whose radius is proportional to the value of the measure of that feature.
 
