@@ -18,8 +18,6 @@ To create a Metamodel enter the **Business Model Catalogue** and add a new model
 
 -  Category (mandatory): Select, from the ones avaiables, a category that the model belongs to.
 
-Create an empty model
-
 -  Data Source (mandatory): select the datasource that will be used to create your model (so the one that contains the tables that you need).
 
 
@@ -51,7 +49,7 @@ Editing the metamodel
 
 The Meta Web Editor is divided in two main tabs **Business Model** and **Physical Model** corresponding to the related models. Clicking on one of this tab will change the view showing the elements of the specific model.
 
-The “Physical Model” tab contains the tables that the user has checked earlier. On the left side of the interface you will see a tree like structure with the list of tables imported in the Physical Model (see Figure 10.3.
+The “Physical Model” tab contains the tables that the user has checked earlier. On the left side of the interface you will see a tree like structure with the list of tables imported in the Physical Model (see Figure 10.3).
 
    |image301|
 
@@ -59,7 +57,7 @@ The “Physical Model” tab contains the tables that the user has checked earli
 
 The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to Figure 10.4, selecting the “Update Physical Model” option the user can refresh the model metadata. As shown in Figure 10.5, the interface shows if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
 
-Each table of Physical Model brings the information read from data base. Selecting each table, the interface shows on the right the list of its properties (**Property List** tab) and its foreign keys (**Foreign Keys** tab). Clicking on the icon on the left of each Physical Table, it is possible
+Each table of Physical Model brings the information read from data base. Selecting each table, the interface shows on the right the list of its properties (**Property List** tab) and its foreign keys (**Foreign Keys** tab). Clicking on the icon on the left of each Physical Table, it is possible to expand the corresponding node. Highlight each column name to see (on the right side of the screen) a list of properties, like data type or length.
 
    |image302|
 
@@ -68,8 +66,6 @@ Each table of Physical Model brings the information read from data base. Selecti
    |image303|
 
    Figure 10.5: Update the physical model.
-
-to expand the corresponding node. Highlight each column name to see (on the right side of the screen) a list of properties, like data type or length.
 
 The Business Model tab, shown in Figure 10.6, allows the user to custom the model in terms of column name, type, visibility, format, etc.
 
@@ -154,15 +150,15 @@ In the “Business Model” tab, the sandwitch icon lets the user add other Busi
 
 When clicking on the icon, as shown in Figure 10.10), and selecting “New Business Class”, a new dialog asks to the users to:
 
--  select a Physical Table from the available ones; • insert a description for this new business class;
+-  select a Physical Table from the available ones; 
+
+-  insert a description for this new business class;
 
 -  select one or more columns.
 
 Then click on save to add the business class.
 
 As well, when clicking on “New Business View”, as reported in Figure 10.11 the user is asked to select two or more tables from the available ones and insert a description for this new business view.
-
-Table property list
 
    |image309|
 
@@ -174,20 +170,16 @@ Then, moving to the next step, the user must join tables through specific column
 
    Figure 10.12: Create a new business view.
 
-For each business view, the interface reports the same property tabs we saw for each business class. In addition, the user finds the **Join relationships** tab and the **Physical table** tab, as highlighted in Figure 10.13. The “Join relationships” tab shows the join clauses set to create
+For each business view, the interface reports the same property tabs we saw for each business class. In addition, the user finds the **Join relationships** tab and the **Physical table** tab, as highlighted in Figure 10.13. The “Join relationships” tab shows the join clauses set to create the business view while the “Physical Table” tab recalls the physical table names.
 
    |image311|
 
    Figure 10.13: Additional property tabs for business view.
 
-the business view while the “Physical Table” tab recalls the physical table names.
-
 Table property list
 ~~~~~~~~~~~~~~~~~~~
 
 Scrolling the table “Property list” tab, the user finds the **Type** menu item. Expanding the related combobox the user can custom the table type among the ones available and listed in Figure 10.14.
-
-Column property list
 
    |image312|
 
@@ -199,7 +191,7 @@ We highlight that for temporal and time dimension type, the user must define at 
 
    Figure 10.15: Temporal hierarchy definition.
 
-According to the chosen type, the user will be able to use the specific functions introduced in Section 9.1.
+According to the chosen type, the user will be able to use the specific functions introduced in Section **XXX**.
 
 Column property list
 ~~~~~~~~~~~~~~~~~~~~
@@ -215,8 +207,6 @@ The **Structural** area covers an important role for the field properties. Here 
 -  **Aggregation type** for measure field type,
 
 -  **Format string**, to custom the format of the string for measure field type,
-
-Generate the datamart
 
    |image314|
 
@@ -240,16 +230,12 @@ After the editing of the metamodel, click on “Save” on the Meta Web toolbar 
    |image315|
 
    Figure 10.17: Generate datamart dialog.
-
-Generate the datamart
-
-If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advacend options” (see Figure 10.18) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to buid the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this
+   
+If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advacend options” (see Figure 10.18) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to buid the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
 
    |image316|
 
    Figure 10.18: Generate datamart dialog: advanced options.
-
-instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
 
 When the datamart is generated it will be possible to query the metamodel accessing it in the Workspace interface.
 
@@ -265,10 +251,7 @@ In this section, we briefly describe the generic available options for business 
 Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the **Metadata** section. Clicking the **Import metadata** button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context). The **Export CWM** allows the user to export metadata information in the CWM format. Vice versa the **Import CWM** allows the user to import a CWM file containing metadata infomration. The user must browse the CWM file into personal folder and then click on the “Import CWM” button to correctly upload it. Remember to save to validate the process.
 
 Finally the **Saved versions** section the user keeps trace of model changes over time. Furthermore it is possible to restore old versions by checking the active column. Selecting the “three-dots” icon the user can download the jar file or the model itself or delete the version.
-
 Figure 10.20 shows an example.
-
-Additional functions for business model
 
    |image318|
 
