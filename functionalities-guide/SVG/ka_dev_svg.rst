@@ -1,5 +1,5 @@
 My first SVG Map or design
-----------------------------
+--------------------------
 
 The SVG Viewer Engine is a tool that lets you develop documents based on the SVG, acronym for Scalable Vector Graphics, format. It permits to show different business information directly on each area, and permits the drill action to other more detailed SVG files using a logical hierarchy. This viewer is divided into two sections:
 
@@ -21,7 +21,7 @@ Like other Knowage documents type there is a set of activities managed by the te
    Figure 11.2: SVG document example at the States level after the selection of the “Center West” Region.
 
 Technical activities
---------------------------
+---------------------
 
 First of all, a technical user needs to configure the logical hierarchy of the SVG and to define datasets with the business data he/she wishes to show. Finally he/she must type the document template. We will give details about these points in the following sections.
 
