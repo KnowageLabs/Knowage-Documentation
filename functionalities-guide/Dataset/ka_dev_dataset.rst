@@ -268,15 +268,15 @@ This is available only in KnowageBD and KnowageSI.
 
 A Ckan dataset let you use open data as resource. You have to fill all the settings fields properly to let the dataset work successfully. Let’s have a look on them:
 
- -  **File Type**\ ***: this field specifies the type of the file you want to import. Allowed ones are: CSV or XML;
- -  **Delimiter Character**\ ***: Here you have to insert the delimiter used in the file. Allowe values are: , ; \\t \|
- -  **Quote Character**\ ***: Allowed values for this field are: “ or ”;
+ -  **File Type**: this field specifies the type of the file you want to import. Allowed ones are: CSV or XML;
+ -  **Delimiter Character**: Here you have to insert the delimiter used in the file. Allowe values are: , ; \\t \|
+ -  **Quote Character**: Allowed values for this field are: “ or ”;
  -  **Encoding**: Here you have to specify the encoding typology used. Allowed values are: UTF-8, UTF-16, windows-1252 , ASCII or    ISO-8859-1;
  -  **Skip rows**: the number inserted stands for the rows not to be imported;
  -  **Limit rows**: it is the maximum number of rows to be imported. If you leave it blank all rows are uploaded;
  -  **XLS numbers**: it is the number of scheets to be imported;
- -  **CKAN ID**\ ***: here you have to insert the ID of the resource you are interested in. Look for it among the additional information in Ckan dataset webpage.
- -  **CKAN url**\ ***: it is the direct link to download the resources available on Ckan dataset webpage.
+ -  **CKAN ID** : here you have to insert the ID of the resource you are interested in. Look for it among the additional information in Ckan dataset webpage.
+ -  **CKAN url**: it is the direct link to download the resources available on Ckan dataset webpage.
 
 We marked with the \* symbol the mandatory fields. We suggest to do a preview of your dataset before saving it to be sure everything have been correctly configured.
 
@@ -285,416 +285,224 @@ Federated
 
 This is available only in KnowageBD and KnowageSI.
 
-In this area you can only manage metadata, visibility and perform the
-   advanced operation we are going to describe at the end of this
-   section.
+In this area you can only manage metadata, visibility and perform the advanced operation we are going to describe at the end of this section.
 
-   Instead, the creation of **Federated** done can be accessed from **My
-   data** BI functionality under **Federatation Definitions**.
+Instead, the creation of **Federated** done can be accessed from **My data** BI functionality under **Federatation Definitions**.
 
 Rest
 ^^^^
 
-   The REST dataset enables Knowage to retrieve data from external REST
-   services. The developer of the dataset is free to define the body,
-   method, headers and parameters of the request; then he has to specify
-   how to read data from the service response using JSON Path
-   expressions (at the moment no other ways to read data is available,
-   therefore the REST service is presumed to return data in JSON
-   format).
+The REST dataset enables Knowage to retrieve data from external REST services. The developer of the dataset is free to define the body, method, headers and parameters of the request; then he has to specify how to read data from the service response using JSON Path expressions (at the moment no other ways to read data is available, therefore the REST service is presumed to return data in JSON format).
 
-   Let’s make as example in order to understand how it works. Suppose an
-   external REST service providing data from sensors, we want to
-   retrieve values from prosumers electricity meters, a prosumer being a
-   producer/consumer of electricity, and that the request body should be
-   something like:
+Let’s make as example in order to understand how it works. Suppose an external REST service providing data from sensors, we want to retrieve values from prosumers electricity meters, a prosumer being a producer/consumer of electricity, and that the request body should be something like:
 
-+------+-------------------------+
-|    { | "entities": [ {         |
-|      |                         |
-|      |    "isPattern": "true", |
-+------+-------------------------+
+       .. code-block:: json
+         :caption: Request body code
+         :linenos:
+
+         {  "entities": [ {         
+            "isPattern": "true", 
+            "id": ".*", 
+            "type":"Meter"
+         }  }     ] 
 
 
+while querying for "Meter" entities, and that the JSON response is something like:
 
-+------+---+----------------+
-|      |   | "id": ".*",    |
-|      |   |                |
-|      |   | "type":"Meter" |
-+======+===+================+
-|    } | } |    ]           |
-+------+---+----------------+
+       .. code-block:: json
+         :caption: RJSON response code
+         :linenos:
 
+         {                                          
+                "contextResponses": [                   
+             {                                       
+                "contextElement": {                     
+                "id": "pros6_Meter",                    
+                "type": "Meter",                        
+                "isPattern": "false",                   
+                "attributes": [                         
+                    {                                           
+                      "name": "atTime",                                           
+                      "type": "timestamp",                                           
+                       "value": "2015-07-21T14:49:46.968+0200"                                        
+                     },                                         
+                     {                                       
+                      "name": "downstreamActivePower",        
+                      "type": "double",                       
+                      "value": "3.8"                          
+                     },                                     
+                    {                                       
+                      "name": "prosumerId",                   
+                      "type": "string",                       
+                      "value": "pros3"                        
+                    },                                      
+                    {                                       
+                      "name": "unitOfMeasurement",            
+                      "type": "string",                       
+                      "value": "kW"                           
+                     },                                      
+                     {                                       
+                      "name": "upstreamActivePower",          
+                      "type": "double",                       
+                      "value": "3.97"                         
+                      }                                       
+                    ]                                       
+                    },                                      
+               "statusCode": {                         
+                       "reasonPhrase": "OK",                   
+                       "code": "200"                           
+                             }                                       
+                 },                                         
+                    {                                          
+                "contextElement": {                     
+                       "id": "pros5_Meter",                    
+                       "type": "Meter",                        
+                       "isPattern": "false",                   
+                       "attributes": [                         
+                    {                                       
+                       "name": "atTime",                       
+                       "type": "timestamp",                    
+                       "value": "2015-08-09T20:29:45.698+0200" 
+                    },                                      
+                    {                                       
+                       "name": "downstreamActivePower",        
+                       "type": "double",                       
+                       "value": "1.8"                          
+                    },                                      
+                     {                                       
+                       "name": "prosumerId",                   
+                       "type": "string",                       
+                       "value": "pros5"                        
+                   },                                      
+                    {                                       
+                      "name": "unitOfMeasurement",            
+                      "type": "string",                       
+                      "value": "kW"                           
+                   },                                      
+                 {                                       
+                      "name": "upstreamActivePower",          
+                      "type": "double",                       
+                      "value": "0"                            
+                  }                                       
+                          ]    
+                 },                                      
+                      "statusCode": {                         
+                      "reasonPhrase": "OK",                   
+                      "code": "200"                           
+                       }                                       
+                 }                                          
+                         ] 
+                 }    
 
+In this example we have two **Context Elements** with the following attributes:
 
-    Request body code.
-
-querying for "Meter" entities, and that the JSON response is something
-like:
-
-+--------------------------------------------+
-| {                                          |
-|                                            |
-|    "contextResponses": [                   |
-|                                            |
-|    {                                       |
-|                                            |
-|    "contextElement": {                     |
-|                                            |
-|    "id": "pros6_Meter",                    |
-|                                            |
-|    "type": "Meter",                        |
-|                                            |
-|    "isPattern": "false",                   |
-|                                            |
-|    "attributes": [                         |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "atTime",                       |
-|                                            |
-|    "type": "timestamp",                    |
-|                                            |
-|    "value": "2015-07-21T14:49:46.968+0200" |
-|                                            |
-|    },                                      |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "downstreamActivePower",        |
-|                                            |
-|    "type": "double",                       |
-|                                            |
-|    "value": "3.8"                          |
-|                                            |
-|    },                                      |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "prosumerId",                   |
-|                                            |
-|    "type": "string",                       |
-|                                            |
-|    "value": "pros3"                        |
-|                                            |
-|    },                                      |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "unitOfMeasurement",            |
-|                                            |
-|    "type": "string",                       |
-|                                            |
-|    "value": "kW"                           |
-|                                            |
-|    },                                      |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "upstreamActivePower",          |
-|                                            |
-|    "type": "double",                       |
-|                                            |
-|    "value": "3.97"                         |
-|                                            |
-|    }                                       |
-|                                            |
-|    ]                                       |
-|                                            |
-|    },                                      |
-+--------------------------------------------+
-
-
-
-+--------------------------------------------+
-|    "statusCode": {                         |
-|                                            |
-|    "reasonPhrase": "OK",                   |
-|                                            |
-|    "code": "200"                           |
-|                                            |
-|    }                                       |
-|                                            |
-| },                                         |
-|                                            |
-| {                                          |
-|                                            |
-|    "contextElement": {                     |
-|                                            |
-|    "id": "pros5_Meter",                    |
-|                                            |
-|    "type": "Meter",                        |
-|                                            |
-|    "isPattern": "false",                   |
-|                                            |
-|    "attributes": [                         |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "atTime",                       |
-|                                            |
-|    "type": "timestamp",                    |
-|                                            |
-|    "value": "2015-08-09T20:29:45.698+0200" |
-|                                            |
-|    },                                      |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "downstreamActivePower",        |
-|                                            |
-|    "type": "double",                       |
-|                                            |
-|    "value": "1.8"                          |
-|                                            |
-|    },                                      |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "prosumerId",                   |
-|                                            |
-|    "type": "string",                       |
-|                                            |
-|    "value": "pros5"                        |
-|                                            |
-|    },                                      |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "unitOfMeasurement",            |
-|                                            |
-|    "type": "string",                       |
-|                                            |
-|    "value": "kW"                           |
-|                                            |
-|    },                                      |
-|                                            |
-|    {                                       |
-|                                            |
-|    "name": "upstreamActivePower",          |
-|                                            |
-|    "type": "double",                       |
-|                                            |
-|    "value": "0"                            |
-|                                            |
-|    }                                       |
-|                                            |
-|    ]                                       |
-|                                            |
-|    },                                      |
-|                                            |
-|    "statusCode": {                         |
-|                                            |
-|    "reasonPhrase": "OK",                   |
-|                                            |
-|    "code": "200"                           |
-|                                            |
-|    }                                       |
-|                                            |
-| }                                          |
-+--------------------------------------------+
+ -  **atTime** ;
+ -  **downstreamActivePower**;
+ -  **prosumerId**;
+ -  **unitOfMeasurement**;
+ -  **upstreamActivePower**.
 
 
-+------+
-|    ] |
-|      |
-| }    |
-+------+
-
-
-
-    JSON response code.
-
-In this example we have two **Context Elements** with the following
-attributes:
-
--  **atTime** ;
-
--  **downstreamActivePower**;
-
--  **prosumerId**;
-
--  **unitOfMeasurement**;
-
--  **upstreamActivePower**.
-
-..
-
-   Let’s see how to define a Knowage dataset:
+Let’s see how to define a Knowage dataset:
 
    |image26|
 
    Figure 3.10: REST dataset interface.
 
-   We specified
+We specified
 
 -  the URL of the REST service;
-
 -  the request body;
-
--  the request headers (in this example we ask the service for JSON
-   data);
-
+-  the request headers (in this example we ask the service for JSON data);
 -  the HTTP method;
+-  the JSONPath to retrieve the items (see below), i.e. the JSONPath where the items are stored;
+-  the JSONPaths to retrieve the attributes (see below), i.e. the JSONPaths useful to retrieve the attributes of the items we are looking for; those paths are relative to the "JSON Path items";
+-  offset, fetch size and max results parameters, in case the REST service has pagination.
 
--  the JSONPath to retrieve the items (see below), i.e. the JSONPath
-   where the items are stored;
+Once followed the steps above the user obtains upstream/downstream active power for each prosumer.
 
--  the JSONPaths to retrieve the attributes (see below), i.e. the
-   JSONPaths useful to retrieve the attributes of the items we are
-   looking for; those paths are relative to the "JSON Path items";
+**NGSI checkbox** is specific for NGSI REST calls: it permits easy the job when querying the Orion Context Broker (`https://github.com/telefonicaid/fiware-orion) <https://github.com/telefonicaid/fiware-orion>`__ and to omit some of the REST fields (since the JSON format from NGSI s pecifications is fixed): you don’t need to specify headers, JSONPath items, JSONPath attributes (all available attributes are fetched) and pagination parameters (offset and fetch size).
 
--  offset, fetch size and max results parameters, in case the REST
-   service has pagination.
+When checking the **Use directly JSON attributes** checkbox, yon can skip the definition of the JSONPath attributes, since the JSON structure is presumed to be fixed as in the following example:
 
-..
+       .. code-block:: json
+         :caption: Use directly JSON attributes
+         :linenos:
 
-   Once followed the steps above the user obtains upstream/downstream
-   active power for each prosumer.
-
-   **NGSI checkbox** is specific for NGSI REST calls: it permits easy
-   the job when querying the
-
-   Orion Context Broker
-   (`https://github.com/telefonicaid/fiware-orion) <https://github.com/telefonicaid/fiware-orion>`__
-   and to omit some of the REST fields (since the JSON format from NGSI
-   s pecifications is fixed): you don’t need to specify headers,
-   JSONPath items, JSONPath attributes (all available attributes are
-   fetched) and pagination parameters (offset and fetch size).
-
-   When checking the **Use directly JSON attributes** checkbox, yon can
-   skip the definition of the JSONPath attributes, since the JSON
-   structure is presumed to be fixed as in the following example:
-
-+---------------------------------+
-| {                               |
-|                                 |
-|    "contextResponses": [        |
-|                                 |
-|    {                            |
-|                                 |
-|    "prosumerId":"pros1",        |
-|                                 |
-|    "downstreamActivePower":3.1, |
-|                                 |
-|    "upstreamActivePower":0.0    |
-|                                 |
-|    },{                          |
-|                                 |
-|    "prosumerId":"pros2",        |
-|                                 |
-|    "downstreamActivePower":0.5, |
-|                                 |
-|    "upstreamActivePower":2.4    |
-|                                 |
-|    }                            |
-|                                 |
-|    ]                            |
-|                                 |
-| }                               |
-+---------------------------------+
+         {                               
+          "contextResponses": [        
+            {                            
+              "prosumerId":"pros1",        
+              "downstreamActivePower":3.1, 
+              "upstreamActivePower":0.0    
+            },{                          
+              "prosumerId":"pros2",        
+              "downstreamActivePower":0.5, 
+              "upstreamActivePower":2.4    
+               }                            
+                             ]                            
+         }                               
 
 
+Then it will be enough to define only the **JSON Path Items** and check **Use directly JSON Attributes** without defining the attributes; the attributes will be retrieved automatically from the JSON object.
 
-   Use directly JSON attributes.
-
-   then it will be enough to define only the **JSON Path Items** and
-   check **Use directly JSON Attributes** without defining the
-   attributes; the attributes will be retrieved automatically from the
-   JSON object.
-
-   In the above examples, the JSON Path Items will be:
-   $.contextResponses[:sub:`\*`] and the dataset result will look like:
-
-Big Data- NoSQL
-
-+---------------+-----------------------+---------------------+
-|    prosumerId | downstreamActivePower | upstreamActivePower |
-+===============+=======================+=====================+
-| pros1         | 3.1                   | 0.0                 |
-+---------------+-----------------------+---------------------+
-| pros2         | 0.5                   | 2.4                 |
-+---------------+-----------------------+---------------------+
-
-..
-
-   Table 3.2: Dataset result
-
-   The REST dataset permits usage of profile attributes and parameters
-   using the same syntax as for other dataset types: $<profile
-   attribute> and $P<parameter>. You can use both of them as
-   placeholders in every field: most likely you need to use them in REST
-   service URL or on the request body. As an example, suppose you want
-   to retrieve the value of just one prosumer that is specified by the
-   "prosumerId" parameter, you have to set the request body as:
-
-+--------------------------+
-| {                        |
-|                          |
-|    "entities":[          |
-|                          |
-|    {                     |
-|                          |
-|    "isPattern":"true",   |
-|                          |
-|    "type":"Meter",       |
-|                          |
-|    "id":"$P{prosumerId}" |
-|                          |
-|    }                     |
-|                          |
-|    ]                     |
-|                          |
-| }                        |
-+--------------------------+
+In the above examples, the JSON Path Items will be: $.contextResponses[:sub:`\*`] and the dataset result will look like:
 
 
-   Request body for prosumerId parameter.
+.. table:: Dataset result
+  :widths: auto
+  
+  +---------------+-----------------------+---------------------+
+  |    prosumerId | downstreamActivePower | upstreamActivePower |
+  +===============+=======================+=====================+
+  | pros1         | 3.1                   | 0.0                 |
+  +---------------+-----------------------+---------------------+
+  | pros2         | 0.5                   | 2.4                 |
+  +---------------+-----------------------+---------------------+
+
+
+The REST dataset permits usage of profile attributes and parameters using the same syntax as for other dataset types: *$<profile attribute>* and *$P<parameter>*. You can use both of them as placeholders in every field: most likely you need to use them in REST service URL or on the request body. As an example, suppose you want to retrieve the value of just one prosumer that is specified by the "prosumerId" parameter, you have to set the request body as:
+
+       .. code-block:: json
+         :caption: Request body for prosumerId parameter
+         :linenos:
+
+         {                        
+          "entities":[          
+            {                     
+             "isPattern":"true",   
+             "type":"Meter",       
+             "id":"$P{prosumerId}" 
+            }                     
+                     ]                     
+         }                        
+
+
+
 
 Big Data- NoSQL
 ^^^^^^^^^^^^^^^
 
-   KnowageBD and KnowagePM provide the possibility to define Big Data
-   dataset as well as Big Data datsources. To set these kind of datasets
-   the user just have to select the **Query** type and insert the code
-   according to the dialect in use (that is accordingly to the
-   datasource dialect).
+KnowageBD and KnowagePM provide the possibility to define Big Data dataset as well as Big Data datsources. To set these kind of datasets the user just have to select the **Query** type and insert the code according to the dialect in use (that is accordingly to the datasource dialect).
 
-   For example, let’s suppose we defined a Mongo datasource and want to
-   create a dataset upon it. Therefore choose the "‘Query type‘ dataset
-   and, as we revealed in advance, choose the correct language: in this
-   case JS instead of SQL. The script must respect some convention, in
-   particular:
+For example, let’s suppose we defined a Mongo datasource and want to create a dataset upon it. Therefore choose the "‘Query type‘ dataset and, as we revealed in advance, choose the correct language: in this case JS instead of SQL. The script must respect some convention, in particular:
 
 -  the return value of the query must be assigned to a variable with
    name ”query“. For example
 
-..
+       .. code-block:: javascript
+         :caption: Request body for prosumerId parameter
+         :linenos:
+   
+         var query = db.store.find();
 
-   var query = db.store.find();
+-  if the return value doesn’t come from a query, for example it’s a js variable, than it must be assigned to a variable with name **sbiDatasetfixedResult**. The result will be managed by Knowage accordingly to the type of the variable:
 
--  if the return value doesn’t come from a query, for example it’s a js
-   variable, than it
+    -  if it’s a primitive type the resulting dataset contains only a columns with name ”result“ and value equal to the value of the variable sbiDatasetfixedResult;
 
-Big Data- NoSQL
+    -  if it’s an object, the resulting dataset contains a column for each property of the object.
 
-   must be assigned to a variable with name **sbiDatasetfixedResult**.
-   The result will be managed by Knowage accordingly to the type of the
-   variable:
-
--  if it’s a primitive type the resulting dataset contains only a
-   columns with name ”result“ and value equal to the value of the
-   variable sbiDatasetfixedResult;
-
--  if it’s an object, the resulting dataset contains a column for each
-   property of the object.
-
-..
-
-   For example, if we consider the query
-
-   sbiDatasetfixedResult = {a:2, b:3}, the dataset is as shown in Table
-   3.3
+   For example, if we consider the query sbiDatasetfixedResult = {a:2, b:3}, the dataset is as shown in Table  3.3
 
 +------+------+
 |    a |    b |
@@ -702,18 +510,15 @@ Big Data- NoSQL
 |    2 | 3    |
 +------+------+
 
-..
+
 
    Table 3.3: Dataset output.
 
--  if it’s a list than the columns of the dataset are the union of the
-   properties of all the objects contained in the list.
+    -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
 
-..
 
-   For istance, let’s consider the query
 
-   sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] the dataset is
+   For istance, let’s consider the query sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] the dataset is
 
 +------+------+------+
 |    a | b    |    c |
@@ -727,51 +532,36 @@ Big Data- NoSQL
 
    Table 3.4: Dataset output.
 
-   The result of a query in MongoDB can assume different shapes: Cursor,
-   Document, List, fix value. Knowage can manage automatically the
-   result of the query. The algorithm to understand how to manage the
-   result is very simple.
+The result of a query in MongoDB can assume different shapes: Cursor, Document, List, fix value. Knowage can manage automatically the result of the query. The algorithm to understand how to manage the result is very simple.
 
--  If in the query it finds the variable sbiDatasetfixedResult the
-   result will be managed as described above.
+-  If in the query it finds the variable sbiDatasetfixedResult the result will be managed as described above.
 
--  If in the query it finds a findOne the result will be managed as a
-   single document.
+-  If in the query it finds a findOne the result will be managed as a single document.
 
--  If in the query it finds an aggregate the result will be managed as
-   an aggregation.
+-  If in the query it finds an aggregate the result will be managed as an aggregation.
 
 -  In the ether cases the result will be managed as a Cursor.
 
- Parameters and profile attributes
 
-   It’s possible to force the behaviour. In particular the result stored
-   in the variable query, will be managed:
 
--  as cursor if in the script exist a variable with value
-   LIST_DOCUMENTS_QUERY.
+It’s possible to force the behaviour. In particular the result stored in the variable query, will be managed:
+
+-  as cursor if in the script exist a variable with value LIST_DOCUMENTS_QUERY.
 
 
    Example: var retVal= "LIST_DOCUMENTS_QUERY“;
 
--  a document if in the script exist a variable with value
-   SINGLE_DOCUMENT_QUERY.
+-  a document if in the script exist a variable with value SINGLE_DOCUMENT_QUERY.
 
 
    Example: var retVal= "SINGLE_DOCUMENT_QUERY”.
 
-   Similar techniques can be applied to the other languages. We leave
-   the reader to examine the dialect related to each Big Data
-   datasource.
+Similar techniques can be applied to the other languages. We leave the reader to examine the dialect related to each Big Data datasource.
 
   Parameters and profile attributes
 --------------------------------------
 
-   All dataset types except **File** and **CKAN** allow you to add
-   parameters. This means that results can be customized according to
-   the value of one or more parameters at execution time. Parameters can
-   be managed from the **Type** tab. Two operations are needed to add a
-   parameter to the dataset:
+All dataset types except **File** and **CKAN** allow you to add parameters. This means that results can be customized according to the value of one or more parameters at execution time. Parameters can be managed from the **Type** tab. Two operations are needed to add a parameter to the dataset:
 
 1. insert the parameter in the actual text of the dataset;
 
