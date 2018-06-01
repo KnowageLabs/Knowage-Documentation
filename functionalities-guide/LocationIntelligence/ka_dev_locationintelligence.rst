@@ -183,78 +183,79 @@ The template of the **GEOReport Engine** is a JSON file. The key information inc
 -  definition of the target layer.
 
 In Code9.3 we provide a more complex version of the previous template code. The results will be similar to the one obtained in Figure 15.27, but you will provide to the user extra features like filters and cross navigation. Moreover you see how to configure some elements from template, i.e. visualization coordinates, analysis customization, etc.
-
+ 
 .. code-block:: json
-       :caption: Advanced template definition.
-       :linenos:
-       
-			mapName:"Test",
+      	 :caption: Advanced template definition.
+         :linenos:
+	 
+       		{
+	
+		mapName:"Test",
+		
+		analysisType:"choropleth",
+		
+		targetLayerConf:{"label":"usa_states_file"},
+		
+		datasetJoinColumns:"sales_state",
+		
+		layerJoinColumns:"STATE_ABBR",
+		
+		indicators:[
+		
+			{"name":"store_sales","label":"Store sales"},
+			{"name":"unit_sales","label":"Unit Sales"},
+			{"name":"store_cost","label":"Store cost"}
+			],
+		
+		filters:[
+			{"name":"store_country","label":"Nazione"}, 
+			{"name":"sales_region","label":"Regione"} 
+			],
+		
+		analysisConf:{
+			choropleth:{
+				"method":"CLASSIFY_BY_EQUAL_INTERVALS", 
+				"classes":3,
+				"fromColor":"rgb(255, 255, 0)","toColor":"rgb(0, 128, 0)" 
+			},
+			"proportionalSymbol":{
+				"minRadiusSize":2,
+				"maxRadiusSize":20,
+				"color":"rgb(255, 255, 0)"
+			}, 
+		chart:{
+			"indicator_1":"red",
+			"indicator_2":"green",
+			"indicator_3":"blue"} 
+			},
 			
-			analysisType:"choropleth",
-			
-			targetLayerConf:{"label":"usa_states_file"},
-			
-			datasetJoinColumns:"sales_state",
-			
-			layerJoinColumns:"STATE_ABBR",
-			
-			indicators:[
-			
-				{"name":"store_sales","label":"Store sales"},
-				{"name":"unit_sales","label":"Unit Sales"},
-				{"name":"store_cost","label":"Store cost"}
-				],
-			
-			filters:[
-				{"name":"store_country","label":"Nazione"}, 
-				{"name":"sales_region","label":"Regione"} 
-				],
-			
-			analysisConf:{
-				choropleth:{
-					"method":"CLASSIFY_BY_EQUAL_INTERVALS", 
-					"classes":3,
-					"fromColor":"rgb(255, 255, 0)","toColor":"rgb(0, 128, 0)" 
-				},
-				"proportionalSymbol":{
-					"minRadiusSize":2,
-					"maxRadiusSize":20,
-					"color":"rgb(255, 255, 0)"
-				}, 
-			chart:{
-				"indicator_1":"red",
-				"indicator_2":"green",
-				"indicator_3":"blue"} 
-				},
-				
-			"currentView":{"center":[-1.1192826925855E7,4648063.947363],"zoom":4},
-			
-			indicatorContainer:"store","storeType":"physicalStore",
-			
-			
-			"overLayersConf":[],
-			
-			"selectedBaseLayer":"OpenStreetMap" 
-			}
-			
-				crossnav : { 
-					label : 'arrive chart', 
-					multiSelect: true,
-					staticParams : { 
-						product_family : 'Food' 
-				},
-			
-					dynamicParams : [{ 
-						state : 'STATE_ABBR', 
-						scope : 'feature'
-					} , {
-						inputpar : 'PAR1', 
-						scope : 'env', 
-						outputpar: 'output_par'
-				}] 
-				} 
-			}
-
+		"currentView":{"center":[-1.1192826925855E7,4648063.947363],"zoom":4},
+		
+		indicatorContainer:"store","storeType":"physicalStore",
+		
+		
+		"overLayersConf":[],
+		
+		"selectedBaseLayer":"OpenStreetMap" 
+		}
+		
+			crossnav : { 
+				label : 'arrive chart', 
+				multiSelect: true,
+				staticParams : { 
+					product_family : 'Food' 
+			},
+		
+				dynamicParams : [{ 
+					state : 'STATE_ABBR', 
+					scope : 'feature'
+				} , {
+					inputpar : 'PAR1', 
+					scope : 'env', 
+					outputpar: 'output_par'
+			}] 
+			} 
+		}
 
    Let us describe these codes in detail we will describe the Minimal template definition at first and then we will go on with the extra features contained in advanced template definition. So the following are the mandatory template information:
 
