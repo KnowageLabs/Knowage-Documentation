@@ -1,27 +1,18 @@
-In this section we suppose to log in as an admin user. In this case the
-dataset definition is no longer available under **My data** section.
-Otherwise the functionality is granted by the **Dataset** item under the
-**Data Providers** section of server menu, as highlighted in Figure 3.1.
-This area offers you the possibility to define datasets among a wide
-range of types. Moreover you can add parameters, define scope, manage
-metadata and perform advanced operation on datasets. While the datasets
-creation and management between user and admin change in favour to the
-latter, the **Models** and **Federation definitions** tabs available in
-**My data** section remain identical. For this reason in this chapter we
-are going to describe only the dataset creation and management.
+Advanced Data Access
+====================
+
+In this section we suppose to log in as an admin user. In this case the dataset definition is no longer available under **My data** section. Otherwise the functionality is granted by the **Dataset** item under the **Data Providers** section of server menu, as highlighted in Figure 3.1. This area offers you the possibility to define datasets among a wide range of types. Moreover you can add parameters, define scope, manage metadata and perform advanced operation on datasets. While the datasets creation and management between user and admin change in favour to the latter, the **Models** and **Federation definitions** tabs available in **My data** section remain identical. For this reason in this chapter we are going to describe only the dataset creation and management.
 
  My first dataset
 --------------------
 
-As stated before, you can open the dataset graphical editor by selecting
-**Dataset** in **Data Provider**\ panel, as shown in Figure 3.1.
+As stated before, you can open the dataset graphical editor by selecting **Dataset** in **Data Provider**\ panel, as shown in Figure 3.1.
 
    |image13|
 
    Figure 3.1: Access data set creation area.
 
-A dataset acts as a data provider for analytical documents thatís why
-many types are supported. Knowage manages several dataset types:
+A dataset acts as a data provider for analytical documents that‚Äôs why many types are supported. Knowage manages several dataset types:
 
 -  File,
 
@@ -45,14 +36,11 @@ many types are supported. Knowage manages several dataset types:
 
 -  Big Data (only in KnowageBD and KnowagePM).
 
-All types of dataset share some common operations, while others are
-specific to each of them. The process for defining a dataset inside
-Knowage follows:
+All types of dataset share some common operations, while others are specific to each of them. The process for defining a dataset inside Knowage follows:
 
 1. choose a name and a unique label;
 
-2. choose the type of dataset and the source, depending on the dataset
-      type;
+2. choose the type of dataset and the source, depending on the dataset type;
 
 3. write the code defining the dataset;
 
@@ -62,276 +50,180 @@ Knowage follows:
 
 6. test the dataset and save it.
 
-Some of these steps depend on the specific type of dataset, as we will
-see.
+Some of these steps depend on the specific type of dataset, as we will see.
 
 New dataset creation
 ~~~~~~~~~~~~~~~~~~~~
 
-The dataset graphical editor is divided into two areas: the left side
-shows the list of all available datasets and the right one shows three
-tabs, each one corresponding to a specific type of editing operation on
-dataset.
+The dataset graphical editor is divided into two areas: the left side shows the list of all available datasets and the right one shows three tabs, each one corresponding to a specific type of editing operation on dataset.
 
-Each item of the list in the left panel shows the dataset label (i.e.,
-the dataset unique identifier), name and type, as well as the number of
-documents currently using it. To create a new dataset, click the **Add**
-icon |image14|. If your dataset is similar to another existing dataset,
-you can click
+Each item of the list in the left panel shows the dataset label (i.e., the dataset unique identifier), name and type, as well as the number of documents currently using it. To create a new dataset, click the **Add** icon |image14|. If your dataset is similar to another existing dataset, you can click the **Clone** icon |image16|. This will create a copy of the dataset, except for the label that must edit once again. All fields are pre-filled with values from the existing dataset but they can be modified and saved without affecting the original dataset.
+
+To remove an existing dataset, click the small dustbin icon |image17| on the corresponding row of the dataset list.
+
+Once you have clicked the **Add** button, you can fill in the dataset definition form. Each tab in the right panel corresponds to a step of the dataset definition process.
+
+In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to Figure 3.2). In the lower part you can see a versioning system for the dataset: Knowage supports dataset versioning, as shown in Figure 3.3, therefore, each time you edit and save a dataset, the older version is archived and is still accessible from the lower part of the detail panel.
 
    |image15|
 
    Figure 3.2: Dataset Panel.
 
-the **Clone** icon |image16|. This will create a copy of the dataset,
-except for the label that must edit once again. All fields are
-pre-filled with values from the existing dataset but they can be
-modified and saved without affecting the original dataset.
-
-To remove an existing dataset, click the small dustbin icon |image17| on
-the corresponding row of the dataset list.
-
-Once you have clicked the **Add** button, you can fill in the dataset
-definition form. Each tab in the right panel corresponds to a step of
-the dataset definition process.
-
-In the **Detail** tab you define the Name, the Label and an optional
-Description of the dataset (refer to Figure 3.2). In the lower part you
-can see a versioning system for the dataset: Knowage supports dataset
-versioning, as shown in Figure 3.3, therefore, each time you edit and
-save a dataset, the older version is archived and is still accessible
-from the lower part of the detail panel.
-
-The Scope lets you choose between two options, whose combination allows
-the definition of fine-grained purpose datasets. In Table 3.1 all
-details of possible matching are provided.
+The Scope lets you choose between two options, whose combination allows the definition of fine-grained purpose datasets. In Table 3.1 all details of possible matching are provided.
 
    |image18|
 
    Figure 3.3: The dataset versioning.
+   
+   .. table:: Scope options
+     :widths: auto
 
-+-----------------------+-----------------------+-----------------------+
-|    Dataset            | Private               | Public                |
-+=======================+=======================+=======================+
-|    User               | Created from file     | Dataset created from  |
-|                       | (CSV, XLS) or from    | file (CSV, XLS) or    |
-|                       | QbE (My Data) for     | from QbE (My Data)    |
-|                       | personal use only.    | and shared with other |
-|                       |                       | users.                |
-+-----------------------+-----------------------+-----------------------+
-|    Technical          | Not applicable.       | Dataset created by a  |
-|                       |                       | BI developer to be    |
-|                       |                       | used in one or more   |
-|                       |                       | documents.            |
-|                       |                       |                       |
-|                       |                       | Not visible to end    |
-|                       |                       | users.                |
-+-----------------------+-----------------------+-----------------------+
-|    Enterprise         | Not applicable.       | Dataset of any type   |
-|                       |                       | created by a          |
-|                       |                       | technical user and    |
-|                       |                       | certified by a        |
-|                       |                       | trusted entity within |
-|                       |                       | the organization, and |
-|                       |                       | made available to all |
-|                       |                       | end users for reuse.  |
-+-----------------------+-----------------------+-----------------------+
+     +-----------------------+-----------------------+-----------------------+
+     |    Dataset            | Private               | Public                |
+     +=======================+=======================+=======================+
+     |    User               | Created from file     | Dataset created from  |
+     |                       | (CSV, XLS) or from    | file (CSV, XLS) or    |
+     |                       | QbE (My Data) for     | from QbE (My Data)    |
+     |                       | personal use only.    | and shared with other |
+     |                       |                       | users.                |
+     +-----------------------+-----------------------+-----------------------+
+     |    Technical          | Not applicable.       | Dataset created by a  |
+     |                       |                       | BI developer to be    |
+     |                       |                       | used in one or more   |  
+     |                       |                       | documents.            |
+     |                       |                       |                       |
+     |                       |                       | Not visible to end    |
+     |                       |                       | users.                |
+     +-----------------------+-----------------------+-----------------------+
+     |    Enterprise         | Not applicable.       | Dataset of any type   |
+     |                       |                       | created by a          | 
+     |                       |                       | technical user and    |
+     |                       |                       | certified by a        |
+     |                       |                       | trusted entity within |
+     |                       |                       | the organization, and |
+     |                       |                       | made available to all |
+     |                       |                       | end users for reuse.  |    
+     +-----------------------+-----------------------+-----------------------+
 
-..
+
 
    Table 3.1: Scope options.
 
-You can also specify the Category of the dataset. This field is not
-mandatory but it can be used to categorize datasets in your BI project,
-so that you can easily recover them when performing searches.
+You can also specify the Category of the dataset. This field is not mandatory but it can be used to categorize datasets in your BI project, so that you can easily recover them when performing searches.
 
-In the **Type** tab you can define the type of dataset: here you have to
-write the code or upload an XLS file or call for a web service
-accordingly to the dataset type and add parameters to it, if any. An
-example is shown in Figure 3.4.
+In the **Type** tab you can define the type of dataset: here you have to write the code or upload an XLS file or call for a web service accordingly to the dataset type and add parameters to it, if any. An example is shown in Figure 3.4.
 
    |image19|
 
    Figure 3.4: The dataset type definition.
 
-In the **Advanced** tab, shown in Figure 3.5, you can apply the pivoting
-transformation to the dataset results if needed or decide to persist the
-dataset.
+In the **Advanced** tab, shown in Figure 3.5, you can apply the pivoting transformation to the dataset results if needed or decide to persist the dataset.
 
    |image20|
 
    Figure 3.5: The dataset trasformation tab.
 
-Once all those settings have been performed you can see a preview of the
-dataset results clicking on the **Preview** button available on the top
-right corner of the page. It is recommended to check preview to detect
-possible errors in the dataset code before associating it to a document.
+Once all those settings have been performed you can see a preview of the dataset results clicking on the **Preview** button available on the top right corner of the page. It is recommended to check preview to detect possible errors in the dataset code before associating it to a document.
 
-|image21|\ Note that the metadata can be manage by clicking on the icon
-and use the same criterion described in Dataset Otherwise use the
-icon to save without associating any metadata.
+Note that the metadata can be manage by clicking on the icon |image21| and use the same criterion described in Dataset Otherwise use the icon to save without associating any metadata.
 
 Let us describe more deeply each type of dataset.
 
-File Dataset
 
 File Dataset
 ~~~~~~~~~~~~
 
-   A dataset of type File, see Figure 3.6, reads data from an XLS or CSV
-   file. To define a **File Dataset** select the File type, then upload
-   the file by browsing in your personal folders and set the proper
-   options for parsing it.
+A dataset of type File, see Figure 3.6, reads data from an XLS or CSV file. To define a **File Dataset** select the File type, then upload the file by browsing in your personal folders and set the proper options for parsing it.
 
    |image22|
 
    Figure 3.6: File Dataset.
 
-   Once you have uploaded the file, you can check and define the
-   metadata (measure or attribute) of each column.
+Once you have uploaded the file, you can check and define the metadata (measure or attribute) of each column.
 
 Query Dataset
 ~~~~~~~~~~~~~
 
-   Selecting the query option requires the BI developer to write an SQL
-   statement to retrieve data.
+Selecting the query option requires the BI developer to write an SQL statement to retrieve data.
 
-   The SQL dialect depends on the chosen data source. The SQL text must
-   be written in the Query text area. Look at SQL query example.
+The SQL dialect depends on the chosen data source. The SQL text must be written in the Query text area. Look at SQL query example.
 
-+-----------------------------------------------------------+
-| SELECT p.media_type as MEDIA, sum(s.store_sales) as SALES |
-|                                                           |
-| FROM sales_fact_1998 s                                    |
-|                                                           |
-| JOIN promotion p on s.promotion_id=p.promotion_id         |
-|                                                           |
-| GROUP BY p.media_type                                     |
-+-----------------------------------------------------------+
+       .. code-block:: sql
+         :caption: SQL query example
+         :linenos:
+
+         SELECT p.media_type as MEDIA, sum(s.store_sales) as SALES                                                            
+         FROM sales_fact_1998 s                                    
+         JOIN promotion p on s.promotion_id=p.promotion_id                                                                    
+         GROUP BY p.media_type                                     
 
 
 
-    SQL query example.
+It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or Javascript) and associating it to the query. Click on the **Edit Script** button (see Figure 3.7) and the script editor will open. Here you can write the script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
 
-   It is also possible to dynamically change the original text of the
-   query at runtime. This can be done by defining a script (Groovy or
-   Javascript) and associating it to the query. Click on the **Edit
-   Script** button (see Figure 3.7) and the script editor will open.
-
-   Here you can write the script. The base query is bounded to the
-   execution context of the script (variable query) together with its
-   parameters (variable parameters) and all the profile attributes of
-   the user that executes the dataset (variable attributes).
-
-   In Code Query datasetís script example we uses Javascript to dynamically modify the FROM clause
-   of the original query according to the value of the parameter year
-   selected at runtime by the user.
-
-Java Class Dataset
+In Code Query dataset‚Äôs script example we uses Javascript to dynamically modify the FROM clause of the original query according to the value of the parameter year selected at runtime by the user.
 
    |image23|
 
    Figure 3.7: Script editing for dataset.
 
-+-----------------------------------------------------------------------+
-|    if( parameters.get('year') == 1997 ) { query = query.replace(FROM  |
-|    sales_fact_1998, FROM sales_fact_1997);                            |
-|                                                                       |
-| } else { query = query; // do nothing                                 |
-|                                                                       |
-| }                                                                     |
-+-----------------------------------------------------------------------+
+       .. code-block:: javascript
+         :caption:  Query dataset‚Äôs script example
+         :linenos:
 
+         if( parameters.get('year') == 1997 ) { query = query.replace(FROM  
+         sales_fact_1998, FROM sales_fact_1997);                            
+         } else { query = query; // do nothing                                 
+         }                                                                     
 
- Query datasetís script example.
 
 Java Class Dataset
 ~~~~~~~~~~~~~~~~~~
 
-   Selecting a dataset of **Java Class** type allows the execution of
-   complex data elaboration implemented by a Java class. The compiled
-   class must be available at \\webapps\\ Knowage\WEB-INF\\ classes with
-   the proper package. The class defined by the developer must implement
-   the interface it.eng.spagobi.tools.dataset.bo.IJavaClassDataSet and
-   the methods implemented are:
+Selecting a dataset of **Java Class** type allows the execution of complex data elaboration implemented by a Java class. The compiled class must be available at \\webapps\\ Knowage\WEB-INF\\ classes with the proper package. The class defined by the developer must implement the interface it.eng.spagobi.tools.dataset.bo.IJavaClassDataSet and the methods implemented are:
 
 -  public String getValues(Map profile, Map parameters);
+   This method provides the result set of the dataset using profile attributes and parameters. The String to return must be the XML result set representation of type:
 
-..
+       .. code-block:: XML
+         :caption:  
+         :linenos:
 
-   This method provides the result set of the dataset using profile
-   attributes and parameters. The String to return must be the XML
-   result set representation of type:
-
-+----------------------------------+
-| <ROWS>                           |
-|                                  |
-|    <ROW value="value1" .../>     |
-|                                  |
-|    <ROW value="value2" .../> ... |
-|                                  |
-| </ROWS>                          |
-+----------------------------------+
-
-
+         <ROWS>                           
+         <ROW value="value1" .../>     
+         <ROW value="value2" .../> ... 
+         </ROWS>                          
 
 -  public List getNamesOfProfileAttributeRequired();
+   This method provides the names of profile attributes used by this dataset implementation class. This is a utility method, used during dataset execution.
 
-..
 
-   This method provides the names of profile attributes used by this
-   dataset implementation class. This is a utility method, used during
-   dataset execution.
-
-Script
 
 Script
 ~~~~~~
 
-   If you select this option, the results of the dataset will be
-   produced by a script. Therefore, the developer should write a script
-   returning an XML string containing a list of values with the syntax
-   shown below.
+If you select this option, the results of the dataset will be produced by a script. Therefore, the developer should write a script returning an XML string containing a list of values with the syntax shown below.
 
-+----------------------------------+
-| <ROWS>                           |
-|                                  |
-|    <ROW value="value1" .../>     |
-|                                  |
-|    <ROW value="value2" .../> ... |
-|                                  |
-| </ROWS>                          |
-+----------------------------------+
+       .. code-block:: XML
+         :caption:  
+         :linenos:
+
+         <ROWS>                           
+         <ROW value="value1" .../>     
+         <ROW value="value2" .../> ... 
+         </ROWS>   
 
 
-
-   If the script returns a single value, this will be automatically
-   encoded in the XML format above. The script must be written using
-   Groovy or Javascript language. Knowage already provides some Groovy
-   and Javascript functions returning the value of a single or
-   multi-value profile attribute. These functions are explained in the
-   information window that can be opened from the
-
-   **Dataset Type** tab. New custom functions can be added in
-   predefinedGroovyScript.groovy and predefinedJavascript.js files
-   contained in the KnowageUtils.jar file.
+If the script returns a single value, this will be automatically encoded in the XML format above. The script must be written using Groovy or Javascript language. Knowage already provides some Groovy and Javascript functions returning the value of a single or multi-value profile attribute. These functions are explained in the information window that can be opened from the **Dataset Type** tab. New custom functions can be added in *predefinedGroovyScript.groovy* and *predefinedJavascript.js* files contained in the *KnowageUtils.jar* file.
 
 QbE
 ~~~
 
-   This is available only in KnowageBD and KnowageSI.
+This is available only in KnowageBD and KnowageSI.
 
-   The QbE dataset type option allows the definition of dataset results
-   based on a query defined over a metamodel. To define a QbE dataset
-   you need to select the Data Source and Datamart that you want to use.
-   Once chosen your datamart you can click the lookup button of the Open
-   QbE field and a pop up window will appear showing a QbE interface
-   where you can define your query. Once saved, you can check the
-   generated query thanks to the View QbE Query.
+The QbE dataset type option allows the definition of dataset results based on a query defined over a metamodel. To define a QbE dataset you need to select the Data Source and Datamart that you want to use. Once chosen your datamart you can click the lookup button of the Open QbE field and a pop up window will appear showing a QbE interface where you can define your query. Once saved, you can check the generated query thanks to the View QbE Query.
 
-   All these features are exhibited in Figure 3.8.
-
-Custom Dataset
+All these features are exhibited in Figure 3.8.
 
    |image24|
 
@@ -340,56 +232,30 @@ Custom Dataset
 Custom Dataset
 ~~~~~~~~~~~~~~
 
-   Selecting a Custom dataset type allows the developer to execute
-   complex data elaboration by a custom Java dataset implementation.
-   There are two options:
+Selecting a Custom dataset type allows the developer to execute complex data elaboration by a custom Java dataset implementation. There are two options:
 
-ï implement the :sub:`it.eng.spagobi.tools.dataset.bo.IDataSet` interface;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ - implement the :sub:`it.eng.spagobi.tools.dataset.bo.IDataSet` interface;
+ - extend the it.eng.spagobi.tools.dataset.bo.AbstractCustomDataSet class.
 
--  extend the it.eng.spagobi.tools.dataset.bo.AbstractCustomDataSet
-      class. The methods executing the dataset that must be implemented
-      are:
+The methods executing the dataset that must be implemented are:
 
--  void loadData();
+ - void loadData();
+ - void loadData(int offset, int fetchSize, int maxResults);
 
--  void loadData(int offset, int fetchSize, int maxResults);
+Using the AbstractCustomDataset class allows the developer to access predefined utility methods, such as:
 
-..
+ -  public void setParamsMap(Map paramsMap);
+ -  public IDataSetTableDescriptor createTemporaryTable (String tableName, Connection connection);
+ -  public IDataStore decode(IDataStore datastore);
+ -  private void substituteCodeWithDescriptions(IDataStore datastore, Map<String, List<String> > codes, Map<String, List<String> > descriptions);
+ -  private Map<String, List<String> > getCodes(IDataStore datastore).
 
-   Using the AbstractCustomDataset class allows the developer to access
-   predefined utility methods, such as:
-
--  public void setParamsMap(Map paramsMap);
-
--  public IDataSetTableDescriptor createTemporaryTable (String
-      tableName, Connection connection);
-
--  public IDataStore decode(IDataStore datastore);
-
--  private void substituteCodeWithDescriptions(IDataStore datastore,
-      Map<String, List<String> > codes, Map<String, List<String> >
-      descriptions);
-
-Flat Dataset
-
--  private Map<String, List<String> > getCodes(IDataStore datastore).
-
-..
-
-   The full class name (package included) must be set on the Java class
-   name field, while it is possible to add custom attributes for dataset
-   execution and retrieve them via the following method of the IDataSet
-   interface: Map getProperties().
+The full class name (package included) must be set on the Java class name field, while it is possible to add custom attributes for dataset execution and retrieve them via the following method of the IDataSet interface: Map getProperties().
 
 Flat Dataset
 ^^^^^^^^^^^^
 
-   A flat dataset allows the retrieval of an entire table from a data
-   source. In other words, it replaces a dummy query like "select
-   :sub:`\*` from sales" by automatically retrieving all rows in a
-   table. To create a flat dataset, simply enter the table and the data
-   source name, as shown in Figure 3.9.
+A flat dataset allows the retrieval of an entire table from a data source. In other words, it replaces a dummy query like "select \* from sales" by automatically retrieving all rows in a table. To create a flat dataset, simply enter the table and the data source name, as shown in Figure 3.9.
 
    |image25|
 
@@ -398,53 +264,28 @@ Flat Dataset
 Ckan
 ^^^^
 
-   This is available only in KnowageBD and KnowageSI.
+This is available only in KnowageBD and KnowageSI.
 
-   A Ckan dataset let you use open data as resource. You have to fill
-   all the settings fields properly to let the dataset work
-   successfully. Letís have a look on them:
+A Ckan dataset let you use open data as resource. You have to fill all the settings fields properly to let the dataset work successfully. Let‚Äôs have a look on them:
 
--  **File Type**\ ***: this field specifies the type of the file you
-      want to import. Allowed ones are: CSV or XML;
+ -  **File Type**\ ***: this field specifies the type of the file you want to import. Allowed ones are: CSV or XML;
+ -  **Delimiter Character**\ ***: Here you have to insert the delimiter used in the file. Allowe values are: , ; \\t \|
+ -  **Quote Character**\ ***: Allowed values for this field are: ‚Äú or ‚Äù;
+ -  **Encoding**: Here you have to specify the encoding typology used. Allowed values are: UTF-8, UTF-16, windows-1252 , ASCII or    ISO-8859-1;
+ -  **Skip rows**: the number inserted stands for the rows not to be imported;
+ -  **Limit rows**: it is the maximum number of rows to be imported. If you leave it blank all rows are uploaded;
+ -  **XLS numbers**: it is the number of scheets to be imported;
+ -  **CKAN ID**\ ***: here you have to insert the ID of the resource you are interested in. Look for it among the additional information in Ckan dataset webpage.
+ -  **CKAN url**\ ***: it is the direct link to download the resources available on Ckan dataset webpage.
 
--  **Delimiter Character**\ ***: Here you have to insert the delimiter
-      used in the file. Allowe values are: , ; \\t \|
-
-Federated
-
--  **Quote Character**\ ***: Allowed values for this field are: ì or î;
-
--  **Encoding**: Here you have to specify the encoding typology used.
-      Allowed values are: UTF-8, UTF-16, windows-1252 , ASCII or
-      ISO-8859-1;
-
--  **Skip rows**: the number inserted stands for the rows not to be
-      imported;
-
--  **Limit rows**: it is the maximum number of rows to be imported. If
-      you leave it blank all rows are uploaded;
-
--  **XLS numbers**: it is the number of scheets to be imported;
-
--  **CKAN ID**\ ***: here you have to insert the ID of the resource you
-      are interested in. Look for it among the additional information in
-      Ckan dataset webpage.
-
--  **CKAN url**\ ***: it is the direct link to download the resources
-      available on Ckan dataset webpage.
-
-..
-
-   We marked with the \* symbol the mandatory fields. We suggest to do a
-   preview of your dataset before saving it to be sure everything have
-   been correctly configured.
+We marked with the \* symbol the mandatory fields. We suggest to do a preview of your dataset before saving it to be sure everything have been correctly configured.
 
 Federated
 ^^^^^^^^^
 
-   This is available only in KnowageBD and KnowageSI.
+This is available only in KnowageBD and KnowageSI.
 
-   In this area you can only manage metadata, visibility and perform the
+In this area you can only manage metadata, visibility and perform the
    advanced operation we are going to describe at the end of this
    section.
 
@@ -462,7 +303,7 @@ Rest
    therefore the REST service is presumed to return data in JSON
    format).
 
-   Letís make as example in order to understand how it works. Suppose an
+   Let‚Äôs make as example in order to understand how it works. Suppose an
    external REST service providing data from sensors, we want to
    retrieve values from prosumers electricity meters, a prosumer being a
    producer/consumer of electricity, and that the request body should be
@@ -679,7 +520,7 @@ attributes:
 
 ..
 
-   Letís see how to define a Knowage dataset:
+   Let‚Äôs see how to define a Knowage dataset:
 
    |image26|
 
@@ -717,7 +558,7 @@ attributes:
    Orion Context Broker
    (`https://github.com/telefonicaid/fiware-orion) <https://github.com/telefonicaid/fiware-orion>`__
    and to omit some of the REST fields (since the JSON format from NGSI
-   s pecifications is fixed): you donít need to specify headers,
+   s pecifications is fixed): you don‚Äôt need to specify headers,
    JSONPath items, JSONPath attributes (all available attributes are
    fetched) and pagination parameters (offset and fetch size).
 
@@ -819,20 +660,20 @@ Big Data- NoSQL
    according to the dialect in use (that is accordingly to the
    datasource dialect).
 
-   For example, letís suppose we defined a Mongo datasource and want to
-   create a dataset upon it. Therefore choose the "ëQuery typeë dataset
+   For example, let‚Äôs suppose we defined a Mongo datasource and want to
+   create a dataset upon it. Therefore choose the "‚ÄòQuery type‚Äò dataset
    and, as we revealed in advance, choose the correct language: in this
    case JS instead of SQL. The script must respect some convention, in
    particular:
 
 -  the return value of the query must be assigned to a variable with
-   name îqueryì. For example
+   name ‚Äùquery‚Äú. For example
 
 ..
 
    var query = db.store.find();
 
--  if the return value doesnít come from a query, for example itís a js
+-  if the return value doesn‚Äôt come from a query, for example it‚Äôs a js
    variable, than it
 
 Big Data- NoSQL
@@ -841,11 +682,11 @@ Big Data- NoSQL
    The result will be managed by Knowage accordingly to the type of the
    variable:
 
--  if itís a primitive type the resulting dataset contains only a
-   columns with name îresultì and value equal to the value of the
+-  if it‚Äôs a primitive type the resulting dataset contains only a
+   columns with name ‚Äùresult‚Äú and value equal to the value of the
    variable sbiDatasetfixedResult;
 
--  if itís an object, the resulting dataset contains a column for each
+-  if it‚Äôs an object, the resulting dataset contains a column for each
    property of the object.
 
 ..
@@ -865,12 +706,12 @@ Big Data- NoSQL
 
    Table 3.3: Dataset output.
 
--  if itís a list than the columns of the dataset are the union of the
+-  if it‚Äôs a list than the columns of the dataset are the union of the
    properties of all the objects contained in the list.
 
 ..
 
-   For istance, letís consider the query
+   For istance, let‚Äôs consider the query
 
    sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] the dataset is
 
@@ -904,20 +745,20 @@ Big Data- NoSQL
 
  Parameters and profile attributes
 
-   Itís possible to force the behaviour. In particular the result stored
+   It‚Äôs possible to force the behaviour. In particular the result stored
    in the variable query, will be managed:
 
 -  as cursor if in the script exist a variable with value
    LIST_DOCUMENTS_QUERY.
 
 
-   Example: var retVal= "LIST_DOCUMENTS_QUERYì;
+   Example: var retVal= "LIST_DOCUMENTS_QUERY‚Äú;
 
 -  a document if in the script exist a variable with value
    SINGLE_DOCUMENT_QUERY.
 
 
-   Example: var retVal= "SINGLE_DOCUMENT_QUERYî.
+   Example: var retVal= "SINGLE_DOCUMENT_QUERY‚Äù.
 
    Similar techniques can be applied to the other languages. We leave
    the reader to examine the dialect related to each Big Data
@@ -940,10 +781,10 @@ Big Data- NoSQL
    $P{parameter_name}. At dataset execution time, the parameter will be
    replaced by its actual value.
 
-   Attention to parametersí names!
+   Attention to parameters‚Äô names!
 
    |image27|\ If the dataset is used by a Knowage document, then the
-   document parametersí URL must match the parameter name set in the
+   document parameters‚Äô URL must match the parameter name set in the
    dataset **Type** tab, in order for the dataset to be passed
    correctly.
 
