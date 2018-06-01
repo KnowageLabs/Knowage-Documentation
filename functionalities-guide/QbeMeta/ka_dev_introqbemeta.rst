@@ -1,6 +1,6 @@
 
 
-FREE INQUIRY
+Free Inquiry
 ============
 
 This detailed user guide is dedicated to the Qbe (acronym of Query By Example), a Free Inquiry instrument which empowers users with easy and free access to information via graphical interfaces.
