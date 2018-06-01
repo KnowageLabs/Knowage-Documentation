@@ -27,8 +27,6 @@ A feature includes:
 
 -  a set of generic attributes related to the particular type of physical object to be modeled. Generic attributes are not defined: they vary according to the type of abstraction that users want to give to each real-world physical object.
 
-..
-
    |image386|
 
    Figure 15.23: Examples of feature.
@@ -48,7 +46,7 @@ From a logical point of view, the key functionalities of a GIS do not differ fro
 
 Unlike the market of BI suites, the market of GIS is characterized by a wide spread of open standards, adopted by all main vendors, which regulate the interaction among the various components of the system at all architectural levels.
 
-        .. note::
+.. note::
          **Open Gesospatial Consortium (OGC)**
 
             The most important International organization for standardization in the GIS domain is the Open Geospatial Consortium (OGC), involving 370 commercial, governmental, non-profit and research organizations. Read more at `www.opengeospatial.org. <http://www.opengeospatial.org/>`__
@@ -60,7 +58,7 @@ As for the integration between GIS and BI systems, the OGC has defined two main 
 
 -  the *Web Feature Service* (WFS). It describes the interface of services that allow to query a GIS, in order to get the geographic features in a format that allows their transformation and/or spatial analysis (e.g. GML, GeoJson, etc.).
 
-        .. note::
+.. note::
          **WMS and WFS standards for spatial data distribution**
 
             Full documentation about the WMS and WFS standards can be found at `www.opengeospatial.org/standards/wms <http://www.opengeospatial.org/standards/wms>`__ and `www.opengeospatial.org/standards/wfs. <http://www.opengeospatial.org/standards/wfs>`__
@@ -185,7 +183,8 @@ The template of the **GEOReport Engine** is a JSON file. The key information inc
 
 In Code9.3 we provide a more complex version of the previous template code. The results will be similar to the one obtained in Figure 15.27, but you will provide to the user extra features like filters and cross navigation. Moreover you see how to configure some elements from template, i.e. visualization coordinates, analysis customization, etc.
 
-    .. code-block::json
+.. code-block:: json
+       :caption: Advanced template definition.
        :linenos:
        
 			{
@@ -256,7 +255,6 @@ In Code9.3 we provide a more complex version of the previous template code. The 
 				} 
 			}
 
-   Code9.3: Advanced template definition.
 
    Let us describe these codes in detail we will describe the Minimal template definition at first and then we will go on with the extra features contained in advanced template definition. So the following are the mandatory template information:
 
@@ -264,25 +262,24 @@ In Code9.3 we provide a more complex version of the previous template code. The 
 
 -  layerJoinColumns. It’s the feature’s name which has to join with the dataset column.
 
-      .. warning::
+.. warning::
          **Join columns between dataset and Layer**
          
          You can match the dataset and the layer on more then one colum. The correct sintax for doing this is shown in join on multiple columns sintax. In this way you match *sales_state* with STATE_ABBR and *other_column* with OTHER_COLUMN.
          
-      .. code-block::json
+.. code-block:: json
+           :caption: Join on multiple columns sintax.
            :linenos:
 
                datasetJoinColumns : ["sales_state",other_coloumns] 
 
                layerJoinColumns : ["STATE_ABBR","OTHER_COLOUMN"] 
 
-   Code 9.4: Join on multiple columns sintax
-
 -  targetLayerConf. This attribute contains the layer’s label.
 
 -  indicators. It specifies the measures that can be used to perform the thematization of the map. Each measure is defined by an array (e.g. ["unit_sales", "Unit sales"]) in which the first value ("unit_sales") represents the name of the column of the input dataset that includes the measure. The second value ("Unit sales") includes the description of the measures that will be listed in the Indicators section, through the engine interface.
 
-      .. warning::
+.. warning::
          **Referring to dataset column's name**
          
          Beware that feature’s aribute name, indicators’ aribute names,the datasetJoinColumns and layerJoinColumns are case sensitive.
@@ -338,7 +335,7 @@ Analytical document creation
 
    Now we have all the necessary elements to develop a new location intelligence analytical document: map, dataset and template. Create a new dataset with the query shown in Code9.2, create a layer in the layer catalogue and a new analytical document.
 
-      .. warning::
+.. warning::
          **Datasets and maps**
          
          End users can properly visualize location intelligence documents only if the underlying query dataset has scope set to **PUBLIC**. 
@@ -349,11 +346,11 @@ Analytical document creation
 Cross navigation definition\*
 -----------------------------------
 
-   It is possible to enable cross navigation from a map document to other Knowage documents. In the example of Figure 15.27, this means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
+It is possible to enable cross navigation from a map document to other Knowage documents. In the example of Figure 15.27, this means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
 
-   GIS document template example shows how to modify the template in order to enable cross navigation.
+GIS document template example shows how to modify the template in order to enable cross navigation.
       
-      .. code-block::json
+.. code-block:: json
       	   :caption: GIS document template example		
            :linenos:
 	   
@@ -367,22 +364,17 @@ Cross navigation definition\*
 				]
 			}
 
+The label attribute refers to the label of the target Knowage document.
 
-Cross navigation definition\*
+The staticParams contains an array of static parameters that must be passed to the document in the form parameterName:ParameterValue. Static parameters are parameters that do not depend on the source document from which the cross navigation starts.
 
-   The label attribute refers to the label of the target Knowage document.
-
-   The staticParams contains an array of static parameters that must be passed to the document in the form parameterName:ParameterValue. Static parameters are parameters that do not depend on the source document from which the cross navigation starts.
-
-   The dynamicParams contains dynamic parameters that must be passed to the target document in the form
+The dynamicParams contains dynamic parameters that must be passed to the target document in the form
 
    parameterName:ReferenciatedAttribute
 
-   The parameterName must be the target document’s parameter url, while ReferenciatedAttribute defines where to recover its value and may be different depending on the value of the attribute scope:
+The parameterName must be the target document’s parameter url, while ReferenciatedAttribute defines where to recover its value and may be different depending on the value of the attribute scope:
 
 -  feature: the value of the parameter is the feature’s value of the selected element. The ReferenciatedAttribute is the name of feature. For example, the row
-
-..
 
    state:'STATE_ABBR', scope:'feature'
 
@@ -390,35 +382,31 @@ Cross navigation definition\*
 
 -  env: the value of the parameter is the value of an input analytical driver of the map document. The ReferenciatedAttribute is the name of the input analytical driver url of the map. For example,
 
-..
-
    state:'par_state', scope:'env'
 
    means that when you click on a state, the target document will be executed with a parameter state=<value of par_state driver>.
 
 -  dataset: the value of the parameter is the value of a column of the dataset. The ReferenciatedDatasetAttribute is the name of column of the dataset that the map are using. For example,
 
-..
-
    state:'col_state', scope:'dataset'
 
-   means that when you click on a state, the target document will be executed with a parameter state=<value of the column col_state of the dataset>. Pay attention that the last configuration is usable only with physical store.
+   means that when you click on a state, the target document will be executed with a parameter state=<value of the column col_state of the dataset>. 
+   
+Pay attention that the last configuration is usable only with physical store.
 
-   Once you are done, you need to define the output parameters as described in Section 5.5 of Chapter 5. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
+Once you are done, you need to define the output parameters as described in Section **XXX** of Chapter **XXX**. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
 
 
- TemplatebuildingwithGISdesignerfortechnicaluser
--------------------------------------------------------
+ Template building with GIS designer for technical user\*
+----------------------------------------------------------
 
-   When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to Figure 15.29). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
+When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to Figure 15.29). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
 
    |image397|
 
    Figure 15.29: Gis designer accessible from the template build.
 
-   We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to Section 15.4 for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in Figure 15.30. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (Figure 15.31).
-
-Template building with GIS designer for technical user\*
+We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to Section 15.4 for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in Figure 15.30. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (Figure 15.31).
 
    |image398|
 
