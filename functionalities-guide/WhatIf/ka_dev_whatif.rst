@@ -63,48 +63,37 @@ Now you should map the new tables in the mondrian schema. In order to merge the 
 
 -  To create a new "Version" dimension as inChanging the Mondrian Schema.
 
-+-----------------------------------------------------------------------+
-| <Dimension name="Version">                                            |
-|                                                                       |
-|    <Hierarchy hasAll="false" primaryKey="wbversion"                   |
-|    defaultMember="[Version ].[0]" >                                   |
-|                                                                       |
-|    <Table name="wbversion"/>                                          |
-|                                                                       |
-|    <Level name="Version" column="wbversion" uniqueMembers="true"      |
-|    captionColumn="version_name"/>                                     |
-|                                                                       |
-|    </Hierarchy>                                                       |
-|                                                                       |
-| </Dimension>                                                          |
-+-----------------------------------------------------------------------+
+.. code-block:: xml 
+   :linenos:
+       <Dimension name="Version">                                                          
+          <Hierarchy hasAll="false" primaryKey="wbversion"  
+          defaultMember="[Version ].[0]" >            
+          <Table name="wbversion"/>  
+          <Level name="Version" column="wbversion" uniqueMembers="true"  
+          captionColumn="version_name"/>                              
+          </Hierarchy>                                  
+       </Dimension>   
 
-   Code 10.1: Changing the Mondrian Schema.
+  Code 10.1: Changing the Mondrian Schema.
 
 -  To create the mapping of the editable cube (in our example the table sales_fact_1998_virtual) as shown in Code Creating the mapping of the editable cube.
 
-+--------------------------------------------------------------------------+
-| <Cube name="Sales_Edit">                                                 |
-|                                                                          |
-|    <Table name="sales_fact_1998_virtual"/>                               |
-|                                                                          |
-|    <DimensionUsage name="Product" source="Product"                       |
-|    foreignKey="product_id" />                                            |
-|                                                                          |
-|    <DimensionUsage name="Region" source="Region"                         |
-|    foreignKey="store_id"/>                                               |
-|                                                                          |
-|    <DimensionUsage name="Customers" source="Customers" foreignKey="      |
-|    customer_id"/>                                                        |
-|                                                                          |
-|    <DimensionUsage name="Version" source="Version"                       |
-|    foreignKey="wbversion"/>                                              |
-|                                                                          |
-|    <Measure name="Store Sales" column="store_sales" aggregator="sum"     |
-|    formatString="#,###.00"/>                                             |
-|                                                                          |
-| </Cube>                                                                  |
-+--------------------------------------------------------------------------+
+.. code-block:: xml 
+   :linenos:
+   
+       <Cube name="Sales_Edit">      
+          <Table name="sales_fact_1998_virtual"/>                                               
+          <DimensionUsage name="Product" source="Product"   
+                          foreignKey="product_id" /> 
+          <DimensionUsage name="Region" source="Region"   
+                          foreignKey="store_id"/>     
+          <DimensionUsage name="Customers" source="Customers" foreignKey="customer_id"/>  
+          <DimensionUsage name="Version" source="Version"   
+          foreignKey="wbversion"/>  
+          <Measure name="Store Sales" column="store_sales" aggregator="sum"   
+          formatString="#,###.00"/>               
+       </Cube>                       
+
 
    Code 10.2: Creating the mapping of the editable cube.
 
@@ -112,58 +101,35 @@ The name of the cube ("Sales_Edit") is the value of the edit Cube attribute of t
 
 • To create the virtual cube that will contain the mapping of the columns as in Code 10.3.
 
-+-----------------------------------------------------------------------+
-| <VirtualCube name="Sales_V">                                          |
-|                                                                       |
-|    <CubeUsages>                                                       |
-|                                                                       |
-|    <CubeUsage cubeName="Sales_Edit"                                   |
-|    ignoreUnrelatedDimensions="true"/>                                 |
-|                                                                       |
-|    <CubeUsage cubeName="Sales" ignoreUnrelatedDimensions="true"/>     |
-|                                                                       |
-|    </CubeUsages>                                                      |
-|                                                                       |
-|    <VirtualCubeDimension cubeName="Sales" name="Customers"/>          |
-|                                                                       |
-|    <VirtualCubeDimension cubeName="Sales" name="Product"/>            |
-|                                                                       |
-|    <VirtualCubeDimension cubeName="Sales" name="Region"/>             |
-|                                                                       |
-|    <VirtualCubeDimension cubeName="Sales_Edit" name="Customers"/>     |
-|                                                                       |
-|    <VirtualCubeDimension cubeName="Sales_Edit" name="Product"/>       |
-|    <VirtualCubeDimension cubeName="Sales_Edit" name="Region"/>        |
-|                                                                       |
-|    <VirtualCubeDimension cubeName="Sales_Edit" name="Version"/>       |
-|                                                                       |
-|    <VirtualCubeMeasure cubeName="Sales" name="[Measures].[Unit Sales  |
-|    Original]" visible="false"/>                                       |
-|                                                                       |
-|    <VirtualCubeMeasure cubeName="Sales" name="[Measures].[Sales Count |
-|    Original]" visible="false"/>                                       |
-|                                                                       |
-|    <VirtualCubeMeasure cubeName="Sales_Edit" name="[Measures].[Store  |
-|    Sales]" visible="true"/>                                           |
-|                                                                       |
-|    <VirtualCubeMeasure cubeName="Sales_Edit" name="[Measures].[Store  |
-|    Cost]" visible="true"/>                                            |
-|                                                                       |
-|    <CalculatedMember name="Sales Count" dimension="Measures">         |
-|                                                                       |
-| <Formula>VALIDMEASURE([Measures].[Sales Count Original])</Formula>    |
-|                                                                       |
-|    </CalculatedMember>                                                |
-|                                                                       |
-|    <CalculatedMember name="Unit Sales" dimension="Measures">          |
-|                                                                       |
-| <Formula>VALIDMEASURE([Measures].[Unit Sales Original])</Formula>     |
-|                                                                       |
-|    </CalculatedMember>                                                |
-|                                                                       |
-| </VirtualCube>                                                        |
-+-----------------------------------------------------------------------+
+.. code-block:: xml 
+   :linenos:
+   
+       <VirtualCube name="Sales_V"> 
+          <CubeUsages> 
+             <CubeUsage cubeName="Sales_Edit" ignoreUnrelatedDimensions="true"/>    
+             <CubeUsage cubeName="Sales" ignoreUnrelatedDimensions="true"/>   
+          </CubeUsages>                                                      
 
+          <VirtualCubeDimension cubeName="Sales" name="Customers"/>  
+          <VirtualCubeDimension cubeName="Sales" name="Product"/>  
+          <VirtualCubeDimension cubeName="Sales" name="Region"/> 
+          <VirtualCubeDimension cubeName="Sales_Edit" name="Customers"/>  
+          <VirtualCubeDimension cubeName="Sales_Edit" name="Product"/>       
+          <VirtualCubeDimension cubeName="Sales_Edit" name="Region"/>    
+          <VirtualCubeDimension cubeName="Sales_Edit" name="Version"/> 
+          <VirtualCubeMeasure cubeName="Sales" name="[Measures].[Unit Sales Original]" visible="false"/>    
+          <VirtualCubeMeasure cubeName="Sales" name="[Measures].[Sales Count Original]" visible="false"/>
+          <VirtualCubeMeasure cubeName="Sales_Edit" name="[Measures].[Store Sales]" visible="true"/> 
+          <VirtualCubeMeasure cubeName="Sales_Edit" name="[Measures].[Store Cost]" visible="true"/>    
+          
+          <CalculatedMember name="Sales Count" dimension="Measures">   
+             <Formula>VALIDMEASURE([Measures].[Sales Count Original])</Formula> 
+          </CalculatedMember>                                                
+
+          <CalculatedMember name="Unit Sales" dimension="Measures"> 
+             <Formula>VALIDMEASURE([Measures].[Unit Sales Original])</Formula>
+          </CalculatedMember>                                                            
+       </VirtualCube>                                                        
 
     Code 10.3: Creating the virtual cube
 
