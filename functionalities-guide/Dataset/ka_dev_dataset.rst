@@ -75,7 +75,7 @@ The Scope lets you choose between two options, whose combination allows the defi
 
    Figure 3.3: The dataset versioning.
    
-   .. table:: Scope options
+.. table:: Scope options
      :widths: auto
 
      +-----------------------+-----------------------+-----------------------+
@@ -148,7 +148,7 @@ Selecting the query option requires the BI developer to write an SQL statement t
 
 The SQL dialect depends on the chosen data source. The SQL text must be written in the Query text area. Look at SQL query example.
 
-       .. code-block:: sql
+.. code-block:: sql
          :caption: SQL query example
          :linenos:
 
@@ -167,7 +167,7 @@ In Code Query dataset’s script example we uses Javascript to dynamically modif
 
    Figure 3.7: Script editing for dataset.
 
-       .. code-block:: javascript
+.. code-block:: javascript
          :caption:  Query dataset’s script example
          :linenos:
 
@@ -185,7 +185,7 @@ Selecting a dataset of **Java Class** type allows the execution of complex data 
 -  public String getValues(Map profile, Map parameters);
    This method provides the result set of the dataset using profile attributes and parameters. The String to return must be the XML result set representation of type:
 
-       .. code-block:: XML
+.. code-block:: XML
          :caption:  
          :linenos:
 
@@ -204,7 +204,7 @@ Script
 
 If you select this option, the results of the dataset will be produced by a script. Therefore, the developer should write a script returning an XML string containing a list of values with the syntax shown below.
 
-       .. code-block:: XML
+.. code-block:: XML
          :caption:  
          :linenos:
 
@@ -296,7 +296,7 @@ The REST dataset enables Knowage to retrieve data from external REST services. T
 
 Let’s make as example in order to understand how it works. Suppose an external REST service providing data from sensors, we want to retrieve values from prosumers electricity meters, a prosumer being a producer/consumer of electricity, and that the request body should be something like:
 
-       .. code-block:: json
+.. code-block:: json
          :caption: Request body code
          :linenos:
 
@@ -309,7 +309,7 @@ Let’s make as example in order to understand how it works. Suppose an external
 
 while querying for "Meter" entities, and that the JSON response is something like:
 
-       .. code-block:: json
+.. code-block:: json
          :caption: RJSON response code
          :linenos:
 
@@ -425,7 +425,7 @@ Once followed the steps above the user obtains upstream/downstream active power 
 
 When checking the **Use directly JSON attributes** checkbox, yon can skip the definition of the JSONPath attributes, since the JSON structure is presumed to be fixed as in the following example:
 
-       .. code-block:: json
+.. code-block:: json
          :caption: Use directly JSON attributes
          :linenos:
 
@@ -463,7 +463,7 @@ In the above examples, the JSON Path Items will be: $.contextResponses[:sub:`\*`
 
 The REST dataset permits usage of profile attributes and parameters using the same syntax as for other dataset types: *$<profile attribute>* and *$P<parameter>*. You can use both of them as placeholders in every field: most likely you need to use them in REST service URL or on the request body. As an example, suppose you want to retrieve the value of just one prosumer that is specified by the "prosumerId" parameter, you have to set the request body as:
 
-       .. code-block:: json
+.. code-block:: json
          :caption: Request body for prosumerId parameter
          :linenos:
 
@@ -490,7 +490,7 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
 -  the return value of the query must be assigned to a variable with
    name ”query“. For example
 
-       .. code-block:: javascript
+.. code-block:: javascript
          :caption: Request body for prosumerId parameter
          :linenos:
    
@@ -503,34 +503,35 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
     -  if it’s an object, the resulting dataset contains a column for each property of the object.
 
    For example, if we consider the query sbiDatasetfixedResult = {a:2, b:3}, the dataset is as shown in Table  3.3
+   
+.. table:: Dataset output
+  :widths: auto
 
-+------+------+
-|    a |    b |
-+======+======+
-|    2 | 3    |
-+------+------+
-
-
-
-   Table 3.3: Dataset output.
-
-    -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
+  +------+------+
+  |    a |    b |
+  +======+======+
+  |    2 | 3    |
+  +------+------+
 
 
 
-   For istance, let’s consider the query sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] the dataset is
+   -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
 
-+------+------+------+
-|    a | b    |    c |
-+======+======+======+
-|    2 |    3 |      |
-+------+------+------+
-|    2 |      | 3    |
-+------+------+------+
 
-..
+For istance, let’s consider the query sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] the dataset is
 
-   Table 3.4: Dataset output.
+.. table:: Dataset output
+  :widths: auto
+
+  +------+------+------+
+  |    a | b    |    c |
+  +======+======+======+
+  |    2 |    3 |      |
+  +------+------+------+
+  |    2 |      | 3    |
+  +------+------+------+
+
+
 
 The result of a query in MongoDB can assume different shapes: Cursor, Document, List, fix value. Knowage can manage automatically the result of the query. The algorithm to understand how to manage the result is very simple.
 
@@ -546,15 +547,20 @@ The result of a query in MongoDB can assume different shapes: Cursor, Document, 
 
 It’s possible to force the behaviour. In particular the result stored in the variable query, will be managed:
 
--  as cursor if in the script exist a variable with value LIST_DOCUMENTS_QUERY.
+-  as cursor if in the script exist a variable with value LIST_DOCUMENTS_QUERY. Example:
 
+.. code-block:: javascript 
+         :linenos:
+           
+         var retVal= "LIST_DOCUMENTS_QUERY“;
 
-   Example: var retVal= "LIST_DOCUMENTS_QUERY“;
+-  a document if in the script exist a variable with value SINGLE_DOCUMENT_QUERY. Example:
 
--  a document if in the script exist a variable with value SINGLE_DOCUMENT_QUERY.
+.. code-block:: javascript 
+         :linenos:
+           
+         var retVal= "SINGLE_DOCUMENT_QUERY”;
 
-
-   Example: var retVal= "SINGLE_DOCUMENT_QUERY”.
 
 Similar techniques can be applied to the other languages. We leave the reader to examine the dialect related to each Big Data datasource.
 
@@ -567,95 +573,57 @@ All dataset types except **File** and **CKAN** allow you to add parameters. This
 
 2. create the parameter in the parameters list below the editor area.
 
-   The syntax to add a parameter in the dataset code text is
-   $P{parameter_name}. At dataset execution time, the parameter will be
-   replaced by its actual value.
+The syntax to add a parameter in the dataset code text is *$P{parameter_name}*. At dataset execution time, the parameter will be replaced by its actual value.
 
-   Attention to parameters’ names!
+      .. warning::
+         **Attention to parameters’ names!**
+         
+         If the dataset is used by a Knowage document, then the document parameters’ URL must match the parameter name set in the dataset **Type** tab, in order for the dataset to be passed correctly.
+         
+Any parameter added to your dataset must be added to the parameters list, too. To add a parameter in the list, click the **Add** button. A new row will be created in the list: double click the name and edit the parameter values. There are three different types of parameters. For each of them the placeholder will be replaced according to a different pattern, as follows:
 
-   |image27|\ If the dataset is used by a Knowage document, then the
-   document parameters’ URL must match the parameter name set in the
-   dataset **Type** tab, in order for the dataset to be passed
-   correctly.
+   **String**: the parameter value will be surrounded with single quotes if not already present.
 
-   Any parameter added to your dataset must be added to the parameters
-   list, too. To add a parameter in the list, click the **Add** button.
-   A new row will be created in the list: double click the name and edit
-   the parameter values. There are three different types of parameters.
-   For each of them the placeholder will be replaced according to a
-   different pattern, as follows:
+   **Number**: the parameter value is treated as a number, with no quotes; an exception is thrown if the value passed is not a number.
 
-   String: the parameter value will be surrounded with single quotes if
-   not already present.
+   **Raw**: the parameter value is treated as a string containing a set of values; single quotes are removed from the containing string, not from the single strings composing it.
 
-   Number: the parameter value is treated as a number, with no quotes;
-   an exception is thrown if the value passed is not a number.
+   **Generic**: the parameter is simply passed as is, with no futher processing.
 
-   Raw: the parameter value is treated as a string containing a set of
-   values; single quotes are removed from the containing string, not
-   from the single strings composing it.
+In SQL query example with parameters an example is provided, where MediaType is a string parameter.
 
-Parameters and profile attributes
-
-   Generic: the parameter is simply passed as is, with no futher
-   processing.
-
-   In SQL query example with parameters an example is provided, where MediaType is a string
-   parameter.
-
-+-----------------------------------------------------------------------+
-| SELECT                                                                |
-|                                                                       |
-|    s.customer_id as CUSTOMER , sum(s.store_sales) as SALES            |
-|                                                                       |
-|    , c.yearly_income as INCOME                                        |
-|                                                                       |
-|    , p.media_type as MEDIA                                            |
-|                                                                       |
-| FROM sales_fact_1998 s, customer c, promotion p                       |
-|                                                                       |
-| WHERE                                                                 |
-|                                                                       |
-|    s.customer_id=c.customer_id and s.promotion_id=p.promotion_id and  |
-|    p.media_type in ($P{MediaType})                                    |
-|                                                                       |
-| GROUP BY                                                              |
-|                                                                       |
-|    s.customer_id,                                                     |
-|                                                                       |
-|    c.yearly_income,                                                   |
-|                                                                       |
-|    p.media_type                                                       |
-+-----------------------------------------------------------------------+
+.. code-block:: sql 
+         :caption: SQL query example with parameters
+         :linenos:
+           
+         SELECT  s.customer_id as CUSTOMER 
+         , sum(s.store_sales) as SALES       
+         , c.yearly_income as INCOME
+         , p.media_type as MEDIA 
+         FROM sales_fact_1998 s, customer c, promotion p                       
+         WHERE                                                                 
+         s.customer_id=c.customer_id and s.promotion_id=p.promotion_id and  
+         p.media_type in ($P{MediaType})                                    
+         GROUP BY 
+         s.customer_id,                                                     
+         c.yearly_income,                                                   
+         p.media_type                                                       
 
 
-
-    SQL query example with parameters.
-
-   Datasets of type Query and Script can also use *profile attributes*.
-   Differently from parameters, profile attributes do not need to be
-   explicitly added to the parameter list since they have been defined
-   elsewhere. Clicking the **Available Profile Attribute** button you
-   can see all profile attributes defined in the behavioral model and
-   choose the one(s) you wish to insert in the dataset query/script
-   text, as shown in Figure 3.11.
+Datasets of type Query and Script can also use *profile attributes*. Differently from parameters, profile attributes do not need to be   explicitly added to the parameter list since they have been defined elsewhere. Clicking the **Available Profile Attribute** button you can see all profile attributes defined in the behavioral model and choose the one(s) you wish to insert in the dataset query/script   text, as shown in Figure 3.11.
 
    |image28|
 
    Figure 3.11: Profile Attributes assignment.
 
-   The syntax to include attributes into the dataset text is
-   ${attribute_name}. Profile attributes can be single-value or
-   multivalue.
+The syntax to include attributes into the dataset text is *${attribute_name}*. Profile attributes can be single-value or multivalue.
 
-Further operations on a dataset
+         .. note::
+         **User profile attributes**
+         
+         Each Knowage user is assigned a profile with attributes. The user profile is part of the more general behavioural model, which allows tailored visibility and permissions on Knowage documents and functionalities.
 
-   User profile attributes
-
-   |image29|\ Each Knowage user is assigned a profile with attributes.
-   The user profile is part of the more general behavioural model, which
-   allows tailored visibility and permissions on Knowage documents and
-   functionalities.
+   
 
   Further operations on a dataset
 ------------------------------------
@@ -663,92 +631,46 @@ Further operations on a dataset
 Transformations
 ~~~~~~~~~~~~~~~
 
-   In some cases it is useful to perform transformations on the results
-   of a dataset, to obtain data in the desired format. The most common
-   operation is the pivot transformation, which allows the switch
-   between rows and columns of the dataset results. Knowage supports
-   this operation on any type of dataset.
+In some cases it is useful to perform transformations on the results of a dataset, to obtain data in the desired format. The most common operation is the pivot transformation, which allows the switch between rows and columns of the dataset results. Knowage supports this operation on any type of dataset.
+
+To set a pivot transformation, select **Pivot Transformer** in the drop down menu of the **Transformation** tab. Then set the following fields:
+
+-  **Name of Category Column to be Pivoted**. Here you should write the name of the dataset column whose values will be mapped onto columns after pivoting.
+
+-  **Name of Value Column to be Pivoted**. Here you should write the name of the result set column, whose values should become values of the previous columns (category columns).
+
+-  **Name of the Column not to be Pivoted**. Here you should write the name of those columns that should not be altered during the transformation.
+
+-  In case you wish to add a number to category columns (e.g., 1_name_of_column), you should check the option Automatic Columns numeration.
+
+
+An example of usage is available in Figure 3.12, showing the result set of the dataset.
 
    |image30|
 
    Figure 3.12: Pivot transformation.
-
-   To set a pivot transformation, select **Pivot Transformer** in the
-   drop down menu of the **Transformation** tab. Then set the following
-   fields:
-
--  Name of Category Column to be Pivoted. Here you should write the name
-   of the dataset column whose values will be mapped onto columns after
-   pivoting.
-
-Dataset persistence
-
--  Name of Value Column to be Pivoted. Here you should write the name of
-   the result set column, whose values should become values of the
-   previous columns (category columns).
-
--  Name of the Column not to be Pivoted. Here you should write the name
-   of those columns that should not be altered during the
-   transformation.
-
--  In case you wish to add a number to category columns (e.g.,
-   1_name_of_column), you should check the option Automatic Columns
-   numeration.
-
-..
-
-   An example of usage is available in Figure 3.12, showing the result
-   set of the dataset.
+   
 
 Dataset persistence
 ~~~~~~~~~~~~~~~~~~~
 
-   The **Advanced** tab is used to make a dataset persistent, i.e., to
-   write it on the default database. Making a dataset persisent may be
-   useful in case dataset calculation takes a considerable amount of
-   time. Instead of recalculating the dataset each time the documents
-   using it are executed, the dataset is calculated once and then
-   retrieved from a table to improve performance. In order to force
-   recalculation of the dataset, you should execute dataset preview
-   again. This will store the newly generated data on the database
-   table.
+The **Advanced** tab is used to make a dataset persistent, i.e., to write it on the default database. Making a dataset persisent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. In order to force recalculation of the dataset, you should execute dataset preview again. This will store the newly generated data on the database table.
 
-   Once marked the dataset as persistent, you are asked to insert a
-   table name. This is the table where data are stored and then
-   retrieved.
+Once marked the dataset as persistent, you are asked to insert a table name. This is the table where data are stored and then retrieved.
 
-   With KnowageBD, KnowageER and KnowageSI products you can also decide
-   to schedule the persistence operation: this means that the data
-   stored in the table will be update with according to the frequency
-   defined in the **scheduling** options. Choose your scheduling option
-   and save the dataset. Now the table where your data are stored will
-   be persisted according to the settings provided.
+With KnowageBD, KnowageER and KnowageSI products you can also decide to schedule the persistence operation: this means that the data stored in the table will be update with according to the frequency defined in the **scheduling** options. Choose your scheduling option and save the dataset. Now the table where your data are stored will be persisted according to the settings provided.
 
 Preview
 ~~~~~~~
 
-   Before actually using the dataset in a document, it is a good
-   practice to test it. Clicking the
-
-   **Preview** button within the **Preview** tab, you can see a preview
-   of the result set, see Figure 3.13. This allows the developer to
-   check any anomaly or possible error in the dataset definition, before
-   using it.
+Before actually using the dataset in a document, it is a good practice to test it. Clicking the **Preview** button within the **Preview** tab, you can see a preview of the result set, see Figure 3.13. This allows the developer to check any anomaly or possible error in the dataset definition, before using it.
 
    |image31|
 
-   Figure 3.13: Dataset preview (left) and parameters prompt window
-   (right).
+   Figure 3.13: Dataset preview (left) and parameters prompt window (right).
 
-Preview
 
-   If some parameters have been set, a window with their list will be
-   shown: their values must be entered by double clicking on the
-   corresponding value column, see Figure 3.13. If a parameter type is
-   set to string, just write the value you want to assign in the
-   preview: quotes will be added automatically. On the other hand, if
-   the type is raw or generic but you want to input text, then remember
-   to add quotes to the test value.
+If some parameters have been set, a window with their list will be shown: their values must be entered by double clicking on the set to string, just write the value you want to assign in the preview: quotes will be added automatically. On the other hand, if the type is raw or generic but you want to input text, then remember to add quotes to the test value.
    
    
 .. include:: myDataAndDataSetThumbinals.rst
