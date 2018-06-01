@@ -1,20 +1,4 @@
 
-   |image158|
-
-   Figure 7.36: Widget document.
-
-   |image159|
-
-   Figure 7.37: KPI Speedometer.
-
-   |image160|
-
-   Figure 7.38: KPI Card.
-
-   |image161|
-
-   Figure 7.39: KPI List.
-
 Scorecard\*
 ===========
 
