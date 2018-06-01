@@ -149,22 +149,22 @@ In order to describe the basic structure of the template, we refer to Minimal te
 .. code-block:: json
       	 :caption: Minimal template definition.
          :linenos:
-				{
+	  {
 				
-				"datasetJoinColumns" : "sales_state", 
+	  "datasetJoinColumns" : "sales_state", 
 				
-				"layerJoinColumns" : "STATE_ABBR",
+	  "layerJoinColumns" : "STATE_ABBR",
 				
-				"targetLayerConf" : {
-				"label" : "usa_states_file"  
-				},
-				{ 
-				indicators:[
-				{"name":"store_sales","label":"Store sales"},
-				{"name":"unit_sales","label":"Unit Sales"},
-				{"name":"store_cost","label":"Store cost"} ]}
+	  "targetLayerConf" : {
+	  "label" : "usa_states_file"  
+	  },
+	  { 
+	  indicators:[
+	  {"name":"store_sales","label":"Store sales"},
+	  {"name":"unit_sales","label":"Unit Sales"},
+	  {"name":"store_cost","label":"Store cost"} ]}
 				
-				}
+	  }
 
 
 In this template, we will include information that allows the engine to produce a thematic map identical to the one shown in Figure 15.27. The colour intensity of each feature included in the usa_states.json file proportionally increases according to the value of the selected measure (one of the three measures of the dataset) in the corresponding record.
@@ -353,15 +353,15 @@ GIS document template example shows how to modify the template in order to enabl
       	   :caption: GIS document template example		
            :linenos:
 	   
-			, selectMode: 'cross' 
-			crossnav: { 
-			label: 'REPORT_DETAIL'
-			, staticParams: {par_product_family: 'Food'}
-			, dynamicParams: [
-				{par_state: 'STATE_ABBR', scope:'feature'}
-				, {par_date: 'PAR_1', scope:'env'} 
-				]
-			}
+           , selectMode: 'cross' 
+	   crossnav: { 
+	   label: 'REPORT_DETAIL'
+	   , staticParams: {par_product_family: 'Food'}
+	   , dynamicParams: [
+	           {par_state: 'STATE_ABBR', scope:'feature'}
+	         , {par_date: 'PAR_1', scope:'env'} 
+		 ]
+	   }
 
 The label attribute refers to the label of the target Knowage document.
 
