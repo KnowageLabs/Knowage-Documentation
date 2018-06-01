@@ -171,7 +171,8 @@ to Code 9.10
 .. code-block:: 
    :linenos:
    
-     [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0], [Region].[Mexico Central],            [Customers].[AllCustomers], [Customers].[All Customers]                                                                          
+     [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0], 
+     [Region].[Mexico Central], [Customers].[AllCustomers], [Customers].[All Customers]                                                                          
 
  Code 9.10: Example of shorten cell’s tuple
 
@@ -189,8 +190,10 @@ Note that the last part of the expression is the portion of the path to the targ
 .. code-block:: 
    :linenos:
    
-     [Product].[Food]
+   [Product].[Food]
 
  Code 9.12: Further example.
+
+
    
-     .. include:: whatIfThumbinals.rst
+.. include:: whatIfThumbinals.rst
