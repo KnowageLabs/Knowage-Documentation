@@ -116,8 +116,10 @@ Now you need to have a well-configured dataset to work with the base layer. The 
 
 For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in Code15.1.
 
-      .. code-block::sql
+.. code-block:: sql
+      	 :caption: GeojSON file except.
          :linenos:
+	 
                   SELECT r.region_id as region_id
                        , s.store_country
                        , r.sales_state as sales_state
@@ -136,7 +138,6 @@ For example you can use a query dataset, connected to the foodmart data source, 
                   AND STORE_COUNTRY = 'USA' 
                   GROUP BY region_id, s.store_country,r.sales_state, r.sales_region, s.store_city                                     
 
-   Code15.1: GeojSON file except.
    
 Create and save the dataset you want to use and go on preparing the document template.
 
@@ -147,7 +148,8 @@ The template of the analytical documents executed by the GeoReport engine allows
 
 In order to describe the basic structure of the template, we refer to Minimal template definition which provide a sample of template. The template shown is the minimal to let the GIS analysis works.
 
-      .. code-block::json
+.. code-block:: json
+      	 :caption: Minimal template definition.
          :linenos:
 				{
 				
@@ -166,7 +168,6 @@ In order to describe the basic structure of the template, we refer to Minimal te
 				
 				}
 
-    Code9.2: Minimal template definition.
 
 In this template, we will include information that allows the engine to produce a thematic map identical to the one shown in Figure 15.27. The colour intensity of each feature included in the usa_states.json file proportionally increases according to the value of the selected measure (one of the three measures of the dataset) in the corresponding record.
 
@@ -288,9 +289,9 @@ In Code9.3 we provide a more complex version of the previous template code. The 
          
 The following, instead, are some of the optional attributes:
 
--  mapName, it is a string field and it is the map’s name.
+-  *mapName*, it is a string field and it is the map’s name.
 
--  analysisType, this attribute allows to specify the type of thematization that the user wants to produce the first time the document is executed. The engine supports two types of thematization: 
+-  *analysisType*, this attribute allows to specify the type of thematization that the user wants to produce the first time the document is executed. The engine supports two types of thematization: 
 
    **choropleth**: it changes the intensity of fill colours of the features included in the target layer, according to users’ needs. It can only be applied to target layers that are composed of features whose geometry is represented by a plane figure.
 
@@ -300,52 +301,49 @@ The following, instead, are some of the optional attributes:
 
    You can change the thematization after the document execution by switching between Map point, Map zone and Map chart in the left panel of the map.
 
--  filters ,here you define which target layer attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "country",label : "Nazione". The first value (name : "country") is the name of the attribute as it is displayed among the properties. The second one label : "Nazione" is the label which will be displayed to the user.
-
-..
+ - *filters*, here you define which target layer attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "country",label : "Nazione". The first value (name : "country") is the name of the attribute as it is displayed among the properties. The second one label: "Nazione" is the label which will be displayed to the user.
 
    |image395|
 
    Figure 15.28: choropleth (left) proportionalSymbols (center) and Chart (right) thematization.
 
--  analysisConf, this attribute configures the chosen thematization. In particular,
+ - *analysisConf*, this attribute configures the chosen thematization. In particular,
 
    -  the classes attribute defines the number of total data intervals. Each interval corresponds to a colour (choropleth thematization) or a radius size (proportional symbols thematization).
 
-   -  the method specifies how to subdivide data among the intervals. Possible values are
+   -  the method specifies how to subdivide data among the intervals. Possible values are:
 
-..
+   	* CLASSIFY_BY_QUANTILS: data are subdivided according to quantiles, that means that data are split into subsets of equal size. A quantile classification is well suited to linearly distributed data.
 
-   * CLASSIFY_BY_QUANTILS: data are subdivided according to quantiles, that means that data are split into subsets of equal size. A quantile classification is well suited to linearly distributed data.
+   	* CLASSIFY_BY_EQUAL_INTERVALS: divide the range of values into equal-sized subranges. For example, if you specify three classes for a indicator whose values range from 0 to 300, you will obtain three classes with ranges of 0–100, 101–200 and 201–300.
 
-   * CLASSIFY_BY_EQUAL_INTERVALS: divide the range of values into equal-sized subranges. For example, if you specify three classes for a indicator whose values range from 0 to 300, you will obtain three classes with ranges of 0–100, 101–200 and 201–300.
+   -  the toColor and fromColor attributes specifies the ranges of colours to be used in case of choropleth thematization. Similarly, the minRadiusSize and maxRadiusSize attributes can be used to specify the size ranges for circles in case of proportional symbols thematization.
 
--  the toColor and fromColor attributes specifies the ranges of colours to be used in case of choropleth thematization. Similarly, the minRadiusSize and maxRadiusSize attributes can be used to specify the size ranges for circles in case of proportional symbols thematization.
+   -  the chart attribute has a list of indicators which configure the style for each column of the chart.
 
--  the chart attribute has a list of indicators which configure the style for each column of the chart.
+-  *currentView*, this attribute configures the map starting coordinates, center and the zoom, zoom.
 
--  currentView, this attribute configures the map starting coordinates, center and the zoom, zoom.
+-  *layerLoaded*, it let you define which layers are displayed by default at the first map execution.
 
--  layerLoaded, it let you define which layers are displayed by default at the first map execution.
+-  *selectedIndicator*, here you can set the measure to be displayed as default and its label.
 
--  selectedIndicator, here you can set the measure to be displayed as default and its label.
+-  *baseLayersConf*, it contains all the parameters needed for openlayers to create the desired layer.
 
--  baseLayersConf, it contains all the parameters needed for openlayers to create the desired layer.
+-  *selectedBaseLayer*, it specifies the base layer for the map. It can be in the catalogue or between “Openstreetmap” and “OSM”. Please notice that this attribute is not mandatory, if it is not specified OpenstreetMap is set by default.
 
-Analytical document creation
-
--  selectedBaseLayer, it specifies the base layer for the map. It can be in the catalogue or between “Openstreetmap” and “OSM”. Please notice that this attribute is not mandatory, if it is not specified OpenstreetMap is set by default.
-
--  crossnav. You can use this attribute to start a cross navigation to others Knowage documents. Cross navigation details are explained in next sections.
+-  *crossnav*, you can use this attribute to start a cross navigation to others Knowage documents. Cross navigation details are explained in next sections.
 
 Analytical document creation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Now we have all the necessary elements to develop a new location intelligence analytical document: map, dataset and template. Create a new dataset with the query shown in  Minimal template definition, create a layer in the layer catalogue and a new analytical document.
+   Now we have all the necessary elements to develop a new location intelligence analytical document: map, dataset and template. Create a new dataset with the query shown in Code9.2, create a layer in the layer catalogue and a new analytical document.
 
-   |image396|
+      .. warning::
+         **Datasets and maps**
+         
+         End users can properly visualize location intelligence documents only if the underlying query dataset has scope set to **PUBLIC**. 
 
-   Select Location Intelligence as Type and Gis Engine as Engine. Associate the correct datasource and data set, upload the template and save. You are now ready to execute your first location intelligence document!
+   Select Location Intelligence as **Type** and Gis Engine as **Engine**. Associate the correct datasource and data set, upload the template and save. You are now ready to execute your first location intelligence document!
 
 
 Cross navigation definition\*
@@ -354,22 +352,21 @@ Cross navigation definition\*
    It is possible to enable cross navigation from a map document to other Knowage documents. In the example of Figure 15.27, this means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
 
    GIS document template example shows how to modify the template in order to enable cross navigation.
+      
+      .. code-block::json
+      	   :caption: GIS document template example		
+           :linenos:
+	   
+			, selectMode: 'cross' 
+			crossnav: { 
+			label: 'REPORT_DETAIL'
+			, staticParams: {par_product_family: 'Food'}
+			, dynamicParams: [
+				{par_state: 'STATE_ABBR', scope:'feature'}
+				, {par_date: 'PAR_1', scope:'env'} 
+				]
+			}
 
-+----------------------------------------------------------+
-| , selectMode: 'cross' crossnav: { label: 'REPORT_DETAIL' |
-|                                                          |
-|    , staticParams: {par_product_family: 'Food'}          |
-|                                                          |
-|    , dynamicParams: [                                    |
-|                                                          |
-|    {par_state: 'STATE_ABBR', scope:'feature'}            |
-|                                                          |
-|    , {par_date: 'PAR_1', scope:'env'} ]                  |
-|                                                          |
-| }                                                        |
-+----------------------------------------------------------+
-
-    GIS document template example.
 
 Cross navigation definition\*
 
