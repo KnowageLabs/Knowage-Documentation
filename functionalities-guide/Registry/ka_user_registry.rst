@@ -2,7 +2,12 @@
 REGISTRY
 ========
 
-A Registry document allows users to write, cancel and modify items of a datamart. Knowage allows users to implement a Registry document through the **Qbe Engine**. By the way it has a different graphical interface compared to the Qbe one. An example is given in Figure 12.1. In next chapters we will see how to navigate a Registry document  and how to create a new one :ref:`(Section 12.2) Registry development`.
+A Registry document allows users to write, cancel and modify items of a datamart. Knowage allows users to implement a Registry document through the **Qbe Engine**. By the way it has a different graphical interface compared to the Qbe one. An example is given in Figure 12.1. In next chapters we will see how to navigate a Registry document  and how to create a new one 
+
+.. _Section-12.1-ref:
+
+Registry development
+--------------------
 
    |image333|
 
