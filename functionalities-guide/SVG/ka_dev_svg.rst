@@ -85,8 +85,8 @@ At the moment there is not yet a designer to create a template for this engine, 
 
 An example is in Code 11.1.
 
-   .. code-block:: xml
-      :linenos:
+.. code-block:: xml
+   :linenos:
 
       <?xml version="1.0" encoding="UTF-8"?>                                  
 
@@ -99,7 +99,7 @@ An example is in Code 11.1.
           <DATAMART_PROVIDER>                                                                                                       
        <MAP>                                                                   
 
-  Code 11.1: Example of SVG code for template file.
+ Code 11.1: Example of SVG code for template file.
 
 Basically, it’s necessary to specify the hierarchy that we want to use, as well as its members (remember that with member we are considering a specific SVG).
 
@@ -107,8 +107,8 @@ We recap in Table 11.1 the meaning of the main tag.
 
 After, we need to define each member and first of all we can note that is composed by three sections: METADATA, LAYERS and MEASURE, as in Code 11.2:
    
-   .. code-block:: xml
-      :linenos:
+.. code-block:: xml
+   :linenos:
 
       <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >                        
         <METADATA>
@@ -116,14 +116,14 @@ After, we need to define each member and first of all we can note that is compos
         <MEASURES default_kpi="UNIT_SALES">    
       <MEMBER>                                                              
 
-  Code 11.2: Example of SVG code for template file.
+ Code 11.2: Example of SVG code for template file.
 
 Let us see each of them in more depth.
 
 -  **METADATA.** This is the section where we define the dataset metadata, in fact, each COLUMN tag defines the dataset columns that        we want to use as attribute, as measure (used for thematize the SVG) or other technical meaning usefull for the engine.
 
-      .. code-block:: xml
-         :linenos:
+.. code-block:: xml
+   :linenos:
 
          <METADATA>                                                                                                                    
            <COLUMN TYPE="geoid" column_id="sales_region" />   
@@ -133,7 +133,7 @@ Let us see each of them in more depth.
            <COLUMN TYPE="drillid" column_id="member_name" /> 
            <COLUMN TYPE="info" column_id="info_text" />                          
 
-     Code 11.3: Example of SVG code for template file.
+  Code 11.3: Example of SVG code for template file.
 
 Once again we give some details on metadata in next Table 11.5.
 
@@ -143,8 +143,8 @@ Once again we give some details on metadata in next Table 11.5.
 
       Figure 11.6: Available layers set by a technical user.
 
-      .. code-block:: xml
-         :linenos:
+.. code-block:: xml
+   :linenos:
 
          <LAYERS>                                                                                                                       
            <LAYER name="regions" description="Regions" selected="true" />                                               
@@ -152,7 +152,7 @@ Once again we give some details on metadata in next Table 11.5.
                   selected="false" />                                                                             
          <LAYERS>                                                           
 
-   Code 11.4: Code relative to the LAYER setting.
+  Code 11.4: Code relative to the LAYER setting.
 
 +-----------------------+-----------------------+-----------------------+
 |    Tag                | Property              | Note                  |
@@ -329,8 +329,8 @@ Once again we give some details on metadata in next Table 11.5.
 
    Figure 11.7: Left. Measure panel. Right. Legend panel.
 
-      .. code-block:: xml
-         :linenos:
+.. code-block:: xml
+   :linenos:
 
          <MEASURES default_kpi="UNIT_SALES">                                                
             <KPI column_id="STORE_SALES" description="Store Sales" >                                                    
@@ -345,8 +345,7 @@ Once again we give some details on metadata in next Table 11.5.
            <KPI column_id="UNIT_SALES" description="Unit Sales" >   
          <MEASURE>                                                                          
 
-
-   Code 11.4: Code for setting the KPI into SVG document.
+ Code 11.4: Code for setting the KPI into SVG document.
 
 We report Table 11.6 for further details on THRESHOLDS and COLOURS tag. This table includes the heuristics supporting value interval partition into a finite number of subintervals (type attribute of the THRESHOLDS tag).
 
@@ -647,14 +646,14 @@ Advanced functionalities
 
 Other the default drill navigation that you have if for the document are defined more than one member, is it possible to cross versus other Knowage documents. To enable this feature, is necessary to set the enableExternalCross property for the MEMBER tag. Here an example in Code 11.5:
 
-      .. code-block:: xml
-         :linenos:
+.. code-block:: xml
+   :linenos:
 
          <MEMBER name="states" level="2"                                  
             measure_dataset="ds_states"                                     
             enableExternalCross="true">                                     
 
-    Code 11.5: Code for enabling external cross navigation.
+  Code 11.5: Code for enabling external cross navigation.
     
     |image242|
     
