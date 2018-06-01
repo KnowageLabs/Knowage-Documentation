@@ -24,15 +24,15 @@ The selected workspace works as a local repository for all the developed objects
     
        **Connection between Server and Studio**
 
-         Once Knowage Studio has been configured, connect it to Knowage Server. This will be the deployment environment to provide                end-users with all certified objects. The main steps to set the connection are:
+       Once Knowage Studio has been configured, connect it to Knowage Server. This will be the deployment environment to provide                end-users with all certified objects. The main steps to set the connection are:
 
-        -  select the Knowage perspective;
+       -  select the Knowage perspective;
 
-        -  create a Knowage project;
+       -  create a Knowage project;
 
-        -  set Knowage Server connections.
+       -  set Knowage Server connections.
 
-        These points will be described in the following.
+       These points will be described in the following.
 
 At first execution of Knowage Studio, a welcome page appears.
 
@@ -170,7 +170,7 @@ Right click on the **Data Source** item and select the corresponding data source
 
 Note that these configuration parameters will be used by the Studio to connect to the database and let the report to be executed locally (i.e., within the Studio). Make sure that the database set in the Server share the same schema of that defined in the Studio.
 
-Since you are setting a local reference to a database inside the report, remember to set an additional information: this will enable Knowage Server to correctly execute the report, by connecting to the data source referenced within the server and not inside the report. Basically you need to tell the server to override the data source configuration. Therefore, add a parameter to the report, called connectionName, right-clicking on the Report Parameters menu item and selecting New Parameter. Fill in the form as suggested in Figure 11.7.
+Since you are setting a local reference to a database inside the report, remember to set an additional information: this will enable Knowage Server to correctly execute the report, by connecting to the data source referenced within the server and not inside the report. Basically you need to tell the server to override the data source configuration. Therefore, add a parameter to the report, called connectionName, right-clicking on the "Report Parameters" menu item and selecting "New Parameter". Fill in the form as suggested in Figure 11.7.
 
 Then go to **Property Binding** in the Data Source editor and set the property JNDI URL to the value of the connectionName parameter, as shown in Figure 11.8.
 
@@ -339,10 +339,10 @@ Notice that the pointer can reference any Knowage document, regardless of the so
 
 In Knowage there are two main typologies of cross navigation: *internal* and *external*.
 
-*Internal cross navigation* updates one or more areas of a document by clicking on a series, a text, an image or  in general  on a
+*Internal cross navigation* updates one or more areas of a document by clicking on a series, a text, an image or - in general - on a
 selected element of the document.
 
-*External cross navigation* opens another document by clicking on an element of the main document, allowing in this way the definition of a navigation path throughout analytical documents (usually, from very general and aggregated information down to the more detailed and specific information)). Indeed, you can add cross navigation also to a document reached by cross navigation. This can be helpful to go deeper into an analysis, since each cross navigation step could be a deeper visualization of the data displayed in the starting document. 
+*External cross navigation* opens another document by clicking on an element of the main document, allowing in this way the definition of a "navigation path" throughout analytical documents (usually, from very general and aggregated information down to the more detailed and specific information)). Indeed, you can add cross navigation also to a document reached by cross navigation. This can be helpful to go deeper into an analysis, since each cross navigation step could be a deeper visualization of the data displayed in the starting document. 
 
 It is obviously possible to associate more than one cross navigation to a single document. It means that by clicking on different elements of the same document the user can be directed to different documents.
 
@@ -360,7 +360,7 @@ Click on the table cell and select the **Hyperlink** item in the **Properties** 
 
    Figure 11.14: Hyperlink editor.
 
-To edit the Location, click on the right drop down button and select the JavaScript syntax. This will open BIRT JavaScript editor. Here you must write down the javascript function javascript:parent.execExternalCrossNavigation passing JSON arguments like ParName: string, null and string.
+To edit the Location, click on the right drop down button and select the JavaScript syntax. This will open BIRT JavaScript editor. Here you must write down the javascript function "javascript:parent.execExternalCrossNavigation" passing JSON arguments like ParName: string, null and string.
 
 In Cross Navigation syntax we give an idea of how the syntax should be like:
 
@@ -403,7 +403,7 @@ or
     OUT_SeveralNames:[5,9,31938]
 
 
-Finally, it is possible to set a sort of multi-cross navigation if for example the exit document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document goes to a target document and the name of the navigation is CrossNav1 and simultaneously the source document goes to a second target document and the name of the navigation is CrossNav2. If in the JavaScript function of Code 11.2 the Cross_Navigation_Name is left empty as in Code 11.3, when the user clicks on the object for which the navigation has been enabled a pop up opens asking for the user to choose between the CrossNav1 navigation or the CrossNav2 one. This procedure allows the user to have a more than one possible navigation starting from the same object.
+Finally, it is possible to set a sort of "multi"-cross navigation if for example the exit document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document goes to a target document and the name of the navigation is "CrossNav1" and simultaneously the source document goes to a second target document and the name of the navigation is "CrossNav2". If in the JavaScript function of Code 11.2 the "Cross_Navigation_Name" is left empty as in Code 11.3, when the user clicks on the object for which the navigation has been enabled a pop up opens asking for the user to choose between the "CrossNav1" navigation or the "CrossNav2" one. This procedure allows the user to have a more than one possible navigation starting from the same object.
    
     |image344|
 
