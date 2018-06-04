@@ -58,7 +58,7 @@ In particular, we give some details for each tag and main attributes.
 
    -  **color and format for numbers**: optional,
 
-   -  **editor**: : the editor. Default type is free-text for simple column (not fk values), but for date is possible show the picker         through the type PICKER. The format option specify the format date,
+   -  **editor**: the editor. Default type is free-text for simple column (not fk values), but for date is possible show the picker         through the type PICKER. The format option specify the format date,
 
    -  **subEntity**: If the column is a reference key user can specify the subentity referred and the foreign key name; in this case the       field shown will be of the entity referred and will be shown as combo if editable,
 
