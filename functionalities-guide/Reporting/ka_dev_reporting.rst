@@ -277,16 +277,16 @@ Parameters can also be used within some graphical elements, such as dynamic text
 .. code-block::
    :linenos:
    
-       params[name_of_parameter].value
+     params[name_of_parameter].value
 
-
-  Code 11.1: Parameters syntax
+Code 11.1: Parameters syntax
 
     .. warning:: 
-
+       
        **Transfer reports from Studio to Server and vice versa**
-
+       
        We saw that developers can use Knowage Studio deployment service to easily register the report with its template on Knowage              Server. Alternatively, any valid BIRT template (developed with or without Knowage Studio) can be directly uploaded in Knowage            Server using the web interface for document management.
+
 
 Download and deploy
 ---------------------------
