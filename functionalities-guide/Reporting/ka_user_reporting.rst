@@ -1,6 +1,6 @@
 
 
-REPORTING
+Reporting
 =========
 
 Reports represent the most popular type of business analysis. Indeed, they allow the visualization of data in a structured way and accordingly to predefined formats. The main characteristics of a report are:
