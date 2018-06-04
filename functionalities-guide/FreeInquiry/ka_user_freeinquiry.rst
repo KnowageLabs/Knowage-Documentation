@@ -237,10 +237,9 @@ Filters are expressions of type:
 
 Once you have selected the left operand, you can configure the filter by using the proper setting values on columns. In particular:
 
--  the **Filter Name** column contains the (editable) name of the filter while the Filter Description column contains an editable
-      description;
+-  the **Filter Name** column contains the (editable) name of the filter while the Filter Description column contains an editable          description;
 
--  the **Left operand, Operator, Right operand** columns allow you to define filters according to the syntax defined above. Double clicking in the Right operand column, a lookup function is activated to facilitate selection of values;
+-  the **Left operand, Operator, Right operand** columns allow you to define filters according to the syntax defined above. Double        clicking in the Right operand column, a lookup function is activated to facilitate selection of values;
 
 -  the **LeftOperandType** and **RightOperandType** columns define the types of operands;
 
@@ -734,7 +733,7 @@ This function allows the user to sum a measure referring to last period data. If
 
    |image247|
 
-Figure 9.33: LAST_YEAR function example: output of last-year sold products compared to the last-two-year ones.
+   Figure 9.33: LAST_YEAR function example: output of last-year sold products compared to the last-two-year ones.
 
 Note that the operator allows to visualize the sum of sales upon 2 years per month. In other words, LAST_YEAR(1) set to the month level starts the progression from the aggregated value of 2015 to which it adds the sales of 2016.
 
@@ -774,15 +773,15 @@ This operator is very similar to the previous one. In this case the reference ti
 
    |image253|
 
-Figure 9.39: LAST_MONTH function example: output when one sums up to last 3 months output where year is 2015.
+   Figure 9.39: LAST_MONTH function example: output when one sums up to last 3 months output where year is 2015.
 
    |image254|
 
-Figure 9.40: LAST_MONTH function example: sales per month aganst the sum of current and previous month sales.
+   Figure 9.40: LAST_MONTH function example: sales per month aganst the sum of current and previous month sales.
 
    |image255|
 
-Figure 9.41: LAST_MONTH function example: results of sales per month aganst the sum of current and previous month sales.
+   Figure 9.41: LAST_MONTH function example: results of sales per month aganst the sum of current and previous month sales.
 
 The YTD function
 ^^^^^^^^^^^^^^^^
@@ -1068,7 +1067,7 @@ Click **Finish** and check the SQL code clicking **Generated Query**. Figure 9.7
 
 
 Cross Navigation
----------------------
+-----------------
 
 Free inquiry documents support cross navigation, letting the user not only add interactions with other documents, but also add images and hyperlinks to a specific field.
 
