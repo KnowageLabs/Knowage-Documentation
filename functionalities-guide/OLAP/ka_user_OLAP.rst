@@ -248,8 +248,8 @@ Referring to Figure 7.15, what if consists of:
    Figure 7.15: Table functions.
 
 
- Functionalities
------------------
+Functionalities
+----------------
 
 Placing hierarchies on axes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
