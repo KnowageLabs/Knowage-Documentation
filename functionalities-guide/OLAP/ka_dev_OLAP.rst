@@ -387,10 +387,10 @@ Once the OLAP document has been created using the template designer the user can
 
 -  to download the Mondrian schema and edit it; modify the dimension(s) (that will update according to the value parameter(s)) inserting    an SQL query which presents the parametric filtering clause. Then it is necessary to add tbe DATA-ACCESS tab to the template.
 
-   .. hint::
-      **Filter through the interface**
-      
-      Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with             profile attributes while all the filtering issue is performed through the interface, using the filter panel.
+ .. hint::
+    **Filter through the interface**
+
+    Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with             profile attributes while all the filtering issue is performed through the interface, using the filter panel.
 
 
 
