@@ -43,3 +43,15 @@ User Guide
 .. |image30| image:: media/image24.png
    :width: 0.23624in
    :height: 0.18374in
+.. |image34| image:: media/image28.png	
+   :width: 0.19685in	
+   :height: 0.15256in	
+.. |image35| image:: media/image29.png	
+   :width: 0.19686in	
+   :height: 0.18328in	
+.. |image36| image:: media/image30.png	
+   :width: 0.19685in	
+   :height: 0.19029in	
+-.. |image37| image:: media/image31.png
+   :width: 0.19685in	
+   :height: 0.17973in
