@@ -185,13 +185,7 @@ From BI functionalities Menu, select |image26| to open the Document Browser.
    
    Document Browser
 
-By default the page is divided in two parts, as shown in Figure 2.5: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
-
-You can switch to the document preview view by clicking on grid icon in the top right corner, as shown in Figure 2.6.
-
-.. figure:: media/image22.png
-
-   Changing documents view
+By default the page is divided in two parts, as shown in Figure 2.5: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder. You can switch to the document preview view by clicking on grid icon in the top right corner, |image28|.
 
 Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date (see Figure 2.7).
 
