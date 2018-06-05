@@ -1,23 +1,15 @@
-
-KEY PERFORMANCE INDICATORS AND ALERTS
+Key Performance Indicator
 =====================================
 
 KPI stands for Key Performance Indicator. It denotes a set of metrics, usually derived from simple measures, which allow managers to take a snapshot on key aspects of their business. The main characteristics of KPIs follow:
 
 -  summary indicators,
-
 -  complex calculations,
-
 -  thresholds supporting results evaluation,
-
 -  reference target goals,
-
 -  easy to use but requiring more specific skills to design it,
-
 -  association with alarms,
-
 -  not necessarily used for real-time analysis,
-
 -  may refer to a specific time frame.
 
 For these reasons, KPIs are always defined by expert analysts and then used to analyze performances through synthetic views that select and outline only meaningful information.
