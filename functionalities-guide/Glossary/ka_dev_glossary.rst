@@ -1,6 +1,4 @@
-
-
-GLOSSARY AND DATA LINAGE
+Glossary and Data Linage
 ========================
 
 The **Glossary** functionality offers a way to find documents by browsing an index page.
@@ -146,15 +144,10 @@ Help Online functionality
 The user can inspect the association of a specific analytical element (dataset, document or model) by using the **Help Online** funcitonality. The latter can be reached:
 
 -  from the Document Browser,
-
 -  from the toolbar of each document, once launched,
-
 -  from every dataset,
-
 -  from every entity of the Qbe model,
-
 -  from Birt reports,
-
 -  from the cockpit.
 
 As an example, we show in Figure 19.14 the graphic interface the user will encounter once he/she has launched a document and wishes to use the Help Online functionality.
