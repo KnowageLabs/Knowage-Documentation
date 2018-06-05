@@ -1,24 +1,18 @@
-LOCATION INTELLIGENCE
-=====================
+Location Intelligence
+======================
 
 Location intelligence is based on the idea that geographical spaces are a particular analytical dimension in the BI domain. It is based on:
 
 -  the geographical representation of data,
-
 -  interaction with GIS systems,
-
 -  spatial data,
-
 -  spatial operators.
 
 Location Intelligence usually guarantees:
 
 -  an immediate perception of a phenomena distribution over a geographical area,
-
 -  interactivity, 
-
 -  multivariate analysis,
-
 -  temporal snapshots.
 
 Location Intelligence is becoming widely used, mostly thanks to the emergence of location services such as Google Maps. This domain is very easy to use for all kinds of users, usually analysts and operational profiles. By contrast, its management is not as easy, especially if it implies an internal management of the geographical data base.
