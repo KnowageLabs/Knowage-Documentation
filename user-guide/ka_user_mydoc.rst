@@ -91,7 +91,7 @@ Rate document
 
 .. figure:: media/image36.png
 
-   Figure 3.8: Rating a document
+   Rating a document
 
 The aim of this functionality is to acquire explicit quality data that can be further used. Specifically, it allows the administrator to identify anomalies about the use of an analytical document by end users. Rating a document means assigning it a value from the end user perspective. This brings additional information with respect to traditional audit and monitoring data, which can track the number of executions but cannot interpret users motivations and feelings.
 
