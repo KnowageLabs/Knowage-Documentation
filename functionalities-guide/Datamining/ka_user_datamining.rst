@@ -1,8 +1,8 @@
 
-DATA MINING
+Data Mining
 ===========
 
-KnowAge supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making
+Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making
 and business strategies. In particular, Knowage **Data Mining Engine** integrates R and Python scripting capabilities.
 
 R is a programming language and software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing andvanced algorithms andm data analysis tools. Polls and surveys show that R’s popularity is continually increasing. As well, Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Rather than requiring all desired functionality to be built into the language’s core, Python was designed to be highly extensible and it is intended to be a highly readable language.
