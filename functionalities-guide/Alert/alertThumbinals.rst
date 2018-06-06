@@ -1,6 +1,7 @@
 .. |image174| image:: media/image172.png
    :width: 4.05106in
    :height: 1.92314in
+   :label: `mc`
 .. |image175| image:: media/image173.png
    :width: 5.78738in
    :height: 2.16211in
