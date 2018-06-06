@@ -1,4 +1,4 @@
-.. |image174| figure:: media/image172.png
+.. |image174| image:: media/image172.png
    :width: 4.05106in
    :height: 1.92314in
 .. |image175| image:: media/image173.png
