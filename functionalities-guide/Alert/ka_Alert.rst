@@ -1,7 +1,7 @@
 Alert
 ===========
 
-The **Alert** functionality available under the **Tool** section of Knowage main menu, as shown in :ref:`figlem`, allows you to implement a control over events. Technically it consists of monitoring the possible overcoming of fixed thresholds and the consequent signal of anomalies by means of an email or by launching an ETL process. In next sections we will see in details how to configure the alarms using the Alert feature. Se io scrivo cose aggiuntive le inserisce nlla doc online?
+The **Alert** functionality available under the **Tool** section of Knowage main menu, as shown in :numref:`figlem`, allows you to implement a control over events. Technically it consists of monitoring the possible overcoming of fixed thresholds and the consequent signal of anomalies by means of an email or by launching an ETL process. In next sections we will see in details how to configure the alarms using the Alert feature.
 
    .. _figlem:
    
@@ -12,7 +12,7 @@ The **Alert** functionality available under the **Tool** section of Knowage main
 Alert implementation
 ------------
 
-The Alert definition window (refer to Figure 9.2) diplays the list of existing alerts and a search box at the top of the page to facilitate to browse over the items. In the right top corner it is available the “Plus” icon to configure a new alert.
+The Alert definition window (refer to Figure 9.2, :numref:`figlem`) diplays the list of existing alerts and a search box at the top of the page to facilitate to browse over the items. In the right top corner it is available the “Plus” icon to configure a new alert.
 
 Clicking on the “Plus” icon the page in Figure 9.3 opens.
 
