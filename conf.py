@@ -59,8 +59,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.imgmath',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.numfig'
+    'sphinx.ext.ifconfig'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
