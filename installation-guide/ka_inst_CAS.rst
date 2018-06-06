@@ -52,7 +52,7 @@ Code 8.2: keystore.jks creation.
 
 .. code:: console
 
-   $JAVA_HOME/bin/keytool -export -alias <alias of the certificate> -file cert.crt      
+   $JAVA_HOME/bin/keytool -export -alias <alias of the certificate> -file cert.crt -keystore keystore.jks 
    
 Code 8.3: Certificate export.
 
