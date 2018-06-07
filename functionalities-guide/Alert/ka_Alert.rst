@@ -13,11 +13,13 @@ A visualization of this is shown in Figure :num:`emPlaneWaveSetupWin`.
 
    Setup window for the Electromagnetic Plane Wave example.
    
-   .. _label:  
+.. _label:  
    
-   |image174|
+.. figure:: media/image172.png
+   :width: 4.05106in
+   :height: 1.92314in
 
-      Alert functionality from contextual menu.
+   Alert functionality from contextual menu.
 
 Alert implementation
 ------------
