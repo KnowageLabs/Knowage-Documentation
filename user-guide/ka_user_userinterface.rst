@@ -54,12 +54,13 @@ From now on we suppose the reader has a role of type “End user”. If some gra
 Main menu
 -------------
 
-Knowage Menu gives you access to documents, data and all the functionalities that you are allowed to use. By default the menu button is at the left bottom corner of the home page: clik it to open the menu, as shown in Figure 2.2.
+Knowage Menu gives you access to documents, data and all the functionalities that you are allowed to use. By default the menu button is at the left bottom corner of the home page: clik it to open the menu, as shown in :numfig:`homepage`.
 
 Knowage main menu consists in a set of icons associated with basic features. It is divided in two submenus: the general menu, which is collapsed, and the BI functionalities menu. In Table 2.2 and 2.3 the corresponding elements are summed up .
 
 It is important to underline that not all the components of the menu are mandatory, but they may be configured by the administrator according to user’s needs.
 
+.. _homepage:
 .. figure:: media/image7.png
    
    Home page
