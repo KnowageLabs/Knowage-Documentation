@@ -1,26 +1,12 @@
 Alert
 ===========
 
-The **Alert** functionality available under the **Tool** section of Knowage main menu, as shown in Figure :num:`label`, allows you to implement a control over events. Technically it consists of monitoring the possible overcoming of fixed thresholds and the consequent signal of anomalies by means of an email or by launching an ETL process. In next sections we will see in details how to configure the alarms using the Alert feature. Prova aggiornamento. Prova aggiornamento.
+The **Alert** functionality available under the **Tool** section of Knowage main menu, as shown in Figure 9.1, allows you to implement a control over events. Technically it consists of monitoring the possible overcoming of fixed thresholds and the consequent signal of anomalies by means of an email or by launching an ETL process. In next sections we will see in details how to configure the alarms using the Alert feature.
 
-A visualization of this is shown in Figure :num:`emPlaneWaveSetupWin`.
+   |image174|
 
-.. _emPlaneWaveSetupWin:
-
-.. figure:: media/image172.png
-   :scale: 100 %
-   :alt: image 1
-
-   Setup window for the Electromagnetic Plane Wave example.
+   Figure 9.1: Alert functionality from contextual menu.
    
-.. _label:  
-   
-.. figure:: media/image172.png
-   :width: 4.05106in
-   :height: 1.92314in
-
-   Alert functionality from contextual menu.
-
 Alert implementation
 ------------
 
