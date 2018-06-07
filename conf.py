@@ -396,3 +396,5 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 # https://stackoverflow.com/questions/2686310/referencing-figures-with-numbers-in-sphinx-and-restructuredtext
 numfig = True
+numfig_secnum_depth = 1
+numfig_format = {'figure': 'Figure %s'}
