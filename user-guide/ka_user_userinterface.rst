@@ -55,6 +55,7 @@ Main menu
 -------------
 
 .. _homepage:
+
 .. figure:: media/image7.png
    
    Home page
