@@ -82,7 +82,7 @@ The following Table 3.3 displays the compatibility with the supported applicatio
 For each application server installation please refer to each official user guide.
 
 JBoss Enterprise Application Platform (EAP) 6
------------------------
+---------------------------------------------
 
 In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
@@ -111,7 +111,7 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
 
 Tomcat 7
-------------------
+---------
 
 In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 
@@ -135,12 +135,10 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
     .. code:: console
 
       export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat7.  
-      pid                                                                         
-      export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
+        pid export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
 
 
-**Remark.** Modify the TOMCAT_HOME/bin/shutdown.sh file to force the
-   shut down of the application in case of hanging:
+**Remark.** Modify the TOMCAT_HOME/bin/shutdown.sh file to force the shut down of the application in case of hanging:
 
     .. code:: console
 
