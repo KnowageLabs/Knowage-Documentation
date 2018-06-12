@@ -45,7 +45,7 @@ JDK version
 
 The enviroment in which Knowage will be installed must include a 1.8 JDK installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
 
-**[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 3.1):
+**[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following Code 2.1):
 
 .. code:: console
 
@@ -53,13 +53,13 @@ The enviroment in which Knowage will be installed must include a 1.8 JDK install
  export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            
  export PATH=$JAVA_HOME/bin:$PATH                                      
 
-Code 3.1: Instructions to set the JAVA_HOME variable for Linux environment.
+Code 2.1: Instructions to set the JAVA_HOME variable for Linux environment.
 
-**[WIN]** Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 3.1.
+**[WIN]** Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to Figure 2.1.
 
  .. image:: media/image7.png
 
-Figure 3.1: Setting the path for the JAVA_HOME variable for Windows.
+Figure 2.1: Setting the path for the JAVA_HOME variable for Windows.
    
 
 Application server
@@ -89,6 +89,7 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 **[LINUX]** It is recommended to create a proper user for the execution of JBoss. We state the main steps to reach this purpose.
    
 - Create the JBoss user.
+
     .. code:: console
 
       useradd -m jboss                                                         
@@ -100,7 +101,7 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
       export JBOSS_HOME=<path of the installation JBoss root folder > 
 
-- Be sure that the JBoss uses the JDK 1.8: usually the JBoss settings are defined in the JBOSS_HOME/bin/run.conf.sh file, therefore if the JBOSS_HOME/bin/run.conf.sh file does not exit, the user must create it and insert it in the content as shown in Code 3.6:
+- Be sure that the JBoss uses the JDK 1.8: usually the JBoss settings are defined in the JBOSS_HOME/bin/run.conf.sh file, therefore if the JBOSS_HOME/bin/run.conf.sh file does not exit, the user must create it and insert it in the content as shown below:
 
     .. code:: console
 
@@ -117,17 +118,19 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 **[LINUX]** It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
 - Create the Tomcat user.
+
     .. code:: console
 
       useradd -m tomcat                     
       passwd <password for the tomcat user> 
 
 - Install the Tomcat using the Tomcat user. Remeber to define the TOMCAT_HOME variable.
+
     .. code:: console
 
       export TOMCAT_HOME=<path of the installation Tomcat root folder >
 
-- Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown in Code 3.6. Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
+- Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown below. Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
 
     .. code:: console
 
@@ -136,7 +139,7 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
       export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
 
 
-   **Remark.** Modify the TOMCAT_HOME/bin/shutdown.sh file to force the
+**Remark.** Modify the TOMCAT_HOME/bin/shutdown.sh file to force the
    shut down of the application in case of hanging:
 
     .. code:: console
@@ -149,7 +152,7 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 Database schema for metadata
 ---------------------
 
-Knowage uses a schema to manage metadata, that is all those information required for its operation. These concern the configuration, the users and the analytical documents. It is possible to use the DBMSs listed in Table 3.4 for the creation of this schema.
+Knowage uses a schema to manage metadata, that is all those information required for its operation. These concern the configuration, the users and the analytical documents. It is possible to use the DBMSs listed in Table 2.4 for the creation of this schema.
 
 .. table:: Exploitable DBMSs for the metadata schema creation
     :widths: auto
