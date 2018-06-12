@@ -70,38 +70,38 @@ Let’s describe the main steps of the execution:
 
 .. figure:: media/image9.png 
 
-Licence acceptance.
+    Licence acceptance.
   
 - **Step 3.** The installer requires internet access to connect with Knowage server in order to activate the licences and download the installation packages. It is possible to configure the proxy with for Internet connectivity inside the wizard. In case the settings are wrong, cancel the current installation and start a new one. If the connection succeeds, then the installer proceeds with the online licences, otherwise the user is asked to continue with the offline activation or to cancel the installation.
 
 .. figure:: media/image10.png 
-
-Internet connection.
+    
+    Internet connection.
   
 - **Step 4.** It is possible to activate the product on-line thanks to an online activation procedure. It is necessary though to purchase one (or more) product key(s). There are as many product keys as the available components in Knowage. If the installer recognises the product key, then it starts the procedure, otherwise the activation fails.
 The user can insert a new product key until there are components to activate.
 
 .. figure:: media/image11.png 
 
-Insert the product key.
+    Insert the product key.
 
 - **Step 5.** If the user has chosen the online activation, the products corresponding to the purchased product keys are selected automatically and are not changeable by the user. If the user has chosen the offline procedure he/she must manually select at least one component to be installed.
       
 .. figure:: media/image12.png 
 
-Select components.
+    Select components.
 
 - **Step 6.**  Select the desired application server and set up its installation folder. The installer checks the installation path of the application server before moving to the next step.
 
 .. figure:: media/image13.png 
 
-Application server configuration.
+    Application server configuration.
 
 - **Step 7.** The metadata database is used by Knowage as repository for the configuration information.
 
 .. figure:: media/image14.png 
 
-Configuration of the metadata database.
+    Configuration of the metadata database.
 
 **Remark.** Set up a priori a DBMS to store Knowage metadata. Select then the desired DBMS for metadata storage and modify the fields accordingly. The installer will verify the connection before moving to the next step. In addition the installer asks the user if the JDBC connector should be installed the JDBC connector.
 
@@ -110,32 +110,31 @@ To configure a data DB the user must check the relative feature of the wizard, a
 .. _confofthemetadata:
 .. figure:: media/image15.png 
 
-Configuration of the metadata database.
+    Configuration of the metadata database.
 
 - **Step 8.** The setting for clustering is deselected by default, that is Knowage executes on a single node if not otherwise specified. To enable the clustering, select the number of nodes and set up the related IP address for each of them. The installer controls the correctness of each and that they are not repeated. The installation process is therefore activated. The installer attempts to download the installation files from the Knowage web site, for which credentials are required. If the connection fails and the installer cannot verify the user’s credentials, the installer asks the user if he wants to go on using the local WAR files. In this case the installer will check if all essential WAR files are located in the specified path, according to the components selected in the previous steps. It will also copy the WAR files (in the case of the offline installation) and add additional files if needed. All the additional tasks are hidden behind the progress bar showed in the installation wizard (refer to :numref:`additionaltasks`).
 
 .. figure:: media/image16.png 
 
-Clustering.
+    Clustering.
 
 .. _additionaltasks:
 .. figure:: media/image17.png 
 
-Additional tasks.
+    Additional tasks.
 
 **Remark: offline manual activation.** Note that in this case the wizard, :numref:`offlinemanualact`, provides the instructions to ask for technical support and get the licence files that the user must manually install.
 
 .. _offlinemanualact:
 .. figure:: media/image18.png 
 
-Offline manual activation.
+    Offline manual activation.
 
 - **Step 9.** The installation succeded. The user can now choose if to visit the Knowage website and click "Finish" to exit setup.
 
 .. figure:: media/image19.png 
 
-End of the installation.
-
+    End of the installation.
 
 Uninstaller
 --------------
@@ -152,19 +151,19 @@ At the end of the installation, the user can find the **uninstaller** file insid
 
 .. figure:: media/image20.png 
 
-Knowage uninstaller.
+    Knowage uninstaller.
 
 Select also which optional features to run (in :numref:`knowageuninstaller` the available ones) and click on “Next”. The uninstaller controls if the application server is running in that moment. If that is the case, the uninstaller cannot succeed in removing the Knowage packages. The uninstaller removes also the previous installed files, restores the databases and the application server configuration.
 
 .. _knowageuninstaller:
 .. figure:: media/image21.png 
 
-Knowage uninstaller.
+    Knowage uninstaller.
 
 .. figure:: media/image22.png 
 
-Knowage uninstaller.
+    Knowage uninstaller.
 
 .. figure:: media/image23.png 
 
-Knowage uninstaller.
+    Knowage uninstaller.
