@@ -94,12 +94,11 @@ Figure 2.6: Select components.
 
 -**Step 7.**\ (Figure 2.8) The metadata database is used by Knowage as repository for the configuration information.
 
-
 **Remark.** Set up a priori a DBMS to store Knowage metadata. Select then the desired DBMS for metadata storage and modify the fields accordingly. The installer will verify the connection before moving to the next step. In addition the installer asks the user if the JDBC connector should be installed the JDBC connector.
 
-To configure a data DB the user must check the relative feature of the wizard, as shown in Figure 4.8, otherwise the installer will not configure such connection. Select then the desired DBMS as data database and modify the fields properly. Once again the installer verifies the connection before moving to the next step. The user is asked to install on the application server the JDBC connector for the specified DBMS.
+To configure a data DB the user must check the relative feature of the wizard, as shown in Figure 2.9, otherwise the installer will not configure such connection. Select then the desired DBMS as data database and modify the fields properly. Once again the installer verifies the connection before moving to the next step. The user is asked to install on the application server the JDBC connector for the specified DBMS.
 
--**Step 8.**\ (Figure 2.9) The setting for clustering is deselected by default, that is Knowage executes on a single node if not otherwise specified.
+-**Step 8.**\ (Figure 2.10) The setting for clustering is deselected by default, that is Knowage executes on a single node if not otherwise specified. To enable the clustering, select the number of nodes and set up the related IP address for each of them. The installer controls the correctness of each and that they are not repeated. The installation process is therefore activated. The installer attempts to download the installation files from the Knowage web site, for which credentials are required. If the connection fails and the installer cannot verify the user’s credentials, the installer asks the user if he wants to go on using the local WAR files. In this case the installer will check if all essential WAR files are located in the specified path, according to the components selected in the previous steps. It will also copy the WAR files (in the case of the offline installation) and add additional files if needed. All the additional tasks are hidden behind the progress bar showed in the installation wizard (refer to Figure 2.11).
 
 .. image:: media/image13.png 
 
@@ -113,27 +112,26 @@ Figure 2.8: Configuration of the metadata database.
 
 Figure 2.9: Configuration of the metadata database.
 
-To enable the clustering, select the number of nodes and set up the related IP address for each of them. The installer controls the correctness of each and that they are not repeated. The installation process is therefore activated. The installer attempts to download the installation files from the Knowage web site, for which credentials are required. If the connection fails and the installer cannot verify the user’s credentials, the installer asks the user if he wants to go on using the local WAR files. In this case the installer will check if all essential WAR files are located in the specified path, according to the components selected in the previous steps. It will also copy the WAR files (in the case of the offline installation) and add additional files if needed. All the additional tasks are hidden behind the progress bar showed in the installation wizard (refer to Figure 4.10).
 
-**Remark: offline manual activation.** Note that in this case the wizard, Figure 4.11, provides the instructions to ask for technical support and get the licence files that the user must manually install.
+**Remark: offline manual activation.** Note that in this case the wizard, Figure 2.12, provides the instructions to ask for technical support and get the licence files that the user must manually install.
 
--**Step 9.**\ (Figure 4.12) The installation succeded. The user can now choose if to visit the Knowage website and click "Finish" to exit setup.
+-**Step 9.**\ (Figure 2.13) The installation succeded. The user can now choose if to visit the Knowage website and click "Finish" to exit setup.
 
 .. image:: media/image16.png 
 
-Figure 4.9: Clustering.
+Figure 2.10: Clustering.
 
 .. image:: media/image17.png 
 
-Figure 4.10: Additional tasks.
+Figure 2.11: Additional tasks.
 
 .. image:: media/image18.png 
 
-Figure 4.11: Offline manual activation.
+Figure 2.12: Offline manual activation.
 
 .. image:: media/image19.png 
 
-Figure 4.12: End of the installation.
+Figure 2.13: End of the installation.
 
 
 
