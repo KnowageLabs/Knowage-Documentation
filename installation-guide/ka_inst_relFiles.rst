@@ -85,19 +85,19 @@ The user can insert a new product key until there are components to activate.
 
 Insert the product key.
 
--**Step 5.** If the user has chosen the online activation, the products corresponding to the purchased product keys are selected automatically and are not changeable by the user. If the user has chosen the offline procedure he/she must manually select at least one component to be installed.
+- **Step 5.** If the user has chosen the online activation, the products corresponding to the purchased product keys are selected automatically and are not changeable by the user. If the user has chosen the offline procedure he/she must manually select at least one component to be installed.
       
 .. figure:: media/image12.png 
 
 Select components.
 
--**Step 6.**  Select the desired application server and set up its installation folder. The installer checks the installation path of the application server before moving to the next step.
+- **Step 6.**  Select the desired application server and set up its installation folder. The installer checks the installation path of the application server before moving to the next step.
 
 .. figure:: media/image13.png 
 
 Application server configuration.
 
--**Step 7.** The metadata database is used by Knowage as repository for the configuration information.
+- **Step 7.** The metadata database is used by Knowage as repository for the configuration information.
 
 .. figure:: media/image14.png 
 
@@ -112,7 +112,7 @@ To configure a data DB the user must check the relative feature of the wizard, a
 
 Configuration of the metadata database.
 
--**Step 8.** The setting for clustering is deselected by default, that is Knowage executes on a single node if not otherwise specified. To enable the clustering, select the number of nodes and set up the related IP address for each of them. The installer controls the correctness of each and that they are not repeated. The installation process is therefore activated. The installer attempts to download the installation files from the Knowage web site, for which credentials are required. If the connection fails and the installer cannot verify the user’s credentials, the installer asks the user if he wants to go on using the local WAR files. In this case the installer will check if all essential WAR files are located in the specified path, according to the components selected in the previous steps. It will also copy the WAR files (in the case of the offline installation) and add additional files if needed. All the additional tasks are hidden behind the progress bar showed in the installation wizard (refer to :numref:`additionaltasks`).
+- **Step 8.** The setting for clustering is deselected by default, that is Knowage executes on a single node if not otherwise specified. To enable the clustering, select the number of nodes and set up the related IP address for each of them. The installer controls the correctness of each and that they are not repeated. The installation process is therefore activated. The installer attempts to download the installation files from the Knowage web site, for which credentials are required. If the connection fails and the installer cannot verify the user’s credentials, the installer asks the user if he wants to go on using the local WAR files. In this case the installer will check if all essential WAR files are located in the specified path, according to the components selected in the previous steps. It will also copy the WAR files (in the case of the offline installation) and add additional files if needed. All the additional tasks are hidden behind the progress bar showed in the installation wizard (refer to :numref:`additionaltasks`).
 
 .. figure:: media/image16.png 
 
@@ -130,7 +130,7 @@ Additional tasks.
 
 Offline manual activation.
 
--**Step 9.** The installation succeded. The user can now choose if to visit the Knowage website and click "Finish" to exit setup.
+- **Step 9.** The installation succeded. The user can now choose if to visit the Knowage website and click "Finish" to exit setup.
 
 .. figure:: media/image19.png 
 
