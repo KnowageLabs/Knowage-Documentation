@@ -54,9 +54,9 @@ The enviroment in which Knowage will be installed must include a 1.8 JDK install
       	 :caption: Instructions to set the JAVA_HOME variable for Linux environment.
         :linenos:
         
- export JAVA_HOME=<root path of the Java installation>                 
- export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            
- export PATH=$JAVA_HOME/bin:$PATH                                      
+        export JAVA_HOME=<root path of the Java installation>                 
+        export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            
+        export PATH=$JAVA_HOME/bin:$PATH                                      
 
 **[WIN]** Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to :numref:`setting`.
  
@@ -97,22 +97,22 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 .. code-block:: bash
         :linenos:
 
-      useradd -m jboss                                                         
-      passwd <password for the jboss user> 
+        useradd -m jboss                                                         
+        passwd <password for the jboss user> 
 
 - Install the JBoss using the JBoss user, remeber to define the JBOSS_HOME variable.
 
 .. code-block:: bash
         :linenos:
 
-      export JBOSS_HOME=<path of the installation JBoss root folder > 
+        export JBOSS_HOME=<path of the installation JBoss root folder > 
 
 - Be sure that the JBoss uses the JDK 1.8: usually the JBoss settings are defined in the JBOSS_HOME/bin/run.conf.sh file, therefore if the JBOSS_HOME/bin/run.conf.sh file does not exit, the user must create it and insert it in the content as shown below:
 
 .. code-block:: bash
         :linenos:
 
-     export JAVA_HOME=<JDK 1.8 installation root folder> 
+        export JAVA_HOME=<JDK 1.8 installation root folder> 
 
 **[WIN]** It is recommended to install JBoss as a service, using the dedicated user guide available on the Red Hat web site http://www.redhat.com
 
@@ -129,22 +129,22 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 .. code-block:: bash
         :linenos:
 
-      useradd -m tomcat                     
-      passwd <password for the tomcat user> 
+        useradd -m tomcat                     
+        passwd <password for the tomcat user> 
 
 - Install the Tomcat using the Tomcat user. Remeber to define the TOMCAT_HOME variable.
 
 .. code-block:: bash
         :linenos:
 
-      export TOMCAT_HOME=<path of the installation Tomcat root folder >
+        export TOMCAT_HOME=<path of the installation Tomcat root folder >
 
 - Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown below. Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
 
 .. code-block:: bash
         :linenos:
 
-      export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat7.  
+        export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat7.
         pid export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
 
 
