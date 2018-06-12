@@ -47,12 +47,10 @@ JDK version
 
 The enviroment in which Knowage will be installed must include a 1.8 JDK installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
 
-**[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following :numref:`instructions`):
+**[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following :numref:`instructionstosetthejava`):
 
-.. _instructions:
+.. _instructionstosetthejava:
 .. code-block:: bash
-      	 :caption: Instructions to set the JAVA_HOME variable for Linux environment.
-        :linenos:
         
  export JAVA_HOME=<root path of the Java installation>                 
  export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            
@@ -65,7 +63,6 @@ The enviroment in which Knowage will be installed must include a 1.8 JDK install
   
    Setting the path for the JAVA_HOME variable for Windows.
    
-
 Application server
 ---------------------
 The following :numref:`supportedapp` displays the compatibility with the supported application servers:
@@ -110,7 +107,6 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
 - Be sure that the JBoss uses the JDK 1.8: usually the JBoss settings are defined in the JBOSS_HOME/bin/run.conf.sh file, therefore if the JBOSS_HOME/bin/run.conf.sh file does not exit, the user must create it and insert it in the content as shown below:
 
-.. _instructions:
 .. code-block:: bash
         :linenos:
 
