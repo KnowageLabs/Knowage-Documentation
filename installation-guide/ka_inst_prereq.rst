@@ -50,7 +50,7 @@ The enviroment in which Knowage will be installed must include a 1.8 JDK install
 **[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process (root and tomcat, as shown in the following :numref:`instructions`):
 
 .. _instructions:
-.. code-block:: console
+.. code-block:: bash
       	 :caption: Instructions to set the JAVA_HOME variable for Linux environment.
         :linenos:
         
@@ -95,7 +95,6 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
    
 - Create the JBoss user.
 
-.. _instructions:
 .. code-block:: console
         :linenos:
 
@@ -104,7 +103,6 @@ In the following we will refer to the JBoss installation folder as JBOSS_HOME.
 
 - Install the JBoss using the JBoss user, remeber to define the JBOSS_HOME variable.
 
-.. _instructions:
 .. code-block:: console
         :linenos:
 
@@ -139,7 +137,6 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 
 - Install the Tomcat using the Tomcat user. Remeber to define the TOMCAT_HOME variable.
 
-.. _instructions:
 .. code-block:: console
         :linenos:
 
@@ -147,7 +144,6 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 
 - Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown below. Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
 
-.. _instructions:
 .. code-block:: console
         :linenos:
 
@@ -157,7 +153,6 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
 
 **Remark.** Modify the TOMCAT_HOME/bin/shutdown.sh file to force the shut down of the application in case of hanging:
 
-.. _instructions:
 .. code-block:: console
         :linenos:
 
