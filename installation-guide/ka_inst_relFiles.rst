@@ -7,11 +7,25 @@ Here the essential elements for the installation:
 
 -Installer,
 
--DDL (see Table 4.1),
+-DDL (see Table 2.5),
 
 -the single software packages.
 
-
+.. table:: Available Data Definition Languages
+    :widths: auto
+    
+    +------------------------------------+
+    |   **Component for table creation** |
+    +====================================+
+    |   Ingres-dbscript                  |
+    +------------------------------------+
+    |   MySql                            |
+    +------------------------------------+
+    |   Oracle                           |
+    +------------------------------------+
+    |   Postgres                         |
+    +------------------------------------+
+    
 Installation procedure
 ----------------
 
@@ -44,59 +58,60 @@ while in the second case he must type the command:
 
 Let’s describe the main steps of the execution:
 
--**Step 1.**\ ( Figure 4.1) Click on “Next” to go on with the installation or “Cancel” to call off.
+-**Step 1.**\ ( Figure 2.2) Click on “Next” to go on with the installation or “Cancel” to call off.
 
--**Step 2.**\ (Figure 4.2) Accept the license terms and conditions and click on “Next”.
+-**Step 2.**\ (Figure 2.3) Accept the license terms and conditions and click on “Next”.
 
--**Step 3.**\ (Figure 4.3) The installer requires internet access to connect with Knowage server in order to activate the licences and download the installation packages. It is possible to configure the proxy with for Internet connectivity inside the wizard. In case the settings are wrong, cancel the current installation and start a new one. If the connection succeeds, then the installer proceeds with the online licences, otherwise the user is asked to continue with the offline activation or to cancel the installation.
+-**Step 3.**\ (Figure 2.4) The installer requires internet access to connect with Knowage server in order to activate the licences and download the installation packages. It is possible to configure the proxy with for Internet connectivity inside the wizard. In case the settings are wrong, cancel the current installation and start a new one. If the connection succeeds, then the installer proceeds with the online licences, otherwise the user is asked to continue with the offline activation or to cancel the installation.
 
--**Step 4.**\ (Figure 4.4) It is possible to activate the product on-line thanks to an online activation procedure. It is necessary though to purchase one (or more) product key(s). There are as many product keys as the available components in Knowage. If the installer recognises the product key, then it starts the procedure, otherwise the activation fails.
+-**Step 4.**\ (Figure 2.5) It is possible to activate the product on-line thanks to an online activation procedure. It is necessary though to purchase one (or more) product key(s). There are as many product keys as the available components in Knowage. If the installer recognises the product key, then it starts the procedure, otherwise the activation fails.
 
 The user can insert a new product key until there are components to activate.
 
-      .. image:: media/image8.png 
-Figure 4.1: Installer GUI.
+.. image:: media/image8.png 
 
-      .. image:: media/image9.png 
+Figure 2.2: Installer GUI.
 
-Figure 4.2: Licence acceptance.
+.. image:: media/image9.png 
+
+Figure 2.3: Licence acceptance.
 
 .. image:: media/image10.png 
 
-Figure 4.3: Internet connection.
+Figure 2.4: Internet connection.
 
 .. image:: media/image11.png 
 
-Figure 4.4: Insert the product key.
+Figure 2.5: Insert the product key.
 
--**Step 5.**\ (Figure 4.5) If the user has chosen the online activation, the products corresponding to the purchased product keys are selected automatically and are not changeable by the user. If the user has chosen the offline procedure he/she must manually select at least one component to be installed.
+-**Step 5.**\ (Figure 2.6) If the user has chosen the online activation, the products corresponding to the purchased product keys are selected automatically and are not changeable by the user. If the user has chosen the offline procedure he/she must manually select at least one component to be installed.
       
 .. image:: media/image12.png 
 
-Figure 4.5: Select components.
+Figure 2.6: Select components.
 
--**Step 6.**\ (Figure 4.6) Select the desired application server and set up its installation folder. The installer checks the installation path of the application server before moving to the next step.
+-**Step 6.**\ (Figure 2.7) Select the desired application server and set up its installation folder. The installer checks the installation path of the application server before moving to the next step.
 
--**Step 7.**\ (Figure 4.7) The metadata database is used by Knowage as repository for the configuration information.
+-**Step 7.**\ (Figure 2.8) The metadata database is used by Knowage as repository for the configuration information.
 
 
 **Remark.** Set up a priori a DBMS to store Knowage metadata. Select then the desired DBMS for metadata storage and modify the fields accordingly. The installer will verify the connection before moving to the next step. In addition the installer asks the user if the JDBC connector should be installed the JDBC connector.
 
 To configure a data DB the user must check the relative feature of the wizard, as shown in Figure 4.8, otherwise the installer will not configure such connection. Select then the desired DBMS as data database and modify the fields properly. Once again the installer verifies the connection before moving to the next step. The user is asked to install on the application server the JDBC connector for the specified DBMS.
 
--**Step 8.**\ (Figure 4.9) The setting for clustering is deselected by default, that is Knowage executes on a single node if not otherwise specified.
+-**Step 8.**\ (Figure 2.9) The setting for clustering is deselected by default, that is Knowage executes on a single node if not otherwise specified.
 
 .. image:: media/image13.png 
 
-Figure 4.6: Application server configuration.
+Figure 2.7: Application server configuration.
 
 .. image:: media/image14.png 
 
-Figure 4.7: Configuration of the metadata database.
+Figure 2.8: Configuration of the metadata database.
 
 .. image:: media/image15.png 
 
-Figure 4.8: Configuration of the metadata database.
+Figure 2.9: Configuration of the metadata database.
 
 To enable the clustering, select the number of nodes and set up the related IP address for each of them. The installer controls the correctness of each and that they are not repeated. The installation process is therefore activated. The installer attempts to download the installation files from the Knowage web site, for which credentials are required. If the connection fails and the installer cannot verify the user’s credentials, the installer asks the user if he wants to go on using the local WAR files. In this case the installer will check if all essential WAR files are located in the specified path, according to the components selected in the previous steps. It will also copy the WAR files (in the case of the offline installation) and add additional files if needed. All the additional tasks are hidden behind the progress bar showed in the installation wizard (refer to Figure 4.10).
 
