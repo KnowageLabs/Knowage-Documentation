@@ -139,33 +139,29 @@ Uninstaller
 --------------
 
 At the end of the installation, the user can find the **uninstaller** file inside the installation folder. This can be executed to unistall Knowage.
+
 **[LINUX]** The uninstaller is executable from the Knowage installation folder:
 
 -  using the GUI if a desktop environment is available;
 
 -  using the bash if it is executed typing the parameter “-c”.
+
 **[WIN]** On Windows Systems the uninstaller requires administrator permissions. It can be executed from Windows menu or from the Windows control panel.
 
 .. image:: media/image20.png 
 
-Figure 4.13: Knowage uninstaller.
+Figure 2.14: Knowage uninstaller.
 
-Select also which optional features to run (in Figure 4.14 the available ones) and click on “Next”. The uninstaller controls if the application server is running in that moment. If that is the case, the uninstaller cannot succeed in removing the Knowage packages.
-
-The uninstaller removes also the previous installed files, restores the databases and the application server configuration.
-
-Uninstaller
+Select also which optional features to run (in Figure 2.15 the available ones) and click on “Next”. The uninstaller controls if the application server is running in that moment. If that is the case, the uninstaller cannot succeed in removing the Knowage packages. The uninstaller removes also the previous installed files, restores the databases and the application server configuration.
 
 .. image:: media/image21.png 
 
-Figure 4.14: Knowage uninstaller.
+Figure 2.15: Knowage uninstaller.
 
 .. image:: media/image22.png 
 
-Figure 4.15: Knowage uninstaller.
-
-Uninstaller
+Figure 2.16: Knowage uninstaller.
 
 .. image:: media/image23.png 
 
-Figure 4.16: Knowage uninstaller.
+Figure 2.17: Knowage uninstaller.
