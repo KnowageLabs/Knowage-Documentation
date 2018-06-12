@@ -5,11 +5,9 @@ It is possible to download the software in the web site `www.knowage-suite.com/p
 
 Here the essential elements for the installation:
 
--Installer,
-
--DDL (see Table 2.5),
-
--the single software packages.
+- Installer,
+- DDL (see Table 2.5),
+- the single software packages.
 
 .. table:: Available Data Definition Languages
     :widths: auto
@@ -58,31 +56,29 @@ while in the second case he must type the command:
 
 Let’s describe the main steps of the execution:
 
--**Step 1.**\ ( Figure 2.2) Click on “Next” to go on with the installation or “Cancel” to call off.
+- **Step 1.** Click on “Next” to go on with the installation or “Cancel” to call off.
 
--**Step 2.**\ (Figure 2.3) Accept the license terms and conditions and click on “Next”.
-
--**Step 3.**\ (Figure 2.4) The installer requires internet access to connect with Knowage server in order to activate the licences and download the installation packages. It is possible to configure the proxy with for Internet connectivity inside the wizard. In case the settings are wrong, cancel the current installation and start a new one. If the connection succeeds, then the installer proceeds with the online licences, otherwise the user is asked to continue with the offline activation or to cancel the installation.
-
--**Step 4.**\ (Figure 2.5) It is possible to activate the product on-line thanks to an online activation procedure. It is necessary though to purchase one (or more) product key(s). There are as many product keys as the available components in Knowage. If the installer recognises the product key, then it starts the procedure, otherwise the activation fails.
+  .. _installergui:
+  .. figure:: media/image8.png 
+  
+     Installer GUI.
+- **Step 2.**\ (Figure 2.3) Accept the license terms and conditions and click on “Next”.
+- **Step 3.**\ (Figure 2.4) The installer requires internet access to connect with Knowage server in order to activate the licences and download the installation packages. It is possible to configure the proxy with for Internet connectivity inside the wizard. In case the settings are wrong, cancel the current installation and start a new one. If the connection succeeds, then the installer proceeds with the online licences, otherwise the user is asked to continue with the offline activation or to cancel the installation.
+- **Step 4.**\ (Figure 2.5) It is possible to activate the product on-line thanks to an online activation procedure. It is necessary though to purchase one (or more) product key(s). There are as many product keys as the available components in Knowage. If the installer recognises the product key, then it starts the procedure, otherwise the activation fails.
 
 The user can insert a new product key until there are components to activate.
 
-.. image:: media/image8.png 
+.. figure:: media/image9.png 
 
-Figure 2.2: Installer GUI.
+  Licence acceptance.
 
-.. image:: media/image9.png 
+.. figure:: media/image10.png 
 
-Figure 2.3: Licence acceptance.
+  Internet connection.
 
-.. image:: media/image10.png 
+.. figure:: media/image11.png 
 
-Figure 2.4: Internet connection.
-
-.. image:: media/image11.png 
-
-Figure 2.5: Insert the product key.
+  Insert the product key.
 
 -**Step 5.**\ (Figure 2.6) If the user has chosen the online activation, the products corresponding to the purchased product keys are selected automatically and are not changeable by the user. If the user has chosen the offline procedure he/she must manually select at least one component to be installed.
       
