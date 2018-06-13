@@ -383,17 +383,17 @@ Moreover, apply the string substitutions to the configs.xml file included in the
 .. table:: String replacements according to the web application.
     :widths: auto
 
-+------------------+------------------------------+--------------------------+
-|    **File name** | **Original string**          | **New string**           |
-+==================+==============================+==========================+
-|    configs.xml   | java:/comp/env/resource_path | java:/urls/resource_path |
-+------------------+------------------------------+--------------------------+
-|                  | java:/comp/env/service_url   | java:/urls/service_url   |
-+------------------+------------------------------+--------------------------+
-|                  | java:/comp/env/sso_class     | java:/urls/sso_class     |
-+------------------+------------------------------+--------------------------+
-|                  | java:/comp/env/hmacKey       | java:/urls/hmacKey       |
-+------------------+------------------------------+--------------------------+
+    +------------------+------------------------------+--------------------------+
+    |    **File name** | **Original string**          | **New string**           |
+    +==================+==============================+==========================+
+    |    configs.xml   | java:/comp/env/resource_path | java:/urls/resource_path |
+    +------------------+------------------------------+--------------------------+
+    |                  | java:/comp/env/service_url   | java:/urls/service_url   |
+    +------------------+------------------------------+--------------------------+
+    |                  | java:/comp/env/sso_class     | java:/urls/sso_class     |
+    +------------------+------------------------------+--------------------------+
+    |                  | java:/comp/env/hmacKey       | java:/urls/hmacKey       |
+    +------------------+------------------------------+--------------------------+
 
 **Remark.** The configs.xml file is used to initialize some configuration tables on the database, therefore the user must set these adjustments before the server is launched. Furthermore, the user must apply the modifications listed below in all configuration web.xml files of each web application:
 
