@@ -258,8 +258,10 @@ Where:
 
 -  <COMMONJ> is the main tag and includes all the document.
 -  The tag <WORK> specifies the process. In particular:
+
    -  workName is the id of the process
    -  className contains the name of the class implementing the proces (as defined above).
+   
 -  The tag <PARAMETERS> contains all parameters. Each <PARAMETER> tag includes a parameter. Some of them are mandatory
 
 .. _connectionsettings:
