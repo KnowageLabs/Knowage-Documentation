@@ -21,175 +21,168 @@ Dependencies
 -------------------
 If you are using JBoss as application server, you must add some modules inside the folder JBOSS_HOME/modules/system/layers/base:
 
--the JDBC module of the metadata database with its dependencies (if any);
+- the JDBC module of the metadata database with its dependencies (if any);
+- the JDBC module of the data database with its dependencies (if any);
+- the module which includes the commonj library with its dependencies (if any):
 
--the JDBC module of the data database with its dependencies (if any);
+   - geronimo-commonj_1.1_spec-1.0.jar,
+   - concurrent.jar,
+   - foo-commonj.jar;
 
--the module which includes the commonj library with its dependencies (if any):
-
-   –geronimo-commonj_1.1_spec-1.0.jar,
-
-   -concurrent.jar,
-
-   -foo-commonj.jar;
-
--the Resteasy Jackson2 Provider module;
-
--the fasterxml Classmate, Jackson Core e Jackson JAXRS modules.
+- the Resteasy Jackson2 Provider module;
+- the fasterxml Classmate, Jackson Core e Jackson JAXRS modules.
 
 Instead, if you are using Tomcat as application server, you must add some libraries inside the TOMCAT_HOME/lib folder:
 
 -  the JDBC module of the metadata database with its dependencies (if any);
-
 -  the JDBC module of the data database with its dependencies (if any);
-
 -  the module which includes the commonj library with its dependencies (if any):
 
    -  geronimo-commonj_1.1_spec-1.0.jar,
-
    -  concurrent.jar,
-
    -  foo-commonj.jar.
 
 File system resources
---------------------
+---------------------
 
 In the JBoss instance, create the folder JBOSS_HOME/standalone/data/resources. Equally in the Tomcat instance, create the folder TOMCAT_HOME/resources. Such a folder will contain some useful static resources and the indexes for the research engine used by Knowage.
 
 Metadata database connection
------------------------
-In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the metadata database inside the “datasources” tag: specify the username, the password and driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 is an example:
+----------------------------
+In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the metadata database inside the “datasources” tag: specify the username, the password and driver class name, URL, connection checker class and exception sorter class. The following :numref:`settingthemetadatadata` is an example:
 
-.. code:: xml
+.. _settingthemetadatadata:
+.. code-block:: xml
+        :linenos:
+        :caption: Setting the metadata datasource.
+        
+	<datasource jndi-name="java:/jdbc/knowage" pool-name="knowage">       
+	<connection-url> <JDBC URL> </connection-url>                         
+	<driver> <JDBC driver> </driver>                                      
+	<security>                                                            
+	<user-name> user name> </user-name>                                   
+	<password> <password> </password>                                     
+	</security>                                                           
+	<validation>                                                          
+	<validate-on-match>true</validate-on-match>                           
+	<background-validation>false</background-validation>                  
+		<valid-connection-checker class-name="<connection checkerclass>"/> 
+		<exception-sorter class-name="<exception sorter class>"/>          
+		</validation>                                                      
+	</datasource>  
 
- <datasource jndi-name="java:/jdbc/knowage" pool-name="knowage">       
- <connection-url> <JDBC URL> </connection-url>                         
- <driver> <JDBC driver> </driver>                                      
- <security>                                                            
- <user-name> user name> </user-name>                                   
- <password> <password> </password>                                     
- </security>                                                           
- <validation>                                                          
- <validate-on-match>true</validate-on-match>                           
- <background-validation>false</background-validation>                  
-    <valid-connection-checker class-name="<connection checkerclass>"/> 
-    <exception-sorter class-name="<exception sorter class>"/>          
-    </validation>                                                      
- </datasource>                                                         
+In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Below an example:
 
-Code 5.2: Setting the metadata datasource.
+.. code-block:: xml
+        :linenos:
 
-In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Here in Code 3.6 is an example:
+         <driver name="<driver class>" module="<module name>" /> 
 
-.. code:: xml
+In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following :numref:`settingthemetadatadatas` shows an example:
 
-<driver name="<driver class>" module="<module name>" /> 
+.. _settingthemetadatadatas:
+.. code-block:: xml
+        :linenos:
+        :caption: Setting the metadata datasource.
 
-
-In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following Code 3.6 shows an example:
-
-.. code:: xml
-
- <Resource name="jdbc/knowage" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
- password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
- validationQuery="<a query to validate the connection, for example "select 1 from dual" on Oracle>" 
- removeAbandoned="true" removeAbandonedTimeout="3600"/>                
-
-Code 5.3: Setting the metadata datasource.
+        <Resource name="jdbc/knowage" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
+          password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
+          validationQuery="<a query to validate the connection, for example 
+          "select 1 from dual" on Oracle>" removeAbandoned="true" 
+        removeAbandonedTimeout="3600"/>                
 
 Data database connection
--------------------
+------------------------
 
-In the JBoss case, edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the data database inside the datasources tag. Specify: username, password, driver class name, URL, connection checker class and exception sorter class. The following Code 3.6 shows an example:
+In the JBoss case, edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the data database inside the datasources tag. Specify: username, password, driver class name, URL, connection checker class and exception sorter class. The following :numref:`settingthemetadatadataso` shows an example:
 
-.. code:: xml
+.. _settingthemetadatadataso:
+.. code-block:: xml
+        :linenos:
+        :caption: Setting the metadata datasource.
 
- <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage">           
-    <connection-url> <JDBC URL> </connection-url>                      
-    <driver> <JDBC driver> </driver>                                   
-    <security>                                                         
-    <user-name> <user name> </user-name>                               
-    <password> <password> </password>                                  
-    </security>                                                        
-    <validation>                                                       
-    <validate-on-match>true</validate-on-match>                        
-    <background-validation>false</background-validation>               
-    <valid-connection-checker class-name="<connection checker class>"/>
-    <exception-sorter class-name="<exception sorter class>"/>          
-    </validation>                                                      
- </datasource>                                                         
-
-Code 5.4: Setting the data datasource.
+        <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage">           
+            <connection-url> <JDBC URL> </connection-url>                      
+            <driver> <JDBC driver> </driver>                                   
+            <security>                                                         
+            <user-name> <user name> </user-name>                               
+            <password> <password> </password>                                  
+            </security>                                                        
+            <validation>                                                       
+            <validate-on-match>true</validate-on-match>                        
+            <background-validation>false</background-validation>               
+            <valid-connection-checker class-name="<connection checker class>"/>
+            <exception-sorter class-name="<exception sorter class>"/>          
+            </validation>                                                      
+        </datasource>                                                         
 
 In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Code is an example:
 
-.. code:: xml
+.. code-block:: xml
+        :linenos:
 
- <driver name="<driver class>" module="<module name>" /> 
+        <driver name="<driver class>" module="<module name>" /> 
 
-In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following Code 3.6 shows an example:
+In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following :numref:`settingthemetadatadatasou` shows an example:
 
-.. code:: xml
+.. _settingthemetadatadatasou:
+.. code-block:: xml
+        :linenos:
+        :caption: Setting the metadata datasource.
 
- <Resource name="jdbc/dwh" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
- password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
- validationQuery="<query to validate the connection, for instance "select 1  from dual" on Oracle>"        
-      removeAbandoned="true"                      
-    removeAbandonedTimeout="3600"/>                                    
-
-
-
-Code 5.5: Setting the metadata datasource.
+        <Resource name="jdbc/dwh" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
+          password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
+          validationQuery="<query to validate the connection, for instance 
+          "select 1  from dual" on Oracle>" removeAbandoned="true"                      
+        removeAbandonedTimeout="3600"/>
 
 Environment variables definition
-------------------------
-Concerning JBoss, edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the following constants inside the subsystem domain naming tab, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in Code 5.6:
+--------------------------------
+Concerning JBoss, edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the following constants inside the subsystem domain naming tab, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in :numref:`jbossenvironmentvariables`:
+
+.. _jbossenvironmentvariables:
+.. code-block:: xml
+        :linenos:
+        :caption: JBoss environment variables configuration.
+
+         <bindings>                                                            
+              <simple name="java:/urls/resource_path" type="java.lang.String"    
+              value="${jboss.server.data.dir}/resources" />                      
+              <simple name="java:/urls/sso_class" type="java.lang.String"        
+              value="it.eng.spagobi.services.common.FakeSsoService" /> <simple   
+              name="java:/urls/service_url" type="java.lang.String"              
+              value="http:// localhost:8080/knowage" />                          
+              <simple name="java:/urls/host_url" type="java.lang.String"         
+              value="<server url which is hosting knowage>"/>                    
+        </bindings>                                                           
 
 Applications deploy
--------------
+-------------------
 
-.. code:: xml
+On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and add the following constants in the GlobalNamingResources tag, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in :numref:`tomcatoenvironmentvariab`:
 
- <bindings>                                                            
-    <simple name="java:/urls/resource_path" type="java.lang.String"    
-    value="${jboss.server.data.dir}/resources" />                      
-    <simple name="java:/urls/sso_class" type="java.lang.String"        
-    value="it.eng.spagobi.services.common.FakeSsoService" /> <simple   
-    name="java:/urls/service_url" type="java.lang.String"              
-    value="http:// localhost:8080/knowage" />                          
-    <simple name="java:/urls/host_url" type="java.lang.String"         
-    value="<server url which is hosting knowage>"/>                    
- </bindings>                                                           
+.. _tomcatoenvironmentvariab:
+.. code-block:: xml
+        :linenos:
+        :caption: Tomcat environment variables configuration.
 
-
-Code 5.6: JBoss environment variables configuration.
-
-On the other hand, edit the file TOMCAT_HOME/conf/server.xml in Tomcat case and add the following constants in the GlobalNamingResources tag, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in Code 5.7:
-
-.. code:: xml
-
- <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>                 
+        <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>                 
                                                                                                                 
- <Environment name=" sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/> 
+        <Environment name=" sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/> 
                                                                                                                 
- <Environment name="service_url" type="java.lang.String" value="http://localhost :8080/knowage"/>               
+        <Environment name="service_url" type="java.lang.String" value="http://localhost :8080/knowage"/>               
                                                                                                                 
- <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>            
+        <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>            
 
-Code 5.7: Tomcat environment variables configuration.
+In both case cases, constants have the following meaning:
 
-In both case cases, costants have the following meaning:
-
--**resource\ \_\ path**: resources folder path,
-
--**sso_class**:SSO connector class name,
-
--**service\ \_\ url**:backend services address, typically set to `http://localhost:8080/knowage, <http://localhost:8080/knowage>`__
-
--**host\_\ url**: frontend services address, the one the user types in his browser.
+- **resource\ \_\ path**: resources folder path,
+- **sso_class**:SSO connector class name,
+- **service\ \_\ url**:backend services address, typically set to `http://localhost:8080/knowage, <http://localhost:8080/knowage>`__
+- **host\_\ url**: frontend services address, the one the user types in his browser.
 
 Applications deploy
-----------------
+-------------------
 
 For the JBoss istance, execute the following steps:
 
