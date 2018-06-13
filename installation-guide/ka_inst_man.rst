@@ -235,7 +235,8 @@ The scheduler is configured by the following file: knowage.war/WEB-INF/classes/q
  	# Postgres delegate class                                                                     
  	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      
  	# Oracle delegate class                                                                       
- 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate                                             # SQLServer delegate class                                                                    
+ 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
+	# SQLServer delegate class                                                                    
  	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.MSSQLDelegate           
 
 
