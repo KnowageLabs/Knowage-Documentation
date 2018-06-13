@@ -5,16 +5,15 @@ Manual Installation
 Metadata database
 -------------------
 
-The metadata database must contains a schema which will collect all Knowage metadata.
-For configuring such a schema, the user must execute the creation scripts provided for the
-DBMS in use. The package which includes the DDL will contain the following scripts in Code 3.1:
+The metadata database must contains a schema which will collect all Knowage metadata. For configuring such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following scripts in :numref:`scriptsformetadat`:
 
-.. code:: console
+.. _scriptsformetadat:
+.. code-block:: bash
+        :caption: Scripts for metadata schema.
+        :linenos:
  
- XXX_create.sql                                            
- XXX_create_quartz_schema.sql 
-
-Code 5.1: Scripts for metadata schema.
+        XXX_create.sql                                            
+        XXX_create_quartz_schema.sql
 
 where XXX represents the DBMS type, for instance ORA stands for Oracle. Inside the packages there are the corresponding files for deleting tables.
 
