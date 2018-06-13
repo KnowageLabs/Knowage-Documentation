@@ -9,8 +9,8 @@ The metadata database must contains a schema which will collect all Knowage meta
 
 .. _scriptsformetadat:
 .. code-block:: bash
-        :caption: Scripts for metadata schema.
         :linenos:
+        :caption: Scripts for metadata schema.
  
         XXX_create.sql                                            
         XXX_create_quartz_schema.sql
