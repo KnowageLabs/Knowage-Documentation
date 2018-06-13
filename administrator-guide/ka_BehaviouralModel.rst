@@ -34,6 +34,7 @@ The *profile* of a user consists of a set of properties called attributes, descr
 
 The *role* of a user represents a categorization of a group of users. These roles may correspond to specific positions in the company, e.g., “general manager” or a “sales director”, or to a position with respect to the BI project, e.g., “data administrator” and “BI developer”. Different users may have the same role, as well as the same user may have multiple roles.
 
+.. _knowageroletype:
 .. table:: Knowage Role Types.
     :widths: auto
 
@@ -124,7 +125,7 @@ Once the attributes are defined, the model administrator can define roles, using
       **Role Management**:
          The behavioural model should be built taking into account the specificity of each organization and the needs of the BI project.    Therefore, it is a good practice to define specific roles for the BI project and avoid using Knowage technical roles only.
 
-In the right panel there are three tabs. The **Detail** tab allows the administrator to define role name and role type (mandatory). The role type regulates the visibility of that role based on the categorization described in Table 5.1. A code and a description can be added too, as shown below.
+In the right panel there are three tabs. The **Detail** tab allows the administrator to define role name and role type (mandatory). The role type regulates the visibility of that role based on the categorization described in :numref:`knowageroletype` A code and a description can be added too, as shown below.
 
 .. figure:: media/image30.png
 
