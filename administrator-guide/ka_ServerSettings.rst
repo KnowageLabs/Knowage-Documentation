@@ -3,7 +3,7 @@ Server Settings
 
 In this chapter we describe all functionalities available in Server Settings panel of the Administrator Menu shown below.
 
-.. figure:: media/image87.png
+.. figure:: media/image93.png
 
    Server Settings Panel.
 
