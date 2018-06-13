@@ -25,10 +25,9 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 
 The detail page of each data source (on the right side as shown in the figure above) includes the following properties:
 
-   .. image:: media/image25.png  image:: media/image26.png
-        :alt: Figure 4.1: Left: Add a new data source. Right: Data source details.
+.. figure:: media/image25.png  ..figure:: media/image26.png
         
-|image25| |image26|
+    Left: Add a new data source. Right: Data source details.
 
 Label: 
   Mandatory identifier of the data source.
