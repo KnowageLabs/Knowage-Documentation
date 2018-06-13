@@ -26,7 +26,7 @@ Here the essential elements for the installation:
     +------------------------------------+
     
 Installation procedure
-----------------
+----------------------
 
 Knowage can be installed in two ways: manually or using the installer. In this section we will describe both procedures.
 
@@ -34,7 +34,7 @@ Installer usage
 ------------------
 Knowage installer is an application which steers the user to the installation and the first configuration of the product. It works in both Linux and Windows operating systems.
 
- **[LINUX]** To launch the installer, it is necessary to enable the flag execution on the installation file, typing the command in the bash:
+**[LINUX]** To launch the installer, it is necessary to enable the flag execution on the installation file, typing the command in the bash:
 
 .. code-block:: bash
          :linenos:
@@ -56,7 +56,7 @@ while in the second case he must type the command:
 
          ./Knowage_unix_1_0_0.sh -c 
 
- **[WIN]** On Windows systems the installer requires some administrator permissions.
+**[WIN]** On Windows systems the installer requires some administrator permissions.
 
 Let’s describe the main steps of the execution:
 
