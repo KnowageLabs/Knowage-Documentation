@@ -159,14 +159,16 @@ Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for
          	</init-param>                                                      
           <init-param>                                                       
           	<param-name>serverName</param-name>                                
-          	<param-value><dominio di Knowage Server, incluso il protocollo e la porta, se non standard></param-value>                       
+          	<param-value><dominio di Knowage Server, incluso il protocollo e la porta, se non standard></param-value>
+		
           </init-param>                                                      
           <init-param>                                                       
           	<param-name>proxyReceptorUrl</param-name>                          
           	<param-value>/proxyCallback</param-value>                          
           </init-param>                                                      
       
-      	[Nelle web application knowageXXXengine presente anche questo parametro:                                                                                                                           
+      	[Nelle web application knowageXXXengine presente anche questo parametro:
+	
         <init-param> <param-name>proxyCallbackUrl</param-name>             
       	<param-value>                                                      
            <dominio di knowage Server, incluso il protocollo e la porta, se  non standard>/< knowageXXXengine>/proxyCallback </param-value>     
@@ -174,10 +176,10 @@ Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for
         
        	</filter>   
       
-       
        	<filter>                                                              
           <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>   
-          <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFtilter</filter-class>                                                      
+          <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFtilter</filter-class>
+	  
       	</filter>...
       
       	<filter-mapping>                                                    
