@@ -20,7 +20,7 @@ It is required the installation of the following components for the correct oper
    chown -R tomcat.root /usr/lib64/R/library && chmod -R 775 /usr/lib64/R/library 
    chown -R tomcat.root /usr/share/doc/R-3.2.2 && chmod -R 775 /usr/share/doc/R
 
-Typing the address http://<server_ipormachine_name>:8787/ in the browser, the user gets on screen the page showed below:
+Typing the address 'http://<server_ipormachine_name>:8787/'_ the browser, the user gets on screen the page showed below:
 
 .. figure:: media/image24.png
 
