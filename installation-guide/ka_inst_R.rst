@@ -1,8 +1,7 @@
 R installation
 ===================
 
-It is required the installation of the following components for the
-   correct operation of the data mining engine:
+It is required the installation of the following components for the correct operation of the data mining engine:
 
 -  R
 -  R Studio
