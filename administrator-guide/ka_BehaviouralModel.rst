@@ -37,40 +37,40 @@ The *role* of a user represents a categorization of a group of users. These role
 .. table:: Knowage Role Types.
     :widths: auto
 
-+-----------------------+-----------------------+-----------------------+
-|    Role Type          | Description           | Standard User         |
-+=======================+=======================+=======================+
-|    ADMIN              | General               | biadmin               |
-|                       | administrator.        |                       |
-|                       |                       |                       |
-|                       | Manages all Knowage   |                       |
-|                       | functionalities.      |                       |
-+-----------------------+-----------------------+-----------------------+
-|    MODEL_ADMIN        | Model administrator.  | bimodel               |
-|                       |                       |                       |
-|                       | Manages the           |                       |
-|                       | Behavioural Model and |                       |
-|                       | its associated        |                       |
-|                       | functionalities.      |                       |
-+-----------------------+-----------------------+-----------------------+
-|    DEV_ROLE           | Developer.            | bidev                 |
-|                       |                       |                       |
-|                       | Creates and modifies  |                       |
-|                       | datasets and          |                       |
-|                       | documents.            |                       |
-+-----------------------+-----------------------+-----------------------+
-|    TEST_ROLE          | Test user.            | bitest                |
-|                       |                       |                       |
-|                       | Tests analytical      |                       |
-|                       | documents.            |                       |
-+-----------------------+-----------------------+-----------------------+
-|    USER               | End user.             | biuser                |
-|                       |                       |                       |
-|                       | Executes documents    |                       |
-|                       | visible to him and    |                       |
-|                       | creates ad-hoc        |                       |
-|                       | reporting analysis.   |                       |
-+-----------------------+-----------------------+-----------------------+
+    +-----------------------+-----------------------+-----------------------+
+    |    Role Type          | Description           | Standard User         |
+    +=======================+=======================+=======================+
+    |    ADMIN              | General               | biadmin               |
+    |                       | administrator.        |                       |
+    |                       |                       |                       |
+    |                       | Manages all Knowage   |                       |
+    |                       | functionalities.      |                       |
+    +-----------------------+-----------------------+-----------------------+
+    |    MODEL_ADMIN        | Model administrator.  | bimodel               |
+    |                       |                       |                       |
+    |                       | Manages the           |                       |
+    |                       | Behavioural Model and |                       |
+    |                       | its associated        |                       |
+    |                       | functionalities.      |                       |
+    +-----------------------+-----------------------+-----------------------+
+    |    DEV_ROLE           | Developer.            | bidev                 |
+    |                       |                       |                       |
+    |                       | Creates and modifies  |                       |
+    |                       | datasets and          |                       |
+    |                       | documents.            |                       |
+    +-----------------------+-----------------------+-----------------------+
+    |    TEST_ROLE          | Test user.            | bitest                |
+    |                       |                       |                       |
+    |                       | Tests analytical      |                       |
+    |                       | documents.            |                       |
+    +-----------------------+-----------------------+-----------------------+
+    |    USER               | End user.             | biuser                |
+    |                       |                       |                       |
+    |                       | Executes documents    |                       |
+    |                       | visible to him and    |                       |
+    |                       | creates ad-hoc        |                       |
+    |                       | reporting analysis.   |                       |
+    +-----------------------+-----------------------+-----------------------+
 
 Knowage allows you to create several roles, according to your project needs. However, all roles must belong to a specific *role type*. A role type is a higher-level categorization used by Knowage, in order to map roles for the different features of the suite.
 
