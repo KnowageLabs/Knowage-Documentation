@@ -103,7 +103,7 @@ As described in the next chapters, Knowage can also access less traditional data
 All Knowage metadata are stored in a private repository hosted on a generic RDBMS and accessed by means of a generic description based on Hibernate technology. Knowage metadata contains technical information, business metadata and metamodels registry.
 
 What you can do with Knowage
------------------
+----------------------------
 
 This section focuses on Knowage analytical and operational funciontalities, administration tools and cross services.
 
@@ -114,7 +114,7 @@ consistency, thanks to the independence of the behavioural model that regulates 
 Moreover, Knowage has a distributed logic and handles more instances of a same engine. This allows the workload distribution on several servers, ensuring the linear system scalability.
 
 Analytical and operational functionalities
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage server provides a wide range of analytical functionalities,
 covered by the different products of the suite.
@@ -126,7 +126,7 @@ Concerning the operative level, Knowage Server works with:
 - **Master data**, to manually manage domain data.
 
 Administrative tools and cross services
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Besides its analytical, delivery and data access capabilities, Knowage Server provides all the administration tool needed to handle your
 Knowage instance, as well as several cross-product services to make its features even more powerful.
