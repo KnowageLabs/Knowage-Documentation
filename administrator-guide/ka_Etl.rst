@@ -84,7 +84,7 @@ Template building
     language="java"/>
     </etl>
 
-   Where the tag job includes all the following configuration attributes:
+Where the tag job includes all the following configuration attributes:
 
 -  project is the name of the Talend project
 -  jobName is the label assigned to the job in Talends repository.
