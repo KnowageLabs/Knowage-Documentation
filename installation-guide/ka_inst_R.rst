@@ -24,7 +24,7 @@ Typing the address 'http://<server_ipormachine_name>:8787/'_ the browser, the us
 
 .. figure:: media/image24.png
 
-Sign in RStudio.
+   Sign in RStudio.
 
 Then log in with the user credentials used for the Tomcat 7 installation: tomcat / <tomcat_user_password>.
 
