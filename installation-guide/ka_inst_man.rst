@@ -363,21 +363,21 @@ Moreover, apply the string substitutions to the configs.xml file included in the
 .. table:: String replacements according to the web application.
     :widths: auto
 
-	+----------------------+------------------------------+--------------------------+
-	|    **File name**     | **Original string**          | **New string**           |
-	+======================+==============================+==========================+
-	| hibernate.cfg.xml    | java:/comp/env/jdbc/knowage  | java:/jdbc/knowage       |
-	+----------------------+------------------------------+--------------------------+
-	| quartz.properties    | java:/comp/env/jdbc/knowage  | java:/jdbc/knowage       |
-	+----------------------+------------------------------+--------------------------+
-	| engine config.xml    | java:/comp/env/resource_path | java:/urls/resource_path |
-	+----------------------+------------------------------+--------------------------+
-	|                      | java:/comp/env/service_url   | java:/urls/service_url   |
-	+----------------------+------------------------------+--------------------------+
-	|                      | java:/comp/env/sso_class     | java:/urls/sso_class     |
-	+----------------------+------------------------------+--------------------------+
-	|                      | java:/comp/env/hmacKey       | java:/urls/hmacKey       |
-	+----------------------+------------------------------+--------------------------+
+    +----------------------+------------------------------+--------------------------+
+    |    **File name**     | **Original string**          | **New string**           |
+    +======================+==============================+==========================+
+    | hibernate.cfg.xml    | java:/comp/env/jdbc/knowage  | java:/jdbc/knowage       |
+    +----------------------+------------------------------+--------------------------+
+    | quartz.properties    | java:/comp/env/jdbc/knowage  | java:/jdbc/knowage       |
+    +----------------------+------------------------------+--------------------------+
+    | engine config.xml    | java:/comp/env/resource_path | java:/urls/resource_path |
+    +----------------------+------------------------------+--------------------------+
+    |                      | java:/comp/env/service_url   | java:/urls/service_url   |
+    +----------------------+------------------------------+--------------------------+
+    |                      | java:/comp/env/sso_class     | java:/urls/sso_class     |
+    +----------------------+------------------------------+--------------------------+
+    |                      | java:/comp/env/hmacKey       | java:/urls/hmacKey       |
+    +----------------------+------------------------------+--------------------------+
 
 .. _stringreplacctothe:
 .. table:: String replacements according to the web application.
