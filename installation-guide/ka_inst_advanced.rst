@@ -12,13 +12,13 @@ For Tomcat: the configuration of the pool of thread is available inside the TOMC
         :linenos:
         :caption: Configuration of the pool of thread for Tomcat.
 
-   <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" 
-     maxThreads="5" 
-     minThreads="1" 
-     queueLength="10"   
-     maxDaemons="10" 
-     name="wm/SpagoWorkManager" 
-     type="commonj.work.WorkManager"/>       
+        <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" 
+            maxThreads="5" 
+            minThreads="1" 
+            queueLength="10"   
+            maxDaemons="10" 
+            name="wm/SpagoWorkManager" 
+            type="commonj.work.WorkManager"/>       
 
 
 For JBoss: the configuration of the pool of thread is available inside the JBOSS_HOME/ standalone/configuration/s Refer to Code below.
@@ -27,7 +27,7 @@ For JBoss: the configuration of the pool of thread is available inside the JBOSS
         :linenos:
         :caption: Configuration of the pool of thread for JBoss.
 
-       <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"                
+        <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"                
           class="de.myfoo.commonj.work.MyFooWorkManagerFactory">              
           <environment>                                                                  
           <property name="maxThreads" value="5"/>                            
@@ -76,7 +76,7 @@ Knowage uses the component Log4J to create the log applications. Each web applic
          log4j.appender.SpagoBI.MaxFileSize=10000KB                            
          log4j.appender.SpagoBI.MaxBackupIndex=0                               
          log4j.appender.SpagoBI.layout=org.apache.log4j.PatternLayout          
-         log4j.appender.SpagoBI.layout.ConversionPattern=[%t] %d{DATE} %5p %c.%M:%L - %m %n     |
+         log4j.appender.SpagoBI.layout.ConversionPattern=[%t] %d{DATE} %5p %c.%M:%L - %m %n
                                                                    
          log4j.appender.SpagoBI.append=false                               
                                                                    
@@ -161,7 +161,7 @@ For security reasons, Knowage has a series of parameters which manage the maximu
 
 * **SPAGOBI.DOCUMENTS.MAX_PREVIEW_IMAGE_SIZE** : Max preview image size: it is the maximum dimension of an image used as document preview (in the document browser, for instance), expressed in bytes; the default is 1MB;
 
--  **IMAGE_GALLERY.MAX_IMAGE_SIZE_KB** : Max image size in Kb:it is the maximum size of the images that can be used in a cockpit creation; the default is 1MB;
+*  **IMAGE_GALLERY.MAX_IMAGE_SIZE_KB** : Max image size in Kb:it is the maximum size of the images that can be used in a cockpit creation; the default is 1MB;
 
 Date format
 ------------
