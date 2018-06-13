@@ -54,9 +54,8 @@ The enviroment in which Knowage will be installed must include a 1.8 JDK install
       	 :caption: Instructions to set the JAVA_HOME variable for Linux environment.
         :linenos:
         
-        export JAVA_HOME=<root path of the Java installation>                 
-        export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            
-        export PATH=$JAVA_HOME/bin:$PATH                                      
+        export JAVA_HOME=<root path of the Java installation>export 
+        JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/export PATH=$JAVA_HOME/bin:$PATH                                      
 
 **[WIN]** Define the JAVA_HOME variable and PATH in the section "Environment variables“ which can be reached from the ”System“. You can refer to :numref:`setting`.
  
