@@ -267,7 +267,8 @@ For the execution of the batch processing ,Knowage uses a thread pool. In the JB
         :caption: Thread pool configuration for JBoss.
 
  	<bindings>                                                            
-	<object-factory name="java:/global/SpagoWorkManager" module="de.myfoo.commonj" class="de.myfoo.commonj.work.MyFooWorkManagerFactory">                                                                                           <environment>                                                         
+	<object-factory name="java:/global/SpagoWorkManager" module="de.myfoo.commonj" class="de.myfoo.commonj.work.MyFooWorkManagerFactory">
+	<environment>                                                         
         <property name="maxThreads" value="5"/>                               
         <property name="minThreads" value="1"/>                               
         <property name="queueLength" value="10"/>                             
