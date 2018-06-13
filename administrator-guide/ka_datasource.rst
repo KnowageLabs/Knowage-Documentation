@@ -79,11 +79,11 @@ Apache Hive is a data warehouse infrastructure built on top of Hadoop for provid
 
 Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you to use or the Apache one or the one specific of your distribution. In general the JDBC driver for Hive is composed by different .jars, and so you should deploy the JDBC driver with all dependencies in your application server. If you are creating a model you should create a new *Data Source Connection* and import the JDBC driver and all the dependencies.
 
-For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure 4.2.
+For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure below.
 
-   |image35|
+.. figure:: media/image27.png
 
-   Figure 4.2: Libraries to include in the apache driver.
+   Libraries to include in the apache driver.
 
 If you forget to add one or more libraries, you will likely get a *NoClassDefFoundError* or *ClassNofFoundException*.
 
