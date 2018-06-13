@@ -200,8 +200,8 @@ Class definition
     } catch (InterruptedException e) {
     } catch (IOException e) {}}}}
 
-   Note that this class implements the execCommand() method and uses the isRunning() method. No logic is directly embedded in this class.
-   Therefore, we also define an external class, called ProcessTest, which contains the actual logic (in our example printing the content of a file):
+Note that this class implements the execCommand() method and uses the isRunning() method. No logic is directly embedded in this class.
+Therefore, we also define an external class, called ProcessTest, which contains the actual logic (in our example printing the content of a file):
    
 .. code-block:: java
          :linenos:
@@ -254,7 +254,7 @@ Template definition
       </WORK>
     </COMMONJ>
 
-   Where:
+Where:
 
 -  <COMMONJ> is the main tag and includes all the document.
 -  The tag <WORK> specifies the process. In particular:
@@ -293,7 +293,7 @@ Template definition
     |                                   | associated with the process.      |
     +-----------------------------------+-----------------------------------+
 
-   The class CmdExecWork (and its extensions) allows the execution of the command specified in the template. In particular, the template above would produce the following command at runtime:
+The class CmdExecWork (and its extensions) allows the execution of the command specified in the template. In particular, the template above would produce the following command at runtime:
 
 .. code-block:: xml
          :linenos:
