@@ -45,10 +45,9 @@ Datamining engine supports the use of all Python libraries: before import a libr
 
 JPY installation Furthermore, to give an idea of what Python template is refer to Code
 
-Example of Python Template 
-
 .. code-block:: xml
-    :linenos:
+        :linenos:
+        :caption: Example of Python Template.
     
 	<?xml version="1.0" encoding="ISO-8859-15"?> 
     <DATA_MINING>            
