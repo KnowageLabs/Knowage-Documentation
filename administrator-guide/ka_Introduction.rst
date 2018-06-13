@@ -32,20 +32,16 @@ functionalities.
 It represents an enterprise level solution for BI, supporting the whole project life-cycle, managing security and guaranteeing scalability, clustering and high availability architectures. Moreover, it is the main reference for all potential users and usages; it leads the development trend in terms of features, services and delivery models.
 
 .. _knowmodules:
-.. figure:: media/image2.png
+.. figure:: media/image6.png
    
    Knowage modules.
-   
-      |image2|
 
 Layers
 -------
 
 Knowage Server architecture is functionally layered on three main levels, as shown in Figure below:
-
-   |image3|
    
-.. figure:: media/image3.png
+.. figure:: media/image7.png
 
    Knowage Server architecture structure.
 
@@ -58,8 +54,7 @@ Data layer
 
 Every layer of the functional architecture is composed of different application modules, as shown in Figure below.
 
-   |image4|
-.. figure:: media/image4.png
+.. figure:: media/image8.png
 
    Knowage Server architecture detail.
 
