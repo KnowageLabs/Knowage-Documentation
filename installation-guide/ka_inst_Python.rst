@@ -1,7 +1,7 @@
 Python Installation
 ================
 
-The engine uses a Java/Python interface, which allows to submit scripts and get result from a Python environment already installed on the machine where the Datamining Engine runs. For this reason, Python environment need to be installed on the same machine of KnowAge server. This implies that, in order to run this engine, you have to install Python properly (depending on the OS) on the same machine where KnowAge is installed. You can find all information about Python installation at `https://www.python.org. Datamining engine only support Python 3 (the product has been tested with Python 3.4.0, but other 3.x releases are supported).
+The engine uses a Java/Python interface, which allows to submit scripts and get result from a Python environment already installed on the machine where the Datamining Engine runs. For this reason, Python environment need to be installed on the same machine of KnowAge server. This implies that, in order to run this engine, you have to install Python properly (depending on the OS) on the same machine where KnowAge is installed. You can find all information about Python installation at https://www.python.org. Datamining engine only support Python 3 (the product has been tested with Python 3.4.0, but other 3.x releases are supported).
  
 JPY installation
 -------------------
