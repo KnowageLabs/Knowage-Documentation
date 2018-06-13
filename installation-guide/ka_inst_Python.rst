@@ -18,7 +18,7 @@ The Python setup tools (distutils) can make use of the command-line C/C++ compil
 * If you already use Microsoft Visual C++ 2010, make sure to uninstall the x86 and amd64 compiler redistributables first. Otherwise the installation of the Windows SDK will definitely fail. This may also be applied to higher versions of Visual C++.
 * Download and install Windows SDK 7.1.
 * Download and install Windows SDK 7.1 SP1. Open the command-line and execute:
-	* "C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\bin\\setenv" /x64 /release toprepare a build of the 64-bit version of jpy.
+	* "C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\bin\\setenv" /x64 /release to prepare a build of the 64-bit version of jpy.
 	* Use: "C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\bin\\setenv" /x86 /release to prepare a build of the 32-bit version of jpy. 
    
 Now set other environment variables:
