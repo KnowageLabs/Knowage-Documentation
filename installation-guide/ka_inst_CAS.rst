@@ -137,7 +137,7 @@ Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for
         :linenos:
         :caption: Setting the CAS filters for sso_class variable.
 	
-      <filter>                                                              
+      	<filter>                                                              
           <filter-name>CAS Authentication Filter</filter-name>               
           <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>                                         
           <init-param>                                                       
@@ -148,9 +148,9 @@ Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for
            <param-name>serverName</param-name>                                
             <param-value><dominio di knowage, incluso il protocollo e la porta, se non standard></param-value>                             
           </init-param>                                                      
-       </filter> 
+       	</filter> 
        
-       <filter>                                                              
+       	<filter>                                                              
           <filter-name>CAS Validation Filter</filter-name>                   
           <filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>           
           <init-param>                                                       
@@ -166,36 +166,36 @@ Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for
           	<param-value>/proxyCallback</param-value>                          
           </init-param>                                                      
       
-      [Nelle web application knowageXXXengine presente anche questo parametro:                                                                                                                           
+      	[Nelle web application knowageXXXengine presente anche questo parametro:                                                                                                                           
         <init-param> <param-name>proxyCallbackUrl</param-name>             
       	<param-value>                                                      
            <dominio di knowage Server, incluso il protocollo e la porta, se  non standard>/< knowageXXXengine>/proxyCallback </param-value>     
         </init-param>]
         
-       </filter>   
+       	</filter>   
       
        
-       <filter>                                                              
+       	<filter>                                                              
           <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>   
           <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFtilter</filter-class>                                                      
-      </filter>...
+      	</filter>...
       
-      <filter-mapping>                                                    
-       <filter-name>CAS Authentication Filter</filter-name>                
-       <url-pattern>/servlet/*</url-pattern>                               
-      </filter-mapping>                                                   
-      
-       <filter-mapping>                                                    
-       <filter-name>CAS Validation Filter</filter-name>                    
-       <url-pattern>/servlet/*</url-pattern>                               
-      </filter-mapping>                                                   
-        <filter-mapping>                                                    
-        <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>    
-        <url-pattern>/servlet/*</url-pattern>                               
-       </filter-mapping>
-        
-      [Nelle web application knowageXXXengine presente anche questo mapping: 
       	<filter-mapping>                                                    
+       	 <filter-name>CAS Authentication Filter</filter-name>                
+         <url-pattern>/servlet/*</url-pattern>                               
+      	</filter-mapping>                                                   
+      
+        <filter-mapping>                                                    
+         <filter-name>CAS Validation Filter</filter-name>                    
+         <url-pattern>/servlet/*</url-pattern>                               
+      	</filter-mapping>                                                   
+         <filter-mapping>                                                    
+         <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>    
+         <url-pattern>/servlet/*</url-pattern>                               
+       	</filter-mapping>
+        
+      	[Nelle web application knowageXXXengine presente anche questo mapping: 
+      	 <filter-mapping>                                                    
           <filter-name>CAS Validation Filter</filter-name>                    
           <url-pattern>/proxyCallback</url-pattern>                           
           </filter-mapping>]                                     
