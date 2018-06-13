@@ -6,20 +6,26 @@ This chapter focuses on Knowage user interface, providing detailed information o
 Main menu
 -----------------
 
-Knowage menu gives you access to all its functionalities. By default you find the menu button at the left bottom corner of the home page, click it to open the menu, as shown in Figure 3.1. You can minimize it by clicking somewhere else outside the menu. In this way the menu button appears and you can reopen the menu according to your needs. You can move this button around the page by dragging and dropping it. Choose the position that best fits with your work.
+Knowage menu gives you access to all its functionalities. By default you find the menu button at the left bottom corner of the home page, click it to open the menu, as shown in :numref:`homepageuser`. You can minimize it by clicking somewhere else outside the menu. In this way the menu button appears and you can reopen the menu according to your needs. You can move this button around the page by dragging and dropping it. Choose the position that best fits with your work.
 
-   .. image:: media/image9.png
+.. _homepageuser:
+.. figure:: media/image9.png
 
-   Figure 3.1: Home page
+   Home page
 
-Knowage main menu is divided in three submenus: the user menu, the BI functionalities menu and the administrator one. The left panel contains the user menu, which is collapsed, and the BI functionalities menu, while the administrator menu is on the right panel. The main menu is shown in Figure 3.2.
+Knowage main menu is divided in three submenus: the user menu, the BI functionalities menu and the administrator one. The left panel contains the user menu, which is collapsed, and the BI functionalities menu, while the administrator menu is on the right panel. The main menu is shown in :numref:`menuuser`.
 
-   |image6|
+.. _menuuser:
+.. figure:: media/image10.png
 
-   Figure 3.2: Menu
+   Menu
 
-In Table 3.1, 3.2 and 3.3 the different elements are summed up.
+In :numref:`menucomponentsuser`, :numref:`menucomponentsbi` and :numref:`menucomponentsadmin` the different elements are summed up.
 
+.. _menucomponentsuser:
+.. table:: Menu components - User menu.
+    :widths: auto
+    
 +----------------+-----------------------+-----------------------+
 |    Icon        | Name                  | Description           |
 +================+=======================+=======================+
@@ -41,10 +47,6 @@ In Table 3.1, 3.2 and 3.3 the different elements are summed up.
 |    |image15|   | Log out               | log out.              |
 +----------------+-----------------------+-----------------------+
 
-..
-
-   Table 3.1: Menu components - User menu.
-
 The user menu is identified with the first icon in Table 3.1 and a label containing your user name. Opening the user menu you have the following extra buttons:
 
 - **Select role** If your user is associated with more than one role, Knowage requests you to specify the default one. You can select it when executing a document, or right after authentication by clicking on this icon and choosing a default role.
@@ -53,6 +55,10 @@ The user menu is identified with the first icon in Table 3.1 and a label contain
 - **Log out** To go back to log in page.
 
 The BI functionalities menu consists in a set of icons associated with basic features, namely:
+
+.. _menucomponentsbi:
+.. table:: Menu components - BI Functionalities Menu.
+    :widths: auto
 
 +-----------------------+-----------------------+-----------------------+
 |    Icon               | Name                  | Description           |
@@ -66,9 +72,9 @@ The BI functionalities menu consists in a set of icons associated with basic fea
 |                       |                       | create your datasets  |
 +-----------------------+-----------------------+-----------------------+
 
-..
-
-   Table 3.2: Menu components - BI Functionalities Menu.
+.. _menucomponentsadmin:
+.. table:: Menu components - Administrator Menu.
+    :widths: auto
 
 +-----------------------+-----------------------+-----------------------+
 |    Icon               | Name                  | Management areas      |
@@ -96,8 +102,6 @@ The BI functionalities menu consists in a set of icons associated with basic fea
 |                       |                       | options               |
 +-----------------------+-----------------------+-----------------------+
 
-
-   Table 3.3: Menu components - Administrator Menu.
 
 - **Documents development** This is a standard functionality of Knowage Server. It enables you to create the analytical document as well as access and execute them.
 
