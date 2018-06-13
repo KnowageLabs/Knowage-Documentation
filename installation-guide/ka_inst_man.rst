@@ -200,7 +200,8 @@ For JBoss instance, control that in all the JBOSS_HOME/standalone/deployments/kn
         :linenos:
         :caption: DataSource link syntax.
 
- 	<ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql. DataSource"/>                                                   <ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>                                         
+ 	<ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql. DataSource"/>
+	<ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>                                         
 
 While for the Tomcat instance, control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same links as in :numref:`datasourcelink`. Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
 
