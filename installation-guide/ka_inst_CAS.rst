@@ -44,7 +44,8 @@ We suggest to refer to the Java documents for more details. In the following we 
         :linenos:
         :caption: keystore.jks creation.
 
-   	$JAVA_HOME/bin/keytool -genkeypair -keystore keystore.jks -storepass <keystore password> -alias <certificate alias> -keyalg RSA -keysize 2048 -validity 5000 -dname CN=<server name that hosts Knowage >, OU=<organization unit>, O=<organization name>,L=<locality name>, ST=<state name>, C=<country>                    
+   	$JAVA_HOME/bin/keytool -genkeypair -keystore keystore.jks -storepass <keystore password> -alias <certificate alias> -keyalg RSA -keysize 2048 -validity 5000 -dname CN=<server name that hosts Knowage >
+	, OU=<organization unit>, O=<organization name>,L=<locality name>, ST=<state name>, C=<country>                    
 
 * export a certificate in a cert.crt file, as suggested below:
 
@@ -131,6 +132,7 @@ This variable is located:
 * JBoss: in the JBOSS_HOME/ standalone/configuration/standalone.xml.
  
 Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for istance, as in Code below
+
 .. code-block:: xml
         :linenos:
         :caption: Setting the CAS filters for sso_class variable.
