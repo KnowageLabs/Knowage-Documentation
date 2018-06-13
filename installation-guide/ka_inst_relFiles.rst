@@ -78,8 +78,7 @@ Let’s describe the main steps of the execution:
     
     Internet connection.
   
-- **Step 4.** It is possible to activate the product on-line thanks to an online activation procedure. It is necessary though to purchase one (or more) product key(s). There are as many product keys as the available components in Knowage. If the installer recognises the product key, then it starts the procedure, otherwise the activation fails.
-The user can insert a new product key until there are components to activate.
+- **Step 4.** It is possible to activate the product on-line thanks to an online activation procedure. It is necessary though to purchase one (or more) product key(s). There are as many product keys as the available components in Knowage. If the installer recognises the product key, then it starts the procedure, otherwise the activation fails. The user can insert a new product key until there are components to activate.
 
 .. figure:: media/image11.png 
 
