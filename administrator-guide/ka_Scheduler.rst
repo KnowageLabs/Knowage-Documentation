@@ -8,9 +8,9 @@ Create an Activity
 
 In order to define a new scheduled activity the administrator must specify which documents compose the activity and how to execute them. The list of all scheduled activities can be seen selecting **Tools** >\ **Scheduler**. To create a new activity click on the “Plus” icon at the top of the page in the left area. In Figure 8.1 you can see the main scheduler page and the new activity GUI.
 
-   |image47|
+.. figure:: media/image40.png
 
-   Figure 8.1: Left: scheduler main page. Right: New activity GUI
+   Left: scheduler main page. Right: New activity GUI
 
 Give a name and a description to the new activity. Then select the documents that compose it by clicking on the “Plus” icon and selecting them from the pop up wizard, see Figure 8.2
 
