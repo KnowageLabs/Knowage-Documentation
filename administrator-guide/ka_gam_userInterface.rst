@@ -26,28 +26,28 @@ In :numref:`menucomponentsuser`, :numref:`menucomponentsbi` and :numref:`menucom
 .. table:: Menu components - User menu.
     :widths: auto
     
-+----------------+-----------------------+-----------------------+
-|    Icon        | Name                  | Description           |
-+================+=======================+=======================+
-|    |image11|   | Knowage user          | It opens a hidden     |
-|                |                       | menu with extra       |
-|                |                       | functionalities.      |
-+----------------+-----------------------+-----------------------+
-|    |image12|   | Select role           | To select the default |
-|                |                       | role (available if    |
-|                |                       | the user is           |
-|                |                       | associated to more    |
-|                |                       | than one role).       |
-+----------------+-----------------------+-----------------------+
-|    |image13|   | Languages             | Language options.     |
-+----------------+-----------------------+-----------------------+
-|    |image14|   | Info                  | Info on Knowage       |
-|                |                       | version.              |
-+----------------+-----------------------+-----------------------+
-|    |image15|   | Log out               | log out.              |
-+----------------+-----------------------+-----------------------+
+   +----------------+-----------------------+-----------------------+
+   |    Icon        | Name                  | Description           |
+   +================+=======================+=======================+
+   |    |image11|   | Knowage user          | It opens a hidden     |
+   |                |                       | menu with extra       |
+   |                |                       | functionalities.      |
+   +----------------+-----------------------+-----------------------+
+   |    |image12|   | Select role           | To select the default |
+   |                |                       | role (available if    |
+   |                |                       | the user is           |
+   |                |                       | associated to more    |
+   |                |                       | than one role).       |
+   +----------------+-----------------------+-----------------------+
+   |    |image13|   | Languages             | Language options.     |
+   +----------------+-----------------------+-----------------------+
+   |    |image14|   | Info                  | Info on Knowage       |
+   |                |                       | version.              |
+   +----------------+-----------------------+-----------------------+
+   |    |image15|   | Log out               | log out.              |
+   +----------------+-----------------------+-----------------------+
 
-The user menu is identified with the first icon in Table 3.1 and a label containing your user name. Opening the user menu you have the following extra buttons:
+The user menu is identified with the first icon in Table above and a label containing your user name. Opening the user menu you have the following extra buttons:
 
 - **Select role** If your user is associated with more than one role, Knowage requests you to specify the default one. You can select it when executing a document, or right after authentication by clicking on this icon and choosing a default role.
 - **Languages** To select the language of Knowage environment.
@@ -60,47 +60,47 @@ The BI functionalities menu consists in a set of icons associated with basic fea
 .. table:: Menu components - BI Functionalities Menu.
     :widths: auto
 
-+-----------------------+-----------------------+-----------------------+
-|    Icon               | Name                  | Description           |
-+=======================+=======================+=======================+
-|    |image18|          | Documents development | Document creation and |
-|                       |                       | acces to the archive  |
-|                       |                       | folders.              |
-+-----------------------+-----------------------+-----------------------+
-|    |image19|          | Workspace             | Inquiry your business |
-|                       |                       | models, navigate and  |
-|                       |                       | create your datasets  |
-+-----------------------+-----------------------+-----------------------+
+   +-----------------------+-----------------------+-----------------------+
+   |    Icon               | Name                  | Description           |
+   +=======================+=======================+=======================+
+   |    |image18|          | Documents development | Document creation and |
+   |                       |                       | acces to the archive  |
+   |                       |                       | folders.              |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image19|          | Workspace             | Inquiry your business |
+   |                       |                       | models, navigate and  |
+   |                       |                       | create your datasets  |
+   +-----------------------+-----------------------+-----------------------+
 
 .. _menucomponentsadmin:
 .. table:: Menu components - Administrator Menu.
     :widths: auto
 
-+-----------------------+-----------------------+-----------------------+
-|    Icon               | Name                  | Management areas      |
-+=======================+=======================+=======================+
-|    |image27|          | Data Providers        | Data source settings. |
-+-----------------------+-----------------------+-----------------------+
-|    |image28|          | Profile               | Profile Attributes,   |
-|                       | Management            | Roles, User and Menu  |
-|                       |                       | configuration         |
-+-----------------------+-----------------------+-----------------------+
-|    |image29|          | Behavioural model     | Lovs, Analytical      |
-|                       |                       | Driver and Contraints |
-+-----------------------+-----------------------+-----------------------+
-|    |image30|          | Catalogs              | Business Models and   |
-|                       |                       | Layers                |
-+-----------------------+-----------------------+-----------------------+
-|    |image31|          | Tools                 | Scheduler             |
-+-----------------------+-----------------------+-----------------------+
-|    |image32|          | Server Settings       | User Data Properties, |
-|                       |                       | Configuration,        |
-|                       |                       | Domains and Metadata  |
-+-----------------------+-----------------------+-----------------------+
-|    |image33|          | Server Manager        | Template manager and  |
-|                       |                       | Import-Export         |
-|                       |                       | options               |
-+-----------------------+-----------------------+-----------------------+
+   +-----------------------+-----------------------+-----------------------+
+   |    Icon               | Name                  | Management areas      |
+   +=======================+=======================+=======================+
+   |    |image27|          | Data Providers        | Data source settings. |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image28|          | Profile               | Profile Attributes,   |
+   |                       | Management            | Roles, User and Menu  |
+   |                       |                       | configuration         |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image29|          | Behavioural model     | Lovs, Analytical      |
+   |                       |                       | Driver and Contraints |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image30|          | Catalogs              | Business Models and   |
+   |                       |                       | Layers                |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image31|          | Tools                 | Scheduler             |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image32|          | Server Settings       | User Data Properties, |
+   |                       |                       | Configuration,        |
+   |                       |                       | Domains and Metadata  |
+   +-----------------------+-----------------------+-----------------------+
+   |    |image33|          | Server Manager        | Template manager and  |
+   |                       |                       | Import-Export         |
+   |                       |                       | options               |
+   +-----------------------+-----------------------+-----------------------+
 
 
 - **Documents development** This is a standard functionality of Knowage Server. It enables you to create the analytical document as well as access and execute them.
