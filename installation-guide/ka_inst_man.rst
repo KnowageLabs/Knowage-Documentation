@@ -347,7 +347,7 @@ In short, to configure the Knowage log folder the user must execute the followin
 
 - create the LOG_DIR folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The LOG_DIR_PATH string must be the same for every node;
 
-**[LINUX]** verify that Knowage has write permissions on this folder; set the property :`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
+- **[LINUX]** verify that Knowage has write permissions on this folder; set the property :`log4j.appender.knowage.File` inside the WEB-INF/classes/log4j.properties Knowage file to LOG_DIR_PATH/knowage.log;
 
 - set the property :`log4j.appender.knowageXXXXXEngine.File` inside the :`WEB-INF/classes/log4j.properties` file of each engine to LOG_DIR_PATH/knwoageXXXXXEngine.log;
 - only for the Birt Engine, to set the property logDirectory inside the WEB-INF/classes/BirtLogConfig.properties file of the knowagebirtreportengine application toLOG\ :`\_`\ DIR\ :`\_`\ PATH.
