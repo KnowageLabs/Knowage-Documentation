@@ -11,7 +11,7 @@ KnowageER and KnowageSI also supports **multi-tenancy**, i.e. a single Knowage i
 Modules
 -----------------
 
-Knowage suite is based on five modules, as shown in Figure 2.1:
+Knowage suite is based on five modules, as shown in :numref:`knowmodules`:
 
 Knowage Server
    The core of the suite, which includes all analytical features. This is the reference environment for the end user and the administrator;
@@ -31,14 +31,23 @@ functionalities.
 
 It represents an enterprise level solution for BI, supporting the whole project life-cycle, managing security and guaranteeing scalability, clustering and high availability architectures. Moreover, it is the main reference for all potential users and usages; it leads the development trend in terms of features, services and delivery models.
 
-   |image2|
-
-   Figure 2.1: Knowage modules.
+.. _knowmodules:
+.. figure:: media/image2.png
+   
+   Knowage modules.
+   
+      |image2|
 
 Layers
------------------
+-------
 
-Knowage Server architecture is functionally layered on three main levels, as shown in Figure 2.2:
+Knowage Server architecture is functionally layered on three main levels, as shown in Figure below:
+
+   |image3|
+   
+.. figure:: media/image3.png
+
+   Knowage Server architecture structure.
 
 Delivery layer
    It manages all possible usages of the Server by end users or from external applications.
@@ -47,15 +56,12 @@ Analytical layer
 Data layer
    It regulates data loading through many access strategies.
 
-Every layer of the functional architecture is composed of different application modules, as shown in Figure 2.3.
-
-   |image3|
-
-   Figure 2.2: Knowage Server architecture structure.
+Every layer of the functional architecture is composed of different application modules, as shown in Figure below.
 
    |image4|
+.. figure:: media/image4.png
 
-   Figure 2.3: Knowage Server architecture detail.
+   Knowage Server architecture detail.
 
 Delivery layer
 ~~~~~~~~~~~~~~~~~~~~~~
