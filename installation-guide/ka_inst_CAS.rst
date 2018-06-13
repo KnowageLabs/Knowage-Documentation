@@ -119,7 +119,7 @@ Once the CAS has been installed, it is necessary to modify the Knowage configura
    	SPAGOBI_SSO.SECURITY_LOGOUT_URL:
    	set valueCheck to https://<URL of the CAS application>/cas/logout
 
-Then set the **sso_class** environment variable as in Code 8.7:
+Then set the **sso_class** environment variable as in Code below:
 
 .. code-block:: bash
         :linenos:
@@ -200,4 +200,4 @@ Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for
           <url-pattern>/proxyCallback</url-pattern>                           
           </filter-mapping>]                                     
 
-All web.xml files have CAS filters already configured, but they are commented. The user must uncomment them, looking for the strings "START-CAS”, "END-CAS“ and adjust the URL as the Code 8.8 reports.
+All web.xml files have CAS filters already configured, but they are commented. The user must uncomment them, looking for the strings "START-CAS”, "END-CAS“ and adjust the URL as the code abow reports.
