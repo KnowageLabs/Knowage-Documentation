@@ -50,24 +50,24 @@ JPY installation Furthermore, to give an idea of what Python template is refer t
         :caption: Example of Python Template.
     
 	<?xml version="1.0" encoding="ISO-8859-15"?> 
-    <DATA_MINING>            
-        <LANGUAGE name="Python"/>                                          
-        <DATASETS>                                                         
-            <DATASET name="df" readType="csv" type="file" label="HairEyeColor" canUpload="true"><![CDATA[sep=',']]>
-            </DATASET>                                                         
-        </DATASETS>                                                        
-        <SCRIPTS>                                                          
-            <SCRIPT name="test01" mode="auto" datasets="df" label="HairEyeColor" libraries="csv,os,pandas,numpy">              
+    	<DATA_MINING>            
+           <LANGUAGE name="Python"/>                                          
+           <DATASETS>                                                         
+               <DATASET name="df" readType="csv" type="file" label="HairEyeColor" canUpload="true"><![CDATA[sep=',']]>
+               </DATASET>                                                         
+           </DATASETS>                                                        
+           <SCRIPTS>                                                          
+               <SCRIPT name="test01" mode="auto" datasets="df" label="HairEyeColor" libraries="csv,os,pandas,numpy">              
                 <![CDATA[ print(df.ix[0,0]) y=df.ix[0,0] ]]>                                                                
-            </SCRIPT>                                                          
-        </SCRIPTS>                                                         
-        <COMMANDS>                                                         
+               </SCRIPT>                                                          
+           </SCRIPTS>                                                         
+           <COMMANDS>                                                         
 			<COMMAND name="testcommand" scriptName="test01" label="test01"  mode=" auto">
                 <OUTPUTS>                                                          
-			        <OUTPUT type="text" name="first_element" value="y" function=""  mode="manual" label="first_element"/>
+			<OUTPUT type="text" name="first_element" value="y" function=""  mode="manual" label="first_element"/>
                 </OUTPUTS>                                                         
             </COMMAND>                                                         
-        </COMMANDS>                                                        
-    </DATA_MINING>
+           </COMMANDS>                                                        
+    	</DATA_MINING>
 
 Note that the LANGUAGE tag is used to specify the language to use: name=Python and name=R are supported. If the LANGUAGE tag is not present or name is not specified correctly, the default language is set to R.
