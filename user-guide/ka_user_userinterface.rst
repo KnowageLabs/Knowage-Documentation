@@ -64,7 +64,7 @@ It is important to underline that not all the components of the menu are mandato
 .. _homepage:
 .. figure:: media/image7.png
    
-   Home page
+    Home page
 
 .. _menucompgene:
 .. table:: Menu components - General menu
@@ -145,7 +145,7 @@ Workspace
 
       User Datasets
 
-   From here you can also modify your existing datasets or create new ones for instance uploading a CSV or XLS file.
+From here you can also modify your existing datasets or create new ones for instance uploading a CSV or XLS file.
 
    In the **Models** one instead you have two tabs on the right side of the interface. The **Business** tab allows you to access models    built up for you by the developer and inquiry them using the QbE interface. In the **Federation definition** tab you can create          federation between one or more existing dataset using the specific GUI or just access the exiting ones as well.
 
