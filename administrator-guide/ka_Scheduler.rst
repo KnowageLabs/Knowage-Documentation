@@ -278,7 +278,7 @@ Dynamic List with script
 
 Check the option **Use an expression** and assign a value to the configuration property **Expression** with a parameter-dependent expression like the following:
 
-.. code-block:: java
+.. code-block:: bash
          :linenos:
 
       $P{dealer}@eng.it
