@@ -1,26 +1,28 @@
 Server Manager
 ==============
 
-In teh **Server Manager** menu panel you find some management functionalities, as Figure 9.1.
+In the **Server Manager** menu panel you find some management functionalities.
    
-   |image61|
+.. figure:: media/image60.png
 
-   Figure 9.1: Server Manager Panel
+    Server Manager Panel
 
 Those about **Import/Export** let you export some configurations or elements from one istallation to another. This can be helpful for example in managing a test and a production areas. We are going to give the full description of these funtionalities in the following.
 
 Tenants Management
 ------------------
 
-We start this Section undeling that only those users who have the superadmin role can use this functionality. In addition, although implemented, this menu item is not visible in Figure 9.1. In fact, the **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones. The Tenants Management window is shown in Figure 9.2. On the left you have the list of existing tenants. On the top of such list it is available the **Search** box to help users to browse the tenants. When clicking on the “Plus” icon you can create a new tenant. A form opens on the right area. Insert a **Name** and a **Theme**. Then change tabs to set product types access and select which datasources are achievable. An example is given in Figure 9.3.
+We start this Section undeling that only those users who have the superadmin role can use this functionality. In addition, although implemented, this menu item is not visible in Figure 9.1. In fact, the **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones. The Tenants Management window is shown in :numref:`tenantsmanagementw`. On the left you have the list of existing tenants. On the top of such list it is available the **Search** box to help users to browse the tenants. When clicking on the “Plus” icon you can create a new tenant. A form opens on the right area. Insert a **Name** and a **Theme**. Then change tabs to set product types access and select which datasources are achievable. An example is given in :numref:`producttypedatas`.
 
-   |image62|
+.. _tenantsmanagementw:
+.. figure:: media/image61.png
 
-   Figure 9.2: Tenants Management window.
+    Tenants Management window.
 
-   |image63|
+.. _producttypedatas:
+.. figure:: media/image64.png
 
-   Figure 9.3: Product types tab (Left) Datasources tab (Right).
+    Product types tab (Left) Datasources tab (Right).
 
 Note that, in a single-tentant environment admin and superadmin coincides. In a multitenants environment (developed then through the Server Manager functionality), only *one* user has the superadmin role for each tenant, while there can be one or more users with admin role. In particular compared to the admin case, the superadmin has the possibility to manage the multi-tenancy. Moreover, he is the only one who can configure the JNDI datasources and access the cache configuration (through the cache manager menu item).
 
@@ -31,14 +33,14 @@ Each Knowage document is associated to a *template*. The template defines the st
 
 The **Template Management** let you choose a starting date before which delete the templates versions. This could be very useful because it allows the administrator to clean the environment and save space in Knowage metadata database once a document life cycle is completed.
 
-First of all you are asked to insert a date by clicking on the calendar icon. Then click the magnifier icon and select the documents you are interested in. The list displayed contains only documents created before the selected date. Clicking the trash icon you delete the template of the selected documents which were uploaded before the chosen date. If all the templates of a document precede the chosen date, the last template uploaded will be kept, so that no document is deleted accidentally. We sum up the steps described in Figure 9.4.
+First of all you are asked to insert a date by clicking on the calendar icon. Then click the magnifier icon and select the documents you are interested in. The list displayed contains only documents created before the selected date. Clicking the trash icon you delete the template of the selected documents which were uploaded before the chosen date. If all the templates of a document precede the chosen date, the last template uploaded will be kept, so that no document is deleted accidentally. We sum up the steps described in Figure below.
 
-   |image64|
+.. figure:: media/image66.png
 
-   Figure 9.4: Deleting templates
+    Deleting templates
 
 Import\\Export
--------------
+--------------
 
 These options are about Import\\Export of Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
 
@@ -51,11 +53,11 @@ When you import, all the “objects” associated to those documents (such as da
 
 Let’s have a look on the steps to create the .zip.
 
-In Figure 9.5, we show the export editor.
+Below we show the export editor.
 
-   |image65|
+.. figure:: media/image67.png
 
-   Figure 9.5: Document Export
+    Document Export
    
 First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the MyFirstExport.zip.
 
@@ -63,11 +65,11 @@ Then select which documents do you want to export. You can browse the folder by 
 
 When you have chose a name and select some documents the export icon change colour from gray to pink. This means all elements are set to start exporting. Before going on decide if you want to export **Subviews** and **Snapshot** as well one or both of them. Now you are ready to click on the export icon to generate and download the .zip.
 
-Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** > **Import\\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure 9.6 we show the document import interface.
+Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** > **Import\\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure below we show the document import interface.
 
-   |image66|
+.. figure:: media/image68.png
 
-   Figure 9.6: Document Import
+    Document Import
 
 Choose the .zip obtained from the **Export** phase and click on the import icon. Few steps guide you trought importation. You are asked to map from source to target: the Roles, the Engines and the Metadata. If a role doesn’t map any of the existing among the target one, it will be created. Please keep attention during the metadata step beacause you can choose to overwrite or don’t the target metadata. By default this option is set to false. If you change to yes documents, lov, driver, etc. which has the same label of the exported ones will have metadata overwritten at the end of import procedure.
 
@@ -76,70 +78,71 @@ Menu
 
 This feature let you export the menu structure.
 
-   |image67|
+.. figure:: media/image71.png
 
-   Figure 9.7: Menu Export
+    Menu Export
 
 To start the export you need only to insert the Export name. Once inserted the name, the export icon changes colour from grey to pink to let you understand all mandatory fields to start the export were filled. Click on this icon and the related .zip is downloaded.
 
-To upload it in another istallation, accede to the **Import\\Export** Menu area and switch to the tab **import**. Here click on **Browse** to search in your folders the .zip previously created, see Figure 9.8.
+To upload it in another istallation, accede to the **Import\\Export** Menu area and switch to the tab **import**. Here click on **Browse** to search in your folders the .zip previously created, see the following Figure.
 
-   |image68|
+.. figure:: media/image72.png
 
-   Figure 9.8: Menu Import
+    Menu Import
 
 Then choose between the two import modes: **Override** and **Add Missing**. If you choose **Override**, the menu items which match with existing ones will be override by the imported. If you choose **Add missing** only the menu items which don’t match with the existing one will be added. You are ready to start importation by clicking on **Start Import**.
 
 Users
 ~~~~~
 
-In this area you can export the users from an installation to another, see Figure 9.9.
+In this area you can export the users from an installation to another, see the following Figure.
 
-   |image69|
+.. figure:: media/image73.png
 
-   Figure 9.9: User Export
+    User Export
 
 To generate the .zip you have to mark the user to include in the export and insert an export name. Save the export in the folders of your pc and move to the other installation. You have the chance to include the personal folder of the chosen users in the Export. Put a mark in the **Export Personal folder** checkbox and choose if you want to include snapshots and subviews too.
 
-To import the .zip in another installation, log in and open the **Server Manager** > **Import\\Export Users**, switching to **Import** area. Here click on **Browse** to choose the .zip created by exportation. Then click on the import icon. The users contained in your file are uploaded and Catalogs displayed in the left side of the screen. Choose among the users displayed the one you want to import, mark them and click on the arrow to move them in the other side. Now click on **Start import** button and your users are successfully created in this installation too. Keep attention in marking personal folder checkbox if you want that personal folders are imported. In Figure 9.10 you can see **User Import** interface.
+To import the .zip in another installation, log in and open the **Server Manager** > **Import\\Export Users**, switching to **Import** area. Here click on **Browse** to choose the .zip created by exportation. Then click on the import icon. The users contained in your file are uploaded and Catalogs displayed in the left side of the screen. Choose among the users displayed the one you want to import, mark them and click on the arrow to move them in the other side. Now click on **Start import** button and your users are successfully created in this installation too. Keep attention in marking personal folder checkbox if you want that personal folders are imported. In Figure below you can see **User Import** interface.
 
-   |image70|
+.. figure:: media/image74.png
 
-   Figure 9.10: User Import
+    User Import
 
 Catalogs
 ~~~~~~~~
 
-In this area you can export the different catalogs (such as datasets catalogs, business models catalogs and so on) from one installation to another, see Figure 9.11.
+In this area you can export the different catalogs (such as datasets catalogs, business models catalogs and so on) from one installation to another, see the following Figure.
 
-   |image71|
+.. figure:: media/image75.png
 
-   Figure 9.11: Catalogs Export
+    Catalogs Export
 
 To generate the .zip you have to mark the elements to include in the export and insert an export name. Save the export somewhere in your local system and move to the other installation. You have the chance to include the personal folder of the chosen users in the Export. Put a mark in the **Export Personal folder** checkbox and choose if you want to include snapshots and subviews too.
 
-To import the .zip in another instance, log in and open the **Server Manager** > **Import\\ Export Catalogs**, switching to **Import** area. Here click **Browse** to choose the .zip created through exportation. Uploading the file, the available exported catalogs are displayed in the bottom area. Selecting a catalogs (for instance, the **Dataset** one), all the catalogs exported elements are displayed in the left side of the screen. Choose the ones that you want to import, decide if you want to override or to just add the missing ones and then click **Start import**. Your catalogs are successfully created in this environment. In Figure 9.12 you can see **User Import** interface.
+To import the .zip in another instance, log in and open the **Server Manager** > **Import\\ Export Catalogs**, switching to **Import** area. Here click **Browse** to choose the .zip created through exportation. Uploading the file, the available exported catalogs are displayed in the bottom area. Selecting a catalogs (for instance, the **Dataset** one), all the catalogs exported elements are displayed in the left side of the screen. Choose the ones that you want to import, decide if you want to override or to just add the missing ones and then click **Start import**. Your catalogs are successfully created in this environment. In Figure below you can see **User Import** interface.
 
-   |image72|
+.. figure:: media/image76.png
 
-   Figure 9.12: Catalogs Import
+    Catalogs Import
    
 KPIs
 ~~~~
 
 In this section we describe how to manage the import/export of KPIs between two tenants.
 
-The user must enter Knowage as administrator of source tenant and click on **Import/Export KPIs** from Server Manager menu panel, as shown in Figure 9.13.
+The user must enter Knowage as administrator of source tenant and click on **Import/Export KPIs** from Server Manager menu panel, as shown in Figure below.
 
-   |image73|
+.. figure:: media/image77.png
 
-   Figure 9.13: KPIs Import/Export from menu
+    KPIs Import/Export from menu
 
-The window in Figure 9.14 opens. The page contains the **Export** and the **Import** tab, where the user can select the KPIs for the export/import respectively.
+The window in :numref:`kpiimportwind` opens. The page contains the **Export** and the **Import** tab, where the user can select the KPIs for the export/import respectively.
 
-   |image74|
+.. _kpiimportwind:
+.. figure:: media/image78.png
 
-   Figure 9.14: KPIs Import window
+    KPIs Import window
 
 Let’s start from the export feature. The user must check the KPIs for the export using the tab interface. He/she can add some more functionalities to the export action, namely:
 
@@ -149,21 +152,21 @@ Let’s start from the export feature. The user must check the KPIs for the expo
 
 -  to include schedulations.
 
-Finally click on the red download button (see Figure 9.15) to get azipped folder that will be used to conclude the export.
+Finally click on the red download button (see Figure below) to get azipped folder that will be used to conclude the export.
 
-   |image75|
+.. figure:: media/image79.png
 
-   Figure 9.15: Start export button
+    Start export button
 
 Once the .zip file is downloaded, the user has to switch tenant (the one on which he/she wants to do the import). As admin of the destination tenant, enter the Import/Export KPIs functionality and move to the Import tab.
 
-The user must therefore browse the personal folder to catch the zipped folder and click on the red upload button just aside, as shown in Figure 9.16.
+The user must therefore browse the personal folder to catch the zipped folder and click on the red upload button just aside, as shown in the following figure.
 
-   |image76|
+.. figure:: media/image82.png
 
-   Figure 9.16: Import tab
+    Import tab
 
-Referring to Figure 9.17, the user has to specify if:
+Referring to :numref:`importkpiset`, the user has to specify if:
 
 -  to overwrite the existing KPIs and their related formulas,
 
@@ -173,50 +176,52 @@ Referring to Figure 9.17, the user has to specify if:
 
 -  to import schedulations.
 
-   |image77|
+.. _importkpiset:
+.. figure:: media/image83.png
 
-   Figure 9.17: Import KPIs settings
+    Import KPIs settings
 
-Once the import is started, the GUI leads the user to finalise the import procedure. In particular, the user is asked to map data sources correctly (Figure 9.18).
+Once the import is started, the GUI leads the user to finalise the import procedure. In particular, the user is asked to map data sources correctly (Figure below).
 
-   |image78|
+.. figure:: media/image84.png
 
-   Figure 9.18: Mapping data sources
+    Mapping data sources
 
-The process ends successfully when the wizard in Figure 9.19 shows up.
+The process ends successfully when the wizard in the following Figure shows up.
 
-   |image79|
+.. figure:: media/image85.png
 
-   Figure 9.19: Import KPIs ended successfully
+    Import KPIs ended successfully
 
 Analytical Drivers
 ~~~~~~~~~~~~~~~~~~~~
 
 This option allows to import/export the analytical drivers and their related LOV.
 
-   |image80|
+.. figure:: media/image86.png
 
-   Figure 9.20: Import/Export of analytical drivers 
+    Import/Export of analytical drivers 
    
-As shown in Figure 9.20, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
+As shown in Figure anowe, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
 
 To produce suce a file, the user has to log in as administrator of the source tentant. Then he has to assign a name to the export, check the analytical drivers of interest and click on the red download button available at the top right corner of the page. Note that it is possible to slim down the research of the analytical drivers by filtering on their data of creation.
 
 Switch tenant and log in as administrator. Use the Import tab to upload the zipped folder and finalise the import.
 
-Use the GUI exhibited in Figure 9.21 to upload the zipped folder, to specify if to overwrite on the existind analytical drivers or add missing. Then click on next and continue by mapping roles among tenants and data sources.
+Use the GUI exhibited in :numref:`importofanalyt` to upload the zipped folder, to specify if to overwrite on the existind analytical drivers or add missing. Then click on next and continue by mapping roles among tenants and data sources.
 
-   |image81|
+.. _importofanalyt:
+.. figure:: media/image87.png
 
-   Figure 9.21: Import of analytical drivers
+    Import of analytical drivers
 
-   |image82|
+.. figure:: media/image88.png
 
-   Figure 9.22: Import of analytical drivers
+    Import of analytical drivers
 
-   |image83|
+.. figure:: media/image89.png
 
-   Figure 9.23: Import of analytical drivers
+    Import of analytical drivers
 
 The process ends with a message containing the information about the import.
 
@@ -225,19 +230,21 @@ Glossary
 
 The export/import of glossary allows the user to allign glossaries among tenants.
 
-   |image84|
+.. _exportimportgloss:
+.. figure:: media/image90.png
 
-   Figure 9.24: Export/Import of glossaries window
+    Export/Import of glossaries window
 
-There are the two tabs of Export and Import in this instance too (Figure 9.24). The user is asked to select the glossaries to export and to type a name that will be assigned to the zipped folder. The user can help himself/herself by using the filter on data (of creation of the glossary).
+There are the two tabs of Export and Import in this instance too (:numref:`exportimportgloss`). The user is asked to select the glossaries to export and to type a name that will be assigned to the zipped folder. The user can help himself/herself by using the filter on data (of creation of the glossary).
 
 Once the user has got the zipped folder he/she must switch tenant and enter as its admin. Then select the import tab from the Export/Import main window.
 
-   |image85|
+.. _importgloss:
+.. figure:: media/image91.png
 
-   Figure 9.25: Import of glossaries
+    Import of glossaries
 
-The user must use the arrows (Figure 9.25) to indicate the glossaries he/she wants to import in the target tenant. No further information are needed to end the process. Then the user has to enter the target tenant as administrator and use the import tab to finalise the import.
+The user must use the arrows (:numref:`importgloss`) to indicate the glossaries he/she wants to import in the target tenant. No further information are needed to end the process. Then the user has to enter the target tenant as administrator and use the import tab to finalise the import.
 
 Catalog
 ~~~~~~~~
@@ -257,8 +264,8 @@ This functionality allows to Export/Import the following elements
 The steps to perform the Export/Import are equal to those seen in the previous sections. Namely, the user has to enter the **Import/Export catalog** menu item from Server Manager menu panel. The window will contain the Import and Export tabs. The export tab is used to produce the zip folder to be imported in the tenant of interest. Note that the user can apply a temporal filter to help him/her to look up elements in
 the list.
 
-   |image86|
+.. figure:: media/image92.png
 
-   Figure 9.26: Import of catalog
+    Import of catalog
 
 The import requires the zipped folder to be uploaded, to check the elements to import, to map roles among tenants and to map datasources.
