@@ -76,8 +76,6 @@ Administration Manual
 .. |image43| image:: media/image3.png
    :width: 5.78738in
    :height: 1.58376in
-   
-
 .. |image93| image:: media/image99.png
    :width: 8.25in
    :height: 8.28333in
