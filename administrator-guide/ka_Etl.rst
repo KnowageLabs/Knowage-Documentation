@@ -157,26 +157,26 @@ Class definition
          :linenos:
          :caption: Class template.
          
-    package it.eng.spagobi.job;
-    import java.util.Iterator;
-    import it.eng.spagobi.engines.commonj.process.SpagoBIWork;
-    public class CommandJob extends SpagoBIWork{
-    @Override
-    public boolean isDaemon() {
-    return true;}
-    @Override
-    public void release() {
-    System.out.println("Release!!"); super.release();} @Override public void run() { super.run();
-    System.out.println("Job started! "); java.util.Map parameters=getSbiParameters(); for (Iterator iterator =
-    parameters.keySet().iterator(); iterator.hasNext();) {
-    String type = (String) iterator.next();
-    Object o=parameters.get(type);
-    System.out.println("Parameter "+type+ " value
-    "+o.toString());}
-    for(int i=0;i<50 && isRunning();i++){ System.out.println("job is running!"); try {
-    Thread.sleep(2000);
-    } catch (InterruptedException e) { e.printStackTrace();}}
-    System.out.println("Job finished!");}}
+            package it.eng.spagobi.job;
+            import java.util.Iterator;
+            import it.eng.spagobi.engines.commonj.process.SpagoBIWork;
+            public class CommandJob extends SpagoBIWork{
+            @Override
+            public boolean isDaemon() {
+            return true;}
+            @Override
+            public void release() {
+            System.out.println("Release!!"); super.release();} @Override public void run() { super.run();
+            System.out.println("Job started! "); java.util.Map parameters=getSbiParameters(); for (Iterator iterator =
+            parameters.keySet().iterator(); iterator.hasNext();) {
+            String type = (String) iterator.next();
+            Object o=parameters.get(type);
+            System.out.println("Parameter "+type+ " value
+            "+o.toString());}
+            for(int i=0;i<50 && isRunning();i++){ System.out.println("job is running!"); try {
+            Thread.sleep(2000);
+            } catch (InterruptedException e) { e.printStackTrace();}}
+            System.out.println("Job finished!");}}
 
    Note that we only implement the run() method, embedding the logic of the process in it. Below you can see an example extension of CmqExecWork, called CommandJob:
    
@@ -184,21 +184,21 @@ Class definition
          :linenos:
          :caption: Example extension of CmqExecWork.
          
-    package it.eng.spagobi.job;
-    import it.eng.spagobi.engines.commonj.process.CmdExecWork;
-    import java.io.IOException;
-    public class CommandJob extends CmdExecWork{
-    public boolean isDaemon() {
-    return true;}
-    public void release() {
-    super.release();}
-    public void run() {
-    super.run();
-    if(isRunning()){
-    try {
-    execCommand();
-    } catch (InterruptedException e) {
-    } catch (IOException e) {}}}}
+            package it.eng.spagobi.job;
+            import it.eng.spagobi.engines.commonj.process.CmdExecWork;
+            import java.io.IOException;
+            public class CommandJob extends CmdExecWork{
+            public boolean isDaemon() {
+            return true;}
+            public void release() {
+            super.release();}
+            public void run() {
+            super.run();
+            if(isRunning()){
+            try {
+            execCommand();
+            } catch (InterruptedException e) {
+            } catch (IOException e) {}}}}
 
 Note that this class implements the execCommand() method and uses the isRunning() method. No logic is directly embedded in this class.
 Therefore, we also define an external class, called ProcessTest, which contains the actual logic (in our example printing the content of a file):
@@ -207,28 +207,28 @@ Therefore, we also define an external class, called ProcessTest, which contains 
          :linenos:
          :caption: ProcessTest
          
-    package it.eng.test;
-    import java.io.FileNotFoundException;
-    import java.io.FileOutputStream;
-    import java.io.PrintStream;
-    public class ProcessTest {
-    public static void main(String[] args) {
-    FileOutputStream file=null;
-    try {
-    file = new FileOutputStream("C:/file.txt");
-    } catch (FileNotFoundException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();}
-    PrintStream output = new PrintStream(file);
-    while (true){
-    output.println("New row");
-    output.flush();
-    try {
-    Thread.currentThread().sleep(5000l);
-    } catch (InterruptedException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-    output.close();}}}}
+            package it.eng.test;
+            import java.io.FileNotFoundException;
+            import java.io.FileOutputStream;
+            import java.io.PrintStream;
+            public class ProcessTest {
+            public static void main(String[] args) {
+            FileOutputStream file=null;
+            try {
+            file = new FileOutputStream("C:/file.txt");
+            } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();}
+            PrintStream output = new PrintStream(file);
+            while (true){
+            output.println("New row");
+            output.flush();
+            try {
+            Thread.currentThread().sleep(5000l);
+            } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            output.close();}}}}
     
 Now that classes are ready, we pack them in .jar file containing all classes and their paths. Then we copy the jar file under the resource folder of Knowage at: [RESOURCE_PATH]/commonj/ CommonjRepository/[JAR\\_NAME]. In the next section we will explain how to define the template, based on the class definition chosen above.
 
@@ -241,18 +241,18 @@ Template definition
          :linenos:
          :caption: Template Definition
 
-    <COMMONJ>
-      <WORK workName='JobTest' className='it.eng.spagobi.job.CommandJob'>
-      <PARAMETERS>                                                       
-      <PARAMETER name='cmd'value='C:/Programmi/Java/jdk1.5.0_16/bin/java'/>
-      <PARAMETER name='classpath'
-      value='C:/resources/commonj/CommonjRepository/JobTest/process.jar'/>
-      <PARAMETER name='cmd_par' value='it.eng.test.ProcessTest'/>
-      <PARAMETER name='sbi_analytical_driver' value='update'/>
-      <PARAMETER name='sbi_analytical_driver' value='level'/>
-      </PARAMETERS>
-      </WORK>
-    </COMMONJ>
+          <COMMONJ>
+            <WORK workName='JobTest' className='it.eng.spagobi.job.CommandJob'>
+            <PARAMETERS>                                                       
+            <PARAMETER name='cmd'value='C:/Programmi/Java/jdk1.5.0_16/bin/java'/>
+            <PARAMETER name='classpath'
+            value='C:/resources/commonj/CommonjRepository/JobTest/process.jar'/>
+            <PARAMETER name='cmd_par' value='it.eng.test.ProcessTest'/>
+            <PARAMETER name='sbi_analytical_driver' value='update'/>
+            <PARAMETER name='sbi_analytical_driver' value='level'/>
+            </PARAMETERS>
+            </WORK>
+          </COMMONJ>
 
 Where:
 
@@ -299,5 +299,5 @@ The class CmdExecWork (and its extensions) allows the execution of the command s
          :linenos:
          :caption: Runtime command line
 
-        C:/Programmi/Java/jdk1.5.0_16/bin/java 'it.eng.test.ProcessTest'
-        update=<val> level=<val>
+            C:/Programmi/Java/jdk1.5.0_16/bin/java 'it.eng.test.ProcessTest'
+            update=<val> level=<val>
