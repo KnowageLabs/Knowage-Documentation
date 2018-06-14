@@ -305,7 +305,7 @@ Here you find the following information:
 -  **Resume schedulation**, it appears after having paused a schedulation, it enables you to resume it.
 -  **Delete Schedulation**, it lets you delete a schedulation.
 
-   In the **Detail** tab you can analyze the settings on document, that is which parameters are associated to it and how to manage them. The detail tab is showed in :numref:`scheduldettab`.
+In the **Detail** tab you can analyze the settings on document, that is which parameters are associated to it and how to manage them. The detail tab is showed in :numref:`scheduldettab`.
 
 .. _schedulinfpop:
 .. figure:: media/image57.png
@@ -320,8 +320,8 @@ Here you find the following information:
 Scheduler Monitor
 ----------------------
 
-   You can monitor the whole scheduling situation by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
+You can monitor the whole scheduling situation by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
   
 .. figure:: media/image59.png
 
-   Figure 8.13: Schedulation detail tab
+    Schedulation detail tab
