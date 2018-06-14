@@ -12,7 +12,7 @@ In order to define a new scheduled activity the administrator must specify which
 
    Left: scheduler main page. Right: New activity GUI
 
-Give a name and a description to the new activity. Then select the documents that compose it by clicking on the “Plus” icon and selecting them from the pop up wizard, see Figure below
+Give a name and a description to the new activity. Then select the documents that compose it by clicking on the “Plus” icon and selecting them from the pop up wizard, see Figure below.
 
 .. figure:: media/image42.png
 
@@ -42,13 +42,9 @@ Schedulation details opens (Figure below).
     Schedulation detail panel.
 
 It is composed by two areas: **Detail** and **Documents management**.
-
 The details tab let you set all properties of you schedulation. Indeed here you decide its name, description and timing.
-
 A schedulation can be made in a choosen date and time if you choose **Single Execution** as type.
-
-Otherwise it can be realised for fixed periods or start on a fixed
-event.
+Otherwise it can be realised for fixed periods or start on a fixed event.
 
 You can decide it, by choosing the schedulation type.
 
@@ -115,12 +111,12 @@ The executed document can be saved as an **Ad hoc reporting** document in the Kn
 -  the first containing a specific parameter value;
 -  the second containing the label of the folder where the document shall be dispatched when the document is executed with the corresponding parameter value.
 
-   Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. Like in the previous case, the scheduler will execute the report one time for each possible value of the parameter. This time, however, execution results will be dispatched in different folders, according to the mapping defined in the dataset.
+Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. Like in the previous case, the scheduler will execute the report one time for each possible value of the parameter. This time, however, execution results will be dispatched in different folders, according to the mapping defined in the dataset.
 
 Send to Java class
 ~~~~~~~~~~~~~~~~~~
 
-   The executed document can be sent to a Java class implementing a custom dispatch logic. The custom class must extend the abstract class JavaClassDestination that implements the method execute. This method is called by the scheduler after document execution. Below an example of Java class.
+The executed document can be sent to a Java class implementing a custom dispatch logic. The custom class must extend the abstract class JavaClassDestination that implements the method execute. This method is called by the scheduler after document execution. Below an example of Java class.
    
 .. code-block:: java
          :linenos:
@@ -147,7 +143,7 @@ Send to Java class
          }
 
 
-   The method getDocumentByte can be used to get the executed document, while the method getBiObj can be used to get all metadata related to the executed document. The following code snippet shows an example of a possible extension of class JavaClassDestination.
+The method getDocumentByte can be used to get the executed document, while the method getBiObj can be used to get all metadata related to the executed document. The following code snippet shows an example of a possible extension of class JavaClassDestination.
    
 .. code-block:: java
          :linenos:
@@ -242,9 +238,9 @@ The class FileDestination copies the executed documents to the local filesystem 
 Send mail
 ~~~~~~~~~
 
-   We remind that this feature is available only for KnowageER and KnowageSI.
+We remind that this feature is available only for KnowageER and KnowageSI.
 
-   The executed document can be sent to one or more mail recipients. The list of mail addresses to be used to forward the executed document can be defined in three different ways:
+The executed document can be sent to one or more mail recipients. The list of mail addresses to be used to forward the executed document can be defined in three different ways:
 
 -  statically;
 -  dynamically, using a mapping dataset;
@@ -259,7 +255,7 @@ In Figure below you can have a look at the mail form. In the following we will f
 Static list
 ^^^^^^^^^^^^
 
-   If you want to choose a static list, check the option **Fixed list of recipients** and fill the configuration property **Mail to** with the list of desired mail addresses separated by a comma. An mail for each executed document will be sent to all the mail addresses contained in the list.
+If you want to choose a static list, check the option **Fixed list of recipients** and fill the configuration property **Mail to** with the list of desired mail addresses separated by a comma. An mail for each executed document will be sent to all the mail addresses contained in the list.
 
 Dynamic list with mapping dataset
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -273,35 +269,34 @@ In this case, you have to define a two-column dataset:
    
 .. figure:: media/image54.png
 
-    Example of mapping dataset for dynamic distribution list
+Example of mapping dataset for dynamic distribution list
 
-   Basically, when the parameter has a given value, the document will be sent to the corresponding email address. Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. With this configuration, the scheduler will execute the report one time for each possible value of the parameter **Position**, then dispatching the results to different recipients. Specifically, all execution results passing a value of the **Position** parameter to the report starting with VP will be sent to name1surname1@gmail.com, the ones starting with HQ will sent to name2surname2@gmail.com and the ones starting with President will be sent to namesurname@gmail.com.
+Basically, when the parameter has a given value, the document will be sent to the corresponding email address. Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. With this configuration, the scheduler will execute the report one time for each possible value of the parameter **Position**, then dispatching the results to different recipients. Specifically, all execution results passing a value of the **Position** parameter to the report starting with VP will be sent to name1surname1@gmail.com, the ones starting with HQ will sent to name2surname2@gmail.com and the ones starting with President will be sent to namesurname@gmail.com.
 
 Dynamic List with script
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Check the option **Use an expression** and assign a value to the configuration property **Expression** with a parameter-dependent expression like the following:
+Check the option **Use an expression** and assign a value to the configuration property **Expression** with a parameter-dependent expression like the following:
 
 .. code-block:: java
          :linenos:
 
       $P{dealer}@eng.it
 
-
-   Here dealer is a document parameter label ($P{dealer} will be replaced by the parameter value of the scheduled execution).
+Here dealer is a document parameter label ($P{dealer} will be replaced by the parameter value of the scheduled execution).
 
 Schedulation panel
 ------------------
 
-   To conclude our overview on the scheduler features, save your settings and go back to the main scheduler page.
+To conclude our overview on the scheduler features, save your settings and go back to the main scheduler page.
 
-   Here you can select one of the available scheduled activities to explore details. We show an example in Figure 8.10. A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind of scheduling has been chosen (Single Execution, Customized Execution or Event Exectution), the start date and so on. Note that at the end of the row you have the possibilities to explore more details by clicking on the “three dots” icon.
+Here you can select one of the available scheduled activities to explore details. We show an example in Figure 8.10. A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind of scheduling has been chosen (Single Execution, Customized Execution or Event Exectution), the start date and so on. Note that at the end of the row you have the possibilities to explore more details by clicking on the “three dots” icon.
    
 .. figure:: media/image55.png
 
     Exploring the detailed of a scheduled activity.
 
-   Here you find the following information:
+Here you find the following information:
 
 -  **Schedulation informations**, it give some extra information about your schedulation concerning sending emails, we provide an example in :numref:`schedulinfpop`.
 -  **Schedulation detail**, it opens the scheduling configuration and let you change them.
