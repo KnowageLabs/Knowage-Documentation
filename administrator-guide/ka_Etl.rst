@@ -76,13 +76,13 @@ Template building
          :linenos:
          :caption: ETL template.
 
-    <etl>
-    <job project="Foodmart"
-    jobName="sales_by_month_country_product_familiy"
-    context="Default"
-    version="0.1"
-    language="java"/>
-    </etl>
+        <etl>
+        <job project="Foodmart"
+        jobName="sales_by_month_country_product_familiy"
+        context="Default"
+        version="0.1"
+        language="java"/>
+        </etl>
 
 Where the tag job includes all the following configuration attributes:
 
