@@ -43,7 +43,7 @@ The |image35| refreshes the document.
 
 The |image36| opens the parameters panel (see :numref:`parampaneluser`) and it is visible only if there are parameters associated to the document.
 
-The opens the contextual menu shown in :numref:`toolbarcontexmenu`. We describe the main functionalities provided by this menu in the following.
+The |image37| opens the contextual menu shown in :numref:`toolbarcontexmenu`. We describe the main functionalities provided by this menu in the following.
 
 .. _toolbarcontexmenu:
 .. figure:: media/image32.png
