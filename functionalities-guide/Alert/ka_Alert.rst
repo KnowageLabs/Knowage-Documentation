@@ -9,7 +9,7 @@ The **Alert** functionality available under the **Tool** section of Knowage main
     Alert functionality from contextual menu.
    
 Alert implementation
-------------
+--------------------
 
 The Alert definition window (refer to :numref:`alertfunctfrom`) diplays the list of existing alerts and a search box at the top of the page to facilitate to browse over the items. In the right top corner it is available the “Plus” icon to configure a new alert.
 
