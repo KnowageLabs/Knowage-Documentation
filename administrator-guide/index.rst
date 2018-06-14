@@ -55,6 +55,9 @@ Administration Manual
 .. |image33| image:: media/image24.png
    :width: 0.27559in
    :height: 0.2756in
+.. |image50| image:: media/image44.png
+   :width: 0.39371in
+   :height: 0.25131in
    
 
 
@@ -73,48 +76,8 @@ Administration Manual
 .. |image43| image:: media/image3.png
    :width: 5.78738in
    :height: 1.58376in
-.. |image47| image:: media/image40.png
-   :width: 5.09928in
-   :height: 1.084in
-.. |image48| image:: media/image42.png
-   :width: 4.05117in
-   :height: 1.92895in
-.. |image49| image:: media/image43.png
-   :width: 4.05108in
-   :height: 2.74155in
-.. |image50| image:: media/image44.png
-   :width: 0.39371in
-   :height: 0.25131in
-.. |image51| image:: media/image45.png
-   :width: 4.05102in
-   :height: 1.93083in
-.. |image52| image:: media/image46.png
-   :width: 4.05104in
-   :height: 1.92748in
-.. |image53| image:: media/image47.png
-   :width: 3.70868in
-   :height: 2.32877in
-.. |image54| image:: media/image51.png
-   :width: 4.05116in
-   :height: 1.93477in
-.. |image55| image:: media/image52.png
-   :width: 4.05116in
-   :height: 1.92736in
-.. |image56| image:: media/image54.png
-   :width: 4.05124in
-   :height: 1.56072in
-.. |image57| image:: media/image55.png
-   :width: 4.05104in
-   :height: 3.04019in
-.. |image58| image:: media/image57.png
-   :width: 4.05119in
-   :height: 1.94561in
-.. |image59| image:: media/image58.png
-   :width: 4.05119in
-   :height: 1.91586in
-.. |image60| image:: media/image59.png
-   :width: 4.05106in
-   :height: 1.90237in   
+   
+
 .. |image93| image:: media/image99.png
    :width: 8.25in
    :height: 8.28333in
