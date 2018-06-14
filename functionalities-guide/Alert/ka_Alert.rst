@@ -48,6 +48,3 @@ Save both the action and the alert configuration settings to store your alert. R
 .. figure:: media/image177.png
 
     Execute document configuration.
-
-
-.. include:: alertThumbinals.rst
