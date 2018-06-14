@@ -100,11 +100,11 @@ The aim of this functionality is to acquire explicit quality data that can be fu
 
 To rate documents, click on **Rank** in the contextual menu of the document toolbar. Choose the document ranking in the pop-up window and click **Save**. The administrator can exploit the result of votes, in order to evaluate and improve the quality of the document.
 
+.. figure:: media/image38.png
+
+   Share notes and comments
+
 Scheduled Execution
 ~~~~~~~~~~~~
 
 The administrator has the possibility to set schedulation for documents. These schedulations can be accessed by **Show Scheduled executions**.
-
-.. figure:: media/image38.png
-
-   Share notes and comments
