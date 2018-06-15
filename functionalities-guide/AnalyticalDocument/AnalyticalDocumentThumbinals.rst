@@ -31,7 +31,30 @@
 .. |image63| image:: media/image65.png
    :width: 0.23623in
    :height: 0.24608in
-   
+.. |image67| image:: media/image69.png
+   :width: 0.19686in
+   :height: 0.16769in
+.. |image71| image:: media/image72.png
+   :width: 0.19686in
+   :height: 0.17498in
+.. |image72| image:: media/image73.png
+   :width: 0.78739in
+   :height: 0.34049in
+.. |image73| image:: media/image74.png
+   :width: 0.11811in
+   :height: 0.10827in   
+.. |image75| image:: media/image76.png
+   :width: 0.19686in
+   :height: 0.25903in
+.. |image79| image:: media/image80.png
+   :width: 0.23623in
+   :height: 0.21179in
+.. |image80| image:: media/image72.png
+   :width: 0.23624in
+   :height: 0.20999in
+.. |image84| image:: media/image72.png
+   :width: 0.23624in
+   :height: 0.20999in   
    
    
 .. |image64| image:: media/image66.png
@@ -43,9 +66,6 @@
 .. |image66| image:: media/image68.png
    :width: 4.05131in
    :height: 2.12447in
-.. |image67| image:: media/image69.png
-   :width: 0.19686in
-   :height: 0.16769in
 .. |image68| image:: media/image70.png
    :width: 4.05105in
    :height: 2.58521in
@@ -55,21 +75,9 @@
 .. |image70| image:: media/image71.png
    :width: 4.05123in
    :height: 1.8664in
-.. |image71| image:: media/image72.png
-   :width: 0.19686in
-   :height: 0.17498in
-.. |image72| image:: media/image73.png
-   :width: 0.78739in
-   :height: 0.34049in
-.. |image73| image:: media/image74.png
-   :width: 0.11811in
-   :height: 0.10827in
 .. |image74| image:: media/image75.png
    :width: 3.47252in
    :height: 3.36174in
-.. |image75| image:: media/image76.png
-   :width: 0.19686in
-   :height: 0.25903in
 .. |image76| image:: media/image77.png
    :width: 3.47239in
    :height: 1.57982in
@@ -79,12 +87,6 @@
 .. |image78| image:: media/image79.png
    :width: 3.47239in
    :height: 1.52268in
-.. |image79| image:: media/image80.png
-   :width: 0.23623in
-   :height: 0.21179in
-.. |image80| image:: media/image72.png
-   :width: 0.23624in
-   :height: 0.20999in
 .. |image81| image:: media/image81.png
    :width: 3.47244in
    :height: 0.66962in
@@ -94,9 +96,6 @@
 .. |image83| image:: media/image83.png
    :width: 3.47244in
    :height: 2.60597in
-.. |image84| image:: media/image72.png
-   :width: 0.23624in
-   :height: 0.20999in
 .. |image85| image:: media/image84.png
    :width: 3.4725in
    :height: 1.67548in
