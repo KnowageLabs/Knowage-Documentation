@@ -58,7 +58,7 @@ There are two different ways to create a new document on Knowage Server. If you 
 .. note::
       **Deploy a document from Knowage Studio**
       
-Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
+    Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
 
 The second option is to manually create the document on the Server. This is the most general way since the Studio designer is not yet available for all documents types.
 
@@ -69,27 +69,28 @@ Analytical documents on Server
 
 First of all click on **Document Development** from the BI functionalities menu, as shown .
 
-   |image56|
+.. figure:: media/image58.png
 
-   Figure 5.2: Documents Development button.
+    Documents Development button.
 
 By default the page is divided into two parts, as shown in Figure 5.3: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
 
-   |image57|
+.. figure:: media/image59.png
 
-   Figure 5.3: Documents Development section.
+    Documents Development section.
 
-You can switch to the document preview view by clicking on grid icon in the top right corner, as shown in Figure 5.4.
+You can switch to the document preview view by clicking on grid icon in the top right corner, as shown in figure below.
 
-   |image58|
+.. _changingdocumentsview:
+.. figure:: media/image60.png
 
-   Figure 5.4: Changing documents view.
+    Changing documents view.
 
 Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date.
 
-   |image59|
+.. figure:: media/image61.png
 
-   Figure 5.5: Side panel.
+    Side panel.
 
 At the top of this side panel you find four button:
 
@@ -98,27 +99,28 @@ At the top of this side panel you find four button:
    |image62| clone the item; 
    |image63| erase the document.
 
-Figure 5.6 shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can alternatively see either the history of document templates or the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders (see Figure 5.10).
+:numref:`detailpanelofknowanalydoc` shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can alternatively see either the history of document templates or the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders (see :numref:`functionaltreedocsav`).
 
-   |image64|
+.. _detailpanelofknowanalydoc:
+.. figure:: media/image66.png
 
-   Figure 5.6: Detail panel of Knowage analytical document.
+    Detail panel of Knowage analytical document.
 
-In order to create a new document you need to click on the red plus button (shown in Figure 5.4) in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Geo-Referenced Analysis**, **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
+In order to create a new document you need to click on the red plus button (shown in :numref:`changingdocumentsview`) in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Geo-Referenced Analysis**, **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
 
 To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in Figure 5.6 but with empty fields, in order to allow you to define the document details.
 
-First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see Figure 5.7).
+First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see Figure below).
 
-   |image65|
+.. figure:: media/image67.png
 
-   Figure 5.7: Select Type and Engine for a new document.
+    Select Type and Engine for a new document.
 
-Now you have to select the dataset and data source that will feed your document with data, see Figure 5.8.
+Now you have to select the dataset and data source that will feed your document with data, see the following figure .
 
-   |image66|
+.. figure:: media/image68.png
 
-   Figure 5.8: Selecting a dataset for the document.
+    Selecting a dataset for the document.
 
 Both should have already been defined in the corresponding sections for Knowageto show them in the available options of the menus. Select the data source from the drop down menu. Then click on the green icon |image67| and select the dataset from the lookup window.
 
@@ -132,11 +134,8 @@ Document lifecycle
 The next step is to choose the status of the document using the **State** drop down menu. At any time in fact, each document is   associated to a state, which will typically change over time following the development of the project. Those states are:
 
 -  development;
-
 -  test;
-
 -  released;
-
 -  suspended.
 
 Upon creation, the document is by default in development state. Any time you upload a new template or make changes to the document, it is recommended that the state is updated so as to reflect its actual development state.
@@ -150,11 +149,12 @@ Template Versioning
 
 When you register a document on the Server, you need to associate a template to it. Click on **Browse** next to **Template** and upload the template from your local file system. You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
 
-Knowage Server supports versioning of uploaded templates, as shown in Figure 5.9. To view them in the document detail window, click on   **Show document templates** in the right panel. All templates are saved with their date and name, and can be easily restored or   deleted. To restore a template, choose it in the list by clicking on the selector, then remember to save: the new template will be   uploaded. Using the same list you can download or delete a template.
+Knowage Server supports versioning of uploaded templates, as shown in :numref:`templateversionforanalydoc`. To view them in the document detail window, click on   **Show document templates** in the right panel. All templates are saved with their date and name, and can be easily restored or   deleted. To restore a template, choose it in the list by clicking on the selector, then remember to save: the new template will be   uploaded. Using the same list you can download or delete a template.
 
-   |image68|
+.. _templateversionforanalydoc:
+.. figure:: media/image70.png
 
-   Figure 5.9: Template versioning for analytical documents.
+    Template versioning for analytical documents.
 
 Document Visibility
 ^^^^^^^^^^^^^^^^^^^
@@ -165,9 +165,10 @@ After having defined all details, you need to choose where the analytical docume
 
 Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). To save your document in the   repository, switch the perspective on the right panel by clicking on **Show functionalities tree**. This operation is needed only if you  moved to the template history view. Here you can choose where you wish to save the document, by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
 
-   |image70|
+.. _functionaltreedocsav:
+.. figure:: media/image66.png
 
-   Figure 5.10: Functionality Tree, document saving settings.
+    Functionality Tree, document saving settings.
 
 Visibility rules
 ---------------------
