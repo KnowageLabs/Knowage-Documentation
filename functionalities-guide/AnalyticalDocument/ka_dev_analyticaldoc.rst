@@ -1,5 +1,5 @@
 Analytical Document
-===============
+===================
 
 The *analytical model* is the core of Knowage Server and covers the whole range of analytical needs, providing many solutions for each analytical area, like reports, charts, OLAP documents, KPIs and so on.
 
@@ -180,7 +180,7 @@ In addition to the standard mechanism supported by the functionalities tree, it 
 
 This can be done by editing conditions in the Visibility section of the detail panel. To add a new condition pick a profile attribute   from the drop down menu, assign it a value, then click on |image71|. This will add a new condition that must be verified to allow a user to access the document. In the same way you can add further conditions, and possibly remove all of them by clicking on the eraser.
 
- Association with analytical drivers
+Association with analytical drivers
 ----------------------------------------
 
 We have already discussed the role of analytical drivers and how they are connected to analytical documents via parameters. In this section we will show how to practically define this association.
@@ -262,9 +262,6 @@ We stress that the *AD_name* is the name of the driver the administrator is tryi
   :linenos:
   
    $P{AD_name}
-
-
-Figure 5.16 depicts the all procedure.
 
 .. figure:: media/image82.png
 
