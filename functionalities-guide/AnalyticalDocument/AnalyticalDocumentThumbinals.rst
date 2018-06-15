@@ -1,24 +1,3 @@
-.. |image54| image:: media/image57.png
-   :width: 4.91939in
-   :height: 3.48213in
-.. |image55| image:: ../Common/media/image10.png
-   :width: 5.0075in
-   :height: 1.06748in
-.. |image56| image:: media/image58.png
-   :width: 3.47242in
-   :height: 0.63588in
-.. |image57| image:: media/image59.png
-   :width: 3.47236in
-   :height: 1.72952in
-.. |image58| image:: media/image60.png
-   :width: 2.31501in
-   :height: 1.07232in
-.. |image59| image:: media/image61.png
-   :width: 3.47243in
-   :height: 1.34942in
-   
-   
-   
 .. |image60| image:: media/image62.png
    :width: 0.23624in
    :height: 0.18374in
@@ -57,6 +36,25 @@
    :height: 0.20999in   
    
    
+   
+.. |image54| image:: media/image57.png
+   :width: 4.91939in
+   :height: 3.48213in
+.. |image55| image:: ../Common/media/image10.png
+   :width: 5.0075in
+   :height: 1.06748in
+.. |image56| image:: media/image58.png
+   :width: 3.47242in
+   :height: 0.63588in
+.. |image57| image:: media/image59.png
+   :width: 3.47236in
+   :height: 1.72952in
+.. |image58| image:: media/image60.png
+   :width: 2.31501in
+   :height: 1.07232in
+.. |image59| image:: media/image61.png
+   :width: 3.47243in
+   :height: 1.34942in   
 .. |image64| image:: media/image66.png
    :width: 3.47231in
    :height: 1.57538in
