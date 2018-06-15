@@ -1,3 +1,6 @@
+Behavioural Model
+=================
+
 An important topic to face before starting a new project is how to create and manage the so-called *behavioural model*.
 
 The *behavioural model* regulates the visibility on documents and data according to the roles and profiles of the end users.
@@ -5,9 +8,7 @@ The *behavioural model* regulates the visibility on documents and data according
 It mainly answers the following questions:
 
 -  WHO uses the business intelligence solution (user profile);
-
 -  WHAT is visible to users, in terms of documents and data (repository rights and analytical drivers);
-
 -  HOW users work with their documents (analytical drivers and presentation environment settings).
 
 The creation and the management of the bevioural model is in charge of Knowage Administrator. However when it has been designed and built, it has to be shared with developers as well. Indeed in developing phase you have to be aware of the visibility hierarchy. You need these information to set document options correctly.
