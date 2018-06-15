@@ -170,7 +170,7 @@ In particular, all query except the *List of fixed values* type can be parameter
 
 Then, at LOV execution time, for the user food manager the query becomes as shown in Runtime placeholder substitute and hence the corresponding LOV will return only the brand names related to the Food product family.
 
-.. code-block:: bash
+.. code-block:: sql
          :caption: Runtime placeholder substitute
          :linenos:
        
