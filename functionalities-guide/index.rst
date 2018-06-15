@@ -4,8 +4,8 @@ Functionalities
 .. include:: Alert/ka_Alert.rst
 .. include:: AnalyticalDocument/ka_dev_analyticaldoc.rst
 .. include:: BehavioralModel/ka_dev_behavioralmodel.rst
-.. include:: Chart/ka_dev_chart.rst
 .. include:: Chart/ka_user_chart.rst
+.. include:: Chart/ka_dev_chart.rst
 .. include:: Cockpit/ka_user_cockpit.rst
 .. include:: Datamining/ka_dev_datamining.rst
 .. include:: Datamining/ka_user_datamining.rst
