@@ -306,7 +306,7 @@ document. Please refer to Chapter of Behavioural model for more detail on how to
 
 Therefore it is required to state which parameters among the ones associated to the target document are going to be involved in the   navigation. Parameters coming out from the source document are said **output parameters** while the ones that receive values through the association (with the source document) are said **input parameters**. By the way, when declaring the parameters they will be called equally **output parameters** at first, since there is no criterion to distinguish output from input before the navigation is configured.
 
-The definition of the output parameters is performed using the **Manage outputparameters** button (see Figure 5.10) but it differs   from document to document, according to its type. We will describe these differences in detail in each dedicated chapter, here we   explain the common steps.
+The definition of the output parameters is performed using the **Manage outputparameters** button but it differs   from document to document, according to its type. We will describe these differences in detail in each dedicated chapter, here we   explain the common steps.
 
 Declaration of the output parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
