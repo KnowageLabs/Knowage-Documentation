@@ -16,6 +16,9 @@
 .. |image59| image:: media/image61.png
    :width: 3.47243in
    :height: 1.34942in
+   
+   
+   
 .. |image60| image:: media/image62.png
    :width: 0.23624in
    :height: 0.18374in
@@ -28,6 +31,9 @@
 .. |image63| image:: media/image65.png
    :width: 0.23623in
    :height: 0.24608in
+   
+   
+   
 .. |image64| image:: media/image66.png
    :width: 3.47231in
    :height: 1.57538in
