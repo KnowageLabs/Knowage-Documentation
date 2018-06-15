@@ -98,9 +98,13 @@ A *List Of Value* (LOV), is a collection of data organized in attribute-value fa
 There may be multiple attributes in a LOV, but only one of them is the core value that is actually used in the analytical driver. Other  values have a descriptive function: they can be used to provide a human readable description of the LOV, as well as to store information used, for example, to correlate analytical drivers. In our example, the core value is the customer’s id, while the others are additional data describing the customer. Knowage allows to create different types of LOV:
 
    **Query**: SQL query to retrieve values from the database;
+   
    **Script**: Groovy or JavaScript to dynamically return values;
+   
    **List of fixed values**: Values are defined statically at LOV creation time;
+   
    **Java objects**: External object invoked by name that returns the list of values;
+   
    **Dataset**: Dataset already defined in Knowage Server that is used to retrieve values. Note that the dataset must not contain parameters, while profile attributes are allowed.
 
 .. _lovlistbehav:
@@ -149,8 +153,8 @@ Suppose that you need to retrieve a list of values representing all brand names 
          :caption: Query LOV example
          :linenos:
  
-          SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME                                         |
-          FROM PRODUCT                               
+          SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
+          FROM PRODUCT
 
 This is suitable for end users like the general manager who need to see all brands for every product family. Suppose now that another end user is, for example, the food manager. He should not see every brand name, but only those related to the Food product family. This could be done using user’s profile attributes.
 
@@ -159,9 +163,10 @@ In particular, all query except the *List of fixed values* type can be parameter
 .. code-block:: sql
          :caption: Parametric query
          :linenos:
-          SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
-          FROM PRODUCT
-          WHERE C.PRODUCT_FAMILY = '${pr_family}'  
+         
+           SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
+           FROM PRODUCT
+           WHERE C.PRODUCT_FAMILY = '${pr_family}'
 
 Then, at LOV execution time, for the user food manager the query becomes as shown in Runtime placeholder substitute and hence the corresponding LOV will return only the brand names related to the Food product family.
 
@@ -193,19 +198,26 @@ Knowage supports the validation of the document’s input parameters via validat
 Knowage default checks are:
 
    **Alfanumeric**: it checks if the parameter is alfanumeric;
+   
    **Numeric**: it checks if the parameter is numeric;
+   
    **Letter String**: it checks if the parameter is a letter string;
+   
    **E-Mail**: it checks if the parameter is an e-mail;
+   
    **Fiscal Code**: it checks if the parameter has the correct syntax of a fiscal code; Internet Address: it checks if the parameter is an internet address.
 
 If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
 
    **Date**: here you can set a costumized format type of date;
+   
    **Regular Expression**: to set a regular expression validation rule;
+   
    **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
+   
    **Range**: to set a range the parameters value has to satisfy;
+   
    **Decimal**: to set a maximal decimal places for the parameters.
-
 
 Creating an analytical driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -237,9 +249,13 @@ To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Det
 The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are selectable at document execution. In fact the user can choose among:
 
    **List values selection**: the filter will look like a lookup table;
+   
    **Pop up**: the filter will look like a lookup table;
+   
    **Slider**: the user can drag the slider to choose the parameter;
+   
    **Tree**: made for hierarchical LOV, lets the users navigate the parameters in a hierarchical way;
+   
    **Combo Box values selection**: the filter will look like a drop down menu.
 
 The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next Sections 4.2 for this kind of input.
@@ -284,5 +300,6 @@ Once you have saved the LOV, just log out from Knowage and log in with a differe
 .. figure:: media/image56.png
 
     Behavioural Model Schema.
+    
    
-   .. include:: behavioralModelThumbinals.rst
+.. include:: behavioralModelThumbinals.rst
