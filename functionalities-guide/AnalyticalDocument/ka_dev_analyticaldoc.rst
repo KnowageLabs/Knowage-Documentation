@@ -161,7 +161,10 @@ Document Visibility
 
 After having defined all details, you need to choose where the analytical document shall be saved in the functionality tree. This   choice has an impact on the visibility of the document. Since folders in the functionality tree are subject to different access policies, which can be set when creating the node, then each document saved in that folder will inherit permissions accordingly.
 
-   |image69|
+.. warning::
+         **Repository structure and rights**
+         
+         The **Functionalities tree** is Knowage document repository. It is maneged by administrator, who is in charge to profile user visibility too.
 
 Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). To save your document in the   repository, switch the perspective on the right panel by clicking on **Show functionalities tree**. This operation is needed only if you  moved to the template history view. Here you can choose where you wish to save the document, by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
 
