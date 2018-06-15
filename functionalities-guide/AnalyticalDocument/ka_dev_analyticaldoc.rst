@@ -22,9 +22,9 @@ The creation and management of analytical documents in Knowage involves differen
 
 These elements are then combined inside each document engine, in order to produce different analytical documents. This process generates an HTML output, which can be accessed and navigated using a web browser.Other output formats are supported, including XLS, CSV, PDF, XML.
 
-   |image54|
+.. figure:: media/image57.png
 
-   Figure 5.1: Components of Knowage analytical document.
+   Components of Knowage analytical document.
 
 Document types
 ~~~~~~~~~~~~~~
@@ -32,33 +32,18 @@ Document types
 Regardless of their type, all analytical documents interact with some generic components (such as cross-services) and with the specific engine that generate them (e.g. Report engine, OLAP engine). Therefore, all analytical documents are managed in the same way in terms of:
 
 -  document storage and versioning;
-
--  document life cycle, based on a specific approval process including
-      different status (development, test, released, suspended);
-
--  multiple positioning on the repository and indirectly first
-      visibility level;
-
+-  document life cycle, based on a specific approval process including different status (development, test, released, suspended);
+-  multiple positioning on the repository and indirectly first visibility level;
 -  rules to restrict document visibility to some end user profiles;
-
 -  management of analytical drivers;
-
 -  multi-format export logic;
-
 -  attribution of business metadata;
-
 -  scheduled execution;
-
 -  collection of auditing and monitoring data;
-
 -  adding end user notes;
-
 -  adding bookmarks;
-
 -  end user evaluation;
-
 -  sending the document by email;
-
 -  on-line or off-line (scheduled) execution.
 
 This means that the above mentioned features are also inherited by every new engine that is developed or integrated into Knowage.
@@ -70,14 +55,14 @@ Register an analytical document
 
 There are two different ways to create a new document on Knowage Server. If you are using Knowage Studio  [1]_, simply click on **Deploy** and the document window will open with pre-filled options.
 
-   .. note::
+.. note::
       **Deploy a document from Knowage Studio**
       
-      Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
+Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
 
 The second option is to manually create the document on the Server. This is the most general way since the Studio designer is not yet available for all documents types.
 
-..[1] Knowage Studio can be used to create Birt or Dashboard document only.
+[1]_ Knowage Studio can be used to create Birt or Dashboard document only.
 
 Analytical documents on Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
