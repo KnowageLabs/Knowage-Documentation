@@ -1,3 +1,6 @@
+Charts
+======
+
 Stand alone charts\*
 ------------------------
 
