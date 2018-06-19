@@ -23,8 +23,8 @@ Knowage main menu is divided in three submenus: the user menu, the BI functional
 In :numref:`menucomponentsuser`, :numref:`menucomponentsbi` and :numref:`menucomponentsadmin` the different elements are summed up.
 
 .. _menucomponentsuser:
-.. table:: Menu components - User menu.
-    :widths: auto
+.. table:: Menu components - User menu
+   :widths: auto
     
    +----------------+-----------------------+-----------------------+
    |    Icon        | Name                  | Description           |
@@ -58,7 +58,7 @@ The BI functionalities menu consists in a set of icons associated with basic fea
 
 .. _menucomponentsbi:
 .. table:: Menu components - BI Functionalities Menu.
-    :widths: auto
+   :widths: auto
 
    +-----------------------+-----------------------+-----------------------+
    |    Icon               | Name                  | Description           |
@@ -74,7 +74,7 @@ The BI functionalities menu consists in a set of icons associated with basic fea
 
 .. _menucomponentsadmin:
 .. table:: Menu components - Administrator Menu.
-    :widths: auto
+   :widths: auto
 
    +-----------------------+-----------------------+-----------------------+
    |    Icon               | Name                  | Management areas      |
