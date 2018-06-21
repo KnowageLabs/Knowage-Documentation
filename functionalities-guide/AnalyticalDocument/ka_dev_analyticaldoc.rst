@@ -12,13 +12,14 @@ Main concepts
 
 The creation and management of analytical documents in Knowage involves different elements:
 
-   **Template**.The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage Studio designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.
-
-   **Dataset**. Each document is associated to one or more datasets. The dataset provides actual data that will be represented according to the defined template. That is to say, the dataset provides the actual content of the analysis and the template is in charge of giving it a meaningful structure.
-
-   **Data source**. In order to retrieve data via the dataset, a source of information must be defined. Depending on the type of document, the data source may be associated to the document either directly or implicitly (via the dataset).
-
-   **Parameters**. Parameters allow the connection between the document and analytical drivers associated to it. In other words, at document execution time, each driver generates a value that is assigned to the corresponding parameter.
+Template
+  The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage Studio designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.
+Dataset
+  Each document is associated to one or more datasets. The dataset provides actual data that will be represented according to the defined template. That is to say, the dataset provides the actual content of the analysis and the template is in charge of giving it a meaningful structure.
+Data source
+  In order to retrieve data via the dataset, a source of information must be defined. Depending on the type of document, the data source may be associated to the document either directly or implicitly (via the dataset).
+Parameters
+  Parameters allow the connection between the document and analytical drivers associated to it. In other words, at document execution time, each driver generates a value that is assigned to the corresponding parameter.
 
 These elements are then combined inside each document engine, in order to produce different analytical documents. This process generates an HTML output, which can be accessed and navigated using a web browser.Other output formats are supported, including XLS, CSV, PDF, XML.
 
@@ -53,7 +54,7 @@ In the next sections we describe in detail how to create and manage analytical d
 Register an analytical document
 -----------------------------------
 
-There are two different ways to create a new document on Knowage Server. If you are using Knowage Studio  [1]_, simply click on **Deploy** and the document window will open with pre-filled options.
+There are two different ways to create a new document on Knowage Server. The first option involves Knowage Studio: within it you can simply click on **Deploy** and the document window will open with pre-filled options. Please note that Knowage Studio can be used to create Birt or Dashboard document only.
 
 .. note::
       **Deploy a document from Knowage Studio**
@@ -61,8 +62,6 @@ There are two different ways to create a new document on Knowage Server. If you 
     Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
 
 The second option is to manually create the document on the Server. This is the most general way since the Studio designer is not yet available for all documents types.
-
-[1]_ Knowage Studio can be used to create Birt or Dashboard document only.
 
 Analytical documents on Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
