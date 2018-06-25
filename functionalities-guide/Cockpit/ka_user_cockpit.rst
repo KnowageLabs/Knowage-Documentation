@@ -117,9 +117,9 @@ On the **Style** tab you can configure the style of your image widget with the d
 
 On the **Cross** tab you can define navigation to another document, as shown in figure below.
 
-.. figure:: media/image148.png
+.. figure:: media/image149.png
 
-   Figure 7.6: Cross tab of Image Widget Configuration.
+    Cross tab of Image Widget Configuration.
 
 .. warning::
          **Cross navigation only for technical users**
@@ -157,105 +157,103 @@ In addition, if the navigation expects other parameters to be passed, use the bo
 Table widget
 ~~~~~~~~~~~~
 
-The **Widget table configuration** opens and it guides you through the steps to configure the widget. The pop up opens showing the **column** tab, as you can see from Figure 7.10. In details, it is mandatory to select a dataset using the combobox ( only if at least one dataset has been loaded using the **Data Configuration** feature) or clicking on the icon |image156| available just aside the combobox line. You can page the table specifying the number of rows per sheet. Consequently the user can set columns properties.
+The **Widget table configuration** opens and it guides you through the steps to configure the widget. The pop up opens showing the **column** tab, as you can see from Figure below. In details, it is mandatory to select a dataset using the combobox ( only if at least one dataset has been loaded using the **Data Configuration** feature) or clicking on the icon |image156| available just aside the combobox line. You can page the table specifying the number of rows per sheet. Consequently the user can set columns properties.
 
-   |image157|
+.. figure:: media/image154.png
 
-   Figure 7.10: Table configuration window.
+    Table configuration window.
 
 In fact, the column area is divided into two parts: on the left side you have columns ordering, on the right the user has the button to add a new column or a calcutated field. As soon as the dataset is selected, you can indicate the sorting column or modal selection column. The modal selection serves to specify which value will be passed to other widgets (if interaction is enabled) when clicking on the cell at document execution time. You can specify this field by selecting a value from the combobox. In the same way, you indicate the sorting column and the order type that steers the rows ordering. You can select the field and the order from the dedicated comboboxes.
 
-When a dataset is added to a table widget, all of its columns are listed below. If the user doesn’t wish to show some of them, he can use the delete button available at the end of each column row, as shown in Figure 7.11.
+When a dataset is added to a table widget, all of its columns are listed below. If the user doesn’t wish to show some of them, he can use the delete button available at the end of each column row, as shown below.
 
-   |image158|
+.. figure:: media/image155.png
 
-   Figure 7.11: Delete a column.
+    Delete a column.
 
 In case of accidental cancellation or new table requirements, it is possible to re-add columns. In order to add a new column you have to
-click on the **Add Column** icon on the top right of the second box. Once opened you can select one or more columns. When you have finished selecting the desired columns you can click on save button and your new columns will appear in the field list. Refer to Figure 7.12.
+click on the **Add Column** icon on the top right of the second box. Once opened you can select one or more columns. When you have finished selecting the desired columns you can click on save button and your new columns will appear in the field list. Refer to Figure below.
 
-   |image159|
+.. figure:: media/image156.png
 
-   Figure 7.12: Add a new column.
+    Add a new column.
 
 Likewise, to add a calculated field you have to click on the **Add Calculated field** icon next to add column icon. Once opened the Calculated Field Wizard you have to type an alias for your calculated field in the dedicated area at the top corner of the wizard. Then you can choose from the Items Tree the fields and the arithmetic function you want to use for building your expression. In the middle you can see the expression you have built. If you prefer you can create or modify the expression manually directly in the panel which
-is editable. When you are satisfied with your expression you can click on save button and your calculated field appears in the field list. We provide an example in the Figure 7.13.
+is editable. When you are satisfied with your expression you can click on save button and your calculated field appears in the field list. We provide an example in the following figure.
 
-   |image160|
+.. figure:: media/image157.png
 
-   Figure 7.13: Add a calculated field.
+    Add a calculated field.
 
-At the very bottom of the window, you can see the dataset fields listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from Figure 7.14. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+At the very bottom of the window, you can see the dataset fields listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from :numref:`columnsettings`. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+
+.. _columnsettings:
+.. figure:: media/image158.png
+
+    Column settings.
 
 Note that here you can indicate the column type and the aggregation. To add an aggregation to a column you must control the type of data that column has. An aggregation can only be added if the column value is of “number” type . The different aggregation functions are: *none (you also can not add any aggregation function)*, *Sum*, *Average*, *Maximum*, *Minimum*, *Count* and *Count distinct*.
 
 The **Style** tab is where you can customize the table by using the different options of style. It is divided into eight parts:
 
 -  In the **Summary** section you can show the total of the column and customize it by typing the summary name and using font and style
-      configurations. Refer to Figure 7.15.
+      configurations. Refer to Figure below.
 
-   |image161|
+.. figure:: media/image159.png
 
-   Figure 7.14: Column settings.
+    Summary section of the Style tab.
 
-   |image162|
+-  In the **Rows** section you can set the table rows to be adapted in automatic or select a fixed height. You can also show the total of rows. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other      external documents. Refer to figure below.
 
-   Figure 7.15: Summary section of the Style tab.
+.. figure:: media/image160.png
 
--  In the **Rows** section you can set the table rows to be adapted in automatic or select a fixed height. You can also show the total of rows. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other      external documents. Refer to Figure 7.16.
-
-
-   |image163|
-
-   Figure 7.16: Rows section of the Style tab.
+    Rows section of the Style tab.
 
 -  In the **Grid** section you can add borders to the table and add color to alternate rows. In this section you can find different      options to customize them. Refer to figure below.
 
-   |image164|
+.. figure:: media/image161.png
 
-   Figure 7.17: Grid section of the Style tab.
+    Grid section of the Style tab.
 
--  In the **Header Style** section you find the different options of  style for the table header. Refer to Figure 7.18.
+-  In the **Header Style** section you find the different options of  style for the table header. Refer to Figure below.
 
-   |image165|
+.. figure:: media/image162.png
 
-   Figure 7.18: Header style section of the Style tab.
+    Header style section of the Style tab.
 
--  In the **Titles** section you can add the titles to the widget and modify the font size and weight. In this section you can also      change the height of the widget title. Refer to Figure 7.19.
+-  In the **Titles** section you can add the titles to the widget and modify the font size and weight. In this section you can also      change the height of the widget title. Refer to Figure below.
 
-   |image166|
+.. figure:: media/image163.png
 
-   Figure 7.19: Titles section of the Style tab.
+    Titles section of the Style tab.
 
 -  In the **Borders** section you can add a border to the widget and customize it by using the colors, thickness and style. Refer to
-      Figure 7.20.
+      the following figure.
       
-   |image167|
+.. figure:: media/image164.png
 
-   Figure 7.20: Borders section of the Style tab.
-   
+    Borders section of the Style tab.   
 
--  In the **Shadows** section you can add the shadows in the widget. Refer to Figure 7.21.
+-  In the **Shadows** section you can add the shadows in the widget. Refer to the following figure.
 
-   |image168|
+.. figure:: media/image165.png
 
-   Figure 7.21: Shadows section of the Style tab.
-   
+    Shadows section of the Style tab. 
 
--  In the **Background** color section you can set the background color of the widget. Refer to Figure 7.22.
+-  In the **Background** color section you can set the background color of the widget. Refer to the Figure below.
 
-   |image169|
+.. figure:: media/image166.png
 
-   Figure 7.22: Background color section of the Style tab.
+    Background color section of the Style tab.
 
 Once the table style settings have been implemented you can switch to the next tab. The “Cross” tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator).
 
 
-Referring to Figure 7.23, we sum up how to add a cross navigation to the cockpit with the following bullet list:
+Referring to Figure below, we sum up how to add a cross navigation to the cockpit with the following bullet list:
 
-   |image171|
+.. figure:: media/image167.png
 
-   Figure 7.23: Cross tab of the table widget configuration.
+    Cross tab of the table widget configuration.
 
 -  activate the cross navigation flag;
 
@@ -269,11 +267,12 @@ Referring to Figure 7.23, we sum up how to add a cross navigation to the cockpit
 
 -  add all involved output parameters by adding them one by one in the bottom part of the GUI.
 
-Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. Figure 7.24 shows an example of how to set the limit rows or a conditions on dataset columns.
+Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. :numref:`filterstabwidgetconf` shows an example of how to set the limit rows or a conditions on dataset columns.
 
-   |image172|
+.. _filterstabwidgetconf:
+.. figure:: media/image168.png
 
-   Figure 7.24: Filters tab of the table widget configuration.
+    Filters tab of the table widget configuration.
 
 Once you have finished setting the different configuration options of the table widget, then just click on “Save” and your new widget is
 displayed inside the cockpit.
