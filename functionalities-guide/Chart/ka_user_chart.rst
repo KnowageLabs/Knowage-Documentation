@@ -320,7 +320,7 @@ To create a parallel chart select a dataset with at least one attribute and two 
         |    108 |    7.3       |    2.9      |    6.3       |    1.8      | Iris-virginica  |
         +--------+--------------+-------------+--------------+-------------+-----------------+
     
-In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, we are able to find out which class we are looking at. In Figure :numref:`fromleftparallrighetchart`(a) you can find the parallel chart made with the suggested dataset. While in Figure :numref:`fromleftparallrighetchart`(b) it is easy to see, thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
+In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, we are able to find out which class we are looking at. In Figure :numref:`fromleftparallrighetchart` (a) you can find the parallel chart made with the suggested dataset. While in Figure :numref:`fromleftparallrighetchart` (b) it is easy to see, thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
 
 .. _fromleftparallrighetchart:
 .. figure:: media/image116.png
