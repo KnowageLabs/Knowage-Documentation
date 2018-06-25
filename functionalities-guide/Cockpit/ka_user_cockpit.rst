@@ -129,6 +129,7 @@ On the **Cross** tab you can define navigation to another document, as shown in 
 
 For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. If the cross navigation definition is not defined, then when you launch the Chart widget cross navigation will be shown a pop up (refer to Figure below) with the list of cross navigation definition that exist for this cockpit.
 
+.. _crossnavmultchoice:
 .. figure:: media/image150.png
 
     Cross navigation multiple choices.
@@ -142,7 +143,7 @@ We recall that also for chart widget it is possible to set cross navigation on e
 
 As shown in :numref:`crossnavchartwidget`, it is mandatory to enable the cross navigation feature by using the dedicate tab of chart editor GUI. It is mandatory to choose the column element to be passed to the destination document and associate it to the right output parameter (previoulsy added to the document using the detail interface).
 
-The cross navigation name can be left empty. In case multiple cross navigation definitions have been configured for the document, a pop up will be displayed, letting the user to choose which destination to reach (exactly as we saw earlier for Image widget in Figure 7.7).
+The cross navigation name can be left empty. In case multiple cross navigation definitions have been configured for the document, a pop up will be displayed, letting the user to choose which destination to reach (exactly as we saw earlier for Image widget in :numref:`crossnavmultchoice`).
 
 .. _crossnavchartwidget:
 .. figure:: media/image151.png
@@ -197,8 +198,7 @@ Note that here you can indicate the column type and the aggregation. To add an a
 
 The **Style** tab is where you can customize the table by using the different options of style. It is divided into eight parts:
 
--  In the **Summary** section you can show the total of the column and customize it by typing the summary name and using font and style
-      configurations. Refer to Figure below.
+-  In the **Summary** section you can show the total of the column and customize it by typing the summary name and using font and style configurations. Refer to Figure below.
 
 .. figure:: media/image159.png
 
@@ -394,9 +394,9 @@ Document section
 
 The Document widget allows to add an external document into the cockpit area. This widget supports documents like reports, graphs, maps, etc.
 
-Use the Data configuration button (Figure 7.53) to add a document souce to the cockpit. Click on the “Plus” icon on the right half of the page to choose among all available documents.
+Use the Data configuration button to add a document souce to the cockpit. Click on the “Plus” icon on the right half of the page to choose among all available documents.
 
-The Document Widget configuration is divided into two parts: **Custom** tab and **Style** tab as you can see from Figure 7.41.
+The Document Widget configuration is divided into two parts: **Custom** tab and **Style** tab as you can see from Figure below.
 
 .. figure:: media/image185.png
 
