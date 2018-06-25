@@ -6,10 +6,10 @@ Functionalities
    :caption: Table of Contents
    :maxdepth: 10
    
-   Alert/ka_Alert.rst
+   Chart/ka_user_chart.rst
    AnalyticalDocument/ka_dev_analyticaldoc.rst
    BehavioralModel/ka_dev_behavioralmodel.rst
-   Chart/ka_user_chart.rst
+   Alert/ka_Alert.rst
    Cockpit/ka_user_cockpit.rst
    Datamining/ka_dev_datamining.rst
    Datamining/ka_user_datamining.rst
