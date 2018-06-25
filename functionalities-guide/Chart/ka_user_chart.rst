@@ -182,29 +182,29 @@ example of dataset for the sunburst chart is showed in Table below.
 
 .. _exampleofdatsetsunburst:
 .. table:: Example of dataset for the sunburst chart.
-    :widths: auto
+   :widths: auto
    
-        +----------------------+----------------+------+
-        |    CATEGORY          | SUBCATEGORY    | UNIT |
-        +======================+================+======+
-        |    Baking Goods      | Cooking Oil    | 349  |
-        +----------------------+----------------+------+
-        |    Baking Goods      | Sauces         | 109  |
-        +----------------------+----------------+------+
-        |    Baking Goods      | Spices         | 290  |
-        +----------------------+----------------+------+
-        |    Baking Goods      | Sugar          | 205  |
-        +----------------------+----------------+------+
-        |    Bathroom Products | Conditioner    | 64   |
-        +----------------------+----------------+------+
-        |    Bathroom Products | Mouthwash      | 159  |
-        +----------------------+----------------+------+
-        |    Bathroom Products | Shampoo        | 254  |
-        +----------------------+----------------+------+
-        |    Bathroom Products | Toilet Brushes | 92   |
-        +----------------------+----------------+------+
-        |    Bathroom Products | Toothbrushes   | 94   |
-        +----------------------+----------------+------+
+   +----------------------+----------------+------+
+   |    CATEGORY          | SUBCATEGORY    | UNIT |
+   +======================+================+======+
+   |    Baking Goods      | Cooking Oil    | 349  |
+   +----------------------+----------------+------+
+   |    Baking Goods      | Sauces         | 109  |
+   +----------------------+----------------+------+
+   |    Baking Goods      | Spices         | 290  |
+   +----------------------+----------------+------+
+   |    Baking Goods      | Sugar          | 205  |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Conditioner    | 64   |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Mouthwash      | 159  |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Shampoo        | 254  |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Toilet Brushes | 92   |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Toothbrushes   | 94   |
+   +----------------------+----------------+------+
 
 Once you selected the dataset and the type of chart, choose at least two attributes in the X-axis panel and a measure in the Y-axis panel as showed in the following figure.
 
