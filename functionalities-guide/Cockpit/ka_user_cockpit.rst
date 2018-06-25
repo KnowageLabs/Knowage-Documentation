@@ -83,8 +83,9 @@ In the following we go into details of each available widget.
 Text widget
 ~~~~~~~~~~~
 
-By clicking the button Text Widget you can add text to your cockpit. As shown in Figure 7.3, the widget editor opens and it is divided in three tabs: the **Text editor**, the **Style**, the **Dataset** and the **Filters** tab.
+By clicking the button Text Widget you can add text to your cockpit. As shown in :numref:`texteditwidgetconf`, the widget editor opens and it is divided in three tabs: the **Text editor**, the **Style**, the **Dataset** and the **Filters** tab.
 
+.. _texteditwidgetconf:
 .. figure:: media/image144.png
 
      Text editor of text widget configuration.
