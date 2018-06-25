@@ -408,17 +408,17 @@ Selection widget
 
 This widget is related to the association concept so in this subsection we give information on how to add and custom the **Selection Widget** into the cockpit area and its functioning, while we refer to the dedicated Document section for details on how to set (global) associations.
 
-To enable the Selection widget, which means the possibility to have all associations listed and acccessible on a widget, the user must open the “Selection” feature through the “Add widget” functionality and configure the demanded options. Figure 7.42 shows the“Selection widget configuration” interface.
+To enable the Selection widget, which means the possibility to have all associations listed and acccessible on a widget, the user must open the “Selection” feature through the “Add widget” functionality and configure the demanded options. Figure below shows the“Selection widget configuration” interface.
 
-   |image190|
+.. figure:: media/image186.png
 
-   Figure 7.42: Selection widget configuration.
+    Selection widget configuration.
 
-The Selection Widget will display the elements selected by the user. Figure 7.43 shows an example.
+The Selection Widget will display the elements selected by the user. Figure below shows an example.
 
-   |image191|
+.. figure:: media/image187.png
 
-   Figure 7.43: Selection widget outlook.
+    Selection widget outlook.
 
 If global associations have been set, clicking on table, cross table or chart elements will update all corresponding widgets. Otherwise, only the widget on which selection has been made Selector Widget will be updated. In both cases the Selection widget will display the
 highlighted attribute values.
@@ -428,67 +428,63 @@ Selector Widget
 
 The **Selector Widget** is useful when an end user (a user with a USER tole type) wants to add a parameter to the document.
 
-   |image192|
+To configure properly a Selector Widget, use the three tabs shown below.
 
-   Figure 7.44: Selector widget outlook.
+.. figure:: ../Common/media/image4.png
 
-To configure properly a Selector Widget, use the three tabs shown in Figure 7.44.
+    Selector widget outlook.
 
 In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then custom the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further Selector Widget choose among “vertical”, “horizontal” or “grid”. Finally, you can decide to add a dafault value, chosen from main column’s first item, main column’s last item or to simply assign a static value.
 
-Move to the **Style** tab to set the widget style in terms of: titles, borders, shadows and background color. Figure 7.45 shows a customization example.
+Move to the **Style** tab to set the widget style in terms of: titles, borders, shadows and background color. Figure below shows a customization example.
 
-   |image193|
+.. figure:: media/image189.png
 
-   Figure 7.45: Selector widget configuration.
+    Selector widget configuration.
 
-Finally use the **Filters** (see 7.46) tab to handle pagination or filter on a dataset column.
+Finally use the **Filters** tab to handle pagination or filter on a dataset column.
 
-   |image194|
+.. figure:: media/image190.png
 
-   Figure 7.46: Selector filters.
+    Selector filters.
 
-The Selector widget works effectively as a ready-to-use filter panel, as Figure 7.47 highlights.
+The Selector widget works effectively as a ready-to-use filter panel.
 
-   |image195|
+.. figure:: media/image191.png
 
-   Figure 7.47: Selector widget execution example.
+    Selector widget execution example.
 
 Widget properties
 ^^^^^^^^^^^^^^^^^
 
-Once one or more (above mentioned) widgets have been implemented, the technical user has some more options exploring the icon available at the right top corner of the widget itself, as Figure 7.48 highlights.
+Once one or more (above mentioned) widgets have been implemented, the technical user has some more options exploring the icon available at the right top corner of the widget itself, as Figure below highlights.
 
-   |image196|
+.. figure:: media/image192.png
 
-   Figure 7.48: Widget properties.
+    Widget properties.
 
 Here the user can:
 
 -  move the widget in the cockpit area at convenience;
-
 -  modify its dimension;
-
 -  delete it;
-
 -  activate the on-click interaction of the widget with the other ones;
-
 -  activate the updating of widget data due to the interaction with other widgets.
 
 When executing the cockpit in visualization mode, the user has also some more options for widgets. For all widget the user can use the icon|image197| to expand the widget to all page and use the icon |image198| to reduce it again.
 
 
-Chart widget are endowed with an additional option that allows the user to change the chart type, as you can see in Figure 7.49.
+Chart widget are endowed with an additional option that allows the user to change the chart type, as you can see in Figure below.
 
-   |image199|
+.. figure:: media/image195.png
 
-   Figure 7.49: Change chart type button.
+    Change chart type button.
 
-Referring to Figure 7.50, the available chart types are: parallel, scatter, wordcloud, line, radar, bar and pie.
+Referring to Figure below, the available chart types are: parallel, scatter, wordcloud, line, radar, bar and pie.
 
-   |image200|
+.. figure:: media/image196.png
 
-   Figure 7.50: Available chart types.
+    Available chart types.
 
 Pay attention though to the fact that when grouping functions have been used, the change chart type may not report the same level of aggregation. In fact, not all type of chart allows the grouping function. Refer to Chart types in detail to read more about each chart type configuration. Pay also attention when a two-series chart is chaned with a single-series one. For instance the parallel chart works only when (at laest) two series have been set, while the wordcloud works with only one series.
 
@@ -496,41 +492,41 @@ Pay attention though to the fact that when grouping functions have been used, th
 7.2 General configuration
 -------------------------
 
-This option allows the user to manage all cockpit general settings that we are going to describe through images of the interface. Clicking on the **General configuration** button the window in FIgure 7.51 opens. This contains the **General Settings** tab and the **Widget Style** tab.
+This option allows the user to manage all cockpit general settings that we are going to describe through images of the interface. Clicking on the **General configuration** button the window in figure below opens. This contains the **General Settings** tab and the **Widget Style** tab.
 
-   |image201|
+.. figure:: media/image197.png
 
-   Figure 7.51: General configuration window.
+    General configuration window.
 
-Editing the fields of the first tab you can add or change the name and/or the description of your cockpit; moreover here you can choose the sheet color and decide to enable the menu when the document runs in display mode. The second tab (Figure 7.52 allows to configure some style options of the cockpit, like borders, shadows, titles and background color.
+Editing the fields of the first tab you can add or change the name and/or the description of your cockpit; moreover here you can choose the sheet color and decide to enable the menu when the document runs in display mode. The second tab (Figure below allows to configure some style options of the cockpit, like borders, shadows, titles and background color.
 
-   |image202|
+.. figure:: media/image198.png
 
-   Figure 7.52: Widget style tab.
+    Widget style tab.
 
 7.3 Data configuration
 ----------------------
 
-This feature manages the data storage and usage. In fact, here there is the possiblity to save data in cache, create associations between datasets, schedule the (data) refresh frequency and so on. Referring to Figure 7.53, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **Frequency** and the **Template** tab.
+This feature manages the data storage and usage. In fact, here there is the possiblity to save data in cache, create associations between datasets, schedule the (data) refresh frequency and so on. Referring to :numref:`dataconfigwindow`, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **Frequency** and the **Template** tab.
+
+.. _dataconfigwindow:
+.. figure:: media/image199.png
+
+    Data configuration window.
 
 Source
 ~~~~~~
 
 The Source tab is split into two areas. On the left side the user can find the list of those dataset that are currently used by the cockpit. Here it is possible to add new dataset that will be passed to widgets. In other words, datasets inserted in this area will be listed in the dataset combobox of widgets like the Table, the Pivot Table and the Chart one. Note that the user can delete datasets as well.
 
-   |image203|
-
-   Figure 7.53: Data configuration window.
-   
-
 Parametric sources management\*
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the user is adding a parametric dataset the window will exhibit them in an expandable box right below. It is also mandatory to give default values or to associate proper drivers to the document to secure its correct execution. By the way, a final user has no access to parametric dataset and he/she cannot handle analytical drivers, therefore **parametric sources can be managed only by an admin user**. We stress that the user must also type the driver name in the field box as highlighted in Figure 7.54. You can type it manually or use the look up just aside the parameter line.
+If the user is adding a parametric dataset the window will exhibit them in an expandable box right below. It is also mandatory to give default values or to associate proper drivers to the document to secure its correct execution. By the way, a final user has no access to parametric dataset and he/she cannot handle analytical drivers, therefore **parametric sources can be managed only by an admin user**. We stress that the user must also type the driver name in the field box as highlighted in Figure below. You can type it manually or use the look up just aside the parameter line.
 
-   |image204|
+.. figure:: media/image200.png
 
-   Figure 7.54: Dataset management.
+    Dataset management.
 
 On the right side of the window the user finds the list of external documents that can be added to the cockpit (through Document widgets), or as well as for the dataset case, of documents that are already in use in (previously set) Document widgets. In the occurance of Associations parametric documents, parameter boxes are shown below. Note that it is mandatory to link them to analytical drivers (previuosly hooked to the document) or be assigned a fixed (default) value.
 
@@ -539,59 +535,59 @@ Associations
 
 If your goal is to show data from a single dataset, it is not necessary to define any association. *Associations should be set within the designer when widgets are built on different datasets*. Associations can be set with the elements: dataset columns, dataset parameters and document parameters. Note that to implement an association the user must have at least one column. We show some examples in the following.
 
-Figure 7.55 shows the association between two datasets. In this case the user must detect one field from the first dataset, the same field (in terms of values) in the other one. The relation will appear right below. Click on the save button to confirm the association. If the associations rely on multiple columns the user must add them one by one.
+:numref:`assocbetweendatacolum` shows the association between two datasets. In this case the user must detect one field from the first dataset, the same field (in terms of values) in the other one. The relation will appear right below. Click on the save button to confirm the association. If the associations rely on multiple columns the user must add them one by one.
 
-   |image205|
+.. _assocbetweendatacolum:
+.. figure:: media/image201.png
 
-   Figure 7.55: Associations between dataset columns.
+    Associations between dataset columns.
 
-The same procedure can be done in the case of dataset columns and dataset parameters, as shown in Figure 7.56.
+The same procedure can be done in the case of dataset columns and dataset parameters, as shown below.
 
-   |image206|
+.. figure:: media/image202.png
 
-   Figure 7.56: Associations between dataset column and dataset
-   parameter.
+    Associations between dataset column and dataset parameter.
 
-Another example is supplied in Figure 7.57. Here the association is perfomed between a dataset Frequency column and document parameter.
+Another example is supplied in Figure below. Here the association is perfomed between a dataset Frequency column and document parameter.
 
-   |image207|
+.. figure:: media/image203.png
 
-   Figure 7.57: Associations between dataset column and document
-   parameter.
+    Associations between dataset column and document parameter.
 
 Once you have defined the associations, as soon as you refresh one widget, all related widgets are refreshed simultaneously on data update.
 
 Frequency
 ~~~~~~~~~
 
-The Frequency tab defines a schedulation over dataset involved in the associations. An example is supplied in Figure 7.58. This means that associations are activated automatically and data are reloaded according to this feature. In particular, groups of realtime datasets that compose one or more associations can have different update frequencies. We stress that, in order to secure the right document execution, the group frequency do not affect the other ones and each group is reloaded at different times. In addition, realtime dataset that are not involved in any association can have their own frequency.
+The Frequency tab defines a schedulation over dataset involved in the associations. An example is supplied in :numref:`frequsettexample`. This means that associations are activated automatically and data are reloaded according to this feature. In particular, groups of realtime datasets that compose one or more associations can have different update frequencies. We stress that, in order to secure the right document execution, the group frequency do not affect the other ones and each group is reloaded at different times. In addition, realtime dataset that are not involved in any association can have their own frequency.
 
-   |image208|
+.. _frequsettexample:
+.. figure:: media/image204.png
 
-   Figure 7.58: Frequency settings example.
+    Frequency settings example.
 
 Template
 ~~~~~~~~
 
-In this tab the user can find the json code (at the current stage of the work) which composes the template. Figure 7.59 shows an example.
+In this tab the user can find the json code (at the current stage of the work) which composes the template. Figure below shows an example.
 
-   |image209|
+.. figure:: media/image205.png
 
-   Figure 7.59: Template example.
+   Template example.
 
 
-7.4 Selections
+Selections
 --------------
 
-Adding the **Selections** to your widgets, namely the possibility to reload all widget data according to selection made throught the click on a specific item of the cockpit (cell value, chart bar, etc.). Moreover, thanks to this functionality the user can reproduce the drill down feature that we introduced in Chapter 6. You can check which selections are active on your cockpit at anytime thanks to the **Selection** functionality. In Section 7.1 we already described how to add the “Selection” widget inside the cockpit area. If the user do not wish for the widget to stay visible, selections can still be accessed and managed through the menu configuration bar. Clicking on the “Selection” menu icon you can enter the “Selections” window. Here all selections and associations are listed, as shown in Figure 7.60. The “Delete” button is available just aside each row to let the user to remove that specific selections. Click on the “Cancel” button to exit the window.
+Adding the **Selections** to your widgets, namely the possibility to reload all widget data according to selection made throught the click on a specific item of the cockpit (cell value, chart bar, etc.). Moreover, thanks to this functionality the user can reproduce the drill down feature that we introduced in Chapter of Chart. You can check which selections are active on your cockpit at anytime thanks to the **Selection** functionality. In Section 7.1 we already described how to add the “Selection” widget inside the cockpit area. If the user do not wish for the widget to stay visible, selections can still be accessed and managed through the menu configuration bar. Clicking on the “Selection” menu icon you can enter the “Selections” window. Here all selections and associations are listed, as shown in Figure 7.60. The “Delete” button is available just aside each row to let the user to remove that specific selections. Click on the “Cancel” button to exit the window.
 
 
-   |image210|
+.. figure:: media/image206.png
 
-   Figure 7.60: Selection window.
+    Selection window.
 
 
- Clear cache
+Clear cache
 ---------------
 
 The **Clear cache** button lets you reallign the data shown in your widget to the ones in your database. When you create your widget and associate your datafields, a photo of data is made and stored in temporary tables. This means that your cockpit will display the same data at each execution until you clean the chace by clicking on the dedicated button and execute the document again. Now your data are refreshed and updated to the one contained in your database at last execution time. As discussed before this button is available also in “Read only” modality.
@@ -605,11 +601,11 @@ You can save the cockpit by clicking on the save button in the right-top corner.
  Multisheet functionality
 ----------------------------
 
-Cockpit allows to manage data visualization splitting it in two or more sheets. In each layer the user can find and employ the features shown above. Indeed, it is possible to perform a new analysis (as highlighted in Figure 7.61) selecting different datasets and gadgets.
+Cockpit allows to manage data visualization splitting it in two or more sheets. In each layer the user can find and employ the features shown above. Indeed, it is possible to perform a new analysis (as highlighted in Figure below) selecting different datasets and gadgets.
 
-   |image211|
+.. figure:: media/image207.png
 
-   Figure 7.61: Multisheet cockpit example.
+    Multisheet cockpit example.
 
 A user can take advantage of the “move widget” functionality we saw in My first Cockpit to bring widget from one sheet to another.
 
