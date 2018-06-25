@@ -75,7 +75,7 @@ By clicking the button **Add Widget** you can add a widget containing a **Text**
 
 .. figure:: media/image143.png
 
-    Widget Type.
+        Widget Type.
 
 In the following we go into details of each available widget.
 
@@ -84,15 +84,15 @@ Text widget
 
 By clicking the button Text Widget you can add text to your cockpit. As shown in Figure 7.3, the widget editor opens and it is divided in three tabs: the **Text editor**, the **Style**, the **Dataset** and the **Filters** tab.
 
-  |image147|
+.. figure:: media/image144.png
 
-   Figure 7.3: Text editor of text widget configuration.
+     Text editor of text widget configuration.
 
 On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possbile to associate dataset values to the text and read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure 7.4. To add a function to a measure first select the desired function and then the field of numeric type.
 
-   |image148|
+.. figure:: media/image145.png
 
-   Figure 7.4: Editing a dynamic text.
+    Editing a dynamic text.
 
 On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget.
 
@@ -106,53 +106,52 @@ Image widget
 By clicking the button **Image Widget** you can add images to your cockpit. As already seen the widget editor opens and it is divided in
 three sections.
 
-On the **Gallery** tab you can upload an image, delete it or select one from the gallery. Refer to the Figure 7.5.
+On the **Gallery** tab you can upload an image, delete it or select one from the gallery. Refer to the following figure.
 
-   |image149|
+.. figure:: media/image148.png
 
-   Figure 7.5: Gallery tab of Image Widget Configuration.
+    Gallery tab of Image Widget Configuration.
 
 On the **Style** tab you can configure the style of your image widget with the different options offered by this tab. Many of them are defined in the table widget that you will find later.
 
-On the **Cross** tab you can define navigation to another document, as shown in Figure 7.6.
+On the **Cross** tab you can define navigation to another document, as shown in figure below.
 
-   |image151|
+.. figure:: media/image148.png
 
    Figure 7.6: Cross tab of Image Widget Configuration.
 
-      .. warning::
+.. warning::
          **Cross navigation only for technical users**
          
-         Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final
-user.
+         Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final user.
 
-For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. If the cross navigation definition is not defined, then when you launch the Chart widget cross navigation will be shown a pop up (refer to Figure 7.7) with the list of cross navigation definition that exist for this cockpit.
+For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. If the cross navigation definition is not defined, then when you launch the Chart widget cross navigation will be shown a pop up (refer to Figure below) with the list of cross navigation definition that exist for this cockpit.
 
-   |image152|
+.. figure:: media/image150.png
 
-   Figure 7.7: Cross navigation multiple choices.
+    Cross navigation multiple choices.
 
 Chart widget
 ~~~~~~~~~~~~
 
-Charts are an essential representation of data, Knowage let you use many different charts type and configure them according to your needs. We have provided all details about charts type and configuration in Chapter 6.
+Charts are an essential representation of data, Knowage let you use many different charts type and configure them according to your needs. We have provided all details about charts type and configuration in Chapter of Chart.
 
 We recall that also for chart widget it is possible to set cross navigation on elements.
 
-As shown in Figure 7.8, it is mandatory to enable the cross navigation feature by using the dedicate tab of chart editor GUI. It is mandatory to choose the column element to be passed to the destination document and associate it to the right output parameter (previoulsy added to the document using the detail interface).
+As shown in :numref:`crossnavchartwidget`, it is mandatory to enable the cross navigation feature by using the dedicate tab of chart editor GUI. It is mandatory to choose the column element to be passed to the destination document and associate it to the right output parameter (previoulsy added to the document using the detail interface).
 
 The cross navigation name can be left empty. In case multiple cross navigation definitions have been configured for the document, a pop up will be displayed, letting the user to choose which destination to reach (exactly as we saw earlier for Image widget in Figure 7.7).
 
-   |image154|
+.. _crossnavchartwidget:
+.. figure:: media/image151.png
 
-   Figure 7.8: Cross navigation for chart widget.
+    Cross navigation for chart widget.
 
-In addition, if the navigation expects other parameters to be passed, use the bottom part of the page to add the additional parameters. Figure 7.9 shows an example.
+In addition, if the navigation expects other parameters to be passed, use the bottom part of the page to add the additional parameters. Figurebelow shows an example.
 
-   |image155|
+.. figure:: media/image152.png
 
-   Figure 7.9: Add all output parameters involved in the cross
-   navigation.
+    Add all output parameters involved in the cross navigation.
 
 Table widget
 ~~~~~~~~~~~~
