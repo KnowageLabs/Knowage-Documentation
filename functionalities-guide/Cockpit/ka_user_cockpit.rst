@@ -1,85 +1,81 @@
 Cockpit
 =======
 
-KnowAgeBD and KnowageSI allow end users to *self-build interactive cockpits* through an intuitive and interactive interface, with a few
-clicks and simple drag and drop. This allows you to compose your analytical documents with multiple widgets and define associations among them, so that clicking on one widget data are automatically updated in other widgets.
+KnowageBD and KnowageSI allow end users to *self-build interactive cockpits* through an intuitive and interactive interface, with a few clicks and simple drag and drop. This allows you to compose your analytical documents with multiple widgets and define associations among them, so that clicking on one widget data are automatically updated in other widgets.
 
-   |image129|
+.. figure:: media/image135.png
 
-   Figure 7.1: Cockpit document example.
+    Cockpit document example.
 
 In particular, Knowage supports in-memory technologies, in order to enable faster data insights and get the highest analytical efficiency. Moreover, it enables *data mash-up* to integrate enterprise data and externally sourced data.
 
 Cockpit documents can be created and executed both by technical users and end users and are part of Knowage ad-hoc reporting system. A key aspect is that different widget can rely on different datasets and hence on different data sources. *The only requirement needed to define associations between two or more datasets is the presence in each of them of one or more columns containing the same data*.
 
-      .. warning::
-         **Section structure exception**
+.. warning::
+    **Section structure exception**
          
          Since there are no differences between the cockpit interface reached by a final user and the one reached by a technical user, the cockpit designer is described in one unique My first Cockpit for both those kind of users. By the way, when necessary we will   highlight how the same functionality can be exploited accordingly to the user’s role.
-         
 
-
- My first Cockpit
+My first Cockpit
 --------------------
 
 You can create your new Cockpit from the **Analysis** area of the **Workspace** by clicking on the “Plus” icon and selecting **Cockpits** if you enter Knowage Server as final user, while you can enter the document browser and start a new cockpit using the “Plus” icon if you enter Knowage Server as admin.
 
-      .. important::
+.. important::
          **Reaching the cockpit designer**
          
          We stress that the cockpit interface is reached by the final user and the administrator following two diferent paths.
 
-Let us see how to build a cockpit and how the interface is displayed within the server. Once opened, the cockpit interface is an empty page with a toolbar containing different options described in Table 7.1.
+Let us see how to build a cockpit and how the interface is displayed within the server. Once opened, the cockpit interface is an empty page with a toolbar containing different options described in Table below.
 
-+-----------------------+-----------------------+-----------------------+
-|    Icon               | Name                  | Function              |
-+=======================+=======================+=======================+
-|    |image139|         | **Cockpit menu**      | Configuration menu of |
-|                       |                       | Cockpit.              |
-+-----------------------+-----------------------+-----------------------+
-|    |image140|         | **Add widget**        | It opens a window     |
-|                       |                       | where you can create  |
-|                       |                       | a new chart or table, |
-|                       |                       | add texts, images or  |
-|                       |                       | Knowage documents.    |
-+-----------------------+-----------------------+-----------------------+
-|    |image141|         | **General             | It opens the window   |
-|                       | configuration**       | where you set the     |
-|                       |                       | general cockpit       |
-|                       |                       | options (name, label, |
-|                       |                       | show menu, etc.) and  |
-|                       |                       | widget style (header, |
-|                       |                       | titles, borders,      |
-|                       |                       | etc.).                |
-+-----------------------+-----------------------+-----------------------+
-|    |image142|         | **Data                | It opens a window     |
-|                       | configuration**       | where you can manage  |
-|                       |                       | the dataset, the      |
-|                       |                       | association between   |
-|                       |                       | datasets and the      |
-|                       |                       | refresh frequency.    |
-+-----------------------+-----------------------+-----------------------+
-|    |image143|         | **Selections**        | It adds a widget that |
-|                       |                       | manages selections.   |
-+-----------------------+-----------------------+-----------------------+
-|    |image144|         | **Clear Cache**       | It cleans temporary   |
-|                       |                       | data.                 |
-+-----------------------+-----------------------+-----------------------+
-|    |image145|         | **Save as**           | It opens the window   |
-|                       |                       | to save the cockpit   |
-|                       |                       | document as a new     |
-|                       |                       | document.             |
-+-----------------------+-----------------------+-----------------------+
+.. table:: Cockpit editor toolbar.
+   :widths: auto
+      +-----------------------+-----------------------+-----------------------+
+      |    Icon               | Name                  | Function              |
+      +=======================+=======================+=======================+
+      |    |image139|         | **Cockpit menu**      | Configuration menu of |
+      |                       |                       | Cockpit.              |
+      +-----------------------+-----------------------+-----------------------+
+      |    |image140|         | **Add widget**        | It opens a window     |
+      |                       |                       | where you can create  |
+      |                       |                       | a new chart or table, |
+      |                       |                       | add texts, images or  |
+      |                       |                       | Knowage documents.    |
+      +-----------------------+-----------------------+-----------------------+
+      |    |image141|         | **General             | It opens the window   |
+      |                       | configuration**       | where you set the     |
+      |                       |                       | general cockpit       |
+      |                       |                       | options (name, label, |
+      |                       |                       | show menu, etc.) and  |
+      |                       |                       | widget style (header, |
+      |                       |                       | titles, borders,      |
+      |                       |                       | etc.).                |
+      +-----------------------+-----------------------+-----------------------+
+      |    |image142|         | **Data                | It opens a window     |
+      |                       | configuration**       | where you can manage  |
+      |                       |                       | the dataset, the      |
+      |                       |                       | association between   |
+      |                       |                       | datasets and the      |
+      |                       |                       | refresh frequency.    |
+      +-----------------------+-----------------------+-----------------------+
+      |    |image143|         | **Selections**        | It adds a widget that |
+      |                       |                       | manages selections.   |
+      +-----------------------+-----------------------+-----------------------+
+      |    |image144|         | **Clear Cache**       | It cleans temporary   |
+      |                       |                       | data.                 |
+      +-----------------------+-----------------------+-----------------------+
+      |    |image145|         | **Save as**           | It opens the window   |
+      |                       |                       | to save the cockpit   |
+      |                       |                       | document as a new     |
+      |                       |                       | document.             |
+      +-----------------------+-----------------------+-----------------------+
 
-
-   Table 7.1: Cockpit editor toolbar.
    
-By clicking the button **Add Widget** you can add a widget containing a **Text**, an **Image**, a **Chart**, a **Table**, a **Cross table**, a **Document**,the **Active selections** or the **Selector** to your cockpit, as shown in Figure 7.2.
+By clicking the button **Add Widget** you can add a widget containing a **Text**, an **Image**, a **Chart**, a **Table**, a **Cross table**, a **Document**,the **Active selections** or the **Selector** to your cockpit, as shown below.
 
-   |image146|
+.. figure:: media/image143.png
 
-   Figure 7.2: Widget Type.
-
+    Widget Type.
 
 In the following we go into details of each available widget.
 
