@@ -183,6 +183,7 @@ example of dataset for the sunburst chart is showed in Table below.
 .. _exampleofdatsetsunburst:
 .. table:: Example of dataset for the sunburst chart.
    :widths: auto
+   
         +----------------------+----------------+------+
         |    CATEGORY          | SUBCATEGORY    | UNIT |
         +======================+================+======+
