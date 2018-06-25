@@ -208,6 +208,7 @@ example of dataset for the sunburst chart is showed in Table below.
 Once you selected the dataset and the type of chart, choose at least two attributes in the X-axis panel and a measure in the Y-axis panel as showed in the following figure.
 
 .. figure:: media/image106.png
+
      Sunburst configuration.
 
 Then click on **Configuration**. As you can see the features are not exactly the same as traditional chart. We give some tips on most important sunburst settings.
