@@ -96,7 +96,7 @@ Also in the dataset output case there are not considerable changes in the window
 
 Only when using R language, the outputs can be set to html type. In this case, the document execution will provoke the opening of a web page containing the results requested through the command instructions.
 
- Functions Catalog
+Functions Catalog
 ----------------------
 
 The Data Mining can also be managed through the **Functions** framework. In this section we will see how to explore and handle this part, while in Create a new function in Function Catalog we will see how to create a new function.
@@ -358,4 +358,4 @@ When the script runs using a certain output dataset Knowage server produces a da
 
 As an example the function of Figure 16.23 produces a dataFrame whose label and name are biadmin_functionsCatalog_datasetOut.
 
-   .. include:: dataminingThumbinals.rst
+.. include:: dataminingThumbinals.rst
