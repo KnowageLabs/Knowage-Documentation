@@ -490,13 +490,14 @@ Then click on the “Plus” icon of the **Create Document** feature and select 
 
     Create a new document.
 
-You will be asked to fill in the form. We give an example in :numref:`documentdetailschart`.The fields marked with an asterisk are mandatory. Select the Chart type and engine. Choose the dataset with which you want to manage your analysis. Use the magnifier to choose among the available datasets. Remember to pick out in which folder you want your chart to be stored (see Figure 6.34) and finally save.
+You will be asked to fill in the form. We give an example in :numref:`documentdetailschart`.The fields marked with an asterisk are mandatory. Select the Chart type and engine. Choose the dataset with which you want to manage your analysis. Use the magnifier to choose among the available datasets. Remember to pick out in which folder you want your chart to be stored (see :numref:`selectfolderforchart`) and finally save.
 
 .. _documentdetailschart:
 .. figure:: media/image132.png
 
     Document Details.
 
+.. _selectfolderforchart:
 .. figure:: media/image133.png
 
     Select the folder in which you want your chart to be saved.
