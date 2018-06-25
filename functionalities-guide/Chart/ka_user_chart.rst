@@ -520,5 +520,3 @@ When you develop a standalone chart it is possible to add a cross navigation pat
 
 For charts documents outputs parameters are automatically generated during the creation of the document. Therefore you can define cross
 navigation in the default way, as explained in Cross Navigation.
-
-.. include:: chartThumbinals.rst
