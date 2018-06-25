@@ -30,6 +30,7 @@ Let us see how to build a cockpit and how the interface is displayed within the 
 
 .. table:: Cockpit editor toolbar.
    :widths: auto
+   
       +-----------------------+-----------------------+-----------------------+
       |    Icon               | Name                  | Function              |
       +=======================+=======================+=======================+
