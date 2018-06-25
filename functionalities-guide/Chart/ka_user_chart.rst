@@ -113,7 +113,7 @@ Note that for the color palette details you can use one already in the list or y
 
 Indeed, the options available in this tab change according to the chart selected enabling different configurations. See Chart types in detail for a detailed description of the specific options of each chart.
 
- Chart types in detail
+Chart types in detail
 -------------------------
 
 This section describes the different types of chart and how to create them within the **Chart Engine** of Knowage.
