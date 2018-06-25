@@ -72,7 +72,7 @@ First of all click on **Document Development** from the BI functionalities menu,
 
     Documents Development button.
 
-By default the page is divided into two parts, as shown in Figure 5.3: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
+By default the page is divided into two parts, as shown in figure below: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
 
 .. figure:: media/image59.png
 
@@ -93,10 +93,10 @@ Each line shows the label, the name, the author and the type of the document, wh
 
 At the top of this side panel you find four button:
 
-   |image60| execute the document; 
-   |image61| access document details;
-   |image62| clone the item; 
-   |image63| erase the document.
+- |image60| execute the document;
+- |image61| access document details;
+- |image62| clone the item;
+- |image63| erase the document.
 
 :numref:`detailpanelofknowanalydoc` shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can alternatively see either the history of document templates or the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders (see :numref:`functionaltreedocsav`).
 
@@ -107,7 +107,7 @@ At the top of this side panel you find four button:
 
 In order to create a new document you need to click on the red plus button (shown in :numref:`changingdocumentsview`) in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Geo-Referenced Analysis**, **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
 
-To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in Figure 5.6 but with empty fields, in order to allow you to define the document details.
+To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in :numref:`detailpanelofknowanalydoc` but with empty fields, in order to allow you to define the document details.
 
 First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see Figure below).
 
