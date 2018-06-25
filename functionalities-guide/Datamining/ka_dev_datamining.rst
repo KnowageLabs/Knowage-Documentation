@@ -1,4 +1,4 @@
- Engine description\*
+Engine description\*
 --------------------------
 
 The **Data Mining Engine** is thought and implemented in order to supply KnowAge with data mining capabilities, but it also enhances OS R and Python with several distinguishing features.
