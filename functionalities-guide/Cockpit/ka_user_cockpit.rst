@@ -280,112 +280,111 @@ displayed inside the cockpit.
 Cross Table widget
 ~~~~~~~~~~~~~~~~~~
 
-Similar configurations are available also for the Cross Table widget. In this data visualization option, you still have the tabs: **Dataset** tab, **Configuration** tab, the **Style** tab and the **Filters** tab as you can see from Figure 7.25.
+Similar configurations are available also for the Cross Table widget. In this data visualization option, you still have the tabs: **Dataset** tab, **Configuration** tab, the **Style** tab and the **Filters** tab as you can see below.
 
-   |image173|
+.. figure:: media/image169.png
 
-   Figure 7.25: Dataset section of the crosstab widget configuration.
+    Dataset section of the crosstab widget configuration.
 
-Using the “Dataset” tab the user can add the dataset to take values from. Consequently, it is necessary to select the fields you wish to appear as columns, those as row and measures to be exhibited in the pivot table. See Figure 7.26. Remember to set column and row fields as attributes, while measure fields as numbers.
+Using the “Dataset” tab the user can add the dataset to take values from. Consequently, it is necessary to select the fields you wish to appear as columns, those as row and measures to be exhibited in the pivot table. See Figure below. Remember to set column and row fields as attributes, while measure fields as numbers.
+
+.. figure:: media/image170.png
+
+    Selecting columns, rows and measures of the crosstab.
 
 Once the dataset has been properly configured, you can proceed to the “Configuration” tab.
 
-   |image174|
+The latter is made up of three sections: **General**, **On rows** and **On columns**, as Figure below shows.
 
-   Figure 7.26: Selecting columns, rows and measures of the crosstab.
+.. figure:: media/image171.png
 
-The latter is made up of three sections: **General**, **On rows** and **On columns**, as Figure 7.27 shows.
-
-   |image175|
-
-   Figure 7.27: Configuration tab interface.
+    Configuration tab interface.
 
 In the “General” section you can set the following features:
 
 -  Define the maximum cell number to show;
-
 -  decide to hook measures to columns or rows;
-
 -  decide to show percentages of measures related to columns or rows.
 
-Thanks to the “On rows” feature, you can easily compute totals or subtotals on rows. Figure 7.28 exhibit an example.
+Thanks to the “On rows” feature, you can easily compute totals or subtotals on rows. Figure below exhibit an example.
 
-   |image176|
+.. figure:: media/image172.png
 
-   Figure 7.28: Computing totals and/or subtotals on rows.
+    Computing totals and/or subtotals on rows.
 
-Otherwise, thanks to the “On columns” feature, you can easily compute totals or subtotals on columns. Figure 7.29 exhibit an example.
+Otherwise, thanks to the “On columns” feature, you can easily compute totals or subtotals on columns. Figure below exhibit an example.
 
-   |image177|
+.. figure:: media/image173.png
 
-   Figure 7.29: Computing totals and/or subtotals on columns.
+    Computing totals and/or subtotals on columns.
 
 Switching to the “Style” tab you can find the general style settings available for the crosstab.
 
--  **Crosstab Font General Options** where font and font size are set (Figure 7.30);
+-  **Crosstab Font General Options** where font and font size are set;
 
-   |image178|
+.. figure:: media/image174.png
 
-   Figure 7.30: General style options for crosstab.
+    General style options for crosstab.
 
--  **Crosstab Headers Font Options** where you can configure, as you can see from Figure 7.31, the header style settings as color,      background, font, etc.
+-  **Crosstab Headers Font Options** where you can configure the header style settings as color, background, font, etc.
 
-   |image179|
+.. figure:: media/image175.png
 
-   Figure 7.31: Crosstab Headers Font Options for crosstab.
+    Crosstab Headers Font Options for crosstab.
 
--  **Measures Font Options** where you can configure several style options for measures, such as color, background, font size, etc.      Figure 7.32 shows the window outlook.
+-  **Measures Font Options** where you can configure several style options for measures, such as color, background, font size, etc.
 
-   |image180|
+.. figure:: media/image176.png
 
-   Figure 7.32: Measures Font Options for crosstab.
+    Measures Font Options for crosstab.
 
--  Using the **Grid** section you can mark (or not) grid borders, decide for border style, thickness and color. You can also alternate row indicating different colors (refer to Figure 7.33).
+-  Using the **Grid** section you can mark (or not) grid borders, decide for border style, thickness and color. You can also alternate row indicating different colors.
 
-   |image181|
+.. figure:: media/image177.png
 
-   Figure 7.33: Grid Options for crosstab.
+    Grid Options for crosstab.
 
--  In the **Measures Headers** section you can configure different style option for measure headers, such as color, background, font size, etc. You can refer to Figure 7.34.
+-  In the **Measures Headers** section you can configure different style option for measure headers, such as color, background, font size, etc.
 
-   |image182|
+.. figure:: media/image178.png
 
-   Figure 7.34: Measures Headers Option for crosstab.
+    Measures Headers Option for crosstab.
    
+-  In the **Total** section you can set color and background of totals (if any).
 
--  In the **Total** section you can set color and background of totals (if any). You can refer to Figure 7.35.
+.. figure:: media/image179.png
 
-   |image183|
+    Color settings for Totals.
+      
+-  In the **Subtotal** section you can set color and background of subtotals (if any).
 
-   Figure 7.35: Color settings for Totals.
-   
-   
--  In the **Subtotal** section you can set color and background of subtotals (if any). You can refer to Figure 7.36.
+.. figure:: media/image180.png
 
-   |image184|
+    Color settings for Subtotals.
 
-   Figure 7.36: Color settings for Subtotals.
+-  In the **Titles** section you can add titles to widget and customize them using different styles.
 
+.. figure:: media/image181.png
 
--  In the **Titles** section you can add titles to widget and customize them using different styles. You can refer to Figure 7.37 to have a spark on this feature.
+    Title settings.
 
-   |image185|
+-  In the **Borders** section you can add borders to widgets and customize them using different styles.
 
-   Figure 7.37: Title settings.
+.. figure:: media/image182.png
 
--  In the **Borders** section you can add borders to widgets and customize them using different styles. You can refer to Figure 7.38 to have a spark on this feature.
+    Border settings.
 
-   |image186|
+-  In the **Shadows** section you can add a shadow to widget layout and indicate its measure.
 
-   Figure 7.38: Border settings.
+.. figure:: media/image183.png
 
--  In the **Shadows** section you can add a shadow to widget layout and indicate its measure. You can refer to Figure 7.39 to have a spark on this feature.
+    Shadow settings.
 
-   |image187|
+-  In the **Background color** section you can color the widget background at convenience.
 
-   Figure 7.39: Shadow settings.
+.. figure:: media/image184.png
 
--  In the **Background color** section you can color the widget background at convenience. You can refer to Figure 7.40 to have a    spark on this feature.
+    Background color.
 
 Once some or all (at least the mandatory) of the above mentioned setting features have been set you can save and the widget will be inserted into the cockpit area.
 
@@ -398,16 +397,11 @@ Use the Data configuration button (Figure 7.53) to add a document souce to the c
 
 The Document Widget configuration is divided into two parts: **Custom** tab and **Style** tab as you can see from Figure 7.41.
 
+.. figure:: media/image185.png
 
-   |image188|
-
-   Figure 7.40: Shadow settings.
-
+    Custom tab of the Document widget.
+   
 The Custom tab is the place where the document is uploaded while the Style tab is where all style options are set.
-
-   |image189|
-
-   Figure 7.41: Custom tab of the Document widget.
 
 Selection widget
 ~~~~~~~~~~~~~~~~
