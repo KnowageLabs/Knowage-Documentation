@@ -64,16 +64,16 @@ The **NETWOK_DEFINITION** contains the definition of the network: nodes, edges, 
         :caption: Syntax for edge/nodes properties.
 
 
-<options>
-<visual_style>
-<nodes>
-Nodes properties
-</nodes>
-<edges
-Edges properties
-</edges>
-</visual_style>
-</options>
+          <options>
+             <visual_style>
+               <nodes>
+                  Nodes properties
+               </nodes>
+               <edges
+                  Edges properties
+          </edges>
+          </visual_style>
+          </options>
 
    Tooltip is a special Edge/node property. The tooltip contains a set
    of proerty/value couple and the syntax is typed in the next 
