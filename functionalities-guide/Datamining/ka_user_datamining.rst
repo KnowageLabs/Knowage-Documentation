@@ -217,9 +217,9 @@ Note that if the function takes variables or files as input you can recall them 
          :caption: Code syntax to recall the variable input
          :linenos:
  
-          $P{variable_name}
+           $P{variable_name}
  
- We suppose now to have chosen a dataset and the local modality but to want to use the Python language (:numref:`usedatafrmpandas`). In this case the  dataset is saved and read by the script as a dataframe of the pandas libraries: `http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`__
+We suppose now to have chosen a dataset and the local modality but to want to use the Python language (:numref:`usedatafrmpandas`). In this case the  dataset is saved and read by the script as a dataframe of the pandas libraries: `http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`__
 
 .. _usedatafrmpandas:
 .. figure:: media/image412.png
