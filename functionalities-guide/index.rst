@@ -13,7 +13,6 @@ Functionalities
    Cockpit/ka_user_cockpit.rst
    FreeInquiry/ka_user_freeinquiry.rst
    MetaWeb/ka_dev_metaweb.rst
-   Reporting/ka_dev_reporting.rst
    Reporting/ka_user_reporting.rst
    Jasper/ka_dev_jasper.rst
    LocationIntelligence/ka_dev_introlocationintelligence.rst
