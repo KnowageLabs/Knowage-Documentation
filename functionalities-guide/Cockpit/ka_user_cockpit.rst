@@ -22,7 +22,7 @@ My first Cockpit
 You can create your new Cockpit from the **Analysis** area of the **Workspace** by clicking on the “Plus” icon and selecting **Cockpits** if you enter Knowage Server as final user, while you can enter the document browser and start a new cockpit using the “Plus” icon if you enter Knowage Server as admin.
 
 .. important::
-         **Reaching the cockpit designer**
+    **Reaching the cockpit designer**
          
          We stress that the cockpit interface is reached by the final user and the administrator following two diferent paths.
 
