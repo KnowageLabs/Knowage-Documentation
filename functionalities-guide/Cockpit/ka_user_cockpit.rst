@@ -249,6 +249,10 @@ The **Style** tab is where you can customize the table by using the different op
 
 Once the table style settings have been implemented you can switch to the next tab. The “Cross” tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator).
 
+.. warning::
+    **Cross navigation only for technical users**
+         
+         Due to the fact that parameters can only be managed by technical user, the cross navigation cannot be implemented by the final user.
 
 Referring to Figure below, we sum up how to add a cross navigation to the cockpit with the following bullet list:
 
@@ -257,15 +261,10 @@ Referring to Figure below, we sum up how to add a cross navigation to the cockpi
     Cross tab of the table widget configuration.
 
 -  activate the cross navigation flag;
-
 -  activate cross Enable on all row flag, if you want to be able to click on all the columns of the table;
-
 -  select the column whose value will be passed through output parameter to the document of arrival;
-
 -  select the output parameter that will pass the value to the document of arrival. This parameter type are defined in the document detail of the cockpit;
-
 -  select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that     cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
-
 -  add all involved output parameters by adding them one by one in the bottom part of the GUI.
 
 Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. :numref:`filterstabwidgetconf` shows an example of how to set the limit rows or a conditions on dataset columns.
