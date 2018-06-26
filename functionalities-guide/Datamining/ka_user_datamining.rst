@@ -248,27 +248,40 @@ The function that you are defining must be a REST service, in particular of POST
          :caption: JSON format for remote function
          :linenos:
 
-           [  "type":"variablesIn", "items":                                                
-              {   {                                                                            
-                   "demoVarName1":"3",                   
-                   "demoVarName2":"3"                                                  
-                  }                                 
-              },  "type":"datasetsIn", "items":                                                
-               {      {                               
-                   "demoDsName1":"df1",                                              
-                   "demoDsName2":"df2"                                             
-                       }                               
-               },  "type":"filesIn", "items":                                                   
-               {   { "demoFileAlias1":                                                       
-                       {                                                                   
-                      "filename:filename1, base64 :..                                    
-                        },   "demoFileAlias2": 
-                      {
-                       "filename:filename2, base64 :.. 
-                      }
+            [  
+                {
+                    "type":"variablesIn", 
+                    "items":                                                
+                    {                                                                            
+                       "demoVarName1":"3",                   
+                       "demoVarName2":"3"                                                  
+                    }                                 
+                }, 
+                {
+                    "type":"datasetsIn", 
+                    "items":                                                
+                    {                               
+                        "demoDsName1":"df1",                                              
+                        "demoDsName2":"df2"                                             
+                    }                               
+                },  
+                {
+                    "type":"filesIn", 
+                    "items":                                                   
+                    { 
+                        "demoFileAlias1":                                                       
+                    {                                                                   
+                            "filename:filename1, 
+                            base64 :..                                    
+                    },   
+                        "demoFileAlias2": 
+                    {
+                            "filename:filename2,
+                            base64 :.. 
                     }
-               }       
-           ] 
+                    }
+                }       
+            ] 
           
  When the call runs successfully, the remote function must answer answer with a JSON element like the one exhibited in Code below.
  
