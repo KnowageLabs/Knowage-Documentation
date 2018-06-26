@@ -16,83 +16,85 @@ Data Mining document interface
 
 Data Mining can be implemented using R or Python language as we just said. The starting point for developing a data mining document is to write down a template which consists of an XML file. We refer to My first data datamining document for a more detailed description of the template features. We disclose here that to comunicate the engine which language you are going to use you must add the tag **LANGUAGE** as shown in Code syntax to recall the variable input
 
-   |image400|
+.. figure:: media/image384.png
 
-   Figure 16.1: Setting the language for data mining.
+    Setting the language for data mining.
 
 For both R and Python languages, the engine yields different kind of outputs. The outputs can be of type:
 
 -  text,
-
 -  dataset,
-
 -  images,
-
 -  html file (only when using the R language).
 
-Once again the outputs are set at template level. In the following we will describe how to browse and visualise each type of output. The Data Mining document execution is very simple in all cases. Once configured the document, the execution starts clicking on the document’s icon from Knowage Document Browser interface as shown in Figure 16.2.
+Once again the outputs are set at template level. In the following we will describe how to browse and visualise each type of output. The Data Mining document execution is very simple in all cases. Once configured the document, the execution starts clicking on the document’s icon from Knowage Document Browser interface as shown below.
 
-   |image401|
+.. figure:: media/image385.png
 
-   Figure 16.2: Document browsing on server.
+    Document browsing on server.
 
-We suppose to open a document with text outputs. At the top of the page you find the command box. When the document is lauched, it is automatically executed with the default command (which is the one set to **auto** in the template file) and you get the corresponding outputs displayed in different tabs. If you wish to change the command to get other outputs you can use the dedicated combobox as emphasized in Figure 16.3. We say in advance that the command are set in the template file. As you can check in Figure 16.4 the template must contain the **COMMAND TAGS**. In the example each command (two in this case) is made up of instructions to be executed in order to compute one or more measures.
+We suppose to open a document with text outputs. At the top of the page you find the command box. When the document is lauched, it is automatically executed with the default command (which is the one set to **auto** in the template file) and you get the corresponding outputs displayed in different tabs. If you wish to change the command to get other outputs you can use the dedicated combobox as emphasized in :numref:`selectingcommandapp`. We say in advance that the command are set in the template file. As you can check in :numref:`commandtags` the template must contain the **COMMAND TAGS**. In the example each command (two in this case) is made up of instructions to be executed in order to compute one or more measures.
 
-   |image402|
+.. _selectingcommandapp:
+.. figure:: media/image386.png
 
-   Figure 16.3: Selecting the command to be applied.
+    Selecting the command to be applied.
+    
+.. _commandtags:
+.. figure:: media/image387.png
+
+    The command tags.
 
 The combobox will then reflect the command settings inside the template. Therefore it is important that the final user is told the meaning of each using “speaking” names or furnishing information with a documentation.
-
-   |image403|
-
-   Figure 16.4: The command tags.
 
 To switch to a different command, use the combobox and click on the target command. The simple click activates the execution.
 
 The computed outputs are visualized in the half bottom of the page: each output populates a tab.
 
-If the command refers to a script that needs one or more datasets, than these datasets are displayed between the command combobox and the outputs tabs. You can use the combobox which list the Knowage dataset matched to the document throught the template. Otherwise you can upload a file for Knowage datasets that cannot be changed from the GUI. Clicking on the **FILE** button it is possible to upload the file to replace the default dataset. Remember to click on the |image404| to start the upload. Then a **Run script** button will appear to re-execute the document as indicated in Figure 16.6.
+If the command refers to a script that needs one or more datasets, than these datasets are displayed between the command combobox and the outputs tabs. You can use the combobox which list the Knowage dataset matched to the document throught the template. Otherwise you can upload a file for Knowage datasets that cannot be changed from the GUI. Clicking on the **FILE** button it is possible to upload the file to replace the default dataset. Remember to click on the |image404| to start the upload. Then a **Run script** button will appear to re-execute the document as indicated in :numref:`executbuttupload`.
 
-   |image405|
+.. figure:: media/image389.png
 
-   Figure 16.5: Changing dataset related to a command.
+    Changing dataset related to a command.
 
-   |image406|
+.. _executbuttupload:
+.. figure:: media/image390.png
 
-   Figure 16.6: Execution button after the upload.
+    Execution button after the upload.
 
-As well as for other analysis tools, data mining allows to filter data through parameters. In this case the setting of the parameters can be done in the script tag or the command tag. The main parts of the code for the configuration of parameters are highlighted in Figure 16.7.
+As well as for other analysis tools, data mining allows to filter data through parameters. In this case the setting of the parameters can be done in the script tag or the command tag. The main parts of the code for the configuration of parameters are highlighted in figure below.
 
-   |image407|
+.. figure:: media/image391.png
 
-   Figure 16.7: Setting parameters.
+    Setting parameters.
 
 We will not go further into details of R or Python code so we leave the user to take care about the issue. Generally you can use two kind of parameters (when defined by developers): output parameters and command parameters. These may be required for changing factors or more generally fields (string or numbers) inside the script or in the output functions.
 
 When dealing with output parameters, you can update the corresponding values by filling the input box appearing in the respective output tab panel. Once you re-run the document, the modifications are applied to a single output, the one which the parameter is associated to.
 
-On the other hand, when dealing with command parameters, you can update the variable value by clicking the double gear icon (circled in Figure 16.8) displayed next to the command name. The button updates the interface and opens a box (Figure 16.9) where you can change a convalidate the modification. The variable value is passed to the whole command and hence it updates the variables of all command outputs.
+On the other hand, when dealing with command parameters, you can update the variable value by clicking the double gear icon (circled in :numref:`clickdoublebuttchange`) displayed next to the command name. The button updates the interface and opens a box (:numref:`changingparamvalues`) where you can change a convalidate the modification. The variable value is passed to the whole command and hence it updates the variables of all command outputs.
 
-   |image408|
+.. _clickdoublebuttchange:
+.. figure:: media/image392.png
 
-   Figure 16.8: Click on the double gear button to change the .
+    Click on the double gear button to change the .
 
-   |image409|
+.. _changingparamvalues:
+.. figure:: media/image393.png
 
-   Figure 16.9: Changing the parameter values.
+    Changing the parameter values.
 
-In case the commands produce image outputs the interface is essentially the same as the text output case. So you can change commands, dataset and set parameter values. The output tabs will though display data through graphics. An example is given in Figure 16.10.
+In case the commands produce image outputs the interface is essentially the same as the text output case. So you can change commands, dataset and set parameter values. The output tabs will though display data through graphics. An example is given below.
 
-   |image410|
+.. figure:: media/image394.png
 
-   Figure 16.10: Image outputs.
+    Image outputs.
 
-Also in the dataset output case there are not considerable changes in the window organization. A Data Mining document with dataset output transform a query over a data source or a plain data container into a dataset on Knowage Server. For instance, this kind of output comes to be really useful when the user needs to convert a .xlsx or .csv file into a dataset on Server. The output tab will accordingly shows a message stating the name of the dataset as stored in Knowage Server, under Data Provider » data set menu item. Figure 16.11 gives an example.
+Also in the dataset output case there are not considerable changes in the window organization. A Data Mining document with dataset output transform a query over a data source or a plain data container into a dataset on Knowage Server. For instance, this kind of output comes to be really useful when the user needs to convert a .xlsx or .csv file into a dataset on Server. The output tab will accordingly shows a message stating the name of the dataset as stored in Knowage Server, under Data Provider » data set menu item. The following figure gives an example.
 
-   |image411|
+.. figure:: media/image395.png
 
-   Figure 16.11: Dataset outputs.
+    Dataset outputs.
 
 Only when using R language, the outputs can be set to html type. In this case, the document execution will provoke the opening of a web page containing the results requested through the command instructions.
 
@@ -101,19 +103,20 @@ Functions Catalog
 
 The Data Mining can also be managed through the **Functions** framework. In this section we will see how to explore and handle this part, while in Create a new function in Function Catalog we will see how to create a new function.
 
-First click on the **Functions Catalog** from the Knowage main page as shown in Figure 16.12.
+First click on the **Functions Catalog** from the Knowage main page as shown below.
 
-   |image412|
+.. figure:: media/image396.png
 
-   Figure 16.12: Functions Catalog from Knowage menu.
+    Functions Catalog from Knowage menu.
 
-You will enter a page like the one shown in Figure 16.13.
+You will enter a page like the one shown in figure below.
 
-   |image413|
+.. _functioncatalinterf:
+.. figure:: media/image397.png
 
-   Figure 16.13: Functions Catalog interface.
+   Functions Catalog interface.
 
-The actions that a user can perform depend on the user’s role. However, indipendently from the user’s role, once entered the feature all functions are shown by default. Referring to Figure 16.13, one has the page made up of:
+The actions that a user can perform depend on the user’s role. However, indipendently from the user’s role, once entered the feature all functions are shown by default. Referring to :numref:`functioncatalinterf`, one has the page made up of:
 
 -  **categories**: these are set by an administrator user and are used to classify the functions accordingly to their definition and goals. Moreover they’re of help in browsing the functions; only the admin user can add and/or modify categories.
 
@@ -121,12 +124,12 @@ The actions that a user can perform depend on the user’s role. However, indipe
 
 -  **list of functions** (if there are any): these are visible and explorable by any kind of user. Anyway only an admin user can add and/or modify them.
 
-      .. hint::
-         **Add or modify the categories**
+.. hint::
+    **Add or modify the categories**
          
          The admin can add a new category using the Domain management available on Knowage Server under the Server Settings section. To know more about this section, please refer to Section “Server settings” of the General Administration Manual.
 
-The categories for functions depends on an admin user. Taking Figure 16.13 as an example, we have:
+The categories for functions depends on an admin user. Taking :numref:`functioncatalinterf` as an example, we have:
 
 1. **Text Analysis**: make sense of unstructured text,
 
@@ -138,30 +141,29 @@ The categories for functions depends on an admin user. Taking Figure 16.13 as an
 
 5. **All**: visualizes all your functions; this is the only category that cannot be changed or removed.
 
-To facilitate the comprehension we created some functions to be examined. We recall here that one can look for a function in different ways: using the categories or the tags or using the Functions Catalog “Search” box available at the top of the functions list as highlighted in Figure 16.14.
+To facilitate the comprehension we created some functions to be examined. We recall here that one can look for a function in different ways: using the categories or the tags or using the Functions Catalog “Search” box available at the top of the functions list as highlighted below.
 
-   |image415|
+.. figure:: media/image398.png
 
-   Figure 16.14: Search box to look for a function.
+    Search box to look for a function.
 
 We suppose here to select one category, which means to click on the category box, in order to be able to analize the functions belonging to it.
 
+Note that the underlined part in figure below contains a list of tags. These help to focus on the subjects and therefore fuctions associated to that category. Viceversa when all functions are shown, all tags are shown as well and they can be used to pick up functions related to that subject.
 
-Note that the underlined part in Figure 16.15 contains a list of tags. These help to focus on the subjects and therefore fuctions associated to that category. Viceversa when all functions are shown, all tags are shown as well and they can be used to pick up functions related to that subject (Figure 16.15).
-
-   |image416|
+.. figure:: media/image399.png
    
-   |image417|
+.. figure:: media/image401.png
 
-   Figure 16.15: Using tags and categories to look for functions.
+    Using tags and categories to look for functions.
 
 A function can be executed using the icon which launches a demo (i.e. the function with default values) or using the icon which lauches the computation after the insertion of new values for data. Use the icon for deleting the function. Only the an admin user can use the three options, while the final user can use only the “execution” button.
 
-To create a new function an admin user must click on the “Plus” icon available at the right top corner of the page. The action opens the interface shown in Figure 16.16. Here you have four tabs that we describe shortly in the following subsections.
+To create a new function an admin user must click on the “Plus” icon available at the right top corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.
 
-   |image418|
+.. figure:: media/image404.png
 
-   Figure 16.16: Creating a new function.
+    Creating a new function.
 
 The General tab\*
 ~~~~~~~~~~~~~~~~~
@@ -171,78 +173,79 @@ In this tab the user gives the general information about the function as Figure 
 The Input tab\*
 ~~~~~~~~~~~~~~~
 
-As shown in Figure 16.17, the function admits three kind of input: the *dataset*, the *variables* and the *files* one.
+As shown in the following figure, the function admits three kind of input: the *dataset*, the *variables* and the *files* one.
 
-   |image419|
+.. figure:: media/image405.png
 
-   Figure 16.17: Input tab.
+    Input tab.
 
-In the “Dataset” (Figure 16.18) instance the function takes values from a Knowage dataset. It can be chosen from the combobox available in the dedicated area. Note that the combobox shows the labels of the datasets. It is also possible to ask for the preview so the user can check if the values suit the wished requests.
+In the “Dataset” instance the function takes values from a Knowage dataset. It can be chosen from the combobox available in the dedicated area. Note that the combobox shows the labels of the datasets. It is also possible to ask for the preview so the user can check if the values suit the wished requests.
 
-   |image420|
+.. figure:: media/image406.png
 
-   Figure 16.18: The dataset input of the function settings.
+    The dataset input of the function settings.
 
-In the “Variable” case (Figure 16.19), the user must insert one or more variables and match them with values using the dedicated area.
+In the “Variable” case, the user must insert one or more variables and match them with values using the dedicated area.
 
-   |image421|
+.. figure:: media/image407.png
 
-   Figure 16.19: The variable input of the function settings.
+    The variable input of the function settings.
 
-In the “File” case (Figure 16.20), the user is asked to browse folders and upload the wished document remembering to give an alias to it. Files as videos, images, etc are all supported by the functionalities.
+In the “File” case, the user is asked to browse folders and upload the wished document remembering to give an alias to it. Files as videos, images, etc are all supported by the functionalities.
 
-   |image422|
+.. figure:: media/image408.png
 
-   Figure 16.20: The file input of the function settings.
+    The file input of the function settings.
 
 The Script tab\*
 ~~~~~~~~~~~~~~~~
 
-The script tab is where an expert user defines the function through the usage of datamining languages R or Python, as shown in Figure 16.21, or calling for an external link. In particular, it is possible to choose between the two options **Local** and **Remote**.
+The script tab is where an expert user defines the function through the usage of datamining languages R or Python, as shown in Figure below, or calling for an external link. In particular, it is possible to choose between the two options **Local** and **Remote**.
 
-   |image423|
+.. figure:: media/image409.png
 
-   Figure 16.21: The script tab.
+    The script tab.
 
-We suppose we have chosen the “Local” modality and that we selected a dataset in the previous input tab. In this case the dataset is transformed into an R dataframe that can be recalled while editing the script using the same name of the dataset label. Figure 16.22   shows an example.
+We suppose we have chosen the “Local” modality and that we selected a dataset in the previous input tab. In this case the dataset is transformed into an R dataframe that can be recalled while editing the script using the same name of the dataset label. The following figure   shows an example.
 
-   |image424|
+.. figure:: media/image410.png
 
-   Figure 16.22: Using the dataset dataframe generated by the software to edit the R script.
+    Using the dataset dataframe generated by the software to edit the R script.
 
 Note that if the function takes variables or files as input you can recall them through their name (as specified in the input tab). In particular, refer to Code syntax to recall the variable input in the variable instance, while for the file case remember that the alias will contain the file path.
 
-       .. code-block:: bash
+.. code-block:: bash
          :caption: Code syntax to recall the variable input
          :linenos:
  
-         $P{variable_name}
+          $P{variable_name}
  
- We suppose now to have chosen a dataset and the local modality but to want to use the Python language (Figure 16.23). In this case the  dataset is saved and read by the script as a dataframe of the pandas libraries: `http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`__
+ We suppose now to have chosen a dataset and the local modality but to want to use the Python language (:numref:`usedatafrmpandas`). In this case the  dataset is saved and read by the script as a dataframe of the pandas libraries: `http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`__
 
-   |image425|
+.. _usedatafrmpandas:
+.. figure:: media/image412.png
 
-   Figure 16.23: Using the dataset dataframe of the pandas libraries generated by the software to edit the Python script. 
+    Using the dataset dataframe of the pandas libraries generated by the software to edit the Python script. 
  
 The “Remote” instance is used for external services and when the user wants to use a language which is not supported by Knowage server. When selecting this modality the user is asked to insert an URL calling for an external web site that supports and runs the requested language.
 
 Technically, remote functions are recorded in the catalog list. The input data of those functions are specified by the local Knowage request and the code is not stored inside Knowage. On the contrary it is located at the address specified by the URL.
 
-   |image426|
+.. figure:: media/image413.png
 
-   Figure 16.24: Input definition for remote function.
+    Input definition for remote function.
 
-To define a remote function you have to perform the steps seen above, therefore to specify label, name, inputs and outputs. Figure 16.25 shows an example.
+To define a remote function you have to perform the steps seen above, therefore to specify label, name, inputs and outputs. Figure below shows an example.
 
-   |image427|
+.. figure:: media/image413.png
 
-   Figure 16.25: Remote function definition.
+    Remote function definition.
 
 When opening the Script tab, select the Remote Radio button. The action will create a remote address and the editor where to insert the code will not be available and the user will have only the chance to specify the URL where the code is placed.
 
 The function that you are defining must be a REST service, in particular of POST type, and it will receive the input data in the JSON format with the syntax showed in JSON format for remote function.
 
-       .. code-block:: json
+.. code-block:: json
          :caption: JSON format for remote function
          :linenos:
 
@@ -271,7 +274,7 @@ The function that you are defining must be a REST service, in particular of POST
  When the call runs successfully, the remote function must answer answer with a JSON element like the one exhibited in Code 6.3.
  
  
-        .. code-block:: json
+.. code-block:: json
          :caption: JSON answer of a remote function
          :linenos:
 
@@ -297,7 +300,7 @@ The function that you are defining must be a REST service, in particular of POST
 
 If an error occur the function must returns the lines as shown in JSON format for remote function.
 
-        .. code-block:: json
+.. code-block:: json
          :caption: JSON answer of a remote function
          :linenos:
 
@@ -313,49 +316,47 @@ If an error occur the function must returns the lines as shown in JSON format fo
 The Output tab\*
 ~~~~~~~~~~~~~~~~
 
-Finally it is important to specify what kind of outputs the function will produce. Using the “Output“ tab shown in Figure 16.26, you can choose between:
+Finally it is important to specify what kind of outputs the function will produce. Using the “Output“ tab shown below, you can choose between:
 
-   |image428|
+.. figure:: media/image414.png
 
-   Figure 16.26: Choosing the output type in the function definition.
+    Choosing the output type in the function definition.
 
 -  **Dataset**: the function will return a set of records as a the Knowage dataset way;
-
 -  **Image**: the function will return one or more graphics showing the results through bar or pie charts or other kind of visual tools;
-
 -  **Text**: the function will return a window containing some text;
-
 -  **File**: the function will return a file.
 
+It is possible to define more than one output for the same function. As an example, in :numref:`execofdemoforfunct` you can see the execution of the demo for a function called “Heart diseases”. The latter was set to have two outputs, one is of type “Dataset” and the other of type “Image”. The execution opens then a window with two tabs. The first tab contains the Dataset type output, which is translated visually with a table. While the second tab contains the Image output namely a set of graphics as configured to.
 
-It is possible to define more than one output for the same function. As an example, in Figure 16.27 you can see the execution of the demo for a function called “Heart diseases”. The latter was set to have two outputs, one is of type “Dataset” and the other of type “Image”. The execution opens then a window with two tabs. The first tab contains the Dataset type output, which is translated visually with a table. While the second tab contains the Image output namely a set of graphics as configured to.
+.. _execofdemoforfunct:
+.. figure:: media/image415.png
 
-   |image429|
+    Execution of demo for a function.
 
-   Figure 16.27: Execution of demo for a function.
+Clicking on the second execution icon you be asked to insert the new value and run the function after filling all boxes in. Figure below  shows the window opening when one asks for inserting new data values.
 
-Clicking on the second execution icon you be asked to insert the new value and run the function after filling all boxes in. Figure 16.28  shows the window opening when one asks for inserting new data values.
+.. figure:: media/image417.png
 
-   |image430|
+    Inserting new data values for function.
 
-   Figure 16.28: Inserting new data values for function.
+Finally clicking on the function name as shown below you can enter function configuration details and modify them.
 
-Finally clicking on the function name as shown in Figure 16.29 you can enter function configuration details and modify them.
+.. figure:: media/image418.png
 
-   |image431|
+    Clicking on function name to modify it.
 
-   Figure 16.29: Clicking on function name to modify it.
+As well as for the input case, the script can recall the output elements. We need to distinguish between the R and the Python language. Note that, in the dataset case, the user needs to name the output as reported in the script body. :numref:`usedatafrmpandas` and :numref:`defoutpexample` show an example.
 
-As well as for the input case, the script can recall the output elements. We need to distinguish between the R and the Python language. Note that, in the dataset case, the user needs to name the output as reported in the script body. Figure 16.23 and Figure 16.30 show an example.
+.. _defoutpexample:
+.. figure:: media/image419.png
 
-   |image432|
-
-   Figure 16.30: Defining the output example.
+    Defining the output example.
 
 When using Python the datasetOut variable is a “pandas” dataframe while, when using R it is a dataframe. Then it is important in fact  to consider the objects’ stucture (input and output type must match).
 
 When the script runs using a certain output dataset Knowage server produces a dataset whose name and label is label <User_Name> functionsCatalog <label specified in the Output tab>.
 
-As an example the function of Figure 16.23 produces a dataFrame whose label and name are biadmin_functionsCatalog_datasetOut.
+As an example the function of :numref:`usedatafrmpandas` produces a dataFrame whose label and name are biadmin_functionsCatalog_datasetOut.
 
 .. include:: dataminingThumbinals.rst
