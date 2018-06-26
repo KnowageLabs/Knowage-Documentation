@@ -1,143 +1,79 @@
-
-
 NETWORK
 =======
 
-   Network theory is the study of graphs as a representation of either
-   symmetric relations or, more generally, of asymmetric relations
-   between discrete objects. It has applications in many disciplines
-   including statistical physics, particle physics, computer science,
-   electrical engineering, biology, economics, operations research,
-   climatology and sociology. Applications of network theory include
-   logistical networks, the World Wide Web, Internet, gene regulatory
-   networks, metabolic networks, social networks, epistemological
-   networks, etc.; see List of network theory topics for more examples.
+Network theory is the study of graphs as a representation of either symmetric relations or, more generally, of asymmetric relations between discrete objects. It has applications in many disciplines including statistical physics, particle physics, computer science, electrical engineering, biology, economics, operations research, climatology and sociology. Applications of network theory include logistical networks, the World Wide Web, Internet, gene regulatory networks, metabolic networks, social networks, epistemological networks, etc.; see List of network theory topics for more examples.
 
-   Using Knowage you can perform Network Analysis with
-   knowagenetworkengine. The engine allows you to generate a network
-   starting from your data. Now let see how. What is a network? Itís a
-   set of nodes linked by relations. So itís a 3-tuple where the
-   entities are:
+Using Knowage you can perform Network Analysis with knowagenetworkengine. The engine allows you to generate a network starting from your data. Now let see how. What is a network? It‚Äôs a set of nodes linked by relations. So it‚Äôs a 3-tuple where the entities are:
 
--  Source node; ï Destination node;
-
+-  Source node; 
+-  Destination node;
 -  Relation.
 
-   In Knowage a document is the composition of a template and the data.
+In Knowage a document is the composition of a template and the data.
 
--  In this case data are a dataset with at least the three columns
-   described above.
-
--  The template is the mapping of the columns of the dataset on graph
-   properties (column *?* source node, column *?* destination node,)
-
-
+-  In this case data are a dataset with at least the three columns described above.
+-  The template is the mapping of the columns of the dataset on graph properties (column *?* source node, column *?* destination node,)
 
  Template\
 ----------------
 
-   Before entering this section we underlight that Knowage uses
-   cytoscapeweb library (`http: <http://cytoscapeweb.cytoscape.org/>`__
+Before entering this section we underlight that Knowage uses cytoscapeweb library (`http: <http://cytoscapeweb.cytoscape.org/>`__ `//cytoscapeweb.cytoscape.org/) <http://cytoscapeweb.cytoscape.org/>`__ to render the network, so sometimes in the description we will refer to cytoscapeweb documentation
 
-   `//cytoscapeweb.cytoscape.org/) <http://cytoscapeweb.cytoscape.org/>`__
-   to render the network, so sometimes in the description we will refer
-   to cytoscapeweb documentation
+**knowagenetworkanalysisengine** supports different types of network definitions. If you have your network defined in GRAPHML or XGMML notation you can upload that file as template of the document and that‚Äôs it. After this operation you can open your network using Knowage.
 
-   **knowagenetworkanalysisengine** supports different types of network
-   definitions. If you have your network defined in GRAPHML or XGMML
-   notation you can upload that file as template of the document and
-   thatís it. After this operation you can open your network using
-   Knowage.
+On the other hand if you want to create a dynamic network that gets data from your datasource you should create a dynamic document. In this case the structure of a template is typed in:
 
-   On the other hand if you want to create a dynamic network that gets
-   data from your datasource you should create a dynamic document. In
-   this case the structure of a template is typed in  Template structure:
+.. code-block:: bash
+        :linenos:
+        :caption: Template structure.
 
-+-----------------------------------------------------------------------+
-| <NET>                                                                 |
-|                                                                       |
-|    <NETWOK_DEFINITION>                                                |
-|                                                                       |
-|    Definition of the network with mapping and rendering options       |
-|                                                                       |
-|    <options> general rendering options: tooltip, shape of the         |
-|                                                                       |
-|    network, interaction buttons,...                                   |
-|                                                                       |
-|    </options>                                                         |
-|                                                                       |
-|    <dataset_mapping_LIST> mapping between dataset columns and network |
-|    properties:                                                        |
-|                                                                       |
-|    data, node shapes, node colors,....                                |
-|                                                                       |
-|    </dataset_mapping_LIST>                                            |
-|                                                                       |
-|    </NETWOK_DEFINITION>                                               |
-|                                                                       |
-|    <info> info of the document: left tab content </info>              |
-|                                                                       |
-| <drill>                                                               |
-|                                                                       |
-|    Cross navigation configuration                                     |
-|                                                                       |
-| </drill>                                                              |
-|                                                                       |
-| </NET>                                                                |
-+-----------------------------------------------------------------------+
+         <NET>
+               <NETWOK_DEFINITION>
+                  Definition of the network with mapping and rendering options
 
+                  <options> 
+                     general rendering options: tooltip, shape of the network, interaction buttons,...
+                  </options>
 
+                  <dataset_mapping_LIST>
+                     mapping between dataset columns and network properties: data, node shapes, node colors,....
+                  </dataset_mapping_LIST>
+               </NETWOK_DEFINITION>
+               <info>
+                     info of the document: left tab content 
+               </info>
+         <drill>
+               Cross navigation configuration
+         </drill>
+         </NET>
 
-   Template structure.
+In the following we explain shortly the meaning of the Template structure.
 
-   In the following we explain shortly the meaning of the Template structure.
+The **NETWOK_DEFINITION** contains the definition of the network: nodes, edges, shapes, colours It has two children:
 
-   The **NETWOK_DEFINITION** contains the definition of the network:
-   nodes, edges, shapes, colours It has two children:
-
-   ï **Options**: it contains the general options of the network. There
+   ‚Ä¢ **Options**: it contains the general options of the network. There
    are 2 type of options:
 
--  Network options. These are options that drive the rendering of all
-   the network. For example where to put the navigation commands or the
-   shape of the network (circular, radial,). You can find the list of
-   available properties here
-   `http://cytoscapeweb. <http://cytoscapeweb.cytoscape.org/documentation/visualization>`__
-
-
-   `cytoscape.org/documentation/visualization <http://cytoscapeweb.cytoscape.org/documentation/visualization>`__
-   and the list of layouts here `http:
+      -  Network options. These are options that drive the rendering of all the network. For example where to put the navigation commands or the shape of the network (circular, radial,). You can find the list of available properties here `http://cytoscapeweb. <http://cytoscapeweb.cytoscape.org/documentation/visualization>`__ `cytoscape.org/documentation/visualization <http://cytoscapeweb.cytoscape.org/documentation/visualization>`_ and the list of layouts here `http:
    //cytoscapeweb.cytoscape.org/documentation/layout <http://cytoscapeweb.cytoscape.org/documentation/layout>`__
 
--  Edge/nodes properties. General visual properties for the nodes and
-   edges. The syntax for these settings is in next Syntax for edge/nodes properties:
+      -  Edge/nodes properties. General visual properties for the nodes and edges. The syntax for these settings is in next Syntax for edge/nodes properties:
 
-+---------------------+
-| <options>           |
-|                     |
-|    <visual_style>   |
-|                     |
-|    <nodes>          |
-|                     |
-|    Nodes properties |
-|                     |
-|    </nodes>         |
-|                     |
-|    <edges           |
-|                     |
-|    Edges properties |
-|                     |
-|    </edges>         |
-|                     |
-|    </visual_style>  |
-|                     |
-| </options>          |
-+---------------------+
+.. code-block:: bash
+        :linenos:
+        :caption: Syntax for edge/nodes properties.
 
 
-   
-
-   Syntax for edge/nodes properties.
+<options>
+<visual_style>
+<nodes>
+Nodes properties
+</nodes>
+<edges
+Edges properties
+</edges>
+</visual_style>
+</options>
 
    Tooltip is a special Edge/node property. The tooltip contains a set
    of proerty/value couple and the syntax is typed in the next 
@@ -157,7 +93,7 @@ NETWORK
  Syntax for tooltip,an edge/nodes property.
 
    Where OBJ PROPERTY property is the name of the property (for example
-   id) and PROPERTY LABEL TEXT is the text youíll see as label of the
+   id) and PROPERTY LABEL TEXT is the text you‚Äôll see as label of the
    property in the tooltip. You can find the list of available
    properties here: `http://cytoscapeweb.
    cytoscape.org/documentation/visual_style <http://cytoscapeweb.cytoscape.org/documentation/visual_style>`__
@@ -231,7 +167,7 @@ The list of available node and edge properties is here
 
 -  DOCUMENT: is the label of the destination document;
 
--  PAR_NAME: is the destination document parameter label; ñ TYPE:
+-  PAR_NAME: is the destination document parameter label; ‚Äì TYPE:
    parameter type
 
 
@@ -242,7 +178,7 @@ The list of available node and edge properties is here
    * NODE: the parameter will get an node property value;
 
 
-   ñ PROPERTY: property of the object (node/edge) to bind to parameter.
+   ‚Äì PROPERTY: property of the object (node/edge) to bind to parameter.
 
   An example\*
 ------------------
@@ -322,7 +258,7 @@ An example\*
 
  Template for foodmart demo.
 
-   Now we try to make the graph ìnicerî. We want to:
+   Now we try to make the graph ‚Äúnicer‚Äù. We want to:
 
 -  see the name of the cities,
 
