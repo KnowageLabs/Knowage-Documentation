@@ -123,7 +123,7 @@ On the **Cross** tab you can define navigation to another document, as shown in 
     Cross tab of Image Widget Configuration.
 
 .. warning::
-         **Cross navigation only for technical users**
+    **Cross navigation only for technical users**
          
          Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final user.
 
