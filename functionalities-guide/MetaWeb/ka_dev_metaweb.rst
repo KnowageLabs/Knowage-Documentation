@@ -10,20 +10,17 @@ Metamodel creation
 
 Using the Meta Web application, it is possible to reverse the content of a database and manipulate this information creating a new model that can fit the user’s needs. In this section will we see what are the steps need in order to create a metamodel and query it with the QBE.
 
-To create a Metamodel enter the **Business Model Catalogue** and add a new model clicking on the “Plus” icon. Referring to Figure 10.1, you will be prompted to enter the following fields:
+To create a Metamodel enter the **Business Model Catalogue** and add a new model clicking on the “Plus” icon. Referring to :numref:`settingthemodelinfo`, you will be prompted to enter the following fields:
 
 -  Name (mandatory): Name of the model (cannot be changed after the save).
-
 -  Description: A longer description of your model.
-
 -  Category (mandatory): Select, from the ones avaiables, a category that the model belongs to.
-
 -  Data Source (mandatory): select the datasource that will be used to create your model (so the one that contains the tables that you need).
 
+.. _settingthemodelinfo:
+.. figure:: media/image299.png
 
-   |image299|
-
-   Figure 10.1: Setting the metamodel basic information.
+    Setting the metamodel basic information.
 
 After you have compiled these information, you can use the browse button to upload a model developed through an external (and specific) tool or you can click on “Save” on the top right corner of the screen and use the Meta Web engine to build it through Knowage interface. Now click on the switch **Enable Meta Web** that will show up a button **Meta Web**, click on that and you are ready to design the model.
 
@@ -32,9 +29,9 @@ Create an empty model
 
 The first time you enter the Meta Web, the interface (see Figure 10.2 will show you the available tables extracted from the selected data source.
 
-   |image300|
+.. figure:: media/image300.png
 
-   Figure 10.2: Metaweb interface.
+    Metaweb interface.
 
 For each table you can decide if you want to include it in your metamodel. More in detail a metamodel is divided in two model:
 
@@ -49,48 +46,49 @@ Editing the metamodel
 
 The Meta Web Editor is divided in two main tabs **Business Model** and **Physical Model** corresponding to the related models. Clicking on one of this tab will change the view showing the elements of the specific model.
 
-The “Physical Model” tab contains the tables that the user has checked earlier. On the left side of the interface you will see a tree like structure with the list of tables imported in the Physical Model (see Figure 10.3).
+The “Physical Model” tab contains the tables that the user has checked earlier. On the left side of the interface you will see a tree like structure with the list of tables imported in the Physical Model (see figure below).
 
-   |image301|
+.. figure:: media/image301.png
 
-   Figure 10.3: Physical Model Tab.
+    Physical Model Tab.
 
-The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to Figure 10.4, selecting the “Update Physical Model” option the user can refresh the model metadata. As shown in Figure 10.5, the interface shows if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
+The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to :numref:`updtphisicalmdl1`, selecting the “Update Physical Model” option the user can refresh the model metadata. As shown in :numref:`updtphisicalmdl2`, the interface shows if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
+
+.. _updtphisicalmdl1:
+.. figure:: media/image302.png
+
+    Update the physical model.
+
+.. _updtphisicalmdl2:
+.. figure:: media/image306.png
+
+    Update the physical model.
 
 Each table of Physical Model brings the information read from data base. Selecting each table, the interface shows on the right the list of its properties (**Property List** tab) and its foreign keys (**Foreign Keys** tab). Clicking on the icon on the left of each Physical Table, it is possible to expand the corresponding node. Highlight each column name to see (on the right side of the screen) a list of properties, like data type or length.
 
-   |image302|
+The Business Model tab, shown below, allows the user to custom the model in terms of column name, type, visibility, format, etc.
 
-   Figure 10.4: Update the physical model.
+.. figure:: media/image308.png
 
-   |image303|
+    Physical Model Tab.
 
-   Figure 10.5: Update the physical model.
+In this view, you see all the Business Class created at the first initialization. As well, the Business Classes are represented in a tree structure on the left side of the page. Clicking on each business class name, generic information are reported in the five tabs available on the right side of the page (Figure below).
 
-The Business Model tab, shown in Figure 10.6, allows the user to custom the model in terms of column name, type, visibility, format, etc.
+.. figure:: media/image309.png
 
-In this view, you see all the Business Class created at the first initialization. As well, the Business Classes are represented in a tree structure on the left side of the page. Clicking on each business class name, generic information are reported in the five tabs available on the right side of the page (Figure 10.7).
+    Exploring Business Class properties.
 
 Using the **Property List** tab, the user can custom the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatia functions to the dimension fields available in the QbE interface.
 
 The **Attributes** tab lets the user to define which columns to be used as primary keys and which are effectively functional for the Business Class (not to be confused with the visibility condition). Note that, for istance, it is not possible to disable the “In Use” option when the field has already been set as foreign key.
 
-   |image304|
+The **Calculated field** tab is used to configure computed measures or attributes. Click on the dedicated button, as shown below, to create a new field. Use the list of functions to retrieve right function syntax and the list of fields on the left to correctly type the fields name.
 
-   Figure 10.6: Physical Model Tab.
+.. figure:: media/image310.png
 
-   |image305|
-
-   Figure 10.7: Exploring Business Class properties.
-
-The **Calculated field** tab is used to configure computed measures or attributes. Click on the dedicated button, as shown in Figure 10.8, to create a new field. Use the list of functions to retrieve right function syntax and the list of fields on the left to correctly type the fields name.
-
-   |image306|
-
-   Figure 10.8: Add calculated fields.
+    Add calculated fields.
 
 The **Inbound** and **Outbound** tabs are described in the following section.
-
 
 Create a new relationship
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,25 +96,21 @@ Create a new relationship
 In the Business Model is possible to define new relationships between Business Classes that are not inherited from the physical foreign keys. The Business Relationships are divided in two types:
 
 -  **Inbound**: relationships that have the selected Business Class as a target (so they are entering);
-
 -  **Outbound**: relationships that have the selected Business Class as a source (so the starts from).
 
 The two relationships differ then for the direction of the bounds between tables that they establish.
 
 To create a new relationship, just select the tab “Inbound” or “Outbound” after selecting one Business Class. Then click on the button “Add” and you will see a dialog.
 
-   |image307|
+.. figure:: media/image311.png
 
-   Figure 10.9: Setting the outbound relationship.
+   Setting the outbound relationship.
 
-In Figure 10.9 the outbound relationship is shown. Here you have to:
+In Figure above the outbound relationship is shown. Here you have to:
 
 -  enter the business relationship name,
-
 -  select the cardinality of the relationship (1 to N is suggested),
-
 -  select the Source and Target Business Classes,
-
 -  Then is possible to drag and drop a Business attribute from the source Business Class to another Business attribute in the target Business Class. This will create a link between the two attributes.
 
 When all these steps are accomplished, click on “Create” to save.
@@ -134,7 +128,6 @@ Use the second type of cardinality when the type of cardinality can be optional.
 As well, the cardinality of the inbound relationship can be of two types:
 
 -  N to 1,
-
 -  N\ *** to 1.
 
 Use the second type of cardinality when the type of cardinality can be optional.
@@ -144,78 +137,74 @@ Create a new business class
 
 In the “Business Model” tab, the sandwitch icon lets the user add other Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
 
-   |image308|
+.. figure:: media/image312.png
 
-   Figure 10.10: Create a new business class.
+    Create a new business class.
 
-When clicking on the icon, as shown in Figure 10.10), and selecting “New Business Class”, a new dialog asks to the users to:
+When clicking on the icon, as shown in Figure above), and selecting “New Business Class”, a new dialog asks to the users to:
 
 -  select a Physical Table from the available ones; 
-
 -  insert a description for this new business class;
-
 -  select one or more columns.
 
 Then click on save to add the business class.
 
-As well, when clicking on “New Business View”, as reported in Figure 10.11 the user is asked to select two or more tables from the available ones and insert a description for this new business view.
+As well, when clicking on “New Business View”, as reported in Figure below the user is asked to select two or more tables from the available ones and insert a description for this new business view.
 
-   |image309|
+.. figure:: media/image3120.png
 
-   Figure 10.11: Create a new business view.
+    Create a new business view.
 
-Then, moving to the next step, the user must join tables through specific columns, typically the tables’ foreign keys. Figure 10.12 shows an example.
+Then, moving to the next step, the user must join tables through specific columns, typically the tables’ foreign keys. Figure below shows an example.
 
-   |image310|
+.. figure:: media/image315.png
 
-   Figure 10.12: Create a new business view.
+    Create a new business view.
 
-For each business view, the interface reports the same property tabs we saw for each business class. In addition, the user finds the **Join relationships** tab and the **Physical table** tab, as highlighted in Figure 10.13. The “Join relationships” tab shows the join clauses set to create the business view while the “Physical Table” tab recalls the physical table names.
+For each business view, the interface reports the same property tabs we saw for each business class. In addition, the user finds the **Join relationships** tab and the **Physical table** tab, as highlighted in the  following figure. The “Join relationships” tab shows the join clauses set to create the business view while the “Physical Table” tab recalls the physical table names.
 
-   |image311|
+.. figure:: media/image317.png
 
-   Figure 10.13: Additional property tabs for business view.
+    Additional property tabs for business view.
 
 Table property list
 ~~~~~~~~~~~~~~~~~~~
 
-Scrolling the table “Property list” tab, the user finds the **Type** menu item. Expanding the related combobox the user can custom the table type among the ones available and listed in Figure 10.14.
+Scrolling the table “Property list” tab, the user finds the **Type** menu item. Expanding the related combobox the user can custom the table type among the ones available and listed below.
 
-   |image312|
+.. figure:: media/image318.png
 
-   Figure 10.14: Table property list.
+    Table property list.
 
-We highlight that for temporal and time dimension type, the user must define at least one hierarchy for the related dimension. Figure 10.15 shows that it is possible to set a hierarchy clicking on the button avaiable at the end of the comobobox line. Then, clicking on the “Add” button, the user can configure a new hierarchy. Remember to choose the **Level type** using the dedicated combobox. Note that it is possibile to shift levels using the up and down arrows avaiable at the end of each level row. Furthermore, the user can add a “Has all” node the hierarchy: just enable the “has-all” box and type the all member name.
+We highlight that for temporal and time dimension type, the user must define at least one hierarchy for the related dimension. :numref:`temphierarcdef` shows that it is possible to set a hierarchy clicking on the button avaiable at the end of the comobobox line. Then, clicking on the “Add” button, the user can configure a new hierarchy. Remember to choose the **Level type** using the dedicated combobox. Note that it is possibile to shift levels using the up and down arrows avaiable at the end of each level row. Furthermore, the user can add a “Has all” node the hierarchy: just enable the “has-all” box and type the all member name.
 
-   |image313|
+.. _temphierarcdef:
+.. figure:: media/image320.png
 
-   Figure 10.15: Temporal hierarchy definition.
+    Temporal hierarchy definition.
 
 According to the chosen type, the user will be able to use the specific functions introduced in Section **XXX**.
 
 Column property list
 ~~~~~~~~~~~~~~~~~~~~
 
-As well, the user can employ each field property list (Figure 10.16) to both inspect the object and custom it.
+As well, the user can employ each field property list (:numref:`clmnproprtylist`) to both inspect the object and custom it.
 
 The **Structural** area covers an important role for the field properties. Here the user can set:
 
 -  **Visibility** over the field,
-
 -  **Type**, among measure, attribute, calendar, temporal_id, the_date and hour_id,
-
 -  **Aggregation type** for measure field type,
-
 -  **Format string**, to custom the format of the string for measure field type,
 
-   |image314|
+.. _clmnproprtylist:
+.. figure:: media/image322.png
 
-   Figure 10.16: Column property list.
+   Column property list.
 
 -  **Profile attribute**, to filter the field (and then the table records) by the user profile attributes (note that the combobox lists the available profile attributes),
 
 -  **Profile attribute filter type**, to define the filter operator among “equals to”, “in”, “like”,
-
 -  **Data type**, to indicate the field data type.
 
 In the **Behavioural Model** area, the user can assign the field’s visbility permission to specific roles.
@@ -227,34 +216,34 @@ Generate the datamart
 
 After the editing of the metamodel, click on “Save” on the Meta Web toolbar on the upper right corner. Now you have a metamodel that can be compiled and used to generate a datamart. Now if you go back to the Business Model catalog you will see that near the “Meta Web” button there is a “Generate” button. Clicking on it, a dialog will open:
 
-   |image315|
+.. figure:: media/image323.png
 
-   Figure 10.17: Generate datamart dialog.
+    Generate datamart dialog.
    
 If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advacend options” (see Figure 10.18) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to buid the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
 
-   |image316|
+.. figure:: media/image324.png
 
-   Figure 10.18: Generate datamart dialog: advanced options.
+    Generate datamart dialog: advanced options.
 
 When the datamart is generated it will be possible to query the metamodel accessing it in the Workspace interface.
 
 Additional functions for business model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this section, we briefly describe the generic available options for business model development. Referring to Figure 10.19, the user first finds the **Lock Model**: if enabled, only the user who developed the model can modify it.
+In this section, we briefly describe the generic available options for business model development. Referring to figure below, the user first finds the **Lock Model**: if enabled, only the user who developed the model can modify it.
 
-   |image317|
+.. figure:: media/image325.png
 
-   Figure 10.19: Additional functions for business model.
+    Additional functions for business model.
 
 Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the **Metadata** section. Clicking the **Import metadata** button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context). The **Export CWM** allows the user to export metadata information in the CWM format. Vice versa the **Import CWM** allows the user to import a CWM file containing metadata infomration. The user must browse the CWM file into personal folder and then click on the “Import CWM” button to correctly upload it. Remember to save to validate the process.
 
 Finally the **Saved versions** section the user keeps trace of model changes over time. Furthermore it is possible to restore old versions by checking the active column. Selecting the “three-dots” icon the user can download the jar file or the model itself or delete the version.
-Figure 10.20 shows an example.
+Figure belowshows an example.
 
-   |image318|
+.. figure:: media/image326.png
 
-   Figure 10.20: Saved version functionalities.
+    Saved version functionalities.
    
-   .. include:: metawebThumbinals.rst
+.. include:: metawebThumbinals.rst
