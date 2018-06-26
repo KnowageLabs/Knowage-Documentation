@@ -159,6 +159,7 @@ A function can be executed using the icon .. figure:: media/image401.png which l
 
 To create a new function an admin user must click on the “Plus” icon available at the right top corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.
 
+.. _creatingnewfunct:
 .. figure:: media/image404.png
 
     Creating a new function.
@@ -166,7 +167,7 @@ To create a new function an admin user must click on the “Plus” icon availab
 The General tab\*
 ~~~~~~~~~~~~~~~~~
 
-In this tab the user gives the general information about the function as Figure 16.16 shows. The admin user must type: the *name* of the function, the *label* with which it is identified uniquely (remember to use only numbers or letters and do not leave spaces between them). The *keywords* are were tags are defined. Finally the *Description* is where the user can insert a text or images to be shown when the function outputs are visualized.
+In this tab the user gives the general information about the function as :numref:`creatingnewfunct` shows. The admin user must type: the *name* of the function, the *label* with which it is identified uniquely (remember to use only numbers or letters and do not leave spaces between them). The *keywords* are were tags are defined. Finally the *Description* is where the user can insert a text or images to be shown when the function outputs are visualized.
 
 The Input tab\*
 ~~~~~~~~~~~~~~~
