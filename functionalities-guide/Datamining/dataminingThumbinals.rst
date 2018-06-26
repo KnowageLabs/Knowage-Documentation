@@ -1,7 +1,7 @@
 .. |image404| image:: media/image388.png
    :width: 0.39371in
    :height: 0.41389in
-.. |image417| figure:: media/image401.png
+.. |image417| image:: media/image401.png
    :width: 0.80662in
    :height: 0.76475in
 .. |image436| image:: media/image423.png
