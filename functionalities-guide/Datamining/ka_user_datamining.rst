@@ -152,12 +152,10 @@ We suppose here to select one category, which means to click on the category box
 Note that the underlined part in figure below contains a list of tags. These help to focus on the subjects and therefore fuctions associated to that category. Viceversa when all functions are shown, all tags are shown as well and they can be used to pick up functions related to that subject.
 
 .. figure:: media/image399.png
-   
-.. figure:: media/image401.png
 
     Using tags and categories to look for functions.
 
-A function can be executed using the icon which launches a demo (i.e. the function with default values) or using the icon which lauches the computation after the insertion of new values for data. Use the icon for deleting the function. Only the an admin user can use the three options, while the final user can use only the “execution” button.
+A function can be executed using the icon .. figure:: media/image401.png which launches a demo (i.e. the function with default values) or using the icon which lauches the computation after the insertion of new values for data. Use the icon for deleting the function. Only the an admin user can use the three options, while the final user can use only the “execution” button.
 
 To create a new function an admin user must click on the “Plus” icon available at the right top corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.
 
