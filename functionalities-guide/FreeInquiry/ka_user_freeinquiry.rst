@@ -1,4 +1,3 @@
-
 Free Inquiry
 ============
 
@@ -13,21 +12,13 @@ The material will be divided in two main sections. The first is dedicated to bui
 **QbE** (i.e., Query By Example) allows you to query (a subset of) a database through a high-level representation of the entities and relations. Its main characteristics are:
 
 -  it has a rich end user GUI;
-
 -  it allows to select attributes and set filters;
-
 -  it does not require any knowledge of data structures;
-
 -  it requires a semantic knowledge of data;
-
 -  it is useful every time the free inquiry on data is more important than their graphical layout;
-
 -  it leaves the management of results free;
-
 -  it supports export capabilities;
-
 -  it allows the repeatable execution of inquiries;
-
 -  it works on a data domain with limitations.
 
 Building a QbE query does not require any technical knowledge, but data domain knowledge: technical aspects, such as creating filters, aggregation and ordering criteria, are managed by a user-friendly graphical interface.
@@ -35,7 +26,6 @@ Building a QbE query does not require any technical knowledge, but data domain k
 Let’s suppose that an administrator has built a business model and a Qbe document and, consequently, released it on Knowage Server. This permits the user to perform the following tasks:
 
 -  from the model you can save a query as a dataset, usable later in other Knowage documents, such as cockpits;
-
 -  since the QbE document has all the features of all other Knowage analytical documents, you can:
 
    - add to the QbE document parameters, 
@@ -50,14 +40,13 @@ Query design and execution
 You can open the QbE editor for querying a model:
 
 1. directly from the **Workspace**> **Models** section, by clicking on the model icon;
-
 2. from the QbE document associated, you can find it in your **Document Browser**.
 
 In this paragraph we show how to build a simple query with the QbE editor.
 
-   |image212|
+.. figure:: media/image208.png
 
-   Figure 9.1: QbE editor.
+    QbE editor.
 
 As shown in Figure 9.1 the window of the QbE editor contains the **Query designer**. In next sections we explain in detail all the areas of the **Query Designer**, the **Datamart Schema** tab, the query editor and a hidden tab dedicated to the management of queries, subqueries and parameters catalogue.
 
@@ -66,33 +55,27 @@ Datamart Schema
 
 Starting from the left side, the first Panel shows the querable logical schema and the list of entities that can be queried to generate the query. Entities and relationships are represented in a tree structure, with user-defined names. Fields can be dragged from here and dropped onto the editor area.
 
-In the top right corner of the panel you can find a small toolbar to configure the panel (e.g., expand, reduce) and to save changes made to the model (i.e. **Calculated Field** or **Range**), as shown Figure 9.2.
+In the top right corner of the panel you can find a small toolbar to configure the panel (e.g., expand, reduce) and to save changes made to the model (i.e. **Calculated Field** or **Range**), as shown below.
 
+.. figure:: media/image209.png
 
-   |image213|
-
-   Figure 9.2: Datamart schema toolbar.
+    Datamart schema toolbar.
 
 
 There are two types of entities: *facts*, represented by a cube symbol.(i.e., the Sales fact 1998 entity) or *dimensions*, represented by a three-arrows symbol (i.e., the Product entity).
 
 Each single entity is composed of a title, some attributes or measures and relationships with other entities. In particular, by exploding the content of an entity (i.e. Sales fact 1998 as in Figure 9.2), you may encounter the following elements:
 
-**measure**: it refers to fields associated with numeric data (e.g. number of sold items);
-
-**attribute**: it refers to fields that can be associated to a category (e.g. product category);
-
-**relation**: it refers to relationships or connections between two entities (e.g. relationship between the product sales fact and the product dimension).
+- **measure**: it refers to fields associated with numeric data (e.g. number of sold items);
+- **attribute**: it refers to fields that can be associated to a category (e.g. product category);
+- **relation**: it refers to relationships or connections between two entities (e.g. relationship between the product sales fact and the product dimension).
 
 Right clicking on an item in the tree, the contextual menu opens and shows some additional features:
 
-**Add calculated field**: to add a field that can be obtained via simple expressions combining existing fields and operators. Clicking on the contextual menu item, the wizard opens. Here you can combine fields with arithmetic and date functions. When you create a calculated field, you can add it to the model by clicking the **Save** button located in the top right corner of the panel. In addition, they can be used in queries. Calculated fields may also be managed by expert users via advanced functionalities, which will be described at the end of this section.
-
-**Edit field**: to rename a field.
-
-**Add/Edit Range**: to add or manage a range of values of the selected attribute (details are provided below).
-
-**Remove calculated field**: to remove a calculated field that was added before.
+- **Add calculated field**: to add a field that can be obtained via simple expressions combining existing fields and operators. Clicking on the contextual menu item, the wizard opens. Here you can combine fields with arithmetic and date functions. When you create a calculated field, you can add it to the model by clicking the **Save** button located in the top right corner of the panel. In addition, they can be used in queries. Calculated fields may also be managed by expert users via advanced functionalities, which will be described at the end of this section.
+- **Edit field**: to rename a field.
+- **Add/Edit Range**: to add or manage a range of values of the selected attribute (details are provided below).
+- **Remove calculated field**: to remove a calculated field that was added before.
 
 Let us see more in detail how to add calculated fields and ranges.
 
@@ -108,18 +91,15 @@ In order to define a new calculated field in the model, right click on the chose
 To build a calculated field, you shall define:
 
 - **Name**;
-
 - **Type**: string, number or date;
-
 - **Nature**: measure or attribute;
-
 - **Formula**: you can click on the fields included in the item tree on the left (or drag and drop them) and build the formula.
 
-An example is provided in Figure 9.3.
+An example is provided below.
 
-   |image214|
+.. figure:: media/image210.png
 
-   Figure 9.3: Calculated field wizard.
+    Calculated field wizard.
 
 There are two types of calculated fields that you can add to the QbE query: *standard* and *expert*. The *standard* ones are SQL expressions that are injected into the query. With the *expert* calculated fields (you should mark the **Expert user** box in the calculated fields wizard) you can build Groovy scripts, show images, add links. This second type of calculated field is computed after the query has been executed.
 
@@ -131,18 +111,17 @@ It frequently happens that attributes of entities in a model have several differ
 For example, let’s consider the customers’ age: often analysts do not aim to know the exact age of customers, but rather if they belong to a certain age range, e.g., young, adult and elderly. For this and similar cases, the **QbE Engine** is able to define and manage ranges in queries. To create a new range for an attribute you can:
 
 - right click a field and click on **Add Range** in the contextual menu;
-
 - right click on an entity (a cube or a dimension), click on **Add Range** , then in the wizard choose a field or define a calculated   expression, give a name to it and click on **Next**.
 
-Both operations open the band creation wizard. Here click on **Add Band** to add a new instance and set the corresponding values and labels, as shown in Figure 9.4.
+Both operations open the band creation wizard. Here click on **Add Band** to add a new instance and set the corresponding values and labels, as shown below.
+
+.. figure:: media/image211.png
+
+    Range instance creation.
 
 You can set your band values by clicking on blue points under the Values List column to add them one by one, or by clicking on *[a,b]* under the **Limits** column to give only the end points of the interval. Then you can name your band by double clicking on the related field under the Name. Repeat the procedure to generate all the bands you need.
 
 Finally, you can click on **Add Default**: this creates a new category called **Others**, which groups all values not belonging to already defined range intervals. At this point, click on **Finish**. The range appears as a node in the schema panel on the left. If you want to edit the range, click on **Edit Range**.
-
-   |image215|
-
-   Figure 9.4: Range instance creation.
 
 
 Query Editor
@@ -151,9 +130,7 @@ Query Editor
 The central panel provides a query editor, including three different tabs:
 
 - **Select Fields**, containing the list of columns to be returned by the query;
-
 - **Filters**, containing filtering conditions on fields values;
-
 - **Filters on Groups**, containing filtering conditions on aggregated measures.
 
 Elements from the datamart schema on the left can be dragged and dropped onto the query editor tabs. If a whole entity is selected, all its attributes are dropped into the editor. Alternatively, you can drag and drop single entity fields, as said before. To remove an attribute from the query editor, just click on the dedicated icon in the delete column or select the corresponding row and press **Delete** on your keyboard.
@@ -167,41 +144,34 @@ Select Fields
 
 This tab contains the list of columns to be returned by the query. To add a new attribute in this section, just click on a field in the schema panel tree or drag and drop it onto the query editor.
 
-   |image216|
+This panel is structured as a table: rows contain the attributes selected from the datamart schema, while columns include applicable functions as shown below.
 
-   Figure 9.5: Select fields interface.
+.. figure:: media/image212.png
 
-This panel is structured as a table: rows contain the attributes selected from the datamart schema, while columns include applicable functions as shown in Figure 9.5.
+    Select fields interface.
 
 For each dropped item, the first two colums Entity and Field show the entity and the related attribute field respectively, and they are not editable.
 
-   |image217|
+.. figure:: media/image213.png
 
-   Figure 9.6: **Select Fields** panel options.
+    **Select Fields** panel options.
 
 With the other columns it is possible to:
 
-**Alias**: define aliases for fields: those aliases are shown as column headers in the result table;
+- **Alias**: define aliases for fields: those aliases are shown as column headers in the result table;
+- **Function**: in case of aggregation, define the aggregation function (e.g., **SUM**, **AVERAGE**, ...) on the non-grouped items;
+- **Order**: define a sorting criteria: double click on the **Order** column to set the ordering criteria;
+- **Group**: in case of aggregations, define the attribute that you want to group on (if you know SQL syntax, these attributes are the ones you should place in the GROUP BY clause);
+- **Include**: indicate the column(s) to be included in the result (please notice that non-included attributes will not be returned by the query, but can be used in it, e.g. to apply grouping criteria);
+- **Visible**: indicate whether a column shall be visible in the result (hidden attributes are used and returned by the generated query, but are not shown in the result table);
+- **Filter**: add a filter criteria: clicking on this filter icon redirects you to the **Filters** tab;
+- **Group Filter**: add a filter on groups: clicking on this filter icon redirects you to the **Filters on Groups** tab;
 
-**Function**: in case of aggregation, define the aggregation function (e.g., **SUM**, **AVERAGE**, ...) on the non-grouped items;
+Pay attention to grouping options: if you want to define an aggregation function on a field (like, for instance, the **COUNT** of the sold items), you shall tick the Group checkbox for all the other fields dragged in the **Select Filters** panel without an aggregation function defined, otherwise you will get an SQL exception. The possible grouping functions are shown in the following figure.
 
-**Order**: define a sorting criteria: double click on the **Order** column to set the ordering criteria;
+.. figure:: media/image214.png
 
-**Group**: in case of aggregations, define the attribute that you want to group on (if you know SQL syntax, these attributes are the ones you should place in the GROUP BY clause);
-
-**Include**: indicate the column(s) to be included in the result (please notice that non-included attributes will not be returned by the query, but can be used in it, e.g. to apply grouping criteria);
-
-**Visible**: indicate whether a column shall be visible in the result (hidden attributes are used and returned by the generated query, but are not shown in the result table);
-
-**Filter**: add a filter criteria: clicking on this filter icon redirects you to the **Filters** tab;
-
-**Group Filter**: add a filter on groups: clicking on this filter icon redirects you to the **Filters on Groups** tab;
-
-Pay attention to grouping options: if you want to define an aggregation function on a field (like, for instance, the **COUNT** of the sold items), you shall tick the Group checkbox for all the other fields dragged in the **Select Filters** panel without an aggregation function defined, otherwise you will get an SQL exception. The possible grouping functions are shown in Figure 9.7.
-
-   |image218|
-
-   Figure 9.7: Aggregation functions.
+    Aggregation functions.
 
 When you drag attributes belonging to entities that are linked through a relationship path, the QbE automatically resolves relationships between attributes (implicit join).
 
@@ -209,23 +179,23 @@ Moreover, multiple relationships may occur among entities. A typical example con
 
 In this case, when dragging fields from both the **Order** entity and the **Time** entity you may want to specify which relationship will join the two tables: for instance, you may want to know the total number of orders according to the ordering month, the shipping month or for both. In all these situations, you can set the relationship to be used by clicking the **Relationships wizard** button at the top right corner of the panel. A pop up window opens where you can define the path to be used. Please refer to Multiple relationships section for all details regarding the disambiguation of relationships.
 
-The select sub-section has a toolbar with additional functionalities summarized in Table 9.1.
+The select sub-section has a toolbar with additional functionalities summarized in Table below.
 
 .. table::  Select fields toolbar options
   :widths: auto
 
-+-----------------------------------+-----------------------------------+
-|    Button                         | Description                       |
-+===================================+===================================+
-|    **Apply distinct clause**      | Remove duplicated rows from       |
-|                                   | results, if any                   |
-+-----------------------------------+-----------------------------------+
-|    **Hide non visible**           | Hide fields set as non visible in |
-|                                   | query results                     |
-+-----------------------------------+-----------------------------------+
-|    **Add calculated**             | Add a calculated field to the     |
-|                                   | query                             |
-+-----------------------------------+-----------------------------------+
+   +-----------------------------------+-----------------------------------+
+   |    Button                         | Description                       |
+   +===================================+===================================+
+   |    **Apply distinct clause**      | Remove duplicated rows from       |
+   |                                   | results, if any                   |
+   +-----------------------------------+-----------------------------------+
+   |    **Hide non visible**           | Hide fields set as non visible in |
+   |                                   | query results                     |
+   +-----------------------------------+-----------------------------------+
+   |    **Add calculated**             | Add a calculated field to the     |
+   |                                   | query                             |
+   +-----------------------------------+-----------------------------------+
 
 Filters
 ~~~~~~~
@@ -249,30 +219,26 @@ Filters are expressions of type:
 Once you have selected the left operand, you can configure the filter by using the proper setting values on columns. In particular:
 
 -  the **Filter Name** column contains the (editable) name of the filter while the Filter Description column contains an editable          description;
-
 -  the **Left operand, Operator, Right operand** columns allow you to define filters according to the syntax defined above. Double        clicking in the Right operand column, a lookup function is activated to facilitate selection of values;
-
 -  the **LeftOperandType** and **RightOperandType** columns define the types of operands;
-
 -  the **Is for Prompt** column should be checked in order to insert dinamically the value for the parameters at execution time;
-
 -  the **Boolean Connector** column shall be used to control the evaluation order of the different filters conditions;
 
 Not all available features of the editor panel are visible by default. To customize the editor appearance, double click on the arrow located on each column header and select **Columns**.
 
 Here you can decide which columns you want to appear in the editor.
 
-   |image219|
+.. figure:: media/image215.png
 
-   Figure 9.8: Filter lookup for right operand selection.
+    Filter lookup for right operand selection.
 
-   |image220|
+.. figure:: media/image216.png
 
-   Figure 9.9: Filter editor customization.
+   Filter editor customization.
 
 Note that more complex combinations of filters can be defined using the Expression Wizard, which you ca find selecting the **Exp Wizard** icon.
 
-In Table 9.2 the possible types of filters in the QbE are summarized. The use of subqueries in filters is explained later in section 9.1.
+In the following table the possible types of filters in the QbE are summarized. The use of subqueries in filters is explained later in section 9.1.
 
 .. table:: Possible combinations of filters in the QbE.
   :widths: auto
@@ -309,9 +275,6 @@ In Table 9.2 the possible types of filters in the QbE are summarized. The use of
 |    subquery |             |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+
 
-
-
-
 Filters on Groups
 ~~~~~~~~~~~~~~~~~
 
@@ -335,7 +298,6 @@ In case you have started the QbE editor directly from a model (that is, you have
 We highlight that when the save button is selected, a pop up shows asking you to fill in the datails, split in three tabs:
 
 -  **Generic**, in this tab you set basic information for your dataset like its **Label**, **Name**, **Description** and **Scope**. The available values for the scope are **Public** and **Private**. If you choose **Public**, the dataset will be visible to all other users otherwise it won’t.
-
 -  **Persistence**, you have the chance to persist your dataset, i.e., to write it on the default database. Making a dataset persistent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the    documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. You can also decide to schedule the persistence operation: this means that the data stored will be update according to the frequency defined in the **scheduling** options.
 
 Choose your scheduling option and save the dataset. Now the table where your data are stored will be persisted according to the settings provided.
@@ -355,44 +317,33 @@ The Qbe engine supports spatial queries through a set of operators (that return 
 
 We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |image221|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distiguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
 
-   |image222|
+.. figure:: media/image218.png
 
-   Figure 9.10: QbE spatial dimensions.
+    QbE spatial dimensions.
 
-After a first selection of fields, it is possible to add calculated fields. Click on the **Add calculated** option available on the query editor area as shown by the blue arrow in Figure 9.11. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields.The circles of Figure 9.11 underline that the fields on which you can operate are the one previously selected via drag and drop (or by a simple click on the field).
+After a first selection of fields, it is possible to add calculated fields. Click on the **Add calculated** option available on the query editor area as shown by the blue arrow in Figure 9.11. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields.The circles of :numref:`calculfldwizardspt` underline that the fields on which you can operate are the one previously selected via drag and drop (or by a simple click on the field).
 
-   |image223|
+.. _calculfldwizardspt:
+.. figure:: media/image219.png
 
-   Figure 9.11: Calculated field wizard with spatial filters.
+    Calculated field wizard with spatial filters.
 
 In addition note that the **Items** panel provides all the applicable functions sorted by categories:
 
 -  arithmetic functions,
-
 -  aggregation functions,
-
 -  date functions,
-
 -  spatial functions.
 
-The latter are available only in the presence of a geographical Business Model and *must* be properly applied to spatial attributes or measures. Figure 9.12 shows the list of the available spatial functions while Table 9.3 helps you to use them properly, supplying the corresponding Oracle function name and a link to grab more specific information about usage, number of arguments, type and output.
+The latter are available only in the presence of a geographical Business Model and *must* be properly applied to spatial attributes or measures. Figure below shows the list of the available spatial functions while :numref:`linkoraclesptfnct` helps you to use them properly, supplying the corresponding Oracle function name and a link to grab more specific information about usage, number of arguments, type and output.
 
-      .. warning::
-         **Take into account the Oracle function definition**
-         
-         It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
+.. figure:: media/image220.png
 
-To apply one function click on the function name and the “Operands selection window” wizard opens. Figure 9.13 shows an example for the funtion “Distance”. Fill in all boxes since all fields are mandatory.
-
-Finally you can use spatial function to add a calculated field, as shown in Figure 9.14.
-
-   |image225|
-
-   Figure 9.12: Spatial function list.
-
-   |image226|
-
-   Figure 9.13: Operands selection window.
+    Spatial function list.
+    
+.. _linkoraclesptfnct:
+.. table:: Link to Oracle spatial functions.
+    :widths: auto
 
 +-----------------------+-----------------------+-----------------------+
 |    Function Name      | Oracle Function       | Link to Oracle web    |
@@ -487,20 +438,33 @@ Finally you can use spatial function to add a calculated field, as shown in Figu
 |                       |                       | b14255/sdo_objgeom.ht |
 |                       |                       | m#BGHCDIDG>`__        |
 +-----------------------+-----------------------+-----------------------+
-
-   Table 9.3: Link to Oracle spatial functions.
-
    
-   |image227|
+.. warning::
+      **Take into account the Oracle function definition**
+         
+         It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
+
+To apply one function click on the function name and the “Operands selection window” wizard opens. Figure below shows an example for the funtion “Distance”. Fill in all boxes since all fields are mandatory.
+
+.. figure:: media/image221.png
+
+    Operands selection window.
+
+Finally you can use spatial function to add a calculated field, as shown below.
+
+.. figure:: media/image222.png
    
-   Figure 9.14: Example of added calculated field using a spatial function.
+    Example of added calculated field using a spatial function.
 
-As well as calculated fields it is possible to filter on spatial fields using specific geometric operators. Once again we report in Figure 9.15 the available geometric operator (you can find them scrolling the panel to the bottom) and report the link to the Oracle web pages in Table 9.4.
+As well as calculated fields it is possible to filter on spatial fields using specific geometric operators. Once again we report in Figure below the available geometric operator (you can find them scrolling the panel to the bottom) and report the link to the Oracle web pages in :numref:`linkoraclefltrfnct`.
 
+.. figure:: media/image223.png
 
-   |image228|
-
-   Figure 9.15: Spatial filters.
+    Spatial filters.
+   
+.. _linkoraclefltrfnct:
+.. table:: Link to Oracle filter functions.
+    :widths: auto
 
 +-----------------------+-----------------------+-----------------------+
 |    Function Name      | Oracle Function       | Link to Oracle web    |
@@ -597,8 +561,6 @@ As well as calculated fields it is possible to filter on spatial fields using sp
 |                       |                       | #BGEJHDGD>`__         | 
 +-----------------------+-----------------------+-----------------------+
 
-   Table 9.4: Link to Oracle filter functions.
-
 
 Temporal dimension
 ~~~~~~~~~~~~~~~~~~
@@ -607,9 +569,9 @@ The Qbe engine on Knowage Server is endowed with some temporal functionalities t
 
 We highlight that the new features are available only if the model has at least one temporal dimension. The latter must be defined while creating the model using Knowage Meta.
 
-   .. warning::
+.. warning::
       
-      **Define first the temporal dimension on Knowage Meta**
+    **Define first the temporal dimension on Knowage Meta**
       
       To have a temporal dimension that can be used in the Qbe interface an expert user must enable it first on the model using               Knowage Meta. Use the **property view** to set/change the type of the dimension as shown in Figure 9.16. Refer to Chapter ?? to         learn how to use Knowage Meta.
 
@@ -618,24 +580,24 @@ The temporal dimension can have one or more hierarchies. Only one of these can s
    |image230|
 
    Figure 9.16: Temporal dimension definition on Meta.
-
-Furthermore there is the possibility to set a “time” dimension as Figure 9.18 displays.
-
-The user can use the elements of each dimension as attributes in the “Select” instance. Note that if one drags and drops of element to be used as a filter also its parent nodes will be brought too. Figure 9.19 exhibits one example. Remember to assign a value to each parent node before you run the query.
-
-Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in Figure 9.20 (Left). The action opens the pop up displayed in Figure 9.20 (Right).
-
+   
    |image231|
 
    Figure 9.17: Temporal hierarchy visualization (Left). Changing hierarchies (Right).
+
+Furthermore there is the possibility to set a “time” dimension as Figure 9.18 displays.
 
    |image232|
 
    Figure 9.18: Time dimension.
 
+The user can use the elements of each dimension as attributes in the “Select” instance. Note that if one drags and drops of element to be used as a filter also its parent nodes will be brought too. Figure 9.19 exhibits one example. Remember to assign a value to each parent node before you run the query.
+
    |image233|
 
    Figure 9.19: Filter on an element means to filter also on its parent nodes.
+
+Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in Figure 9.20 (Left). The action opens the pop up displayed in Figure 9.20 (Right).
 
    |image234|
 
@@ -644,15 +606,10 @@ Moreover, selecting the filters tab, you can use specific filters clicking on th
 In the list of available elements is made up of:
 
 -  filters defined by the admin through the TimeSpan GUI;
-
 -  system filters manageable through a table;
-
 -  the element “Current year”;
-
 -  the element “Current month”;
-
 -  the element “Current day”;
-
 -  the element “Last Period” for which you must indicate the number of years.
 
 Inside the section “Select” you can use the temporal operators directly on attributes.
@@ -672,21 +629,17 @@ This function allows to manage and study measures on parallel periods. For examp
 
 1. In the case the user wants the sum of a measure relative to current year, he/she must drag and drop the measure in the “select          fields” panel and launch the temporal function PARALLEL_YEAR passing 0 as value. See Figure 9.22 as example.
 
-
    |image236|
 
    Figure 9.22: PARALLEL_YEAR example: sum of a measure referred to a specific time year.
 
-
 2. In the case the user wants to compare the sales of 2016 with those of the previous year. He/she has to drag twice the measure inside    the “select fields” panel and indicate the temporal function “PARALLEL_YEAR” using 0 and 1 as value parameters. See Figure 9.23.
-
 
    |image237|
 
    Figure 9.23: PARALLEL_YEAR example: comparing data with different time interval.
 
 -  Suppose now that the analysis requires to compare the unit sold from January to March of the current year with that of the same time    interval of the previous one. In this instance the user must set the temporal filter which will be the point of reference as shown      in Figure 9.24.
-
 
    |image238|
 
@@ -695,7 +648,6 @@ This function allows to manage and study measures on parallel periods. For examp
 Remember that the temporal filter uses the “IN” operator.
 
 -  In the case one wants to compare the sales per month of the current year with the ones of the parallel year, the user should add the    month field in the select clause (picking it up from the used temporal hierarchy) and group by it.
-
 
    |image239|
 
@@ -716,11 +668,8 @@ The **LAST\ \_\ YEAR** function.
 This function allows the user to sum a measure referring to last period data. If the temporal filter isn’t set, the engine takes the current year by default, otherwise the chosen one.
 
 -  In our example in Figure 9.28 and Figure 9.29 the period is the year. Here we compare last-year sold products to the sum of those      sold in last two years.
-
 -  Referring to Figure 9.30 and Figure 9.31 give an example of how to define a time reference, for instance 2015. In this case I pass      2015 to the filter.
-
 -  In case the user wants to inspect the evolution of sales per month of the current year comparing them with those of last year plus      the current. It is sufficient to add the month in the “selected fields” area and the measure “unit sold” where the LAST_YEAR            function is set on 0 or 1. Figure 9.32 and Figure 9.33 show an example.
-
 
    |image242|
 
@@ -764,7 +713,6 @@ This operator is very similar to the previous one. In this case the reference ti
 
 -  Figure 9.36 shows how to aggregate data up to last three months per each month of the current year. Remember to add the month in the    section “selected fields”. Therefore, inserting the month in the select clause the user obtains a projection on current year of        sales of last 3 months per each month. Note that data are related to the current year, namely there is no shift to the passed one.      Pay attention to the fact that if one month is missing the system does not notice it and return a sum relative to a bigger time        period.
 
-
    |image250|
 
    Figure 9.36: LAST_MONTH function example: sum up to last 3 months.
@@ -772,7 +720,6 @@ This operator is very similar to the previous one. In this case the reference ti
 -  The same query can be performed cosidering a specific year. In Figure 9.38 and Figure 9.39 year 2015 has been selected.
 
 -  If the user wants to compare sales per month to those of the previuos month summed to the current one. Results in Figure 9.40 and      Figure 9.41 reflect this selection.
-
 
    |image251|
 
@@ -801,7 +748,6 @@ This operator aggregate the measure of the first day of the year up to the execu
 
 -  Figure 9.42 and Figure 9.43 shows the case in which the user wants to count the sales from the beginning of the year up to now.
 
-
    |image256|
 
    Figure 9.42: YTD function example: to count the sales from the beginning of the year up to now.
@@ -811,7 +757,6 @@ This operator aggregate the measure of the first day of the year up to the execu
 -  Figure 9.46 refers to the case where the user wishes to sum 2015 sales considering the day in which the query is executed but of        the previuos year.
 
 -  Figure 9.47 refers instead to the case where the user wishes to sum 2015 sales of first 3 months of 2015.
-
 
    |image257|
 
@@ -835,7 +780,6 @@ This operator aggregate the measure of the first day of the year up to the execu
 
 -  In Figure 9.48 and Figure 9.49 the user is comparing the unit sold from the beginning of the year with those of the previuos year.      The engine considers the day of query execution as end of the time period.
 
-
    |image262|
 
    Figure 9.48: YTD function example: comparing the unit sold from the beginning of the year with those of the previuos year.
@@ -845,7 +789,6 @@ This operator aggregate the measure of the first day of the year up to the execu
    Figure 9.49: YTD function example: output when comparing the unit sold from the beginning of the year with those of the previuos        year.
 
 -  Figure 9.50 Figure 9.51 shows the instance when the user wants to see the sum of unit sold each month after having added the month      field in the select clause.
-
 
    |image264|
 
@@ -862,13 +805,11 @@ The MTD function follows the same logic as the YTD function but using the month.
 
 -  Figure 9.52 shows the case in which the user wants to check the unit sold during the current month.
 
-
    |image266|
 
    Figure 9.52: MTD function example: check the unit sold during the current month.
 
 -  In Figure 9.53 and Figure 9.54 the user wants to check the aggregated sales of last 7 months, current (relative to the execution        time) month included.
-
 
    |image267|
 
@@ -900,7 +841,6 @@ The MTD function follows the same logic as the YTD function but using the month.
 
 -  Figure 9.59 and Figure 9.60 shows as a user can compare sales of aggregated months (up to the current) to the current one.
 
-
    |image273|
 
    Figure 9.59: MTD function example:sales of current month for the present year.
@@ -908,7 +848,6 @@ The MTD function follows the same logic as the YTD function but using the month.
 -  Figure 9.61 and Figure 9.62 shows a case very similar to the previous one. In this case the next month is added to the sum.
 
 -  Figure 9.63 and Figure 9.64 shows a case very similar to the previous one. In this case the reference year is specified through a      filtering condition.
-
 
    |image274|
 
@@ -937,7 +876,6 @@ Catalogues
 A hidden panel is activated once you click on the arrow on the right side of the QbE editor, right under the **Preview** button. This panel contains two elements:
 
 -  the catalogue of queries (at the top);
-
 -  the list of analytical drivers linked to the QbE document (bottom).
 
 The catalogue of queries is the list of all queries defined in the QbE document, while the lower panel lists all analytical drivers linked to the QbE document.
@@ -976,11 +914,8 @@ The QbE includes a specific feature to thoroughly manage relationships among ent
 Using the schema and data model represented in Figure 9.66, suppose you have a model with the following relationships:
 
 -  **Store** - **Region**;
-
 -  **Customer** - **Region**;
-
 -  **Sales Fact** - **Store**;
-
 -  **Sales Fact** - **Customer**.
 
 
@@ -988,7 +923,6 @@ Ambiguity arises when attributes coming from the various tables are dragged and 
 
 - **Sales Fact - Customer - Region**,
 - **Sales Fact - Store - Region**,
-
 
    |image284|
 
@@ -1003,7 +937,6 @@ By clicking on the **Relationship Wizard** button in the top right corner of the
 The images of Figure 9.68 show the double relationship between **Sales Fact** and **Region**, specifically:
 
 -  relationship between **Sales Fact** and **Customer**;
-
 -  relationship between **Sales Fact** and **Store**.
 
 At this point, you can modify the relationship so as to eliminate ambiguity: for instance, if you wish to view the region related to a specific customer, first select the **Region** entity in the **Entity** panel on the left and double click the correct path in the panel on the right (the correct path and only the correct path has to be green-colored to be correctly selected).
@@ -1019,7 +952,6 @@ Once you are done, you can check the SQL code generated by the QbE query by clic
    |image287|
 
    Figure 9.70: Generated query.
-
 
 Aliases and relationships
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1055,9 +987,7 @@ The window shown in Figure 9.73 will appear.
 It includes three sections:
 
 1. List of aliases: the first column on the left contains the different entity fields;
-
 2. List of fields associated to the entities: here you can set the associations between aliases and entity fields;
-
 3. List of fields: the first column on the right contains the aliases that you previously defined in the query, and corresponds to the    columns that you expect to be shown in the resulting table.
 
 To distinguish the fields during the execution of the query, it is necessary to identify all the fields involved in the query (included in the third section List of fields) with the aliases of the entities that contain them (included in the first section List of aliases). 
@@ -1076,7 +1006,6 @@ Click **Finish** and check the SQL code clicking **Generated Query**. Figure 9.7
 
    Figure 9.75: Double relationship preview.
 
-
 Cross Navigation
 -----------------
 
@@ -1087,9 +1016,7 @@ All these type of document can provide other interactions: images and hyperlink 
 In particular, the employment of calculated fields allows you to set hyperlinks for the following items:
 
 -  HTML pages;
-
 -  images;
-
 -  other Knowage documents.
 
 
@@ -1113,7 +1040,6 @@ If **link** is selected, you can associate a field with an HTML page. The defaul
 
 
 where **TEXT** is the clickable field in the QbE query results table and **URL** is the URL of the HTML page you want to open.
-
 
 You can add this default code by opening the **Exp. Items** > **Groovy functions** folder and selecting the **link** item, as shown in Figure 9.77.
 
@@ -1147,7 +1073,6 @@ If you want to add an image, the code to be used to reference an image on the se
    
    return api.getImageLink("${IMAGE_URL}"); 
 
-
 As before, by cliking on **image** from the **Exp. Items** tree, this code is automatically added as shown in Figure 9.79.
 
 Replace the **IMAGE\_\ URL**\ with the path of your image. Code 9.2 produces a graphical result like the one shown in the **Bullet Chart** column of Figure 9.80.
@@ -1163,7 +1088,6 @@ Replace the **IMAGE\_\ URL**\ with the path of your image. Code 9.2 produces a g
     } else { return 'api.getImageLink("'+ baseUrl + 'bullet-yellow.png")'; }          
 
  Code 9.2: Add images.
-
 
    |image295|
 
@@ -1197,13 +1121,9 @@ Code 9.3 provides an example for Knowage 4.2 and later versions.
 In particular:
 
 -  TARGET_DOCUMENT_LABEL is the name of the target document;
-
 -  TEXT is the clickable field in the QbE query results table;
-
 -  PARAMETERS is the list of parameters you want to pass to the target  document (optional); 
-
 -  SUBOBJECT is the subobject name of the target document to which you want to navigate.
-
 
    |image298|
 
