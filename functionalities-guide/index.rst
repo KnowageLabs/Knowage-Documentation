@@ -13,14 +13,14 @@ Functionalities
    Cockpit/ka_user_cockpit.rst
    FreeInquiry/ka_user_freeinquiry.rst
    MetaWeb/ka_dev_metaweb.rst
-   Alert/ka_Alert.rst
-   Datamining/ka_user_datamining.rst
-   Glossary/ka_dev_glossary.rst
    Jasper/ka_dev_jasper.rst
-   KPI/ka_KPI.rst
    LocationIntelligence/ka_dev_introlocationintelligence.rst
    LocationIntelligence/ka_user_locationintelligence.rst
    LocationIntelligence/ka_dev_locationintelligence.rst
+   Datamining/ka_user_datamining.rst
+   Alert/ka_Alert.rst
+   Glossary/ka_dev_glossary.rst
+   KPI/ka_KPI.rst
    MyData/ka_user_my_data.rst
    Network/ka_dev_network.rst
    OLAP/ka_dev_OLAP.rst
