@@ -16,8 +16,6 @@ Functionalities
    Reporting/ka_user_reporting.rst
    Jasper/ka_dev_jasper.rst
    LocationIntelligence/ka_dev_introlocationintelligence.rst
-   LocationIntelligence/ka_user_locationintelligence.rst
-   LocationIntelligence/ka_dev_locationintelligence.rst
    Datamining/ka_user_datamining.rst
    Alert/ka_Alert.rst
    Glossary/ka_dev_glossary.rst
