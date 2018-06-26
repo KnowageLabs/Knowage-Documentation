@@ -39,44 +39,45 @@ The template of a data mining document is a simple XML file that enables the dev
          :caption:  Linux and Tomcat example
          :linenos:
  
-            <?xml version="1.0" encoding="ISO-8859-15"?> 
-            <DATA_MINING>                                
-            <DATASETS>                                                            
-              <DATASET name="fileDS" readType="table" type="file" label="Dataset_Label_01 " canUpload="true">                        
-               <![CDATA[ ...read_options...]]>                                   
-              </DATASET>                                                         
-            </DATASETS>                                                           
+                  <?xml version="1.0" encoding="ISO-8859-15"?> 
+                  <DATA_MINING>                                
+                  <DATASETS>                                                            
+                           <DATASET name="fileDS" readType="table" type="file" label="Dataset_Label_01 " canUpload="true">
+                           <![CDATA[ ...read_options...]]>                                   
+                  </DATASET>                                                         
+                  </DATASETS>                                                           
            
-            <SCRIPTS>                                                             
-              <SCRIPT name="Script_Name_01" datasets="fileDs"  label="Script_Label_01">                                           
-                <![CDATA[.... action_to_call<-function(x){ ... }]]>                
-              </SCRIPT>                                                          
-              <SCRIPT name="Script_Name_02" datasets="fileDs"  label="Script_Label_01">                                          
-                <![CDATA[... z1<-'$P{var1}' ... ]]>                               
-              </SCRIPT>                                                          
-              <SCRIPT name="Script_Name_03" label="Script_Name_03">              
-                <![CDATA[... z2<-$P{var2} ... ]]>                                  
-              </SCRIPT>                                                          
-            </SCRIPTS>                                                            
+                  <SCRIPTS>                                                             
+                           <SCRIPT name="Script_Name_01" datasets="fileDs"  label="Script_Label_01">
+                           <![CDATA[.... action_to_call<-function(x){ ... }]]>                
+                  </SCRIPT>                                                          
+                           <SCRIPT name="Script_Name_02" datasets="fileDs"  label="Script_Label_01">
+                              <![CDATA[... z1<-'$P{var1}' ... ]]>                               
+                  </SCRIPT>                                                          
+                           <SCRIPT name="Script_Name_03" label="Script_Name_03">              
+                           <![CDATA[... z2<-$P{var2} ... ]]>                                  
+                  </SCRIPT>                                                          
+                  </SCRIPTS>                                                            
              
-            <COMMANDS>                                                            
-                <COMMAND name="command1" scriptName="Script_Name_01" label=" Command_Label_01" mode="auto">                                               <OUTPUTS>                                                          
-                   <OUTPUT type="image" name="a" value="x" function="plot" mode="auto" label="Output_Label_01"/>                                            <OUTPUT type="image" name="c" value="z,k" function="biplot" mode=" manual" label="Output_Label_02"/>                                    <OUTPUT type="text" name="d" value="y" mode="manual" label="   Output_Label_03"/>                                                       </OUTPUTS>                                                         
-            </COMMAND>                                                         
-               <COMMAND name="command2" scriptName="Script_Name_02" label=" Command_Label_01" mode="manual" action="function1(x)">                         <VARIABLES>                                                        
-                   <VARIABLE name="var1" default="valuevar1"/>                        
-                  </VARIABLES>                                                       
-                  <OUTPUTS>                                                          
-                   <OUTPUT type="text" name="c" value="z" function="function2(y,z)"  mode=" manual" label="Output_Label_01"/>                             </OUTPUTS>                                                         
-            </COMMAND>                                                         
-               <COMMAND name="command3" scriptName="Script_Name_03" label=" Command_Label_03" mode="manual" action="action_to_call">                       <OUTPUTS>                                                          
-                   <OUTPUT type="text" name="e" value="z2" mode="manual" label=" Output_Label_01">                                                         <VARIABLES>                                                       
-                   <VARIABLE name="var2" default="valuevar2"/> </VARIABLES>           
-                  </OUTPUT>                                                          
-                   <OUTPUT type="image" name="f" value="" function="rectf(z)" mode="auto" label="Output_Label_02"/>                                       </OUTPUTS>                                                         
-            </COMMAND>                                                         
-            </COMMANDS>                                                              
-            </DATA_MINING>                                                        
+                  <COMMANDS>                                                            
+                       <COMMAND name="command1" scriptName="Script_Name_01" label=" Command_Label_01" mode="auto">                                               <OUTPUTS>                                                          
+                            <OUTPUT type="image" name="a" value="x" function="plot" mode="auto" label="Output_Label_01"/>                                           <OUTPUT type="image" name="c" value="z,k" function="biplot" mode=" manual" label="Output_Label_02"/>                                     <OUTPUT type="text" name="d" value="y" mode="manual" label="   Output_Label_03"/>                                                   </OUTPUTS>                                                         
+                       </COMMAND>                                                         
+                  <COMMAND name="command2" scriptName="Script_Name_02" label=" Command_Label_01" mode="manual" action="function1(x)">                         <VARIABLES>                                                        
+                             <VARIABLE name="var1" default="valuevar1"/>                        
+                      </VARIABLES>                                                       
+                      <OUTPUTS>                                                          
+                           <OUTPUT type="text" name="c" value="z" function="function2(y,z)"  mode=" manual" label="Output_Label_01"/>                         </OUTPUTS>                                                         
+                  </COMMAND>                                                         
+                    <COMMAND name="command3" scriptName="Script_Name_03" label=" Command_Label_03" mode="manual" action="action_to_call">                       
+                      <OUTPUTS>
+                           <OUTPUT type="text" name="e" value="z2" mode="manual" label=" Output_Label_01">                                                     <VARIABLES>                                                       
+                           <VARIABLE name="var2" default="valuevar2"/> </VARIABLES>           
+                      </OUTPUT>                                                          
+                           <OUTPUT type="image" name="f" value="" function="rectf(z)" mode="auto" label="Output_Label_02"/>                                   </OUTPUTS>                                                         
+                  </COMMAND>                                                         
+                  </COMMANDS>                                                              
+                  </DATA_MINING>                                                        
 
   As you can see in the example, there are six basic tags:
 
