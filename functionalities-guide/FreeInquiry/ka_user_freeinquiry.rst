@@ -38,7 +38,7 @@ In the following we discuss each step in detail, showing basic and advanced func
 
 
 Query design and execution
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can open the QbE editor for querying a model:
 
@@ -54,7 +54,7 @@ In this paragraph we show how to build a simple query with the QbE editor.
 As shown in Figure 9.1 the window of the QbE editor contains the **Query designer**. In next sections we explain in detail all the areas of the **Query Designer**, the **Datamart Schema** tab, the query editor and a hidden tab dedicated to the management of queries, subqueries and parameters catalogue.
 
 Datamart Schema
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 Starting from the left side, the first Panel shows the querable logical schema and the list of entities that can be queried to generate the query. Entities and relationships are represented in a tree structure, with user-defined names. Fields can be dragged from here and dropped onto the editor area.
 
@@ -83,7 +83,7 @@ Right clicking on an item in the tree, the contextual menu opens and shows some 
 Let us see more in detail how to add calculated fields and ranges.
 
 Calculated fields management
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can create new calculated fields either inside a query or in the schema panel,in order to reuse them. Calculated fields defined in this second way can be saved for future use.
 
@@ -107,7 +107,7 @@ An example is provided below.
 There are two types of calculated fields that you can add to the QbE query: *standard* and *expert*. The *standard* ones are SQL expressions that are injected into the query. With the *expert* calculated fields (you should mark the **Expert user** box in the calculated fields wizard) you can build Groovy scripts, show images, add links. This second type of calculated field is computed after the query has been executed.
 
 Range management
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 It frequently happens that attributes of entities in a model have several different values. However, for the purpose of analysing data, it is often more useful to group those values into categories.
 
@@ -128,7 +128,7 @@ Finally, you can click on **Add Default**: this creates a new category called **
 
 
 Query Editor
-~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 The central panel provides a query editor, including three different tabs:
 
@@ -143,7 +143,7 @@ The expert user can visualize the query matching his selections by clicking on t
 Let us now see in detail the three functionalities, listed above, which split the query editor area in different sections.
 
 Select Fields
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 This tab contains the list of columns to be returned by the query. To add a new attribute in this section, just click on a field in the schema panel tree or drag and drop it onto the query editor.
 
@@ -201,7 +201,7 @@ The select sub-section has a toolbar with additional functionalities summarized 
    +-----------------------------------+-----------------------------------+
 
 Filters
-~~~~~~~
+^^^^^^^^^^^^^^^^
 
 The **Filters** panel allows you to define filter criteria (WHERE clause). Similarly to the select area, filters are structured as a table: here rows contain filters, while columns represent the elements of the filter.
 
@@ -279,7 +279,7 @@ In the following table the possible types of filters in the QbE are summarized. 
 +-------------+-------------+-------------+-------------+-------------+
 
 Filters on Groups
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 By moving to the **Filters on Group** tab it is possible to define filters on aggretated measures.
 
@@ -292,7 +292,7 @@ where the second [Aggr. function] is in this case optional. Example expessions c
 Once you have selected the left operand, you can configure the filter using the proper setting values on columns. Columns are the same as those of the **Filters** tab, that is the ones just described in the previous section. There are, however, additional columns related to grouping functions. In particular, the two columns named **Function**, define he aggregation function to use on the left, or right, operand.
 
 Query Preview
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 Once you are satisfied with your query or if you want to check the results, you can see the returned data by clicking the **Preview** button located in the top right corner of the panel. From there, you can go back to the **Designer** tab to modify the definition of the query or switch directly to the **Worksheet** designer to start building your graphical representation of the extracted data.
 
@@ -309,12 +309,12 @@ Choose your scheduling option and save the dataset. Now the table where your dat
       in your query.
 
 Advanced QbE functionalities	
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this section we focus on advanced features, which can be comfortably managed by more expert users.
 
 Spatial fields usage
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The Qbe engine supports spatial queries through a set of operators (that return true or false) or a set of functions (these usually return a measure). This feature is although available only when the Location Intelligence (LI) license is possesed. It also fundamental that the Business Model has to be tagged as geographical model. You can refer to Section ?? to have details on how to set the geographical option using Knowage Meta.
 
@@ -566,7 +566,7 @@ As well as calculated fields it is possible to filter on spatial fields using sp
 
 
 Temporal dimension
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 The Qbe engine on Knowage Server is endowed with some temporal functionalities that allow the final user to easily perfom queries based on time.
 
@@ -745,7 +745,7 @@ This operator is very similar to the previous one. In this case the reference ti
    Figure 9.41: LAST_MONTH function example: results of sales per month aganst the sum of current and previous month sales.
 
 The YTD function
-^^^^^^^^^^^^^^^^
+++++++++++++++++
 
 This operator aggregate the measure of the first day of the year up to the execution date (currentDay). If the user sets temporal filters the YTD function must refer to the filter. The chosen day will be used as reference by the function. For example, if the user sets “15/03/2016” as reference day, the function sums starting from the first of January up to the 15th of March (2016). Observe that if the filter is monthly the engine will take the last day of the month, while if it is yearly the engine will take the whole year. If the user inserts a temporal element as aggregation function the measure must be aggregated progressively.
 
@@ -802,7 +802,7 @@ This operator aggregate the measure of the first day of the year up to the execu
    Figure 9.51: YTD function example: output when one sums unit sold each month after having added the month field in the select          clause.
 
 The MTD function
-^^^^^^^^^^^^^^^^
+++++++++++++++++
 
 The MTD function follows the same logic as the YTD function but using the month.
 
@@ -874,7 +874,7 @@ The MTD function follows the same logic as the YTD function but using the month.
 
 
 Catalogues
-^^^^^^^^^^
+++++++++++++++++
  
 A hidden panel is activated once you click on the arrow on the right side of the QbE editor, right under the **Preview** button. This panel contains two elements:
 
@@ -884,7 +884,7 @@ A hidden panel is activated once you click on the arrow on the right side of the
 The catalogue of queries is the list of all queries defined in the QbE document, while the lower panel lists all analytical drivers linked to the QbE document.
 
 Queries catalogue and subqueries
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++
 
 Several queries can be built over the same QbE datamart. The catalogue lists all saved queries on the current datamart. The base query that we are creating in the query editor appears with a default name (query-q1): to rename it, simply double click on the query item in the catalogue tree.
 
@@ -901,12 +901,12 @@ Once defined the main query and the filter that contains the subquery, go to the
 To use the sub-query inside the main query, simply drag and drop it into the columns corresponding to the left or right operand of the filter and set the type of operand (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries. 
 
 Analytical drivers catalogue
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Although drivers are not editable, they can be used as a right/left condition of a filter by dragging and dropping them from this panel into the corresponding columns of the **Filters** tab query editor. Here they are represented with the standard syntax: [Product_Family]. 
 
 Multiple relationships
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The QbE includes a specific feature to thoroughly manage relationships among entities: users can create join paths from one table to another to be used in case of ambiguity. Let’s see in detail how it works through an example.
 
@@ -957,7 +957,7 @@ Once you are done, you can check the SQL code generated by the QbE query by clic
    Figure 9.70: Generated query.
 
 Aliases and relationships
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the data model includes various relationships between two tables, the QbE allows users to manage them using aliases. 
 
@@ -1010,7 +1010,7 @@ Click **Finish** and check the SQL code clicking **Generated Query**. Figure 9.7
    Figure 9.75: Double relationship preview.
 
 Cross Navigation
------------------
+~~~~~~~~~~~~~~~~~~~
 
 Free inquiry documents support cross navigation, letting the user not only add interactions with other documents, but also add images and hyperlinks to a specific field.
 
@@ -1032,8 +1032,7 @@ First of all, advanced functionalities have to be enabled. Open the **Calculated
    Let us provide detailed instructions to activate these options.
 
 HTML Pages
-~~~~~~~~~~
-
+^^^^^^^^^^^^^
 If **link** is selected, you can associate a field with an HTML page. The default code to be inserted in the calculated field is
 
 .. code:: javascript
@@ -1067,7 +1066,7 @@ An example is provided by Add hyperlink.
 The output is shown in Figure 9.78 (column City URL).
 
 Images
-~~~~~~
+^^^^^^^^
 
 If you want to add an image, the code to be used to reference an image on the server:
 
@@ -1105,7 +1104,7 @@ Replace the **IMAGE\_\ URL**\ with the path of your image. Code 9.2 produces a g
    Figure 9.80: QbE results tab with custom image.
 
 Other Knowage documents
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Generally speaking, when we talk about Cross Navigation we mostly refer to this case. To realize the navigation between Knowage documents, the code has to be customized so as to call the cross navigation service.
 
@@ -1133,4 +1132,4 @@ In particular:
    Figure 9.81: Default cross navigation code.
    
    
-   .. include:: freeinquiryThumbinals.rst
+.. include:: freeinquiryThumbinals.rst
