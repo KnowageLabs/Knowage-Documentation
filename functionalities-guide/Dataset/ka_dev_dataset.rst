@@ -6,48 +6,33 @@ In this section we suppose to log in as an admin user. In this case the dataset 
  My first dataset
 --------------------
 
-As stated before, you can open the dataset graphical editor by selecting **Dataset** in **Data Provider**\ panel, as shown in Figure 3.1.
+As stated before, you can open the dataset graphical editor by selecting **Dataset** in **Data Provider**\ panel, as shown below.
 
-   |image13|
+.. figure:: media/image20.png
 
-   Figure 3.1: Access data set creation area.
+    Access data set creation area.
 
 A dataset acts as a data provider for analytical documents that’s why many types are supported. Knowage manages several dataset types:
 
 -  File,
-
 -  Query,
-
 -  Java Class,
-
 -  Script (Groovy, Javascript, Embedded Javascript or ECMAScript),
-
 -  Qbe query over the metamodel (only in KnowageBD and KnowageSI),
-
 -  Custom,
-
 -  Flat,
-
 -  Ckan (only in KnowageBD and KnowageSI),
-
 -  Federated (only in KnowageBD and KnowageSI),
-
 -  REST,
-
 -  Big Data (only in KnowageBD and KnowagePM).
 
 All types of dataset share some common operations, while others are specific to each of them. The process for defining a dataset inside Knowage follows:
 
 1. choose a name and a unique label;
-
 2. choose the type of dataset and the source, depending on the dataset type;
-
 3. write the code defining the dataset;
-
 4. associate parameters to the dataset, if any (optional);
-
 5. apply transformations (optional);
-
 6. test the dataset and save it.
 
 Some of these steps depend on the specific type of dataset, as we will see.
@@ -63,18 +48,20 @@ To remove an existing dataset, click the small dustbin icon |image17| on the cor
 
 Once you have clicked the **Add** button, you can fill in the dataset definition form. Each tab in the right panel corresponds to a step of the dataset definition process.
 
-In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to Figure 3.2). In the lower part you can see a versioning system for the dataset: Knowage supports dataset versioning, as shown in Figure 3.3, therefore, each time you edit and save a dataset, the older version is archived and is still accessible from the lower part of the detail panel.
+In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to :numref:`datasetpanel`). In the lower part you can see a versioning system for the dataset: Knowage supports dataset versioning, as shown in :numref:`datasetversioning`, therefore, each time you edit and save a dataset, the older version is archived and is still accessible from the lower part of the detail panel.
 
-   |image15|
+.. _datasetpanel:
+.. figure:: media/image22.png
 
-   Figure 3.2: Dataset Panel.
+    Dataset Panel.
 
-The Scope lets you choose between two options, whose combination allows the definition of fine-grained purpose datasets. In Table 3.1 all details of possible matching are provided.
+.. _datasetversioning:
+.. figure:: media/image25.png
 
-   |image18|
+    The dataset versioning.
 
-   Figure 3.3: The dataset versioning.
-   
+The Scope lets you choose between two options, whose combination allows the definition of fine-grained purpose datasets. In Table below all details of possible matching are provided.
+
 .. table:: Scope options
      :widths: auto
 
@@ -105,23 +92,19 @@ The Scope lets you choose between two options, whose combination allows the defi
      |                       |                       | end users for reuse.  |    
      +-----------------------+-----------------------+-----------------------+
 
-
-
-   Table 3.1: Scope options.
-
 You can also specify the Category of the dataset. This field is not mandatory but it can be used to categorize datasets in your BI project, so that you can easily recover them when performing searches.
 
-In the **Type** tab you can define the type of dataset: here you have to write the code or upload an XLS file or call for a web service accordingly to the dataset type and add parameters to it, if any. An example is shown in Figure 3.4.
+In the **Type** tab you can define the type of dataset: here you have to write the code or upload an XLS file or call for a web service accordingly to the dataset type and add parameters to it, if any. An example is shown below.
 
-   |image19|
+.. figure:: media/image26.png
 
-   Figure 3.4: The dataset type definition.
+    The dataset type definition.
 
-In the **Advanced** tab, shown in Figure 3.5, you can apply the pivoting transformation to the dataset results if needed or decide to persist the dataset.
+In the **Advanced** tab, shown in figure below, you can apply the pivoting transformation to the dataset results if needed or decide to persist the dataset.
 
-   |image20|
+.. figure:: media/image27.png
 
-   Figure 3.5: The dataset trasformation tab.
+    The dataset trasformation tab.
 
 Once all those settings have been performed you can see a preview of the dataset results clicking on the **Preview** button available on the top right corner of the page. It is recommended to check preview to detect possible errors in the dataset code before associating it to a document.
 
@@ -129,15 +112,14 @@ Note that the metadata can be manage by clicking on the icon |image21| and use t
 
 Let us describe more deeply each type of dataset.
 
-
 File Dataset
 ~~~~~~~~~~~~
 
-A dataset of type File, see Figure 3.6, reads data from an XLS or CSV file. To define a **File Dataset** select the File type, then upload the file by browsing in your personal folders and set the proper options for parsing it.
+A dataset of type File, see the following figure, reads data from an XLS or CSV file. To define a **File Dataset** select the File type, then upload the file by browsing in your personal folders and set the proper options for parsing it.
 
-   |image22|
+.. figure:: media/image30.png
 
-   Figure 3.6: File Dataset.
+    File Dataset.
 
 Once you have uploaded the file, you can check and define the metadata (measure or attribute) of each column.
 
@@ -152,30 +134,28 @@ The SQL dialect depends on the chosen data source. The SQL text must be written 
          :caption: SQL query example
          :linenos:
 
-         SELECT p.media_type as MEDIA, sum(s.store_sales) as SALES                                                            
-         FROM sales_fact_1998 s                                    
-         JOIN promotion p on s.promotion_id=p.promotion_id                                                                    
-         GROUP BY p.media_type                                     
+          SELECT p.media_type as MEDIA, sum(s.store_sales) as SALES                                                            
+          FROM sales_fact_1998 s                                    
+          JOIN promotion p on s.promotion_id=p.promotion_id                                                                    
+          GROUP BY p.media_type                                     
 
+It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or Javascript) and associating it to the query. Click on the **Edit Script** button (see :numref:`scripteditingdataset`) and the script editor will open. Here you can write the script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
 
+.. _scripteditingdataset:
+.. figure:: media/image31.png
 
-It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or Javascript) and associating it to the query. Click on the **Edit Script** button (see Figure 3.7) and the script editor will open. Here you can write the script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
+    Script editing for dataset.
 
 In Code Query dataset’s script example we uses Javascript to dynamically modify the FROM clause of the original query according to the value of the parameter year selected at runtime by the user.
-
-   |image23|
-
-   Figure 3.7: Script editing for dataset.
 
 .. code-block:: javascript
          :caption:  Query dataset’s script example
          :linenos:
 
-         if( parameters.get('year') == 1997 ) { query = query.replace(FROM  
-         sales_fact_1998, FROM sales_fact_1997);                            
-         } else { query = query; // do nothing                                 
-         }                                                                     
-
+          if( parameters.get('year') == 1997 ) { query = query.replace(FROM  
+          sales_fact_1998, FROM sales_fact_1997);                            
+          } else { query = query; // do nothing                                 
+          }                                                                     
 
 Java Class Dataset
 ~~~~~~~~~~~~~~~~~~
@@ -189,14 +169,13 @@ Selecting a dataset of **Java Class** type allows the execution of complex data 
          :caption:  
          :linenos:
 
-         <ROWS>                           
-         <ROW value="value1" .../>     
-         <ROW value="value2" .../> ... 
-         </ROWS>                          
+          <ROWS>                           
+          <ROW value="value1" .../>     
+          <ROW value="value2" .../> ... 
+          </ROWS>                          
 
 -  public List getNamesOfProfileAttributeRequired();
    This method provides the names of profile attributes used by this dataset implementation class. This is a utility method, used during dataset execution.
-
 
 
 Script
@@ -208,11 +187,10 @@ If you select this option, the results of the dataset will be produced by a scri
          :caption:  
          :linenos:
 
-         <ROWS>                           
-         <ROW value="value1" .../>     
-         <ROW value="value2" .../> ... 
-         </ROWS>   
-
+          <ROWS>                           
+          <ROW value="value1" .../>     
+          <ROW value="value2" .../> ... 
+          </ROWS>   
 
 If the script returns a single value, this will be automatically encoded in the XML format above. The script must be written using Groovy or Javascript language. Knowage already provides some Groovy and Javascript functions returning the value of a single or multi-value profile attribute. These functions are explained in the information window that can be opened from the **Dataset Type** tab. New custom functions can be added in *predefinedGroovyScript.groovy* and *predefinedJavascript.js* files contained in the *KnowageUtils.jar* file.
 
@@ -223,11 +201,11 @@ This is available only in KnowageBD and KnowageSI.
 
 The QbE dataset type option allows the definition of dataset results based on a query defined over a metamodel. To define a QbE dataset you need to select the Data Source and Datamart that you want to use. Once chosen your datamart you can click the lookup button of the Open QbE field and a pop up window will appear showing a QbE interface where you can define your query. Once saved, you can check the generated query thanks to the View QbE Query.
 
-All these features are exhibited in Figure 3.8.
+All these features are exhibited below.
 
-   |image24|
+.. figure:: media/image32.png
 
-   Figure 3.8: QbE Dataset.
+    QbE Dataset.
 
 Custom Dataset
 ~~~~~~~~~~~~~~
@@ -255,11 +233,11 @@ The full class name (package included) must be set on the Java class name field,
 Flat Dataset
 ^^^^^^^^^^^^
 
-A flat dataset allows the retrieval of an entire table from a data source. In other words, it replaces a dummy query like "select \* from sales" by automatically retrieving all rows in a table. To create a flat dataset, simply enter the table and the data source name, as shown in Figure 3.9.
+A flat dataset allows the retrieval of an entire table from a data source. In other words, it replaces a dummy query like "select \* from sales" by automatically retrieving all rows in a table. To create a flat dataset, simply enter the table and the data source name, as shown below.
 
-   |image25|
+.. figure:: media/image33.png
 
-   Figure 3.9: Flat Dataset.
+    Flat Dataset.
 
 Ckan
 ^^^^
@@ -405,9 +383,9 @@ In this example we have two **Context Elements** with the following attributes:
 
 Let’s see how to define a Knowage dataset:
 
-   |image26|
+.. figure:: media/image34.png
 
-   Figure 3.10: REST dataset interface.
+    REST dataset interface.
 
 We specified
 
@@ -450,7 +428,7 @@ In the above examples, the JSON Path Items will be: $.contextResponses[:sub:`\*`
 
 
 .. table:: Dataset result
-  :widths: auto
+    :widths: auto
   
   +---------------+-----------------------+---------------------+
   |    prosumerId | downstreamActivePower | upstreamActivePower |
@@ -502,17 +480,16 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
 
     -  if it’s an object, the resulting dataset contains a column for each property of the object.
 
-   For example, if we consider the query sbiDatasetfixedResult = {a:2, b:3}, the dataset is as shown in Table  3.3
+   For example, if we consider the query sbiDatasetfixedResult = {a:2, b:3}, the dataset is as shown in Table  below.
    
 .. table:: Dataset output
   :widths: auto
 
-  +------+------+
-  |    a |    b |
-  +======+======+
-  |    2 | 3    |
-  +------+------+
-
+   +------+------+
+   |    a |    b |
+   +======+======+
+   |    2 | 3    |
+   +------+------+
 
 
    -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
@@ -523,26 +500,21 @@ For istance, let’s consider the query sbiDatasetfixedResult = [{a:2, b:3},{a:2
 .. table:: Dataset output
   :widths: auto
 
-  +------+------+------+
-  |    a | b    |    c |
-  +======+======+======+
-  |    2 |    3 |      |
-  +------+------+------+
-  |    2 |      | 3    |
-  +------+------+------+
-
+   +------+------+------+
+   |    a | b    |    c |
+   +======+======+======+
+   |    2 |    3 |      |
+   +------+------+------+
+   |    2 |      | 3    |
+   +------+------+------+
 
 
 The result of a query in MongoDB can assume different shapes: Cursor, Document, List, fix value. Knowage can manage automatically the result of the query. The algorithm to understand how to manage the result is very simple.
 
 -  If in the query it finds the variable sbiDatasetfixedResult the result will be managed as described above.
-
 -  If in the query it finds a findOne the result will be managed as a single document.
-
 -  If in the query it finds an aggregate the result will be managed as an aggregation.
-
 -  In the ether cases the result will be managed as a Cursor.
-
 
 
 It’s possible to force the behaviour. In particular the result stored in the variable query, will be managed:
@@ -552,42 +524,38 @@ It’s possible to force the behaviour. In particular the result stored in the v
 .. code-block:: javascript 
          :linenos:
            
-         var retVal= "LIST_DOCUMENTS_QUERY“;
+          var retVal= "LIST_DOCUMENTS_QUERY“;
 
 -  a document if in the script exist a variable with value SINGLE_DOCUMENT_QUERY. Example:
 
 .. code-block:: javascript 
          :linenos:
            
-         var retVal= "SINGLE_DOCUMENT_QUERY”;
+          var retVal= "SINGLE_DOCUMENT_QUERY”;
 
 
 Similar techniques can be applied to the other languages. We leave the reader to examine the dialect related to each Big Data datasource.
 
-  Parameters and profile attributes
+Parameters and profile attributes
 --------------------------------------
 
 All dataset types except **File** and **CKAN** allow you to add parameters. This means that results can be customized according to the value of one or more parameters at execution time. Parameters can be managed from the **Type** tab. Two operations are needed to add a parameter to the dataset:
 
 1. insert the parameter in the actual text of the dataset;
-
 2. create the parameter in the parameters list below the editor area.
 
 The syntax to add a parameter in the dataset code text is *$P{parameter_name}*. At dataset execution time, the parameter will be replaced by its actual value.
 
-      .. warning::
-         **Attention to parameters’ names!**
+.. warning::
+     **Attention to parameters’ names!**
          
          If the dataset is used by a Knowage document, then the document parameters’ URL must match the parameter name set in the dataset **Type** tab, in order for the dataset to be passed correctly.
          
 Any parameter added to your dataset must be added to the parameters list, too. To add a parameter in the list, click the **Add** button. A new row will be created in the list: double click the name and edit the parameter values. There are three different types of parameters. For each of them the placeholder will be replaced according to a different pattern, as follows:
 
    **String**: the parameter value will be surrounded with single quotes if not already present.
-
    **Number**: the parameter value is treated as a number, with no quotes; an exception is thrown if the value passed is not a number.
-
    **Raw**: the parameter value is treated as a string containing a set of values; single quotes are removed from the containing string, not from the single strings composing it.
-
    **Generic**: the parameter is simply passed as is, with no futher processing.
 
 In SQL query example with parameters an example is provided, where MediaType is a string parameter.
@@ -610,22 +578,21 @@ In SQL query example with parameters an example is provided, where MediaType is 
          p.media_type                                                       
 
 
-Datasets of type Query and Script can also use *profile attributes*. Differently from parameters, profile attributes do not need to be   explicitly added to the parameter list since they have been defined elsewhere. Clicking the **Available Profile Attribute** button you can see all profile attributes defined in the behavioral model and choose the one(s) you wish to insert in the dataset query/script   text, as shown in Figure 3.11.
+Datasets of type Query and Script can also use *profile attributes*. Differently from parameters, profile attributes do not need to be   explicitly added to the parameter list since they have been defined elsewhere. Clicking the **Available Profile Attribute** button you can see all profile attributes defined in the behavioral model and choose the one(s) you wish to insert in the dataset query/script   text, as shown below.
 
-   |image28|
+.. figure:: media/image35.png
 
-   Figure 3.11: Profile Attributes assignment.
+    Profile Attributes assignment.
 
 The syntax to include attributes into the dataset text is *${attribute_name}*. Profile attributes can be single-value or multivalue.
 
-         .. note::
-         **User profile attributes**
+.. note::
+     **User profile attributes**
          
          Each Knowage user is assigned a profile with attributes. The user profile is part of the more general behavioural model, which allows tailored visibility and permissions on Knowage documents and functionalities.
 
    
-
-  Further operations on a dataset
+Further operations on a dataset
 ------------------------------------
 
 Transformations
@@ -636,19 +603,15 @@ In some cases it is useful to perform transformations on the results of a datase
 To set a pivot transformation, select **Pivot Transformer** in the drop down menu of the **Transformation** tab. Then set the following fields:
 
 -  **Name of Category Column to be Pivoted**. Here you should write the name of the dataset column whose values will be mapped onto columns after pivoting.
-
 -  **Name of Value Column to be Pivoted**. Here you should write the name of the result set column, whose values should become values of the previous columns (category columns).
-
 -  **Name of the Column not to be Pivoted**. Here you should write the name of those columns that should not be altered during the transformation.
-
 -  In case you wish to add a number to category columns (e.g., 1_name_of_column), you should check the option Automatic Columns numeration.
 
+An example of usage is available in figure below, showing the result set of the dataset.
 
-An example of usage is available in Figure 3.12, showing the result set of the dataset.
+.. figure:: media/image36.png
 
-   |image30|
-
-   Figure 3.12: Pivot transformation.
+    Pivot transformation.
    
 
 Dataset persistence
@@ -663,11 +626,11 @@ With KnowageBD, KnowageER and KnowageSI products you can also decide to schedule
 Preview
 ~~~~~~~
 
-Before actually using the dataset in a document, it is a good practice to test it. Clicking the **Preview** button within the **Preview** tab, you can see a preview of the result set, see Figure 3.13. This allows the developer to check any anomaly or possible error in the dataset definition, before using it.
+Before actually using the dataset in a document, it is a good practice to test it. Clicking the **Preview** button within the **Preview** tab, you can see a preview of the result set, see the following figure. This allows the developer to check any anomaly or possible error in the dataset definition, before using it.
 
-   |image31|
+.. figure:: media/image37.png
 
-   Figure 3.13: Dataset preview (left) and parameters prompt window (right).
+    Dataset preview (left) and parameters prompt window (right).
 
 
 If some parameters have been set, a window with their list will be shown: their values must be entered by double clicking on the set to string, just write the value you want to assign in the preview: quotes will be added automatically. On the other hand, if the type is raw or generic but you want to input text, then remember to add quotes to the test value.
