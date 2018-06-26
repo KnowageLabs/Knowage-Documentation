@@ -12,7 +12,6 @@ Functionalities
    Alert/ka_Alert.rst
    Cockpit/ka_user_cockpit.rst
    Datamining/ka_user_datamining.rst
-   Datamining/ka_dev_datamining.rst
    Dataset/ka_dev_dataset.rst
    FreeInquiry/ka_user_freeinquiry.rst
    Glossary/ka_dev_glossary.rst
