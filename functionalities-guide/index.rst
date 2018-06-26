@@ -13,6 +13,8 @@ Functionalities
    Cockpit/ka_user_cockpit.rst
    FreeInquiry/ka_user_freeinquiry.rst
    MetaWeb/ka_dev_metaweb.rst
+   Reporting/ka_dev_reporting.rst
+   Reporting/ka_user_reporting.rst
    Jasper/ka_dev_jasper.rst
    LocationIntelligence/ka_dev_introlocationintelligence.rst
    LocationIntelligence/ka_user_locationintelligence.rst
@@ -28,8 +30,6 @@ Functionalities
    QbeMeta/ka_dev_introqbemeta.rst
    Registry/ka_dev_registry.rst
    Registry/ka_user_registry.rst 
-   Reporting/ka_dev_reporting.rst
-   Reporting/ka_user_reporting.rst
    ScoreCard/ka_Scorecard.rst
    SVG/ka_dev_svg.rst
    SVG/ka_user_svg.rst
