@@ -6,6 +6,7 @@ Functionalities
    :caption: Table of Contents
    :maxdepth: 10
    
+   MyData/ka_user_my_data.rst
    Dataset/ka_dev_dataset.rst 
    BehavioralModel/ka_dev_behavioralmodel.rst
    AnalyticalDocument/ka_dev_analyticaldoc.rst
@@ -19,8 +20,7 @@ Functionalities
    Datamining/ka_user_datamining.rst
    Alert/ka_Alert.rst
    Glossary/ka_dev_glossary.rst
-   KPI/ka_KPI.rst
-   MyData/ka_user_my_data.rst
+   KPI/ka_KPI.rst 
    Network/ka_dev_network.rst
    OLAP/ka_dev_OLAP.rst
    OLAP/ka_user_OLAP.rst
