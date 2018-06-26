@@ -201,7 +201,7 @@ The select sub-section has a toolbar with additional functionalities summarized 
    +-----------------------------------+-----------------------------------+
 
 Filters
-^^^^^^^^^^^^^^^^
+^^^^^^^^
 
 The **Filters** panel allows you to define filter criteria (WHERE clause). Similarly to the select area, filters are structured as a table: here rows contain filters, while columns represent the elements of the filter.
 
@@ -578,33 +578,34 @@ We highlight that the new features are available only if the model has at least 
       
       To have a temporal dimension that can be used in the Qbe interface an expert user must enable it first on the model using               Knowage Meta. Use the **property view** to set/change the type of the dimension as shown in Figure 9.16. Refer to Chapter ?? to         learn how to use Knowage Meta.
 
-The temporal dimension can have one or more hierarchies. Only one of these can stay active and that is the one used by the query code. Figure 9.17 shows that a temporal dimension can have one or more hierarchies. In the case of more hierarchies the user can see which is the one set by default just exploring the dimension: the bold highlighted hierarchy is the primary. On the other hand the user can change the default choice by right-clicking on the target dimension hierarchy and selecting “\ *Set as Default Hierarchy*\ ”.
+The temporal dimension can have one or more hierarchies. Only one of these can stay active and that is the one used by the query code. Figure below shows that a temporal dimension can have one or more hierarchies. In the case of more hierarchies the user can see which is the one set by default just exploring the dimension: the bold highlighted hierarchy is the primary. On the other hand the user can change the default choice by right-clicking on the target dimension hierarchy and selecting “\ *Set as Default Hierarchy*\ ”.
 
-   |image230|
+.. figure:: media/image224.png
 
-   Figure 9.16: Temporal dimension definition on Meta.
+    Temporal dimension definition on Meta.
    
-   |image231|
+.. figure:: media/image225.png
 
-   Figure 9.17: Temporal hierarchy visualization (Left). Changing hierarchies (Right).
+    Temporal hierarchy visualization (Left). Changing hierarchies (Right).
 
-Furthermore there is the possibility to set a “time” dimension as Figure 9.18 displays.
+Furthermore there is the possibility to set a “time” dimension as Figure below displays.
 
-   |image232|
+.. figure:: media/image227.png
 
-   Figure 9.18: Time dimension.
+    Time dimension.
 
-The user can use the elements of each dimension as attributes in the “Select” instance. Note that if one drags and drops of element to be used as a filter also its parent nodes will be brought too. Figure 9.19 exhibits one example. Remember to assign a value to each parent node before you run the query.
+The user can use the elements of each dimension as attributes in the “Select” instance. Note that if one drags and drops of element to be used as a filter also its parent nodes will be brought too. The following figure exhibits one example. Remember to assign a value to each parent node before you run the query.
 
-   |image233|
+.. figure:: media/image228.png
 
-   Figure 9.19: Filter on an element means to filter also on its parent nodes.
+    Filter on an element means to filter also on its parent nodes.
 
-Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in Figure 9.20 (Left). The action opens the pop up displayed in Figure 9.20 (Right).
+Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in :numref:`iaddtempfiltersleftright`) (Left). The action opens the pop up displayed in :numref:`iaddtempfiltersleftright`) (Right).
 
-   |image234|
+.. _iaddtempfiltersleftright:
+.. figure:: media/image229.png
 
-   Figure 9.20: Add temporal filters (Left). List of available elements (Right).
+    Add temporal filters (Left). List of available elements (Right).
 
 In the list of available elements is made up of:
 
@@ -617,9 +618,9 @@ In the list of available elements is made up of:
 
 Inside the section “Select” you can use the temporal operators directly on attributes.
 
-   |image235|
+.. figure:: media/image231.png
 
-   Figure 9.21: Apply operators directly on attributes.
+    Apply operators directly on attributes.
 
 For each function there is the possibility to assing a value to a parameter that indicates how long the function will act. We now describe the working principles of temporal functions.
 
@@ -630,73 +631,75 @@ This function allows to manage and study measures on parallel periods. For examp
 
 -  no temporal filter is set and the temporal functions are applied directly on measures. In this case the current year is taken as        default value. When the functions are applied on measures the user must apply them on ALL measures in order to have a coherent          result.
 
-1. In the case the user wants the sum of a measure relative to current year, he/she must drag and drop the measure in the “select          fields” panel and launch the temporal function PARALLEL_YEAR passing 0 as value. See Figure 9.22 as example.
+1. In the case the user wants the sum of a measure relative to current year, he/she must drag and drop the measure in the “select          fields” panel and launch the temporal function PARALLEL_YEAR passing 0 as value. See Figure below as example.
 
-   |image236|
+.. figure:: media/image232.png
 
-   Figure 9.22: PARALLEL_YEAR example: sum of a measure referred to a specific time year.
+    PARALLEL_YEAR example: sum of a measure referred to a specific time year.
 
-2. In the case the user wants to compare the sales of 2016 with those of the previous year. He/she has to drag twice the measure inside    the “select fields” panel and indicate the temporal function “PARALLEL_YEAR” using 0 and 1 as value parameters. See Figure 9.23.
+2. In the case the user wants to compare the sales of 2016 with those of the previous year. He/she has to drag twice the measure inside    the “select fields” panel and indicate the temporal function “PARALLEL_YEAR” using 0 and 1 as value parameters.
 
-   |image237|
+.. figure:: media/image233.png
 
-   Figure 9.23: PARALLEL_YEAR example: comparing data with different time interval.
+    PARALLEL_YEAR example: comparing data with different time interval.
 
--  Suppose now that the analysis requires to compare the unit sold from January to March of the current year with that of the same time    interval of the previous one. In this instance the user must set the temporal filter which will be the point of reference as shown      in Figure 9.24.
+-  Suppose now that the analysis requires to compare the unit sold from January to March of the current year with that of the same time    interval of the previous one. In this instance the user must set the temporal filter which will be the point of reference.
 
-   |image238|
+.. figure:: media/image234.png
 
-   Figure 9.24: PARALLEL_YEAR example: setting the temporal filter.
+    PARALLEL_YEAR example: setting the temporal filter.
 
 Remember that the temporal filter uses the “IN” operator.
 
 -  In the case one wants to compare the sales per month of the current year with the ones of the parallel year, the user should add the    month field in the select clause (picking it up from the used temporal hierarchy) and group by it.
 
-   |image239|
+.. figure:: media/image236.png
 
-   Figure 9.25: Comparing results with those of the parallel year.
+    Comparing results with those of the parallel year.
 
-An example of data visualization is given in Figure 9.26 and in Figure 9.27.
+An example of data visualization is given in the two figures below.
 
-   |image240|
+.. figure:: media/image237.png
 
-   Figure 9.26: Comparing results with those of two parallel years.
+    Comparing results with those of two parallel years.
 
-   |image241|
+.. figure:: media/image238.png
 
-   Figure 9.27: Comparing results with those of three parallel years.
+    Comparing results with those of three parallel years.
 
 The **LAST\ \_\ YEAR** function.
 
 This function allows the user to sum a measure referring to last period data. If the temporal filter isn’t set, the engine takes the current year by default, otherwise the chosen one.
 
--  In our example in Figure 9.28 and Figure 9.29 the period is the year. Here we compare last-year sold products to the sum of those      sold in last two years.
--  Referring to Figure 9.30 and Figure 9.31 give an example of how to define a time reference, for instance 2015. In this case I pass      2015 to the filter.
--  In case the user wants to inspect the evolution of sales per month of the current year comparing them with those of last year plus      the current. It is sufficient to add the month in the “selected fields” area and the measure “unit sold” where the LAST_YEAR            function is set on 0 or 1. Figure 9.32 and Figure 9.33 show an example.
+-  In our example in the two figures below the period is the year. Here we compare last-year sold products to the sum of those      sold in last two years.
 
-   |image242|
+.. figure:: media/image239.png
 
-   Figure 9.28: LAST_YEAR function.
+    LAST_YEAR function.
 
-   |image243|
+.. figure:: media/image240.png
 
-   Figure 9.29: Comparing LAST_YEAR results.
+    Comparing LAST_YEAR results.
+   
+-  Referring to figures below give an example of how to define a time reference, for instance 2015. In this case I pass      2015 to the filter.
 
-   |image244|
+.. figure:: media/image241.png
 
-   Figure 9.30: LAST_YEAR function example: changing the reference year.
+    LAST_YEAR function example: changing the reference year.
 
-   |image245|
+.. figure:: media/image243.png
 
-   Figure 9.31: LAST_YEAR function example: output of changing the reference year.
+    LAST_YEAR function example: output of changing the reference year.
+   
+-  In case the user wants to inspect the evolution of sales per month of the current year comparing them with those of last year plus      the current. It is sufficient to add the month in the “selected fields” area and the measure “unit sold” where the LAST_YEAR            function is set on 0 or 1. The two following figures show an example.
 
-   |image246|
+.. figure:: media/image244.png
 
-   Figure 9.32: LAST_YEAR function example: last-year sold products compared to the last-twoyear ones.
+    LAST_YEAR function example: last-year sold products compared to the last-twoyear ones.
 
-   |image247|
+.. figure:: media/image245.png
 
-   Figure 9.33: LAST_YEAR function example: output of last-year sold products compared to the last-two-year ones.
+    LAST_YEAR function example: output of last-year sold products compared to the last-two-year ones.
 
 Note that the operator allows to visualize the sum of sales upon 2 years per month. In other words, LAST_YEAR(1) set to the month level starts the progression from the aggregated value of 2015 to which it adds the sales of 2016.
 
@@ -704,173 +707,173 @@ The **LAST\ \_\ MONTH** function.
 
 This operator is very similar to the previous one. In this case the reference time period is the month. Remember that if the user does not specify the name of the referenced month the system will take the current one by default.
 
--  Figure 9.34 and Figure 9.35 the user wants to count the sales of last three months.
+-  The user wants to count the sales of last three months.
 
-   |image248|
+.. figure:: media/image246.png
 
-   Figure 9.34: LAST_MONTH function example: setting time reference.
+    LAST_MONTH function example: setting time reference.
 
-   |image249|
+.. figure:: media/image247.png
 
-   Figure 9.35: LAST_MONTH function example: setting time reference.
+    LAST_MONTH function example: setting time reference.
 
--  Figure 9.36 shows how to aggregate data up to last three months per each month of the current year. Remember to add the month in the    section “selected fields”. Therefore, inserting the month in the select clause the user obtains a projection on current year of        sales of last 3 months per each month. Note that data are related to the current year, namely there is no shift to the passed one.      Pay attention to the fact that if one month is missing the system does not notice it and return a sum relative to a bigger time        period.
+-  Figure below shows how to aggregate data up to last three months per each month of the current year. Remember to add the month in the section “selected fields”. Therefore, inserting the month in the select clause the user obtains a projection on current year of sales of last 3 months per each month. Note that data are related to the current year, namely there is no shift to the passed one. Pay attention to the fact that if one month is missing the system does not notice it and return a sum relative to a bigger time period.
 
-   |image250|
+.. figure:: media/image248.png
 
-   Figure 9.36: LAST_MONTH function example: sum up to last 3 months.
+    LAST_MONTH function example: sum up to last 3 months.
+    
+.. figure:: media/image249.png
 
--  The same query can be performed cosidering a specific year. In Figure 9.38 and Figure 9.39 year 2015 has been selected.
+    LAST_MONTH function example: sum up to last 3 months output.
 
--  If the user wants to compare sales per month to those of the previuos month summed to the current one. Results in Figure 9.40 and      Figure 9.41 reflect this selection.
+-  The same query can be performed cosidering a specific year. In the following figures year 2015 has been selected.
+  
+.. figure:: media/image250.png
 
-   |image251|
+    LAST_MONTH function example: sum up to last 3 months where year is 2015.
+   
+.. figure:: media/image252.png
 
-   Figure 9.37: LAST_MONTH function example: sum up to last 3 months output.
+    LAST_MONTH function example: output when one sums up to last 3 months output where year is 2015.
 
-   |image252|
+-  If the user wants to compare sales per month to those of the previuos month summed to the current one. Results in the following figures reflect this selection.
 
-   Figure 9.38: LAST_MONTH function example: sum up to last 3 months where year is 2015.
+.. figure:: media/image253.png
 
-   |image253|
+    LAST_MONTH function example: sales per month aganst the sum of current and previous month sales.
 
-   Figure 9.39: LAST_MONTH function example: output when one sums up to last 3 months output where year is 2015.
+.. figure:: media/image254.png
 
-   |image254|
-
-   Figure 9.40: LAST_MONTH function example: sales per month aganst the sum of current and previous month sales.
-
-   |image255|
-
-   Figure 9.41: LAST_MONTH function example: results of sales per month aganst the sum of current and previous month sales.
+    LAST_MONTH function example: results of sales per month aganst the sum of current and previous month sales.
 
 The YTD function
 ++++++++++++++++
 
 This operator aggregate the measure of the first day of the year up to the execution date (currentDay). If the user sets temporal filters the YTD function must refer to the filter. The chosen day will be used as reference by the function. For example, if the user sets “15/03/2016” as reference day, the function sums starting from the first of January up to the 15th of March (2016). Observe that if the filter is monthly the engine will take the last day of the month, while if it is yearly the engine will take the whole year. If the user inserts a temporal element as aggregation function the measure must be aggregated progressively.
 
--  Figure 9.42 and Figure 9.43 shows the case in which the user wants to count the sales from the beginning of the year up to now.
+-  Below shows the case in which the user wants to count the sales from the beginning of the year up to now.
 
-   |image256|
+.. figure:: media/image255.png
 
-   Figure 9.42: YTD function example: to count the sales from the beginning of the year up to now.
+    YTD function example: to count the sales from the beginning of the year up to now.
+   
+.. figure:: media/image256.png
 
--  Figure 9.44 and Figure 9.45 shows the case in which the user wants to count the sales from the beginning of the year up to the end      of March.
+    YTD function example: number of sales from the beginning of the year up to now.
 
--  Figure 9.46 refers to the case where the user wishes to sum 2015 sales considering the day in which the query is executed but of        the previuos year.
+-  Below shows the case in which the user wants to count the sales from the beginning of the year up to the end      of March.
 
--  Figure 9.47 refers instead to the case where the user wishes to sum 2015 sales of first 3 months of 2015.
+.. figure:: media/image257.png
 
-   |image257|
+    YTD function example: to count the sales from the beginning of the year up to the end of March.
+   
+.. figure:: media/image258.png
 
-   Figure 9.43: YTD function example: number of sales from the beginning of the year up to now.
+    YTD function example: to count the sales from the beginning of the year up to the end of March.
 
-   |image258|
+-  The following figure refers to the case where the user wishes to sum 2015 sales considering the day in which the query is executed but of the previuos year.
 
-   Figure 9.44: YTD function example: to count the sales from the beginning of the year up to the end of March.
+.. figure:: media/image259.png
 
-   |image259|
+    YTD function example: sum 2015 sales considering the day in which the query is executed but of the previuos year.
 
-   Figure 9.45: YTD function example: to count the sales from the beginning of the year up to the end of March.
+-  The following figure refers instead to the case where the user wishes to sum 2015 sales of first 3 months of 2015.
 
-   |image260|
+.. figure:: media/image260.png
 
-   Figure 9.46: YTD function example: sum 2015 sales considering the day in which the query is executed but of the previuos year.
+    YTD function example: sales summed up to the first 3 months of 2015.
 
-   |image261|
+-  In the following figures the user is comparing the unit sold from the beginning of the year with those of the previuos year.      The engine considers the day of query execution as end of the time period.
 
-   Figure 9.47: YTD function example: sales summed up to the first 3 months of 2015.
+.. figure:: media/image262.png
 
--  In Figure 9.48 and Figure 9.49 the user is comparing the unit sold from the beginning of the year with those of the previuos year.      The engine considers the day of query execution as end of the time period.
+    YTD function example: comparing the unit sold from the beginning of the year with those of the previuos year.
 
-   |image262|
+.. figure:: media/image263.png
 
-   Figure 9.48: YTD function example: comparing the unit sold from the beginning of the year with those of the previuos year.
+    YTD function example: output when comparing the unit sold from the beginning of the year with those of the previuos        year.
 
-   |image263|
+-  Figures below shows the instance when the user wants to see the sum of unit sold each month after having added the month      field in the select clause.
 
-   Figure 9.49: YTD function example: output when comparing the unit sold from the beginning of the year with those of the previuos        year.
+.. figure:: media/image264.png
 
--  Figure 9.50 Figure 9.51 shows the instance when the user wants to see the sum of unit sold each month after having added the month      field in the select clause.
+    YTD function example: sum of unit sold each month after having added the month field in the select clause.
 
-   |image264|
+.. figure:: media/image265.png
 
-   Figure 9.50: YTD function example: sum of unit sold each month after having added the month field in the select clause.
-
-   |image265|
-
-   Figure 9.51: YTD function example: output when one sums unit sold each month after having added the month field in the select          clause.
+    YTD function example: output when one sums unit sold each month after having added the month field in the select          clause.
 
 The MTD function
 ++++++++++++++++
 
 The MTD function follows the same logic as the YTD function but using the month.
 
--  Figure 9.52 shows the case in which the user wants to check the unit sold during the current month.
+-  Figure below shows the case in which the user wants to check the unit sold during the current month.
 
-   |image266|
+.. figure:: media/image266.png
 
-   Figure 9.52: MTD function example: check the unit sold during the current month.
+    MTD function example: check the unit sold during the current month.
 
--  In Figure 9.53 and Figure 9.54 the user wants to check the aggregated sales of last 7 months, current (relative to the execution        time) month included.
+-  The following figures the user wants to check the aggregated sales of last 7 months, current (relative to the execution        time) month included.
 
-   |image267|
+.. figure:: media/image267.png
 
-   Figure 9.53: MTD function example: aggregated sales of last 7 months.
+     MTD function example: aggregated sales of last 7 months.
+   
+.. figure:: media/image268.png
 
--  Another case is shown in Figure 9.55 and Figure 9.56 where sales are aggregated on current month plus the previuos one, relative to    the current year (referring to the query execution time).
+     MTD function example: output of the aggregated sales of last 7 months.
 
--  Figure 9.57 and Figure 9.58 shows a user that is summing the sales of current month
+-  Another case is shown in figures below where sales are aggregated on current month plus the previuos one, relative to    the current year (referring to the query execution time).
 
-   |image268|
+.. figure:: media/image269.png
 
-   Figure 9.54: MTD function example: output of the aggregated sales of last 7 months.
+    MTD function example: sales are aggregated on current month plus the previuos one, relative to the current year.
 
-   |image269|
+.. figure:: media/image270.png
 
-   Figure 9.55: MTD function example: sales are aggregated on current month plus the previuos one, relative to the current year.
+    MTD function example: output when sales are aggregated on current month plus the previuos one, relative to the current    year (referring to the query execution time) for the present year.
 
-   |image270|
+-  Figures below shows a user that is summing the sales of current month
 
-   Figure 9.56: MTD function example: output when sales are aggregated on current month plus the previuos one, relative to the current    year (referring to the query execution time) for the present year.
+.. figure:: media/image271.png
 
-   |image271|
+    MTD function example:sales of current month for the present year.
 
-   Figure 9.57: MTD function example:sales of current month for the present year.
+.. figure:: media/image272.png
 
-   |image272|
+    MTD function example: output of the sales of current month for the present year.
 
-   Figure 9.58: MTD function example: output of the sales of current month for the present year.
+-  The following figures shows as a user can compare sales of aggregated months (up to the current) to the current one.
 
--  Figure 9.59 and Figure 9.60 shows as a user can compare sales of aggregated months (up to the current) to the current one.
+.. figure:: media/image273.png
 
-   |image273|
+    MTD function example:sales of current month for the present year.
+   
+.. figure:: media/image274.png
 
-   Figure 9.59: MTD function example:sales of current month for the present year.
+     MTD function example: output of the sales of current month for the present year.
 
--  Figure 9.61 and Figure 9.62 shows a case very similar to the previous one. In this case the next month is added to the sum.
+-  Below shows a case very similar to the previous one. In this case the next month is added to the sum.
 
--  Figure 9.63 and Figure 9.64 shows a case very similar to the previous one. In this case the reference year is specified through a      filtering condition.
+.. figure:: media/image275.png
 
-   |image274|
+    MTD function example: sum of sales of months up to now plus next month.
 
-   Figure 9.60: MTD function example: output of the sales of current month for the present year.
+.. figure:: media/image276.png
 
-   |image275|
+    MTD function example: output when one sums sales of months up to now plus next month.
 
-   Figure 9.61: MTD function example: sum of sales of months up to now plus next month.
+-  The following figures shows a case very similar to the previous one. In this case the reference year is specified through a      filtering condition.
 
-   |image276|
+.. figure:: media/image277.png
 
-   Figure 9.62: MTD function example: output when one sums sales of months up to now plus next month.
+    MTD function example: sum of sales of months up to now plus next month for a different year.
 
-   |image277|
+.. figure:: media/image278.png
 
-   Figure 9.63: MTD function example: sum of sales of months up to now plus next month for a different year.
-
-   |image278|
-
-   Figure 9.64: MTD function example: output when one sums sales of months up to now plus next month for a different year.
+    MTD function example: output when one sums sales of months up to now plus next month for a different year.
 
 
 Catalogues
@@ -890,11 +893,11 @@ Several queries can be built over the same QbE datamart. The catalogue lists all
 
 To create a new query, click the icon |image279|. The query appears in the catalogue at the same level as the base query. Using the query editor you can create the query and save it.
 
-The **QbE Engine** also supports the definition and usage of subqueries similarly to the SQL language. As a result, you can define a subquery and use it within a filter in association to the in/not in operator, as shown in Figure 9.65. To create a new subquery, which can be used as a filter inside the main query, click on |image280|. The query appears in the catalogue as a child node of the base query.
+The **QbE Engine** also supports the definition and usage of subqueries similarly to the SQL language. As a result, you can define a subquery and use it within a filter in association to the in/not in operator, as shown in Figure below. To create a new subquery, which can be used as a filter inside the main query, click on |image280|. The query appears in the catalogue as a child node of the base query.
 
-   |image281|
+.. figure:: media/image281.png
 
-   Figure 9.65: QbE query: use of a subquery in a filter.
+    QbE query: use of a subquery in a filter.
 
 Once defined the main query and the filter that contains the subquery, go to the **Query Catalogue** panel and click on |image282| . The query appears in the catalogue as a child node of the base query.
 
@@ -910,9 +913,9 @@ Multiple relationships
 
 The QbE includes a specific feature to thoroughly manage relationships among entities: users can create join paths from one table to another to be used in case of ambiguity. Let’s see in detail how it works through an example.
 
-   |image283|
+.. figure:: media/image283.png
 
-   Figure 9.66: Relationships ambiguity - Schema.
+    Relationships ambiguity - Schema.
 
 Using the schema and data model represented in Figure 9.66, suppose you have a model with the following relationships:
 
@@ -922,20 +925,20 @@ Using the schema and data model represented in Figure 9.66, suppose you have a m
 -  **Sales Fact** - **Customer**.
 
 
-Ambiguity arises when attributes coming from the various tables are dragged and dropped into the query that is build in the QbE, as in Figure 9.67. In this case, in order to identify the items sold by region, you may have one of the following join relationships:
+Ambiguity arises when attributes coming from the various tables are dragged and dropped into the query that is build in the QbE, as in Figure below. In this case, in order to identify the items sold by region, you may have one of the following join relationships:
 
 - **Sales Fact - Customer - Region**,
 - **Sales Fact - Store - Region**,
 
-   |image284|
+.. figure:: media/image284.png
 
-   Figure 9.67: Relationships ambiguity - Query definition.
+    Relationships ambiguity - Query definition.
 
-By clicking on the **Relationship Wizard** button in the top right corner of the query editor a pop-up window appears, where users can define the path as shown in Figure 9.68.
+By clicking on the **Relationship Wizard** button in the top right corner of the query editor a pop-up window appears, where users can define the path as shown below.
 
-   |image285|
+.. figure:: media/image285.png
 
-   Figure 9.68: Relationship wizard.
+    Relationship wizard.
 
 The images of Figure 9.68 show the double relationship between **Sales Fact** and **Region**, specifically:
 
@@ -944,48 +947,49 @@ The images of Figure 9.68 show the double relationship between **Sales Fact** an
 
 At this point, you can modify the relationship so as to eliminate ambiguity: for instance, if you wish to view the region related to a specific customer, first select the **Region** entity in the **Entity** panel on the left and double click the correct path in the panel on the right (the correct path and only the correct path has to be green-colored to be correctly selected).
 
-Remember to repeat this operation for all the entities listed in the **Entity** panel: now select the **Sales Fact** table and the correct path. If a wrong path is selected (green background), double click on the corresponding row to de-select it. The new configuration is shown in Figure 9.69.
+Remember to repeat this operation for all the entities listed in the **Entity** panel: now select the **Sales Fact** table and the correct path. If a wrong path is selected (green background), double click on the corresponding row to de-select it. The new configuration is shown below.
 
-   |image286|
+.. figure:: media/image286.png
 
-   Figure 9.69: Relationship Wizard - Choosing paths.
+    Relationship Wizard - Choosing paths.
 
-Once you are done, you can check the SQL code generated by the QbE query by clicking the Generated Query button. The relationship between Customer and Region is highlighted in bold, as shown in Figure 9.70.
+Once you are done, you can check the SQL code generated by the QbE query by clicking the Generated Query button. The relationship between Customer and Region is highlighted in bold, as shown below.
 
-   |image287|
+.. figure:: media/image287.png
 
-   Figure 9.70: Generated query.
+    Generated query.
 
 Aliases and relationships
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the data model includes various relationships between two tables, the QbE allows users to manage them using aliases. 
 
-To describe this feature, it is worth using an example. Suppose there is a double relationship between **Promotion** and **Time by Day** entities (see Figure 9.71).
+To describe this feature, it is worth using an example. Suppose there is a double relationship between **Promotion** and **Time by Day** entities (see :numref:`doublerelationship`)).
 
-   |image288|
+.. _doublerelationship:
+.. figure:: media/image288.png
 
-   Figure 9.71: Double relationships.
+    Double relationships.
 
-The two relationships concern the start date and end date of the promotion. As shown in the Figure 9.71, this information can be retrieved from the QbE graphical interface. The **Promotion** entity includes two relationships (see points 1 and 2 in the figure), whose tooltip returns information on how the relationship is structured (see point 3).
+The two relationships concern the start date and end date of the promotion. As shown in the :numref:`doublerelationship`), this information can be retrieved from the QbE graphical interface. The **Promotion** entity includes two relationships (see points 1 and 2 in the figure), whose tooltip returns information on how the relationship is structured (see point 3).
 
 If you wish to see the list of promotions with a specific start date and end date, it is necessary to drag and drop the **Name** of the promotion (from the **Promotion** entity) and the **The Date** field (from the **Time by Day** entity) two times by changing the alias, as well as the name of the column to be visualized in the results of the query (see points 4 and 5). 
 
 By executing the query, you will see that in the absence of specific indications, the system selects two relationships (path) at random.
 
-As mentioned in the previous paragraph, by opening the relationships wizard, users can see the list of entities relating to various paths, as well as the list of paths involving various entities. If you wish to use both relationships (end date and start date), select both as shown in Figure 9.72. The tooltip shows the complete path using an intuitive tree layout.
+As mentioned in the previous paragraph, by opening the relationships wizard, users can see the list of entities relating to various paths, as well as the list of paths involving various entities. If you wish to use both relationships (end date and start date), select both as shown below. The tooltip shows the complete path using an intuitive tree layout.
 
-   |image289|
+.. figure:: media/image289.png
 
-   Figure 9.72: Relationship wizard - Double relationships (I).
+    Relationship wizard - Double relationships (I).
 
 Once the relationships are selected in both entities, click on **Apply**.
 
-The window shown in Figure 9.73 will appear.
+The window shown below will appear.
 
-   |image290|
+.. figure:: media/image290.png
 
-   Figure 9.73: Relationship wizard - Double relationships (II).
+    Relationship wizard - Double relationships (II).
 
 It includes three sections:
 
@@ -997,17 +1001,17 @@ To distinguish the fields during the execution of the query, it is necessary to 
 
 In this case, select the **Time by day (rel BR\ \_\ Promotion\ \_..)** entity in the first column, then drag and drop the **End Date** field from the third column to the one in the middle. Repeat the same with the **Time by day (rel: t2\ \_\ fk)** entity and the **Start date** field.
 
-The results are shown in Figure 9.74. To check whether the association was correctly set, you can refer to the relationship specified in the tooltip.
+The results are shown below. To check whether the association was correctly set, you can refer to the relationship specified in the tooltip.
 
-   |image291|
+.. figure:: media/image291.png
 
-   Figure 9.74: Relationship wizard - Double relationships (III).
+    Relationship wizard - Double relationships (III).
 
-Click **Finish** and check the SQL code clicking **Generated Query**. Figure 9.75 shows the desired result.
+Click **Finish** and check the SQL code clicking **Generated Query**. Figure below shows the desired result.
 
-   |image292|
+.. figure:: media/image292.png
 
-   Figure 9.75: Double relationship preview.
+    Double relationship preview.
 
 Cross Navigation
 ~~~~~~~~~~~~~~~~~~~
@@ -1022,12 +1026,11 @@ In particular, the employment of calculated fields allows you to set hyperlinks 
 -  images;
 -  other Knowage documents.
 
+First of all, advanced functionalities have to be enabled. Open the **Calculated Field Wizard** by selecting **Add Calculated** in the toolbar. Then check the **Expert User** box. Here there are three types of Groovy script fields on the left.
 
-First of all, advanced functionalities have to be enabled. Open the **Calculated Field Wizard** by selecting **Add Calculated** in the toolbar. Then check the **Expert User** box. Here there are three types of Groovy script fields on the left, see Figure 9.76.
+.. figure:: media/image293.png
 
-   |image293|
-
-   Figure 9.76: Expert User mode activation.
+    Expert User mode activation.
 
    Let us provide detailed instructions to activate these options.
 
@@ -1043,11 +1046,11 @@ If **link** is selected, you can associate a field with an HTML page. The defaul
 
 where **TEXT** is the clickable field in the QbE query results table and **URL** is the URL of the HTML page you want to open.
 
-You can add this default code by opening the **Exp. Items** > **Groovy functions** folder and selecting the **link** item, as shown in Figure 9.77.
+You can add this default code by opening the **Exp. Items** > **Groovy functions** folder and selecting the **link** ite.
 
-   |image294|
+.. figure:: media/image294.png
 
-   Figure 9.77: Default code for adding a link.
+    Default code for adding a link.
 
 An example is provided by Add hyperlink.
 
@@ -1060,11 +1063,13 @@ An example is provided by Add hyperlink.
     return api.getLink(baseUrl,                                           
     dmFields['it.eng.spagobi.meta.Sales_fact_1998::  
     rel_customer_id_in_customer(rel_customer_id_in_customer):city']);  
+  
+The output is shown below(column City URL).
 
- Code 9.1: Add hyperlink
+.. figure:: media/image295.png
 
-The output is shown in Figure 9.78 (column City URL).
-
+    QbE results tab with hyperlink.
+   
 Images
 ^^^^^^^^
 
@@ -1075,12 +1080,17 @@ If you want to add an image, the code to be used to reference an image on the se
    
    return api.getImageLink("${IMAGE_URL}"); 
 
-As before, by cliking on **image** from the **Exp. Items** tree, this code is automatically added as shown in Figure 9.79.
+As before, by cliking on **image** from the **Exp. Items** tree, this code is automatically added as shown below.
 
-Replace the **IMAGE\_\ URL**\ with the path of your image. Code 9.2 produces a graphical result like the one shown in the **Bullet Chart** column of Figure 9.80.
+.. figure:: media/image296.png
+
+    Default code for adding an image.
+
+Replace the **IMAGE\_\ URL**\ with the path of your image. Code below produces a graphical result like the one shown in the **Bullet Chart** column of figure below.
 
 .. code:: javascript
    :linenos:
+   :caption: Add images.
    
     baseUrl = "http://localhost:8080/SpagoBIQbeEngine/img/inline/";       
     if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']<2){     
@@ -1089,36 +1099,26 @@ Replace the **IMAGE\_\ URL**\ with the path of your image. Code 9.2 produces a g
          return 'api.getImageLink("'+ baseUrl + 'bullet-green.png")';                                                 
     } else { return 'api.getImageLink("'+ baseUrl + 'bullet-yellow.png")'; }          
 
- Code 9.2: Add images.
+.. figure:: media/image297.png
 
-   |image295|
+    QbE results tab with custom image.
 
-   Figure 9.78: QbE results tab with hyperlink.
-
-   |image296|
-
-   Figure 9.79: Default code for adding an image.
-
-   |image297|
-
-   Figure 9.80: QbE results tab with custom image.
 
 Other Knowage documents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Generally speaking, when we talk about Cross Navigation we mostly refer to this case. To realize the navigation between Knowage documents, the code has to be customized so as to call the cross navigation service.
 
-Code 9.3 provides an example for Knowage 4.2 and later versions.
+Code below provides an example for Knowage 4.2 and later versions.
 
 .. code:: javascript
    :linenos:
+   :caption: Cross navigation configuration.
    
     return api.getCrossNavigationLink("${TEXT}",                                               
     "${TARGET_DOCUMENT_LABEL}",                                                                
     "${PARAMETERS}",                                                                           
     "${SUBOBJECT");                              
-
- Code 9.3: Cross navigation configuration.
 
 In particular:
 
@@ -1127,9 +1127,9 @@ In particular:
 -  PARAMETERS is the list of parameters you want to pass to the target  document (optional); 
 -  SUBOBJECT is the subobject name of the target document to which you want to navigate.
 
-   |image298|
+.. figure:: media/image298.png
 
-   Figure 9.81: Default cross navigation code.
+    Default cross navigation code.
    
    
 .. include:: freeinquiryThumbinals.rst
