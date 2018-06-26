@@ -458,7 +458,7 @@ The Selector widget works effectively as a ready-to-use filter panel.
     Selector widget execution example.
 
 Widget properties
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 Once one or more (above mentioned) widgets have been implemented, the technical user has some more options exploring the icon available at the right top corner of the widget itself, as Figure below highlights.
 
