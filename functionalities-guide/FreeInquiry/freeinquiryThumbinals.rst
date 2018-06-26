@@ -1,3 +1,18 @@
+.. |image221| image:: media/image217.png
+   :width: 0.19686in
+   :height: 0.21874in
+.. |image279| image:: media/image279.png
+   :width: 0.2756in
+   :height: 0.24659in
+.. |image280| image:: media/image280.png
+   :width: 0.19685in
+   :height: 0.2231in
+.. |image282| image:: media/image282.png
+   :width: 0.55118in
+   :height: 0.11672in
+
+
+
 
 .. |image212| image:: media/image208.png
    :width: 4.05119in
@@ -26,9 +41,6 @@
 .. |image220| image:: media/image216.png
    :width: 4.05122in
    :height: 1.78503in
-.. |image221| image:: media/image217.png
-   :width: 0.19686in
-   :height: 0.21874in
 .. |image222| image:: media/image218.png
    :width: 4.05117in
    :height: 1.84171in
@@ -200,18 +212,9 @@
 .. |image278| image:: media/image278.png
    :width: 4.05133in
    :height: 0.4691in
-.. |image279| image:: media/image279.png
-   :width: 0.2756in
-   :height: 0.24659in
-.. |image280| image:: media/image280.png
-   :width: 0.19685in
-   :height: 0.2231in
 .. |image281| image:: media/image281.png
    :width: 4.05099in
    :height: 1.93675in
-.. |image282| image:: media/image282.png
-   :width: 0.55118in
-   :height: 0.11672in
 .. |image283| image:: media/image283.png
    :width: 2.89369in
    :height: 2.6916in
