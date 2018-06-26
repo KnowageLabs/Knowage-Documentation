@@ -9,6 +9,9 @@ QbE is the tool that lets you develop your free inquiry through an entirely grap
 
 The material will be divided in two main sections. The first is dedicated to build queries in the Knowage Server environment, supposing that an expert user has already created a suitable business model to analize. In the second part, we will provide the user for the principal steps to build a proper business model through the Qbe designer available in Knowage Meta.
 
+My first Query By Example
+--------------------------
+
 **QbE** (i.e., Query By Example) allows you to query (a subset of) a database through a high-level representation of the entities and relations. Its main characteristics are:
 
 -  it has a rich end user GUI;
