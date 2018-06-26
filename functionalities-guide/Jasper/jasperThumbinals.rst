@@ -1,3 +1,10 @@
+.. |image348| image:: media/image344.png
+   :width: 0.39372in
+   :height: 0.38279in
+
+
+
+
 .. |image345| image:: media/image342.png
    :width: 4.05122in
    :height: 1.7427in
@@ -7,9 +14,6 @@
 .. |image347| image:: media/image343.png
    :width: 4.05104in
    :height: 3.04019in
-.. |image348| image:: media/image344.png
-   :width: 0.39372in
-   :height: 0.38279in
 .. |image349| image:: media/image345.png
    :width: 4.05129in
    :height: 2.37774in
