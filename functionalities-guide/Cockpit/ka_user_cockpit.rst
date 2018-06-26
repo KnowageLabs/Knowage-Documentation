@@ -428,7 +428,10 @@ Selector Widget
 
 The **Selector Widget** is useful when an end user (a user with a USER tole type) wants to add a parameter to the document.
 
-To configure properly a Selector Widget, use the three tabs shown below.
+.. note::
+    **Selector widget**
+         
+        A technical user can use the association with an Analytical Driver to filter on cockpit.
 
 .. figure:: media/image188.png
 
