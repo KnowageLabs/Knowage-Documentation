@@ -248,7 +248,7 @@ The function that you are defining must be a REST service, in particular of POST
          :caption: JSON format for remote function
          :linenos:
 
-         [  "type":"variablesIn", "items":                                                
+          [  "type":"variablesIn", "items":                                                
              {   {                                                                            
                   "demoVarName1":"3",                   
                   "demoVarName2":"3"                                                  
@@ -268,34 +268,33 @@ The function that you are defining must be a REST service, in particular of POST
                      }
                    }
               }       
-         ]
+          ]
+          
 
- When the call runs successfully, the remote function must answer answer with a JSON element like the one exhibited in Code 6.3.
- 
+ When the call runs successfully, the remote function must answer answer with a JSON element like the one exhibited in Code below.
  
 .. code-block:: json
          :caption: JSON answer of a remote function
          :linenos:
 
-         {                                                                           
-         "resultType":"Image",                  
-         "result":".image content in base64.",  
-         "resultName":"res"                     
-         },                                                                               
-        {                                      
-         "resultType":"Dataset",                
-         "result":"outDatasetLabel",            
-         "resultName":"datasetName"             
-        },                                     
-         { "resultType":"File", "result":       
-        {                                      
-         "filesize":"54836", --optional            
-         "filetype":"image/jpeg", --optional      
-         "filename":"chart.jpg", --optional        
-         "base64":".file content in base64." }, 
-         "resultName":"fileToBeSave"            
-        }                                         
-
+            {                                                                           
+            "resultType":"Image",                  
+            "result":".image content in base64.",  
+            "resultName":"res"                     
+            },                                                                               
+            {                                         
+            "resultType":"Dataset",                
+            "result":"outDatasetLabel",            
+            "resultName":"datasetName"             
+            },                                     
+            { "resultType":"File", "result":       
+            {                                      
+            "filesize":"54836", --optional            
+            "filetype":"image/jpeg", --optional      
+            "filename":"chart.jpg", --optional        
+            "base64":".file content in base64." }, 
+            "resultName":"fileToBeSave"            
+            }                                         
 
 If an error occur the function must returns the lines as shown in JSON format for remote function.
 
@@ -303,13 +302,13 @@ If an error occur the function must returns the lines as shown in JSON format fo
          :caption: JSON answer of a remote function
          :linenos:
 
-         { 
+          { 
             "service":"",                                                                          
             errors":[                            
               {                                     
                "message":"Here the error message."  
                ]                                     
-         }
+          }
 
 
 The Output tab\*
