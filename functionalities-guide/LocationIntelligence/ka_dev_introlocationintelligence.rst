@@ -31,73 +31,71 @@ Analytical document execution
 
 Let’s have a look on the user interface of Knowage Location Intelligence features.
 
-In Figure 15.1 we provide an example of a BI analysis carried out thanks to map. In our example, the colour intensity of each state shown proportionally increases according to the value of the indicator selected. States who have no record connected are not coloured at all.
+In Figure belowwe provide an example of a BI analysis carried out thanks to map. In our example, the colour intensity of each state shown proportionally increases according to the value of the indicator selected. States who have no record connected are not coloured at all.
 
-   |image364|
+.. figure:: media/image352.png
 
-   Figure 15.1: Example of GIS document. USA sales per store
+    Example of GIS document. USA sales per store
 
 Click on the arrow on the top right to open the Location Inteligence options panel. Here you can choose the **Map Type**, the indicators to be displayed on the map and you can enter filters.
 
-   |image365|
+.. figure:: media/image353.png
 
-   Figure 15.2: Arrow button (left) Location Inteligence options panel (right) .
+    Arrow button (left) Location Inteligence options panel (right) .
 
 The **Map Type** available are:
 
 -  **Map Zone**: the different map zone are filled with different colour range according to the indicator values
-
 -  **Map Point**: the indicator values are displayed by points with differs on the radius. A bigger radius means a higher indicator’s value.
-
 -  **Map Chart**: thanks to this visualization type you can compare more than one indicators simultaneously. Choose which indicators compare among the available ones. You have to mark them in the **indicator** panel area to visualize them. The charts appears on the map displaying the selected indicators’ values.
 
-These three typologies of data visualization on map are compared in Figure 15.3.
+These three typologies of data visualization on map are compared below.
 
-   |image366|
+.. figure:: media/image355.png
 
-   Figure 15.3: Map Zone (left) Map Point (center) and Map Chart (right).
+    Map Zone (left) Map Point (center) and Map Chart (right).
 
 Now you can add extra layers on the default one. Switch to the **layer** tab of the Location Inteligence options panel.
 
-Here click on **select form catalog**, choose the layers you want to add. Mark them in the bottom part of the Location Intelligence area in the Layer box and the selected layer are displayed. These steps are shown in Figure 15.4. In our example we upload some waypoints, you can see the results obtained in Figure 15.5.
+Here click on **select form catalog**, choose the layers you want to add. Mark them in the bottom part of the Location Intelligence area in the Layer box and the selected layer are displayed. These steps are shown in :numref:`stepsforlayeradd`. In our example we upload some waypoints, you can see the results obtained in :numref:`mapwithlayers`.
 
-   |image367|
+.. _stepsforlayeradd:
+.. figure:: media/image358.png
 
-   Figure 15.4: Steps for layer adding
+    Steps for layer adding
    
-      |image368|
+.. _mapwithlayers:
+.. figure:: media/image359.png
 
-   Figure 15.5: Map with two layers
+    Map with two layers
 
 Now let’s focus on **Configuration** tab of Location Inteligence panel option. Here you can set some extra configurations. Let’s have a look them for each data visualization typology.
 
 For the **Map Zone** you can set:
 
 -  **Method**: the available ones are quantiles or equal intervals. If you choose quantiles data are classified into a certain number of classes with an equal number of units in each classe. If you choose equal Intervals the value are divided in ranges for each classe, the classes are equal in size and their number can be set. The entire range of data values (max - min) is divided equally into however many classes have been chosen.
-
 -  **N°of classes**: the number of intervals in which data are subdivided.
+-  **Range colours**: You can choose the first and the last colour of the range. For both of them you can use a colour pixer by clicking on the coloured square. An example is provided below.
 
--  **Range colours**: You can choose the first and the last colour of the range. For both of them you can use a colour pixer by clicking on the coloured square. An example is provided in Figure 15.6.
+.. figure:: media/image360.png
 
-   |image369|
-
-   Figure 15.6: Map Zone extra configurations
+    Map Zone extra configurations
 
 For the **Map Point** you can set:
 
 -  **Colour**: the colour of the circle.
-
 -  **Min/Max value**: the minimum and the maximum circles radius.
 
 For the **Map Chart** you can set the colour of each chart’s bar.
 
 The last tab of the panel is dedicate to the template preview, it is provided for advanced user who want to have an approach on generated code.
 
-We can conclude our overview on GIS document describing the buttons located at the bottom right corner, you can see them underlined in Figure 15.7. From the left to the right this bottons can be used for: have a look at the legend, compute a measure of an area of the map and do the .pdf export of the map.
+We can conclude our overview on GIS document describing the buttons located at the bottom right corner, you can see them underlined in :numref:`legendmeasurexport`. From the left to the right this bottons can be used for: have a look at the legend, compute a measure of an area of the map and do the .pdf export of the map.
 
-   |image370|
+.. _legendmeasurexport:
+.. figure:: media/image361.png
 
-   Figure 15.7: From the left to the right: Legend, Measure and Export bottom.
+    From the left to the right: Legend, Measure and Export bottom.
 
 Extra functionalities
 ~~~~~~~~~~~~~~~~~~~~~
@@ -116,15 +114,15 @@ GIS engine document templates can now be built using GIS designer. Designer is a
 
 A GIS document can be created by a final user from workspace area of Knowage Server. Follow My Workspace » Analysis and click on the “Plus” icon available at the top right corner of the page and launch a new **Geo-referenced analysis**.
 
-   |image371|
+.. figure:: media/image362.png
 
-   Figure 15.8: Start a new Geo-referenced analysis.
+    Start a new Geo-referenced analysis.
 
 When the designer is opened there is option to choose dataset for joining spatial data and business data. When the dataset is selected the Dataset join columns and indicators sections will appear. By default dataset is not chosen and there is interface to create map without business data
 
-   |image372|
+.. figure:: media/image363.png
 
-   Figure 15.9: GIS document designer window.
+    GIS document designer window.
 
 
 Designer sections
@@ -133,86 +131,90 @@ Designer sections
 Layer section
 ~~~~~~~~~~~~~
 
-Definition of the target layer is configurable in layer section. If the dataset is selected one of the available layers is chosen from list of layers catalogs. Button change layer (Figure 15.10) opens a pop up with a list of all available layer catalogs (Figure 15.11). Selecting one item from the list and clicking save the selected item will be chosen for template.
+Definition of the target layer is configurable in layer section. If the dataset is selected one of the available layers is chosen from list of layers catalogs. Button change layer (:numref:`targetlayerdef`) opens a pop up with a list of all available layer catalogs (:numref:`listavailbcatalog`). Selecting one item from the list and clicking save the selected item will be chosen for template.
 
-   |image373|
+.. _targetlayerdef:
+.. figure:: media/image364.png
 
-   Figure 15.10: Target layer definition.
+    Target layer definition.
 
-   |image374|
+.. _listavailbcatalog:
+.. figure:: media/image365.png
 
-   Figure 15.11: List of available layer catalogs.
+    List of available layer catalogs.
 
-In case when there is no dataset multiple layers can be selected as in Figure 15.12.
+In case when there is no dataset multiple layers can be selected below.
 
-   |image375|
+.. figure:: media/image366.png
 
-   Figure 15.12: Multiple selection of available layers.
+    Multiple selection of available layers.
 
 Dataset join columns
 ~~~~~~~~~~~~~~~~~~~~
 
-Dataset join columns section is for configuring joining spatial data and business data. This section is only present when the dataset is selected for the document. Designer data structure for joining is represented by the pairs of dataset columns and corresponding layer columns. Clicking on add join column that you can see in Figure15.13 new empty pair appears. Dataset join column can be selected from columns on selected dataset by choosing an option from combo box. Layer join column should be added as a free text by editing corresponding table column.
+Dataset join columns section is for configuring joining spatial data and business data. This section is only present when the dataset is selected for the document. Designer data structure for joining is represented by the pairs of dataset columns and corresponding layer columns. Clicking on add join column that you can see in figure below new empty pair appears. Dataset join column can be selected from columns on selected dataset by choosing an option from combo box. Layer join column should be added as a free text by editing corresponding table column.
 
-   |image376|
+.. figure:: media/image367.png
 
-   Figure 15.13: Dataset join columns interface.
+    Dataset join columns interface.
 
 Indicators
 ~~~~~~~~~~
 
-Measures definition is configurable by adding indicators. The interface is shown in Figure 15.14 This section is only present when dataset is chosen for the document. Indicators are represented by pairs of measure field from selected dataset and corresponding label that will be used on map. Clicking on add indicators creates empty pair. Measure filed should be selected by picking one option from combo box that contains measure fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
+Measures definition is configurable by adding indicators. The interface is shown in :numref:`indicatorsinterface` This section is only present when dataset is chosen for the document. Indicators are represented by pairs of measure field from selected dataset and corresponding label that will be used on map. Clicking on add indicators creates empty pair. Measure filed should be selected by picking one option from combo box that contains measure fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
 
-   |image377|
+.. _indicatorsinterface:
+.. figure:: media/image368.png
 
-   Figure 15.14: Indicators interface.
-
+    Indicators interface.
 
 Filters
 ~~~~~~~
 
-Using the filtering dedicated area of Figure 15.16 you define which dataset attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "store_country", label:"COUNTRY"). The first value (name : "store_country") is the name of the attribute as it is displayed among the properties. The second one label: "COUNTRY" is the label which will be displayed to the user. This section is only present when dataset is chosen for the document. Clicking on add filter creates empty pair. Label field should be selected by picking one option from combobox that contains attribute fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
+Using the filtering dedicated area of :numref:`filtersinterfac` you define which dataset attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "store_country", label:"COUNTRY"). The first value (name : "store_country") is the name of the attribute as it is displayed among the properties. The second one label: "COUNTRY" is the label which will be displayed to the user. This section is only present when dataset is chosen for the document. Clicking on add filter creates empty pair. Label field should be selected by picking one option from combobox that contains attribute fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
 
-   |image378|
+.. _filtersinterfac:
+.. figure:: media/image369.png
 
-   Figure 15.15: Filters interface.
+    Filters interface.
 
 Map menu configuration
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Through the **Map menu configuration** panel the user can desides to enable or disable some available functions and features, like the legend, the distance calculator and so on. See Figure 15.16 to have a glimpse at the available items.
+Through the **Map menu configuration** panel the user can desides to enable or disable some available functions and features, like the legend, the distance calculator and so on. See :numref:`mapmenuconfig` to have a glimpse at the available items.
 
-   |image379|
+.. _mapmenuconfig:
+.. figure:: media/image369.png
 
-   Figure 15.16: map menu configuration.
+    Map menu configuration.
 
 Layer filters
 ~~~~~~~~~~~~~
 
-Here, as you can see from Figure 15.17, you define which target layer attributes can be used to filter the geometry. This section is only present when a dataset has been selected. Add filters button opens pop up where you can choose all available filters of the selected layers. Figure 15.18 gives an example.
+Here, as you can see from figure below, you define which target layer attributes can be used to filter the geometry. This section is only present when a dataset has been selected. Add filters button opens pop up where you can choose all available filters of the selected layers. Figure below gives an example.
 
-   |image380|
+.. figure:: media/image370.png
 
-   Figure 15.17: Layer filters interface interface.
+    Layer filters interface.
+    
+.. figure:: media/image371.png
+
+    List of available filters.
 
 Edit map
 ~~~~~~~~
 
-When all required fields are filled basic template can be saved. From workspace user is first asked to enter name and description of new created document as in Figure 15.19. When the template is saved successfuly EDIT MAP button is enabled in the right part of the main toolbar.
+When all required fields are filled basic template can be saved. From workspace user is first asked to enter name and description of new created document as in the following figure. When the template is saved successfuly EDIT MAP button is enabled in the right part of the main toolbar.
+    
+.. figure:: media/image372.png
 
-   |image381|
+    interface for name and description of new geo document for end user.
 
-   Figure 15.18: List of available filters.
-
-Clicking the edit map button will open created map. An example is given in Figure 15.20. In edit mode you are able to save all custom setting made on map.
-
-   |image382|
-
-   Figure 15.19: interface for name and description of new geo document for end user.
+Clicking the edit map button will open created map. An example is given below. In edit mode you are able to save all custom setting made on map.
    
-   |image383|
+.. figure:: media/image373.png
 
-   Figure 15.20: Map in edit mode with save template available.
+    Map in edit mode with save template available.
    
 More on GIS and Spatial Data\*
 -----------------------------------
@@ -222,9 +224,9 @@ Spatial Data
 
 The term *spatial data* refers to any kind of information that can be placed in a real or virtual geometric space. In particular, if the spatial data is located in a real geometric space — which is a geometric space that models the real space — it can be defined as *geo-referenced* data.
 
-   |image384|
+.. figure:: media/image374.png
 
-   Figure 15.21: A base layer in raster and vector format.
+    A base layer in raster and vector format.
 
 Spatial data are represented through graphical objects called maps. Maps are a portrayal of geographic information as a digital image file suitable for display on a computer screen.
 
@@ -232,19 +234,18 @@ According to the *Open Geospatial Consortium* (OGC) definition, a map is made of
 
 A feature is called *geographic feature* when the constituting objects are abstractions of real-world physical objects and can be located univocally within a referencez coordinate system, according to their relative position.
 
-   |image385|
+.. figure:: media/image375.png
 
-   Figure 15.22: Overlapping layer.
+    Overlapping layer.
 
 A feature includes:
 
 -  a set of attributes that describes its geometry (vector encoding). Geometric attributes must describe its relative shape and position in an unambiguous way, so that the feature can be properly drawn and located on the map, according to the other features of the layers.
-
 -  a set of generic attributes related to the particular type of physical object to be modeled. Generic attributes are not defined: they vary according to the type of abstraction that users want to give to each real-world physical object.
 
-   |image386|
+.. figure:: media/image376.png
 
-   Figure 15.23: Examples of feature.
+    Examples of feature.
 
 There is a wide range of standards that can be used for the vector encoding of spatial data (e.g. GeoJSON, GML, Shape File, etc.). Most geographic information systems can perform the needed conversions among various encodings.
 
@@ -255,9 +256,9 @@ Geographic Information Systems (GIS) provide a set of software tools designed to
 
 From a logical point of view, the key functionalities of a GIS do not differ from those of a BI system. Both systems are characterized by some specific components supporting the effective storage of data, some others supporting their manipulation, their re-distribution or their visualization. On the other hand, the implementation of these functionalities deeply differs between GIS and BI systems, since they deal with two different types of data (alphanumeric and spatial data).
 
-   |image387|
+.. figure:: media/image377.png
 
-   Figure 15.24: Definition of GIS, BI, spatial data and business data.
+    Definition of GIS, BI, spatial data and business data.
 
 Unlike the market of BI suites, the market of GIS is characterized by a wide spread of open standards, adopted by all main vendors, which regulate the interaction among the various components of the system at all architectural levels.
 
@@ -270,7 +271,6 @@ Unlike the market of BI suites, the market of GIS is characterized by a wide spr
 As for the integration between GIS and BI systems, the OGC has defined two main standards supporting the re-distribution of the spatial data:
 
 -  the *Web Map Service* (WMS). It describes the interface of services that allow to generate maps in a dynamic way, using the spatial data contained in a GIS.
-
 -  the *Web Feature Service* (WFS). It describes the interface of services that allow to query a GIS, in order to get the geographic features in a format that allows their transformation and/or spatial analysis (e.g. GML, GeoJson, etc.).
 
 .. note::
@@ -289,9 +289,9 @@ Generally speaking, a bridge integration involves both the BI and the GIS system
 
 In particular, the **GEOReport Engine** extracts spatial data from an external GIS system and join them dynamically with the business data extracted from the Data Ware House, in order to produce a thematic map, according to the user’s request. In other words, it acts as a *bridge* between the two systems, which can consequently be kept totally decoupled.
 
-   |image390|
+.. figure:: media/image378.png
 
-   Figure 15.25: Bridge integration architecture of the **GEOReport Engine**.
+    Bridge integration architecture of the **GEOReport Engine**.
 
 The thematic map is composed of different overlapping layers that can be uploaded from various GIS engines at the same time. Among them just one layer is used to produce the effective thematization of the map: this is called *target layer*.
 
@@ -300,15 +300,10 @@ You can manage your layers inside the **Layers Catalogue**.
 Here you can upload the following layer types:
 
 -  File;
-
 -  WFS;
-
 -  WMS;
-
 -  TMS;
-
 -  Google;
-
 -  OSM.
    
 Create a new layer clicking on the dedicated plus icon. On the right side you are asked to fill few settings before saving the new layer. Among these settings the firsts are equals for all types of layers. Once you choose the layer type, instead, some fields may change. This happens to manage all layers types from the same interface. For example if you choose **File** as type you have the possibility to chose your own .json file and upload it. After having done this, the path where your file is been uploaded is shown among the setting.
@@ -317,11 +312,11 @@ If you chose **WFS** or **WMS** you are asked to insert a specific url.
 
 At the bottom part of layer configuration you can manage the layer visibility. Mark the role you want to give visibility previlegies on this layer. If none is marked, the layer is visibile to all role by default.
 
-Once you have set all layer configuration you can switch to filter setting. Click on the tab you can find in the upper part of the screen, see Figure 15.26.
+Once you have set all layer configuration you can switch to filter setting. Click on the tab you can find in the upper part of the screen, see the following figure.
 
-   |image391|
+.. figure:: media/image379.png
 
-   Figure 15.26: Filter tab
+    Filter tab
 
 Here you can choose which filters will be active during visualization phase. Choose among the properties of your layer, the available ones are only the string type.
 
@@ -383,22 +378,22 @@ In order to describe the basic structure of the template, we refer to Minimal te
 	  }
 
 
-In this template, we will include information that allows the engine to produce a thematic map identical to the one shown in Figure 15.27. The colour intensity of each feature included in the usa_states.json file proportionally increases according to the value of the selected measure (one of the three measures of the dataset) in the corresponding record.
+In this template, we will include information that allows the engine to produce a thematic map identical to the one shown below. The colour intensity of each feature included in the usa_states.json file proportionally increases according to the value of the selected measure (one of the three measures of the dataset) in the corresponding record.
 
-   |image392|
+.. _locatintelldoc:
+.. figure:: media/image380.png
 
-   Figure 15.27: Location intelligence document.
+    Location intelligence document.
 
 The template of the **GEOReport Engine** is a JSON file. The key information included in this file are:
 
 -  method for joining spatial data and business data,
-
 -  measures definition,
-
 -  definition of the target layer.
 
-In Code9.3 we provide a more complex version of the previous template code. The results will be similar to the one obtained in Figure 15.27, but you will provide to the user extra features like filters and cross navigation. Moreover you see how to configure some elements from template, i.e. visualization coordinates, analysis customization, etc.
- 
+In :numref:`advtemplatdef` we provide a more complex version of the previous template code. The results will be similar to the one obtained in :numref:`locatintelldoc`, but you will provide to the user extra features like filters and cross navigation. Moreover you see how to configure some elements from template, i.e. visualization coordinates, analysis customization, etc.
+
+.. _advtemplatdef:
 .. code-block:: json
       	 :caption: Advanced template definition.
          :linenos:
@@ -472,10 +467,9 @@ In Code9.3 we provide a more complex version of the previous template code. The 
 			} 
 		}
 
-   Let us describe these codes in detail we will describe the Minimal template definition at first and then we will go on with the extra features contained in advanced template definition. So the following are the mandatory template information:
+Let us describe these codes in detail we will describe the Minimal template definition at first and then we will go on with the extra features contained in advanced template definition. So the following are the mandatory template information:
 
 -  datasetJoinColumns. It is the dataset column used to join with the feature of layer property.
-
 -  layerJoinColumns. It’s the feature’s name which has to join with the dataset column.
 
 .. warning::
@@ -492,7 +486,6 @@ In Code9.3 we provide a more complex version of the previous template code. The 
                layerJoinColumns : ["STATE_ABBR","OTHER_COLOUMN"] 
 
 -  targetLayerConf. This attribute contains the layer’s label.
-
 -  indicators. It specifies the measures that can be used to perform the thematization of the map. Each measure is defined by an array (e.g. ["unit_sales", "Unit sales"]) in which the first value ("unit_sales") represents the name of the column of the input dataset that includes the measure. The second value ("Unit sales") includes the description of the measures that will be listed in the Indicators section, through the engine interface.
 
 .. warning::
@@ -503,47 +496,38 @@ In Code9.3 we provide a more complex version of the previous template code. The 
 The following, instead, are some of the optional attributes:
 
 -  *mapName*, it is a string field and it is the map’s name.
-
 -  *analysisType*, this attribute allows to specify the type of thematization that the user wants to produce the first time the document is executed. The engine supports two types of thematization: 
 
    **choropleth**: it changes the intensity of fill colours of the features included in the target layer, according to users’ needs. It can only be applied to target layers that are composed of features whose geometry is represented by a plane figure.
 
    **proportionalSymbols**: it changes the dimension of graphical objects. It can be applied to target layers that are composed of features whose geometry is represented by a dot point. The symbol used to perform the thematization of features is a circle whose center is located in the feature itself and whose radius is proportional to the value of the measure of that feature.
 
-   Chart: to visualize the features with charts which compare the different features indicators.
+Chart: to visualize the features with charts which compare the different features indicators.
 
-   You can change the thematization after the document execution by switching between Map point, Map zone and Map chart in the left panel of the map.
+You can change the thematization after the document execution by switching between Map point, Map zone and Map chart in the left panel of the map.
 
  - *filters*, here you define which target layer attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "country",label : "Nazione". The first value (name : "country") is the name of the attribute as it is displayed among the properties. The second one label: "Nazione" is the label which will be displayed to the user.
 
-   |image395|
+.. figure:: media/image355.png
 
-   Figure 15.28: choropleth (left) proportionalSymbols (center) and Chart (right) thematization.
+    Choropleth (left) proportionalSymbols (center) and Chart (right) thematization.
 
  - *analysisConf*, this attribute configures the chosen thematization. In particular,
 
    -  the classes attribute defines the number of total data intervals. Each interval corresponds to a colour (choropleth thematization) or a radius size (proportional symbols thematization).
-
    -  the method specifies how to subdivide data among the intervals. Possible values are:
 
    	* CLASSIFY_BY_QUANTILS: data are subdivided according to quantiles, that means that data are split into subsets of equal size. A quantile classification is well suited to linearly distributed data.
-
    	* CLASSIFY_BY_EQUAL_INTERVALS: divide the range of values into equal-sized subranges. For example, if you specify three classes for a indicator whose values range from 0 to 300, you will obtain three classes with ranges of 0–100, 101–200 and 201–300.
 
    -  the toColor and fromColor attributes specifies the ranges of colours to be used in case of choropleth thematization. Similarly, the minRadiusSize and maxRadiusSize attributes can be used to specify the size ranges for circles in case of proportional symbols thematization.
-
    -  the chart attribute has a list of indicators which configure the style for each column of the chart.
 
 -  *currentView*, this attribute configures the map starting coordinates, center and the zoom, zoom.
-
 -  *layerLoaded*, it let you define which layers are displayed by default at the first map execution.
-
 -  *selectedIndicator*, here you can set the measure to be displayed as default and its label.
-
 -  *baseLayersConf*, it contains all the parameters needed for openlayers to create the desired layer.
-
 -  *selectedBaseLayer*, it specifies the base layer for the map. It can be in the catalogue or between “Openstreetmap” and “OSM”. Please notice that this attribute is not mandatory, if it is not specified OpenstreetMap is set by default.
-
 -  *crossnav*, you can use this attribute to start a cross navigation to others Knowage documents. Cross navigation details are explained in next sections.
 
 Analytical document creation
@@ -562,7 +546,7 @@ Analytical document creation
 Cross navigation definition\*
 -----------------------------------
 
-It is possible to enable cross navigation from a map document to other Knowage documents. In the example of Figure 15.27, this means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
+It is possible to enable cross navigation from a map document to other Knowage documents. In the example of :numref:`locatintelldoc`, this means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
 
 GIS document template example shows how to modify the template in order to enable cross navigation.
       
@@ -616,21 +600,24 @@ Once you are done, you need to define the output parameters as described in Sect
  Template building with GIS designer for technical user\*
 ----------------------------------------------------------
 
-When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to Figure 15.29). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
+When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to :numref:`gisdesigneraccestemplbuild`). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
 
-   |image397|
+.. _gisdesigneraccestemplbuild:
+.. figure:: media/image381.png
 
    Figure 15.29: Gis designer accessible from the template build.
 
-We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to Section 15.4 for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in Figure 15.30. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (Figure 15.31).
+We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to Section 15.4 for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in :numref:`layerfiltranalytdriv`. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (:numref:`listavailfiltranalydriv`).
 
-   |image398|
+.. _layerfiltranalytdriv:
+.. figure:: media/image382.png
 
-   Figure 15.30: Layer filters interface with analytical drivers.
+    Layer filters interface with analytical drivers.
 
-   |image399|
+.. _listavailfiltranalydriv:
+.. figure:: media/image383.png
 
-   Figure 15.31: List of available filters with list of analytical drivers.
+    List of available filters with list of analytical drivers.
    
   
 .. include:: locationIntelligenceThumbinals.rst
