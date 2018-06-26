@@ -35,7 +35,7 @@ Create a new generic document and select **Data Mining** as Type and **Data-Mini
 
 The template of a data mining document is a simple XML file that enables the developer to configure properly the document behaviour.   Look at Linux and Tomcat example. 
 
-       .. code-block:: xml
+.. code-block:: xml
          :caption:  Linux and Tomcat example
          :linenos:
  
@@ -97,48 +97,47 @@ The template of a data mining document is a simple XML file that enables the dev
 -  VARIABLES: are required for changing factors or more generally parameters (strings or numbers) inside the script (referenced by a command) or the output functions.
 
 
-Once the template has been edited it can be upload on Knowage server to create a usable Data Mining document. Enter then Knowage document browser and click on the “Plus” icon. The insert all mandatory fileds as label, name, engine and datasource. Then you must upload the template file cliking on the icon available at the bottom of the form, highlighted in Figure 16.31.
+Once the template has been edited it can be upload on Knowage server to create a usable Data Mining document. Enter then Knowage document browser and click on the “Plus” icon. The insert all mandatory fileds as label, name, engine and datasource. Then you must upload the template file cliking on the icon available at the bottom of the form, highlighted below.
 
+.. figure:: media/image420.png
 
-   |image433|
-
-   Figure 16.31: Creating a new function.
+    Creating a new function.
 
 
 Create a new function in the Function Catalog
 --------------------------------------------------
 
-To create a new Function you must click on the “Plus” icon available at the right top side of the page. The action will provoke the opening of the window in Figure 16.32 made up of 4 tabs.
+To create a new Function you must click on the “Plus” icon available at the right top side of the page. The action will provoke the opening of the window in figure below made up of 4 tabs.
 
-   |image434|
+.. figure:: media/image421.png
 
-   Figure 16.32: Creating a new function.
+    Creating a new function.
 
 -  **General**: here you have to set the Function name, the label which identifies the function univocally, the name of the user who creates the function, the type to which the function belongs to and a brief description of the function usage.
 
 -  **Input**:
 
-   |image435|
+.. figure:: media/image422.png
 
-   Figure 16.33: Input tabs.
+    Input tabs.
 
-Use the icon |image436| to insert a new dataset or a new variable. And use the icon |image437| to delete the insertion. Choose a dataset from the combobox and use the “Preview button” to check the outcome. While for the variables you must specify the variable name and value. An example is give in Figure 16.34.
+Use the icon |image436| to insert a new dataset or a new variable. And use the icon |image437| to delete the insertion. Choose a dataset from the combobox and use the “Preview button” to check the outcome. While for the variables you must specify the variable name and value. An example is give in figure below.
 
-   |image440|
+.. figure:: media/image425.png
 
-   Figure 16.34: Inserting variables.
+    Inserting variables.
 
--  **Script**: here is where the user is required to have knoledge of R or Python language. Figure 16.35 shows an example.
+-  **Script**: here is where the user is required to have knoledge of R or Python language. Figure below shows an example.
 
-   |image441|
+.. figure:: media/image426.png
 
-   Figure 16.35: Typing Python script
+    Typing Python script
 
--  **Output**: referring to Figure 16.36, in the Output tab you have to choose how the output should be visualized. Still use the icon |image438| to insert a new output and the icon |image439| to delete the items. Then insert the output name and once again you can choose among “Text”, “Image”, “Dataset” for both Python and R.
+-  **Output**: referring to the following figure, in the Output tab you have to choose how the output should be visualized. Still use the icon |image438| to insert a new output and the icon |image439| to delete the items. Then insert the output name and once again you can choose among “Text”, “Image”, “Dataset” for both Python and R.
 
-   |image442|
+.. figure:: media/image427.png
 
-   Figure 16.36: Choosing how to visualise outputs.
+    Choosing how to visualise outputs.
 
 Then save and you are ready to use the function.
 
