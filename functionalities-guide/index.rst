@@ -964,8 +964,6 @@ Functionalities
 .. |image298| image:: FreeInquiry/media/image298.png
    :width: 4.05122in
    :height: 1.75125in
-
-
 .. |image299| image:: MetaWeb/media/image299.png
    :width: 4.05119in
    :height: 2.18594in
@@ -1911,22 +1909,6 @@ Functionalities
 .. |image174| image:: ScoreCard/media/image172.png
    :width: 4.05106in
    :height: 1.92314in
-.. |image175| image:: Alert/media/image173.png
-   :width: 5.78738in
-   :height: 2.16211in
-.. |image176| image:: Alert/media/image174.png
-   :width: 4.05119in
-   :height: 1.91883in
-.. |image177| image:: Alert/media/image175.png
-   :width: 4.05113in
-   :height: 1.92584in
-.. |image178| image:: Alert/media/image176.png
-   :width: 4.05111in
-   :height: 1.93505in
-.. |image179| image:: Alert/media/image177.png
-   :width: 4.05116in
-   :height: 1.94731in
-
 .. |image400| image:: Datamining/media/image384.png
    :width: 2.89382in
    :height: 0.39757in
@@ -2365,8 +2347,6 @@ Functionalities
 .. |image479| image:: Glossary/media/image474.png
    :width: 4.05123in
    :height: 1.91118in
-
-
 .. |image333| image:: Registry/media/image339.png
    :width: 4.05119in
    :height: 1.92179in
