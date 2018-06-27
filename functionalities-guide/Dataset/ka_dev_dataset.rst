@@ -607,7 +607,7 @@ To set a pivot transformation, select **Pivot Transformer** in the drop down men
 -  **Name of Category Column to be Pivoted**. Here you should write the name of the dataset column whose values will be mapped onto columns after pivoting.
 -  **Name of Value Column to be Pivoted**. Here you should write the name of the result set column, whose values should become values of the previous columns (category columns).
 -  **Name of the Column not to be Pivoted**. Here you should write the name of those columns that should not be altered during the transformation.
--  In case you wish to add a number to category columns (e.g., 1_name_of_column), you should check the option Automatic Columns numeration.
+-  In case you wish to add a number to category columns (e.g., 1_name_of_column), you should check the option **Automatic Columns numeration**.
 
 An example of usage is available in figure below, showing the result set of the dataset.
 
