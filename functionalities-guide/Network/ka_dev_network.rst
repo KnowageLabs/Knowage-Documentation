@@ -21,8 +21,9 @@ Before entering this section we underlight that Knowage uses cytoscapeweb librar
 
 **knowagenetworkanalysisengine** supports different types of network definitions. If you have your network defined in GRAPHML or XGMML notation you can upload that file as template of the document and that’s it. After this operation you can open your network using Knowage.
 
-On the other hand if you want to create a dynamic network that gets data from your datasource you should create a dynamic document. In this case the structure of a template is typed in:
+On the other hand if you want to create a dynamic network that gets data from your datasource you should create a dynamic document. In this case the structure of a template is typed in :numref:`templatestructnetwork`:
 
+.. _templatestructnetwork:
 .. code-block:: bash
         :linenos:
         :caption: Template structure.
@@ -47,7 +48,7 @@ On the other hand if you want to create a dynamic network that gets data from yo
          </drill>
          </NET>
 
-In the following we explain shortly the meaning of the Template structure.
+In the following we explain shortly the meaning of the :numref:`templatestructnetwork`.
 
 The **NETWOK_DEFINITION** contains the definition of the network: nodes, edges, shapes, colours It has two children:
 
@@ -90,7 +91,7 @@ Tooltip is a special Edge/node property. The tooltip contains a set of proerty/v
   Where OBJ PROPERTY property is the name of the property (for example id) and PROPERTY LABEL TEXT is the text you’ll see as label of the property in the tooltip. You can find the list of available properties here: `http://cytoscapeweb. cytoscape.org/documentation/visual_style <http://cytoscapeweb.cytoscape.org/documentation/visual_style>`__
 
 -  **Dataset_mapping_LIST**: this section maps the columns of the dataset on properties of the graph. This is done with the tag dataset_mapping. There are two possibilities:
--  Map a column of the dataset on a property of the graph and the syntax is showed in Code 17.1:
+-  Map a column of the dataset on a property of the graph and the syntax is showed in :numref:`templatestructnetwork`:
 
 .. code-block:: bash
         :linenos:
@@ -106,7 +107,7 @@ Tooltip is a special Edge/node property. The tooltip contains a set of proerty/v
 
 The list of available node and edge properties is here `http://cytoscapeweb.cytosca <http://cytoscapeweb.cytoscape.org/documentation/elements>`__\ pe.`org/documentation/elements <http://cytoscapeweb.cytoscape.org/documentation/elements>`__
 
--  Set a fixed value to a property. The syntax is showed in Code 17.1.
+-  Set a fixed value to a property. The syntax is showed in :numref:`templatestructnetwork`.
 
 .. code-block:: bash
         :linenos:
@@ -114,236 +115,125 @@ The list of available node and edge properties is here `http://cytoscapeweb.cyto
 
           <dataset_mapping element="source" value="#caabff" property="color"/>
 
-     Where:
-
-   * value is the fixed value of the property we want to set.
+     Where: 
+     
+      - * value is the fixed value of the property we want to set.
 
 -  **info**: contains some text/html that can help the user understanding the network. Since the syntax of the template is XML if
- you want to insert HTML you should envelop it into a CDATA tag. For example refer to Code 17.1:
+ you want to insert HTML you should envelop it into a CDATA tag. For example refer to :numref:`templatestructnetwork`:
 
-+-------------------+
-| <![CDATA[ ....... |
-|                   |
-|    ]]>            |
-+-------------------+
+.. code-block:: bash
+        :linenos:
 
 
+          <![CDATA[ .......
+            ]]>
 
--  **drill**: is used to link the network to another document. The
-   structure of the tag is showed in Template structure
+-  **drill**: is used to link the network to another document. The structure of the tag is showed in Template structure
 
-+------------------------------------------------------------+
-| <DRILL document="LINKED_DOCUMENT ">                        |
-|                                                            |
-|    <PARAM name="PAR_NAME" type="TYPE" property =PROPERTY/> |
-|                                                            |
-| </DRILL>                                                   |
-+------------------------------------------------------------+
+.. code-block:: bash
+        :linenos:
 
-  
+          <DRILL document="LINKED_DOCUMENT ">
+            <PARAM name="PAR_NAME" type="TYPE" property =PROPERTY/>
+          </DRILL>
 
    Where:
 
--  DOCUMENT: is the label of the destination document;
+    -  DOCUMENT: is the label of the destination document;
+    -  PAR_NAME: is the destination document parameter label; – TYPE: parameter type
+       
+        * ABSOLUTE/RELATIVE,
+        * EDGE: the parameter will get an edge property value,
+        * NODE: the parameter will get an node property value;
 
--  PAR_NAME: is the destination document parameter label; – TYPE:
-   parameter type
+    - PROPERTY: property of the object (node/edge) to bind to parameter.
 
-
-   * ABSOLUTE/RELATIVE,
-
-   * EDGE: the parameter will get an edge property value,
-
-   * NODE: the parameter will get an node property value;
-
-
-   – PROPERTY: property of the object (node/edge) to bind to parameter.
-
-  An example\*
+An example\*
 ------------------
 
-   Lets try to create a network that shows where the customers of Mexico
-   usually go shopping.
+Lets try to create a network that shows where the customers of Mexico usually go shopping.
 
-   Here, in the query on the foodmart demo data:
+Here, in the query on the foodmart demo data:
 
-+-----------------------------------------------------------------------+
-| SELECT s.store_city store                                             |
-|                                                                       |
-|    ,c.city customer                                                   |
-|                                                                       |
-|    ,c.city customer_city                                              |
-|                                                                       |
-|    ,count(*) number_sales                                             |
-|                                                                       |
-|    ,((length(s.store_city) \* 7) + 10) textlenght                     |
-|                                                                       |
-|    ,CONCAT (s.store_city,'-',c.city) rel_id                           |
-|                                                                       |
-| FROM sales_fact_1998 sf                                               |
-|                                                                       |
-| JOIN customer c ON (c.customer_id = sf.customer_id) JOIN store s ON   |
-| (s.store_id = sf.store_id)                                            |
-|                                                                       |
-| WHERE c.country = 'Mexico' GROUP BY store                             |
-|                                                                       |
-|    ,customer                                                          |
-|                                                                       |
-|    ,rel_id                                                            |
-+-----------------------------------------------------------------------+
+.. code-block:: sql
+        :linenos:
+        :caption: Foodmart demo data.
+        
+          SELECT s.store_city store
+                ,c.city customer
+                ,c.city customer_city
+                ,count(*) number_sales
+                ,((length(s.store_city) \* 7) + 10) textlenght
+                ,CONCAT (s.store_city,'-',c.city) rel_id
+          FROM sales_fact_1998 sf
+          JOIN customer c ON (c.customer_id = sf.customer_id) 
+          JOIN store s ON (s.store_id = sf.store_id)
+          WHERE c.country = 'Mexico' 
+          GROUP BY store
+               ,customer
+               ,rel_id
+ 
+Now we can collect all these information and build our first network template. In our example the nodes are the cities and the relations represent where the customer of a city go to shop. Template for foodmart demo shows a simply template for this document:
 
+.. code-block:: bash
+        :linenos:
+        :caption: Template for Foodmart demo.
+        
+          <NET>
+             <NETWOK_DEFINITION>
+                  <options pan_Zoom_Control_Position="topLeft">
+                  </options>
+                  <dataset_mapping_LIST>
+                    <dataset_mapping element="source" column="customer" property="id"/>
+                    <dataset_mapping element="target" column="store" property="id"/>
+                    <dataset_mapping element="edge" column="rel_id" property="id"/>
+                  </dataset_mapping_LIST>
+             </NETWOK_DEFINITION>
+          </NET>
 
-
-    Foodmart demo data.
-
-   Now we can collect all these information and build our first network
-   template. In our example the nodes are the cities and the relations
-   represent where the customer of a city go to shop. Template for foodmart demo shows a
-   simply template for this document:
-
-+--------------------------------------------------------+
-| <NET>                                                  |
-|                                                        |
-|    <NETWOK_DEFINITION>                                 |
-|                                                        |
-|    <options pan_Zoom_Control_Position="topLeft">       |
-|                                                        |
-|    </options>                                          |
-|                                                        |
-|    <dataset_mapping_LIST>                              |
-|                                                        |
-|    <dataset_mapping element="source" column="customer" |
-|                                                        |
-|    property="id"/>                                     |
-|                                                        |
-|    <dataset_mapping element="target" column="store"    |
-|                                                        |
-|    property="id"/>                                     |
-|                                                        |
-|    <dataset_mapping element="edge" column="rel_id"     |
-|                                                        |
-|    property="id"/>                                     |
-|                                                        |
-|    </dataset_mapping_LIST>                             |
-+--------------------------------------------------------+
-
-
-
-An example\*
-
-+-----------+----------------------+
-|    </NET> | </NETWOK_DEFINITION> |
-+-----------+----------------------+
-
- Template for foodmart demo.
-
-   Now we try to make the graph “nicer”. We want to:
+Now we try to make the graph “nicer”. We want to:
 
 -  see the name of the cities,
+-  see the number of sales of customers coming from city A to shop in city B,
+-  add some image as background of the nodes The template will look like Improved template for foodmart demo:
 
--  see the number of sales of customers coming from city A to shop in
-   city B,
+.. code-block:: bash
+        :linenos:
+        :caption: Improved template for foodmart demo.
 
--  add some image as background of the nodes The template will look like
-   Improved template for foodmart demo:
-
-+-----------------------------------------------------------------------+
-| <NET>                                                                 |
-|                                                                       |
-|    <NETWOK_DEFINITION>                                                |
-|                                                                       |
-| <options edgeLabelsVisible="true" pan_Zoom_Control_Position="         |
-|                                                                       |
-|    topLeft" nodeTooltipsEnabled="true" layout="Circle">               |
-|                                                                       |
-|    <visual_style>                                                     |
-|                                                                       |
-|    <edges directed="true"> <label>                                    |
-|                                                                       |
-| <passthrough_Mapper attrName="                                        |
-|                                                                       |
-|    number_sales"/>                                                    |
-|                                                                       |
-|    </label>                                                           |
-|                                                                       |
-| </edges>                                                              |
-|                                                                       |
-|    </visual_style>                                                    |
-|                                                                       |
-|    </options>                                                         |
-|                                                                       |
-|    <dataset_mapping_LIST>                                             |
-|                                                                       |
-|    <dataset_mapping element="source" column="customer"                |
-|                                                                       |
-|    property="id"/>                                                    |
-|                                                                       |
-|    <dataset_mapping element="source" property="size" value ="50"/>    |
-|                                                                       |
-|    <dataset_mapping element="source" column="customer_city "          |
-|    property="label"/>                                                 |
-|                                                                       |
-|    <dataset_mapping element="source" property="image"                 |
-|                                                                       |
-|    value="../img/city2.png"/>                                         |
-|                                                                       |
-|    <dataset_mapping element="source" property="                       |
-|                                                                       |
-|    labelFontSize" value="12"/>                                        |
-|                                                                       |
-|    <dataset_mapping element="source" property="                       |
-|                                                                       |
-|    labelFontWeight" value="bold"/>                                    |
-|                                                                       |
-|    <dataset_mapping element="target" column="store"                   |
-|                                                                       |
-|    property="id"/>                                                    |
-+-----------------------------------------------------------------------+
+         <NET>
+            <NETWOK_DEFINITION>
+                  <options edgeLabelsVisible="true" pan_Zoom_Control_Position="topLeft" nodeTooltipsEnabled="true" layout="Circle">
+                      <visual_style>
+                         <edges directed="true"> 
+                           <label>
+                             <passthrough_Mapper attrName="number_sales"/>
+                           </label>
+                         </edges>
+                      </visual_style>
+                  </options>
+                  
+                  <dataset_mapping_LIST>
+                     <dataset_mapping element="source" column="customer"property="id"/>
+                     <dataset_mapping element="source" property="size" value ="50"/>
+                     <dataset_mapping element="source" column="customer_city "property="label"/>
+                     <dataset_mapping element="source" property="image"value="../img/city2.png"/>
+                     <dataset_mapping element="source" property="labelFontSize" value="12"/>
+                     <dataset_mapping element="source" property="labelFontWeight" value="bold"/>
+                     <dataset_mapping element="target" column="store"property="id"/>
+                     <dataset_mapping element="target" property="labelFontWeight" value="bold"/>
+                     <dataset_mapping element="target" property="labelFontSize" value="12"/>
+                     <dataset_mapping element="edge" column="rel_id"property="id"/>
+                     <dataset_mapping element="edge" column="number_sales"property="number_sales"/>
+                     <dataset_mapping element="edge" value="ARROW" property="sourceArrowShape"/>
+                  </dataset_mapping_LIST>
+            </NETWOK_DEFINITION>
+         </NET>
 
 
-
-An example\*
-
-+------------------------------------------------------------+
-|    <dataset_mapping element="target" property="            |
-|                                                            |
-|    labelFontWeight" value="bold"/>                         |
-|                                                            |
-|    <dataset_mapping element="target" property="            |
-|                                                            |
-|    labelFontSize" value="12"/>                             |
-|                                                            |
-|    <dataset_mapping element="edge" column="rel_id"         |
-|                                                            |
-|    property="id"/>                                         |
-|                                                            |
-|    <dataset_mapping element="edge" column="number_sales"   |
-|                                                            |
-|    property="number_sales"/>                               |
-|                                                            |
-|    <dataset_mapping element="edge" value="ARROW" property= |
-|                                                            |
-|    "sourceArrowShape"/>                                    |
-|                                                            |
-|    </dataset_mapping_LIST>                                 |
-|                                                            |
-|    </NETWOK_DEFINITION>                                    |
-|                                                            |
-| </NET>                                                     |
-+------------------------------------------------------------+
-
-
-
-   Improved template for foodmart demo.
-
-   **Remark**: The path ../img/city2.png is relative to the context of
-   the web application, so it refers to the folder img inside the web
-   application knowagenetworkengine Finally, the result is showed in
-   next Figure 17.1:
+**Remark**: The path ../img/city2.png is relative to the context of the web application, so it refers to the folder img inside the web application knowagenetworkengine Finally, the result is showed in next Figure 17.1:
 
    |image443|
 
    Figure 17.1: Network for foodmart demo example.
-
-
-   Knowage Engineering Group
