@@ -19,12 +19,12 @@ Functionalities
    Jasper/ka_dev_jasper.rst
    LocationIntelligence/ka_dev_introlocationintelligence.rst
    Datamining/ka_user_datamining.rst
-   Alert/ka_Alert.rst
-   Glossary/ka_dev_glossary.rst
-   KPI/ka_KPI.rst 
-   Network/ka_dev_network.rst
    OLAP/ka_dev_OLAP.rst
    OLAP/ka_user_OLAP.rst
+   Glossary/ka_dev_glossary.rst
+   Alert/ka_Alert.rst
+   KPI/ka_KPI.rst 
+   Network/ka_dev_network.rst
    QbeMeta/ka_dev_introqbemeta.rst
    ScoreCard/ka_Scorecard.rst
    SVG/ka_dev_svg.rst
