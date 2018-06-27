@@ -20,7 +20,6 @@ Functionalities
    LocationIntelligence/ka_dev_introlocationintelligence.rst
    Datamining/ka_user_datamining.rst
    Network/ka_dev_network.rst
-   OLAP/ka_dev_OLAP.rst
    OLAP/ka_user_OLAP.rst
    Glossary/ka_dev_glossary.rst
    Alert/ka_Alert.rst
