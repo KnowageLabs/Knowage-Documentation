@@ -6,64 +6,58 @@ OLAP tools enable users to analyse multidimensional data interactively from mult
 OLAP user manual step by step
 -------------------------------
 
-We start our lecture on the OLAP engine by analysing an existing OLAP document. Open the document browser folder of the Knowage suite as in Figure 7.1 and launch an OLAP document. Figure 7.2 exhibits an example.
+We start our lecture on the OLAP engine by analysing an existing OLAP document. Open the document browser folder of the Knowage suite as in figure below and launch an OLAP document.
 
-   |image134|
+.. figure:: media/image134.png
 
-   Figure 7.1: Browse the documents and select an OLAP document.
+    Browse the documents and select an OLAP document.
+
+Here an example.
+
+.. figure:: media/image135.png
+
+      Exploring an existing OLAP document.
 
 We will describe the main parts of the OLAP page in the following.
-
-   |image135|
-
-   Figure 7.2: Exploring an existing OLAP document.
 
 The filter panel
 ~~~~~~~~~~~~~~~~
 
-Once the document is executed, the central area of the window contains the table whose measures are aggregated on dimensions. At the top of this area, panels are available to configure filters on attributes. We see in Figure 7.3 that the filter panel is made up of **Filter cards**. Here you can find the cube dimensions and their hierarchies as defined in the OLAP schema by the developer.
+Once the document is executed, the central area of the window contains the table whose measures are aggregated on dimensions. At the top of this area, panels are available to configure filters on attributes. We see in the following figure that the filter panel is made up of **Filter cards**. Here you can find the cube dimensions and their hierarchies as defined in the OLAP schema by the developer.
 
-   |image136|
+.. figure:: media/image136.png
 
-   Figure 7.3: The filter panel.
+    The filter panel.
 
 The filter cards
 ~~~~~~~~~~~~~~~~
 
-Filter cards can be placed on the filter panel (Figure 7.4) or on column axis. You can switch their position dragging and dropping them from one place to the other.
+Filter cards can be placed on the filter panel or on column axis. You can switch their position dragging and dropping them from one place to the other.
 
-   |image137|
+.. figure:: media/image137.png
 
-   Figure 7.4: The filter card inside the filter panel.
+    The filter card inside the filter panel.
 
 Filter cards are used to:
 
 -  inform the user about available dimensions defined in OLAP schema,
-
 -  inform the user about dimension’s name,
-
 -  perfom slices,
-
 -  Add the dimensions to the cube visualization,
-
 -  place hierarchies in different axes,
-
 -  filter visible members.
 
-Considering Figure 7.5, we can see that a filter card is made up of:
+Considering :numref:`featuresoffiltcard`, we can see that a filter card is made up of:
 
--  (a) an icon for opening dimension chooser dialog,
+- (a) an icon for opening dimension chooser dialog,
+- (b) a dimension name,
+- (c)+(e) icon slicer,
+- (d) choosed filter name,
 
--  (b) a dimension name,
+.. _featuresoffiltcard:
+.. figure:: media/image138.png
 
--  (c)+(e) icon slicer,
-
--  (d) choosed filter name,
-
-
-   |image138|
-
-   Figure 7.5: Features of a filter card.
+    Features of a filter card.
 
 Axes panel
 ~~~~~~~~~~
@@ -71,180 +65,143 @@ Axes panel
 In the panel axes you can:
 
 -  drag and drop one or more dimensions,
-
 -  organise the dimensions visualization,
-
 -  swap axes.
 
-Referring to Figure 7.6, the axes panel consists of the following items:
+Referring to :numref:`axespanelfeat`, the axes panel consists of the following items:
 
 -  (a) columns axis,
-
 -  (b) row axis,
-
 -  (c) filter cards,
-
 -  (d) icon for swap axes,
-
 -  (e) icon for hierarchy order.
 
-   |image139|
+.. _axespanelfeat:
+.. figure:: media/image140.png
 
-   Figure 7.6: Axes panel features.
+    Axes panel features.
 
 Pivot table
 ~~~~~~~~~~~
 
-The Pivot table is the central part of the OLAP page. In Figure 7.7 is shown an example. 
+The Pivot table is the central part of the OLAP page. In figure below is shown an example. 
 
-   |image140|
+.. figure:: media/image141.png
 
-   Figure 7.7: Pivot table.
+    Pivot table.
 
 Pivot table is used to:
 
 -  show data based on MDX query sent from the interface,
-
 -  drill down/up hierarchies’ dimensions,
-
 -  drill through,
-
 -  show properties of a particular member,
-
 -  sort data,
-
 -  show calculated fields,
-
 -  perform cross navigation to other documents.
 
 
-Referring to Figure 7.8, Pivot table consists of:
+Referring to :numref:`pivottablefeat`, Pivot table consists of:
 
 -  (a) dimensions involved in the analysis,
-
 -  (b) cells with data,
-
 -  (c) icons for drill down and drill up,
-
 -  (d) icons for sorting (only if enabled by the developer),
-
 -  (e) icons for showing properties (only if enabled and configured by the developer),
-
 -  links for cross navigation (only if enabled and configured by the developer)
 
+.. _pivottablefeat:
+.. figure:: media/image142.png
 
-   |image141|
-
-   Figure 7.8: Pivot table features.
+    Pivot table features.
 
 Side bar
 ~~~~~~~~
 
-You can open the side bar by clicking on the icon positioned on the top right side of the page (Figure 7.9). Side bar will be shown on the right side (Figure 7.10).
+You can open the side bar by clicking on the icon positioned on the top right side of the page (:numref:`openthesidebar`). Side bar will be shown on the right side (:numref:`sidebar`).
 
-   |image142|
+.. _openthesidebar:
+.. figure:: media/image143.png
 
-   Figure 7.9: Open the side bar.
+    Open the side bar.
 
 Side bar is used to:
 
 -  choose between different data representations,
-
 -  choose between different drill types,
-
 -  call dialogs and functionalities that effect the pivot table,
-
 -  get additional data based on loaded model.
 
+.. _sidebar:
+.. figure:: media/image144.png
 
-   |image143|
+    Side bar.
 
-   Figure 7.10: Side bar.
-
-The side bar shows the **Menu**. This area let you customize the Olap layout. As highlighted in Figure 7.11, the Menu is divided in three subsections:
+The side bar shows the **Menu**. This area let you customize the Olap layout. As highlighted in :numref:`sidebarmenu`, the Menu is divided in three subsections:
 
 -  (a) drill options,
-
 -  (b) OLAP functions,
-
 -  (c) table functions, 
-
 -  what if.
 
+.. _sidebarmenu:
+.. figure:: media/image145.png
 
-   |image144|
+    Side bar Menu.
 
-   Figure 7.11: Side bar Menu.
-
-We start introducing the interface and leave the description to the next Section 7.2. In particular, referring to Figure 7.12, drill types consists of:
+We start introducing the interface and leave the description to the next Section 7.2. In particular, referring to :numref:`drilltypes`, drill types consists of:
 
 -  (a) position,
-
 -  (b) member,
-
 -  (c) replace,
-
 -  (d) drill through.
 
-   |image145|
+.. _drilltypes:
+.. figure:: media/image146.png
 
-   Figure 7.12: Drill types.
+    Drill types.
 
-Meanwhile, referring to Figure 7.13, the OLAP functions consist of:
+Meanwhile, referring to :numref:`olapfunctions`, the OLAP functions consist of:
 
 -  (a) reload model,
-
 -  (b) show MDX,
-
 -  (c) send MDX.
 
+.. _olapfunctions:
+.. figure:: media/image147.png
 
-Referring to Figure 7.14, table functions consist of:
+    OLAP functions.
+
+Referring to :numref:`tablefunctions1`, table functions consist of:
 
 -  (a) show parent members,
-
 -  (b) hide spans,
-
 -  (c) show properties,
-
 -  (d) suppress empty rows/columns,
-
 -  (e) enable compact properties,
-
 -  (f) enable sorting,
-
 -  (g) sorting settings,
-
 -  (h) calculated field wizard.
 
+.. _tablefunctions1:
+.. figure:: media/image148.png
 
-   |image146|
-
-   Figure 7.13: OLAP functions.
-
-   |image147|
-
-   Figure 7.14: Table functions.
+    Table functions.
 
 
-Referring to Figure 7.15, what if consists of:
+Referring to :numref:`tablefunctions2`, what if consists of:
 
 -  (a) lock/unlock model,
-
 -  (b) save,
-
 -  (c) save as new version,
-
 -  (d) undo, 
-
 - (e) delete versions, 
-
 - (f) output wizard.
 
+.. _tablefunctions2:
+.. figure:: media/image149.png
 
-   |image148|
-
-   Figure 7.15: Table functions.
+    Table functions.
 
 
 Functionalities
@@ -255,192 +212,175 @@ Placing hierarchies on axes
 
 As we already told, the user can easily move a dimension from the filter bar to the axis or viceversa dragging and dropping it to the desired place.
 
-Let us suppose we want to move a dimension from the filter panel to the columns axis. The steps are summarized in Figure 7.16
+Let us suppose we want to move a dimension from the filter panel to the columns axis. The steps are summarized in figure below
 
-Vice versa, to move back the dimension from the columns axis to the filter panel the user must simply drag and drop the dimension from one place to the other as in Figure 7.17.
+.. figure:: media/image150.png
 
-   |image149|
+    Move a hierarchy to the columns axis.
 
-   Figure 7.16: Move a hierarchy to the columns axis.
+Vice versa, to move back the dimension from the columns axis to the filter panel the user must simply drag and drop the dimension from one place to the other as in the following figure.
 
-   |image150|
+.. figure:: media/image151.png
 
-   Figure 7.17: Move a dimension from the columns axis to the filter panel.
-
+    Move a dimension from the columns axis to the filter panel.
 
 Similarly, a dimension can be moved from the filter panel to the rows axis simply dragging and dropping it from one place to the other.
 
 Swaping axes
 ~~~~~~~~~~~~
 
-To swap axes the user should click on the icon |image151|. The user will get the outcome showed in Figure 7.18.
+To swap axes the user should click on the icon |image151|. The user will get the outcome showed in figure below.
 
-   |image152|
+.. figure:: media/image153.png
 
-   Figure 7.18: Swap axes.
+    Swap axes.
 
 Selecting different hierarchies on dimension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If an OLAP schema is defined, the user can choose different hierarchies of the same dimension. The icon for opening the dialog is positioned on the top left corner of the filter card (if the dimension has more than one hierarchy). Select the hierarchies icon underlined in Figure 7.19.
+If an OLAP schema is defined, the user can choose different hierarchies of the same dimension. The icon for opening the dialog is positioned on the top left corner of the filter card (if the dimension has more than one hierarchy). Select the hierarchies icon underlined below.
 
-   |image153|
+.. figure:: media/image154.png
 
-   Figure 7.19: Hierarchies icon.
+    Hierarchies icon.
 
-A pop up will be displayed. Figure 7.20 shows its characteristics. The window will present:
+A pop up will be displayed. :numref:`hierarchiesdialogpopup` shows its characteristics. The window will present:
 
--  (a) the dimension name,
-
--  (b) name of selected hierarchies,
-
--  (c) drop down list of available hierarchies,
-
--  (d) save button,
-
+- (a) the dimension name,
+- (b) name of selected hierarchies,
+- (c) drop down list of available hierarchies,
+- (d) save button,
 - (e) cancel button.
 
-   |image154|
+.. _hierarchiesdialogpopup:
+.. figure:: media/image155.png
 
-   Figure 7.20: Hierarchies dialog pop up.
+    Hierarchies dialog pop up.
 
 After selecting the hierarchy and saving user’s choice, that hierarchy will be used by the pivot table.
 
-If the user re-opens the dialog window, he/she sees the selected hieararchies and has the chance to change it if needed to, as shown in Figure 7.21.
+If the user re-opens the dialog window, he/she sees the selected hieararchies and has the chance to change it if needed to, as shown below.
 
-We give an example of the output when the hierarchy “Time” is selected in Figure 7.22 and hierarchy “Time Weekly” in Figure 7.23.
+.. figure:: media/image156.png
+
+    Changing the hierarchies.
+
+We give an example of the output when the hierarchy “Time” is selected in :numref:`timehierarchieshowsdays` and hierarchy “Time Weekly” in :numref:`timeweeklyhierarchyshowsweek`.
+
+.. _timehierarchieshowsdays:
+.. figure:: media/image159.png
+
+     Time hierachy: the table shows days in the month.
+
+.. _timeweeklyhierarchyshowsweek:
+.. figure:: media/image160.png
+
+    Time Weekly hierachy: table shows weeks in the month.
 
 Slicing
 ~~~~~~~
 
 The slicing operation consists in the analysis of a subset of a multi-dimensional array corresponding to a single value for one or more members of the dimensions. In order to perform this operation you need to drag and drop the dimesion of interest in the axis panel.  Then clicking on the filter icon choose the new single focus and apply it. Once concluded these steps the cube will show only the selected level of the dimension, while the others have been sliced out.
 
-Figure 7.24 shows the slicer option panel which consists of:
+:numref:`dialogforslicerchoosing` shows the slicer option panel which consists of:
 
--  (a) a dimension name,
-
--  (b) a search input field,
-
--  (c) a search button,
-
--  (d) a show/hide siblings checkbox,
-
--  (e) a member tree,
-
--  (f) a selected member icon,
-
-
-   |image155|
-
-   Figure 7.21: Changing the hierarchies.
-
-   |image156|
-
-   Figure 7.22: Time hierachy: the table shows days in the month.
-
-   |image157|
-
-   Figure 7.23: Time Weekly hierachy: table shows weeks in the month.
-
-
--  (g) a highlighted member (result of searching), 
-
+- (a) a dimension name,
+- (b) a search input field,
+- (c) a search button,
+- (d) a show/hide siblings checkbox,
+- (e) a member tree,
+- (f) a selected member icon,
+- (g) a highlighted member (result of searching), 
 - (h) a save and a cancel buttons.
 
-   |image158|
+.. _dialogforslicerchoosing:
+.. figure:: media/image161.png
 
-   Figure 7.24: Dialog for slicer choosing.
+    Dialog for slicer choosing.
 
 In particular, it is possible to search for a member in three ways:
 
-1. by browsing the member tree (Figure 7.25);
+1. by browsing the member tree;
 
-2. by typing member’s name or it’s part in the input field and clicking on the search button. The research will be possible if the user    enters at least four letters. If the user wishes to include member’s siblings to the research, the checkbox (Figure 7.24, (d))          needs to be checked (Figure 7.26);
+.. figure:: media/image162.png
 
-3. after the first research, if the user types some other member’s name before clicking on the search button, visible members whose        names contains a entered text will be highlighted (Figure 7.27).
+   Browsing the member tree.
+
+2. by typing member’s name or it’s part in the input field and clicking on the search button. The research will be possible if the user enters at least four letters. If the user wishes to include member’s siblings to the research, the checkbox (:numref:`dialogforslicerchoosing`, (d))needs to be checked;
+
+.. figure:: media/image163.png
+
+   Using the research box.
+
+3. after the first research, if the user types some other member’s name before clicking on the search button, visible members whose        names contains a entered text will be highlighted.
+
+.. figure:: media/image165.png
+
+    Using the research box after a first investigation.
 
 Once the selection has been saved, the users choice will affect the pivot table and the filter cards slicer name will rearrange.
 
 Filtering
 ~~~~~~~~~
 
-To filter dimension members in a pivot table, the user should click on a button (see Figure 7.5) located on the right side of dimension’s filter card placed in the filter area.
+To filter dimension members in a pivot table, the user should click on a button (see :numref:`featuresoffiltcard`) located on the right side of dimension’s filter card placed in the filter area.
 
-   |image159|
+The procedure to search for a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog. The pop up interface is the one showed below. After selecting a member, the user should click on the save button. The pivot table will display the changements. Otherwise click on the cancel button to discard changes.
 
-   Figure 7.25: Browsing the member tree.
+.. figure:: media/image166.png
 
-   |image160|
+    Filter dialog.
+    
+.. figure:: media/image167.png
 
-   Figure 7.26: Using the research box.
-
-   |image161|
-
-   Figure 7.27: Using the research box after a first investigation.
-
-The procedure to search for a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog. The pop up interface is the one showed in Figure 7.28. After selecting a member, the user should click on the save button. The pivot table will display the changements. Otherwise click on the cancel button to discard changes.
-
-   |image162|
-
-   Figure 7.28: Filter dialog.
-
+    Filter effects on pivot table.
 
 Drill down and drill up
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 User can choose between drill types by clicking on one of the three buttons in the drill types section of the side bar (Figure 7.10). There are three drill types. In the following we give some details on them.
 
-1. **Position**: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with          child members of a member with that particular command. See Figure 7.30.
+1. **Position**: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with          child members of a member with that particular command. See below.
 
-2. **Member**: if the user wants to perform drill operation not only on one member per time but on all members of the same name and        level at the same time it is needed to select member drill type. See Figure 7.31.
+.. figure:: media/image168.png
 
-   |image163|
+     “Position” drill down.
 
-   Figure 7.29: Filter effects on pivot table.
+2. **Member**: if the user wants to perform drill operation not only on one member per time but on all members of the same name and        level at the same time it is needed to select member drill type. See below.
 
-   |image164|
-
-   Figure 7.30: “Position” drill down.
-
-   |image165|
+.. figure:: media/image169.png
 
    Figure 7.31: “Member” drill down.
 
-3. **Replace**: This option lets the user replace the parent member with his child member during drill down operation. To drill up the      user should click on the arrow icon next to the dimension name on which to perform operation. See Figure 7.32.
+3. **Replace**: This option lets the user replace the parent member with his child member during drill down operation. To drill up the      user should click on the arrow icon next to the dimension name on which to perform operation. See figure below.
 
-   |image166|
+.. figure:: media/image170.png
 
-   Figure 7.32: “Replace” drill down.
+    “Replace” drill down.
 
 Drill through
 ~~~~~~~~~~~~~
 
-To perform drill through operation the user needs first to select a cell, as in Figure 7.33, on which to perform operations. Then clicking on the button for a drill through in the side bar, a dialog will open with results (this pop up could take some time to    open).
+To perform drill through operation the user needs first to select a cell, as in the following figure, on which to perform operations. Then clicking on the button for a drill through in the side bar, a dialog will open with results (this pop up could take some time to    open).
 
-   |image167|
+.. figure:: media/image171.png
 
-   Figure 7.33: Drill thorugh option.
+    Drill thorugh option.
 
-In particular, referring to Figure 7.34, drill though dialog consists of:
+In particular, referring to :numref:`drillthoroughwindow`, drill though dialog consists of:
 
 -  (a) a hierarchy menu,
-
 -  (b) a table of values,
-
 -  (c) a maximum rows drop down list,
-
 -  (d) a pagination,
-
 -  (e) a apply button,
-
 -  (f) a export button,
-
 -  (g) a cancel button.
 
+.. _drillthoroughwindow:
+.. figure:: media/image172.png
 
-   |image168|
-
-   Figure 7.34: Drill thorugh window.
+    Drill thorugh window.
 
 The user must therefore select a cell, open the side bar and select the drill through item from the panel. A pop up will show up: here the user can choose the level of detail with which data will be displayed. The steps to follow are:
 
@@ -450,7 +390,7 @@ The user must therefore select a cell, open the side bar and select the drill th
 
 3. to click on the “Apply” button (after checking the checkbox, remember to click outside of the level list and then select apply).
 
-The user can also select the maximum rows to load by choosing one of the options in the drop down list (see Figure 7.34, (c)). Finally, loaded data can be exported in csv format by clicking on the “Export” button.
+The user can also select the maximum rows to load by choosing one of the options in the drop down list (see :numref:`drillthoroughwindow`, (c)). Finally, loaded data can be exported in csv format by clicking on the “Export” button.
 
 Refreshing model
 ~~~~~~~~~~~~~~~~
@@ -461,11 +401,11 @@ To refresh a loaded model the user needs to click on the “Refresh” button av
 Showing MDX
 ~~~~~~~~~~~
 
-To show current mdx query user should click on show mdx button in the side bar. Figure 7.35 shows an example.
+To show current mdx query user should click on show mdx button in the side bar. Figure below shows an example.
 
-   |image169|
+.. figure:: media/image173.png
 
-   Figure 7.35: Showing MDX query example.
+     Showing MDX query example.
 
 
 Sending MDX
@@ -474,13 +414,10 @@ Sending MDX
 If you want to execute an MDX query you need to:
 
 -  click on send MDX button in the sidebar,
-
 -  type a query in a text area of send MDX dialogs (Figure 7.36), 
-
 -  click on the save button (Figure 7.36).
 
-
-   |image170|
+.. figure:: media/image174.png
 
    Figure 7.36: Sending MDX query example.
 
@@ -559,17 +496,11 @@ To remove the sorting, the user just have to click on the icon again. To change 
    Figure 7.45: Sorting settings window.
 
 -  (a) sorting modes:
-
-   -  (b) basic (by default),
-
-   -  (c) breaking,
-
-   -  (d) count,
-
+-  (b) basic (by default),
+-  (c) breaking,
+-  (d) count,
 -  (e) a number input field for count mode definition,
-
 -  (f) a save button.
-
 
 Note that “breaking mode” means that the hierarchy will be broken.
 
@@ -591,21 +522,13 @@ Once enabled, to create a calculated member/set the user should:
 2. click on the “calculated field” button in the side bar panel: a “Select function” dialog will appear. The latter consists of            (refer to Figure 7.47):
 
    -  (a) a name input field,
-
    -  (b) an aggregation functions tab,
-
    -  (c) an arithmetic functions tab,
-
    -  (d) a temporal functions tab,
-
    -  (e) a custom functions tab,
-
    -  (f) a recent functions tab,
-
    -  (g) an available functions list,
-
    -  (h) ok and cancel buttons.
-
 
    |image182|
 
@@ -613,40 +536,24 @@ Once enabled, to create a calculated member/set the user should:
 
 The function definition used to create calculated members are read from the formula.xml file, located at: ROOT/resources/yourTennant/Olap folder. Functions are divided by few different tabs. In particular,\ **Tab Recent** contains calculated members and calculated sets created by user and saved in cookies. If there are no sets/members stored in the cookies, that tab will be empty. **Tab Custom** is where to define custom functions. These functions can be used to make really complex operations that are not part of predefined MDX functions. There you can use combination of few functions together or use operators for complex mathematical  calculations. They are also defined in formulas xml. If a specific tab doesn’t contain any formula, it will not be displayed. The “Name” field is mandatory, indeed the creation of a function without a name is forbidden. In **Recent tab**, the “Name” field is hidden for  Figure 7.48 provides an example of edited formula in the formulas.xml file.
 
-3. Select a function and enter a calculated member/set name and click on “Ok”. A dialog for arguments defintion will show up, as shown in Figure 7.49. This is made up of the following elements:
-
--  (a) selected function name,
-
--  (b) function description,
-
    |image183|
 
    Figure 7.48: Example of one formula inside of formulas xml.
 
--  (c) text input fields for argument expression,
+3. Select a function and enter a calculated member/set name and click on “Ok”. A dialog for arguments defintion will show up, as shown in Figure 7.49. This is made up of the following elements:
 
--  (d) expected MDX expression return type,
-
--  (e) argument’s MDX expression description,
-
--  (f) open saved button, 
-
--  (g) select from table button,
-
--  (h) ok and cancel buttons.
-
+- (a) selected function name,
+- (b) function description,
+- (c) text input fields for argument expression,
+- (d) expected MDX expression return type,
+- (e) argument’s MDX expression description,
+- (f) open saved button, 
+- (g) select from table button,
+- (h) ok and cancel buttons.
 
    |image184|
 
    Figure 7.49: Argument defintion dialog.
-
-   |image185|
-
-   Figure 7.50: Selecting members.
-
-   |image186|
-
-   Figure 7.51: Expression of the selected members.
 
 In particular, to input MDX expression argument, the user has three options, listed in the following.
 
@@ -655,39 +562,40 @@ In particular, to input MDX expression argument, the user has three options, lis
 2. Select members from the pivot table: to select a members that are going to be included in a set, the user should (see Figure 7.50):
 
    -  click on select from table button,
-
    -  click on members in a pivot table,
-
    -  click ok in dialog to finish selection.
+   
+      |image185|
 
+   Figure 7.50: Selecting members.
 
 The expression of selected members will be imported in text input fields for argument expression as Figure 7.51 shows.
 
-   |image187|
-   
-   Figure 7.52: Saved sets dialog.
+   |image186|
 
-   |image188|
-
-   Figure 7.53: Expression of the saved/calculated member/set.
+   Figure 7.51: Expression of the selected members.
 
 3. Import expression from saved calculated members or sets. To import calculated member/set, the user should:
-
 
    • Click on open saved button. Then the dialog of saved calculated members/sets will appear (Figure 7.52) and it consists of:
 
      -  a list of saved calculated members and sets,
-
      -  a calculated member/set name,
-
      -  calculated member/set return type is shown by round icon.
+     
+        |image187|
+   
+   Figure 7.52: Saved sets dialog.
 
    •  Click on calculated member/set. The expression of saved calculated member/set will be imported in text input fields for argument         expression, as highlighted in Figure 7.53.
+   
+   |image188|
+
+   Figure 7.53: Expression of the saved/calculated member/set.
 
    •  After filling all the arguments of function, clicking on OK button will:
 
       -  add calculated member in a pivot table,
-
       -  save calculated set and it will be available for creation of other calculated member and sets.
 
 
@@ -699,470 +607,4 @@ In tab “Recent”, opening the “Select function” dialog the user can find 
 
 Deleting is done by Delete button as shown in Figure 7.54.
 
-Creation of an OLAP document\*
-------------------------------
-
-Multidimensional analysis allows the hierarchical inquiry of numerical measures over predefined dimensions. In Cockpit we explained how the user can monitor data on different detail levels and from different perspectives. Here we want to go into details of how a technical user can create an OLAP document. We recall that the main characteristics of OLAP documents are:
-
--  the need for a specific data structure (logical or physical);
--  analysis based on dimensions, hierarchies and measures;
--  interactive analysis;
--  freedom to re-orient analysis;
--  different levels of data analysis, through synthetic and detailed views;
--  drill-down, slice and dice, drill-through operations.
-
-Considering these items, we will describe the steps to develop an OLAP document.
-
-About the engine
-~~~~~~~~~~~~~~~~
-
-Knowage performs OLAP documents by relying on the **OLAP engine**. This engine integrates Mondrian OLAP server and two different cube navigation clients to provide multi-dimensional analysis. In general, Mondrian is a Relational Online Analytical Processing (ROLAP) tool that provides the back-end support for the engine. OLAP structures, such as cubes, dimensions and attributes, are mapped directly onto tables and columns of the data warehouse. This way, Mondrian builds an OLAP cube in cache that can be accessed by client applications. The Knowage OLAP engine provides the front-end tool to interact with Mondrian servers and shows the results via the typical OLAP functionalities, like drill down, slicing and dicing on a multi-dimensional table. Furthermore, it can also interact with XMLA servers. This frontend translates user’s navigation actions into MDX queries on the multi-dimensional cube, and show query results on the table he is navigating.
-
-
-Development of an OLAP document
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The creation of an OLAP analytical document requires the following steps:
-
-1. schema modelling;
-
-2. catalogue configuration; 
-
-3. OLAP cube template building;
-
-4. analytical document creation.
-
-Schema modelling
-^^^^^^^^^^^^^^^^^
-
-The very first step for a multi-dimensional analysis is to identify essential information describing the process/event under analysis and to consider how it is stored and organized in the database. On the basis of these two elements, a mapping process should be performed to create the multi-dimensional model.
-
-     .. hint::
-     
-        **From the relational to the multi-dimensional model**
-
-        The logical structure of the database has an impact on the mapping approach to be adopted when creating the multidimensional             model, as well as on query performances.
-
-If the structure of the relational schema complies with multi-dimensional logics, it will be easier to map the entities of the physical model onto the metadata used in Mondrian schemas. Otherwise, if the structure is highly normalized and scarcely dimensional, the mapping process will probably require to force and approximate the model to obtain a multi-dimensional model. As said above, Mondrian is a ROLAP tool. As such, it maps OLAP structures, such as cubes, dimensions and attributes directly on tables and columns of a relational data base via XMLbased files, called Mondrian schemas. Mondrian schemas are treated by Knowage as resources and organized into catalogues. Hereafter, an example of Mondrian schema in Mondrian schema example:
-
-.. code-block:: xml
-    :linenos:
-    
-    <?xml version="1.0"?>                                   
-         <Schema name="FoodMart">     
-               <!-- Shared dimensions -->   
-               <Dimension name="Customers"> 
-                  <Hierarchy hasAll="true" allMemberName="All Customers"             
-                             primaryKey=" customer_id">                                         
-                      <Table name="customer"/>                                           
-                      <Level name="Country" column="country" uniqueMembers="true"/>      
-                      <Level name="State Province" column="state_province"               
-                             uniqueMembers="true"/>                                             
-
-                      <Level name="City" column="city" uniqueMembers="false"/>           
-
-                  </Hierarchy> ...                                                   
-
-               </Dimension> ...                                                      
-
-               <!-- Cubes -->                                                        
-               <Cube name="Sales">                                                   
-
-                  <Table name="sales_fact_1998"/>                                    
-
-                  <DimensionUsage name="Customers" source="Customers"                
-                                  foreignKey="customer_id" /> ...                                                             
-
-                  <!-- Private dimensions -->                                        
-
-                  <Dimension name="Promotion Media" foreignKey="promotion_id">       
-
-                      <Hierarchy hasAll="true" allMemberName="All Media"                 
-                                 primaryKey="promotion_id"> 
-                          <Table name="promotion"/>          
-                          <Level name="Media Type" column="media_type" uniqueMembers="true"/>   
-                      </Hierarchy>                                                       
-
-                  </Dimension> ...                                                   
-
-                  <!-- basic measures-->                                             
-
-                  <Measure name="Unit Sales" column="unit_sales" aggregator="sum"    
-                           formatString="#,###.00"/>                                                       
-
-                  <Measure name="Store Cost" column="store_cost" aggregator="sum"    
-                           formatString= "#,###.00"/>                                         
-
-                  <Measure name="Store Sales" column="store_sales" aggregator="sum"  
-                           formatString="#,###.00"/>                                          
-                  ...                                                                
-
-                  <!-- derived measures-->                                           
-
-                  <CalculatedMember name="Profit" dimension="Measures">              
-                      <Formula>        
-                           [Measures].[Store Sales] - [Measures].[Store Cost]  
-                      </Formula>                                                         
-
-                      <CalculatedMemberProperty name="format_string" value="$#,##0.00"/> 
-                  </CalculatedMember>                                                
-
-               </Cube> 
-          ...      
- </Schema> 
-
- Code 8.1: Mondrian schema example
-
-Each mapping file contains one schema only, as well as multiple dimensions and cubes. Cubes include multiple dimensions and measures. Dimensions include multiple hierarchies and levels. Measures can be either primitive, i.e., bound to single columns of the fact table, or calculated, i.e., derived from calculation formulas that are defined in the schema. The schema also contains links between the elements of the OLAP model and the entities of the physical model: for example, <table> sets a link between a cube and its dimensions, while the attributes primaryKey and foreignKey reference integrity constraints of the star schema.
-
-   |image191|
-
-Engine catalogue configuration
-+++++++++++++++++++++++++++++++
-
-To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to **Catalogs> Mondrian schemas catalog**. Here you can define the new schema uploading you XML schema file and choosing **Name** and **Description**. When creating a new OLAP template, you will choose among the available cubes defined in the registered schemas.
-
-Note that the Lock option forbids other technical users to modify settings.
-
-OLAP template building
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user must manually edit the template. The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in Code 8.2:
-
-.. code-block:: xml
-    :linenos:
-    
-     <?xml version="1.0" encoding="UTF-8"?> 
-     <olap>                                 
-        <!-- schema configuration -->       
-        <cube reference="FoodMart"/>        
-
-        <!-- query configuration -->        
-        <MDXquery>  
-            SELECT {[Measures].[Unit Sales]} ON COLUMNS           
-            , {[Region].[All Regions]} ON ROWS                    
-            FROM [Sales]                                          
-            WHERE [Product].[All Products].[${family}]            
-            <parameter name="family" as="family"/>                
-        </MDXquery>                                           
-
-        <MDXMondrianQuery>                                    
-            SELECT {[Measures].[Unit Sales]} ON COLUMNS           
-            , {[Region].[All Regions]} ON ROWS                    
-            FROM [Sales]                                          
-            WHERE [Product].[All Products].[Drink]                
-        </MDXMondrianQuery>                                   
-
-        <!-- toolbar configuration -->                        
-        <TOOLBAR>                                             
-            <BUTTON_MDX visible="true" menu="false" />            
-            <BUTTON_FATHER_MEMBERS visible="true" menu="false"/>  
-            <BUTTON_HIDE_SPANS visible="true" menu="false"/>      
-            <BUTTON_SHOW_PROPERTIES visible="true" menu="false"/> 
-            <BUTTON_HIDE_EMPTY visible="true" menu="false" />     
-            <BUTTON_FLUSH_CACHE visible="true" menu="false" />    
-            <BUTTON_SAVE visible="true" menu="false" />           
-            <BUTTON_SAVE_NEW visible="true" menu="false" />       
-            <BUTTON_EXPORT_OUTPUT visible="true" menu="false" />  
-        </TOOLBAR>                                            
-
-        <!-- data profiling -->                               
-        <DATA-ACCESS>                                         
-           <ATTRIBUTE name="family"/>                            
-        </DATA-ACCESS>                                        
-     </olap>                                                  
-
-   Code 8.2: Mapping template example
-
-An explanation of different sections of Mapping template example follows.
-
--  The CUBE section sets the Mondrian schema. It should reference the exact name of the schema, as registered in the catalogue on the      Server.
-
--  The MDXMondrianQuery section contains the original MDX query defining the starting view (columns and rows) of the OLAP document.
-
--  The MDX section contains a variation of the original MDX query, as used by the Knowage Engine. This version includes parameters (if      any). The name of the parameter will allow Knowage to link the analytical driver associated to the document via the parameter (on        the Server).
-
--  The TOOLBAR section is used to configure visibility options for the toolbar in the OLAP document. The exact meaning and                  functionalities of each toolbar button are explained in next sections. A more complete list of the available options is shown in Menu    configurable options:
-
-.. code-block:: xml
-    :linenos:
-    
-   <BUTTON_DRILL_THROUGH visible="true"/>    
-   <BUTTON_MDX visible="true"/>              
-   <BUTTON_EDIT_MDX visible="true"/>         
-   <BUTTON_FATHER_MEMBERS visible="true"/>   
-   <BUTTON_CC visible="true"/>               
-   <BUTTON_HIDE_SPANS visible="true"/>       
-   <BUTTON_SORTING_SETTINGS visible="true"/> 
-   <BUTTON_SORTING visible="true" />         
-   <BUTTON_SHOW_PROPERTIES visible="true"/>  
-   <BUTTON_HIDE_EMPTY visible="true"/>       
-   <BUTTON_FLUSH_CACHE visible="true"/>      
-   <BUTTON_SAVE visible="true"/>             
-   <BUTTON_SAVE_NEW visible="true"/>        
-   <BUTTON_UNDO visible="true"/>             
-   <BUTTON_VERSION_MANAGER visible="true"/>  
-   <BUTTON_EXPORT_OUTPUT visible="false"/>   
-
-  Code 8.3: Menu configurable options
-
-- The DATA-ACCESS section is used to configure visibility options for data, in particular when the dimensions or cubes defining them are   profiled also in the underlying schema. Details on how to profile OLAP cubes are explained in next sections.
-
-Profiled access
-^^^^^^^^^^^^^^^^^^^^^^
-
-As for any other analytical document, Knowage provides filtered access to data via its behavioural model. The behavioural model is a very important concept in Knowage. For a full understanding of its meaning and functionalities, please refer to Behavioural Model.
-
-Knowage offers the possibility to regulate data visibility based on user profiles. Data visibility can be profiled at the level of the OLAP cube, namely the cube itself is filtered and all queries over that cube share the same data visibility criteria.
-
-To set the filter, which is based on the attribute (or attributes) in the user’s profile, the tecnical user has to type the Mondrian schema. We report Cube level profilation example as a reference guide. Note that data profiling is performed on the cube directly since the filter acts on the data retrieval logics of the Mondrian Server. So the user can only see the data that have been got back by the server according to the filter.
-
-
-.. code-block:: xml
-    :linenos:
-    
-   <?xml version="1.0"?>                                                 
-   <Schema name="FoodMartProfiled"> 
-   ....                                 
-     <Cube name="Sales_profiled"> <Table name="sales_fact_1998"/> 
-     ...      
-        <!-- profiled dimension -->                                        
-        <Dimension name="Product" foreignKey="product_id">                 
-            <Hierarchy hasAll="true" allMemberName="All Products" primaryKey="product_id">                                   
-                <View alias="Product">                                             
-                  <SQL dialect="generic">                                            
-                    SELECT pc.product_family as product_family, p.product_id as        
-                    product_id,                                                        
-                    p.product_name as product_name,                                    
-                    p.brand_name as brand_name, pc.product_subcategory as              
-                    product_subcategory, pc.product_category as product_category,      
-                    pc.product_department as product_department                        
-                    FROM product as p                                                  
-                    JOIN product_class as pc ON p.product_class_id = pc.               
-                    product_class_id                                                   
-                    WHERE and pc.product_family = '${family}' 
-                  </SQL>                   
-                </View>                                                            
-
-                <Level name="Product Family" column="product_family"               
-                       uniqueMembers="false" />                                                                 
-                <Level name="Product Department" column="product_department"       
-                       uniqueMembers="false"/>                                                          
-                <Level name="Product Category" column="product_category"           
-                      uniqueMembers=" false"/>                                           
-                <Level name="Product Subcategory" column="product_subcategory"     
-                       uniqueMembers="false"/>                                            
-                <Level name="Brand Name" column="brand_name"                       
-                       uniqueMembers="false"/>                                            
-                <Level name="Product Name" column="product_name"                   
-                       uniqueMembers="true"/>                                             
-            </Hierarchy>                                                       
-        </Dimension>                                                       
-     </Cube> 
-     ...                                       
-   </Schema> 
-
-   Code 8.4: Cube level profilation example.
-
-In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax and pr.product_family = '${family}'.
-
-To properly set visibility it is required to edit also the OLAP template, adding the <DATA-ACCESS> ... </DATA-ACCESS> tab. OLAP template profilation gives an example.
-
-.. code-block:: xml
-    :linenos:
-    
-   <olap> 
-    ...                        
-      <DATA-ACCESS>                   
-        <ATTRIBUTE name="family" />     
-        <ATTRIBUTE name="department" /> 
-      </DATA-ACCESS>                  
-   </olap>                            
-
-  Code 8.5:OLAP template profilation example.
-
-The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.
-
-You can filter more than one dimensions/cubes and use more profile attributes, remembering to define them in the template. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’, and insert into the query a condition like “ and pc.product_family IN (${family})”.
-
-Creating the analytical document
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Once you have the template ready you can create the OLAP document on Knowage Server.
-
-To create a new OLAP document, click on the “create a new document” button in the **Document Development** area and select **Online analytical processing** as Type. Then you can choose the available engines. In this case we have only the **OLAP engine**. 
-
-Type a name, a functionality, load the XML template and save. You will see the document in the functionality (folder) you selected, displayed with the typical cube icon as shown in Figure 8.1.
-
-   |image192|
-
-   Figure 8.1: OLAP document on server.
-
-OLAP Designer\*
-~~~~~~~~~~~~~~~~~
-
-Knowage Server is also endowed of an efficient OLAP designer which avoid the user to edit manually the XML-based template that we discussed on in Development of an OLAP document. We will therefore describe here all features of this functionality. 
-
-The user needs to have a functioning Modrian schema to start the work with. Select **Mondrian Schemas Catalog** to check the available Mondrian schemas on server. It is mandatory that the chosen Mondrian schema has no parameters applied.
-
-   |image193|
-
-The page as the one in Figure 8.2 will open.
-
-   |image194|
-
-   Figure 8.2: Schema Mondrian from catalog.
-
-Then we start entering the **Document Browser** and clicking on the “Plus” icon at the top right corner of the page. Fill in the mandatory boxes as Label and Name of the document, select the On-line Analytica Process Type of document and the What-if Engine (we stress that the What-if engine is available only for who have purchased the Knowage SI package). Remember to save to move to the next step: open the Template Build. The latter can be opend clicking on the editor icon |image195| and it is available at the bottom of the document detail page.
-
-The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. Figure 8.3 sums up these three steps. Following the example just given in Figure 8.3 you will enter a page like that of Figure 8.4. 
-
-   |image196|
-
-   Figure 8.3: OLAP core configuration.
-
-   |image197|
-
-   Figure 8.4: Defining OLAP template.
-
-Once entered the page the user can freely set the fields as filter panels or as filter cards, according to requirements. Refer to Chapter 7.1 to review the terminology. Make your selection and you can already save the template as shown in Figure 8.5. You can notice that the side panel contains some features (Figure 8.6): 
-
-   |image198|
-
-   Figure 8.5: Defining OLAP template.
-
-   |image199|
-
-   Figure 8.6: Side panel features for the OLAP Designer.
-
-
--  |image200| to set the drill on Position, Member or Replace;
--  |image201| to configure the scenario; 
-- |image202| to define the cross navigation;
--  |image203| to configure buttons visibility.
-
-
-Refer to Section 7.2 to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to Figure 8.8, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
-
-   |image204|
-
-   Figure 8.7: Wizard to configure the scenario.
-
-Once one cross navigation has been set you keep on adding as many as required. Just open the wizard and click on the “Add” button at the top right corner.
-
-Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the the user must access the “Cross Navigation Definition” functionalities available in Knowage Server. Here, referring to Section 5.5, you will use the parameter just set as output parameter.
-
-As shown in Figure 8.9, the buttons visibility serves to decide which permissions are granted to the end-user. Some features can only be let visible while the admin can also grant the selection for others. 
-
-Once the configuration is done click on the **Save template** button and on the **Close designer** button to exit template. As Figure 8.6 highlights, these two buttons are available at the bottom of the side panel.
-
-The admin can develop the OLAP document using also the OLAP engine. In this case the OLAP designer will lack of the scenario configuration since in this case the end-user must not have the grants for editing the records. So in this instance the “Configure scenario” button is not available at all. For the other two options the instructions are right the same as the What-if engine.
-
-   |image205|
-
-   Figure 8.8: Cross navigation definition.
-
-   |image206|
-
-   Figure 8.9: Wizard to configure the scenario.
-
-
-Profiled access
-^^^^^^^^^^^^^^^^
-
-Once the OLAP document has been created using the template designer the user can insert parameters to profile the document. To set parameters the user can follow two paths, already seen in Development of an OLAP document:
-
--  to download the template of the document and edit it, adding the parameter(s),
--  to download the Mondrian schema and edit it; modify the dimension(s) (that will update according to the value parameter(s)) inserting    an SQL query which presents the parametric filtering clause. Then it is necessary to add tbe DATA-ACCESS tab to the template.
-
-.. hint::
-    **Filter through the interface**
-
-       Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with             profile attributes while all the filtering issue is performed through the interface, using the filter panel.
-
-
-
-Cross Navigation
-~~~~~~~~~~~~~~~~~~~
-
-The cross navigation must be implemented at template level but also at analytical document level. The latter has been already wildly described in Cross Navigation . In the following we will see the first case. Observe that both procedures are mandatory.
-
-For OLAP documents it is possible to enable the cross navigation on members or on cells and we will give more details on these two cases in the following.
-
-Generally speaking, the user must modify the template file to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in Section 5.5 of this manual. 
-
-Cross navigation on members
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To activate the cross navigation on a member means that the user can click on a member of a dimension to be sent and visualize a target document. The first type of navigation can be set by editing the OLAP query template. In the first case you need to add a section called “clickable” inside the MDX query tag. In fact,
-
--  the attribute value is equal to the hierarchy level containing the member(s) that shall be clickable;
--  the element represents the parameter that will be passed to the destination document. The name attribute is the URI of the              parameter that will be passed to the target document. The value 0 represents the currently selected member, as a convention: this        value will be assigned to the parameter whose URI is null.
-
-Figure 8.10 gives an example. Note that you can recognize that the cross navigation is activated when elements are shown blue highlighted and underlined.
-
-   |image208|
-
-   Figure 8.10: Cross navigation on member.
-
-If you open the template file you will read instructions similar to the ones reported in Syntax used to set cross navigation.
-
-.. code-block:: xml
-    :linenos:
-    
-     <MDXquery> 
-       select {[Measures].[Unit Sales]} ON COLUMNS,               
-       {([Region].[All Regions], [Product].[All Products])} ON ROWS from     
-       [Sales_V]                                                             
-       <clickable uniqueName="[Product].[Product Family]" >                  
-          <clickParameter name="family" value="{0}"/>                           
-       </clickable>                                                          
-     </MDXquery>                                                           
-
- Code 8.6: Syntax used to set cross navigation.
-
-
-Cross navigation from a cell of the pivot table
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This case is similar to the one-dimension drill except that in this case values of all dimensions can be passed to the target document. In other words, the whole dimensional context of a cell can be passed. Now let us suppose the user wishes to click on a cell and pass to the target document the value of the level family of product dimension and year of time dimension. It should creates two parameters one for family where dimension is product, hierarchy is product, level is product family and one for year parameter where dimension in type, hierarchy is time and level is year. Let see what happens when user clicks on a cell. Depending on the selected cell, the analytical driver family of the target document will have a different value: it will be the name of the context member (of the selected cell) of the “Product” dimension, i.e. the [Product] hierarchy, at [Product].[ProductFamily] level. Look at the following Table 8.1 for some examples:
-
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    Context member on Product dimension                          | "Family" analytical driver value                    |
-+=================================================================+=====================================================+
-|    [Product].[All Products]                                     | [no value: it will be prompted to  the user]        |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Food]                              | Food                                                |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Drink]                             | Drink                                               |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Non-Consumable]                    | Non-Consumable                                      |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Food].[Snacks]                     | Food                                                |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Food].[Snacks].[Candy]             | Food                                                |
-+-----------------------------------------------------------------+-----------------------------------------------------+
- 
-   Table 8.1
-
-Let us have a look at the template. Syntax used to set cross navigation shows how to use the cross navigation tag:
-
-.. code-block:: xml
-    :linenos:
-    
-   <CROSS_NAVIGATION>                                                    
-      <PARAMETERS>                                                       
-          <PARAMETER name="family" dimension="Product" hierarchy="[Product]" 
-                     level="[Product].[Product Family]" />                             
-          <PARAMETER name="year" dimension="Time" hierarchy="[Time]"        
-                     level="[Time].[Year]" />                                                          
-      </PARAMETERS>                                                      
-   </CROSS_NAVIGATION>                                                   
-
- Code 8.7: Syntax used to set cross navigation
-
-
-A green arrow will be visible in the toolbar to show that cross navigation is enabled. When user clicks on that icon in each cell a green arrow will displayed in each cell. User can click on that icon to start cross navigation from a cell.
-
-   
-.. include:: olapThumbinals.rst
+  .. include:: olapThumbinals.rst
