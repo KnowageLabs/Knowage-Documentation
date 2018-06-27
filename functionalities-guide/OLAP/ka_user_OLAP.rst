@@ -414,41 +414,41 @@ Sending MDX
 If you want to execute an MDX query you need to:
 
 -  click on send MDX button in the sidebar,
--  type a query in a text area of send MDX dialogs (Figure 7.36), 
--  click on the save button (Figure 7.36).
+-  type a query in a text area of send MDX dialogs, 
+-  click on the save button.
 
 .. figure:: media/image174.png
 
-   Figure 7.36: Sending MDX query example.
+    Sending MDX query example.
 
-Result of the MDX query “should” appear in pivot table as in Figure 7.37. In fact, the user is responsable for entering *valid* MDX query.
+Result of the MDX query “should” appear in pivot table as in figure below. In fact, the user is responsable for entering *valid* MDX query.
 
-   |image171|
+.. figure:: media/image175.png
 
-   Figure 7.37: Sending MDX query example.
+    Sending MDX query example.
 
 
 Showing parent members
 ~~~~~~~~~~~~~~~~~~~~~~
 
-If a user wants to see additional information about members shown in the pivot table (for example: member’s hierarchy, level or parent member) he should click on a show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in Figure 7.38 and Figure 7.39.
+If a user wants to see additional information about members shown in the pivot table (for example: member’s hierarchy, level or parent member) he should click on a show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in the following two figures.
 
-   |image172|
+.. figure:: media/image176.png
 
-   Figure 7.38: Pivot table without the parent members mode.
+    Pivot table without the parent members mode.
 
-   |image173|
+.. figure:: media/image177.png
 
-   Figure 7.39: Pivot table after the parent members selection.
+    Pivot table after the parent members selection.
 
 Hiding/showing spans
 ~~~~~~~~~~~~~~~~~~~~
 
-To hide or show spans the user should click on show/hide spans button in the side bar. The result will be visible in pivot table as in Figure 7.40.
+To hide or show spans the user should click on show/hide spans button in the side bar. The result will be visible in pivot table as in figure below.
 
-   |image174|
+.. figure:: media/image178.png
 
-   Figure 7.40: Hide/show spans.
+    Hide/show spans.
 
 Showing properties
 ~~~~~~~~~~~~~~~~~~
@@ -457,43 +457,41 @@ In OLAP schema the XML member properties, if configured, could be represented in
 
 1. as part of pivot table where a property values are placed in rows and columns. To get these values, the user needs to click on show      properties button in the side bar. Results will be shown in the pivot table;
 
+.. figure:: media/image179.png
 
-   |image175|
+    Show properties.
 
-   Figure 7.41: Show properties.
+2. in a pop up as compact properties. To enable compact properties user should click on enable compact properties button in the side bar. In this way in all the cells of members Suppressing empty colunms/rows which has property set, a table icon appears. This icon lets the property pop up opens. Figure below shows an example.
 
-2. in a pop up as compact properties. To enable compact properties user should click on enable compact properties button in the side bar. In this way in all the cells of members Suppressing empty colunms/rows which has property set, a table icon appears. This icon lets the property pop up opens. Figure 7.42 shows an example.
+.. figure:: media/image180.png
 
-   |image176|
-
-   Figure 7.42: Show properties summarized in a pop up.
+    Show properties summarized in a pop up.
 
 Suppressing empty colunms/rows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To hide the empty rows and/or colums, if any, from pivot table the user can click on the “Suppress empty rows/colums” button in the side bar panel. An example is given in Figure 7.43.
+To hide the empty rows and/or colums, if any, from pivot table the user can click on the “Suppress empty rows/colums” button in the side bar panel. An example is given in Figure below.
 
+.. figure:: media/image181.png
 
-   |image177|
-
-   Figure 7.43: Suppressing empty colunms/rows.
-
-   |image178|
-
-   Figure 7.44: Member sorting.
+    Suppressing empty colunms/rows.
 
 Sorting
 ~~~~~~~
 
-To enable member ordering the user must click on the “Enable sorting” button in the side bar panel. The command for sorting will appear next to the member’s name in the pivot table. In addition, the sorting command will show the members of “Measures” hieararchy or members that are crossjoined with them, as shown in Figure 7.44. 
+To enable member ordering the user must click on the “Enable sorting” button in the side bar panel. The command for sorting will appear next to the member’s name in the pivot table. In addition, the sorting command will show the members of “Measures” hieararchy or members that are crossjoined with them, as shown below. 
+
+.. figure:: media/image182.png
+
+    Member sorting.
 
 To sort members the user needs to click on the sorting command |image179|, available next to each member of the pivot table. Note that the sorting criteria is ascending at first execution. If the user clicks on the sorting icon, criteria will change to descending and the result will be shown in pivot table.
 
-To remove the sorting, the user just have to click on the icon again. To change sorting mode user should click on sorting settings button in the side bar. Referring to Figure 7.45, dialog sorting settings consists of:
+To remove the sorting, the user just have to click on the icon again. To change sorting mode user should click on sorting settings button in the side bar. Referring to the following figure, dialog sorting settings consists of:
    
-   |image180|
+.. figure:: media/image185.png
 
-   Figure 7.45: Sorting settings window.
+    Sorting settings window.
 
 -  (a) sorting modes:
 -  (b) basic (by default),
@@ -513,13 +511,13 @@ Firstly we stress that to enable **Calculated fields** in your Olap document a p
 
 Once enabled, to create a calculated member/set the user should:
 
-   |image181|
+.. figure:: media/image186.png
 
-   Figure 7.46: Calculated member.
+   Calculated member.
 
-1. select a member of the pivot table, as in Figure 7.46, which will be the parent of the calculated member,
+1. select a member of the pivot table, as in figure above, which will be the parent of the calculated member,
 
-2. click on the “calculated field” button in the side bar panel: a “Select function” dialog will appear. The latter consists of            (refer to Figure 7.47):
+2. click on the “calculated field” button in the side bar panel: a “Select function” dialog will appear. The latter consists of            (refer to :numref:`selectfunctiondialog`):
 
    -  (a) a name input field,
    -  (b) an aggregation functions tab,
@@ -530,17 +528,18 @@ Once enabled, to create a calculated member/set the user should:
    -  (g) an available functions list,
    -  (h) ok and cancel buttons.
 
-   |image182|
+.. _selectfunctiondialog:
+.. figure:: media/image187.png
 
-   Figure 7.47: Select function dialog.
+    Select function dialog.
 
 The function definition used to create calculated members are read from the formula.xml file, located at: ROOT/resources/yourTennant/Olap folder. Functions are divided by few different tabs. In particular,\ **Tab Recent** contains calculated members and calculated sets created by user and saved in cookies. If there are no sets/members stored in the cookies, that tab will be empty. **Tab Custom** is where to define custom functions. These functions can be used to make really complex operations that are not part of predefined MDX functions. There you can use combination of few functions together or use operators for complex mathematical  calculations. They are also defined in formulas xml. If a specific tab doesn’t contain any formula, it will not be displayed. The “Name” field is mandatory, indeed the creation of a function without a name is forbidden. In **Recent tab**, the “Name” field is hidden for  Figure 7.48 provides an example of edited formula in the formulas.xml file.
 
-   |image183|
+.. figure:: media/image188.png
 
-   Figure 7.48: Example of one formula inside of formulas xml.
+    Example of one formula inside of formulas xml.
 
-3. Select a function and enter a calculated member/set name and click on “Ok”. A dialog for arguments defintion will show up, as shown in Figure 7.49. This is made up of the following elements:
+3. Select a function and enter a calculated member/set name and click on “Ok”. A dialog for arguments defintion will show up, as shown in :numref:`argumentdefdialog`. This is made up of the following elements:
 
 - (a) selected function name,
 - (b) function description,
@@ -551,47 +550,50 @@ The function definition used to create calculated members are read from the form
 - (g) select from table button,
 - (h) ok and cancel buttons.
 
-   |image184|
+.. _argumentdefdialog:
+.. figure:: media/image189.png
 
-   Figure 7.49: Argument defintion dialog.
+    Argument defintion dialog.
 
 In particular, to input MDX expression argument, the user has three options, listed in the following.
 
 1. Type it manually (for advance users).
 
-2. Select members from the pivot table: to select a members that are going to be included in a set, the user should (see Figure 7.50):
+2. Select members from the pivot table: to select a members that are going to be included in a set, the user should (see :numref:`selectingmembers`):
 
    -  click on select from table button,
    -  click on members in a pivot table,
    -  click ok in dialog to finish selection.
-   
-      |image185|
 
-   Figure 7.50: Selecting members.
+.. _selectingmembers:
+.. figure:: media/image190.png
 
-The expression of selected members will be imported in text input fields for argument expression as Figure 7.51 shows.
+    Selecting members.
 
-   |image186|
+The expression of selected members will be imported in text input fields for argument expression as figure below shows.
 
-   Figure 7.51: Expression of the selected members.
+.. figure:: media/image191.png
+
+    Expression of the selected members.
 
 3. Import expression from saved calculated members or sets. To import calculated member/set, the user should:
 
-   • Click on open saved button. Then the dialog of saved calculated members/sets will appear (Figure 7.52) and it consists of:
+   • Click on open saved button. Then the dialog of saved calculated members/sets will appear (:numref:`savedsetsdialog`) and it consists of:
 
      -  a list of saved calculated members and sets,
      -  a calculated member/set name,
      -  calculated member/set return type is shown by round icon.
-     
-        |image187|
-   
-   Figure 7.52: Saved sets dialog.
 
-   •  Click on calculated member/set. The expression of saved calculated member/set will be imported in text input fields for argument         expression, as highlighted in Figure 7.53.
+.. _savedsetsdialog:
+.. figure:: media/image192.png
    
-   |image188|
+    Saved sets dialog.
 
-   Figure 7.53: Expression of the saved/calculated member/set.
+   •  Click on calculated member/set. The expression of saved calculated member/set will be imported in text input fields for argument         expression, as highlighted below.
+   
+.. figure:: media/image193.png
+
+    Expression of the saved/calculated member/set.
 
    •  After filling all the arguments of function, clicking on OK button will:
 
@@ -601,10 +603,10 @@ The expression of selected members will be imported in text input fields for arg
 
 In tab “Recent”, opening the “Select function” dialog the user can find a list of saved calculated member and sets which can be edited or deleted. Editing is done by clicking on one of them. 
 
-   |image189|
+.. figure:: media/image194.png
 
-   Figure 7.54: Edit a calculated member.
+   Edit a calculated member.
 
-Deleting is done by Delete button as shown in Figure 7.54.
+Deleting is done by Delete button as shown in figure above.
 
-  .. include:: olapThumbinals.rst
+.. include:: olapThumbinals.rst
