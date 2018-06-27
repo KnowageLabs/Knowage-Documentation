@@ -430,13 +430,13 @@ In the above examples, the JSON Path Items will be: $.contextResponses[:sub:`\*`
 .. table:: Dataset result
     :widths: auto
   
-  +---------------+-----------------------+---------------------+
-  |    prosumerId | downstreamActivePower | upstreamActivePower |
-  +===============+=======================+=====================+
-  | pros1         | 3.1                   | 0.0                 |
-  +---------------+-----------------------+---------------------+
-  | pros2         | 0.5                   | 2.4                 |
-  +---------------+-----------------------+---------------------+
+     +---------------+-----------------------+---------------------+
+     |    prosumerId | downstreamActivePower | upstreamActivePower |
+     +===============+=======================+=====================+
+     | pros1         | 3.1                   | 0.0                 |
+     +---------------+-----------------------+---------------------+
+     | pros2         | 0.5                   | 2.4                 |
+     +---------------+-----------------------+---------------------+
 
 
 The REST dataset permits usage of profile attributes and parameters using the same syntax as for other dataset types: *$<profile attribute>* and *$P<parameter>*. You can use both of them as placeholders in every field: most likely you need to use them in REST service URL or on the request body. As an example, suppose you want to retrieve the value of just one prosumer that is specified by the "prosumerId" parameter, you have to set the request body as:
