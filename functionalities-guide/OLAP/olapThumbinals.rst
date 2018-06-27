@@ -5,6 +5,21 @@
 .. |image179| image:: media/image184.png
    :width: 1.1811in
    :height: 0.27309in
+.. |image195| image:: media/image197.png
+   :width: 0.39372in
+   :height: 0.36831in
+.. |image200| image:: media/image202.png
+   :width: 0.7874in
+   :height: 0.25054in
+.. |image201| image:: media/image203.png
+   :width: 0.3937in
+   :height: 0.27485in
+.. |image202| image:: media/image204.png
+   :width: 0.39372in
+   :height: 0.26248in
+.. |image203| image:: media/image205.png
+   :width: 0.3937in
+   :height: 0.27019in
 
 
 
@@ -187,9 +202,6 @@
 .. |image194| image:: media/image196.png
    :width: 4.05119in
    :height: 1.89807in
-.. |image195| image:: media/image197.png
-   :width: 0.39372in
-   :height: 0.36831in
 .. |image196| image:: media/image198.png
    :width: 4.05104in
    :height: 3.04019in
@@ -202,18 +214,6 @@
 .. |image199| image:: media/image201.png
    :width: 0.86807in
    :height: 3.09129in
-.. |image200| image:: media/image202.png
-   :width: 0.7874in
-   :height: 0.25054in
-.. |image201| image:: media/image203.png
-   :width: 0.3937in
-   :height: 0.27485in
-.. |image202| image:: media/image204.png
-   :width: 0.39372in
-   :height: 0.26248in
-.. |image203| image:: media/image205.png
-   :width: 0.3937in
-   :height: 0.27019in
 .. |image204| image:: media/image206.png
    :width: 4.72136in
    :height: 1.08613in
