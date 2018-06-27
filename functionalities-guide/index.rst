@@ -22,13 +22,12 @@ Functionalities
    Datamining/ka_user_datamining.rst
    Network/ka_dev_network.rst
    OLAP/ka_user_OLAP.rst
+   WhatIf/ka_user_whatif.rst
    Glossary/ka_dev_glossary.rst
    KPI/ka_KPI.rst
    ScoreCard/ka_Scorecard.rst
    Alert/ka_Alert.rst
    QbeMeta/ka_dev_introqbemeta.rst
-   WhatIf/ka_dev_whatif.rst
-   WhatIf/ka_user_whatif.rst
 
 
 .. |image0| image:: MyData/media/image1.png
