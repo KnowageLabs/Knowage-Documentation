@@ -555,10 +555,10 @@ The syntax to add a parameter in the dataset code text is *$P{parameter_name}*. 
          
 Any parameter added to your dataset must be added to the parameters list, too. To add a parameter in the list, click the **Add** button. A new row will be created in the list: double click the name and edit the parameter values. There are three different types of parameters. For each of them the placeholder will be replaced according to a different pattern, as follows:
 
-   **String**: the parameter value will be surrounded with single quotes if not already present.
-   **Number**: the parameter value is treated as a number, with no quotes; an exception is thrown if the value passed is not a number.
-   **Raw**: the parameter value is treated as a string containing a set of values; single quotes are removed from the containing string, not from the single strings composing it.
-   **Generic**: the parameter is simply passed as is, with no futher processing.
+-  **String**: the parameter value will be surrounded with single quotes if not already present.
+-  **Number**: the parameter value is treated as a number, with no quotes; an exception is thrown if the value passed is not a number.
+-  **Raw**: the parameter value is treated as a string containing a set of values; single quotes are removed from the containing string, not from the single strings composing it.
+-  **Generic**: the parameter is simply passed as is, with no futher processing.
 
 In SQL query example with parameters an example is provided, where MediaType is a string parameter.
 
