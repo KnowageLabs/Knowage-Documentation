@@ -1,3 +1,15 @@
+.. |image475| image:: media/image469.png
+   :width: 0.15748in
+   :height: 0.14961in
+.. |image476| image:: media/image470.png
+   :width: 0.15749in
+   :height: 0.14091in
+
+
+
+
+
+
 .. |image464| image:: media/image456.png
    :width: 4.05116in
    :height: 2.70077in
@@ -31,12 +43,6 @@
 .. |image474| image:: media/image467.png
    :width: 5.24626in
    :height: 1.23532in
-.. |image475| image:: media/image469.png
-   :width: 0.15748in
-   :height: 0.14961in
-.. |image476| image:: media/image470.png
-   :width: 0.15749in
-   :height: 0.14091in
 .. |image477| image:: media/image471.png
    :width: 5.67801in
    :height: 1.16094in
