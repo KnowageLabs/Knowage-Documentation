@@ -71,76 +71,55 @@ The **NETWOK_DEFINITION** contains the definition of the network: nodes, edges, 
                </nodes>
                <edges
                   Edges properties
-          </edges>
-          </visual_style>
+               </edges>
+             </visual_style>
           </options>
 
-   Tooltip is a special Edge/node property. The tooltip contains a set
-   of proerty/value couple and the syntax is typed in the next 
-   Syntax for tooltip,an edge/nodes property:
+Tooltip is a special Edge/node property. The tooltip contains a set of proerty/value couple and the syntax is typed in the next Syntax for tooltip,an edge/nodes property:
 
-+-----------------------------------------------------------------------+
-| <nodes (or edge)>                                                     |
-|                                                                       |
-|    <tooltip_LIST>                                                     |
-|                                                                       |
-|    <tooltip property="OBJ PROPERTY" text="PROPERTY LABEL TEXT"/>      |
-|    </tooltip_LIST>                                                    |
-|                                                                       |
-| </nodes (or edge)>                                                    |
-+-----------------------------------------------------------------------+
+.. code-block:: bash
+        :linenos:
+        :caption: Syntax for tooltip,an edge/nodes property.
 
- Syntax for tooltip,an edge/nodes property.
+          <nodes (or edge)>
+            <tooltip_LIST>
+            <tooltip property="OBJ PROPERTY" text="PROPERTY LABEL TEXT"/>
+            </tooltip_LIST>
+          </nodes (or edge)>
 
-   Where OBJ PROPERTY property is the name of the property (for example
-   id) and PROPERTY LABEL TEXT is the text you’ll see as label of the
-   property in the tooltip. You can find the list of available
-   properties here: `http://cytoscapeweb.
-   cytoscape.org/documentation/visual_style <http://cytoscapeweb.cytoscape.org/documentation/visual_style>`__
+  Where OBJ PROPERTY property is the name of the property (for example id) and PROPERTY LABEL TEXT is the text you’ll see as label of the property in the tooltip. You can find the list of available properties here: `http://cytoscapeweb. cytoscape.org/documentation/visual_style <http://cytoscapeweb.cytoscape.org/documentation/visual_style>`__
 
--  **Dataset_mapping_LIST**: this section maps the columns of the
-   dataset on properties of the graph. This is done with the tag
-   dataset_mapping. There are two possibilities:
+-  **Dataset_mapping_LIST**: this section maps the columns of the dataset on properties of the graph. This is done with the tag dataset_mapping. There are two possibilities:
+-  Map a column of the dataset on a property of the graph and the syntax is showed in Code 17.1:
 
-   -  Map a column of the dataset on a property of the graph and the
-      syntax is showed in Code 17.1:
-
-+---------------------------------------------------------------------+
-| <dataset_mapping element="source" column="sourceId" property="id"/> |
-+---------------------------------------------------------------------+
-
-
-   
+.. code-block:: bash
+        :linenos:
+        :caption: Syntax for tooltip,an edge/nodes property.
+      
+          <dataset_mapping element="source" column="sourceId" property="id"/>   
 
    Where:
 
-   * element: is the element where we want to apply the property. It can
-   be source, target (for nodes) and edge;
+   - * element: is the element where we want to apply the property. It can be source, target (for nodes) and edge;
+   - * property: the property of the network object we wan to set;
+   - * column: the label of the dataset column we want to map.
 
-   * property: the property of the network object we wan to set; *
-   column: the label of the dataset column we want to map.
-
-The list of available node and edge properties is here
-`http://cytoscapeweb.cytosca <http://cytoscapeweb.cytoscape.org/documentation/elements>`__\ pe.
-
-   `org/documentation/elements <http://cytoscapeweb.cytoscape.org/documentation/elements>`__
+The list of available node and edge properties is here `http://cytoscapeweb.cytosca <http://cytoscapeweb.cytoscape.org/documentation/elements>`__\ pe.`org/documentation/elements <http://cytoscapeweb.cytoscape.org/documentation/elements>`__
 
 -  Set a fixed value to a property. The syntax is showed in Code 17.1.
 
-+-------------------------------------------------------------------------+
-|    <dataset_mapping element="source" value="#caabff" property="color"/> |
-+-------------------------------------------------------------------------+
+.. code-block:: bash
+        :linenos:
+        :caption: Syntax for tooltip,an edge/nodes property.
 
-   
+          <dataset_mapping element="source" value="#caabff" property="color"/>
 
-   Where:
+     Where:
 
    * value is the fixed value of the property we want to set.
 
--  **info**: contains some text/html that can help the user
-   understanding the network. Since the syntax of the template is XML if
-   you want to insert HTML you should envelop it into a CDATA tag. For
-   example refer to Code 17.1:
+-  **info**: contains some text/html that can help the user understanding the network. Since the syntax of the template is XML if
+ you want to insert HTML you should envelop it into a CDATA tag. For example refer to Code 17.1:
 
 +-------------------+
 | <![CDATA[ ....... |
