@@ -1,3 +1,15 @@
+
+.. |image151| image:: media/image152.png
+   :width: 0.39372in
+   :height: 0.3281in
+.. |image179| image:: media/image184.png
+   :width: 1.1811in
+   :height: 0.27309in
+
+
+
+
+
 .. |image134| image:: media/image134.png
    :width: 4.0511in
    :height: 1.92442in
@@ -49,9 +61,6 @@
 .. |image150| image:: media/image151.png
    :width: 5.20858in
    :height: 1.74301in
-.. |image151| image:: media/image152.png
-   :width: 0.39372in
-   :height: 0.3281in
 .. |image152| image:: media/image153.png
    :width: 5.20872in
    :height: 1.61682in
@@ -133,9 +142,6 @@
 .. |image178| image:: media/image182.png
    :width: 5.67806in
    :height: 1.86197in
-.. |image179| image:: media/image184.png
-   :width: 1.1811in
-   :height: 0.27309in
 .. |image180| image:: media/image185.png
    :width: 4.05116in
    :height: 2.93395in
