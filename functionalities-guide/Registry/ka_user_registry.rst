@@ -1,57 +1,55 @@
-
 Registry
 ========
 
-A Registry document allows users to write, cancel and modify items of a datamart. Knowage allows users to implement a Registry document through the **Qbe Engine**. By the way it has a different graphical interface compared to the Qbe one. An example is given in Figure 12.1. In next chapters we will see how to navigate a Registry document (Section 12.1) and how to create a new one (Section 12.2).
+A Registry document allows users to write, cancel and modify items of a datamart. Knowage allows users to implement a Registry document through the **Qbe Engine**. By the way it has a different graphical interface compared to the Qbe one. An example is given in the following figure. In next chapters we will see how to navigate a Registry document (Section 12.1) and how to create a new one (Section 12.2).
 
+.. figure:: media/image339.png
 
-   |image333|
-
-   Figure 12.1: Example of Registry document.
+    Example of Registry document.
    
-
 Registry features
 -------------------
 
-The execution of a Registry document opens a plain table: the records are shown in rows and they can be browsed using the pagination available at the bottom of the window. We underline that it is possible to edit each item of the table. Just double-click on a cell you may wish to rearrange and type a string or a numeric value accordingly. Some examples are highlighted in Figure 12.2.
+The execution of a Registry document opens a plain table: the records are shown in rows and they can be browsed using the pagination available at the bottom of the window. We underline that it is possible to edit each item of the table. Just double-click on a cell you may wish to rearrange and type a string or a numeric value accordingly. Some examples are highlighted below.
 
+.. figure:: media/image340.png
 
-   |image334|
+    Editing table cells.
 
-   Figure 12.2: Editing table cells.
+Moreover, you can add new rows from scratch selecting the “Plus” icon |image335| on the left of the functionality bar (:numref:`functionalitybar`) available at the top of the window. Insert in each cell the corresponding value: string or number.
 
-Moreover, you can add new rows from scratch selecting the “Plus” icon |image335| on the left of the functionality bar (Figure 12.3) available at the top of the window. Insert in each cell the corresponding value: string or number.
+.. _functionalitybar:
+.. figure:: media/image342.png
 
-   |image336|
+    Functionality bar.
 
-   Figure 12.3: Functionality bar.
+.. figure:: media/image343.png
 
-   |image337|
+    Adding a new row.
 
-   Figure 12.4: Adding a new row.
-
-Vice versa, you can delete one or more rows using the “Minus” icon |image338| of the functionality bar (Figure 12.3) available at the top of the window. 
+Vice versa, you can delete one or more rows using the “Minus” icon |image338| of the functionality bar (:numref:`functionalitybar`) available at the top of the window. 
 
 It is important to click on the Save button |image339| to store the adjustments done in the datamart.
 
 Furthermore you can use filters, if implemented, of the functionality bar. Pick one field out of the combobox. Click on the “Filter” icon |image340| to run the functionality. Otherwise, click on the “Cancel” icon |image341| to clear the boxes off.
 
-Note that, since records are displayed in a plain table, it is available a combobox (see Figure 12.5) which allows the user to visualize all fields related to the record of the previous cell and then change from one to another to get all data.
+Note that, since records are displayed in a plain table, it is available a combobox (see figure below) which allows the user to visualize all fields related to the record of the previous cell and then change from one to another to get all data.
 
-   |image342|
+.. figure:: media/image348.png
 
-   Figure 12.5: Select one field from a combobox.
+    Select one field from a combobox.
 
 JPivot Registry characteristics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to implement also a JPivot Registry document. The graphical features are very similar to the ones exposed in Section 12.1. An example is given in Figure 12.6.
+It is possible to implement also a JPivot Registry document. The graphical features are very similar to the ones exposed in Section 12.1. An example is given below.
 
-   |image343|
+.. _examplejpivotregdoc:
+.. figure:: media/image349.png
 
-   Figure 12.6: Example of Jpivot Registry document.
+    Example of Jpivot Registry document.
 
-In this case the table shows columns organized in a hierarchical way and a grouping function is implemented. From the left to the right the columns contain fields at different detail levels. The last column in our example in Figure 12.6 contains numeric data. Such a field is grouped at the “country” level. The grouping level depends on the configurations made on template building.
+In this case the table shows columns organized in a hierarchical way and a grouping function is implemented. From the left to the right the columns contain fields at different detail levels. The last column in our example in :numref:`examplejpivotregdoc` contains numeric data. Such a field is grouped at the “country” level. The grouping level depends on the configurations made on template building.
 
 In the JPivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented filters are still available.
 
@@ -63,8 +61,10 @@ To create a Registry document there must be available a datamart schema on Knowa
 
 Here we exhibit a possible syntax for a Registry document.
 
+.. _exampletemplatebuild:
 .. code-block:: xml
     :linenos:
+    :caption: Example (a) of template for Registry.
     
     <?xml version="1.0" encoding="windows-1250"?> 
     <QBE>  
@@ -93,55 +93,42 @@ Here we exhibit a possible syntax for a Registry document.
             </CONFIGURATIONS>                                                                  
          </ENTITY>                                                                       
       </REGISTRY>                                                                       
-   </QBE>                                                                 
-
- Code 10.1: Example (a) of template for Registry
+    </QBE>                                                                 
 
 In particular, we give some details for each tag and main attributes.
 
 -  **ENTITY**: the entity name as in the model;
-
 -  **FILTERS**: possibility to define filters by specifing the title, the field (among shown columns) and the type among COMBO, MANUAL      or DRIVER: in this last case user has also to specify the analytical driver that take this filter’s value;
-
 -  **COLUMNS**: columns list specifing:
 
    -  **field name**: the reference to the field identifier into the model,
-
    -  **title**: the title of the column shown (optional),
-
    -  **visible**: the visibility of the column (Optional, default true),
-
    -  **editable**: the editability of the column (Optional, default true),
-
    -  **color and format for numbers**: optional,
-
    -  **editor**: the editor. Default type is free-text for simple column (not fk values), but for date is possible show the picker         through the type PICKER. The format option specify the format date,
-
    -  **subEntity**: If the column is a reference key user can specify the subentity referred and the foreign key name; in this case the       field shown will be of the entity referred and will be shown as combo if editable,
-
    -  **dependsFrom**: if the column content is logically correlatd to other registry’s column is possible specifiy this logic through         this parameter. DependsFrom identifies the field name on which it depends (Optional),
-
    -  **dependsFromEntity**: usable only with dependsFrom parameter. It defines a different entity to resolve the correlation                 (Optional),
-
    -  **orderBy**: is used in case of foreign key, the combo box is ordered by the column here indicated, by default is the column             extracted (Optional).
-
    -  **infoColumn**: if true ignore the column when inserting or updating the record (Optional).
 
-We stress that it is mandatory to point at one datamart table using a column with a numeric key. The code line is highlighted in Figure 12.7 While, if not elsewhere specified, a descriptive column will be displayed by default.
+We stress that it is mandatory to point at one datamart table using a column with a numeric key. The code line is highlighted in figure below. While, if not elsewhere specified, a descriptive column will be displayed by default.
 
-   |image344|
+.. figure:: media/image350.png
 
-   Figure 12.7: Pointing at a numerical column.
+    Pointing at a numerical column.
 
-Still referring to Code 12.1, we underline that the “product_subcategory” field is used as a subcategory. It belongs in fact to another table. In this case it is enough to add the attributes: subEntity="rel_product_class_id_in_product_class"  foreignKey="rel_product_class_id_in_product_class".
+Still referring to :numref:`exampletemplatebuild`, we underline that the “product_subcategory” field is used as a subcategory. It belongs in fact to another table. In this case it is enough to add the attributes: subEntity="rel_product_class_id_in_product_class"  foreignKey="rel_product_class_id_in_product_class".
 
 JPivot Registry instance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Registry instance allows to develop also a Jpivot table. See Figure 12.6 to have an idea while the syntax example is given:
+The Registry instance allows to develop also a Jpivot table. See :numref:`examplejpivotregdoc` to have an idea while the syntax example is given:
 
 .. code-block:: xml
     :linenos:
+    :caption: Example (b) of template code for Registry.
     
     <QBE> 
        <DATAMART name="foodmart" /> 
@@ -171,8 +158,6 @@ The Registry instance allows to develop also a Jpivot table. See Figure 12.6 to 
           </ENTITY> 
        </REGISTRY> 
     </QBE>         
-   
-  Code 10.1: Example (b) of template code for Registry
 
 Note that to activate the JPivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
     
