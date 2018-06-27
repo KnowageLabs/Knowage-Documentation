@@ -1,32 +1,25 @@
- 
 Creation of an OLAP document\*
 ------------------------------
 
 Multidimensional analysis allows the hierarchical inquiry of numerical measures over predefined dimensions. In Cockpit we explained how the user can monitor data on different detail levels and from different perspectives. Here we want to go into details of how a technical user can create an OLAP document. We recall that the main characteristics of OLAP documents are:
 
 -  the need for a specific data structure (logical or physical);
-
 -  analysis based on dimensions, hierarchies and measures;
-
 -  interactive analysis;
-
 -  freedom to re-orient analysis;
-
 -  different levels of data analysis, through synthetic and detailed views;
-
 -  drill-down, slice and dice, drill-through operations.
-
 
 Considering these items, we will describe the steps to develop an OLAP document.
 
 About the engine
------------------
+~~~~~~~~~~~~~~~~
 
 Knowage performs OLAP documents by relying on the **OLAP engine**. This engine integrates Mondrian OLAP server and two different cube navigation clients to provide multi-dimensional analysis. In general, Mondrian is a Relational Online Analytical Processing (ROLAP) tool that provides the back-end support for the engine. OLAP structures, such as cubes, dimensions and attributes, are mapped directly onto tables and columns of the data warehouse. This way, Mondrian builds an OLAP cube in cache that can be accessed by client applications. The Knowage OLAP engine provides the front-end tool to interact with Mondrian servers and shows the results via the typical OLAP functionalities, like drill down, slicing and dicing on a multi-dimensional table. Furthermore, it can also interact with XMLA servers. This frontend translates user’s navigation actions into MDX queries on the multi-dimensional cube, and show query results on the table he is navigating.
 
 
 Development of an OLAP document
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The creation of an OLAP analytical document requires the following steps:
 
@@ -39,7 +32,7 @@ The creation of an OLAP analytical document requires the following steps:
 4. analytical document creation.
 
 Schema modelling
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 The very first step for a multi-dimensional analysis is to identify essential information describing the process/event under analysis and to consider how it is stored and organized in the database. On the basis of these two elements, a mapping process should be performed to create the multi-dimensional model.
 
@@ -124,14 +117,14 @@ Each mapping file contains one schema only, as well as multiple dimensions and c
    |image191|
 
 Engine catalogue configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++
 
 To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to **Catalogs> Mondrian schemas catalog**. Here you can define the new schema uploading you XML schema file and choosing **Name** and **Description**. When creating a new OLAP template, you will choose among the available cubes defined in the registered schemas.
 
 Note that the Lock option forbids other technical users to modify settings.
 
 OLAP template building
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user must manually edit the template. The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in Code 8.2:
 
@@ -215,7 +208,7 @@ An explanation of different sections of Mapping template example follows.
 - The DATA-ACCESS section is used to configure visibility options for data, in particular when the dimensions or cubes defining them are   profiled also in the underlying schema. Details on how to profile OLAP cubes are explained in next sections.
 
 Profiled access
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 As for any other analytical document, Knowage provides filtered access to data via its behavioural model. The behavioural model is a very important concept in Knowage. For a full understanding of its meaning and functionalities, please refer to Behavioural Model.
 
@@ -292,7 +285,7 @@ The value of the “family” user profile attribute will replace the ${family} 
 You can filter more than one dimensions/cubes and use more profile attributes, remembering to define them in the template. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’, and insert into the query a condition like “ and pc.product_family IN (${family})”.
 
 Creating the analytical document
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have the template ready you can create the OLAP document on Knowage Server.
 
@@ -300,14 +293,12 @@ To create a new OLAP document, click on the “create a new document” button i
 
 Type a name, a functionality, load the XML template and save. You will see the document in the functionality (folder) you selected, displayed with the typical cube icon as shown in Figure 8.1.
 
-
-
    |image192|
 
    Figure 8.1: OLAP document on server.
 
 OLAP Designer\*
----------------
+~~~~~~~~~~~~~~~~~
 
 Knowage Server is also endowed of an efficient OLAP designer which avoid the user to edit manually the XML-based template that we discussed on in Development of an OLAP document. We will therefore describe here all features of this functionality. 
 
@@ -345,11 +336,8 @@ Once entered the page the user can freely set the fields as filter panels or as 
 
 
 -  |image200| to set the drill on Position, Member or Replace;
-
 -  |image201| to configure the scenario; 
-
 - |image202| to define the cross navigation;
-
 -  |image203| to configure buttons visibility.
 
 
@@ -379,23 +367,22 @@ The admin can develop the OLAP document using also the OLAP engine. In this case
 
 
 Profiled access
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 Once the OLAP document has been created using the template designer the user can insert parameters to profile the document. To set parameters the user can follow two paths, already seen in Development of an OLAP document:
 
 -  to download the template of the document and edit it, adding the parameter(s),
-
 -  to download the Mondrian schema and edit it; modify the dimension(s) (that will update according to the value parameter(s)) inserting    an SQL query which presents the parametric filtering clause. Then it is necessary to add tbe DATA-ACCESS tab to the template.
 
- .. hint::
+.. hint::
     **Filter through the interface**
 
-    Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with             profile attributes while all the filtering issue is performed through the interface, using the filter panel.
+       Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with             profile attributes while all the filtering issue is performed through the interface, using the filter panel.
 
 
 
 Cross Navigation
------------------
+~~~~~~~~~~~~~~~~~~~
 
 The cross navigation must be implemented at template level but also at analytical document level. The latter has been already wildly described in Cross Navigation . In the following we will see the first case. Observe that both procedures are mandatory.
 
@@ -404,12 +391,11 @@ For OLAP documents it is possible to enable the cross navigation on members or o
 Generally speaking, the user must modify the template file to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in Section 5.5 of this manual. 
 
 Cross navigation on members
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate the cross navigation on a member means that the user can click on a member of a dimension to be sent and visualize a target document. The first type of navigation can be set by editing the OLAP query template. In the first case you need to add a section called “clickable” inside the MDX query tag. In fact,
 
 -  the attribute value is equal to the hierarchy level containing the member(s) that shall be clickable;
-
 -  the element represents the parameter that will be passed to the destination document. The name attribute is the URI of the              parameter that will be passed to the target document. The value 0 represents the currently selected member, as a convention: this        value will be assigned to the parameter whose URI is null.
 
 Figure 8.10 gives an example. Note that you can recognize that the cross navigation is activated when elements are shown blue highlighted and underlined.
@@ -436,7 +422,7 @@ If you open the template file you will read instructions similar to the ones rep
 
 
 Cross navigation from a cell of the pivot table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This case is similar to the one-dimension drill except that in this case values of all dimensions can be passed to the target document. In other words, the whole dimensional context of a cell can be passed. Now let us suppose the user wishes to click on a cell and pass to the target document the value of the level family of product dimension and year of time dimension. It should creates two parameters one for family where dimension is product, hierarchy is product, level is product family and one for year parameter where dimension in type, hierarchy is time and level is year. Let see what happens when user clicks on a cell. Depending on the selected cell, the analytical driver family of the target document will have a different value: it will be the name of the context member (of the selected cell) of the “Product” dimension, i.e. the [Product] hierarchy, at [Product].[ProductFamily] level. Look at the following Table 8.1 for some examples:
 
@@ -478,4 +464,4 @@ Let us have a look at the template. Syntax used to set cross navigation shows ho
 A green arrow will be visible in the toolbar to show that cross navigation is enabled. When user clicks on that icon in each cell a green arrow will displayed in each cell. User can click on that icon to start cross navigation from a cell.
 
    
-     .. include:: olapThumbinals.rst
+.. include:: olapThumbinals.rst
