@@ -4,7 +4,7 @@ Scorecard\*
 The **Scorecard** feature, available in Knowage suite as highlighted in :numref:`scorcardforthecontmenu`, allows to supervise different KPIs at the same time. This option gives an exclusive complete overview of the KPIs situation when the user is not interested in a single threshold check. This tool is in fact useful when concern is addressed to monitoring the overcoming of two or more critical KPI values.
 
 .. _scorcardforthecontmenu:
-.. figure:: media/image157.png
+.. figure:: media/image161.png
 
     Scorecard from the contextual menu.
 
@@ -14,13 +14,13 @@ Scorecard development
 A scorecard is structured in hierarchical levels. Shortly, there is a first level called **Perspective** composed of KPIs grouped on targets. Otherwise, **Targets** are assigned a threshold depending on the KPIs they are composed of. In the following we will describe in detail a scorecard configuration. When clicking on the Scorecard menu item the window of :numref:`scorcardwindow` opens. Here the implemented scorecards are listed and can be explored once selected and edited.
 
 .. _scorcardwindow:
-.. figure:: media/image158.png
+.. figure:: media/image162.png
 
     Scorecard window.
 
 The “Plus” icon available at the right top corner of the page opens a new window where to set a new scorecard, as shown below. Assign a name and click on **Add perspective** (Figure below).
 
-.. figure:: media/image159.png
+.. figure:: media/image163.png
 
    Defining a new scorecard.
 
