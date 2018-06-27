@@ -456,8 +456,6 @@ The REST dataset permits usage of profile attributes and parameters using the sa
          }                        
 
 
-
-
 Big Data- NoSQL
 ^^^^^^^^^^^^^^^
 
@@ -480,33 +478,37 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
 
     -  if it’s an object, the resulting dataset contains a column for each property of the object.
 
-   For example, if we consider the query sbiDatasetfixedResult = {a:2, b:3}, the dataset is as shown in Table  below.
+        For example, if we consider the query 
+        sbiDatasetfixedResult = {a:2, b:3}, 
+        the dataset is as shown in Table below.
    
 .. table:: Dataset output
-  :widths: auto
+    :widths: auto
 
-   +------+------+
-   |    a |    b |
-   +======+======+
-   |    2 | 3    |
-   +------+------+
+     +------+------+
+     |    a |    b |
+     +======+======+
+     |    2 | 3    |
+     +------+------+
 
 
    -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
 
 
-For istance, let’s consider the query sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] the dataset is
+        For istance, let’s consider the query 
+        sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] 
+        the dataset is
 
 .. table:: Dataset output
-  :widths: auto
+     :widths: auto
 
-   +------+------+------+
-   |    a | b    |    c |
-   +======+======+======+
-   |    2 |    3 |      |
-   +------+------+------+
-   |    2 |      | 3    |
-   +------+------+------+
+        +------+------+------+
+        |    a | b    |    c |
+        +======+======+======+
+        |    2 |    3 |      |
+        +------+------+------+
+        |    2 |      | 3    |
+        +------+------+------+
 
 
 The result of a query in MongoDB can assume different shapes: Cursor, Document, List, fix value. Knowage can manage automatically the result of the query. The algorithm to understand how to manage the result is very simple.
