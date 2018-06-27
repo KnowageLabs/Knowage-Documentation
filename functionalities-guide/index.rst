@@ -25,7 +25,7 @@ Functionalities
    WhatIf/ka_user_whatif.rst
    Glossary/ka_dev_glossary.rst
    KPI/ka_KPI.rst
-   ScoreCard/ka_Scorecard.rst
+   ScoreCard/ka_ScoreCard.rst
    Alert/ka_Alert.rst
 
 
