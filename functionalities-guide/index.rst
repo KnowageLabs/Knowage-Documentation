@@ -18,6 +18,7 @@ Functionalities
    Reporting/ka_user_reporting.rst
    Jasper/ka_dev_jasper.rst
    LocationIntelligence/ka_dev_introlocationintelligence.rst
+   SVG/ka_user_svg.rst
    Datamining/ka_user_datamining.rst
    Network/ka_dev_network.rst
    OLAP/ka_user_OLAP.rst
@@ -26,8 +27,6 @@ Functionalities
    KPI/ka_KPI.rst 
    QbeMeta/ka_dev_introqbemeta.rst
    ScoreCard/ka_Scorecard.rst
-   SVG/ka_dev_svg.rst
-   SVG/ka_user_svg.rst
    WhatIf/ka_dev_whatif.rst
    WhatIf/ka_user_whatif.rst
 
