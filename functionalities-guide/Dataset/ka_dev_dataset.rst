@@ -108,7 +108,7 @@ In the **Advanced** tab, shown in figure below, you can apply the pivoting trans
 
 Once all those settings have been performed you can see a preview of the dataset results clicking on the **Preview** button available on the top right corner of the page. It is recommended to check preview to detect possible errors in the dataset code before associating it to a document.
 
-Note that the metadata can be manage by clicking on the icon |image21| and use the same criterion described in Dataset Otherwise use the icon to save without associating any metadata.
+Note that the metadata can be manage by clicking on the icon |image21| and use the same criterion described in Dataset paragraph. Otherwise use the icon to save without associating any metadata.
 
 Let us describe more deeply each type of dataset.
 
@@ -166,13 +166,12 @@ Selecting a dataset of **Java Class** type allows the execution of complex data 
    This method provides the result set of the dataset using profile attributes and parameters. The String to return must be the XML result set representation of type:
 
 .. code-block:: XML
-         :caption:  
          :linenos:
 
-          <ROWS>                           
-          <ROW value="value1" .../>     
-          <ROW value="value2" .../> ... 
-          </ROWS>                          
+            <ROWS>                           
+            <ROW value="value1" .../>     
+            <ROW value="value2" .../> ... 
+            </ROWS>                          
 
 -  public List getNamesOfProfileAttributeRequired();
    This method provides the names of profile attributes used by this dataset implementation class. This is a utility method, used during dataset execution.
