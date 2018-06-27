@@ -6,7 +6,7 @@ Functionalities
    :caption: Table of Contents
    :maxdepth: 10
    
-   MyData/ka_user_my_data.rst
+   MyData/ka_user_mydata.rst
    Dataset/ka_dev_dataset.rst 
    BehavioralModel/ka_dev_behavioralmodel.rst
    AnalyticalDocument/ka_dev_analyticaldoc.rst
