@@ -597,7 +597,7 @@ Pay attention that the last configuration is usable only with physical store.
 Once you are done, you need to define the output parameters as described in Section **XXX** of Chapter **XXX**. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
 
 
- Template building with GIS designer for technical user\*
+Template building with GIS designer for technical user\*
 ----------------------------------------------------------
 
 When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to :numref:`gisdesigneraccestemplbuild`). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
