@@ -5,7 +5,6 @@ The SVG Viewer Engine is a tool that lets you develop documents based on the SVG
 
 -  a panel with many dynamic details such measures, layers and legend plus an optional section with specific information about the
    active document,
-
 -  the svg document.
 
 To give an example, we can imagine to visualize throught an SVG the USA map. At first we can show data at the “Regions” level and then throught the click / drill - show the same or other information at the States “level”. We give an example of map document produced with the SVG engine in Figure 11.1 and Figure 11.2.
@@ -21,17 +20,17 @@ Like other Knowage documents type there is a set of activities managed by the te
    Figure 11.2: SVG document example at the States level after the selection of the “Center West” Region.
 
 Technical activities
----------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First of all, a technical user needs to configure the logical hierarchy of the SVG and to define datasets with the business data he/she wishes to show. Finally he/she must type the document template. We will give details about these points in the following sections.
 
 SVG Catalogue
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 The first activity that you need to do as administrator is to find or create an SVG file. Any file saved in SVG format is a text file in XML format. As a consequence, they can easily be queried, indexed, enriched with scripts and, if necessary, zipped. The SVG final output could represent everything: geographical areas (like USA in the previous example in Figure 11.1), concepts (like the item production steps) and so on.
 
 SVG Format
-~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 The Scalable Vector Graphics, SVG, refers to an XML-based encoding format, used to describe two dimensional vector graphical objects. SVG is an open standard, defined by the World Wide Web Consortium (W3C), which released its first version in 1999. Read more at `http: <http://www.w3.org/Graphics/SVG/>`__ .
 
@@ -66,7 +65,7 @@ The second level (the more detailed SVG) is about the USA states and it’s defi
 As you can see the principal differences between these configurations are only about the level content and the member label. This means that both will be used in the same hierarchy’s context and that from the “Regions” SVG will be possible to drill on the “States” SVG. Anyway it is not mandatory to define more than one level: it depends from each project implementation.
 
 Datasets definition
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After that all SVG was loaded, you must define a dataset (one for each level) that you want to use for getting and showing business information from your DWH. You can refer to Chapter 3 of this manual to know how to create datasets. Here in Figure 11.5 a dataset of our example:
 
@@ -77,7 +76,7 @@ After that all SVG was loaded, you must define a dataset (one for each level) th
 .. _template-building-1:
 
 Template building
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 The template allows the SVG viewer to properly join business data (Knowage dataset) and spatial data (SVG included in the catalog), in order to produce the analytical documents.
 
@@ -642,7 +641,7 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 Now, after the template definiton, you can create it into Knowage. Remember that it must be a “Location Intelligence” document type with the engine “SVG Viewer Engine”.
 
 Advanced functionalities
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Other the default drill navigation that you have if for the document are defined more than one member, is it possible to cross versus other Knowage documents. To enable this feature, is necessary to set the enableExternalCross property for the MEMBER tag. Here an example in Code 11.5:
 
@@ -663,4 +662,4 @@ With this setting, you are able to create a “Cross Navigation Definition” wi
 
 In a cross navigation it is also possible to pass the dataset column values. It is only necessary that a technical user prepares specific output parameters, setting the name like the alias of the dataset columns.
    
-     .. include:: svgThumbinals.rst
+.. include:: svgThumbinals.rst
