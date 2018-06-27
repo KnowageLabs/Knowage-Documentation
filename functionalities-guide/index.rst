@@ -27,7 +27,6 @@ Functionalities
    KPI/ka_KPI.rst
    ScoreCard/ka_Scorecard.rst
    Alert/ka_Alert.rst
-   QbeMeta/ka_dev_introqbemeta.rst
 
 
 .. |image0| image:: MyData/media/image1.png
