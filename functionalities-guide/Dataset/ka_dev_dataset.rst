@@ -3,7 +3,7 @@ Advanced Data Access
 
 In this section we suppose to log in as an admin user. In this case the dataset definition is no longer available under **My data** section. Otherwise the functionality is granted by the **Dataset** item under the **Data Providers** section of server menu, as highlighted in Figure 3.1. This area offers you the possibility to define datasets among a wide range of types. Moreover you can add parameters, define scope, manage metadata and perform advanced operation on datasets. While the datasets creation and management between user and admin change in favour to the latter, the **Models** and **Federation definitions** tabs available in **My data** section remain identical. For this reason in this chapter we are going to describe only the dataset creation and management.
 
- My first dataset
+My first dataset
 --------------------
 
 As stated before, you can open the dataset graphical editor by selecting **Dataset** in **Data Provider**\ panel, as shown below.
