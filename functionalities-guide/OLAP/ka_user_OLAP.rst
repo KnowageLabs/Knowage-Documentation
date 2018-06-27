@@ -634,22 +634,19 @@ Development of an OLAP document
 
 The creation of an OLAP analytical document requires the following steps:
 
-1. schema modelling;
-
-2. catalogue configuration; 
-
-3. OLAP cube template building;
-
-4. analytical document creation.
+- schema modelling;
+- catalogue configuration; 
+- OLAP cube template building;
+- analytical document creation.
 
 Schema modelling
 ^^^^^^^^^^^^^^^^^
 
 The very first step for a multi-dimensional analysis is to identify essential information describing the process/event under analysis and to consider how it is stored and organized in the database. On the basis of these two elements, a mapping process should be performed to create the multi-dimensional model.
 
-     .. hint::
+.. hint::
      
-        **From the relational to the multi-dimensional model**
+     **From the relational to the multi-dimensional model**
 
         The logical structure of the database has an impact on the mapping approach to be adopted when creating the multidimensional             model, as well as on query performances.
 
@@ -657,6 +654,7 @@ If the structure of the relational schema complies with multi-dimensional logics
 
 .. code-block:: xml
     :linenos:
+    :caption: Mondrian schema example
     
     <?xml version="1.0"?>                                   
          <Schema name="FoodMart">     
@@ -721,12 +719,14 @@ If the structure of the relational schema complies with multi-dimensional logics
           ...      
  </Schema> 
 
- Code 8.1: Mondrian schema example
-
 Each mapping file contains one schema only, as well as multiple dimensions and cubes. Cubes include multiple dimensions and measures. Dimensions include multiple hierarchies and levels. Measures can be either primitive, i.e., bound to single columns of the fact table, or calculated, i.e., derived from calculation formulas that are defined in the schema. The schema also contains links between the elements of the OLAP model and the entities of the physical model: for example, <table> sets a link between a cube and its dimensions, while the attributes primaryKey and foreignKey reference integrity constraints of the star schema.
 
-   |image191|
-
+.. note::
+      **Mondrian**
+         
+         For a detailed explanation of Mondrian schemas, please refer to the documentation available at the official project webpage: http://mondrian.pentaho.com/.
+         
+         
 Engine catalogue configuration
 +++++++++++++++++++++++++++++++
 
@@ -737,10 +737,12 @@ Note that the Lock option forbids other technical users to modify settings.
 OLAP template building
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user must manually edit the template. The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in Code 8.2:
+Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user must manually edit the template. The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in :numref:`mappingtemplateexample`:
 
+.. _mappingtemplateexample:
 .. code-block:: xml
     :linenos:
+    :caption: Mapping template example
     
      <?xml version="1.0" encoding="UTF-8"?> 
      <olap>                                 
@@ -782,20 +784,16 @@ Once the cube has been created, you need to build a template which maps the cube
         </DATA-ACCESS>                                        
      </olap>                                                  
 
-   Code 8.2: Mapping template example
-
 An explanation of different sections of Mapping template example follows.
 
--  The CUBE section sets the Mondrian schema. It should reference the exact name of the schema, as registered in the catalogue on the      Server.
-
+-  The CUBE section sets the Mondrian schema. It should reference the exact name of the schema, as registered in the catalogue on the Server.
 -  The MDXMondrianQuery section contains the original MDX query defining the starting view (columns and rows) of the OLAP document.
-
--  The MDX section contains a variation of the original MDX query, as used by the Knowage Engine. This version includes parameters (if      any). The name of the parameter will allow Knowage to link the analytical driver associated to the document via the parameter (on        the Server).
-
--  The TOOLBAR section is used to configure visibility options for the toolbar in the OLAP document. The exact meaning and                  functionalities of each toolbar button are explained in next sections. A more complete list of the available options is shown in Menu    configurable options:
+-  The MDX section contains a variation of the original MDX query, as used by the Knowage Engine. This version includes parameters (if any). The name of the parameter will allow Knowage to link the analytical driver associated to the document via the parameter (on the Server).
+-  The TOOLBAR section is used to configure visibility options for the toolbar in the OLAP document. The exact meaning and functionalities of each toolbar button are explained in next sections. A more complete list of the available options is shown in Menu configurable options:
 
 .. code-block:: xml
     :linenos:
+    :caption: Menu configurable options
     
    <BUTTON_DRILL_THROUGH visible="true"/>    
    <BUTTON_MDX visible="true"/>              
@@ -814,9 +812,7 @@ An explanation of different sections of Mapping template example follows.
    <BUTTON_VERSION_MANAGER visible="true"/>  
    <BUTTON_EXPORT_OUTPUT visible="false"/>   
 
-  Code 8.3: Menu configurable options
-
-- The DATA-ACCESS section is used to configure visibility options for data, in particular when the dimensions or cubes defining them are   profiled also in the underlying schema. Details on how to profile OLAP cubes are explained in next sections.
+- The DATA-ACCESS section is used to configure visibility options for data, in particular when the dimensions or cubes defining them are profiled also in the underlying schema. Details on how to profile OLAP cubes are explained in next sections.
 
 Profiled access
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -830,6 +826,7 @@ To set the filter, which is based on the attribute (or attributes) in the user�
 
 .. code-block:: xml
     :linenos:
+    :caption: Cube level profilation example.
     
    <?xml version="1.0"?>                                                 
    <Schema name="FoodMartProfiled"> 
@@ -872,14 +869,13 @@ To set the filter, which is based on the attribute (or attributes) in the user�
      ...                                       
    </Schema> 
 
-   Code 8.4: Cube level profilation example.
-
 In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax and pr.product_family = '${family}'.
 
 To properly set visibility it is required to edit also the OLAP template, adding the <DATA-ACCESS> ... </DATA-ACCESS> tab. OLAP template profilation gives an example.
 
 .. code-block:: xml
     :linenos:
+    :caption: OLAP template profilation example.
     
    <olap> 
     ...                        
@@ -888,8 +884,6 @@ To properly set visibility it is required to edit also the OLAP template, adding
         <ATTRIBUTE name="department" /> 
       </DATA-ACCESS>                  
    </olap>                            
-
-  Code 8.5:OLAP template profilation example.
 
 The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.
 
@@ -902,11 +896,12 @@ Once you have the template ready you can create the OLAP document on Knowage Ser
 
 To create a new OLAP document, click on the “create a new document” button in the **Document Development** area and select **Online analytical processing** as Type. Then you can choose the available engines. In this case we have only the **OLAP engine**. 
 
-Type a name, a functionality, load the XML template and save. You will see the document in the functionality (folder) you selected, displayed with the typical cube icon as shown in Figure 8.1.
+Type a name, a functionality, load the XML template and save. You will see the document in the functionality (folder) you selected, displayed with the typical cube icon as shown in :numref:`olapdocserver`.
 
-   |image192|
+.. _olapdocserver:
+.. figure:: media/image195.png
 
-   Figure 8.1: OLAP document on server.
+    OLAP document on server.
 
 OLAP Designer\*
 ~~~~~~~~~~~~~~~~~
@@ -915,66 +910,73 @@ Knowage Server is also endowed of an efficient OLAP designer which avoid the use
 
 The user needs to have a functioning Modrian schema to start the work with. Select **Mondrian Schemas Catalog** to check the available Mondrian schemas on server. It is mandatory that the chosen Mondrian schema has no parameters applied.
 
-   |image193|
+.. warning::
+      **Mondrian schema for OLAP designer**
+         
+         The Mondrian schema must not be filtered thorough any parameter or profile attribute.
 
-The page as the one in Figure 8.2 will open.
+The page as the one in figure below will open.
 
-   |image194|
+.. figure:: media/image196.png
 
-   Figure 8.2: Schema Mondrian from catalog.
+    Schema Mondrian from catalog.
 
 Then we start entering the **Document Browser** and clicking on the “Plus” icon at the top right corner of the page. Fill in the mandatory boxes as Label and Name of the document, select the On-line Analytica Process Type of document and the What-if Engine (we stress that the What-if engine is available only for who have purchased the Knowage SI package). Remember to save to move to the next step: open the Template Build. The latter can be opend clicking on the editor icon |image195| and it is available at the bottom of the document detail page.
 
-The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. Figure 8.3 sums up these three steps. Following the example just given in Figure 8.3 you will enter a page like that of Figure 8.4. 
+The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. Figure 8.3 sums up these three steps. Following the example just given in  :numref:`olapcoreconfig` you will enter a page like that of  :numref:`definingolaptempl`. 
 
-   |image196|
+.. _olapcoreconfig:
+.. figure:: media/image198.png
 
-   Figure 8.3: OLAP core configuration.
+    OLAP core configuration.
 
-   |image197|
+.. _definingolaptempl:
+.. figure:: media/image199.png
 
-   Figure 8.4: Defining OLAP template.
+    Defining OLAP template.
 
-Once entered the page the user can freely set the fields as filter panels or as filter cards, according to requirements. Refer to Chapter 7.1 to review the terminology. Make your selection and you can already save the template as shown in Figure 8.5. You can notice that the side panel contains some features (Figure 8.6): 
+Once entered the page the user can freely set the fields as filter panels or as filter cards, according to requirements. Refer to Chapter 7.1 to review the terminology. Make your selection and you can already save the template as shown in :numref:`definingolaptempl2`. You can notice that the side panel contains some features (:numref:`sidepanelfeatolapdes`): 
 
-   |image198|
+.. _definingolaptempl2:
+.. figure:: media/image200.png
 
-   Figure 8.5: Defining OLAP template.
+    Defining OLAP template.
 
-   |image199|
+.. _sidepanelfeatolapdes:
+.. figure:: media/image201.png
 
-   Figure 8.6: Side panel features for the OLAP Designer.
+    Side panel features for the OLAP Designer.
 
-
--  |image200| to set the drill on Position, Member or Replace;
--  |image201| to configure the scenario; 
+- |image200| to set the drill on Position, Member or Replace;
+- |image201| to configure the scenario; 
 - |image202| to define the cross navigation;
--  |image203| to configure buttons visibility.
+- |image203| to configure buttons visibility.
 
-
-Refer to Section 7.2 to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to Figure 8.8, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
 
    |image204|
 
    Figure 8.7: Wizard to configure the scenario.
 
+Refer to Section 7.2 to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to :numref:`crossnavdef`, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
+
+.. _crossnavdef:
+.. figure:: media/image208.png
+
+    Cross navigation definition.
+
 Once one cross navigation has been set you keep on adding as many as required. Just open the wizard and click on the “Add” button at the top right corner.
 
 Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the the user must access the “Cross Navigation Definition” functionalities available in Knowage Server. Here, referring to Section 5.5, you will use the parameter just set as output parameter.
 
-As shown in Figure 8.9, the buttons visibility serves to decide which permissions are granted to the end-user. Some features can only be let visible while the admin can also grant the selection for others. 
+As shown in figure below, the buttons visibility serves to decide which permissions are granted to the end-user. Some features can only be let visible while the admin can also grant the selection for others. 
 
-Once the configuration is done click on the **Save template** button and on the **Close designer** button to exit template. As Figure 8.6 highlights, these two buttons are available at the bottom of the side panel.
+.. figure:: media/image211.png
+
+    Wizard to configure the scenario.
+
+Once the configuration is done click on the **Save template** button and on the **Close designer** button to exit template. As :numref:`sidepanelfeatolapdes` highlights, these two buttons are available at the bottom of the side panel.
 
 The admin can develop the OLAP document using also the OLAP engine. In this case the OLAP designer will lack of the scenario configuration since in this case the end-user must not have the grants for editing the records. So in this instance the “Configure scenario” button is not available at all. For the other two options the instructions are right the same as the What-if engine.
-
-   |image205|
-
-   Figure 8.8: Cross navigation definition.
-
-   |image206|
-
-   Figure 8.9: Wizard to configure the scenario.
 
 
 Profiled access
@@ -989,8 +991,6 @@ Once the OLAP document has been created using the template designer the user can
     **Filter through the interface**
 
        Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with             profile attributes while all the filtering issue is performed through the interface, using the filter panel.
-
-
 
 Cross Navigation
 ~~~~~~~~~~~~~~~~~~~
@@ -1009,16 +1009,17 @@ To activate the cross navigation on a member means that the user can click on a 
 -  the attribute value is equal to the hierarchy level containing the member(s) that shall be clickable;
 -  the element represents the parameter that will be passed to the destination document. The name attribute is the URI of the              parameter that will be passed to the target document. The value 0 represents the currently selected member, as a convention: this        value will be assigned to the parameter whose URI is null.
 
-Figure 8.10 gives an example. Note that you can recognize that the cross navigation is activated when elements are shown blue highlighted and underlined.
+Figure below gives an example. Note that you can recognize that the cross navigation is activated when elements are shown blue highlighted and underlined.
 
-   |image208|
+.. figure:: media/image212.png
 
-   Figure 8.10: Cross navigation on member.
+    Cross navigation on member.
 
 If you open the template file you will read instructions similar to the ones reported in Syntax used to set cross navigation.
 
 .. code-block:: xml
     :linenos:
+    :caption: Syntax used to set cross navigation.
     
      <MDXquery> 
        select {[Measures].[Unit Sales]} ON COLUMNS,               
@@ -1029,36 +1030,36 @@ If you open the template file you will read instructions similar to the ones rep
        </clickable>                                                          
      </MDXquery>                                                           
 
- Code 8.6: Syntax used to set cross navigation.
-
-
 Cross navigation from a cell of the pivot table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This case is similar to the one-dimension drill except that in this case values of all dimensions can be passed to the target document. In other words, the whole dimensional context of a cell can be passed. Now let us suppose the user wishes to click on a cell and pass to the target document the value of the level family of product dimension and year of time dimension. It should creates two parameters one for family where dimension is product, hierarchy is product, level is product family and one for year parameter where dimension in type, hierarchy is time and level is year. Let see what happens when user clicks on a cell. Depending on the selected cell, the analytical driver family of the target document will have a different value: it will be the name of the context member (of the selected cell) of the “Product” dimension, i.e. the [Product] hierarchy, at [Product].[ProductFamily] level. Look at the following Table 8.1 for some examples:
 
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    Context member on Product dimension                          | "Family" analytical driver value                    |
-+=================================================================+=====================================================+
-|    [Product].[All Products]                                     | [no value: it will be prompted to  the user]        |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Food]                              | Food                                                |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Drink]                             | Drink                                               |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Non-Consumable]                    | Non-Consumable                                      |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Food].[Snacks]                     | Food                                                |
-+-----------------------------------------------------------------+-----------------------------------------------------+
-|    [Product].[All Products].[Food].[Snacks].[Candy]             | Food                                                |
-+-----------------------------------------------------------------+-----------------------------------------------------+
+.. table:: Context member on product dimension
+    :widths: auto
+
+        +-----------------------------------------------------------------+-----------------------------------------------------+
+        |    Context member on Product dimension                          | "Family" analytical driver value                    |
+        +=================================================================+=====================================================+
+        |    [Product].[All Products]                                     | [no value: it will be prompted to  the user]        |
+        +-----------------------------------------------------------------+-----------------------------------------------------+
+        |    [Product].[All Products].[Food]                              | Food                                                |
+        +-----------------------------------------------------------------+-----------------------------------------------------+
+        |    [Product].[All Products].[Drink]                             | Drink                                               |
+        +-----------------------------------------------------------------+-----------------------------------------------------+
+        |    [Product].[All Products].[Non-Consumable]                    | Non-Consumable                                      |
+        +-----------------------------------------------------------------+-----------------------------------------------------+
+        |    [Product].[All Products].[Food].[Snacks]                     | Food                                                |
+        +-----------------------------------------------------------------+-----------------------------------------------------+
+        |    [Product].[All Products].[Food].[Snacks].[Candy]             | Food                                                |
+        +-----------------------------------------------------------------+-----------------------------------------------------+
  
-   Table 8.1
 
 Let us have a look at the template. Syntax used to set cross navigation shows how to use the cross navigation tag:
 
 .. code-block:: xml
     :linenos:
+    :caption: Syntax used to set cross navigation.
     
    <CROSS_NAVIGATION>                                                    
       <PARAMETERS>                                                       
@@ -1068,8 +1069,6 @@ Let us have a look at the template. Syntax used to set cross navigation shows ho
                      level="[Time].[Year]" />                                                          
       </PARAMETERS>                                                      
    </CROSS_NAVIGATION>                                                   
-
- Code 8.7: Syntax used to set cross navigation
 
 
 A green arrow will be visible in the toolbar to show that cross navigation is enabled. When user clicks on that icon in each cell a green arrow will displayed in each cell. User can click on that icon to start cross navigation from a cell.
