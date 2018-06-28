@@ -828,13 +828,13 @@ To set the filter, which is based on the attribute (or attributes) in the user�
     :linenos:
     :caption: Cube level profilation example.
     
-   <?xml version="1.0"?>                                                 
-   <Schema name="FoodMartProfiled"> 
-   ....                                 
-     <Cube name="Sales_profiled"> <Table name="sales_fact_1998"/> 
-     ...      
-        <!-- profiled dimension -->                                        
-        <Dimension name="Product" foreignKey="product_id">                 
+        <?xml version="1.0"?>                                                 
+        <Schema name="FoodMartProfiled"> 
+        ....                                 
+         <Cube name="Sales_profiled"> <Table name="sales_fact_1998"/> 
+         ...      
+           <!-- profiled dimension -->                                        
+           <Dimension name="Product" foreignKey="product_id">                 
             <Hierarchy hasAll="true" allMemberName="All Products" primaryKey="product_id">                                   
                 <View alias="Product">                                             
                   <SQL dialect="generic">                                            
@@ -864,10 +864,10 @@ To set the filter, which is based on the attribute (or attributes) in the user�
                 <Level name="Product Name" column="product_name"                   
                        uniqueMembers="true"/>                                             
             </Hierarchy>                                                       
-        </Dimension>                                                       
-     </Cube> 
-     ...                                       
-   </Schema> 
+           </Dimension>                                                       
+         </Cube> 
+         ...                                       
+        </Schema> 
 
 In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax and pr.product_family = '${family}'.
 
@@ -877,13 +877,13 @@ To properly set visibility it is required to edit also the OLAP template, adding
     :linenos:
     :caption: OLAP template profilation example.
     
-   <olap> 
-    ...                        
-      <DATA-ACCESS>                   
-        <ATTRIBUTE name="family" />     
-        <ATTRIBUTE name="department" /> 
-      </DATA-ACCESS>                  
-   </olap>                            
+        <olap> 
+        ...                        
+            <DATA-ACCESS>                   
+                <ATTRIBUTE name="family" />     
+                <ATTRIBUTE name="department" /> 
+            </DATA-ACCESS>                  
+        </olap>                            
 
 The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.
 
@@ -923,7 +923,7 @@ The page as the one in figure below will open.
 
 Then we start entering the **Document Browser** and clicking on the “Plus” icon at the top right corner of the page. Fill in the mandatory boxes as Label and Name of the document, select the On-line Analytica Process Type of document and the What-if Engine (we stress that the What-if engine is available only for who have purchased the Knowage SI package). Remember to save to move to the next step: open the Template Build. The latter can be opend clicking on the editor icon |image195| and it is available at the bottom of the document detail page.
 
-The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. Figure 8.3 sums up these three steps. Following the example just given in  :numref:`olapcoreconfig` you will enter a page like that of  :numref:`definingolaptempl`. 
+The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. :numref:`olapcoreconfig` sums up these three steps. Following the example just given in  :numref:`olapcoreconfig` you will enter a page like that of  :numref:`definingolaptempl`. 
 
 .. _olapcoreconfig:
 .. figure:: media/image198.png
@@ -935,7 +935,7 @@ The action opens a first page asking for the kind of template. Here we choose th
 
     Defining OLAP template.
 
-Once entered the page the user can freely set the fields as filter panels or as filter cards, according to requirements. Refer to Chapter 7.1 to review the terminology. Make your selection and you can already save the template as shown in :numref:`definingolaptempl2`. You can notice that the side panel contains some features (:numref:`sidepanelfeatolapdes`): 
+Once entered the page the user can freely set the fields as filter panels or as filter cards, according to requirements. Refer to *Functionalities* Chapter to review the terminology. Make your selection and you can already save the template as shown in :numref:`definingolaptempl2`. You can notice that the side panel contains some features (:numref:`sidepanelfeatolapdes`): 
 
 .. _definingolaptempl2:
 .. figure:: media/image200.png
@@ -966,7 +966,7 @@ Refer to Section 7.2 to recall the action of the different drills. To select bet
 
 Once one cross navigation has been set you keep on adding as many as required. Just open the wizard and click on the “Add” button at the top right corner.
 
-Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the the user must access the “Cross Navigation Definition” functionalities available in Knowage Server. Here, referring to Section 5.5, you will use the parameter just set as output parameter.
+Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the the user must access the “Cross Navigation Definition” functionalities available in Knowage Server. Here, referring to *Cross Navigation* section of *Analytical document* chapter, you will use the parameter just set as output parameter.
 
 As shown in figure below, the buttons visibility serves to decide which permissions are granted to the end-user. Some features can only be let visible while the admin can also grant the selection for others. 
 
@@ -999,7 +999,7 @@ The cross navigation must be implemented at template level but also at analytica
 
 For OLAP documents it is possible to enable the cross navigation on members or on cells and we will give more details on these two cases in the following.
 
-Generally speaking, the user must modify the template file to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in Section 5.5 of this manual. 
+Generally speaking, the user must modify the template file to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in *Cross Navigation* section of *Analytical document* chapter of this manual. 
 
 Cross navigation on members
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1033,10 +1033,10 @@ If you open the template file you will read instructions similar to the ones rep
 Cross navigation from a cell of the pivot table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This case is similar to the one-dimension drill except that in this case values of all dimensions can be passed to the target document. In other words, the whole dimensional context of a cell can be passed. Now let us suppose the user wishes to click on a cell and pass to the target document the value of the level family of product dimension and year of time dimension. It should creates two parameters one for family where dimension is product, hierarchy is product, level is product family and one for year parameter where dimension in type, hierarchy is time and level is year. Let see what happens when user clicks on a cell. Depending on the selected cell, the analytical driver family of the target document will have a different value: it will be the name of the context member (of the selected cell) of the “Product” dimension, i.e. the [Product] hierarchy, at [Product].[ProductFamily] level. Look at the following Table 8.1 for some examples:
+This case is similar to the one-dimension drill except that in this case values of all dimensions can be passed to the target document. In other words, the whole dimensional context of a cell can be passed. Now let us suppose the user wishes to click on a cell and pass to the target document the value of the level family of product dimension and year of time dimension. It should creates two parameters one for family where dimension is product, hierarchy is product, level is product family and one for year parameter where dimension in type, hierarchy is time and level is year. Let see what happens when user clicks on a cell. Depending on the selected cell, the analytical driver family of the target document will have a different value: it will be the name of the context member (of the selected cell) of the “Product” dimension, i.e. the [Product] hierarchy, at [Product].[ProductFamily] level. Look at the following Table for some examples:
 
 .. table:: Context member on product dimension
-    :widths: auto
+        :widths: auto
 
         +-----------------------------------------------------------------+-----------------------------------------------------+
         |    Context member on Product dimension                          | "Family" analytical driver value                    |
@@ -1061,14 +1061,12 @@ Let us have a look at the template. Syntax used to set cross navigation shows ho
     :linenos:
     :caption: Syntax used to set cross navigation.
     
-   <CROSS_NAVIGATION>                                                    
-      <PARAMETERS>                                                       
-          <PARAMETER name="family" dimension="Product" hierarchy="[Product]" 
-                     level="[Product].[Product Family]" />                             
-          <PARAMETER name="year" dimension="Time" hierarchy="[Time]"        
-                     level="[Time].[Year]" />                                                          
-      </PARAMETERS>                                                      
-   </CROSS_NAVIGATION>                                                   
+        <CROSS_NAVIGATION>                                                    
+            <PARAMETERS>                                                       
+                <PARAMETER name="family" dimension="Product" hierarchy="[Product]" level="[Product].[Product Family]" /> 
+                <PARAMETER name="year" dimension="Time" hierarchy="[Time]" level="[Time].[Year]" />
+            </PARAMETERS>                                                      
+        </CROSS_NAVIGATION>                                                   
 
 
 A green arrow will be visible in the toolbar to show that cross navigation is enabled. When user clicks on that icon in each cell a green arrow will displayed in each cell. User can click on that icon to start cross navigation from a cell.
