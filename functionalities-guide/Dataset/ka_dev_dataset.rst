@@ -481,13 +481,14 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
         the dataset is as shown in Table below.
    
 .. table:: Dataset output
-    :widths: auto
+     :widths: auto
 
-    +------+------+
-    |    a |    b |
-    +======+======+
-    |    2 | 3    |
-    +------+------+
+     +------+------+
+     |    a |    b |
+     +======+======+
+     |    2 | 3    |
+     +------+------+
+
 
    -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
 
