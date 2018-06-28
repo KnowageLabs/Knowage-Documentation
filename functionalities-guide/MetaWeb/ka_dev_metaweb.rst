@@ -118,17 +118,14 @@ When all these steps are accomplished, click on “Create” to save.
 We stress that the cardinality of the outbound relationship can be of two types:
 
 -  1 to N,
-
-Create a new business class
-
--  1 to N\ ***.
+-  1 to N\ *.
 
 Use the second type of cardinality when the type of cardinality can be optional.
 
 As well, the cardinality of the inbound relationship can be of two types:
 
 -  N to 1,
--  N\ *** to 1.
+-  N\ * to 1.
 
 Use the second type of cardinality when the type of cardinality can be optional.
 
@@ -196,16 +193,14 @@ The **Structural** area covers an important role for the field properties. Here 
 -  **Type**, among measure, attribute, calendar, temporal_id, the_date and hour_id,
 -  **Aggregation type** for measure field type,
 -  **Format string**, to custom the format of the string for measure field type,
+-  **Profile attribute**, to filter the field (and then the table records) by the user profile attributes (note that the combobox lists the available profile attributes),
+-  **Profile attribute filter type**, to define the filter operator among “equals to”, “in”, “like”,
+-  **Data type**, to indicate the field data type.
 
 .. _clmnproprtylist:
 .. figure:: media/image322.png
 
    Column property list.
-
--  **Profile attribute**, to filter the field (and then the table records) by the user profile attributes (note that the combobox lists the available profile attributes),
-
--  **Profile attribute filter type**, to define the filter operator among “equals to”, “in”, “like”,
--  **Data type**, to indicate the field data type.
 
 In the **Behavioural Model** area, the user can assign the field’s visbility permission to specific roles.
 
@@ -220,8 +215,9 @@ After the editing of the metamodel, click on “Save” on the Meta Web toolbar 
 
     Generate datamart dialog.
    
-If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advacend options” (see Figure 10.18) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to buid the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
+If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advacend options” (see :numref:`generdatamdialogadv`) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to buid the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
 
+.. _generdatamdialogadv:
 .. figure:: media/image324.png
 
     Generate datamart dialog: advanced options.
