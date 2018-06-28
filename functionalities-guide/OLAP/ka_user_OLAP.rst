@@ -795,22 +795,22 @@ An explanation of different sections of Mapping template example follows.
     :linenos:
     :caption: Menu configurable options
     
-   <BUTTON_DRILL_THROUGH visible="true"/>    
-   <BUTTON_MDX visible="true"/>              
-   <BUTTON_EDIT_MDX visible="true"/>         
-   <BUTTON_FATHER_MEMBERS visible="true"/>   
-   <BUTTON_CC visible="true"/>               
-   <BUTTON_HIDE_SPANS visible="true"/>       
-   <BUTTON_SORTING_SETTINGS visible="true"/> 
-   <BUTTON_SORTING visible="true" />         
-   <BUTTON_SHOW_PROPERTIES visible="true"/>  
-   <BUTTON_HIDE_EMPTY visible="true"/>       
-   <BUTTON_FLUSH_CACHE visible="true"/>      
-   <BUTTON_SAVE visible="true"/>             
-   <BUTTON_SAVE_NEW visible="true"/>        
-   <BUTTON_UNDO visible="true"/>             
-   <BUTTON_VERSION_MANAGER visible="true"/>  
-   <BUTTON_EXPORT_OUTPUT visible="false"/>   
+        <BUTTON_DRILL_THROUGH visible="true"/>    
+        <BUTTON_MDX visible="true"/>              
+        <BUTTON_EDIT_MDX visible="true"/>         
+        <BUTTON_FATHER_MEMBERS visible="true"/>   
+        <BUTTON_CC visible="true"/>               
+        <BUTTON_HIDE_SPANS visible="true"/>       
+        <BUTTON_SORTING_SETTINGS visible="true"/> 
+        <BUTTON_SORTING visible="true" />         
+        <BUTTON_SHOW_PROPERTIES visible="true"/>  
+        <BUTTON_HIDE_EMPTY visible="true"/>       
+        <BUTTON_FLUSH_CACHE visible="true"/>      
+        <BUTTON_SAVE visible="true"/>             
+        <BUTTON_SAVE_NEW visible="true"/>        
+        <BUTTON_UNDO visible="true"/>             
+        <BUTTON_VERSION_MANAGER visible="true"/>  
+        <BUTTON_EXPORT_OUTPUT visible="false"/>   
 
 - The DATA-ACCESS section is used to configure visibility options for data, in particular when the dimensions or cubes defining them are profiled also in the underlying schema. Details on how to profile OLAP cubes are explained in next sections.
 
