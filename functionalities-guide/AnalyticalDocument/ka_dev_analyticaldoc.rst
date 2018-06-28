@@ -257,7 +257,7 @@ In previous Section 5.4 we saw how to set correlation through the GUI available 
 We stress that the *AD_name* is the name of the driver the administrator is trying to reach. Syntax for setting correlation through LOV configuration is:
 
 .. code-block:: bash
-  :caption: Retrieve values from driver 
+  :caption: Syntax for setting correlation through LOV configuration 
   :linenos:
   
    $P{AD_name}
