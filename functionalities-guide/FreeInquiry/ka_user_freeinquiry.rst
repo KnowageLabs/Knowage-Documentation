@@ -577,10 +577,11 @@ We highlight that the new features are available only if the model has at least 
       
     **Define first the temporal dimension on Knowage Meta**
       
-      To have a temporal dimension that can be used in the Qbe interface an expert user must enable it first on the model using               Knowage Meta. Use the **property view** to set/change the type of the dimension as shown in Figure 9.16. Refer to Chapter ?? to         learn how to use Knowage Meta.
+      To have a temporal dimension that can be used in the Qbe interface an expert user must enable it first on the model using Knowage Meta. Use the **property view** to set/change the type of the dimension as shown in :numref:`tempdimensmeta`. Refer to *Meta Web* chapter to learn how to use Knowage Meta.
 
 The temporal dimension can have one or more hierarchies. Only one of these can stay active and that is the one used by the query code. Figure below shows that a temporal dimension can have one or more hierarchies. In the case of more hierarchies the user can see which is the one set by default just exploring the dimension: the bold highlighted hierarchy is the primary. On the other hand the user can change the default choice by right-clicking on the target dimension hierarchy and selecting “\ *Set as Default Hierarchy*\ ”.
 
+.. _tempdimensmeta:
 .. figure:: media/image224.png
 
     Temporal dimension definition on Meta.
