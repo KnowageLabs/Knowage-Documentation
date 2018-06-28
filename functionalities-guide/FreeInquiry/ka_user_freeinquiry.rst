@@ -60,6 +60,7 @@ Starting from the left side, the first Panel shows the querable logical schema a
 
 In the top right corner of the panel you can find a small toolbar to configure the panel (e.g., expand, reduce) and to save changes made to the model (i.e. **Calculated Field** or **Range**), as shown below.
 
+.. _datamartchematoolb:
 .. figure:: media/image209.png
 
     Datamart schema toolbar.
@@ -67,7 +68,7 @@ In the top right corner of the panel you can find a small toolbar to configure t
 
 There are two types of entities: *facts*, represented by a cube symbol.(i.e., the Sales fact 1998 entity) or *dimensions*, represented by a three-arrows symbol (i.e., the Product entity).
 
-Each single entity is composed of a title, some attributes or measures and relationships with other entities. In particular, by exploding the content of an entity (i.e. Sales fact 1998 as in Figure 9.2), you may encounter the following elements:
+Each single entity is composed of a title, some attributes or measures and relationships with other entities. In particular, by exploding the content of an entity (i.e. Sales fact 1998 as in :numref:`datamartchematoolb`), you may encounter the following elements:
 
 - **measure**: it refers to fields associated with numeric data (e.g. number of sold items);
 - **attribute**: it refers to fields that can be associated to a category (e.g. product category);
@@ -185,20 +186,20 @@ In this case, when dragging fields from both the **Order** entity and the **Time
 The select sub-section has a toolbar with additional functionalities summarized in Table below.
 
 .. table::  Select fields toolbar options
-  :widths: auto
+      :widths: auto
 
-   +-----------------------------------+-----------------------------------+
-   |    Button                         | Description                       |
-   +===================================+===================================+
-   |    **Apply distinct clause**      | Remove duplicated rows from       |
-   |                                   | results, if any                   |
-   +-----------------------------------+-----------------------------------+
-   |    **Hide non visible**           | Hide fields set as non visible in |
-   |                                   | query results                     |
-   +-----------------------------------+-----------------------------------+
-   |    **Add calculated**             | Add a calculated field to the     |
-   |                                   | query                             |
-   +-----------------------------------+-----------------------------------+
+      +-----------------------------------+-----------------------------------+
+      |    Button                         | Description                       |
+      +===================================+===================================+
+      |    **Apply distinct clause**      | Remove duplicated rows from       |
+      |                                   | results, if any                   |
+      +-----------------------------------+-----------------------------------+
+      |    **Hide non visible**           | Hide fields set as non visible in |
+      |                                   | query results                     |
+      +-----------------------------------+-----------------------------------+
+      |    **Add calculated**             | Add a calculated field to the     |
+      |                                   | query                             |
+      +-----------------------------------+-----------------------------------+
 
 Filters
 ^^^^^^^^
