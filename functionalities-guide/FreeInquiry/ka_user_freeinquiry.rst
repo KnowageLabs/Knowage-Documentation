@@ -248,39 +248,39 @@ Note that more complex combinations of filters can be defined using the Expressi
 In the following table the possible types of filters in the QbE are summarized. The use of subqueries in filters is explained later in *Advanced QbE functionalities* paragraph.
 
 .. table:: Possible combinations of filters in the QbE.
-  :widths: auto
+      :widths: auto
 
-   +-------------+-------------+-------------+-------------+-------------+
-   | Filter type | Left        | Operator    | Right       | Example     |
-   |             | operand     |             | operand     |             |
-   +=============+=============+=============+=============+=============+
-   |    Basic    | Entity.attr | Any         | value       | Prod.family |
-   |             | ibute       |             |             | =           |
-   |             |             |             |             |             |
-   |             |             |             |             | 'Food'      |
-   +-------------+-------------+-------------+-------------+-------------+
-   |    Basic    | Entity.attr | Any         | Entity.attr | Sales.sales |
-   |             | ibute       |             | ibute       | >           |
-   |             |             |             |             | Sales.cost  |
-   +-------------+-------------+-------------+-------------+-------------+
-   |  Parametric | Entity.attr | Any         | [parameter] | Prod.family |
-   |             | ibute       |             |             | =           |
-   |             |             |             |             |             |
-   |             |             |             |             | [p_family]  |
-   +-------------+-------------+-------------+-------------+-------------+
-   |    Dynamic  | Entity.attr | Any         | prompt      | Prod.family |
-   |             | ibute       |             |             | = ?         |
-   +-------------+-------------+-------------+-------------+-------------+
-   |    Value    | Entity.attr | In          | subquery    | Sales.custo |
-   |    list     | ibute       |             |             | mer         |
-   |    from     |             | /not in     |             | in subquery |
-   |    subquery |             |             |             |             |
-   +-------------+-------------+-------------+-------------+-------------+
-   |    Single   | subquery    | < = >       | value       | Subquery >  |
-   |    value    |             |             |             | 0           |
-   |    from     |             |             |             |             |
-   |    subquery |             |             |             |             |
-   +-------------+-------------+-------------+-------------+-------------+
+      +-------------+-------------+-------------+-------------+-------------+
+      | Filter type | Left        | Operator    | Right       | Example     |
+      |             | operand     |             | operand     |             |
+      +=============+=============+=============+=============+=============+
+      |    Basic    | Entity.attr | Any         | value       | Prod.family |
+      |             | ibute       |             |             | =           |
+      |             |             |             |             |             |
+      |             |             |             |             | 'Food'      |
+      +-------------+-------------+-------------+-------------+-------------+
+      |    Basic    | Entity.attr | Any         | Entity.attr | Sales.sales |
+      |             | ibute       |             | ibute       | >           |
+      |             |             |             |             | Sales.cost  |
+      +-------------+-------------+-------------+-------------+-------------+
+      |  Parametric | Entity.attr | Any         | [parameter] | Prod.family |
+      |             | ibute       |             |             | =           |
+      |             |             |             |             |             |
+      |             |             |             |             | [p_family]  |
+      +-------------+-------------+-------------+-------------+-------------+
+      |    Dynamic  | Entity.attr | Any         | prompt      | Prod.family |
+      |             | ibute       |             |             | = ?         |
+      +-------------+-------------+-------------+-------------+-------------+
+      |    Value    | Entity.attr | In          | subquery    | Sales.custo |
+      |    list     | ibute       |             |             | mer         |
+      |    from     |             | /not in     |             | in subquery |
+      |    subquery |             |             |             |             |
+      +-------------+-------------+-------------+-------------+-------------+
+      |    Single   | subquery    | < = >       | value       | Subquery >  |
+      |    value    |             |             |             | 0           |
+      |    from     |             |             |             |             |
+      |    subquery |             |             |             |             |
+      +-------------+-------------+-------------+-------------+-------------+
 
 Filters on Groups
 ^^^^^^^^^^^^^^^^^^^^
@@ -347,15 +347,15 @@ The latter are available only in the presence of a geographical Business Model a
 
     Spatial function list.
     
-.. _linkoraclesptfnct:
-.. table:: Link to Oracle spatial functions.
-    :widths: auto
-    
 .. warning::
      **Take into account the Oracle function definition**
          
          It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
-
+    
+.. _linkoraclesptfnct:
+.. table:: Link to Oracle spatial functions.
+    :widths: auto
+    
       +-----------------------+-----------------------+-----------------------+
       |    Function Name      | Oracle Function       | Link to Oracle web    |
       |                       |                       | pages                 |
@@ -473,100 +473,100 @@ As well as calculated fields it is possible to filter on spatial fields using sp
 .. table:: Link to Oracle filter functions.
     :widths: auto
 
-+-----------------------+-----------------------+-----------------------+
-|    Function Name      | Oracle Function       | Link to Oracle web    |
-|                       |                       | pages                 |
-+=======================+=======================+=======================+
-|    **touches**        | SDO_TOUCH             | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BGEHHIGF <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BGEHHIGF>`__         |
-+-----------------------+-----------------------+-----------------------+
-|    **filter**         | SDO_FILTER            | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BJAFBCFC <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BJAFBCFC>`__         |
-+-----------------------+-----------------------+-----------------------+
-|    **contains**       | SDO_CONTAINS          | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BGEHCFDH <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BGEHCFDH>`__         |
-+-----------------------+-----------------------+-----------------------+
-|    **covered by**     | SDO_COVEREDBY         | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BGEHEAEJ <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BGEHEAEJ>`__         |
-+-----------------------+-----------------------+-----------------------+
-|    **inside**         | SDO_INSIDE            | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BGEFABDH <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BGEFABDH>`__         |
-+-----------------------+-----------------------+-----------------------+
-|    **covers**         | SDO_COVERS            | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BGEGIJFB <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BGEGIJFB>`__         |
-+-----------------------+-----------------------+-----------------------+
-|    **overlaps**       | SDO_OVERLAPS          | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BGEDACIF <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BGEDACIF>`__         |
-+-----------------------+-----------------------+-----------------------+
-|    **equals to**      | SDO_EQUAL             | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BGEBCEJE <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BGEBCEJE>`__         |
-+-----------------------+-----------------------+-----------------------+
-|    **intersects**     | SDO_ANYINTERACT       | `https://docs.oracle. |
-|                       |                       | com/cd/B19306_01/appd |
-|                       |                       | ev.                   |
-|                       |                       | 102/b14255/sdo_operat |
-|                       |                       | .htm#BGEJHDGD <https: |
-|                       |                       | //docs.oracle.com/cd/ |
-|                       |                       | B19306_01/appdev.102/ |
-|                       |                       | b14255/sdo_operat.htm |
-|                       |                       | #BGEJHDGD>`__         | 
-+-----------------------+-----------------------+-----------------------+
+      +-----------------------+-----------------------+-----------------------+
+      |    Function Name      | Oracle Function       | Link to Oracle web    |
+      |                       |                       | pages                 |
+      +=======================+=======================+=======================+
+      |    **touches**        | SDO_TOUCH             | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BGEHHIGF <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BGEHHIGF>`__         |
+      +-----------------------+-----------------------+-----------------------+
+      |    **filter**         | SDO_FILTER            | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BJAFBCFC <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BJAFBCFC>`__         |
+      +-----------------------+-----------------------+-----------------------+
+      |    **contains**       | SDO_CONTAINS          | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BGEHCFDH <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BGEHCFDH>`__         |
+      +-----------------------+-----------------------+-----------------------+
+      |    **covered by**     | SDO_COVEREDBY         | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BGEHEAEJ <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BGEHEAEJ>`__         |
+      +-----------------------+-----------------------+-----------------------+
+      |    **inside**         | SDO_INSIDE            | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BGEFABDH <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BGEFABDH>`__         |
+      +-----------------------+-----------------------+-----------------------+
+      |    **covers**         | SDO_COVERS            | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BGEGIJFB <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BGEGIJFB>`__         |
+      +-----------------------+-----------------------+-----------------------+
+      |    **overlaps**       | SDO_OVERLAPS          | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BGEDACIF <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BGEDACIF>`__         |
+      +-----------------------+-----------------------+-----------------------+
+      |    **equals to**      | SDO_EQUAL             | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BGEBCEJE <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BGEBCEJE>`__         |
+      +-----------------------+-----------------------+-----------------------+
+      |    **intersects**     | SDO_ANYINTERACT       | `https://docs.oracle. |
+      |                       |                       | com/cd/B19306_01/appd |
+      |                       |                       | ev.                   |
+      |                       |                       | 102/b14255/sdo_operat |
+      |                       |                       | .htm#BGEJHDGD <https: |
+      |                       |                       | //docs.oracle.com/cd/ |
+      |                       |                       | B19306_01/appdev.102/ |
+      |                       |                       | b14255/sdo_operat.htm |
+      |                       |                       | #BGEJHDGD>`__         | 
+      +-----------------------+-----------------------+-----------------------+
 
 
 Temporal dimension
