@@ -70,11 +70,11 @@ In the panel axes you can:
 
 Referring to :numref:`axespanelfeat`, the axes panel consists of the following items:
 
--  (a) columns axis,
--  (b) row axis,
--  (c) filter cards,
--  (d) icon for swap axes,
--  (e) icon for hierarchy order.
+-  \(a\) columns axis,
+-  \(b\) row axis,
+-  \(c\) filter cards,
+-  \(d\) icon for swap axes,
+-  \(e\) icon for hierarchy order.
 
 .. _axespanelfeat:
 .. figure:: media/image140.png
