@@ -49,10 +49,10 @@ Filter cards are used to:
 
 Considering :numref:`featuresoffiltcard`, we can see that a filter card is made up of:
 
--(a) an icon for opening dimension chooser dialog,
--(b) a dimension name,
--(c)+(e) icon slicer,
--(d) choosed filter name,
+- (a) an icon for opening dimension chooser dialog,
+- (b) a dimension name,
+- (c)+(e) icon slicer,
+- (d) choosed filter name,
 
 .. _featuresoffiltcard:
 .. figure:: media/image138.png
@@ -70,11 +70,11 @@ In the panel axes you can:
 
 Referring to :numref:`axespanelfeat`, the axes panel consists of the following items:
 
--  \(a\) columns axis,
--  \(b\) row axis,
--  \(c\) filter cards,
--  \(d\) icon for swap axes,
--  \(e\) icon for hierarchy order.
+- (a) columns axis,
+- (b) row axis,
+- (c) filter cards,
+- (d) icon for swap axes,
+- (e) icon for hierarchy order.
 
 .. _axespanelfeat:
 .. figure:: media/image140.png
@@ -149,7 +149,7 @@ The side bar shows the **Menu**. This area let you customize the Olap layout. As
 
     Side bar Menu.
 
-We start introducing the interface and leave the description to the next Section 7.2. In particular, referring to :numref:`drilltypes`, drill types consists of:
+We start introducing the interface and leave the description to the next *Functionalities* paragraph. In particular, referring to :numref:`drilltypes`, drill types consists of:
 
 -  (a) position,
 -  (b) member,
