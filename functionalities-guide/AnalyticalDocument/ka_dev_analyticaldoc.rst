@@ -161,7 +161,7 @@ Document Visibility
 After having defined all details, you need to choose where the analytical document shall be saved in the functionality tree. This   choice has an impact on the visibility of the document. Since folders in the functionality tree are subject to different access policies, which can be set when creating the node, then each document saved in that folder will inherit permissions accordingly.
 
 .. warning::
-         **Repository structure and rights**
+      **Repository structure and rights**
          
          The **Functionalities tree** is Knowage document repository. It is maneged by administrator, who is in charge to profile user visibility too.
 
