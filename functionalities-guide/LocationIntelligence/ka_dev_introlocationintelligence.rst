@@ -502,17 +502,17 @@ The following, instead, are some of the optional attributes:
 
    **proportionalSymbols**: it changes the dimension of graphical objects. It can be applied to target layers that are composed of features whose geometry is represented by a dot point. The symbol used to perform the thematization of features is a circle whose center is located in the feature itself and whose radius is proportional to the value of the measure of that feature.
 
-Chart: to visualize the features with charts which compare the different features indicators.
+	Chart: to visualize the features with charts which compare the different features indicators.
 
-You can change the thematization after the document execution by switching between Map point, Map zone and Map chart in the left panel of the map.
+	You can change the thematization after the document execution by switching between Map point, Map zone and Map chart in the left panel of the map.
 
- - *filters*, here you define which target layer attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "country",label : "Nazione". The first value (name : "country") is the name of the attribute as it is displayed among the properties. The second one label: "Nazione" is the label which will be displayed to the user.
+- *filters*, here you define which target layer attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "country",label : "Nazione". The first value (name : "country") is the name of the attribute as it is displayed among the properties. The second one label: "Nazione" is the label which will be displayed to the user.
 
 .. figure:: media/image355.png
 
-    Choropleth (left) proportionalSymbols (center) and Chart (right) thematization.
+      Choropleth (left) proportionalSymbols (center) and Chart (right) thematization.
 
- - *analysisConf*, this attribute configures the chosen thematization. In particular,
+- *analysisConf*, this attribute configures the chosen thematization. In particular,
 
    -  the classes attribute defines the number of total data intervals. Each interval corresponds to a colour (choropleth thematization) or a radius size (proportional symbols thematization).
    -  the method specifies how to subdivide data among the intervals. Possible values are:
@@ -536,11 +536,11 @@ Analytical document creation
    Now we have all the necessary elements to develop a new location intelligence analytical document: map, dataset and template. Create a new dataset with the query shown in Code9.2, create a layer in the layer catalogue and a new analytical document.
 
 .. warning::
-         **Datasets and maps**
+      **Datasets and maps**
          
          End users can properly visualize location intelligence documents only if the underlying query dataset has scope set to **PUBLIC**. 
 
-   Select Location Intelligence as **Type** and Gis Engine as **Engine**. Associate the correct datasource and data set, upload the template and save. You are now ready to execute your first location intelligence document!
+Select Location Intelligence as **Type** and Gis Engine as **Engine**. Associate the correct datasource and data set, upload the template and save. You are now ready to execute your first location intelligence document!
 
 
 Cross navigation definition\*
@@ -570,31 +570,31 @@ The staticParams contains an array of static parameters that must be passed to t
 
 The dynamicParams contains dynamic parameters that must be passed to the target document in the form
 
-   parameterName:ReferenciatedAttribute
+   *parameterName:ReferenciatedAttribute*
 
 The parameterName must be the target document’s parameter url, while ReferenciatedAttribute defines where to recover its value and may be different depending on the value of the attribute scope:
 
 -  feature: the value of the parameter is the feature’s value of the selected element. The ReferenciatedAttribute is the name of feature. For example, the row
 
-   state:'STATE_ABBR', scope:'feature'
+   *state:'STATE_ABBR', scope:'feature'*
 
    means that if you click on the state of Texas, whose feature STATE_ABBR has value 'TX', the target document will be executed with parameter state='TX'.
 
 -  env: the value of the parameter is the value of an input analytical driver of the map document. The ReferenciatedAttribute is the name of the input analytical driver url of the map. For example,
 
-   state:'par_state', scope:'env'
+   *state:'par_state', scope:'env'*
 
    means that when you click on a state, the target document will be executed with a parameter state=<value of par_state driver>.
 
 -  dataset: the value of the parameter is the value of a column of the dataset. The ReferenciatedDatasetAttribute is the name of column of the dataset that the map are using. For example,
 
-   state:'col_state', scope:'dataset'
+   *state:'col_state', scope:'dataset'*
 
    means that when you click on a state, the target document will be executed with a parameter state=<value of the column col_state of the dataset>. 
    
 Pay attention that the last configuration is usable only with physical store.
 
-Once you are done, you need to define the output parameters as described in Section **XXX** of Chapter **XXX**. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
+Once you are done, you need to define the output parameters as described in Section *Cross Navigation* of *Analytical Document* Chapter. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
 
 
 Template building with GIS designer for technical user\*
@@ -605,9 +605,9 @@ When creating new location intelligence document using GIS engine basic template
 .. _gisdesigneraccestemplbuild:
 .. figure:: media/image381.png
 
-   Figure 15.29: Gis designer accessible from the template build.
+    Gis designer accessible from the template build.
 
-We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to Section 15.4 for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in :numref:`layerfiltranalytdriv`. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (:numref:`listavailfiltranalydriv`).
+We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to *Designer section* paragraph for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in :numref:`layerfiltranalytdriv`. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (:numref:`listavailfiltranalydriv`).
 
 .. _layerfiltranalytdriv:
 .. figure:: media/image382.png
