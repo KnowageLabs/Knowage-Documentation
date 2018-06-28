@@ -479,169 +479,164 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 	|                       |                       | outbound of the       |
 	|                       |                       | maximum range.165     |
 	+-----------------------+-----------------------+-----------------------+
-
-.. _recaplayerproperties5:
-.. table:: Recap of layer tag properties and function.
-    	:widths: auto
-
-        +-----------------------------------+-----------------------------------+
-        |    Tag                            | Property Note                     |
-        +===================================+===================================+
-        |    COLOURS                        | Mandatory. Defines the colour to  |
-        |                                   | use when the value for the spe-   |
-        |                                   |                                   |
-        |                                   | null_values_color cific area is   |
-        |                                   | null.                             |
-        +-----------------------------------+-----------------------------------+
-        |    PARAM                          | See the PARAM \| name property    |
-        |                                   | specified for the THRESHOLD namv  |
-        |                                   |                                   |
-        |                                   |    tag.                           |
-        +-----------------------------------+-----------------------------------+
-        |    PARAM                          | See the PARAM \| value property   |
-        |                                   | specified for the THRESHOLD nalue |
-        |                                   | tag.                              |
-        +-----------------------------------+-----------------------------------+
+        |    COLOURS            | null_values_color     | Mandatory. Defines the| 
+	|			|			|  colour to use when the|
+        |                       |                       | value for the specific|
+        |                       |                       | area is null          |
+        |                       |                       |                       |
+        +-----------------------+-----------------------+-----------------------+
+        |    PARAM              | namv		        | See the PARAM \|      |
+        |                       |                       | name property         |
+	|			|		        | specified for         |
+        |                       |                       | the THRESHOLD tag.    |
+        |                       |                       |                       |
+        +-----------------------+-----------------------+-----------------------+
+        |    PARAM              | nalue			|  See the PARAM \|	|
+	|			|			|  value property	|
+	|			|			|  specified for the	|
+	|			|			|  THRESHOLD tag.	|	
+        |                       |                       |                       |
+        +-----------------------+-----------------------+-----------------------+
 
 .. _recaplayerproperties6:
 .. table:: Recap of layer tag properties and function.
     	:widths: auto
     
-		+-----------------------+-----------------------+-----------------------+
-		|    Tag                | Property              | Note                  |
-		+=======================+=======================+=======================+
-		|    type               | static                | It partitions the     |
-		|                       |                       | interval into smaller |
-		|                       |                       | fixed-size            |
-		|                       |                       | subintervals,         |
-		|                       |                       | statically defined by |
-		|                       |                       | the RANGE parameter   |
-		|                       |                       | <TRESHOLDS            |
-		|                       |                       |                       |
-		|                       |                       | type="static"         |
-		|                       |                       | lb_value="0"          |
-		|                       |                       | ub_value="none" >     |
-		|                       |                       |                       |
-		|                       |                       | <PARAM name="range"   |
-		|                       |                       | value="0,256,512,1024 |
-		|                       |                       | "                     |
-		|                       |                       | />                    |
-		|                       |                       |                       |
-		|                       |                       | <PARAM name="label"   |
-		|                       |                       | value="Low,Medium,Hig |
-		|                       |                       | h,Max"                |
-		|                       |                       | />                    |
-		|                       |                       |                       |
-		|                       |                       | </TRESHOLDS>          |
-		+-----------------------+-----------------------+-----------------------+
-		|    type               | quantile              | it partitions the     |
-		|                       |                       | interval into N       |
-		|                       |                       | quintiles. The exact  |
-		|                       |                       | amount of quintiles   |
-		|                       |                       | to be created is      |
-		|                       |                       | defined by the        |
-		|                       |                       | GROUPS_NUMBER         |
-		|                       |                       | parameter:            |
-		|                       |                       |                       |
-		|                       |                       | <TRESHOLDS            |
-		|                       |                       | type="quantile"       |
-		|                       |                       | lb_value="0"          |
-		|                       |                       | ub_value="none"       |
-		|                       |                       |                       |
-		|                       |                       | >                     |
-		|                       |                       |                       |
-		|                       |                       | <PARAM                |
-		|                       |                       | name="GROUPS_NUMBER"  |
-		|                       |                       | value="5" />          |
-		|                       |                       | </TRESHOLDS>          |
-		+-----------------------+-----------------------+-----------------------+
-		|    type               | perc                  | it partitions the     |
-		|                       |                       | interval into         |
-		|                       |                       | subintervals whose    |
-		|                       |                       | extent represents a   |
-		|                       |                       | specific fraction of  |
-		|                       |                       | the overall interval  |
-		|                       |                       | extent. The extent of |
-		|                       |                       | each single           |
-		|                       |                       | subinterval is        |
-		|                       |                       | defined by the RANGE  |
-		|                       |                       | parameter.            |
-		|                       |                       |                       |
-		|                       |                       | <TRESHOLDS            |
-		|                       |                       | type="perc"           |
-		|                       |                       | lb_value="0"          |
-		|                       |                       | ub_value="none" >     |
-		|                       |                       |                       |
-		|                       |                       | <PARAM name="range"   |
-		|                       |                       | value="30,20,30,20"   |
-		|                       |                       | /> </TRESHOLDS>       |
-		+-----------------------+-----------------------+-----------------------+
-		|    type               | uniform               | it partitions the     |
-		|                       |                       | interval into N       |
-		|                       |                       | subintervals of a     |
-		|                       |                       | same extent. The      |
-		|                       |                       | exact number of       |
-		|                       |                       | sub-intervals is      |
-		|                       |                       | defined by the        |
-		|                       |                       | GROUPS_NUMBER         |
-		|                       |                       | parameter. <TRESHOLDS |
-		|                       |                       | type="uniform"        |
-		|                       |                       | lb_value="0"          |
-		|                       |                       | ub_value="none" >     |
-		|                       |                       |                       |
-		|                       |                       | <PARAM                |
-		|                       |                       | name="GROUPS_NUMBER"  |
-		|                       |                       | value="4" />          |
-		|                       |                       |                       |
-		|                       |                       | </TRESHOLDS>          |
-		+-----------------------+-----------------------+-----------------------+
+	+-----------------------+-----------------------+-----------------------+
+	|    Tag                | Property              | Note                  |
+	+=======================+=======================+=======================+
+	|    type               | static                | It partitions the     |
+	|                       |                       | interval into smaller |
+	|                       |                       | fixed-size            |
+	|                       |                       | subintervals,         |
+	|                       |                       | statically defined by |
+	|                       |                       | the RANGE parameter   |
+	|                       |                       | <TRESHOLDS            |
+	|                       |                       |                       |
+	|                       |                       | type="static"         |
+	|                       |                       | lb_value="0"          |
+	|                       |                       | ub_value="none" >     |
+	|                       |                       |                       |
+	|                       |                       | <PARAM name="range"   |
+	|                       |                       | value="0,256,512,1024 |
+	|                       |                       | "                     |
+	|                       |                       | />                    |
+	|                       |                       |                       |
+	|                       |                       | <PARAM name="label"   |
+	|                       |                       | value="Low,Medium,Hig |
+	|                       |                       | h,Max"                |
+	|                       |                       | />                    |
+	|                       |                       |                       |
+	|                       |                       | </TRESHOLDS>          |
+	+-----------------------+-----------------------+-----------------------+
+	|    type               | quantile              | it partitions the     |
+	|                       |                       | interval into N       |
+	|                       |                       | quintiles. The exact  |
+	|                       |                       | amount of quintiles   |
+	|                       |                       | to be created is      |
+	|                       |                       | defined by the        |
+	|                       |                       | GROUPS_NUMBER         |
+	|                       |                       | parameter:            |
+	|                       |                       |                       |
+	|                       |                       | <TRESHOLDS            |
+	|                       |                       | type="quantile"       |
+	|                       |                       | lb_value="0"          |
+	|                       |                       | ub_value="none"       |
+	|                       |                       |                       |
+	|                       |                       | >                     |
+	|                       |                       |                       |
+	|                       |                       | <PARAM                |
+	|                       |                       | name="GROUPS_NUMBER"  |
+	|                       |                       | value="5" />          |
+	|                       |                       | </TRESHOLDS>          |
+	+-----------------------+-----------------------+-----------------------+
+	|    type               | perc                  | it partitions the     |
+	|                       |                       | interval into         |
+	|                       |                       | subintervals whose    |
+	|                       |                       | extent represents a   |
+	|                       |                       | specific fraction of  |
+	|                       |                       | the overall interval  |
+	|                       |                       | extent. The extent of |
+	|                       |                       | each single           |
+	|                       |                       | subinterval is        |
+	|                       |                       | defined by the RANGE  |
+	|                       |                       | parameter.            |
+	|                       |                       |                       |
+	|                       |                       | <TRESHOLDS            |
+	|                       |                       | type="perc"           |
+	|                       |                       | lb_value="0"          |
+	|                       |                       | ub_value="none" >     |
+	|                       |                       |                       |
+	|                       |                       | <PARAM name="range"   |
+	|                       |                       | value="30,20,30,20"   |
+	|                       |                       | /> </TRESHOLDS>       |
+	+-----------------------+-----------------------+-----------------------+
+	|    type               | uniform               | it partitions the     |
+	|                       |                       | interval into N       |
+	|                       |                       | subintervals of a     |
+	|                       |                       | same extent. The      |
+	|                       |                       | exact number of       |
+	|                       |                       | sub-intervals is      |
+	|                       |                       | defined by the        |
+	|                       |                       | GROUPS_NUMBER         |
+	|                       |                       | parameter. <TRESHOLDS |
+	|                       |                       | type="uniform"        |
+	|                       |                       | lb_value="0"          |
+	|                       |                       | ub_value="none" >     |
+	|                       |                       |                       |
+	|                       |                       | <PARAM                |
+	|                       |                       | name="GROUPS_NUMBER"  |
+	|                       |                       | value="4" />          |
+	|                       |                       |                       |
+	|                       |                       | </TRESHOLDS>          |
+	+-----------------------+-----------------------+-----------------------+
 
 .. _recaplayerproperties7:
 .. table:: Recap of layer tag properties and function.
     	:widths: auto
 
-		+-----------------------+-----------------------+-----------------------+
-		|    Tag                | Property              | Note                  |
-		+=======================+=======================+=======================+
-		|    type               | static                | Static: it assigns    |
-		|                       |                       | each sub-interval a   |
-		|                       |                       | specific color that   |
-		|                       |                       | is statically         |
-		|                       |                       | defined, through the  |
-		|                       |                       | RANGE parameter       |
-		|                       |                       | <COLOURS              |
-		|                       |                       |                       |
-		|                       |                       | type="static"         |
-		|                       |                       | null_values_color="#F |
-		|                       |                       | FFFFF"                |
-		|                       |                       | > <PARAM name="range" |
-		|                       |                       | value="#CCD6E3,#6699F |
-		|                       |                       | F,#4a7aaf,#283B64"    |
-		|                       |                       | />                    |
-		|                       |                       |                       |
-		|                       |                       | </COLOURS>            |
-		+-----------------------+-----------------------+-----------------------+
-		|    type               | grad                  | Gradient : it assigns |
-		|                       |                       | each sub-interval a   |
-		|                       |                       | specific color that   |
-		|                       |                       | is dynamically        |
-		|                       |                       | calculated through a  |
-		|                       |                       | gradient function,    |
-		|                       |                       | which progressively   |
-		|                       |                       | scales the base color |
-		|                       |                       | intensity. This is    |
-		|                       |                       | defined through the   |
-		|                       |                       | BASE_COLOR parameter  |
-		|                       |                       | <COLOURS type="grad"  |
-		|                       |                       | outbound_colour="#CCC |
-		|                       |                       | CCC"                  |
-		|                       |                       | null_values_color="#F |
-		|                       |                       | FFFFF"                |
-		|                       |                       | > <PARAM              |
-		|                       |                       | name="BASE_COLOUR"    |
-		|                       |                       | value="#3333CC" />    |
-		|                       |                       | </COLOURS>            |
-		+-----------------------+-----------------------+-----------------------+
+	+-----------------------+-----------------------+-----------------------+
+	|    Tag                | Property              | Note                  |
+	+=======================+=======================+=======================+
+	|    type               | static                | Static: it assigns    |
+	|                       |                       | each sub-interval a   |
+	|                       |                       | specific color that   |
+	|                       |                       | is statically         |
+	|                       |                       | defined, through the  |
+	|                       |                       | RANGE parameter       |
+	|                       |                       | <COLOURS              |
+	|                       |                       |                       |
+	|                       |                       | type="static"         |
+	|                       |                       | null_values_color="#F |
+	|                       |                       | FFFFF"                |
+	|                       |                       | > <PARAM name="range" |
+	|                       |                       | value="#CCD6E3,#6699F |
+	|                       |                       | F,#4a7aaf,#283B64"    |
+	|                       |                       | />                    |
+	|                       |                       |                       |
+	|                       |                       | </COLOURS>            |
+	+-----------------------+-----------------------+-----------------------+
+	|    type               | grad                  | Gradient : it assigns |
+	|                       |                       | each sub-interval a   |
+	|                       |                       | specific color that   |
+	|                       |                       | is dynamically        |
+	|                       |                       | calculated through a  |
+	|                       |                       | gradient function,    |
+	|                       |                       | which progressively   |
+	|                       |                       | scales the base color |
+	|                       |                       | intensity. This is    |
+	|                       |                       | defined through the   |
+	|                       |                       | BASE_COLOR parameter  |
+	|                       |                       | <COLOURS type="grad"  |
+	|                       |                       | outbound_colour="#CCC |
+	|                       |                       | CCC"                  |
+	|                       |                       | null_values_color="#F |
+	|                       |                       | FFFFF"                |
+	|                       |                       | > <PARAM              |
+	|                       |                       | name="BASE_COLOUR"    |
+	|                       |                       | value="#3333CC" />    |
+	|                       |                       | </COLOURS>            |
+	+-----------------------+-----------------------+-----------------------+
 
 
 Now, after the template definiton, you can create it into Knowage. Remember that it must be a “Location Intelligence” document type with the engine “SVG Viewer Engine”.
