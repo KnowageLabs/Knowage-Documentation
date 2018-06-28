@@ -306,7 +306,7 @@ In particular, it is possible to search for a member in three ways:
 
    Browsing the member tree.
 
-2. by typing member’s name or it’s part in the input field and clicking on the search button. The research will be possible if the user enters at least four letters. If the user wishes to include member’s siblings to the research, the checkbox (:numref:`dialogforslicerchoosing`, (d))needs to be checked;
+2. by typing member’s name or it’s part in the input field and clicking on the search button. The research will be possible if the user enters at least four letters. If the user wishes to include member’s siblings to the research, the checkbox (:numref:`dialogforslicerchoosing` (d))needs to be checked;
 
 .. figure:: media/image163.png
 
@@ -338,7 +338,7 @@ The procedure to search for a member using the filter dialog has no meaningful d
 Drill down and drill up
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-User can choose between drill types by clicking on one of the three buttons in the drill types section of the side bar (Figure 7.10). There are three drill types. In the following we give some details on them.
+User can choose between drill types by clicking on one of the three buttons in the drill types section of the side bar (:numref:`sidebarmenu`). There are three drill types. In the following we give some details on them.
 
 1. **Position**: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with          child members of a member with that particular command. See below.
 
@@ -533,7 +533,7 @@ Once enabled, to create a calculated member/set the user should:
 
     Select function dialog.
 
-The function definition used to create calculated members are read from the formula.xml file, located at: ROOT/resources/yourTennant/Olap folder. Functions are divided by few different tabs. In particular,\ **Tab Recent** contains calculated members and calculated sets created by user and saved in cookies. If there are no sets/members stored in the cookies, that tab will be empty. **Tab Custom** is where to define custom functions. These functions can be used to make really complex operations that are not part of predefined MDX functions. There you can use combination of few functions together or use operators for complex mathematical  calculations. They are also defined in formulas xml. If a specific tab doesn’t contain any formula, it will not be displayed. The “Name” field is mandatory, indeed the creation of a function without a name is forbidden. In **Recent tab**, the “Name” field is hidden for  Figure 7.48 provides an example of edited formula in the formulas.xml file.
+The function definition used to create calculated members are read from the formula.xml file, located at: ROOT/resources/yourTennant/Olap folder. Functions are divided by few different tabs. In particular,\ **Tab Recent** contains calculated members and calculated sets created by user and saved in cookies. If there are no sets/members stored in the cookies, that tab will be empty. **Tab Custom** is where to define custom functions. These functions can be used to make really complex operations that are not part of predefined MDX functions. There you can use combination of few functions together or use operators for complex mathematical  calculations. They are also defined in formulas xml. If a specific tab doesn’t contain any formula, it will not be displayed. The “Name” field is mandatory, indeed the creation of a function without a name is forbidden. In **Recent tab**, the “Name” field is hidden. the figure below provides an example of edited formula in the formulas.xml file.
 
 .. figure:: media/image188.png
 
@@ -589,13 +589,13 @@ The expression of selected members will be imported in text input fields for arg
    
     Saved sets dialog.
 
-   •  Click on calculated member/set. The expression of saved calculated member/set will be imported in text input fields for argument         expression, as highlighted below.
+•  Click on calculated member/set. The expression of saved calculated member/set will be imported in text input fields for argument         expression, as highlighted below.
    
 .. figure:: media/image193.png
 
     Expression of the saved/calculated member/set.
 
-   •  After filling all the arguments of function, clicking on OK button will:
+•  After filling all the arguments of function, clicking on OK button will:
 
       -  add calculated member in a pivot table,
       -  save calculated set and it will be available for creation of other calculated member and sets.
