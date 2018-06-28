@@ -75,19 +75,19 @@ You can refer to the tuple in :numref:`producteggs` with just Product.Eggs and a
 
 .. _producteggs:
 .. code-block:: 
-      :linenos:
-      :caption: Product.Eggs
+         :linenos:
+         :caption: Product.Eggs
    
-         [Measures].[Store Sales], [Product].[Food].[Eggs], [Version].[0],        
-         [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]   
+            [Measures].[Store Sales], [Product].[Food].[Eggs], [Version].[0],        
+            [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]   
 
 
 .. code-block:: 
-      :linenos:
-      :caption: Product.Eggs; Measures.Unit Sales
+         :linenos:
+         :caption: Product.Eggs; Measures.Unit Sales
    
-         [Measures].[Unit Sales], [Product].[Food].[Eggs], [Version].[0],                              
-         [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers] 
+            [Measures].[Unit Sales], [Product].[Food].[Eggs], [Version].[0],                              
+            [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers] 
 
 
 Note that if you create a formula on a cell and you want to move it along a dimension (for example the cell refers to member Time.2016 and you want to get value for Time.2017) you have to refer to a member of same level. So for example you can get value of the cell for Time.2017, but not for Time.2017.May.
@@ -95,53 +95,53 @@ Note that if you create a formula on a cell and you want to move it along a dime
 The syntax is as the one shown in Referring to different members or, in case you are using another hierarchy, as in :numref:`referringdiffmembers` where you can concatenate different members with ";".
 
 .. code-block:: 
-      :linenos:
-      :caption: Referring to different members.
+         :linenos:
+         :caption: Referring to different members.
    
-         <dimension's name>.<member's name>or[<dimension's name>].[<member's name>]                      
+            <dimension's name>.<member's name>or[<dimension's name>].[<member's name>]                      
 
 .. _referringdiffmembers:
 .. code-block:: 
-      :linenos:
-      :caption: Referring to different members of another hierarchy.
+         :linenos:
+         :caption: Referring to different members of another hierarchy.
    
-         <dimension's name>.<hierarchy's name>.<member's name>or[<dimension's name>].[< hierarchy's name>].[<member's name>]  
+            <dimension's name>.<hierarchy's name>.<member's name>or[<dimension's name>].[< hierarchy's name>].[<member's name>]  
 
 
 You can also refer to members that are on the same level but they are not sibling members:
 suppose that, for example, the cell’s tuple is as in Code below:
 
 .. code-block:: 
-      :linenos:
-      :caption: Example of cell’s tuple.
+         :linenos:
+         :caption: Example of cell’s tuple.
    
-         [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],        
-         [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]
+            [Measures].[Store Sales], [Product].[Food].[Deli], [Version].[0],        
+            [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]
 
 
 Note that you can refer to the tuple
 
 .. code-block:: 
-      :linenos:
-      :caption: Example of cell’s tuple.
+         :linenos:
+         :caption: Example of cell’s tuple.
    
-         [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages],  
-         [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],  
-         [Customers].[All Customers]                                                  
+            [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages],  
+            [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],  
+            [Customers].[All Customers]                                                  
 
 just with:
 
 .. code-block:: 
-      :linenos:
-      :caption: Shorten syntax code.
+         :linenos:
+         :caption: Shorten syntax code.
    
-         [Product].[Drink.Alcoholic Beverages] 
+            [Product].[Drink.Alcoholic Beverages] 
 
 Another example from Code below
 
 .. code-block:: 
-      :linenos:
-      :caption: Example of cell’s tuple.
+         :linenos:
+         :caption: Example of cell’s tuple.
    
           [Measures].[Store Sales], [Product].[Food].[Deli].[Meat],            
           [Version].[0], [Region].[Mexico Central], [Customers].[All Customers],
@@ -149,26 +149,26 @@ Another example from Code below
 to Code below
 
 .. code-block:: 
-      :linenos:
-      :caption: Example of cell’s tuple.
+         :linenos:
+         :caption: Example of cell’s tuple.
    
-         [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0], 
-         [Region].[Mexico Central], [Customers].[AllCustomers], [Customers].[All Customers]                                                                          
+            [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0], 
+            [Region].[Mexico Central], [Customers].[AllCustomers], [Customers].[All Customers]                                                                          
 is as in the following code
 
 .. code-block:: 
-      :linenos:
-      :caption: Used expression.
+         :linenos:
+         :caption: Used expression.
    
-         [Product].[Drink.Alcoholic Beverages.Beer and Wine] 
+            [Product].[Drink.Alcoholic Beverages.Beer and Wine] 
 
 Note that the last part of the expression is the portion of the path to the target member that differs from the path of the cell’s member. Some other examples:
 
 .. code-block:: 
-      :linenos:
-      :caption: Further example.
+         :linenos:
+         :caption: Further example.
    
-         [Product].[Food]
+            [Product].[Food]
       
  
 What-if analysis implementation
