@@ -8,7 +8,7 @@ Jasper is a stand-alone reporting tool developed by the Jaspersoft Community. An
 
     Example of a Jasper report.
 
-   Plese note that this engine is available only in KnowageER.
+Plese note that this engine is available only in KnowageER.
 
 Document defintion\*
 ----------------------
@@ -57,7 +57,7 @@ The tree located in the left part of the window shows the elements of the report
 
     Data Set definition.
 
-   To create a table, click on the element in the Palette and use the wizard. Figure below exhibits the Jasper editor interface. To insert dataset columns into the report, use the syntax showed in following syntax to insert dataset columns.
+To create a table, click on the element in the Palette and use the wizard. Figure below exhibits the Jasper editor interface. To insert dataset columns into the report, use the syntax showed in following syntax to insert dataset columns.
    
 .. figure:: media/image348.png
 
@@ -66,11 +66,12 @@ The tree located in the left part of the window shows the elements of the report
 .. code-block:: bash
         :linenos:
         :caption: Syntax to insert dataset columns.
+        
              $F{name_of_dataset_column}
 
 
-   Once the document has been developed, technical users can use Knowage Studio deployment service to easily register the report with its template on Knowage Server. Alternatively, any valid Jasper template (developed with or without Knowage Studio) can be directly uploaded to Knowage Server using the web interface for the document management.
+Once the document has been developed, technical users can use Knowage Studio deployment service to easily register the report with its template on Knowage Server. Alternatively, any valid Jasper template (developed with or without Knowage Studio) can be directly uploaded to Knowage Server using the web interface for the document management.
 
-   This section does not provide any further detail about graphical development since it focuses on specific aspects of Knowage Jasper Report Engine. All Jasper standard functionalities work with Jasper Report Engine. For a full overview of Jasper reporting tool and a detailed developer guide, please refer to the official documentation at `http://community.jaspersoft.com/`.
+This section does not provide any further detail about graphical development since it focuses on specific aspects of Knowage Jasper Report Engine. All Jasper standard functionalities work with Jasper Report Engine. For a full overview of Jasper reporting tool and a detailed developer guide, please refer to the official documentation at `http://community.jaspersoft.com/`.
 
 .. include:: jasperThumbinals.rst
