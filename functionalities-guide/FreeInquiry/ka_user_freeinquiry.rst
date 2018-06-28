@@ -464,6 +464,7 @@ As well as calculated fields it is possible to filter on spatial fields using sp
 .. figure:: media/image223.png
 
     Spatial filters.
+    
    
 .. _linkoraclefltrfnct:
 .. table:: Link to Oracle filter functions.
