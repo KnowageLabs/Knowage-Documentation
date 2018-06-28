@@ -490,8 +490,7 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
      |    2 | 3    |
      +------+------+
 
-
-   -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
+-  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
 
         For istance, let’s consider the query 
         sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] 
