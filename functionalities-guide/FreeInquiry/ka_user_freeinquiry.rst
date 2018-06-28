@@ -626,7 +626,8 @@ Inside the section “Select” you can use the temporal operators directly on a
 
 For each function there is the possibility to assing a value to a parameter that indicates how long the function will act. We now describe the working principles of temporal functions.
 
-The **PARALLEL_YEAR** function.
+The PARALLEL_YEAR function.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This function allows to manage and study measures on parallel periods. For example if one wants to analize the product sales of the current year and, at the same time, those of the previuos year. The following are some possible use cases:
 
