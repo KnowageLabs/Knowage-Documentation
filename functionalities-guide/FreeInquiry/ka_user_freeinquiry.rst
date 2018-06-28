@@ -1046,7 +1046,7 @@ If **link** is selected, you can associate a field with an HTML page. The defaul
 .. code:: javascript
    :linenos:
 
-   return api.getLink("${URL}", "${TEXT}"); 
+      return api.getLink("${URL}", "${TEXT}"); 
 
 
 where **TEXT** is the clickable field in the QbE query results table and **URL** is the URL of the HTML page you want to open.
@@ -1061,13 +1061,14 @@ An example is provided by Add hyperlink.
 
 .. code:: javascript
    :linenos:
+   :caption: Add hyperlink
    
-    baseUrl = "https://maps.google.it/maps?q="; baseUrl = baseUrl +       
-    dmFields['it.eng.spagobi.meta.Sales_fact_1998::                       
-       rel_customer_id_in_customer(rel_customer_id_in_customer):city'];   
-    return api.getLink(baseUrl,                                           
-    dmFields['it.eng.spagobi.meta.Sales_fact_1998::  
-    rel_customer_id_in_customer(rel_customer_id_in_customer):city']);  
+      baseUrl = "https://maps.google.it/maps?q="; baseUrl = baseUrl +       
+      dmFields['it.eng.spagobi.meta.Sales_fact_1998::                       
+         rel_customer_id_in_customer(rel_customer_id_in_customer):city'];   
+      return api.getLink(baseUrl,                                           
+      dmFields['it.eng.spagobi.meta.Sales_fact_1998::  
+      rel_customer_id_in_customer(rel_customer_id_in_customer):city']);  
   
 The output is shown below(column City URL).
 
