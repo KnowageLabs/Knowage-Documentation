@@ -57,11 +57,13 @@ The tree located in the left part of the window shows the elements of the report
 
     Data Set definition.
 
-To create a table, click on the element in the Palette and use the wizard. Figure below exhibits the Jasper editor interface. To insert dataset columns into the report, use the syntax showed in following syntax to insert dataset columns.
+To create a table, click on the element in the Palette and use the wizard. Figure below exhibits the Jasper editor interface. 
    
 .. figure:: media/image348.png
 
     iReport graphical editor.
+
+To insert dataset columns into the report, use the syntax showed in following syntax to insert dataset columns.
 
 .. code-block:: bash
         :linenos:
