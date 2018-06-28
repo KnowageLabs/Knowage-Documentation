@@ -656,7 +656,7 @@ If the structure of the relational schema complies with multi-dimensional logics
     :linenos:
     :caption: Mondrian schema example
     
-    <?xml version="1.0"?>                                   
+        <?xml version="1.0"?>                                   
          <Schema name="FoodMart">     
                <!-- Shared dimensions -->   
                <Dimension name="Customers"> 
@@ -716,8 +716,8 @@ If the structure of the relational schema complies with multi-dimensional logics
                   </CalculatedMember>                                                
 
                </Cube> 
-          ...      
- </Schema> 
+            ...      
+        </Schema> 
 
 Each mapping file contains one schema only, as well as multiple dimensions and cubes. Cubes include multiple dimensions and measures. Dimensions include multiple hierarchies and levels. Measures can be either primitive, i.e., bound to single columns of the fact table, or calculated, i.e., derived from calculation formulas that are defined in the schema. The schema also contains links between the elements of the OLAP model and the entities of the physical model: for example, <table> sets a link between a cube and its dimensions, while the attributes primaryKey and foreignKey reference integrity constraints of the star schema.
 
