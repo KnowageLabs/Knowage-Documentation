@@ -922,7 +922,7 @@ The QbE includes a specific feature to thoroughly manage relationships among ent
 
     Relationships ambiguity - Schema.
 
-Using the schema and data model represented in Figure 9.66, suppose you have a model with the following relationships:
+Using the schema and data model represented in figure above, suppose you have a model with the following relationships:
 
 -  **Store** - **Region**;
 -  **Customer** - **Region**;
@@ -945,7 +945,7 @@ By clicking on the **Relationship Wizard** button in the top right corner of the
 
     Relationship wizard.
 
-The images of Figure 9.68 show the double relationship between **Sales Fact** and **Region**, specifically:
+The images of figure above show the double relationship between **Sales Fact** and **Region**, specifically:
 
 -  relationship between **Sales Fact** and **Customer**;
 -  relationship between **Sales Fact** and **Store**.
