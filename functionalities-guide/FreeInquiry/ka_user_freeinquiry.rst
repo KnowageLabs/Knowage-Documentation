@@ -627,7 +627,7 @@ Inside the section “Select” you can use the temporal operators directly on a
 For each function there is the possibility to assing a value to a parameter that indicates how long the function will act. We now describe the working principles of temporal functions.
 
 The PARALLEL_YEAR function.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++
 
 This function allows to manage and study measures on parallel periods. For example if one wants to analize the product sales of the current year and, at the same time, those of the previuos year. The following are some possible use cases:
 
@@ -670,7 +670,8 @@ An example of data visualization is given in the two figures below.
 
     Comparing results with those of three parallel years.
 
-The **LAST\ \_\ YEAR** function.
+The LAST\ \_\ YEAR function
+++++++++++++++++++++++++++++++++
 
 This function allows the user to sum a measure referring to last period data. If the temporal filter isn’t set, the engine takes the current year by default, otherwise the chosen one.
 
@@ -706,7 +707,8 @@ This function allows the user to sum a measure referring to last period data. If
 
 Note that the operator allows to visualize the sum of sales upon 2 years per month. In other words, LAST_YEAR(1) set to the month level starts the progression from the aggregated value of 2015 to which it adds the sales of 2016.
 
-The **LAST\ \_\ MONTH** function.
+The LAST\ \_\ MONTH function
++++++++++++++++++++++++++++++++++
 
 This operator is very similar to the previous one. In this case the reference time period is the month. Remember that if the user does not specify the name of the referenced month the system will take the current one by default.
 
