@@ -1121,10 +1121,10 @@ Code below provides an example for Knowage 4.2 and later versions.
    :linenos:
    :caption: Cross navigation configuration.
    
-    return api.getCrossNavigationLink("${TEXT}",                                               
-    "${TARGET_DOCUMENT_LABEL}",                                                                
-    "${PARAMETERS}",                                                                           
-    "${SUBOBJECT");                              
+      return api.getCrossNavigationLink("${TEXT}",                                               
+      "${TARGET_DOCUMENT_LABEL}",                                                                
+      "${PARAMETERS}",                                                                           
+      "${SUBOBJECT");                              
 
 In particular:
 
