@@ -141,6 +141,11 @@ Charts are an essential representation of data, Knowage let you use many differe
 
 We recall that also for chart widget it is possible to set cross navigation on elements.
 
+.. warning::
+    **Cross navigation only for technical users**
+         
+         Due to the fact that parameters can only be managed by technical user the cross navigation cannot be implemented by the final user.
+         
 As shown in :numref:`crossnavchartwidget`, it is mandatory to enable the cross navigation feature by using the dedicate tab of chart editor GUI. It is mandatory to choose the column element to be passed to the destination document and associate it to the right output parameter (previoulsy added to the document using the detail interface).
 
 The cross navigation name can be left empty. In case multiple cross navigation definitions have been configured for the document, a pop up will be displayed, letting the user to choose which destination to reach (exactly as we saw earlier for Image widget in :numref:`crossnavmultchoice`).
@@ -228,8 +233,7 @@ The **Style** tab is where you can customize the table by using the different op
 
     Titles section of the Style tab.
 
--  In the **Borders** section you can add a border to the widget and customize it by using the colors, thickness and style. Refer to
-      the following figure.
+-  In the **Borders** section you can add a border to the widget and customize it by using the colors, thickness and style. Refer to the following figure.
       
 .. figure:: media/image164.png
 
