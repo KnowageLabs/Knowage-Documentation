@@ -200,6 +200,9 @@ The select sub-section has a toolbar with additional functionalities summarized 
       |    **Add calculated**             | Add a calculated field to the     |
       |                                   | query                             |
       +-----------------------------------+-----------------------------------+
+      |    **Delete all**                 | Remove all rows from select area  |
+      |                                   |                                   |
+      +-----------------------------------+-----------------------------------+
 
 Filters
 ^^^^^^^^
