@@ -52,11 +52,9 @@ In the following we explain shortly the meaning of the :numref:`templatestructne
 
 The **NETWOK_DEFINITION** contains the definition of the network: nodes, edges, shapes, colours It has two children:
 
-   • **Options**: it contains the general options of the network. There
-   are 2 type of options:
+   • **Options**: it contains the general options of the network. There are 2 type of options:
 
-      -  Network options. These are options that drive the rendering of all the network. For example where to put the navigation commands or the shape of the network (circular, radial,). You can find the list of available properties here `http://cytoscapeweb. <http://cytoscapeweb.cytoscape.org/documentation/visualization>`__ `cytoscape.org/documentation/visualization <http://cytoscapeweb.cytoscape.org/documentation/visualization>`_ and the list of layouts here `http:
-   //cytoscapeweb.cytoscape.org/documentation/layout <http://cytoscapeweb.cytoscape.org/documentation/layout>`__
+      -  Network options. These are options that drive the rendering of all the network. For example where to put the navigation commands or the shape of the network (circular, radial,). You can find the list of available properties here http://cytoscapeweb.cytoscape.org/documentation/visualization and the list of layouts here http://cytoscapeweb.cytoscape.org/documentation/layout
 
       -  Edge/nodes properties. General visual properties for the nodes and edges. The syntax for these settings is in next Syntax for edge/nodes properties:
 
@@ -88,10 +86,11 @@ Tooltip is a special Edge/node property. The tooltip contains a set of proerty/v
             </tooltip_LIST>
           </nodes (or edge)>
 
-  Where OBJ PROPERTY property is the name of the property (for example id) and PROPERTY LABEL TEXT is the text you’ll see as label of the property in the tooltip. You can find the list of available properties here: `http://cytoscapeweb. cytoscape.org/documentation/visual_style <http://cytoscapeweb.cytoscape.org/documentation/visual_style>`__
+Where OBJ PROPERTY property is the name of the property (for example id) and PROPERTY LABEL TEXT is the text you’ll see as label of the property in the tooltip. You can find the list of available properties here: `http://cytoscapeweb. cytoscape.org/documentation/visual_style <http://cytoscapeweb.cytoscape.org/documentation/visual_style>`__
 
 -  **Dataset_mapping_LIST**: this section maps the columns of the dataset on properties of the graph. This is done with the tag dataset_mapping. There are two possibilities:
--  Map a column of the dataset on a property of the graph and the syntax is showed in :numref:`templatestructnetwork`:
+
+        -  Map a column of the dataset on a property of the graph and the syntax is showed in :numref:`templatestructnetwork`:
 
 .. code-block:: bash
         :linenos:
@@ -99,15 +98,15 @@ Tooltip is a special Edge/node property. The tooltip contains a set of proerty/v
       
           <dataset_mapping element="source" column="sourceId" property="id"/>   
 
-   Where:
+Where:
 
-   - * element: is the element where we want to apply the property. It can be source, target (for nodes) and edge;
-   - * property: the property of the network object we wan to set;
-   - * column: the label of the dataset column we want to map.
+        - * element: is the element where we want to apply the property. It can be source, target (for nodes) and edge;
+        - * property: the property of the network object we wan to set;
+        - * column: the label of the dataset column we want to map.
 
-The list of available node and edge properties is here `http://cytoscapeweb.cytosca <http://cytoscapeweb.cytoscape.org/documentation/elements>`__\ pe.`org/documentation/elements <http://cytoscapeweb.cytoscape.org/documentation/elements>`__
+The list of available node and edge properties is here http://cytoscapeweb.cytoscape.org/documentation/elements
 
--  Set a fixed value to a property. The syntax is showed in :numref:`templatestructnetwork`.
+        -  Set a fixed value to a property. The syntax is showed in :numref:`templatestructnetwork`.
 
 .. code-block:: bash
         :linenos:
@@ -115,7 +114,7 @@ The list of available node and edge properties is here `http://cytoscapeweb.cyto
 
           <dataset_mapping element="source" value="#caabff" property="color"/>
 
-     Where: 
+Where: 
      
       - * value is the fixed value of the property we want to set.
 
@@ -138,7 +137,7 @@ The list of available node and edge properties is here `http://cytoscapeweb.cyto
             <PARAM name="PAR_NAME" type="TYPE" property =PROPERTY/>
           </DRILL>
 
-   Where:
+Where:
 
     -  DOCUMENT: is the label of the destination document;
     -  PAR_NAME: is the destination document parameter label; – TYPE: parameter type
