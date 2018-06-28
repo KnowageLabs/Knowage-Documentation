@@ -250,37 +250,37 @@ In the following table the possible types of filters in the QbE are summarized. 
 .. table:: Possible combinations of filters in the QbE.
   :widths: auto
 
-+-------------+-------------+-------------+-------------+-------------+
-| Filter type | Left        | Operator    | Right       | Example     |
-|             | operand     |             | operand     |             |
-+=============+=============+=============+=============+=============+
-|    Basic    | Entity.attr | Any         | value       | Prod.family |
-|             | ibute       |             |             | =           |
-|             |             |             |             |             |
-|             |             |             |             | 'Food'      |
-+-------------+-------------+-------------+-------------+-------------+
-|    Basic    | Entity.attr | Any         | Entity.attr | Sales.sales |
-|             | ibute       |             | ibute       | >           |
-|             |             |             |             | Sales.cost  |
-+-------------+-------------+-------------+-------------+-------------+
-|  Parametric | Entity.attr | Any         | [parameter] | Prod.family |
-|             | ibute       |             |             | =           |
-|             |             |             |             |             |
-|             |             |             |             | [p_family]  |
-+-------------+-------------+-------------+-------------+-------------+
-|    Dynamic  | Entity.attr | Any         | prompt      | Prod.family |
-|             | ibute       |             |             | = ?         |
-+-------------+-------------+-------------+-------------+-------------+
-|    Value    | Entity.attr | In          | subquery    | Sales.custo |
-|    list     | ibute       |             |             | mer         |
-|    from     |             | /not in     |             | in subquery |
-|    subquery |             |             |             |             |
-+-------------+-------------+-------------+-------------+-------------+
-|    Single   | subquery    | < = >       | value       | Subquery >  |
-|    value    |             |             |             | 0           |
-|    from     |             |             |             |             |
-|    subquery |             |             |             |             |
-+-------------+-------------+-------------+-------------+-------------+
+   +-------------+-------------+-------------+-------------+-------------+
+   | Filter type | Left        | Operator    | Right       | Example     |
+   |             | operand     |             | operand     |             |
+   +=============+=============+=============+=============+=============+
+   |    Basic    | Entity.attr | Any         | value       | Prod.family |
+   |             | ibute       |             |             | =           |
+   |             |             |             |             |             |
+   |             |             |             |             | 'Food'      |
+   +-------------+-------------+-------------+-------------+-------------+
+   |    Basic    | Entity.attr | Any         | Entity.attr | Sales.sales |
+   |             | ibute       |             | ibute       | >           |
+   |             |             |             |             | Sales.cost  |
+   +-------------+-------------+-------------+-------------+-------------+
+   |  Parametric | Entity.attr | Any         | [parameter] | Prod.family |
+   |             | ibute       |             |             | =           |
+   |             |             |             |             |             |
+   |             |             |             |             | [p_family]  |
+   +-------------+-------------+-------------+-------------+-------------+
+   |    Dynamic  | Entity.attr | Any         | prompt      | Prod.family |
+   |             | ibute       |             |             | = ?         |
+   +-------------+-------------+-------------+-------------+-------------+
+   |    Value    | Entity.attr | In          | subquery    | Sales.custo |
+   |    list     | ibute       |             |             | mer         |
+   |    from     |             | /not in     |             | in subquery |
+   |    subquery |             |             |             |             |
+   +-------------+-------------+-------------+-------------+-------------+
+   |    Single   | subquery    | < = >       | value       | Subquery >  |
+   |    value    |             |             |             | 0           |
+   |    from     |             |             |             |             |
+   |    subquery |             |             |             |             |
+   +-------------+-------------+-------------+-------------+-------------+
 
 Filters on Groups
 ^^^^^^^^^^^^^^^^^^^^
@@ -350,6 +350,11 @@ The latter are available only in the presence of a geographical Business Model a
 .. _linkoraclesptfnct:
 .. table:: Link to Oracle spatial functions.
     :widths: auto
+    
+.. warning::
+     **Take into account the Oracle function definition**
+         
+         It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
 
       +-----------------------+-----------------------+-----------------------+
       |    Function Name      | Oracle Function       | Link to Oracle web    |
@@ -444,11 +449,6 @@ The latter are available only in the presence of a geographical Business Model a
       |                       |                       | b14255/sdo_objgeom.ht |
       |                       |                       | m#BGHCDIDG>`__        |
       +-----------------------+-----------------------+-----------------------+
-   
-.. warning::
-     **Take into account the Oracle function definition**
-         
-         It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
 
 To apply one function click on the function name and the “Operands selection window” wizard opens. Figure below shows an example for the funtion “Distance”. Fill in all boxes since all fields are mandatory.
 
