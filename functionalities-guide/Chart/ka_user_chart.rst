@@ -33,9 +33,9 @@ Once opened, the cockpit interface is an empty page with a toolbar containing di
     Add a chart to a cockpit.
    
 .. note::
-         **Cockpit**
+       **Cockpit**
          
-         The Cockpit Engine allows the user to self-build interactive cockpits through an intuitive and dynamic interface. Read more in Chapter 7.
+         The Cockpit Engine allows the user to self-build interactive cockpits through an intuitive and dynamic interface. Read more in *Cockpit* chapter.
 
 Clicking on the **Add Chart** icon, you will be asked to choose among some available widgets. Pick out the **Chart** one and let’s now go into details on how to build a chart from scratch. The designer editor is divided into four principal tabs: **Dataset**, **Chart Engine Designer**, **Style**, **Cross** and **Filters**. As soon as the user clicks on the “Add Chart” button, he/she enters the “Dataset” tab editor. Here the user must select, using the “little plus” icon placed just aside the combobox line, one dataset. Then the user must switch to the “Chart Engine Designer” tab and choose a chart type among the available ones, as shown in figure below.
 
@@ -82,7 +82,7 @@ Structure
 The “Structure” tab of the designer is the core of the Chart development. Here it is possible and mandatory to choose the measures and the attributes. When selected, the tab shows a two axes panel. The horizontal axis indicates the X-axis where you must choose one or more attributes. As well, the left axis is the Y-axis and here you must choose measures. You can also insert manually the axis title for both the X and the Y axis if the chart is configured to have axis titles.
 
 .. warning::
-      **Chart type changemens may cause broke down**
+    **Chart type changemens may cause broke down**
     
       Before creating any chart, it is convenient to be sure of    what kind of chart you want to develop. We stress that the user can    change the chart type afterwards, but at the expense of a loss of just defined settings.
 
