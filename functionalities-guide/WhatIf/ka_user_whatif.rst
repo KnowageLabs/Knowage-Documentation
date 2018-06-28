@@ -269,7 +269,7 @@ Now you should map the new tables in the mondrian schema. In order to merge the 
 
 The name of the cube ("Sales_Edit") is the value of the edit Cube attribute of the tag scenario in the template. Note that the name of the dimension Version must be exactly "Version"!!
 
-• To create the virtual cube that will contain the mapping of the columns as in Code 10.3.
+• To create the virtual cube that will contain the mapping of the columns as in Code below.
 
 .. code-block:: xml 
    :linenos:
