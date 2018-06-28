@@ -215,11 +215,17 @@ While developing a report, it is particularly useful to test it regularly. To th
 
 Once your report is done, you can deploy it on Knowage Server.
 
-   |image334|
+.. note::
+     **Deploy on Knowage Server**
+         
+         Please refer to the section *Download and Deploy* in this chapter to find out more on report deployment.
 
 The BIRT report designer allows the creation of complex reports, with different graphical elements such as cross tabs, charts, images and different text areas. In this section we do not provide any details on graphical development but we focus on specific aspects of Knowage BIRT Report Engine.
 
-   |image335|
+.. note::
+     **BIRT Designer**
+         
+         For a detailed explanation of report design, pleas refer to BIRT documentation at www.eclipse.org/birt/.
 
 Using an external Data Set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -273,10 +279,11 @@ Once you have defined all parameters, open the (or create a new) dataset. Parame
 Parameters can also be used within some graphical elements, such as dynamic text, with the following syntax:
 
 .. code-block::
-   :linenos:
-   :caption: Parameters syntax
+     :linenos:
+     :caption: Parameters syntax
    
-     params[name_of_parameter].value
+         params[name_of_parameter].value
+      
 
 .. warning:: 
        
@@ -352,6 +359,7 @@ To edit the Location, click on the right drop down button and select the JavaScr
 
 In Cross Navigation syntax we give an idea of how the syntax should be like:
 
+.. _crossnavsyntax:
 .. code-block:: javascript
       :linenos:
       :caption: Cross Navigation syntax.
@@ -369,9 +377,9 @@ In Cross Navigation syntax we give an idea of how the syntax should be like:
     
     **Type the right cross navigation name**
 
-       It is important to underline that the "Cross_Navigation_Name" of Cross Navigation syntax is the cross navigation name                    related to the document and set using the "Cross Navigation Definition" feature we described in Chapter 5, Section 5.5. 
+       It is important to underline that the "Cross_Navigation_Name" of Cross Navigation syntax is the cross navigation name                    related to the document and set using the "Cross Navigation Definition" feature we described in *Analytical Document* Chapter, *Cross Navigation* Section. 
        
-It will be necessary to type the right cross navigation name related to the document as defined using the "Tool" settings of Knowage      server and to define those parameters (OUT_PAR, OUT_STRING, etc.) as output parameters in the deployed document on the Server            (see Section 5.5 of Chapter 5).
+It will be necessary to type the right cross navigation name related to the document as defined using the "Tool" settings of Knowage      server and to define those parameters (OUT_PAR, OUT_STRING, etc.) as output parameters in the deployed document on the Server            (see *Analytical Document* Chapter, *Cross Navigation* Section).
 
 Note that the syntax of the string is fixed, while you need to assign values to the parameters that will be passed to the destination document. The JavaScript editor helps you to insert dataset column bindings, as shown in Figure below, and report parameters automatically.
 
@@ -379,7 +387,7 @@ Note that the syntax of the string is fixed, while you need to assign values to 
 
      Column bindings.
 
-To manage multi-value parameters is enough to list all values between brackets separating them with commas, as reported in Code 11.2. More specifically, the array must contain values of the same type. For example:
+To manage multi-value parameters is enough to list all values between brackets separating them with commas, as reported in :numref:`crossnavsyntax`. More specifically, the array must contain values of the same type. For example:
 
 .. code-block:: javascript
    :linenos:
@@ -394,9 +402,9 @@ or
     OUT_SeveralNames:[5,9,31938]
 
 
-Finally, it is possible to set a sort of "multi"-cross navigation if for example the exit document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document goes to a target document and the name of the navigation is "CrossNav1" and simultaneously the source document goes to a second target document and the name of the navigation is "CrossNav2". If in the JavaScript function of Code 11.2 the "Cross_Navigation_Name" is left empty as in Code 11.3, when the user clicks on the object for which the navigation has been enabled a pop up opens asking for the user to choose between the "CrossNav1" navigation or the "CrossNav2" one. This procedure allows the user to have a more than one possible navigation starting from the same object.
+Finally, it is possible to set a sort of "multi"-cross navigation if for example the exit document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document goes to a target document and the name of the navigation is "CrossNav1" and simultaneously the source document goes to a second target document and the name of the navigation is "CrossNav2". If in the JavaScript function of :numref:`crossnavsyntax` the "Cross_Navigation_Name" is left empty as in :numref:`crossnavsyntax2`, when the user clicks on the object for which the navigation has been enabled a pop up opens asking for the user to choose between the "CrossNav1" navigation or the "CrossNav2" one. This procedure allows the user to have a more than one possible navigation starting from the same object.
    
-
+.. _crossnavsyntax2:
 .. code-block:: javascript
    :linenos:
    :caption: Cross Navigation syntax
