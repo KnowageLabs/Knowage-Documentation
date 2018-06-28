@@ -57,9 +57,9 @@ Register an analytical document
 There are two different ways to create a new document on Knowage Server. The first option involves Knowage Studio: within it you can simply click on **Deploy** and the document window will open with pre-filled options. Please note that Knowage Studio can be used to create Birt or Dashboard document only.
 
 .. note::
-      **Deploy a document from Knowage Studio**
+    **Deploy a document from Knowage Studio**
       
-    Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
+       Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
 
 The second option is to manually create the document on the Server. This is the most general way since the Studio designer is not yet available for all documents types.
 
