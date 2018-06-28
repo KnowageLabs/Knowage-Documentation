@@ -1,7 +1,7 @@
 Registry
 ========
 
-A Registry document allows users to write, cancel and modify items of a datamart. Knowage allows users to implement a Registry document through the **Qbe Engine**. By the way it has a different graphical interface compared to the Qbe one. An example is given in the following figure. In next chapters we will see how to navigate a Registry document (Section 12.1) and how to create a new one (Section 12.2).
+A Registry document allows users to write, cancel and modify items of a datamart. Knowage allows users to implement a Registry document through the **Qbe Engine**. By the way it has a different graphical interface compared to the Qbe one. An example is given in the following figure. In next chapters we will see how to navigate a Registry document (*Registry features* paragraph) and how to create a new one (*Registry development* paragraph).
 
 .. figure:: media/image339.png
 
@@ -42,7 +42,7 @@ Note that, since records are displayed in a plain table, it is available a combo
 JPivot Registry characteristics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to implement also a JPivot Registry document. The graphical features are very similar to the ones exposed in Section 12.1. An example is given below.
+It is possible to implement also a JPivot Registry document. The graphical features are very similar to the ones exposed in *Registry development* paragraph. An example is given below.
 
 .. _examplejpivotregdoc:
 .. figure:: media/image349.png
