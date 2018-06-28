@@ -279,10 +279,10 @@ Once you have defined all parameters, open the (or create a new) dataset. Parame
 Parameters can also be used within some graphical elements, such as dynamic text, with the following syntax:
 
 .. code-block::
-     :linenos:
-     :caption: Parameters syntax
+        :linenos:
+        :caption: Parameters syntax
    
-         params[name_of_parameter].value
+            params[name_of_parameter].value
       
 
 .. warning:: 
