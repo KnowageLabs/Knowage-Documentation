@@ -20,6 +20,7 @@ The SVG Viewer Engine is a tool that lets you develop documents based on the SVG
 
 To give an example, we can imagine to visualize throught an SVG the USA map. At first we can show data at the “Regions” level and then throught the click / drill - show the same or other information at the States “level”. We give an example of map document produced with the SVG engine in the two figures below.
 
+.. _svgexampleusalevel:
 .. figure:: media/image243.png
 
     SVG document example at the USA Regions level.
@@ -39,12 +40,12 @@ First of all, a technical user needs to configure the logical hierarchy of the S
 SVG Catalogue
 ^^^^^^^^^^^^^^
 
-The first activity that you need to do as administrator is to find or create an SVG file. Any file saved in SVG format is a text file in XML format. As a consequence, they can easily be queried, indexed, enriched with scripts and, if necessary, zipped. The SVG final output could represent everything: geographical areas (like USA in the previous example in Figure 11.1), concepts (like the item production steps) and so on.
+The first activity that you need to do as administrator is to find or create an SVG file. Any file saved in SVG format is a text file in XML format. As a consequence, they can easily be queried, indexed, enriched with scripts and, if necessary, zipped. The SVG final output could represent everything: geographical areas (like USA in the previous example in :numref:`svgexampleusalevel`), concepts (like the item production steps) and so on.
 
 SVG Format
 ^^^^^^^^^^^^^^
 
-The Scalable Vector Graphics, SVG, refers to an XML-based encoding format, used to describe two dimensional vector graphical objects. SVG is an open standard, defined by the World Wide Web Consortium (W3C), which released its first version in 1999. Read more at `http: <http://www.w3.org/Graphics/SVG/>`__ .
+The Scalable Vector Graphics, SVG, refers to an XML-based encoding format, used to describe two dimensional vector graphical objects. SVG is an open standard, defined by the World Wide Web Consortium (W3C), which released its first version in 1999. Read more at http://www.w3.org/Graphics/SVG/ .
 
 Not all graphical objects of an SVG can be thematized. Using the SVG grouping operator <g>, the developer can create one or more subsets of graphical objects and specify which groups should be subject to thematization. Each group has an unique name, corresponding to the value of the id attribute of the <g> tag (e.g. <g id=“regions”>). Considering that, graphical objects grouped in an SVG file are usually homogeneous elements (in other words, they model a same category of objects: regions, towns, streets, etc.), we can consider these groups as layers and the objects can be considered as features.
 
@@ -113,7 +114,7 @@ Basically, it’s necessary to specify the hierarchy that we want to use, as wel
 
 We recap in :numref:`recaptagproperties` the meaning of the main tag.
 
-After, we need to define each member and first of all we can note that is composed by three sections: METADATA, LAYERS and MEASURE, as in Code 11.2:
+After, we need to define each member and first of all we can note that is composed by three sections: METADATA, LAYERS and MEASURE, as in Code below:
    
 .. code-block:: xml
    :linenos:
@@ -161,7 +162,7 @@ Once again we give some details on metadata in next :numref:`recaptagproperties5
 
 .. _recaptagproperties:
 .. table:: Recap of properties and function.
-    :widths: auto
+    	:widths: auto
 
         +-----------------------+-----------------------+-----------------------+
         |    Tag                | Property              | Note                  |
@@ -350,7 +351,7 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 
 .. _recaplayerproperties4:
 .. table:: Recap of layer tag properties and function.
-    :widths: auto
+    	:widths: auto
 
         +-----------------------+-----------------------+-----------------------+
         |    Tag                | Property              | Note                  |
@@ -372,116 +373,116 @@ Sometimes users need to color the map and, at the same time, to continue to see 
         |                       |                       | are defining. Its     |
         |                       |                       | value must exist into |
         |                       |                       | the METADATA section  |
-		|                       |                       | as measuere type.     |
-		+-----------------------+-----------------------+-----------------------+
-		|    KPI                | Description           | Mandatory. The label  |
-		|                       |                       | that you want show    |
-		|                       |                       | into the detail       |
-		|                       |                       | panel.                |
-		+-----------------------+-----------------------+-----------------------+
-		|    THRESHOLDS         | type                  | Mandatory. The type   |
-		|                       |                       | of logic to use to    |
-		|                       |                       | define the            |
-		|                       |                       | thematization. It     |
-		|                       |                       | could be:             |
-		|                       |                       |                       |
-		|                       |                       | -  **quantile**: it   |
-		|                       |                       |    partitions the     |
-		|                       |                       |    interval into N    |
-		|                       |                       |    quintiles.         |
-		|                       |                       |                       |
-		|                       |                       | -  **perc**: it       |
-		|                       |                       |    partitions the     |
-		|                       |                       |    interval into      |
-		|                       |                       |    subintervals whose |
-		|                       |                       |    extent represents  |
-		|                       |                       |    a specific         |
-		|                       |                       |    fraction of the    |
-		|                       |                       |    overall interval   |
-		|                       |                       |    extent.            |
-		|                       |                       |                       |
-		|                       |                       | -  **uniform**: it    |
-		|                       |                       |    partitions the     |
-		|                       |                       |    interval into N    |
-		|                       |                       |    subintervals of a  |
-		|                       |                       |    same extent.       |
-		|                       |                       |                       |
-		|                       |                       | -  **static**: it     |
-		|                       |                       |    partitions the     |
-		|                       |                       |    interval into      |
-		|                       |                       |    smaller fixed-size |
-		|                       |                       |    subintervals,      |
-		|                       |                       |    statically defined |
-		|                       |                       |    by the RANGE       |
-		|                       |                       |    parameter          |
-		+-----------------------+-----------------------+-----------------------+
-		|    THRESHOLDS         | lb_value              | Mandatory. The lower  |
-		|                       |                       | value outside of      |
-		|                       |                       | which no value is     |
-		|                       |                       | considered.           |
-		+-----------------------+-----------------------+-----------------------+
-		|    THRESHOLDS         | ub_value              | Mandatory. The upper  |
-		|                       |                       | value outside of      |
-		|                       |                       | which no value is     |
-		|                       |                       | considered.           |
-		+-----------------------+-----------------------+-----------------------+
-		|    PARAM              | name                  | Mandatory. Specify    |
-		|                       |                       | the parameter value   |
-		|                       |                       | necessaty to define   |
-		|                       |                       | correctly the         |
-		|                       |                       | temhatization. Its    |
-		|                       |                       | value depends by the  |
-		|                       |                       | threshold type.       |
-		|                       |                       |                       |
-		|                       |                       | This attribite could  |
-		|                       |                       | be present more than  |
-		|                       |                       | once.                 |
-		+-----------------------+-----------------------+-----------------------+
-		|    PARAM              | value                 | Mandatory. It’s the   |
-		|                       |                       | parameter name value. |
-		+-----------------------+-----------------------+-----------------------+
-		|    PARAM              | label                 | Optional. Specify the |
-		|                       |                       | static labels for the |
-		|                       |                       | legend when           |
-		|                       |                       | thresholds type is    |
-		|                       |                       | “static”.             |
-		+-----------------------+-----------------------+-----------------------+
-		|    PARAM              | value                 | Optional. It’s the    |
-		|                       |                       | parameter label       |
-		|                       |                       | value.                |
-		+-----------------------+-----------------------+-----------------------+
-		|    COLOURS            | type                  | Mandatory. Specify    |
-		|                       |                       | the logic type for    |
-		|                       |                       | defining colors       |
-		|                       |                       | range. It could be:   |
-		|                       |                       |                       |
-		|                       |                       | -  **static**: it     |
-		|                       |                       |    assigns each       |
-		|                       |                       |    sub-interval a     |
-		|                       |                       |    specific color     |
-		|                       |                       |    that is statically |
-		|                       |                       |    defined.           |
-		|                       |                       |                       |
-		|                       |                       | -  grad: it assigns   |
-		|                       |                       |    each sub-interval  |
-		|                       |                       |    a specific color   |
-		|                       |                       |    that is            |
-		|                       |                       |    dynamically        |
-		|                       |                       |    calculated through |
-		|                       |                       |    a gradient         |
-		|                       |                       |    function.          |
-		+-----------------------+-----------------------+-----------------------+
-		|    COLOURS            | outboud_color         | Mandatory. Defines    |
-		|                       |                       | the color to use when |
-		|                       |                       | the value for the     |
-		|                       |                       | specific area is      |
-		|                       |                       | outbound of the       |
-		|                       |                       | maximum range.165     |
-		+-----------------------+-----------------------+-----------------------+
+	|                       |                       | as measuere type.     |
+	+-----------------------+-----------------------+-----------------------+
+	|    KPI                | Description           | Mandatory. The label  |
+	|                       |                       | that you want show    |
+	|                       |                       | into the detail       |
+	|                       |                       | panel.                |
+	+-----------------------+-----------------------+-----------------------+
+	|    THRESHOLDS         | type                  | Mandatory. The type   |
+	|                       |                       | of logic to use to    |
+	|                       |                       | define the            |
+	|                       |                       | thematization. It     |
+	|                       |                       | could be:             |
+	|                       |                       |                       |
+	|                       |                       | -  **quantile**: it   |
+	|                       |                       |    partitions the     |
+	|                       |                       |    interval into N    |
+	|                       |                       |    quintiles.         |
+	|                       |                       |                       |
+	|                       |                       | -  **perc**: it       |
+	|                       |                       |    partitions the     |
+	|                       |                       |    interval into      |
+	|                       |                       |    subintervals whose |
+	|                       |                       |    extent represents  |
+	|                       |                       |    a specific         |
+	|                       |                       |    fraction of the    |
+	|                       |                       |    overall interval   |
+	|                       |                       |    extent.            |
+	|                       |                       |                       |
+	|                       |                       | -  **uniform**: it    |
+	|                       |                       |    partitions the     |
+	|                       |                       |    interval into N    |
+	|                       |                       |    subintervals of a  |
+	|                       |                       |    same extent.       |
+	|                       |                       |                       |
+	|                       |                       | -  **static**: it     |
+	|                       |                       |    partitions the     |
+	|                       |                       |    interval into      |
+	|                       |                       |    smaller fixed-size |
+	|                       |                       |    subintervals,      |
+	|                       |                       |    statically defined |
+	|                       |                       |    by the RANGE       |
+	|                       |                       |    parameter          |
+	+-----------------------+-----------------------+-----------------------+
+	|    THRESHOLDS         | lb_value              | Mandatory. The lower  |
+	|                       |                       | value outside of      |
+	|                       |                       | which no value is     |
+	|                       |                       | considered.           |
+	+-----------------------+-----------------------+-----------------------+
+	|    THRESHOLDS         | ub_value              | Mandatory. The upper  |
+	|                       |                       | value outside of      |
+	|                       |                       | which no value is     |
+	|                       |                       | considered.           |
+	+-----------------------+-----------------------+-----------------------+
+	|    PARAM              | name                  | Mandatory. Specify    |
+	|                       |                       | the parameter value   |
+	|                       |                       | necessaty to define   |
+	|                       |                       | correctly the         |
+	|                       |                       | temhatization. Its    |
+	|                       |                       | value depends by the  |
+	|                       |                       | threshold type.       |
+	|                       |                       |                       |
+	|                       |                       | This attribite could  |
+	|                       |                       | be present more than  |
+	|                       |                       | once.                 |
+	+-----------------------+-----------------------+-----------------------+
+	|    PARAM              | value                 | Mandatory. It’s the   |
+	|                       |                       | parameter name value. |
+	+-----------------------+-----------------------+-----------------------+
+	|    PARAM              | label                 | Optional. Specify the |
+	|                       |                       | static labels for the |
+	|                       |                       | legend when           |
+	|                       |                       | thresholds type is    |
+	|                       |                       | “static”.             |
+	+-----------------------+-----------------------+-----------------------+
+	|    PARAM              | value                 | Optional. It’s the    |
+	|                       |                       | parameter label       |
+	|                       |                       | value.                |
+	+-----------------------+-----------------------+-----------------------+
+	|    COLOURS            | type                  | Mandatory. Specify    |
+	|                       |                       | the logic type for    |
+	|                       |                       | defining colors       |
+	|                       |                       | range. It could be:   |
+	|                       |                       |                       |
+	|                       |                       | -  **static**: it     |
+	|                       |                       |    assigns each       |
+	|                       |                       |    sub-interval a     |
+	|                       |                       |    specific color     |
+	|                       |                       |    that is statically |
+	|                       |                       |    defined.           |
+	|                       |                       |                       |
+	|                       |                       | -  grad: it assigns   |
+	|                       |                       |    each sub-interval  |
+	|                       |                       |    a specific color   |
+	|                       |                       |    that is            |
+	|                       |                       |    dynamically        |
+	|                       |                       |    calculated through |
+	|                       |                       |    a gradient         |
+	|                       |                       |    function.          |
+	+-----------------------+-----------------------+-----------------------+
+	|    COLOURS            | outboud_color         | Mandatory. Defines    |
+	|                       |                       | the color to use when |
+	|                       |                       | the value for the     |
+	|                       |                       | specific area is      |
+	|                       |                       | outbound of the       |
+	|                       |                       | maximum range.165     |
+	+-----------------------+-----------------------+-----------------------+
 
 .. _recaplayerproperties5:
 .. table:: Recap of layer tag properties and function.
-    :widths: auto
+    	:widths: auto
 
         +-----------------------------------+-----------------------------------+
         |    Tag                            | Property Note                     |
@@ -504,7 +505,7 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 
 .. _recaplayerproperties6:
 .. table:: Recap of layer tag properties and function.
-    :widths: auto
+    	:widths: auto
     
 		+-----------------------+-----------------------+-----------------------+
 		|    Tag                | Property              | Note                  |
@@ -597,7 +598,7 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 
 .. _recaplayerproperties7:
 .. table:: Recap of layer tag properties and function.
-    :widths: auto
+    	:widths: auto
 
 		+-----------------------+-----------------------+-----------------------+
 		|    Tag                | Property              | Note                  |
