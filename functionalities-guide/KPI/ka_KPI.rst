@@ -63,14 +63,14 @@ A typology (measure, attribute and temporal attribute) and a category can be ass
 
 We say in advance that, it is important to distinguish these metedata categories from the required field “Category” that occurs while saving the KPI definition (see :numref:`savekpidefcategory`). In fact, the category assigned when saving the KPI definition will be added (if it doesn’t exist) in the “KPI categories“ list, used to profile KPIs on roles (see Figure 7.6).
 
-   |image127|
-
-   Figure 7.6: KPI category.
+.. _kpicategory:
+.. figure:: media/image126.png
+    KPI category.
 
 .. warning::
       **Do not mistake metadata category with the KPI category**
          
-         The category defined in the metadata tab of the "Measure definition" functionally are not the same categories selected in the tab area of the "Roles management" functionality (see Figure 7.6). The first serve to classify the metadata while the second serve the profiling issue.
+         The category defined in the metadata tab of the "Measure definition" functionally are not the same categories selected in the tab area of the "Roles management" functionality (see :numref:`kpicategory`). The first serve to classify the metadata while the second serve the profiling issue.
 
 As we told, a proper categorization exists for the aggregations of type temporal. In fact, when associating “temporal attribute” as metadata typology, the technical user must indicate the hierarchy level of the data: day, month or year. You can see an example in :numref:`hierarchyleveltempattrib`. Note that the field set as temporal type must contains numbers (therefore string types are not allowed). For example, if one wants to set a field as “month”, such a field must contain {01,02,03,...,12} that will be considered as {January, February, March,...,December}.
 
@@ -202,13 +202,13 @@ Note that once targets are set, the window in Figure 7.20 gets populated with a 
 
 As for the other interfaces it is enough to click on the “Plus” icon to create a new schedulation. The new schedulation window presents several tabs.
 
- -  **KPI**: it is possible to associate one or more KPI to the schedulation clicking on “Add KPI Association”.
+-  **KPI**: it is possible to associate one or more KPI to the schedulation clicking on “Add KPI Association”.
  
 .. figure:: media/image145.png
 
     KPI tab window.
  
- -  **Filters**: here you assign values to the filters (if configured) associated to the schedulation. Note that it is possibile to assign values to the filters by means of a LOV, a fixed list of values or a temporal function. In case the LOV option is chosen, remember that the LOV must return one unique value. This choice can be useful for profiling tasks.
+-  **Filters**: here you assign values to the filters (if configured) associated to the schedulation. Note that it is possibile to assign values to the filters by means of a LOV, a fixed list of values or a temporal function. In case the LOV option is chosen, remember that the LOV must return one unique value. This choice can be useful for profiling tasks.
 
 .. figure:: media/image146.png
 
