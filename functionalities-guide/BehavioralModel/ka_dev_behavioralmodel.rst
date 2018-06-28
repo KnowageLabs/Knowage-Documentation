@@ -132,7 +132,7 @@ Once completed the form, click on **Preview** button to enable the **Test** butt
 .. note::
      **Correlating analytical drivers**
      
-         Drivers can be correlated so that the value of the first driver is used as a parameter to select values in the second. Read more at *My first analytical document* chapter.
+         Drivers can be correlated so that the value of the first driver is used as a parameter to select values in the second. Read more at *Analytical document* chapter.
 
 We stress that the visibility of specific fields serve to improved human readability when applying filters to documents handled by third users. Moreover it is possible to choose (refer to :numref:`hierarchicallvdef`) between **simple**, **tree** and **tree with selectable internal nodes** typology of LOV. The last two are hierarchical and let the user visualize the parameters together with their logical tree structure.
 
