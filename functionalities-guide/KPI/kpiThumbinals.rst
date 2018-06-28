@@ -13,7 +13,7 @@
 .. |image126| image:: media/image125.png
    :width: 4.05111in
    :height: 1.0674in
-.. |image127| image:: ../Common/media/image20.png
+.. |image127| image:: media/image126.png
    :width: 5.0075in
    :height: 4.11158in
 .. |image128| image:: media/image127.png
