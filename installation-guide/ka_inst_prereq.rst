@@ -172,16 +172,13 @@ Knowage uses a schema to manage metadata, that is all those information required
     +=====================+===============+==============+
     |    Certified        | Oracle        | 8,9,10,11,12 |
     +---------------------+---------------+--------------+
-    |    Certified        | MySql         | 5.1          |
+    |    Certified        | MySql         | 5.2,5.5,5.6  |
     +---------------------+---------------+--------------+
-    |    Certified        | PostgreSQL    | 8.2          |
+    |    Certified        | PostgreSQL    | 8.2, 9.1     |
     +---------------------+---------------+--------------+
-    |    Certified        | MySql         | 5.5          |
+    |    Certified        | MariaDB       |10.1,10.2,10.3|
     +---------------------+---------------+--------------+
-    |    Certified        | MariaDB       |              |
-    +---------------------+---------------+--------------+
-    |    Certified        | PostgreSQL    | 9.1          |
-    +---------------------+---------------+--------------+
+
 
 Therefore, a schema must be available. It can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called "metadata DB” in the following. Observe that Knowage includes all the DDL for table creation.
 
