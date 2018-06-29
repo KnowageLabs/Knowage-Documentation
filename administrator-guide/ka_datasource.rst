@@ -38,12 +38,19 @@ Dialect:
       
       + Oracle
       + SQL Server
-      + HyperSQL
       + MySQL
       + PostgreSQL
       + Ingres
       + DB2
-      + AS400
+      + Teradata
+      + Vertica
+      + Apache Hive
+      + Apache Impala
+      + Apache Spark SQL
+      + Mongo DB
+      + Orient DB
+
+
 Read Only
    Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
 Write
@@ -168,22 +175,4 @@ Example parameters for the connection are:
 
 Unless you are using Spark SQL to read from Cassandra, the definition of a business model over Cassandra data using Knowage Meta will be available in the next releases.
 
-Neo4j
-~~~~~~
 
-Neo4j is a graph database management system developed by Neo Technology, Inc., described by its developers as an ACID-compliant transactional database with native graph storage and processing. Neo4j is available in a GPL3-licensed open-source "community edition", with online backup and high availability extensions licensed under the terms of the Affero General Public License. Neo also licenses Neo4j with these extensions under closed-source commercial terms. Neo4j is implemented in Java and accessible from software written in other languages using the Cypher Query Language.
-
-To Use Neo4J in Knowage you should download the JDBC driver from Neo4J web site and than deploy the driver with all dependencies on your application server. In Neo4J official website you can find a distribution of the JDBC driver with all dependencies included.
-
-Example parameters for the connection are:
-
--  **Dialect:** Neo4j;
--  **Driver Class:** org.neo4j.jdbc.Driver;
--  **Connection URL:** jdbc:neo4j://MN03:7474.
-
-The definition of a business model over Neo4j data using Knowage Meta will be available in the next releases.
-
-Others not listed
-~~~~~~
-
-Knowage can connect to several other data sources using JDBC drivers (for example Big SQL, Vertica) without any modification of the platform. The standard approach is to deploy the JDBC driver with all dependencies on the application server and than configure a connection in the data source catalogue. For big data data sources we suggest you to use HiveQL as dialect.
