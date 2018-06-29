@@ -214,9 +214,7 @@ In the Tomcat instance, verify that the right dialect has been set in all TOMCAT
 -  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
 -  <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 -  <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
--  <property name="hibernate.dialect">org.hibernate.dialect.IngresDialect</property>
--  <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
--  <property name="hibernate.dialect">org.hibernate.dialect.DB2400Dialect</property>
+
 
 **Remark.** The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
@@ -231,13 +229,12 @@ The scheduler is configured by the following file: knowage.war/WEB-INF/classes/q
 
  	# Hsqldb delegate class                                                                                
  	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          
- 	# Mysql/Ingres delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
+ 	# Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
  	# Postgres delegate class                                                                     
  	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      
  	# Oracle delegate class                                                                       
  	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
-	# SQLServer delegate class                                                                    
- 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.MSSQLDelegate           
+	
 
 
 Pool of thread definition
