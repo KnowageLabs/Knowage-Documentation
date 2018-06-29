@@ -176,10 +176,6 @@ Knowage uses a schema to manage metadata, that is all those information required
     +---------------------+---------------+--------------+
     |    Certified        | PostgreSQL    | 8.2          |
     +---------------------+---------------+--------------+
-    |    Certified        | MS Sql Server | 2012         |
-    +---------------------+---------------+--------------+
-    |    Certified        | Ingres        | II           |
-    +---------------------+---------------+--------------+
     |    Certified        | MySql         | 5.5          |
     +---------------------+---------------+--------------+
     |    Certified        | MariaDB       |              |
