@@ -36,19 +36,38 @@ Description:
 Dialect: 
   The dialect used to access the database. Supported dialects are: 
       
-      + Oracle
-      + SQL Server
-      + MySQL
-      + PostgreSQL
-      + Ingres
-      + DB2
-      + Teradata
-      + Vertica
-      + Apache Hive
-      + Apache Impala
-      + Apache Spark SQL
-      + Mongo DB
-      + Orient DB
+.. _certdatasources:
+.. table:: Certified Data Dources
+   :widths: auto
+   
+   +-----------------------+-----------------+
+   |    Certified Data Dources               |
+   +=======================+=================+
+   | Oracle                |  11,12          |
+   +-----------------------+-----------------+
+   | MySQL                 | 5.2,5.5,5.6     |
+   +-----------------------+-----------------+
+   | PostgreSQL            | 8.2, 9.1        |
+   +-----------------------+-----------------+
+   | Teradata              | 15.10.0.7       |
+   +-----------------------+-----------------+
+   | Vertica               | v9.0.1-0        |
+   +-----------------------+-----------------+
+   | Apache Hive 1         | 1.1.0           | 
+   +-----------------------+-----------------+
+   | Apache Hive 2         | 2.3.2           | 
+   +-----------------------+-----------------+     
+   | Apache Impala         |                 |
+   +-----------------------+-----------------+
+   | Apache Spark SQL      |                 |
+   +-----------------------+-----------------+
+   | Mongo DB              |                 |
+   +-----------------------+-----------------+
+   | Orient DB             |                 |
+   +-----------------------+-----------------+
+   | Maria DB              |  10.1,10.2,10.3 |
+   +-----------------------+-----------------+
+  
 
 
 Read Only
