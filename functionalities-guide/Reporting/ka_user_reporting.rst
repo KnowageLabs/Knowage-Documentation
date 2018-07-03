@@ -284,7 +284,7 @@ Once you have defined all parameters, open the (or create a new) dataset. Parame
 
 Parameters can also be used within some graphical elements, such as dynamic text, with the following syntax:
 
-.. code-block::
+.. code-block:: javascript
         :linenos:
         :caption: Parameters syntax
    
