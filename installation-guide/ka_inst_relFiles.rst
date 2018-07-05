@@ -2,8 +2,8 @@ Released file description
 =========================
 
 Here you can download the software:
-  - Knowage CE: www.knowage-suite.com/site/ce-download/.
-  - Knowage EE: www.knowage-suite.com/portal
+  - Knowage CE: http://www.knowage-suite.com/site/ce-download/.
+  - Knowage EE: http://www.knowage-suite.com/portal
   
 Where we can find all resources for the installation, the single packages and the DDL.
 
