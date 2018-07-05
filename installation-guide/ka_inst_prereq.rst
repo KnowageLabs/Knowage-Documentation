@@ -7,7 +7,7 @@ Before going into details on Knowage installation, it is necessary to check if c
 Operating systems
 ------------------
 
-The Operating Systems (OS) showed in :numref:`certenvironments` and :numref:`compenvironments` are those ones which suit with Knowage platform.
+The Operating Systems (OS) showed in :numref:'certenvironments' and :numref:'compenvironments' are those ones which suit with Knowage platform.
 
 .. _certenvironments:
 .. table:: Certified environments
