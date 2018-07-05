@@ -1,6 +1,6 @@
 
 
-Manual Installation on Tomcat AS
+Tomcat AS Manual Installation
 ==========================
 
 Metadata database
