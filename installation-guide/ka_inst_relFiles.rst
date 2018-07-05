@@ -1,7 +1,11 @@
 Released file description
 =========================
 
-It is possible to download the software in the web site `www.knowage-suite.com/portal <http://www.knowage-suite.com/portal>`__ where we can find all resources for the installation, the single packages and the DDL.
+Here you can download the software:
+  - Knowage CE: www.knowage-suite.com/site/ce-download/.
+  - Knowage EE: www.knowage-suite.com/portal
+  
+Where we can find all resources for the installation, the single packages and the DDL.
 
 Here the essential elements for the installation:
 
