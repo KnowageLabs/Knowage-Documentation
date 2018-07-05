@@ -20,7 +20,7 @@ Here the essential elements for the installation:
     +------------------------------------+
     |   **Component for table creation** |
     +====================================+
-    |   Ingres-dbscript                  |
+    |   Maria DB                         |
     +------------------------------------+
     |   MySql                            |
     +------------------------------------+
