@@ -362,14 +362,14 @@ In Cross Navigation syntax we give an idea of how the syntax should be like:
       :linenos:
       :caption: Cross Navigation syntax.
    
-       javascript:parent.execExternalCrossNavigation(+         
-       {OUT_PAR:'+params["par_period].value+"'"+               
-       ,'OUT_STRING:'+string_text+"'"+ 
-       ,'OUT_NUM:+numberX+     
-       ,'OUT_ManualSTRING:'foo'"+    
-       ,'OUT_ARRAY:['A','B','5']}"+ 
-       ,null,+       
-       'Cross_Navigation_Name');       
+       "javascript:parent.execExternalCrossNavigation("+         
+       "{OUT_PAR:'"+params["par_period"].value+"'"+               
+       ",OUT_STRING:'"+string_text+"'"+ 
+       ",OUT_NUM:"+numberX+     
+       ",OUT_ManualSTRING:'foo'"+    
+       ",OUT_ARRAY:['A','B','5']}"+ 
+       ",null,"+       
+       "'Cross_Navigation_Name');"       
 
 .. warning::
     
@@ -407,13 +407,13 @@ Finally, it is possible to set a sort of "multi"-cross navigation if for example
    :linenos:
    :caption: Cross Navigation syntax
    
-       javascript:parent.execExternalCrossNavigation(+                       
-       {OUT_PAR:'+params["par_period].value+"'"+                             
-       ,'OUT_STRING:'+string_text+"'"+  
-       ,'OUT_NUM:+numberX+ 
-       ,'OUT_ManualSTRING:'foo'"+ 
-       ,'OUT_ARRAY:['A','B','5']}"+    
-       ,null,+    
-       '');                                                                  
+       "javascript:parent.execExternalCrossNavigation("+                       
+       "{OUT_PAR:'"+params["par_period"].value+"'"+                             
+       ",OUT_STRING:'"+string_text+"'"+  
+       ",OUT_NUM:"+numberX+ 
+       ",OUT_ManualSTRING:'foo'"+ 
+       ",OUT_ARRAY:['A','B','5']}"+    
+       ",null,"+    
+       "'');"
  
 .. include:: reportingThumbinals.rst
