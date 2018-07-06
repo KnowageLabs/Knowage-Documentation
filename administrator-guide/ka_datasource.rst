@@ -53,7 +53,7 @@ Dialect:
    +-----------------------+-----------------+
    | Teradata              | 15.10.0.7       |
    +-----------------------+-----------------+
-   | Vertica               | 9.0.1-0        |
+   | Vertica               | 9.0.1-0         |
    +-----------------------+-----------------+
    | Cloudera              | 5.8.9           | 
    +-----------------------+-----------------+
@@ -71,6 +71,7 @@ Dialect:
    +-----------------------+-----------------+
    | Orient DB             | 3.0.2           |
    +-----------------------+-----------------+
+   
    
 Read Only
    Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
