@@ -479,13 +479,50 @@ In the editor tab is possible to add the code that will be shown in the widget. 
     
 In the right side of the editor is possible to take available tags to copy inside the code, those tags will be explained in details in the following paragraphs. Is not possible to add custom Javascript code inside the html editor, so the available tags are the tools to make the widget dynamic and to use the dataset data.
 
+The Dataset tab allows the user to select a dataset to make the Widget dynamic and to bind it to dataset data.
+After choosing a dataset the list of available columns will be show. Those names will be useful inside the dynamic tags.
+
 **Available Tags**
 
 ``[kn-column='COLUMN-NAME' row='COLUMN-ROW-NUMBER' aggregation='COLUMN-AGGREGATION' precision='COLUMN-DECIMALS']``
-The kn-column tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to print its value. 
+
+The kn-column tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to print its value. The value of the kn-column attribute should be the name of the column value you want to read in execution.
+
 The **row** attribute is optional and is a number type attribute. If no row is selected the first row column value will be shown.
+
 The **aggregation** attribute is optional and is a string type attribute. If inserted the value shown will be the aggregation of all column rows values. The available aggregations are: AVG|MIN|MAX|SUM|COUNT_DISTINCT|COUNT|DISTINCT COUNT.
+
 The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
+
+
+``[kn-parameter='PARAMETER-NAME']``
+
+The kn-parameter tag is the tool to show a dataset parameter inside the widget execution. The value of the kn-parameter attribute should be the name of the set attribute.
+
+
+``[kn-calc=(CODE-TO-EVALUATE) precision='VALUE-PRECISION']``
+
+The kn-calc tag is the tool to calculate expressions between different values on widget execution. Everything inside the brackets will be evaluated after the other tags substitution, so will be possible to use other tags inside.
+
+The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
+
+
+``<div kn-repeat="true" limit="LIMIT-NUMBER"> ... REPEATED-CONTENT ... </div>``
+
+The kn-repeat attribute is available to every HTML5 tag, and is a tool to repeat the element for every row of the selected dataset.
+
+This attribute is naturally linked to kn-column tag. If inside a kn-column tag without a row attribute is present, the kn-repeat will show the column value for every row of the dataset. 
+
+Inside a kn-repeat is possible to use the specific tag [kn-repeat-index], that will print the index of the repeated column row.
+
+The **limit** attribute is optional and is a number type attribute. If added the number of row repeated will be limited to the selected number.
+
+
+``<div kn-if="CODE-TO-EVALUATE"> ... </div>``
+
+| The kn-if attribute is available to every HTML5 tag and is a way to conditionally show or hide an element based on some other value.
+| The attribute content will be evaluated after the other tags substitution, so will be possible to use other tags inside.
+| If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
 
 **Code Examples**
 
