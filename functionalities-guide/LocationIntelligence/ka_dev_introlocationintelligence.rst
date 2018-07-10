@@ -378,8 +378,13 @@ It is possible to enable cross navigation from a map document to other Knowage d
 
 You need to define the output parameters as described in Section *Cross Navigation* of *Analytical Document* Chapter. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
 
-Once you have created a new Cross Navigation in the Cross Navigation Definition menu in Tools section, it is possibile to navigate from the GIS docuement to any other document. There is still a little step to do to activate the cross navigation.
+Once you have created a new Cross Navigation in the Cross Navigation Definition menu in Tools section, it is possibile to navigate from the GIS document to a target document. There is still a little step to do to activate the cross navigation.
 
+.. figure:: media/image384.png
+
+    Cross navigation option.
+
+Open the **layer** tab of the Location Intelligence options panel and click on cross navigation select mode. Now the cros navigation is activated and if you click, for example, on one of the state it will compare 
 
   
 .. include:: locationIntelligenceThumbinals.rst
