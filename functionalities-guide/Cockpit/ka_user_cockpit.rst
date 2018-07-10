@@ -481,6 +481,9 @@ In the right side of the editor is possible to take available tags to copy insid
 
 The Dataset tab allows the user to select a dataset to make the Widget dynamic and to bind it to dataset data.
 After choosing a dataset the list of available columns will be show. Those names will be useful inside the dynamic tags.
+.. figure:: media/image209.png
+
+    Dataset selection
 
 **Available Tags**
 
@@ -524,8 +527,19 @@ The **limit** attribute is optional and is a number type attribute. If added the
 | The attribute content will be evaluated after the other tags substitution, so will be possible to use other tags inside.
 | If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
 
-**Code Examples**
-
+.. warning::
+    **Whitelist**
+        All external resources paths must be present inside a whitelist xml inside the resources folder of the server named 'services-whitelist.xml'.
+        The file should have the following structure:
+        
+        ``
+        <?xml version="1.0" encoding="UTF-8"?>
+        <WHITELIST>
+            <service baseurl="https://www.youtube.com" />
+            <service relativepath="/knowage/icons/" />
+        </WHITELIST>
+        ``
+        
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
