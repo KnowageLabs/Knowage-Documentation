@@ -381,7 +381,7 @@ It will be necessary to type the right cross navigation name related to the docu
 
 Note that the syntax of the string is fixed, while you need to assign values to the parameters that will be passed to the destination document. The JavaScript editor helps you to insert dataset column bindings, as shown in Figure below, and report parameters automatically.
 
-.. figure:: media/image341.png
+.. figure:: media/image342.png
 
      Column bindings.
 
