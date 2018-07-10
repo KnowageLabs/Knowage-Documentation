@@ -384,7 +384,7 @@ Once you have created a new Cross Navigation in the Cross Navigation Definition 
 
     Cross navigation option.
 
-Open the **layer** tab of the Location Intelligence options panel and click on cross navigation select mode. Now the cros navigation is activated and if you click, for example, on one of the state of :numref:`locatintelldoc` it will compare the above popup.
+Open the **layer** tab of the Location Intelligence options panel and click on cross navigation select mode. Now the cross navigation is activated and if you click, for example, on one of the state of :numref:`locatintelldoc` it will compare the above popup.
 
 .. figure:: media/image385.png
 
