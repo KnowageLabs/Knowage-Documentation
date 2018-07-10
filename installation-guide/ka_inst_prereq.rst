@@ -20,23 +20,14 @@ The Operating Systems (OS) showed in :numref:'certenvironments' and :numref:'com
    +---------------------------+-------------+
    |    CentOS                 | 6 64-bit    |
    +---------------------------+-------------+
-   |    Windows                | 7           |
+   | Red Hat Enterprise RHEL   | 6.4 64-bit  |
+   +---------------------------+-------------+ 
+   |    Windows                | 7,10        |
+   +---------------------------+-------------+   
+   |    Windows Server         | 2008, 2012  |
    +---------------------------+-------------+
 
-.. _compenvironments:
-.. table:: Compatible environments
-    :widths: auto
-   
-    +-----------------------------+-------------+
-    |    Compatible Environments                |
-    +=============================+=============+
-    |    **Operating System**     | **Version** |
-    +-----------------------------+-------------+
-    |    RHEL Red Hat Enterprise  | 6.4         |
-    +-----------------------------+-------------+
-    |    Windows server           | 2012, 2008  |
-    +-----------------------------+-------------+
-   
+
 Disk usage
 --------------------
 
@@ -76,12 +67,13 @@ The following :numref:`supportedapp` displays the compatibility with the support
     +---------------------+------------------------+-------------+
     |    **Support type** | **Application Server** | **Version** |
     +=====================+========================+=============+
-    |    Certified        | Apache Tomcat          | 7           |
+    |    Certified        | Apache Tomcat          | 7.0.65      |
     +---------------------+------------------------+-------------+
-    |    Certified        | JBoss EAP              | 6           |
+    |                     | JBoss EAP              | 6           |
     +---------------------+------------------------+-------------+
-    |    Compatible       | Jboss Wildfly          |             |
-    +---------------------+------------------------+-------------+
+
+    
+**N.B. JBoss support will be available on Q4 2018**
 
 For each application server installation please refer to each official user guide.
 
