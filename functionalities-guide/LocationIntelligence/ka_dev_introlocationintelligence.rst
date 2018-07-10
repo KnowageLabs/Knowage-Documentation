@@ -376,53 +376,9 @@ Cross navigation definition\*
 
 It is possible to enable cross navigation from a map document to other Knowage documents. In the example of :numref:`locatintelldoc`, this means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
 
-GIS document template example shows how to modify the template in order to enable cross navigation.
-      
-.. code-block:: json
-      	   :caption: GIS document template example		
-           :linenos:
-	   
-           , selectMode: 'cross' 
-	   crossnav: { 
-	   label: 'REPORT_DETAIL'
-	   , staticParams: {par_product_family: 'Food'}
-	   , dynamicParams: [
-	           {par_state: 'STATE_ABBR', scope:'feature'}
-	         , {par_date: 'PAR_1', scope:'env'} 
-		 ]
-	   }
+You need to define the output parameters as described in Section *Cross Navigation* of *Analytical Document* Chapter. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
 
-The label attribute refers to the label of the target Knowage document.
-
-The staticParams contains an array of static parameters that must be passed to the document in the form parameterName:ParameterValue. Static parameters are parameters that do not depend on the source document from which the cross navigation starts.
-
-The dynamicParams contains dynamic parameters that must be passed to the target document in the form
-
-   *parameterName:ReferenciatedAttribute*
-
-The parameterName must be the target document’s parameter url, while ReferenciatedAttribute defines where to recover its value and may be different depending on the value of the attribute scope:
-
--  feature: the value of the parameter is the feature’s value of the selected element. The ReferenciatedAttribute is the name of feature. For example, the row
-
-   *state:'STATE_ABBR', scope:'feature'*
-
-   means that if you click on the state of Texas, whose feature STATE_ABBR has value 'TX', the target document will be executed with parameter state='TX'.
-
--  env: the value of the parameter is the value of an input analytical driver of the map document. The ReferenciatedAttribute is the name of the input analytical driver url of the map. For example,
-
-   *state:'par_state', scope:'env'*
-
-   means that when you click on a state, the target document will be executed with a parameter state=<value of par_state driver>.
-
--  dataset: the value of the parameter is the value of a column of the dataset. The ReferenciatedDatasetAttribute is the name of column of the dataset that the map are using. For example,
-
-   *state:'col_state', scope:'dataset'*
-
-   means that when you click on a state, the target document will be executed with a parameter state=<value of the column col_state of the dataset>. 
-   
-Pay attention that the last configuration is usable only with physical store.
-
-Once you are done, you need to define the output parameters as described in Section *Cross Navigation* of *Analytical Document* Chapter. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
+Once you have created a new Cross Navigation in the Cross Navigation Definition menu in Tools section, it is possibile to navigate from the GIS docuement to any other document. There is still a little step to do to activate the cross navigation.
 
 
   
