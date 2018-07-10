@@ -475,6 +475,21 @@ In the editor tab is possible to add the code that will be shown in the widget. 
 
 .. figure:: media/image208.png
 
+    HTML widget editor
+    
+In the right side of the editor is possible to take available tags to copy inside the code, those tags will be explained in details in the following paragraphs. Is not possible to add custom Javascript code inside the html editor, so the available tags are the tools to make the widget dynamic and to use the dataset data.
+
+**Available Tags**
+
+``[kn-column='COLUMN-NAME' row='COLUMN-ROW-NUMBER' aggregation='COLUMN-AGGREGATION' precision='COLUMN-DECIMALS']``
+The kn-column tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to print its value. 
+The **row** attribute is optional and is a number type attribute. If no row is selected the first row column value will be shown.
+The **aggregation** attribute is optional and is a string type attribute. If inserted the value shown will be the aggregation of all column rows values. The available aggregations are: AVG|MIN|MAX|SUM|COUNT_DISTINCT|COUNT|DISTINCT COUNT.
+The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
+
+**Code Examples**
+
+
 Widget properties
 ~~~~~~~~~~~~~~~~~~
 
