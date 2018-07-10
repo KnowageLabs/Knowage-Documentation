@@ -532,13 +532,15 @@ The **limit** attribute is optional and is a number type attribute. If added the
         All external resources paths must be present inside a whitelist xml inside the resources folder of the server named 'services-whitelist.xml'.
         The file should have the following structure:
         
-        ``
-        <?xml version="1.0" encoding="UTF-8"?>
-        <WHITELIST>
-            <service baseurl="https://www.youtube.com" />
-            <service relativepath="/knowage/icons/" />
-        </WHITELIST>
-        ``
+        .. code-block:: xml
+        :linenos:
+        :caption: Cross Navigation syntax
+  
+            <?xml version="1.0" encoding="UTF-8"?>
+            <WHITELIST>
+	            <service baseurl="https://www.youtube.com" />
+	            <service relativepath="/knowage/themes/" />
+            </WHITELIST>
         
 
 Widget properties
