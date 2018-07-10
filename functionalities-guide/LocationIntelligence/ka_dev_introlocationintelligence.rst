@@ -349,199 +349,27 @@ For example you can use a query dataset, connected to the foodmart data source, 
    
 Create and save the dataset you want to use and go on preparing the document template.
 
-Template building
-~~~~~~~~~~~~~~~~~
+Template building with GIS designer for technical user\*
+----------------------------------------------------------
 
-The template of the analytical documents executed by the GeoReport engine allows this engine to properly join business data (dataset) and spatial data (target layer) in order to produce and visualize the output map.
+When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to :numref:`gisdesigneraccestemplbuild`). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
 
-In order to describe the basic structure of the template, we refer to Minimal template definition which provide a sample of template. The template shown is the minimal to let the GIS analysis works.
+.. _gisdesigneraccestemplbuild:
+.. figure:: media/image381.png
 
-.. code-block:: json
-      	 :caption: Minimal template definition.
-         :linenos:
-	 
-	  {
-				
-	  "datasetJoinColumns" : "sales_state", 
-				
-	  "layerJoinColumns" : "STATE_ABBR",
-				
-	  "targetLayerConf" : {
-	  "label" : "usa_states_file"  
-	  },
-	  { 
-	  indicators:[
-	  {"name":"store_sales","label":"Store sales"},
-	  {"name":"unit_sales","label":"Unit Sales"},
-	  {"name":"store_cost","label":"Store cost"} ]}
-				
-	  }
+    Gis designer accessible from the template build.
 
+We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to *Designer section* paragraph for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in :numref:`layerfiltranalytdriv`. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (:numref:`listavailfiltranalydriv`).
 
-In this template, we will include information that allows the engine to produce a thematic map identical to the one shown below. The colour intensity of each feature included in the usa_states.json file proportionally increases according to the value of the selected measure (one of the three measures of the dataset) in the corresponding record.
+.. _layerfiltranalytdriv:
+.. figure:: media/image382.png
 
-.. _locatintelldoc:
-.. figure:: media/image380.png
+    Layer filters interface with analytical drivers.
 
-    Location intelligence document.
+.. _listavailfiltranalydriv:
+.. figure:: media/image383.png
 
-The template of the **GEOReport Engine** is a JSON file. The key information included in this file are:
-
--  method for joining spatial data and business data,
--  measures definition,
--  definition of the target layer.
-
-In :numref:`advtemplatdef` we provide a more complex version of the previous template code. The results will be similar to the one obtained in :numref:`locatintelldoc`, but you will provide to the user extra features like filters and cross navigation. Moreover you see how to configure some elements from template, i.e. visualization coordinates, analysis customization, etc.
-
-.. _advtemplatdef:
-.. code-block:: json
-      	 :caption: Advanced template definition.
-         :linenos:
-	 
-       		{
-	
-		mapName:"Test",
-		
-		analysisType:"choropleth",
-		
-		targetLayerConf:{"label":"usa_states_file"},
-		
-		datasetJoinColumns:"sales_state",
-		
-		layerJoinColumns:"STATE_ABBR",
-		
-		indicators:[
-		
-			{"name":"store_sales","label":"Store sales"},
-			{"name":"unit_sales","label":"Unit Sales"},
-			{"name":"store_cost","label":"Store cost"}
-			],
-		
-		filters:[
-			{"name":"store_country","label":"Nazione"}, 
-			{"name":"sales_region","label":"Regione"} 
-			],
-		
-		analysisConf:{
-			choropleth:{
-				"method":"CLASSIFY_BY_EQUAL_INTERVALS", 
-				"classes":3,
-				"fromColor":"rgb(255, 255, 0)","toColor":"rgb(0, 128, 0)" 
-			},
-			"proportionalSymbol":{
-				"minRadiusSize":2,
-				"maxRadiusSize":20,
-				"color":"rgb(255, 255, 0)"
-			}, 
-		chart:{
-			"indicator_1":"red",
-			"indicator_2":"green",
-			"indicator_3":"blue"} 
-			},
-			
-		"currentView":{"center":[-1.1192826925855E7,4648063.947363],"zoom":4},
-		
-		indicatorContainer:"store","storeType":"physicalStore",
-		
-		
-		"overLayersConf":[],
-		
-		"selectedBaseLayer":"OpenStreetMap" 
-		}
-		
-			crossnav : { 
-				label : 'arrive chart', 
-				multiSelect: true,
-				staticParams : { 
-					product_family : 'Food' 
-			},
-		
-				dynamicParams : [{ 
-					state : 'STATE_ABBR', 
-					scope : 'feature'
-				} , {
-					inputpar : 'PAR1', 
-					scope : 'env', 
-					outputpar: 'output_par'
-			}] 
-			} 
-		}
-
-Let us describe these codes in detail we will describe the Minimal template definition at first and then we will go on with the extra features contained in advanced template definition. So the following are the mandatory template information:
-
--  datasetJoinColumns. It is the dataset column used to join with the feature of layer property.
--  layerJoinColumns. It’s the feature’s name which has to join with the dataset column.
-
-.. warning::
-         **Join columns between dataset and Layer**
-         
-         You can match the dataset and the layer on more then one colum. The correct sintax for doing this is shown in join on multiple columns sintax. In this way you match *sales_state* with STATE_ABBR and *other_column* with OTHER_COLUMN.
-         
-.. code-block:: json
-           :caption: Join on multiple columns sintax.
-           :linenos:
-
-               datasetJoinColumns : ["sales_state",other_coloumns] 
-
-               layerJoinColumns : ["STATE_ABBR","OTHER_COLOUMN"] 
-
--  targetLayerConf. This attribute contains the layer’s label.
--  indicators. It specifies the measures that can be used to perform the thematization of the map. Each measure is defined by an array (e.g. ["unit_sales", "Unit sales"]) in which the first value ("unit_sales") represents the name of the column of the input dataset that includes the measure. The second value ("Unit sales") includes the description of the measures that will be listed in the Indicators section, through the engine interface.
-
-.. warning::
-         **Referring to dataset column's name**
-         
-         Beware that feature’s aribute name, indicators’ aribute names,the datasetJoinColumns and layerJoinColumns are case sensitive.
-         
-The following, instead, are some of the optional attributes:
-
--  *mapName*, it is a string field and it is the map’s name.
--  *analysisType*, this attribute allows to specify the type of thematization that the user wants to produce the first time the document is executed. The engine supports two types of thematization: 
-
-   **choropleth**: it changes the intensity of fill colours of the features included in the target layer, according to users’ needs. It can only be applied to target layers that are composed of features whose geometry is represented by a plane figure.
-
-   **proportionalSymbols**: it changes the dimension of graphical objects. It can be applied to target layers that are composed of features whose geometry is represented by a dot point. The symbol used to perform the thematization of features is a circle whose center is located in the feature itself and whose radius is proportional to the value of the measure of that feature.
-
-	Chart: to visualize the features with charts which compare the different features indicators.
-
-	You can change the thematization after the document execution by switching between Map point, Map zone and Map chart in the left panel of the map.
-
-- *filters*, here you define which target layer attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "country",label : "Nazione". The first value (name : "country") is the name of the attribute as it is displayed among the properties. The second one label: "Nazione" is the label which will be displayed to the user.
-
-.. figure:: media/image355.png
-
-      Choropleth (left) proportionalSymbols (center) and Chart (right) thematization.
-
-- *analysisConf*, this attribute configures the chosen thematization. In particular,
-
-   -  the classes attribute defines the number of total data intervals. Each interval corresponds to a colour (choropleth thematization) or a radius size (proportional symbols thematization).
-   -  the method specifies how to subdivide data among the intervals. Possible values are:
-
-   	* CLASSIFY_BY_QUANTILS: data are subdivided according to quantiles, that means that data are split into subsets of equal size. A quantile classification is well suited to linearly distributed data.
-   	* CLASSIFY_BY_EQUAL_INTERVALS: divide the range of values into equal-sized subranges. For example, if you specify three classes for a indicator whose values range from 0 to 300, you will obtain three classes with ranges of 0–100, 101–200 and 201–300.
-
-   -  the toColor and fromColor attributes specifies the ranges of colours to be used in case of choropleth thematization. Similarly, the minRadiusSize and maxRadiusSize attributes can be used to specify the size ranges for circles in case of proportional symbols thematization.
-   -  the chart attribute has a list of indicators which configure the style for each column of the chart.
-
--  *currentView*, this attribute configures the map starting coordinates, center and the zoom, zoom.
--  *layerLoaded*, it let you define which layers are displayed by default at the first map execution.
--  *selectedIndicator*, here you can set the measure to be displayed as default and its label.
--  *baseLayersConf*, it contains all the parameters needed for openlayers to create the desired layer.
--  *selectedBaseLayer*, it specifies the base layer for the map. It can be in the catalogue or between “Openstreetmap” and “OSM”. Please notice that this attribute is not mandatory, if it is not specified OpenstreetMap is set by default.
--  *crossnav*, you can use this attribute to start a cross navigation to others Knowage documents. Cross navigation details are explained in next sections.
-
-Analytical document creation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Now we have all the necessary elements to develop a new location intelligence analytical document: map, dataset and template. Create a new dataset with the query shown in Code9.2, create a layer in the layer catalogue and a new analytical document.
-
-.. warning::
-      **Datasets and maps**
-         
-         End users can properly visualize location intelligence documents only if the underlying query dataset has scope set to **PUBLIC**. 
-
-Select Location Intelligence as **Type** and Gis Engine as **Engine**. Associate the correct datasource and data set, upload the template and save. You are now ready to execute your first location intelligence document!
-
+    List of available filters with list of analytical drivers.
 
 Cross navigation definition\*
 -----------------------------------
@@ -597,28 +425,6 @@ Pay attention that the last configuration is usable only with physical store.
 Once you are done, you need to define the output parameters as described in Section *Cross Navigation* of *Analytical Document* Chapter. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
 
 
-Template building with GIS designer for technical user\*
-----------------------------------------------------------
-
-When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to :numref:`gisdesigneraccestemplbuild`). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
-
-.. _gisdesigneraccestemplbuild:
-.. figure:: media/image381.png
-
-    Gis designer accessible from the template build.
-
-We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to *Designer section* paragraph for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in :numref:`layerfiltranalytdriv`. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (:numref:`listavailfiltranalydriv`).
-
-.. _layerfiltranalytdriv:
-.. figure:: media/image382.png
-
-    Layer filters interface with analytical drivers.
-
-.. _listavailfiltranalydriv:
-.. figure:: media/image383.png
-
-    List of available filters with list of analytical drivers.
-   
   
 .. include:: locationIntelligenceThumbinals.rst
 
