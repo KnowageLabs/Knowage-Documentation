@@ -460,6 +460,18 @@ The Selector widget works effectively as a ready-to-use filter panel.
 .. figure:: media/image191.png
 
     Selector widget execution example.
+    
+HTML Widget
+~~~~~~~~~~~
+
+The HTML widget allows to add customized HTML and CSS code to add very custom dynamic elements to the cockpit. This widget supports all HTML5 standard tags and CSS3 properties.
+
+The Edit section of the widget is composed by tree tabs: the HTML editor, the style and the dataset.
+In the editor tab is possible to add the code that will be shown in the widget. Clicking on the top expander section in the tab, the one named "CSS" also the CSS editor will be available. 
+.. important::
+    A CSS property will be extended to all the classes in the cockpit with the same name, to apply the property only to the current widget use the id prefix shown in the info panel of the CSS editor 
+
+..figure:: media/image208.png
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
