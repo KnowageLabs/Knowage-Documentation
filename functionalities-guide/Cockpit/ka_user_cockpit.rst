@@ -527,19 +527,18 @@ The **limit** attribute is optional and is a number type attribute. If added the
 | The attribute content will be evaluated after the other tags substitution, so will be possible to use other tags inside.
 | If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
 
-**Whitelist**
-All external resources paths must be present inside a whitelist xml inside the resources folder of the server named 'services-whitelist.xml'.
-
-The file should have the following structure:
-       
-.. code-block:: xml
-   :linenos:
-   :caption: whitelist example
-      <?xml version="1.0" encoding="UTF-8"?>
-      <WHITELIST>
-      <service baseurl="https://www.youtube.com" />
-      <service relativepath="/knowage/themes/" />
-      </WHITELIST>
+.. warning:: 
+    **Whitelist**
+        All external resources paths must be present inside a whitelist xml inside the resources folder of the server named 'services-whitelist.xml'. The file should have the following structure:
+        <?xml version="1.0" encoding="UTF-8"?>
+        
+        <WHITELIST>
+        
+        <service baseurl="https://www.youtube.com" />
+        
+        <service relativepath="/knowage/themes/" />
+        
+        </WHITELIST>
         
 
 Widget properties
