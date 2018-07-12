@@ -31,7 +31,7 @@ You must add some libraries inside the TOMCAT_HOME/lib folder:
    -  foo-commonj.jar.
    
 You can download here.
-.. image:: /media/lib.zip
+.. file:: /media/lib.zip
 
 File system resources
 ---------------------
