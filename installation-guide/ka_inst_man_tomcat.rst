@@ -172,18 +172,31 @@ Here adn example:
         <ResourceLink global="host_url" name="host_url" type="java.lang.String" />
         <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
         <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
-</Context>
-
-
+ </Context>
+ 
+**Remark.** The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
 Configuration of the metadata db dialect
 ----------------------------------------
-Verify that the right dialect has been set in all TOMCAT_HOME/webapps/knowage*/WEB-INF/classes/hibernate.cfg.xml files. We list all the possible dialects that can be used:
+Verify that the right dialect has been set inside **hibernate.cfg.xml** files. We list all the possible dialects that can be used:
 
--  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
--  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
--  <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
--  <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
+.. code-block:: xml
+
+ <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
+ <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+ <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+ <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
+
+You have to change these files:
+
+./knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
+./knowagegeoreportengine/WEB-INF/classes/hibernate.cfg.xml
+./knowage/WEB-INF/classes/hsql/hibernate.cfg.xml
+./knowage/WEB-INF/classes/hibernate.cfg.xml
+./knowagesvgviewerengine/WEB-INF/classes/hibernate.cfg.xml
+./knowagemeta/WEB-INF/classes/hibernate.cfg.xml
+./knowagecockpitengine/WEB-INF/classes/hibernate.cfg.xml
+./knowagedataminingengine/WEB-INF/classes/hibernate.cfg.xml
 
 
 **Remark.** The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
