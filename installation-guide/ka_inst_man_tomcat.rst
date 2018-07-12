@@ -172,7 +172,7 @@ Here adn example:
         <ResourceLink global="host_url" name="host_url" type="java.lang.String" />
         <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
         <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
- </Context>
+   </Context>
  
 **Remark.** The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
@@ -222,6 +222,7 @@ Pool of thread definition
 When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the quartz.properties file of every involved machines:
 
 .. code-block:: bash
+
  org.quartz.jobStore.isClustered = true
  org.quartz.jobStore.clusterCheckinInterval = 20000
  
@@ -233,6 +234,7 @@ Pool of thread definition
 For the execution of the batch processing ,Knowage uses a thread pool, it is possible to enable it by editing the configuration of the TOMCAT_HOME/conf/server.xml file and add the settings related to the pool of thread editing the **GlobalNamingResources** tag, as shown follow.
 
 .. code-block:: xml
+
  <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/> 
 
 
@@ -276,13 +278,9 @@ In short, to configure the Knowage log folder the user must execute the followin
 
 server-config.wsdd tests
 ------------------------
-In Knowage server the core and its analytical engines exchange information through some SOAP services. Those services can send/receive attached files: those files are temporarely stored in a folder that is configured in the knowage/WEB-INF/server-config.wsdd file. The :numref:`confofthefl` shows the syntax.
+In Knowage server the core and its analytical engines exchange information through some SOAP services. Those services can send/receive attached files: those files are temporarely stored in a folder that is configured in the knowage/WEB-INF/server-config.wsdd file. Here the syntax.
 
-.. _confofthefl:
 .. code-block:: bash
-        :linenos:
-        :caption: Configuration of the files.
-
-	<parameter name="attachments.Directory" value="../attachments"/>
+ <parameter name="attachments.Directory" value="../attachments"/>
 
 Obviously it is possible to modify the folder path, but the user who starts the application server is required to have indeed write permissions in the configured folder.
