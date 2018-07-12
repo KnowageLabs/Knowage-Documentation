@@ -30,13 +30,17 @@ You must add some libraries inside the TOMCAT_HOME/lib folder:
    -  concurrent.jar,
    -  foo-commonj.jar.
    
-You can download here.
-.. file:: /media/lib.zip
+You can download here `Libraries <media/lib.zip>`_
+
+
+
 
 File system resources
 ---------------------
 
 Create the folder TOMCAT_HOME/resources. Such a folder will contain some useful static resources and the indexes for the research engine used by Knowage.
+
+
 
 Metadata database connection
 ----------------------------
@@ -52,17 +56,45 @@ The following :numref:`settingthemetadatadatas` shows an example:
         :linenos:
         :caption: Setting the metadata datasource.
 
-        <Resource name="jdbc/knowage" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
-          password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
-          validationQuery="<a query to validate the connection, for example 
-          "select 1 from dual" on Oracle>" removeAbandoned="true" 
-        removeAbandonedTimeout="3600"/>     
+	<Resource auth="Container" 
+		driverClassName="<JDBC driver>" 
+		name="jdbc/knowage"
+		password="<password>" 
+		type="javax.sql.DataSource" 
+		url="<JDBC URL>" 
+		username="<user name>"
+		maxWait="-1" 
+		maxActive="10" 
+		maxIdle="1" 
+		validationQuery="<validation query>" 
+		removeAbandoned="true" 
+		removeAbandonedTimeout="3600" 
+		logAbandoned="true" 
+		testOnReturn="true" 
+		testWhileIdle="true" 
+		timeBetweenEvictionRunsMillis="10000" 
+		minEvictableIdleTimeMillis="60000" 
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />   
 
-        <Resource name="jdbc/cache_ds" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
-          password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
-          validationQuery="<a query to validate the connection, for example 
-          "select 1 from dual" on Oracle>" removeAbandoned="true" 
-        removeAbandonedTimeout="3600"/>  
+	<Resource auth="Container" 
+		driverClassName="<JDBC driver>" 
+		name="jdbc/cache_ds"
+		password="<password>" 
+		type="javax.sql.DataSource" 
+		url="<JDBC URL>" 
+		username="<user name>"
+		maxWait="-1" 
+		maxActive="10" 
+		maxIdle="1" 
+		validationQuery="<validation query>" 
+		removeAbandoned="true" 
+		removeAbandonedTimeout="3600" 
+		logAbandoned="true" 
+		testOnReturn="true" 
+		testWhileIdle="true" 
+		timeBetweenEvictionRunsMillis="10000" 
+		minEvictableIdleTimeMillis="60000" 
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />  
 
 Data database connection
 ------------------------
@@ -73,11 +105,25 @@ In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information
         :linenos:
         :caption: Setting the metadata datasource.
 
-        <Resource name="jdbc/dwh" auth="Container" type="javax.sql.DataSource" username="<user name>"                    
-          password="<password>" driverClassName="<JDBC driver>" url="<JDBC URL>" maxActive="20" maxIdle="4" 
-          validationQuery="<query to validate the connection, for instance 
-          "select 1  from dual" on Oracle>" removeAbandoned="true"                      
-        removeAbandonedTimeout="3600"/>
+	<Resource auth="Container" 
+		driverClassName="<JDBC driver>" 
+		name="jdbc/dwh"
+		password="<password>" 
+		type="javax.sql.DataSource" 
+		url="<JDBC URL>" 
+		username="<user name>"
+		maxWait="-1" 
+		maxActive="10" 
+		maxIdle="1" 
+		validationQuery="<validation query>" 
+		removeAbandoned="true" 
+		removeAbandonedTimeout="3600" 
+		logAbandoned="true" 
+		testOnReturn="true" 
+		testWhileIdle="true" 
+		timeBetweenEvictionRunsMillis="10000" 
+		minEvictableIdleTimeMillis="60000" 
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
 Environment variables definition
 --------------------------------
