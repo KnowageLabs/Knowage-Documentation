@@ -29,6 +29,9 @@ You must add some libraries inside the TOMCAT_HOME/lib folder:
    -  geronimo-commonj_1.1_spec-1.0.jar,
    -  concurrent.jar,
    -  foo-commonj.jar.
+   
+You can download here.
+.. image:: /media/lib.zip
 
 File system resources
 ---------------------
