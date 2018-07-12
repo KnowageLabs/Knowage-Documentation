@@ -354,101 +354,101 @@ The latter are available only in the presence of a geographical Business Model a
     
 .. _linkoraclesptfnct:
 .. table:: Link to Oracle spatial functions.
-    :widths: auto
+         :widths: auto
     
-      +-----------------------+-----------------------+-----------------------+
-      |    Function Name      | Oracle Function       | Link to Oracle web    |
-      |                       |                       | pages                 |
-      +=======================+=======================+=======================+
-      |    **distance**       | SDO_GEOM.SDO_DISTANCE | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_objgeo |
-      |                       |                       | m.htm#i857957 <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_objgeom.ht |
-      |                       |                       | m#i857957>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **dwithin**        | SDO_WITHIN_DISTANCE   | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#i77653 <https:// |
-      |                       |                       | docs.oracle.com/cd/B1 |
-      |                       |                       | 9306_01/appdev.102/b1 |
-      |                       |                       | 4255/sdo_operat.htm#i |
-      |                       |                       | 77653>`__             |
-      +-----------------------+-----------------------+-----------------------+
-      |    **dimension**      | GET_DIMS              | `https://docs.oracle. |
-      |                       |                       | com/cd/B10501_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 920/a96630/sdo_meth.h |
-      |                       |                       | tm#BABDEBJA <https:// |
-      |                       |                       | docs.oracle.com/cd/B1 |
-      |                       |                       | 0501_01/appdev.920/a9 |
-      |                       |                       | 6630/sdo_meth.htm#BAB |
-      |                       |                       | DEBJA>`__             |
-      +-----------------------+-----------------------+-----------------------+
-      |    **difference**     | SDO_GEOM.SDO_DIFFEREN | `https://docs.oracle. |
-      |                       | CE                    | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_objgeo |
-      |                       |                       | m.htm#i857512 <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_objgeom.ht |
-      |                       |                       | m#i857512>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **centroid**       | SDO_GEOM.SDO_CENTROID | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_objgeo |
-      |                       |                       | m.htm#i860848 <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_objgeom.ht |
-      |                       |                       | m#i860848>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **geometrytype**   | GET_GTYPE             | `https://docs.oracle. |
-      |                       |                       | com/cd/B10501_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 920/a96630/sdo_meth.h |
-      |                       |                       | tm#i866821 <https://d |
-      |                       |                       | ocs.oracle.com/cd/B10 |
-      |                       |                       | 501_01/appdev.920/a96 |
-      |                       |                       | 630/sdo_meth.htm#i866 |
-      |                       |                       | 821>`__               |
-      +-----------------------+-----------------------+-----------------------+
-      |    **union**          | SDO_GEOM.SDO_UNION    | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_objgeo |
-      |                       |                       | m.htm#i857624 <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_objgeom.ht |
-      |                       |                       | m#i857624>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **length**         | SDO_GEOM.SDO_LENGTH   | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_objgeo |
-      |                       |                       | m.htm#i856257 <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_objgeom.ht |
-      |                       |                       | m#i856257>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **relate**         | SDO_GEOM.RELATE       | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | m.htm#BGHCDIDG <https:|
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_objgeom.ht |
-      |                       |                       | m#BGHCDIDG>`__        |
-      +-----------------------+-----------------------+-----------------------+
+         +-----------------------+-----------------------+-----------------------+
+         |    Function Name      | Oracle Function       | Link to Oracle web    |
+         |                       |                       | pages                 |
+         +=======================+=======================+=======================+
+         |    **distance**       | SDO_GEOM.SDO_DISTANCE | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_objgeo |
+         |                       |                       | m.htm#i857957 <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_objgeom.ht |
+         |                       |                       | m#i857957>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **dwithin**        | SDO_WITHIN_DISTANCE   | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#i77653 <https:// |
+         |                       |                       | docs.oracle.com/cd/B1 |
+         |                       |                       | 9306_01/appdev.102/b1 |
+         |                       |                       | 4255/sdo_operat.htm#i |
+         |                       |                       | 77653>`__             |
+         +-----------------------+-----------------------+-----------------------+
+         |    **dimension**      | GET_DIMS              | `https://docs.oracle. |
+         |                       |                       | com/cd/B10501_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 920/a96630/sdo_meth.h |
+         |                       |                       | tm#BABDEBJA <https:// |
+         |                       |                       | docs.oracle.com/cd/B1 |
+         |                       |                       | 0501_01/appdev.920/a9 |
+         |                       |                       | 6630/sdo_meth.htm#BAB |
+         |                       |                       | DEBJA>`__             |
+         +-----------------------+-----------------------+-----------------------+
+         |    **difference**     | SDO_GEOM.SDO_DIFFEREN | `https://docs.oracle. |
+         |                       | CE                    | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_objgeo |
+         |                       |                       | m.htm#i857512 <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_objgeom.ht |
+         |                       |                       | m#i857512>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **centroid**       | SDO_GEOM.SDO_CENTROID | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_objgeo |
+         |                       |                       | m.htm#i860848 <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_objgeom.ht |
+         |                       |                       | m#i860848>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **geometrytype**   | GET_GTYPE             | `https://docs.oracle. |
+         |                       |                       | com/cd/B10501_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 920/a96630/sdo_meth.h |
+         |                       |                       | tm#i866821 <https://d |
+         |                       |                       | ocs.oracle.com/cd/B10 |
+         |                       |                       | 501_01/appdev.920/a96 |
+         |                       |                       | 630/sdo_meth.htm#i866 |
+         |                       |                       | 821>`__               |
+         +-----------------------+-----------------------+-----------------------+
+         |    **union**          | SDO_GEOM.SDO_UNION    | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_objgeo |
+         |                       |                       | m.htm#i857624 <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_objgeom.ht |
+         |                       |                       | m#i857624>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **length**         | SDO_GEOM.SDO_LENGTH   | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_objgeo |
+         |                       |                       | m.htm#i856257 <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_objgeom.ht |
+         |                       |                       | m#i856257>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **relate**         | SDO_GEOM.RELATE       | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | m.htm#BGHCDIDG <https:|
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_objgeom.ht |
+         |                       |                       | m#BGHCDIDG>`__        |
+         +-----------------------+-----------------------+-----------------------+
 
 To apply one function click on the function name and the “Operands selection window” wizard opens. Figure below shows an example for the funtion “Distance”. Fill in all boxes since all fields are mandatory.
 
@@ -471,102 +471,102 @@ As well as calculated fields it is possible to filter on spatial fields using sp
    
 .. _linkoraclefltrfnct:
 .. table:: Link to Oracle filter functions.
-    :widths: auto
+         :widths: auto
 
-      +-----------------------+-----------------------+-----------------------+
-      |    Function Name      | Oracle Function       | Link to Oracle web    |
-      |                       |                       | pages                 |
-      +=======================+=======================+=======================+
-      |    **touches**        | SDO_TOUCH             | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BGEHHIGF <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BGEHHIGF>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **filter**         | SDO_FILTER            | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BJAFBCFC <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BJAFBCFC>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **contains**       | SDO_CONTAINS          | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BGEHCFDH <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BGEHCFDH>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **covered by**     | SDO_COVEREDBY         | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BGEHEAEJ <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BGEHEAEJ>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **inside**         | SDO_INSIDE            | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BGEFABDH <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BGEFABDH>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **covers**         | SDO_COVERS            | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BGEGIJFB <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BGEGIJFB>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **overlaps**       | SDO_OVERLAPS          | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BGEDACIF <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BGEDACIF>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **equals to**      | SDO_EQUAL             | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BGEBCEJE <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BGEBCEJE>`__         |
-      +-----------------------+-----------------------+-----------------------+
-      |    **intersects**     | SDO_ANYINTERACT       | `https://docs.oracle. |
-      |                       |                       | com/cd/B19306_01/appd |
-      |                       |                       | ev.                   |
-      |                       |                       | 102/b14255/sdo_operat |
-      |                       |                       | .htm#BGEJHDGD <https: |
-      |                       |                       | //docs.oracle.com/cd/ |
-      |                       |                       | B19306_01/appdev.102/ |
-      |                       |                       | b14255/sdo_operat.htm |
-      |                       |                       | #BGEJHDGD>`__         | 
-      +-----------------------+-----------------------+-----------------------+
+         +-----------------------+-----------------------+-----------------------+
+         |    Function Name      | Oracle Function       | Link to Oracle web    |
+         |                       |                       | pages                 |
+         +=======================+=======================+=======================+
+         |    **touches**        | SDO_TOUCH             | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BGEHHIGF <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BGEHHIGF>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **filter**         | SDO_FILTER            | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BJAFBCFC <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BJAFBCFC>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **contains**       | SDO_CONTAINS          | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BGEHCFDH <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BGEHCFDH>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **covered by**     | SDO_COVEREDBY         | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BGEHEAEJ <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BGEHEAEJ>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **inside**         | SDO_INSIDE            | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BGEFABDH <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BGEFABDH>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **covers**         | SDO_COVERS            | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BGEGIJFB <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BGEGIJFB>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **overlaps**       | SDO_OVERLAPS          | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BGEDACIF <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BGEDACIF>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **equals to**      | SDO_EQUAL             | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BGEBCEJE <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BGEBCEJE>`__         |
+         +-----------------------+-----------------------+-----------------------+
+         |    **intersects**     | SDO_ANYINTERACT       | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_operat |
+         |                       |                       | .htm#BGEJHDGD <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_operat.htm |
+         |                       |                       | #BGEJHDGD>`__         | 
+         +-----------------------+-----------------------+-----------------------+
 
 
 Temporal dimension
@@ -1047,9 +1047,9 @@ HTML Pages
 If **link** is selected, you can associate a field with an HTML page. The default code to be inserted in the calculated field is
 
 .. code:: javascript
-   :linenos:
+        :linenos:
 
-      return api.getLink("${URL}", "${TEXT}"); 
+          return api.getLink("${URL}", "${TEXT}"); 
 
 
 where **TEXT** is the clickable field in the QbE query results table and **URL** is the URL of the HTML page you want to open.
@@ -1063,15 +1063,15 @@ You can add this default code by opening the **Exp. Items** > **Groovy functions
 An example is provided by Add hyperlink.
 
 .. code:: javascript
-   :linenos:
-   :caption: Add hyperlink
+      :linenos:
+      :caption: Add hyperlink
    
-      baseUrl = "https://maps.google.it/maps?q="; baseUrl = baseUrl +       
-      dmFields['it.eng.spagobi.meta.Sales_fact_1998::                       
-         rel_customer_id_in_customer(rel_customer_id_in_customer):city'];   
-      return api.getLink(baseUrl,                                           
-      dmFields['it.eng.spagobi.meta.Sales_fact_1998::  
-      rel_customer_id_in_customer(rel_customer_id_in_customer):city']);  
+         baseUrl = "https://maps.google.it/maps?q="; baseUrl = baseUrl +       
+         dmFields['it.eng.spagobi.meta.Sales_fact_1998::                       
+            rel_customer_id_in_customer(rel_customer_id_in_customer):city'];   
+         return api.getLink(baseUrl,                                           
+         dmFields['it.eng.spagobi.meta.Sales_fact_1998::  
+         rel_customer_id_in_customer(rel_customer_id_in_customer):city']);  
   
 The output is shown below(column City URL).
 
@@ -1085,9 +1085,9 @@ Images
 If you want to add an image, the code to be used to reference an image on the server:
 
 .. code:: javascript
-   :linenos:
+      :linenos:
    
-   return api.getImageLink("${IMAGE_URL}"); 
+         return api.getImageLink("${IMAGE_URL}"); 
 
 As before, by cliking on **image** from the **Exp. Items** tree, this code is automatically added as shown below.
 
@@ -1098,15 +1098,15 @@ As before, by cliking on **image** from the **Exp. Items** tree, this code is au
 Replace the **IMAGE\_\ URL**\ with the path of your image. Code below produces a graphical result like the one shown in the **Bullet Chart** column of figure below.
 
 .. code:: javascript
-   :linenos:
-   :caption: Add images.
+      :linenos:
+      :caption: Add images.
    
-    baseUrl = "http://localhost:8080/SpagoBIQbeEngine/img/inline/";       
-    if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']<2){     
-         return 'api.getImageLink("'+ baseUrl + 'bullet-red.png")';            
-    } else if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']>3){     
-         return 'api.getImageLink("'+ baseUrl + 'bullet-green.png")';                                                 
-    } else { return 'api.getImageLink("'+ baseUrl + 'bullet-yellow.png")'; }          
+      baseUrl = "http://localhost:8080/SpagoBIQbeEngine/img/inline/";       
+      if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']<2){     
+            return 'api.getImageLink("'+ baseUrl + 'bullet-red.png")';            
+      } else if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']>3){     
+            return 'api.getImageLink("'+ baseUrl + 'bullet-green.png")';                                                 
+      } else { return 'api.getImageLink("'+ baseUrl + 'bullet-yellow.png")'; }          
 
 .. figure:: media/image297.png
 
