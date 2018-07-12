@@ -189,64 +189,51 @@ Verify that the right dialect has been set inside **hibernate.cfg.xml** files. W
 
 You have to change these files:
 
-./knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
-./knowagegeoreportengine/WEB-INF/classes/hibernate.cfg.xml
-./knowage/WEB-INF/classes/hsql/hibernate.cfg.xml
-./knowage/WEB-INF/classes/hibernate.cfg.xml
-./knowagesvgviewerengine/WEB-INF/classes/hibernate.cfg.xml
-./knowagemeta/WEB-INF/classes/hibernate.cfg.xml
-./knowagecockpitengine/WEB-INF/classes/hibernate.cfg.xml
-./knowagedataminingengine/WEB-INF/classes/hibernate.cfg.xml
+- <TOMCAT_HOME>/webapps/knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
+- <TOMCAT_HOME>/webapps/knowagegeoreportengine/WEB-INF/classes/hibernate.cfg.xml
+- <TOMCAT_HOME>/webapps/knowage/WEB-INF/classes/hsql/hibernate.cfg.xml
+- <TOMCAT_HOME>/webapps/knowage/WEB-INF/classes/hibernate.cfg.xml
+- <TOMCAT_HOME>/webapps/knowagesvgviewerengine/WEB-INF/classes/hibernate.cfg.xml
+- <TOMCAT_HOME>/webapps/knowagemeta/WEB-INF/classes/hibernate.cfg.xml
+- <TOMCAT_HOME>/webapps/knowagecockpitengine/WEB-INF/classes/hibernate.cfg.xml
+- <TOMCAT_HOME>/webapps/knowagedataminingengine/WEB-INF/classes/hibernate.cfg.xml
 
 
 **Remark.** The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
 Modification of the Quartz configuration
 ----------------------------------------
-The scheduler is configured by the following file: knowage.war/WEB-INF/classes/quartz.properties. It is essential to enhance in this file the property ”org.quartz.jobStore.driverDelegateClass“ with the right value, according to the metadata database in use. These in :numref:`valuesfortheqz` the possible values:
+The scheduler is configured by the following file: knowage.war/WEB-INF/classes/quartz.properties. It is essential to enhance in this file the property ”org.quartz.jobStore.driverDelegateClass“ with the right value, according to the metadata database in use. Following the possible values:
 
-.. _valuesfortheqz:
 .. code-block:: bash
-        :linenos:
-        :caption: Values for the Quartz file.
 
- 	# Hsqldb delegate class                                                                                
- 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          
- 	# Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
- 	# Postgres delegate class                                                                     
- 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      
- 	# Oracle delegate class                                                                       
- 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
+ # Hsqldb delegate class                                                                                
+ #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          
+ # Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
+ # Postgres delegate class                                                                     
+ #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      
+ # Oracle delegate class                                                                       
+ #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
 	
 
 
 Pool of thread definition
 -------------------------
+When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the quartz.properties file of every involved machines:
 
-When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters, in :numref:`clustermodalityman`, to the quartz.properties file of every involved machines:
-
-.. _clustermodalityman:
 .. code-block:: bash
-        :linenos:
-        :caption: Cluster modality manual activation.
-
- 	org.quartz.jobStore.isClustered = true
- 	org.quartz.jobStore.clusterCheckinInterval = 20000
+ org.quartz.jobStore.isClustered = true
+ org.quartz.jobStore.clusterCheckinInterval = 20000
  
-	org.quartz.scheduler.instanceId = AUTO
- 	org.quartz.scheduler.instanceName = RHECMClusteredSchedule
+ org.quartz.scheduler.instanceId = AUTO
+ org.quartz.scheduler.instanceName = RHECMClusteredSchedule
 
 Pool of thread definition
 -------------------------
+For the execution of the batch processing ,Knowage uses a thread pool, it is possible to enable it by editing the configuration of the TOMCAT_HOME/conf/server.xml file and add the settings related to the pool of thread editing the **GlobalNamingResources** tag, as shown follow.
 
-For the execution of the batch processing ,Knowage uses a thread pool, it is possible to enable it by editing the configuration of the TOMCAT_HOME/conf/server.xml file and add the settings related to the pool of thread editing the **GlobalNamingResources** tag, as shown in :numref:`threadpoolconftom`
-
-.. _threadpoolconftom:
 .. code-block:: xml
-        :linenos:
-        :caption: Thread of pool configuration for Tomcat.
-
- 	<Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/> 
+ <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/> 
 
 
 Check of the memory settings
@@ -257,24 +244,19 @@ It is recommended to increase the memory dimension used by the application serve
 -  Xms1024m;
 -  Xmx2048m;
 
-**[LINUX]** Insert at the beginning of the TOMCAT_HOME/bin/setenv.sh file the row in :numref:`memorysettingslint`:
+**[LINUX]** Insert at the beginning of the TOMCAT_HOME/bin/setenv.sh file this command:
 
-.. _memorysettingslint:
 .. code-block:: bash
-        :linenos:
-        :caption: Memory settings for Tomcat in Linux environment.
 
-	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" 
+ export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" 
 
 
-**[WIN]** Insert at the beginning of the TOMCAT_HOME/bin/setenv.bat file the row in :numref:`memorysettingswindt`:
+**[WIN]** Insert at the beginning of the TOMCAT_HOME/bin/setenv.bat file this command:
 
-.. _memorysettingswindt:
 .. code-block:: bash
-        :linenos:
-        :caption: Memory settings for Tomcat in Windows environment.
 
-	set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
+ set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
+
 
 If one uses Tomcat as a service it is important to modify those settings through the GUI. For that we refer to the documents available on the web page  http://www.apache.org/ 
 
