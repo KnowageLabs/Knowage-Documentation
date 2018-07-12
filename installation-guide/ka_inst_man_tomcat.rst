@@ -42,8 +42,8 @@ Metadata database connection
 ----------------------------
 To create a new connection, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. 
 We need to create 2 connection:
-   - knowage metadata 
-   - Knowage cache, this must be an emty schema
+   - jdbc/knowage:  knowage metadata 
+   - jdbc/cache_ds: Knowage cache, this must be an emty schema
 
 The following xml fragment shows an example:
 
