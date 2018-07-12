@@ -77,9 +77,13 @@ The following :numref:`supportedapp` displays the compatibility with the support
     +---------------------+------------------------+-------------+
     |    **Support type** | **Application Server** | **Version** |
     +=====================+========================+=============+
-    |    Certified        | Apache Tomcat 7        | 7.0.65      |
+    |    Certified        | Apache Tomcat          | 7.0.65      |
+    +---------------------+------------------------+-------------+
+    |                     | JBoss EAP              | 6           |
     +---------------------+------------------------+-------------+
 
+    
+**N.B. JBoss support will be available on Q4 2018**
 
 For each application server installation please refer to each official user guide.
 
