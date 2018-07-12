@@ -49,14 +49,11 @@ We need to create 2 connection:
    - knowage metadata 
    - Knowage cache, this must be an emty schema
 
-The following :numref:`settingthemetadatadatas` shows an example:
+The following xml fragment shows an example:
 
-.. _settingthemetadatadatas:
 .. code-block:: xml
-        :linenos:
-        :caption: Setting the metadata datasource.
 
-	<Resource auth="Container" 
+ <Resource auth="Container" 
 		driverClassName="<JDBC driver>" 
 		name="jdbc/knowage"
 		password="<password>" 
@@ -74,9 +71,9 @@ The following :numref:`settingthemetadatadatas` shows an example:
 		testWhileIdle="true" 
 		timeBetweenEvictionRunsMillis="10000" 
 		minEvictableIdleTimeMillis="60000" 
-		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />   
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />   
 
-	<Resource auth="Container" 
+ <Resource auth="Container" 
 		driverClassName="<JDBC driver>" 
 		name="jdbc/cache_ds"
 		password="<password>" 
@@ -94,18 +91,16 @@ The following :numref:`settingthemetadatadatas` shows an example:
 		testWhileIdle="true" 
 		timeBetweenEvictionRunsMillis="10000" 
 		minEvictableIdleTimeMillis="60000" 
-		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />  
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
 Data database connection
 ------------------------
-In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. The following :numref:`settingthemetadatadatasou` shows an example:
+In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information related to the metadata database inside the GlobalNamingResources tag. Specify: username, password, driver class name and URL. 
+The following xml fragment shows an example:
 
-.. _settingthemetadatadatasou:
 .. code-block:: xml
-        :linenos:
-        :caption: Setting the metadata datasource.
 
-	<Resource auth="Container" 
+ <Resource auth="Container" 
 		driverClassName="<JDBC driver>" 
 		name="jdbc/dwh"
 		password="<password>" 
@@ -125,6 +120,7 @@ In the Tomcat case, edit the TOMCAT_HOME/conf/server.xml and add the information
 		minEvictableIdleTimeMillis="60000" 
 		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
+
 Environment variables definition
 --------------------------------
 Edit the file TOMCAT_HOME/conf/server.xml in Tomcat and add the following constants in the GlobalNamingResources tag, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in :numref:`tomcatoenvironmentvariab`:
@@ -136,9 +132,9 @@ Edit the file TOMCAT_HOME/conf/server.xml in Tomcat and add the following consta
 
         <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>                 
                                                                                                                 
-        <Environment name=" sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/> 
+        <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/> 
                                                                                                                 
-        <Environment name="service_url" type="java.lang.String" value="http://localhost :8080/knowage"/>               
+        <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>               
                                                                                                                 
         <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>            
 
@@ -151,11 +147,34 @@ In both case cases, constants have the following meaning:
 
 Applications deploy
 -------------------
-Simply copy all the WAR files inside the TOMCAT_HOME/webapps folder. Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
+To deploy knowage you have to copy all the WAR files inside the TOMCAT_HOME/webapps folder. 
+Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
+
 
 Datasource link within the applications
 ---------------------------------------
-Control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the same links as in :numref:`datasourcelink`. Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
+Control in the TOMCAT_HOME/webapps/knowage*/META-INF/context.xml and set the ResourceLink for each data source created. 
+Inside the released packages there are already two links: one for the jdbc/knowage resource, which the user must keep, and the other for the jdbc/foodmart, which should be renamed with jdbc/dwh, as above.
+Here adn example:
+
+.. code-block:: xml
+
+ <Context docBase="knowage-ee" path="/knowage" reloadable="true">
+        
+	<ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
+        
+	<ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource"/>
+        <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache" type="javax.sql.DataSource"/>
+	
+        <ResourceLink global="resource_path" name="resource_path" type="java.lang.String" />
+        <ResourceLink global="sso_class" name="sso_class" type="java.lang.String" />
+        <ResourceLink name="hmacKey" global="hmacKey" type="java.lang.String"/>
+        <ResourceLink global="host_url" name="host_url" type="java.lang.String" />
+        <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
+        <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
+</Context>
+
+
 
 Configuration of the metadata db dialect
 ----------------------------------------
