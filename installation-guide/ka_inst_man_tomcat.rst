@@ -6,15 +6,11 @@ Tomcat AS Manual Installation
 Metadata database
 -------------------
 
-The metadata database must contains a schema which will collect all Knowage metadata. For configuring such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following scripts in :numref:`scriptsformetadat`:
+The metadata database must contains a schema which will collect all Knowage metadata. For configuring such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following scripts:
 
-.. _scriptsformetadat:
 .. code-block:: bash
-        :linenos:
-        :caption: Scripts for metadata schema.
- 
-        XXX_create.sql                                            
-        XXX_create_quartz_schema.sql
+ XXX_create.sql                                            
+ XXX_create_quartz_schema.sql
 
 where XXX represents the DBMS type, for instance ORA stands for Oracle. Inside the packages there are the corresponding files for deleting tables.
 
