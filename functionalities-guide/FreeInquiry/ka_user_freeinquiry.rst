@@ -341,16 +341,16 @@ In addition note that the **Items** panel provides all the applicable functions 
 -  date functions,
 -  spatial functions.
 
+.. warning::
+     **Take into account the Oracle function definition**
+         
+         It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
+
 The latter are available only in the presence of a geographical Business Model and *must* be properly applied to spatial attributes or measures. Figure below shows the list of the available spatial functions while :numref:`linkoraclesptfnct` helps you to use them properly, supplying the corresponding Oracle function name and a link to grab more specific information about usage, number of arguments, type and output.
 
 .. figure:: media/image220.png
 
     Spatial function list.
-    
-.. warning::
-     **Take into account the Oracle function definition**
-         
-         It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
     
 .. _linkoraclesptfnct:
 .. table:: Link to Oracle spatial functions.
@@ -467,7 +467,8 @@ As well as calculated fields it is possible to filter on spatial fields using sp
 .. figure:: media/image223.png
 
     Spatial filters.
-    
+
+See the table below:
    
 .. _linkoraclefltrfnct:
 .. table:: Link to Oracle filter functions.
@@ -1050,7 +1051,6 @@ If **link** is selected, you can associate a field with an HTML page. The defaul
         :linenos:
 
           return api.getLink("${URL}", "${TEXT}"); 
-
 
 where **TEXT** is the clickable field in the QbE query results table and **URL** is the URL of the HTML page you want to open.
 
