@@ -49,7 +49,7 @@ Documents
 
 This feature let you create and download a .zip of whole or a part of the documents existing in your Knowage installation. In this way you can upload it in another istallation or keep it as backup.
 
-When you import, all the “objects” associated to those documents (such as datasets, lovs, drivers, roles and folders) are created. Instead users, menu configurations, hot link and remember me are not exported with this tool.
+When you import, all the “objects” associated to those documents (such as datasets, lovs, drivers, roles and folders) are created. Instead users, menu configurations, KPI, catalog, glossary and alert are not exported with this tool.
 
 Let’s have a look on the steps to create the .zip.
 
@@ -59,12 +59,27 @@ Below we show the export editor.
 
     Document Export
    
-First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the MyFirstExport.zip.
+First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the MyFirstExport.zip).
 
 Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its childer folders/leaves.
 
-When you have chose a name and select some documents the export icon change colour from gray to pink. This means all elements are set to start exporting. Before going on decide if you want to export **Subviews** and **Snapshot** as well one or both of them. Now you are ready to click on the export icon to generate and download the .zip.
+When you have chose a name and select some documents the export icon change colour from gray to pink. This means all elements are set to start exporting. Before going on decide if you want to export **Olap customized View** and/or **Scheduled documents** and/or **CrossNavigation** and/or **BIRT Translation** and/or **Schedule configurations** . 
 
+- **Olap customized View**
+Clicking on this functionalities the export will include all the customized views saved into the chosen OLAP documents. You can find the Customized View going on the OLAP Document Menu and clicking on *Show OLAP custom View*. See the figure below:
+
+- **Scheduled documents**
+Clicking on this functionalities the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
+
+- **CrossNavigation**
+Clicking on this functionalities the export will include all the cross navigation associated to the chosen documents and the documents related to navigation.
+
+- **BIRT Translation**
+
+- **Schedule configurations**
+Clicking on this functionalities the export will include all the schedulation associated to the chosen documents. At the end of the import you must have the schedulation saved into Scheduler section under the Tools area.
+
+Now you are ready to click on the export icon to generate and download the .zip.
 Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** > **Import\\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure below we show the document import interface.
 
 .. figure:: media/image68.png
