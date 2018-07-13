@@ -67,15 +67,11 @@ When you have chose a name and select some documents the export icon change colo
 
 - **Olap customized View**
 Clicking on this functionalities the export will include all the customized views saved into the chosen OLAP documents. You can find the Customized View going on the OLAP Document Menu and clicking on *Show OLAP custom View*. See the figure below:
-
 - **Scheduled documents**
 Clicking on this functionalities the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
-
 - **CrossNavigation**
 Clicking on this functionalities the export will include all the cross navigation associated to the chosen documents and the documents related to navigation.
-
 - **BIRT Translation**
-
 - **Schedule configurations**
 Clicking on this functionalities the export will include all the schedulation associated to the chosen documents. At the end of the import you must have the schedulation saved into Scheduler section under the Tools area.
 
