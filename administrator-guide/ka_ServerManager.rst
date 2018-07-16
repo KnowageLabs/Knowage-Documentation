@@ -67,8 +67,18 @@ When you have chose a name and select some documents the export icon change colo
 
 - **Olap customized View**
    Clicking on this functionalities the export will include all the customized views saved into the chosen OLAP documents. You can find the Customized View going on the OLAP Document Menu and clicking on *Show OLAP custom View*. See the figure below:
+   
+.. figure::
+
+    Olap customized view
+   
 - **Scheduled documents**
    Clicking on this functionalities the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
+   
+.. figure::
+
+    Scheduled documents
+   
 - **CrossNavigation**
    Clicking on this functionalities the export will include all the cross navigation associated to the chosen documents and the documents related to navigation.
 - **BIRT Translation**
@@ -158,9 +168,7 @@ The window in :numref:`kpiimportwind` opens. The page contains the **Export** an
 Let’s start from the export feature. The user must check the KPIs for the export using the tab interface. He/she can add some more functionalities to the export action, namely:
 
 -  to include targets,
-
 -  to include those scorecards related to the selected KPIs,
-
 -  to include schedulations.
 
 Finally click on the red download button (see Figure below) to get azipped folder that will be used to conclude the export.
@@ -179,12 +187,9 @@ The user must therefore browse the personal folder to catch the zipped folder an
 
 Referring to :numref:`importkpiset`, the user has to specify if:
 
--  to overwrite the existing KPIs and their related formulas,
-
+-  to overwrite the existing KPIs and their related formulas
 -  to import targets,
-
 -  to import scorecards,
-
 -  to import schedulations.
 
 .. _importkpiset:
