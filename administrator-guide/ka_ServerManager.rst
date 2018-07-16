@@ -82,6 +82,7 @@ When you have chose a name and select some documents the export icon change colo
 - **CrossNavigation**
    Clicking on this functionalities the export will include all the cross navigation associated to the chosen documents and the documents related to navigation.
 - **BIRT Translation**
+   Clicking on this functionalities the export will include all the translation added into 'Localization' functionalities of the BIRT templates. 
 - **Schedule configurations**
    Clicking on this functionalities the export will include all the schedulation associated to the chosen documents. At the end of the import you must have the schedulation saved into Scheduler section under the Tools area.
 
