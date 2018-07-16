@@ -68,14 +68,14 @@ When you have chose a name and select some documents the export icon change colo
 - **Olap customized View**
    Clicking on this functionalities the export will include all the customized views saved into the chosen OLAP documents. You can find the Customized View going on the OLAP Document Menu and clicking on *Show OLAP custom View*. See the figure below:
    
-.. figure::
+.. figure:: media/Olap Customized View.png
 
     Olap customized view
    
 - **Scheduled documents**
    Clicking on this functionalities the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
    
-.. figure::
+.. figure:: media/Scheduled documents.png
 
     Scheduled documents
    
@@ -268,13 +268,9 @@ Catalog
 This functionality allows to Export/Import the following elements
 
 -  Data sets,
-
 -  Business models,
-
 -  Mondrian catalogs,
-
 -  Layers,
-
 -  SVG files.
 
 The steps to perform the Export/Import are equal to those seen in the previous sections. Namely, the user has to enter the **Import/Export catalog** menu item from Server Manager menu panel. The window will contain the Import and Export tabs. The export tab is used to produce the zip folder to be imported in the tenant of interest. Note that the user can apply a temporal filter to help him/her to look up elements in
