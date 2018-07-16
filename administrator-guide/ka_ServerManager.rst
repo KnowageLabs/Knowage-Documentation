@@ -75,7 +75,7 @@ When you have chose a name and select some documents the export icon change colo
 - **Scheduled documents**
    Clicking on this functionalities the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
    
-.. figure:: media/SD.PNG
+.. figure:: media/SDOC.PNG
 
     Scheduled documents
    
