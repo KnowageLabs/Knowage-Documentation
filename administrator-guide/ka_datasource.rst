@@ -25,7 +25,8 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 
 The detail page of each data source (on the right side as shown in the figure above) includes the following properties:
 
-.. figure:: media/image25.png  ..figure:: media/image26.png
+.. figure:: media/image25.png  
+.. figure:: media/image26.png
         
     Left: Add a new data source. Right: Data source details.
 
@@ -128,7 +129,7 @@ Here <host1>:<port1>,<host2>:<port2> is a server instance or a comma separated l
 A simple example of connetction url is: *jdbc:\hive2://192.168.0.125:10000*.
 
 Spark SQL
-~~~~~~
+~~~~~~~~~~
 
 Spark SQL reuses the Hive front end and metastore, giving you full compatibility with existing Hive data, queries and UDFs. Simply install it alongside Hive. For the installation of Spark we suggest you to look at the spark website `http://spark.apache.org/. <http://spark.apache.org/>`__ To create a connection to the Spark SQL Apache Thrift server you should use the same JDBC driver of Hive. 
 
@@ -150,7 +151,7 @@ Example parameters for Impala connection are:
 -  **Connection URL:** jdbc:impala://dn03:21050/default.
 
 MongoDB
-~~~~~~
+~~~~~~~~
 
 MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling. MongoDB obviates the need for an Object Relational Mapping (ORM) to facilitate development.
 
@@ -165,7 +166,7 @@ Example parameters for the connection are:
 The definition of a business model over MongoBD data using Knowage Meta will be available in the next releases.
 
 Cassandra
-~~~~~~
+~~~~~~~~~~
 
 Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple  datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
 
