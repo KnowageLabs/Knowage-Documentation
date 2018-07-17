@@ -608,7 +608,7 @@ To set a pivot transformation, select **Pivot Transformer** in the drop down men
 
 An example of usage is available in figure below, showing the result set of the dataset.
 
-.. figure:: media/image36.png
+.. figure:: media/image36a.png
 
     Pivot transformation.
    
@@ -627,7 +627,7 @@ Preview
 
 Before actually using the dataset in a document, it is a good practice to test it. Clicking the **Preview** button within the **Preview** tab, you can see a preview of the result set, see the following figure. This allows the developer to check any anomaly or possible error in the dataset definition, before using it.
 
-.. figure:: media/image37.png
+.. figure:: media/image37a.png
 
     Dataset preview (left) and parameters prompt window (right).
 
