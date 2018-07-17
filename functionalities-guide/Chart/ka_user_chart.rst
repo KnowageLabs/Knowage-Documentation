@@ -362,7 +362,7 @@ The next step is to move to **Configuration** tab and select the **Color palette
 The engine will create a progressive color scale as shown in the left image of figure below. To custom the scale the user can use the Preset colors and use the arrow to move up and down Heatmap chart the added color or the user can increase the number of steps and then
 some intermediate color to leave more contrast between them.
 
-.. figure:: media/image12324.png
+.. figure:: media/image12324.PNG
 
     Custom color scale.
 
@@ -428,7 +428,7 @@ An example of dataset for the chord chart is represented in Table below:
 
 Once you have selected the dataset open the designer and select chord chart type. Then choose the two entities in the X-axis panel and the value in the Y-axis panel as showed in figure below. Now you are ready to customize the chart setting the generic configuration and the palette on **Configuration**.
 
-.. figure:: media/image125.png
+.. figure:: media/image12526.png
 
     Chord configuration.
 
