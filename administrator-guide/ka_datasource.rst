@@ -25,12 +25,6 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 
 The detail page of each data source (on the right side as shown in the figure above) includes the following properties:
 
-<p float="left">
-  <img src="media/image25.png" width="100" />
-  <img src="media/image26.png" width="100" /> 
-</p>
-
-..float:: 
 .. |image1| figure:: media/image25.png
       :scale: 60%
       
