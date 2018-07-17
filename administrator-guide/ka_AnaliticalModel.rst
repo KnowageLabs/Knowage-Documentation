@@ -71,7 +71,7 @@ The **document** content type runs directly a document. For this type you have t
 lookup button and define the list of parameters in the standard url (i.e.: par1=val1&par2=val2&...). You can also choose to hide the toolbar or the slider panel.
 
 .. _emptydocument:
-.. figure:: media/image3637.png
+.. figure:: media/image3637.PNG
 
    **Empty** (left) and **document** (right) content type.
 
