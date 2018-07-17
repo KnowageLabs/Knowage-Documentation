@@ -78,7 +78,7 @@ As stated before, in order to see and/or edit metadata the user roles need some 
 When you are satisfied with what you wrote just click on the **SAVE** button. We provide an example in :numref:`feneralshorteditinglong`.
 
 .. _feneralshorteditinglong:
-.. figure:: media/image34.png
+.. figure:: media/image3435.png
 
    Left: General and short metadata, Right: editing long metadata
 
