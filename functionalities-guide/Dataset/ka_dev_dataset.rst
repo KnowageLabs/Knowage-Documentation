@@ -108,7 +108,7 @@ In the **Advanced** tab, shown in figure below, you can apply the pivoting trans
 
 Once all those settings have been performed you can see a preview of the dataset results clicking on the **Preview** button available on the top right corner of the page. It is recommended to check preview to detect possible errors in the dataset code before associating it to a document.
 
-Note that the metadata can be manage by clicking on the icon |image21| and use the same criterion described in Dataset paragraph. Otherwise use the icon to save without associating any metadata.
+Note that the metadata can be manage by clicking on the icon |image21| and use the same criterion described in Dataset paragraph. Otherwise use the icon |image211| to save without associating any metadata.
 
 Let us describe more deeply each type of dataset.
 
