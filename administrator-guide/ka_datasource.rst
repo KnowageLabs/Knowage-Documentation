@@ -30,12 +30,15 @@ The detail page of each data source (on the right side as shown in the figure ab
   <img src="media/image26.png" width="100" /> 
 </p>
 
-
+..float:: 
 .. |image1| figure:: media/image25.png
       :scale: 60%
       
 .. |image2| figure:: media/image26.png
       :scale: 60%
+      :align: right
+    
+    Left: Add a new data source. Right: Data source details.
       
 .. table:: Left: Add a new data source. Right: Data source details.
    :align: center
