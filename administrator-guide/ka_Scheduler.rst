@@ -292,7 +292,7 @@ To conclude our overview on the scheduler features, save your settings and go ba
 
 Here you can select one of the available scheduled activities to explore details. We show an example in Figure 8.10. A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind of scheduling has been chosen (Single Execution, Customized Execution or Event Exectution), the start date and so on. Note that at the end of the row you have the possibilities to explore more details by clicking on the “three dots” icon.
    
-.. figure:: media/image55.png
+.. figure:: media/image55a.png
 
     Exploring the detailed of a scheduled activity.
 
