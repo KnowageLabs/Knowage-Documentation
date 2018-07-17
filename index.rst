@@ -28,16 +28,32 @@ Knowage source code repository is available on GitHub: visit the `repository`_.
 .. both maxdepth here and latex secnumdepth must be set to have effect in PDF output. caption has no effect in PDF output
 
 .. toctree::
-   :glob:
    :numbered:
    :caption: Table of Contents
    :maxdepth: 10
    
    common/ka_BooksStructure.rst
-   installation-guide/index.rst
-   administrator-guide/index.rst
-   user-guide/index.rst
-   functionalities-guide/index.rst
+   installation-guide/ka_inst_intro.rst
+   installation-guide/ka_inst_prereq_tomcat.rst
+   installation-guide/ka_inst_relFiles.rst
+   installation-guide/ka_installer_CE.rst
+   installation-guide/ka_inst_man_tomcat.rst
+   installation-guide/ka_inst_R.rst
+   installation-guide/ka_inst_Python.rst
+   installation-guide/ka_inst_CAS.rst
+   installation-guide/ka_inst_advanced.rst
+   administrator-guide/ka_Introduction.rst
+   administrator-guide/ka_gam_userInterface.rst
+   administrator-guide/ka_datasource.rst
+   administrator-guide/ka_BehaviouralModel.rst
+   administrator-guide/ka_AnaliticalModel.rst
+   administrator-guide/ka_Etl.rst
+   administrator-guide/ka_Scheduler.rst
+   administrator-guide/ka_ServerManager.rst
+   administrator-guide/ka_ServerSettings.rst
+   user-guide/ka_user_intro.rst
+   user-guide/ka_user_userinterface.rst
+   user-guide/ka_user_mydoc.rst
 
 .. Indices and tables
 .. ==================
