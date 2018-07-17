@@ -88,7 +88,7 @@ The “Structure” tab of the designer is the core of the Chart development. He
 
 In this section it’s possible to customize the labels of the axis, titleand grid style clicking on different buttons. With the arrow button, on the top of the Y-axis and X-axis, it’s possible to choose the axis configuration detail, the axis title configuration, the major and minor grid configuration (just for Y-axis) and ordering column (just for X-axis). With the pencil button opens a window on the right with the series configuration details where it’s possible to choose the aggregation way, the order type of the series, if the data will be shown e so on. Finally, with the strip cartoon button you can choose the features of the tooltip (font color, text alignment, ecc). If the chart in place does not allow the customization of the axes the specific button will be disabled or not visible. The Figure below will show in detail the three buttons above explained:
 
-.. figure:: media/image95.png
+.. figure:: media/image9597.png
 
     From left to right: (a) Generic configuration axis (the specific arrow). (b) Generic configuration axis.
 
@@ -216,15 +216,13 @@ Then click on **Configuration**. As you can see the features are not exactly the
 
 Using the **Generic** button you can set the opacity on mouse movement and choose how to display the measure values: absolute, percentage or both. These two features allow the visualization of data just moving the mouse over the slice: the slice is highlighted and values are shown in the center of the ring while the root-node path for the node selected is displayed on the left bottom corner of the page. To custom the root-node path, click on the **Sequence** icon and choose position, label tail size and text style. The tooltip is a mandatory field since it shows the value of the selected slice. Therefore be sure to have filled it before saving by using the **Explanation detail** panel. Figure below sums up the three features.
 
-.. figure:: media/image107.png
-
-.. figure:: media/image109.png
+.. figure:: media/image1070809.png
 
     Generic, Sequence and Explanation configuration
 
 In Figure below you find the sunburst obtained with data of :numref:`exampleofdatsetsunburst`.
 
-.. figure:: media/image110.png
+.. figure:: media/image1101112.png
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
 
@@ -255,7 +253,7 @@ Finally you can set generic configurations and colors palette in the **Configura
 
 In Figure below we show the Treemap resulting with data of our example
 
-.. figure:: media/image114.png
+.. figure:: media/image11415.png
 
     From left to right: (a) Treemap. (b) Treemap sub-branches.
 
@@ -325,7 +323,7 @@ To create a parallel chart select a dataset with at least one attribute and two 
 In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, we are able to find out which class we are looking at. In Figure :numref:`fromleftparallrighetchart` (a) you can find the parallel chart made with the suggested dataset. While in Figure :numref:`fromleftparallrighetchart` (b) it is easy to see, thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
 
 .. _fromleftparallrighetchart:
-.. figure:: media/image116.png
+.. figure:: media/image11617.png
 
     From left to right: (a) Parallel. (b) Parallel chart selection.
 
@@ -350,7 +348,7 @@ Before configuring a heatmap chart, be sure that your dataset returns at least t
 
 Note that for series axis it is possible to specify the values’ range by assigning a minimun and the maximum value, as shown in figure below. Otherwise, the engine will automatically link the axis scale to dataset results set.
 
-.. figure:: media/image120.png
+.. figure:: media/image12021.png
 
     Configure min and max values for series.
 
@@ -364,7 +362,7 @@ The next step is to move to **Configuration** tab and select the **Color palette
 The engine will create a progressive color scale as shown in the left image of figure below. To custom the scale the user can use the Preset colors and use the arrow to move up and down Heatmap chart the added color or the user can increase the number of steps and then
 some intermediate color to leave more contrast between them.
 
-.. figure:: media/image123.png
+.. figure:: media/image12324.png
 
     Custom color scale.
 
