@@ -23,22 +23,17 @@ To add a new connection, first add the relative JDBC driver to the folder Knowag
       
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
-The detail page of each data source (on the right side as shown in the figure above) includes the following properties:
+The detail page of each data source (on the right side as shown in the figures above) includes the following properties:
 
-.. |image1| figure:: media/image25.png
-      :scale: 60%
-      
-.. |image2| figure:: media/image26.png
-      :scale: 60%
-    
-    Left: Add a new data source. Right: Data source details.      
-         
 .. figure:: media/image25.png 
     :widths: 49%
+    
+    Add a new data source
+    
 .. figure:: media/image26.png
     :widths: 49%
     
-    Left: Add a new data source. Right: Data source details.
+    Data source details.
 
 Label: 
   Mandatory identifier of the data source.
