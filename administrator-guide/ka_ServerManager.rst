@@ -20,7 +20,7 @@ We start this Section undeling that only those users who have the superadmin rol
     Tenants Management window.
 
 .. _producttypedatas:
-.. figure:: media/image6465.png
+.. figure:: media/image6465.PNG
 
     Product types tab (Left) Datasources tab (Right).
 
