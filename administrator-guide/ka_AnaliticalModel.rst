@@ -4,7 +4,7 @@ Analytical Model
 The *analytical model* let you organize analytical documents in hierarchies and folders. Let’s have a look on its structure.
 
 Repository structure and rights
---------------------------------
+---------------------------------
 
 Knowage adopts a virtual folder structure to organize analytical documents in hierarchies and folders. This structure is called the Functionalities tree and is accessible via **Profile Management** > **Functionalities management**.
 
