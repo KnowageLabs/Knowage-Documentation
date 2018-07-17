@@ -88,7 +88,7 @@ The “Structure” tab of the designer is the core of the Chart development. He
 
 In this section it’s possible to customize the labels of the axis, titleand grid style clicking on different buttons. With the arrow button, on the top of the Y-axis and X-axis, it’s possible to choose the axis configuration detail, the axis title configuration, the major and minor grid configuration (just for Y-axis) and ordering column (just for X-axis). With the pencil button opens a window on the right with the series configuration details where it’s possible to choose the aggregation way, the order type of the series, if the data will be shown e so on. Finally, with the strip cartoon button you can choose the features of the tooltip (font color, text alignment, ecc). If the chart in place does not allow the customization of the axes the specific button will be disabled or not visible. The Figure below will show in detail the three buttons above explained:
 
-.. figure:: media/image9597.png
+.. figure:: media/9597.png
 
     From left to right: (a) Generic configuration axis (the specific arrow). (b) Generic configuration axis.
 
