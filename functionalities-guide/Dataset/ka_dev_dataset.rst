@@ -608,7 +608,7 @@ To set a pivot transformation, select **Pivot Transformer** in the drop down men
 
 An example of usage is available in figure below, showing the result set of the dataset.
 
-.. figure:: media/image36a.png
+.. figure:: media/36a.png
 
     Pivot transformation.
    
