@@ -590,7 +590,7 @@ The temporal dimension can have one or more hierarchies. Only one of these can s
 
     Temporal dimension definition on Meta.
    
-.. figure:: media/image225.png
+.. figure:: media/image22526.png
 
     Temporal hierarchy visualization (Left). Changing hierarchies (Right).
 
