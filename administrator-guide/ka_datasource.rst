@@ -27,6 +27,14 @@ The detail page of each data source (on the right side as shown in the figure ab
 
 .. figure:: media/image25.png  
 .. figure:: media/image26.png
+
+import mergeImg from 'merge-img';
+
+mergeImg(['image25.png', 'image26.png'])
+  .then((img) => {
+    // Save image as file
+    img.write('out.png', () => console.log('done'));
+  });
         
     Left: Add a new data source. Right: Data source details.
 
