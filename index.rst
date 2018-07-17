@@ -33,6 +33,7 @@ Knowage source code repository is available on GitHub: visit the `repository`_.
    :maxdepth: 10
    
    common/ka_BooksStructure.rst
+   installation-guide/index.rst
    installation-guide/ka_inst_intro.rst
    installation-guide/ka_inst_prereq_tomcat.rst
    installation-guide/ka_inst_relFiles.rst
