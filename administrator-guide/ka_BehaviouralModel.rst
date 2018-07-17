@@ -127,7 +127,7 @@ Once the attributes are defined, the model administrator can define roles, using
 
 In the right panel there are three tabs. The **Detail** tab allows the administrator to define role name and role type (mandatory). The role type regulates the visibility of that role based on the categorization described in :numref:`knowageroletype` A code and a description can be added too, as shown below.
 
-.. figure:: media/image30.png
+.. figure:: media/image3031.png
 
    Roles Management.
 
