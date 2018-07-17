@@ -7,7 +7,7 @@ A dataset is a way to read data from different sources and represents the portio
 
 Let us suppose to enter, with end user credentials, the data management area clicking on the **Workspace** icon from BI functionalities menu as shown in figure below and the **Data** section of the window.
 
-.. figure:: media/image5.png
+.. figure:: media/image56.PNG
 
     Access to **My Data** area
 
@@ -50,7 +50,7 @@ The wizard, shown in :numref:`configfeatures`, leads the user to insert some inf
 
 Once you have uploaded the file, you can check and define the metadata (measure or attribute) of each column. To switch a measure to an **attribute** (or viceversa), click on **Value** column of the interested row field as shown below.
 
-.. figure:: media/image10.png
+.. figure:: media/image101112.png
 
     Change metadata.
 
@@ -60,7 +60,7 @@ Just few steps before saving the dataset:
 -  enable or disable the persistance of dataset. Thanks to this functionality the server creates a snapshot of the extracted data in order to avoid to reload the dataset each time that the user revokes it;
 -  finally, name and save the dataset as shown below.
 
-.. figure:: media/image13.png
+.. figure:: media/image1314.png
 
     Saving dataset.
 
