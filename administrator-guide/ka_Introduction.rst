@@ -2,7 +2,7 @@ Knowage at a glance
 =======================
 
 Discovering Knowage
------------------
+----------------------
 
 Knowage is the business intelligence suite developed and managed by Engineering Group. Knowage is *flexible*, since it is based on a modular architecture and open standards in order to facilitates its customization and integration according to users’ needs. It also provides a *comprehensive* set of analytical features and capabilities, listed in section Analytical and operational functionalities, ranging from traditional reporting and charting tools, to more advanced analytics.
 
