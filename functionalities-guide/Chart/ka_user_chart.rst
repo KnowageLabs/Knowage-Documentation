@@ -253,7 +253,7 @@ Finally you can set generic configurations and colors palette in the **Configura
 
 In Figure below we show the Treemap resulting with data of our example
 
-.. figure:: media/image11415.png
+.. figure:: media/image11415.PNG
 
     From left to right: (a) Treemap. (b) Treemap sub-branches.
 
