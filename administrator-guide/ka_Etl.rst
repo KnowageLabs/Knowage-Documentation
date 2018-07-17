@@ -1,5 +1,5 @@
 Operational engines
-=======
+====================
 
 ETL
 ----
@@ -7,7 +7,7 @@ ETL
 KnowageBD and KnowageSI allow the upload of data from source systems according to a common ETL logic, as well as the monitoring of data flows continuously feeding the data warehouse. To this end, Knowage provides an ETL engine: KnowageTalendEngine.
 
 KnowageTalendEngine
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 KnowageTalendEngine integrates the open source tool Talent Open Studio (TOS). Talend Open Studio (TOS) is a graphical designer for defining ETL flows. Each designed flow produces a self-alone Java or Perl package. TOS is based on Eclipse and offers a complete environment including test, debug and support for documentation.
 
@@ -154,29 +154,46 @@ Class definition
 
 .. _classtemplate:
 .. code-block:: java
-         :linenos:
-         :caption: Class template.
+        :linenos:
+        :caption: Class template
          
-            package it.eng.spagobi.job;
-            import java.util.Iterator;
-            import it.eng.spagobi.engines.commonj.process.SpagoBIWork;
-            public class CommandJob extends SpagoBIWork{
-            @Override
-            public boolean isDaemon() {
-            return true;}
+        package it.eng.spagobi.job;
+        
+		import java.util.Iterator;
+		import it.eng.spagobi.engines.commonj.process.SpagoBIWork;
+        
+		public class CommandJob extends SpagoBIWork {
+		    @Override
+		    public boolean isDaemon() {
+		        return true;
+            }
+            
             @Override
             public void release() {
-            System.out.println("Release!!"); super.release();} @Override public void run() { super.run();
-            System.out.println("Job started! "); java.util.Map parameters=getSbiParameters(); for (Iterator iterator =
-            parameters.keySet().iterator(); iterator.hasNext();) {
-            String type = (String) iterator.next();
-            Object o=parameters.get(type);
-            System.out.println("Parameter "+type+ " value
-            "+o.toString());}
-            for(int i=0;i<50 && isRunning();i++){ System.out.println("job is running!"); try {
-            Thread.sleep(2000);
-            } catch (InterruptedException e) { e.printStackTrace();}}
-            System.out.println("Job finished!");}}
+                System.out.println("Release!!");
+                super.release();
+            } 
+            
+            @Override public void run() { 
+                super.run();
+                System.out.println("Job started! "); 
+                java.util.Map parameters = getSbiParameters();
+                for (Iterator iterator = parameters.keySet().iterator(); iterator.hasNext();) {
+                    String type = (String) iterator.next();
+                    Object o = parameters.get(type);
+                    System.out.println("Parameter " + type + " value" + o.toString());
+                }
+                for(int i = 0; i < 50 && isRunning(); i++) {
+                    System.out.println("job is running!"); 
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                System.out.println("Job finished!");
+            }
+        }
 
    Note that we only implement the run() method, embedding the logic of the process in it. Below you can see an example extension of CmqExecWork, called CommandJob:
    
@@ -207,7 +224,7 @@ Therefore, we also define an external class, called ProcessTest, which contains 
          :linenos:
          :caption: ProcessTest
          
-            package it.eng.test;
+         package it.eng.test;
             import java.io.FileNotFoundException;
             import java.io.FileOutputStream;
             import java.io.PrintStream;
