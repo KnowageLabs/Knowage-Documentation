@@ -26,12 +26,10 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 The detail page of each data source (on the right side as shown in the figures above) includes the following properties:
 
 .. figure:: media/image25.png 
-    :widths: 49%
     
     Add a new data source
     
 .. figure:: media/image26.png
-    :widths: 49%
     
     Data source details.
 
