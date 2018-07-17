@@ -25,6 +25,20 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 
 The detail page of each data source (on the right side as shown in the figure above) includes the following properties:
 
+
+.. |image1| figure:: media/image25.png
+      :scale: 60%
+      
+.. |image2| figure:: media/image26.png
+      :scale: 60%
+      
+.. table:: Left: Add a new data source. Right: Data source details.
+   :align: center
+   
+      +----------+----------+
+      | |image1| | |image2| |
+      +----------+----------+         
+         
 .. figure:: media/image25.png  
 .. figure:: media/image26.png
 
