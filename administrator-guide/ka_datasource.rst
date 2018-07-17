@@ -28,14 +28,16 @@ The detail page of each data source (on the right side as shown in the figure ab
 .. figure:: media/image25.png  
 .. figure:: media/image26.png
 
-import mergeImg from 'merge-img';
+```js
+import mergeImages from 'merge-images';
 
-mergeImg(['image25.png', 'image26.png'])
-  .then((img) => {
-    // Save image as file
-    img.write('out.png', () => console.log('done'));
-  });
-        
+mergeImages([
+  { src: 'image25.png', x: 0, y: 0 },
+  { src: 'image26.png', x: 100, y: 0 },
+])
+  .then(b64 => ...);
+// data:image/png;base64,iVBORw0KGgoAA...
+```       
     Left: Add a new data source. Right: Data source details.
 
 Label: 
