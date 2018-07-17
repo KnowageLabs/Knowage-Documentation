@@ -1048,7 +1048,7 @@ HTML Pages
 If **link** is selected, you can associate a field with an HTML page. The default code to be inserted in the calculated field is
 
 .. code:: javascript
-        :linenos:
+       :linenos:
 
           return api.getLink("${URL}", "${TEXT}"); 
 
@@ -1063,8 +1063,8 @@ You can add this default code by opening the **Exp. Items** > **Groovy functions
 An example is provided by Add hyperlink.
 
 .. code:: javascript
-      :linenos:
-      :caption: Add hyperlink
+       :linenos:
+       :caption: Add hyperlink
    
          baseUrl = "https://maps.google.it/maps?q="; baseUrl = baseUrl +       
          dmFields['it.eng.spagobi.meta.Sales_fact_1998::                       
@@ -1085,7 +1085,7 @@ Images
 If you want to add an image, the code to be used to reference an image on the server:
 
 .. code:: javascript
-      :linenos:
+       :linenos:
    
          return api.getImageLink("${IMAGE_URL}"); 
 
@@ -1098,15 +1098,15 @@ As before, by cliking on **image** from the **Exp. Items** tree, this code is au
 Replace the **IMAGE\_\ URL**\ with the path of your image. Code below produces a graphical result like the one shown in the **Bullet Chart** column of figure below.
 
 .. code:: javascript
-      :linenos:
-      :caption: Add images.
+       :linenos:
+       :caption: Add images.
    
-      baseUrl = "http://localhost:8080/SpagoBIQbeEngine/img/inline/";       
-      if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']<2){     
-            return 'api.getImageLink("'+ baseUrl + 'bullet-red.png")';            
-      } else if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']>3){     
-            return 'api.getImageLink("'+ baseUrl + 'bullet-green.png")';                                                 
-      } else { return 'api.getImageLink("'+ baseUrl + 'bullet-yellow.png")'; }          
+        baseUrl = "http://localhost:8080/SpagoBIQbeEngine/img/inline/";       
+        if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']<2){     
+              return 'api.getImageLink("'+ baseUrl + 'bullet-red.png")';            
+        } else if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']>3){     
+              return 'api.getImageLink("'+ baseUrl + 'bullet-green.png")';                                                 
+        } else { return 'api.getImageLink("'+ baseUrl + 'bullet-yellow.png")'; }          
 
 .. figure:: media/image297.png
 
@@ -1121,13 +1121,13 @@ Generally speaking, when we talk about Cross Navigation we mostly refer to this 
 Code below provides an example for Knowage 4.2 and later versions.
 
 .. code:: javascript
-   :linenos:
-   :caption: Cross navigation configuration.
+       :linenos:
+       :caption: Cross navigation configuration.
    
-      return api.getCrossNavigationLink("${TEXT}",                                               
-      "${TARGET_DOCUMENT_LABEL}",                                                                
-      "${PARAMETERS}",                                                                           
-      "${SUBOBJECT");                              
+        return api.getCrossNavigationLink("${TEXT}",                                               
+        "${TARGET_DOCUMENT_LABEL}",                                                                
+        "${PARAMETERS}",                                                                           
+        "${SUBOBJECT");                              
 
 In particular:
 
