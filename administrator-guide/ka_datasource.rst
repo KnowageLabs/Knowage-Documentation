@@ -42,9 +42,9 @@ The detail page of each data source (on the right side as shown in the figure ab
       +----------+----------+         
          
 .. figure:: media/image25.png 
-    :width: 49%
+    :widths: 49%
 .. figure:: media/image26.png
-    :width: 49%
+    :widths: 49%
     
     Left: Add a new data source. Right: Data source details.
 
