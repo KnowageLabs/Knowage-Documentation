@@ -27,7 +27,11 @@ The detail page of each data source (on the right side as shown in the figures a
 
 .. figure:: media/image25.png 
     
-    Add a new data source
+     Add a new data source
+    
+.. figure:: media/image26.png
+    
+     Data source details.
 
 Label: 
   Mandatory identifier of the data source.
