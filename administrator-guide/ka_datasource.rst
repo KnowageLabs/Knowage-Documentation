@@ -4,7 +4,8 @@ Configure data sources
 To let all the BI tools work properly you need to configure DB connection. There are two different options available for the configuration:
 
 - **JNDI** (recommended)
-- **JDBC**.
+- **JDBC**
+
 Let’s have a look on these two types.
 
 Connect to your data
