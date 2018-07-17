@@ -609,7 +609,7 @@ The user can use the elements of each dimension as attributes in the “Select�
 Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in :numref:`iaddtempfiltersleftright`) (Left). The action opens the pop up displayed in :numref:`iaddtempfiltersleftright`) (Right).
 
 .. _iaddtempfiltersleftright:
-.. figure:: media/image229.png
+.. figure:: media/image22930.png
 
     Add temporal filters (Left). List of available elements (Right).
 
