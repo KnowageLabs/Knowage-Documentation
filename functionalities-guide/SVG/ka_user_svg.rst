@@ -40,7 +40,7 @@ First of all, a technical user needs to configure the logical hierarchy of the S
 SVG Catalogue
 ^^^^^^^^^^^^^^
 
-The first activity that you need to do as administrator is to find or create an SVG file. Any file saved in SVG format is a text file in XML format. As a consequence, they can easily be queried, indexed, enriched with scripts and, if necessary, zipped. The SVG final output could represent everything: geographical areas (like USA in the previous example in :numref:`svgexampleusalevel`), concepts (like the item production steps) and so on.
+The first activity that you need to do as administrator is to find or create an SVG file. Any file saved in SVG format is a text file in XML format. As a consequence, they can easily be queried, indexed, enriched with scripts and, if necessary, zipped. The SVG final output could represent everything: geographical areas (like USA in the previous example), concepts (like the item production steps) and so on.
 
 SVG Format
 ^^^^^^^^^^^^^^
@@ -64,9 +64,9 @@ These three information are used from the system to recover the correct SVG into
 
     Entering the hierarchy details.
 
-As you can see in :numref:`enteringhierarchydet`, you must insert a name and an optional description of the new SVG component, then you need to specify a logical hierarchy’s label, its number of the level and a logical name for the member that it represents. At last you need to upload the SVG file. When this configuration will be saved, the system will read the SVG content and for each group (or tag <g>) will be created a layer. All layers will be shown into the “Feature Detail” section (read only section).
+As you can see in the figure above, you must insert a name and an optional description of the new SVG component, then you need to specify a logical hierarchy’s label, its number of the level and a logical name for the member that it represents. At last you need to upload the SVG file. When this configuration will be saved, the system will read the SVG content and for each group (or tag <g>) will be created a layer. All layers will be shown into the “Feature Detail” section (read only section).
 
-In this first example in :numref:`enteringhierarchydet` we defined an SVG component for the USA regions specifying that it’s the first level (in other words it’s the first SVG of the “USA” hierarchy).
+In this first example in the figure above we defined an SVG component for the USA regions specifying that it’s the first level (in other words it’s the first SVG of the “USA” hierarchy).
 
 The second level (the more detailed SVG) is about the USA states and it’s defined like the next example below:
 
@@ -92,7 +92,7 @@ The template allows the SVG viewer to properly join business data (Knowage datas
 
 At the moment there is not yet a designer to create a template for this engine, anyway, it’s an XML file very simple to define.
 
-An example is in :numref:`enteringhierarchydet`.
+An example below.
 
 .. _enteringhierarchydet:
 .. code-block:: xml
@@ -112,7 +112,7 @@ An example is in :numref:`enteringhierarchydet`.
 
 Basically, it’s necessary to specify the hierarchy that we want to use, as well as its members (remember that with member we are considering a specific SVG).
 
-We recap in :numref:`recaptagproperties` the meaning of the main tag.
+We recap the meaning of the main tag in the next table *Recap of properties and function*.
 
 After, we need to define each member and first of all we can note that is composed by three sections: METADATA, LAYERS and MEASURE, as in Code below:
    
@@ -142,7 +142,7 @@ Let us see each of them in more depth.
            <COLUMN TYPE="drillid" column_id="member_name" /> 
            <COLUMN TYPE="info" column_id="info_text" />                          
 
-Once again we give some details on metadata in next :numref:`recaptagproperties5`.
+Once again we give some details on metadata in next table.
 
 -  **LAYERS.** In this section we define all layers that we want to enable in the document. Each layer will be shown into the detail        panel “Layers section” as you can see in figure below and could be actived or disactived directly by an action of the the final user.    At least one layer must be defined.
 
@@ -319,7 +319,7 @@ Once again we give some details on metadata in next :numref:`recaptagproperties5
         |                       |                       | panel.                |
         +-----------------------+-----------------------+-----------------------+
 
--  **MEASURES** Measures are all the business values (KPI) that the user want to monitor throught this document type. Each measure defined in this section will be shown into the detail panel (“Measures” section) with a specific thematization and could be enabled or disabled directly by an action of the the final user. When the measure is active all its values are shown onto the SVG and each area has a specific tonality of the color in according to the threshold definition and its real value. All thresholds range are visualized    into the “Legend” section of the detail panel as highlight in :numref:`measurepanellegend`. Is possibile to choose the thematization logic that it could be as quantile, percentage, uniform or static. Next, we’ll see both definitions (see Thresholds details).Remember, that at least one    measure must be defined.
+-  **MEASURES** Measures are all the business values (KPI) that the user want to monitor throught this document type. Each measure defined in this section will be shown into the detail panel (“Measures” section) with a specific thematization and could be enabled or disabled directly by an action of the the final user. When the measure is active all its values are shown onto the SVG and each area has a specific tonality of the color in according to the threshold definition and its real value. All thresholds range are visualized    into the “Legend” section of the detail panel as highlight in the following figure. Is possibile to choose the thematization logic that it could be as quantile, percentage, uniform or static. Next, we’ll see both definitions (see Thresholds details).Remember, that at least one    measure must be defined.
 
 .. _measurepanellegend:
 .. figure:: media/image35051.png
@@ -343,9 +343,9 @@ Once again we give some details on metadata in next :numref:`recaptagproperties5
            <KPI column_id="UNIT_SALES" description="Unit Sales" >   
          <MEASURE>                                                                          
 
-We report :numref:`recaplayerproperties6` for further details on THRESHOLDS and COLOURS tag. This table includes the heuristics supporting value interval partition into a finite number of subintervals (type attribute of the THRESHOLDS tag).
+We report the next table for further details on THRESHOLDS and COLOURS tag. This table includes the heuristics supporting value interval partition into a finite number of subintervals (type attribute of the THRESHOLDS tag).
 
-While the following :numref:`recaplayerproperties7` defines the heuristics supporting color definition for each value sub-interval (type attribute of the COLOURS tag).
+While the following table defines the heuristics supporting color definition for each value sub-interval (type attribute of the COLOURS tag).
 
 Sometimes users need to color the map and, at the same time, to continue to see the underlying objects, through a transparency effect (e.g. a raster image). In this case, specify the opacity parameter in order to properly regulate the transparency level of colors (1 = no transparency; 0 = invisible).
 
@@ -497,14 +497,6 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 	|			|			|  THRESHOLD tag.	|	
         |                       |                       |                       |
         +-----------------------+-----------------------+-----------------------+
-
-.. _recaplayerproperties6:
-.. table:: Recap of layer tag properties and function.
-    	:widths: auto
-    
-	+-----------------------+-----------------------+-----------------------+
-	|    Tag                | Property              | Note                  |
-	+=======================+=======================+=======================+
 	|    type               | static                | It partitions the     |
 	|                       |                       | interval into smaller |
 	|                       |                       | fixed-size            |
@@ -590,14 +582,6 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 	|                       |                       |                       |
 	|                       |                       | </TRESHOLDS>          |
 	+-----------------------+-----------------------+-----------------------+
-
-.. _recaplayerproperties7:
-.. table:: Recap of layer tag properties and function.
-    	:widths: auto
-
-	+-----------------------+-----------------------+-----------------------+
-	|    Tag                | Property              | Note                  |
-	+=======================+=======================+=======================+
 	|    type               | static                | Static: it assigns    |
 	|                       |                       | each sub-interval a   |
 	|                       |                       | specific color that   |
@@ -644,7 +628,7 @@ Now, after the template definiton, you can create it into Knowage. Remember that
 Advanced functionalities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Other the default drill navigation that you have if for the document are defined more than one member, is it possible to cross versus other Knowage documents. To enable this feature, is necessary to set the enableExternalCross property for the MEMBER tag. Here an example in :numref:`codeforenablingcross`:
+Other the default drill navigation that you have if for the document are defined more than one member, is it possible to cross versus other Knowage documents. To enable this feature, is necessary to set the enableExternalCross property for the MEMBER tag. Here an example:
 
 .. _codeforenablingcross:
 .. code-block:: xml
