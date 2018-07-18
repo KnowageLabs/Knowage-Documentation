@@ -39,7 +39,8 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
         <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
         <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
    </Context>
- 
+   
+
 .. important::
          **Context update**
          
