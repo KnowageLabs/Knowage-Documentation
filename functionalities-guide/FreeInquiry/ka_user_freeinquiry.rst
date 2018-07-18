@@ -68,7 +68,7 @@ In the top right corner of the panel you can find a small toolbar to configure t
 
 There are two types of entities: *facts*, represented by a cube symbol.(i.e., the Sales fact 1998 entity) or *dimensions*, represented by a three-arrows symbol (i.e., the Product entity).
 
-Each single entity is composed of a title, some attributes or measures and relationships with other entities. In particular, by exploding the content of an entity (i.e. Sales fact 1998 as in :numref:`datamartchematoolb`), you may encounter the following elements:
+Each single entity is composed of a title, some attributes or measures and relationships with other entities. In particular, by exploding the content of an entity (i.e. Sales fact 1998 as in figure above), you may encounter the following elements:
 
 - **measure**: it refers to fields associated with numeric data (e.g. number of sold items);
 - **attribute**: it refers to fields that can be associated to a category (e.g. product category);
@@ -327,7 +327,7 @@ We suppose that we have a BM with geographical dimensions enabled (by a technica
 
     QbE spatial dimensions.
 
-After a first selection of fields, it is possible to add calculated fields. Click on the **Add calculated** option available on the query editor area as shown by the blue arrow in Figure 9.11. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields.The circles of :numref:`calculfldwizardspt` underline that the fields on which you can operate are the one previously selected via drag and drop (or by a simple click on the field).
+After a first selection of fields, it is possible to add calculated fields. Click on the **Add calculated** option available on the query editor area as shown by the blue arrow in Figure 9.11. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields.The circles of the next figure underline that the fields on which you can operate are the one previously selected via drag and drop (or by a simple click on the field).
 
 .. _calculfldwizardspt:
 .. figure:: media/image219.png
@@ -346,7 +346,7 @@ In addition note that the **Items** panel provides all the applicable functions 
          
          It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
 
-The latter are available only in the presence of a geographical Business Model and *must* be properly applied to spatial attributes or measures. Figure below shows the list of the available spatial functions while :numref:`linkoraclesptfnct` helps you to use them properly, supplying the corresponding Oracle function name and a link to grab more specific information about usage, number of arguments, type and output.
+The latter are available only in the presence of a geographical Business Model and *must* be properly applied to spatial attributes or measures. Figure below shows the list of the available spatial functions while next table helps you to use them properly, supplying the corresponding Oracle function name and a link to grab more specific information about usage, number of arguments, type and output.
 
 .. figure:: media/image220.png
 
@@ -462,7 +462,7 @@ Finally you can use spatial function to add a calculated field, as shown below.
    
     Example of added calculated field using a spatial function.
 
-As well as calculated fields it is possible to filter on spatial fields using specific geometric operators. Once again we report in Figure below the available geometric operator (you can find them scrolling the panel to the bottom) and report the link to the Oracle web pages in :numref:`linkoraclefltrfnct`.
+As well as calculated fields it is possible to filter on spatial fields using specific geometric operators. Once again we report in Figure below the available geometric operator (you can find them scrolling the panel to the bottom) and report the link to the Oracle web pages in the next table.
 
 .. figure:: media/image223.png
 
@@ -581,7 +581,7 @@ We highlight that the new features are available only if the model has at least 
       
     **Define first the temporal dimension on Knowage Meta**
       
-      To have a temporal dimension that can be used in the Qbe interface an expert user must enable it first on the model using Knowage Meta. Use the **property view** to set/change the type of the dimension as shown in :numref:`tempdimensmeta`. Refer to *Meta Web* chapter to learn how to use Knowage Meta.
+      To have a temporal dimension that can be used in the Qbe interface an expert user must enable it first on the model using Knowage Meta. Use the **property view** to set/change the type of the dimension as shown in the following figure. Refer to *Meta Web* chapter to learn how to use Knowage Meta.
 
 The temporal dimension can have one or more hierarchies. Only one of these can stay active and that is the one used by the query code. Figure below shows that a temporal dimension can have one or more hierarchies. In the case of more hierarchies the user can see which is the one set by default just exploring the dimension: the bold highlighted hierarchy is the primary. On the other hand the user can change the default choice by right-clicking on the target dimension hierarchy and selecting “\ *Set as Default Hierarchy*\ ”.
 
@@ -606,7 +606,7 @@ The user can use the elements of each dimension as attributes in the “Select�
 
     Filter on an element means to filter also on its parent nodes.
 
-Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in :numref:`iaddtempfiltersleftright`) (Left). The action opens the pop up displayed in :numref:`iaddtempfiltersleftright`) (Right).
+Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in :numref:`iaddtempfiltersleftright`) (Left). The action opens the pop up displayed in next figure) (Right).
 
 .. _iaddtempfiltersleftright:
 .. figure:: media/image22930.png
@@ -973,14 +973,14 @@ Aliases and relationships
 
 If the data model includes various relationships between two tables, the QbE allows users to manage them using aliases. 
 
-To describe this feature, it is worth using an example. Suppose there is a double relationship between **Promotion** and **Time by Day** entities (see :numref:`doublerelationship`)).
+To describe this feature, it is worth using an example. Suppose there is a double relationship between **Promotion** and **Time by Day** entities (see the figure below)).
 
 .. _doublerelationship:
 .. figure:: media/image288.png
 
     Double relationships.
 
-The two relationships concern the start date and end date of the promotion. As shown in the :numref:`doublerelationship`), this information can be retrieved from the QbE graphical interface. The **Promotion** entity includes two relationships (see points 1 and 2 in the figure), whose tooltip returns information on how the relationship is structured (see point 3).
+The two relationships concern the start date and end date of the promotion. As shown in the figure above, this information can be retrieved from the QbE graphical interface. The **Promotion** entity includes two relationships (see points 1 and 2 in the figure), whose tooltip returns information on how the relationship is structured (see point 3).
 
 If you wish to see the list of promotions with a specific start date and end date, it is necessary to drag and drop the **Name** of the promotion (from the **Promotion** entity) and the **The Date** field (from the **Time by Day** entity) two times by changing the alias, as well as the name of the column to be visualized in the results of the query (see points 4 and 5). 
 
