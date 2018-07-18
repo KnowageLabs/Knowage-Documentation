@@ -3,7 +3,6 @@ Advanced Configuration
 
 In this chapter we will describe all the advanced configuration parameters of Knowage.
 
-
 Thread manager
 ------------------
 For Tomcat: the configuration of the pool of thread is available inside the TOMCAT_HOME/conf/server.xml. Refer to Code below.
