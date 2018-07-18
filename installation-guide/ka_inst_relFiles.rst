@@ -1,32 +1,25 @@
-Released file description
+Binary released
 =========================
 
-Here you can download the software:
-  - Knowage CE: http://www.knowage-suite.com/site/ce-download/.
-  - Knowage EE: http://www.knowage-suite.com/portal
-  
-Where we can find all resources for the installation, the single packages and the DDL.
+You can download Knowage through the following links:
 
-Here the essential elements for the installation:
+  - Community Edition: http://www.knowage-suite.com/site/ce-download/
+  - Enterprise Edition: http://www.knowage-suite.com/portal (requires registration)
 
-- Installer,
-- DDL (see :numref:`availabledatadef`),
-- the single software packages.
+A typical release contains three elements:
 
-.. _availabledatadef:
-.. table:: Available Data Definition Languages
-    :widths: auto
-    
-    +------------------------------------+
-    |   **Component for table creation** |
-    +====================================+
-    |   Maria DB                         |
-    +------------------------------------+
-    |   MySql                            |
-    +------------------------------------+
-    |   Oracle                           |
-    +------------------------------------+
-    |   Postgres                         |
-    +------------------------------------+
-    
+- Installer, which gives you a step-by-step Knowage installation 
+- Web Application Archives (WARs) and DDL scripts (to populate the schema used by Knowage for its metadata)
 
+      .. table:: Supported dialect for DDL scripts
+          :widths: auto
+
+          +------------------------------------+
+          |   **Supported databases**          |
+          +====================================+
+          |   MySql / MariaDB                  |
+          +------------------------------------+
+          |   Oracle                           |
+          +------------------------------------+
+          |   Postgres                         |
+          +------------------------------------+
