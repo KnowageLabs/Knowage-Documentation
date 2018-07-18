@@ -145,7 +145,7 @@ The side bar shows the **Menu**. This area let you customize the Olap layout. As
 -  what if.
 
 .. _sidebarmenu:
-.. figure:: media/image145.png
+.. figure:: media/image145a.png
 
     Side bar Menu.
 
@@ -168,7 +168,7 @@ Meanwhile, referring to :numref:`olapfunctions`, the OLAP functions consist of:
 -  (c) send MDX.
 
 .. _olapfunctions:
-.. figure:: media/image147.png
+.. figure:: media/image147a.png
 
     OLAP functions.
 
