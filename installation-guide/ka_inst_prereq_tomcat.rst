@@ -62,9 +62,8 @@ The enviroment in which Knowage will be installed must include a 1.8 JDK install
    
 Application server
 ---------------------
-The following :numref:`supportedapp` displays the compatibility with the supported application servers:
+The following lists the supported application servers:
 
-.. _supportedapp:
 .. table:: Supported application server
     :widths: auto
     
