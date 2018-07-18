@@ -175,26 +175,24 @@ Meanwhile, referring to :numref:`olapfunctions`, the OLAP functions consist of:
 Referring to :numref:`tablefunctions1`, table functions consist of:
 
 -  (a) show parent members,
--  (b) hide spans,
--  (c) show properties,
--  (d) suppress empty rows/columns,
--  (e) enable compact properties,
--  (f) enable sorting,
--  (g) sorting settings,
--  (h) calculated field wizard.
+-  (b) sorting settings,
+-  (c) save customized view,
+-  (d) show properties,
+-  (e) suppress empty rows/columns,
+-  (f) hide spans,
+-  (g) calculated field wizard.
 
 .. _tablefunctions1:
-.. figure:: media/image148.png
+.. figure:: media/image148a.png
 
     Table functions.
 
-
 Referring to :numref:`tablefunctions2`, what if consists of:
 
--  (a) lock/unlock model,
--  (b) save,
--  (c) save as new version,
--  (d) undo, 
+- (a) lock/unlock model,
+- (b) save,
+- (c) save as new version,
+- (d) undo, 
 - (e) delete versions, 
 - (f) output wizard.
 
@@ -202,7 +200,6 @@ Referring to :numref:`tablefunctions2`, what if consists of:
 .. figure:: media/image149.png
 
     Table functions.
-
 
 Functionalities
 ----------------
