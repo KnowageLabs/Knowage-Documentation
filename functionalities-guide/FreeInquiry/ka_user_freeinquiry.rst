@@ -1047,7 +1047,7 @@ HTML Pages
 ^^^^^^^^^^^^^
 If **link** is selected, you can associate a field with an HTML page. The default code to be inserted in the calculated field is
 
-.. code:: javascript
+.. code-block:: javascript
        :linenos:
 
           return api.getLink("${URL}", "${TEXT}"); 
@@ -1062,7 +1062,7 @@ You can add this default code by opening the **Exp. Items** > **Groovy functions
 
 An example is provided by Add hyperlink.
 
-.. code:: javascript
+.. code-block:: javascript
        :linenos:
        :caption: Add hyperlink
    
@@ -1084,7 +1084,7 @@ Images
 
 If you want to add an image, the code to be used to reference an image on the server:
 
-.. code:: javascript
+.. code-block:: javascript
        :linenos:
    
          return api.getImageLink("${IMAGE_URL}"); 
@@ -1097,7 +1097,7 @@ As before, by cliking on **image** from the **Exp. Items** tree, this code is au
 
 Replace the **IMAGE\_\ URL**\ with the path of your image. Code below produces a graphical result like the one shown in the **Bullet Chart** column of figure below.
 
-.. code:: javascript
+.. code-block:: javascript
        :linenos:
        :caption: Add images.
    
@@ -1120,7 +1120,7 @@ Generally speaking, when we talk about Cross Navigation we mostly refer to this 
 
 Code below provides an example for Knowage 4.2 and later versions.
 
-.. code:: javascript
+.. code-block:: javascript
        :linenos:
        :caption: Cross navigation configuration.
    
