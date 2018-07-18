@@ -103,7 +103,7 @@ In Figure belowwe provide an example of a BI analysis carried out thanks to map.
 
 Click on the arrow on the top right to open the Location Inteligence options panel. Here you can choose the **Map Type**, the indicators to be displayed on the map and you can enter filters.
 
-.. figure:: media/image353.png
+.. figure:: media/image35354.png
 
     Arrow button (left) Location Inteligence options panel (right) .
 
@@ -115,7 +115,7 @@ The **Map Type** available are:
 
 These three typologies of data visualization on map are compared below.
 
-.. figure:: media/image355.png
+.. figure:: media/image3555657.png
 
     Map Zone (left) Map Point (center) and Map Chart (right).
 
