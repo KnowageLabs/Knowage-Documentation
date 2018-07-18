@@ -108,10 +108,10 @@ Referring to :numref:`pivottablefeat`, Pivot table consists of:
 -  (c) icons for drill down and drill up,
 -  (d) icons for sorting (only if enabled by the developer),
 -  (e) icons for showing properties (only if enabled and configured by the developer),
--  links for cross navigation (only if enabled and configured by the developer)
+-  (f) links for cross navigation (only if enabled and configured by the developer)
 
 .. _pivottablefeat:
-.. figure:: media/image142.png
+.. figure:: media/image142a.png
 
     Pivot table features.
 
