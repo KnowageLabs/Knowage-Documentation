@@ -163,9 +163,8 @@ We start introducing the interface and leave the description to the next *Functi
 
 Meanwhile, referring to :numref:`olapfunctions`, the OLAP functions consist of:
 
--  (a) reload model,
--  (b) show MDX,
--  (c) send MDX.
+-  (a) show MDX,
+-  (b) reload model.
 
 .. _olapfunctions:
 .. figure:: media/image147a.png
