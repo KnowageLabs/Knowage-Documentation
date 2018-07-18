@@ -155,7 +155,7 @@ Note that the underlined part in figure below contains a list of tags. These hel
 
     Using tags and categories to look for functions.
 
-A function can be executed using the icon |image417| which launches a demo (i.e. the function with default values) or using the icon which launches the computation after the insertion of new values for data. Use the icon for deleting the function. Only the an admin user can use the three options, while the final user can use only the “execution” button.
+A function can be executed using the icon |image417| which launches a demo (i.e. the function with default values) or using the icon |image4171| which launches the computation after the insertion of new values for data. Use the icon |image4172| for deleting the function. Only the an admin user can use the three options, while the final user can use only the “execution” button.
 
 To create a new function an admin user must click on the “Plus” icon available at the right top corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.
 
