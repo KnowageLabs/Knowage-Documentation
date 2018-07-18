@@ -814,81 +814,6 @@ An explanation of different sections of Mapping template example follows.
 
 - The DATA-ACCESS section is used to configure visibility options for data, in particular when the dimensions or cubes defining them are profiled also in the underlying schema. Details on how to profile OLAP cubes are explained in next sections.
 
-Profiled access
-^^^^^^^^^^^^^^^^^^^^^^
-
-As for any other analytical document, Knowage provides filtered access to data via its behavioural model. The behavioural model is a very important concept in Knowage. For a full understanding of its meaning and functionalities, please refer to Behavioural Model.
-
-Knowage offers the possibility to regulate data visibility based on user profiles. Data visibility can be profiled at the level of the OLAP cube, namely the cube itself is filtered and all queries over that cube share the same data visibility criteria.
-
-To set the filter, which is based on the attribute (or attributes) in the user’s profile, the tecnical user has to type the Mondrian schema. We report Cube level profilation example as a reference guide. Note that data profiling is performed on the cube directly since the filter acts on the data retrieval logics of the Mondrian Server. So the user can only see the data that have been got back by the server according to the filter.
-
-
-.. code-block:: xml
-    :linenos:
-    :caption: Cube level profilation example.
-    
-        <?xml version="1.0"?>                                                 
-        <Schema name="FoodMartProfiled"> 
-        ....                                 
-         <Cube name="Sales_profiled"> <Table name="sales_fact_1998"/> 
-         ...      
-           <!-- profiled dimension -->                                        
-           <Dimension name="Product" foreignKey="product_id">                 
-            <Hierarchy hasAll="true" allMemberName="All Products" primaryKey="product_id">                                   
-                <View alias="Product">                                             
-                  <SQL dialect="generic">                                            
-                    SELECT pc.product_family as product_family, p.product_id as        
-                    product_id,                                                        
-                    p.product_name as product_name,                                    
-                    p.brand_name as brand_name, pc.product_subcategory as              
-                    product_subcategory, pc.product_category as product_category,      
-                    pc.product_department as product_department                        
-                    FROM product as p                                                  
-                    JOIN product_class as pc ON p.product_class_id = pc.               
-                    product_class_id                                                   
-                    WHERE and pc.product_family = '${family}' 
-                  </SQL>                   
-                </View>                                                            
-
-                <Level name="Product Family" column="product_family"               
-                       uniqueMembers="false" />                                                                 
-                <Level name="Product Department" column="product_department"       
-                       uniqueMembers="false"/>                                                          
-                <Level name="Product Category" column="product_category"           
-                      uniqueMembers=" false"/>                                           
-                <Level name="Product Subcategory" column="product_subcategory"     
-                       uniqueMembers="false"/>                                            
-                <Level name="Brand Name" column="brand_name"                       
-                       uniqueMembers="false"/>                                            
-                <Level name="Product Name" column="product_name"                   
-                       uniqueMembers="true"/>                                             
-            </Hierarchy>                                                       
-           </Dimension>                                                       
-         </Cube> 
-         ...                                       
-        </Schema> 
-
-In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax and pr.product_family = '${family}'.
-
-To properly set visibility it is required to edit also the OLAP template, adding the <DATA-ACCESS> ... </DATA-ACCESS> tab. OLAP template profilation gives an example.
-
-.. code-block:: xml
-    :linenos:
-    :caption: OLAP template profilation example.
-    
-        <olap> 
-        ...                        
-            <DATA-ACCESS>                   
-                <ATTRIBUTE name="family" />     
-                <ATTRIBUTE name="department" /> 
-            </DATA-ACCESS>                  
-        </olap>                            
-
-The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.
-
-You can filter more than one dimensions/cubes and use more profile attributes, remembering to define them in the template. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’, and insert into the query a condition like “ and pc.product_family IN (${family})”.
-
 Creating the analytical document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -979,7 +904,79 @@ The admin can develop the OLAP document using also the OLAP engine. In this case
 
 
 Profiled access
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+
+As for any other analytical document, Knowage provides filtered access to data via its behavioural model. The behavioural model is a very important concept in Knowage. For a full understanding of its meaning and functionalities, please refer to Behavioural Model.
+
+Knowage offers the possibility to regulate data visibility based on user profiles. Data visibility can be profiled at the level of the OLAP cube, namely the cube itself is filtered and all queries over that cube share the same data visibility criteria.
+
+To set the filter, which is based on the attribute (or attributes) in the user’s profile, the tecnical user has to type the Mondrian schema. We report Cube level profilation example as a reference guide. Note that data profiling is performed on the cube directly since the filter acts on the data retrieval logics of the Mondrian Server. So the user can only see the data that have been got back by the server according to the filter.
+
+
+.. code-block:: xml
+    :linenos:
+    :caption: Cube level profilation example.
+    
+        <?xml version="1.0"?>                                                 
+        <Schema name="FoodMartProfiled"> 
+        ....                                 
+         <Cube name="Sales_profiled"> <Table name="sales_fact_1998"/> 
+         ...      
+           <!-- profiled dimension -->                                        
+           <Dimension name="Product" foreignKey="product_id">                 
+            <Hierarchy hasAll="true" allMemberName="All Products" primaryKey="product_id">                                   
+                <View alias="Product">                                             
+                  <SQL dialect="generic">                                            
+                    SELECT pc.product_family as product_family, p.product_id as        
+                    product_id,                                                        
+                    p.product_name as product_name,                                    
+                    p.brand_name as brand_name, pc.product_subcategory as              
+                    product_subcategory, pc.product_category as product_category,      
+                    pc.product_department as product_department                        
+                    FROM product as p                                                  
+                    JOIN product_class as pc ON p.product_class_id = pc.               
+                    product_class_id                                                   
+                    WHERE and pc.product_family = '${family}' 
+                  </SQL>                   
+                </View>                                                            
+
+                <Level name="Product Family" column="product_family"               
+                       uniqueMembers="false" />                                                                 
+                <Level name="Product Department" column="product_department"       
+                       uniqueMembers="false"/>                                                          
+                <Level name="Product Category" column="product_category"           
+                      uniqueMembers=" false"/>                                           
+                <Level name="Product Subcategory" column="product_subcategory"     
+                       uniqueMembers="false"/>                                            
+                <Level name="Brand Name" column="brand_name"                       
+                       uniqueMembers="false"/>                                            
+                <Level name="Product Name" column="product_name"                   
+                       uniqueMembers="true"/>                                             
+            </Hierarchy>                                                       
+           </Dimension>                                                       
+         </Cube> 
+         ...                                       
+        </Schema> 
+
+In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax and pr.product_family = '${family}'.
+
+To properly set visibility it is required to edit also the OLAP template, adding the <DATA-ACCESS> ... </DATA-ACCESS> tab. OLAP template profilation gives an example.
+
+.. code-block:: xml
+    :linenos:
+    :caption: OLAP template profilation example.
+    
+        <olap> 
+        ...                        
+            <DATA-ACCESS>                   
+                <ATTRIBUTE name="family" />     
+                <ATTRIBUTE name="department" /> 
+            </DATA-ACCESS>                  
+        </olap>                            
+
+The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.
+
+You can filter more than one dimensions/cubes and use more profile attributes, remembering to define them in the template. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’, and insert into the query a condition like “ and pc.product_family IN (${family})”.
 
 Once the OLAP document has been created using the template designer the user can insert parameters to profile the document. To set parameters the user can follow two paths, already seen in Development of an OLAP document:
 
