@@ -60,7 +60,7 @@ First of all, the user must configure the distributed cache. This helps to coord
 
 Logging
 ---------
-Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in :numref:`loggappender`, we analize the log file of Knowage. In the first part we can set the generation mechanism of the log file, while ih the second one the level of tracing.
+Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analize the log file of Knowage. In the first part we can set the generation mechanism of the log file, while ih the second one the level of tracing.
 
 .. _loggappender:
 .. code-block:: bash
@@ -128,6 +128,7 @@ For further details we refer to the official Log4J documents.
 
 Mail server
 ------------
+
 Knowage uses in some situations the mail server to send emails. The configuration of this feature can be done right straight through the Knowage GUI, after accessing with administrator credentials.
 
 Selecting the category MAIL the user gets the list of parameters to configure for the following profiles:
