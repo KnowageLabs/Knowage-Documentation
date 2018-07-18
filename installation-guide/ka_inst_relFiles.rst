@@ -4,7 +4,7 @@ Binary released
 You can download Knowage through the following links:
 
 - Community Edition: http://www.knowage-suite.com/site/ce-download/
-- Enterprise Edition: http://www.knowage-suite.com/portal (requires registration)
+- Enterprise Edition: http://www.knowage-suite.com/portal (registration required)
 
 A typical release contains three elements:
 
