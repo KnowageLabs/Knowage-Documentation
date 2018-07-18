@@ -1,6 +1,11 @@
 Server Manager
 ==============
 
+.. important::
+         **Enterprise Edition only**
+
+         All the functionalities shipped within the Server Manager are available only with Knowage Enterprise Edition
+
 In the **Server Manager** menu panel you find some management functionalities.
    
 .. figure:: media/image60.png
@@ -12,14 +17,14 @@ Those about **Import/Export** let you export some configurations or elements fro
 Tenants Management
 ------------------
 
-We start this Section undeling that only those users who have the superadmin role can use this functionality. In addition, although implemented, this menu item is not visible in Figure 9.1. In fact, the **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones. The Tenants Management window is shown in :numref:`tenantsmanagementw`. On the left you have the list of existing tenants. On the top of such list it is available the **Search** box to help users to browse the tenants. When clicking on the “Plus” icon you can create a new tenant. A form opens on the right area. Insert a **Name** and a **Theme**. Then change tabs to set product types access and select which datasources are achievable. An example is given in :numref:`producttypedatas`.
+We start this section underlining that only those users who have the superadmin role can use this functionality. **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones. 
 
-.. _tenantsmanagementw:
 .. figure:: media/image61.png
 
     Tenants Management window.
 
-.. _producttypedatas:
+In the image above, on the left you have the list of existing tenants. On the top of such list it is available the **Search** box to help users to browse the tenants. When clicking on the “Plus” icon you can create a new tenant. A form opens on the right area. Insert a **Name** and a **Theme**. Then change tabs to set product types access and select which datasources are achievable.
+
 .. figure:: media/image6465.PNG
 
     Product types tab (Left) Datasources tab (Right).
@@ -47,7 +52,7 @@ These options are about Import\\Export of Documents, Menu, Users, KPIs and Catal
 Documents
 ~~~~~~~~~
 
-This feature let you create and download a .zip of whole or a part of the documents existing in your Knowage installation. In this way you can upload it in another istallation or keep it as backup.
+This feature let you create and download a .zip of whole or a part of the documents existing in your Knowage installation. In this way you can upload it in another installation or keep it as backup.
 
 When you import, all the “objects” associated to those documents (such as datasets, lovs, drivers, roles and folders) are created. Instead users, menu configurations, KPI, catalog, glossary and alert are not exported with this tool.
 
@@ -59,7 +64,7 @@ Below we show the export editor.
 
     Document Export
    
-First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the MyFirstExport.zip).
+First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the ``MyFirstExport.zip``).
 
 Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its childer folders/leaves.
 
@@ -153,26 +158,25 @@ KPIs
 
 In this section we describe how to manage the import/export of KPIs between two tenants.
 
-The user must enter Knowage as administrator of source tenant and click on **Import/Export KPIs** from Server Manager menu panel, as shown in Figure below.
+The user must enter Knowage as administrator of source tenant and click on **Import/Export KPIs** from Server Manager menu panel.
 
 .. figure:: media/image77.png
 
     KPIs Import/Export from menu
 
-The window in :numref:`kpiimportwind` opens. The page contains the **Export** and the **Import** tab, where the user can select the KPIs for the export/import respectively.
+The page contains the **Export** and the **Import** tab, where the user can select the KPIs for the export/import respectively.
 
-.. _kpiimportwind:
 .. figure:: media/image78.png
 
     KPIs Import window
 
 Let’s start from the export feature. The user must check the KPIs for the export using the tab interface. He/she can add some more functionalities to the export action, namely:
 
--  to include targets,
--  to include those scorecards related to the selected KPIs,
--  to include schedulations.
+- to include targets,
+- to include those scorecards related to the selected KPIs,
+- to include schedulations.
 
-Finally click on the red download button (see Figure below) to get azipped folder that will be used to conclude the export.
+Finally click on the red download button to get a zipped folder that will be used to conclude the export.
 
 .. figure:: media/image79.png
 
@@ -186,14 +190,13 @@ The user must therefore browse the personal folder to catch the zipped folder an
 
     Import tab
 
-Referring to :numref:`importkpiset`, the user has to specify if:
+Referring to the following image, the user has to specify if:
 
 -  to overwrite the existing KPIs and their related formulas
 -  to import targets,
 -  to import scorecards,
 -  to import schedulations.
 
-.. _importkpiset:
 .. figure:: media/image83.png
 
     Import KPIs settings
@@ -204,7 +207,7 @@ Once the import is started, the GUI leads the user to finalise the import proced
 
     Mapping data sources
 
-The process ends successfully when the wizard in the following Figure shows up.
+The process ends successfully when the wizard shows up as following.
 
 .. figure:: media/image85.png
 
@@ -225,9 +228,8 @@ To produce suce a file, the user has to log in as administrator of the source te
 
 Switch tenant and log in as administrator. Use the Import tab to upload the zipped folder and finalise the import.
 
-Use the GUI exhibited in :numref:`importofanalyt` to upload the zipped folder, to specify if to overwrite on the existind analytical drivers or add missing. Then click on next and continue by mapping roles among tenants and data sources.
+Use the GUI to upload the zipped folder, to specify if to overwrite on the existind analytical drivers or add missing. Then click on next and continue by mapping roles among tenants and data sources.
 
-.. _importofanalyt:
 .. figure:: media/image87.png
 
     Import of analytical drivers
@@ -247,21 +249,19 @@ Glossary
 
 The export/import of glossary allows the user to allign glossaries among tenants.
 
-.. _exportimportgloss:
 .. figure:: media/image90.png
 
     Export/Import of glossaries window
 
-There are the two tabs of Export and Import in this instance too (:numref:`exportimportgloss`). The user is asked to select the glossaries to export and to type a name that will be assigned to the zipped folder. The user can help himself/herself by using the filter on data (of creation of the glossary).
+There are the two tabs of Export and Import. The user is asked to select the glossaries to export and to type a name that will be assigned to the zipped folder. The user can help himself/herself by using the filter on data (of creation of the glossary).
 
 Once the user has got the zipped folder he/she must switch tenant and enter as its admin. Then select the import tab from the Export/Import main window.
 
-.. _importgloss:
 .. figure:: media/image91.png
 
     Import of glossaries
 
-The user must use the arrows (:numref:`importgloss`) to indicate the glossaries he/she wants to import in the target tenant. No further information are needed to end the process. Then the user has to enter the target tenant as administrator and use the import tab to finalise the import.
+The user must use the arrows to indicate the glossaries he/she wants to import in the target tenant. No further information are needed to end the process. Then the user has to enter the target tenant as administrator and use the import tab to finalise the import.
 
 Catalog
 ~~~~~~~~
@@ -274,8 +274,7 @@ This functionality allows to Export/Import the following elements
 -  Layers,
 -  SVG files.
 
-The steps to perform the Export/Import are equal to those seen in the previous sections. Namely, the user has to enter the **Import/Export catalog** menu item from Server Manager menu panel. The window will contain the Import and Export tabs. The export tab is used to produce the zip folder to be imported in the tenant of interest. Note that the user can apply a temporal filter to help him/her to look up elements in
-the list.
+The steps to perform the Export/Import are equal to those seen in the previous sections. Namely, the user has to enter the **Import/Export catalog** menu item from Server Manager menu panel. The window will contain the Import and Export tabs. The export tab is used to produce the zip folder to be imported in the tenant of interest. Note that the user can apply a temporal filter to help him/her to look up elements in the list.
 
 .. figure:: media/image92.png
 
