@@ -348,7 +348,7 @@ User can choose between drill types by clicking on one of the three buttons in t
 
 .. figure:: media/image169.png
 
-   Figure 7.31: “Member” drill down.
+    “Member” drill down.
 
 3. **Replace**: This option lets the user replace the parent member with his child member during drill down operation. To drill up the      user should click on the arrow icon next to the dimension name on which to perform operation. See figure below.
 
@@ -373,10 +373,11 @@ In particular, referring to :numref:`drillthoroughwindow`, drill though dialog c
 -  (d) a pagination,
 -  (e) a apply button,
 -  (f) a export button,
--  (g) a cancel button.
+-  (g) a cancel button,
+-  (h) a clear all button.
 
 .. _drillthoroughwindow:
-.. figure:: media/image172.png
+.. figure:: media/image172a.png
 
     Drill thorugh window.
 
@@ -461,7 +462,7 @@ In OLAP schema the XML member properties, if configured, could be represented in
 
 2. in a pop up as compact properties. To enable compact properties user should click on enable compact properties button in the side bar. In this way in all the cells of members Suppressing empty colunms/rows which has property set, a table icon appears. This icon lets the property pop up opens. Figure below shows an example.
 
-.. figure:: media/image180.png
+.. figure:: media/image180a.png
 
     Show properties summarized in a pop up.
 
@@ -487,16 +488,17 @@ To sort members the user needs to click on the sorting command |image179|, avail
 
 To remove the sorting, the user just have to click on the icon again. To change sorting mode user should click on sorting settings button in the side bar. Referring to the following figure, dialog sorting settings consists of:
    
-.. figure:: media/image185.png
+.. figure:: media/image185a.png
 
     Sorting settings window.
 
--  (a) sorting modes:
--  (b) basic (by default),
--  (c) breaking,
--  (d) count,
--  (e) a number input field for count mode definition,
--  (f) a save button.
+- (a) sorting modes:
+- (b) no sorting (by default), 
+- (c) basic,
+- (d) breaking,
+- (e) count,
+- (f) a number input field for count mode definition,
+- (g) a save button.
 
 Note that “breaking mode” means that the hierarchy will be broken.
 
