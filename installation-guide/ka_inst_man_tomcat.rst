@@ -29,8 +29,9 @@ We need to create two connection:
 - ``jdbc/knowage``:  Knowage metadata 
 
 	.. code-block:: xml
-
-		 <Resource auth="Container" 
+		:linenos:
+		
+		<Resource auth="Container" 
 				driverClassName="<JDBC driver>" 
 				name="jdbc/knowage"
 				password="<password>" 
@@ -48,11 +49,13 @@ We need to create two connection:
 				testWhileIdle="true" 
 				timeBetweenEvictionRunsMillis="10000" 
 				minEvictableIdleTimeMillis="60000" 
-			factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" /> 
+				factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" /> 
 
 - ``jdbc/cache_ds``: Knowage cache, this must be an emty schema  
 
 	.. code-block:: xml
+		:linenos:
+		
 		 <Resource auth="Container" 
 				driverClassName="<JDBC driver>" 
 				name="jdbc/cache_ds"
@@ -79,7 +82,8 @@ Connection to business data
 Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the metadata database inside the ``GlobalNamingResources`` tag, specifying username, password, driver class name and URL. 
 
 .. code-block:: xml
-
+	:linenos:
+	
 	 <Resource auth="Container" 
 			driverClassName="<JDBC driver>" 
 			name="jdbc/dwh"
@@ -132,7 +136,8 @@ Thread pool defintion
 You must configure ``TOMCAT_HOME/conf/server.xml`` file and add the settings related to the pool of thread editing the ``GlobalNamingResources`` tag, as shown follow.
 
 .. code-block:: xml
-
+	:linenos:
+	
 	<Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/> 
 
 
@@ -144,12 +149,14 @@ It is recommended to increase the memory dimension used by the application serve
 **[LINUX]** Insert at the beginning of the ``TOMCAT_HOME/bin/setenv.sh`` file this command:
 
 .. code-block:: bash
-
+	:linenos:
+	
 	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" 
 
 
 **[WIN]** Insert at the beginning of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
 
 .. code-block:: bash
-
+	:linenos:
+	
 	set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
