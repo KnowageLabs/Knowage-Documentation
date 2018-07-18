@@ -231,7 +231,7 @@ In Figure below you find the sunburst obtained with data of :numref:`exampleofda
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
     
-Inside **Advanced** section you can set value for scale that will increase/decrease you.
+Inside **Advanced** section you can set value for scale that will increase/decrease your chart.
 
 Wordcloud chart
 ~~~~~~~~~~~~~~~
