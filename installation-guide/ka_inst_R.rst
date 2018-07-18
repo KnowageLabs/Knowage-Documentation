@@ -7,7 +7,7 @@ It is required the installation of the following components for the correct oper
 -  R Studio
 -  rJava
 
-**[LINUX]** The first two components, needed for the functionality of the Knowage data mining engine, has to be installed through the rpm comand, and, the third, through the RStudio GUI. Once retrieved the RPM file, open the folder and launch the comands:
+**[LINUX]** The first two components, needed for the functionality of the Knowage data mining engine, has to be installed through the ``rpm`` comand, and, the third, through the RStudio GUI. Once retrieved the RPM file, open the folder and launch the comands:
 
 .. code-block:: bash
    :caption: Commands for the rpm file
@@ -20,7 +20,7 @@ It is required the installation of the following components for the correct oper
    chown -R tomcat.root /usr/lib64/R/library && chmod -R 775 /usr/lib64/R/library 
    chown -R tomcat.root /usr/share/doc/R-3.2.2 && chmod -R 775 /usr/share/doc/R
 
-Typing the address http://server_ipormachine_name:8787/ the browser, the user gets on screen the page showed below:
+Typing the address ``http://server_ipormachine_name:8787/`` in the browser, the user gets on screen the page showed below:
 
 .. figure:: media/image24.png
 
@@ -36,13 +36,12 @@ The following images show the sequence of steps the user will encounter:
 
 .. figure:: media/image27.png
 
-Meanwhile the package is installed, remember to answer NO when asked   to create a personal library in the user home (that can be found under $HOME/RStudio/log). This way, rJava will be installed in the directory /usr/lib64/R/library/rJava.
+Meanwhile the package is installed, remember to answer NO when asked to create a personal library in the user home (that can be found under ``$HOME/RStudio/log``). This way, rJava will be installed in the directory ``/usr/lib64/R/library/rJava``.
 
-Finally, edit the TOMCAT_HOME/bin/setenv.sh adding the following commands:
+Finally, edit the ``TOMCAT_HOME/bin/setenv.sh`` adding the following commands:
 
 .. code-block:: bash
    :linenos:
 
    export R_HOME=/usr/lib64/R                          
    export LD_LIBRARY_PATH=/usr/lib64/R/library/rJava/jri
-
