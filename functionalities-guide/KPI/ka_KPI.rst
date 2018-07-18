@@ -65,6 +65,7 @@ We say in advance that, it is important to distinguish these metedata categories
 
 .. _kpicategory:
 .. figure:: media/image126.png
+    
     KPI category.
 
 .. warning::
@@ -91,7 +92,7 @@ Let’s now examine extra features available on the right top corner. There you 
 
 -  **Placeholder**: here you can check the existing placeholders. These are set in the query you’re editing or in other ones.
 
-.. figure:: media/image129.png
+.. figure:: media/image12930.png
 
     Setting placeholders in a query.
    
