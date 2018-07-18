@@ -606,7 +606,7 @@ The user can use the elements of each dimension as attributes in the “Select�
 
     Filter on an element means to filter also on its parent nodes.
 
-Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in :numref:`iaddtempfiltersleftright`) (Left). The action opens the pop up displayed in next figure) (Right).
+Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in figure below (Left). The action opens the pop up displayed in next figure (Right).
 
 .. _iaddtempfiltersleftright:
 .. figure:: media/image22930.png
@@ -842,7 +842,7 @@ The MTD function follows the same logic as the YTD function but using the month.
 
 .. figure:: media/image270.png
 
-    MTD function example: output when sales are aggregated on current month plus the previuos one, relative to the current    year (referring to the query execution time) for the present year.
+    MTD function example: output when sales are aggregated on current month plus the previuos one, relative to the current year (referring to the query execution time) for the present year.
 
 -  Figures below shows a user that is summing the sales of current month
 
