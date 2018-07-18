@@ -4,6 +4,12 @@
 .. |image417| image:: media/image401.png
    :width: 0.80662in
    :height: 0.76475in
+.. |image4171| image:: media/image402.png
+   :width: 0.80662in
+   :height: 0.76475in
+.. |image4172| image:: media/image403.png
+   :width: 0.80662in
+   :height: 0.76475in
 .. |image436| image:: media/image423.png
    :width: 0.27559in
    :height: 0.27559in
