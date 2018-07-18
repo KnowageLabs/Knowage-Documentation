@@ -98,16 +98,16 @@ At the top of this side panel you find four button:
 - |image62| clone the item;
 - |image63| erase the document.
 
-:numref:`detailpanelofknowanalydoc` shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can alternatively see either the history of document templates or the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders (see :numref:`functionaltreedocsav`).
+The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can alternatively see either the history of document templates or the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders (see the last figure of the *Document Visibility* paragraph).
 
 .. _detailpanelofknowanalydoc:
 .. figure:: media/image66.png
 
     Detail panel of Knowage analytical document.
 
-In order to create a new document you need to click on the red plus button (shown in :numref:`changingdocumentsview`) in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Geo-Referenced Analysis**, **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
+In order to create a new document you need to click on the red plus button in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Geo-Referenced Analysis**, **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
 
-To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in :numref:`detailpanelofknowanalydoc` but with empty fields, in order to allow you to define the document details.
+To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in figure above but with empty fields, in order to allow you to define the document details.
 
 First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see Figure below).
 
@@ -141,14 +141,14 @@ Upon creation, the document is by default in development state. Any time you upl
 
 The main reason for this is that the state of the document has an impact on its accessibility. As discussed in the behavioural model,  Knowage defines role types (administrator, developer, tester, user). States are compatible with the corresponding role type. Administrators can change the state of documents at any time. Developers can not access only the documents with test state. Testers   can not see documents in development or suspended state. Users can execute only documents in released state. Note that a tester may   change the state of a document from test back to development.
 
-In KnowageER you may also decide to temporary lock a document while he is working with it: it is enough to set the **Lock by user** item to True. This prevent other developers from modifying the same document you are working on.
+In KnowageER you may also decide to temporary "lock" a document while he is working with it: it is enough to set the **Lock by user** item to True. This prevent other developers from modifying the same document you are working on.
 
 Template Versioning
 ^^^^^^^^^^^^^^^^^^^
 
 When you register a document on the Server, you need to associate a template to it. Click on **Browse** next to **Template** and upload the template from your local file system. You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
 
-Knowage Server supports versioning of uploaded templates, as shown in :numref:`templateversionforanalydoc`. To view them in the document detail window, click on   **Show document templates** in the right panel. All templates are saved with their date and name, and can be easily restored or   deleted. To restore a template, choose it in the list by clicking on the selector, then remember to save: the new template will be   uploaded. Using the same list you can download or delete a template.
+Knowage Server supports versioning of uploaded templates, as shown below. To view them in the document detail window, click on   **Show document templates** in the right panel. All templates are saved with their date and name, and can be easily restored or   deleted. To restore a template, choose it in the list by clicking on the selector, then remember to save: the new template will be   uploaded. Using the same list you can download or delete a template.
 
 .. _templateversionforanalydoc:
 .. figure:: media/image70.png
@@ -186,7 +186,7 @@ We have already discussed the role of analytical drivers and how they are connec
 
 We assume that the document template and datasets are correctly set in terms of parameter definition. In particular, they should have   been correctly referenced with their URL.
 
-To add a new parameter, you can start editing the tab in the lower part of the document detail panel, see :numref:`assocwithanalydriv`.
+To add a new parameter, you can start editing the tab in the lower part of the document detail panel, see the next figure.
 
 Choose a human readable name for the title. Then click on the lookup icon |image72| to choose the driver you wish to associate to the   document. This will open the driver lookup window, where you can select the driver by clicking on the green icon |image73|. You can   also inspect or delete a driver from here.
 
@@ -312,7 +312,7 @@ Declaration of the output parameters
 
 Enter the **Document details** of the document of interest. Then click on **Manage outputparameters** and the **Output parameters**   dialog will open.
 
-Here you have to state which parameters are going to be used as output parameters. If, for instance, you select the Date type (:numref:`settinganotuparam`), it is possible to choose the format in which your date has been coded. The default value is related to the location defined in   (**Menu**>\ **Languages**).
+Here you have to state which parameters are going to be used as output parameters. If, for instance, you select the Date type (see next figure), it is possible to choose the format in which your date has been coded. The default value is related to the location defined in   (**Menu**>\ **Languages**).
 
 .. _settinganotuparam:
 .. figure:: media/image85.png
