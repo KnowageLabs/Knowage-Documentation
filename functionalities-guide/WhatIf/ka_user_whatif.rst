@@ -63,7 +63,7 @@ Then double-click on the target measure cell and a box will appear allowing you 
 
 We stress that you can also refer to members that are not included in the tuple represented by the cell that is going to be modified. Let’s see some examples. For example suppose the cell refers to the following tuple reported in Code below:
 
-.. code-block:: 
+.. code-block:: xml
       :linenos:
       :caption: Product.Deli
 
@@ -74,7 +74,7 @@ We stress that you can also refer to members that are not included in the tuple 
 You can refer to the tuple in :numref:`producteggs` with just Product.Eggs and at the same time to the tuple in Code 9.3 with just Product.Eggs; Measures.Unit Sales 
 
 .. _producteggs:
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Product.Eggs
    
@@ -82,7 +82,7 @@ You can refer to the tuple in :numref:`producteggs` with just Product.Eggs and a
             [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]   
 
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Product.Eggs; Measures.Unit Sales
    
@@ -94,14 +94,14 @@ Note that if you create a formula on a cell and you want to move it along a dime
 
 The syntax is as the one shown in Referring to different members or, in case you are using another hierarchy, as in :numref:`referringdiffmembers` where you can concatenate different members with ";".
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Referring to different members.
    
             <dimension's name>.<member's name>or[<dimension's name>].[<member's name>]                      
 
 .. _referringdiffmembers:
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Referring to different members of another hierarchy.
    
@@ -111,7 +111,7 @@ The syntax is as the one shown in Referring to different members or, in case you
 You can also refer to members that are on the same level but they are not sibling members:
 suppose that, for example, the cell’s tuple is as in Code below:
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Example of cell’s tuple.
    
@@ -121,7 +121,7 @@ suppose that, for example, the cell’s tuple is as in Code below:
 
 Note that you can refer to the tuple
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Example of cell’s tuple.
    
@@ -131,7 +131,7 @@ Note that you can refer to the tuple
 
 just with:
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Shorten syntax code.
    
@@ -139,7 +139,7 @@ just with:
 
 Another example from Code below
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Example of cell’s tuple.
    
@@ -148,7 +148,7 @@ Another example from Code below
 
 to Code below
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Example of cell’s tuple.
    
@@ -156,7 +156,7 @@ to Code below
             [Region].[Mexico Central], [Customers].[AllCustomers], [Customers].[All Customers]                                                                          
 is as in the following code
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Used expression.
    
@@ -164,7 +164,7 @@ is as in the following code
 
 Note that the last part of the expression is the portion of the path to the target member that differs from the path of the cell’s member. Some other examples:
 
-.. code-block:: 
+.. code-block:: xml
          :linenos:
          :caption: Further example.
    
