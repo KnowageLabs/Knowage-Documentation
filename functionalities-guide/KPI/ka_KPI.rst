@@ -257,7 +257,7 @@ Click on the **Template build** icon to develop the template. Here you can choos
 -  **List**: with this option it is possible to add several KPI that will be shown in the same page with a default visualization.
 -  **Widget**: with this option it is always possible to add several KPI that will be shown in the same page but in this case you will also be asked to select its visualization: Speedometer or KPI Card; then the minimum value and the maximum value that the KPI can assume and if you want to add a prefix or a suffix (for example the unit of measure of the value) to the showed value.
 
-Then practically you must add the KPI association using the KPI List area of the interface. As you can see from Figure 7.31 here you select the KPI after clicking on the “ADD KPI ASSOCIATION” link. The latter opens a wizard that allows to pick up a multiple choice of the KPIs. Once chosen, you need to specify all empty fields of the form, like “Category”, “View as” and so on (refer to figure below). Note that the “View as” field is were you can decide if the widget will be a Speedometer or a KPI Card.
+Then practically you must add the KPI association using the KPI List area of the interface. As you can see in figure below you can select the KPI after clicking on the “ADD KPI ASSOCIATION” link. The latter opens a wizard that allows to pick up a multiple choice of the KPIs. Once chosen, you need to specify all empty fields of the form, like “Category”, “View as” and so on (refer to figure below). Note that the “View as” field is were you can decide if the widget will be a Speedometer or a KPI Card.
 
 .. figure:: media/image152.png
 
@@ -281,7 +281,7 @@ Finally in the “Style” area the user can customize the size of the widget, t
 
     Style settings.
 
-Then save and run the document. Examples are shown in :numref:`kpispeedometer`, :numref:`kpicard` and :numref:`kkpilist` .
+Then save and run the document. Examples are shown in the last three figures below.
 
 In case the document contains grouping functions upon them, it is necessary to add the proper analytical drivers. Refer to Section 5.4 to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). We stress that the URL of the analytical driver *must* coincide with the *attribute aliases* on which you have defined the grouping.
 
