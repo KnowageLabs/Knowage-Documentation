@@ -160,6 +160,11 @@ Futhermore, in the occurance the chart uses one datetime attribute as category f
 .. figure:: media/image104.png
 
     Datetime function usage.
+    
+For bar and line chart you can add more then one container for adding series in **Structure** section. In that case you will have in your chart more then one axis for series. 
+In **Advanced** section you can specify to align these axis to 0 (zero) value. 
+ 
+For pie chart inside **Advanced** section you can set configuration for your toolip: to show/hide absolute value and/or percentage.
 
 Scatter chart
 ~~~~~~~~~~~~~
@@ -225,6 +230,8 @@ In Figure below you find the sunburst obtained with data of :numref:`exampleofda
 .. figure:: media/image1101112.png
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
+    
+Inside **Advanced** section you can set value for scale that will increase/decrease you.
 
 Wordcloud chart
 ~~~~~~~~~~~~~~~
