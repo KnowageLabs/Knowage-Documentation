@@ -51,13 +51,13 @@ The computation 100 + 10% is a simple example of usage of the operation %. Note 
 
 To activate the editing of a measure cell that is not shown in the OLAP you must first click on the filter icon of the measure filter card and check the target measure. Then select the version you want to use and change values of figure below shows where are available these objects in the interface.
 
-.. figure:: media/image216.png
+.. figure:: media/image21616.png
 
     Checking measures and selecting version.
 
 Then double-click on the target measure cell and a box will appear allowing you to insert a formula. Type the computation syntax and click on the *f*\ (*x*) icon to convalidate it or cancel it, as shown below.
 
-.. figure:: media/image218.png
+.. figure:: media/image21819.png
 
     Inserting formula and its convalidation.
 
