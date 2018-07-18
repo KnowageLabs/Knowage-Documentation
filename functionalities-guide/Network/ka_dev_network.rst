@@ -231,8 +231,8 @@ Now we try to make the graph “nicer”. We want to:
          </NET>
 
 
-**Remark**: The path ../img/city2.png is relative to the context of the web application, so it refers to the folder img inside the web application knowagenetworkengine Finally, the result is showed in next Figure 17.1:
+**Remark**: The path ../img/city2.png is relative to the context of the web application, so it refers to the folder img inside the web application knowagenetworkengine Finally, the result is showed in next figure:
 
-   |image443|
+.. figure:: media/image443.png
 
-   Figure 17.1: Network for foodmart demo example.
+     Network for foodmart demo example.
