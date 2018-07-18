@@ -156,12 +156,12 @@ Therefore, a schema must be available. It can be reached through the JDBC protoc
 Database schema for data.
 -------------------------
 
-A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called "data DB” in the following .
-To correctly use the Knowage data mining engine it is necessary to install R, R Studio and rJava on the target server. Please refer to  `http://cranr-project.org/. <http://cranr-project.org/>`__
+A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called "data DB” in the following.
 
 
 R
 -----------
+To correctly use the Knowage data mining engine it is necessary to install R, R Studio and rJava on the target server. Please refer to  `http://cranr-project.org/. <http://cranr-project.org/>`__
 
 Be sure to use the following versions:
 
