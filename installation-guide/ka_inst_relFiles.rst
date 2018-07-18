@@ -1,4 +1,4 @@
-Binary released
+Software release
 =========================
 
 You can download Knowage through the following links:
