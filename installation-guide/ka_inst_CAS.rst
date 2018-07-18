@@ -10,128 +10,120 @@ Carry out the following steps:
 
 * shut down the server if running,
 * deploy CAS application,
-* for Tomcat: unzip the cas.war file inside the TOMCAT_HOME/webapps/cas
-* for JBoss: copy the cas.war file inside the JBOSS_HOME/standalone/deployments
-* edit /cas/WEB-INF/classes/cas_spagobi.properties inserting the connection parameters for the metadata database of Knowage, as shown in :numref:`conneparamknow`:
+* for Tomcat: unzip the ``cas.war`` file inside the ``TOMCAT_HOME/webapps/cas``
+* for JBoss: copy the ``cas.war`` file inside the ``JBOSS_HOME/standalone/deployments``
+* edit ``/cas/WEB-INF/classes/cas_spagobi.properties`` inserting the connection parameters for the metadata database of Knowage,as following
 
-.. _conneparamknow:
-.. code-block:: bash
-        :linenos:
-        :caption: Connection parameters for Knowage metadata db.
+	.. _conneparamknow:
+	.. code-block:: bash
+		:linenos:
+		:caption: Connection parameters for Knowage metadata db.
 
-   spagobi.datasource.driver=<driver JDBC> 
-   spagobi.datasource.url=<URL JDBC> 
-   spagobi.datasource.user=<user_name>                             
-   spagobi.datasource.pwd=<password> encript.password=true               
+			spagobi.datasource.driver=<driver JDBC> 
+			spagobi.datasource.url=<URL JDBC> 
+			spagobi.datasource.user=<user_name>                             
+			spagobi.datasource.pwd=<password> encript.password=true               
 
 For further details please refer to the official documents available on CAS website `http://jasig.github.io/cas/. <http://jasig.github.io/cas/>`__
 
 HTTPS certificate
 -----------------
 
-Since CAS application requires the use of the HTTPS protocol, the user must own an SSL certificate: it can be released a Certification Authority (CA) or it can be self-signed (it is recommended the use of the “keytool” utility -http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html- available in the JDK).
+Since CAS application requires the use of the HTTPS protocol, the user must own an SSL certificate: it can be released a Certification Authority (CA) or it can be self-signed (it is recommended the use of the ``keytool`` utility -http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html- available in the JDK).
 
-In case the certificate “self-signed”, it must be inserted in the CA repository of the JDK (usually such a repository is located in the JDK_HOME/jre/lib/security) or in an ad-hoc repository, called **truststore**, and conviniently configured in the application server in use: it is sufficient to set the two properties of the Java process:
+In case the certificate self-signed, it must be inserted in the CA repository of the JDK (usually such a repository is located in the ``JDK_HOME/jre/lib/security``) or in an ad-hoc repository, called ``truststore``, and conveniently configured in the application server in use. It is sufficient to set the two Java properties ``Djavax.net.ssl.trustStore=<truststore path>`` and ``Djavax.net.ssl.trustStorePassword=<truststore password>``
 
-* Djavax.net.ssl.trustStore=<truststore path>
-* Djavax.net.ssl.trustStorePassword=<truststore password>
+We suggest to refer to the Java documents for more details. In the following we will restrict on give some useful commands of the ``keytool`` utility if the user intends to install a self-signed certificate:
 
-We suggest to refer to the Java documents for more details. In the following we will restrict on give some useful commands of the “keytool” utility if the user intends to install a self-signed certificate:
+* generate a copy of the public/private key-pair into a repository (keystore) called ``keystore.jks``, as below:
 
-* generate a copy of the public/private key-pair into a repository (keystore) called keystore.jks, as below:
+	.. code-block:: bash
+       	 	:linenos:
+        	:caption: keystore.jks creation.
 
-.. code-block:: bash
-        :linenos:
-        :caption: keystore.jks creation.
+   			$JAVA_HOME/bin/keytool -genkeypair -keystore keystore.jks -storepass <keystore password> -alias <certificate alias> -keyalg RSA -keysize 2048 -validity 5000 -dname CN=<server name that hosts Knowage >, OU=<organization unit>, O=<organization name>,L=<locality name>, ST=<state name>, C=<country>                    
 
-   	$JAVA_HOME/bin/keytool -genkeypair -keystore keystore.jks -storepass <keystore password> -alias <certificate alias> -keyalg RSA -keysize 2048 -validity 5000 -dname CN=<server name that hosts Knowage >
-	, OU=<organization unit>, O=<organization name>,L=<locality name>, ST=<state name>, C=<country>                    
+* export a certificate in a ``cert.crt`` file, as suggested below:
 
-* export a certificate in a cert.crt file, as suggested below:
+		.. code-block:: bash
+        		:linenos:
+				:caption: Certificate export.
 
-.. code-block:: bash
-        :linenos:
-        :caption: Certificate export.
+   				$JAVA_HOME/bin/keytool -export -alias <alias of the certificate> -file cert.crt -keystore keystore.jks 
 
-   	$JAVA_HOME/bin/keytool -export -alias <alias of the certificate> -file cert.crt -keystore keystore.jks 
+* set the certificate inside the CA certificates of the JDK to make it accessible (the user will be asked the CA certificates password, the default one is *changeit*)
 
-* set the certificate inside the CA certificates of the JDK to make it accessible (the user will be asked the CA certificates password; the default one is "changeit“ refer to Code below
+		.. code-block:: bash
+        		:linenos:
+        		:caption: Importing the certificate into JDK CA repository.
 
-.. code-block:: bash
-        :linenos:
-        :caption: Importing the certificate into JDK CA repository.
-
-   	$JAVA_HOME/bin/keytool -import -trustcacerts -alias <alias del certificato> -file cert.crt -keystore  
-   	$JAVA_HOME/jre/lib/security/cacerts
-
+   				$JAVA_HOME/bin/keytool -import -trustcacerts -alias <alias del certificato> -file cert.crt -keystore  
+   				$JAVA_HOME/jre/lib/security/cacerts
 
 Configuration of the HTTPS protocol for Tomcat
 ----------------------------------------------
 
 To enable the HTTPS protocol it is necessary to operate according to these steps:
 
-* copy the keystore which contains the pair public/private keys (keystore.jks) inside the TOMCAT_HOME/conf;
-* edit the TOMCAT_HOME/conf/server.xml file, comment the HTTP connector on 8080 port and uncomment the HTTPS connector on 8443 port and configure it according to Code below:
+* copy the keystore which contains the pair public/private keys (``keystore.jks``) inside the ``TOMCAT_HOME/conf``;
+* edit the ``TOMCAT_HOME/conf/server.xml`` file, comment the HTTP connector on 8080 port and uncomment the HTTPS connector on 8443 port and configure it as below:
 
 .. code-block:: xml
         :linenos:
         :caption: Export of the certificate.
 
-   	<Connector acceptCount="100"
-   	maxHttpHeaderSize="8192"
-   	clientAuth="false"
-   	debug="0"
-   	disableUploadTimeout="true"
-   	enableLookups="false"
-   	SSLEnabled="true"
-   	keystoreFile="conf/keystore.jks"
-   	keystorePass="<keystore password>"
-   	maxSpareThreads="75"
-  	maxThreads="150"
-  	minSpareThreads="25"
-   	port="8443"
-   	scheme="https"
-   	secure="true"
-   	sslProtocol="TLS"/>
-
-Configuration of the HTTPS protocol for JBoss
----------------------------------------------
-The configuration of the HTTPS protocol for JBoss depends on the version in use. Please refer to the Jboss official documents for the version in use.
+		<Connector acceptCount="100"
+					maxHttpHeaderSize="8192"
+					clientAuth="false"
+					debug="0"
+					disableUploadTimeout="true"
+					enableLookups="false"
+					SSLEnabled="true"
+					keystoreFile="conf/keystore.jks"
+					keystorePass="<keystore password>"
+					maxSpareThreads="75"
+					maxThreads="150"
+					minSpareThreads="25"
+					port="8443"
+					scheme="https"
+					secure="true"
+					sslProtocol="TLS"
+		/>
 
 Knowage configuration
 ---------------------
 
-Once the CAS has been installed, it is necessary to modify the Knowage configuration. The user must edit some values of the SBI_CONFIG table using the administrator interface, as shonw in Code below:
+Once the CAS has been installed, it is necessary to modify the Knowage configuration. The user must edit some values of the ``SBI_CONFIG`` table using the administrator interface
 
 .. code-block:: bash
         :linenos:
         :caption: Values of the SBI_CONFIG table to change.
 
-   	SPAGOBI_SSO.ACTIVE:
-   	set valueCheck to true
-   
-   	CAS_SSO.VALIDATE-USER.URL:
-   	set valueCheck to https://<URL of the CAS application>/cas
-   
-   	CAS_SSO.VALIDATE-USER.SERVICE:
-   	set valueCheck to https://<URL of the Knowage server >:8443/knowage/proxyCallback
-   
-   	SPAGOBI_SSO.SECURITY_LOGOUT_URL:
-   	set valueCheck to https://<URL of the CAS application>/cas/logout
+		SPAGOBI_SSO.ACTIVE:
+		set valueCheck to true
 
-Then set the **sso_class** environment variable as in Code below:
+		CAS_SSO.VALIDATE-USER.URL:
+		set valueCheck to https://<URL of the CAS application>/cas
 
-.. code-block:: bash
+		CAS_SSO.VALIDATE-USER.SERVICE:
+		set valueCheck to https://<URL of the Knowage server >:8443/knowage/proxyCallback
+
+		SPAGOBI_SSO.SECURITY_LOGOUT_URL:
+		set valueCheck to https://<URL of the CAS application>/cas/logout
+
+Then set the ``sso_class`` environment variable as below:
+
+.. code-block:: xml
         :linenos:
 
-   	<Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.cas.CasSsoService3NoProxy"/>  
+   		<Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.cas.CasSsoService3NoProxy"/>  
    
 This variable is located:
 
-* Tomcat: in the TOMCAT_HOME/conf/server.xml file,
-* JBoss: in the JBOSS_HOME/ standalone/configuration/standalone.xml.
+* Tomcat: in the ``TOMCAT_HOME/conf/server.xml``
+* JBoss: in the ``JBOSS_HOME/ standalone/configuration/standalone.xml``
  
-Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for istance, as in Code below
+Edit all ``knowage\WEB-INF\web.xml`` to activate CAS filters.
 
 .. code-block:: xml
         :linenos:
@@ -202,4 +194,4 @@ Edit all /knowage:sub:`\*`/WEB-INF/web.xml files activating all CAS filters; for
           <url-pattern>/proxyCallback</url-pattern>                           
           </filter-mapping>]                                     
 
-All web.xml files have CAS filters already configured, but they are commented. The user must uncomment them, looking for the strings "START-CAS”, "END-CAS“ and adjust the URL as the code abow reports.
+All ``web.xml`` files have CAS filters already configured, but they are commented. The user must uncomment them, looking for the strings ``START-CAS``, ``END-CAS`` and adjust the URL as the code abow reports.
