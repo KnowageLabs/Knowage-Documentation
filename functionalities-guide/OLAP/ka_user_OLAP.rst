@@ -55,7 +55,7 @@ Considering :numref:`featuresoffiltcard`, we can see that a filter card is made 
 - (d) choosed filter name,
 
 .. _featuresoffiltcard:
-.. figure:: media/image138.png
+.. figure:: media/image13839.png
 
     Features of a filter card.
 
@@ -261,7 +261,7 @@ After selecting the hierarchy and saving user’s choice, that hierarchy will be
 
 If the user re-opens the dialog window, he/she sees the selected hieararchies and has the chance to change it if needed to, as shown below.
 
-.. figure:: media/image156.png
+.. figure:: media/image1565758.png
 
     Changing the hierarchies.
 
@@ -308,7 +308,7 @@ In particular, it is possible to search for a member in three ways:
 
 2. by typing member’s name or it’s part in the input field and clicking on the search button. The research will be possible if the user enters at least four letters. If the user wishes to include member’s siblings to the research, the checkbox (:numref:`dialogforslicerchoosing` (d))needs to be checked;
 
-.. figure:: media/image163.png
+.. figure:: media/image16364.png
 
    Using the research box.
 
@@ -481,7 +481,7 @@ Sorting
 
 To enable member ordering the user must click on the “Enable sorting” button in the side bar panel. The command for sorting will appear next to the member’s name in the pivot table. In addition, the sorting command will show the members of “Measures” hieararchy or members that are crossjoined with them, as shown below. 
 
-.. figure:: media/image182.png
+.. figure:: media/image18283.png
 
     Member sorting.
 
@@ -952,21 +952,20 @@ Once entered the page the user can freely set the fields as filter panels or as 
 - |image202| to define the cross navigation;
 - |image203| to configure buttons visibility.
 
+Refer to Section *Functionalities* to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to :numref:`wizconfigscena`, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
 
-   |image204|
+.. _wizconfigscena:
+.. figure:: media/image20607.png
 
-   Figure 8.7: Wizard to configure the scenario.
-
-Refer to Section 7.2 to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to :numref:`crossnavdef`, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
-
-.. _crossnavdef:
-.. figure:: media/image208.png
-
-    Cross navigation definition.
+    Wizard to configure the scenario.
 
 Once one cross navigation has been set you keep on adding as many as required. Just open the wizard and click on the “Add” button at the top right corner.
 
 Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the the user must access the “Cross Navigation Definition” functionalities available in Knowage Server. Here, referring to *Cross Navigation* section of *Analytical document* chapter, you will use the parameter just set as output parameter.
+
+.. figure:: media/image2080910.png
+
+    Cross navigation definition.
 
 As shown in figure below, the buttons visibility serves to decide which permissions are granted to the end-user. Some features can only be let visible while the admin can also grant the selection for others. 
 
