@@ -591,7 +591,6 @@ The temporal dimension can have one or more hierarchies. Only one of these can s
     Temporal dimension definition on Meta.
    
 .. figure:: media/image22526.png
-         :scale: 60%
 
     Temporal hierarchy visualization (Left). Changing hierarchies (Right).
 
@@ -611,7 +610,6 @@ Moreover, selecting the filters tab, you can use specific filters clicking on th
 
 .. _iaddtempfiltersleftright:
 .. figure:: media/image22930.png
-         :scale: 60%
 
     Add temporal filters (Left). List of available elements (Right).
 
