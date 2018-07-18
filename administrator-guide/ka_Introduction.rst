@@ -4,14 +4,19 @@ Knowage at a glance
 Discovering Knowage
 ----------------------
 
-Knowage is the business intelligence suite developed and managed by Engineering Group. Knowage is *flexible*, since it is based on a modular architecture and open standards in order to facilitates its customization and integration according to users’ needs. It also provides a *comprehensive* set of analytical features and capabilities, listed in section Analytical and operational functionalities, ranging from traditional reporting and charting tools, to more advanced analytics.
+Knowage is the business intelligence suite developed and managed by Engineering Group. Knowage is *flexible*, since it is based on a modular architecture and open standards in order to facilitates its customization and integration according to users’ needs. It also provides a *comprehensive* set of analytical features and capabilities ranging from traditional reporting and charting tools, to more advanced analytics.
 
-KnowageER and KnowageSI also supports **multi-tenancy**, i.e. a single Knowage instance serving multiple organizations, called tenants. In a multi-tenancy architecture, each tenant owns and manages his own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
+.. important::
+         **Enterprise Edition only**
+
+         KnowageER and KnowageSI, as submodules of Knowage Enterprise Edition, also supports **multi-tenancy** (i.e. a single Knowage instance serving multiple organizations, called tenants). In a multi-tenancy architecture, each tenant owns and manages his own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
 
 Modules
 -----------------
 
-Knowage suite is based on five modules, as shown in :numref:`knowmodules`:
+.. figure:: media/image6.png
+   
+   Knowage modules.
 
 Knowage Server
    The core of the suite, which includes all analytical features. This is the reference environment for the end user and the administrator;
@@ -31,15 +36,10 @@ functionalities.
 
 It represents an enterprise level solution for BI, supporting the whole project life-cycle, managing security and guaranteeing scalability, clustering and high availability architectures. Moreover, it is the main reference for all potential users and usages; it leads the development trend in terms of features, services and delivery models.
 
-.. _knowmodules:
-.. figure:: media/image6.png
-   
-   Knowage modules.
-
 Layers
 -------
 
-Knowage Server architecture is functionally layered on three main levels, as shown in Figure below:
+Knowage Server architecture is functionally layered on three main levels.
    
 .. figure:: media/image7.png
 
@@ -52,7 +52,7 @@ Analytical layer
 Data layer
    It regulates data loading through many access strategies.
 
-Every layer of the functional architecture is composed of different application modules, as shown in Figure below.
+Every layer of the functional architecture is composed of different application modules.
 
 .. figure:: media/image8.png
 
