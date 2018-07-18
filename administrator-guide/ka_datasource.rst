@@ -1,12 +1,7 @@
 Configure data sources
 =========================
 
-To let all the BI tools work properly you need to configure DB connection. There are two different options available for the configuration:
-
-- **JNDI** (recommended)
-- **JDBC**
-
-Let’s have a look on these two types.
+To let all the BI tools work properly you need to configure DB connection. There are two different options available for the configuration **JNDI** (recommended) and **JDBC**.
 
 Connect to your data
 --------------------
@@ -15,16 +10,12 @@ In order to connect to your data, you have to define a new data source connectio
 
 Knowage manages two types of data source connections:
 
+- connections retrived as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access (e.g. by defining connection pools) and thus are the preferred ones.
 - direct JDBC connections, which are directly managed by Knowage;
-- connections retrived as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access, e.g., by defining connection pools.
 
-The second type of connection is the one recommended in real projects.
-
-To add a new connection, first add the relative JDBC driver to the folder KnowageServer-<version>/lib and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
+To add a new connection, first add the relative JDBC driver to the folder ``KnowageServer-<version>/lib`` and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
       
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
-
-The detail page of each data source (on the right side as shown in the figures above) includes the following properties:
 
 .. figure:: media/image25.png 
     
@@ -34,48 +25,49 @@ The detail page of each data source (on the right side as shown in the figures a
     
      Data source details.
 
-Label: 
+The detail page of each data source (on the right side as shown in the figures above) includes the following properties:
+
+Label 
   Mandatory identifier of the data source.
-Description: 
+Description 
   Description of the data source.
-Dialect: 
+Dialect 
   The dialect used to access the database. Supported dialects are: 
-      
-.. _certdatasources:
-.. table:: Certified Data Dources
-   :widths: auto
-   
-   +-----------------------+-----------------+
-   |    Certified Data Dources               |
-   +=======================+=================+
-   | Oracle                |  11,12          |
-   +-----------------------+-----------------+
-   | MySQL                 | 5.2,5.5,5.6     |
-   +-----------------------+-----------------+
-   | PostgreSQL            | 8.2, 9.1        |
-   +-----------------------+-----------------+
-   | Maria DB              | 10.1,10.2,10.3  |
-   +-----------------------+-----------------+
-   | Teradata              | 15.10.0.7       |
-   +-----------------------+-----------------+
-   | Vertica               | 9.0.1-0         |
-   +-----------------------+-----------------+
-   | Cloudera              | 5.8.9           | 
-   +-----------------------+-----------------+
-   | Apache Hive 1         | 1.1.0           |    
-   +-----------------------+-----------------+
-   | Apache Hive 2         | 2.3.2           | 
-   +-----------------------+-----------------+     
-   | Apache Impala         | 2.6.0           |
-   +-----------------------+-----------------+
-   | Apache Spark SQL      | 2.3.0           |
-   +-----------------------+-----------------+
-   | Apache Cassandra      | 2.1.3           |
-   +-----------------------+-----------------+
-   | Mongo DB              | 3.2.9           |  
-   +-----------------------+-----------------+
-   | Orient DB             | 3.0.2           |
-   +-----------------------+-----------------+
+            
+      .. table:: Certified Data Dources
+         :widths: auto
+
+         +-----------------------+-------------------+
+         |    Certified Data Dources                 |
+         +=======================+===================+
+         | Oracle                | 11, 12            |
+         +-----------------------+-------------------+
+         | MySQL                 | 5.2, 5.5, 5.6     |
+         +-----------------------+-------------------+
+         | PostgreSQL            | 8.2, 9.1          |
+         +-----------------------+-------------------+
+         | Maria DB              | 10.1, 10.2, 10.3  |
+         +-----------------------+-------------------+
+         | Teradata              | 15.10.0.7         |
+         +-----------------------+-------------------+
+         | Vertica               | 9.0.1-0           |
+         +-----------------------+-------------------+
+         | Cloudera              | 5.8.9             | 
+         +-----------------------+-------------------+
+         | Apache Hive 1         | 1.1.0             |    
+         +-----------------------+-------------------+
+         | Apache Hive 2         | 2.3.2             | 
+         +-----------------------+-------------------+     
+         | Apache Impala         | 2.6.0             |
+         +-----------------------+-------------------+
+         | Apache Spark SQL      | 2.3.0             |
+         +-----------------------+-------------------+
+         | Apache Cassandra      | 2.1.3             |
+         +-----------------------+-------------------+
+         | Mongo DB              | 3.2.9             |  
+         +-----------------------+-------------------+
+         | Orient DB             | 3.0.2             |
+         +-----------------------+-------------------+
    
    
 Read Only
@@ -87,15 +79,15 @@ Type
    
       + If you want to define a direct **JDBC** connection, then you have to also set the following fields:
       
-         - **URL** Database URL. An example for MySQL databases is *jdbc:mysql://localhost:3306/foodmart_key*
+         - **URL** Database URL. An example for MySQL databases is ``jdbc:mysql://localhost:3306/foodmart_key``
          - **User** Database username
          - **Password** Database password.
-         - **Driver** Driver class name. An example for MySQL databases is *com.mysql. jdbc.Driver*.
+         - **Driver** Driver class name. An example for MySQL databases is ``com.mysql.jdbc.Driver``.
       + If instead you want to define a **JNDI** connection, fill in the following fields:
       
          - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
          - **Schema attribute** The name of the profile attribute that determines the schema name.
-         - **JNDI NAME** It depends on the application server. For instance, for Tomcat 7 it has the format java:comp/env/jdbc/<resource_name>. If the data source is multischema, then the string is java:comp/env/jdbc/<prefix>.
+         - **JNDI NAME** It depends on the application server. For instance, for Tomcat 7 it has the format ``java:comp/env/jdbc/<resource_name>``. If the data source is multischema, then the string is ``java:comp/env/jdbc/<prefix>``.
 
 Once you have filled the form, you can test the new data source by clicking on the *Test* button at the top right corner of the page and then save it.
 
@@ -104,7 +96,12 @@ Now you are connected to your data and you can start a new Business Intelligence
 Big Data and NoSQL
 -------------------
 
-In this section we describe how you can connect Knowage to different Big Data data sources. Plese note that these connections are available for products *KnowageBD* and *KnowagePM*.
+In this section we describe how you can connect Knowage to different Big Data data sources.
+
+.. important::
+         **Enterprise Edition only**
+
+         Please note that these connections are available for products KnowageBD and KnowagePM only.
 
 Hive
 ~~~~~~
@@ -119,40 +116,40 @@ For example suppose you want to connect to Hive using Apache driver you should i
 
    Libraries to include in the apache driver.
 
-If you forget to add one or more libraries, you will likely get a *NoClassDefFoundError* or *ClassNofFoundException*.
+If you forget to add one or more libraries, you will likely get a ``NoClassDefFoundError`` or ``ClassNofFoundException``.
 
 The parameters for the Hive connection are:
 
 -  **Dialect:** Hive QL;
 
--  **Driver Class:** *org.apache.hive.jdbc.HiveDriver* (if you are not using some specific driver of some distribution. In this case search in the documentation of the distribution);
--  **Connection URL:** *jdbc:\hive2:\//<host1>:<port1>,<host2>:<port2>/dbName;sess\\_var_list?hive_conf_list#hive_var_list**.
+-  **Driver Class:** ``org.apache.hive.jdbc.HiveDriver`` (if you are not using some specific driver of some distribution. In this case search in the documentation of the distribution);
+-  **Connection URL:** ``jdbc:\hive2:\//<host1>:<port1>,<host2>:<port2>/dbName;sess\\_var_list?hive_conf_list#hive_var_list``.
 
-Here <host1>:<port1>,<host2>:<port2> is a server instance or a comma separated list of server instances to connect to (if dynamic service discovery is enabled). If empty, the embedded server will be used.
+Here ``<host1>:<port1>,<host2>:<port2>`` is a server instance or a comma separated list of server instances to connect to (if dynamic service discovery is enabled). If empty, the embedded server will be used.
 
-A simple example of connetction url is: *jdbc:\hive2://192.168.0.125:10000*.
+A simple example of connetction url is ``jdbc:\hive2://192.168.0.125:10000``.
 
 Spark SQL
 ~~~~~~~~~~
 
 Spark SQL reuses the Hive front end and metastore, giving you full compatibility with existing Hive data, queries and UDFs. Simply install it alongside Hive. For the installation of Spark we suggest you to look at the spark website `http://spark.apache.org/. <http://spark.apache.org/>`__ To create a connection to the Spark SQL Apache Thrift server you should use the same JDBC driver of Hive. 
 
--  **Driver Class:** org.apache.hive.jdbc.HiveDriver (if you are not using some specific driver of some distro. In this case search in the documentation of the distro);
+-  **Driver Class:** ``org.apache.hive.jdbc.HiveDriver`` (if you are not using some specific driver of some distro. In this case search in the documentation of the distro);
 
--  **Connection URL:** jdbc:\hive2://<host1>:<port1>,<host2>:<port2>/dbName;sess\\_var_list?hive_conf_list#hive_var_list.
+-  **Connection URL:** ``jdbc:\hive2://<host1>:<port1>,<host2>:<port2>/dbName;sess\\_var_list?hive_conf_list#hive_var_list``.
 
-Look at the Hive section for the details about parameters. The port in this case is not the port of Hive but the one of Spark SQL thrift server (usually 10001).
+Look at the Hive section for the details about parameters. The port in this case is not the port of Hive but the one of Spark SQL thrift server (usually ``10001``).
 
 Impala
 ~~~~~~
 
-Impala (currently an Apache Incubator project) is the open source,   analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it, with all dependencies, on the application server. The definition of the url can be different between versions of the driver, please check on the Cloudera web site.
+Impala (currently an Apache Incubator project) is the open source, analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it, with all dependencies, on the application server. The definition of the url can be different between versions of the driver, please check on the Cloudera web site.
 
 Example parameters for Impala connection are:
 
 -  **Dialect:** Hive SQL;
--  **Driver Class:** com.cloudera.impala.jdbc4.Driver;
--  **Connection URL:** jdbc:impala://dn03:21050/default.
+-  **Driver Class:** ``com.cloudera.impala.jdbc4.Driver``;
+-  **Connection URL:** ``jdbc:\impala://dn03:21050/default``.
 
 MongoDB
 ~~~~~~~~
@@ -165,9 +162,7 @@ Example parameters for the connection are:
 
 -  **Dialect:** MongoDB;
 -  **Driver Class:** mongo;
--  **Connection URL:** localhost:27017/foodamrt.
-
-The definition of a business model over MongoBD data using Knowage Meta will be available in the next releases.
+-  **Connection URL:** ``localhost:27017/foodamrt``.
 
 Cassandra
 ~~~~~~~~~~
@@ -197,8 +192,8 @@ An example of Cassandra Apache driver (with dependencies) is:
 Example parameters for the connection are:
 
 -  **Dialect:** Cassandra;
--  **Driver Class:** org.apache.cassandra.cql.jdbc.CassandraDriver;
--  **Connection URL:** jdbc:cassandra://193.109.207.65:9160/foodmart.
+-  **Driver Class:** ``org.apache.cassandra.cql.jdbc.CassandraDriver``;
+-  **Connection URL:** ``jdbc:cassandra://193.109.207.65:9160/foodmart``.
 
 Unless you are using Spark SQL to read from Cassandra, the definition of a business model over Cassandra data using Knowage Meta will be available in the next releases.
 
