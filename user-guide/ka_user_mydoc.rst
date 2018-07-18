@@ -1,5 +1,5 @@
 Document Execution
-=================
+==================
 
 In this chapter we describe all the features related to Knowage analytical documents, such as parameters management, printing, exporting and so on.
 
@@ -59,7 +59,7 @@ Each Knowage document can be exported into several formats, depending on the opt
 Clicking **Export** in the document toolbar you will see the available formats for the current document. Select one and check the exported document.
 
 Business and structural metadata
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage allows the definition of business metadata to describe an object, in our case a document. Business metadata, unlike technical metadata used in Knowage Meta to build the metamodel, are business information associated to the document intended to help users to understand, access and classify it. As such, they have been mainly conceived for the end user understanding.
 
@@ -89,7 +89,7 @@ Knowage offers a simple collaborative tool to share notes and comments on docume
 Click on **Notes** in the contextual menu of the document toolbar. In this way a text editor opens where you can type your comment. Make it private or public (i.e., accessible to users with the same rights as you) by selecting the preference in the appropriate box. Click **Save** to confirm. All public comments from all users, as well as your private notes, will be shown the next time you open this window. If you want to edit or delete a note, click on the Rate document corresponding symbols in the **Note list** tab. You can also export the note in PDF or RTF format.
 
 Rate document
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The aim of this functionality is to acquire explicit quality data that can be further used. Specifically, it allows the administrator to identify anomalies about the use of an analytical document by end users. Rating a document means assigning it a value from the end user perspective. This brings additional information with respect to traditional audit and monitoring data, which can track the number of executions but cannot interpret users motivations and feelings.
 
@@ -104,6 +104,6 @@ To rate documents, click on **Rank** in the contextual menu of the document tool
    Share notes and comments
 
 Scheduled Execution
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The administrator has the possibility to set schedulation for documents. These schedulations can be accessed by **Show Scheduled executions**.
