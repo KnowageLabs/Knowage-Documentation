@@ -21,7 +21,7 @@ Datasource link within the applications
 You would set up ResourceLink for JNDI datasource. To do so, you have to configure each ``knowage*/META-INF/context.xml`` and set the ResourceLink for each JNDI data source previously created. Inside the released packages two links are already defined: 
 
 - one for the ``jdbc/knowage`` resource, which the user must keep
-- the other for the ``jdbc/foodmart``, which should be renamed with jdbc/dwh.
+- the other for the ``jdbc/foodmart``, which should be renamed with ``jdbc/dwh``.
 
 .. code-block:: xml
 
