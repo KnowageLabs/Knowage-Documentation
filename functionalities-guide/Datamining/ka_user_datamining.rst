@@ -33,13 +33,15 @@ Once again the outputs are set at template level. In the following we will descr
 
     Document browsing on server.
 
-We suppose to open a document with text outputs. At the top of the page you find the command box. When the document is lauched, it is automatically executed with the default command (which is the one set to **auto** in the template file) and you get the corresponding outputs displayed in different tabs. If you wish to change the command to get other outputs you can use the dedicated combobox as emphasized in :numref:`selectingcommandapp`. We say in advance that the command are set in the template file. As you can check in :numref:`commandtags` the template must contain the **COMMAND TAGS**. In the example each command (two in this case) is made up of instructions to be executed in order to compute one or more measures.
+We suppose to open a document with text outputs. At the top of the page you find the command box. When the document is lauched, it is automatically executed with the default command (which is the one set to **auto** in the template file) and you get the corresponding outputs displayed in different tabs. If you wish to change the command to get other outputs you can use the dedicated combobox as emphasized in the following figure.
 
 .. _selectingcommandapp:
 .. figure:: media/image386.png
 
     Selecting the command to be applied.
-    
+
+We say in advance that the command are set in the template file. As you can check in next figure the template must contain the **COMMAND TAGS**. In the example each command (two in this case) is made up of instructions to be executed in order to compute one or more measures.
+
 .. _commandtags:
 .. figure:: media/image387.png
 
@@ -51,11 +53,13 @@ To switch to a different command, use the combobox and click on the target comma
 
 The computed outputs are visualized in the half bottom of the page: each output populates a tab.
 
-If the command refers to a script that needs one or more datasets, than these datasets are displayed between the command combobox and the outputs tabs. You can use the combobox which list the Knowage dataset matched to the document throught the template. Otherwise you can upload a file for Knowage datasets that cannot be changed from the GUI. Clicking on the **FILE** button it is possible to upload the file to replace the default dataset. Remember to click on the |image404| to start the upload. Then a **Run script** button will appear to re-execute the document as indicated in :numref:`executbuttupload`.
+If the command refers to a script that needs one or more datasets, than these datasets are displayed between the command combobox and the outputs tabs. You can use the combobox which list the Knowage dataset matched to the document throught the template. Otherwise you can upload a file for Knowage datasets that cannot be changed from the GUI. Clicking on the **FILE** button it is possible to upload the file to replace the default dataset. Remember to click on the |image404| to start the upload. 
 
 .. figure:: media/image389.png
 
     Changing dataset related to a command.
+    
+Then a **Run script** button will appear to re-execute the document as indicated below.
 
 .. _executbuttupload:
 .. figure:: media/image390.png
@@ -72,12 +76,14 @@ We will not go further into details of R or Python code so we leave the user to 
 
 When dealing with output parameters, you can update the corresponding values by filling the input box appearing in the respective output tab panel. Once you re-run the document, the modifications are applied to a single output, the one which the parameter is associated to.
 
-On the other hand, when dealing with command parameters, you can update the variable value by clicking the double gear icon (circled in :numref:`clickdoublebuttchange`) displayed next to the command name. The button updates the interface and opens a box (:numref:`changingparamvalues`) where you can change a convalidate the modification. The variable value is passed to the whole command and hence it updates the variables of all command outputs.
+On the other hand, when dealing with command parameters, you can update the variable value by clicking the double gear icon (circled in the following figure) displayed next to the command name. 
 
 .. _clickdoublebuttchange:
 .. figure:: media/image392.png
 
     Click on the double gear button to change the .
+
+The button updates the interface and opens a box (see figure below) where you can change a convalidate the modification. The variable value is passed to the whole command and hence it updates the variables of all command outputs.
 
 .. _changingparamvalues:
 .. figure:: media/image393.png
@@ -116,7 +122,7 @@ You will enter a page like the one shown in figure below.
 
    Functions Catalog interface.
 
-The actions that a user can perform depend on the user’s role. However, indipendently from the user’s role, once entered the feature all functions are shown by default. Referring to :numref:`functioncatalinterf`, one has the page made up of:
+The actions that a user can perform depend on the user’s role. However, indipendently from the user’s role, once entered the feature all functions are shown by default. Referring to the figure above, one has the page made up of:
 
 -  **categories**: these are set by an administrator user and are used to classify the functions accordingly to their definition and goals. Moreover they’re of help in browsing the functions; only the admin user can add and/or modify categories.
 
@@ -129,7 +135,7 @@ The actions that a user can perform depend on the user’s role. However, indipe
          
          The admin can add a new category using the Domain management available on Knowage Server under the Server Settings section. To know more about this section, please refer to Section “Server settings” of the General Administration Manual.
 
-The categories for functions depends on an admin user. Taking :numref:`functioncatalinterf` as an example, we have:
+The categories for functions depends on an admin user. Taking *Functions Catalog interface* figure as an example, we have:
 
 1. **Text Analysis**: make sense of unstructured text,
 
@@ -167,7 +173,7 @@ To create a new function an admin user must click on the “Plus” icon availab
 The General tab\*
 ~~~~~~~~~~~~~~~~~
 
-In this tab the user gives the general information about the function as :numref:`creatingnewfunct` shows. The admin user must type: the *name* of the function, the *label* with which it is identified uniquely (remember to use only numbers or letters and do not leave spaces between them). The *keywords* are were tags are defined. Finally the *Description* is where the user can insert a text or images to be shown when the function outputs are visualized.
+In this tab the user gives the general information about the function as the figure above shows. The admin user must type: the *name* of the function, the *label* with which it is identified uniquely (remember to use only numbers or letters and do not leave spaces between them). The *keywords* are were tags are defined. Finally the *Description* is where the user can insert a text or images to be shown when the function outputs are visualized.
 
 The Input tab\*
 ~~~~~~~~~~~~~~~
@@ -219,7 +225,7 @@ Note that if the function takes variables or files as input you can recall them 
  
            $P{variable_name}
  
-We suppose now to have chosen a dataset and the local modality but to want to use the Python language (:numref:`usedatafrmpandas`). In this case the  dataset is saved and read by the script as a dataframe of the pandas libraries: `http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`__
+We suppose now to have chosen a dataset and the local modality but to want to use the Python language (see next figure). In this case the  dataset is saved and read by the script as a dataframe of the pandas libraries: `http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`__
 
 .. _usedatafrmpandas:
 .. figure:: media/image412.png
@@ -338,7 +344,7 @@ Finally it is important to specify what kind of outputs the function will produc
 -  **Text**: the function will return a window containing some text;
 -  **File**: the function will return a file.
 
-It is possible to define more than one output for the same function. As an example, in :numref:`execofdemoforfunct` you can see the execution of the demo for a function called “Heart diseases”. The latter was set to have two outputs, one is of type “Dataset” and the other of type “Image”. The execution opens then a window with two tabs. The first tab contains the Dataset type output, which is translated visually with a table. While the second tab contains the Image output namely a set of graphics as configured to.
+It is possible to define more than one output for the same function. As an example, in the following figure you can see the execution of the demo for a function called “Heart diseases”. The latter was set to have two outputs, one is of type “Dataset” and the other of type “Image”. The execution opens then a window with two tabs. The first tab contains the Dataset type output, which is translated visually with a table. While the second tab contains the Image output namely a set of graphics as configured to.
 
 .. _execofdemoforfunct:
 .. figure:: media/image41516.png
@@ -357,7 +363,7 @@ Finally clicking on the function name as shown below you can enter function conf
 
     Clicking on function name to modify it.
 
-As well as for the input case, the script can recall the output elements. We need to distinguish between the R and the Python language. Note that, in the dataset case, the user needs to name the output as reported in the script body. :numref:`usedatafrmpandas` and :numref:`defoutpexample` show an example.
+As well as for the input case, the script can recall the output elements. We need to distinguish between the R and the Python language. Note that, in the dataset case, the user needs to name the output as reported in the script body. The two figures below show an example.
 
 .. _defoutpexample:
 .. figure:: media/image419.png
@@ -368,7 +374,7 @@ When using Python the datasetOut variable is a “pandas” dataframe while, whe
 
 When the script runs using a certain output dataset Knowage server produces a dataset whose name and label is label <User_Name> functionsCatalog <label specified in the Output tab>.
 
-As an example the function of :numref:`usedatafrmpandas` produces a dataFrame whose label and name are biadmin_functionsCatalog_datasetOut.
+As an example the function produces a dataFrame whose label and name are biadmin_functionsCatalog_datasetOut.
 
 Engine description\*
 --------------------------
