@@ -162,9 +162,9 @@ Futhermore, in the occurance the chart uses one datetime attribute as category f
     Datetime function usage.
     
 For bar and line chart you can add more then one container for adding series in **Structure** section. In that case you will have in your chart more then one axis for series. 
-In **Advanced** section you can specify to align these axis to 0 (zero) value. 
+In **Advanced** section you can specify to align these axis to 0 (zero) value. It is check box **alignAxis** where checked means that axises will be aligned to 0, and unchecked means that they will not be aligned.
  
-For pie chart inside **Advanced** section you can set configuration for your toolip: to show/hide absolute value and/or percentage.
+For pie chart inside **Advanced** section you can set configuration for your toolip: to show/hide absolute value and/or percentage. Inside **tooltip** property of serie object you can find properies **showAbsValueTooltip** and **showPercentageTooltip**.
 
 Scatter chart
 ~~~~~~~~~~~~~
@@ -231,7 +231,7 @@ In Figure below you find the sunburst obtained with data of :numref:`exampleofda
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
     
-Inside **Advanced** section you can set value for scale that will increase/decrease your chart.
+Inside **Advanced** section you can set value for scale that will increase/decrease your chart. You need to set numeric value for property **scale**. 
 
 Wordcloud chart
 ~~~~~~~~~~~~~~~
