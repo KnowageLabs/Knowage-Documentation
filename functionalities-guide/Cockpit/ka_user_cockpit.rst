@@ -83,7 +83,7 @@ In the following we go into details of each available widget.
 Text widget
 ~~~~~~~~~~~
 
-By clicking the button Text Widget you can add text to your cockpit. As shown in :numref:`texteditwidgetconf`, the widget editor opens and it is divided in three tabs: the **Text editor**, the **Style**, the **Dataset** and the **Filters** tab.
+By clicking the button Text Widget you can add text to your cockpit. As shown in figure below, the widget editor opens and it is divided in three tabs: the **Text editor**, the **Style**, the **Dataset** and the **Filters** tab.
 
 .. _texteditwidgetconf:
 .. figure:: media/image144.png
@@ -146,9 +146,9 @@ We recall that also for chart widget it is possible to set cross navigation on e
          
          Due to the fact that parameters can only be managed by technical user the cross navigation cannot be implemented by the final user.
          
-As shown in :numref:`crossnavchartwidget`, it is mandatory to enable the cross navigation feature by using the dedicate tab of chart editor GUI. It is mandatory to choose the column element to be passed to the destination document and associate it to the right output parameter (previoulsy added to the document using the detail interface).
+As shown in next figure, it is mandatory to enable the cross navigation feature by using the dedicate tab of chart editor GUI. It is mandatory to choose the column element to be passed to the destination document and associate it to the right output parameter (previoulsy added to the document using the detail interface).
 
-The cross navigation name can be left empty. In case multiple cross navigation definitions have been configured for the document, a pop up will be displayed, letting the user to choose which destination to reach (exactly as we saw earlier for Image widget in :numref:`crossnavmultchoice`).
+The cross navigation name can be left empty. In case multiple cross navigation definitions have been configured for the document, a pop up will be displayed, letting the user to choose which destination to reach (exactly as we saw earlier for Image widget in the last figure of that paragraph).
 
 .. _crossnavchartwidget:
 .. figure:: media/image151.png
@@ -192,7 +192,7 @@ is editable. When you are satisfied with your expression you can click on save b
 
     Add a calculated field.
 
-At the very bottom of the window, you can see the dataset fields listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from :numref:`columnsettings`. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+At the very bottom of the window, you can see the dataset fields listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
 
 .. _columnsettings:
 .. figure:: media/image158.png
@@ -271,7 +271,7 @@ Referring to Figure below, we sum up how to add a cross navigation to the cockpi
 -  select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that     cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
 -  add all involved output parameters by adding them one by one in the bottom part of the GUI.
 
-Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. :numref:`filterstabwidgetconf` shows an example of how to set the limit rows or a conditions on dataset columns.
+Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
 
 .. _filterstabwidgetconf:
 .. figure:: media/image168.png
@@ -592,7 +592,7 @@ Editing the fields of the first tab you can add or change the name and/or the de
 Data configuration
 ----------------------
 
-This feature manages the data storage and usage. In fact, here there is the possiblity to save data in cache, create associations between datasets, schedule the (data) refresh frequency and so on. Referring to :numref:`dataconfigwindow`, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **Frequency** and the **Template** tab.
+This feature manages the data storage and usage. In fact, here there is the possiblity to save data in cache, create associations between datasets, schedule the (data) refresh frequency and so on. Referring to the figure below, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **Frequency** and the **Template** tab.
 
 .. _dataconfigwindow:
 .. figure:: media/image199.png
@@ -620,7 +620,7 @@ Associations
 
 If your goal is to show data from a single dataset, it is not necessary to define any association. *Associations should be set within the designer when widgets are built on different datasets*. Associations can be set with the elements: dataset columns, dataset parameters and document parameters. Note that to implement an association the user must have at least one column. We show some examples in the following.
 
-:numref:`assocbetweendatacolum` shows the association between two datasets. In this case the user must detect one field from the first dataset, the same field (in terms of values) in the other one. The relation will appear right below. Click on the save button to confirm the association. If the associations rely on multiple columns the user must add them one by one.
+The following figure shows the association between two datasets. In this case the user must detect one field from the first dataset, the same field (in terms of values) in the other one. The relation will appear right below. Click on the save button to confirm the association. If the associations rely on multiple columns the user must add them one by one.
 
 .. _assocbetweendatacolum:
 .. figure:: media/image201.png
@@ -644,7 +644,7 @@ Once you have defined the associations, as soon as you refresh one widget, all r
 Frequency
 ~~~~~~~~~
 
-The Frequency tab defines a schedulation over dataset involved in the associations. An example is supplied in :numref:`frequsettexample`. This means that associations are activated automatically and data are reloaded according to this feature. In particular, groups of realtime datasets that compose one or more associations can have different update frequencies. We stress that, in order to secure the right document execution, the group frequency do not affect the other ones and each group is reloaded at different times. In addition, realtime dataset that are not involved in any association can have their own frequency.
+The Frequency tab defines a schedulation over dataset involved in the associations. An example is supplied in the next figure. This means that associations are activated automatically and data are reloaded according to this feature. In particular, groups of realtime datasets that compose one or more associations can have different update frequencies. We stress that, in order to secure the right document execution, the group frequency do not affect the other ones and each group is reloaded at different times. In addition, realtime dataset that are not involved in any association can have their own frequency.
 
 .. _frequsettexample:
 .. figure:: media/image204.png
