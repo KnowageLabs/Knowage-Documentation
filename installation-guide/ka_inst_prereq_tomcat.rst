@@ -42,9 +42,9 @@ The Knowage installation requires 2 GB of free space on file system. This space 
 JDK version
 --------------------
 
-The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
+The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured.
 
-**[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process
+**[LINUX]** Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
 
    .. code-block:: bash
            :linenos:
@@ -54,14 +54,15 @@ The enviroment in which Knowage will be installed must include a JDK 1.8 install
            export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            
            export PATH=$JAVA_HOME/bin:$PATH                                     
 
-**[WIN]** Define the JAVA_HOME variable and PATH in the section "Environment variables" which can be reached from the "System".
+**[WIN]** Define the ``JAVA_HOME`` variable and ``PATH`` in the section "Environment variables" which can be reached from the "System".
  
    .. figure:: media/image7.png
 
-      Setting the path for the JAVA_HOME variable for Windows.
+      Setting the path for the JAVA_HOME variable for Windows
    
 Application server
 ---------------------
+
 The following lists the supported application servers:
 
 .. table:: Supported application server
@@ -83,7 +84,7 @@ For each application server installation please refer to the official documnetat
 Tomcat 7
 ~~~~~~~~~~~~
 
-In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
+In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
 
 **[LINUX]** It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
@@ -95,14 +96,14 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
            useradd -m tomcat                     
            passwd <password for the tomcat user> 
 
-- Install the Tomcat using the Tomcat user. Remeber to define the TOMCAT_HOME variable.
+- Install the Tomcat using the Tomcat user. Remeber to define the ``TOMCAT_HOME`` variable.
 
    .. code-block:: bash
            :linenos:
 
            export TOMCAT_HOME=<path of the installation Tomcat root folder >
 
-- Be sure that the Tomcat uses the JDK 1.7 o 1.8: usually the Tomcat settings are defined in the TOMCAT_HOME/bin/setenv.sh file, therefore if the TOMCAT_HOME/bin/setenv.sh file does not exit, the user must create it and insert it in the content as shown below. Note that CATALINA_PID contains the ID of the Tomcat process and it kills the process if needed.
+- Be sure that the Tomcat uses the JDK 1.8: usually the Tomcat settings are defined in the ``TOMCAT_HOME/bin/setenv.sh`` file, therefore if the ``TOMCAT_HOME/bin/setenv.sh`` file does not exit, the user must create it and insert it in the content as shown below. Note that ``CATALINA_PID`` contains the ID of the Tomcat process and it kills the process if needed.
 
    .. code-block:: bash
            :linenos:
@@ -110,7 +111,7 @@ In the following we will refer to Tomcat installation folder as TOMCAT_HOME.
            export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat7.
            pid export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
 
-- Modify the TOMCAT_HOME/bin/shutdown.sh file to force the shut down of the application in case of hanging:
+- Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
 
    .. code-block:: bash
            :linenos:
@@ -139,16 +140,16 @@ Knowage uses a schema to manage metadata, that is all those information required
     |    Certified        | MariaDB       | 10.1, 10.2, 10.3 |
     +---------------------+---------------+------------------+
 
-Therefore, a schema must be available. It can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called "metadata DB" in the following. Observe that Knowage includes all the DDL for table creation.
+Therefore, a schema must be available. It can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *metadata DB* in the following. Observe that Knowage includes all the DDL for table creation.
 
 Database schema for data
 -------------------------
 
-A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called "data DB" in the following.
+A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *data DB* in the following.
 
 R
 -----------
-To correctly use the Knowage Data Mining engine it is necessary to install **R**, **R Studio** and **rJava** on the target server. 
+To correctly use the Knowage Data Mining engine it is necessary to install *R*, *R Studio* and *rJava* on the target server. 
 Be sure to use the following versions:
 
 - version 3.2.2 for R,
