@@ -55,12 +55,12 @@ The “Physical Model” tab contains the tables that the user has checked earli
 The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to :numref:`updtphisicalmdl1`, selecting the “Update Physical Model” option the user can refresh the model metadata. As shown in :numref:`updtphisicalmdl2`, the interface shows if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
 
 .. _updtphisicalmdl1:
-.. figure:: media/image302.png
+.. figure:: media/image302a.png
 
     Update the physical model.
 
 .. _updtphisicalmdl2:
-.. figure:: media/image306.png
+.. figure:: media/image30607.png
 
     Update the physical model.
 
@@ -134,7 +134,7 @@ Create a new business class
 
 In the “Business Model” tab, the sandwitch icon lets the user add other Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
 
-.. figure:: media/image312.png
+.. figure:: media/image31213.png
 
     Create a new business class.
 
@@ -148,13 +148,13 @@ Then click on save to add the business class.
 
 As well, when clicking on “New Business View”, as reported in Figure below the user is asked to select two or more tables from the available ones and insert a description for this new business view.
 
-.. figure:: media/image3120.png
+.. figure:: media/image31214.png
 
     Create a new business view.
 
 Then, moving to the next step, the user must join tables through specific columns, typically the tables’ foreign keys. Figure below shows an example.
 
-.. figure:: media/image315.png
+.. figure:: media/image31516.png
 
     Create a new business view.
 
@@ -169,14 +169,14 @@ Table property list
 
 Scrolling the table “Property list” tab, the user finds the **Type** menu item. Expanding the related combobox the user can custom the table type among the ones available and listed below.
 
-.. figure:: media/image318.png
+.. figure:: media/image31819.png
 
     Table property list.
 
 We highlight that for temporal and time dimension type, the user must define at least one hierarchy for the related dimension. :numref:`temphierarcdef` shows that it is possible to set a hierarchy clicking on the button avaiable at the end of the comobobox line. Then, clicking on the “Add” button, the user can configure a new hierarchy. Remember to choose the **Level type** using the dedicated combobox. Note that it is possibile to shift levels using the up and down arrows avaiable at the end of each level row. Furthermore, the user can add a “Has all” node the hierarchy: just enable the “has-all” box and type the all member name.
 
 .. _temphierarcdef:
-.. figure:: media/image320.png
+.. figure:: media/image32021.png
 
     Temporal hierarchy definition.
 
