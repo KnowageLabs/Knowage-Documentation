@@ -81,7 +81,7 @@ Datasets definition
 
 After that all SVG was loaded, you must define a dataset (one for each level) that you want to use for getting and showing business information from your DWH. You can refer to Chapter 3 of this manual to know how to create datasets. Here in the following figure a dataset of our example:
 
-.. figure:: media/image247.png
+.. figure:: media/image24748.png
 
     Left. Dataset behind the SVG document. Right. Dataset preview.
 
