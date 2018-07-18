@@ -190,14 +190,15 @@ Referring to :numref:`tablefunctions1`, table functions consist of:
 Referring to :numref:`tablefunctions2`, what if consists of:
 
 - (a) lock/unlock model,
-- (b) save,
-- (c) save as new version,
-- (d) undo, 
-- (e) delete versions, 
-- (f) output wizard.
+- (b) delete versions,
+- (c) select an algotithm,
+- (d) output wizard, 
+- (e) save as new version, 
+- (f) undo,
+- (g) export excel for edit.
 
 .. _tablefunctions2:
-.. figure:: media/image149.png
+.. figure:: media/image149a.png
 
     Table functions.
 
