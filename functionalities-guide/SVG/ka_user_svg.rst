@@ -322,7 +322,7 @@ Once again we give some details on metadata in next :numref:`recaptagproperties5
 -  **MEASURES** Measures are all the business values (KPI) that the user want to monitor throught this document type. Each measure defined in this section will be shown into the detail panel (“Measures” section) with a specific thematization and could be enabled or disabled directly by an action of the the final user. When the measure is active all its values are shown onto the SVG and each area has a specific tonality of the color in according to the threshold definition and its real value. All thresholds range are visualized    into the “Legend” section of the detail panel as highlight in :numref:`measurepanellegend`. Is possibile to choose the thematization logic that it could be as quantile, percentage, uniform or static. Next, we’ll see both definitions (see Thresholds details).Remember, that at least one    measure must be defined.
 
 .. _measurepanellegend:
-.. figure:: media/image250.png
+.. figure:: media/image25051.png
 
     Left. Measure panel. Right. Legend panel.
 
