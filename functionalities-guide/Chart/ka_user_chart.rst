@@ -123,7 +123,7 @@ Traditional charts
 
 Knowage allows you to create the so-called traditional charts like bar, line, pie, radar and scatter chart in a fancy way.
 
-Each chart type is built on a specific dataset. Despite all, there are some general rules that can be applied to those “simplier” and common charts. The minimum requirement is to define/have a dataset with at least one attribute column and one measure column. Then you can select the type of chart you want to use from the **Chart** section; meanwhile using the **Structure** section you can fill in the category box with one or more attributes (typically these will be place in the X-axis) and in the series box with one or more measures (typically placed as Y-axis’ values). Refer to :numref:`chartstructure` as example.
+Each chart type is built on a specific dataset. Despite all, there are some general rules that can be applied to those “simplier” and common charts. The minimum requirement is to define/have a dataset with at least one attribute column and one measure column. Then you can select the type of chart you want to use from the **Chart** section; meanwhile using the **Structure** section you can fill in the category box with one or more attributes (typically these will be place in the X-axis) and in the series box with one or more measures (typically placed as Y-axis’ values). Refer to *Chart Structure* figure as example.
 
 Once you have selected the attributes and measures you can edit the series style and axis style configurations as explained in My first Chart. Then go to **Configuration** to set the chart dimension, the title, the legend and to choose how to associate colors to series.
 
@@ -269,7 +269,7 @@ Parallel chart
 
 The parallel chart is a way to visualize high-dimensional geometry and multifarious data. The axes of a multidimensional space are represented by parallel lines, usually equally spaced-out, and a point of the space is represented by a broken line with vertices on the parallel axes. The position of the vertex on an axis correspond to the coordinate of the point in that axis.
 
-To create a parallel chart select a dataset with at least one attribute and two columns with numerical values. You can find an interesting example of dataset in :numref:`exampleofdatsetparallel` where we display some of its rows.
+To create a parallel chart select a dataset with at least one attribute and two columns with numerical values. You can find an interesting example of dataset in the next table where we display some of its rows.
 
 .. _exampleofdatsetparallel:
 .. table:: Example of dataset for the parallel chart.
@@ -327,7 +327,7 @@ To create a parallel chart select a dataset with at least one attribute and two 
    |    108 |    7.3       |    2.9      |    6.3       |    1.8      | Iris-virginica  |
    +--------+--------------+-------------+--------------+-------------+-----------------+
     
-In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, we are able to find out which class we are looking at. In Figure :numref:`fromleftparallrighetchart` (a) you can find the parallel chart made with the suggested dataset. While in Figure :numref:`fromleftparallrighetchart` (b) it is easy to see, thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
+In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, we are able to find out which class we are looking at. In Figure below (a part) you can find the parallel chart made with the suggested dataset. While in next figure (b part) it is easy to see, thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
 
 .. _fromleftparallrighetchart:
 .. figure:: media/image11617.png
@@ -359,7 +359,7 @@ Note that for series axis it is possible to specify the values’ range by assig
 
     Configure min and max values for series.
 
-The next step is to move to **Configuration** tab and select the **Color palette** icon. Here (:numref:`addgradientpanel`) the user has to define the chromatic scale which will be associated to the measure values. The panel will demand the user to insert the first, the last color and the number of bands that will constitute the color scale.
+The next step is to move to **Configuration** tab and select the **Color palette** icon. Here (figure below) the user has to define the chromatic scale which will be associated to the measure values. The panel will demand the user to insert the first, the last color and the number of bands that will constitute the color scale.
 
 .. _addgradientpanel:
 .. figure:: media/image122.png
@@ -497,12 +497,14 @@ Then click on the “Plus” icon of the **Create Document** feature and select 
 
     Create a new document.
 
-You will be asked to fill in the form. We give an example in :numref:`documentdetailschart`.The fields marked with an asterisk are mandatory. Select the Chart type and engine. Choose the dataset with which you want to manage your analysis. Use the magnifier to choose among the available datasets. Remember to pick out in which folder you want your chart to be stored (see :numref:`selectfolderforchart`) and finally save.
+You will be asked to fill in the form. We give an example in the following figure.
 
 .. _documentdetailschart:
 .. figure:: media/image132.png
 
     Document Details.
+
+The fields marked with an asterisk are mandatory. Select the Chart type and engine. Choose the dataset with which you want to manage your analysis. Use the magnifier to choose among the available datasets. Remember to pick out in which folder you want your chart to be stored (see next figure) and finally save.
 
 .. _selectfolderforchart:
 .. figure:: media/image133.png
