@@ -42,7 +42,7 @@ The Knowage installation requires 2 GB of free space on file system. This space 
 JDK version
 --------------------
 
-The enviroment in which Knowage will be installed must include a 1.8 JDK installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
+The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable JAVA_HOME is properly configured.
 
 **[LINUX]** Define the JAVA_HOME variable inside the users’ file .bash_profile used in the installation process
 
