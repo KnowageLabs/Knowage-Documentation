@@ -1,7 +1,7 @@
 Advanced Data Access
 ====================
 
-In this section we suppose to log in as an admin user. In this case the dataset definition is no longer available under **My data** section. Otherwise the functionality is granted by the **Dataset** item under the **Data Providers** section of server menu, as highlighted in Figure 3.1. This area offers you the possibility to define datasets among a wide range of types. Moreover you can add parameters, define scope, manage metadata and perform advanced operation on datasets. While the datasets creation and management between user and admin change in favour to the latter, the **Models** and **Federation definitions** tabs available in **My data** section remain identical. For this reason in this chapter we are going to describe only the dataset creation and management.
+In this section we suppose to log in as an admin user. In this case the dataset definition is no longer available under **My data** section. Otherwise the functionality is granted by the **Dataset** item under the **Data Providers** section of server menu, as highlighted in figure below. This area offers you the possibility to define datasets among a wide range of types. Moreover you can add parameters, define scope, manage metadata and perform advanced operation on datasets. While the datasets creation and management between user and admin change in favour to the latter, the **Models** and **Federation definitions** tabs available in **My data** section remain identical. For this reason in this chapter we are going to describe only the dataset creation and management.
 
 My first dataset
 --------------------
@@ -48,12 +48,14 @@ To remove an existing dataset, click the small dustbin icon |image17| on the cor
 
 Once you have clicked the **Add** button, you can fill in the dataset definition form. Each tab in the right panel corresponds to a step of the dataset definition process.
 
-In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to :numref:`datasetpanel`). In the lower part you can see a versioning system for the dataset: Knowage supports dataset versioning, as shown in :numref:`datasetversioning`, therefore, each time you edit and save a dataset, the older version is archived and is still accessible from the lower part of the detail panel.
+In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to figure below). 
 
 .. _datasetpanel:
 .. figure:: media/image22.png
 
     Dataset Panel.
+    
+In the lower part you can see a versioning system for the dataset: Knowage supports dataset versioning, as shown in figure below, therefore, each time you edit and save a dataset, the older version is archived and is still accessible from the lower part of the detail panel.
 
 .. _datasetversioning:
 .. figure:: media/image25.png
@@ -139,7 +141,7 @@ The SQL dialect depends on the chosen data source. The SQL text must be written 
           JOIN promotion p on s.promotion_id=p.promotion_id                                                                    
           GROUP BY p.media_type                                     
 
-It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or Javascript) and associating it to the query. Click on the **Edit Script** button (see :numref:`scripteditingdataset`) and the script editor will open. Here you can write the script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
+It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or Javascript) and associating it to the query. Click on the **Edit Script** button (see next figure) and the script editor will open. Here you can write the script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
 
 .. _scripteditingdataset:
 .. figure:: media/image31.png
