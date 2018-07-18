@@ -121,12 +121,14 @@ These three typologies of data visualization on map are compared below.
 
 Now you can add extra layers on the default one. Switch to the **layer** tab of the Location Inteligence options panel.
 
-Here click on **select form catalog**, choose the layers you want to add. Mark them in the bottom part of the Location Intelligence area in the Layer box and the selected layer are displayed. These steps are shown in :numref:`stepsforlayeradd`. In our example we upload some waypoints, you can see the results obtained in :numref:`mapwithlayers`.
+Here click on **select form catalog**, choose the layers you want to add. Mark them in the bottom part of the Location Intelligence area in the Layer box and the selected layer are displayed. These steps are shown in figure below. 
 
 .. _stepsforlayeradd:
 .. figure:: media/image358.png
 
     Steps for layer adding
+    
+In our example we upload some waypoints, you can see the results obtained in next figure.
    
 .. _mapwithlayers:
 .. figure:: media/image359.png
@@ -154,7 +156,7 @@ For the **Map Chart** you can set the colour of each chart’s bar.
 
 The last tab of the panel is dedicate to the template preview, it is provided for advanced user who want to have an approach on generated code.
 
-We can conclude our overview on GIS document describing the buttons located at the bottom right corner, you can see them underlined in :numref:`legendmeasurexport`. From the left to the right this bottons can be used for: have a look at the legend, compute a measure of an area of the map and do the .pdf export of the map.
+We can conclude our overview on GIS document describing the buttons located at the bottom right corner, you can see them underlined in the following figure. From the left to the right this bottons can be used for: have a look at the legend, compute a measure of an area of the map and do the .pdf export of the map.
 
 .. _legendmeasurexport:
 .. figure:: media/image361.png
@@ -195,7 +197,7 @@ Designer sections
 Layer section
 ~~~~~~~~~~~~~
 
-Definition of the target layer is configurable in layer section. If the dataset is selected one of the available layers is chosen from list of layers catalogs. Button change layer (:numref:`targetlayerdef`) opens a pop up with a list of all available layer catalogs (:numref:`listavailbcatalog`). Selecting one item from the list and clicking save the selected item will be chosen for template.
+Definition of the target layer is configurable in layer section. If the dataset is selected one of the available layers is chosen from list of layers catalogs. Button change layer (next figure) opens a pop up with a list of all available layer catalogs. Selecting one item from the list and clicking save the selected item will be chosen for template.
 
 .. _targetlayerdef:
 .. figure:: media/image364.png
@@ -225,7 +227,7 @@ Dataset join columns section is for configuring joining spatial data and busines
 Indicators
 ~~~~~~~~~~
 
-Measures definition is configurable by adding indicators. The interface is shown in :numref:`indicatorsinterface` This section is only present when dataset is chosen for the document. Indicators are represented by pairs of measure field from selected dataset and corresponding label that will be used on map. Clicking on add indicators creates empty pair. Measure filed should be selected by picking one option from combo box that contains measure fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
+Measures definition is configurable by adding indicators. The interface is shown below. This section is only present when dataset is chosen for the document. Indicators are represented by pairs of measure field from selected dataset and corresponding label that will be used on map. Clicking on add indicators creates empty pair. Measure filed should be selected by picking one option from combo box that contains measure fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
 
 .. _indicatorsinterface:
 .. figure:: media/image368.png
@@ -235,7 +237,7 @@ Measures definition is configurable by adding indicators. The interface is shown
 Filters
 ~~~~~~~
 
-Using the filtering dedicated area of :numref:`filtersinterfac` you define which dataset attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "store_country", label:"COUNTRY"). The first value (name : "store_country") is the name of the attribute as it is displayed among the properties. The second one label: "COUNTRY" is the label which will be displayed to the user. This section is only present when dataset is chosen for the document. Clicking on add filter creates empty pair. Label field should be selected by picking one option from combobox that contains attribute fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
+Using the filtering dedicated area, as ahown in figure below, you define which dataset attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "store_country", label:"COUNTRY"). The first value (name : "store_country") is the name of the attribute as it is displayed among the properties. The second one label: "COUNTRY" is the label which will be displayed to the user. This section is only present when dataset is chosen for the document. Clicking on add filter creates empty pair. Label field should be selected by picking one option from combobox that contains attribute fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
 
 .. _filtersinterfac:
 .. figure:: media/image369.png
@@ -245,7 +247,7 @@ Using the filtering dedicated area of :numref:`filtersinterfac` you define which
 Map menu configuration
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Through the **Map menu configuration** panel the user can desides to enable or disable some available functions and features, like the legend, the distance calculator and so on. See :numref:`mapmenuconfig` to have a glimpse at the available items.
+Through the **Map menu configuration** panel the user can desides to enable or disable some available functions and features, like the legend, the distance calculator and so on. See next figure to have a glimpse at the available items.
 
 .. _mapmenuconfig:
 .. figure:: media/image369.png
@@ -352,19 +354,21 @@ Create and save the dataset you want to use and go on preparing the document tem
 Template building with GIS designer for technical user\*
 ----------------------------------------------------------
 
-When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to :numref:`gisdesigneraccestemplbuild`). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
+When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to next figure). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
 
 .. _gisdesigneraccestemplbuild:
 .. figure:: media/image381.png
 
     Gis designer accessible from the template build.
 
-We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to *Designer section* paragraph for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry as in :numref:`layerfiltranalytdriv`. it is not mandatory to choose layer filters so you can also save the template without any filter selected. When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (:numref:`listavailfiltranalydriv`).
+We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to *Designer section* paragraph for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry, as shown below. It is not mandatory to choose layer filters so you can also save the template without any filter selected. 
 
 .. _layerfiltranalytdriv:
 .. figure:: media/image382.png
 
     Layer filters interface with analytical drivers.
+
+When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (see next figure).
 
 .. _listavailfiltranalydriv:
 .. figure:: media/image383.png
@@ -374,7 +378,7 @@ We have already described the Gis Designer when it is accessed by a final user. 
 Cross navigation definition\*
 -----------------------------------
 
-It is possible to enable cross navigation from a map document to other Knowage documents. In the example of :numref:`locatintelldoc`, this means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
+It is possible to enable cross navigation from a map document to other Knowage documents. This means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
 
 You need to define the output parameters as described in Section *Cross Navigation* of *Analytical Document* Chapter. The possible parameters that can be handled by the GIS documents are the attribute names of the geometries of layers.
 
@@ -384,7 +388,7 @@ Once you have created a new Cross Navigation in the Cross Navigation Definition 
 
     Cross navigation option.
 
-Open the **layer** tab of the Location Intelligence options panel and click on cross navigation select mode. Now the cross navigation is activated and if you click, for example, on one of the state of :numref:`locatintelldoc` it will compare the above popup.
+Open the **layer** tab of the Location Intelligence options panel and click on cross navigation select mode. Now the cross navigation is activated and if you click, for example, on one of the state it will compare the above popup.
 
 .. figure:: media/image385.png
 
