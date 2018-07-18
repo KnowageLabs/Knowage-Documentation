@@ -1,7 +1,7 @@
 Jasper Reporting
 ================
 
-Jasper is a stand-alone reporting tool developed by the Jaspersoft Community. An example of Jasper report is represented in :numref:`exjasperreprt`. Jasper Report Engine manages Jasper report templates inside Knowage Server. A report template for Jasper is a text file with .jrxml extension that can be manually modified by very expert users by editing XML code. Otherwise, iReport, a graphical template designer, is provided for all developers who want to easily design a report for this engine.
+Jasper is a stand-alone reporting tool developed by the Jaspersoft Community. An example of Jasper report is represented in the next figure. Jasper Report Engine manages Jasper report templates inside Knowage Server. A report template for Jasper is a text file with .jrxml extension that can be manually modified by very expert users by editing XML code. Otherwise, iReport, a graphical template designer, is provided for all developers who want to easily design a report for this engine.
 
 .. _exjasperreprt:
 .. figure:: media/image342.png
