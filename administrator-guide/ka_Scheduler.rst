@@ -1,12 +1,12 @@
 Scheduler
 =========
 
-KnowAge scheduler allows to schedule the execution of one or more analytical documents published on the Server. Documents executed by the scheduler can then be distributed along different dispatching channels. In the following we describe how to create an activity, schedule it and dispatch the results.
+Knowage scheduler allows to schedule the execution of one or more analytical documents published on the Server. Documents executed by the scheduler can then be distributed along different dispatching channels. In the following we describe how to create an activity, schedule it and dispatch the results.
 
 Create an Activity
 ------------------
 
-In order to define a new scheduled activity the administrator must specify which documents compose the activity and how to execute them. The list of all scheduled activities can be seen selecting **Tools** >\ **Scheduler**. To create a new activity click on the “Plus” icon at the top of the page in the left area. In Figure below you can see the main scheduler page and the new activity GUI.
+In order to define a new scheduled activity the administrator must specify which documents compose the activity and how to execute them. The list of all scheduled activities can be seen selecting **Tools** > **Scheduler**. To create a new activity click on the “Plus” icon at the top of the page in the left area. In Figure below you can see the main scheduler page and the new activity GUI.
 
 .. figure:: media/image4041.PNG
 
@@ -18,15 +18,17 @@ Give a name and a description to the new activity. Then select the documents tha
 
    Adding a document to an activity.
 
-Now you need to specify how the scheduler must handle the analytical drivers of each selected document having parameters, as shown in :numref:`manageparameters` There are two possibilities:
-
-   • selecting a value from those available for the specific analytical driver at definition time; 
-   • executing the report one time for each possible values of the analytical driver.
+Now you need to specify how the scheduler must handle the analytical drivers of each selected document having parameters.
 
 .. _manageparameters:
 .. figure:: media/image43.png
 
-    Manage parameters.
+   Manage parameters.
+
+There are two possibilities:
+
+- selecting a value from those available for the specific analytical driver at definition time; 
+- executing the report one time for each possible values of the analytical driver.
 
 A scheduled activity can be composed by more than one report. It is also possible to add the same report to a scheduled activity more times. You can use the icon |image50| to easily duplicate a document. Once all esired documents have been added and the management configuration of their parameters has been set up, save the activity by clicking on the save button. The new activity is shown in the list and can be modified or deleted using intended specifically icons.
 
@@ -73,11 +75,11 @@ Once you are done, switch to the **Document Management** tab.
 
 Here you can find the dispatch configurations, that can be different for all the documents that compose the scheduled activity. All documents that compose the activity have their own dispatch configuration and the same document can be distributed along multiple dispatch channels. You can switch among the documents included in your activity by cliking on their name in the upper toolbar. There are many different possible dispatch channels that can be used to distribute the results of the execution of a scheduled activity:
 
--  Save as snapshot,
--  Save as file,
--  Save as document,
--  Send to Java class,
--  Send mail (only for KnowageER and KnowageSI).
+- Save as snapshot,
+- Save as file,
+- Save as document,
+- Send to Java class,
+- Send mail
 
 In the following sections we explain them in detail.
 
@@ -238,7 +240,10 @@ The class FileDestination copies the executed documents to the local filesystem 
 Send mail
 ~~~~~~~~~
 
-We remind that this feature is available only for KnowageER and KnowageSI.
+.. important::
+         **Enterprise Edition only**
+
+         This feature is avaiable only with KnowageER and KnowageSI, submodules of Knowage Enterprise Edition
 
 The executed document can be sent to one or more mail recipients. The list of mail addresses to be used to forward the executed document can be defined in three different ways:
 
@@ -271,7 +276,7 @@ In this case, you have to define a two-column dataset:
 
 Example of mapping dataset for dynamic distribution list
 
-Basically, when the parameter has a given value, the document will be sent to the corresponding email address. Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. With this configuration, the scheduler will execute the report one time for each possible value of the parameter **Position**, then dispatching the results to different recipients. Specifically, all execution results passing a value of the **Position** parameter to the report starting with VP will be sent to name1surname1@gmail.com, the ones starting with HQ will sent to name2surname2@gmail.com and the ones starting with President will be sent to namesurname@gmail.com.
+Basically, when the parameter has a given value, the document will be sent to the corresponding email address. Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. With this configuration, the scheduler will execute the report one time for each possible value of the parameter **Position**, then dispatching the results to different recipients. Specifically, all execution results passing a value of the **Position** parameter to the report starting with VP will be sent to ``name1surname1@gmail.com``, the ones starting with HQ will sent to ``name2surname2@gmail.com`` and the ones starting with President will be sent to ``namesurname@gmail.com``.
 
 Dynamic List with script
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -281,36 +286,39 @@ Check the option **Use an expression** and assign a value to the configuration p
 .. code-block:: bash
          :linenos:
 
-            $P{dealer}@eng.it
+         $P{dealer}@eng.it
 
-Here dealer is a document parameter label ($P{dealer} will be replaced by the parameter value of the scheduled execution).
+Here dealer is a document parameter label (``$P{dealer}`` will be replaced by the parameter value of the scheduled execution).
 
 Schedulation panel
 ------------------
 
 To conclude our overview on the scheduler features, save your settings and go back to the main scheduler page.
 
-Here you can select one of the available scheduled activities to explore details. We show an example in Figure 8.10. A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind of scheduling has been chosen (Single Execution, Customized Execution or Event Exectution), the start date and so on. Note that at the end of the row you have the possibilities to explore more details by clicking on the “three dots” icon.
-   
+Here you can select one of the available scheduled activities to explore details. 
+
 .. figure:: media/image55a.png
 
     Exploring the detailed of a scheduled activity.
 
+A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind of scheduling has been chosen (Single Execution, Customized Execution or Event Exectution), the start date and so on. Note that at the end of the row you have the possibilities to explore more details by clicking on the “three dots” icon.
+
 Here you find the following information:
 
--  **Schedulation informations**, it give some extra information about your schedulation concerning sending emails, we provide an example in :numref:`schedulinfpop`.
--  **Schedulation detail**, it opens the scheduling configuration and let you change them.
--  **Execute now**, by clicking it you immediatly start the execution of your schedulation.
--  **Pause schedulation**, it lets you pause your schedulation.
--  **Resume schedulation**, it appears after having paused a schedulation, it enables you to resume it.
--  **Delete Schedulation**, it lets you delete a schedulation.
-
-In the **Detail** tab you can analyze the settings on document, that is which parameters are associated to it and how to manage them. The detail tab is showed in :numref:`scheduldettab`.
-
-.. _schedulinfpop:
-.. figure:: media/image57.png
+- **Schedulation informations**, it give some extra information about your schedulation concerning sending emails
+   
+- **Schedulation detail**, it opens the scheduling configuration and let you change them.
+   
+   .. figure:: media/image57.png
 
     Schedulation information pop up example
+    
+- **Execute now**, by clicking it you immediatly start the execution of your schedulation.
+- **Pause schedulation**, it lets you pause your schedulation.
+- **Resume schedulation**, it appears after having paused a schedulation, it enables you to resume it.
+- **Delete Schedulation**, it lets you delete a schedulation.
+
+In the **Detail** tab you can analyze the settings on document, that is which parameters are associated to it and how to manage them.
 
 .. _scheduldettab:
 .. figure:: media/image58.png
