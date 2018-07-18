@@ -59,7 +59,7 @@ In the “Glossary” area are listed, if any, all glossaries created in a previ
 Right clicking on the glossary label as shown in :numref:`newglossnewahild` (right side) the user can add a new child. The “New Node” wizard will open. It is mandatory to give a Name to the node while it is recommended to add a Code and a Description. Once the user has set the nodes, it is possible to add children or words to each of them. In particular, if one right clicks on the node name, as in :numref:`additemstonode`, a panel will be opened. It allows the user to add one (or more) child or word to the node. In both cases, the user must fill in the mandatory fields. We remark that if the user chooses to add a word through the panel item, the word will be created from scratch and added to the Word list after saving it. To add an existing word the user has to drag and drop the word from the list to the node. Notice that at the right top corner of the designated area a **Safe Mode** button is available. Select it if you want to assure that it cannot be modified by a user with no administrator permissions.
 
 .. _newglossnewahild:
-.. figure:: media/image461.png
+.. figure:: media/image46162.png
 
     (Left) New glossary wizard. (Right) Add a new child to the glossary.
 
@@ -101,7 +101,7 @@ example is given in the following figure.
 
 To use this functionality, select a glossary using the designated combobox available at the top of the “word” column. The window will show all words associated to that glossary. Selecting one of those words a list of documents will be displayed in the area in the middle of the page. Use the circled i icon to inspect the document details and in addition to run it. In fact the “Run” button is available at the right bottom corner of the detail panel, as shown below.
 
-.. figure:: media/image467.png
+.. figure:: media/image46768.png
 
     Execution documents by means of the glossary.
 
@@ -113,7 +113,7 @@ The Document management tab is the place where to set the associations between t
 
 The page is made up of three colums: the “documents” one on the left, the “word” in the middle and the “glossary” on the right. To associate a word to a document or see which words are related to it the user must select a document from the list of the left sided column. Then it is mandatory to select a glossary from the combobox available on the right sided column. Finally drag and drop words from the glossary tree to the “word” column in the middle of the page. Note that the user must drag and drop the word at the beginning of the list: when a light blu box with dotted borders appears it is possible to end the action. To deselect the choice the user can click on the icon |image476| aside each word. This procedure is recap by figure below.
 
-.. figure:: media/image471.png
+.. figure:: media/image47172.png
 
     Managing the association with a document: (Left) Select the documnet. (Right) Associate one (or more) word(s).
 
