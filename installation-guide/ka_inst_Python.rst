@@ -1,25 +1,25 @@
 Python Installation
 ================
 
-The engine uses a Java/Python interface, which allows to submit scripts and get result from a Python environment already installed on the machine where the Datamining Engine runs. For this reason, Python environment need to be installed on the same machine of KnowAge server. This implies that, in order to run this engine, you have to install Python properly (depending on the OS) on the same machine where KnowAge is installed. You can find all information about Python installation at https://www.python.org. Datamining engine only support Python 3 (the product has been tested with Python 3.4.0, but other 3.x releases are supported).
+The engine uses a Java/Python interface, which allows to submit scripts and get result from a Python environment already installed on the machine where the Datamining Engine runs. For this reason, Python environment need to be installed on the same machine of KnowAge server. This implies that, in order to run this engine, you have to install Python properly (depending on the OS) on the same machine where Knowage is installed. You can find all information about Python installation at https://www.python.org. Datamining engine only support Python 3 (the product has been tested with Python 3.4.0, but other 3.x releases are supported).
  
 JPY installation
 -------------------
 
-JPY is a connector that make possible a bidirectional communication between Python and Java and its components must be installed on both sides (dataminingengine Java project and Python environment). Dataminingengine project is provided with jpy.jar that allows the communication, but this is not sufficient, because JPY must be installed on your Python environment. To do this you have to download the JPY source files and build them by yourself on your machine (unfortunately pre-built packages are not made available yet by JPY creators). All the detailed instructions to build and install JPY on your Python environment are described on the page http://jpy.readthedocs.org/en/stable/install.html. During the testing phase Python 3.4 and JPY 0.8 (stable version) have been used; here the version-specific installation steps are described. You will need:
+JPY is a connector that make possible a bidirectional communication between Python and Java and its components must be installed on both sides (dataminingengine Java project and Python environment). Dataminingengine project is provided with ``jpy.jar`` that allows the communication, but this is not sufficient, because JPY must be installed on your Python environment. To do this you have to download the JPY source files and build them by yourself on your machine (unfortunately pre-built packages are not made available yet by JPY creators). All the detailed instructions to build and install JPY on your Python environment are described on the page http://jpy.readthedocs.org/en/stable/install.html. During the testing phase Python 3.4 and JPY 0.8 (stable version) have been used; here the version-specific installation steps are described. You will need:
 
 *  Python 3.3 or higher (3.2 may work as well but is not tested),
 *  Oracle JDK 7 or higher (JDK 6 may work as well),
 *  Maven 3 or higher,
 *  Microsoft Windows SDK 7.1 or higher If you build for a 32-bit Python, make sure to also install a 32-bit JDK. Accordingly, for a 64-bit Python, you will need a 64-bit JDK.
 
-The Python setup tools (distutils) can make use of the command-line C/C++ compilers of the free Microsoft Windows SDK. These will by used by distutils if the DISTUTILS_USE_SDK environment variable is set. The compilers are made accessible via the command-line by using the setenv tool of the Windows SDK. In order to install the Windows SDK execute the following steps.
+The Python setup tools ``distutils`` can make use of the command-line C/C++ compilers of the free Microsoft Windows SDK. These will by used by ``distutils`` if the ``DISTUTILS_USE_SDK`` environment variable is set. The compilers are made accessible via the command-line by using the setenv tool of the Windows SDK. In order to install the Windows SDK execute the following steps.
 
 * If you already use Microsoft Visual C++ 2010, make sure to uninstall the x86 and amd64 compiler redistributables first. Otherwise the installation of the Windows SDK will definitely fail. This may also be applied to higher versions of Visual C++.
 * Download and install Windows SDK 7.1.
 * Download and install Windows SDK 7.1 SP1. Open the command-line and execute:
-	* "C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\bin\\setenv" /x64 /release to prepare a build of the 64-bit version of jpy.
-	* Use: "C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\bin\\setenv" /x86 /release to prepare a build of the 32-bit version of jpy. 
+	* ``"C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\bin\\setenv" /x64 /release`` to prepare a build of the 64-bit version of jpy.
+	* ``"C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\bin\\setenv" /x86 /release`` to prepare a build of the 32-bit version of jpy. 
    
 Now set other environment variables:
 
@@ -31,9 +31,9 @@ Now set other environment variables:
 	SET PATH=%JDK_HOME%\jre\bin\server;%PATH%
 
 Then, to actually build and test the jpy Python module use the following command: python setup.py install.
-To use JPY you need to replace the jpyconfig.properties file on your project, with the one generated by the build process that is present in your JPY built folder jpy-master\ *\\*\ build\ *\\*\ lib.<SO-CPU-PYTHON_versions>. Properties file to replace is located in knowagedataminingengine\ *\\*\ src\ *\\*.
+To use JPY you need to replace the jpyconfig.properties file on your project, with the one generated by the build process that is present in your JPY built folder ``jpy-master\build\lib.<SO-CPU-PYTHON_versions>``. Properties file to replace is located under ``knowagedataminingengine\src\``.
 
-Datamining engine supports the use of all Python libraries: before import a library in your script install it on your native Python environment (for example using pip). To use Python YOU NEED TO INSTALL the following libraries: matplotlib, pandas, numpy, scipy. You can install them using pip typing the following commands on your native Python console:
+Datamining engine supports the use of all Python libraries: before import a library in your script install it on your native Python environment (for example using ``pip``). To use Python YOU NEED TO INSTALL the following libraries: ``matplotlib``, ``pandas``, ``numpy``, ``scipy``. You can install them using pip typing the following commands on your native Python console:
 
 .. code-block:: python
     :linenos:
@@ -43,11 +43,9 @@ Datamining engine supports the use of all Python libraries: before import a libr
 	pip install scipy 
 	pip install matplotlib.
 
-JPY installation Furthermore, to give an idea of what Python template is refer to Code
-
 .. code-block:: xml
         :linenos:
-        :caption: Example of Python Template.
+        :caption: Example of a Knowage Data Mining engine template which uses a Python script
     
 	<?xml version="1.0" encoding="ISO-8859-15"?> 
     	<DATA_MINING>            
@@ -70,4 +68,4 @@ JPY installation Furthermore, to give an idea of what Python template is refer t
            </COMMANDS>                                                        
     	</DATA_MINING>
 
-Note that the LANGUAGE tag is used to specify the language to use: name=Python and name=R are supported. If the LANGUAGE tag is not present or name is not specified correctly, the default language is set to R.
+Note that the ``LANGUAGE`` tag is used to specify the language to use: name=Python and name=R are supported. If the ``LANGUAGE`` tag is not present or name is not specified correctly, the default language is set to R.
