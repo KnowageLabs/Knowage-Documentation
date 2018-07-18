@@ -25,9 +25,8 @@ This is what is called *Behavioural Model*. It allows to:
 
 All the analytical documents are strictly related to the behavioural model. In fact, the behavioural model guides the behaviour of the analytical documents according to the user’s role, managing the visibility of documents and data.
 
-Every role belongs to a predefined *role type* and In :numref:`roletypesuser`, the different available role types are listed and described.
+Every role belongs to a predefined *role type*. The available role types are listed and described below.
 
-.. _roletypesuser:
 .. table:: Role types
    :widths: auto
 
@@ -55,18 +54,15 @@ From now on we suppose the reader has a role of type “End user”. If some gra
 Main menu
 -------------
 
-Knowage Menu gives you access to documents, data and all the functionalities that you are allowed to use. By default the menu button is at the left bottom corner of the home page: clik it to open the menu, as shown in :numref:`homepage`.
-
-Knowage main menu consists in a set of icons associated with basic features. It is divided in two submenus: the general menu, which is collapsed, and the BI functionalities menu. In :numref:`menucompgene` and :numref:`menucompbi` the corresponding elements are summed up .
-
-It is important to underline that not all the components of the menu are mandatory, but they may be configured by the administrator according to user’s needs.
-
 .. _homepage:
 .. figure:: media/image7.png
    
     Home page
 
-.. _menucompgene:
+The menu gives you access to documents, data and all the functionalities that you are allowed to use. By default the menu button is at the left bottom corner of the home page: clik it to open the menu.
+
+Main menu consists in a set of icons associated with basic features. It is divided in two submenus: the general menu, which is collapsed, and the BI functionalities menu. It is important to underline that not all the components of the menu are mandatory, but they may be configured by the administrator according to user’s needs.
+
 .. table:: Menu components - General menu
    :widths: auto
    
@@ -90,8 +86,7 @@ It is important to underline that not all the components of the menu are mandato
    +-----------------------+-----------------------+-----------------------+
    |    |image13|          | Log Out               | Log out.              |
    +-----------------------+-----------------------+-----------------------+
-
-.. _menucompbi:
+   
 .. table:: Menu components - BI functionalities menu
    :widths: auto
    
@@ -127,25 +122,23 @@ It is important to underline that not all the components of the menu are mandato
    |                       |                       | calendar.             |
    +-----------------------+-----------------------+-----------------------+
 
-In the following we describe all the features the main menu could contain, namely:
-
 Document Browser 
    This is a standard functionality of Knowage Server. It enables you to access.
 
 Workspace 
-   This is available only for KnowageBD and KnowageSI. Entering the Workspace you will find the sections: **Recent**, **Documents**, **Data** and **Analysis**. The “Recent” area shows the latest documents you were working on, while “Documents” contains the analytical documents the user asks to be archived on this area. This way the user has a more rapid and efficient way to retrieve the documents of his interest. The “Data” section is made up of the “Dataset” and the “Models” subsections. In the **Dataset** one you can access all the self-service BI features. Once entered this section, your datasets appear (see :numref:`userdatasetsuser`) divided into four categories:
+   This is available only for KnowageBD and KnowageSI. Entering the Workspace you will find the sections: **Recent**, **Documents**, **Data** and **Analysis**. The “Recent” area shows the latest documents you were working on, while “Documents” contains the analytical documents the user asks to be archived on this area. This way the user has a more rapid and efficient way to retrieve the documents of his interest. The “Data” section is made up of the “Dataset” and the “Models” subsections. In the **Dataset** one you can access all the self-service BI features. Once entered this section, your datasets appear divided into four categories:
+   
+      .. _userdatasetsuser:
+      .. figure:: media/image18.png
+
+            User Datasets
 
    -  **MY DATA SET**, containing all the datasets created by you,
    -  **ENTERPRISE DATA SET**, where you can find the datasets created by the developer and released to the users,
    -  **SHARED DATA SET**, containing datasets created by other users and shared with you,
    -  **CKAN DATA SET**, available only for KnowageBD, where you can search for open data among different portals and save the selected        ones in your environment.
-   
-.. _userdatasetsuser:
-.. figure:: media/image18.png
 
-      User Datasets
-
-From here you can also modify your existing datasets or create new ones for instance uploading a CSV or XLS file.
+   From here you can also modify your existing datasets or create new ones for instance uploading a CSV or XLS file.
 
    In the **Models** one instead you have two tabs on the right side of the interface. The **Business** tab allows you to access models    built up for you by the developer and inquiry them using the QbE interface. In the **Federation definition** tab you can create          federation between one or more existing dataset using the specific GUI or just access the exiting ones as well.
 
@@ -164,7 +157,7 @@ Glossary definition
 Calendar 
    Allows the user to specify the festivity days of a certain time frame.
 
-The **General menu** is identified with the first icon in :numref:`menucompgene` and a label containing your user name. Opening the general menu you have the following extra buttons:
+The **General menu** is identified with the first icon in General Menu and a label containing your user name. Opening the general menu you have the following extra buttons:
 
 Select role 
    If your user is associated with more than one role, Knowage requests you to specify the default role. You can select it when executing a document, or right after authentication by clicking on this icon and choosing a default role.
@@ -175,7 +168,7 @@ Languages
 Info
    View the details of current Knowage version.
 
-To conclude the overview of this area we describe a not mandatory element. When configured by the Knowage administrator, you can have quick links to a static page, a document, a folder or an external application, like for instance a web page. These links are displayed below the BI functionalities menu, as shown in Figure below.
+To conclude the overview of this area we describe a not mandatory element. When configured by the Knowage administrator, you can have quick links to a static page, a document, a folder or an external application, like for instance a web page. These links are displayed below the BI functionalities menu, as shown below.
 
 .. figure:: media/image19.png
 
