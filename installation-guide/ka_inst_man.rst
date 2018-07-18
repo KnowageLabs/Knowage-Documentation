@@ -24,7 +24,8 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
 - the other for the ``jdbc/foodmart``, which should be renamed with ``jdbc/dwh``.
 
 .. code-block:: xml
-
+ :linenos:
+ 
  <Context docBase="knowage-ee" path="/knowage" reloadable="true">
         
 	<ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
@@ -52,7 +53,8 @@ Configuration of the metadata db dialect
 Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. We list all the possible dialects that can be used:
 
 .. code-block:: xml
-
+	:linenos:
+	
  	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
  	<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
  	<property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
@@ -61,7 +63,8 @@ You have to configure these following Hibernate configuration files and set the 
 
 
 .. code-block:: bash
-
+	:linenos:
+	
 	knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
 	knowagegeoreportengine/WEB-INF/classes/hibernate.cfg.xml
 	knowage/WEB-INF/classes/hsql/hibernate.cfg.xml
@@ -82,7 +85,8 @@ Modification of the Quartz configuration
 The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It is essential to enhance in this file the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Following the possible values:
 
 .. code-block:: bash
-
+	:linenos:
+	
 	 # Hsqldb delegate class                                                                                
 	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          
 	 # Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
@@ -97,10 +101,10 @@ Clustering
 When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the ``knowage/WEB-INF/classes/quartz.properties`` file of every involved machines:
 
 .. code-block:: bash
-
+	:linenos:
+	
 	 org.quartz.jobStore.isClustered = true
 	 org.quartz.jobStore.clusterCheckinInterval = 20000
-
 	 org.quartz.scheduler.instanceId = AUTO
 	 org.quartz.scheduler.instanceName = RHECMClusteredSchedule
 	 
