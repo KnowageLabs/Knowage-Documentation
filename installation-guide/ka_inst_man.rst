@@ -18,11 +18,10 @@ where XXX represents the DBMS type (as instance ORA stands for Oracle). The corr
 
 Datasource link within the applications
 ---------------------------------------------------------
-You would set up ResourceLink for JNDI datasource. To do so, you have to configure each knowage*/META-INF/context.xml and set the ResourceLink for each JNDI data source previously created. 
-Inside the released packages two links are already defined: 
+You would set up ResourceLink for JNDI datasource. To do so, you have to configure each ``knowage*/META-INF/context.xml`` and set the ResourceLink for each JNDI data source previously created. Inside the released packages two links are already defined: 
 
-- one for the jdbc/knowage resource, which the user must keep
-- the other for the jdbc/foodmart, which should be renamed with jdbc/dwh.
+- one for the ``jdbc/knowage`` resource, which the user must keep
+- the other for the ``jdbc/foodmart``, which should be renamed with jdbc/dwh.
 
 .. code-block:: xml
 
@@ -49,7 +48,7 @@ Inside the released packages two links are already defined:
 Configuration of the metadata db dialect
 ----------------------------------------
 
-Verify that the right dialect has been set inside **hibernate.cfg.xml** files. We list all the possible dialects that can be used:
+Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. We list all the possible dialects that can be used:
 
 .. code-block:: xml
 
@@ -79,7 +78,7 @@ You have to configure these following Hibernate configuration files and set the 
 
 Modification of the Quartz configuration
 ----------------------------------------
-The scheduler is configured in knowage/WEB-INF/classes/quartz.properties. It is essential to enhance in this file the property *org.quartz.jobStore.driverDelegateClass* with the right value, according to the metadata database in use. Following the possible values:
+The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It is essential to enhance in this file the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Following the possible values:
 
 .. code-block:: bash
 
@@ -94,7 +93,7 @@ The scheduler is configured in knowage/WEB-INF/classes/quartz.properties. It is 
 Clustering
 ~~~~~~~~~~~~~
 
-When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the knowage/WEB-INF/classes/quartz.properties file of every involved machines:
+When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the ``knowage/WEB-INF/classes/quartz.properties`` file of every involved machines:
 
 .. code-block:: bash
 
@@ -107,12 +106,12 @@ When Knowage is installed in cluster with several nodes, it is necessary to acti
 Logging
 ---------
 
-It is necessary to set up a folder where Knowage and its analytical engines can store their respective log files. From now on, we will call LOG_DIR such folder and LOG_DIR_PATH the path that leads to it. This path is configured in file log4j.properties located inside the *\\*\ WEB-INF\ *\\*\ classes\ *\\* available in each web application.
+It is necessary to set up a folder where Knowage and its analytical engines can store their respective log files. From now on, we will call ``LOG_DIR`` such folder and ``LOG_DIR_PATH`` the path that leads to it. This path is configured in file ``log4j.properties`` located inside the ``\WEB-INF\classes\`` available in each web application.
 Shortly, to configure the Knowage log folder the user must execute the following steps:
 
-- create the LOG_DIR folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The LOG_DIR_PATH string must be the same for every node;
+- create the ``LOG_DIR`` folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The ``LOG_DIR_PATH`` string must be the same for every node;
 
 - **[LINUX]** verify that Knowage has write permissions on this folder; set the property ``log4j.appender.knowage.File`` inside the ``WEB-INF/classes/log4j.properties`` to ``LOG_DIR_PATH/knowage.log``;
 
 - set the property ``log4j.appender.knowageXXXXXEngine.File`` inside the ``WEB-INF/classes/log4j.properties`` file of each engine to ``LOG_DIR_PATH/knwoageXXXXXEngine.log``;
-- only for the Birt Engine, to set the property logDirectory inside the ``WEB-INF/classes/BirtLogConfig.properties`` file of the knowagebirtreportengine application to LOG\ :`\_`\ DIR\ :`\_`\ PATH.
+- only for the Birt Engine, to set the property ``logDirectory`` inside the ``WEB-INF/classes/BirtLogConfig.properties`` file of the knowagebirtreportengine application to ``LOG_DIR_PATH``.
