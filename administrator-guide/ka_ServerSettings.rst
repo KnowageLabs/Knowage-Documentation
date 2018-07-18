@@ -12,13 +12,13 @@ Similar editors give you access to configurations and domains. We are going to p
 Configuration Management
 -------------------------
 
-By clicking on the **Server Settings** > **Configuration Management**, you can manage many configuration elements. For example here you can set default language as well as mail settings. Start typing DEFAULT in the search form, as shown below, to filter among available items and find what you are interested it.
+By clicking on the **Server Settings** > **Configuration Management**, you can manage many configuration elements. For example here you can set default language as well as mail settings. Start typing ``DEFAULT`` in the search form, as shown below, to filter among available items and find what you are interested it.
 
 .. figure:: media/image94.png
 
    Configuration categories list.
 
-We provide an example to let you understand the usage of the interface. Suppose you want to set italian as default language. Select the row with SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE. default as label and click the pencil icon at the end of the row to edit the element. Insert it,IT as **Value Check** as click **Save**.
+We provide an example to let you understand the usage of the interface. Suppose you want to set italian as default language. Select the row with ``SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE``. default as label and click the pencil icon at the end of the row to edit the element. Insert ``it,IT`` as **Value Check** as click **Save**.
 
 You can view available languages and their code (**Value Check column)** in the row SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES.
 
@@ -64,6 +64,6 @@ In the metadata page, shown below, you can see the list of existing metadata. He
 
    List of existing metadata.
 
-You define a new metadata by giving it a **Label**, a **Name**, a **Description** and a **Type**. The **Label** is a unique identifier, the **Name** is what will be shown to the end user and the **Type** can be either SHORT TEXT or LONG TEXT.
+You define a new metadata by giving it a **Label**, a **Name**, a **Description** and a **Type**. The **Label** is a unique identifier, the **Name** is what will be shown to the end user and the **Type** can be either ``SHORT TEXT`` or ``LONG TEXT``.
 
 We recall that metadata visibility is one of the authorization you can set while creating roles. Only the users associated to roles which have this authorization will view metadata. In addition, in order to edit metadata the user roles need to have another authorization called **Save Metadata**.
