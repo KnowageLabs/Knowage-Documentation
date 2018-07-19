@@ -3,6 +3,11 @@ Basic Data Access
 
 This chapter describes advanced features, i.e. available only in KnowageBD and KnowageSI products, to access data as end user.
 
+.. important::
+         **Enterprise Edition**
+
+         If you purchased Knowage EE, the following features are available only in KnowageBD and KnowageSI products
+
 A dataset is a way to read data from different sources and represents the portion of data used by various documents. Suppose you want to create a bar chart showing the sales trend for the current year; in this case you need to pass to the document the total sales amount for each month of the current year. You can create your own dataset uploading an XLS or a CSV file or use a dataset already defined. Knowage offers you also the chance to download open data from WEB thanks to CKAN integration. Moreover you can create your own and more complete dataset from different sources through the dataset federation. In the following we will describe all these functionalities.
 
 Let us suppose to enter, with end user credentials, the data management area clicking on the **Workspace** icon from BI functionalities menu as shown in figure below and the **Data** section of the window.
@@ -83,7 +88,7 @@ Thanks to CKAN integration you can easily access to datasets published in the Wo
 .. warning::
       **CKAN Datasets**
          
-         CKAN datasets can be divided in four main categories: “Public”, “Organization private”, “Acquired”, “User private”. You can download and use only the datasets having a **Public** category. 
+      CKAN datasets can be divided in four main categories: “Public”, “Organization private”, “Acquired”, “User private”. You can download and use only the datasets having a **Public** category. 
 
 CKAN datasets access method
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
