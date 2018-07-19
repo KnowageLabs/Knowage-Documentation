@@ -23,11 +23,12 @@ Different installer packages are provided for JDK 32/64 bit on Windows.
 
 Memory
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Knowage CE requires **2GB** of Java heap size (it's enough for most evaluation purposes).
+Knowage CE requires **2GB** of available RAM. This configuration is enough for most evaluation purposes.
 
 Disk usage
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Knowage CE Installer requires **2 GB** of free space on file system.
+Knowage CE requires **2GB** of free space on file system.
+Optional embedded MariaDB Server 10.2 requires **4GB** of free space on file system.
 
 Database
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,7 +48,7 @@ Knowage CE Installer includes also the option to use one of the following **embe
 - MariaDB Server 10.2 for Windows 32/64 bit
 - MariaDB Server 10.2 for Linux 64 bit with GLIBC 2.14 or higher
 
-Please note that embedded database option is not available for other Linux configurations nor macOS.
+Please note that embedded database option is not available for macOS.
 
 Application server
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,12 +75,12 @@ Windows (embedded MariaDB option)
 - Start Knowage CE using ``<installation directory>\Knowage-Server-CE\bin\knowage_startup.bat``
 - Stop Knowage CE using ``<installation directory>\Knowage-Server-CE\bin\knowage_shutdown.bat``
 
-Unix/Linux/macOS
+Linux/macOS
 ~~~~~~~~~~~~~~~~~~~~~~~~
 - Start Knowage CE using ``<installation directory>/Knowage-Server-CE/bin/startup.sh``
 - Stop Knowage CE using ``<installation directory>/Knowage-Server-CE/bin/shutdown.sh``
 
-Unix/Linux (embedded MariaDB option)
+Linux (embedded MariaDB option)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 - Start Knowage CE using ``<installation directory>/Knowage-Server-CE/bin/knowage_startup.sh``
 - Stop Knowage CE using ``<installation directory>/Knowage-Server-CE/bin/knowage_shutdown.sh``
