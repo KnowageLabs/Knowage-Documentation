@@ -45,8 +45,7 @@ The dataset graphical editor is divided into two areas: the left side shows the 
 Each item of the list in the left panel shows the dataset label (i.e., the dataset unique identifier), name and type, as well as the number of documents currently using it. To create a new dataset, click the **Add** icon |image14|. If your dataset is similar to another existing dataset, you can click the **Clone** icon |image16|. This will create a copy of the dataset, except for the label that must edit once again. All fields are pre-filled with values from the existing dataset but they can be modified and saved without affecting the original dataset.
 
 .. |image14| image:: media/image21.png
-   :width: 0.3937in
-   :height: 0.3556in
+   :width: 30
    
 .. |image16| image:: media/image23.png
    :width: 0.3937in
