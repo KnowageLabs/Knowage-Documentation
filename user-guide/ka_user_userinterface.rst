@@ -177,7 +177,7 @@ You can minimize the main menu by clicking the right arrow at its bottom right c
 Document Browser overview
 -----------------------------
 
-From BI functionalities Menu, select ``.. figure::media/image20.png`` to open the Document Browser.
+From BI functionalities Menu, select |image20| to open the Document Browser.
 
 .. figure:: media/image21.png
    
@@ -195,4 +195,11 @@ Each line shows the label, the name, the author and the type of the document, wh
 
    Documents details expanded.
 
-At the top of this side panel you find the |media/image24.png| button, the same one you see at the end of each document line. Click on it to execute the document.
+At the top of this side panel you find the |image24| button, the same one you see at the end of each document line. Click on it to execute the document.
+
+
+.. |image20| image:: media/image20.png
+   :width: 20
+   
+.. |image24| image:: media/image24.png
+   :width: 20
