@@ -21,7 +21,7 @@ Before entering this section we underlight that Knowage uses cytoscapeweb librar
 
 **knowagenetworkanalysisengine** supports different types of network definitions. If you have your network defined in GRAPHML or XGMML notation you can upload that file as template of the document and that’s it. After this operation you can open your network using Knowage.
 
-On the other hand if you want to create a dynamic network that gets data from your datasource you should create a dynamic document. In this case the structure of a template is typed in :numref:`templatestructnetwork`:
+On the other hand if you want to create a dynamic network that gets data from your datasource you should create a dynamic document. In this case the structure of a template is typed in code below:
 
 .. _templatestructnetwork:
 .. code-block:: bash
@@ -48,7 +48,7 @@ On the other hand if you want to create a dynamic network that gets data from yo
          </drill>
          </NET>
 
-In the following we explain shortly the meaning of the :numref:`templatestructnetwork`.
+In the following we explain shortly the meaning of the cobe above.
 
 The **NETWOK_DEFINITION** contains the definition of the network: nodes, edges, shapes, colours It has two children:
 
