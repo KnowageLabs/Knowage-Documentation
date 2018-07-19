@@ -73,7 +73,7 @@ Main menu consists in a set of icons associated with basic features. It is divid
    |                               |                       | with extra            |
    |                               |                       | functionalities.      |
    +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image9.png | Select role           | Select the            |
+   | .. figure:: media/image9.png  | Select role           | Select the            |
    |                               |                       | authentication role   |
    |                               |                       | (available if you are |
    |                               |                       | associated to more    |
