@@ -139,6 +139,6 @@ Click on **Create Federation** to see all available datasets and choose the ones
 
      Federated dataset details.
 
-Once saved, The new federation has been created in **Federation definition**\ and you can find it in Federation definition. Open it by clicking the magnifier icon on the federation. In this way you open it with QbE tool. All details on how to use the QbE interface to perform free inquiries can be found in the dedicated chapter. You can create new datasets, save them and retrieve them from the **Dataset** section.
+Once saved, The new federation has been created in **Federation definition** and you can find it in Federation definition. Open it by clicking the magnifier icon on the federation. In this way you open it with QbE tool. All details on how to use the QbE interface to perform free inquiries can be found in the dedicated chapter. You can create new datasets, save them and retrieve them from the **Dataset** section.
 
 .. include:: myDataAndDataSetThumbinals.rst
