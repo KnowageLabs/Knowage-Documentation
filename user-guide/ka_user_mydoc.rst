@@ -40,11 +40,23 @@ All documents inside Knowage environment share the same toolbar with different f
 
 The |image34| button is to access the help online as defined in the Glossary and it is available only in KnowageSI.
 
+.. |image34| image:: media/image28.png
+   :width: 30
+
 The |image35| refreshes the document.
+   
+.. |image35| image:: media/image29.png
+   :width: 20
 
 The |image36| opens the parameters panel and it is visible only if there are parameters associated to the document.
 
+.. |image36| image:: media/image30.png
+   :width: 20
+
 The |image37| opens the contextual menu shown in figure below. We describe the main functionalities provided by this menu in the following.
+
+.. |image37| image:: media/image31.png
+   :width: 30
 
 .. _toolbarcontexmenu:
 .. figure:: media/image32.png
@@ -107,15 +119,5 @@ Scheduled Execution
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The administrator has the possibility to set schedulation for documents. These schedulations can be accessed by **Show Scheduled executions**.
-
-.. |image34| image:: media/image28.png
-   :width: 30
-   
-.. |image35| image:: media/image29.png
-   :width: 20
  
-.. |image37| image:: media/image31.png
-   :width: 30
-   
-.. |image36| image:: media/image30.png
-   :width: 20
+
