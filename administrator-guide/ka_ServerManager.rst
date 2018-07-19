@@ -8,7 +8,7 @@ Server Manager
 
 In the **Server Manager** menu panel you find some management functionalities.
    
-.. figure:: media/image60.png
+.. figure:: media/image60_bis.png
 
     Server Manager Panel
 
