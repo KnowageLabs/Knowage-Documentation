@@ -46,7 +46,7 @@ The |image34| button is to access the help online as defined in the Glossary and
 The |image35| refreshes the document.
    
 .. |image35| image:: media/image29.png
-   :width: 20
+   :width: 30
 
 The |image36| opens the parameters panel and it is visible only if there are parameters associated to the document.
 
