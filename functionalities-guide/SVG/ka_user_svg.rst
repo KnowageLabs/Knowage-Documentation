@@ -616,11 +616,6 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 	 |                       |                       | value="#3333CC" />    |
 	 |                       |                       | </COLOURS>            |
 	 +-----------------------+-----------------------+-----------------------+
-	 
-	 
-	 
-	 
-
 
 Now, after the template definiton, you can create it into Knowage. Remember that it must be a “Location Intelligence” document type with the engine “SVG Viewer Engine”.
 
