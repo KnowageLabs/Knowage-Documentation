@@ -598,7 +598,7 @@ Data configuration
 This feature manages the data storage and usage. In fact, here there is the possiblity to save data in cache, create associations between datasets, schedule the (data) refresh frequency and so on. Referring to the figure below, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **Frequency** and the **Template** tab.
 
 .. _dataconfigwindow:
-.. figure:: media/image199.png
+.. figure:: media/image199_bis.png
 
     Data configuration window.
 
