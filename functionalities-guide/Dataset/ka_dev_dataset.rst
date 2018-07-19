@@ -6,7 +6,7 @@ In this section we suppose to log in as an admin user. In this case the dataset 
 My first dataset
 --------------------
 
-As stated before, you can open the dataset graphical editor by selecting **Dataset** in **Data Provider**\ panel, as shown below.
+As stated before, you can open the dataset graphical editor by selecting **Dataset** in **Data Provider** panel, as shown below.
 
 .. figure:: media/image20.png
 
@@ -18,13 +18,29 @@ A dataset acts as a data provider for analytical documents that’s why many typ
 -  Query,
 -  Java Class,
 -  Script (Groovy, Javascript, Embedded Javascript or ECMAScript),
--  Qbe query over the metamodel (only in KnowageBD and KnowageSI),
+-  Qbe query over the metamodel,
+    .. important::
+         **Enterprise Edition**
+
+         If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
 -  Custom,
 -  Flat,
--  Ckan (only in KnowageBD and KnowageSI),
--  Federated (only in KnowageBD and KnowageSI),
+-  Ckan,
+    .. important::
+         **Enterprise Edition**
+
+         If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
+-  Federated,
+    .. important::
+         **Enterprise Edition**
+
+         If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
 -  REST,
 -  Big Data (only in KnowageBD and KnowagePM).
+    .. important::
+         **Enterprise Edition**
+
+         If you purchased Knowage EE, this feature is available only in KnowageBD and KnowagePM
 
 All types of dataset share some common operations, while others are specific to each of them. The process for defining a dataset inside Knowage follows:
 
@@ -46,7 +62,7 @@ Each item of the list in the left panel shows the dataset label (i.e., the datas
 
 .. |image14| image:: media/image21.png
    :width: 0.3937in
-   :height: 0.34449in
+   :height: 0.3556in
    
 .. |image16| image:: media/image23.png
    :width: 0.3937in
@@ -168,7 +184,7 @@ It is also possible to dynamically change the original text of the query at runt
 
     Script editing for dataset.
 
-In Code Query dataset’s script example we uses Javascript to dynamically modify the FROM clause of the original query according to the value of the parameter year selected at runtime by the user.
+In Code Query dataset’s script example we uses Javascript to dynamically modify the ``FROM`` clause of the original query according to the value of the parameter year selected at runtime by the user.
 
 .. code-block:: javascript
          :caption:  Query dataset’s script example
@@ -184,42 +200,42 @@ Java Class Dataset
 
 Selecting a dataset of **Java Class** type allows the execution of complex data elaboration implemented by a Java class. The compiled class must be available at \\webapps\\ Knowage\WEB-INF\\ classes with the proper package. The class defined by the developer must implement the interface it.eng.spagobi.tools.dataset.bo.IJavaClassDataSet and the methods implemented are:
 
--  public String getValues(Map profile, Map parameters);
-   This method provides the result set of the dataset using profile attributes and parameters. The String to return must be the XML result set representation of type:
+-  ``public String getValues(Map profile, Map parameters)``. This method provides the result set of the dataset using profile attributes and parameters. The String to return must be the XML result set representation of type:
 
-.. code-block:: XML
+.. code-block:: xml
          :linenos:
 
-            <ROWS>                           
+         <ROWS>                           
                 <ROW value="value1" .../>     
                 <ROW value="value2" .../> 
                 ... 
-            </ROWS>                          
+          </ROWS>                          
 
--  public List getNamesOfProfileAttributeRequired();
-   This method provides the names of profile attributes used by this dataset implementation class. This is a utility method, used during dataset execution.
-
+-  ``public List getNamesOfProfileAttributeRequired()``. This method provides the names of profile attributes used by this dataset implementation class. This is a utility method, used during dataset execution.
 
 Script
 ~~~~~~
 
 If you select this option, the results of the dataset will be produced by a script. Therefore, the developer should write a script returning an XML string containing a list of values with the syntax shown below.
 
-.. code-block:: XML
+.. code-block:: xml
          :linenos:
 
-            <ROWS>                           
+          <ROWS>                           
                 <ROW value="value1" .../>     
                 <ROW value="value2" .../> 
                 ... 
-            </ROWS>   
+          </ROWS>   
 
-If the script returns a single value, this will be automatically encoded in the XML format above. The script must be written using Groovy or Javascript language. Knowage already provides some Groovy and Javascript functions returning the value of a single or multi-value profile attribute. These functions are explained in the information window that can be opened from the **Dataset Type** tab. New custom functions can be added in *predefinedGroovyScript.groovy* and *predefinedJavascript.js* files contained in the *KnowageUtils.jar* file.
+If the script returns a single value, this will be automatically encoded in the XML format above. The script must be written using Groovy or Javascript language. Knowage already provides some Groovy and Javascript functions returning the value of a single or multi-value profile attribute. These functions are explained in the information window that can be opened from the **Dataset Type** tab. New custom functions can be added in ``predefinedGroovyScript.groovy`` and ``predefinedJavascript.js`` files contained in the ``KnowageUtils.jar`` file.
 
 QbE
 ~~~
 
-This is available only in KnowageBD and KnowageSI.
+.. important::
+     **Enterprise Edition**
+
+     If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
 
 The QbE dataset type option allows the definition of dataset results based on a query defined over a metamodel. To define a QbE dataset you need to select the Data Source and Datamart that you want to use. Once chosen your datamart you can click the lookup button of the Open QbE field and a pop up window will appear showing a QbE interface where you can define your query. Once saved, you can check the generated query thanks to the View QbE Query.
 
@@ -234,28 +250,28 @@ Custom Dataset
 
 Selecting a Custom dataset type allows the developer to execute complex data elaboration by a custom Java dataset implementation. There are two options:
 
- - implement the :sub:`it.eng.spagobi.tools.dataset.bo.IDataSet` interface;
- - extend the it.eng.spagobi.tools.dataset.bo.AbstractCustomDataSet class.
+ - implement the ``it.eng.spagobi.tools.dataset.bo.IDataSet`` interface;
+ - extend the ``it.eng.spagobi.tools.dataset.bo.AbstractCustomDataSet`` class.
 
 The methods executing the dataset that must be implemented are:
 
- - void loadData();
- - void loadData(int offset, int fetchSize, int maxResults);
+ - ``void loadData()``;
+ - ``void loadData(int offset, int fetchSize, int maxResults)``;
 
-Using the AbstractCustomDataset class allows the developer to access predefined utility methods, such as:
+Using the ``AbstractCustomDataset`` class allows the developer to access predefined utility methods, such as:
 
- -  public void setParamsMap(Map paramsMap);
- -  public IDataSetTableDescriptor createTemporaryTable (String tableName, Connection connection);
- -  public IDataStore decode(IDataStore datastore);
- -  private void substituteCodeWithDescriptions(IDataStore datastore, Map<String, List<String> > codes, Map<String, List<String> > descriptions);
- -  private Map<String, List<String> > getCodes(IDataStore datastore).
+ -  ``public void setParamsMap(Map paramsMap)``;
+ -  ``public IDataSetTableDescriptor createTemporaryTable (String tableName, Connection connection)``;
+ -  ``public IDataStore decode(IDataStore datastore)``;
+ -  ``private void substituteCodeWithDescriptions(IDataStore datastore, Map<String, List<String>> codes, Map<String, List<String>> descriptions)``;
+ -  ``private Map<String, List<String>> getCodes(IDataStore datastore)``.
 
-The full class name (package included) must be set on the Java class name field, while it is possible to add custom attributes for dataset execution and retrieve them via the following method of the IDataSet interface: Map getProperties().
+The full class name (package included) must be set on the Java class name field, while it is possible to add custom attributes for dataset execution and retrieve them via the following method of the ``IDataSet`` interface: ``Map getProperties()``.
 
 Flat Dataset
 ^^^^^^^^^^^^
 
-A flat dataset allows the retrieval of an entire table from a data source. In other words, it replaces a dummy query like "select \* from sales" by automatically retrieving all rows in a table. To create a flat dataset, simply enter the table and the data source name, as shown below.
+A flat dataset allows the retrieval of an entire table from a data source. In other words, it replaces a dummy query like ``select * from sales`` by automatically retrieving all rows in a table. To create a flat dataset, simply enter the table and the data source name, as shown below.
 
 .. figure:: media/image33.png
 
@@ -264,7 +280,10 @@ A flat dataset allows the retrieval of an entire table from a data source. In ot
 Ckan
 ^^^^
 
-This is available only in KnowageBD and KnowageSI.
+.. important::
+     **Enterprise Edition**
+
+     If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
 
 A Ckan dataset let you use open data as resource. You have to fill all the settings fields properly to let the dataset work successfully. Let’s have a look on them:
 
@@ -283,7 +302,10 @@ We marked with the \* symbol the mandatory fields. We suggest to do a preview of
 Federated
 ^^^^^^^^^
 
-This is available only in KnowageBD and KnowageSI.
+.. important::
+     **Enterprise Edition**
+
+     If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
 
 In this area you can only manage metadata, visibility and perform the advanced operation we are going to describe at the end of this section.
 
@@ -304,10 +326,10 @@ Let’s make as example in order to understand how it works. Suppose an external
             "isPattern": "true", 
             "id": ".*", 
             "type":"Meter"
-         }  }     ] 
+            } ] 
+         }
 
-
-while querying for "Meter" entities, and that the JSON response is something like:
+while querying for ``Meter`` entities, and that the JSON response is something like:
 
 .. code-block:: json
          :caption: RJSON response code
@@ -421,7 +443,7 @@ We specified
 
 Once followed the steps above the user obtains upstream/downstream active power for each prosumer.
 
-**NGSI checkbox** is specific for NGSI REST calls: it permits easy the job when querying the Orion Context Broker (`https://github.com/telefonicaid/fiware-orion) <https://github.com/telefonicaid/fiware-orion>`__ and to omit some of the REST fields (since the JSON format from NGSI s pecifications is fixed): you don’t need to specify headers, JSONPath items, JSONPath attributes (all available attributes are fetched) and pagination parameters (offset and fetch size).
+**NGSI checkbox** is specific for NGSI REST calls: it permits easy the job when querying the Orion Context Broker (`https://github.com/telefonicaid/fiware-orion) <https://github.com/telefonicaid/fiware-orion>`__ and to omit some of the REST fields (since the JSON format from NGSI specifications is fixed): you don’t need to specify headers, JSONPath items, JSONPath attributes (all available attributes are fetched) and pagination parameters (offset and fetch size).
 
 When checking the **Use directly JSON attributes** checkbox, yon can skip the definition of the JSONPath attributes, since the JSON structure is presumed to be fixed as in the following example:
 
@@ -446,7 +468,7 @@ When checking the **Use directly JSON attributes** checkbox, yon can skip the de
 
 Then it will be enough to define only the **JSON Path Items** and check **Use directly JSON Attributes** without defining the attributes; the attributes will be retrieved automatically from the JSON object.
 
-In the above examples, the JSON Path Items will be: $.contextResponses[:sub:`\*`] and the dataset result will look like:
+In the above examples, the JSON Path Items will be ``$.contextResponses[:sub:`\*`]`` and the dataset result will look like:
 
 .. table:: Dataset result
         :widths: auto
@@ -459,8 +481,7 @@ In the above examples, the JSON Path Items will be: $.contextResponses[:sub:`\*`
         | pros2         | 0.5                   | 2.4                 |
         +---------------+-----------------------+---------------------+
     
-
-The REST dataset permits usage of profile attributes and parameters using the same syntax as for other dataset types: *$<profile attribute>* and *$P<parameter>*. You can use both of them as placeholders in every field: most likely you need to use them in REST service URL or on the request body. As an example, suppose you want to retrieve the value of just one prosumer that is specified by the "prosumerId" parameter, you have to set the request body as:
+The REST dataset permits usage of profile attributes and parameters using the same syntax as for other dataset types: ``$<profile attribute>`` and ``$P<parameter>``. You can use both of them as placeholders in every field: most likely you need to use them in REST service URL or on the request body. As an example, suppose you want to retrieve the value of just one prosumer that is specified by the ``prosumerId`` parameter, you have to set the request body as:
 
 .. code-block:: json
          :caption: Request body for prosumerId parameter
@@ -476,11 +497,10 @@ The REST dataset permits usage of profile attributes and parameters using the sa
                      ]                     
          }                        
 
-
-Big Data- NoSQL
+Big Data - NoSQL
 ^^^^^^^^^^^^^^^
 
-KnowageBD and KnowagePM provide the possibility to define Big Data dataset as well as Big Data datsources. To set these kind of datasets the user just have to select the **Query** type and insert the code according to the dialect in use (that is accordingly to the datasource dialect).
+KnowageBD and KnowagePM provide the possibility to define Big Data dataset as well as Big Data datasources. To set these kind of datasets the user just have to select the **Query** type and insert the code according to the dialect in use (that is accordingly to the datasource dialect).
 
 For example, let’s suppose we defined a Mongo datasource and want to create a dataset upon it. Therefore choose the "‘Query type‘ dataset and, as we revealed in advance, choose the correct language: in this case JS instead of SQL. The script must respect some convention, in particular:
 
@@ -493,14 +513,14 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
    
          var query = db.store.find();
 
--  if the return value doesn’t come from a query, for example it’s a js variable, than it must be assigned to a variable with name **sbiDatasetfixedResult**. The result will be managed by Knowage accordingly to the type of the variable:
+-  if the return value doesn’t come from a query, for example it’s a js variable, than it must be assigned to a variable with name ``sbiDatasetfixedResult``. The result will be managed by Knowage accordingly to the type of the variable:
 
-    -  if it’s a primitive type the resulting dataset contains only a columns with name ”result“ and value equal to the value of the variable sbiDatasetfixedResult;
+    -  if it’s a primitive type the resulting dataset contains only a columns with name ``result`` and value equal to the value of the variable ``sbiDatasetfixedResult``;
 
     -  if it’s an object, the resulting dataset contains a column for each property of the object.
 
         For example, if we consider the query 
-        sbiDatasetfixedResult = {a:2, b:3}, 
+        ``sbiDatasetfixedResult = {a:2, b:3}`` 
         the dataset is as shown in Table below.
    
 .. table:: Dataset output
@@ -515,7 +535,7 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
 -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
 
         For istance, let’s consider the query 
-        sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}] 
+        ``sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}]`` 
         the dataset is
 
 .. table:: Dataset output
