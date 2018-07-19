@@ -1,17 +1,18 @@
 Administration Manual
 #########################
 
-.. include:: ka_Introduction.rst
-.. include:: ka_gam_userInterface.rst
-.. include:: ka_datasource.rst
-.. include:: ka_BehaviouralModel.rst
-.. include:: ka_AnaliticalModel.rst
-.. include:: ka_Etl.rst
-.. include:: ka_Scheduler.rst
-.. include:: ka_ServerManager.rst
-.. include:: ka_ServerSettings.rst
+.. toctree::
+   :caption: Table of Contents
 
-
+   ka_Introduction.rst
+	ka_gam_userInterface.rst
+	ka_datasource.rst
+	ka_BehaviouralModel.rst
+	ka_AnaliticalModel.rst
+	ka_Etl.rst
+	ka_Scheduler.rst
+	ka_ServerManager.rst
+	ka_ServerSettings.rst
 
 .. |image11| image:: media/image11.png
    :width: 0.27561in
