@@ -74,7 +74,7 @@ Let us see how to build a cockpit and how the interface is displayed within the 
    
 By clicking the button **Add Widget** you can add a widget containing a **Text**, an **Image**, a **Chart**, a **Table**, a **Cross table**, a **Document**,the **Active selections** or the **Selector** to your cockpit, as shown below.
 
-.. figure:: media/image143.png
+.. figure:: media/image143_bis.png
 
         Widget Type.
 
