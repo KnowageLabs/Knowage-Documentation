@@ -195,4 +195,4 @@ Each line shows the label, the name, the author and the type of the document, wh
 
    Documents details expanded.
 
-At the top of this side panel you find the |.. figure:: media/image24.png| button, the same one you see at the end of each document line. Click on it to execute the document.
+At the top of this side panel you find the |media/image24.png| button, the same one you see at the end of each document line. Click on it to execute the document.
