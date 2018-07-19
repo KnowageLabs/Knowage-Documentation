@@ -2,9 +2,7 @@ Installation Manual
 ########################
 
 .. toctree::
-   :numbered:
    :caption: Table of Contents
-   :maxdepth: 10
    
    ka_inst_intro.rst	
    ka_inst_prereq_tomcat.rst	
