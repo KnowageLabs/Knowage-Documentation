@@ -2,9 +2,7 @@ Functionalities
 ##################
 
 .. toctree::
-   :numbered:
    :caption: Table of Contents
-   :maxdepth: 10
    
    MyData/ka_user_mydata.rst
    Dataset/ka_dev_dataset.rst 
