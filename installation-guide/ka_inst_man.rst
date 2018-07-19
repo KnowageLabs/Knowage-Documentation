@@ -26,13 +26,10 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
 .. code-block:: xml
  :linenos:
  
- <Context docBase="knowage-ee" path="/knowage" reloadable="true">
-        
+ <Context docBase="knowage-ee" path="/knowage" reloadable="true">  
 	<ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
-        
 	<ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource"/>
         <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache" type="javax.sql.DataSource"/>
-	
         <ResourceLink global="resource_path" name="resource_path" type="java.lang.String" />
         <ResourceLink global="sso_class" name="sso_class" type="java.lang.String" />
         <ResourceLink name="hmacKey" global="hmacKey" type="java.lang.String"/>
@@ -41,7 +38,6 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
         <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
    </Context>
    
-
 .. important::
          **Context update**
          
@@ -60,7 +56,6 @@ Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. W
  	<property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
 
 You have to configure these following Hibernate configuration files and set the chosen dialect:
-
 
 .. code-block:: bash
 	:linenos:
