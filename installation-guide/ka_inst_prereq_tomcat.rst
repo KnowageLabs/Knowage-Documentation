@@ -1,7 +1,7 @@
-Prerequisite
+Requirements
 ====================
  
-Before going into details on Knowage installation, it is necessary to check if certain prerequisites are satisfied. We start to distinguish between the certified environments and the compatible ones. The first are those where check tests take place. The latter are those environments technically compatibles but where integration tests are not executed.
+Before going into details on Knowage installation, it is necessary to check if certain requirements are satisfied. We start to distinguish between the certified environments and the compatible ones. The first are those where check tests take place. The latter are those environments technically compatibles but where integration tests are not executed.
 
 Operating systems
 ------------------
