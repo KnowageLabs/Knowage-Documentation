@@ -38,6 +38,7 @@ Knowage CE Installer requires one of the following **external databases**:
 - MariaDB Server 10.2 already installed
 
 A user with sufficient **permissions to create schemas** must be provided.
+
 If you are using MySQL Server 5.7 we suggest to set following configuration in file ``my.ini``:
 
 - ``innodb_buffer_pool_size = 2G`` (adjust value here, 50%-70% of total RAM)
