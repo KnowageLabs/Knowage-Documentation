@@ -109,13 +109,13 @@ Scheduled Execution
 The administrator has the possibility to set schedulation for documents. These schedulations can be accessed by **Show Scheduled executions**.
 
 .. |image34| image:: media/image28.png
-   :width: 20
+   :width: 30
    
 .. |image35| image:: media/image29.png
-   :width: 20
-   
-.. |image36| image:: media/image30.png
    :width: 20
  
 .. |image37| image:: media/image31.png
    :width: 30
+   
+.. |image36| image:: media/image30.png
+   :width: 20
