@@ -13,7 +13,7 @@ The Glossary management is split in two section. Once logged in, the user can fi
     Glossary menu items.
 
 To create a new glossary, click on the Glossary Definition menu item that you can find under the **Catalogs** section of the Knowage
-interface. As shown in :numref:`glossarydefwindow` the page contains two areas:
+interface. As shown in the figure below the page contains two areas:
 
 - **Word**: here there is a list of terms. The latter are used as labels to attach to analytical objects as datasets or documents in order to link those objects to the glossary;
       
@@ -43,7 +43,7 @@ When exploring the detail a wizard will pop up showing the following characteris
 
 The same panel can be used to modify or delete the word.
 
-To add a new word, click on the “Plus” icon available in the right up corner of the “Word” area as :numref:`addanewword` shows. A format will be open in the right half part of the screen. Insert “Name” and “Description”, which are all mandatory fields and add additional details by necessity. Then click on the Save button. Observe that it is possible to look a “Word” up using the dedicated filter available at the top of the Words list. Type a string in the box and the research will start automatically. Remember to cancel the string from the box to get back to the entire list.
+To add a new word, click on the “Plus” icon available in the right up corner of the “Word” area as the figure below shows. A format will be open in the right half part of the screen. Insert “Name” and “Description”, which are all mandatory fields and add additional details by necessity. Then click on the Save button. Observe that it is possible to look a “Word” up using the dedicated filter available at the top of the Words list. Type a string in the box and the research will start automatically. Remember to cancel the string from the box to get back to the entire list.
 
 .. _addanewword:
 .. figure:: media/image459.png
@@ -56,12 +56,13 @@ In the “Glossary” area are listed, if any, all glossaries created in a previ
 
     Exploring a glossary from the menu.
 
-Right clicking on the glossary label as shown in :numref:`newglossnewahild` (right side) the user can add a new child. The “New Node” wizard will open. It is mandatory to give a Name to the node while it is recommended to add a Code and a Description. Once the user has set the nodes, it is possible to add children or words to each of them. In particular, if one right clicks on the node name, as in :numref:`additemstonode`, a panel will be opened. It allows the user to add one (or more) child or word to the node. In both cases, the user must fill in the mandatory fields. We remark that if the user chooses to add a word through the panel item, the word will be created from scratch and added to the Word list after saving it. To add an existing word the user has to drag and drop the word from the list to the node. Notice that at the right top corner of the designated area a **Safe Mode** button is available. Select it if you want to assure that it cannot be modified by a user with no administrator permissions.
-
+Right clicking on the glossary label as shown in the following figure (right side) the user can add a new child. The “New Node” wizard will open. It is mandatory to give a Name to the node while it is recommended to add a Code and a Description. Once the user has set the nodes, it is possible to add children or words to each of them.
 .. _newglossnewahild:
 .. figure:: media/image46162.png
 
     (Left) New glossary wizard. (Right) Add a new child to the glossary.
+
+ In particular, if one right clicks on the node name, as in the next figure, a panel will be opened. It allows the user to add one (or more) child or word to the node. In both cases, the user must fill in the mandatory fields. We remark that if the user chooses to add a word through the panel item, the word will be created from scratch and added to the Word list after saving it. To add an existing word the user has to drag and drop the word from the list to the node. Notice that at the right top corner of the designated area a **Safe Mode** button is available. Select it if you want to assure that it cannot be modified by a user with no administrator permissions.
 
 .. _additemstonode:
 .. figure:: media/image463.png
@@ -119,9 +120,7 @@ The page is made up of three colums: the “documents” one on the left, the �
 
 If one gets back to the navigation tab and select the glossary used in the previous step, it is possible to check the association just set.
 
-Equally, the Dataset management feature allows the user to set the associations between datasets and glossaries. :numref:`datasetmanagmtab` shows an
-example. The window is splitted in four areas: **Dataset**, **Dataset/Word**, **Column/Word** and **Glossary**. First the user must
-select a dataset on the left area. The chosen dataset is highlighted and its fields appear in the Column/Word area. Now, the user select a glossary using the combobox on the right side area. Finally the user can drag and drop words from the glossary tree to the dataset or the single fields of the dataset.
+Equally, the Dataset management feature allows the user to set the associations between datasets and glossaries. The next figure shows an example. The window is splitted in four areas: **Dataset**, **Dataset/Word**, **Column/Word** and **Glossary**. First the user must select a dataset on the left area. The chosen dataset is highlighted and its fields appear in the Column/Word area. Now, the user select a glossary using the combobox on the right side area. Finally the user can drag and drop words from the glossary tree to the dataset or the single fields of the dataset.
 
 .. _datasetmanagmtab:
 .. figure:: media/image473.png
