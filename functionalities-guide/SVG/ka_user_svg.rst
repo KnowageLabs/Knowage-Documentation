@@ -380,6 +380,11 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 	 |                       |                       | into the detail       |
 	 |                       |                       | panel.                |
 	 +-----------------------+-----------------------+-----------------------+
+	 
+	 
+	 
+	 
+	 
 	 |    THRESHOLDS         | type                  | Mandatory. The type   |
 	 |                       |                       | of logic to use to    |
 	 |                       |                       | define the            |
