@@ -16,7 +16,7 @@ The execution of a Registry document opens a plain table: the records are shown 
 
     Editing table cells.
 
-Moreover, you can add new rows from scratch selecting the “Plus” icon |image335| on the left of the functionality bar (:numref:`functionalitybar`) available at the top of the window. Insert in each cell the corresponding value: string or number.
+Moreover, you can add new rows from scratch selecting the “Plus” icon |image335| on the left of the functionality bar (see next figure) available at the top of the window. Insert in each cell the corresponding value: string or number.
 
 .. _functionalitybar:
 .. figure:: media/image342.png
@@ -49,7 +49,7 @@ It is possible to implement also a JPivot Registry document. The graphical featu
 
     Example of Jpivot Registry document.
 
-In this case the table shows columns organized in a hierarchical way and a grouping function is implemented. From the left to the right the columns contain fields at different detail levels. The last column in our example in :numref:`examplejpivotregdoc` contains numeric data. Such a field is grouped at the “country” level. The grouping level depends on the configurations made on template building.
+In this case the table shows columns organized in a hierarchical way and a grouping function is implemented. From the left to the right the columns contain fields at different detail levels. The last column in our example in the figure above contains numeric data. Such a field is grouped at the “country” level. The grouping level depends on the configurations made on template building.
 
 In the JPivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented filters are still available.
 
@@ -57,7 +57,7 @@ In the JPivot instance it is not allowed to add, modify or cancel rows. Furtherm
 Registry development
 --------------------
 
-To create a Registry document there must be available a datamart schema on Knowage Server. Please, refer to Chapter ?? to get more details on how to build it. Then you must edit an XML template. The latter is very similar to the one produced under the Qbe development but in this case you must add an appropriate tag. Indeed, if the template file has the **<REGISTRY>** tag the engine shows data in registry modality; namely it shows a table whose rows are manageable by end users by adding, editing or deleting them.
+To create a Registry document there must be available a datamart schema on Knowage Server. Then you must edit an XML template. The latter is very similar to the one produced under the Qbe development but in this case you must add an appropriate tag. Indeed, if the template file has the **<REGISTRY>** tag the engine shows data in registry modality; namely it shows a table whose rows are manageable by end users by adding, editing or deleting them.
 
 Here we exhibit a possible syntax for a Registry document.
 
@@ -118,13 +118,20 @@ We stress that it is mandatory to point at one datamart table using a column wit
 .. figure:: media/image350.png
 
     Pointing at a numerical column.
+    
+.. code-block:: xml
+    :linenos:
+    :caption: Pointing at a numerical column.
+    
+     <COLUMNS> 
+       <COLUMN field="store_id" visible="false" editable="false" /> 
 
-Still referring to :numref:`exampletemplatebuild`, we underline that the “product_subcategory” field is used as a subcategory. It belongs in fact to another table. In this case it is enough to add the attributes: subEntity="rel_product_class_id_in_product_class"  foreignKey="rel_product_class_id_in_product_class".
+Still referring to the code above, we underline that the “product_subcategory” field is used as a subcategory. It belongs in fact to another table. In this case it is enough to add the attributes: subEntity="rel_product_class_id_in_product_class"  foreignKey="rel_product_class_id_in_product_class".
 
 JPivot Registry instance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Registry instance allows to develop also a Jpivot table. See :numref:`examplejpivotregdoc` to have an idea while the syntax example is given:
+The Registry instance allows to develop also a Jpivot table. See the last figure (above) to have an idea while the syntax example is given in the next code:
 
 .. code-block:: xml
     :linenos:
