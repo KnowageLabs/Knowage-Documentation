@@ -1,7 +1,7 @@
 Scorecard\*
 ===========
 
-The **Scorecard** feature, available in Knowage suite as highlighted in :numref:`scorcardforthecontmenu`, allows to supervise different KPIs at the same time. This option gives an exclusive complete overview of the KPIs situation when the user is not interested in a single threshold check. This tool is in fact useful when concern is addressed to monitoring the overcoming of two or more critical KPI values.
+The **Scorecard** feature, available in Knowage suite as highlighted in the following figure, allows to supervise different KPIs at the same time. This option gives an exclusive complete overview of the KPIs situation when the user is not interested in a single threshold check. This tool is in fact useful when concern is addressed to monitoring the overcoming of two or more critical KPI values.
 
 .. _scorcardforthecontmenu:
 .. figure:: media/image161.png
@@ -11,7 +11,7 @@ The **Scorecard** feature, available in Knowage suite as highlighted in :numref:
 Scorecard development
 -------------------------
 
-A scorecard is structured in hierarchical levels. Shortly, there is a first level called **Perspective** composed of KPIs grouped on targets. Otherwise, **Targets** are assigned a threshold depending on the KPIs they are composed of. In the following we will describe in detail a scorecard configuration. When clicking on the Scorecard menu item the window of :numref:`scorcardwindow` opens. Here the implemented scorecards are listed and can be explored once selected and edited.
+A scorecard is structured in hierarchical levels. Shortly, there is a first level called **Perspective** composed of KPIs grouped on targets. Otherwise, **Targets** are assigned a threshold depending on the KPIs they are composed of. In the following we will describe in detail a scorecard configuration. When clicking on the Scorecard menu item the window of figure below opens. Here the implemented scorecards are listed and can be explored once selected and edited.
 
 .. _scorcardwindow:
 .. figure:: media/image162.png
@@ -24,18 +24,20 @@ The “Plus” icon available at the right top corner of the page opens a new wi
 
    Defining a new scorecard.
 
-A perspective allows you to organise the monitoring over targets. An example is given in :numref:`perspectlistexample`.
+A perspective allows you to organise the monitoring over targets. 
 
 .. figure:: media/image164.png
 
     Add perspective to the scorecard.
+
+An example is given in the following figure.
 
 .. _perspectlistexample:
 .. figure:: media/image165.png
 
     Perspective list example.
 
-In fact, each perspective manages one or more targets accordingly to the user’s requirements. A target consists of one or more KPIs, as in  :numref:`prespectpolicy`, and it is assigned a threshold color according to the chosen **Evaluation criterion**. In fact, if one selects:
+In fact, each perspective manages one or more targets accordingly to the user’s requirements. A target consists of one or more KPIs and it is assigned a threshold color according to the chosen **Evaluation criterion**. In fact, if one selects:
 
 -  **Policy “Majority”** the target gets the threshold of the KPI threshold that numerically exceeds the others,
 -  **Policy “Majority with Priority”** the target gets the threshold of a specific KPI,
@@ -57,7 +59,7 @@ An example is showed below.
 
     Select the KPI with priority.
 
-The same choice is available at the perspective level (refer to :numref:`prespectpolicy`), that is:
+The same choice is available at the perspective level (refer to next figure), that is:
 
 -  **Policy “Majority”** the perspective gets the threshold of the target threshold that numerically exceeds the others,
 -  **Policy “Majority with Priority”** the perspective gets the threshold of a specific target,
