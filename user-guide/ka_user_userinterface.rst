@@ -69,58 +69,58 @@ Main menu consists in a set of icons associated with basic features. It is divid
    +-------------------------------+-----------------------+-----------------------+
    |    Icon                       | Name                  | Description           |
    +===============================+=======================+=======================+
-   |    image9                     | Knowage user          | Open a hidden menu    |
+   | .. figure:: media/image8.png  | Knowage user          | Open a hidden menu    |
    |                               |                       | with extra            |
    |                               |                       | functionalities.      |
    +-------------------------------+-----------------------+-----------------------+
-   |    media/image10.png          | Select role           | Select the            |
+   | .. figure:: media/image9.png | Select role           | Select the            |
    |                               |                       | authentication role   |
    |                               |                       | (available if you are |
    |                               |                       | associated to more    |
    |                               |                       | than one role).       |
    +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image11.png | Languages             | Language options.     |
+   | .. figure:: media/image10.png | Languages             | Language options.     |
    +-------------------------------+-----------------------+-----------------------+
-   |    |image12|                  | Info                  | Infos about Knowage   |
+   | .. figure:: media/image11.png | Info                  | Infos about Knowage   |
    |                               |                       | version.              |
    +-------------------------------+-----------------------+-----------------------+
-   |    |image13|                  | Log Out               | Log out.              |
+   | .. figure:: media/image12.png | Log Out               | Log out.              |
    +-------------------------------+-----------------------+-----------------------+
    
 .. table:: Menu components - BI functionalities menu
    :widths: auto
    
-   +-----------------------+-----------------------+-----------------------+
-   |    Icon               | Name                  | Description           |
-   +=======================+=======================+=======================+
-   |    |image19|          | Document browser      | Show the archive      |
-   |                       |                       | folders and related   |
-   |                       |                       | documents.            |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image20|          | Workspace             | Inquiry, navigate and |
-   |                       |                       | create your data.     |
-   |                       |                       |                       |
-   |                       |                       | Available only for    |
-   |                       |                       | KnowageBD and         |
-   |                       |                       | KnowageSI.            |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image21|          | Functions catalog     | Access data mining    |
-   |                       |                       | functions.            |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image22|          | Glossary definition   | Access the glossary   |
-   |                       |                       | area.                 |
-   |                       |                       |                       |
-   |                       |                       | Visualise the         |
-   |                       |                       | existing words and    |
-   |                       |                       | glossaries.           |
-   |                       |                       |                       |
-   |                       |                       | Create new words and  |
-   |                       |                       | glossaries.           |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image23|          | Calendar              | Access the calendar   |
-   |                       |                       | list. Create a new    |
-   |                       |                       | calendar.             |
-   +-----------------------+-----------------------+-----------------------+
+   +-------------------------------+-----------------------+-----------------------+
+   |    Icon                       | Name                  | Description           |
+   +===============================+=======================+=======================+
+   | .. figure:: media/image13.png | Document browser      | Show the archive      |
+   |                               |                       | folders and related   |
+   |                               |                       | documents.            |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image14.png | Workspace             | Inquiry, navigate and |
+   |                               |                       | create your data.     |
+   |                               |                       |                       |
+   |                               |                       | Available only for    |
+   |                               |                       | KnowageBD and         |
+   |                               |                       | KnowageSI.            |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image15.png | Functions catalog     | Access data mining    |
+   |                               |                       | functions.            |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image16.png | Glossary definition   | Access the glossary   |
+   |                               |                       | area.                 |
+   |                               |                       |                       |
+   |                               |                       | Visualise the         |
+   |                               |                       | existing words and    |
+   |                               |                       | glossaries.           |
+   |                               |                       |                       |
+   |                               |                       | Create new words and  |
+   |                               |                       | glossaries.           |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image17.png | Calendar              | Access the calendar   |
+   |                               |                       | list. Create a new    |
+   |                               |                       | calendar.             |
+   +-------------------------------+-----------------------+-----------------------+
 
 Document Browser 
    This is a standard functionality of Knowage Server. It enables you to access.
@@ -129,7 +129,7 @@ Workspace
    This is available only for KnowageBD and KnowageSI. Entering the Workspace you will find the sections: **Recent**, **Documents**, **Data** and **Analysis**. The “Recent” area shows the latest documents you were working on, while “Documents” contains the analytical documents the user asks to be archived on this area. This way the user has a more rapid and efficient way to retrieve the documents of his interest. The “Data” section is made up of the “Dataset” and the “Models” subsections. In the **Dataset** one you can access all the self-service BI features. Once entered this section, your datasets appear divided into four categories:
    
       .. _userdatasetsuser:
-      .. figure:: media/image18.png
+.. figure:: media/image18.png
 
             User Datasets
 
@@ -141,8 +141,6 @@ Workspace
    From here you can also modify your existing datasets or create new ones for instance uploading a CSV or XLS file.
 
    In the **Models** one instead you have two tabs on the right side of the interface. The **Business** tab allows you to access models    built up for you by the developer and inquiry them using the QbE interface. In the **Federation definition** tab you can create          federation between one or more existing dataset using the specific GUI or just access the exiting ones as well.
-
-
 
    Analytical documents, navigate the document folders tree, search, sort and execute documents.
 
@@ -179,13 +177,17 @@ You can minimize the main menu by clicking the right arrow at its bottom right c
 Document Browser overview
 -----------------------------
 
-From BI functionalities Menu, select |image26| to open the Document Browser.
+From BI functionalities Menu, select .. figure:: media/image20.png to open the Document Browser.
 
 .. figure:: media/image21.png
    
    Document Browser
 
-By default the page is divided in two parts, as shown in Figure above: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder. You can switch to the document preview view by clicking on grid icon in the top right corner, |image28|.
+By default the page is divided in two parts, as shown in Figure above: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder. You can switch to the document preview view by clicking on grid icon in the top right corner, as shown in figure below.
+
+.. figure:: media/image22.png
+   
+    Changing documents view
 
 Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date (see Figure below).
 
@@ -193,4 +195,4 @@ Each line shows the label, the name, the author and the type of the document, wh
 
    Documents details expanded.
 
-At the top of this side panel you find the |image30| button, the same one you see at the end of each document line. Click on it to execute the document.
+At the top of this side panel you find the .. figure:: media/image20.png button, the same one you see at the end of each document line. Click on it to execute the document.
