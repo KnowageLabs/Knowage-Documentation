@@ -31,45 +31,45 @@ Let us see how to build a cockpit and how the interface is displayed within the 
 .. table:: Cockpit editor toolbar.
    :widths: auto
    
-   +-----------------------+-----------------------+-----------------------+
-   |    Icon               | Name                  | Function              |
-   +=======================+=======================+=======================+
-   |    |image139|         | **Cockpit menu**      | Configuration menu of |
-   |                       |                       | Cockpit.              |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image140|         | **Add widget**        | It opens a window     |
-   |                       |                       | where you can create  |
-   |                       |                       | a new chart or table, |
-   |                       |                       | add texts, images or  |
-   |                       |                       | Knowage documents.    |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image141|         | **General             | It opens the window   |
-   |                       | configuration**       | where you set the     |
-   |                       |                       | general cockpit       |
-   |                       |                       | options (name, label, |
-   |                       |                       | show menu, etc.) and  |
-   |                       |                       | widget style (header, |
-   |                       |                       | titles, borders,      |
-   |                       |                       | etc.).                |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image142|         | **Data                | It opens a window     |
-   |                       | configuration**       | where you can manage  |
-   |                       |                       | the dataset, the      |
-   |                       |                       | association between   |
-   |                       |                       | datasets and the      |
-   |                       |                       | refresh frequency.    |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image143|         | **Selections**        | It adds a widget that |
-   |                       |                       | manages selections.   |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image144|         | **Clear Cache**       | It cleans temporary   |
-   |                       |                       | data.                 |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image145|         | **Save as**           | It opens the window   |
-   |                       |                       | to save the cockpit   |
-   |                       |                       | document as a new     |
-   |                       |                       | document.             |
-   +-----------------------+-----------------------+-----------------------+
+   +--------------------------------+-----------------------+-----------------------+
+   |    Icon                        | Name                  | Function              |
+   +================================+=======================+=======================+
+   | .. figure:: media/image136.png | **Cockpit menu**      | Configuration menu of |
+   |                                |                       | Cockpit.              |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image137.png | **Add widget**        | It opens a window     |
+   |                                |                       | where you can create  |
+   |                                |                       | a new chart or table, |
+   |                                |                       | add texts, images or  |
+   |                                |                       | Knowage documents.    |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image138.png | **General             | It opens the window   |
+   |                                | configuration**       | where you set the     |
+   |                                |                       | general cockpit       |
+   |                                |                       | options (name, label, |
+   |                                |                       | show menu, etc.) and  |
+   |                                |                       | widget style (header, |
+   |                                |                       | titles, borders,      |
+   |                                |                       | etc.).                |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image139.png | **Data                | It opens a window     |
+   |                                | configuration**       | where you can manage  |
+   |                                |                       | the dataset, the      |
+   |                                |                       | association between   |
+   |                                |                       | datasets and the      |
+   |                                |                       | refresh frequency.    |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image140.png | **Selections**        | It adds a widget that |
+   |                                |                       | manages selections.   |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image141.png | **Clear Cache**       | It cleans temporary   |
+   |                                |                       | data.                 |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image142.png | **Save as**           | It opens the window   |
+   |                                |                       | to save the cockpit   |
+   |                                |                       | document as a new     |
+   |                                |                       | document.             |
+   +--------------------------------+-----------------------+-----------------------+
 
    
 By clicking the button **Add Widget** you can add a widget containing a **Text**, an **Image**, a **Chart**, a **Table**, a **Cross table**, a **Document**,the **Active selections** or the **Selector** to your cockpit, as shown below.
@@ -695,7 +695,5 @@ Cockpit allows to manage data visualization splitting it in two or more sheets. 
 A user can take advantage of the “move widget” functionality we saw in My first Cockpit to bring widget from one sheet to another.
 
 Furthermore it is possible, but not mandatory, to set associations between datasets underlying different sheets. The multisheet functionality is particularly useful to focus the analysis in a single spot and have a general overview over it in few clicks at the same time.
-
-
 
 .. include:: cockpitThumbinals.rst
