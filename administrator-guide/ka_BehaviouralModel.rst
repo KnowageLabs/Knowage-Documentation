@@ -89,7 +89,7 @@ Once the user has logged in, his role is loaded. Roles are managed internally. I
 
 Alternatively, by clicking on the icon shown below, he can select a default role that will be kept valid until he logs out.
 
-.. figure:: media/image28.png
+.. figure:: media/image28_bis.png
 
    User roles in Knowage.
 
