@@ -25,7 +25,7 @@
 .. |image198| image:: media/image194.png
    :width: 0.19686in
    :height: 0.21144in
-.. |image156| image:: media/image153.png
+.. |image156| figure:: media/image153.png
    :width: 0.19686in
    :height: 0.14582in
 
