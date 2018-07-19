@@ -51,8 +51,8 @@ The |image35| refreshes the document.
 The |image36| opens the parameters panel and it is visible only if there are parameters associated to the document.
 
 .. |image36| image:: media/image30.png
-   :width: 20
-
+   :width: 30
+   
 The |image37| opens the contextual menu shown in figure below. We describe the main functionalities provided by this menu in the following.
 
 .. |image37| image:: media/image31.png
