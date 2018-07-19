@@ -114,10 +114,6 @@ In particular, we give some details for each tag and main attributes.
    -  **infoColumn**: if true ignore the column when inserting or updating the record (Optional).
 
 We stress that it is mandatory to point at one datamart table using a column with a numeric key. The code line is highlighted in figure below. While, if not elsewhere specified, a descriptive column will be displayed by default.
-
-.. figure:: media/image350.png
-
-    Pointing at a numerical column.
     
 .. code-block:: xml
     :linenos:
