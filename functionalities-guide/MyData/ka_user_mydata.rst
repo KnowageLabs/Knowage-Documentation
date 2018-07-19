@@ -29,19 +29,21 @@ My dataset
 
 In this area you can create datasets uploading your own files.
 
-Click **Create Dataset** to open the dataset wizard which guides you through the dataset creation. You can choose between XLS or CSV file as in :numref:`datasetcreation`. In the example shown in :numref:`uploadingxlsdat`, we upload an XLS file.
+Click **Create Dataset** to open the dataset wizard which guides you through the dataset creation. You can choose between XLS or CSV file as in the following figure. 
 
 .. _datasetcreation:
 .. figure:: media/image7.png
 
     Dataset creation.
+    
+In the example shown in the next figure, we upload an XLS file.
 
 .. _uploadingxlsdat:
 .. figure:: media/image8.png
 
     Uploading XLS for dataset.
    
-The wizard, shown in :numref:`configfeatures`, leads the user to insert some information to configure the dataset. For instance to specify the number of rows to skip or to limit and which sheet (of the XLS file) to pick up values from.
+The wizard, shown below, leads the user to insert some information to configure the dataset. For instance to specify the number of rows to skip or to limit and which sheet (of the XLS file) to pick up values from.
 
 .. _configfeatures:
 .. figure:: media/image9.png
@@ -64,7 +66,7 @@ Just few steps before saving the dataset:
 
     Saving dataset.
 
-As we discussed previously, you find all created datasets under **My dataset** area. You can share/unshare them by clicking on the **share** icon (have a look at :numref:`sharedataset`). The colour of the icon changes from white to red when sharing is turned to active. A shared dataset is visible to all other users having your same role.
+As we discussed previously, you find all created datasets under **My dataset** area. You can share/unshare them by clicking on the **share** icon (have a look at the next figure). The colour of the icon changes from white to red when sharing is turned to active. A shared dataset is visible to all other users having your same role.
 
 Note that dedicated area “\ **Shared Dataset**\ ” contains all acquired datasets thanks to the sharing of other users.
 
