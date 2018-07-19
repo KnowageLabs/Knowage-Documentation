@@ -265,11 +265,13 @@ To use these parameters, you first need to add them to your report. Right-click 
 
       Be careful when assigning a name to a parameter inside a report. This name must correspond to the parameters URI when you               deploy the document on Knowage Server.
 
-Once you have defined all parameters, open the (or create a new) dataset. Parameters are identified by a question mark **?** . For each **?** that you insert in your query, you must set the corresponding link in the **Parameters** tab: this will allow parameters substitution at report execution time. Note that you must set a link for each question mark as shown in :numref:`insrtprmintodtsetdef`, even if the same parameter occurs multiple times in the same query.
+Once you have defined all parameters, open the (or create a new) dataset. Parameters are identified by a question mark **?** . For each **?** that you insert in your query, you must set the corresponding link in the **Parameters** tab: this will allow parameters substitution at report execution time.
 
 .. figure:: media/image338.png
 
     Creation of a new parameter in a BIRT report.
+
+Note that you must set a link for each question mark as shown below, even if the same parameter occurs multiple times in the same query.
 
 .. _insrtprmintodtsetdef:
 .. figure:: media/image339.png
@@ -385,7 +387,7 @@ Note that the syntax of the string is fixed, while you need to assign values to 
 
      Column bindings.
 
-To manage multi-value parameters is enough to list all values between brackets separating them with commas, as reported in :numref:`crossnavsyntax`. More specifically, the array must contain values of the same type. For example:
+To manage multi-value parameters is enough to list all values between brackets separating them with commas, as reported in the code above. More specifically, the array must contain values of the same type. For example:
 
 .. code-block:: javascript
    :linenos:
@@ -400,7 +402,7 @@ or
     OUT_SeveralNames:[5,9,31938]
 
 
-Finally, it is possible to set a sort of "multi"-cross navigation if for example the exit document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document goes to a target document and the name of the navigation is "CrossNav1" and simultaneously the source document goes to a second target document and the name of the navigation is "CrossNav2". If in the JavaScript function of :numref:`crossnavsyntax` the "Cross_Navigation_Name" is left empty as in :numref:`crossnavsyntax2`, when the user clicks on the object for which the navigation has been enabled a pop up opens asking for the user to choose between the "CrossNav1" navigation or the "CrossNav2" one. This procedure allows the user to have a more than one possible navigation starting from the same object.
+Finally, it is possible to set a sort of "multi"-cross navigation if for example the exit document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document goes to a target document and the name of the navigation is "CrossNav1" and simultaneously the source document goes to a second target document and the name of the navigation is "CrossNav2". If in the JavaScript function of *Cross Navigation syntax* code the "Cross_Navigation_Name" is left empty as in the code below, when the user clicks on the object for which the navigation has been enabled a pop up opens asking for the user to choose between the "CrossNav1" navigation or the "CrossNav2" one. This procedure allows the user to have a more than one possible navigation starting from the same object.
    
 .. _crossnavsyntax2:
 .. code-block:: javascript
