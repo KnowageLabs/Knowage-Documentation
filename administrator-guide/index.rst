@@ -2,9 +2,9 @@ Administration Manual
 #########################
 
 .. toctree::
-   :caption: Table of Contents
+   	:caption: Table of Contents
 
-   ka_Introduction.rst
+   	ka_Introduction.rst
 	ka_gam_userInterface.rst
 	ka_datasource.rst
 	ka_BehaviouralModel.rst
