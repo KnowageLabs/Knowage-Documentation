@@ -28,6 +28,7 @@ Knowage source code repository is available on GitHub: visit the `repository`_.
 .. both maxdepth here and latex secnumdepth must be set to have effect in PDF output. caption has no effect in PDF output
 
 .. toctree::
+   :hidden:
    :caption: Table of Contents
    :maxdepth: 10
    
