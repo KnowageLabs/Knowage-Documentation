@@ -47,7 +47,7 @@ Filter cards are used to:
 -  place hierarchies in different axes,
 -  filter visible members.
 
-Considering :numref:`featuresoffiltcard`, we can see that a filter card is made up of:
+Considering the next figure, we can see that a filter card is made up of:
 
 - (a) an icon for opening dimension chooser dialog,
 - (b) a dimension name,
@@ -68,7 +68,7 @@ In the panel axes you can:
 -  organise the dimensions visualization,
 -  swap axes.
 
-Referring to :numref:`axespanelfeat`, the axes panel consists of the following items:
+Referring to the following figure, the axes panel consists of the following items:
 
 - (a) columns axis,
 - (b) row axis,
@@ -101,7 +101,7 @@ Pivot table is used to:
 -  perform cross navigation to other documents.
 
 
-Referring to :numref:`pivottablefeat`, Pivot table consists of:
+Referring to next figure, Pivot table consists of:
 
 -  (a) dimensions involved in the analysis,
 -  (b) cells with data,
@@ -118,7 +118,7 @@ Referring to :numref:`pivottablefeat`, Pivot table consists of:
 Side bar
 ~~~~~~~~
 
-You can open the side bar by clicking on the icon positioned on the top right side of the page (:numref:`openthesidebar`). Side bar will be shown on the right side (:numref:`sidebar`).
+You can open the side bar by clicking on the icon positioned on the top right side of the page (see next figure). Side bar will be shown on the right side (see *Side bar* figure).
 
 .. _openthesidebar:
 .. figure:: media/image143.png
@@ -137,7 +137,7 @@ Side bar is used to:
 
     Side bar.
 
-The side bar shows the **Menu**. This area let you customize the Olap layout. As highlighted in :numref:`sidebarmenu`, the Menu is divided in three subsections:
+The side bar shows the **Menu**. This area let you customize the Olap layout. As highlighted in the figure below, the Menu is divided in three subsections:
 
 -  (a) drill options,
 -  (b) OLAP functions,
@@ -149,7 +149,7 @@ The side bar shows the **Menu**. This area let you customize the Olap layout. As
 
     Side bar Menu.
 
-We start introducing the interface and leave the description to the next *Functionalities* paragraph. In particular, referring to :numref:`drilltypes`, drill types consists of:
+We start introducing the interface and leave the description to the next *Functionalities* paragraph. In particular, referring to next figure, drill types consists of:
 
 -  (a) position,
 -  (b) member,
@@ -161,7 +161,7 @@ We start introducing the interface and leave the description to the next *Functi
 
     Drill types.
 
-Meanwhile, referring to :numref:`olapfunctions`, the OLAP functions consist of:
+Meanwhile, referring to the following figure, the OLAP functions consist of:
 
 -  (a) show MDX,
 -  (b) reload model.
@@ -171,7 +171,7 @@ Meanwhile, referring to :numref:`olapfunctions`, the OLAP functions consist of:
 
     OLAP functions.
 
-Referring to :numref:`tablefunctions1`, table functions consist of:
+Referring to figure below, table functions consist of:
 
 -  (a) show parent members,
 -  (b) sorting settings,
@@ -186,7 +186,7 @@ Referring to :numref:`tablefunctions1`, table functions consist of:
 
     Table functions.
 
-Referring to :numref:`tablefunctions2`, what if consists of:
+Referring to next figure, what if consists of:
 
 - (a) lock/unlock model,
 - (b) delete versions,
@@ -241,7 +241,7 @@ If an OLAP schema is defined, the user can choose different hierarchies of the s
 
     Hierarchies icon.
 
-A pop up will be displayed. :numref:`hierarchiesdialogpopup` shows its characteristics. The window will present:
+A pop up will be displayed. The following figure shows its characteristics. The window will present:
 
 - (a) the dimension name,
 - (b) name of selected hierarchies,
@@ -262,7 +262,7 @@ If the user re-opens the dialog window, he/she sees the selected hieararchies an
 
     Changing the hierarchies.
 
-We give an example of the output when the hierarchy “Time” is selected in :numref:`timehierarchieshowsdays` and hierarchy “Time Weekly” in :numref:`timeweeklyhierarchyshowsweek`.
+We give an example of the output when the hierarchy “Time” is selected in first next figure and hierarchy “Time Weekly” in the second next figure.
 
 .. _timehierarchieshowsdays:
 .. figure:: media/image159.png
@@ -279,7 +279,7 @@ Slicing
 
 The slicing operation consists in the analysis of a subset of a multi-dimensional array corresponding to a single value for one or more members of the dimensions. In order to perform this operation you need to drag and drop the dimesion of interest in the axis panel.  Then clicking on the filter icon choose the new single focus and apply it. Once concluded these steps the cube will show only the selected level of the dimension, while the others have been sliced out.
 
-:numref:`dialogforslicerchoosing` shows the slicer option panel which consists of:
+The following figure shows the slicer option panel which consists of:
 
 - (a) a dimension name,
 - (b) a search input field,
@@ -335,7 +335,7 @@ The procedure to search for a member using the filter dialog has no meaningful d
 Drill down and drill up
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-User can choose between drill types by clicking on one of the three buttons in the drill types section of the side bar (:numref:`sidebarmenu`). There are three drill types. In the following we give some details on them.
+User can choose between drill types by clicking on one of the three buttons in the drill types section of the side bar. There are three drill types. In the following we give some details on them.
 
 1. **Position**: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with          child members of a member with that particular command. See below.
 
@@ -364,7 +364,7 @@ To perform drill through operation the user needs first to select a cell, as in 
 
     Drill thorugh option.
 
-In particular, referring to :numref:`drillthoroughwindow`, drill though dialog consists of:
+In particular, referring to the next figure, drill though dialog consists of:
 
 -  (a) a hierarchy menu,
 -  (b) a table of values,
@@ -388,7 +388,7 @@ The user must therefore select a cell, open the side bar and select the drill th
 
 3. to click on the “Apply” button (after checking the checkbox, remember to click outside of the level list and then select apply).
 
-The user can also select the maximum rows to load by choosing one of the options in the drop down list (see :numref:`drillthoroughwindow`, (c)). Finally, loaded data can be exported in csv format by clicking on the “Export” button.
+The user can also select the maximum rows to load by choosing one of the options in the drop down list (see figure above, (c)). Finally, loaded data can be exported in csv format by clicking on the “Export” button.
 
 Refreshing model
 ~~~~~~~~~~~~~~~~
@@ -516,7 +516,7 @@ Once enabled, to create a calculated member/set the user should:
 
 1. select a member of the pivot table, as in figure above, which will be the parent of the calculated member,
 
-2. click on the “calculated field” button in the side bar panel: a “Select function” dialog will appear. The latter consists of            (refer to :numref:`selectfunctiondialog`):
+2. click on the “calculated field” button in the side bar panel: a “Select function” dialog will appear. The latter consists of            (refer to next figure):
 
    -  (a) a name input field,
    -  (b) an aggregation functions tab,
@@ -538,7 +538,7 @@ The function definition used to create calculated members are read from the form
 
     Example of one formula inside of formulas xml.
 
-3. Select a function and enter a calculated member/set name and click on “Ok”. A dialog for arguments defintion will show up, as shown in :numref:`argumentdefdialog`. This is made up of the following elements:
+3. Select a function and enter a calculated member/set name and click on “Ok”. A dialog for arguments defintion will show up, as shown in the following figure. This is made up of the following elements:
 
 - (a) selected function name,
 - (b) function description,
@@ -558,7 +558,7 @@ In particular, to input MDX expression argument, the user has three options, lis
 
 1. Type it manually (for advance users).
 
-2. Select members from the pivot table: to select a members that are going to be included in a set, the user should (see :numref:`selectingmembers`):
+2. Select members from the pivot table: to select a members that are going to be included in a set, the user should (see next figure):
 
    -  click on select from table button,
    -  click on members in a pivot table,
@@ -577,7 +577,7 @@ The expression of selected members will be imported in text input fields for arg
 
 3. Import expression from saved calculated members or sets. To import calculated member/set, the user should:
 
-   • Click on open saved button. Then the dialog of saved calculated members/sets will appear (:numref:`savedsetsdialog`) and it consists of:
+   • Click on open saved button. Then the dialog of saved calculated members/sets will appear (next figure) and it consists of:
 
      -  a list of saved calculated members and sets,
      -  a calculated member/set name,
@@ -736,7 +736,7 @@ Note that the Lock option forbids other technical users to modify settings.
 OLAP template building
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user must manually edit the template. The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in :numref:`mappingtemplateexample`:
+Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user must manually edit the template. The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in next code:
 
 .. _mappingtemplateexample:
 .. code-block:: xml
@@ -820,7 +820,7 @@ Once you have the template ready you can create the OLAP document on Knowage Ser
 
 To create a new OLAP document, click on the “create a new document” button in the **Document Development** area and select **Online analytical processing** as Type. Then you can choose the available engines. In this case we have only the **OLAP engine**. 
 
-Type a name, a functionality, load the XML template and save. You will see the document in the functionality (folder) you selected, displayed with the typical cube icon as shown in :numref:`olapdocserver`.
+Type a name, a functionality, load the XML template and save. You will see the document in the functionality (folder) you selected, displayed with the typical cube icon as shown below.
 
 .. _olapdocserver:
 .. figure:: media/image195.png
@@ -847,7 +847,7 @@ The page as the one in figure below will open.
 
 Then we start entering the **Document Browser** and clicking on the “Plus” icon at the top right corner of the page. Fill in the mandatory boxes as Label and Name of the document, select the On-line Analytica Process Type of document and the What-if Engine (we stress that the What-if engine is available only for who have purchased the Knowage SI package). Remember to save to move to the next step: open the Template Build. The latter can be opend clicking on the editor icon |image195| and it is available at the bottom of the document detail page.
 
-The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. :numref:`olapcoreconfig` sums up these three steps. Following the example just given in  :numref:`olapcoreconfig` you will enter a page like that of  :numref:`definingolaptempl`. 
+The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. Next figure sums up these three steps. Following the example just given below you will enter a page like that of the second figure below. 
 
 .. _olapcoreconfig:
 .. figure:: media/image198.png
@@ -859,12 +859,14 @@ The action opens a first page asking for the kind of template. Here we choose th
 
     Defining OLAP template.
 
-Once entered the page the user can freely set the fields as filter panels or as filter cards, according to requirements. Refer to *Functionalities* Chapter to review the terminology. Make your selection and you can already save the template as shown in :numref:`definingolaptempl2`. You can notice that the side panel contains some features (:numref:`sidepanelfeatolapdes`): 
+Once entered the page the user can freely set the fields as filter panels or as filter cards, according to requirements. Refer to *Functionalities* Chapter to review the terminology. Make your selection and you can already save the template as shown below.  
 
 .. _definingolaptempl2:
 .. figure:: media/image200.png
 
     Defining OLAP template.
+
+You can notice that the side panel contains some features (see next figure):
 
 .. _sidepanelfeatolapdes:
 .. figure:: media/image201.png
@@ -876,7 +878,7 @@ Once entered the page the user can freely set the fields as filter panels or as 
 - |image202| to define the cross navigation;
 - |image203| to configure buttons visibility.
 
-Refer to Section *Functionalities* to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to :numref:`wizconfigscena`, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
+Refer to Section *Functionalities* to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to to the following figure, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
 
 .. _wizconfigscena:
 .. figure:: media/image20607.png
