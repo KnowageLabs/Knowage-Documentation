@@ -177,7 +177,7 @@ You can minimize the main menu by clicking the right arrow at its bottom right c
 Document Browser overview
 -----------------------------
 
-From BI functionalities Menu, select media/image20.png to open the Document Browser.
+From BI functionalities Menu, select ``.. figure::media/image20.png`` to open the Document Browser.
 
 .. figure:: media/image21.png
    
