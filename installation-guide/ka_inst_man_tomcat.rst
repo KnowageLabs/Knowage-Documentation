@@ -28,7 +28,7 @@ We need to create two connection:
 
 - ``jdbc/knowage``:  Knowage metadata 
 
-	.. code-block:: xml
+.. code-block:: xml
 		:linenos:
 		
 		<Resource auth="Container" 
@@ -53,7 +53,7 @@ We need to create two connection:
 
 - ``jdbc/cache_ds``: Knowage cache, this must be an emty schema  
 
-	.. code-block:: xml
+.. code-block:: xml
 		:linenos:
 		
 		 <Resource auth="Container" 
@@ -114,7 +114,8 @@ Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following co
         :linenos:
         :caption: Tomcat environment variables configuration.
 
-        <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>                                           <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/>
+        <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
+	<Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/>
 	<Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
 	<Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>            
 
