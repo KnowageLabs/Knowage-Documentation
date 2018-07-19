@@ -24,7 +24,7 @@ You can create your new Cockpit from the **Analysis** area of the **Workspace** 
 .. important::
     **Reaching the cockpit designer**
          
-         We stress that the cockpit interface is reached by the final user and the administrator following two diferent paths.
+        We stress that the cockpit interface is reached by the final user and the administrator following two diferent paths.
 
 Let us see how to build a cockpit and how the interface is displayed within the server. Once opened, the cockpit interface is an empty page with a toolbar containing different options described in Table below.
 
