@@ -71,7 +71,7 @@ We stress that you can also refer to members that are not included in the tuple 
          [Region].[Mexico Central], [Customers].[All Customers], [Customers].[All Customers]
 
 
-You can refer to the tuple in :numref:`producteggs` with just Product.Eggs and at the same time to the tuple in Code 9.3 with just Product.Eggs; Measures.Unit Sales 
+You can refer to the tuple in the next code with just Product.Eggs and at the same time to the tuple in the second code below with just Product.Eggs; Measures.Unit Sales 
 
 .. _producteggs:
 .. code-block:: xml
@@ -92,7 +92,7 @@ You can refer to the tuple in :numref:`producteggs` with just Product.Eggs and a
 
 Note that if you create a formula on a cell and you want to move it along a dimension (for example the cell refers to member Time.2016 and you want to get value for Time.2017) you have to refer to a member of same level. So for example you can get value of the cell for Time.2017, but not for Time.2017.May.
 
-The syntax is as the one shown in Referring to different members or, in case you are using another hierarchy, as in :numref:`referringdiffmembers` where you can concatenate different members with ";".
+The syntax is as the one shown in Referring to different members or, in case you are using another hierarchy, as in the second code below where you can concatenate different members with ";".
 
 .. code-block:: xml
          :linenos:
@@ -185,7 +185,7 @@ When you perform a what-if analysis the schema is shared in order to be used as 
 
     Workflow tab.
 
-Referring to :numref:`workflowtabinterf`, the interface for the definition of the workflow is composed of a double list where
+Referring to the next figure, the interface for the definition of the workflow is composed of a double list where
 
 -  the **available users** area contains all the users,
 -  the **workflow** area contains the sequence of users for the workflow.
