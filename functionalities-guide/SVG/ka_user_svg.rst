@@ -100,15 +100,14 @@ An example below.
    :caption: Example of SVG code for template file.
 
       <?xml version="1.0" encoding="UTF-8"?>                                  
-
-       <MAP>                                                                                                                             
+      <MAP>                                                                                                                             
           <DATAMART_PROVIDER>                                                                                              
           <HIERARCHY name="USA">  
           <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >   
           <MEMBER name ="states" measure_dataset = "ds_states" level="2" >     
           <HIERARCHY>  
           <DATAMART_PROVIDER>                                                                                                       
-       <MAP>                                                                   
+      <MAP>                                                                   
 
 Basically, it’s necessary to specify the hierarchy that we want to use, as well as its members (remember that with member we are considering a specific SVG).
 
@@ -130,34 +129,34 @@ Let us see each of them in more depth.
 
 -  **METADATA.** This is the section where we define the dataset metadata, in fact, each COLUMN tag defines the dataset columns that        we want to use as attribute, as measure (used for thematize the SVG) or other technical meaning usefull for the engine.
 
-.. code-block:: xml
-   :linenos:
-   :caption: Example of SVG code for template file.
+	.. code-block:: xml
+	   :linenos:
+	   :caption: Example of SVG code for template file.
 
-         <METADATA>                                                                                                                    
-           <COLUMN TYPE="geoid" column_id="sales_region" />   
-           <COLUMN TYPE="measure" column_id="store_sales" />
-           <COLUMN TYPE="measure" column_id="store_costs" /> 
-           <COLUMN TYPE="measure" column_id="unit_sales" />    
-           <COLUMN TYPE="drillid" column_id="member_name" /> 
-           <COLUMN TYPE="info" column_id="info_text" />                          
+		 <METADATA>                                                                                                                    
+		   <COLUMN TYPE="geoid" column_id="sales_region" />   
+		   <COLUMN TYPE="measure" column_id="store_sales" />
+		   <COLUMN TYPE="measure" column_id="store_costs" /> 
+		   <COLUMN TYPE="measure" column_id="unit_sales" />    
+		   <COLUMN TYPE="drillid" column_id="member_name" /> 
+		   <COLUMN TYPE="info" column_id="info_text" />                          
 
 Once again we give some details on metadata in next table.
 
 -  **LAYERS.** In this section we define all layers that we want to enable in the document. Each layer will be shown into the detail        panel “Layers section” as you can see in figure below and could be actived or disactived directly by an action of the the final user.    At least one layer must be defined.
 
-.. figure:: media/image249.png
+	.. figure:: media/image249.png
 
-       Available layers set by a technical user.
+	       Available layers set by a technical user.
 
-.. code-block:: xml
-   :linenos:
-   :caption: Code relative to the LAYER setting.
+	.. code-block:: xml
+	   :linenos:
+	   :caption: Code relative to the LAYER setting.
 
-         <LAYERS>                                                                                                                       
-           <LAYER name="regions" description="Regions" selected="true" />                                               
-           <LAYER name="Labels_Regions_Name" description="Labels_Regions_Name"   
-                  selected="false" />                                                                             
+		 <LAYERS>                                                                                                                       
+		   <LAYER name="regions" description="Regions" selected="true" />                                               
+		   <LAYER name="Labels_Regions_Name" description="Labels_Regions_Name"   
+			  selected="false" />                                                                             
          <LAYERS>                                                           
 
 .. _recaptagproperties:
@@ -321,27 +320,27 @@ Once again we give some details on metadata in next table.
 
 -  **MEASURES** Measures are all the business values (KPI) that the user want to monitor throught this document type. Each measure defined in this section will be shown into the detail panel (“Measures” section) with a specific thematization and could be enabled or disabled directly by an action of the the final user. When the measure is active all its values are shown onto the SVG and each area has a specific tonality of the color in according to the threshold definition and its real value. All thresholds range are visualized    into the “Legend” section of the detail panel as highlight in the following figure. Is possibile to choose the thematization logic that it could be as quantile, percentage, uniform or static. Next, we’ll see both definitions (see Thresholds details).Remember, that at least one    measure must be defined.
 
-.. _measurepanellegend:
-.. figure:: media/image35051.png
+	.. _measurepanellegend:
+	.. figure:: media/image35051.png
 
-    Left. Measure panel. Right. Legend panel.
+	    Left. Measure panel. Right. Legend panel.
 
-.. code-block:: xml
-   :linenos:
-   :caption: Code for setting the KPI into SVG document.
+	.. code-block:: xml
+	   :linenos:
+	   :caption: Code for setting the KPI into SVG document.
 
-         <MEASURES default_kpi="UNIT_SALES">                                                
-            <KPI column_id="STORE_SALES" description="Store Sales" >                                                    
-              <TRESHOLDS type="quantile" lb_value="0" ub_value="none" >                                                         
-                 <PARAM name="GROUPS_NUMBER" value="5" />     
-              </TRESHOLDS>                                                                                 
-              <COLOURS type="grad" outbound_colour="#FFFFFF" null_values_color="#CCCCCC" >              
-              <PARAM name="BASE_COLOR" value="#009900" />  
-              <!--<PARAM name="opacity" value="0.5" />--> </COLOURS>                                                                   
-            </KPI>                                                                           
-           <KPI column_id="STORE_COST" description="Store Cost" >    
-           <KPI column_id="UNIT_SALES" description="Unit Sales" >   
-         <MEASURE>                                                                          
+		 <MEASURES default_kpi="UNIT_SALES">                                                
+		    <KPI column_id="STORE_SALES" description="Store Sales" >                                                    
+		      <TRESHOLDS type="quantile" lb_value="0" ub_value="none" >                                                         
+			 <PARAM name="GROUPS_NUMBER" value="5" />     
+		      </TRESHOLDS>                                                                                 
+		      <COLOURS type="grad" outbound_colour="#FFFFFF" null_values_color="#CCCCCC" >              
+		      <PARAM name="BASE_COLOR" value="#009900" />  
+		      <!--<PARAM name="opacity" value="0.5" />--> </COLOURS>                                                                   
+		    </KPI>                                                                           
+		   <KPI column_id="STORE_COST" description="Store Cost" >    
+		   <KPI column_id="UNIT_SALES" description="Unit Sales" >   
+		 <MEASURE>                                                                          
 
 We report the next table for further details on THRESHOLDS and COLOURS tag. This table includes the heuristics supporting value interval partition into a finite number of subintervals (type attribute of the THRESHOLDS tag).
 
