@@ -10,7 +10,7 @@ Metamodel creation
 
 Using the Meta Web application, it is possible to reverse the content of a database and manipulate this information creating a new model that can fit the user’s needs. In this section will we see what are the steps need in order to create a metamodel and query it with the QBE.
 
-To create a Metamodel enter the **Business Model Catalogue** and add a new model clicking on the “Plus” icon. Referring to :numref:`settingthemodelinfo`, you will be prompted to enter the following fields:
+To create a Metamodel enter the **Business Model Catalogue** and add a new model clicking on the “Plus” icon. Referring to next figure, you will be prompted to enter the following fields:
 
 -  Name (mandatory): Name of the model (cannot be changed after the save).
 -  Description: A longer description of your model.
@@ -52,12 +52,14 @@ The “Physical Model” tab contains the tables that the user has checked earli
 
     Physical Model Tab.
 
-The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to :numref:`updtphisicalmdl1`, selecting the “Update Physical Model” option the user can refresh the model metadata. As shown in :numref:`updtphisicalmdl2`, the interface shows if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
+The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to the figure below, selecting the “Update Physical Model” option the user can refresh the model metadata. 
 
 .. _updtphisicalmdl1:
 .. figure:: media/image302a.png
 
     Update the physical model.
+
+As shown below, the interface shows if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
 
 .. _updtphisicalmdl2:
 .. figure:: media/image30607.png
@@ -173,7 +175,7 @@ Scrolling the table “Property list” tab, the user finds the **Type** menu it
 
     Table property list.
 
-We highlight that for temporal and time dimension type, the user must define at least one hierarchy for the related dimension. :numref:`temphierarcdef` shows that it is possible to set a hierarchy clicking on the button avaiable at the end of the comobobox line. Then, clicking on the “Add” button, the user can configure a new hierarchy. Remember to choose the **Level type** using the dedicated combobox. Note that it is possibile to shift levels using the up and down arrows avaiable at the end of each level row. Furthermore, the user can add a “Has all” node the hierarchy: just enable the “has-all” box and type the all member name.
+We highlight that for temporal and time dimension type, the user must define at least one hierarchy for the related dimension. the next figure shows that it is possible to set a hierarchy clicking on the button avaiable at the end of the comobobox line. Then, clicking on the “Add” button, the user can configure a new hierarchy. Remember to choose the **Level type** using the dedicated combobox. Note that it is possibile to shift levels using the up and down arrows avaiable at the end of each level row. Furthermore, the user can add a “Has all” node the hierarchy: just enable the “has-all” box and type the all member name.
 
 .. _temphierarcdef:
 .. figure:: media/image32021.png
@@ -185,8 +187,13 @@ According to the chosen type, the user will be able to use the specific function
 Column property list
 ~~~~~~~~~~~~~~~~~~~~
 
-As well, the user can employ each field property list (:numref:`clmnproprtylist`) to both inspect the object and custom it.
+As well, the user can employ each field property list (see next figure) to both inspect the object and custom it.
 
+.. _clmnproprtylist:
+.. figure:: media/image322.png
+
+   Column property list.
+   
 The **Structural** area covers an important role for the field properties. Here the user can set:
 
 -  **Visibility** over the field,
@@ -196,11 +203,6 @@ The **Structural** area covers an important role for the field properties. Here 
 -  **Profile attribute**, to filter the field (and then the table records) by the user profile attributes (note that the combobox lists the available profile attributes),
 -  **Profile attribute filter type**, to define the filter operator among “equals to”, “in”, “like”,
 -  **Data type**, to indicate the field data type.
-
-.. _clmnproprtylist:
-.. figure:: media/image322.png
-
-   Column property list.
 
 In the **Behavioural Model** area, the user can assign the field’s visbility permission to specific roles.
 
@@ -215,7 +217,7 @@ After the editing of the metamodel, click on “Save” on the Meta Web toolbar 
 
     Generate datamart dialog.
    
-If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advacend options” (see :numref:`generdatamdialogadv`) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to buid the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
+If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advacend options” (see fegure below) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to buid the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
 
 .. _generdatamdialogadv:
 .. figure:: media/image324.png
