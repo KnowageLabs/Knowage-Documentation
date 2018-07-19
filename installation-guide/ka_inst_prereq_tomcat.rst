@@ -39,12 +39,15 @@ Disk usage
 
 The Knowage installation requires 2 GB of free space on file system. This space does not include the space relative to the data and the metadata storage.
 
-JDK version
+Java environment
 --------------------
 
-The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured.
+The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured. The steps to configure it depend on the OS.
 
-**[LINUX]** Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
+Linux
+~~~~~~~~~~~~
+
+Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
 
    .. code-block:: bash
            :linenos:
@@ -54,7 +57,10 @@ The enviroment in which Knowage will be installed must include a JDK 1.8 install
            export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            
            export PATH=$JAVA_HOME/bin:$PATH                                     
 
-**[WIN]** Define the ``JAVA_HOME`` variable and ``PATH`` in the section "Environment variables" which can be reached from the "System".
+Windows
+~~~~~~~~~~~~
+
+Define the ``JAVA_HOME`` variable and ``PATH`` in the section "Environment variables" which can be reached from the "System".
  
    .. figure:: media/image7.png
 
@@ -86,7 +92,10 @@ Tomcat 7
 
 In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
 
-**[LINUX]** It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
+Linux
+^^^^^^^^^^
+
+It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
 - Create the Tomcat user.
 
@@ -118,7 +127,10 @@ In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
 
            exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@" 
 
-**[WIN]** It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-7.0-doc/windows-service-howto.html.
+Windows
+^^^^^^^^^^
+
+It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-7.0-doc/windows-service-howto.html.
 
 Database schema for metadata
 ----------------------------
@@ -146,14 +158,3 @@ Database schema for data
 -------------------------
 
 A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *data DB* in the following.
-
-R
------------
-To correctly use the Knowage Data Mining engine it is necessary to install *R*, *R Studio* and *rJava* on the target server. 
-Be sure to use the following versions:
-
-- version 3.2.2 for R,
-- version 0.99 for R Studio,
-- version 0.98 for rJava
-
-Please refer to  http://cranr-project.org/ to get more information on R scripting language.
