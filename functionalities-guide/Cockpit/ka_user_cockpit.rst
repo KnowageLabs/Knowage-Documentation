@@ -164,7 +164,7 @@ In addition, if the navigation expects other parameters to be passed, use the bo
 Table widget
 ~~~~~~~~~~~~
 
-The **Widget table configuration** opens and it guides you through the steps to configure the widget. The pop up opens showing the **column** tab, as you can see from Figure below. In details, it is mandatory to select a dataset using the combobox ( only if at least one dataset has been loaded using the **Data Configuration** feature) or clicking on the icon |image156| available just aside the combobox line. You can page the table specifying the number of rows per sheet. Consequently the user can set columns properties.
+The **Widget table configuration** opens and it guides you through the steps to configure the widget. The pop up opens showing the **column** tab, as you can see from Figure below. In details, it is mandatory to select a dataset using the combobox ( only if at least one dataset has been loaded using the **Data Configuration** feature) or clicking on the icon  image:: media/image153.png available just aside the combobox line. You can page the table specifying the number of rows per sheet. Consequently the user can set columns properties.
 
 .. figure:: media/image154.png
 
