@@ -205,7 +205,7 @@ Once again we give some details on metadata in next table.
         |                       |                       | the catalogue for the |
         |                       |                       | hierarchy and the     |
         |                       |                       | member specified.     |
-        +-----------------------+-----------------------+-----------------------+    
+        +-----------------------+-----------------------+-----------------------+
         |    COLUMN             | TYPE                  | Mandatory. The type   |
         |                       |                       | of the specific       |
         |                       |                       | column. Possible      |
@@ -367,24 +367,19 @@ Sometimes users need to color the map and, at the same time, to continue to see 
          |                       |                       | METADATA section as   |
          |                       |                       | measuere type.        |
          +-----------------------+-----------------------+-----------------------+
-         |    KPI                | column_id             | Mandatory. The        |
-         |                       |                       | column_id property of |
-         |                       |                       | the measure that you  |
-         |                       |                       | are defining. Its     |
-         |                       |                       | value must exist into |
-         |                       |                       | the METADATA section  |
-	 |                       |                       | as measuere type.     |
+	 |    KPI                | column_id             | Mandatory. The        |
+	 |                       |                       |  column_id property of|
+	 |			 |			 |  the measure that you |
+         |                       |                       |  are defining. Its    |
+         |                       |                       |  value must exist into|
+         |                       |                       |  the METADATA section |
+	 |			 |			 |  as measure type.     |
 	 +-----------------------+-----------------------+-----------------------+
 	 |    KPI                | Description           | Mandatory. The label  |
 	 |                       |                       | that you want show    |
 	 |                       |                       | into the detail       |
 	 |                       |                       | panel.                |
 	 +-----------------------+-----------------------+-----------------------+
-	 
-	 
-	 
-	 
-	 
 	 |    THRESHOLDS         | type                  | Mandatory. The type   |
 	 |                       |                       | of logic to use to    |
 	 |                       |                       | define the            |
@@ -484,24 +479,19 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 	 |                       |                       | outbound of the       |
 	 |                       |                       | maximum range.165     |
 	 +-----------------------+-----------------------+-----------------------+
-         |    COLOURS            | null_values_color     | Mandatory. Defines the| 
-	 |			 |			 | colour to use when the|
-         |                       |                       | value for the specific|
-         |                       |                       | area is null          |
-         |                       |                       |                       |
-         +-----------------------+-----------------------+-----------------------+
-         |    PARAM              | namv		         | See the PARAM \|      |
-         |                       |                       | name property         |
-	 |			 |		         | specified for         |
-         |                       |                       | the THRESHOLD tag.    |
-         |                       |                       |                       |
-         +-----------------------+-----------------------+-----------------------+
-         |    PARAM              | nalue		 |  See the PARAM \|	 |
-	 |			 |			 |  value property	 |
-	 |			 |			 |  specified for the	 |
-	 |			 |			 |  THRESHOLD tag.	 |	
-         |                       |                       |                       | 
-         +-----------------------+-----------------------+-----------------------+
+	 |    COLOURS            | null_values_color     | Mandatory. Defines    |
+	 |                       |                       | the color to use when |
+	 |                       |                       | the value for the     |
+	 |                       |                       | specific area is null |
+	 +-----------------------+-----------------------+-----------------------+
+	 |    PARAM              | name                  | See the PARAM\ name   |
+	 |                       |                       | property specified for|
+	 |                       |                       | the THRESHOLD tag     |
+	 +-----------------------+-----------------------+-----------------------+
+	 |    PARAM              | value                 | See the PARAM\ value  |
+	 |                       |                       | property specified for|
+	 |                       |                       | the THRESHOLD tag     |
+	 +-----------------------+-----------------------+-----------------------+
 	 |    type               | static                | It partitions the     |
 	 |                       |                       | interval into smaller |
 	 |                       |                       | fixed-size            |
@@ -626,6 +616,10 @@ Sometimes users need to color the map and, at the same time, to continue to see 
 	 |                       |                       | value="#3333CC" />    |
 	 |                       |                       | </COLOURS>            |
 	 +-----------------------+-----------------------+-----------------------+
+	 
+	 
+	 
+	 
 
 
 Now, after the template definiton, you can create it into Knowage. Remember that it must be a “Location Intelligence” document type with the engine “SVG Viewer Engine”.
