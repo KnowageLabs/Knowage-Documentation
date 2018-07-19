@@ -66,26 +66,26 @@ Main menu consists in a set of icons associated with basic features. It is divid
 .. table:: Menu components - General menu
    :widths: auto
    
-   +-----------------------+-----------------------+-----------------------+
-   |    Icon               | Name                  | Description           |
-   +=======================+=======================+=======================+
-   |    |image9|           | Knowage user          | Open a hidden menu    |
-   |                       |                       | with extra            |
-   |                       |                       | functionalities.      |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image10|          | Select role           | Select the            |
-   |                       |                       | authentication role   |
-   |                       |                       | (available if you are |
-   |                       |                       | associated to more    |
-   |                       |                       | than one role).       |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image11|          | Languages             | Language options.     |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image12|          | Info                  | Infos about Knowage   |
-   |                       |                       | version.              |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image13|          | Log Out               | Log out.              |
-   +-----------------------+-----------------------+-----------------------+
+   +-------------------------------+-----------------------+-----------------------+
+   |    Icon                       | Name                  | Description           |
+   +===============================+=======================+=======================+
+   |    image9                     | Knowage user          | Open a hidden menu    |
+   |                               |                       | with extra            |
+   |                               |                       | functionalities.      |
+   +-------------------------------+-----------------------+-----------------------+
+   |    media/image10.png          | Select role           | Select the            |
+   |                               |                       | authentication role   |
+   |                               |                       | (available if you are |
+   |                               |                       | associated to more    |
+   |                               |                       | than one role).       |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image11.png | Languages             | Language options.     |
+   +-------------------------------+-----------------------+-----------------------+
+   |    |image12|                  | Info                  | Infos about Knowage   |
+   |                               |                       | version.              |
+   +-------------------------------+-----------------------+-----------------------+
+   |    |image13|                  | Log Out               | Log out.              |
+   +-------------------------------+-----------------------+-----------------------+
    
 .. table:: Menu components - BI functionalities menu
    :widths: auto
