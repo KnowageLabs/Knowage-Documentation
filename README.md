@@ -224,21 +224,22 @@ Sometimes into the text you need to draw attention with a box. We use four diffe
       .. note::
          **Read more**
          
-         This icon refers to additional documentation, internal or external sources that may be useful for the reader.
+         Text of the note.
          
       .. warning::
          **Warning**
          
-         This icon warns the reader about possible errors and issues using Knowage.
+         Text of the warning.
          
       .. hint::
          **Advice**
          
-         This icon provides best practices and suggestions.
+         Text of the hint.
          
       .. important::
          **Notable content**
          
-         This icon highlights relevant content, to be drawn to the reader’s attention.
+         Text of the important.
+       
   ```
   ---
