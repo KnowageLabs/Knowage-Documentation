@@ -23,7 +23,7 @@ Different installer packages are provided for JDK 32/64 bit on Windows.
 
 Memory
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Knowage CE requires **2GB** of available RAM. This configuration is enough for most evaluation purposes.
+Knowage CE requires **3GB** of available RAM. This configuration is enough for most evaluation purposes.
 
 Disk usage
 ~~~~~~~~~~~~~~~~~~~~~~~~
