@@ -32,6 +32,9 @@ There are two possibilities:
 
 A scheduled activity can be composed by more than one report. It is also possible to add the same report to a scheduled activity more times. You can use the icon |image50| to easily duplicate a document. Once all esired documents have been added and the management configuration of their parameters has been set up, save the activity by clicking on the save button. The new activity is shown in the list and can be modified or deleted using intended specifically icons.
 
+.. |image50| image:: media/image44.png
+   :width: 30
+
 You can manage your activity at any time just clicking on the name of the scheduling item (left side of the window) and all its features will be displayed aside (right half part of the window).
 
 To see and modify the list of the schedules associated to an activity, click on the “Plus” icon you find in the schedulation area in the bottom right side. Similarly, click on the same button to associate schedules
