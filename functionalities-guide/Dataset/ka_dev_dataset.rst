@@ -19,25 +19,32 @@ A dataset acts as a data provider for analytical documents that’s why many typ
 -  Java Class,
 -  Script (Groovy, Javascript, Embedded Javascript or ECMAScript),
 -  Qbe query over the metamodel,
-    .. important::
+
+.. important::
          **Enterprise Edition**
 
          If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
+         
 -  Custom,
 -  Flat,
 -  Ckan,
-    .. important::
+
+.. important::
          **Enterprise Edition**
 
          If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
+         
 -  Federated,
-    .. important::
+
+.. important::
          **Enterprise Edition**
 
          If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
+         
 -  REST,
 -  Big Data (only in KnowageBD and KnowagePM).
-    .. important::
+
+.. important::
          **Enterprise Edition**
 
          If you purchased Knowage EE, this feature is available only in KnowageBD and KnowagePM
