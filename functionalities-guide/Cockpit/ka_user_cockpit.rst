@@ -561,6 +561,11 @@ Here the user can:
 
 When executing the cockpit in visualization mode, the user has also some more options for widgets. For all widget the user can use the icon|image197| to expand the widget to all page and use the icon |image198| to reduce it again.
 
+.. |image197| image:: media/image193.png
+   :width: 30
+   
+.. |image198| image:: media/image194.png
+   :width: 30
 
 Chart widget are endowed with an additional option that allows the user to change the chart type, as you can see in Figure below.
 
