@@ -164,11 +164,7 @@ Once the cube has been created, you need to build a template which maps the cube
             <BUTTON_SAVE_NEW visible="true" menu="false" />       
             <BUTTON_EXPORT_OUTPUT visible="true" menu="false" />  
         </TOOLBAR>                                            
-
-        <!-- data profiling -->                               
-        <DATA-ACCESS>                                         
-           <ATTRIBUTE name="family"/>                            
-        </DATA-ACCESS>                                        
+                                     
      </olap>                                                  
 
    Code 8.2: Mapping template example
@@ -205,7 +201,6 @@ An explanation of different sections of Mapping template example follows.
 
   Code 8.3: Menu configurable options
 
-- The DATA-ACCESS section is used to configure visibility options for data, in particular when the dimensions or cubes defining them are   profiled also in the underlying schema. Details on how to profile OLAP cubes are explained in next sections.
 
 Profiled access
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -263,26 +258,11 @@ To set the filter, which is based on the attribute (or attributes) in the user�
 
    Code 8.4: Cube level profilation example.
 
-In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax and pr.product_family = '${family}'.
-
-To properly set visibility it is required to edit also the OLAP template, adding the <DATA-ACCESS> ... </DATA-ACCESS> tab. OLAP template profilation gives an example.
-
-.. code-block:: xml
-    :linenos:
-    
-   <olap> 
-    ...                        
-      <DATA-ACCESS>                   
-        <ATTRIBUTE name="family" />     
-        <ATTRIBUTE name="department" /> 
-      </DATA-ACCESS>                  
-   </olap>                            
-
-  Code 8.5:OLAP template profilation example.
+In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax “pr.product_family = '${family}'”.
 
 The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.
 
-You can filter more than one dimensions/cubes and use more profile attributes, remembering to define them in the template. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’, and insert into the query a condition like “ and pc.product_family IN (${family})”.
+You can filter more than one dimensions/cubes and use more profile attributes. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’, and insert into the query a condition like “and pc.product_family IN (${family})”.
 
 Creating the analytical document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -369,10 +349,7 @@ The admin can develop the OLAP document using also the OLAP engine. In this case
 Profiled access
 ^^^^^^^^^^^^^^^^
 
-Once the OLAP document has been created using the template designer the user can insert parameters to profile the document. To set parameters the user can follow two paths, already seen in Development of an OLAP document:
-
--  to download the template of the document and edit it, adding the parameter(s),
--  to download the Mondrian schema and edit it; modify the dimension(s) (that will update according to the value parameter(s)) inserting    an SQL query which presents the parametric filtering clause. Then it is necessary to add tbe DATA-ACCESS tab to the template.
+Once the OLAP document has been created using the template designer the user can insert parameters to profile the document. To set parameters the user has to download the Mondrian schema and edit it; modify the dimension(s) (that will update according to the value parameter(s)) inserting an SQL query which presents the parametric filtering clause.
 
 .. hint::
     **Filter through the interface**
