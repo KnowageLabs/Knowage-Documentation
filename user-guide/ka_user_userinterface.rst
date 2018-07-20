@@ -199,6 +199,6 @@ Each line shows the label, the name, the author and the type of the document, wh
    Documents details expanded.
 
 .. |image24| image:: media/image24.png
-   :width: 20
+   :width: 30
 
 At the top of this side panel you find the |image24| button, the same one you see at the end of each document line. Click on it to execute the document.
