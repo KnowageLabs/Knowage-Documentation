@@ -691,7 +691,7 @@ Multisheet functionality
 
 Cockpit allows to manage data visualization splitting it in two or more sheets. In each layer the user can find and employ the features shown above. Indeed, it is possible to perform a new analysis (as highlighted in Figure below) selecting different datasets and gadgets.
 
-.. figure:: media/image207.png
+.. figure:: media/image207_bis.png
 
     Multisheet cockpit example.
 
