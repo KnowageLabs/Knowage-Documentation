@@ -92,7 +92,7 @@ Knowage CE installer can run in GUI or console mode.
 
 Managing Knowage CE
 ------------------------
-After installation, you can start/stop Knowage CE using desktop links, start menu entries or following line commands.
+After installation, you can start/stop Knowage CE using desktop links, start menu entries or following shell commands.
 
 Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~
