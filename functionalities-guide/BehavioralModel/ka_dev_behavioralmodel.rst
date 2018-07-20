@@ -111,7 +111,13 @@ There may be multiple attributes in a LOV, but only one of them is the core valu
 
 To create and manage LOVs, select **Behavioural Model** > **Lovs Management** from the developer menu. The entire list of available   LOVs appears, as shown in figure above. For each LOV, the list shows the label, description and type; to see the details of a LOV the user  must simply select it and they will appear in the right half of the page. On the contrary, to delete one dataset click on the icon |image37| available at the end of the row. Notice that you cannot delete a LOV if a driver is currently using it.
 
+.. |image37| image:: media/image44.png
+   :width: 0.30
+
 To create a new LOV, click on the icon |image38| at the top right corner of the page. The LOV creation interface will open, where you   can set label, name and description, choose the LOV type and define its values accordingly.
+
+.. |image38| image:: media/image45.png
+   :width: 0.30
 
 .. figure:: media/image46.png
 
