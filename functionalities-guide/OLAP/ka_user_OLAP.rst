@@ -228,6 +228,9 @@ Swaping axes
 
 To swap axes the user should click on the icon |image151|. The user will get the outcome showed in figure below.
 
+.. |image151| image:: media/image152.png
+   :width: 30
+
 .. figure:: media/image153.png
 
     Swap axes.
@@ -484,6 +487,9 @@ To enable member ordering the user must click on the “Enable sorting” button
     Member sorting.
 
 To sort members the user needs to click on the sorting command |image179|, available next to each member of the pivot table. Note that the sorting criteria is ascending at first execution. If the user clicks on the sorting icon, criteria will change to descending and the result will be shown in pivot table.
+
+.. |image179| image:: media/image184.png
+   :width: 30
 
 To remove the sorting, the user just have to click on the icon again. To change sorting mode user should click on sorting settings button in the side bar. Referring to the following figure, dialog sorting settings consists of:
    
@@ -847,6 +853,9 @@ The page as the one in figure below will open.
 
 Then we start entering the **Document Browser** and clicking on the “Plus” icon at the top right corner of the page. Fill in the mandatory boxes as Label and Name of the document, select the On-line Analytica Process Type of document and the What-if Engine (we stress that the What-if engine is available only for who have purchased the Knowage SI package). Remember to save to move to the next step: open the Template Build. The latter can be opend clicking on the editor icon |image195| and it is available at the bottom of the document detail page.
 
+.. |image195| image:: media/image197.png
+   :width: 30
+
 The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. Next figure sums up these three steps. Following the example just given below you will enter a page like that of the second figure below. 
 
 .. _olapcoreconfig:
@@ -874,9 +883,24 @@ You can notice that the side panel contains some features (see next figure):
     Side panel features for the OLAP Designer.
 
 - |image200| to set the drill on Position, Member or Replace;
+
+.. |image200| image:: media/image202.png
+   :width: 30
+
 - |image201| to configure the scenario; 
+
+.. |image201| image:: media/image203.png
+   :width: 30
+
 - |image202| to define the cross navigation;
+
+.. |image202| image:: media/image204.png
+   :width: 30
+
 - |image203| to configure buttons visibility.
+
+.. |image203| image:: media/image205.png
+   :width: 30
 
 Refer to Section *Functionalities* to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to to the following figure, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
 
