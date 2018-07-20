@@ -215,3 +215,30 @@ Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` use
 
  ```
  ---
+
+## Box
+
+Sometimes into the text you need to draw attention with a box. We use four differents type of boxes
+
+ ```rst
+      .. note::
+         **Read more**
+         
+         This icon refers to additional documentation, internal or external sources that may be useful for the reader.
+         
+      .. warning::
+         **Warning**
+         
+         This icon warns the reader about possible errors and issues using Knowage.
+         
+      .. hint::
+         **Advice**
+         
+         This icon provides best practices and suggestions.
+         
+      .. important::
+         **Notable content**
+         
+         This icon highlights relevant content, to be drawn to the reader’s attention.
+  ```
+  ---
