@@ -84,6 +84,7 @@ Knowage CE installer can run in GUI or console mode.
     ./Knowage-6_2_0-CE-Installer-Unix-20180719.sh
 
 - **Console mode** is always available and let complete installation using shell. Run installer in Console mode typing the command in shell:
+
   .. code-block:: bash
     :linenos:
 
