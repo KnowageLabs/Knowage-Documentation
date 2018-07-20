@@ -55,6 +55,9 @@ The computed outputs are visualized in the half bottom of the page: each output 
 
 If the command refers to a script that needs one or more datasets, than these datasets are displayed between the command combobox and the outputs tabs. You can use the combobox which list the Knowage dataset matched to the document throught the template. Otherwise you can upload a file for Knowage datasets that cannot be changed from the GUI. Clicking on the **FILE** button it is possible to upload the file to replace the default dataset. Remember to click on the |image404| to start the upload. 
 
+.. |image404| image:: media/image388.png
+   :width: 30
+
 .. figure:: media/image389.png
 
     Changing dataset related to a command.
@@ -162,6 +165,15 @@ Note that the underlined part in figure below contains a list of tags. These hel
     Using tags and categories to look for functions.
 
 A function can be executed using the icon |image417| which launches a demo (i.e. the function with default values) or using the icon |image4171| which launches the computation after the insertion of new values for data. Use the icon |image4172| for deleting the function. Only the an admin user can use the three options, while the final user can use only the “execution” button.
+
+.. |image417| image:: media/image401.png
+   :width: 30
+   
+.. |image4171| image:: media/image402.png
+   :width: 30
+   
+.. |image4172| image:: media/image403.png
+   :width: 30
 
 To create a new function an admin user must click on the “Plus” icon available at the right top corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.
 
@@ -497,6 +509,12 @@ To create a new Function you must click on the “Plus” icon available at the 
 
 Use the icon |image436| to insert a new dataset or a new variable. And use the icon |image437| to delete the insertion. Choose a dataset from the combobox and use the “Preview button” to check the outcome. While for the variables you must specify the variable name and value. An example is give in figure below.
 
+.. |image436| image:: media/image423.png
+   :width: 30
+   
+.. |image437| image:: media/image424.png
+   :width: 30
+
 .. figure:: media/image425.png
 
     Inserting variables.
@@ -508,6 +526,12 @@ Use the icon |image436| to insert a new dataset or a new variable. And use the i
     Typing Python script
 
 -  **Output**: referring to the following figure, in the Output tab you have to choose how the output should be visualized. Still use the icon |image438| to insert a new output and the icon |image439| to delete the items. Then insert the output name and once again you can choose among “Text”, “Image”, “Dataset” for both Python and R.
+
+.. |image438| image:: media/image423.png
+   :width: 30
+   
+.. |image439| image:: media/image424.png
+   :width: 30
 
 .. figure:: media/image427.png
 
