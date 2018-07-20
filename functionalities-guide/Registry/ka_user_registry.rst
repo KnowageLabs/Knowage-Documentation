@@ -18,6 +18,9 @@ The execution of a Registry document opens a plain table: the records are shown 
 
 Moreover, you can add new rows from scratch selecting the “Plus” icon |image335| on the left of the functionality bar (see next figure) available at the top of the window. Insert in each cell the corresponding value: string or number.
 
+.. |image335| image:: media/image341.png
+   :width: 30
+
 .. _functionalitybar:
 .. figure:: media/image342.png
 
@@ -29,9 +32,21 @@ Moreover, you can add new rows from scratch selecting the “Plus” icon |image
 
 Vice versa, you can delete one or more rows using the “Minus” icon |image338| of the functionality bar (:numref:`functionalitybar`) available at the top of the window. 
 
+.. |image338| image:: media/image344.png
+   :width: 30
+
 It is important to click on the Save button |image339| to store the adjustments done in the datamart.
 
+.. |image339| image:: media/image345.png
+   :width: 30
+
 Furthermore you can use filters, if implemented, of the functionality bar. Pick one field out of the combobox. Click on the “Filter” icon |image340| to run the functionality. Otherwise, click on the “Cancel” icon |image341| to clear the boxes off.
+
+.. |image340| image:: media/image346.png
+   :width: 30
+   
+.. |image341| image:: media/image347.png
+   :width: 30
 
 Note that, since records are displayed in a plain table, it is available a combobox (see figure below) which allows the user to visualize all fields related to the record of the previous cell and then change from one to another to get all data.
 
