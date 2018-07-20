@@ -108,11 +108,17 @@ To use this functionality, select a glossary using the designated combobox avail
 
 The filters chosen by the user can be removed through the filter red icon or by selecting the **Clear Filter** button |image475| located at the right top corner of the word list.
 
+.. |image475| image:: media/image469.png
+   :width: 30
+
 Note that it is possible to inspect the details of each element using the specific icon.
 
 The Document management tab is the place where to set the associations between the analytical documents and the words of a glossary. This functionality is profiled through the authorization **Manage Glossary Technical**.
 
 The page is made up of three colums: the “documents” one on the left, the “word” in the middle and the “glossary” on the right. To associate a word to a document or see which words are related to it the user must select a document from the list of the left sided column. Then it is mandatory to select a glossary from the combobox available on the right sided column. Finally drag and drop words from the glossary tree to the “word” column in the middle of the page. Note that the user must drag and drop the word at the beginning of the list: when a light blu box with dotted borders appears it is possible to end the action. To deselect the choice the user can click on the icon |image476| aside each word. This procedure is recap by figure below.
+
+.. |image476| image:: media/image470.png
+   :width: 30
 
 .. figure:: media/image47172.png
 
