@@ -31,6 +31,8 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
     +-----------------------------+-------------+
     |    RHEL Red Hat Enterprise  | 6.4         |
     +-----------------------------+-------------+
+    |    Ubuntu                   |16 LST,18 LST|
+    +-----------------------------+-------------+    
     |    Windows server           | 2012, 2008  |
     +-----------------------------+-------------+
    
