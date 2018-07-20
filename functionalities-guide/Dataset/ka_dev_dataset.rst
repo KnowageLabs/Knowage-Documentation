@@ -141,12 +141,10 @@ Once all those settings have been performed you can see a preview of the dataset
 Note that the metadata can be manage by clicking on the icon |image21| and use the same criterion described in Dataset paragraph. Otherwise use the icon |image211| to save without associating any metadata.
 
 .. |image21| image:: media/image28.png
-   :width: 0.94285in
-   :height: 0.55384in
+   :width: 30
    
 .. |image211| image:: media/image29.png
-   :width: 0.94285in
-   :height: 0.55384in
+   :width: 30
 
 Let us describe more deeply each type of dataset.
 
