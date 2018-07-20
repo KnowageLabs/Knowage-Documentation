@@ -984,6 +984,8 @@ The value of the “family” user profile attribute will replace the ${family} 
 
 You can filter more than one dimensions/cubes and use more profile attributes. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’, and insert into the query a condition like “and pc.product_family IN (${family})”.
 
+Once the OLAP document has been created using the template designer the user can insert parameters to profile the document. To set parameters the user has to download the Mondrian schema and edit it; modify the dimension(s) (that will update according to the value parameter(s)) inserting an SQL query which presents the parametric filtering clause.
+
 .. hint::
     **Filter through the interface**
 
