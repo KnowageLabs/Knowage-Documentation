@@ -43,6 +43,9 @@ The next steps consist in the creation of a datasource and of a dataset. As desc
 
 Click on the small icon |image348| of the menu bar. The data source creation editor will open.
 
+.. |image348| image:: media/image344.png
+   :width: 30
+
 Select a JDBC data source, set the appropriate parameters and give the data source a name. Figure below shows the wizards that present in this procedure.
 
 .. figure:: media/image345.png
@@ -52,6 +55,9 @@ Select a JDBC data source, set the appropriate parameters and give the data sour
 Once you have defined the data source, create your dataset. Note that Jasper only allows one main dataset. By the way, secondary datasets can be added if needed. Right-click on the report item and select **Add dataset**. The dataset editor will guide you through the dataset definition. You can either manually edit the SQL query or use the design query tool provided by iReport.
 
 The tree located in the left part of the window shows the elements of the report. On the right, the **Palette** shows all graphical elements you can add. You can choose to see your report within the **Designer**, to inspect the **XML** code or to look at the **Preview** of your report. If you click on the |image350| icon you can edit and preview your query. As you can see, the iReport designer allows the creation of complex reports, with different graphical elements such as cross tabs, charts, images and different text areas. We see now shortly how to design a very simple report, i.e. a report containing a table showing data from the defined dataset.
+
+.. |image350| image:: media/image346.png
+   :width: 30
 
 .. figure:: media/image347.png
 
