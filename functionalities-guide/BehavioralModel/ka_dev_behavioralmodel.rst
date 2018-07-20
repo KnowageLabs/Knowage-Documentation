@@ -319,7 +319,7 @@ The entire list of available LOVs, analyitical driver and documents appears, as 
 
     List of LOVs, analyitical driver and documents.
 
-By selecting one LOV or Analytical Driver or Documents the other will refresh showing only the elements associated with the selection done. To come back to the original situation click |image50| on the topright corner.
+By selecting one LOV or Analytical Driver or Documents the other will refresh showing only the elements associated with the selection done. To come back to the original situation click |lineage| on the topright corner.
 
-.. |image50| image:: media/button_lineage.png
+.. |lineage| image:: media/button_lineage.png
    :width: 30
