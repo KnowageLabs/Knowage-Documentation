@@ -18,9 +18,9 @@ Roles, users and attributes
 
 Knowage users are defined by:
 
--  identities,
--  roles,
--  profiles.
+- identities,
+- roles,
+- profiles.
 
 The *identity* of a user consists of all data used to identify that user, i.e., a username and a password, as well as a human readable full name.
 
@@ -97,12 +97,11 @@ A *List Of Value* (LOV), is a collection of data organized in attribute-value fa
 
 There may be multiple attributes in a LOV, but only one of them is the core value that is actually used in the analytical driver. Other  values have a descriptive function: they can be used to provide a human readable description of the LOV, as well as to store information used, for example, to correlate analytical drivers. In our example, the core value is the customer’s id, while the others are additional data describing the customer. Knowage allows to create different types of LOV:
 
- -  **Query**: SQL query to retrieve values from the database;
- -  **Script**: Groovy or JavaScript to dynamically return values;
- -  **List of fixed values**: Values are defined statically at LOV creation time;  
- -  **Java objects**: External object invoked by name that returns the list of values;
-   
-   **Dataset**: Dataset already defined in Knowage Server that is used to retrieve values. Note that the dataset must not contain parameters, while profile attributes are allowed.
+-  **Query**: SQL query to retrieve values from the database;
+-  **Script**: Groovy or JavaScript to dynamically return values;
+-  **List of fixed values**: Values are defined statically at LOV creation time;  
+-  **Java objects**: External object invoked by name that returns the list of values;
+- **Dataset**: Dataset already defined in Knowage Server that is used to retrieve values. Note that the dataset must not contain parameters, while profile attributes are allowed.
 
 .. _lovlistbehav:
 .. figure:: media/image43.png
@@ -138,7 +137,7 @@ Once completed the form, click on **Preview** button to enable the **Test** butt
 .. note::
      **Correlating analytical drivers**
      
-         Drivers can be correlated so that the value of the first driver is used as a parameter to select values in the second. Read more at *Analytical document* chapter.
+     Drivers can be correlated so that the value of the first driver is used as a parameter to select values in the second. Read more at *Analytical document* chapter.
 
 We stress that the visibility of specific fields serve to improved human readability when applying filters to documents handled by third users. Moreover it is possible to choose (refer to next figure) between **simple**, **tree** and **tree with selectable internal nodes** typology of LOV. The last two are hierarchical and let the user visualize the parameters together with their logical tree structure.
 
@@ -161,7 +160,7 @@ Suppose that you need to retrieve a list of values representing all brand names 
 
 This is suitable for end users like the general manager who need to see all brands for every product family. Suppose now that another end user is, for example, the food manager. He should not see every brand name, but only those related to the Food product family. This could be done using user’s profile attributes.
 
-In particular, all query except the *List of fixed values* type can be parameterized using profile attributes. This means that, at LOV   execution time, the value of the attribute in the user’s profile is assigned to a placeholder in the LOV query/script. Suppose that, in our example, the food manager user has the profile attribute *pr_family* equal to *Food*. You can write this second Query LOV using the placeholder with the standar syntax **${profile_attribute_name}**, as shown in Parametric query.
+In particular, all query except the ``List of fixed values`` type can be parameterized using profile attributes. This means that, at LOV execution time, the value of the attribute in the user’s profile is assigned to a placeholder in the LOV query/script. Suppose that, in our example, the food manager user has the profile attribute ``pr_family`` equal to ``Food``. You can write this second Query LOV using the placeholder with the standar syntax ``${profile_attribute_name}``, as shown in Parametric query.
 
 .. code-block:: sql
          :caption: Parametric query
@@ -181,7 +180,7 @@ Then, at LOV execution time, for the user food manager the query becomes as show
           FROM PRODUCT
           WHERE C.PRODUCT_FAMILY = 'Food'
 
-This means that if you are the food manager and your user has the profile attribute pr_family=Food, then you will see only the brand   related to the food family as a result of this LOV; while if you are the drink manager and your user has consequently the profile   attribute pr_family=Drink, you will see only the brand related to drink family products.
+This means that if you are the food manager and your user has the profile attribute ``pr_family=Food``, then you will see only the brand related to the food family as a result of this LOV; while if you are the drink manager and your user has consequently the profile   attribute pr_family=Drink, you will see only the brand related to drink family products.
 
 Note that an information button and a profile attribute button are available to guide user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
 
@@ -200,22 +199,23 @@ Knowage supports the validation of the document’s input parameters via validat
 
 Knowage default checks are:
 
--   **Alfanumeric**: it checks if the parameter is alfanumeric;   
--   **Numeric**: it checks if the parameter is numeric;   
--   **Letter String**: it checks if the parameter is a letter string;   
--   **E-Mail**: it checks if the parameter is an e-mail;   
--   **Fiscal Code**: it checks if the parameter has the correct syntax of a fiscal code; Internet Address: it checks if the parameter is an internet address.
+- **Alfanumeric**: it checks if the parameter is alfanumeric;   
+- **Numeric**: it checks if the parameter is numeric;   
+- **Letter String**: it checks if the parameter is a letter string;   
+- **E-Mail**: it checks if the parameter is an e-mail;   
+- **Fiscal Code**: it checks if the parameter has the correct syntax of a fiscal code; 
+- **Internet Address**: it checks if the parameter is an internet address.
 
 .. |image46| image:: media/image45.png
    :width: 30
    
 If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
 
- -  **Date**: here you can set a costumized format type of date;
- -  **Regular Expression**: to set a regular expression validation rule;
- -  **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
- -  **Range**: to set a range the parameters value has to satisfy;  
- -  **Decimal**: to set a maximal decimal places for the parameters.
+- **Date**: here you can set a costumized format type of date;
+- **Regular Expression**: to set a regular expression validation rule;
+- **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
+- **Range**: to set a range the parameters value has to satisfy;  
+- **Decimal**: to set a maximal decimal places for the parameters.
 
 Creating an analytical driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -252,23 +252,22 @@ To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Det
    
 The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are selectable at document execution. In fact the user can choose among:
 
- -  **List values selection**: the filter will look like a lookup table;
- -  **Pop up**: the filter will look like a lookup table;
- -  **Slider**: the user can drag the slider to choose the parameter;
- -  **Tree**: made for hierarchical LOV, lets the users navigate the parameters in a hierarchical way;   
- -  **Combo Box values selection**: the filter will look like a drop down menu.
+- **List values selection**: the filter will look like a lookup table;
+- **Pop up**: the filter will look like a lookup table;
+- **Slider**: the user can drag the slider to choose the parameter;
+- **Tree**: made for hierarchical LOV, lets the users navigate the parameters in a hierarchical way;   
+- **Combo Box values selection**: the filter will look like a drop down menu.
 
-The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next Sections 4.2 for this kind of input.
+The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next sections for this kind of input.
 
 Moreover the user can add default values (namely values that will be passed to the document at its first execution) using the dedicated area. Here it is possible to pick default values from another LOV or to pick the first or the latter value of the current LOV (if the LOV input type was selected).
 
 At the bottom of the page the user must associate roles to the “use mode”. This action is mandatory. The user connects the user’s roles that he/she wants to be allowed to see a certain list of values or certain regions or be able to type values at his/her convenience.
 
-Therefore, since an admin user can decide to separate values according to the other users’ roles, the analytical driver definition allows to configure different use mode. We can also set validation checks if needed. Then it is sufficient to save each use mode and click on **new usemode** to set a new one. We repeat the same procedure for all the use modes. Each use mode is represented in a separate tab. We will go deeper into this at the end of the section.
+Therefore, since an admin user can decide to separate values according to the other users’ roles, the analytical driver definition allows to configure different use mode. We can also set validation checks if needed. Then it is sufficient to save each use mode and click on **new use mode** to set a new one. We repeat the same procedure for all the use modes. Each use mode is represented in a separate tab. We will go deeper into this at the end of the section.
 
 All the selections can be multi-valued, but note that this option has to be set directly on the document detail during analytical driver
 association.
-
 
 Creating an analytical driver for a spatial filter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -289,7 +288,7 @@ Sometimes the same analytical driver (i.e., the same concept, like the concept o
 
 Suppose you have a report on sales and costs like the one in the first figure of this chapter and you want to add to it the possibility to filter also on product brands. If you load the report as the general manager, you should choose between all the possible product brands in the corresponding parameter. If instead you load it as, for instance, the food manager, then you should be able to filter only on product brands related to the Food familiy.
 
-In order to do this, let us focus again on the definition of the LOV and check that the already defined use mode All Brands is associated to the correct role general_manager. Here you can add a second tab, called for instance Profiled_Brands, and associate it to the role product_manager. This is because the food manager user has product_manager role with profile attribute *pr_family = Food*.
+In order to do this, let us focus again on the definition of the LOV and check that the already defined use mode ``All Brands`` is associated to the correct role ``general_manager``. Here you can add a second tab, called for instance ``Profiled_Brands``, and associate it to the role ``product_manager``. This is because the food manager user has ``product_manager`` role with profile attribute ``pr_family = Food``.
 
 Finally, we choose the second LOV created, the one returning only those brands that belong to a specific family (see the code example in section Parametrizing LOVs). The family is selected by checking the value of the family attribute in the user profile.
 
@@ -320,4 +319,3 @@ The entire list of available LOVs, analyitical driver and documents appears, as 
     List of LOVs, analyitical driver and documents.
 
 By selecting one LOV or Analytical Driver or Documents the other will refresh showing only the elements associated with the selection done. To come back to the original situation click the refresh button on the top right corner.
-
