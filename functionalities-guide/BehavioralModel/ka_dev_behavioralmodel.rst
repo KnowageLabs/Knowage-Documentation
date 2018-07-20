@@ -319,5 +319,5 @@ The entire list of available LOVs, analyitical driver and documents appears, as 
 
     List of LOVs, analyitical driver and documents.
 
-By selecting one LOV or Analytical Driver or Documents the other will refresh showing only the elements associated with the selection done. To come back to the original situation click the refreshe button on the topright corner.
+By selecting one LOV or Analytical Driver or Documents the other will refresh showing only the elements associated with the selection done. To come back to the original situation click the refresh button on the top right corner.
 
