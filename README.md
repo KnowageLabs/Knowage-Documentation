@@ -26,9 +26,11 @@ Section 3
 
 To adding a code you need to use this syntax:
 
-.. code-block:: 
+.. code-block:: Type of language
     :linenos:
     :caption: Title.
+    
+      Code
 
 ### Example
 
@@ -37,7 +39,7 @@ To adding a code you need to use this syntax:
     :linenos:
     :caption: Pointing at a numerical column.
     
-     <COLUMNS> 
-       <COLUMN field="store_id" visible="false" editable="false" /> 
+      <COLUMNS> 
+        <COLUMN field="store_id" visible="false" editable="false" /> 
 
 ```
