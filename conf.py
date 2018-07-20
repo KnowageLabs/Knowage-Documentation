@@ -79,16 +79,16 @@ master_doc = 'index'
 # General information about the project.
 project = u'Knowage'
 copyright = u'2014-2018, Knowage Labs'
-author = u'Alessandro Portosa. Knowage Labs'
+author = u'Knowage Labs'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '8.0.0'
+#version = '8.0.0'
 # The full version, including alpha/beta/rc tags.
-release = '8.0.0'
+#release = '8.0.0'
 
 rst_epilog = """
     .. |product.version| replace:: {0}
@@ -260,7 +260,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   (master_doc, 'Knowage.tex', u'Knowage',
-   u'Alessandro Portosa, Knowage Labs', 'manual'),
+   u'Knowage Labs', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -392,7 +392,7 @@ epub_exclude_files = ['search.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+#intersphinx_mapping = {'https://docs.python.org/': None}
 
 # https://stackoverflow.com/questions/2686310/referencing-figures-with-numbers-in-sphinx-and-restructuredtext
 numfig = True
