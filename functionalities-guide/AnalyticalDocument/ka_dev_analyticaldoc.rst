@@ -94,9 +94,24 @@ Each line shows the label, the name, the author and the type of the document, wh
 At the top of this side panel you find four button:
 
 - |image60| execute the document;
+
+.. |image60| image:: media/image62.png
+   :width: 30
+   
 - |image61| access document details;
+
+.. |image61| image:: media/image63.png
+   :width: 30
+
 - |image62| clone the item;
+
+.. |image62| image:: media/image64.png
+   :width: 30
+   
 - |image63| erase the document.
+
+.. |image63| image:: media/image65.png
+   :width: 30
 
 The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can alternatively see either the history of document templates or the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders (see the last figure of the *Document Visibility* paragraph).
 
@@ -122,6 +137,9 @@ Now you have to select the dataset and data source that will feed your document 
     Selecting a dataset for the document.
 
 Both should have already been defined in the corresponding sections for Knowageto show them in the available options of the menus. Select the data source from the drop down menu. Then click on the green icon |image67| and select the dataset from the lookup window.
+
+.. |image67| image:: media/image69.png
+   :width: 30
 
 Note that some types of document do not require the definition of a dataset at this point because they use embedded datasets. Depending on the type, it may also be necessary to select the data source.
 
@@ -179,6 +197,9 @@ In addition to the standard mechanism supported by the functionalities tree, it 
 
 This can be done by editing conditions in the Visibility section of the detail panel. To add a new condition pick a profile attribute   from the drop down menu, assign it a value, then click on |image71|. This will add a new condition that must be verified to allow a user to access the document. In the same way you can add further conditions, and possibly remove all of them by clicking on the eraser.
 
+.. |image71| image:: media/image72.png
+   :width: 30
+
 Association with analytical drivers
 ----------------------------------------
 
@@ -190,6 +211,12 @@ To add a new parameter, you can start editing the tab in the lower part of the d
 
 Choose a human readable name for the title. Then click on the lookup icon |image72| to choose the driver you wish to associate to the   document. This will open the driver lookup window, where you can select the driver by clicking on the green icon |image73|. You can   also inspect or delete a driver from here.
 
+.. |image72| image:: media/image73.png
+   :width: 30
+   
+.. |image73| image:: media/image74.png
+   :width: 30
+   
 .. _assocwithanalydriv:
 .. figure:: media/image75.png
 
@@ -209,6 +236,9 @@ Associating a Spatial driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As just seen, to filter on data visualization a user needs to associate an ananlytical driver using the "Document analytical driver   details" area. As well as for the other driver you can use this interface to associate a spatial driver to the document. The procedure is right the same. When launching the document and opening the filter panel you will find the filter just set. Click on the icon   |image75| to open the map and select the geometric object (the State in the Example in Figure below) according to the chosen layer and   property.
+
+.. |image75| image:: media/image76.png
+   :width: 30
 
 .. figure:: media/image77.png
 
@@ -234,6 +264,12 @@ In general, to configure a correlation within a document you should make sure th
     Definition of the correlation.
 
 To set the correlation, click the tab of the child parameter and displaying the details click on the correlation button |image79|.   Here you can add a new correlation rule by clicking on |image80|. Here you need to define:
+
+.. |image79| image:: media/image80.png
+   :width: 30
+   
+.. |image80| image:: media/image72.png
+   :width: 30
 
 -  the parent parameter;
 -  the type of logical operator, in order to compare values of the parent parameter with values of the child parameter;
@@ -278,6 +314,9 @@ Controlled visibility
 Another type of relation between parameters is supported by Knowage. It is possible to define values of a parent parameter that force the hiding or showing of a child parameter in the parameters mask. Note that in the first case, the child parameter is hidden by default, while in the second case the parameter is shown by default.
 
 To set a visibility expression, click always on the correlation button in the detail tab of the desired parameter, but then click on   the plus icon |image84| in the **Visibility Expression** area. In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.
+
+.. |image84| image:: media/image72.png
+   :width: 30
 
 .. figure:: media/image84.png
 
