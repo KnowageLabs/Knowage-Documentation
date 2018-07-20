@@ -57,6 +57,7 @@ In the “Glossary” area are listed, if any, all glossaries created in a previ
     Exploring a glossary from the menu.
 
 Right clicking on the glossary label as shown in the following figure (right side) the user can add a new child. The “New Node” wizard will open. It is mandatory to give a Name to the node while it is recommended to add a Code and a Description. Once the user has set the nodes, it is possible to add children or words to each of them.
+
 .. _newglossnewahild:
 .. figure:: media/image46162.png
 
