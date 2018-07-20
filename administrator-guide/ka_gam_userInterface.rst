@@ -30,26 +30,26 @@ The user menu (see below) is identified with the first icon in Table above and a
 .. table:: Menu components - User menu
    :widths: auto
     
-   +----------------+-----------------------+-----------------------+
-   |    Icon        | Name                  | Description           |
-   +================+=======================+=======================+
-   |    |image11|   | Knowage user          | It opens a hidden     |
-   |                |                       | menu with extra       |
-   |                |                       | functionalities.      |
-   +----------------+-----------------------+-----------------------+
-   |    |image12|   | Select role           | To select the default |
-   |                |                       | role (available if    |
-   |                |                       | the user is           |
-   |                |                       | associated to more    |
-   |                |                       | than one role).       |
-   +----------------+-----------------------+-----------------------+
-   |    |image13|   | Languages             | Language options.     |
-   +----------------+-----------------------+-----------------------+
-   |    |image14|   | Info                  | Info on Knowage       |
-   |                |                       | version.              |
-   +----------------+-----------------------+-----------------------+
-   |    |image15|   | Log out               | log out.              |
-   +----------------+-----------------------+-----------------------+
+   +--------------------------------+-----------------------+-----------------------+
+   |    Icon                        | Name                  | Description           |
+   +================================+=======================+=======================+
+   | .. figure:: media/image11.png  | Knowage user          | It opens a hidden     |
+   |                                |                       | menu with extra       |
+   |                                |                       | functionalities.      |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image12.png  | Select role           | To select the default |
+   |                                |                       | role (available if    |
+   |                                |                       | the user is           |
+   |                                |                       | associated to more    |
+   |                                |                       | than one role).       |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image13.png  | Languages             | Language options.     |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image14.png  | Info                  | Info on Knowage       |
+   |                                |                       | version.              |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image15.png  | Log out               | log out.              |
+   +--------------------------------+-----------------------+-----------------------+
 
 The BI functionalities menu consists in a set of icons associated with basic features:
 
@@ -59,17 +59,17 @@ The BI functionalities menu consists in a set of icons associated with basic fea
 .. table:: Menu components - BI Functionalities Menu.
    :widths: auto
 
-   +-----------------------+-----------------------+-----------------------+
-   |    Icon               | Name                  | Description           |
-   +=======================+=======================+=======================+
-   |    |image18|          | Documents development | Document creation and |
-   |                       |                       | acces to the archive  |
-   |                       |                       | folders.              |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image19|          | Workspace             | Inquiry your business |
-   |                       |                       | models, navigate and  |
-   |                       |                       | create your datasets  |
-   +-----------------------+-----------------------+-----------------------+
+   +-------------------------------+-----------------------+-----------------------+
+   |    Icon                       | Name                  | Description           |
+   +===============================+=======================+=======================+
+   | .. figure:: media/image16.png | Documents development | Document creation and |
+   |                               |                       | acces to the archive  |
+   |                               |                       | folders.              |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image17.png | Workspace             | Inquiry your business |
+   |                               |                       | models, navigate and  |
+   |                               |                       | create your datasets  |
+   +-------------------------------+-----------------------+-----------------------+
 
 
 The administrator menu is divided in subpanels which maps the different managing areas:
