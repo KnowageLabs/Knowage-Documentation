@@ -160,3 +160,12 @@ Database schema for data
 -------------------------
 
 A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *data DB* in the following.
+
+SlimerJS requirements
+-------------------------
+
+Knowage includes a standalone edition of SlimerJS 0.9 to export some contents to PDF and image files.
+
+Usually SlimerJS runs out-of-the-box on Windows, but requires OS-dependent libraries on Unix-like operating systems.
+
+In order to fulfill all SlimerJS requirements please refer to its official documentation at https://docs.slimerjs.org/0.9/installation.html#requirements.
