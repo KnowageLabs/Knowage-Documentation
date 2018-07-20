@@ -312,3 +312,9 @@ It is possible to show a summary of the links between the LOVs, the analytical d
 .. figure:: media/lineage.png
 
     Behavioural Model Lineage.
+
+The entire list of available LOVs, analyitical driver and documents appears, as shown in figure below.
+
+.. figure:: media/lineage2.png
+
+    List of LOVs, analyitical driver and documents.
