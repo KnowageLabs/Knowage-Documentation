@@ -1,20 +1,23 @@
 # Knowage-Documentation
 
-**Structure**
+Structure
+------------
 
-First af all ther is the 
++----------------------------------------------------------+--------------------------------------------------------+
+| ::                                                       |                                                        |
+|                                                          |   .. class:: faketitle                                 |
+|    Title                                                 |                                                        |
+|    =====                                                 |   Title                                                |
+|                                                          |                                                        |
+|    Titles are underlined (or over- and underlined) with  |   Titles are underlined (or over- and underlined) with |
+|    a nonalphanumeric character at least as long as the   |   a nonalphanumeric character at least as long as the  |
+|    text.                                                 |   text.                                                |
+|                                                          |                                                        |    
+|                                                          |                                                        |
+|    * ``#``, for parts                                    |   * ``#``, for parts                                   | 
+|    * ``=``, for chapters                                 |   * ``=``, for chapters                                |
+|    * ``-``, for sections                                 |   * ``-``, for sections                                |
+|    * ``~``, for subsections                              |   * ``~``, for subsections                             |
+|    * ``^``, for paragraphs                               |   * ``^``, for paragraphs                              |
++----------------------------------------------------------+--------------------------------------------------------+
 
-Title of the chapter
-###################
-
-Title are underlined with a = character at least as long as the text.
-Then we have the hierarchical structure of the text that at this moment arrives at most at 5 levels. Below the syntax for the following 4 levels:
-
-Second level
-============
-  Third level
-  -------------
-    Fourth level
-    ~~~~~~~~~~~~
-      Fifth level
-      ^^^^^^^^^^^^^
