@@ -19,35 +19,12 @@ A dataset acts as a data provider for analytical documents that’s why many typ
 -  Java Class,
 -  Script (Groovy, Javascript, Embedded Javascript or ECMAScript),
 -  Qbe query over the metamodel,
-
-.. important::
-         **Enterprise Edition**
-
-         If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
-         
 -  Custom,
 -  Flat,
--  Ckan,
-
-.. important::
-         **Enterprise Edition**
-
-         If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
-         
+-  Ckan, 
 -  Federated,
-
-.. important::
-         **Enterprise Edition**
-
-         If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
-         
 -  REST,
--  Big Data (only in KnowageBD and KnowagePM).
-
-.. important::
-         **Enterprise Edition**
-
-         If you purchased Knowage EE, this feature is available only in KnowageBD and KnowagePM
+-  Big Data.
 
 All types of dataset share some common operations, while others are specific to each of them. The process for defining a dataset inside Knowage follows:
 
@@ -500,11 +477,16 @@ The REST dataset permits usage of profile attributes and parameters using the sa
          }                        
 
 Big Data - NoSQL
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
-KnowageBD and KnowagePM provide the possibility to define Big Data dataset as well as Big Data datasources. To set these kind of datasets the user just have to select the **Query** type and insert the code according to the dialect in use (that is accordingly to the datasource dialect).
+.. important::
+     **Enterprise Edition**
 
-For example, let’s suppose we defined a Mongo datasource and want to create a dataset upon it. Therefore choose the "‘Query type‘ dataset and, as we revealed in advance, choose the correct language: in this case JS instead of SQL. The script must respect some convention, in particular:
+     If you purchased Knowage EE, this feature is available only in KnowageBD and KnowagePM
+
+Knowage provides the possibility to define Big Data dataset as well as Big Data datasources. To set these kind of datasets the user just have to select the **Query** type and insert the code according to the dialect in use (that is accordingly to the datasource dialect).
+
+For example, let’s suppose we defined a Mongo datasource and want to create a dataset upon it. Therefore choose the "Query type" dataset and, as we revealed in advance, choose the correct language: in this case JS instead of SQL. The script must respect some convention, in particular:
 
 -  the return value of the query must be assigned to a variable with
    name ”query“. For example
@@ -515,7 +497,7 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
    
          var query = db.store.find();
 
--  if the return value doesn’t come from a query, for example it’s a js variable, than it must be assigned to a variable with name ``sbiDatasetfixedResult``. The result will be managed by Knowage accordingly to the type of the variable:
+-  if the return value doesn’t come from a query, for example it's a js variable, than it must be assigned to a variable with name ``sbiDatasetfixedResult``. The result will be managed by Knowage accordingly to the type of the variable:
 
     -  if it’s a primitive type the resulting dataset contains only a columns with name ``result`` and value equal to the value of the variable ``sbiDatasetfixedResult``;
 
@@ -562,14 +544,14 @@ The result of a query in MongoDB can assume different shapes: Cursor, Document, 
 
 It’s possible to force the behaviour. In particular the result stored in the variable query, will be managed:
 
--  as cursor if in the script exist a variable with value LIST_DOCUMENTS_QUERY. Example:
+-  as cursor if in the script exist a variable with value ``LIST_DOCUMENTS_QUERY``. Example:
 
 .. code-block:: javascript 
          :linenos:
            
           var retVal= "LIST_DOCUMENTS_QUERY“;
 
--  a document if in the script exist a variable with value SINGLE_DOCUMENT_QUERY. Example:
+-  a document if in the script exist a variable with value ``SINGLE_DOCUMENT_QUERY``. Example:
 
 .. code-block:: javascript 
          :linenos:
@@ -587,7 +569,7 @@ All dataset types except **File** and **CKAN** allow you to add parameters. This
 1. insert the parameter in the actual text of the dataset;
 2. create the parameter in the parameters list below the editor area.
 
-The syntax to add a parameter in the dataset code text is *$P{parameter_name}*. At dataset execution time, the parameter will be replaced by its actual value.
+The syntax to add a parameter in the dataset code text is ``$P{parameter_name}``. At dataset execution time, the parameter will be replaced by its actual value.
 
 .. warning::
      **Attention to parameters’ names!**
@@ -601,7 +583,7 @@ Any parameter added to your dataset must be added to the parameters list, too. T
 -  **Raw**: the parameter value is treated as a string containing a set of values; single quotes are removed from the containing string, not from the single strings composing it.
 -  **Generic**: the parameter is simply passed as is, with no futher processing.
 
-In SQL query example with parameters an example is provided, where MediaType is a string parameter.
+In SQL query example with parameters an example is provided, where ``MediaType`` is a string parameter.
 
 .. code-block:: sql 
          :caption: SQL query example with parameters
@@ -627,7 +609,7 @@ Datasets of type Query and Script can also use *profile attributes*. Differently
 
     Profile Attributes assignment.
 
-The syntax to include attributes into the dataset text is *${attribute_name}*. Profile attributes can be single-value or multivalue.
+The syntax to include attributes into the dataset text is ``${attribute_name}``. Profile attributes can be single-value or multivalue.
 
 .. note::
      **User profile attributes**
@@ -664,7 +646,10 @@ The **Advanced** tab is used to make a dataset persistent, i.e., to write it on 
 
 Once marked the dataset as persistent, you are asked to insert a table name. This is the table where data are stored and then retrieved.
 
-With KnowageBD, KnowageER and KnowageSI products you can also decide to schedule the persistence operation: this means that the data stored in the table will be update with according to the frequency defined in the **scheduling** options. Choose your scheduling option and save the dataset. Now the table where your data are stored will be persisted according to the settings provided.
+.. important::
+         **Enterprise Edition only**
+
+         With KnowageBD, KnowageER and KnowageSI products you can also decide to schedule the persistence operation: this means that the data stored in the table will be update with according to the frequency defined in the **scheduling** options. Choose your scheduling option and save the dataset. Now the table where your data are stored will be persisted according to the settings provided.
 
 Preview
 ~~~~~~~
@@ -677,6 +662,3 @@ Before actually using the dataset in a document, it is a good practice to test i
 
 
 If some parameters have been set, a window with their list will be shown: their values must be entered by double clicking on the set to string, just write the value you want to assign in the preview: quotes will be added automatically. On the other hand, if the type is raw or generic but you want to input text, then remember to add quotes to the test value.
-   
-   
-.. include:: myDataAndDataSetThumbinals.rst
