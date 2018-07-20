@@ -489,7 +489,7 @@ To enable member ordering the user must click on the “Enable sorting” button
 To sort members the user needs to click on the sorting command |image179|, available next to each member of the pivot table. Note that the sorting criteria is ascending at first execution. If the user clicks on the sorting icon, criteria will change to descending and the result will be shown in pivot table.
 
 .. |image179| image:: media/image184.png
-   :width: 30
+   :width: 50
 
 To remove the sorting, the user just have to click on the icon again. To change sorting mode user should click on sorting settings button in the side bar. Referring to the following figure, dialog sorting settings consists of:
    
