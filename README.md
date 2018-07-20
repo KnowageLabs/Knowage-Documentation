@@ -125,7 +125,7 @@ There are three differents way to add an image, its depend if it is inline of th
 To create a table into the documento you need to "draw" the contours of the table physically as shown below. 
      
      +------------+------------+--------------+
-     | TitleA     | TitleB     | TitleC       |
+     | HeaderA    | HeaderB    | HeaderC      |
      +============+============+==============+
      |    AA      | BA         | CA           |
      |            |            |              |
@@ -168,3 +168,50 @@ To create a table into the documento you need to "draw" the contours of the tabl
 ```
 
 ---
+
+## Text optimization
+
+There are several ways to optimize parts or words in the text.
+
+1. Bold text:
+ 
+ ```rst 
+ **text to highlight**
+ ```
+ 
+ 2. Italic text:
+ 
+ ```rst 
+ *text to highlight*
+ ```
+ 
+ 3. Highlighted Text:
+ 
+  ```rst 
+ ``text to highlight``
+ ```
+ 
+ 4. Bulleted list:
+ 
+  ```rst 
+ - First step
+ - Second step
+ - Third step
+ ```
+ 
+### Example
+
+ ```rst 
+1.
+Let us suppose to enter, with end user credentials, the data management area clicking on the **Workspace** icon from BI functionalities menu as shown in figure below and the **Data** section of the window.
+2.
+Click the *Add* icon
+3.
+Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
+4.
+- **My dataset**: datasets created by yourself uploading a CSV or XLS file or creating a query on a business model using the Qbe interface;
+- **Enterprise dataset**: certified datasets,namely datasets created by the technical/experts users and shared with the end user.
+- **Shared dataset**: datasets created and shared by other end users;
+
+ ```
+ ---
