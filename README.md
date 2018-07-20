@@ -176,19 +176,19 @@ There are several ways to optimize parts or words in the text.
 1. Bold text:
  
  ```rst 
- **text to highlight**
+ **text to be emphasized**
  ```
  
  2. Italic text:
  
  ```rst 
- *text to highlight*
+ *text to be emphasized*
  ```
  
  3. Highlighted Text:
  
   ```rst 
- ``text to highlight``
+ ``text to be emphasized``
  ```
  
  4. Bulleted list:
