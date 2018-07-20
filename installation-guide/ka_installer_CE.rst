@@ -16,7 +16,7 @@ Java platform
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Knowage CE Installer requires:
 
-- JDK version 1.8
+- JDK 1.8
 - ``JAVA_HOME`` environment variable
 
 Different installer packages are provided for JDK 32/64 bit on Windows.
@@ -54,6 +54,12 @@ Please note that embedded database option is not available for macOS.
 Application server
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Knowage CE Installer provides Apache Tomcat 7 out of the box. Don't worry about pre-installing any application server.
+
+SlimerJS requirements
+~~~~~~~~~~~~~~~~~~~~~~~~
+Knowage CE includes a standalone edition of SlimerJS 0.9 to export some contents to PDF or image files.
+Usually SlimerJS runs out-of-the-box on Windows, but requires OS-dependent libraries on Unix-like operating systems.
+In order to fulfill all SlimerJS 0.9 requirements please refer to official documentation at https://docs.slimerjs.org/0.9/installation.html#requirements.
 
 Client-side requirements
 ------------------------
