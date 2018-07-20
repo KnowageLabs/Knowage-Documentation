@@ -208,6 +208,9 @@ Knowage default checks are:
 
 If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
 
+.. |image46| image:: media/image45.png
+   :width: 30
+
  -  **Date**: here you can set a costumized format type of date;
  -  **Regular Expression**: to set a regular expression validation rule;
  -  **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
@@ -226,7 +229,13 @@ As explained at the beginning of this section, analytical drivers use nformation
 
 To create a driver, select Behavioural Model > Analytical Drivers Management from the developer menu. Here, you will see the entire   list of available drivers. For each driver, the list shows unique label, description and type. To explore details the user must just   select one menu item from the list and they will appear in the half right side, as shown in the figure above. Otherwise to delete one   analytical driver the user must use the icon |image48| available at the end of each row of the list. Notice that you cannot delete a driver if adocument is currently using it.
 
+.. |image48| image:: media/image44.png
+   :width: 30
+
 To create a new driver, click on |image49| at the top right corner. The driver creation interface will open. At first execution only the upper part of the window is visible, as shown in the figure below. The upper part is the **Detail** section, where you can set the label, name and description. Choose the type between Date, String or Number depending on the type of expected data. Select Functional or Temporal if the driver is used by an end user or a scheduler, respectively. A click on the save botton, enabled as soon as the form is filled in, will save the driver and let the section below appear.
+
+.. |image49| image:: media/image45.png
+   :width: 30
 
 .. _drivercrationbehav:
 .. figure:: media/image53.png
