@@ -323,6 +323,9 @@ The Qbe engine supports spatial queries through a set of operators (that return 
 
 We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |image221|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distiguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
 
+.. |image221| image:: media/image217.png
+   :width: 30
+
 .. figure:: media/image218.png
 
     QbE spatial dimensions.
@@ -902,13 +905,22 @@ Several queries can be built over the same QbE datamart. The catalogue lists all
 
 To create a new query, click the icon |image279|. The query appears in the catalogue at the same level as the base query. Using the query editor you can create the query and save it.
 
+.. |image279| image:: media/image279.png
+   :width: 30
+
 The **QbE Engine** also supports the definition and usage of subqueries similarly to the SQL language. As a result, you can define a subquery and use it within a filter in association to the in/not in operator, as shown in Figure below. To create a new subquery, which can be used as a filter inside the main query, click on |image280|. The query appears in the catalogue as a child node of the base query.
+
+.. |image280| image:: media/image280.png
+   :width: 30
 
 .. figure:: media/image281.png
 
     QbE query: use of a subquery in a filter.
 
 Once defined the main query and the filter that contains the subquery, go to the **Query Catalogue** panel and click on |image282| . The query appears in the catalogue as a child node of the base query.
+
+.. |image282| image:: media/image282.png
+   :width: 30
 
 To use the sub-query inside the main query, simply drag and drop it into the columns corresponding to the left or right operand of the filter and set the type of operand (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries. 
 
