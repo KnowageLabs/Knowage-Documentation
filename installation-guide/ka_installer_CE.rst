@@ -62,6 +62,33 @@ Browser
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Enable your browser to execute JavaScript.
 
+Launching
+------------------------
+
+Linux/macOS
+~~~~~~~~~~~~~~~~~~~~~~~~
+Enable the execute permission on the file, typing the command in shell:
+
+.. code-block:: bash
+  :linenos:
+
+  chmod +x Knowage-6_2_0-CE-Installer-Unix-20180719.sh
+
+Knowage CE installer can run in GUI or console mode.
+
+- **GUI mode** is available only if a desktop environment is available. Run installer in GUI mode typing the command in shell:
+
+  .. code-block:: bash
+    :linenos:
+
+    ./Knowage-6_2_0-CE-Installer-Unix-20180719.sh
+
+- **Console mode** is always available and let complete installation using shell. Run installer in Console mode typing the command in shell:
+  .. code-block:: bash
+    :linenos:
+
+    ./Knowage-6_2_0-CE-Installer-Unix-20180719.sh -c
+
 Managing Knowage CE
 ------------------------
 After installation, you can start/stop Knowage CE using desktop links, start menu entries or following line commands.
