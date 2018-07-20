@@ -124,32 +124,15 @@ There are three differents way to add an image, its depend if it is inline of th
 
 To create a table into the documento you need to "draw" the contours of the table physically as shown below. 
      
-     +-----------------------+-----------------------+-----------------------+
-     |    Dataset            | Private               | Public                |
-     +=======================+=======================+=======================+
-     |    User               | Created from file     | Dataset created from  |
-     |                       | (CSV, XLS) or from    | file (CSV, XLS) or    |
-     |                       | QbE (My Data) for     | from QbE (My Data)    |
-     |                       | personal use only.    | and shared with other |
-     |                       |                       | users.                |
-     +-----------------------+-----------------------+-----------------------+
-     |    Technical          | Not applicable.       | Dataset created by a  |
-     |                       |                       | BI developer to be    |
-     |                       |                       | used in one or more   |  
-     |                       |                       | documents.            |
-     |                       |                       |                       |
-     |                       |                       | Not visible to end    |
-     |                       |                       | users.                |
-     +-----------------------+-----------------------+-----------------------+
-     |    Enterprise         | Not applicable.       | Dataset of any type   |
-     |                       |                       | created by a          | 
-     |                       |                       | technical user and    |
-     |                       |                       | certified by a        |
-     |                       |                       | trusted entity within |
-     |                       |                       | the organization, and |
-     |                       |                       | made available to all |
-     |                       |                       | end users for reuse.  |    
-     +-----------------------+-----------------------+-----------------------+
+     +------------+------------+--------------+
+     | TitleA     | TitleB     | TitleC       |
+     +============+============+==============+
+     |    AA      | BA         | CA           |
+     |            |            |              |
+     +------------+------------+--------------+
+     |    AB      | BB         | BC           |
+     |            |            |              |
+     +------------+------------+--------------+
 
 
 
