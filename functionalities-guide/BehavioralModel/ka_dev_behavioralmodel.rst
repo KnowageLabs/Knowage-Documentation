@@ -321,5 +321,5 @@ The entire list of available LOVs, analyitical driver and documents appears, as 
 
 By selecting one LOV or Analytical Driver or Documents the other will refresh showing only the elements associated with the selection done. To come back to the original situation click |image60| on the topright corner.
 
-.. |image60| image:: media/button_lineage.png
+.. |image60| figure:: media/button_lineage.png
    :width: 30
