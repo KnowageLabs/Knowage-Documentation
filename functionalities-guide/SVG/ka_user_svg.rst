@@ -354,18 +354,18 @@ Now, after the template definiton, you can create it into Knowage. Remember that
 .. table:: Recap of layer tag properties and function.
     	:widths: auto
 
-         +-----------------------+-----------------------+--------------------------------------------------------------+
-         |    Tag                | Property              | Note                                                         |
-         +=======================+=======================+==============================================================+
-         |    MEASURES           | default_kpi           | Mandatory. Defines the default kpi or the kpi that we wont   |
-         |                       |                       | enable at the beginning, when we start the document          |
-         |                       |                       | execution. Its value must exist into the METADATA section as |
-         |                       |                       | measuere type.                                               |
-         +-----------------------+-----------------------+--------------------------------------------------------------+
-	 |    KPI                | column_id             | Mandatory. The column_id property the measure that you       |
-         |                       |                       | are defining. Its value must exist into the METADATA section |
-	 |			 |	                 | as measure type.                                             |
-	 +-----------------------+-----------------------+--------------------------------------------------------------+
+        +-----------------------+-----------------------+--------------------------------------------------------------+
+        |    Tag                | Property              | Note                                                         |
+        +=======================+=======================+==============================================================+
+        |    MEASURES           | default_kpi           | Mandatory. Defines the default kpi or the kpi that we wont   |
+        |                       |                       | enable at the beginning, when we start the document          |
+        |                       |                       | execution. Its value must exist into the METADATA section as |
+        |                       |                       | measuere type.                                               |
+        +-----------------------+-----------------------+--------------------------------------------------------------+
+	|    KPI                | column_id             | Mandatory. The column_id property the measure that you       |
+        |                       |                       | are defining. Its value must exist into the METADATA section |
+	|			|	                | as measure type.                                             |
+	+-----------------------+-----------------------+--------------------------------------------------------------+
 
 Advanced functionalities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
