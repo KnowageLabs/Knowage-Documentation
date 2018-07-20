@@ -11,7 +11,7 @@ Titles are underlined with a nonalphanumeric character at least as long as the t
 
 ### Example
 
-```
+```rst
 Part I
 ########
 
@@ -22,26 +22,31 @@ Section 3
 -----------
 ```
 
+---
+
 ## Code
 
 To adding a code you need to use this syntax:
 
+```rst
 .. code-block:: Type of language
     :linenos:
     :caption: Title.
       Text of the code
+```
 
 ### Example
 
-```
+```rst
 .. code-block:: xml
     :linenos:
     :caption: Pointing at a numerical column.
     
       <COLUMNS> 
         <COLUMN field="store_id" visible="false" editable="false" /> 
-
 ```
+
+---
 
 ## Image
 
@@ -49,37 +54,37 @@ There are two different way to add an image, its depend if it is inline of the t
 
 1. Added an image inline:
 
-  Insert the |imageX| inside the text and then recall it outside the text (anywhere in the text) whit this syntax:
+  Insert the `|imageX|` inside the text and then recall it outside the text (anywhere in the text) whit this syntax:
   
+  ```rst
   .. |imageX| image:: media/imageX.png
-                   :width: dimension
+              :width: dimension
+  ```
                    
 2. Added an image oustide:
 
-  At the poin you need to insert an image use this:
+  At the point you need to insert an image use this:
   
+  ```rst
   .. figure:: media/imageX.png
 
     Caption of the image.
+  ```
 
 ### Example
 
-```
-1.
-If your dataset is similar to another existing dataset, you can click the **Clone** icon |image16|.
+```rst
+1. If your dataset is similar to another existing dataset, you can click the **Clone** icon |image16|.
 
-.. |image16| image:: media/image23.png
-   :width: 30
+    .. |image16| image:: media/image23.png
+       :width: 30
    
-2.
+2. In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to figure below). 
 
-In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to figure below). 
+    .. _datasetpanel:
+    .. figure:: media/image22.png
 
-.. _datasetpanel:
-.. figure:: media/image22.png
-
-    Dataset Panel.
-
+        Dataset Panel.
 ```
 
-
+---
