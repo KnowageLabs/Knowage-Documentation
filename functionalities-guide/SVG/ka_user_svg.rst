@@ -348,6 +348,8 @@ While the following table defines the heuristics supporting color definition for
 
 Sometimes users need to color the map and, at the same time, to continue to see the underlying objects, through a transparency effect (e.g. a raster image). In this case, specify the opacity parameter in order to properly regulate the transparency level of colors (1 = no transparency; 0 = invisible).
 
+Now, after the template definiton, you can create it into Knowage. Remember that it must be a “Location Intelligence” document type with the engine “SVG Viewer Engine”.
+
 .. _recaplayerproperties4:
 .. table:: Recap of layer tag properties and function.
     	:widths: auto
@@ -364,8 +366,6 @@ Sometimes users need to color the map and, at the same time, to continue to see 
          |                       |                       | are defining. Its value must exist into the METADATA section |
 	 |			 |	                 | as measure type.                                             |
 	 +-----------------------+-----------------------+--------------------------------------------------------------+
-
-Now, after the template definiton, you can create it into Knowage. Remember that it must be a “Location Intelligence” document type with the engine “SVG Viewer Engine”.
 
 Advanced functionalities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
