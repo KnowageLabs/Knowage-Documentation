@@ -58,8 +58,8 @@ Knowage CE Installer provides Apache Tomcat 7 out of the box. Don't worry about 
 SlimerJS requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Knowage CE includes a standalone edition of SlimerJS 0.9 to export some contents to PDF or image files.
-Usually SlimerJS runs out-of-the-box on Windows, but requires OS-dependent libraries on Unix-like operating systems.
-In order to fulfill all SlimerJS 0.9 requirements please refer to official documentation at https://docs.slimerjs.org/0.9/installation.html#requirements.
+
+Usually SlimerJS runs out-of-the-box on Windows, but requires OS-dependent libraries on Unix-like operating systems. Due to that fact Knowage CE Installer doesn't manage SlimerJS requirements. In order to fulfill them please refer to official documentation at https://docs.slimerjs.org/0.9/installation.html#requirements.
 
 Client-side requirements
 ------------------------
