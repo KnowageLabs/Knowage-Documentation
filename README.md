@@ -218,7 +218,7 @@ Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` use
 
 ## Box
 
-Sometimes into the text you need to draw attention with a box. We use four differents type of boxes
+Sometimes into the text you need to draw attention with a box. We use four differents type of boxes.
 
  ```rst
       .. note::
