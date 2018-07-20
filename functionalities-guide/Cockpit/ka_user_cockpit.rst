@@ -559,7 +559,7 @@ Here the user can:
 -  activate the on-click interaction of the widget with the other ones;
 -  activate the updating of widget data due to the interaction with other widgets.
 
-When executing the cockpit in visualization mode, the user has also some more options for widgets. For all widget the user can use the icon|image197| to expand the widget to all page and use the icon |image198| to reduce it again.
+When executing the cockpit in visualization mode, the user has also some more options for widgets. For all widget the user can use the icon |image197| to expand the widget to all page and use the icon |image198| to reduce it again.
 
 .. |image197| image:: media/image193.png
    :width: 30
