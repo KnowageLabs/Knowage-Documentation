@@ -4,7 +4,6 @@ Chart
 Charts are the most adopted method in presenting BI data since they allow an immediate perception of a phenomenon and are easily understandable. Focused on a visual impression more than a punctual lecture of values, they are specially suited to show trends and comparisons.
 
 For these reasons, charts gain a pervasive level of usage and can be used by anyone to perform both synthetic and detailed analysis.
-
 Knowage provides a chart engine to create several types of charts, including:
 
 -  Bar
@@ -24,7 +23,12 @@ Knowage provides a chart engine to create several types of charts, including:
 My first Chart
 ------------------
 
-Once you enter the Knowage environment as a final user, enter the **Analysis** area under the **Workspace** menu item, click on the **Create Analysis** icon and choose **Cockpit**. Please note that this operation is available only in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create charts document, as explained in **Stand alone charts** chapter.
+Once you enter the Knowage environment as a final user, enter the **Analysis** area under the **Workspace** menu item, click on the **Create Analysis** icon and choose **Cockpit**. 
+
+.. important::
+         **Enterprise Edition only**
+
+         Please note that this operation is available only in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create charts document, as explained in **Stand alone charts** chapter.
 
 Once opened, the cockpit interface is an empty page with a toolbar containing different options, the second of which is the **Add chart** feature.
 
@@ -84,7 +88,7 @@ The “Structure” tab of the designer is the core of the Chart development. He
 .. warning::
     **Chart type changemens may cause broke down**
     
-      Before creating any chart, it is convenient to be sure of    what kind of chart you want to develop. We stress that the user can    change the chart type afterwards, but at the expense of a loss of just defined settings.
+    Before creating any chart, it is convenient to be sure of    what kind of chart you want to develop. We stress that the user can    change the chart type afterwards, but at the expense of a loss of just defined settings.
 
 In this section it’s possible to customize the labels of the axis, titleand grid style clicking on different buttons. With the arrow button, on the top of the Y-axis and X-axis, it’s possible to choose the axis configuration detail, the axis title configuration, the major and minor grid configuration (just for Y-axis) and ordering column (just for X-axis). With the pencil button opens a window on the right with the series configuration details where it’s possible to choose the aggregation way, the order type of the series, if the data will be shown e so on. Finally, with the strip cartoon button you can choose the features of the tooltip (font color, text alignment, ecc). If the chart in place does not allow the customization of the axes the specific button will be disabled or not visible. The Figure below will show in detail the three buttons above explained:
 
@@ -460,19 +464,19 @@ The chart that enables the drill down are:
 -  Pie Chart
 -  Treemap
 
-To give an idea of the outcome, we take as instance the Bar Chart drill down. In the following example, the selected categories are four and called: product_family, product_department, product_category and product_subcategory. Once we open the document, we get as shown below:
+To give an idea of the outcome, we take as instance the Bar Chart drill down. In the following example, the selected categories are four and called: ``product_family``, ``product_department``, ``product_category`` and ``product_subcategory``. Once we open the document, we get as shown below:
 
 .. figure:: media/image127.png
 
     Drillable Bar Chart
 
-When selecting “shelf_depth” measure of the Food category one gets (see next figure):
+When selecting ``shelf_depth`` measure of the Food category one gets (see next figure):
 
 .. figure:: media/image128.png
 
     Drillable Bar Chart: first drill
 
-Once again, we can select “Frozen food” subcategory and drill to a second sub_level as below:
+Once again, we can select ``Frozen food`` subcategory and drill to a second sub-level as below:
 
 .. figure:: media/image129.png
 
@@ -480,7 +484,7 @@ Once again, we can select “Frozen food” subcategory and drill to a second su
 
 And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to the previous level. This efficient feature allows the user to have a deep insight of the analysis and draw important conclusions from it.
 
-Stand alone charts\*
+Stand alone charts
 ------------------------
 
 The previous chapters were dedicated to the end user approaching the Knowage Chart engine. We stressed how the final user must pass through the Cockpit interface to develop graphs. We want now spend some words about the developer experience. Indeed, if you are a technical user you can also create a chart as a stand alone document.
@@ -520,7 +524,7 @@ A new template can be generated through the editor clicking on **Template build*
 If you choose to implement the new Chart through the Template Build feature, the steps to follow are exactly the same of those seen for the final user. In fact, once you click on the Template Build icon, you are redirected to the Chart designer. In this case, by the way, another functionality is enabled, the Cross Navigation.
 
 
-Cross Navigation\*
+Cross Navigation
 ----------------------
 
 When you develop a standalone chart it is possible to add a cross navigation path to it. This means that, once the chart is launched, its elements becomes clickable and it redirects the user to a second document.
