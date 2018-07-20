@@ -73,7 +73,7 @@ There are three differents way to add an image, its depend if it is inline of th
 
 3. Added an immage inside a table:
 
-```
+```rst
    +-------------------------------+-----------------------+
    |    Icon                       | Name                  |
    +===============================+=======================+
@@ -122,40 +122,66 @@ There are three differents way to add an image, its depend if it is inline of th
 
 ## Tables
 
-There are two different way to add an image, its depend if it is inline of the text or is out of the text.
+To create a table into the documento you need to "draw" the contours of the table physically as shown below. 
+     
+     +-----------------------+-----------------------+-----------------------+
+     |    Dataset            | Private               | Public                |
+     +=======================+=======================+=======================+
+     |    User               | Created from file     | Dataset created from  |
+     |                       | (CSV, XLS) or from    | file (CSV, XLS) or    |
+     |                       | QbE (My Data) for     | from QbE (My Data)    |
+     |                       | personal use only.    | and shared with other |
+     |                       |                       | users.                |
+     +-----------------------+-----------------------+-----------------------+
+     |    Technical          | Not applicable.       | Dataset created by a  |
+     |                       |                       | BI developer to be    |
+     |                       |                       | used in one or more   |  
+     |                       |                       | documents.            |
+     |                       |                       |                       |
+     |                       |                       | Not visible to end    |
+     |                       |                       | users.                |
+     +-----------------------+-----------------------+-----------------------+
+     |    Enterprise         | Not applicable.       | Dataset of any type   |
+     |                       |                       | created by a          | 
+     |                       |                       | technical user and    |
+     |                       |                       | certified by a        |
+     |                       |                       | trusted entity within |
+     |                       |                       | the organization, and |
+     |                       |                       | made available to all |
+     |                       |                       | end users for reuse.  |    
+     +-----------------------+-----------------------+-----------------------+
 
-1. Added an image inline:
 
-  Insert the `|imageX|` inside the text and then recall it outside the text (anywhere in the text) whit this syntax:
-  
-  ```rst
-  .. |imageX| image:: media/imageX.png
-              :width: dimension
-  ```
-                   
-2. Added an image oustide:
-
-  At the point you need to insert an image use this:
-  
-  ```rst
-  .. figure:: media/imageX.png
-
-    Caption of the image.
-  ```
 
 ### Example
 
 ```rst
-1. If your dataset is similar to another existing dataset, you can click the **Clone** icon |image16|.
-
-    .. |image16| image:: media/image23.png
-       :width: 30
-   
-2. In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to figure below). 
-
-    .. figure:: media/image22.png
-
-        Dataset Panel.
+     +-----------------------+-----------------------+-----------------------+
+     |    Dataset            | Private               | Public                |
+     +=======================+=======================+=======================+
+     |    User               | Created from file     | Dataset created from  |
+     |                       | (CSV, XLS) or from    | file (CSV, XLS) or    |
+     |                       | QbE (My Data) for     | from QbE (My Data)    |
+     |                       | personal use only.    | and shared with other |
+     |                       |                       | users.                |
+     +-----------------------+-----------------------+-----------------------+
+     |    Technical          | Not applicable.       | Dataset created by a  |
+     |                       |                       | BI developer to be    |
+     |                       |                       | used in one or more   |  
+     |                       |                       | documents.            |
+     |                       |                       |                       |
+     |                       |                       | Not visible to end    |
+     |                       |                       | users.                |
+     +-----------------------+-----------------------+-----------------------+
+     |    Enterprise         | Not applicable.       | Dataset of any type   |
+     |                       |                       | created by a          | 
+     |                       |                       | technical user and    |
+     |                       |                       | certified by a        |
+     |                       |                       | trusted entity within |
+     |                       |                       | the organization, and |
+     |                       |                       | made available to all |
+     |                       |                       | end users for reuse.  |    
+     +-----------------------+-----------------------+-----------------------+
 ```
 
 ---
