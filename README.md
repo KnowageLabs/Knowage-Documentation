@@ -21,3 +21,23 @@ Chapter 2
 Section 3
 -----------
 ```
+
+## Code
+
+To adding a code you need to use this syntax:
+
+.. code-block:: 
+    :linenos:
+    :caption: Title.
+
+### Example
+
+```
+.. code-block:: xml
+    :linenos:
+    :caption: Pointing at a numerical column.
+    
+     <COLUMNS> 
+       <COLUMN field="store_id" visible="false" editable="false" /> 
+
+```
