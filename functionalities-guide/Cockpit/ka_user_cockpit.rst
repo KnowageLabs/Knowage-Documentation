@@ -1,20 +1,20 @@
 Cockpit
 =======
 
-KnowageBD and KnowageSI allow end users to *self-build interactive cockpits* through an intuitive and interactive interface, with a few clicks and simple drag and drop. This allows you to compose your analytical documents with multiple widgets and define associations among them, so that clicking on one widget data are automatically updated in other widgets.
+Knowage allow end users to *self-build interactive cockpits* through an intuitive and interactive interface, with a few clicks and simple drag and drop. This allows you to compose your analytical documents with multiple widgets and define associations among them, so that clicking on one widget data are automatically updated in other widgets.
 
 .. figure:: media/image135.png
 
     Cockpit document example.
 
-In particular, Knowage supports in-memory technologies, in order to enable faster data insights and get the highest analytical efficiency. Moreover, it enables *data mash-up* to integrate enterprise data and externally sourced data.
+It enables *data mash-up* to integrate enterprise data and externally sourced data.
 
-Cockpit documents can be created and executed both by technical users and end users and are part of Knowage ad-hoc reporting system. A key aspect is that different widget can rely on different datasets and hence on different data sources. *The only requirement needed to define associations between two or more datasets is the presence in each of them of one or more columns containing the same data*.
+Cockpit documents can be created and executed both by technical users and end users and are part of Knowage ad-hoc reporting system. A key aspect is that different widget can rely on different datasets and hence on different data sources. The only requirement needed to define associations between two or more datasets is the presence in each of them of one or more columns containing the same data.
 
 .. warning::
     **Section structure exception**
          
-         Since there are no differences between the cockpit interface reached by a final user and the one reached by a technical user, the cockpit designer is described in one unique My first Cockpit for both those kind of users. By the way, when necessary we will   highlight how the same functionality can be exploited accordingly to the user’s role.
+    Since there are no differences between the cockpit interface reached by a final user and the one reached by a technical user, the cockpit designer is described in one unique My first Cockpit for both those kind of users. By the way, when necessary we will   highlight how the same functionality can be exploited accordingly to the user’s role.
 
 My first Cockpit
 --------------------
@@ -24,7 +24,7 @@ You can create your new Cockpit from the **Analysis** area of the **Workspace** 
 .. important::
     **Reaching the cockpit designer**
          
-        We stress that the cockpit interface is reached by the final user and the administrator following two diferent paths.
+    We stress that the cockpit interface is reached by the final user and the administrator following two different paths.
 
 Let us see how to build a cockpit and how the interface is displayed within the server. Once opened, the cockpit interface is an empty page with a toolbar containing different options described in Table below.
 
@@ -96,11 +96,7 @@ On the “Text editor” tab you can type the desired text in center panel and c
 
     Editing a dynamic text.
 
-On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget.
-
-On the “Dataset” tab you can add more dataset to be used in the dynamic value.
-
-Finally, the “Filters” tab can be used to extract limited outup from the dataset. We put details off to the table widget subsection.
+On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be used in the dynamic value. Finally, the “Filters” tab can be used to extract limited outup from the dataset. We put details off to the table widget subsection.
 
 Image widget
 ~~~~~~~~~~~~
@@ -125,9 +121,9 @@ On the **Cross** tab you can define navigation to another document, as shown in 
 .. warning::
     **Cross navigation only for technical users**
          
-         Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final user.
+    Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final user.
 
-For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. If the cross navigation definition is not defined, then when you launch the Chart widget cross navigation will be shown a pop up (refer to Figure below) with the list of cross navigation definition that exist for this cockpit.
+For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. If the cross navigation definition is not defined, then when you launch the chart widget cross navigation will be shown a pop up (refer to figure below) with the list of cross navigation definition that exist for this cockpit.
 
 .. _crossnavmultchoice:
 .. figure:: media/image150.png
@@ -137,14 +133,14 @@ For this purpose, you must activate **Enable cross navigation** flag and select 
 Chart widget
 ~~~~~~~~~~~~
 
-Charts are an essential representation of data, Knowage let you use many different charts type and configure them according to your needs. We have provided all details about charts type and configuration in Chapter of Chart.
+Charts are an essential representation of data, Knowage let you use many different charts type and configure them according to your needs. We have provided all details about charts type and configuration in Chart chapter.
 
 We recall that also for chart widget it is possible to set cross navigation on elements.
 
 .. warning::
     **Cross navigation only for technical users**
          
-         Due to the fact that parameters can only be managed by technical user the cross navigation cannot be implemented by the final user.
+    Due to the fact that parameters can only be managed by technical user the cross navigation cannot be implemented by the final user.
          
 As shown in next figure, it is mandatory to enable the cross navigation feature by using the dedicate tab of chart editor GUI. It is mandatory to choose the column element to be passed to the destination document and associate it to the right output parameter (previoulsy added to the document using the detail interface).
 
@@ -164,7 +160,7 @@ In addition, if the navigation expects other parameters to be passed, use the bo
 Table widget
 ~~~~~~~~~~~~
 
-The **Widget table configuration** opens and it guides you through the steps to configure the widget. The pop up opens showing the **column** tab, as you can see from Figure below. In details, it is mandatory to select a dataset using the combobox ( only if at least one dataset has been loaded using the **Data Configuration** feature) or clicking on the icon |image156| available just aside the combobox line. You can page the table specifying the number of rows per sheet. Consequently the user can set columns properties.
+The **Widget table configuration** opens and it guides you through the steps to configure the widget. The pop up opens showing the **column** tab, as you can see from Figure below. In details, it is mandatory to select a dataset using the combobox (only if at least one dataset has been loaded using the **Data Configuration** feature) or clicking on the icon |image156| available just aside the combobox line. You can page the table specifying the number of rows per sheet. Consequently the user can set columns properties.
 
 .. |image156| image:: media/image153.png
    :width: 20
@@ -206,49 +202,49 @@ Note that here you can indicate the column type and the aggregation. To add an a
 
 The **Style** tab is where you can customize the table by using the different options of style. It is divided into eight parts:
 
--  In the **Summary** section you can show the total of the column and customize it by typing the summary name and using font and style configurations. Refer to Figure below.
+- In the **Summary** section you can show the total of the column and customize it by typing the summary name and using font and style configurations. Refer to Figure below.
 
 .. figure:: media/image159.png
 
     Summary section of the Style tab.
 
--  In the **Rows** section you can set the table rows to be adapted in automatic or select a fixed height. You can also show the total of rows. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other      external documents. Refer to figure below.
+- In the **Rows** section you can set the table rows to be adapted in automatic or select a fixed height. You can also show the total of rows. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other      external documents. Refer to figure below.
 
 .. figure:: media/image160.png
 
     Rows section of the Style tab.
 
--  In the **Grid** section you can add borders to the table and add color to alternate rows. In this section you can find different      options to customize them. Refer to figure below.
+- In the **Grid** section you can add borders to the table and add color to alternate rows. In this section you can find different      options to customize them. Refer to figure below.
 
 .. figure:: media/image161.png
 
     Grid section of the Style tab.
 
--  In the **Header Style** section you find the different options of  style for the table header. Refer to Figure below.
+- In the **Header Style** section you find the different options of  style for the table header. Refer to Figure below.
 
 .. figure:: media/image162.png
 
     Header style section of the Style tab.
 
--  In the **Titles** section you can add the titles to the widget and modify the font size and weight. In this section you can also      change the height of the widget title. Refer to Figure below.
+- In the **Titles** section you can add the titles to the widget and modify the font size and weight. In this section you can also      change the height of the widget title. Refer to Figure below.
 
 .. figure:: media/image163.png
 
     Titles section of the Style tab.
 
--  In the **Borders** section you can add a border to the widget and customize it by using the colors, thickness and style. Refer to the following figure.
+- In the **Borders** section you can add a border to the widget and customize it by using the colors, thickness and style. Refer to the following figure.
       
 .. figure:: media/image164.png
 
     Borders section of the Style tab.   
 
--  In the **Shadows** section you can add the shadows in the widget. Refer to the following figure.
+- In the **Shadows** section you can add the shadows in the widget. Refer to the following figure.
 
 .. figure:: media/image165.png
 
     Shadows section of the Style tab. 
 
--  In the **Background** color section you can set the background color of the widget. Refer to the Figure below.
+- In the **Background** color section you can set the background color of the widget. Refer to the Figure below.
 
 .. figure:: media/image166.png
 
@@ -259,20 +255,20 @@ Once the table style settings have been implemented you can switch to the next t
 .. warning::
     **Cross navigation only for technical users**
          
-         Due to the fact that parameters can only be managed by technical user, the cross navigation cannot be implemented by the final user.
+    Due to the fact that parameters can only be managed by technical user, the cross navigation cannot be implemented by the final user.
 
-Referring to Figure below, we sum up how to add a cross navigation to the cockpit with the following bullet list:
+Referring to figure below, we sum up how to add a cross navigation to the cockpit with the following bullet list:
 
 .. figure:: media/image167.png
 
     Cross tab of the table widget configuration.
 
--  activate the cross navigation flag;
--  activate cross Enable on all row flag, if you want to be able to click on all the columns of the table;
--  select the column whose value will be passed through output parameter to the document of arrival;
--  select the output parameter that will pass the value to the document of arrival. This parameter type are defined in the document detail of the cockpit;
--  select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that     cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
--  add all involved output parameters by adding them one by one in the bottom part of the GUI.
+- activate the cross navigation flag;
+- activate cross Enable on all row flag, if you want to be able to click on all the columns of the table;
+- select the column whose value will be passed through output parameter to the document of arrival;
+- select the output parameter that will pass the value to the document of arrival. This parameter type are defined in the document detail of the cockpit;
+- select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that     cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
+- add all involved output parameters by adding them one by one in the bottom part of the GUI.
 
 Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
 
@@ -293,7 +289,7 @@ Similar configurations are available also for the Cross Table widget. In this da
 
     Dataset section of the crosstab widget configuration.
 
-Using the “Dataset” tab the user can add the dataset to take values from. Consequently, it is necessary to select the fields you wish to appear as columns, those as row and measures to be exhibited in the pivot table. See Figure below. Remember to set column and row fields as attributes, while measure fields as numbers.
+Using the “Dataset” tab the user can add the dataset to take values from. Consequently, it is necessary to select the fields you wish to appear as columns, those as row and measures to be exhibited in the pivot table. See figure below. Remember to set column and row fields as attributes, while measure fields as numbers.
 
 .. figure:: media/image170.png
 
@@ -309,9 +305,9 @@ The latter is made up of three sections: **General**, **On rows** and **On colum
 
 In the “General” section you can set the following features:
 
--  Define the maximum cell number to show;
--  decide to hook measures to columns or rows;
--  decide to show percentages of measures related to columns or rows.
+- define the maximum cell number to show;
+- decide to hook measures to columns or rows;
+- decide to show percentages of measures related to columns or rows.
 
 Thanks to the “On rows” feature, you can easily compute totals or subtotals on rows. Figure below exhibit an example.
 
@@ -327,25 +323,25 @@ Otherwise, thanks to the “On columns” feature, you can easily compute totals
 
 Switching to the “Style” tab you can find the general style settings available for the crosstab.
 
--  **Crosstab Font General Options** where font and font size are set;
+- **Crosstab Font General Options** where font and font size are set;
 
 .. figure:: media/image174.png
 
     General style options for crosstab.
 
--  **Crosstab Headers Font Options** where you can configure the header style settings as color, background, font, etc.
+- **Crosstab Headers Font Options** where you can configure the header style settings as color, background, font, etc.
 
 .. figure:: media/image175.png
 
     Crosstab Headers Font Options for crosstab.
 
--  **Measures Font Options** where you can configure several style options for measures, such as color, background, font size, etc.
+- **Measures Font Options** where you can configure several style options for measures, such as color, background, font size, etc.
 
 .. figure:: media/image176.png
 
     Measures Font Options for crosstab.
 
--  Using the **Grid** section you can mark (or not) grid borders, decide for border style, thickness and color. You can also alternate row indicating different colors.
+- Using the **Grid** section you can mark (or not) grid borders, decide for border style, thickness and color. You can also alternate row indicating different colors.
 
 .. figure:: media/image177.png
 
@@ -357,37 +353,37 @@ Switching to the “Style” tab you can find the general style settings availab
 
     Measures Headers Option for crosstab.
    
--  In the **Total** section you can set color and background of totals (if any).
+- In the **Total** section you can set color and background of totals (if any).
 
 .. figure:: media/image179.png
 
     Color settings for Totals.
       
--  In the **Subtotal** section you can set color and background of subtotals (if any).
+- In the **Subtotal** section you can set color and background of subtotals (if any).
 
 .. figure:: media/image180.png
 
     Color settings for Subtotals.
 
--  In the **Titles** section you can add titles to widget and customize them using different styles.
+- In the **Titles** section you can add titles to widget and customize them using different styles.
 
 .. figure:: media/image181.png
 
     Title settings.
 
--  In the **Borders** section you can add borders to widgets and customize them using different styles.
+- In the **Borders** section you can add borders to widgets and customize them using different styles.
 
 .. figure:: media/image182.png
 
     Border settings.
 
--  In the **Shadows** section you can add a shadow to widget layout and indicate its measure.
+- In the **Shadows** section you can add a shadow to widget layout and indicate its measure.
 
 .. figure:: media/image183.png
 
     Shadow settings.
 
--  In the **Background color** section you can color the widget background at convenience.
+- In the **Background color** section you can color the widget background at convenience.
 
 .. figure:: media/image184.png
 
@@ -493,7 +489,7 @@ After choosing a dataset the list of available columns will be show. Those names
 
 ``[kn-column='COLUMN-NAME' row='COLUMN-ROW-NUMBER' aggregation='COLUMN-AGGREGATION' precision='COLUMN-DECIMALS']``
 
-The kn-column tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to print its value. The value of the kn-column attribute should be the name of the column value you want to read in execution.
+The ``kn-column`` tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to print its value. The value of the kn-column attribute should be the name of the column value you want to read in execution.
 
 The **row** attribute is optional and is a number type attribute. If no row is selected the first row column value will be shown.
 
@@ -501,47 +497,44 @@ The **aggregation** attribute is optional and is a string type attribute. If ins
 
 The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
 
-
 ``[kn-parameter='PARAMETER-NAME']``
 
 The kn-parameter tag is the tool to show a dataset parameter inside the widget execution. The value of the kn-parameter attribute should be the name of the set attribute.
 
-
 ``[kn-calc=(CODE-TO-EVALUATE) precision='VALUE-PRECISION']``
 
-The kn-calc tag is the tool to calculate expressions between different values on widget execution. Everything inside the brackets will be evaluated after the other tags substitution, so will be possible to use other tags inside.
+The ``kn-calc`` tag is the tool to calculate expressions between different values on widget execution. Everything inside the brackets will be evaluated after the other tags substitution, so will be possible to use other tags inside.
 
 The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
 
-
 ``<div kn-repeat="true" limit="LIMIT-NUMBER"> ... REPEATED-CONTENT ... </div>``
 
-The kn-repeat attribute is available to every HTML5 tag, and is a tool to repeat the element for every row of the selected dataset.
+The ``kn-repeat`` attribute is available to every HTML5 tag, and is a tool to repeat the element for every row of the selected dataset.
 
-This attribute is naturally linked to kn-column tag. If inside a kn-column tag without a row attribute is present, the kn-repeat will show the column value for every row of the dataset. 
+This attribute is naturally linked to ``kn-column`` tag. If inside a ``kn-column`` tag without a row attribute is present, the ``kn-repeat`` will show the column value for every row of the dataset. 
 
-Inside a kn-repeat is possible to use the specific tag [kn-repeat-index], that will print the index of the repeated column row.
+Inside a ``kn-repeat`` is possible to use the specific tag [kn-repeat-index], that will print the index of the repeated column row.
 
 The **limit** attribute is optional and is a number type attribute. If added the number of row repeated will be limited to the selected number.
 
-
 ``<div kn-if="CODE-TO-EVALUATE"> ... </div>``
 
-| The kn-if attribute is available to every HTML5 tag and is a way to conditionally show or hide an element based on some other value.
-| The attribute content will be evaluated after the other tags substitution, so will be possible to use other tags inside.
-| If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
+The ``kn-if`` attribute is available to every HTML5 tag and is a way to conditionally show or hide an element based on some other value. The attribute content will be evaluated after the other tags substitution, so will be possible to use other tags inside. If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
 
 .. warning:: 
     **Whitelist**
-        All external resources paths must be present inside a whitelist xml inside the resources folder of the server named 'services-whitelist.xml'. The file should have the following structure:
-        
-        | <?xml version="1.0" encoding="UTF-8"?>
-        | <WHITELIST>
-        |   <service baseurl="https://www.youtube.com" />
-        |   <service relativepath="/knowage/themes/" />
-        | </WHITELIST>
-        
+    All external resources paths must be present inside a whitelist XML inside the resources folder of the server named ``services-whitelist.xml``. The file should have the following structure:
 
+
+.. code-block:: xml
+   :linenos:
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <WHITELIST>
+      <service baseurl="https://www.youtube.com" />
+      <service relativepath="/knowage/themes/" />
+   </WHITELIST>
+ 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
 
@@ -573,14 +566,13 @@ Chart widget are endowed with an additional option that allows the user to chang
 
     Change chart type button.
 
-Referring to Figure below, the available chart types are: parallel, scatter, wordcloud, line, radar, bar and pie.
+Referring to figure below, the available chart types are: parallel, scatter, wordcloud, line, radar, bar and pie.
 
 .. figure:: media/image196.png
 
     Available chart types.
 
 Pay attention though to the fact that when grouping functions have been used, the change chart type may not report the same level of aggregation. In fact, not all type of chart allows the grouping function. Refer to Chart types in detail to read more about each chart type configuration. Pay also attention when a two-series chart is chaned with a single-series one. For instance the parallel chart works only when (at laest) two series have been set, while the wordcloud works with only one series.
-
 
 General configuration
 -------------------------
@@ -612,7 +604,7 @@ Source
 
 The Source tab is split into two areas. On the left side the user can find the list of those dataset that are currently used by the cockpit. Here it is possible to add new dataset that will be passed to widgets. In other words, datasets inserted in this area will be listed in the dataset combobox of widgets like the Table, the Pivot Table and the Chart one. Note that the user can delete datasets as well.
 
-Parametric sources management\*
+Parametric sources management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the user is adding a parametric dataset the window will exhibit them in an expandable box right below. It is also mandatory to give default values or to associate proper drivers to the document to secure its correct execution. By the way, a final user has no access to parametric dataset and he/she cannot handle analytical drivers, therefore **parametric sources can be managed only by an admin user**. We stress that the user must also type the driver name in the field box as highlighted in Figure below. You can type it manually or use the look up just aside the parameter line.
@@ -703,5 +695,3 @@ Cockpit allows to manage data visualization splitting it in two or more sheets. 
 A user can take advantage of the “move widget” functionality we saw in My first Cockpit to bring widget from one sheet to another.
 
 Furthermore it is possible, but not mandatory, to set associations between datasets underlying different sheets. The multisheet functionality is particularly useful to focus the analysis in a single spot and have a general overview over it in few clicks at the same time.
-
-.. include:: cockpitThumbinals.rst
