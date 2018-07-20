@@ -589,7 +589,7 @@ We highlight that the new features are available only if the model has at least 
 The temporal dimension can have one or more hierarchies. Only one of these can stay active and that is the one used by the query code. Figure below shows that a temporal dimension can have one or more hierarchies. In the case of more hierarchies the user can see which is the one set by default just exploring the dimension: the bold highlighted hierarchy is the primary. On the other hand the user can change the default choice by right-clicking on the target dimension hierarchy and selecting “\ *Set as Default Hierarchy*\ ”.
 
 .. _tempdimensmeta:
-.. figure:: media/image224.png
+.. figure:: media/image224_bis.png
 
     Temporal dimension definition on Meta.
    
