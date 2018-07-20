@@ -59,7 +59,7 @@ There are two different ways to create a new document on Knowage Server. The fir
 .. note::
     **Deploy a document from Knowage Studio**
       
-       Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
+    Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
 
 The second option is to manually create the document on the Server. This is the most general way since the Studio designer is not yet available for all documents types.
 
@@ -124,7 +124,7 @@ In order to create a new document you need to click on the red plus button in th
 
 To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in figure above but with empty fields, in order to allow you to define the document details.
 
-First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see Figure below).
+First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see figure below).
 
 .. figure:: media/image67.png
 
@@ -159,14 +159,17 @@ Upon creation, the document is by default in development state. Any time you upl
 
 The main reason for this is that the state of the document has an impact on its accessibility. As discussed in the behavioural model,  Knowage defines role types (administrator, developer, tester, user). States are compatible with the corresponding role type. Administrators can change the state of documents at any time. Developers can not access only the documents with test state. Testers   can not see documents in development or suspended state. Users can execute only documents in released state. Note that a tester may   change the state of a document from test back to development.
 
-In KnowageER you may also decide to temporary "lock" a document while he is working with it: it is enough to set the **Lock by user** item to True. This prevent other developers from modifying the same document you are working on.
+.. important::
+         **Enterprise Edition only**
+
+         In KnowageER you may also decide to temporary "lock" a document while he is working with it: it is enough to set the **Lock by user** item. This prevent other developers from modifying the same document you are working on.
 
 Template Versioning
 ^^^^^^^^^^^^^^^^^^^
 
 When you register a document on the Server, you need to associate a template to it. Click on **Browse** next to **Template** and upload the template from your local file system. You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
 
-Knowage Server supports versioning of uploaded templates, as shown below. To view them in the document detail window, click on   **Show document templates** in the right panel. All templates are saved with their date and name, and can be easily restored or   deleted. To restore a template, choose it in the list by clicking on the selector, then remember to save: the new template will be   uploaded. Using the same list you can download or delete a template.
+Knowage Server supports versioning of uploaded templates, as shown below. To view them in the document detail window, click on **Show document templates** in the right panel. All templates are saved with their date and name, and can be easily restored or deleted. To restore a template, choose it in the list by clicking on the selector, then remember to save: the new template will be uploaded. Using the same list you can download or delete a template.
 
 .. _templateversionforanalydoc:
 .. figure:: media/image70.png
@@ -235,7 +238,7 @@ Remember to save each time you have completed the definition of a parameter befo
 Associating a Spatial driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As just seen, to filter on data visualization a user needs to associate an ananlytical driver using the "Document analytical driver   details" area. As well as for the other driver you can use this interface to associate a spatial driver to the document. The procedure is right the same. When launching the document and opening the filter panel you will find the filter just set. Click on the icon   |image75| to open the map and select the geometric object (the State in the Example in Figure below) according to the chosen layer and   property.
+As just seen, to filter on data visualization a user needs to associate an ananlytical driver using the "Document analytical driver   details" area. As well as for the other driver you can use this interface to associate a spatial driver to the document. The procedure is right the same. When launching the document and opening the filter panel you will find the filter just set. Click on the icon   |image75| to open the map and select the geometric object (the ``State`` in the example in figure below) according to the chosen layer and property.
 
 .. |image75| image:: media/image76.png
    :width: 30
@@ -288,9 +291,9 @@ Once defined the correlation, the child parameters will display the labels durin
 Correlation through LOV and drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In previous Section 5.4 we saw how to set correlation through the GUI available in the document detail panel, but there is also the   possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously   configured a driver that runs values that can be used in the "where" clause of a SQL query. Then the user must set a query-type LOV using the syntax 
+In previous sections we saw how to set correlation through the GUI available in the document detail panel, but there is also the   possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously   configured a driver that runs values that can be used in the "where" clause of a SQL query. Then the user must set a query-type LOV using the syntax 
 
-We stress that the *AD_name* is the name of the driver the administrator is trying to reach. Syntax for setting correlation through LOV configuration is:
+We stress that the ``AD_name`` is the name of the driver the administrator is trying to reach. Syntax for setting correlation through LOV configuration is:
 
 .. code-block:: bash
   :caption: Syntax for setting correlation through LOV configuration 
@@ -351,7 +354,7 @@ Declaration of the output parameters
 
 Enter the **Document details** of the document of interest. Then click on **Manage outputparameters** and the **Output parameters**   dialog will open.
 
-Here you have to state which parameters are going to be used as output parameters. If, for instance, you select the Date type (see next figure), it is possible to choose the format in which your date has been coded. The default value is related to the location defined in   (**Menu**>\ **Languages**).
+Here you have to state which parameters are going to be used as output parameters. If, for instance, you select the Date type (see next figure), it is possible to choose the format in which your date has been coded. The default value is related to the location defined in   (**Menu** > **Languages**).
 
 .. _settinganotuparam:
 .. figure:: media/image85.png
@@ -386,5 +389,3 @@ Once set, the association is highlighted as in Figure below.
     Association betweeen parameters.
 
 To assign fixed values to target parameters it is necessary to edit first the box labeled **Fixed value parameter** and click on the **plus** icon. Then the value can be associated as fixed value of the one or more target parameters. Remember to click on the **Ok** button to save the cross navigation just set.
-
-.. include:: AnalyticalDocumentThumbinals.rst
