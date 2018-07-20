@@ -920,7 +920,7 @@ The **QbE Engine** also supports the definition and usage of subqueries similarl
 Once defined the main query and the filter that contains the subquery, go to the **Query Catalogue** panel and click on |image282| . The query appears in the catalogue as a child node of the base query.
 
 .. |image282| image:: media/image282.png
-   :width: 45
+   :width: 55
 
 To use the sub-query inside the main query, simply drag and drop it into the columns corresponding to the left or right operand of the filter and set the type of operand (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries. 
 
