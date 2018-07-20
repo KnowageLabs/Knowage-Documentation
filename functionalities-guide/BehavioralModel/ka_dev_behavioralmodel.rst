@@ -206,10 +206,10 @@ Knowage default checks are:
 -   **E-Mail**: it checks if the parameter is an e-mail;   
 -   **Fiscal Code**: it checks if the parameter has the correct syntax of a fiscal code; Internet Address: it checks if the parameter is an internet address.
 
-If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
-
 .. |image46| image:: media/image45.png
    :width: 30
+   
+If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
 
  -  **Date**: here you can set a costumized format type of date;
  -  **Regular Expression**: to set a regular expression validation rule;
