@@ -29,7 +29,7 @@ Knowage source code repository is available on GitHub! Visit the `repository`_.
    :caption: Table of Contents
    :maxdepth: 10
    
-   common/ka_BooksStructure.rst
+   common/before-starting.rst
    installation-guide/index.rst
    administrator-guide/index.rst
    user-guide/index.rst
