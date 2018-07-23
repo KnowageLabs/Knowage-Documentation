@@ -1,4 +1,4 @@
-Advanced Configuration
+Advanced configuration
 ==============================
 
 In this chapter we will describe all the advanced configuration parameters of Knowage.
