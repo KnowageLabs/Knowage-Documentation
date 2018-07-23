@@ -244,25 +244,25 @@ Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` use
 Sometimes into the text you need to draw attention with a box. We use four differents type of boxes.
 
 ```rst
-      .. note::
-         **Read more**
+.. note::
+      **Read more**
          
-         Text of the note.
+      Text of the note.
          
-      .. warning::
-         **Warning**
+.. warning::
+      **Warning**
          
-         Text of the warning.
+      Text of the warning.
          
-      .. hint::
-         **Advice**
+.. hint::
+      **Advice**
          
-         Text of the hint.
+      Text of the hint.
          
-      .. important::
-         **Notable content**
+.. important::
+      **Notable content**
          
-         Text of the important.  
+      Text of the important.  
 ```
   
 #### Example
