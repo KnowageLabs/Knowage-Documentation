@@ -4,9 +4,6 @@ ______________________________________________
 Knowage is the professional open source suite for modern business analytics over traditional sources and big data systems. Knowage is the new brand for SpagoBI project: this new brand marks the value of the well-known open source business intelligence suite after significant functional and technological transformations and a new offering model. 
 The suite is composed of several modules, each one conceived for a specific analytical domain. They can be used individually as complete solution for a certain task, or combined with one another to ensure full coverage of user’ requirements. 
 
-Knowage is the professional open source suite for modern business analytics over traditional sources and big data systems. Knowage is the new brand for SpagoBI project: this new brand marks the value of the well-known open source business intelligence suite after significant functional and technological transformations and a new offering model. 
-The suite is composed of several modules, each one conceived for a specific analytical domain. They can be used individually as complete solution for a certain task, or combined with one another to ensure full coverage of user’ requirements. 
-
 The sub-products of the suite are:
 
 - BD (big data), to analyse data stored on big data clusters or NoSQL databases
@@ -19,7 +16,7 @@ The sub-products of the suite are:
 Knowage supports a modern vision of the data analytics, providing new self-service capabilities that give autonomy to the end-user, now able to build his own analysis and explore his own data space, also combining data that come from different sources.
 If this is your first contact with Knowage, it is highly recommended to have a look at the `website`_.
 
-Knowage source code repository is available on GitHub: visit the `repository`_.
+Knowage source code repository is available on GitHub! Visit the `repository`_.
    
 .. _website: https://www.knowage-suite.com
 .. _repository: https://github.com/KnowageLabs/Knowage-Server
