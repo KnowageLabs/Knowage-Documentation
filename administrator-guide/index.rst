@@ -4,15 +4,15 @@ Administration Manual
 .. toctree::
    	:caption: Table of Contents
 
-   	ka_Introduction.rst
-	ka_gam_userInterface.rst
-	ka_datasource.rst
-	ka_BehaviouralModel.rst
-	ka_AnaliticalModel.rst
-	ka_Etl.rst
-	ka_Scheduler.rst
-	ka_ServerManager.rst
-	ka_ServerSettings.rst
+   	knowage-at-a-glance.rst
+	user-interface.rst
+	configure-data-sources.rst
+	behavioural-model.rst
+	analytical-model.rst
+	operational-engines.rst
+	scheduler.rst
+	server-manager.rst
+	server-settings.rst
 
 .. |image11| image:: media/image11.png
    :width: 0.27561in
