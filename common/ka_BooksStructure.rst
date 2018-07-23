@@ -23,7 +23,7 @@ Each book is thought to be delivered to different users.
 
 -  **General User Manual**: it is aimed at end users. It provides a first approach to Knowage interface and functionalities. It can be used as a first approach to Knowage. It focus on all those elements which are shared among the products and involves the end user.
 
--  **General Administrator Manual**: it is aimed at Knowage admnistrator. It describes all the management and configuration tools shared by all Knowage products.
+-  **General Administrator Manual**: it is aimed at Knowage administrator. It describes all the management and configuration tools shared by all Knowage products.
 
 -  **Product Manuals**: as we mentioned above, these books are specific for each product. They are aimed both at end users and Knowage developers. Almost each chapter is divided in two parts: the first one can be interesting for both users and developers, while the second one is for developers only. The developer parts are marked by a \* to be easy recognised. We can conlcude that you just need to
    read all the parts not marked by \* to have a complete introduction to all BI functionalities included in your products.
