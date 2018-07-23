@@ -1,4 +1,4 @@
-CAS Installation
+CAS installation
 ==============
 
 CAS is an application that implements a Single-Sign-On (SSO) mechanism. It is a good practise in production environments to install it and configure it so to have secure access to the Knowage server applications. CAS expects the use of the HTTPS protocol.
