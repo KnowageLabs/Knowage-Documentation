@@ -1,4 +1,5 @@
 # Knowage Documentation
+[![Documentation badge](https://readthedocs.org/projects/spagobi/badge/?version=latest)](http://spagobi.readthedocs.org/en/latest/)
 
 ## How to contribute
 
