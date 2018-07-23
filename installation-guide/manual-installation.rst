@@ -1,4 +1,4 @@
-Manual Installation
+Manual installation
 ==========================
 
 How to populate metadata database
