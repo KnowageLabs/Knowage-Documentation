@@ -4,9 +4,9 @@ User Guide
 .. toctree::
    :caption: Table of Contents
    
-   ka_user_intro.rst
-   ka_user_userinterface.rst
-   ka_user_mydoc.rst
+   introduction.rst
+   user-interface.rst
+   document-execution.rst
    
 .. |image9| image:: media/image8.png
 .. |image10| image:: media/image9.png
