@@ -1,7 +1,30 @@
-# Knowage-Documentation
+# Knowage Documentation
 
-## Structure
-                                                   
+## How to contribute
+
+The contribution process in based on GitHub pull requests (https://help.github.com/articles/about-pull-requests/).
+Contributions are taken into account as soon as possible, reviewed by Knowage Labs team and merged only if they comply with our standard (see below).
+
+## How to write it
+
+This documentation is written using ***reStructuredText*** format. reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system.
+
+Official resources to learn:
+- http://docutils.sourceforge.net/rst.html
+- http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+
+Other useful resources:
+- https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
+- https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst
+
+This documentation is intent to be used as source for Sphinx (http://www.sphinx-doc.org/en/master/index.html) and Read the Docs (https://readthedocs.org/) to render the documentation.
+
+## Our standards
+
+If you wish to contribute, in the following sections you can find standards and best practices. 
+
+### Structure
+                                              
 Titles are underlined with a nonalphanumeric character at least as long as the text.
 * `#` for parts
 * `=` for chapters
@@ -9,7 +32,7 @@ Titles are underlined with a nonalphanumeric character at least as long as the t
 * `~` for subsections
 * `^` for paragraphs
 
-### Example
+#### Example
 
 ```rst
 Part I
@@ -24,7 +47,7 @@ Section 3
 
 ---
 
-## Codes
+### Codes
 
 To adding a code you need to use this syntax:
 
@@ -35,7 +58,7 @@ To adding a code you need to use this syntax:
       Text of the code
 ```
 
-### Example
+#### Example
 
 ```rst
 .. code-block:: xml
@@ -48,7 +71,7 @@ To adding a code you need to use this syntax:
 
 ---
 
-## Images
+### Images
 
 There are three differents way to add an image, its depend if it is inline of the text, if it is out of the text or if it is inside a table.
 
@@ -88,7 +111,7 @@ There are three differents way to add an image, its depend if it is inline of th
  
 ```
 
-### Example
+#### Example
 
 ```rst
 1. If your dataset is similar to another existing dataset, you can click the **Clone** icon |image16|.
@@ -120,9 +143,9 @@ There are three differents way to add an image, its depend if it is inline of th
 
 ---
 
-## Tables
+### Tables
 
-To create a table into the documento you need to "draw" the contours of the table physically as shown below. 
+To create a table into the document you need to "draw" the contours of the table physically as shown below. 
      
      +------------+------------+--------------+
      | HeaderA    | HeaderB    | HeaderC      |
@@ -136,7 +159,7 @@ To create a table into the documento you need to "draw" the contours of the tabl
 
 
 
-### Example
+#### Example
 
 ```rst
      +-----------------------+-----------------------+-----------------------+
@@ -169,7 +192,7 @@ To create a table into the documento you need to "draw" the contours of the tabl
 
 ---
 
-## Text optimization
+### Text style
 
 There are several ways to optimize parts or words in the text.
 
@@ -185,7 +208,7 @@ There are several ways to optimize parts or words in the text.
  *text to be emphasized*
  ```
  
- 3. Highlighted Text:
+ 3. Highlighted text (e.g. code, filename, parameter, and so on):
  
   ```rst 
  ``text to be emphasized``
@@ -199,7 +222,7 @@ There are several ways to optimize parts or words in the text.
  - Third step
  ```
  
-### Example
+#### Example
 
  ```rst 
 1.
@@ -216,11 +239,11 @@ Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` use
  ```
  ---
 
-## Box
+### Box
 
 Sometimes into the text you need to draw attention with a box. We use four differents type of boxes.
 
- ```rst
+```rst
       .. note::
          **Read more**
          
@@ -239,7 +262,15 @@ Sometimes into the text you need to draw attention with a box. We use four diffe
       .. important::
          **Notable content**
          
-         Text of the important.
-       
-  ```
-  ---
+         Text of the important.  
+```
+  
+#### Example
+
+ ```rst
+.. hint::
+      **Authentication Management**:
+      The choice of handling authentication internally or delegating it to an external SSO system typically depends on the presence of an authentication system already in place. If this is the case, Knowage can seamlessly integrate with the existing authentication infrastructure.
+```
+
+---
