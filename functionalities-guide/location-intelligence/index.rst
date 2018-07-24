@@ -396,6 +396,3 @@ Open the **layer** tab of the Location Intelligence options panel and click on c
 
 By clicking on the play button the target document will open.
 
-  
-.. include:: locationIntelligenceThumbinals.rst
-

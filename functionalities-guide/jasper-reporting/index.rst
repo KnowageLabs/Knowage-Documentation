@@ -82,4 +82,3 @@ Once the document has been developed, technical users can use Knowage Studio dep
 
 This section does not provide any further detail about graphical development since it focuses on specific aspects of Knowage Jasper Report Engine. All Jasper standard functionalities work with Jasper Report Engine. For a full overview of Jasper reporting tool and a detailed developer guide, please refer to the official documentation at `http://community.jaspersoft.com/`.
 
-.. include:: jasperThumbinals.rst

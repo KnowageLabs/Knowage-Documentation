@@ -387,7 +387,7 @@ When the script runs using a certain output dataset Knowage server produces a da
 
 As an example the function produces a dataFrame whose label and name are biadmin_functionsCatalog_datasetOut.
 
-Engine description\*
+Engine description
 --------------------------
 
 The **Data Mining Engine** is thought and implemented in order to supply KnowAge with data mining capabilities, but it also enhances OS R and Python with several distinguishing features.
@@ -538,4 +538,3 @@ Use the icon |image436| to insert a new dataset or a new variable. And use the i
 
 Then save and you are ready to use the function.
 
-.. include:: dataminingThumbinals.rst

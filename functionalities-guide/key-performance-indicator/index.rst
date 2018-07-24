@@ -310,5 +310,3 @@ In case the document contains grouping functions upon them, it is necessary to a
 
     KPI List.
 
-
-.. include:: kpiThumbinals.rst

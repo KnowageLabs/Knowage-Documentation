@@ -99,4 +99,3 @@ Note that it is possible to check the policy used for each perspective. In fact,
 
     Scorecard document interface.
    
-.. include:: scoreCardThumbinals.rst

@@ -179,4 +179,3 @@ The Registry instance allows to develop also a Jpivot table. See the last figure
 
 Note that to activate the JPivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
     
-.. include:: registryThumbinals.rst

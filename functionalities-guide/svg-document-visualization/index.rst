@@ -503,4 +503,3 @@ With this setting, you are able to create a “Cross Navigation Definition” wi
 
 In a cross navigation it is also possible to pass the dataset column values. It is only necessary that a technical user prepares specific output parameters, setting the name like the alias of the dataset columns.
 
-.. include:: svgThumbinals.rst

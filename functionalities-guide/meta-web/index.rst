@@ -244,4 +244,3 @@ Figure belowshows an example.
 
     Saved version functionalities.
    
-.. include:: metawebThumbinals.rst

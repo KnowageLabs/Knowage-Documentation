@@ -310,5 +310,3 @@ Specifically, in the virtual cube you should specify:
 
 Now all the MDX queries can be performed in the virtual cube.
  
-   
-.. include:: whatIfThumbinals.rst

@@ -1067,7 +1067,5 @@ Let us have a look at the template. Syntax used to set cross navigation shows ho
             </PARAMETERS>                                                      
         </CROSS_NAVIGATION>                                                   
 
-
 A green arrow will be visible in the toolbar to show that cross navigation is enabled. When user clicks on that icon in each cell a green arrow will displayed in each cell. User can click on that icon to start cross navigation from a cell.
 
-.. include:: olapThumbinals.rst

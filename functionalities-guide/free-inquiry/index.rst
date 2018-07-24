@@ -1152,5 +1152,3 @@ In particular:
 
     Default cross navigation code.
    
-   
-.. include:: freeinquiryThumbinals.rst

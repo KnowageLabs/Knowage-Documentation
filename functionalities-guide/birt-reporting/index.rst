@@ -418,4 +418,3 @@ Finally, it is possible to set a sort of "multi"-cross navigation if for example
        ",null,"+    
        "'');"
  
-.. include:: reportingThumbinals.rst

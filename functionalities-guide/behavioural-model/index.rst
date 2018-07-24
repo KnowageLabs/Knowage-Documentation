@@ -300,9 +300,6 @@ Once you have saved the LOV, just log out from Knowage and log in with a differe
 
     Behavioural Model Schema.
     
-   
-.. include:: behavioralModelThumbinals.rst
-
 Behavioural Model Lineage
 ~~~~~~~~~~~~~~~~~~~~~~~~
 

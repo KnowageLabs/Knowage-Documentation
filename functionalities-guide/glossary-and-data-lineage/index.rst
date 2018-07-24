@@ -156,4 +156,3 @@ As an example, we show in figure below the graphic interface the user will encou
 
     Help Online wizard.
 
-.. include:: glossaryThumbinals.rst
