@@ -4,27 +4,27 @@ Functionalities
 .. toctree::
    :caption: Table of Contents
    
-   MyData/ka_user_mydata.rst
-   Dataset/ka_dev_dataset.rst 
-   BehavioralModel/ka_dev_behavioralmodel.rst
-   AnalyticalDocument/ka_dev_analyticaldoc.rst
-   Chart/ka_user_chart.rst
-   Cockpit/ka_user_cockpit.rst
-   FreeInquiry/ka_user_freeinquiry.rst
-   MetaWeb/ka_dev_metaweb.rst
-   Registry/ka_user_registry.rst
-   Reporting/ka_user_reporting.rst
-   Jasper/ka_dev_jasper.rst
-   LocationIntelligence/ka_dev_introlocationintelligence.rst
-   SVG/ka_user_svg.rst
-   Datamining/ka_user_datamining.rst
-   Network/ka_dev_network.rst
-   OLAP/ka_user_OLAP.rst
-   WhatIf/ka_user_whatif.rst
-   Glossary/ka_dev_glossary.rst
-   KPI/ka_KPI.rst
-   ScoreCard/ka_ScoreCard.rst
-   Alert/ka_Alert.rst
+   basic-data-access/index.rst
+   advanced-data-access/index.rst 
+   behavioural-model/index.rst
+   analytical-document/index.rst
+   chart/index.rst
+   cockpit/index.rst
+   free-inquiry/index.rst
+   meta-web/index.rst
+   registry/index.rst
+   birt-reporting/index.rst
+   jasper-reporting/index.rst
+   location-intelligence/index.rst
+   svg-document-visualization/index.rst
+   datamining/index.rst
+   network/index.rst
+   multidimensional-analysis/index.rst
+   what-if-analysis/index.rst
+   glossary-and-data-lineage/index.rst
+   key-performance-indicator/index.rst
+   scorecard/index.rst
+   alert/index.rst
 
 
 .. |image0| image:: MyData/media/image1.png
