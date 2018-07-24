@@ -14,7 +14,7 @@ In Knowage a document is the composition of a template and the data.
 -  In this case data are a dataset with at least the three columns described above.
 -  The template is the mapping of the columns of the dataset on graph properties (column *?* source node, column *?* destination node,)
 
-Template\
+Template
 ----------------
 
 Before entering this section we underlight that Knowage uses cytoscapeweb library (`http: <http://cytoscapeweb.cytoscape.org/>`__ `//cytoscapeweb.cytoscape.org/) <http://cytoscapeweb.cytoscape.org/>`__ to render the network, so sometimes in the description we will refer to cytoscapeweb documentation
