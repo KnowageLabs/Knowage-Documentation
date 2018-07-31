@@ -67,6 +67,16 @@ Launching
 
 Linux/macOS
 ~~~~~~~~~~~~~~~~~~~~~~~~
+Extract the installer SH file typing the command in shell:
+
+.. code-block:: bash
+  :linenos:
+
+  unzip Knowage-6_2_0-CE-Installer-Unix-20180719.zip
+
+.. warning::
+   On **macOS** the default app used to open ZIP files may fail to extract the installer ZIP file.
+
 Enable the execute permission on the file, typing the command in shell:
 
 .. code-block:: bash
