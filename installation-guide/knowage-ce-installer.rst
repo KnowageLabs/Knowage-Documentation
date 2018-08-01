@@ -34,10 +34,10 @@ Database
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Knowage CE Installer requires one of the following **external databases**:
 
-- MySQL Server 5.5 or above already installed
+- MySQL Server 5.5 or 5.6 or 5.7 already installed
 - MariaDB Server 10.2 already installed
 
-A user with sufficient **permissions to create schemas** must be provided.
+A user with sufficient **permissions to create schemas** must be provided. Knowage CE Installer connects to database using a JDBC driver via TCP/IP connection.
 
 If you are using MySQL Server 5.7 we suggest to set following configuration in file ``my.ini``:
 
@@ -55,12 +55,25 @@ Application server
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Knowage CE Installer provides Apache Tomcat 7 out of the box. Don't worry about pre-installing any application server.
 
+Proxy settings
+~~~~~~~~~~~~~~~~~~~~~~~~
+If proxy is enabled please add property ``http.nonProxyHosts`` to JVM properties after completing installation, modifying file ``<installation directory>\Knowage-Server-CE\bin\setenv.bat`` on Windows or ``<installation directory>/Knowage-Server-CE/bin/setenv.sh`` on Linux/macOS.
+
+.. code-block:: bash
+  :linenos:
+  
+  -Dhttp.nonProxyHosts=localhost
+
 Client-side requirements
 ------------------------
 
 Browser
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Enable your browser to execute JavaScript.
+
+Proxy settings
+~~~~~~~~~~~~~~~~~~~~~~~~
+If proxy is enabled please add hostname to proxy's ignore list.
 
 Launching
 ------------------------
@@ -102,7 +115,7 @@ Knowage CE installer can run in GUI or console mode.
 
 Managing Knowage CE
 ------------------------
-After installation, you can start/stop Knowage CE using desktop links, start menu entries or following shell commands.
+After completing installation, you can start/stop Knowage CE using desktop links, start menu entries or following shell commands.
 
 Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~
