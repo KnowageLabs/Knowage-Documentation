@@ -9,9 +9,14 @@ You must add required libraries into ``TOMCAT_HOME/lib`` folder:
 -  the JDBC connector for the business data database with its dependencies (if any);
 -  the module which includes the commonj library with its dependencies (if any):
 
-   -  `geronimo-commonj_1.1_spec-1.0.jar <https://search.maven.org/remotecontent?filepath=org/apache/geronimo/specs/geronimo-commonj_1.1_spec/1.0/geronimo-commonj_1.1_spec-1.0.jar>`_,
-   -  `concurrent.jar <https://search.maven.org/remotecontent?filepath=org/lucee/oswego-concurrent/1.3.4/oswego-concurrent-1.3.4.jar>`_,
+   -  `Apache Geronimo <https://search.maven.org/remotecontent?filepath=org/apache/geronimo/specs/geronimo-commonj_1.1_spec/1.0/geronimo-commonj_1.1_spec-1.0.jar>`_,
+   -  `Concurrency JSR-166 <https://search.maven.org/remotecontent?filepath=org/lucee/oswego-concurrent/1.3.4/oswego-concurrent-1.3.4.jar>`_,
    -  `aktivecortex-foo-commonj-1.3.2.jar <http://central.maven.org/maven2/org/aktivecortex/aktivecortex-foo-commonj/1.3.2/aktivecortex-foo-commonj-1.3.2.jar>`_.
+
+.. important::
+         **Enterprise Edition only**
+
+         To enable the Import/Export capability, please also add the JDBC connector for `HyperSQLDB <https://search.maven.org/remotecontent?filepath=org/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar>`_
 
 File system resources
 ~~~~~~~~~~~~~~~~~~~~~~~~
