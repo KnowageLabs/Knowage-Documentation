@@ -186,8 +186,9 @@ This means that if you are the food manager and your user has the profile attrib
      **Standard profile attributes**
      
      There are some standard profile attributes always avaiable that dont' need to be defined for each user. These profile attributes        are:
-        - *user_id* containts the user id of the logged in user
-        - *TENANT_ID* contains the tenant to which the user belongs
+     
+     - *user_id* containts the user id of the logged in user
+     - *TENANT_ID* contains the tenant to which the user belongs
 
 Note that an information button and a profile attribute button are available to guide user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
 
