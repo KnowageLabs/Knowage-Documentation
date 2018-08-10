@@ -182,6 +182,13 @@ Then, at LOV execution time, for the user food manager the query becomes as show
 
 This means that if you are the food manager and your user has the profile attribute ``pr_family=Food``, then you will see only the brand related to the food family as a result of this LOV; while if you are the drink manager and your user has consequently the profile   attribute pr_family=Drink, you will see only the brand related to drink family products.
 
+.. note::
+     **Standard profile attributes**
+     
+     There are some standard profile attributes always avaiable that dont' need to be defined for each user. These profile attributes are:
+*user_id* containts the user id of the logged in user
+*TENANT_ID* contains the tenant to which the user belongs
+
 Note that an information button and a profile attribute button are available to guide user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
 
 .. figure:: media/image50.png
