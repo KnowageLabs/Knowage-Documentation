@@ -77,6 +77,13 @@ If proxy is enabled please add hostname to proxy's ignore list.
 
 Launching
 ------------------------
+Windows
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+
+  The installer has to be run as administrator.
+
 
 Linux/macOS
 ~~~~~~~~~~~~~~~~~~~~~~~~
