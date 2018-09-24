@@ -19,8 +19,6 @@ Knowage CE Installer requires:
 - JDK 1.8
 - ``JAVA_HOME`` environment variable
 
-Different installer packages are provided for JDK 32/64 bit on Windows.
-
 Memory
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Knowage CE requires **3GB** of available RAM. This configuration is enough for most evaluation purposes.
@@ -46,8 +44,7 @@ If you are using MySQL Server 5.7 we suggest to set following configuration in f
 
 Knowage CE Installer includes also the option to use one of the following **embedded databases**:
 
-- MariaDB Server 10.2 for Windows 32/64 bit
-- MariaDB Server 10.2 for Linux 64 bit with GLIBC 2.14 or higher
+- MariaDB Server 10.2 for Windows 64 bit
 
 Please note that embedded database option is not available for macOS.
 
@@ -131,8 +128,3 @@ Linux/macOS
 ~~~~~~~~~~~~~~~~~~~~~~~~
 - Start Knowage CE using ``<installation directory>/Knowage-Server-CE/bin/startup.sh``
 - Stop Knowage CE using ``<installation directory>/Knowage-Server-CE/bin/shutdown.sh``
-
-Linux (embedded MariaDB option)
-~~~~~~~~~~~~~~~~~~~~~~~~
-- Start Knowage CE using ``<installation directory>/Knowage-Server-CE/bin/knowage_startup.sh``
-- Stop Knowage CE using ``<installation directory>/Knowage-Server-CE/bin/knowage_shutdown.sh``
