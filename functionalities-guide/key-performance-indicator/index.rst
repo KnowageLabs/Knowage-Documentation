@@ -241,7 +241,7 @@ Once the schedulation is completed click on the “Save” button. Remember to g
 
 .. figure:: media/image150.png
 
-    Overview of the KPI case.
+    Creation of a KPI Document.
 
 Creation of a KPI document
 ------------------------------
