@@ -164,4 +164,8 @@ A schema for data must be also available. It can be queried through Knowage and 
 SlimerJS requirements
 -------------------------
 
-Knowage includes a standalone edition of SlimerJS 0.9 to export some contents to PDF and image files. Usually SlimerJS runs out-of-the-box on Windows, but requires OS-dependent libraries on Unix-like operating systems. In order to fulfill all SlimerJS requirements please refer to its official documentation at https://docs.slimerjs.org/0.9/installation.html#requirements.
+Knowage includes a standalone edition of SlimerJS 0.9 to export some contents to PDF and image files. Usually SlimerJS runs out-of-the-box on Windows, but requires OS-dependent libraries on Unix-like operating systems.
+
+- In order to fulfill all **SlimerJS requirements** please refer to its official documentation at https://docs.slimerjs.org/0.9/installation.html#requirements.
+
+- **Xvfb** may be required on Unix-like operating systems if no suitable X display server is available.
