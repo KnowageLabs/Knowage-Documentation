@@ -156,13 +156,42 @@ MongoDB
 
 MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling. MongoDB obviates the need for an Object Relational Mapping (ORM) to facilitate development.
 
-MongoDB is different from the other dbs Knowage can handle, because it doesnt provide a JDBC driver, but a java connector. So to create a connection to MongoDB you should download the java connector and deploy on the Knowage application server (you'll find it in the connectors web page of MongoDB web site).
+MongoDB is different from the other dbs Knowage can handle, because it doesnt provide a JDBC driver, but a java connector. The MongoDB Java driver (at this moment version 3.5.0 is included) is already included inside Knowage so isn't required to download and add it to the application server.
 
 Example parameters for the connection are:
 
 -  **Dialect:** MongoDB;
 -  **Driver Class:** mongo;
--  **Connection URL:** ``localhost:27017/foodamrt``.
+-  **Connection URL:** ``mongodb://localhost:27017/foodamart``(please don't include user and password in this url).
+
+Also please pay attention that the user must have the correct priviledges to access the specified database. So for example on MongoDB you can create a user with this command on the Mongo shell:
+
+.. code-block:: javascript
+    :linenos:
+    :caption: User creation.
+    
+      db.createUser(
+        {
+          user: "user",
+          pwd: "user",
+          roles: [ { role: "readWrite", db: "foodmart" }  ]
+        }
+      )
+
+Then you must create a role that is able to run functions (this is the way used by Knowage to run the code wrote in the MongoDB's dataset definition) and assign it to the user:
+
+.. code-block:: javascript
+    :linenos:
+    :caption: Role assignment .
+    
+      use admin
+      db.createRole( { role: "executeFunctions", privileges: [ { resource: { anyResource: true }, actions: [ "anyAction" ] } ], roles: [] } ) 
+      use foodmart
+      db.grantRolesToUser("user", [ { role: "executeFunctions", db: "admin" } ])
+      
+See also this useful links:
+- (`https://docs.mongodb.com/manual/tutorial/enable-authentication/) <https://docs.mongodb.com/manual/tutorial/enable-authentication/>`__
+- (`https://www.claudiokuenzler.com/blog/555/allow-mongodb-user-execute-command-eval-mongodb-3.x#.W59wiaYzaUl) <https://www.claudiokuenzler.com/blog/555/allow-mongodb-user-execute-command-eval-mongodb-3.x#.W59wiaYzaUl>`__
 
 Cassandra
 ~~~~~~~~~~
