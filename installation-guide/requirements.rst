@@ -168,4 +168,11 @@ Knowage includes a standalone edition of SlimerJS 0.9 to export some contents to
 
 - In order to fulfill all **SlimerJS requirements** please refer to its official documentation at https://docs.slimerjs.org/0.9/installation.html#requirements.
 
-- **Xvfb** may be required on Unix-like operating systems if no suitable X display server is available.
+- **Xvfb** may be required on Unix-like operating systems if no suitable X display server is available; install it with package manager.
+
+Troubleshooting missing requirements may be difficult on Unix-like operating systems. Executing SlimerJS manually with **debug option** may help to investigate further:
+
+.. code-block:: bash
+        :caption: Executing SlimerJS with debug option via Xvfb
+ 
+        xvfb-run ./slimerjs --debug=yes
