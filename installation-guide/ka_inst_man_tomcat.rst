@@ -54,14 +54,14 @@ We need to create two connection:
 				minEvictableIdleTimeMillis="60000" 
 				factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" /> 
 
-- ``jdbc/cache_ds``: Knowage cache, this must be an emty schema  
+- ``jdbc/ds_cache``: Knowage cache, this must be an emty schema  
 
 .. code-block:: xml
 		:linenos:
 		
 		 <Resource auth="Container" 
 				driverClassName="<JDBC driver>" 
-				name="jdbc/cache_ds"
+				name="jdbc/ds_cache"
 				password="<password>" 
 				type="javax.sql.DataSource" 
 				url="<JDBC URL>" 
