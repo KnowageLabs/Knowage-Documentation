@@ -54,7 +54,7 @@ We need to create two connection:
 				minEvictableIdleTimeMillis="60000" 
 				factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" /> 
 
-- ``jdbc/ds_cache``: Knowage cache, this must be an emty schema  
+- ``jdbc/ds_cache``: Knowage cache, this must be an empty schema  
 
 .. code-block:: xml
 		:linenos:
