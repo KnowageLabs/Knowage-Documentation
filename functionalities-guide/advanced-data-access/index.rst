@@ -561,6 +561,11 @@ It’s possible to force the behaviour. In particular the result stored in the v
 
 Similar techniques can be applied to the other languages. We leave the reader to examine the dialect related to each Big Data datasource.
 
+.. note::
+      **MongoDB Document size**
+         
+      Remember that MongoDB has a limit of maximum 16MB for the returned document (BSON), so pay attention to that when creating your dataset. For more information check this link: https://docs.mongodb.com/manual/reference/limits/
+
 Parameters and profile attributes
 --------------------------------------
 
