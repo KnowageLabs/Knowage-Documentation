@@ -49,10 +49,10 @@ Filter cards are used to:
 
 Considering the next figure, we can see that a filter card is made up of:
 
-- (a) an icon for opening dimension chooser dialog,
-- (b) a dimension name,
-- (c)+(e) icon slicer,
-- (d) choosed filter name,
+-  an icon for opening dimension chooser dialog (a),
+-  a dimension name (b),
+-  icon slicer (c)+(e),
+-  choosed filter name (d),
 
 .. _featuresoffiltcard:
 .. figure:: media/image13839.png
