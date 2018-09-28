@@ -70,11 +70,11 @@ In the panel axes you can:
 
 Referring to the following figure, the axes panel consists of the following items:
 
-- (a) columns axis,
-- (b) row axis,
-- (c) filter cards,
-- (d) icon for swap axes,
-- (e) icon for hierarchy order.
+-  columns axis (a),
+-  row axis (b),
+-  filter cards (c),
+-  icon for swap axes (d),
+-  icon for hierarchy order (e).
 
 .. _axespanelfeat:
 .. figure:: media/image140.png
@@ -103,12 +103,12 @@ Pivot table is used to:
 
 Referring to next figure, Pivot table consists of:
 
--  (a) dimensions involved in the analysis,
--  (b) cells with data,
--  (c) icons for drill down and drill up,
--  (d) icons for sorting (only if enabled by the developer),
--  (e) icons for showing properties (only if enabled and configured by the developer),
--  (f) links for cross navigation (only if enabled and configured by the developer)
+-  dimensions involved in the analysis (a),
+-  cells with data (b),
+-  icons for drill down and drill up (c),
+-  icons for sorting (only if enabled by the developer) (d),
+-  icons for showing properties (only if enabled and configured by the developer) (e),
+-  links for cross navigation (only if enabled and configured by the developer) (f).
 
 .. _pivottablefeat:
 .. figure:: media/image142a.png
@@ -139,9 +139,9 @@ Side bar is used to:
 
 The side bar shows the **Menu**. This area let you customize the Olap layout. As highlighted in the figure below, the Menu is divided in three subsections:
 
--  (a) drill options,
--  (b) OLAP functions,
--  (c) table functions, 
+-  drill options (a),
+-  OLAP functions (b),
+-  table functions (c), 
 -  what if.
 
 .. _sidebarmenu:
@@ -151,10 +151,10 @@ The side bar shows the **Menu**. This area let you customize the Olap layout. As
 
 We start introducing the interface and leave the description to the next *Functionalities* paragraph. In particular, referring to next figure, drill types consists of:
 
--  (a) position,
--  (b) member,
--  (c) replace,
--  (d) drill through.
+-  position (a),
+-  member (b),
+-  replace (c),
+-  drill through (d).
 
 .. _drilltypes:
 .. figure:: media/image146.png
@@ -163,8 +163,8 @@ We start introducing the interface and leave the description to the next *Functi
 
 Meanwhile, referring to the following figure, the OLAP functions consist of:
 
--  (a) show MDX,
--  (b) reload model.
+-  show MDX (a),
+-  reload model (b).
 
 .. _olapfunctions:
 .. figure:: media/image147a.png
@@ -173,13 +173,13 @@ Meanwhile, referring to the following figure, the OLAP functions consist of:
 
 Referring to figure below, table functions consist of:
 
--  (a) show parent members,
--  (b) sorting settings,
--  (c) save customized view,
--  (d) show properties,
--  (e) suppress empty rows/columns,
--  (f) hide spans,
--  (g) calculated field wizard.
+-  show parent members (a),
+-  sorting settings (b),
+-  save customized view (c),
+-  show properties (d),
+-  suppress empty rows/columns (e),
+-  hide spans (f),
+-  calculated field wizard (g).
 
 .. _tablefunctions1:
 .. figure:: media/image148a.png
@@ -188,13 +188,13 @@ Referring to figure below, table functions consist of:
 
 Referring to next figure, what if consists of:
 
-- (a) lock/unlock model,
-- (b) delete versions,
-- (c) select an algotithm,
-- (d) output wizard, 
-- (e) save as new version, 
-- (f) undo,
-- (g) export excel for edit.
+-  lock/unlock model (a),
+-  delete versions (b),
+-  select an algotithm (c),
+-  output wizard (d), 
+-  save as new version (e), 
+-  undo (f),
+-  export excel for edit (g).
 
 .. _tablefunctions2:
 .. figure:: media/image149a.png
@@ -246,11 +246,11 @@ If an OLAP schema is defined, the user can choose different hierarchies of the s
 
 A pop up will be displayed. The following figure shows its characteristics. The window will present:
 
-- (a) the dimension name,
-- (b) name of selected hierarchies,
-- (c) drop down list of available hierarchies,
-- (d) save button,
-- (e) cancel button.
+-  the dimension name (a),
+-  name of selected hierarchies (b),
+-  drop down list of available hierarchies (c),
+-  save button (d),
+-  cancel button (e).
 
 .. _hierarchiesdialogpopup:
 .. figure:: media/image155.png
@@ -284,14 +284,14 @@ The slicing operation consists in the analysis of a subset of a multi-dimensiona
 
 The following figure shows the slicer option panel which consists of:
 
-- (a) a dimension name,
-- (b) a search input field,
-- (c) a search button,
-- (d) a show/hide siblings checkbox,
-- (e) a member tree,
-- (f) a selected member icon,
-- (g) a highlighted member (result of searching), 
-- (h) a save and a cancel buttons.
+-  a dimension name (a),
+-  a search input field (b),
+-  a search button (c),
+-  a show/hide siblings checkbox (d),
+-  a member tree (e),
+-  a selected member icon (f),
+-  a highlighted member (result of searching) (g), 
+-  a save and a cancel buttons (h).
 
 .. _dialogforslicerchoosing:
 .. figure:: media/image161.png
@@ -369,14 +369,14 @@ To perform drill through operation the user needs first to select a cell, as in 
 
 In particular, referring to the next figure, drill though dialog consists of:
 
--  (a) a hierarchy menu,
--  (b) a table of values,
--  (c) a maximum rows drop down list,
--  (d) a pagination,
--  (e) a apply button,
--  (f) a export button,
--  (g) a cancel button,
--  (h) a clear all button.
+-   a hierarchy menu (a),
+-   a table of values (b),
+-   a maximum rows drop down list (c),
+-   a pagination (d),
+-   a apply button (e),
+-   a export button (f),
+-   a cancel button (g),
+-   a clear all button (h).
 
 .. _drillthoroughwindow:
 .. figure:: media/image172a.png
@@ -497,13 +497,13 @@ To remove the sorting, the user just have to click on the icon again. To change 
 
     Sorting settings window.
 
-- (a) sorting modes:
-- (b) no sorting (by default), 
-- (c) basic,
-- (d) breaking,
-- (e) count,
-- (f) a number input field for count mode definition,
-- (g) a save button.
+-  sorting modes (a),
+-  no sorting (by default) (b), 
+-  basic (c),
+-  breaking (d),
+-  count (e),
+-  a number input field for count mode definition (f),
+-  a save button (g).
 
 Note that “breaking mode” means that the hierarchy will be broken.
 
@@ -524,14 +524,14 @@ Once enabled, to create a calculated member/set the user should:
 
 2. click on the “calculated field” button in the side bar panel: a “Select function” dialog will appear. The latter consists of            (refer to next figure):
 
-   -  (a) a name input field,
-   -  (b) an aggregation functions tab,
-   -  (c) an arithmetic functions tab,
-   -  (d) a temporal functions tab,
-   -  (e) a custom functions tab,
-   -  (f) a recent functions tab,
-   -  (g) an available functions list,
-   -  (h) ok and cancel buttons.
+   -  a name input field (a),
+   -  an aggregation functions tab (b),
+   -  an arithmetic functions tab (c),
+   -  a temporal functions tab (d),
+   -  a custom functions tab (e), 
+   -  a recent functions tab (f),
+   -  an available functions list (g),
+   -  ok and cancel buttons (h).
 
 .. _selectfunctiondialog:
 .. figure:: media/image187.png
@@ -546,14 +546,14 @@ The function definition used to create calculated members are read from the form
 
 3. Select a function and enter a calculated member/set name and click on “Ok”. A dialog for arguments defintion will show up, as shown in the following figure. This is made up of the following elements:
 
-- (a) selected function name,
-- (b) function description,
-- (c) text input fields for argument expression,
-- (d) expected MDX expression return type,
-- (e) argument’s MDX expression description,
-- (f) open saved button, 
-- (g) select from table button,
-- (h) ok and cancel buttons.
+-  selected function name (a),
+-  function description (b),
+-  text input fields for argument expression (c),
+-  expected MDX expression return type (d),
+-  argument’s MDX expression description (e),
+-  open saved button (f), 
+-  select from table button (g),
+-  ok and cancel buttons (h).
 
 .. _argumentdefdialog:
 .. figure:: media/image189.png
