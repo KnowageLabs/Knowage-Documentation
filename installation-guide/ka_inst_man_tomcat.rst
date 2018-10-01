@@ -120,7 +120,8 @@ Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following co
         <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
 	<Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.FakeSsoService"/>
 	<Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
-	<Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>            
+	<Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>   
+	<Environment description="HMAC key" name="hmacKey" type="java.lang.String" value="abc123"/>
 
 Such environment variables have the following meaning:
 
