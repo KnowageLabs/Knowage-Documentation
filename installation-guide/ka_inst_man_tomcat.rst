@@ -11,7 +11,7 @@ You must add required libraries into ``TOMCAT_HOME/lib`` folder:
 
    -  `Apache Geronimo <https://search.maven.org/remotecontent?filepath=org/apache/geronimo/specs/geronimo-commonj_1.1_spec/1.0/geronimo-commonj_1.1_spec-1.0.jar>`_,
    -  `Concurrency JSR-166 <https://search.maven.org/remotecontent?filepath=org/lucee/oswego-concurrent/1.3.4/oswego-concurrent-1.3.4.jar>`_,
-   -  `aktivecortex-foo-commonj-1.3.2.jar <http://central.maven.org/maven2/org/aktivecortex/aktivecortex-foo-commonj/1.3.2/aktivecortex-foo-commonj-1.3.2.jar>`_.
+   -  `Foo CommonJ <https://github.com/SpagoBILabs/SpagoBI/raw/mvn-repo/releases/de/myfoo/commonj/1.0/commonj-1.0.jar>`_.
 
 .. important::
          **Enterprise Edition only**
