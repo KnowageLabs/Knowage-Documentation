@@ -129,7 +129,7 @@ Such environment variables have the following meaning:
 - ``sso_class``:SSO connector class name,
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
-- ``hmacKey``: Secret key to generate JWT Token.
+- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribuite** it.
 
 Applications deploy
 ~~~~~~~~~~~~~~~~~~~~~~
