@@ -113,7 +113,7 @@ Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the followin
               <simple name="java:/urls/resource_path" type="java.lang.String"    
               value="${jboss.server.data.dir}/resources" />                      
               <simple name="java:/urls/sso_class" type="java.lang.String"        
-              value="it.eng.spagobi.services.common.FakeSsoService" /> <simple   
+              value="it.eng.spagobi.services.common.JWTSsoService" /> <simple   
               name="java:/urls/service_url" type="java.lang.String"              
               value="http:// localhost:8080/knowage" />                          
               <simple name="java:/urls/host_url" type="java.lang.String"         
