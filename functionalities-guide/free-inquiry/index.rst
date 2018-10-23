@@ -355,7 +355,11 @@ The latter are available only in the presence of a geographical Business Model a
          |    **distance**       | SDO_GEOM.SDO_DISTANCE | `https://docs.oracle. |
          |                       |                       | com/database/121/SPAT |
          |                       |                       | L/sdp_geom-sdo_distan |
-         |                       |                       | ce.htm#SPATL1117`__   |
+         |                       |                       | ce.htm#SPATL1117<http |
+         |                       |                       | s://docs.oracle.com/d |
+         |                       |                       | atabase/121/SPATL/sdp |
+         |                       |                       | _geom-sdo_distance.ht |
+         |                       |                       | m#SPATL1117>`__       |
          +-----------------------+-----------------------+-----------------------+
          |    **dwithin**        | SDO_WITHIN_DISTANCE   |`https://docs.oracle.  |
          |                       |                       |com/database/121/SPATL/|
