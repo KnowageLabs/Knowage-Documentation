@@ -352,17 +352,17 @@ The latter are available only in the presence of a geographical Business Model a
          |    Function Name      | Oracle Function       | Link to Oracle web    |
          |                       |                       | pages                 |
          +=======================+=======================+=======================+
-         |    **distance**       | SDO_GEOM.SDO_DISTANCE |`https://docs.oracle.com|
-         |                       |                       |/database/121/SPATL/sdo|
-         |                       |                       |_geom-sdo_distance.htm#|
-         |                       |                       |SPATL1117`_             |
+         |    **distance**       | SDO_GEOM.SDO_DISTANCE |`https://docs.oracle.co|
+         |                       |                       |m/database/121/SPATL/sd|
+         |                       |                       |p_geom-sdo_distance.htm|
+         |                       |                       |#SPATL1117`__          |
          |                       |                       |                       |
          |                       |                       |                       |
          |                       |                       |                       |
          |                       |                       |                       |
          |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
-         |    **dwithin**        | SDO_WITHIN_DISTANCE   | `https://docs.oracle. |
+         |    **dwithin**        | SDO_WITHIN_DISTANCE   |`https://docs.oracle.  |
          |                       |                       |com/database/121/SPATL/|
          |                       |                       | sdo_within_distance.  |
          |                       |                       | htm#SPATL1041`__      |
