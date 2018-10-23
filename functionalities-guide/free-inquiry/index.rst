@@ -375,71 +375,72 @@ The latter are available only in the presence of a geographical Business Model a
          |    **dimension**      | GET_DIMS              | `https://docs.oracle. |
          |                       |                       |/cd/B13789_01/appdev.  |
          |                       |                       | 101/b10826/sdo_meth.  |
-         |                       |                       | htm`__      |
+         |                       |                       | htm`__                |
          |                       |                       |                       |
          |                       |                       |                       |
          |                       |                       |                       |
          |                       |                       |                       |
          |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
-         |    **difference**     | SDO_GEOM.SDO_DIFFEREN | `https://docs.oracle. |
-         |                       | CE                    | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_objgeo |
-         |                       |                       | m.htm#i857512 <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#i857512>`__         |
+         |    **difference**     |SDO_GEOM.SDO_DIFFERENCE| `https://docs.oracle. |
+         |                       |                       |com/cd/B28359_01/appdev|
+         |                       |                       |.111/b28400/sdo_objgeom|
+         |                       |                       | .htm#SPATL120`__      |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **centroid**       | SDO_GEOM.SDO_CENTROID | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_objgeo |
-         |                       |                       | m.htm#i860848 <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#i860848>`__         |
+         |                       |                       | com/database/121/SPATL|
+         |                       |                       |/sdo_geom-sdo_centroid |
+         |                       |                       | .htm#SPATL1112`__     |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **geometrytype**   | GET_GTYPE             | `https://docs.oracle. |
-         |                       |                       | com/cd/B10501_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 920/a96630/sdo_meth.h |
-         |                       |                       | tm#i866821 <https://d |
-         |                       |                       | ocs.oracle.com/cd/B10 |
-         |                       |                       | 501_01/appdev.920/a96 |
-         |                       |                       | 630/sdo_meth.htm#i866 |
-         |                       |                       | 821>`__               |
+         |                       |                       |  com/cd/B10500_01/    |
+         |                       |                       |  appdev.920/a96630    |
+         |                       |                       | /sdo_meth.htm`__      |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **union**          | SDO_GEOM.SDO_UNION    | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_objgeo |
-         |                       |                       | m.htm#i857624 <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#i857624>`__         |
+         |                       |                       | com/cd/B28359_01/     |
+         |                       |                       |  appdev.111/b28400/   |
+         |                       |                       |  sdo_objgeom.htm      |
+         |                       |                       |     #SPATL120`__      |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **length**         | SDO_GEOM.SDO_LENGTH   | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_objgeo |
-         |                       |                       | m.htm#i856257 <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#i856257>`__         |
+         |                       |                       |com/database/121/SPATL |
+         |                       |                       | /sdo_geom-sdo_length. |
+         |                       |                       |  htm#SPATL1120`__     |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **relate**         | SDO_GEOM.RELATE       | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | m.htm#BGHCDIDG <https:|
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#BGHCDIDG>`__        |
+         |                       |                       |com/database/121/SPATL |
+         |                       |                       | /sdo_geom-relate      |
+         |                       |                       | .htm#SPATL1107`__     |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
 
 To apply one function click on the function name and the “Operands selection window” wizard opens. Figure below shows an example for the funtion “Distance”. Fill in all boxes since all fields are mandatory.
