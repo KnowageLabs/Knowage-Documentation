@@ -308,7 +308,7 @@ In this section we focus on advanced features, which can be comfortably managed 
 Spatial fields usage
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The Qbe engine supports spatial queries through a set of operators (that return true or false) or a set of functions (these usually return a measure). This feature is although available only when the Location Intelligence (LI) license is possesed. It also fundamental that the Business Model has to be tagged as geographical model. You can refer to Section ?? to have details on how to set the geographical option using Knowage Meta.
+The Qbe engine supports spatial queries through a set of operators (that return true or false) or a set of functions (these usually return a measure). This feature is although available only when the Location Intelligence (LI) license is possesed and when data are stored in Oracle 12c database. It also fundamental that the Business Model has to be tagged as geographical model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
 
 We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |image221|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distiguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
 
@@ -353,34 +353,34 @@ The latter are available only in the presence of a geographical Business Model a
          |                       |                       | pages                 |
          +=======================+=======================+=======================+
          |    **distance**       | SDO_GEOM.SDO_DISTANCE | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_objgeo |
-         |                       |                       | m.htm#i857957 <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#i857957>`__         |
+         |                       |                       | com/database/121/     |
+         |                       |                       | SPATL/sdo_geom-       |
+         |                       |                       | sdo_distance.         |
+         |                       |                       | htm#SPATL1117`__      |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **dwithin**        | SDO_WITHIN_DISTANCE   | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#i77653 <https:// |
-         |                       |                       | docs.oracle.com/cd/B1 |
-         |                       |                       | 9306_01/appdev.102/b1 |
-         |                       |                       | 4255/sdo_operat.htm#i |
-         |                       |                       | 77653>`__             |
+         |                       |                       |com/database/121/SPATL/|
+         |                       |                       | sdo_within_distance.  |
+         |                       |                       | htm#SPATL1041`__      |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **dimension**      | GET_DIMS              | `https://docs.oracle. |
-         |                       |                       | com/cd/B10501_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 920/a96630/sdo_meth.h |
-         |                       |                       | tm#BABDEBJA <https:// |
-         |                       |                       | docs.oracle.com/cd/B1 |
-         |                       |                       | 0501_01/appdev.920/a9 |
-         |                       |                       | 6630/sdo_meth.htm#BAB |
-         |                       |                       | DEBJA>`__             |
+         |                       |                       |/cd/B13789_01/appdev.  |
+         |                       |                       | 101/b10826/sdo_meth.  |
+         |                       |                       | htm`__      |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
+         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **difference**     | SDO_GEOM.SDO_DIFFEREN | `https://docs.oracle. |
          |                       | CE                    | com/cd/B19306_01/appd |
