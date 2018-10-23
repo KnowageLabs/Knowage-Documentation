@@ -353,10 +353,10 @@ The latter are available only in the presence of a geographical Business Model a
          |                       |                       | pages                 |
          +=======================+=======================+=======================+
          |    **distance**       | SDO_GEOM.SDO_DISTANCE |`link text<https://docs|
-         |                       |                       |.oracle.com/database/  |
-         |                       |                       | 121/SPATL/sdo_geom-   |
-         |                       |                       | sdo_distance.         |
-         |                       |                       | htm#SPATL1117>`__     |
+         |                       |                       |.oracle.com/database/12|
+         |                       |                       |1/SPATL/sdo_geom-sdo_di|
+         |                       |                       |stance.htm#SPATL1117>`_|
+         |                       |                       |                       |
          |                       |                       |                       |
          |                       |                       |                       |
          |                       |                       |                       |
