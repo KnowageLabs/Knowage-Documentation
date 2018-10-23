@@ -26,13 +26,7 @@ My first Query By Example
 
 Building a QbE query does not require any technical knowledge, but data domain knowledge: technical aspects, such as creating filters, aggregation and ordering criteria, are managed by a user-friendly graphical interface.
 
-Let’s suppose that an administrator has built a business model and a Qbe document and, consequently, released it on Knowage Server. This permits the user to perform the following tasks:
-
--  from the model you can save a query as a dataset, usable later in other Knowage documents, such as cockpits;
--  since the QbE document has all the features of all other Knowage analytical documents, you can:
-
-   - add to the QbE document parameters, 
-   - add profiling logics to the model.
+Let’s suppose that an administrator has built a business model and, consequently, released it on Knowage Server. This permits the user to access the model, query the available entities and save results as a dataset, usable later in other Knowage documents, such as cockpits.
 
 In the following we discuss each step in detail, showing basic and advanced functionalities of the **QbE Editor**.
 
@@ -40,10 +34,7 @@ In the following we discuss each step in detail, showing basic and advanced func
 Query design and execution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can open the QbE editor for querying a model:
-
-1. directly from the **Workspace**> **Models** section, by clicking on the model icon;
-2. from the QbE document associated, you can find it in your **Document Browser**.
+To open the QbE editor, access the **Models** section, available in the end user's **Workspace**. Then, simply click on the model icon to reach the QbE graphical interface.
 
 In this paragraph we show how to build a simple query with the QbE editor.
 
@@ -56,7 +47,7 @@ As shown in Figure 9.1 the window of the QbE editor contains the **Query designe
 Datamart Schema
 ^^^^^^^^^^^^^^^^
 
-Starting from the left side, the first Panel shows the querable logical schema and the list of entities that can be queried to generate the query. Entities and relationships are represented in a tree structure, with user-defined names. Fields can be dragged from here and dropped onto the editor area.
+Starting from the left side, the first Panel shows the searchable logical schema and the list of entities that can be queried to generate the query. Entities and relationships are represented in a tree structure, with user-defined names. Fields can be dragged from here and dropped onto the editor area.
 
 In the top right corner of the panel you can find a small toolbar to configure the panel (e.g., expand, reduce) and to save changes made to the model (i.e. **Calculated Field** or **Range**), as shown below.
 
@@ -66,7 +57,7 @@ In the top right corner of the panel you can find a small toolbar to configure t
     Datamart schema toolbar.
 
 
-There are two types of entities: *facts*, represented by a cube symbol.(i.e., the Sales fact 1998 entity) or *dimensions*, represented by a three-arrows symbol (i.e., the Product entity).
+There are two types of entities: *facts*, represented by a cube symbol.(i.e., the Sales fact 1998 entity) and *dimensions*, represented by a three-arrows symbol (i.e., the Product entity).
 
 Each single entity is composed of a title, some attributes or measures and relationships with other entities. In particular, by exploding the content of an entity (i.e. Sales fact 1998 as in figure above), you may encounter the following elements:
 
@@ -86,11 +77,9 @@ Let us see more in detail how to add calculated fields and ranges.
 Calculated fields management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can create new calculated fields either inside a query or in the schema panel,in order to reuse them. Calculated fields defined in this second way can be saved for future use.
+You can create new calculated fields either inside a query or in the schema panel. Calculated fields defined in this second way can be saved for future use.
 
-In order to define a new calculated field in the model, right click on the chosen entity and select
-
-**Add calculated field**. The wizard offers an editor in which you can define the calculated field.
+In order to define a new calculated field in the model, right click on the chosen entity and select **Add calculated field**. The wizard offers an editor in which you can define the calculated field.
 
 To build a calculated field, you shall define:
 
@@ -924,10 +913,6 @@ Once defined the main query and the filter that contains the subquery, go to the
 
 To use the sub-query inside the main query, simply drag and drop it into the columns corresponding to the left or right operand of the filter and set the type of operand (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries. 
 
-Analytical drivers catalogue
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Although drivers are not editable, they can be used as a right/left condition of a filter by dragging and dropping them from this panel into the corresponding columns of the **Filters** tab query editor. Here they are represented with the standard syntax: [Product_Family]. 
 
 Multiple relationships
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1034,121 +1019,3 @@ Click **Finish** and check the SQL code clicking **Generated Query**. Figure bel
 
     Double relationship preview.
 
-Cross Navigation
-~~~~~~~~~~~~~~~~~~~
-
-Free inquiry documents support cross navigation, letting the user not only add interactions with other documents, but also add images and hyperlinks to a specific field.
-
-All these type of document can provide other interactions: images and hyperlink can be added to specific field. All these functionalities can be added to a QbE document using calculated fields. 
-
-In particular, the employment of calculated fields allows you to set hyperlinks for the following items:
-
--  HTML pages;
--  images;
--  other Knowage documents.
-
-First of all, advanced functionalities have to be enabled. Open the **Calculated Field Wizard** by selecting **Add Calculated** in the toolbar. Then check the **Expert User** box. Here there are three types of Groovy script fields on the left.
-
-.. figure:: media/image293.png
-
-    Expert User mode activation.
-
-   Let us provide detailed instructions to activate these options.
-
-HTML Pages
-^^^^^^^^^^^^^
-If **link** is selected, you can associate a field with an HTML page. The default code to be inserted in the calculated field is
-
-.. code-block:: javascript
-       :linenos:
-
-          return api.getLink("${URL}", "${TEXT}"); 
-
-where **TEXT** is the clickable field in the QbE query results table and **URL** is the URL of the HTML page you want to open.
-
-You can add this default code by opening the **Exp. Items** > **Groovy functions** folder and selecting the **link** ite.
-
-.. figure:: media/image294.png
-
-    Default code for adding a link.
-
-An example is provided by Add hyperlink.
-
-.. code-block:: javascript
-       :linenos:
-       :caption: Add hyperlink
-   
-         baseUrl = "https://maps.google.it/maps?q="; baseUrl = baseUrl +       
-         dmFields['it.eng.spagobi.meta.Sales_fact_1998::                       
-            rel_customer_id_in_customer(rel_customer_id_in_customer):city'];   
-         return api.getLink(baseUrl,                                           
-         dmFields['it.eng.spagobi.meta.Sales_fact_1998::  
-         rel_customer_id_in_customer(rel_customer_id_in_customer):city']);  
-  
-The output is shown below(column City URL).
-
-.. figure:: media/image295.png
-
-    QbE results tab with hyperlink.
-   
-Images
-^^^^^^^^
-
-If you want to add an image, the code to be used to reference an image on the server:
-
-.. code-block:: javascript
-       :linenos:
-   
-         return api.getImageLink("${IMAGE_URL}"); 
-
-As before, by cliking on **image** from the **Exp. Items** tree, this code is automatically added as shown below.
-
-.. figure:: media/image296.png
-
-    Default code for adding an image.
-
-Replace the **IMAGE\_\ URL**\ with the path of your image. Code below produces a graphical result like the one shown in the **Bullet Chart** column of figure below.
-
-.. code-block:: javascript
-       :linenos:
-       :caption: Add images.
-   
-        baseUrl = "http://localhost:8080/SpagoBIQbeEngine/img/inline/";       
-        if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']<2){     
-              return 'api.getImageLink("'+ baseUrl + 'bullet-red.png")';            
-        } else if(dmFields['it.eng.spagobi.meta.Sales_fact_1998:store_cost']>3){     
-              return 'api.getImageLink("'+ baseUrl + 'bullet-green.png")';                                                 
-        } else { return 'api.getImageLink("'+ baseUrl + 'bullet-yellow.png")'; }          
-
-.. figure:: media/image297.png
-
-    QbE results tab with custom image.
-
-
-Other Knowage documents
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Generally speaking, when we talk about Cross Navigation we mostly refer to this case. To realize the navigation between Knowage documents, the code has to be customized so as to call the cross navigation service.
-
-Code below provides an example for Knowage 4.2 and later versions.
-
-.. code-block:: javascript
-       :linenos:
-       :caption: Cross navigation configuration.
-   
-        return api.getCrossNavigationLink("${TEXT}",                                               
-        "${TARGET_DOCUMENT_LABEL}",                                                                
-        "${PARAMETERS}",                                                                           
-        "${SUBOBJECT");                              
-
-In particular:
-
--  TARGET_DOCUMENT_LABEL is the name of the target document;
--  TEXT is the clickable field in the QbE query results table;
--  PARAMETERS is the list of parameters you want to pass to the target  document (optional); 
--  SUBOBJECT is the subobject name of the target document to which you want to navigate.
-
-.. figure:: media/image298.png
-
-    Default cross navigation code.
-   
