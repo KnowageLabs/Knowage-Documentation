@@ -352,95 +352,51 @@ The latter are available only in the presence of a geographical Business Model a
          |    Function Name      | Oracle Function       | Link to Oracle web    |
          |                       |                       | pages                 |
          +=======================+=======================+=======================+
-         |    **distance**       | SDO_GEOM.SDO_DISTANCE |`https://docs.oracle.co|
-         |                       |                       |m/database/121/SPATL/sd|
-         |                       |                       |p_geom-sdo_distance.htm|
-         |                       |                       |#SPATL1117`__          |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
+         |    **distance**       | SDO_GEOM.SDO_DISTANCE | `https://docs.oracle. |
+         |                       |                       | com/database/121/SPAT |
+         |                       |                       | L/sdp_geom-sdo_distan |
+         |                       |                       | ce.htm#SPATL1117`__   |
          +-----------------------+-----------------------+-----------------------+
          |    **dwithin**        | SDO_WITHIN_DISTANCE   |`https://docs.oracle.  |
          |                       |                       |com/database/121/SPATL/|
          |                       |                       | sdo_within_distance.  |
          |                       |                       | htm#SPATL1041`__      |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **dimension**      | GET_DIMS              | `https://docs.oracle. |
          |                       |                       |/cd/B13789_01/appdev.  |
          |                       |                       | 101/b10826/sdo_meth.  |
          |                       |                       | htm`__                |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **difference**     |SDO_GEOM.SDO_DIFFERENCE| `https://docs.oracle. |
          |                       |                       |com/cd/B28359_01/appdev|
          |                       |                       |.111/b28400/sdo_objgeom|
          |                       |                       | .htm#SPATL120`__      |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **centroid**       | SDO_GEOM.SDO_CENTROID | `https://docs.oracle. |
          |                       |                       | com/database/121/SPATL|
          |                       |                       |/sdo_geom-sdo_centroid |
          |                       |                       | .htm#SPATL1112`__     |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **geometrytype**   | GET_GTYPE             | `https://docs.oracle. |
          |                       |                       |  com/cd/B10500_01/    |
          |                       |                       |  appdev.920/a96630    |
          |                       |                       | /sdo_meth.htm`__      |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **union**          | SDO_GEOM.SDO_UNION    | `https://docs.oracle. |
          |                       |                       | com/cd/B28359_01/     |
          |                       |                       |  appdev.111/b28400/   |
          |                       |                       |  sdo_objgeom.htm      |
          |                       |                       |     #SPATL120`__      |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **length**         | SDO_GEOM.SDO_LENGTH   | `https://docs.oracle. |
          |                       |                       |com/database/121/SPATL |
          |                       |                       | /sdo_geom-sdo_length. |
          |                       |                       |  htm#SPATL1120`__     |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
          |    **relate**         | SDO_GEOM.RELATE       | `https://docs.oracle. |
          |                       |                       |com/database/121/SPATL |
          |                       |                       | /sdo_geom-relate      |
          |                       |                       | .htm#SPATL1107`__     |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
-         |                       |                       |                       |
          +-----------------------+-----------------------+-----------------------+
 
 To apply one function click on the function name and the “Operands selection window” wizard opens. Figure below shows an example for the funtion “Distance”. Fill in all boxes since all fields are mandatory.
