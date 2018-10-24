@@ -348,12 +348,20 @@ The latter are available only in the presence of a geographical Business Model a
 .. table:: Link to Oracle spatial functions.
          :widths: auto
     
-         +-----------------------+-----------------------+-----------------------------------------------------------------+
-         |    Function Name      | Oracle Function       | Link to Oracle web                                              |
-         |                       |                       | pages                                                           |
-         +=======================+=======================+=================================================================+
-         |    **distance**       | SDO_GEOM.SDO_DISTANCE | `oralce <https://docs.oracle.com/database/121/SPATL/sdp_geom-   |                    |                       |                       | sdo_distance.htm#SPATL1117>`__                                  |  
-         +-----------------------+-----------------------+-----------------------------------------------------------------+
+         +-----------------------+-----------------------+-----------------------+
+         |    Function Name      | Oracle Function       | Link to Oracle web    |
+         |                       |                       | pages                 |
+         +=======================+=======================+=======================+
+         |    **distance**       | SDO_GEOM.SDO_DISTANCE | `https://docs.oracle. |
+         |                       |                       | com/cd/B19306_01/appd |
+         |                       |                       | ev.                   |
+         |                       |                       | 102/b14255/sdo_objgeo |
+         |                       |                       | m.htm#i857957 <https: |
+         |                       |                       | //docs.oracle.com/cd/ |
+         |                       |                       | B19306_01/appdev.102/ |
+         |                       |                       | b14255/sdo_objgeom.ht |
+         |                       |                       | m#i857957>`__         |
+         +-----------------------+-----------------------+-----------------------+
          |    **dwithin**        | SDO_WITHIN_DISTANCE   | `https://docs.oracle. |
          |                       |                       | com/cd/B19306_01/appd |
          |                       |                       | ev.                   |
@@ -433,6 +441,8 @@ The latter are available only in the presence of a geographical Business Model a
          |                       |                       | b14255/sdo_objgeom.ht |
          |                       |                       | m#BGHCDIDG>`__        |
          +-----------------------+-----------------------+-----------------------+
+
+
 
 To apply one function click on the function name and the “Operands selection window” wizard opens. Figure below shows an example for the funtion “Distance”. Fill in all boxes since all fields are mandatory.
 
