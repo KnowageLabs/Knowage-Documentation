@@ -187,7 +187,8 @@ This means that if you are the food manager and your user has the profile attrib
      
      There are some standard profile attributes always avaiable that dont' need to be defined for each user. These profile attributes are:
      
-     - *user_id* containts the user id of the logged in user
+     - *user_id* contains the user id of the logged in user
+     - *user_roles* contains the current user's roles, joined as a SQL IN clause fashion, for example: 'general_management','human_resources_management'
      - *TENANT_ID* contains the tenant to which the user belongs
 
 Note that an information button and a profile attribute button are available to guide user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
