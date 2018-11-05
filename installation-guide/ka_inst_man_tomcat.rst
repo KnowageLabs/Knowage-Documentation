@@ -41,7 +41,6 @@ We need to create two connection:
 				type="javax.sql.DataSource" 
 				url="<JDBC URL>" 
 				username="<user name>"
-				maxWait="-1" 
 				maxActive="10" 
 				maxIdle="1" 
 				validationQuery="<validation query>" 
@@ -51,8 +50,7 @@ We need to create two connection:
 				testOnReturn="true" 
 				testWhileIdle="true" 
 				timeBetweenEvictionRunsMillis="10000" 
-				minEvictableIdleTimeMillis="60000" 
-				factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" /> 
+				minEvictableIdleTimeMillis="60000" /> 
 
 - ``jdbc/ds_cache``: Knowage cache, this must be an empty schema  
 
@@ -66,7 +64,6 @@ We need to create two connection:
 				type="javax.sql.DataSource" 
 				url="<JDBC URL>" 
 				username="<user name>"
-				maxWait="-1" 
 				maxActive="10" 
 				maxIdle="1" 
 				validationQuery="<validation query>" 
@@ -76,8 +73,7 @@ We need to create two connection:
 				testOnReturn="true" 
 				testWhileIdle="true" 
 				timeBetweenEvictionRunsMillis="10000" 
-				minEvictableIdleTimeMillis="60000" 
-				factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
+				minEvictableIdleTimeMillis="60000" />
 
 Connection to business data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
