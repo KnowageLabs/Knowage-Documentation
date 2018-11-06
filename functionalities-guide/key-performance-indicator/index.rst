@@ -290,7 +290,13 @@ Finally in the “Style” area the user can customize the size of the widget, t
 
 Then save and run the document. Examples are shown in the last three figures below.
 
-In case the document contains KPIs that involves grouping functions upon some attributes, it is possible to filter data returned on those attributes. To easily retrieve the attributes on which measures are grouped, it is sufficient to check the fields listed in the "Cardinality" tab of the KPI definition. Then to use them to filter the document, first add the proper analytical drivers. Refer to Section 5.4 to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). Then it is mandatory that the URL of the analytical driver *must* coincide with the *attribute aliases* on which you have defined the grouping.
+In case the document contains KPIs that involves grouping functions upon some attributes, it is possible to filter data returned on those attributes. To easily retrieve the attributes on which measures are grouped, it is sufficient to check the fields listed in the "Cardinality" tab of the KPI definition. WE recall it in the picture below.
+
+.. figure:: media/image137.png
+
+    Cardinality settings example.
+
+Then to use them to filter the document, first add the proper analytical drivers. Refer to Section 5.4 to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). Then it is mandatory that the URL of the analytical driver *must* coincide with the *attribute aliases* on which you have defined the grouping.
 
 .. _kpiassociation:
 .. figure:: media/image156.png
