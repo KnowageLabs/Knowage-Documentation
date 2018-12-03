@@ -24,7 +24,7 @@ Carry out the following steps:
 			spagobi.datasource.user=<user_name>                             
 			spagobi.datasource.pwd=<password> encript.password=true               
 
-For further details please refer to the official documents available on CAS website `http://jasig.github.io/cas/. <http://jasig.github.io/cas/>`__
+For further details please refer to the official documents available on CAS website `https://www.apereo.org/projects/cas. <https://www.apereo.org/projects/cas>`__
 
 HTTPS certificate
 -----------------
