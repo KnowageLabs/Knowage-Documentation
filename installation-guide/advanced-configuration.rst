@@ -191,21 +191,48 @@ Knowage manages the multi-language. The list of all languages is manageable from
 
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default**: the default value is [en,US].
 
-Security connectors
+LDAP security connectors
 --------------------
 
-**Remark.** Be sure that the SpagoBI users have been taken under LDAP census, administrator with the highest number of authorizations. The LDAP security connector controls the user that is accessing Knowage, but the user himself must be already registered inside of SpagoBI. Therefore, the users must cohesist in both authentication systems.
+Knowage provides integration with a LDAP server for authentication purposes.
 
-Modify the adam_authorizations.xml file located inside the SpagoBI/WEB-INF/conf/webapp folder, according to the parameters to configure:
+**Remark.** Be sure that the Knowage users have been taken under LDAP census. The LDAP security connectors check the user that is accessing Knowage, but the user must be already defined as a Knowage user. Therefore, the users must cohesist in both authentication systems (LDAP and Knowage).
 
+Knowage ships with two LDAP security connectors:
+
+* **LdapSecurityServiceSupplier**: a pure LDAP connector that authenticates every user using the LDAP server,
+* **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP connector that can authenticate some users using the LDAP server and other users using the internal Knowage authentication mechanism.
+
+LdapSecurityServiceSupplier relies only on a LDAP configuration file, instead ProfiledLdapSecurityServiceSupplier checks also the Knowage user profile **auth_mode**.
+If the user profile **auth_mode** is defined and its value equals to ``internal`` for the logging user then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
+
+In order to setup any LDAP security connector, prepare a .properties file that includes the LDAP configuration:
+
+* INITIAL_CONTEXT_FACTORY: initial context factory Java class,
 * PROVIDER_URL: LDAP server IP,
 * SECURITY_AUTHENTICATION: authentication type,
-* DN_PREFIX: this is the prefix that will be concatenated with the user name to create the DN,
-* DN_POSTFIX: this is the postfix that will be concatenated with the user name to create the DN;
+* DN_PREFIX: prefix that will be prepended to the user name to create the DN (distinguished name) of logging user,
+* DN_POSTFIX: postfix that will be appended to the user name to create the DN (distinguished name) of logging user;
 
-The environment to use the class :sub:`it.eng.spagobi.adam.AdamAuthorization` as follow:
+An example of LDAP configuration is the file ``ldap_authorizations.properties``, available in the project ``knowageldapsecurityprovider``.
+
+Then define a custom JVM property ``ldap.config``, setting its value to the path of LDAP configuration file.
+E.g. in a Unix-like environment using Apache Tomcat you can add a custom JVM property to variable ``JAVA_OPTS`` in a ``setenv.sh`` file under ``bin`` folder:
+
+.. code-block:: bash
+        :linenos:
+        :caption: Logg appender.
+
+        export JAVA_OPTS="${JAVA_OPTS} -Dldap.config=/opt/tomcat/resources/ldap.properties"
+
+**Remark.** Restart your application server in order to load the custom JVM property.
+
+The final step is to set the LDAP security connector as follow:
+
 * access Knowage as administrator,
-* browse until the "Configuration Management” is reached,
-* set the value **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to it.eng.spagobi.adam.AdamAuthorization and confirm, – log out of Knowage.
+* browse to **Configuration Management** via the main menu,
+* set the value **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to ``it.eng.spagobi.security.LdapSecurityServiceSupplier`` **or** ``it.eng.spagobi.security.ProfiledLdapSecurityServiceSupplier``,
+* save,
+* log out of Knowage.
 
-Knowage is now ready to authenticate the users through the LDAP.
+Knowage is now ready to authenticate the users via LDAP.
