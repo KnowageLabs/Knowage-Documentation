@@ -204,15 +204,15 @@ Knowage ships with two LDAP security connectors:
 * **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP connector that can authenticate some users using the LDAP server and other users using the internal Knowage authentication mechanism.
 
 LdapSecurityServiceSupplier relies only on a LDAP configuration file, instead ProfiledLdapSecurityServiceSupplier checks also the Knowage user profile **auth_mode**.
-If the user profile **auth_mode** is defined and its value equals to ``internal`` for the logging user then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
+If the user profile **auth_mode** is defined and its value equals to ``internal`` for the logging user, then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
 
 In order to setup any LDAP security connector, prepare a .properties file that includes the LDAP configuration:
 
-* INITIAL_CONTEXT_FACTORY: initial context factory Java class,
-* PROVIDER_URL: LDAP server IP,
-* SECURITY_AUTHENTICATION: authentication type,
-* DN_PREFIX: prefix that will be prepended to the user name to create the DN (distinguished name) of logging user,
-* DN_POSTFIX: postfix that will be appended to the user name to create the DN (distinguished name) of logging user;
+* **INITIAL_CONTEXT_FACTORY**: initial context factory Java class,
+* **PROVIDER_URL**: LDAP server IP,
+* **SECURITY_AUTHENTICATION**: authentication type,
+* **DN_PREFIX**: prefix that will be prepended to the user name to create the DN (distinguished name) of logging user,
+* **DN_POSTFIX**: postfix that will be appended to the user name to create the DN (distinguished name) of logging user;
 
 An example of LDAP configuration is the file ``ldap_authorizations.properties``, available in the project ``knowageldapsecurityprovider``.
 
@@ -221,7 +221,6 @@ E.g. in a Unix-like environment using Apache Tomcat you can add a custom JVM pro
 
 .. code-block:: bash
         :linenos:
-        :caption: Logg appender.
 
         export JAVA_OPTS="${JAVA_OPTS} -Dldap.config=/opt/tomcat/resources/ldap.properties"
 
@@ -231,7 +230,7 @@ The final step is to set the LDAP security connector as follow:
 
 * access Knowage as administrator,
 * browse to **Configuration Management** via the main menu,
-* set the value **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to ``it.eng.spagobi.security.LdapSecurityServiceSupplier`` **or** ``it.eng.spagobi.security.ProfiledLdapSecurityServiceSupplier``,
+* set the value of config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to ``it.eng.spagobi.security.LdapSecurityServiceSupplier`` **or** ``it.eng.spagobi.security.ProfiledLdapSecurityServiceSupplier``,
 * save,
 * log out of Knowage.
 
