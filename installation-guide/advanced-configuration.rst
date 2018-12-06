@@ -249,7 +249,7 @@ The final step is to set the LDAP security connector as follow:
 The only way to mantain access to Knowage for **users not mapped onto LDAP** is to:
 
 * define the user profile attribute **auth_mode**
-* set **auth_mode** = ``internal`` for every user
+* set **auth_mode** = ``internal`` for every user not mapped onto LDAP
 * use the connector **ProfiledLdapSecurityServiceSupplier**
 
 .. warning::
