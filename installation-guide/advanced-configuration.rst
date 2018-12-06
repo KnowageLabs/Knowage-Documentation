@@ -246,12 +246,11 @@ The final step is to set the LDAP security connector as follow:
 * save,
 * log out of Knowage.
 
-.. warning::
-   The only way to mantain access to Knowage **users not mapped onto LDAP** is to:
-   
-   * define the user profile attribute **auth_mode**
-   * set **auth_mode** = ``internal`` for every user
-   * use the connector **ProfiledLdapSecurityServiceSupplier**
+The only way to mantain access to Knowage for **users not mapped onto LDAP** is to:
+
+* define the user profile attribute **auth_mode**
+* set **auth_mode** = ``internal`` for every user
+* use the connector **ProfiledLdapSecurityServiceSupplier**
 
 .. warning::
    To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value **InternalSecurityServiceSupplierImpl** using a proper database client.
