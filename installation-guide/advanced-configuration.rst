@@ -203,8 +203,8 @@ Knowage ships with two LDAP security connectors:
 * **LdapSecurityServiceSupplier**: a pure LDAP connector that authenticates every user using the LDAP server,
 * **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP connector that can authenticate some users using the LDAP server and other users using the internal Knowage authentication mechanism.
 
-LdapSecurityServiceSupplier relies only on a LDAP configuration file, instead ProfiledLdapSecurityServiceSupplier checks also the Knowage user profile **auth_mode**.
-If the user profile **auth_mode** is defined and its value equals to ``internal`` for the logging user, then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
+LdapSecurityServiceSupplier relies only on a LDAP configuration file, instead ProfiledLdapSecurityServiceSupplier checks also the Knowage user profile attribute **auth_mode**.
+If the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the logging user, then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
 
 In order to setup any LDAP security connector, prepare a .properties file that includes the LDAP configuration:
 
@@ -214,17 +214,29 @@ In order to setup any LDAP security connector, prepare a .properties file that i
 * **DN_PREFIX**: prefix that will be prepended to the user name to create the DN (distinguished name) of logging user,
 * **DN_POSTFIX**: postfix that will be appended to the user name to create the DN (distinguished name) of logging user;
 
+.. important::
+         The final concatenation **DN_PREFIX + <Knowage user ID> + DN_POSTFIX** must be equal to the **DN** (distinguished name) of the user as defined in LDAP server.
+
 An example of LDAP configuration is the file ``ldap_authorizations.properties``, available in the project ``knowageldapsecurityprovider``.
 
 Then define a custom JVM property ``ldap.config``, setting its value to the path of LDAP configuration file.
-E.g. in a Unix-like environment using Apache Tomcat you can add a custom JVM property to variable ``JAVA_OPTS`` in a ``setenv.sh`` file under ``bin`` folder:
+
+In a Unix-like environment using Apache Tomcat you can add a custom JVM property to variable ``JAVA_OPTS`` in a ``setenv.sh`` file under ``bin`` folder:
 
 .. code-block:: bash
         :linenos:
 
         export JAVA_OPTS="${JAVA_OPTS} -Dldap.config=/opt/tomcat/resources/ldap.properties"
 
-**Remark.** Restart your application server in order to load the custom JVM property.
+In a Windows environment using Apache Tomcat you can add a custom JVM property to variable ``JAVA_OPTS`` in a ``setenv.bat`` file under ``bin`` folder:
+
+.. code-block:: bash
+    :linenos:
+
+    set JAVA_OPTS="%JAVA_OPTS% -Dldap.config=C:/Tomcat/resources/ldap.properties"
+
+.. important::
+    Restart your application server in order to load the custom JVM property.
 
 The final step is to set the LDAP security connector as follow:
 
@@ -234,4 +246,14 @@ The final step is to set the LDAP security connector as follow:
 * save,
 * log out of Knowage.
 
-Knowage is now ready to authenticate the users via LDAP.
+.. warning::
+   The only way to mantain access to Knowage **users not mapped onto LDAP** is to:
+   
+   * define the user profile attribute **auth_mode**
+   * set **auth_mode** = ``internal`` for every user
+   * use the connector **ProfiledLdapSecurityServiceSupplier**
+
+.. warning::
+   To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value **InternalSecurityServiceSupplierImpl** using a proper database client.
+
+Knowage is now ready to authenticate the users via LDAP credentials.
