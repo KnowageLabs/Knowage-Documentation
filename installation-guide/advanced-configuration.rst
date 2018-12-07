@@ -222,7 +222,7 @@ In order to setup any LDAP security connector, prepare a .properties file that i
 * **DN_POSTFIX**: postfix that will be appended to the user name to create the DN (distinguished name) of logging user;
 
 .. important::
-         The final concatenation **DN_PREFIX + <Knowage user ID> + DN_POSTFIX** must be equal to the **DN** (distinguished name) of the user as defined in LDAP server.
+         The final concatenation **DN_PREFIX + <Knowage user ID> + DN_POSTFIX** must be equal to the **DN (distinguished name)** of the user as defined in LDAP server. Please check DN examples at https://ldapwiki.com/wiki/DN%20Syntax .
 
 An example of LDAP configuration is the file ``ldap_authorizations.properties``, available in the project ``knowageldapsecurityprovider``.
 
