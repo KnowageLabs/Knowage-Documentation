@@ -206,6 +206,13 @@ Knowage ships with two LDAP security connectors:
 LdapSecurityServiceSupplier relies only on a LDAP configuration file, instead ProfiledLdapSecurityServiceSupplier checks also the Knowage user profile attribute **auth_mode**.
 If the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the logging user, then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
 
+.. warning::
+    The only way to mantain access to Knowage for **users not mapped onto LDAP** is to:
+    
+    * define the user profile attribute **auth_mode**,
+    * set **auth_mode** = ``internal`` for every user not mapped onto LDAP,
+    * use the connector **ProfiledLdapSecurityServiceSupplier** (see below).
+
 In order to setup any LDAP security connector, prepare a .properties file that includes the LDAP configuration:
 
 * **INITIAL_CONTEXT_FACTORY**: initial context factory Java class,
@@ -246,13 +253,7 @@ The final step is to set the LDAP security connector as follow:
 * save,
 * log out of Knowage.
 
-The only way to mantain access to Knowage for **users not mapped onto LDAP** is to:
-
-* define the user profile attribute **auth_mode**
-* set **auth_mode** = ``internal`` for every user not mapped onto LDAP
-* use the connector **ProfiledLdapSecurityServiceSupplier**
-
 .. warning::
-   To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value **InternalSecurityServiceSupplierImpl** using a proper database client.
+        To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value **InternalSecurityServiceSupplierImpl** using a proper database client.
 
 Knowage is now ready to authenticate the users via LDAP credentials.
