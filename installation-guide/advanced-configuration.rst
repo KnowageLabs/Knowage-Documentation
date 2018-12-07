@@ -254,6 +254,6 @@ The final step is to set the LDAP security connector as follow:
 * log out of Knowage.
 
 .. warning::
-        To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value **InternalSecurityServiceSupplierImpl** using a proper database client.
+        To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value ``it.eng.spagobi.security.InternalSecurityServiceSupplierImpl`` using a database client.
 
 Knowage is now ready to authenticate the users via LDAP credentials.
