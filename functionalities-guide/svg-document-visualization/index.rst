@@ -298,6 +298,15 @@ Once again we give some details on metadata in next table.
         |                       |                       |    the Info section   |
         |                       |                       |    into the detail    |
         |                       |                       |    panel.             |
+        |                       |                       |                       |
+        |                       |                       | -  **tooltip**:       |
+        |                       |                       |    optional. Defines  |
+        |                       |                       |    the column that    |
+        |                       |                       |    contains a text    |
+        |                       |                       |    (also html) to be  |
+        |                       |                       |    showned in the     |
+        |                       |                       |    tooltip on mouse   |	
+        |                       |                       |    hover.             |	
         +-----------------------+-----------------------+-----------------------+
         |    COLUMN             | column_id             | The dataset label     |
         |                       |                       | that we want to use   |
