@@ -54,7 +54,7 @@ After choosing the appropriate chart type you must go into the **Structure** pag
 
      Chart structure.
 
-Clicking on the **Configuration** page you will found seven different blocks as you can see in figure below.
+Clicking on the **Configuration** page you will found eight different blocks as you can see in figure below.
 
 .. figure:: media/image93.png
 
@@ -69,8 +69,9 @@ In detail these blocks concern:
 -  **Legend Items**
 -  **Color Palette**
 -  **Advanced Series Configuration**
+-  **Custom Colors**
 
-These seven blocks are common to all chart types; anyway, some chart types may have additional blocks.
+These eight blocks are common to all chart types; anyway, some chart types may have additional blocks.
 
 The **Advanced** tab contains extra features, usually exploited by an expert user. Here the user can see all settable properties associated to the chart: it reflects the property tabs that an expert user should manually edit to generate a json template.
 
@@ -78,7 +79,7 @@ The **Advanced** tab contains extra features, usually exploited by an expert use
 
     Chart Advanced Features.
 
-In the next subsections, the available functionalities of the Structure and the Configuration tabs are described in a more specific way.
+In the next subsections, the available functionalities of the Structure, the Configuration and the Advanced tabs are described in a more specific way.
 
 Structure
 ~~~~~~~~~
@@ -107,7 +108,7 @@ In this section it’s possible to customize the labels of the axis, titleand gr
 Configuration
 ~~~~~~~~~~~~~
 
-The **Configuration** section contains options to define the generic style of the chart. Here you can set the dimensions of the chart, the background color, insert the title and subtitle and define their style, choose the series palette, add and configure the legend. The listed options are an example of what you can configure in the tab.
+The **Configuration** section contains options to define the generic style of the chart. Here you can set the dimensions of the chart, the background color, insert the title and subtitle and define their style, choose the series palette, associate a specific color to a particular serie or category, add and configure the legend. The listed options are an example of what you can configure in the tab.
 
 Note that for the color palette details you can use one already in the list or you can choose any color inserting the hex color code with the hashtag symbol. This is a very useful feature to customize the output.
 
@@ -115,7 +116,52 @@ Note that for the color palette details you can use one already in the list or y
 
     Color box editing.
 
+In particular, in the 6.3 version, it has been introduced a new configuration option: the Custom Color.
+
+.. figure:: media/image200.png
+
+    Custom Colors details.
+
+With this new option it is possible to assign a specific color to a particular category and/or serie or to a particular value of a category and/or serie. Look at the following figure for an example.
+
+.. figure:: media/image201.png
+
+    Custom Colors example.
+
+To add a custom color simply write the category/serie value or name, select a color with the color piker and then click on the plus button. In the figure example it is assigned a color for each value of the ‘QUARTER’ category.
+
 Indeed, the options available in this tab change according to the chart selected enabling different configurations. See Chart types in detail for a detailed description of the specific options of each chart.
+
+Advanced options
+~~~~~~~~~~~~~
+
+The **Advanced** tab contains some advanced options to more customize the chart. Here it is possible, for example, to set the tooltip options, the widget dimensions, if the chart is stacking or not, the grouping type.
+
+.. figure:: media/image140.png
+
+    Advanced tab.
+
+Down here are listed some of the most useful and new options.
+
+The **dataLabels** option can be found under the path VALUES -> SERIE -> 0 or another serie -> dataLabels. The option is available only for measures. Here it is possible to set the labels style such as the color, font family or font weight.
+
+.. figure:: media/image141.png
+
+    dataLabels option.
+
+The **TOOLTIP** option allows to set the width and the radius of hte tooltip's border.
+
+The **plotBands** and **plotLines** options can be found under the path AXES_LIST -> AXIS -> 0 or another serie. With these options is possible to plot respectively bands and lines on the chart with fixed values and to set their style, like the line width and the line type or the band color.
+
+.. figure:: media/image142.png
+
+    plotBands option.
+
+The **min** and **max** options are under the path AXES_LIST -> AXIS -> 0 or another serie. They are available only for series and allow to set the maximum and minimum axis value for the selected sere's axis.
+
+.. figure:: media/image143.png
+
+    min and max options.
 
 Chart types in detail
 -------------------------
