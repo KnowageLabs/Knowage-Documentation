@@ -238,17 +238,11 @@ The **Style** tab is where you can customize the table by using the different op
 
     Borders section of the Style tab.   
 
-- In the **Shadows** section you can add the shadows in the widget. Refer to the following figure.
+- In the **Other Options** section you can add the shadows in the widget, you can set the background color of the widget and it is possible to disable or enable the screenshot option for that particular widget. Refer to the following figure.
 
 .. figure:: media/image165.png
 
-    Shadows section of the Style tab. 
-
-- In the **Background** color section you can set the background color of the widget. Refer to the Figure below.
-
-.. figure:: media/image166.png
-
-    Background color section of the Style tab.
+    Other Options section of the Style tab. 
 
 Once the table style settings have been implemented you can switch to the next tab. The “Cross” tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator).
 
@@ -566,12 +560,18 @@ Here the user can:
 -  activate the on-click interaction of the widget with the other ones;
 -  activate the updating of widget data due to the interaction with other widgets.
 
-When executing the cockpit in visualization mode, the user has also some more options for widgets. For all widget the user can use the icon |image197| to expand the widget to all page and use the icon |image198| to reduce it again.
+When executing the cockpit in visualization mode, the user has also some more options for widgets. For all widget the user can use the icon |image197| to expand the widget to all page and use the icon |image198| to reduce it again. There are also two new widget options: using th icon |image300| it is possible to capture the screenshot of the widget and clicking on the icon |image301| the data plotted on a chart or displayed in a table or crosstab are exported in an excel file.
 
 .. |image197| image:: media/image193.png
    :width: 30
    
 .. |image198| image:: media/image194.png
+   :width: 30
+
+.. |image300| image:: media/image300.png
+   :width: 30
+
+.. |image301| image:: media/image301.png
    :width: 30
 
 Chart widget are endowed with an additional option that allows the user to change the chart type, as you can see in Figure below.
@@ -597,7 +597,9 @@ This option allows the user to manage all cockpit general settings that we are g
 
     General configuration window.
 
-Editing the fields of the first tab you can add or change the name and/or the description of your cockpit; moreover here you can choose the sheet color and decide to enable the menu when the document runs in display mode. The second tab (Figure below allows to configure some style options of the cockpit, like borders, shadows, titles and background color.
+Editing the fields of the first tab you can add or change the name and/or the description of your cockpit; moreover here you can choose the sheet color or a background image and its size. In particular, in order to add a background image for the sheets, firstly you have to add the image to the catalogue of the image widget and then copy the link of the image. It is also possible to decide to enable the menu and the widgets functionalities when the document runs in display mode or to disable the screenshot functionality for every widgets. 
+
+The second tab (Figure below allows to configure some style options of the cockpit, like borders, shadows, titles and background color.
 
 .. figure:: media/image198.png
 
