@@ -529,6 +529,16 @@ The **limit** attribute is optional and is a number type attribute. If added the
 
 The ``kn-if`` attribute is available to every HTML5 tag and is a way to conditionally show or hide an element based on some other value. The attribute content will be evaluated after the other tags substitution, so will be possible to use other tags inside. If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
 
+**Banned Tags**
+
+For Cross side scripting and security reasons some tags are removed on save by the security filter:
+
+-  ``<button></button>``
+-  ``<object></object>``
+-  ``<script></script>``
+
+If the tag is needed for some specific behaviour (ie. the button default hover), please replicate it with css using a different allowed tag.
+
 .. warning:: 
     **Whitelist**
     All external resources paths must be present inside a whitelist XML inside the resources folder of the server named ``services-whitelist.xml``. The file should have the following structure:
