@@ -402,6 +402,6 @@ For both attributes it is possible show parameters (of input or output type) val
 
    Example of popup selection for more cross navigation definition (with params)
    
-.. figure:: media/image91.png
+.. figure:: media/image92.png
 
    Example of breadcrumb with params
