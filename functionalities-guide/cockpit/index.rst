@@ -297,7 +297,7 @@ Using the “Dataset” tab the user can add the dataset to take values from. Co
 
 Once the columns, rows and measures have been selected the style of each column can be set by clicking on the cog settings icon. A popup will open with different options for the selected columnn. See figure below.
 
-.. figure:: media/image210.png
+.. figure:: media/image212.png
 
     Column style popup.
 
