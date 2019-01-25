@@ -301,7 +301,7 @@ Once the columns, rows and measures have been selected the style of each column 
 
     Column style popup.
 
-It is possible to sort the crosstab according to the values of the selected column or, alternatively, according to columns not visible in the crosstab. It can also be set the style of the column, such as the font size, the font weight or the cell alignment. There is also the possibility to specify the size of the column in pixels (you can also use percent values but it is better to use pixels).
+Here it can be set the style of the column, such as the font size, the font weight or the cell alignment. There is also the possibility to specify the size of the column in pixels (you can also use percent values but it is better to use pixels).
 
 .. figure:: media/image211.png
 
