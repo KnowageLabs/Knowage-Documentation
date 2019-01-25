@@ -385,17 +385,11 @@ Switching to the “Style” tab you can find the general style settings availab
 
     Border settings.
 
-- In the **Shadows** section you can add a shadow to widget layout and indicate its measure.
+- In the **Other Options** section you can add a shadow to widget layout and indicate its measure, color the widget background at convenience and it is possible to disable or enable the screenshot option for that particular widget.
 
 .. figure:: media/image183.png
 
-    Shadow settings.
-
-- In the **Background color** section you can color the widget background at convenience.
-
-.. figure:: media/image184.png
-
-    Background color.
+    Other Options for crosstab.
 
 Once some or all (at least the mandatory) of the above mentioned setting features have been set you can save and the widget will be inserted into the cockpit area.
 
@@ -448,9 +442,15 @@ The **Selector Widget** is useful when an end user (a user with a USER tole type
 
     Selector widget outlook.
 
-In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then custom the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further Selector Widget choose among “vertical”, “horizontal” or “grid”. Finally, you can decide to add a dafault value, chosen from main column’s first item, main column’s last item or to simply assign a static value.
+In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then custom the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further choose among “vertical”, “horizontal” or “grid”. You can also decide to add a dafault value, chosen from main column’s first item, main column’s last item or to simply assign a static value. Finally, by clicking on the Wrap Text option it is possible to wrap the text shown in the selector; this option is useful when the categories to choose from are sting of long dimensions. 
 
-Move to the **Style** tab to set the widget style in terms of: titles, borders, shadows and background color. Figure below shows a customization example.
+In the case of the selector of type list "grid" it is also possible to set the grid columns width.
+
+.. figure:: media/image304.png
+
+    Grid columns width.
+
+Move to the **Style** tab to set the widget style in terms of: label, titles, borders, shadows and background color. Figure below shows a customization example.
 
 .. figure:: media/image189.png
 
@@ -491,11 +491,19 @@ In the editor tab is possible to add the code that will be shown in the widget. 
 In the right side of the editor is possible to take available tags to copy inside the code, those tags will be explained in details in the following paragraphs. Is not possible to add custom Javascript code inside the html editor, so the available tags are the tools to make the widget dynamic and to use the dataset data.
 
 The Dataset tab allows the user to select a dataset to make the Widget dynamic and to bind it to dataset data.
-After choosing a dataset the list of available columns will be show. Those names will be useful inside the dynamic tags.
+After choosing a dataset the list of available columns will be show. Those names will be useful inside the dynamic tags. Here it is also possible to order the dataset according to a column and to select the ordering type (ascendig or descending).
 
 .. figure:: media/image209.png
 
     Dataset selection
+
+By clicking on the icon |image302| of a specific column the dataset will be ordered by that column by default by ascending order. In order to select the descending ordering type you have to click another time on the icon (the icon will be now like this |image303|).
+
+.. |image302| image:: media/image302.png
+   :width: 30
+
+.. |image303| image:: media/image303.png
+   :width: 30
 
 **Available Tags**
 
@@ -533,6 +541,20 @@ The **limit** attribute is optional and is a number type attribute. If added the
 
 The ``kn-if`` attribute is available to every HTML5 tag and is a way to conditionally show or hide an element based on some other value. The attribute content will be evaluated after the other tags substitution, so will be possible to use other tags inside. If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
 
+``<div kn-cross> ... </div>``
+
+The ``kn-cross`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attribute generates an on click event on the element to open the cross navigation set. If there is no cross navigation set this tag will not work.
+
+``<div kn-preview="DATASET-TO-SHOW"> ... </div>``
+
+The ``kn-preview`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attribute generates an on click event on the element to open the dataset preview dialog. The attribute value will be the *dataset label* of the dataset that you want to open. If a dataset is not specified the cockpit will use the one set for the widget. If no dataset has been set and the attribute has no value this tag will not work.
+
+``<div kn-selection-column="COLUMN-NAME" kn-selection-value="COLUMN-VALUE"> ... </div>``
+
+The ``kn-selection-column`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attributes generates an on click event on the element to set the chosen column and value in the cockpit selections. The default will use as a selection the first row value for the column.
+
+The **kn-selection-value** attribute is optional and will add a specific value to the column selection.
+
 **Banned Tags**
 
 For Cross side scripting and security reasons some tags are removed on save by the security filter:
@@ -556,7 +578,9 @@ If the tag is needed for some specific behaviour (ie. the button default hover),
       <service baseurl="https://www.youtube.com" />
       <service relativepath="/knowage/themes/" />
    </WHITELIST>
- 
+
+Like other widgets the "Style" tab and the "Filters" tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
+
 Widget properties
 ~~~~~~~~~~~~~~~~~~
 
