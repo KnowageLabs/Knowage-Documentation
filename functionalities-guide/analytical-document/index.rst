@@ -376,7 +376,7 @@ It is possible to configure the associations betweeen input/output parameters by
 
 .. figure:: media/image87.png
 
-    Setting the cross navigation through the menu item.
+    Setting the cross navigation through the tree item.
 
 .. figure:: media/image88.png
 
@@ -389,3 +389,20 @@ Once set, the association is highlighted as in Figure below.
     Association betweeen parameters.
 
 To assign fixed values to target parameters it is necessary to edit first the box labeled **Fixed value parameter** and click on the **plus** icon. Then the value can be associated as fixed value of the one or more target parameters. Remember to click on the **Ok** button to save the cross navigation just set.
+
+As you know, it is possible to define multiple cross navigation starting by the same document. In this case the system will show a popup window to choose the one that you want execute. 
+It is possible set a specific description for each cross navigation so that will be easy to recognize the right navigation definition to use. In the same way it is possible set the text of the bread crumb and personalize it. 
+For both attributes it is possible show parameters (of input or output type) values through the syntax $P{parameter_name}. Just parameters of source documents are available.
+
+.. figure:: media/image90.png
+
+   Example of parametric description and breadcrumb text
+   
+.. figure:: media/image91.png
+
+   Example of popup selection for more cross navigation definition (with params)
+   
+.. figure:: media/image92.png
+
+   Example of breadcrumb with params
+
