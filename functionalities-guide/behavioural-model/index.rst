@@ -146,6 +146,11 @@ We stress that the visibility of specific fields serve to improved human readabi
 
     Hierarchical LOV definition.
 
+.. note::
+     **Create a LOV for the default value of an analytical driver of type Manual Input Date**
+     
+     This note is useful when using an analytical driver of type Date with an input of type Manual. In the case you want to use a particular date as default value for that driver, you have to use this syntax for the LOV: select '2017-09-10#yyyy-MM-dd' as fixed_date. Instead of the fixed date 2017-09-10 you can also use as default date the today date for example; in this case you can use a query of this type: select concat(to_date(now()) ,'#yyyy-MM-dd') as today. The most important thing is to concat to the default date you want to use the string #yyyy-MM-dd.
+
 Parametrizing LOVs
 ~~~~~~~~~~~~~~~~~~
 
@@ -270,6 +275,11 @@ The first type allows the user to pick values from a previously defined LOV. Whe
 The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next sections for this kind of input.
 
 Moreover the user can add default values (namely values that will be passed to the document at its first execution) using the dedicated area. Here it is possible to pick default values from another LOV or to pick the first or the latter value of the current LOV (if the LOV input type was selected).
+
+.. note::
+     **Analytical driver of type Manual Input Date with a default value**
+     
+     In the case you want to use an analytical driver of type Manual Input Date with a particular date as default value, you have to use a particular syntax for the LOVs query. See the note *Create a LOV for the default value of an analytical driver of type Manual Input Date* in the section *Creating a List Of Value* for more details.
 
 At the bottom of the page the user must associate roles to the “use mode”. This action is mandatory. The user connects the user’s roles that he/she wants to be allowed to see a certain list of values or certain regions or be able to type values at his/her convenience.
 
