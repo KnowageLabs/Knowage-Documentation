@@ -151,6 +151,10 @@ We stress that the visibility of specific fields serve to improved human readabi
      
      This note is useful when using an analytical driver of type Date with an input of type Manual. In the case you want to use a particular date as default value for that driver, you have to use this syntax for the LOV: select '2017-09-10#yyyy-MM-dd' as fixed_date. Instead of the fixed date 2017-09-10 you can also use as default date the today date for example; in this case you can use a query of this type: select concat(to_date(now()) ,'#yyyy-MM-dd') as today. The most important thing is to concat to the default date you want to use the string #yyyy-MM-dd.
 
+.. note::
+    **Create a LOV for the default value of an analytical driver with a hierarchical LOV**
+    In case you want to add a default value to an analytical driver with an input of type hierarchical LOV you need to use another hierarchycal LOV with the default values desired. In case the analytical driver LOV is of type *Tree* then the default LOV need to be of type *Tree* too. The LOV need to have values for the leaf level only. In case the analytical driver LOV is of type *Tree selectable inner nodes* the default love need to be of the same type. The default LOV may have values for one of the level used in the hierarchical LOV. For example, suppose you have an analytical driver with a hierarchical LOV having levels Product Family > Product Category > Product Department. If the hierarchical LOV is of type *Tree* then in the in the deafult LOV you need to insert one or more values for the level Product Department. In case the LOV is of type *Tree selectable inner nodes* you can choose one of the three levels (Product Family or Product Category or Product Department).
+
 Parametrizing LOVs
 ~~~~~~~~~~~~~~~~~~
 
