@@ -331,7 +331,7 @@ Otherwise, thanks to the “On columns” feature, you can easily compute totals
 
 Switching to the “Style” tab you can find the general style settings available for the crosstab.
 
-- **Crosstab Font General Options** where font and font size are set;
+- **Crosstab General Options** where the rows' height, the general font and font size can be set;
 
 .. figure:: media/image174.png
 
