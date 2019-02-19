@@ -7,7 +7,8 @@ Installation Manual
    goal-of-the-document.rst	
    requirements.rst	
    software-release.rst
-   manual-installation.rst	
+   manual-installation.rst
+   upgrade.rst
    knowage-ce-installer.rst	
    r-installation.rst	
    python-installation.rst	
