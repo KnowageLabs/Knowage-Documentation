@@ -586,7 +586,7 @@ Any parameter added to your dataset must be added to the parameters list, too. T
 -  **String**: the parameter value will be surrounded with single quotes if not already present.
 -  **Number**: the parameter value is treated as a number, with no quotes; an exception is thrown if the value passed is not a number.
 -  **Raw**: the parameter value is treated as a string containing a set of values; single quotes are removed from the containing string, not from the single strings composing it.
--  **Generic**: the parameter is simply passed as is, with no futher processing.
+-  **Generic**: the parameter is simply passed as it is, with no futher processing.
 
 In SQL query example with parameters an example is provided, where ``MediaType`` is a string parameter.
 
@@ -624,6 +624,27 @@ The syntax to include attributes into the dataset text is ``${attribute_name}``.
    
 Further operations on a dataset
 ------------------------------------
+
+Script option
+~~~~~~~~~~~~~
+
+As we reported in Section 'Query Dataset', the script option can be very useful when the user wants to create a very dynamic query. Dealing with parameters, if the query and syntax are not handle properly, the missing of one parameter value compromise the dataset execution. Therefore it can be convenient to use a script to manage the assignment of null or empty values to parameters. Scripts can be in fact configured to load placeholders with a slice of SQL code.
+
+Clicking on the "script" button, the interface opens the wizard shown in the following figure. 
+
+.. figure:: media/image39.png
+
+   Editing script.
+
+Here the user is asked to select the language he's intended to use. The window is divided into two tabs, the script tab is the one opened by default. 
+
+.. figure:: media/image40.png
+
+   Editing script.
+
+.. figure:: media/image38.png
+
+   Setting placeholder using script.
 
 Transformations
 ~~~~~~~~~~~~~~~
