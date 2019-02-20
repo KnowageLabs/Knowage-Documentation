@@ -54,17 +54,10 @@ To upgrade Knowage installation follow these steps:
 
 -  start Apache Tomcat service, wait until Apache Tomcat is started and then stop it again in order to change some configuration files;
 
--  for Knowage metadata database dialect, check that the right dialect has been set inside hibernate.cfg.xml files: the ``hibernate.dialect`` property should match your RDBMS for Knowage metadata database. Admissible dialects are:
+-  for Knowage metadata database dialect, check that the right dialect has been set inside hibernate.cfg.xml files: the ``hibernate.dialect`` property should match your RDBMS for Knowage metadata database. Admissible dialects follows:
 
    .. code-block:: bash
-   
-    org.hibernate.dialect.MySQLDialect
-    org.hibernate.dialect.PostgreSQLDialect
-    org.hibernate.dialect.Oracle9Dialect
-
-  hibernate.cfg.xml files to check are as follows:
-
-   .. code-block:: bash
+      :caption: hibernate.cfg.xml files to check
 
     TOMCAT_HOME/webapps/knowage/WEB-INF/classes/hibernate.cfg.xml
     TOMCAT_HOME/webapps/knowagecockpitengine/WEB-INF/classes/hibernate.cfg.xml
@@ -73,6 +66,13 @@ To upgrade Knowage installation follow these steps:
     TOMCAT_HOME/webapps/knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
     TOMCAT_HOME/webapps/knowagemeta/WEB-INF/classes/hibernate.cfg.xml
     TOMCAT_HOME/webapps/knowagesvgviewerengine/WEB-INF/classes/hibernate.cfg.xml
+	
+   .. code-block:: bash
+      :caption: Admissible Hibernate dialects
+	 
+    org.hibernate.dialect.MySQLDialect
+    org.hibernate.dialect.PostgreSQLDialect
+    org.hibernate.dialect.Oracle9Dialect
 
 -  check Quartz scheduler engine configuration within file ``TOMCAT_HOME/webapps/knowage/WEB-INF/classes/quartz.properties``: it is essential to set the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Admissible values are:
    
@@ -85,7 +85,7 @@ To upgrade Knowage installation follow these steps:
 	 # Oracle delegate class                                                                       
 	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
 	 
-  then restore the Cluster modality, in case Knowage is installed within a cluster: add these lines:
+-  restore the Quartz cluster modality, in case Knowage is installed within a cluster: add these lines:
    
    .. code-block:: jproperties
 	
