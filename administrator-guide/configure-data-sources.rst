@@ -34,11 +34,11 @@ Description
 Dialect 
   The dialect used to access the database. Supported dialects are: 
             
-      .. table:: Certified Data Dources
+      .. table:: Certified Data Sources
          :widths: auto
 
          +-----------------------+-------------------+
-         |    Certified Data Dources                 |
+         |    Certified Data Sources                 |
          +=======================+===================+
          | Oracle                | 11, 12            |
          +-----------------------+-------------------+
