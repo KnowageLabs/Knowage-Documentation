@@ -632,17 +632,17 @@ As we reported in Section 'Query Dataset', the script option can be very useful 
 
 Clicking on the "script" button, the interface opens the wizard shown in the following figure. 
 
-.. figure:: media/image39.png
+.. figure:: media/image039.png
 
    Editing script.
 
 Here the user is asked to select the language he's intended to use. The window is divided into two tabs, the script tab is the one opened by default. 
 
-.. figure:: media/image40.png
+.. figure:: media/image040.png
 
    Editing script.
 
-.. figure:: media/image38.png
+.. figure:: media/image038.png
 
    Setting placeholder using script.
 
