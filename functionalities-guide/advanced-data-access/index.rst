@@ -628,23 +628,29 @@ Further operations on a dataset
 Script option
 ~~~~~~~~~~~~~
 
-As we reported in Section 'Query Dataset', the script option can be very useful when the user wants to create a very dynamic query. Dealing with parameters, if the query and syntax are not handle properly, the missing of one parameter value compromise the dataset execution. Therefore it can be convenient to use a script to manage the assignment of null or empty values to parameters. Scripts can be in fact configured to load placeholders with a slice of SQL code.
+As we reported in Section 'Query Dataset', the script option can be very useful when the user wants to create a very dynamic query. Dealing with parameters, if the query syntax is not handled properly, the missing of one parameter value may compromise the dataset execution itself. In particular, it can be convenient to use a script to manage the assignment of null or empty values to parameters in those cases when the user wants the filters not to be applied.
 
-Clicking on the "script" button, the interface opens the wizard shown in the following figure. 
+Knowage query dataset are endowed of a specific area to insert the script syntax. Clicking on the "Script" button we reported in section Query Dataset', the interface opens the wizard shown in the following figure. 
 
 .. figure:: media/image039.png
 
    Editing script.
 
-Here the user is asked to select the language he's intended to use. The window is divided into two tabs, the script tab is the one opened by default. 
+Here the user is asked to select the language he/she's intended to use. The window is divided into two tabs, the script tab is the one opened by default. Typically, scripts are configured to load placeholders with a slice of SQL code. As a reference, we show an example of Javascript (JS) code usage. Moving to the "Query" tab the user has to insert a placeholder where he/she's expecting a certain clause to be added.
+
+.. figure:: media/image038.png
+
+   Setting placeholder using script.
+
+Moving to the "Script" tab, instead the user has to communicate with the server on how to interpret that placeholder .The following picture shows a JS block code where the user first initializes a variable as empty: if certain conditions, on one or more parameters, are satisfied, the variable is assigned an SQL code string. Then, the JS method ".replace" will substitute the placehoder with the content the variable.
 
 .. figure:: media/image040.png
 
    Editing script.
 
-.. figure:: media/image038.png
+To sum up, the example reveals that if the parameter is assigned a null or empty value, conditions are not satisfied and the placeholder is substituted with an empty space (therefore nothing is added to the "where" clause). Otherwise, the SQL code is insert into the "where" clause and the dataset is accordingly filtered.
 
-   Setting placeholder using script.
+We stress that it is not necessary to use any concatenation or JS method to recall for parameters' values. It is enough to use the syntax $P{par_name} as well as seen when configuring a plain parametric dataset.
 
 Transformations
 ~~~~~~~~~~~~~~~
