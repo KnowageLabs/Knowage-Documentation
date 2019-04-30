@@ -648,7 +648,7 @@ Moving to the "Script" tab instead, the user has to declare how the server has t
 
    Editing script.
 
-To sum up, the example reveals that if the parameter is assigned a null or empty value, conditions are not satisfied and the placeholder is substituted with an empty space (therefore nothing is added to the "where" clause). Otherwise, the SQL code is insert into the "where" clause and the dataset is accordingly filtered.
+To sum up, the example reveals that if the parameter is assigned a null or empty value, conditions are not satisfied and the placeholder is substituted with an empty space (therefore nothing is added to the "where" clause). Otherwise, the SQL code is inserted into the "where" clause and the dataset is accordingly filtered.
 
 We stress that it is not necessary to use any concatenation or JS method to recall for parameters' values. It is enough to use the syntax $P{par_name} as well as seen when configuring a plain parametric dataset.
 
