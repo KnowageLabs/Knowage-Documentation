@@ -525,6 +525,15 @@ The kn-parameter tag is the tool to show a dataset parameter inside the widget e
 
 The ``kn-calc`` tag is the tool to calculate expressions between different values on widget execution. Everything inside the brackets will be evaluated after the other tags substitution, so will be possible to use other tags inside.
 
+.. code-block:: html
+   :linenos:
+
+   <div>
+        [kn-calc=([kn-column='sold_units' aggregation='SUM']/[kn-column='total_units' aggregation='SUM']*100)]%
+   </div>
+
+   Example html code to calculate a percentage using aggregated data from a dataset.
+    
 The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
 
 ``<div kn-repeat="true" limit="LIMIT-NUMBER"> ... REPEATED-CONTENT ... </div>``
