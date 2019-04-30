@@ -630,13 +630,13 @@ Script option
 
 As we reported in Section 'Query Dataset', the script option can be very useful when the user wants to create a very dynamic query. Dealing with parameters, if the query syntax is not handled properly, the missing of one parameter value may compromise the dataset execution itself. In particular, it can be convenient to use a script to manage the assignment of null or empty values to parameters in those cases when the user wants the filters not to be applied.
 
-Knowage query dataset are endowed of a specific area to insert the script syntax. Clicking on the "Script" button we reported in section Query Dataset', the interface opens the wizard shown in the following figure. 
+Knowage query dataset are endowed of a specific area to insert the script syntax. Clicking on the "Script" button we reported in section Query Dataset', the interface opens a wizard containing two tabs: the script tab is the one opened by default. Here the user is asked to select the language he/she's intended to use.
 
 .. figure:: media/image039.png
 
    Editing script.
 
-Here the user is asked to select the language he/she's intended to use. The window is divided into two tabs, the script tab is the one opened by default. Typically, scripts are configured to load placeholders with a slice of SQL code. As a reference, we show an example of Javascript (JS) code usage. Moving to the "Query" tab the user has to insert a placeholder where he/she's expecting a certain clause to be added.
+Typically, scripts are configured to load placeholders with a slice of SQL code. Referring to the following pictures, we show an example of Javascript (JS) code usage. Moving to the "Query" tab the user has to insert a placeholder where he/she's expecting a certain clause to be added. The query will then look like the one shown below.
 
 .. figure:: media/image038.png
 
