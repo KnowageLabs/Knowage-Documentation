@@ -642,7 +642,7 @@ Typically, scripts are configured to load placeholders with a slice of SQL code.
 
    Setting placeholder using script.
 
-Moving to the "Script" tab, instead the user has to communicate with the server on how to interpret that placeholder .The following picture shows a JS block code where the user first initializes a variable as empty: if certain conditions, on one or more parameters, are satisfied, the variable is assigned an SQL code string. Then, the JS method ".replace" will substitute the placehoder with the content the variable.
+Moving to the "Script" tab instead, the user has to declare how the server has to manage the placeholder. The following picture shows a JS block code where the user first initializes a variable as empty: if certain conditions, on one or more parameters, are satisfied, the variable is assigned an SQL code string. Then, the JS method ".replace" will substitute the placehoder with the content the variable.
 
 .. figure:: media/image040.png
 
