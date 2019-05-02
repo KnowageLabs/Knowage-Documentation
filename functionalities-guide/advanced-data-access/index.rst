@@ -652,7 +652,6 @@ To sum up, the example reveals that if the parameter is assigned a null or empty
 
 We stress that it is not necessary to use any concatenation or JS method to recall for parameters' values. It is enough to use the syntax $P{par_name} as well as seen when configuring a plain parametric dataset.
 
-
 Transformations
 ~~~~~~~~~~~~~~~
 
