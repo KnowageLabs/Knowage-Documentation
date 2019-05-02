@@ -507,7 +507,7 @@ By clicking on the icon |image302| of a specific column the dataset will be orde
 
 **Available Tags**
 
-``[kn-column='COLUMN-NAME' row='COLUMN-ROW-NUMBER' aggregation='COLUMN-AGGREGATION' precision='COLUMN-DECIMALS']``
+``[kn-column='COLUMN-NAME' row='COLUMN-ROW-NUMBER' aggregation='COLUMN-AGGREGATION' precision='COLUMN-DECIMALS' format]``
 
 The ``kn-column`` tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to print its value. The value of the kn-column attribute should be the name of the column value you want to read in execution.
 
@@ -517,11 +517,13 @@ The **aggregation** attribute is optional and is a string type attribute. If ins
 
 The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
 
+The **format** attribute is optional and does not need to specify any attribute. If added and if the result value is a number, the result will be formatted depending on the user locale settings.
+
 ``[kn-parameter='PARAMETER-NAME']``
 
 The kn-parameter tag is the tool to show a dataset parameter inside the widget execution. The value of the kn-parameter attribute should be the name of the set attribute.
 
-``[kn-calc=(CODE-TO-EVALUATE) precision='VALUE-PRECISION']``
+``[kn-calc=(CODE-TO-EVALUATE) min='MIN NUMBER' max='MAX NUMBER' precision='VALUE-PRECISION' format]``
 
 The ``kn-calc`` tag is the tool to calculate expressions between different values on widget execution. Everything inside the brackets will be evaluated after the other tags substitution, so will be possible to use other tags inside.
 
@@ -535,6 +537,12 @@ The ``kn-calc`` tag is the tool to calculate expressions between different value
    Example html code to calculate a percentage using aggregated data from a dataset.
     
 The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
+
+The **min** attribute is optional and is a number type attribute. If added and if the result value is a number minor than the selected one, the result value will be the one selected as min attribute.
+
+The **max** attribute is optional and is a number type attribute. If added and if the result value is a number major than the selected one, the result value will be the one selected as max attribute.
+
+The **format** attribute is optional and does not need to specify any attribute. If added and if the result value is a number, the result will be formatted depending on the user locale settings.
 
 ``<div kn-repeat="true" limit="LIMIT-NUMBER"> ... REPEATED-CONTENT ... </div>``
 
