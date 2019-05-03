@@ -1,13 +1,12 @@
 News management
 ===================
 
-Using this new features it is possible to send news to the end user in order to advice changed on Knowage. 
+The **news management** is an helpful functionality to keep the end user constantly informed on any changements or updates on the Knowage platform itself. In this section we will describe the main steps to insert a latest piece of news.
 
-How create a piece of news
+How to publish news
 ---------------------------
 
-Currently only the administrator can manage the news.
-The knowage administrator can create the news using the “news management” functionality from main menu:
+To put news in place is mandatory to have administration priviledges. An admin user can insert the news entering the “news management” functionality from Knowage main menu, as the following picture highlights:
 
 .. figure:: media/image01.png
 
