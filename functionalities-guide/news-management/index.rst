@@ -18,21 +18,21 @@ Consequently, the user is redirected to the News management list. The page is di
 
     Access news management list.
     
-Click on the red plus icon button to create a new news.
-Knowage will show you the following form:
+To edit the latest news instead, the user must click on the red plus icon button available at the center of the page. When clicking on the icon, Knowage server opens the interface shown in the following image:
 
 .. figure:: media/image03.png
 
     Access news management list.
     
-Where you have to insert:
-    - The news title
-    - The news description
-    - The text of the news
-    - The expiration date, the date until the news can be visible from the end user
-    - Active flag, to enable/disable the news
-    - The list of the roles that can be see the news.
-After that the user can save the news using the right top “SAVE” button.
+Here the user is asked to:
+    - insert the news title,
+    - insert the news description,
+    - insert the text of the news,
+    - specify the expiration date, i.e. the date until the news can be visible from the end user,
+    - to check/unckeck a flag to enable/disable the piece of news,
+    - the list of the roles that have the permission on reading the news.
+    
+Once the "news details" form is filled in all its mandatory parts, the user can save the piece of news using the "save" button, available on top right corner of the page.
 
 
 How the end user can see the news
