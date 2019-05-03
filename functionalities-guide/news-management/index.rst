@@ -1,6 +1,5 @@
- News management
+News management
 ===================
-
 
 Using this new features it is possible to send news to the end user in order to advice changed on Knowage. 
 
