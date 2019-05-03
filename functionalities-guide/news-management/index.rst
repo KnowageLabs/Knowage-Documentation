@@ -25,12 +25,13 @@ To edit the latest news instead, the user must click on the red plus icon button
     Access news management list.
     
 Here the user is asked to:
-- insert the news title,
-- insert the news description,
-- insert the text of the news,
-- specify the expiration date, i.e. the date until the news can be visible from the end user,
-- to check/unckeck a flag to enable/disable the piece of news,
-- the list of the roles that have the permission on reading the news.
+
+-  insert the news title,
+-  insert the news description,
+-  insert the text of the news,
+-  specify the expiration date, i.e. the date until the news can be visible from the end user,
+-  to check/unckeck a flag to enable/disable the piece of news,
+-  the list of the roles that have the permission on reading the news.
     
 Once the "news details" form is filled in all its mandatory parts, the user can save the piece of news using the "save" button, available on top right corner of the page.
 
