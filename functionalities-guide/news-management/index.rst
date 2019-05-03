@@ -45,11 +45,11 @@ When some news are added, the **news icon** reports the presence of recent news 
 
     News notification.
 
-The news icon is always available under the Knowage menu panel, while the red icon stay still the user has some unread news.
+The news icon is always available under the Knowage menu panel, while the red icon stays still the user has some unread news. Clicking on the icon, the list of recent unread news appears.
 
 .. figure:: media/image05.png
 
     News notification pop up.
 
 
-The user can click on the news item itself from the list, to read all its information and mark it as already readed
+The user can access news information, simply selecting the news item itself from the list. Finally the user can mark it as read.
