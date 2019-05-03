@@ -24,6 +24,7 @@ To edit the latest news instead, the user must click on the red plus icon button
 
     Access news management list.
     
+
 Here the user is asked to:
     - insert the news title,
     - insert the news description,
@@ -35,20 +36,20 @@ Here the user is asked to:
 Once the "news details" form is filled in all its mandatory parts, the user can save the piece of news using the "save" button, available on top right corner of the page.
 
 
-How the end user can see the news
+How the end user can read the news
 ------------------------------------
 
-When the administrator has created the news, the end user can see they using the news option on the main menu. 
+When some news are added, the **news icon** reports the presence of recent news thanks to a red spot symbol that highlights also the number of latest news.
 
 .. figure:: media/image04.png
 
     News notification.
 
-The icon is always present, but when the user has some unread news a red icon appears showing the number of the news unread.
+The news icon is always available under the Knowage menu panel, while the red icon stay still the user has some unread news.
 
 .. figure:: media/image05.png
 
     News notification pop up.
 
 
-The user can click on the news to read all the information and mark as already readed
+The user can click on the news item itself from the list, to read all its information and mark it as already readed
