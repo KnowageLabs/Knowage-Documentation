@@ -39,7 +39,7 @@ Once the "news details" form is filled in all its mandatory parts, the user can 
 How the end user can read the news
 ------------------------------------
 
-When some news are added, the **news icon** reports the presence of recent news thanks to a red spot symbol that highlights also the number of latest news.
+When some news are added, the **news icon** reports the presence of recent news thanks to a red spot symbol that highlights also the number of latest unread news.
 
 .. figure:: media/image04.png
 
