@@ -12,7 +12,7 @@ To put news in place is mandatory to have administration priviledges. An admin u
 
     News management menu item.
     
-Knowage will show you the master detail form:
+Consequently, the user is redirected to the News management list. The page is divided into two areas. On the left side, all previously inserted news are listed. When clicking on one of them, its details are shown on the right side. 
 
 .. figure:: media/image02.png
 
