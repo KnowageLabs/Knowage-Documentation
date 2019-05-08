@@ -25,7 +25,7 @@ Functionalities
    key-performance-indicator/index.rst
    scorecard/index.rst
    alert/index.rst
-   news-managemet/index.rst
+   news-management/index.rst
 
 
 .. |image0| image:: MyData/media/image1.png
