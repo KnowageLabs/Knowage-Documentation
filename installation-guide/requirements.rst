@@ -73,21 +73,16 @@ Application server
 
 The following lists the supported application servers:
 
-.. table:: Supported application server
+.. table:: Supported application servers
     :widths: auto
     
     +---------------------+------------------------+-------------+
     |    **Support type** | **Application Server** | **Version** |
     +=====================+========================+=============+
-    |    Certified        | Apache Tomcat          | 7.0.65      |
+    |    Certified        | Apache Tomcat          | 8.5.37      |
     +---------------------+------------------------+-------------+
 
-.. important::
-         **Roadmap**
-         
-         JBoss support will be available on Q4 2018
-
-For each application server installation please refer to the official documnetation.
+For each application server installation please refer to its official documentation.
 
 Tomcat 7
 ~~~~~~~~~~~~
