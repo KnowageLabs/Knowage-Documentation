@@ -23,13 +23,10 @@ File system resources
 
 Create the folder ``TOMCAT_HOME/resources``. Such a folder will contain some useful static resources and the indexes for the search engine used by Knowage.
 
-Metadata database connection
+Connection to metadata database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a new connection, edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the metadata database inside the ``GlobalNamingResources`` tag. Specify: username, password, driver class name and URL. 
-We need to create two connection:
-
-- ``jdbc/knowage``:  Knowage metadata 
+To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the metadata database inside the ``GlobalNamingResources`` tag. Specify: username, password, driver class name, JDBC URL and validation query (any valid query to be executed to validate connections). Connection's name must the ``jdbc/knowage``:
 
 .. code-block:: xml
 		:linenos:
@@ -52,7 +49,10 @@ We need to create two connection:
 				timeBetweenEvictionRunsMillis="10000" 
 				minEvictableIdleTimeMillis="60000" /> 
 
-- ``jdbc/ds_cache``: Knowage cache, this must be an empty schema  
+Cache database connection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In some scenarios (for example when defining a cockpit document on top of a file dataset), Knowage requires a database to be used as cache. It is highly recommended to create an empty database schema for this purpose. Then, you need to configure it inside ``TOMCAT_HOME/conf/server.xml`` as you did for metadata database.  Connection's name must the ``jdbc/ds_cache``:
 
 .. code-block:: xml
 		:linenos:
@@ -78,7 +78,7 @@ We need to create two connection:
 Connection to business data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the metadata database inside the ``GlobalNamingResources`` tag, specifying username, password, driver class name and URL. 
+Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the database containing business data to be analysed by Knowage inside the ``GlobalNamingResources`` tag, specifying username, password, driver class name, URL and validation query. Connection's name is free, in this example we used  ``jdbc/dwh``:
 
 .. code-block:: xml
 	:linenos:

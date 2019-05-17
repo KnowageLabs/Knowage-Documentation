@@ -1,10 +1,10 @@
 Manual installation
 ==========================
 
-How to populate metadata database
+Metadata database initialization
 --------------------------------------
 
-The metadata database must contains a schema which will collect all Knowage metadata. For configuring such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following SQL files:
+Knowage requires a database schema to store its own metadata (definition of analyses, datasets and so on). For initializing such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following SQL files:
 
 .. code-block:: bash
         :caption: Scripts for metadata schema
