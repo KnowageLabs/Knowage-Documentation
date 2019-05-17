@@ -84,7 +84,7 @@ The following lists the supported application servers:
 
 For each application server installation please refer to its official documentation.
 
-Tomcat 7
+Tomcat 8.5
 ~~~~~~~~~~~~
 
 In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
@@ -114,7 +114,7 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
    .. code-block:: bash
            :linenos:
 
-           export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat7.pid 
+           export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid 
            export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
 
 - Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
@@ -127,7 +127,7 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
 Windows
 ^^^^^^^^^^
 
-It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-7.0-doc/windows-service-howto.html.
+It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-8.5-doc/windows-service-howto.html.
 
 Database schema for metadata
 ----------------------------
