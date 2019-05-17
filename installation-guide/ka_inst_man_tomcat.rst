@@ -52,7 +52,7 @@ To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/serv
 Cache database connection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In some scenarios (for example when defining a cockpit document on top of a file dataset), Knowage requires a database to be used as cache. It is highly recommended to create an empty database schema for this purpose. Then, you need to configure it inside ``TOMCAT_HOME/conf/server.xml`` as you did for metadata database. Connection's name is free, in this example we used ``jdbc/ds_cache``:
+In some scenarios (for example when defining a cockpit document on top of a file dataset), Knowage requires a database to be used as cache. It is highly recommended to create an empty database schema for this purpose. Then, you need to configure it inside ``TOMCAT_HOME/conf/server.xml`` as you did for metadata database. Feel free to type a name of your choice, in this example we used ``jdbc/ds_cache``:
 
 .. code-block:: xml
 		:linenos:
@@ -78,7 +78,7 @@ In some scenarios (for example when defining a cockpit document on top of a file
 Connection to business data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the database containing business data to be analysed by Knowage inside the ``GlobalNamingResources`` tag, specifying username, password, driver class name, URL and validation query. Connection's name is free, in this example we used  ``jdbc/dwh``:
+Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the database containing business data to be analysed by Knowage inside the ``GlobalNamingResources`` tag, specifying username, password, driver class name, URL and validation query. Feel free to type a name of your choice, in this example we used ``jdbc/dwh``:
 
 .. code-block:: xml
 	:linenos:
