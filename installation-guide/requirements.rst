@@ -39,7 +39,7 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
 Disk usage
 --------------------
 
-The Knowage installation requires 2 GB of free space on file system. This space does not include the space relative to the data and the metadata storage.
+The Knowage installation requires 2 GB of available space on file system. This space does not include the space relative to the data and the metadata storage.
 
 Java environment
 --------------------
