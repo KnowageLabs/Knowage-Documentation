@@ -114,8 +114,8 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
    .. code-block:: bash
            :linenos:
 
-           export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat7.
-           pid export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
+           export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat7.pid 
+           export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
 
 - Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
 
