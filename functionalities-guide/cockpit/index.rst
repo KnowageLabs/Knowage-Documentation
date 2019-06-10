@@ -574,7 +574,7 @@ The **kn-selection-value** attribute is optional and will add a specific value t
 
 **Banned Tags**
 
-For Cross side scripting and security reasons some tags are removed on save by the security filter:
+In order to avoid Cross-site scripting and other vulnerabilities, some tags are automatically removed by the system when saving the cockpit:
 
 -  ``<button></button>``
 -  ``<object></object>``
@@ -584,7 +584,7 @@ If the tag is needed for some specific behaviour (ie. the button default hover),
 
 .. warning:: 
     **Whitelist**
-    All external resources paths must be present inside a whitelist XML inside the resources folder of the server named ``services-whitelist.xml``. The file should have the following structure:
+    Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise those external links will be removed by the system. This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
 
 
 .. code-block:: xml
@@ -593,7 +593,14 @@ If the tag is needed for some specific behaviour (ie. the button default hover),
    <?xml version="1.0" encoding="UTF-8"?>
    <WHITELIST>
       <service baseurl="https://www.youtube.com" />
+      <service baseurl="https://player.vimeo.com" />
+      <service baseurl="https://vimeo.com" />	
+      <service baseurl="https://media.giphy.com" />
+      <service baseurl="https://giphy.com" />
+      <service baseurl="https://flic.kr" />
       <service relativepath="/knowage/themes/" />
+      <service relativepath="/knowage/icons/" />
+      <service relativepath="/knowage/restful-services/1.0/images/" />
    </WHITELIST>
 
 Like other widgets the "Style" tab and the "Filters" tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
