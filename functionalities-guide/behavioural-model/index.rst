@@ -91,15 +91,15 @@ A *List Of Value* (LOV), is a collection of data organized in attribute-value fa
    :caption: LOV example
    :linenos:
 
-    {195, High Top Almonds, Food};  
-    {522, Tell Tale Walnuts, Food}; 
-    {844, Very Good Soda, Drink};   
+    {195, High Top Almonds, Food};
+    {522, Tell Tale Walnuts, Food};
+    {844, Very Good Soda, Drink};
 
 There may be multiple attributes in a LOV, but only one of them is the core value that is actually used in the analytical driver. Other  values have a descriptive function: they can be used to provide a human readable description of the LOV, as well as to store information used, for example, to correlate analytical drivers. In our example, the core value is the customer’s id, while the others are additional data describing the customer. Knowage allows to create different types of LOV:
 
 -  **Query**: SQL query to retrieve values from the database;
 -  **Script**: Groovy or JavaScript to dynamically return values;
--  **List of fixed values**: Values are defined statically at LOV creation time;  
+-  **List of fixed values**: Values are defined statically at LOV creation time;
 -  **Java objects**: External object invoked by name that returns the list of values;
 - **Dataset**: Dataset already defined in Knowage Server that is used to retrieve values. Note that the dataset must not contain parameters, while profile attributes are allowed.
 
@@ -136,7 +136,7 @@ Once completed the form, click on **Preview** button to enable the **Test** butt
 
 .. note::
      **Correlating analytical drivers**
-     
+
      Drivers can be correlated so that the value of the first driver is used as a parameter to select values in the second. Read more at *Analytical document* chapter.
 
 We stress that the visibility of specific fields serve to improved human readability when applying filters to documents handled by third users. Moreover it is possible to choose (refer to next figure) between **simple**, **tree** and **tree with selectable internal nodes** typology of LOV. The last two are hierarchical and let the user visualize the parameters together with their logical tree structure.
@@ -148,12 +148,12 @@ We stress that the visibility of specific fields serve to improved human readabi
 
 .. note::
      **Create a LOV for the default value of an analytical driver of type Manual Input Date**
-     
+
      This note is useful when using an analytical driver of type Date with an input of type Manual. In the case you want to use a particular date as default value for that driver, you have to use this syntax for the LOV: select '2017-09-10#yyyy-MM-dd' as fixed_date. Instead of the fixed date 2017-09-10 you can also use as default date the today date for example; in this case you can use a query of this type: select concat(to_date(now()) ,'#yyyy-MM-dd') as today. The most important thing is to concat to the default date you want to use the string #yyyy-MM-dd.
 
 .. note::
     **Create a LOV for the default value of an analytical driver with a hierarchical LOV**
-    
+
     In case you want to add a default value to an analytical driver with an input of type hierarchical LOV you need to use another hierarchical LOV with the default values desired. If the analytical driver LOV is of type *Tree* then the default LOV need to be of type *Tree* too. The LOV need to have values for the leaf level only. Otherwise, if the analytical driver LOV is of type *Tree selectable inner nodes* the default LOV need to be of the same type. The default LOV may have values for one of the level used in the hierarchical LOV. For example, suppose you have an analytical driver with a hierarchical LOV having levels Product Family > Product Category > Product Department. If the hierarchical LOV is of type *Tree* then in the deafult LOV you need to insert one or more values for the level Product Department. Your default LOV have one level, the Product Department. In case the LOV is of type *Tree selectable inner nodes* you can choose one of the three levels. Your default LOV have one level between Product Family, Product Category or Product Department.
 
 Parametrizing LOVs
@@ -164,7 +164,7 @@ Suppose that you need to retrieve a list of values representing all brand names 
 .. code-block:: sql
          :caption: Query LOV example
          :linenos:
- 
+
           SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
           FROM PRODUCT
 
@@ -175,7 +175,7 @@ In particular, all query except the ``List of fixed values`` type can be paramet
 .. code-block:: sql
          :caption: Parametric query
          :linenos:
-         
+
            SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
            FROM PRODUCT
            WHERE C.PRODUCT_FAMILY = '${pr_family}'
@@ -185,7 +185,7 @@ Then, at LOV execution time, for the user food manager the query becomes as show
 .. code-block:: sql
          :caption: Runtime placeholder substitute
          :linenos:
-       
+
           SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
           FROM PRODUCT
           WHERE C.PRODUCT_FAMILY = 'Food'
@@ -194,9 +194,9 @@ This means that if you are the food manager and your user has the profile attrib
 
 .. note::
      **Standard profile attributes**
-     
+
      There are some standard profile attributes always avaiable that dont' need to be defined for each user. These profile attributes are:
-     
+
      - *user_id* contains the user id of the logged in user
      - *user_roles* contains the current user's roles, joined as a SQL IN clause fashion, for example: 'general_management','human_resources_management'
      - *TENANT_ID* contains the tenant to which the user belongs
@@ -218,22 +218,22 @@ Knowage supports the validation of the document’s input parameters via validat
 
 Knowage default checks are:
 
-- **Alfanumeric**: it checks if the parameter is alfanumeric;   
-- **Numeric**: it checks if the parameter is numeric;   
-- **Letter String**: it checks if the parameter is a letter string;   
-- **E-Mail**: it checks if the parameter is an e-mail;   
-- **Fiscal Code**: it checks if the parameter has the correct syntax of a fiscal code; 
+- **Alfanumeric**: it checks if the parameter is alfanumeric;
+- **Numeric**: it checks if the parameter is numeric;
+- **Letter String**: it checks if the parameter is a letter string;
+- **E-Mail**: it checks if the parameter is an e-mail;
+- **Fiscal Code**: it checks if the parameter has the correct syntax of a fiscal code;
 - **Internet Address**: it checks if the parameter is an internet address.
 
 .. |image46| image:: media/image45.png
    :width: 30
-   
+
 If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
 
 - **Date**: here you can set a costumized format type of date;
 - **Regular Expression**: to set a regular expression validation rule;
 - **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
-- **Range**: to set a range the parameters value has to satisfy;  
+- **Range**: to set a range the parameters value has to satisfy;
 - **Decimal**: to set a maximal decimal places for the parameters.
 
 Creating an analytical driver
@@ -268,27 +268,35 @@ To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Det
 .. figure:: media/image54.png
 
     Detail panel of LOV creation, second step.
-   
+
 The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are selectable at document execution. In fact the user can choose among:
 
 - **List values selection**: the filter will look like a lookup table;
 - **Pop up**: the filter will look like a lookup table;
 - **Slider**: the user can drag the slider to choose the parameter;
-- **Tree**: made for hierarchical LOV, lets the users navigate the parameters in a hierarchical way;   
+- **Tree**: made for hierarchical LOV, lets the users navigate the parameters in a hierarchical way;
 - **Combo Box values selection**: the filter will look like a drop down menu.
 
 The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next sections for this kind of input.
 
 Moreover the user can add default values (namely values that will be passed to the document at its first execution) using the dedicated area. Here it is possible to pick default values from another LOV or to pick the first or the latter value of the current LOV (if the LOV input type was selected).
 
+In case of Manual Input Date the user can specify a maximum value driven by a LOV:
+
+.. figure:: media/image57.png
+
+During execution of a document, the date picker will be limited by that value:
+
+.. figure:: media/image58.png
+
 .. note::
-     **Analytical driver of type Manual Input Date with a default value**
-     
-     In the case you want to use an analytical driver of type Manual Input Date with a particular date as default value, you have to use a particular syntax for the LOVs query. See the note *Create a LOV for the default value of an analytical driver of type Manual Input Date* in the section *Creating a List Of Value* for more details.
+     **Analytical driver of type Manual Input Date with a default value and/or max value**
+
+     In the case you want to use an analytical driver of type Manual Input Date with a particular date as default value and/or a maximum value, you have to use a particular syntax for the LOVs query. See the note *Create a LOV for the default value of an analytical driver of type Manual Input Date* in the section *Creating a List Of Value* for more details.
 
 .. note::
      **Analytical driver with hierarchical LOV and default LOV**
-     
+
      In the case you want to use an analytical driver with a hierarchical LOV and a default LOV the latter need to be hierarchical too. For more details see *Create a LOV for the default value of an analytical driver with a hierarchical LOV* note in the section *Creating a List Of Value*.
 
 At the bottom of the page the user must associate roles to the “use mode”. This action is mandatory. The user connects the user’s roles that he/she wants to be allowed to see a certain list of values or certain regions or be able to type values at his/her convenience.
@@ -328,11 +336,11 @@ Once you have saved the LOV, just log out from Knowage and log in with a differe
 .. figure:: media/image56.png
 
     Behavioural Model Schema.
-    
+
 Behavioural Model Lineage
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to show a summary of the links between the LOVs, the analytical driver and the documents by selecting **Behavioural Model** > **Behavioural Model Lineage**. 
+It is possible to show a summary of the links between the LOVs, the analytical driver and the documents by selecting **Behavioural Model** > **Behavioural Model Lineage**.
 
 .. figure:: media/lineage.png
 
