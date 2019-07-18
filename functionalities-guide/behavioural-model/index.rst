@@ -285,9 +285,13 @@ In case of Manual Input Date the user can specify a maximum value driven by a LO
 
 .. figure:: media/image57.png
 
+    Detail panel of LOV creation, specification of a maximum value.
+
 During execution of a document, the date picker will be limited by that value:
 
 .. figure:: media/image58.png
+
+    Detail of a date picker for a date parameter with maximum value specified.
 
 .. note::
      **Analytical driver of type Manual Input Date with a default value and/or max value**
