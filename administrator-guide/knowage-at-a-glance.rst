@@ -89,14 +89,14 @@ Operational Engines
 Behavioural Model
    which regulates the visibility over documents and data, according to end users’ roles.
 
-Offering multiple solutions for the same analytical requirement and/or multiple instances for the same engine, Knowage logic and architecture provide various benefits, such as: limited workload on each engine, guaranteeing high performances; openness to improve or extend the suite and its capabilities, minimizing the impact on exiting environments; high flexibility and modularity; high scalability, with minimum economic, infrastructural and applicationlevel impact.
+Offering multiple solutions for the same analytical requirement and/or multiple instances for the same engine, Knowage logic and architecture provide various benefits, such as: limited workload on each engine, guaranteeing high performances; openness to improve or extend the suite and its capabilities, minimizing the impact on exiting environments; high flexibility and modularity; high scalability, with minimum economic, infrastructural and application level impact.
 
 Data layer
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The data layer allows data and metadata storage and usage. BI data is often located in a data warehouse, whose design is out of the BI product scope and strictly related to the specific customer’s world. Most of Knowage products offer a specific ETL tool allowing to load data at this level, covering the whole BI stack.
 
-Knowage can directly access the data warehouse through JDBC connections (for intance, using SQL queries) or, on a higher level, it can use a specific access strategy based on metamodels, built through Knowage Meta.
+Knowage can directly access the data warehouse through JDBC connections (for instance, using SQL queries) or, on a higher level, it can use a specific access strategy based on metamodels, built through Knowage Meta.
 
 As described in the next chapters, Knowage can also access less traditional data sources, like Big Data and NoSQL data sources.
 
@@ -105,7 +105,7 @@ All Knowage metadata are stored in a private repository hosted on a generic RDBM
 What you can do with Knowage
 ----------------------------
 
-This section focuses on Knowage analytical and operational funciontalities, administration tools and cross services.
+This section focuses on Knowage analytical and operational functionalities, administration tools and cross services.
 
 It is important to point out that Knowage adopts an evolutionary approach, allowing you to use and adapt the different features provided
 by the suite according to your specific needs, and adapt them over time. The Server reflects this strategy, guaranteeing security and
