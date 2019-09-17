@@ -80,7 +80,7 @@ Type
       + If you want to define a direct **JDBC** connection, then you have to also set the following fields:
       
          - **URL** Database URL. An example for MySQL databases is ``jdbc:mysql://localhost:3306/foodmart_key``
-         - **User** Database username
+         - **User** Database username.
          - **Password** Database password.
          - **Driver** Driver class name. An example for MySQL databases is ``com.mysql.jdbc.Driver``.
       + If instead you want to define a **JNDI** connection, fill in the following fields:
@@ -127,7 +127,7 @@ The parameters for the Hive connection are:
 
 Here ``<host1>:<port1>,<host2>:<port2>`` is a server instance or a comma separated list of server instances to connect to (if dynamic service discovery is enabled). If empty, the embedded server will be used.
 
-A simple example of connetction url is ``jdbc:\hive2://192.168.0.125:10000``.
+A simple example of connection URL is ``jdbc:\hive2://192.168.0.125:10000``.
 
 Spark SQL
 ~~~~~~~~~~
@@ -143,7 +143,7 @@ Look at the Hive section for the details about parameters. The port in this case
 Impala
 ~~~~~~
 
-Impala (currently an Apache Incubator project) is the open source, analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it, with all dependencies, on the application server. The definition of the url can be different between versions of the driver, please check on the Cloudera web site.
+Impala (currently an Apache Incubator project) is the open source, analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it, with all dependencies, on the application server. The definition of the URL can be different between versions of the driver, please check on the Cloudera web site.
 
 Example parameters for Impala connection are:
 
@@ -156,15 +156,15 @@ MongoDB
 
 MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling. MongoDB obviates the need for an Object Relational Mapping (ORM) to facilitate development.
 
-MongoDB is different from the other dbs Knowage can handle, because it doesnt provide a JDBC driver, but a java connector. The MongoDB Java driver (at this moment version 3.5.0 is included) is already included inside Knowage so isn't required to download and add it to the application server.
+MongoDB is different from the other dbs Knowage can handle, because it doesn't provide a JDBC driver, but a Java connector. The MongoDB Java driver (at this moment version 3.5.0 is included) is already included inside Knowage so isn't required to download and add it to the application server.
 
 Example parameters for the connection are:
 
 -  **Dialect:** MongoDB;
 -  **Driver Class:** mongo;
--  **Connection URL:** ``mongodb://localhost:27017/foodamart``(please don't include user and password in this url).
+-  **Connection URL:** ``mongodb://localhost:27017/foodamart``(please don't include user and password in this URL).
 
-Also please pay attention that the user must have the correct priviledges to access the specified database. So for example on MongoDB you can create a user with this command on the Mongo shell:
+Also please pay attention that the user must have the correct privileges to access the specified database. So for example on MongoDB you can create a user with this command on the Mongo shell:
 
 .. code-block:: javascript
     :linenos:
@@ -196,7 +196,7 @@ See also this useful links:
 Cassandra
 ~~~~~~~~~~
 
-Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple  datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
+Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
 
 There are different ways to connect Knowage to Cassandra. 
 

@@ -30,7 +30,7 @@ There are two possibilities:
 - selecting a value from those available for the specific analytical driver at definition time; 
 - executing the report one time for each possible values of the analytical driver.
 
-A scheduled activity can be composed by more than one report. It is also possible to add the same report to a scheduled activity more times. You can use the icon |image50| to easily duplicate a document. Once all esired documents have been added and the management configuration of their parameters has been set up, save the activity by clicking on the save button. The new activity is shown in the list and can be modified or deleted using intended specifically icons.
+A scheduled activity can be composed by more than one report. It is also possible to add the same report to a scheduled activity more times. You can use the icon |image50| to easily duplicate a document. Once all desired documents have been added and the management configuration of their parameters has been set up, save the activity by clicking on the save button. The new activity is shown in the list and can be modified or deleted using intended specifically icons.
 
 .. |image50| image:: media/image44.png
    :width: 30
@@ -48,8 +48,8 @@ Schedulation details opens (Figure below).
 
 It is composed by two areas: **Detail** and **Documents management**.
 The details tab let you set all properties of you schedulation. Indeed here you decide its name, description and timing.
-A schedulation can be made in a choosen date and time if you choose **Single Execution** as type.
-Otherwise it can be realised for fixed periods or start on a fixed event.
+A schedulation can be made in a chosen date and time if you choose **Single Execution** as type.
+Otherwise it can be realized for fixed periods or start on a fixed event.
 
 You can decide it, by choosing the schedulation type.
 
@@ -59,13 +59,13 @@ Available schedulation type are:
 -  Customized Execution;
 -  Event Exectution.
 
-A **Single Execution** is a fixed execution for a date and a time which happens only once. A **Customized Execution** repeats your schedulation perodically according to your settings. The **Event Execution** starts the scheduling when an event happens.
+A **Single Execution** is a fixed execution for a date and a time which happens only once. A **Customized Execution** repeats your schedulation periodically according to your settings. The **Event Execution** starts the scheduling when an event happens.
 
 You can choose among these event types:
 
 -  REST service,
 -  JMS Queue,
--  ContextBroker messge,
+-  ContextBroker message,
 -  Dataset verification.
 
 If you choose **Dataset verification**, you have to select a right structured dataset. It has to give as results only true or false. Then set the frequency in seconds. This is the frequency the dataset will be verified. For example if you set it on 10 seconds it means that each 10 seconds the dataset is executed. If the result of its execution is true, the schedulation is trigged otherwise it isn’t.
@@ -76,7 +76,7 @@ Once you are done, switch to the **Document Management** tab.
 
     Document management.
 
-Here you can find the dispatch configurations, that can be different for all the documents that compose the scheduled activity. All documents that compose the activity have their own dispatch configuration and the same document can be distributed along multiple dispatch channels. You can switch among the documents included in your activity by cliking on their name in the upper toolbar. There are many different possible dispatch channels that can be used to distribute the results of the execution of a scheduled activity:
+Here you can find the dispatch configurations, that can be different for all the documents that compose the scheduled activity. All documents that compose the activity have their own dispatch configuration and the same document can be distributed along multiple dispatch channels. You can switch among the documents included in your activity by clicking on their name in the upper toolbar. There are many different possible dispatch channels that can be used to distribute the results of the execution of a scheduled activity:
 
 - Save as snapshot,
 - Save as file,
@@ -100,7 +100,7 @@ The list of all snapshots contained in the buffer can be accessed from the **Sho
 Save as file
 ~~~~~~~~~~~~
 
-The executed document can be saved as file on the filesystem in the path /knowage-<version> /resources (if no destination folder is specified). Otherwise, you can create the relative path of this subfolder by writing your subfolder name. For instance, if you write “MyFirstScheduler” as file name and “Schedulation” as destination folder, after the schedulation execution a subfolder Schedulation containg the file “MyFirstScheduler” is created in /knowage-<version> /resources. If the subfolder Schedulation already exist your file is added to this subfolder. You can have a look at the form in Figure below.
+The executed document can be saved as file on the filesystem in the path /knowage-<version> /resources (if no destination folder is specified). Otherwise, you can create the relative path of this subfolder by writing your subfolder name. For instance, if you write “MyFirstScheduler” as file name and “Schedulation” as destination folder, after the schedulation execution a subfolder Schedulation containing the file “MyFirstScheduler” is created in /knowage-<version> /resources. If the subfolder Schedulation already exist your file is added to this subfolder. You can have a look at the form in Figure below.
 
 .. figure:: media/image51.png
 
@@ -246,7 +246,7 @@ Send mail
 .. important::
          **Enterprise Edition only**
 
-         This feature is avaiable only with KnowageER and KnowageSI, submodules of Knowage Enterprise Edition
+         This feature is available only with KnowageER and KnowageSI, submodules of Knowage Enterprise Edition
 
 The executed document can be sent to one or more mail recipients. The list of mail addresses to be used to forward the executed document can be defined in three different ways:
 
@@ -316,7 +316,7 @@ Here you find the following information:
 
     Schedulation information pop up example
     
-- **Execute now**, by clicking it you immediatly start the execution of your schedulation.
+- **Execute now**, by clicking it you immediately start the execution of your schedulation.
 - **Pause schedulation**, it lets you pause your schedulation.
 - **Resume schedulation**, it appears after having paused a schedulation, it enables you to resume it.
 - **Delete Schedulation**, it lets you delete a schedulation.
