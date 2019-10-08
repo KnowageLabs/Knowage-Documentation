@@ -12,7 +12,7 @@ In the **Server Manager** menu panel you find some management functionalities.
 
     Server Manager Panel
 
-Those about **Import/Export** let you export some configurations or elements from one istallation to another. This can be helpful for example in managing a test and a production areas. We are going to give the full description of these funtionalities in the following.
+Those about **Import/Export** let you export some configurations or elements from one installation to another. This can be helpful for example in managing a test and a production areas. We are going to give the full description of these functionalities in the following.
 
 Tenants Management
 ------------------
@@ -68,7 +68,7 @@ First of all choose the name to give to your exportation (i.e. if you choose MyF
 
 Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its childer folders/leaves.
 
-When you have chose a name and select some documents the export icon change colour from gray to pink. This means all elements are set to start exporting. Before going on decide if you want to export **Olap customized View** and/or **Scheduled documents** and/or **CrossNavigation** and/or **BIRT Translation** and/or **Schedule configurations** . 
+When you have chose a name and select some documents the export icon change color from gray to pink. This means all elements are set to start exporting. Before going on decide if you want to export **Olap customized View** and/or **Scheduled documents** and/or **CrossNavigation** and/or **BIRT Translation** and/or **Schedule configurations** . 
 
 - **Olap customized View**
    Clicking on this functionalities the export will include all the customized views saved into the chosen OLAP documents. You can find the Customized View going on the OLAP Document Menu and clicking on *Show OLAP custom View*. See the figure below:
@@ -98,7 +98,7 @@ Suppose you want to upload MyFirstExport.zip in another installation. Log in it 
 
     Document Import
 
-Choose the .zip obtained from the **Export** phase and click on the import icon. Few steps guide you trought importation. You are asked to map from source to target: the Roles, the Engines and the Metadata. If a role doesn’t map any of the existing among the target one, it will be created. Please keep attention during the metadata step beacause you can choose to overwrite or don’t the target metadata. By default this option is set to false. If you change to yes documents, lov, driver, etc. which has the same label of the exported ones will have metadata overwritten at the end of import procedure.
+Choose the .zip obtained from the **Export** phase and click on the import icon. Few steps guide you trough importation. You are asked to map from source to target: the Roles, the Engines and the Metadata. If a role doesn’t map any of the existing among the target one, it will be created. Please keep attention during the metadata step because you can choose to overwrite or don’t the target metadata. By default this option is set to false. If you change to yes documents, lov, driver, etc. which has the same label of the exported ones will have metadata overwritten at the end of import procedure.
 
 Menu
 ~~~~~
@@ -109,9 +109,9 @@ This feature let you export the menu structure.
 
     Menu Export
 
-To start the export you need only to insert the Export name. Once inserted the name, the export icon changes colour from grey to pink to let you understand all mandatory fields to start the export were filled. Click on this icon and the related .zip is downloaded.
+To start the export you need only to insert the Export name. Once inserted the name, the export icon changes color from grey to pink to let you understand all mandatory fields to start the export were filled. Click on this icon and the related .zip is downloaded.
 
-To upload it in another istallation, accede to the **Import\\Export** Menu area and switch to the tab **import**. Here click on **Browse** to search in your folders the .zip previously created, see the following Figure.
+To upload it in another installation, accede to the **Import\\Export** Menu area and switch to the tab **import**. Here click on **Browse** to search in your folders the .zip previously created, see the following Figure.
 
 .. figure:: media/image72.png
 
@@ -201,7 +201,7 @@ Referring to the following image, the user has to specify if:
 
     Import KPIs settings
 
-Once the import is started, the GUI leads the user to finalise the import procedure. In particular, the user is asked to map data sources correctly (Figure below).
+Once the import is started, the GUI leads the user to finalize the import procedure. In particular, the user is asked to map data sources correctly (Figure below).
 
 .. figure:: media/image84.png
 
@@ -222,13 +222,13 @@ This option allows to import/export the analytical drivers and their related LOV
 
     Import/Export of analytical drivers 
    
-As shown in Figure anowe, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
+As shown in Figure above, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
 
-To produce suce a file, the user has to log in as administrator of the source tentant. Then he has to assign a name to the export, check the analytical drivers of interest and click on the red download button available at the top right corner of the page. Note that it is possible to slim down the research of the analytical drivers by filtering on their data of creation.
+To produce such a file, the user has to log in as administrator of the source tentant. Then he has to assign a name to the export, check the analytical drivers of interest and click on the red download button available at the top right corner of the page. Note that it is possible to slim down the research of the analytical drivers by filtering on their data of creation.
 
-Switch tenant and log in as administrator. Use the Import tab to upload the zipped folder and finalise the import.
+Switch tenant and log in as administrator. Use the Import tab to upload the zipped folder and finalize the import.
 
-Use the GUI to upload the zipped folder, to specify if to overwrite on the existind analytical drivers or add missing. Then click on next and continue by mapping roles among tenants and data sources.
+Use the GUI to upload the zipped folder, to specify if to overwrite on the existing analytical drivers or add missing. Then click on next and continue by mapping roles among tenants and data sources.
 
 .. figure:: media/image87.png
 
@@ -247,7 +247,7 @@ The process ends with a message containing the information about the import.
 Glossary
 ~~~~~~~~
 
-The export/import of glossary allows the user to allign glossaries among tenants.
+The export/import of glossary allows the user to align glossaries among tenants.
 
 .. figure:: media/image90.png
 
@@ -261,7 +261,7 @@ Once the user has got the zipped folder he/she must switch tenant and enter as i
 
     Import of glossaries
 
-The user must use the arrows to indicate the glossaries he/she wants to import in the target tenant. No further information are needed to end the process. Then the user has to enter the target tenant as administrator and use the import tab to finalise the import.
+The user must use the arrows to indicate the glossaries he/she wants to import in the target tenant. No further information are needed to end the process. Then the user has to enter the target tenant as administrator and use the import tab to finalize the import.
 
 Catalog
 ~~~~~~~~

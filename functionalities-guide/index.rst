@@ -18,7 +18,6 @@ Functionalities
    location-intelligence/index.rst
    svg-document-visualization/index.rst
    datamining/index.rst
-   network/index.rst
    multidimensional-analysis/index.rst
    what-if-analysis/index.rst
    glossary-and-data-lineage/index.rst

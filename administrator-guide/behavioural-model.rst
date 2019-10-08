@@ -5,14 +5,14 @@ An important topic to explore before starting a new project is the creation and 
 
 It regulates the visibility on documents and data according to the roles and profiles of the end users. It offers many advantages in a BI project, including: reducing the required number of analytical documents to be developed and maintained; coding visibility rules once only and apply them to several documents, each one with its own analytical logics; ensuring a uniform growth of the project over time; guaranteeing the respect of the visibility rules over time, with no limitation on the number of engines and analytical documents that can be added over time.
 
-The bevioural model is based on four main concepts:
+The behavioural model is based on four main concepts:
 
 -  *user profile*, defining the user’s roles and attributes;
 -  *repository rights*, defining the users’ rights in terms of document accessibility;
 -  *analytical drivers*, defining which data of a document can be shown to the user;
 -  *presentation environment* settings, defining how the user can reach and run his own documents.
 
-In other words, the bevioural model mainly answers the following
+In other words, the behavioural model mainly answers the following
 questions:
 
 -  *WHO* uses the business intelligence solution (user profile);

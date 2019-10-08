@@ -7,7 +7,7 @@ In this chapter we describe all functionalities available in Server Settings pan
 
    Server Settings Panel.
 
-Similar editors give you access to configurations and domains. We are going to provide an example of both cases to let you understand how thier management works. A complete overview of metadata creation, editing and management conclude this chapter.
+Similar editors give you access to configurations and domains. We are going to provide an example of both cases to let you understand how their management works. A complete overview of metadata creation, editing and management conclude this chapter.
 
 Configuration Management
 -------------------------

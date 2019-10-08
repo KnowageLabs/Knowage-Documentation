@@ -75,9 +75,9 @@ The BI functionalities menu consists in a set of icons associated with basic fea
 The administrator menu is divided in subpanels which maps the different managing areas:
 
 - **Data Providers** Here you can set and manage Data Sources.
-- **Profile Management** In this panel you can organize the users profilation, authorizations and attributes, but also organize the Analitycal model. It means you can create/manage Roles, Users and Attributes as well as configure the functionality tree and the menu, i.e. the list of quick access link to analytcal document or other resources provided to the users.
-- **Behavioural model** Here you manage all the Behavioural model, which means create analytical drivers and lov. In this area you can access the contraints configuration too.
-- **Catalogs** In this area you manage different catalogs, that may vary from product to product: the **Business Model** catalogues used for QbE; the **Layer Catalogs** for the creation of GIS analitycal documents and so on.
+- **Profile Management** In this panel you can organize the users profilation, authorizations and attributes, but also organize the Analytical model. It means you can create/manage Roles, Users and Attributes as well as configure the functionality tree and the menu, i.e. the list of quick access link to analytical document or other resources provided to the users.
+- **Behavioural model** Here you manage all the Behavioural model, which means create analytical drivers and lov. In this area you can access the constraints configuration too.
+- **Catalogs** In this area you manage different catalogs, that may vary from product to product: the **Business Model** catalogues used for QbE; the **Layer Catalogs** for the creation of GIS analytical documents and so on.
 - **Tools** In this area you can access the different scheduler options.
 - **Server Settings** In this panel you have access to all server settings configuration options, such as configuration or domain management.
 - **Server Manager** This is an optional package. It gives you access to different server functionalities, such as template management and all the import/export features.
@@ -95,7 +95,7 @@ The administrator menu is divided in subpanels which maps the different managing
    |                       |                       | configuration         |
    +-----------------------+-----------------------+-----------------------+
    |    |image29|          | Behavioural model     | Lovs, Analytical      |
-   |                       |                       | Driver and Contraints |
+   |                       |                       | Driver and Constraints |
    +-----------------------+-----------------------+-----------------------+
    |    |image30|          | Catalogs              | Business Models and   |
    |                       |                       | Layers                |
