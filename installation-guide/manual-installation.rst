@@ -124,6 +124,7 @@ Installation of Chromium Cockpit Export script
          Chromium Cockpit Export script is only available for Enterprise Edition.
 
 Extract archive ``knowage-cockpit-export-installation.zip`` to ``/opt/knowage``:
+
 .. code-block:: bash
         :caption: Complete path of the script
 
