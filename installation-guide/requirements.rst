@@ -1,6 +1,6 @@
 Requirements
 ====================
- 
+
 Before going into details on Knowage installation, it is necessary to check if certain requirements are satisfied. We start to distinguish between the certified environments and the compatible ones. The first are those where check tests take place. The latter are those environments technically compatibles but where integration tests are not executed.
 
 Operating systems
@@ -10,7 +10,7 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
 
 .. table:: Certified environments
    :widths: auto
-   
+
    +---------------------------+-------------+
    |    Certified Environments               |
    +===========================+=============+
@@ -23,7 +23,7 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
 
 .. table:: Compatible environments
     :widths: auto
-   
+
     +-----------------------------+-------------+
     |    Compatible Environments                |
     +=============================+=============+
@@ -32,10 +32,10 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
     |    RHEL Red Hat Enterprise  | 6.4         |
     +-----------------------------+-------------+
     |    Ubuntu                   |16 LST,18 LST|
-    +-----------------------------+-------------+    
+    +-----------------------------+-------------+
     |    Windows server           | 2012, 2008  |
     +-----------------------------+-------------+
-   
+
 Disk usage
 --------------------
 
@@ -55,19 +55,19 @@ Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` use
            :linenos:
            :caption: Instructions to set the JAVA_HOME variable for Linux environment.
 
-           export JAVA_HOME=<root path of the Java installation>                 
-           export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/                            
-           export PATH=$JAVA_HOME/bin:$PATH                                     
+           export JAVA_HOME=<root path of the Java installation>
+           export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/
+           export PATH=$JAVA_HOME/bin:$PATH
 
 Windows
 ~~~~~~~~~~~~
 
 Define the ``JAVA_HOME`` variable and ``PATH`` in the section "Environment variables" which can be reached from the "System".
- 
+
    .. figure:: media/image7.png
 
       Setting the path for the JAVA_HOME variable for Windows
-   
+
 Application server
 ---------------------
 
@@ -75,7 +75,7 @@ The following lists the supported application servers:
 
 .. table:: Supported application servers
     :widths: auto
-    
+
     +---------------------+------------------------+-------------+
     |    **Support type** | **Application Server** | **Version** |
     +=====================+========================+=============+
@@ -99,8 +99,8 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
    .. code-block:: bash
            :linenos:
 
-           useradd -m tomcat                     
-           passwd <password for the tomcat user> 
+           useradd -m tomcat
+           passwd <password for the tomcat user>
 
 - Install the Tomcat using the Tomcat user. Remeber to define the ``TOMCAT_HOME`` variable.
 
@@ -114,15 +114,15 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
    .. code-block:: bash
            :linenos:
 
-           export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid 
-           export JAVA_HOME=<root folder of the JDK 1.8 installation>                  
+           export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid
+           export JAVA_HOME=<root folder of the JDK 1.8 installation>
 
 - Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
 
    .. code-block:: bash
            :linenos:
 
-           exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@" 
+           exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@"
 
 Windows
 ^^^^^^^^^^
@@ -169,5 +169,40 @@ Troubleshooting missing requirements may be difficult on Unix-like operating sys
 
 .. code-block:: bash
         :caption: Executing SlimerJS with debug option via Xvfb
- 
+
         xvfb-run ./slimerjs --debug=yes
+
+NodeJS requirements
+-------------------------
+.. important::
+         **Enterprise Edition only**
+
+         NodeJS is required only Enterprise Edition.
+
+Knowage includes some NodeJS scripts that need to be executed with NodeJS 8 or greater: see NodeJS official documentation for the installation process.
+
+In particular, for CentOS 6 you need to execute:
+
+.. code-block:: bash
+        :caption: Executing SlimerJS with debug option via Xvfb
+
+        curl -sL https://rpm.nodesource.com/setup_8.x | bash -
+
+To be able to download NodeJS with YUM:
+.. code-block:: bash
+        :caption: Installing of NodeJS with YUM
+
+        yum install -y nodejs
+
+Chromium requirements
+-------------------------
+.. important::
+         **Enterprise Edition only**
+
+         Chromium is required only Enterprise Edition.
+
+Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install follwing Chromium dependencies:
+.. code-block:: bash
+        :caption: Installing of Chromium dependencies with YUM
+
+        yum install -y cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
