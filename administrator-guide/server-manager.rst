@@ -12,7 +12,7 @@ In the **Server Manager** menu panel you find some management functionalities.
 
     Server Manager Panel
 
-Those about **Import/Export** let you export some configurations or elements from one istallation to another. This can be helpful for example in managing a test and a production areas. We are going to give the full description of these funtionalities in the following.
+Those about **Import/Export** let you export some configurations or elements from one installation to another. This can be helpful for example in managing a test and a production areas. We are going to give the full description of these funtionalities in the following.
 
 Tenants Management
 ------------------
