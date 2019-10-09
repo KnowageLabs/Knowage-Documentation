@@ -156,22 +156,6 @@ Database schema for data
 
 A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *data DB* in the following.
 
-SlimerJS requirements
--------------------------
-
-Knowage includes a standalone edition of SlimerJS 0.9 to export some contents to PDF and image files. Usually SlimerJS runs out-of-the-box on Windows, but requires OS-dependent libraries on Unix-like operating systems.
-
-- In order to fulfill all **SlimerJS requirements** please refer to its official documentation at https://docs.slimerjs.org/0.9/installation.html#requirements.
-
-- **Xvfb** may be required on Unix-like operating systems if no suitable X display server is available; install it with package manager.
-
-Troubleshooting missing requirements may be difficult on Unix-like operating systems. Executing SlimerJS manually with **debug option** may help to investigate further:
-
-.. code-block:: bash
-        :caption: Executing SlimerJS with debug option via Xvfb
-
-        xvfb-run ./slimerjs --debug=yes
-
 NodeJS requirements
 -------------------------
 .. important::
@@ -189,6 +173,7 @@ In particular, for CentOS 6 you need to execute:
         curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 
 To be able to download NodeJS with YUM:
+
 .. code-block:: bash
         :caption: Installing of NodeJS with YUM
 
@@ -202,6 +187,7 @@ Chromium requirements
          Chromium is required only Enterprise Edition.
 
 Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install follwing Chromium dependencies:
+
 .. code-block:: bash
         :caption: Installing of Chromium dependencies with YUM
 
