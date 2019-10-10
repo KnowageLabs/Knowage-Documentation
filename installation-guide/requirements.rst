@@ -234,7 +234,7 @@ Finally you can install NodeJS:
 .. code-block:: bash
         :caption: Installation of NodeJS
 
-        yum install -y nodejs
+        apt-get install -y nodejs
 
 Chromium requirements
 -------------------------
