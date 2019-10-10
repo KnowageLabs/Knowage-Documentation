@@ -162,9 +162,9 @@ NodeJS requirements
 .. important::
          **Enterprise Edition only**
 
-         NodeJS is required only Enterprise Edition.
+         NodeJS is required only for Enterprise Edition.
 
-Knowage includes some NodeJS scripts that need to be executed with NodeJS 8 or greater: see `NodeJS official documentation<https://nodejs.org/en/download/package-manager/>`_ for the installation process.
+Knowage includes some NodeJS scripts that need to be executed with NodeJS 8 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
 
 CentOS 6
 ^^^^^^^^^^
@@ -203,12 +203,12 @@ Chromium requirements
 .. important::
          **Enterprise Edition only**
 
-         Chromium is required only Enterprise Edition.
+         Chromium is required only for Enterprise Edition.
 
 Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install following Chromium dependencies:
 
 .. code-block:: bash
-        :caption: Installing of Chromium dependencies with YUM
+        :caption: Installation of Chromium dependencies
 
         # For CentOS
         yum install -y cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
