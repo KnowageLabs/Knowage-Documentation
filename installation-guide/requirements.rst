@@ -184,17 +184,55 @@ Then you need to clear YUM cache and update all local packages:
         yum clean all
         yum update -y
 
-Next you can install the official repository of NodeJS for Centos:
+Next you can install the official repository of NodeJS:
 
 .. code-block:: bash
-        :caption: Installation of NodeJS on CentOS
+        :caption: Installation of the repository of NodeJS
 
         curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 
-To be able to download NodeJS with YUM:
+.. important::
+         If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
+
+Finally you can install NodeJS:
 
 .. code-block:: bash
-        :caption: Installing of NodeJS with YUM
+        :caption: Installation of NodeJS
+
+        yum install -y nodejs
+
+Ubuntu
+^^^^^^^^^^
+
+In Ubuntu you need to erase older versions of NodeJS, if present:
+
+.. code-block:: bash
+        :caption: Command to erase older versions of NodeJS
+
+        apt-get remove nodejs
+
+Then you need to clear APT cache and update all local packages:
+
+.. code-block:: bash
+        :caption: Cache clearing and system updating
+
+        apt-get update
+        apt-get upgrade -y
+
+Next you can install the official repository of NodeJS:
+
+.. code-block:: bash
+        :caption: Installation of the repository of NodeJS
+
+        curl -sL https://deb.nodesource.com/setup_8.x | bash -
+
+.. important::
+         If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
+
+Finally you can install NodeJS:
+
+.. code-block:: bash
+        :caption: Installation of NodeJS
 
         yum install -y nodejs
 
