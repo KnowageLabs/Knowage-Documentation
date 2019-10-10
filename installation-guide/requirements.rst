@@ -158,17 +158,36 @@ A schema for data must be also available. It can be queried through Knowage and 
 
 NodeJS requirements
 -------------------------
+
 .. important::
          **Enterprise Edition only**
 
          NodeJS is required only Enterprise Edition.
 
-Knowage includes some NodeJS scripts that need to be executed with NodeJS 8 or greater: see NodeJS official documentation for the installation process.
+Knowage includes some NodeJS scripts that need to be executed with NodeJS 8 or greater: see `NodeJS official documentation<https://nodejs.org/en/download/package-manager/>`_ for the installation process.
 
-In particular, for CentOS 6 you need to execute:
+CentOS 6
+^^^^^^^^^^
+
+In CentOS you need to erase older versions of NodeJS, if present:
 
 .. code-block:: bash
-        :caption: Executing SlimerJS with debug option via Xvfb
+        :caption: Command to erase older versions of NodeJS
+
+        yum erase -y nodejs
+
+Then you need to clear YUM cache and update all local packages:
+
+.. code-block:: bash
+        :caption: Cache clearing and system updating
+
+        yum clean all
+        yum update -y
+
+Next you can install the official repository of NodeJS for Centos:
+
+.. code-block:: bash
+        :caption: Installation of NodeJS on CentOS
 
         curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 
@@ -186,9 +205,12 @@ Chromium requirements
 
          Chromium is required only Enterprise Edition.
 
-Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install follwing Chromium dependencies:
+Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install following Chromium dependencies:
 
 .. code-block:: bash
         :caption: Installing of Chromium dependencies with YUM
 
-        yum install -y cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
+        # For CentOS
+        yum install -y cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
+        # For Ubuntu
+        apt-get install -y libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash
