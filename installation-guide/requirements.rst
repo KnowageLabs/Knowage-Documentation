@@ -167,7 +167,7 @@ NodeJS requirements
 Knowage includes some NodeJS scripts that need to be executed with NodeJS 8 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
 
 CentOS 6
-^^^^^^^^^^
+~~~~~~~~~~~~
 
 In CentOS you need to erase older versions of NodeJS, if present:
 
@@ -202,7 +202,7 @@ Finally you can install NodeJS:
         yum install -y nodejs
 
 Ubuntu
-^^^^^^^^^^
+~~~~~~~~~~~~
 
 In Ubuntu you need to erase older versions of NodeJS, if present:
 
@@ -234,7 +234,7 @@ Finally you can install NodeJS:
 .. code-block:: bash
         :caption: Installation of NodeJS
 
-        yum install -y nodejs
+        apt-get install -y nodejs
 
 Chromium requirements
 -------------------------
