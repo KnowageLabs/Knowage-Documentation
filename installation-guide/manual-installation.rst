@@ -131,3 +131,6 @@ Extract archive ``knowage-cockpit-export-installation.zip`` to ``/opt/knowage``:
         /opt/knowage/cockpit-export/cockpit-export.js
 
 For alternatives path you have to fix ``internal.nodejs.chromium.export.path`` in Knowage Configuration Management.
+
+.. important::
+         It is highly recommend to add  URIEncoding="UTF-8" attribute to server.xml file connector tags in order to avoid special characters issues.
