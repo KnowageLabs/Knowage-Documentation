@@ -533,6 +533,12 @@ And so on to the fourth subcategory. Selecting the “Back to: ...” icon avail
 Stand alone charts
 ------------------------
 
+      .. warning::
+         **Warning**
+         
+         Design of stand alone charts is **deprecated** and may be removed in future releases, therefore we invite users to exploit the cockpit designer for charts instead.
+
+
 The previous chapters were dedicated to the end user approaching the Knowage Chart engine. We stressed how the final user must pass through the Cockpit interface to develop graphs. We want now spend some words about the developer experience. Indeed, if you are a technical user you can also create a chart as a stand alone document.
 
 Once you enter the Knowage environment with developer credentials, open the technical menu directly into the **Documents Development** area, as shown in Figure below.
