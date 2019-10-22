@@ -534,7 +534,7 @@ Stand alone charts
 ------------------------
 
       .. warning::
-         **Warning**
+         **This functionality is deprecated**
          
          Design of stand alone charts is **deprecated** and may be removed in future releases, therefore we invite users to exploit the cockpit designer for charts instead.
 
