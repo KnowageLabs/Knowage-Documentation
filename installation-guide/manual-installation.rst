@@ -8,8 +8,8 @@ Knowage requires a database schema to store its own metadata (definition of anal
 
 .. code-block:: bash
         :caption: Scripts for metadata schema
- 
-        XXX_create.sql                                            
+
+        XXX_create.sql
         XXX_create_quartz_schema.sql
 
 where XXX represents the DBMS type (as instance ORA stands for Oracle). The corresponding SQL files for deleting tables are also provided.
@@ -18,15 +18,15 @@ where XXX represents the DBMS type (as instance ORA stands for Oracle). The corr
 
 Datasource link within the applications
 ---------------------------------------------------------
-You would set up ResourceLink for JNDI datasource. To do so, you have to configure each ``knowage*/META-INF/context.xml`` and set the ResourceLink for each JNDI data source previously created. Inside the released packages two links are already defined: 
+You would set up ResourceLink for JNDI datasource. To do so, you have to configure each ``knowage*/META-INF/context.xml`` and set the ResourceLink for each JNDI data source previously created. Inside the released packages two links are already defined:
 
 - one for the ``jdbc/knowage`` resource, which the user must keep
 - the other for the ``jdbc/foodmart``, which should be renamed with ``jdbc/dwh``.
 
 .. code-block:: xml
  :linenos:
- 
- <Context docBase="knowage-ee" path="/knowage" reloadable="true">  
+
+ <Context docBase="knowage-ee" path="/knowage" reloadable="true">
 	<ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
 	<ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource"/>
         <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache" type="javax.sql.DataSource"/>
@@ -37,10 +37,10 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
         <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
         <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
    </Context>
-   
+
 .. important::
          **Context update**
-         
+
          The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
 Configuration of the metadata db dialect
@@ -50,7 +50,7 @@ Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. W
 
 .. code-block:: xml
 	:linenos:
-	
+
  	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
  	<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
  	<property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
@@ -59,7 +59,7 @@ You have to configure these following Hibernate configuration files and set the 
 
 .. code-block:: bash
 	:linenos:
-	
+
 	knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
 	knowagegeoreportengine/WEB-INF/classes/hibernate.cfg.xml
 	knowage/WEB-INF/classes/hsql/hibernate.cfg.xml
@@ -72,7 +72,7 @@ You have to configure these following Hibernate configuration files and set the 
 
 .. important::
          **Context update**
-         
+
          The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
 Modification of the Quartz configuration
@@ -81,15 +81,15 @@ The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It
 
 .. code-block:: bash
 	:linenos:
-	
-	 # Hsqldb delegate class                                                                                
-	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          
-	 # Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
-	 # Postgres delegate class                                                                     
-	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      
-	 # Oracle delegate class                                                                       
+
+	 # Hsqldb delegate class
+	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate
+	 # Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+	 # Postgres delegate class
+	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+	 # Oracle delegate class
 	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
-	
+
 Clustering
 ~~~~~~~~~~~~~
 
@@ -97,12 +97,12 @@ When Knowage is installed in cluster with several nodes, it is necessary to acti
 
 .. code-block:: bash
 	:linenos:
-	
+
 	 org.quartz.jobStore.isClustered = true
 	 org.quartz.jobStore.clusterCheckinInterval = 20000
 	 org.quartz.scheduler.instanceId = AUTO
 	 org.quartz.scheduler.instanceName = RHECMClusteredSchedule
-	 
+
 Logging
 ---------
 
@@ -115,3 +115,22 @@ Shortly, to configure the Knowage log folder the user must execute the following
 
 - set the property ``log4j.appender.knowageXXXXXEngine.File`` inside the ``WEB-INF/classes/log4j.properties`` file of each engine to ``LOG_DIR_PATH/knwoageXXXXXEngine.log``;
 - only for the Birt Engine, to set the property ``logDirectory`` inside the ``WEB-INF/classes/BirtLogConfig.properties`` file of the knowagebirtreportengine application to ``LOG_DIR_PATH``.
+
+Installation of Chromium Cockpit Export script
+---------
+.. important::
+         **Enterprise Edition only**
+
+         Chromium Cockpit Export script is only available for Enterprise Edition.
+
+Extract archive ``knowage-cockpit-export-installation.zip`` to ``/opt/knowage``:
+
+.. code-block:: bash
+        :caption: Complete path of the script
+
+        /opt/knowage/cockpit-export/cockpit-export.js
+
+For alternatives path you have to fix ``internal.nodejs.chromium.export.path`` in Knowage Configuration Management.
+
+.. important::
+         It is highly recommend to add  URIEncoding="UTF-8" attribute to server.xml file connector tags in order to avoid special characters issues.
