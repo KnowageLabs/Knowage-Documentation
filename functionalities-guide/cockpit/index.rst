@@ -597,13 +597,30 @@ The Map Widget is useful when a user needs to visualize data related to a geogra
 
     Map widget.
 
-A dataset with a spatial attribute is eligible to be used in Map Widget: that attribute will be used to display a marker on the map. Every marker can be clicked to show a popup detail about the data related to that position. In the top right corner, the gear icon allows to hide and show layers and to change data displayed.
-
 In Map Widget configuration a user can add and remove layers, set the format of the spatial attribute to use and specify the attributes to display on map and on the detail popup:
 
-.. figure:: media/image476.png
+    .. figure:: media/image476.png
 
-    Map widget configuration.
+        Map widget configuration.
+
+Every dataset with a spatial attribute is eligible to become a layer in map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
+
+.. |image478| image:: media/image478.png
+   :height: 26
+
+.. |image479| image:: media/image479.png
+   :height: 26
+
+In layer's metadata, the user The spatial attribute of the dataset will be used to display a markers on the map. Actually, many spatial attribute types are supported:
+
+-  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
+-  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
+-  WKT: where the value is a text string in `Well-known Text <https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry>`_ format;
+
+.. important::
+         **Geographic coordinates format**
+
+         For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
@@ -611,6 +628,7 @@ For every layer, a user can specify the way the data will be displayed on map: t
 
     Style configuration for every layer.
 
+TODO : Every marker can be clicked to show a popup detail about the data related to that position. In the top right corner, the gear icon allows to hide and show layers and to change data displayed.
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
