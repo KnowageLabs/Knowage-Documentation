@@ -113,7 +113,7 @@ At the top of this side panel you find four button:
 .. |image63| image:: media/image65.png
    :width: 30
 
-The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can alternatively see either the history of document templates or the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders (see the last figure of the *Document Visibility* paragraph).
+The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can see the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders.
 
 .. _detailpanelofknowanalydoc:
 .. figure:: media/image66.png
@@ -130,20 +130,17 @@ First of all, choose a label, a name and a description. It is important to point
 
     Select Type and Engine for a new document.
 
-Now you have to select the dataset and data source that will feed your document with data, see the following figure .
+Now you have to select the dataset and/or data source that will feed your document with data. In this example you can see the pop-up window with datasets to select on the following figure.
 
 .. figure:: media/image68.png
 
     Selecting a dataset for the document.
 
-Both should have already been defined in the corresponding sections for Knowageto show them in the available options of the menus. Select the data source from the drop down menu. Then click on the green icon |image67| and select the dataset from the lookup window.
-
-.. |image67| image:: media/image69.png
-   :width: 30
+Both should have already been defined in the corresponding sections for Knowage to show them in the available options of the menus. You can select the data source from the drop down menu. And select the dataset from the pop-up window and click save.
 
 Note that some types of document do not require the definition of a dataset at this point because they use embedded datasets. Depending on the type, it may also be necessary to select the data source.
 
-It is advisable to regularly save the document in this process, by clicking the related icon at the top right corner of the window.
+It is advisable to regularly save the document in this process, by clicking the related button save at the top right corner of the window.
 
 Document lifecycle
 ^^^^^^^^^^^^^^^^^^
@@ -167,9 +164,14 @@ The main reason for this is that the state of the document has an impact on its 
 Template Versioning
 ^^^^^^^^^^^^^^^^^^^
 
-When you register a document on the Server, you need to associate a template to it. Click on **Browse** next to **Template** and upload the template from your local file system. You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
+When you register a document on the Server, you need to associate a template to it. Click on  tab **History** and then on button **Browse** to choose a template from your local file system and upload it. 
 
-Knowage Server supports versioning of uploaded templates, as shown below. To view them in the document detail window, click on **Show document templates** in the right panel. All templates are saved with their date and name, and can be easily restored or deleted. To restore a template, choose it in the list by clicking on the selector, then remember to save: the new template will be uploaded. Using the same list you can download or delete a template.
+.. _templateversionforanalydoc:
+.. figure:: media/image69.png
+
+You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
+
+Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab **History**. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button **Browse** to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.
 
 .. _templateversionforanalydoc:
 .. figure:: media/image70.png
