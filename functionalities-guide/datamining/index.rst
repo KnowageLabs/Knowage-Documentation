@@ -4,16 +4,16 @@ Data Mining
 Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making
 and business strategies. In particular, Knowage **Data Mining Engine** integrates R and Python scripting capabilities.
 
-R is a programming language and software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing andvanced algorithms andm data analysis tools. Polls and surveys show that R’s popularity is continually increasing. As well, Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Rather than requiring all desired functionality to be built into the language’s core, Python was designed to be highly extensible and it is intended to be a highly readable language.
+R is a programming language and software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing advanced algorithms and data analysis tools. Polls and surveys show that R’s popularity is continually increasing. As well, Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Rather than requiring all desired functionality to be built into the language’s core, Python was designed to be highly extensible and it is intended to be a highly readable language.
 
-Thanks to Knowage **Data Mining Engine**, it is possible to execute multiple R and Pyhton scripts in an interactive way and visualise several outputs, including the powerful R graphics. Another importang thing to notice is that it allows users to perform statistical or data mining analysis on different files or Knowage datasets.
+Thanks to Knowage **Data Mining Engine**, it is possible to execute multiple R and Python scripts in an interactive way and visualise several outputs, including the powerful R graphics. Another important thing to notice is that it allows users to perform statistical or data mining analysis on different files or Knowage datasets.
 
 The data scientists can thus integrate its own algorithm within Knowage and deliver their output to the end user, together with new advanced visualization options useful to discover meaningful insights hidden in the data.
 
 Data Mining document interface
 -----------------------------------
 
-Data Mining can be implemented using R or Python language as we just said. The starting point for developing a data mining document is to write down a template which consists of an XML file. We refer to My first data datamining document for a more detailed description of the template features. We disclose here that to comunicate the engine which language you are going to use you must add the tag **LANGUAGE** as shown in Code syntax to recall the variable input
+Data Mining can be implemented using R or Python language as we just said. The starting point for developing a data mining document is to write down a template which consists of an XML file. We refer to My first data datamining document for a more detailed description of the template features. We disclose here that to communicate the engine which language you are going to use you must add the tag **LANGUAGE** as shown in Code syntax to recall the variable input
 
 .. figure:: media/image384.png
 
@@ -32,7 +32,7 @@ Once again the outputs are set at template level. In the following we will descr
 
     Document browsing on server.
 
-We suppose to open a document with text outputs. At the top of the page you find the command box. When the document is lauched, it is automatically executed with the default command (which is the one set to **auto** in the template file) and you get the corresponding outputs displayed in different tabs. If you wish to change the command to get other outputs you can use the dedicated combobox as emphasized in the following figure.
+We suppose to open a document with text outputs. At the top of the page you find the command box. When the document is launched, it is automatically executed with the default command (which is the one set to **auto** in the template file) and you get the corresponding outputs displayed in different tabs. If you wish to change the command to get other outputs you can use the dedicated combobox as emphasized in the following figure.
 
 .. _selectingcommandapp:
 .. figure:: media/image386.png
@@ -52,7 +52,7 @@ To switch to a different command, use the combobox and click on the target comma
 
 The computed outputs are visualized in the half bottom of the page: each output populates a tab.
 
-If the command refers to a script that needs one or more datasets, than these datasets are displayed between the command combobox and the outputs tabs. You can use the combobox which list the Knowage dataset matched to the document throught the template. Otherwise you can upload a file for Knowage datasets that cannot be changed from the GUI. Clicking on the **FILE** button it is possible to upload the file to replace the default dataset. Remember to click on the |image404| to start the upload. 
+If the command refers to a script that needs one or more datasets, than these datasets are displayed between the command combobox and the outputs tabs. You can use the combobox which list the Knowage dataset matched to the document through the template. Otherwise you can upload a file for Knowage datasets that cannot be changed from the GUI. Clicking on the **FILE** button it is possible to upload the file to replace the default dataset. Remember to click on the |image404| to start the upload.
 
 .. |image404| image:: media/image388.png
    :width: 30
@@ -60,7 +60,7 @@ If the command refers to a script that needs one or more datasets, than these da
 .. figure:: media/image389.png
 
     Changing dataset related to a command.
-    
+
 Then a **Run script** button will appear to re-execute the document as indicated below.
 
 .. _executbuttupload:
@@ -78,7 +78,7 @@ We will not go further into details of R or Python code so we leave the user to 
 
 When dealing with output parameters, you can update the corresponding values by filling the input box appearing in the respective output tab panel. Once you re-run the document, the modifications are applied to a single output, the one which the parameter is associated to.
 
-On the other hand, when dealing with command parameters, you can update the variable value by clicking the double gear icon (circled in the following figure) displayed next to the command name. 
+On the other hand, when dealing with command parameters, you can update the variable value by clicking the double gear icon (circled in the following figure) displayed next to the command name.
 
 .. _clickdoublebuttchange:
 .. figure:: media/image392.png
@@ -124,17 +124,17 @@ You will enter a page like the one shown in figure below.
 
    Functions Catalog interface.
 
-The actions that a user can perform depend on the user’s role. However, indipendently from the user’s role, once entered the feature all functions are shown by default. Referring to the figure above, one has the page made up of:
+The actions that a user can perform depend on the user’s role. However, independently from the user’s role, once entered the feature all functions are shown by default. Referring to the figure above, one has the page made up of:
 
 -  **categories**: these are set by an administrator user and are used to classify the functions accordingly to their definition and goals. Moreover they’re of help in browsing the functions; only the admin user can add and/or modify categories.
 
--  **tags**: they are used to easily sharpen the research and esily recall the functions that are tagged with that word; once again only the admin user can add and/or modify tags;
+-  **tags**: they are used to easily sharpen the research and easily recall the functions that are tagged with that word; once again only the admin user can add and/or modify tags;
 
 -  **list of functions** (if there are any): these are visible and explorable by any kind of user. Anyway only an admin user can add and/or modify them.
 
 .. hint::
     **Add or modify the categories**
-         
+
          The admin can add a new category using the Domain management available on Knowage Server under the Server Settings section. To know more about this section, please refer to Section “Server settings” of the General Administration Manual.
 
 The categories for functions depends on an admin user. Taking *Functions Catalog interface* figure as an example, we have:
@@ -155,9 +155,9 @@ To facilitate the comprehension we created some functions to be examined. We rec
 
     Search box to look for a function.
 
-We suppose here to select one category, which means to click on the category box, in order to be able to analize the functions belonging to it.
+We suppose here to select one category, which means to click on the category box, in order to be able to analyse the functions belonging to it.
 
-Note that the underlined part in figure below contains a list of tags. These help to focus on the subjects and therefore fuctions associated to that category. Viceversa when all functions are shown, all tags are shown as well and they can be used to pick up functions related to that subject.
+Note that the underlined part in figure below contains a list of tags. These help to focus on the subjects and therefore functions associated to that category. Vice versa when all functions are shown, all tags are shown as well and they can be used to pick up functions related to that subject.
 
 .. figure:: media/image399400.png
 
@@ -167,10 +167,10 @@ A function can be executed using the icon |image417| which launches a demo (i.e.
 
 .. |image417| image:: media/image401.png
    :width: 30
-   
+
 .. |image4171| image:: media/image402.png
    :width: 30
-   
+
 .. |image4172| image:: media/image403.png
    :width: 30
 
@@ -233,16 +233,16 @@ Note that if the function takes variables or files as input you can recall them 
 .. code-block:: bash
          :caption: Code syntax to recall the variable input
          :linenos:
- 
+
            $P{variable_name}
- 
+
 We suppose now to have chosen a dataset and the local modality but to want to use the Python language (see next figure). In this case the  dataset is saved and read by the script as a dataframe of the pandas libraries: `http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`__
 
 .. _usedatafrmpandas:
 .. figure:: media/image412.png
 
-    Using the dataset dataframe of the pandas libraries generated by the software to edit the Python script. 
- 
+    Using the dataset dataframe of the pandas libraries generated by the software to edit the Python script.
+
 The “Remote” instance is used for external services and when the user wants to use a language which is not supported by Knowage server. When selecting this modality the user is asked to insert an URL calling for an external web site that supports and runs the requested language.
 
 Technically, remote functions are recorded in the catalog list. The input data of those functions are specified by the local Knowage request and the code is not stored inside Knowage. On the contrary it is located at the address specified by the URL.
@@ -265,66 +265,66 @@ The function that you are defining must be a REST service, in particular of POST
          :caption: JSON format for remote function
          :linenos:
 
-            [  
+            [
                 {
-                    "type":"variablesIn", 
-                    "items":                                                
-                    {                                                                            
-                       "demoVarName1":"3",                   
-                       "demoVarName2":"3"                                                  
-                    }                                 
-                }, 
+                    "type":"variablesIn",
+                    "items":
+                    {
+                       "demoVarName1":"3",
+                       "demoVarName2":"3"
+                    }
+                },
                 {
-                    "type":"datasetsIn", 
-                    "items":                                                
-                    {                               
-                        "demoDsName1":"df1",                                              
-                        "demoDsName2":"df2"                                             
-                    }                               
-                },  
+                    "type":"datasetsIn",
+                    "items":
+                    {
+                        "demoDsName1":"df1",
+                        "demoDsName2":"df2"
+                    }
+                },
                 {
-                    "type":"filesIn", 
-                    "items":                                                   
-                    { 
-                        "demoFileAlias1":                                                       
-                    {                                                                   
-                            "filename:filename1, 
-                            base64 :..                                    
-                    },   
-                        "demoFileAlias2": 
+                    "type":"filesIn",
+                    "items":
+                    {
+                        "demoFileAlias1":
+                    {
+                            "filename:filename1,
+                            base64 :..
+                    },
+                        "demoFileAlias2":
                     {
                             "filename:filename2,
-                            base64 :.. 
+                            base64 :..
                     }
                     }
-                }       
+                }
             ]
-            
-          
-When the call runs successfully, the remote function must answer answer with a JSON element like the one exhibited in Code below.
- 
+
+
+When the call runs successfully, the remote function must answer with a JSON element like the one exhibited in Code below.
+
 .. code-block:: json
          :caption: JSON answer of a remote function
          :linenos:
 
-            {                                                                           
-            "resultType":"Image",                  
-            "result":".image content in base64.",  
-            "resultName":"res"                     
-            },                                                                               
-            {                                         
-            "resultType":"Dataset",                
-            "result":"outDatasetLabel",            
-            "resultName":"datasetName"             
-            },                                     
-            { "resultType":"File", "result":       
-            {                                      
-            "filesize":"54836", --optional            
-            "filetype":"image/jpeg", --optional      
-            "filename":"chart.jpg", --optional        
-            "base64":".file content in base64." }, 
-            "resultName":"fileToBeSave"            
-            }                                         
+            {
+            "resultType":"Image",
+            "result":".image content in base64.",
+            "resultName":"res"
+            },
+            {
+            "resultType":"Dataset",
+            "result":"outDatasetLabel",
+            "resultName":"datasetName"
+            },
+            { "resultType":"File", "result":
+            {
+            "filesize":"54836", --optional
+            "filetype":"image/jpeg", --optional
+            "filename":"chart.jpg", --optional
+            "base64":".file content in base64." },
+            "resultName":"fileToBeSave"
+            }
 
 If an error occur the function must returns the lines as shown in JSON format for remote function.
 
@@ -332,12 +332,12 @@ If an error occur the function must returns the lines as shown in JSON format fo
          :caption: JSON answer of a remote function
          :linenos:
 
-          { 
-            "service":"",                                                                          
-            errors":[                            
-              {                                     
-               "message":"Here the error message."  
-               ]                                     
+          {
+            "service":"",
+            errors":[
+              {
+               "message":"Here the error message."
+               ]
           }
 
 
@@ -422,50 +422,50 @@ My first data mining document\*
 
 Create a new generic document and select **Data Mining** as Type and **Data-Mining Engine** as Engine. Define label, name and description and associate the correct datasource. The next step is the definition of the template.
 
-The template of a data mining document is a simple XML file that enables the developer to configure properly the document behaviour.   Look at Linux and Tomcat example. 
+The template of a data mining document is a simple XML file that enables the developer to configure properly the document behaviour.   Look at Linux and Tomcat example.
 
 .. code-block:: xml
          :caption:  Linux and Tomcat example
          :linenos:
- 
-                  <?xml version="1.0" encoding="ISO-8859-15"?> 
-                  <DATA_MINING>                                
-                  <DATASETS>                                                            
+
+                  <?xml version="1.0" encoding="ISO-8859-15"?>
+                  <DATA_MINING>
+                  <DATASETS>
                            <DATASET name="fileDS" readType="table" type="file" label="Dataset_Label_01 " canUpload="true">
-                           <![CDATA[ ...read_options...]]>                                   
-                  </DATASET>                                                         
-                  </DATASETS>                                                           
-           
-                  <SCRIPTS>                                                             
+                           <![CDATA[ ...read_options...]]>
+                  </DATASET>
+                  </DATASETS>
+
+                  <SCRIPTS>
                            <SCRIPT name="Script_Name_01" datasets="fileDs"  label="Script_Label_01">
-                           <![CDATA[.... action_to_call<-function(x){ ... }]]>                
-                  </SCRIPT>                                                          
+                           <![CDATA[.... action_to_call<-function(x){ ... }]]>
+                  </SCRIPT>
                            <SCRIPT name="Script_Name_02" datasets="fileDs"  label="Script_Label_01">
-                              <![CDATA[... z1<-'$P{var1}' ... ]]>                               
-                  </SCRIPT>                                                          
-                           <SCRIPT name="Script_Name_03" label="Script_Name_03">              
-                           <![CDATA[... z2<-$P{var2} ... ]]>                                  
-                  </SCRIPT>                                                          
-                  </SCRIPTS>                                                            
-             
-                  <COMMANDS>                                                            
-                       <COMMAND name="command1" scriptName="Script_Name_01" label=" Command_Label_01" mode="auto">                                               <OUTPUTS>                                                          
-                            <OUTPUT type="image" name="a" value="x" function="plot" mode="auto" label="Output_Label_01"/>                                           <OUTPUT type="image" name="c" value="z,k" function="biplot" mode=" manual" label="Output_Label_02"/>                                     <OUTPUT type="text" name="d" value="y" mode="manual" label="   Output_Label_03"/>                                                   </OUTPUTS>                                                         
-                       </COMMAND>                                                         
-                  <COMMAND name="command2" scriptName="Script_Name_02" label=" Command_Label_01" mode="manual" action="function1(x)">                         <VARIABLES>                                                        
-                             <VARIABLE name="var1" default="valuevar1"/>                        
-                      </VARIABLES>                                                       
-                      <OUTPUTS>                                                          
-                           <OUTPUT type="text" name="c" value="z" function="function2(y,z)"  mode=" manual" label="Output_Label_01"/>                         </OUTPUTS>                                                         
-                  </COMMAND>                                                         
+                              <![CDATA[... z1<-'$P{var1}' ... ]]>
+                  </SCRIPT>
+                           <SCRIPT name="Script_Name_03" label="Script_Name_03">
+                           <![CDATA[... z2<-$P{var2} ... ]]>
+                  </SCRIPT>
+                  </SCRIPTS>
+
+                  <COMMANDS>
+                       <COMMAND name="command1" scriptName="Script_Name_01" label=" Command_Label_01" mode="auto">                                               <OUTPUTS>
+                            <OUTPUT type="image" name="a" value="x" function="plot" mode="auto" label="Output_Label_01"/>                                           <OUTPUT type="image" name="c" value="z,k" function="biplot" mode=" manual" label="Output_Label_02"/>                                     <OUTPUT type="text" name="d" value="y" mode="manual" label="   Output_Label_03"/>                                                   </OUTPUTS>
+                       </COMMAND>
+                  <COMMAND name="command2" scriptName="Script_Name_02" label=" Command_Label_01" mode="manual" action="function1(x)">                         <VARIABLES>
+                             <VARIABLE name="var1" default="valuevar1"/>
+                      </VARIABLES>
+                      <OUTPUTS>
+                           <OUTPUT type="text" name="c" value="z" function="function2(y,z)"  mode=" manual" label="Output_Label_01"/>                         </OUTPUTS>
+                  </COMMAND>
                     <COMMAND name="command3" scriptName="Script_Name_03" label=" Command_Label_03" mode="manual"action="action_to_call">                       <OUTPUTS>
-                           <OUTPUT type="text" name="e" value="z2" mode="manual" label=" Output_Label_01">                                                     <VARIABLES>                                                       
-                           <VARIABLE name="var2" default="valuevar2"/> </VARIABLES>           
-                      </OUTPUT>                                                          
-                           <OUTPUT type="image" name="f" value="" function="rectf(z)" mode="auto" label="Output_Label_02"/>                                   </OUTPUTS>                                                         
-                  </COMMAND>                                                         
-                  </COMMANDS>                                                              
-                  </DATA_MINING>                                                        
+                           <OUTPUT type="text" name="e" value="z2" mode="manual" label=" Output_Label_01">                                                     <VARIABLES>
+                           <VARIABLE name="var2" default="valuevar2"/> </VARIABLES>
+                      </OUTPUT>
+                           <OUTPUT type="image" name="f" value="" function="rectf(z)" mode="auto" label="Output_Label_02"/>                                   </OUTPUTS>
+                  </COMMAND>
+                  </COMMANDS>
+                  </DATA_MINING>
 
 
 As you can see in the example, there are six basic tags:
@@ -510,7 +510,7 @@ Use the icon |image436| to insert a new dataset or a new variable. And use the i
 
 .. |image436| image:: media/image423.png
    :width: 30
-   
+
 .. |image437| image:: media/image424.png
    :width: 30
 
@@ -528,7 +528,7 @@ Use the icon |image436| to insert a new dataset or a new variable. And use the i
 
 .. |image438| image:: media/image423.png
    :width: 30
-   
+
 .. |image439| image:: media/image424.png
    :width: 30
 
@@ -537,4 +537,3 @@ Use the icon |image436| to insert a new dataset or a new variable. And use the i
     Choosing how to visualise outputs.
 
 Then save and you are ready to use the function.
-
