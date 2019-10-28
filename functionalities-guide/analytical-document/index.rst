@@ -354,7 +354,7 @@ The definition of the output parameters is performed using the **Manage outputpa
 Declaration of the output parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Enter the **Document details** of the document of interest. Then click on **Manage outputparameters** and the **Output parameters**   dialog will open.
+Enter the **Document details** of the document of interest. Then click on **Output parameters** tab and then on the button **Add** for adding new output parameter.
 
 Here you have to state which parameters are going to be used as output parameters. If, for instance, you select the Date type (see next figure), it is possible to choose the format in which your date has been coded. The default value is related to the location defined in   (**Menu** > **Languages**).
 
