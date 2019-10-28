@@ -315,10 +315,13 @@ Controlled visibility
 
 Another type of relation between parameters is supported by Knowage. It is possible to define values of a parent parameter that force hiding or showing of a child parameter in the parameters mask. Note that in the first case, the child parameter is hidden by default, while in the second case the parameter is shown by default.
 
-To set a visibility expression, click always on the correlation button in the detail tab of the desired parameter, but then click on   the plus icon |image84| in the **Visibility Expression** area. In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.
+To set a visibility expression, click on the **Add condition** button on the **Driver visibility coonditions** card.
 
-.. |image84| image:: media/image72.png
-   :width: 30
+.. figure:: media/image72.png
+
+    Adding visual corelation
+
+In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.
 
 .. figure:: media/image84.png
 
