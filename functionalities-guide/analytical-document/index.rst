@@ -120,7 +120,7 @@ The figure below shows the detail panel of a document. On the left, document det
 
     Detail panel of Knowage analytical document.
 
-In order to create a new document you need to click on the red plus button in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Geo-Referenced Analysis**, **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
+In order to create a new document you need to click on the red plus button in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
 
 To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in figure above but with empty fields, in order to allow you to define the document details.
 
@@ -188,7 +188,7 @@ After having defined all details, you need to choose where the analytical docume
          
          The **Functionalities tree** is Knowage document repository. It is maneged by administrator, who is in charge to profile user visibility too.
 
-Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). To save your document in the   repository, switch the perspective on the right panel by clicking on **Show functionalities tree**. This operation is needed only if you  moved to the template history view. Here you can choose where you wish to save the document, by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
+Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). On the right, you can choose where you wish to save the document by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
 
 .. _functionaltreedocsav:
 .. figure:: media/image66.png
@@ -200,10 +200,9 @@ Visibility rules
 
 In addition to the standard mechanism supported by the functionalities tree, it is possible to further customize access to a document based on user profile attributes. This allows administrators to rule access to documents at a very fine-grained level, beyond simple repository-based policies.
 
-This can be done by editing conditions in the Visibility section of the detail panel. To add a new condition pick a profile attribute   from the drop down menu, assign it a value, then click on |image71|. This will add a new condition that must be verified to allow a user to access the document. In the same way you can add further conditions, and possibly remove all of them by clicking on the eraser.
+This can be done by editing conditions in the **Visibility restrictions** section on the right side of **Information** panel. To add a new condition pick a profile attribute from the drop down menu and assign it a value. This will add a new condition that must be verified to allow a user to access the document. In the same way you can add further conditions, and possibly remove all of them by clicking on the eraser.
 
-.. |image71| image:: media/image72.png
-   :width: 30
+.. figure:: media/image73.png
 
 Association with analytical drivers
 ----------------------------------------
@@ -212,30 +211,22 @@ We have already discussed the role of analytical drivers and how they are connec
 
 We assume that the document template and datasets are correctly set in terms of parameter definition. In particular, they should have   been correctly referenced with their URL.
 
-To add a new parameter, you can start editing the tab in the lower part of the document detail panel, see the next figure.
+To add a new parameter, you can click on the tab **Drivers** and then on a **Add** button, see the next figure.
 
-Choose a human readable name for the title. Then click on the lookup icon |image72| to choose the driver you wish to associate to the   document. This will open the driver lookup window, where you can select the driver by clicking on the green icon |image73|. You can   also inspect or delete a driver from here.
-
-.. |image72| image:: media/image73.png
-   :width: 30
-   
-.. |image73| image:: media/image74.png
-   :width: 30
-   
-.. _assocwithanalydriv:
-.. figure:: media/image75.png
-
+.. figure:: media/image74.png
     Association with analytical driver panel.
 
-Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set the different features   associated to the driver: you can set its visibility and decide if it is mandatory and multivalue. By default the parameter is visible, not mandatory and not multivalue.
+Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the document.   
+
+Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set the different features   associated to the driver: you can set its visibility and decide if it is required and multivalue. By default the parameter is visible, not mandatory and not multivalue.
 
 If you want the document not to be visible to end users, untick the **Visible** checkbox. Note that the parameter will still exist and   receive values from the associated driver. However, this will be hidden and the end user will not be able to choose any value for this   parameter.
 
-If you want to set it as a mandatory parameter just click on **true**. In this case, no default value is set. The end user will be   asked to choose the value of the parameter before opening the document.
+If you want to set it as a required parameter just click on **true**. In this case, no default value is set. The end user will be   asked to choose the value of the parameter before opening the document.
 
 Similarly to set a parameter as multivalue click on **true**, in this way the user can perform multiple selections on among its values.
 
-Remember to save each time you have completed the definition of a parameter before adding a new one. To add further parameters, click   on the **New** icon. Repeat the same procedure how many times you wish. At this point you may wish to change the order of parameters   (i.e., how they are presented to the user). To do so, modify the **Priority** number. In the following we will see some special operations that can be performed on drivers associated to a document.
+After you have completed the definition of a parameter you can save by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters   (i.e., how they are presented to the user). To do so, click on the arrow of selected driver. In the following we will see some special operations that can be performed on drivers associated to a document.
 
 Associating a Spatial driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
