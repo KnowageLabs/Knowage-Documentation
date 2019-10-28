@@ -611,7 +611,7 @@ Every dataset with a spatial attribute is eligible to become a layer in map widg
 .. |image479| image:: media/image479.png
    :height: 26
 
-In layer's metadata, the user The spatial attribute of the dataset will be used to display a markers on the map. Actually, many spatial attribute types are supported:
+In layer's metadata, the user set the spatial attribute of the dataset that will be used to display a markers on the map. Actually, many spatial attribute types are supported:
 
 -  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
 -  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
@@ -621,6 +621,14 @@ In layer's metadata, the user The spatial attribute of the dataset will be used 
          **Geographic coordinates format**
 
          For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
+
+Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup. For a measure type field a user could specify the aggregation function and if it has to be shown on map: at least one field has to be shown on map.
+
+The threshold button open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
+
+    .. figure:: media/image480.png
+
+        Threshold dialog.
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
