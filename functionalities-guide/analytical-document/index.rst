@@ -204,6 +204,8 @@ This can be done by editing conditions in the **Visibility restrictions** sectio
 
 .. figure:: media/image73.png
 
+    Visibility restrictions.
+
 Association with analytical drivers
 ----------------------------------------
 
@@ -214,6 +216,7 @@ We assume that the document template and datasets are correctly set in terms of 
 To add a new parameter, you can click on the tab **Drivers** and then on a **Add** button, see the next figure.
 
 .. figure:: media/image74.png
+
     Association with analytical driver panel.
 
 Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the document.   
@@ -226,7 +229,13 @@ If you want to set it as a required parameter just click on **true**. In this ca
 
 Similarly to set a parameter as multivalue click on **true**, in this way the user can perform multiple selections on among its values.
 
-After you have completed the definition of a parameter you can save by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters   (i.e., how they are presented to the user). To do so, click on the arrow of selected driver. In the following we will see some special operations that can be performed on drivers associated to a document.
+After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.
+
+.. figure:: media/image75.png
+
+    Association with analytical driver panel.
+
+In the following we will see some special operations that can be performed on drivers associated to a document.
 
 Associating a Spatial driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -251,7 +260,7 @@ Correlation between parameters
 
 In the context of a document, two different parameters may be connected to each other: this means that the possible values of a   parameter are limited by the value(s) of another parameter.
 
-This feature can be useful when two (or more) parameters are logically related. For example, suppose to have a parameter for all   the possible countries and another one for all the possible cities. If the user selects a region, it is meaningless to show him all cities: he should only be enabled to choose among the cities in the selected region.
+This feature can be useful when two (or more) parameters are logically related. For example, suppose to have a parameter for all the possible countries and another one for all the possible cities. If the user selects a region, it is meaningless to show him all cities: he should only be enabled to choose among the cities in the selected region.
 
 In general, to configure a correlation within a document you should make sure that the LOV associated with the parent parameter and the  one associated to the child parameter share at least one column. This column defines which value from the parent parameter will be applied to the child, in order to constrain the results.
 
