@@ -21,10 +21,11 @@ A dataset acts as a data provider for analytical documents that’s why many typ
 -  Qbe query over the metamodel,
 -  Custom,
 -  Flat,
--  Ckan, 
+-  Ckan,
 -  Federated,
 -  REST,
--  Big Data.
+-  Big Data,
+-  Solr.
 
 All types of dataset share some common operations, while others are specific to each of them. The process for defining a dataset inside Knowage follows:
 
@@ -46,7 +47,7 @@ Each item of the list in the left panel shows the dataset label (i.e., the datas
 
 .. |image14| image:: media/image21.png
    :width: 30
-   
+
 .. |image16| image:: media/image23.png
    :width: 30
 
@@ -57,13 +58,13 @@ To remove an existing dataset, click the small dustbin icon |image17| on the cor
 
 Once you have clicked the **Add** button, you can fill in the dataset definition form. Each tab in the right panel corresponds to a step of the dataset definition process.
 
-In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to figure below). 
+In the **Detail** tab you define the Name, the Label and an optional Description of the dataset (refer to figure below).
 
 .. _datasetpanel:
 .. figure:: media/image22.png
 
     Dataset Panel.
-    
+
 In the lower part you can see a versioning system for the dataset: Knowage supports dataset versioning, as shown in figure below, therefore, each time you edit and save a dataset, the older version is archived and is still accessible from the lower part of the detail panel.
 
 .. _datasetversioning:
@@ -87,20 +88,20 @@ The Scope lets you choose between two options, whose combination allows the defi
      +-----------------------+-----------------------+-----------------------+
      |    Technical          | Not applicable.       | Dataset created by a  |
      |                       |                       | BI developer to be    |
-     |                       |                       | used in one or more   |  
+     |                       |                       | used in one or more   |
      |                       |                       | documents.            |
      |                       |                       |                       |
      |                       |                       | Not visible to end    |
      |                       |                       | users.                |
      +-----------------------+-----------------------+-----------------------+
      |    Enterprise         | Not applicable.       | Dataset of any type   |
-     |                       |                       | created by a          | 
+     |                       |                       | created by a          |
      |                       |                       | technical user and    |
      |                       |                       | certified by a        |
      |                       |                       | trusted entity within |
      |                       |                       | the organization, and |
      |                       |                       | made available to all |
-     |                       |                       | end users for reuse.  |    
+     |                       |                       | end users for reuse.  |
      +-----------------------+-----------------------+-----------------------+
 
 You can also specify the Category of the dataset. This field is not mandatory but it can be used to categorize datasets in your BI project, so that you can easily recover them when performing searches.
@@ -123,7 +124,7 @@ Note that the metadata can be manage by clicking on the icon |image21| and use t
 
 .. |image21| image:: media/image28.png
    :width: 30
-   
+
 .. |image211| image:: media/image29.png
    :width: 30
 
@@ -151,10 +152,10 @@ The SQL dialect depends on the chosen data source. The SQL text must be written 
          :caption: SQL query example
          :linenos:
 
-          SELECT p.media_type as MEDIA, sum(s.store_sales) as SALES                                                            
-          FROM sales_fact_1998 s                                    
-          JOIN promotion p on s.promotion_id=p.promotion_id                                                                    
-          GROUP BY p.media_type                                     
+          SELECT p.media_type as MEDIA, sum(s.store_sales) as SALES
+          FROM sales_fact_1998 s
+          JOIN promotion p on s.promotion_id=p.promotion_id
+          GROUP BY p.media_type
 
 It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or Javascript) and associating it to the query. Click on the **Edit Script** button (see next figure) and the script editor will open. Here you can write the script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
 
@@ -169,10 +170,10 @@ In Code Query dataset’s script example we uses Javascript to dynamically modif
          :caption:  Query dataset’s script example
          :linenos:
 
-          if( parameters.get('year') == 1997 ) { query = query.replace(FROM  
-          sales_fact_1998, FROM sales_fact_1997);                            
-          } else { query = query; // do nothing                                 
-          }                                                                     
+          if( parameters.get('year') == 1997 ) { query = query.replace(FROM
+          sales_fact_1998, FROM sales_fact_1997);
+          } else { query = query; // do nothing
+          }
 
 Java Class Dataset
 ~~~~~~~~~~~~~~~~~~
@@ -184,11 +185,11 @@ Selecting a dataset of **Java Class** type allows the execution of complex data 
 .. code-block:: xml
          :linenos:
 
-         <ROWS>                           
-                <ROW value="value1" .../>     
-                <ROW value="value2" .../> 
-                ... 
-          </ROWS>                          
+         <ROWS>
+                <ROW value="value1" .../>
+                <ROW value="value2" .../>
+                ...
+          </ROWS>
 
 -  ``public List getNamesOfProfileAttributeRequired()``. This method provides the names of profile attributes used by this dataset implementation class. This is a utility method, used during dataset execution.
 
@@ -200,11 +201,11 @@ If you select this option, the results of the dataset will be produced by a scri
 .. code-block:: xml
          :linenos:
 
-          <ROWS>                           
-                <ROW value="value1" .../>     
-                <ROW value="value2" .../> 
-                ... 
-          </ROWS>   
+          <ROWS>
+                <ROW value="value1" .../>
+                <ROW value="value2" .../>
+                ...
+          </ROWS>
 
 If the script returns a single value, this will be automatically encoded in the XML format above. The script must be written using Groovy or Javascript language. Knowage already provides some Groovy and Javascript functions returning the value of a single or multi-value profile attribute. These functions are explained in the information window that can be opened from the **Dataset Type** tab. New custom functions can be added in ``predefinedGroovyScript.groovy`` and ``predefinedJavascript.js`` files contained in the ``KnowageUtils.jar`` file.
 
@@ -301,11 +302,11 @@ Let’s make as example in order to understand how it works. Suppose an external
          :caption: Request body code
          :linenos:
 
-         {  "entities": [ {         
-            "isPattern": "true", 
-            "id": ".*", 
+         {  "entities": [ {
+            "isPattern": "true",
+            "id": ".*",
             "type":"Meter"
-            } ] 
+            } ]
          }
 
 while querying for ``Meter`` entities, and that the JSON response is something like:
@@ -314,86 +315,86 @@ while querying for ``Meter`` entities, and that the JSON response is something l
          :caption: RJSON response code
          :linenos:
 
-         {                                          
-                "contextResponses": [                   
-             {                                       
-                "contextElement": {                     
-                "id": "pros6_Meter",                    
-                "type": "Meter",                        
-                "isPattern": "false",                   
-                "attributes": [                         
-                    {                                           
-                      "name": "atTime",                                           
-                      "type": "timestamp",                                           
-                       "value": "2015-07-21T14:49:46.968+0200"                                        
-                     },                                         
-                     {                                       
-                      "name": "downstreamActivePower",        
-                      "type": "double",                       
-                      "value": "3.8"                          
-                     },                                     
-                    {                                       
-                      "name": "prosumerId",                   
-                      "type": "string",                       
-                      "value": "pros3"                        
-                    },                                      
-                    {                                       
-                      "name": "unitOfMeasurement",            
-                      "type": "string",                       
-                      "value": "kW"                           
-                     },                                      
-                     {                                       
-                      "name": "upstreamActivePower",          
-                      "type": "double",                       
-                      "value": "3.97"                         
-                      }                                       
-                    ]                                       
-                    },                                      
-               "statusCode": {                         
-                       "reasonPhrase": "OK",                   
-                       "code": "200"                           
-                             }                                       
-                 },                                         
-                    {                                          
-                "contextElement": {                     
-                       "id": "pros5_Meter",                    
-                       "type": "Meter",                        
-                       "isPattern": "false",                   
-                       "attributes": [                         
-                    {                                       
-                       "name": "atTime",                       
-                       "type": "timestamp",                    
-                       "value": "2015-08-09T20:29:45.698+0200" 
-                    },                                      
-                    {                                       
-                       "name": "downstreamActivePower",        
-                       "type": "double",                       
-                       "value": "1.8"                          
-                    },                                      
-                     {                                       
-                       "name": "prosumerId",                   
-                       "type": "string",                       
-                       "value": "pros5"                        
-                   },                                      
-                    {                                       
-                      "name": "unitOfMeasurement",            
-                      "type": "string",                       
-                      "value": "kW"                           
-                   },                                      
-                 {                                       
-                      "name": "upstreamActivePower",          
-                      "type": "double",                       
-                      "value": "0"                            
-                  }                                       
-                          ]    
-                 },                                      
-                      "statusCode": {                         
-                      "reasonPhrase": "OK",                   
-                      "code": "200"                           
-                       }                                       
-                 }                                          
-                         ] 
-                 }    
+         {
+                "contextResponses": [
+             {
+                "contextElement": {
+                "id": "pros6_Meter",
+                "type": "Meter",
+                "isPattern": "false",
+                "attributes": [
+                    {
+                      "name": "atTime",
+                      "type": "timestamp",
+                       "value": "2015-07-21T14:49:46.968+0200"
+                     },
+                     {
+                      "name": "downstreamActivePower",
+                      "type": "double",
+                      "value": "3.8"
+                     },
+                    {
+                      "name": "prosumerId",
+                      "type": "string",
+                      "value": "pros3"
+                    },
+                    {
+                      "name": "unitOfMeasurement",
+                      "type": "string",
+                      "value": "kW"
+                     },
+                     {
+                      "name": "upstreamActivePower",
+                      "type": "double",
+                      "value": "3.97"
+                      }
+                    ]
+                    },
+               "statusCode": {
+                       "reasonPhrase": "OK",
+                       "code": "200"
+                             }
+                 },
+                    {
+                "contextElement": {
+                       "id": "pros5_Meter",
+                       "type": "Meter",
+                       "isPattern": "false",
+                       "attributes": [
+                    {
+                       "name": "atTime",
+                       "type": "timestamp",
+                       "value": "2015-08-09T20:29:45.698+0200"
+                    },
+                    {
+                       "name": "downstreamActivePower",
+                       "type": "double",
+                       "value": "1.8"
+                    },
+                     {
+                       "name": "prosumerId",
+                       "type": "string",
+                       "value": "pros5"
+                   },
+                    {
+                      "name": "unitOfMeasurement",
+                      "type": "string",
+                      "value": "kW"
+                   },
+                 {
+                      "name": "upstreamActivePower",
+                      "type": "double",
+                      "value": "0"
+                  }
+                          ]
+                 },
+                      "statusCode": {
+                      "reasonPhrase": "OK",
+                      "code": "200"
+                       }
+                 }
+                         ]
+                 }
 
 In this example we have two **Context Elements** with the following attributes:
 
@@ -430,19 +431,19 @@ When checking the **Use directly JSON attributes** checkbox, yon can skip the de
          :caption: Use directly JSON attributes
          :linenos:
 
-         {                               
-          "contextResponses": [        
-            {                            
-              "prosumerId":"pros1",        
-              "downstreamActivePower":3.1, 
-              "upstreamActivePower":0.0    
-            },{                          
-              "prosumerId":"pros2",        
-              "downstreamActivePower":0.5, 
-              "upstreamActivePower":2.4    
-               }                            
-                             ]                            
-         }                               
+         {
+          "contextResponses": [
+            {
+              "prosumerId":"pros1",
+              "downstreamActivePower":3.1,
+              "upstreamActivePower":0.0
+            },{
+              "prosumerId":"pros2",
+              "downstreamActivePower":0.5,
+              "upstreamActivePower":2.4
+               }
+                             ]
+         }
 
 
 Then it will be enough to define only the **JSON Path Items** and check **Use directly JSON Attributes** without defining the attributes; the attributes will be retrieved automatically from the JSON object.
@@ -451,7 +452,7 @@ In the above examples, the JSON Path Items will be ``$.contextResponses[:sub:`\*
 
 .. table:: Dataset result
         :widths: auto
-  
+
         +---------------+-----------------------+---------------------+
         |    prosumerId | downstreamActivePower | upstreamActivePower |
         +===============+=======================+=====================+
@@ -459,22 +460,22 @@ In the above examples, the JSON Path Items will be ``$.contextResponses[:sub:`\*
         +---------------+-----------------------+---------------------+
         | pros2         | 0.5                   | 2.4                 |
         +---------------+-----------------------+---------------------+
-    
+
 The REST dataset permits usage of profile attributes and parameters using the same syntax as for other dataset types: ``$<profile attribute>`` and ``$P<parameter>``. You can use both of them as placeholders in every field: most likely you need to use them in REST service URL or on the request body. As an example, suppose you want to retrieve the value of just one prosumer that is specified by the ``prosumerId`` parameter, you have to set the request body as:
 
 .. code-block:: json
          :caption: Request body for prosumerId parameter
          :linenos:
 
-         {                        
-          "entities":[          
-            {                     
-             "isPattern":"true",   
-             "type":"Meter",       
-             "id":"$P{prosumerId}" 
-            }                     
-                     ]                     
-         }                        
+         {
+          "entities":[
+            {
+             "isPattern":"true",
+             "type":"Meter",
+             "id":"$P{prosumerId}"
+            }
+                     ]
+         }
 
 Big Data - NoSQL
 ^^^^^^^^^^^^^^^^
@@ -494,7 +495,7 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
 .. code-block:: javascript
          :caption: Request body for prosumerId parameter
          :linenos:
-   
+
          var query = db.store.find();
 
 -  if the return value doesn’t come from a query, for example it's a js variable, than it must be assigned to a variable with name ``sbiDatasetfixedResult``. The result will be managed by Knowage accordingly to the type of the variable:
@@ -503,10 +504,10 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
 
     -  if it’s an object, the resulting dataset contains a column for each property of the object.
 
-        For example, if we consider the query 
-        ``sbiDatasetfixedResult = {a:2, b:3}`` 
+        For example, if we consider the query
+        ``sbiDatasetfixedResult = {a:2, b:3}``
         the dataset is as shown in Table below.
-   
+
 .. table:: Dataset output
      :widths: auto
 
@@ -518,8 +519,8 @@ For example, let’s suppose we defined a Mongo datasource and want to create a 
 
 -  if it’s a list than the columns of the dataset are the union of the properties of all the objects contained in the list.
 
-        For istance, let’s consider the query 
-        ``sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}]`` 
+        For istance, let’s consider the query
+        ``sbiDatasetfixedResult = [{a:2, b:3},{a:2, c:3}]``
         the dataset is
 
 .. table:: Dataset output
@@ -546,16 +547,16 @@ It’s possible to force the behaviour. In particular the result stored in the v
 
 -  as cursor if in the script exist a variable with value ``LIST_DOCUMENTS_QUERY``. Example:
 
-.. code-block:: javascript 
+.. code-block:: javascript
          :linenos:
-           
+
           var retVal= "LIST_DOCUMENTS_QUERY“;
 
 -  a document if in the script exist a variable with value ``SINGLE_DOCUMENT_QUERY``. Example:
 
-.. code-block:: javascript 
+.. code-block:: javascript
          :linenos:
-           
+
           var retVal= "SINGLE_DOCUMENT_QUERY”;
 
 
@@ -563,7 +564,7 @@ Similar techniques can be applied to the other languages. We leave the reader to
 
 .. note::
       **MongoDB Document size**
-         
+
       Remember that MongoDB has a limit of maximum 16MB for the returned document (BSON), so pay attention to that when creating your dataset. For more information check this link: https://docs.mongodb.com/manual/reference/limits/
 
 Parameters and profile attributes
@@ -578,9 +579,9 @@ The syntax to add a parameter in the dataset code text is ``$P{parameter_name}``
 
 .. warning::
      **Attention to parameters’ names!**
-         
+
          If the dataset is used by a Knowage document, then the document parameters’ URL must match the parameter name set in the dataset **Type** tab, in order for the dataset to be passed correctly.
-         
+
 Any parameter added to your dataset must be added to the parameters list, too. To add a parameter in the list, click the **Add** button. A new row will be created in the list: double click the name and edit the parameter values. There are three different types of parameters. For each of them the placeholder will be replaced according to a different pattern, as follows:
 
 -  **String**: the parameter value will be surrounded with single quotes if not already present.
@@ -590,22 +591,22 @@ Any parameter added to your dataset must be added to the parameters list, too. T
 
 In SQL query example with parameters an example is provided, where ``MediaType`` is a string parameter.
 
-.. code-block:: sql 
+.. code-block:: sql
          :caption: SQL query example with parameters
          :linenos:
-           
-         SELECT  s.customer_id as CUSTOMER 
-         , sum(s.store_sales) as SALES       
+
+         SELECT  s.customer_id as CUSTOMER
+         , sum(s.store_sales) as SALES
          , c.yearly_income as INCOME
-         , p.media_type as MEDIA 
-         FROM sales_fact_1998 s, customer c, promotion p                       
-         WHERE                                                                 
-         s.customer_id=c.customer_id and s.promotion_id=p.promotion_id and  
-         p.media_type in ($P{MediaType})                                    
-         GROUP BY 
-         s.customer_id,                                                     
-         c.yearly_income,                                                   
-         p.media_type                                                       
+         , p.media_type as MEDIA
+         FROM sales_fact_1998 s, customer c, promotion p
+         WHERE
+         s.customer_id=c.customer_id and s.promotion_id=p.promotion_id and
+         p.media_type in ($P{MediaType})
+         GROUP BY
+         s.customer_id,
+         c.yearly_income,
+         p.media_type
 
 
 Datasets of type Query and Script can also use *profile attributes*. Differently from parameters, profile attributes do not need to be   explicitly added to the parameter list since they have been defined elsewhere. Clicking the **Available Profile Attribute** button you can see all profile attributes defined in the behavioral model and choose the one(s) you wish to insert in the dataset query/script   text, as shown below.
@@ -618,10 +619,10 @@ The syntax to include attributes into the dataset text is ``${attribute_name}``.
 
 .. note::
      **User profile attributes**
-         
+
          Each Knowage user is assigned a profile with attributes. The user profile is part of the more general behavioural model, which allows tailored visibility and permissions on Knowage documents and functionalities.
 
-   
+
 Further operations on a dataset
 ------------------------------------
 
@@ -669,7 +670,7 @@ An example of usage is available in figure below, showing the result set of the 
 .. figure:: media/36a.png
 
     Pivot transformation.
-   
+
 
 Dataset persistence
 ~~~~~~~~~~~~~~~~~~~
@@ -694,3 +695,33 @@ Before actually using the dataset in a document, it is a good practice to test i
 
 
 If some parameters have been set, a window with their list will be shown: their values must be entered by double clicking on the set to string, just write the value you want to assign in the preview: quotes will be added automatically. On the other hand, if the type is raw or generic but you want to input text, then remember to add quotes to the test value.
+
+Solr Dataset
+~~~~~~~~~~~~
+
+A dataset of type Solr, see the following figure, reads data from the popular Search Engine Solr. To define a **Solr Dataset** select the Solr type, then choose between Document or Facets type.
+
+.. figure:: media/image41.png
+
+    Solr Dataset, Document type selected.
+
+**Documents**
+
+According to the Solr official documentation, Solr’s basic unit of information is a document, which is a set of data that describes something. A recipe document would contain the ingredients, the instructions, the preparation time, the cooking time, the tools needed, and so on. A document about a person, for example, might contain the person’s name, biography, favorite color, and shoe size. A document about a book could contain the title, author, year of publication, number of pages, and so on.
+
+In the Solr universe, documents are composed of fields, which are more specific pieces of information. Shoe size could be a field. First name and last name could be fields.
+If you have chosen the type "Documents", you can add the document fields to the list below called "Documents".
+
+.. figure:: media/image42.png
+.. figure:: media/image43.png
+    Solr Dataset, Optional fields for filtering parameters.
+
+**Faceting**
+
+Faceting is the arrangement of search results into categories based on indexed terms.
+If you choose Facets you can add the Facet Query.
+This parameter allows you to specify an arbitrary query in the Lucene default syntax to generate a facet count.
+The Facet Field is the facet.field parameter and identifies a field that should be treated as a facet. It iterates over each Term in the field and generate a facet count using that Term as the constraint. This parameter can be specified multiple times in a query to select multiple facet fields.
+The Facet Prefix is the facet.prefix parameter limits the terms on which to facet to those starting with the given string prefix. This does not limit the query in any way, only the facets that would be returned in response to the query.
+
+.. figure:: media/image44.png

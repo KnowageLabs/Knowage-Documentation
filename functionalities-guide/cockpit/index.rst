@@ -191,7 +191,13 @@ is editable. When you are satisfied with your expression you can click on save b
 
     Add a calculated field.
 
-At the very bottom of the window, you can see the dataset fields listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+At the very bottom of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+You can choose between dataset-level behaviour or table-level (default), that is the calculation modality that will involve table fields or dataset columns to get the result.
+If you choose dataset-level behaviour the calculation result will be done at dataset columns level only and the aggregation will involve the entire result of the calculation.
+
+.. figure:: media/image157b.png
+
+    Dataset-level behaviour
 
 .. _columnsettings:
 .. figure:: media/image158.png
@@ -626,7 +632,7 @@ Every field of the dataset, except for the spatial one, can have a custom alias 
 
 The threshold button open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
 
-    .. figure:: media/image480.png
+    .. figure:: media/image482.png
 
         Threshold dialog.
 
@@ -636,7 +642,17 @@ For every layer, a user can specify the way the data will be displayed on map: t
 
     Style configuration for every layer.
 
-TODO : Every marker can be clicked to show a popup detail about the data related to that position. In the top right corner, the gear icon allows to hide and show layers and to change data displayed.
+Discovery Widget
+~~~~~~~~~~~~~~~~~~
+.. figure:: media/image480.png
+
+The Discovery Widget is used to easily use and navigate into a Solr Dataset using facets aggregation and a table results.
+In order to make searches, aggregations using facets and so on, after selecting the Solr dataset it is possible to choose the fields that should be shown as the result.
+The table result can also be configured to show a limited set of fields, please open edit mode:
+
+.. figure:: media/image481.png
+
+If facets selection is enabled, it is also possibile to configure facets pagination options such as results limit, max number of items and more.
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
