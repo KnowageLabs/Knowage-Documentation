@@ -144,3 +144,19 @@ Last but not least, the **User Management** section includes a left panel that a
 .. figure:: media/image32.png
 
    Users Management.
+
+------------------
+Roles settings
+------------------
+
+Clicking on the ROLES tab you have to select one o more roles to associate with the user.
+After that, if more than one role is associated to the user, you can choose the default role by selecting it from the combo box on the top of the page.
+Default role is optional: if you don't select a default role, at login time all roles available for the user will be loaded.
+
+.. figure:: media/image100.png
+
+    Users Management - Roles settings example
+
+In the example above, for the user "*bitest*" you can choose from "admin" and "*kte_dev*" as default role.
+
+TODO inserire la parte in cui si dice che se c'è un solo ruolo, quello sarà automaticamente selezionato come ruolo di default. Se così sarà!
