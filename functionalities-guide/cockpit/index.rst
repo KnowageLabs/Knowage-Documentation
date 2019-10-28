@@ -13,7 +13,7 @@ Cockpit documents can be created and executed both by technical users and end us
 
 .. warning::
     **Section structure exception**
-         
+
     Since there are no differences between the cockpit interface reached by a final user and the one reached by a technical user, the cockpit designer is described in one unique My first Cockpit for both those kind of users. By the way, when necessary we will   highlight how the same functionality can be exploited accordingly to the user’s role.
 
 My first Cockpit
@@ -23,14 +23,14 @@ You can create your new Cockpit from the **Analysis** area of the **Workspace** 
 
 .. important::
     **Reaching the cockpit designer**
-         
+
     We stress that the cockpit interface is reached by the final user and the administrator following two different paths.
 
 Let us see how to build a cockpit and how the interface is displayed within the server. Once opened, the cockpit interface is an empty page with a toolbar containing different options described in Table below.
 
 .. table:: Cockpit editor toolbar.
    :widths: auto
-   
+
    +--------------------------------+-----------------------+-----------------------+
    |    Icon                        | Name                  | Function              |
    +================================+=======================+=======================+
@@ -71,7 +71,7 @@ Let us see how to build a cockpit and how the interface is displayed within the 
    |                                |                       | document.             |
    +--------------------------------+-----------------------+-----------------------+
 
-   
+
 By clicking the button **Add Widget** you can add a widget containing a **Text**, an **Image**, a **Chart**, a **Table**, a **Cross table**, a **Document**,the **Active selections** or the **Selector** to your cockpit, as shown below.
 
 .. figure:: media/image143_bis.png
@@ -120,7 +120,7 @@ On the **Cross** tab you can define navigation to another document, as shown in 
 
 .. warning::
     **Cross navigation only for technical users**
-         
+
     Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final user.
 
 For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. If the cross navigation definition is not defined, then when you launch the chart widget cross navigation will be shown a pop up (refer to figure below) with the list of cross navigation definition that exist for this cockpit.
@@ -139,9 +139,9 @@ We recall that also for chart widget it is possible to set cross navigation on e
 
 .. warning::
     **Cross navigation only for technical users**
-         
+
     Due to the fact that parameters can only be managed by technical user the cross navigation cannot be implemented by the final user.
-         
+
 As shown in next figure, it is mandatory to enable the cross navigation feature by using the dedicate tab of chart editor GUI. It is mandatory to choose the column element to be passed to the destination document and associate it to the right output parameter (previoulsy added to the document using the detail interface).
 
 The cross navigation name can be left empty. In case multiple cross navigation definitions have been configured for the document, a pop up will be displayed, letting the user to choose which destination to reach (exactly as we saw earlier for Image widget in the last figure of that paragraph).
@@ -191,7 +191,13 @@ is editable. When you are satisfied with your expression you can click on save b
 
     Add a calculated field.
 
-At the very bottom of the window, you can see the dataset fields listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+At the very bottom of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+You can choose between dataset-level behaviour or table-level (default), that is the calculation modality that will involve table fields or dataset columns to get the result.
+If you choose dataset-level behaviour the calculation result will be done at dataset columns level only and the aggregation will involve the entire result of the calculation.
+
+.. figure:: media/image157b.png
+
+    Dataset-level behaviour
 
 .. _columnsettings:
 .. figure:: media/image158.png
@@ -233,22 +239,22 @@ The **Style** tab is where you can customize the table by using the different op
     Titles section of the Style tab.
 
 - In the **Borders** section you can add a border to the widget and customize it by using the colors, thickness and style. Refer to the following figure.
-      
+
 .. figure:: media/image164.png
 
-    Borders section of the Style tab.   
+    Borders section of the Style tab.
 
 - In the **Other Options** section you can add the shadows in the widget, you can set the background color of the widget and it is possible to disable or enable the screenshot option for that particular widget. Refer to the following figure.
 
 .. figure:: media/image165.png
 
-    Other Options section of the Style tab. 
+    Other Options section of the Style tab.
 
 Once the table style settings have been implemented you can switch to the next tab. The “Cross” tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator).
 
 .. warning::
     **Cross navigation only for technical users**
-         
+
     Due to the fact that parameters can only be managed by technical user, the cross navigation cannot be implemented by the final user.
 
 Referring to figure below, we sum up how to add a cross navigation to the cockpit with the following bullet list:
@@ -360,13 +366,13 @@ Switching to the “Style” tab you can find the general style settings availab
 .. figure:: media/image178.png
 
     Measures Headers Option for crosstab.
-   
+
 - In the **Total** section you can set color and background of totals (if any).
 
 .. figure:: media/image179.png
 
     Color settings for Totals.
-      
+
 - In the **Subtotal** section you can set color and background of subtotals (if any).
 
 .. figure:: media/image180.png
@@ -405,7 +411,7 @@ The Document Widget configuration is divided into two parts: **Custom** tab and 
 .. figure:: media/image185.png
 
     Custom tab of the Document widget.
-   
+
 The Custom tab is the place where the document is uploaded while the Style tab is where all style options are set.
 
 Selection widget
@@ -435,14 +441,14 @@ The **Selector Widget** is useful when an end user (a user with a USER tole type
 
 .. note::
     **Selector widget**
-         
+
         A technical user can use the association with an Analytical Driver to filter on cockpit.
 
 .. figure:: media/image188.png
 
     Selector widget outlook.
 
-In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then custom the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further choose among “vertical”, “horizontal” or “grid”. You can also decide to add a dafault value, chosen from main column’s first item, main column’s last item or to simply assign a static value. Finally, by clicking on the Wrap Text option it is possible to wrap the text shown in the selector; this option is useful when the categories to choose from are sting of long dimensions. 
+In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then custom the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further choose among “vertical”, “horizontal” or “grid”. You can also decide to add a dafault value, chosen from main column’s first item, main column’s last item or to simply assign a static value. Finally, by clicking on the Wrap Text option it is possible to wrap the text shown in the selector; this option is useful when the categories to choose from are sting of long dimensions.
 
 In the case of the selector of type list "grid" it is also possible to set the grid columns width.
 
@@ -467,7 +473,7 @@ The Selector widget works effectively as a ready-to-use filter panel.
 .. figure:: media/image191.png
 
     Selector widget execution example.
-    
+
 HTML Widget
 ~~~~~~~~~~~
 
@@ -478,16 +484,16 @@ The HTML widget allows to add customized HTML and CSS code to add very custom dy
         For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
 
 The Edit section of the widget is composed by tree tabs: the HTML editor, the style and the dataset.
-In the editor tab is possible to add the code that will be shown in the widget. Clicking on the top expander section in the tab, the one named "CSS" also the CSS editor will be available. 
+In the editor tab is possible to add the code that will be shown in the widget. Clicking on the top expander section in the tab, the one named "CSS" also the CSS editor will be available.
 
 .. important::
 
-        A CSS property will be extended to all the classes in the cockpit with the same name, to apply the property only to the current widget use the id prefix shown in the info panel of the CSS editor 
+        A CSS property will be extended to all the classes in the cockpit with the same name, to apply the property only to the current widget use the id prefix shown in the info panel of the CSS editor
 
 .. figure:: media/image208.png
 
     HTML widget editor
-    
+
 In the right side of the editor is possible to take available tags to copy inside the code, those tags will be explained in details in the following paragraphs. Is not possible to add custom Javascript code inside the html editor, so the available tags are the tools to make the widget dynamic and to use the dataset data.
 
 The Dataset tab allows the user to select a dataset to make the Widget dynamic and to bind it to dataset data.
@@ -531,7 +537,7 @@ The **precision** attribute is optional and is a number type attribute. If added
 
 The ``kn-repeat`` attribute is available to every HTML5 tag, and is a tool to repeat the element for every row of the selected dataset.
 
-This attribute is naturally linked to ``kn-column`` tag. If inside a ``kn-column`` tag without a row attribute is present, the ``kn-repeat`` will show the column value for every row of the dataset. 
+This attribute is naturally linked to ``kn-column`` tag. If inside a ``kn-column`` tag without a row attribute is present, the ``kn-repeat`` will show the column value for every row of the dataset.
 
 Inside a ``kn-repeat`` is possible to use the specific tag [kn-repeat-index], that will print the index of the repeated column row.
 
@@ -565,7 +571,7 @@ In order to avoid Cross-site scripting and other vulnerabilities, some tags are 
 
 If the tag is needed for some specific behaviour (ie. the button default hover), please replicate it with css using a different allowed tag.
 
-.. warning:: 
+.. warning::
     **Whitelist**
     Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise those external links will be removed by the system. This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
 
@@ -577,7 +583,7 @@ If the tag is needed for some specific behaviour (ie. the button default hover),
    <WHITELIST>
       <service baseurl="https://www.youtube.com" />
       <service baseurl="https://player.vimeo.com" />
-      <service baseurl="https://vimeo.com" />	
+      <service baseurl="https://vimeo.com" />
       <service baseurl="https://media.giphy.com" />
       <service baseurl="https://giphy.com" />
       <service baseurl="https://flic.kr" />
@@ -587,6 +593,108 @@ If the tag is needed for some specific behaviour (ie. the button default hover),
    </WHITELIST>
 
 Like other widgets the "Style" tab and the "Filters" tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
+
+Map Widget
+~~~~~~~~~~~
+
+The Map Widget is useful when a user needs to visualize data related to a geographic position. The widget supports multiple layers, one for every dataset added to widget configuration, and one data field for every layer: the user can switch on-the-fly between all data available on the layer.
+
+.. figure:: media/image475.png
+
+    Map widget.
+
+In Map Widget configuration a user can add and remove layers, set the format of the spatial attribute to use and specify the attributes to display on map and on the detail popup:
+
+    .. figure:: media/image476.png
+
+        Map widget configuration.
+
+Every dataset with a spatial attribute is eligible to become a layer in map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
+
+.. |image478| image:: media/image478.png
+   :height: 26
+
+.. |image479| image:: media/image479.png
+   :height: 26
+
+In layer's metadata, the user set the spatial attribute of the dataset that will be used to display a markers on the map. Actually, many spatial attribute types are supported:
+
+-  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
+-  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
+-  WKT: where the value is a text string in `Well-known Text <https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry>`_ format;
+
+.. important::
+         **Geographic coordinates format**
+
+         For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
+
+Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup. For a measure type field a user could specify the aggregation function and if it has to be shown on map: at least one field has to be shown on map. For attribute type field a user can specify if it's modal, that allows a user to make a selection on that value and refresh all other widget in the document: the user can specify only one model field.
+
+The threshold button open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
+
+    .. figure:: media/image482.png
+
+        Threshold dialog.
+
+For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
+
+.. figure:: media/image477.png
+
+    Style configuration for every layer.
+
+For marker there are multiple choices between a user can select. The first one is the standard marker, where a user can select only the marker color:
+
+.. figure:: media/image483.png
+
+    Standard marker configuration.
+
+The second possibility is to use a custom color and custom scale with a custom marker, for example and icon available in Font Awesome catalog:
+
+.. figure:: media/image484.png
+
+    Custom marker configuration.
+
+A user can also use an image from Knowage media as a marker:
+
+.. figure:: media/image485.png
+
+    Marker from Knowage images.
+
+Finally a user can use an image from external URL as a marker:
+
+.. figure:: media/image486.png
+
+    Marker from Knowage images.
+
+Cluster visualization renders circles of different size where every circle aggregating positions by relative values. A user can zoom in to disaggregate the cluster until he see the single data. For this type of visualization, a user can set size and color of the circle and the size and the color of the font used to display the aggregated value:
+
+.. figure:: media/image487.png
+
+    Cluster configuration.
+
+When heatmap is selected, a user can display values by areas colored by a color range from green to red where the values are respectively lower and higher. Setting the radius and the blur, a user can specify the scale of the areas and the scale of the blur around it:
+
+.. figure:: media/image488.png
+
+    Heatmap configuration.
+
+The choroplet visualization allows a user to precisely associate values to areas, very useful when spatial attribute specify a geometry instead of a single point. The classes method specify the subdivision algorithm and the classes number specify how many subdivision to make; the colors specify the start and the end of the range color that will follow the same range of the values:
+
+.. figure:: media/image489.png
+
+    Choroplet configuration.
+
+Discovery Widget
+~~~~~~~~~~~~~~~~~~
+.. figure:: media/image480.png
+
+The Discovery Widget is used to easily use and navigate into a Solr Dataset using facets aggregation and a table results.
+In order to make searches, aggregations using facets and so on, after selecting the Solr dataset it is possible to choose the fields that should be shown as the result.
+The table result can also be configured to show a limited set of fields, please open edit mode:
+
+.. figure:: media/image481.png
+
+If facets selection is enabled, it is also possibile to configure facets pagination options such as results limit, max number of items and more.
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
@@ -609,7 +717,7 @@ When executing the cockpit in visualization mode, the user has also some more op
 
 .. |image197| image:: media/image193.png
    :width: 30
-   
+
 .. |image198| image:: media/image194.png
    :width: 30
 
@@ -642,7 +750,7 @@ This option allows the user to manage all cockpit general settings that we are g
 
     General configuration window.
 
-Editing the fields of the first tab you can add or change the name and/or the description of your cockpit; moreover here you can choose the sheet color or a background image and its size. In particular, in order to add a background image for the sheets, firstly you have to add the image to the catalogue of the image widget and then copy the link of the image. It is also possible to decide to enable the menu and the widgets functionalities when the document runs in display mode or to disable the screenshot functionality for every widgets. 
+Editing the fields of the first tab you can add or change the name and/or the description of your cockpit; moreover here you can choose the sheet color or a background image and its size. In particular, in order to add a background image for the sheets, firstly you have to add the image to the catalogue of the image widget and then copy the link of the image. It is also possible to decide to enable the menu and the widgets functionalities when the document runs in display mode or to disable the screenshot functionality for every widgets.
 
 The second tab (Figure below allows to configure some style options of the cockpit, like borders, shadows, titles and background color.
 
