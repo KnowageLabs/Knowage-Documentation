@@ -90,13 +90,13 @@ By clicking the button Text Widget you can add text to your cockpit. As shown in
 
      Text editor of text widget configuration.
 
-On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possbile to associate dataset values to the text and read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure first select the desired function and then the field of numeric type.
+On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possible to associate dataset values to the text and read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure first select the desired function and then the field of numeric type.
 
 .. figure:: media/image1454647.png
 
     Editing a dynamic text.
 
-On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be used in the dynamic value. Finally, the “Filters” tab can be used to extract limited outup from the dataset. We put details off to the table widget subsection.
+On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be used in the dynamic value. Finally, the “Filters” tab can be used to extract limited output from the dataset. We put details off to the table widget subsection.
 
 Image widget
 ~~~~~~~~~~~~
@@ -191,7 +191,13 @@ is editable. When you are satisfied with your expression you can click on save b
 
     Add a calculated field.
 
-At the very bottom of the window, you can see the dataset fields listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+At the very bottom of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
+You can choose between dataset-level behaviour or table-level (default), that is the calculation modality that will involve table fields or dataset columns to get the result.
+If you choose dataset-level behaviour the calculation result will be done at dataset columns level only and the aggregation will involve the entire result of the calculation.
+
+.. figure:: media/image157b.png
+
+    Dataset-level behaviour
 
 .. _columnsettings:
 .. figure:: media/image158.png
@@ -214,7 +220,7 @@ The **Style** tab is where you can customize the table by using the different op
 
     Rows section of the Style tab.
 
-- In the **Grid** section you can add borders to the table and add color to alternate rows. In this section you can find different      options to customize them. Refer to figure below.
+- In the **Grid** section you can add borders to the table and add color to alternate rows. In this section you can find different options to customize them. Refer to figure below.
 
 .. figure:: media/image161.png
 
@@ -261,7 +267,7 @@ Referring to figure below, we sum up how to add a cross navigation to the cockpi
 - activate cross Enable on all row flag, if you want to be able to click on all the columns of the table;
 - select the column whose value will be passed through output parameter to the document of arrival;
 - select the output parameter that will pass the value to the document of arrival. This parameter type are defined in the document detail of the cockpit;
-- select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that     cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
+- select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
 - add all involved output parameters by adding them one by one in the bottom part of the GUI.
 
 Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
@@ -398,7 +404,7 @@ Document section
 
 The Document widget allows to add an external document into the cockpit area. This widget supports documents like reports, graphs, maps, etc.
 
-Use the Data configuration button to add a document souce to the cockpit. Click on the “Plus” icon on the right half of the page to choose among all available documents.
+Use the Data configuration button to add a document source to the cockpit. Click on the “Plus” icon on the right half of the page to choose among all available documents.
 
 The Document Widget configuration is divided into two parts: **Custom** tab and **Style** tab as you can see from Figure below.
 
@@ -413,7 +419,7 @@ Selection widget
 
 This widget is related to the association concept so in this subsection we give information on how to add and custom the **Selection Widget** into the cockpit area and its functioning, while we refer to the dedicated Document section for details on how to set (global) associations.
 
-To enable the Selection widget, which means the possibility to have all associations listed and acccessible on a widget, the user must open the “Selection” feature through the “Add widget” functionality and configure the demanded options. Figure below shows the“Selection widget configuration” interface.
+To enable the Selection widget, which means the possibility to have all associations listed and accessible on a widget, the user must open the “Selection” feature through the “Add widget” functionality and configure the demanded options. Figure below shows the “Selection widget configuration” interface.
 
 .. figure:: media/image186.png
 
@@ -442,7 +448,7 @@ The **Selector Widget** is useful when an end user (a user with a USER tole type
 
     Selector widget outlook.
 
-In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then custom the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further choose among “vertical”, “horizontal” or “grid”. You can also decide to add a dafault value, chosen from main column’s first item, main column’s last item or to simply assign a static value. Finally, by clicking on the Wrap Text option it is possible to wrap the text shown in the selector; this option is useful when the categories to choose from are sting of long dimensions.
+In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then custom the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further choose among “vertical”, “horizontal” or “grid”. You can also decide to add a default value, chosen from main column’s first item, main column’s last item or to simply assign a static value. Finally, by clicking on the Wrap Text option it is possible to wrap the text shown in the selector; this option is useful when the categories to choose from are sting of long dimensions.
 
 In the case of the selector of type list "grid" it is also possible to set the grid columns width.
 
@@ -488,10 +494,10 @@ In the editor tab is possible to add the code that will be shown in the widget. 
 
     HTML widget editor
 
-In the right side of the editor is possible to take available tags to copy inside the code, those tags will be explained in details in the following paragraphs. Is not possible to add custom Javascript code inside the html editor, so the available tags are the tools to make the widget dynamic and to use the dataset data.
+In the right side of the editor is possible to take available tags to copy inside the code, those tags will be explained in details in the following paragraphs. Is not possible to add custom JavaScript code inside the html editor, so the available tags are the tools to make the widget dynamic and to use the dataset data.
 
 The Dataset tab allows the user to select a dataset to make the Widget dynamic and to bind it to dataset data.
-After choosing a dataset the list of available columns will be show. Those names will be useful inside the dynamic tags. Here it is also possible to order the dataset according to a column and to select the ordering type (ascendig or descending).
+After choosing a dataset the list of available columns will be show. Those names will be useful inside the dynamic tags. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
 
 .. figure:: media/image209.png
 
@@ -563,7 +569,7 @@ In order to avoid Cross-site scripting and other vulnerabilities, some tags are 
 -  ``<object></object>``
 -  ``<script></script>``
 
-If the tag is needed for some specific behaviour (ie. the button default hover), please replicate it with css using a different allowed tag.
+If the tag is needed for some specific behaviour (i.e. the button default hover), please replicate it with CSS using a different allowed tag.
 
 .. warning::
     **Whitelist**
@@ -597,13 +603,38 @@ The Map Widget is useful when a user needs to visualize data related to a geogra
 
     Map widget.
 
-A dataset with a spatial attribute is eligible to be used in Map Widget: that attribute will be used to display a marker on the map. Every marker can be clicked to show a popup detail about the data related to that position. In the top right corner, the gear icon allows to hide and show layers and to change data displayed.
-
 In Map Widget configuration a user can add and remove layers, set the format of the spatial attribute to use and specify the attributes to display on map and on the detail popup:
 
-.. figure:: media/image476.png
+    .. figure:: media/image476.png
 
-    Map widget configuration.
+        Map widget configuration.
+
+Every dataset with a spatial attribute is eligible to become a layer in map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
+
+.. |image478| image:: media/image478.png
+   :height: 26
+
+.. |image479| image:: media/image479.png
+   :height: 26
+
+In layer's metadata, the user set the spatial attribute of the dataset that will be used to display a markers on the map. Actually, many spatial attribute types are supported:
+
+-  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
+-  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
+-  WKT: where the value is a text string in `Well-known Text <https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry>`_ format;
+
+.. important::
+         **Geographic coordinates format**
+
+         For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
+
+Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup. For a measure type field a user could specify the aggregation function and if it has to be shown on map: at least one field has to be shown on map. For attribute type field a user can specify if it's modal, that allows a user to make a selection on that value and refresh all other widget in the document: the user can specify only one model field.
+
+The threshold button open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
+
+    .. figure:: media/image482.png
+
+        Threshold dialog.
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
@@ -611,6 +642,59 @@ For every layer, a user can specify the way the data will be displayed on map: t
 
     Style configuration for every layer.
 
+For marker there are multiple choices between a user can select. The first one is the standard marker, where a user can select only the marker color:
+
+.. figure:: media/image483.png
+
+    Standard marker configuration.
+
+The second possibility is to use a custom color and custom scale with a custom marker, for example and icon available in Font Awesome catalog:
+
+.. figure:: media/image484.png
+
+    Custom marker configuration.
+
+A user can also use an image from Knowage media as a marker:
+
+.. figure:: media/image485.png
+
+    Marker from Knowage images.
+
+Finally a user can use an image from external URL as a marker:
+
+.. figure:: media/image486.png
+
+    Marker from Knowage images.
+
+Cluster visualization renders circles of different size where every circle aggregating positions by relative values. A user can zoom in to disaggregate the cluster until he see the single data. For this type of visualization, a user can set size and color of the circle and the size and the color of the font used to display the aggregated value:
+
+.. figure:: media/image487.png
+
+    Cluster configuration.
+
+When heatmap is selected, a user can display values by areas colored by a color range from green to red where the values are respectively lower and higher. Setting the radius and the blur, a user can specify the scale of the areas and the scale of the blur around it:
+
+.. figure:: media/image488.png
+
+    Heatmap configuration.
+
+The choroplet visualization allows a user to precisely associate values to areas, very useful when spatial attribute specify a geometry instead of a single point. The classes method specify the subdivision algorithm and the classes number specify how many subdivision to make; the colors specify the start and the end of the range color that will follow the same range of the values:
+
+.. figure:: media/image489.png
+
+    Choroplet configuration.
+
+Discovery Widget
+~~~~~~~~~~~~~~~~~~
+.. figure:: media/image480.png
+
+The Discovery Widget is used to easily use and navigate into a Solr Dataset using facets aggregation and a table results.
+In order to make searches, aggregations using facets and so on, after selecting the Solr dataset it is possible to choose the fields that should be shown as the result.
+The table result can also be configured to show a limited set of fields, please open edit mode:
+
+.. figure:: media/image481.png
+
+If facets selection is enabled, it is also possibile to configure facets pagination options such as results limit, max number of items and more.
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
@@ -655,7 +739,7 @@ Referring to figure below, the available chart types are: parallel, scatter, wor
 
     Available chart types.
 
-Pay attention though to the fact that when grouping functions have been used, the change chart type may not report the same level of aggregation. In fact, not all type of chart allows the grouping function. Refer to Chart types in detail to read more about each chart type configuration. Pay also attention when a two-series chart is chaned with a single-series one. For instance the parallel chart works only when (at laest) two series have been set, while the wordcloud works with only one series.
+Pay attention though to the fact that when grouping functions have been used, the change chart type may not report the same level of aggregation. In fact, not all type of chart allows the grouping function. Refer to Chart types in detail to read more about each chart type configuration. Pay also attention when a two-series chart is chaned with a single-series one. For instance the parallel chart works only when (at least) two series have been set, while the wordcloud works with only one series.
 
 General configuration
 -------------------------
@@ -677,7 +761,7 @@ The second tab (Figure below allows to configure some style options of the cockp
 Data configuration
 ----------------------
 
-This feature manages the data storage and usage. In fact, here there is the possiblity to save data in cache, create associations between datasets, schedule the (data) refresh frequency and so on. Referring to the figure below, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **Frequency** and the **Template** tab.
+This feature manages the data storage and usage. In fact, here there is the possibility to save data in cache, create associations between datasets, create indexes on cached data, schedule the (data) refresh frequency and so on. Referring to the figure below, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **indexes**, the **Frequency** and the **Template** tab.
 
 .. _dataconfigwindow:
 .. figure:: media/image199_b.png
@@ -698,7 +782,7 @@ If the user is adding a parametric dataset the window will exhibit them in an ex
 
     Dataset management.
 
-On the right side of the window the user finds the list of external documents that can be added to the cockpit (through Document widgets), or as well as for the dataset case, of documents that are already in use in (previously set) Document widgets. In the occurance of Associations parametric documents, parameter boxes are shown below. Note that it is mandatory to link them to analytical drivers (previuosly hooked to the document) or be assigned a fixed (default) value.
+On the right side of the window the user finds the list of external documents that can be added to the cockpit (through Document widgets), or as well as for the dataset case, of documents that are already in use in (previously set) Document widgets. In the occurrence of Associations parametric documents, parameter boxes are shown below. Note that it is mandatory to link them to analytical drivers (previously hooked to the document) or be assigned a fixed (default) value.
 
 Associations
 ~~~~~~~~~~~~
@@ -718,13 +802,28 @@ The same procedure can be done in the case of dataset columns and dataset parame
 
     Associations between dataset column and dataset parameter.
 
-Another example is supplied in Figure below. Here the association is perfomed between a dataset Frequency column and document parameter.
+Another example is supplied in Figure below. Here the association is performed between a dataset Frequency column and document parameter.
 
 .. figure:: media/image203.png
 
     Associations between dataset column and document parameter.
 
 Once you have defined the associations, as soon as you refresh one widget, all related widgets are refreshed simultaneously on data update.
+
+Indexes
+~~~~~~~~~~~~
+If you want that cockpit loading be faster, you can create indexes on cached data. This feature is available only for cached dataset.
+
+If you want to create an index on a column you have to choose that column by clicking. The name of the column will appears in the Indexes List
+section of the page. If you want to confirm your choose, click on the save icon. If you want to cancel it, click on the cross icon. After saving
+a index you'll see in the list surrounded by a continuous border.
+
+.. figure:: media/image305.png
+
+    Indexes settings example
+
+For example, in the figure above index on the column "customer_id" of ALL_CUSTOMERS dataset is already saved.
+"store_name" column of "SPARKSQL_STORE" dataset is selected. If you want to create an index on it, you have to save it.
 
 Frequency
 ~~~~~~~~~
@@ -749,7 +848,7 @@ In this tab the user can find the json code (at the current stage of the work) w
 Selections
 --------------
 
-Adding the **Selections** to your widgets, namely the possibility to reload all widget data according to selection made throught the click on a specific item of the cockpit (cell value, chart bar, etc.). Moreover, thanks to this functionality the user can reproduce the drill down feature that we introduced in Chapter of Chart. You can check which selections are active on your cockpit at anytime thanks to the **Selection** functionality. In Section 7.1 we already described how to add the “Selection” widget inside the cockpit area. If the user do not wish for the widget to stay visible, selections can still be accessed and managed through the menu configuration bar. Clicking on the “Selection” menu icon you can enter the “Selections” window. Here all selections and associations are listed, as shown in Figure below. The “Delete” button is available just aside each row to let the user to remove that specific selections. Click on the “Cancel” button to exit the window.
+Adding the **Selections** to your widgets, namely the possibility to reload all widget data according to selection made through the click on a specific item of the cockpit (cell value, chart bar, etc.). Moreover, thanks to this functionality the user can reproduce the drill down feature that we introduced in Chapter of Chart. You can check which selections are active on your cockpit at anytime thanks to the **Selection** functionality. In Section 7.1 we already described how to add the “Selection” widget inside the cockpit area. If the user do not wish for the widget to stay visible, selections can still be accessed and managed through the menu configuration bar. Clicking on the “Selection” menu icon you can enter the “Selections” window. Here all selections and associations are listed, as shown in Figure below. The “Delete” button is available just aside each row to let the user to remove that specific selections. Click on the “Cancel” button to exit the window.
 
 
 .. figure:: media/image206.png
@@ -760,7 +859,7 @@ Adding the **Selections** to your widgets, namely the possibility to reload all 
 Clear cache
 ---------------
 
-The **Clear cache** button lets you reallign the data shown in your widget to the ones in your database. When you create your widget and associate your datafields, a photo of data is made and stored in temporary tables. This means that your cockpit will display the same data at each execution until you clean the chace by clicking on the dedicated button and execute the document again. Now your data are refreshed and updated to the one contained in your database at last execution time. As discussed before this button is available also in “Read only” modality.
+The **Clear cache** button lets you realign the data shown in your widget to the ones in your database. When you create your widget and associate your datafields, a photo of data is made and stored in temporary tables. This means that your cockpit will display the same data at each execution until you clean the chace by clicking on the dedicated button and execute the document again. Now your data are refreshed and updated to the one contained in your database at last execution time. As discussed before this button is available also in “Read only” modality.
 
 Save
 --------

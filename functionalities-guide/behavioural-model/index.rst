@@ -11,7 +11,7 @@ It mainly answers the following questions:
 -  WHAT is visible to users, in terms of documents and data (repository rights and analytical drivers);
 -  HOW users work with their documents (analytical drivers and presentation environment settings).
 
-The creation and the management of the bevioural model is in charge of Knowage Administrator. However when it has been designed and built, it has to be shared with developers as well. Indeed in developing phase you have to be aware of the visibility hierarchy. You need these information to set document options correctly.
+The creation and the management of the behavioural model is in charge of Knowage Administrator. However when it has been designed and built, it has to be shared with developers as well. Indeed in developing phase you have to be aware of the visibility hierarchy. You need these information to set document options correctly.
 
 Roles, users and attributes
 -------------------------------
@@ -28,7 +28,7 @@ The *profile* of a user consists of a set of properties called attributes, descr
 
 The *role* of a user represents a categorization of a group of users. These roles may correspond to specific positions in the company, e.g., “general manager” or a “sales director”, or to a position with respect to the BI project, e.g., “data administrator” and “BI developer”. Different users may have the same role, as well as the same user may have multiple roles.
 
-You will not have grants to create new roles or users, but you are asked to match them during document profilation phases. In the following we are going to describe the elements needed for adding parameters. This elements involves profilation too. To conlcude we will see how to manage accessibility while creating a document.
+You will not have grants to create new roles or users, but you are asked to match them during document profilation phases. In the following we are going to describe the elements needed for adding parameters. This elements involves profilation too. To conclude we will see how to manage accessibility while creating a document.
 
 Analytical drivers
 ----------------------
@@ -42,7 +42,7 @@ An analytical driver (hereafter simply driver) models a concept or a piece of da
 
 The Figure above represents a report with two parameters:
 
-- the Deparment, a mandatory field, displayed as a combo box and with possible values: Alcoholic Beverages, Baked Goods, Baking Goods and so on;
+- the Department, a mandatory field, displayed as a combo box and with possible values: Alcoholic Beverages, Baked Goods, Baking Goods and so on;
 - the Age Range, a mandatory field, displayed as list of values and with possible values 0-10, 10-20 and so on.
 
 All these aspects are regulated by the analytical driver behind each parameter. In particular, each driver provides many *use modes*, defining:
@@ -170,7 +170,7 @@ Suppose that you need to retrieve a list of values representing all brand names 
 
 This is suitable for end users like the general manager who need to see all brands for every product family. Suppose now that another end user is, for example, the food manager. He should not see every brand name, but only those related to the Food product family. This could be done using user’s profile attributes.
 
-In particular, all query except the ``List of fixed values`` type can be parameterized using profile attributes. This means that, at LOV execution time, the value of the attribute in the user’s profile is assigned to a placeholder in the LOV query/script. Suppose that, in our example, the food manager user has the profile attribute ``pr_family`` equal to ``Food``. You can write this second Query LOV using the placeholder with the standar syntax ``${profile_attribute_name}``, as shown in Parametric query.
+In particular, all query except the ``List of fixed values`` type can be parameterized using profile attributes. This means that, at LOV execution time, the value of the attribute in the user’s profile is assigned to a placeholder in the LOV query/script. Suppose that, in our example, the food manager user has the profile attribute ``pr_family`` equal to ``Food``. You can write this second Query LOV using the placeholder with the standard syntax ``${profile_attribute_name}``, as shown in Parametric query.
 
 .. code-block:: sql
          :caption: Parametric query
@@ -195,7 +195,7 @@ This means that if you are the food manager and your user has the profile attrib
 .. note::
      **Standard profile attributes**
 
-     There are some standard profile attributes always avaiable that dont' need to be defined for each user. These profile attributes are:
+     There are some standard profile attributes always available that don't' need to be defined for each user. These profile attributes are:
 
      - *user_id* contains the user id of the logged in user
      - *user_roles* contains the current user's roles, joined as a SQL IN clause fashion, for example: 'general_management','human_resources_management'
@@ -230,7 +230,7 @@ Knowage default checks are:
 
 If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
 
-- **Date**: here you can set a costumized format type of date;
+- **Date**: here you can set a customized format type of date;
 - **Regular Expression**: to set a regular expression validation rule;
 - **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
 - **Range**: to set a range the parameters value has to satisfy;
@@ -239,14 +239,14 @@ If the administrator needs to create additional validation rules, he can click o
 Creating an analytical driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As explained at the beginning of this section, analytical drivers use nformation about users, their roles and profiles to filter data   returned by their associated LOVs. Users, roles and profiles must have been already defined in the project context so that they are   available to the driver.
+As explained at the beginning of this section, analytical drivers use information about users, their roles and profiles to filter data returned by their associated LOVs. Users, roles and profiles must have been already defined in the project context so that they are available to the driver.
 
 .. _analyticaldrivermanagbehav:
 .. figure:: media/image52.png
 
     Analytical Driver Management.
 
-To create a driver, select Behavioural Model > Analytical Drivers Management from the developer menu. Here, you will see the entire   list of available drivers. For each driver, the list shows unique label, description and type. To explore details the user must just   select one menu item from the list and they will appear in the half right side, as shown in the figure above. Otherwise to delete one   analytical driver the user must use the icon |image48| available at the end of each row of the list. Notice that you cannot delete a driver if adocument is currently using it.
+To create a driver, select Behavioural Model > Analytical Drivers Management from the developer menu. Here, you will see the entire   list of available drivers. For each driver, the list shows unique label, description and type. To explore details the user must just   select one menu item from the list and they will appear in the half right side, as shown in the figure above. Otherwise to delete one analytical driver the user must use the icon |image48| available at the end of each row of the list. Notice that you cannot delete a driver if a document is currently using it.
 
 .. |image48| image:: media/image44.png
    :width: 30
@@ -327,7 +327,7 @@ Analytical driver’s use modes
 
 Sometimes the same analytical driver (i.e., the same concept, like the concept of product brand) should display different values according to the user that is executing it.
 
-Suppose you have a report on sales and costs like the one in the first figure of this chapter and you want to add to it the possibility to filter also on product brands. If you load the report as the general manager, you should choose between all the possible product brands in the corresponding parameter. If instead you load it as, for instance, the food manager, then you should be able to filter only on product brands related to the Food familiy.
+Suppose you have a report on sales and costs like the one in the first figure of this chapter and you want to add to it the possibility to filter also on product brands. If you load the report as the general manager, you should choose between all the possible product brands in the corresponding parameter. If instead you load it as, for instance, the food manager, then you should be able to filter only on product brands related to the Food family.
 
 In order to do this, let us focus again on the definition of the LOV and check that the already defined use mode ``All Brands`` is associated to the correct role ``general_manager``. Here you can add a second tab, called for instance ``Profiled_Brands``, and associate it to the role ``product_manager``. This is because the food manager user has ``product_manager`` role with profile attribute ``pr_family = Food``.
 
@@ -350,10 +350,10 @@ It is possible to show a summary of the links between the LOVs, the analytical d
 
     Behavioural Model Lineage.
 
-The entire list of available LOVs, analyitical driver and documents appears, as shown in figure below.
+The entire list of available LOVs, analytical driver and documents appears, as shown in figure below.
 
 .. figure:: media/lineage2.png
 
-    List of LOVs, analyitical driver and documents.
+    List of LOVs, analytical driver and documents.
 
 By selecting one LOV or Analytical Driver or Documents the other will refresh showing only the elements associated with the selection done. To come back to the original situation click the refresh button on the top right corner.
