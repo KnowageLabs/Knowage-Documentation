@@ -24,6 +24,37 @@ To create a Metamodel enter the **Business Model Catalogue** and add a new model
 
 After you have compiled these information, you can use the browse button to upload a model developed through an external (and specific) tool or you can click on “Save” on the top right corner of the screen and use the Meta Web engine to build it through Knowage interface. Now click on the switch **Enable Meta Web** that will show up a button **Meta Web**, click on that and you are ready to design the model.
 
+Association with analytical drivers
+----------------------------------------
+
+We have already discussed the role of analytical drivers and how they are connected to analytical documents via parameters. In this section we will show how to practically define this association.
+
+We assume that the document template and datasets are correctly set in terms of parameter definition. In particular, they should have   been correctly referenced with their URL.
+
+To add a new parameter, you can click on the tab **Drivers** and then on a **Add** button, see the next figure.
+
+.. figure:: media/image74.png
+
+    Association with analytical driver panel.
+
+Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the document.   
+
+Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set the different features   associated to the driver: you can set its visibility and decide if it is required and multivalue. By default the parameter is visible, not mandatory and not multivalue.
+
+If you want the document not to be visible to end users, untick the **Visible** checkbox. Note that the parameter will still exist and   receive values from the associated driver. However, this will be hidden and the end user will not be able to choose any value for this   parameter.
+
+If you want to set it as a required parameter just click on **true**. In this case, no default value is set. The end user will be   asked to choose the value of the parameter before opening the document.
+
+Similarly to set a parameter as multivalue click on **true**, in this way the user can perform multiple selections on among its values.
+
+After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.
+
+.. figure:: media/image75.png
+
+    Association with analytical driver panel.
+
+In the following we will see some special operations that can be performed on drivers associated to a document.
+
 Create an empty model
 ~~~~~~~~~~~~~~~~~~~~~
 
