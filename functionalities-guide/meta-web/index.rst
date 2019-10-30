@@ -213,14 +213,8 @@ As well, the cardinality of the inbound relationship can be of two types:
 
 Use the second type of cardinality when the type of cardinality can be optional.
 
-Create a new business class
+SQL Filter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In the “Business Model” tab, the sandwitch icon lets the user add other Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
-
-.. figure:: media/image31213.png
-
-    SQL Filter
     
 In meta web is added new feature connected with drivers that we can define in the Drivers tab of a new business model. This is SQL filter that is actually applying already defined drivers. 
 
@@ -232,6 +226,15 @@ SQL filter is expression that is added in the end of query as part of where clau
 
 If you want to add filter for multivalue driver this is the right syntax: column_name IN ($P{url_name_of_the_driver}). For example:
 city IN ($P{cityUrl}).
+
+
+Create a new business class
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the “Business Model” tab, the sandwitch icon lets the user add other Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
+
+.. figure:: media/image31213.png
+
 
     Create a new business class.
 
