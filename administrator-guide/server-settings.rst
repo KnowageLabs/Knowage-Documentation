@@ -53,6 +53,23 @@ All the values except the **Domain code** to you. the last are mandatory for cor
 
 You can also modify an existing domain by selecting its dedicated row and clicking the edit button.
 
+Exporters Menu
+--------
+
+Exporters Menu is the new feature of Knowage. This feature allows administrator to configure the exporters of the documents. When you open this catalogue, on the left side you can see the list of created exporters and if you want to see the details of one of them or to change it, you can do that by selecting it in the list. You can add a new exporter by clicking on a plus icon. See the figure below.
+
+.. figure:: media/image101.png
+
+   Adding new exporter.
+
+On the right side of catalogue you have two drop down menus where you can choose engine and exporter to link it with the engine. After you selected engine and exporter you can save it by clicking on a save button in the upper right corner. In the figure below you can see the example of creating new exporter.
+
+.. figure:: media/image102.png
+
+   Creating new exporter.
+
+You also have possibility to change existing exporter and delete it.
+
 Metadata
 --------
 
