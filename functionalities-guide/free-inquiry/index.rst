@@ -38,7 +38,7 @@ To open the QbE editor, access the **Models** section, available in the end user
 
 In this paragraph we show how to build a simple query with the QbE editor.
 
-.. figure:: media/image208.png
+.. figure:: media/qbeDesigner.png
 
     QbE editor.
 
@@ -75,9 +75,7 @@ Let us see more in detail how to add calculated fields.
 Calculated fields management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In advance view there will be availbe option for creating **calculated fields**. Clicking on **Calculator** icon **Calculated field wizard** will open.
-
-.. figure:: media/calculateFieldWizard.png
+You can create new calculated fields inside a query. In advance view there will be available option for creating **calculated fields**. Clicking on **Calculator** icon **Calculated field wizard** will open.
 
 To build a calculated field, you shall define:
 
@@ -88,7 +86,7 @@ To build a calculated field, you shall define:
 
 An example is provided below.
 
-.. figure:: media/image210.png
+.. figure:: media/calculateFieldWizard.png
 
     Calculated field wizard.
 
@@ -96,7 +94,7 @@ An example is provided below.
 Query Editor
 ^^^^^^^^^^^^^^^^
 
-The central panel provides a query editor. As we already mantioned, there are two available views: smart and advance.
+Central panel provides a query editor. As we already mantioned, there are two available views: smart and advance.
 
 Elements from the datamart schema on the left can be added into the query editor. To remove an field from the query editor, just click on the x icon, or if advance view is opened, clicking on three dots icon, **Delete field** is available.
 
@@ -122,7 +120,6 @@ With available functions it is possible to:
 - **Function**: in case of aggregation, define the aggregation function (e.g., **SUM**, **AVERAGE**, …) on the non-grouped items;
 - **Order**: define a sorting criteria: double click on the **Order** column to set the ordering criteria;
 - **Group**: in case of aggregations, define the attribute that you want to group on (if you know SQL syntax, these attributes are the ones you should place in the GROUP BY clause);
-- **Include**: indicate the column(s) to be included in the result (please notice that non-included attributes will not be returned by the query, but can be used in it, e.g. to apply grouping criteria);
 - **Visible**: indicate whether a column shall be visible in the result (hidden attributes are used and returned by the generated query, but are not shown in the result table);
 - **Filter**: add a filter criteria: clicking on this filter icon redirects you to the **Filters** tab;
 
@@ -208,7 +205,7 @@ Structure of Filters panel is:
 
 With target type **value of the field** lookup function is activated to facilitate selection of values
 
-..figure:: media/lookupFunction.png
+.. figure:: media/lookupFunction.png
 
     Filter lookup for right operand selection.
 
@@ -258,6 +255,8 @@ Query Preview
 While you are in smart view you can see preview of you query.
 While you are in advance view, and you are satisfied with your query or if you want to check the results, you can see the returned data by clicking the **Play** button located in the top right corner of the panel. From there, you can go back to the **Designer** to modify the definition of the query.
 
+.. figure:: media/preview.png
+
 In case you have started the QbE editor directly from a model (that is, you have clicked on a model icon in the **My Data** > **Models** section) from here you can also click the **Save** button located in the top right corner of the page to save your query as a new dataset, reachable later from the **My Data**> **Dataset** section. Please note that this operation saves the *definition* of your query and not the snapshot of the resulting data. This means that every time you re-execute the saved dataset, a query on the database is performed to recover the updated data.
 
 We highlight that when the save button is selected, a pop up shows asking you to fill in the details, split in three tabs:
@@ -269,7 +268,7 @@ Choose your scheduling option and save the dataset. Now the table where your dat
 
 -  **Metadata** It recaps the metadata associated to the fields involved in your query.
 
-..figure:: media/saveQbeDS.png
+.. figure:: media/saveQbeDS.png
 
 	Save qbe dataset.
 
@@ -332,7 +331,7 @@ The latter are available only in the presence of a geographical Business Model a
          |                       |                       | com/cd/B19306_01/appd |
          |                       |                       | ev.                   |
          |                       |                       | 102/b14255/sdo_objgeo |
-         |              ddd         |                       | m.htm#i857957 <https: |
+         |                       |                       | m.htm#i857957 <https: |
          |                       |                       | //docs.oracle.com/cd/ |
          |                       |                       | B19306_01/appdev.102/ |
          |                       |                       | b14255/sdo_objgeom.ht |
@@ -341,7 +340,7 @@ The latter are available only in the presence of a geographical Business Model a
          |    **dimension**      | GET_DIMS              | `https://docs.oracle. |
          |                       |                       | com/cd/B10501_01/appd |
          |                       |                       | ev.                   |
-         |           dddd            |                       | 920/a96630/sdo_meth.h |
+         |                       |                       | 920/a96630/sdo_meth.h |
          |                       |                       | tm#BABDEBJA <https:// |
          |                       |                       | docs.oracle.com/cd/B1 |
          |                       |                       | 0501_01/appdev.920/a9 |
@@ -858,7 +857,6 @@ The **QbE Engine** also supports the definition and usage of subqueries similarl
 	QbE subquery view.
 
 You can easily return to main qiery clicking on **MAIN** button in the query editor toolbar
-
 
 .. figure:: media/image281.png
 
