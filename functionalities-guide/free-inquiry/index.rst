@@ -60,14 +60,20 @@ Each single entity is composed of a title, some attributes or measures and relat
 - **relation**: it refers to relationships or connections between two entities (e.g. relationship between the sales and the product dimension).
 
 .. figure:: media/image300.png
+	
+	Relations of one entity.
 
 There are two available views: smart and advance. When qbe is opened by default user will see smart view. Clicking on one filed of one entity that field will be added in the query and user will se executed query in imidiately. 
 
 .. figure:: media/smart.png
+	
+	Smart view.
 
 User can switch to advance view clicking on Smart view in top right corner. User can continue adding fields in the query but without seeing result. 
 
 .. figure:: media/advanceView.png
+	
+	Advance view
 
 
 Let us see more in detail how to add calculated fields.
@@ -107,11 +113,13 @@ This panel is structured as a table: columns contain the fileds selected from th
 
 .. figure:: media/image212.png
 
-    Select fields interface.
+    Select fields interface in smart view.
 
 In the advance view, every row include applicable functions as shown below, plus clicking on **three dots icon** there are few more functions.
 
 .. figure:: media/image213.png
+
+	Select fields interface in advance view.
 
 
 With available functions it is possible to:
@@ -126,6 +134,8 @@ With available functions it is possible to:
 It is possible to edit alias, clicking on gear icon (smart view) and on **Alias item**. In advance view, alias can be changed clicking on cell of alias column.
 
 .. figure:: media/aliasChange.png
+
+	Change alias.
 
 Pay attention to grouping options: if you want to define an aggregation function on a field (like, for instance, the **COUNT** of the sold items), you shall tick the Group checkbox for all the other fields added in the query editor, without an aggregation function defined, otherwise you will get an SQL exception. The possible grouping functions are shown in the following figure.
 
@@ -162,7 +172,7 @@ The toolbar about query editor sub-section has a toolbar contains additional fun
       |    **Calculator**                 | Add calculated fields             |
       |                                   |                                   |
       +-----------------------------------+-----------------------------------+
-      |    **Three gears*                 | Open advanced filters panel       |
+      |    **Three gears**                | Open advanced filters panel       |
       |                                   |                                   |
       +-----------------------------------+-----------------------------------+
       |    **Eye**                        | Show/hide hidden fileds           |
@@ -185,8 +195,6 @@ The **Filters** panel allows you to define filter criteria (WHERE clause). Filte
 - In smart view clicking on **Filter icon** on the field in entity
 - In smart view clicking on **filter icon** on the alredy added field in the query
 - In advance view clicking on three dots and **Filters item**
-
-.. figure:: media/filtersPanel.png
 
 Adding new filter is possible clicking on **+** icon.
 
@@ -256,6 +264,8 @@ While you are in smart view you can see preview of you query.
 While you are in advance view, and you are satisfied with your query or if you want to check the results, you can see the returned data by clicking the **Play** button located in the top right corner of the panel. From there, you can go back to the **Designer** to modify the definition of the query.
 
 .. figure:: media/preview.png
+
+	Preview wizard.
 
 In case you have started the QbE editor directly from a model (that is, you have clicked on a model icon in the **My Data** > **Models** section) from here you can also click the **Save** button located in the top right corner of the page to save your query as a new dataset, reachable later from the **My Data**> **Dataset** section. Please note that this operation saves the *definition* of your query and not the snapshot of the resulting data. This means that every time you re-execute the saved dataset, a query on the database is performed to recover the updated data.
 
