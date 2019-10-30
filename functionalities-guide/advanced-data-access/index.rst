@@ -64,7 +64,7 @@ In the **Detail** tab you define the Name, the Label and an optional Description
 .. figure:: media/image22.png
 
     Dataset Panel.
-By clicking on some of the tags, user is filtering data set list to show only data sets with that tag. In the detail part of data set, user can define tag for that data set by writing the name of the tag in the input field Tags. By clicking on Save button, user saved the changes and he can see new tag in the list.
+By clicking on some of the tags, user is filtering data set list to show only data sets with that tag. In the detail part of data set, user can define tag for that data set by writing the name of the tag in the input field Tags. By clicking on Save button, user saves the new tag and he can see it in the data set tags list.
 
 In the lower part you can see a versioning system for the dataset: Knowage supports dataset versioning, as shown in figure below, therefore, each time you edit and save a dataset, the older version is archived and is still accessible from the lower part of the detail panel.
 
