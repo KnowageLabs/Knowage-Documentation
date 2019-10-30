@@ -39,8 +39,6 @@ Choose a name for the title of driver. Then choose analytical driver from drop-d
 
 Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set if the driver is multivalue or not. By default, drivers are set to be mandatory so you don't have the option to change that like you have for analytical document.
 
-Similarly to set a parameter as multivalue click on **true**, in this way the user can perform multiple selections on among its values.
-
 After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.
 
 .. figure:: media/image299b.png
@@ -221,6 +219,19 @@ Create a new business class
 In the “Business Model” tab, the sandwitch icon lets the user add other Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
 
 .. figure:: media/image31213.png
+
+    SQL Filter
+    
+In meta web is added new feature connected with drivers that we can define in the Drivers tab of a new business model. This is SQL filter that is actually applying already defined drivers. 
+
+.. figure:: media/image1.png
+
+SQL filter is expression that is added in the end of query as part of where clause. The write syntax for sql filter is: column_name = $P{url_name_of_the_driver}. For example: city = $P{cityUrl}. If you want to add more than one filter, you can connect them with AND operator.
+
+.. figure:: media/image2.png
+
+If you want to add filter for multivalue driver this is the right syntax: column_name IN ($P{url_name_of_the_driver}). For example:
+city IN ($P{cityUrl}).
 
     Create a new business class.
 
