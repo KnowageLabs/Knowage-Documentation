@@ -214,17 +214,18 @@ As well, the cardinality of the inbound relationship can be of two types:
 Use the second type of cardinality when the type of cardinality can be optional.
 
 SQL Filter
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
     
-In meta web is added new feature connected with drivers that we can define in the Drivers tab of a new business model. This is SQL filter that is actually applying already defined drivers. 
+There is a new feature that is added in meta web. It is SQL Filter which we can define in Filter tab in meta web as you can see in the figure below. SQL Filter is used for applying already defined drivers in query. 
 
 .. figure:: media/image1.png
 
-SQL filter is expression that is added in the end of query as part of where clause. The write syntax for sql filter is: column_name = $P{url_name_of_the_driver}. For example: city = $P{cityUrl}. If you want to add more than one filter, you can connect them with AND operator.
+SQL filter is expression that is added in the end of query as part of where clause. The right syntax for sql filter is: 
+column_name = $P{url_name_of_the_driver}. For example: city = $P{cityUrl}. If you want to add more than one filter, you can connect them with an operator (AND, OR...) as you can see in an example in figure below.
 
 .. figure:: media/image2.png
 
-If you want to add filter for multivalue driver this is the right syntax: column_name IN ($P{url_name_of_the_driver}). For example:
+If you want to add filter for multivalue driver the right syntax is this: column_name IN ($P{url_name_of_the_driver}). For example:
 city IN ($P{cityUrl}).
 
 
