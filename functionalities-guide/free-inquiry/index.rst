@@ -38,7 +38,7 @@ To open the QbE editor, access the **Models** section, available in the end user
 
 In this paragraph we show how to build a simple query with the QbE editor.
 
-.. figure:: media/image208.png
+.. figure:: media/qbeDesigner.png
 
     QbE editor.
 
@@ -60,14 +60,20 @@ Each single entity is composed of a title, some attributes or measures and relat
 - **relation**: it refers to relationships or connections between two entities (e.g. relationship between the sales and the product dimension).
 
 .. figure:: media/image300.png
+	
+	Relations of one entity.
 
 There are two available views: smart and advance. When qbe is opened by default user will see smart view. Clicking on one filed of one entity that field will be added in the query and user will se executed query in imidiately. 
 
 .. figure:: media/smart.png
+	
+	Smart view.
 
 User can switch to advance view clicking on Smart view in top right corner. User can continue adding fields in the query but without seeing result. 
 
 .. figure:: media/advanceView.png
+	
+	Advance view
 
 
 Let us see more in detail how to add calculated fields.
@@ -75,9 +81,7 @@ Let us see more in detail how to add calculated fields.
 Calculated fields management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In advance view there will be availbe option for creating **calculated fields**. Clicking on **Calculator** icon **Calculated field wizard** will open.
-
-.. figure:: media/calculateFieldWizard.png
+You can create new calculated fields inside a query. In advance view there will be available option for creating **calculated fields**. Clicking on **Calculator** icon **Calculated field wizard** will open.
 
 To build a calculated field, you shall define:
 
@@ -88,7 +92,7 @@ To build a calculated field, you shall define:
 
 An example is provided below.
 
-.. figure:: media/image210.png
+.. figure:: media/calculateFieldWizard.png
 
     Calculated field wizard.
 
@@ -96,7 +100,7 @@ An example is provided below.
 Query Editor
 ^^^^^^^^^^^^^^^^
 
-The central panel provides a query editor. As we already mantioned, there are two available views: smart and advance.
+Central panel provides a query editor. As we already mantioned, there are two available views: smart and advance.
 
 Elements from the datamart schema on the left can be added into the query editor. To remove an field from the query editor, just click on the x icon, or if advance view is opened, clicking on three dots icon, **Delete field** is available.
 
@@ -109,11 +113,13 @@ This panel is structured as a table: columns contain the fileds selected from th
 
 .. figure:: media/image212.png
 
-    Select fields interface.
+    Select fields interface in smart view.
 
 In the advance view, every row include applicable functions as shown below, plus clicking on **three dots icon** there are few more functions.
 
 .. figure:: media/image213.png
+
+	Select fields interface in advance view.
 
 
 With available functions it is possible to:
@@ -122,13 +128,14 @@ With available functions it is possible to:
 - **Function**: in case of aggregation, define the aggregation function (e.g., **SUM**, **AVERAGE**, …) on the non-grouped items;
 - **Order**: define a sorting criteria: double click on the **Order** column to set the ordering criteria;
 - **Group**: in case of aggregations, define the attribute that you want to group on (if you know SQL syntax, these attributes are the ones you should place in the GROUP BY clause);
-- **Include**: indicate the column(s) to be included in the result (please notice that non-included attributes will not be returned by the query, but can be used in it, e.g. to apply grouping criteria);
 - **Visible**: indicate whether a column shall be visible in the result (hidden attributes are used and returned by the generated query, but are not shown in the result table);
 - **Filter**: add a filter criteria: clicking on this filter icon redirects you to the **Filters** tab;
 
 It is possible to edit alias, clicking on gear icon (smart view) and on **Alias item**. In advance view, alias can be changed clicking on cell of alias column.
 
 .. figure:: media/aliasChange.png
+
+	Change alias.
 
 Pay attention to grouping options: if you want to define an aggregation function on a field (like, for instance, the **COUNT** of the sold items), you shall tick the Group checkbox for all the other fields added in the query editor, without an aggregation function defined, otherwise you will get an SQL exception. The possible grouping functions are shown in the following figure.
 
@@ -165,7 +172,7 @@ The toolbar about query editor sub-section has a toolbar contains additional fun
       |    **Calculator**                 | Add calculated fields             |
       |                                   |                                   |
       +-----------------------------------+-----------------------------------+
-      |    **Three gears*                 | Open advanced filters panel       |
+      |    **Three gears**                | Open advanced filters panel       |
       |                                   |                                   |
       +-----------------------------------+-----------------------------------+
       |    **Eye**                        | Show/hide hidden fileds           |
@@ -189,8 +196,6 @@ The **Filters** panel allows you to define filter criteria (WHERE clause). Filte
 - In smart view clicking on **filter icon** on the alredy added field in the query
 - In advance view clicking on three dots and **Filters item**
 
-.. figure:: media/filtersPanel.png
-
 Adding new filter is possible clicking on **+** icon.
 
 Removing the filter is possible clicking on **eraser** icon.
@@ -208,7 +213,7 @@ Structure of Filters panel is:
 
 With target type **value of the field** lookup function is activated to facilitate selection of values
 
-..figure:: media/lookupFunction.png
+.. figure:: media/lookupFunction.png
 
     Filter lookup for right operand selection.
 
@@ -258,6 +263,10 @@ Query Preview
 While you are in smart view you can see preview of you query.
 While you are in advance view, and you are satisfied with your query or if you want to check the results, you can see the returned data by clicking the **Play** button located in the top right corner of the panel. From there, you can go back to the **Designer** to modify the definition of the query.
 
+.. figure:: media/preview.png
+
+	Preview wizard.
+
 In case you have started the QbE editor directly from a model (that is, you have clicked on a model icon in the **My Data** > **Models** section) from here you can also click the **Save** button located in the top right corner of the page to save your query as a new dataset, reachable later from the **My Data**> **Dataset** section. Please note that this operation saves the *definition* of your query and not the snapshot of the resulting data. This means that every time you re-execute the saved dataset, a query on the database is performed to recover the updated data.
 
 We highlight that when the save button is selected, a pop up shows asking you to fill in the details, split in three tabs:
@@ -269,7 +278,7 @@ Choose your scheduling option and save the dataset. Now the table where your dat
 
 -  **Metadata** It recaps the metadata associated to the fields involved in your query.
 
-..figure:: media/saveQbeDS.png
+.. figure:: media/saveQbeDS.png
 
 	Save qbe dataset.
 
@@ -332,7 +341,7 @@ The latter are available only in the presence of a geographical Business Model a
          |                       |                       | com/cd/B19306_01/appd |
          |                       |                       | ev.                   |
          |                       |                       | 102/b14255/sdo_objgeo |
-         |              ddd         |                       | m.htm#i857957 <https: |
+         |                       |                       | m.htm#i857957 <https: |
          |                       |                       | //docs.oracle.com/cd/ |
          |                       |                       | B19306_01/appdev.102/ |
          |                       |                       | b14255/sdo_objgeom.ht |
@@ -341,7 +350,7 @@ The latter are available only in the presence of a geographical Business Model a
          |    **dimension**      | GET_DIMS              | `https://docs.oracle. |
          |                       |                       | com/cd/B10501_01/appd |
          |                       |                       | ev.                   |
-         |           dddd            |                       | 920/a96630/sdo_meth.h |
+         |                       |                       | 920/a96630/sdo_meth.h |
          |                       |                       | tm#BABDEBJA <https:// |
          |                       |                       | docs.oracle.com/cd/B1 |
          |                       |                       | 0501_01/appdev.920/a9 |
@@ -529,321 +538,6 @@ See the table below:
          +-----------------------+-----------------------+-----------------------+
 
 
-Temporal dimension
-^^^^^^^^^^^^^^^^^^^^
-
-The Qbe engine on Knowage Server is endowed with some temporal functionalities that allow the final user to easily preform queries based on time.
-
-We highlight that the new features are available only if the model has at least one temporal dimension. The latter must be defined while creating the model using Knowage Meta.
-
-.. warning::
-
-    **Define first the temporal dimension on Knowage Meta**
-
-      To have a temporal dimension that can be used in the Qbe interface an expert user must enable it first on the model using Knowage Meta. Use the **property view** to set/change the type of the dimension as shown in the following figure. Refer to *Meta Web* chapter to learn how to use Knowage Meta.
-
-The temporal dimension can have one or more hierarchies. Only one of these can stay active and that is the one used by the query code. Figure below shows that a temporal dimension can have one or more hierarchies. In the case of more hierarchies the user can see which is the one set by default just exploring the dimension: the bold highlighted hierarchy is the primary. On the other hand the user can change the default choice by right-clicking on the target dimension hierarchy and selecting “\ *Set as Default Hierarchy*\ ”.
-
-.. _tempdimensmeta:
-.. figure:: media/image224_bis.png
-
-    Temporal dimension definition on Meta.
-
-.. figure:: media/image22526.png
-
-    Temporal hierarchy visualization (Left). Changing hierarchies (Right).
-
-Furthermore there is the possibility to set a “time” dimension as Figure below displays.
-
-.. figure:: media/image227.png
-
-    Time dimension.
-
-The user can use the elements of each dimension as attributes in the “Select” instance. Note that if one drags and drops of element to be used as a filter also its parent nodes will be brought too. The following figure exhibits one example. Remember to assign a value to each parent node before you run the query.
-
-.. figure:: media/image228.png
-
-    Filter on an element means to filter also on its parent nodes.
-
-Moreover, selecting the filters tab, you can use specific filters clicking on the button “Add Temporal” as shown in figure below (Left). The action opens the pop up displayed in next figure (Right).
-
-.. _iaddtempfiltersleftright:
-.. figure:: media/image22930.png
-
-    Add temporal filters (Left). List of available elements (Right).
-
-In the list of available elements is made up of:
-
--  filters defined by the admin through the TimeSpan GUI;
--  system filters manageable through a table;
--  the element “Current year”;
--  the element “Current month”;
--  the element “Current day”;
--  the element “Last Period” for which you must indicate the number of years.
-
-Inside the section “Select” you can use the temporal operators directly on attributes.
-
-.. figure:: media/image231.png
-
-    Apply operators directly on attributes.
-
-For each function there is the possibility to assign a value to a parameter that indicates how long the function will act. We now describe the working principles of temporal functions.
-
-The PARALLEL_YEAR function.
-++++++++++++++++++++++++++++
-
-This function allows to manage and study measures on parallel periods. For example if one wants to analyse the product sales of the current year and, at the same time, those of the previous year. The following are some possible use cases:
-
-
--  no temporal filter is set and the temporal functions are applied directly on measures. In this case the current year is taken as        default value. When the functions are applied on measures the user must apply them on ALL measures in order to have a coherent          result.
-
-1. In the case the user wants the sum of a measure relative to current year, he/she must drag and drop the measure in the “select          fields” panel and launch the temporal function PARALLEL_YEAR passing 0 as value. See Figure below as example.
-
-.. figure:: media/image232.png
-
-    PARALLEL_YEAR example: sum of a measure referred to a specific time year.
-
-2. In the case the user wants to compare the sales of 2016 with those of the previous year. He/she has to drag twice the measure inside    the “select fields” panel and indicate the temporal function “PARALLEL_YEAR” using 0 and 1 as value parameters.
-
-.. figure:: media/image233.png
-
-    PARALLEL_YEAR example: comparing data with different time interval.
-
--  Suppose now that the analysis requires to compare the unit sold from January to March of the current year with that of the same time    interval of the previous one. In this instance the user must set the temporal filter which will be the point of reference.
-
-.. figure:: media/image234.png
-
-    PARALLEL_YEAR example: setting the temporal filter.
-
-Remember that the temporal filter uses the “IN” operator.
-
--  In the case one wants to compare the sales per month of the current year with the ones of the parallel year, the user should add the    month field in the select clause (picking it up from the used temporal hierarchy) and group by it.
-
-.. figure:: media/image236.png
-
-    Comparing results with those of the parallel year.
-
-An example of data visualization is given in the two figures below.
-
-.. figure:: media/image237.png
-
-    Comparing results with those of two parallel years.
-
-.. figure:: media/image238.png
-
-    Comparing results with those of three parallel years.
-
-The LAST\ \_\ YEAR function
-++++++++++++++++++++++++++++++++
-
-This function allows the user to sum a measure referring to last period data. If the temporal filter isn’t set, the engine takes the current year by default, otherwise the chosen one.
-
--  In our example in the two figures below the period is the year. Here we compare last-year sold products to the sum of those      sold in last two years.
-
-.. figure:: media/image239.png
-
-    LAST_YEAR function.
-
-.. figure:: media/image240.png
-
-    Comparing LAST_YEAR results.
-
--  Referring to figures below give an example of how to define a time reference, for instance 2015. In this case I pass      2015 to the filter.
-
-.. figure:: media/image241.png
-
-    LAST_YEAR function example: changing the reference year.
-
-.. figure:: media/image243.png
-
-    LAST_YEAR function example: output of changing the reference year.
-
--  In case the user wants to inspect the evolution of sales per month of the current year comparing them with those of last year plus      the current. It is sufficient to add the month in the “selected fields” area and the measure “unit sold” where the LAST_YEAR            function is set on 0 or 1. The two following figures show an example.
-
-.. figure:: media/image244.png
-
-    LAST_YEAR function example: last-year sold products compared to the last-twoyear ones.
-
-.. figure:: media/image245.png
-
-    LAST_YEAR function example: output of last-year sold products compared to the last-two-year ones.
-
-Note that the operator allows to visualize the sum of sales upon 2 years per month. In other words, LAST_YEAR(1) set to the month level starts the progression from the aggregated value of 2015 to which it adds the sales of 2016.
-
-The LAST\ \_\ MONTH function
-+++++++++++++++++++++++++++++++++
-
-This operator is very similar to the previous one. In this case the reference time period is the month. Remember that if the user does not specify the name of the referenced month the system will take the current one by default.
-
--  The user wants to count the sales of last three months.
-
-.. figure:: media/image246.png
-
-    LAST_MONTH function example: setting time reference.
-
-.. figure:: media/image247.png
-
-    LAST_MONTH function example: setting time reference.
-
--  Figure below shows how to aggregate data up to last three months per each month of the current year. Remember to add the month in the section “selected fields”. Therefore, inserting the month in the select clause the user obtains a projection on current year of sales of last 3 months per each month. Note that data are related to the current year, namely there is no shift to the passed one. Pay attention to the fact that if one month is missing the system does not notice it and return a sum relative to a bigger time period.
-
-.. figure:: media/image248.png
-
-    LAST_MONTH function example: sum up to last 3 months.
-
-.. figure:: media/image249.png
-
-    LAST_MONTH function example: sum up to last 3 months output.
-
--  The same query can be performed considering a specific year. In the following figures year 2015 has been selected.
-
-.. figure:: media/image250.png
-
-    LAST_MONTH function example: sum up to last 3 months where year is 2015.
-
-.. figure:: media/image252.png
-
-    LAST_MONTH function example: output when one sums up to last 3 months output where year is 2015.
-
--  If the user wants to compare sales per month to those of the previous month summed to the current one. Results in the following figures reflect this selection.
-
-.. figure:: media/image253.png
-
-    LAST_MONTH function example: sales per month against the sum of current and previous month sales.
-
-.. figure:: media/image254.png
-
-    LAST_MONTH function example: results of sales per month against the sum of current and previous month sales.
-
-The YTD function
-++++++++++++++++
-
-This operator aggregate the measure of the first day of the year up to the execution date (currentDay). If the user sets temporal filters the YTD function must refer to the filter. The chosen day will be used as reference by the function. For example, if the user sets “15/03/2016” as reference day, the function sums starting from the first of January up to the 15th of March (2016). Observe that if the filter is monthly the engine will take the last day of the month, while if it is yearly the engine will take the whole year. If the user inserts a temporal element as aggregation function the measure must be aggregated progressively.
-
--  Below shows the case in which the user wants to count the sales from the beginning of the year up to now.
-
-.. figure:: media/image255.png
-
-    YTD function example: to count the sales from the beginning of the year up to now.
-
-.. figure:: media/image256.png
-
-    YTD function example: number of sales from the beginning of the year up to now.
-
--  Below shows the case in which the user wants to count the sales from the beginning of the year up to the end      of March.
-
-.. figure:: media/image257.png
-
-    YTD function example: to count the sales from the beginning of the year up to the end of March.
-
-.. figure:: media/image258.png
-
-    YTD function example: to count the sales from the beginning of the year up to the end of March.
-
--  The following figure refers to the case where the user wishes to sum 2015 sales considering the day in which the query is executed but of the previous year.
-
-.. figure:: media/image259.png
-
-    YTD function example: sum 2015 sales considering the day in which the query is executed but of the previous year.
-
--  The following figure refers instead to the case where the user wishes to sum 2015 sales of first 3 months of 2015.
-
-.. figure:: media/image260.png
-
-    YTD function example: sales summed up to the first 3 months of 2015.
-
--  In the following figures the user is comparing the unit sold from the beginning of the year with those of the previuos year.      The engine considers the day of query execution as end of the time period.
-
-.. figure:: media/image262.png
-
-    YTD function example: comparing the unit sold from the beginning of the year with those of the previuos year.
-
-.. figure:: media/image263.png
-
-    YTD function example: output when comparing the unit sold from the beginning of the year with those of the previuos        year.
-
--  Figures below shows the instance when the user wants to see the sum of unit sold each month after having added the month      field in the select clause.
-
-.. figure:: media/image264.png
-
-    YTD function example: sum of unit sold each month after having added the month field in the select clause.
-
-.. figure:: media/image265.png
-
-    YTD function example: output when one sums unit sold each month after having added the month field in the select          clause.
-
-The MTD function
-++++++++++++++++
-
-The MTD function follows the same logic as the YTD function but using the month.
-
--  Figure below shows the case in which the user wants to check the unit sold during the current month.
-
-.. figure:: media/image266.png
-
-    MTD function example: check the unit sold during the current month.
-
--  The following figures the user wants to check the aggregated sales of last 7 months, current (relative to the execution        time) month included.
-
-.. figure:: media/image267.png
-
-     MTD function example: aggregated sales of last 7 months.
-
-.. figure:: media/image268.png
-
-     MTD function example: output of the aggregated sales of last 7 months.
-
--  Another case is shown in figures below where sales are aggregated on current month plus the previous one, relative to    the current year (referring to the query execution time).
-
-.. figure:: media/image269.png
-
-    MTD function example: sales are aggregated on current month plus the previous one, relative to the current year.
-
-.. figure:: media/image270.png
-
-    MTD function example: output when sales are aggregated on current month plus the previous one, relative to the current year (referring to the query execution time) for the present year.
-
--  Figures below shows a user that is summing the sales of current month
-
-.. figure:: media/image271.png
-
-    MTD function example:sales of current month for the present year.
-
-.. figure:: media/image272.png
-
-    MTD function example: output of the sales of current month for the present year.
-
--  The following figures shows as a user can compare sales of aggregated months (up to the current) to the current one.
-
-.. figure:: media/image273.png
-
-    MTD function example:sales of current month for the present year.
-
-.. figure:: media/image274.png
-
-     MTD function example: output of the sales of current month for the present year.
-
--  Below shows a case very similar to the previous one. In this case the next month is added to the sum.
-
-.. figure:: media/image275.png
-
-    MTD function example: sum of sales of months up to now plus next month.
-
-.. figure:: media/image276.png
-
-    MTD function example: output when one sums sales of months up to now plus next month.
-
--  The following figures shows a case very similar to the previous one. In this case the reference year is specified through a      filtering condition.
-
-.. figure:: media/image277.png
-
-    MTD function example: sum of sales of months up to now plus next month for a different year.
-
-.. figure:: media/image278.png
-
-    MTD function example: output when one sums sales of months up to now plus next month for a different year.
-
-
 Subueries
 +++++++++
 
@@ -858,7 +552,6 @@ The **QbE Engine** also supports the definition and usage of subqueries similarl
 	QbE subquery view.
 
 You can easily return to main qiery clicking on **MAIN** button in the query editor toolbar
-
 
 .. figure:: media/image281.png
 
