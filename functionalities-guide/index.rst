@@ -25,6 +25,7 @@ Functionalities
    scorecard/index.rst
    alert/index.rst
    news-management/index.rst
+   dataset-preview/index.rst
 
 
 .. |image0| image:: MyData/media/image1.png

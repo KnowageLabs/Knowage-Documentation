@@ -113,14 +113,14 @@ At the top of this side panel you find four button:
 .. |image63| image:: media/image65.png
    :width: 30
 
-The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can alternatively see either the history of document templates or the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders (see the last figure of the *Document Visibility* paragraph).
+The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can see the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders.
 
 .. _detailpanelofknowanalydoc:
 .. figure:: media/image66.png
 
     Detail panel of Knowage analytical document.
 
-In order to create a new document you need to click on the red plus button in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Geo-Referenced Analysis**, **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
+In order to create a new document you need to click on the red plus button in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
 
 To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in figure above but with empty fields, in order to allow you to define the document details.
 
@@ -130,20 +130,17 @@ First of all, choose a label, a name and a description. It is important to point
 
     Select Type and Engine for a new document.
 
-Now you have to select the dataset and data source that will feed your document with data, see the following figure .
+Now you have to select the dataset and/or data source that will feed your document with data. In this example you can see the pop-up window with datasets to select on the following figure.
 
 .. figure:: media/image68.png
 
     Selecting a dataset for the document.
 
-Both should have already been defined in the corresponding sections for Knowageto show them in the available options of the menus. Select the data source from the drop down menu. Then click on the green icon |image67| and select the dataset from the lookup window.
-
-.. |image67| image:: media/image69.png
-   :width: 30
+Both should have already been defined in the corresponding sections for Knowage to show them in the available options of the menus. You can select the data source from the drop down menu. And select the dataset from the pop-up window and click save.
 
 Note that some types of document do not require the definition of a dataset at this point because they use embedded datasets. Depending on the type, it may also be necessary to select the data source.
 
-It is advisable to regularly save the document in this process, by clicking the related icon at the top right corner of the window.
+It is advisable to regularly save the document in this process, by clicking the related button save at the top right corner of the window.
 
 Document lifecycle
 ^^^^^^^^^^^^^^^^^^
@@ -167,9 +164,14 @@ The main reason for this is that the state of the document has an impact on its 
 Template Versioning
 ^^^^^^^^^^^^^^^^^^^
 
-When you register a document on the Server, you need to associate a template to it. Click on **Browse** next to **Template** and upload the template from your local file system. You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
+When you register a document on the Server, you need to associate a template to it. Click on  tab **History** and then on button **Browse** to choose a template from your local file system and upload it. 
 
-Knowage Server supports versioning of uploaded templates, as shown below. To view them in the document detail window, click on **Show document templates** in the right panel. All templates are saved with their date and name, and can be easily restored or deleted. To restore a template, choose it in the list by clicking on the selector, then remember to save: the new template will be uploaded. Using the same list you can download or delete a template.
+.. _templateversionforanalydoc:
+.. figure:: media/image69.png
+
+You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
+
+Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab **History**. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button **Browse** to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.
 
 .. _templateversionforanalydoc:
 .. figure:: media/image70.png
@@ -186,7 +188,7 @@ After having defined all details, you need to choose where the analytical docume
          
          The **Functionalities tree** is Knowage document repository. It is maneged by administrator, who is in charge to profile user visibility too.
 
-Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). To save your document in the   repository, switch the perspective on the right panel by clicking on **Show functionalities tree**. This operation is needed only if you  moved to the template history view. Here you can choose where you wish to save the document, by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
+Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). On the right, you can choose where you wish to save the document by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
 
 .. _functionaltreedocsav:
 .. figure:: media/image66.png
@@ -198,10 +200,11 @@ Visibility rules
 
 In addition to the standard mechanism supported by the functionalities tree, it is possible to further customize access to a document based on user profile attributes. This allows administrators to rule access to documents at a very fine-grained level, beyond simple repository-based policies.
 
-This can be done by editing conditions in the Visibility section of the detail panel. To add a new condition pick a profile attribute   from the drop down menu, assign it a value, then click on |image71|. This will add a new condition that must be verified to allow a user to access the document. In the same way you can add further conditions, and possibly remove all of them by clicking on the eraser.
+This can be done by editing conditions in the **Visibility restrictions** section on the right side of **Information** panel. To add a new condition pick a profile attribute from the drop down menu and assign it a value. This will add a new condition that must be verified to allow a user to access the document. In the same way you can add further conditions, and possibly remove all of them by clicking on the eraser.
 
-.. |image71| image:: media/image72.png
-   :width: 30
+.. figure:: media/image73.png
+
+    Visibility restrictions.
 
 Association with analytical drivers
 ----------------------------------------
@@ -210,30 +213,29 @@ We have already discussed the role of analytical drivers and how they are connec
 
 We assume that the document template and datasets are correctly set in terms of parameter definition. In particular, they should have   been correctly referenced with their URL.
 
-To add a new parameter, you can start editing the tab in the lower part of the document detail panel, see the next figure.
+To add a new parameter, you can click on the tab **Drivers** and then on a **Add** button, see the next figure.
 
-Choose a human readable name for the title. Then click on the lookup icon |image72| to choose the driver you wish to associate to the   document. This will open the driver lookup window, where you can select the driver by clicking on the green icon |image73|. You can   also inspect or delete a driver from here.
+.. figure:: media/image74.png
 
-.. |image72| image:: media/image73.png
-   :width: 30
-   
-.. |image73| image:: media/image74.png
-   :width: 30
-   
-.. _assocwithanalydriv:
+    Association with analytical driver panel.
+
+Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the document.   
+
+Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set the different features   associated to the driver: you can set its visibility and decide if it is required and multivalue. By default the parameter is visible, not mandatory and not multivalue.
+
+If you want the document not to be visible to end users, untick the **Visible** checkbox. Note that the parameter will still exist and   receive values from the associated driver. However, this will be hidden and the end user will not be able to choose any value for this   parameter.
+
+If you want to set it as a required parameter just click on **true**. In this case, no default value is set. The end user will be   asked to choose the value of the parameter before opening the document.
+
+Similarly to set a parameter as multivalue click on **true**, in this way the user can perform multiple selections on among its values.
+
+After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.
+
 .. figure:: media/image75.png
 
     Association with analytical driver panel.
 
-Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set the different features   associated to the driver: you can set its visibility and decide if it is mandatory and multivalue. By default the parameter is visible, not mandatory and not multivalue.
-
-If you want the document not to be visible to end users, untick the **Visible** checkbox. Note that the parameter will still exist and   receive values from the associated driver. However, this will be hidden and the end user will not be able to choose any value for this   parameter.
-
-If you want to set it as a mandatory parameter just click on **true**. In this case, no default value is set. The end user will be   asked to choose the value of the parameter before opening the document.
-
-Similarly to set a parameter as multivalue click on **true**, in this way the user can perform multiple selections on among its values.
-
-Remember to save each time you have completed the definition of a parameter before adding a new one. To add further parameters, click   on the **New** icon. Repeat the same procedure how many times you wish. At this point you may wish to change the order of parameters   (i.e., how they are presented to the user). To do so, modify the **Priority** number. In the following we will see some special operations that can be performed on drivers associated to a document.
+In the following we will see some special operations that can be performed on drivers associated to a document.
 
 Associating a Spatial driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -258,7 +260,7 @@ Correlation between parameters
 
 In the context of a document, two different parameters may be connected to each other: this means that the possible values of a   parameter are limited by the value(s) of another parameter.
 
-This feature can be useful when two (or more) parameters are logically related. For example, suppose to have a parameter for all   the possible countries and another one for all the possible cities. If the user selects a region, it is meaningless to show him all cities: he should only be enabled to choose among the cities in the selected region.
+This feature can be useful when two (or more) parameters are logically related. For example, suppose to have a parameter for all the possible countries and another one for all the possible cities. If the user selects a region, it is meaningless to show him all cities: he should only be enabled to choose among the cities in the selected region.
 
 In general, to configure a correlation within a document you should make sure that the LOV associated with the parent parameter and the  one associated to the child parameter share at least one column. This column defines which value from the parent parameter will be applied to the child, in order to constrain the results.
 
@@ -266,25 +268,25 @@ In general, to configure a correlation within a document you should make sure th
 
     Definition of the correlation.
 
-To set the correlation, click the tab of the child parameter and displaying the details click on the correlation button |image79|.   Here you can add a new correlation rule by clicking on |image80|. Here you need to define:
+To set the correlation, select child parameter which will show you the details of that particular driver and then click on the **Add condition** button to open pop-up window for defining data correlation.
 
-.. |image79| image:: media/image80.png
-   :width: 30
-   
-.. |image80| image:: media/image72.png
-   :width: 30
+.. figure:: media/image80.png
+
+    Adding data correlation.
+
+Here you need to define:
 
 -  the parent parameter;
+
 -  the type of logical operator, in order to compare values of the parent parameter with values of the child parameter;
+
 -  the column, generated by the child parameter, whose value will be compared with the value of the same column in the parent   parameter.
 
-If a parameter depends on multiple parent parameters, you can define multiple correlations. Create the needed correlations and choose how they are logically connected (via AND / OR operators) as shown in figure below.
+If a parameter depends on multiple parent parameters, you can define multiple correlations.
 
 .. figure:: media/image81.png
 
     Multiple correlations.
-
-If needed, you can insert or remove parenthesis at the extremes of each line clicking on the two green plus and minus icons.
 
 Once defined the correlation, the child parameters will display the labels during the runtime in italics.
 
@@ -314,12 +316,15 @@ As a result, at document execution, as soon as the user pick up a value from the
 Controlled visibility
 ~~~~~~~~~~~~~~~~~~~~~
 
-Another type of relation between parameters is supported by Knowage. It is possible to define values of a parent parameter that force the hiding or showing of a child parameter in the parameters mask. Note that in the first case, the child parameter is hidden by default, while in the second case the parameter is shown by default.
+Another type of relation between parameters is supported by Knowage. It is possible to define values of a parent parameter that force hiding or showing of a child parameter in the parameters mask. Note that in the first case, the child parameter is hidden by default, while in the second case the parameter is shown by default.
 
-To set a visibility expression, click always on the correlation button in the detail tab of the desired parameter, but then click on   the plus icon |image84| in the **Visibility Expression** area. In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.
+To set a visibility expression, click on the **Add condition** button on the **Driver visibility coonditions** card.
 
-.. |image84| image:: media/image72.png
-   :width: 30
+.. figure:: media/image72.png
+
+    Adding visual corelation
+
+In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.
 
 .. figure:: media/image84.png
 
@@ -352,7 +357,7 @@ The definition of the output parameters is performed using the **Manage outputpa
 Declaration of the output parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Enter the **Document details** of the document of interest. Then click on **Manage outputparameters** and the **Output parameters**   dialog will open.
+Enter the **Document details** of the document of interest. Then click on **Output parameters** tab and then on the button **Add** for adding new output parameter.
 
 Here you have to state which parameters are going to be used as output parameters. If, for instance, you select the Date type (see next figure), it is possible to choose the format in which your date has been coded. The default value is related to the location defined in   (**Menu** > **Languages**).
 
