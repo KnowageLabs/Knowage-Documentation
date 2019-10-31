@@ -544,7 +544,7 @@ Subueries
 
 The **QbE Engine** also supports the definition and usage of subqueries similarly to the SQL language. As a result, you can define a subquery and use it within a filter in association to the in/not in operator, as shown in Figure below. To create a new subquery, which can be used as a filter inside the main query, click on |addSubqueries| button, on the left part, in **Derived entities**  toolbar. In the main view you will see that you are abble to add fieds in subquery.
 
-.. |addSubqueries| image:: media/addSubqueries.png
+.. |addSubqueries| image:: media/addSubquery.png
    :width: 30
 
 .. figure:: media/subqueries.png
