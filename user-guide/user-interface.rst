@@ -63,7 +63,13 @@ The menu gives you access to documents, data and all the functionalities that yo
 
 Main menu consists in a set of icons associated with basic features. It is divided in two submenus: the general menu, which is collapsed, and the BI functionalities menu. It is important to underline that not all the components of the menu are mandatory, but they may be configured by the administrator according to user’s needs.
 
-You can open general menu clicking on |mainManu| and then on *username* drop down menu.
+
+.. figure:: media/biAndGeneralMenu.png
+	
+	General and BI functionalities menu.
+
+
+You can open general menu clicking on |mainManu| and then on **username** drop down menu.
 
 .. |mainManu| image:: media/mainManu.png
    :width: 30
@@ -101,9 +107,14 @@ You can open general menu clicking on |mainManu| and then on *username* drop dow
    |                               |                       | folders and related   |
    |                               |                       | documents.            |
    +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/users.png   | Users management      |     |
-   |                               |                       |    |
-   |                               |                       |             |
+   | .. figure:: media/users.png   | Users management      | Manage list of users. |
+   |                               |                       |    	   			   |
+   |                               |                       | See the list of users,|
+   |                               |                       | create new user, 	   |
+   |                               |                       | update existing, 	   |
+   |                               |                       | delete existing, 	   |
+   |                               |                       | see details of  	   |
+   |                               |                       | existing users.  	   |
    +-------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image14.png | Workspace             | Inquiry, navigate and |
    |                               |                       | create your data.     |
@@ -115,8 +126,10 @@ You can open general menu clicking on |mainManu| and then on *username* drop dow
    | .. figure:: media/image15.png | Functions catalog     | Access data mining    |
    |                               |                       | functions.            |
    +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/glosUse.png | Glossary usage        |     |
-   |                               |                       |             |
+   | .. figure:: media/glossUse.png| Glossary usage        | You can use this 	   |
+   |                               |                       | function to assign the|
+   |                               |                       | word to document and  |
+   |                               |                       | data set.			   |   
    +-------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image16.png | Glossary definition   | Access the glossary   |
    |                               |                       | area.                 |
@@ -132,17 +145,15 @@ You can open general menu clicking on |mainManu| and then on *username* drop dow
    |                               |                       | list. Create a new    |
    |                               |                       | calendar.             |
    +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/internat.png| Internationalization  |    |
-   |                               |                       |    |
-   |                               |                       |              |
+   | .. figure:: media/internat.png| Internationalization  | Create custom 		   |
+   |                               |                       | internationalized 	   |
+   |                               |                       | labels.               |
    +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/news.png    | News                  |    |
-   |                               |                       |     |
-   |                               |                       |             |
+   | .. figure:: media/news.png    | News                  | News management.	   |
+   |                               |                       |     				   |
    +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/down.png    | Downloads             |    |
-   |                               |                       |     |
-   |                               |                       |             |
+   | .. figure:: media/down.png    | Downloads             | Download manager.     |
+   |                               |                       |                       |
    +-------------------------------+-----------------------+-----------------------+
 
 Document Browser 
