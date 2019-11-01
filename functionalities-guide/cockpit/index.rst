@@ -879,3 +879,24 @@ Cockpit allows to manage data visualization splitting it in two or more sheets. 
 A user can take advantage of the “move widget” functionality we saw in My first Cockpit to bring widget from one sheet to another.
 
 Furthermore it is possible, but not mandatory, to set associations between datasets underlying different sheets. The multisheet functionality is particularly useful to focus the analysis in a single spot and have a general overview over it in few clicks at the same time.
+
+
+Export cockpit
+------------------
+
+Cockpit document allows to export data into csv file without executing document. This is very useful when you produce data using a heavy query. This option is available if your document has parameters. When you start execution of your document, you will get opened filter panel so you can fill values. To start export, you should click on drop down menu, next to execute button, as on image below.
+
+.. figure:: media/exportCockpitDrop.png
+	
+	Export cockpit into csv.
+
+After process is finished, you will get notification on **download** icon |download| and you can find your file in **Download manager** section.
+
+.. |download| image:: media/download.png
+   :width: 20
+
+Clicking on download icon, **Download manager** will open, and you will be able to download zip file that contains csv file/files, depends of how many widgets (chart or table) you have in your document. 
+
+.. figure:: media/downloadManager.png
+
+	Download manager section.
