@@ -569,6 +569,82 @@ See the table below:
          +-----------------------+-----------------------+-----------------------+
 
 
+
+Time functions for creating calculate field
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In the qbe calculated field wizard there are available several time finctions.
+
+.. figure:: media/timeFunctions.png
+
+    Time functions.
+
+See the table below:
+
+.. _timefunctions:
+.. table:: Time functions.
+         :widths: auto
+
+      +-----------------------------------+-----------------------------------+
+      |    Function                       | Description                       |
+      +===================================+===================================+
+      |    **CURRENT_DATE()**             | Returns current date        	  |
+      +-----------------------------------+-----------------------------------+
+      |    **CURRENT_TIME()**             | Returns current time 	          |
+      +-----------------------------------+-----------------------------------+
+      |    **Hour(date)**		          | Returns hour from date       	  |
+      +-----------------------------------+-----------------------------------+
+      |    **Second(date)**               | Returns hour from date			  |
+      +-----------------------------------+-----------------------------------+
+      |    **Year(date)**                 | Returns year from date            |
+      +-----------------------------------+-----------------------------------+
+      |    **Month(date)**                | Returns month from date       	  |
+      +-----------------------------------+-----------------------------------+
+      |    **Day(date)**                  | Returns day from date        	  |
+      +-----------------------------------+-----------------------------------+
+
+
+.. figure:: media/currentDate.png
+
+    Creating calculated field with function current_date().
+
+.. figure:: media/currentTimr.png
+
+    Creating calculated field with function current_Time().
+
+.. figure:: media/hour.png
+
+    Creating calculated field with function hour(date).
+
+.. figure:: media/second.png
+
+    Creating calculated field with function second(date).
+
+.. figure:: media/year.png
+
+    Creating calculated field with function year(date).
+
+.. figure:: media/month.png
+
+    Creating calculated field with function monte(date).
+
+.. figure:: media/day.png
+
+    Creating calculated field with function day(date).
+
+In the picture below, you can see list of all created calculated fields:
+
+.. figure:: media/advanceViewTime.png
+
+    List of created calculated fields.
+
+In the next picture you can see result of you query:
+
+.. figure:: media/previewTime.png
+
+    Result of the query.
+
+
 Subueries
 +++++++++
 
