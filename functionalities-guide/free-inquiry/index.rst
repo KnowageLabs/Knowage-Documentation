@@ -211,11 +211,42 @@ Structure of Filters panel is:
 -  the **Field, Condition, Target** columns allow you to define filters according to the syntax defined above.
 -  the **Target type** column define the types of right operand: manual, value of the field, another entity, parameter, subquery;
 
-With target type **value of the field** lookup function is activated to facilitate selection of values
+With target type **manual** you should fill input **target** with value that you want to to be right operand.
+
+.. figure:: media/manualTarget.png
+	
+	Manual target type
+
+With target type **value of the field** lookup function is activated to facilitate selection of values. You are able to choose values for right operand. If you are choosing two values, you should set condition to be **beetween**, **not betwee**, **in** or **not in**. If you are choosing more then two values, you should set condition to be **in** or **not in**.
 
 .. figure:: media/lookupFunction.png
 
     Filter lookup for right operand selection.
+
+With target type **another entity** you will get option to choose field from another entity for your right operand.
+
+.. figure:: media/anotherEntity.png
+
+About target type **subquery** and **parameter** there will be more words later.
+
+You will get the chance to filter your data with fields type of date/time/timestamp using calendar/time/calendar + time option. This depends of what is data type of you field, and this is coming form metamodel creation phase.
+When creating your metamodel, you can set data type of to your field.
+
+.. figure:: media/timeDataType.png
+
+	Metamodel creation.
+
+.. figure:: media/date.png
+
+	Filters creation on date data type of the field.
+
+.. figure:: media/time.png
+
+	Filters creation on time data type of the field.
+
+.. figure:: media/timestamp.png
+
+	Metamodel creation, timestamp data type of the field.
 
 Note that more complex combinations of filters can be defined using the Advance filter wizard, which you ca find selecting the **Three gears** icon.
 
@@ -551,10 +582,32 @@ The **QbE Engine** also supports the definition and usage of subqueries similarl
 
 	QbE subquery view.
 
-You can easily return to main qiery clicking on **MAIN** button in the query editor toolbar
+You can easily return to main qiery clicking on **MAIN** button in the query editor toolbar.
+
+To use the sub-query inside the main query, simply choose from target type **Subquery option**, from **Target** choose subquery that you want and set the type of condition (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries. 
 
 .. figure:: media/image281.png
 
     QbE query: use of a subquery in a filter.
 
-To use the sub-query inside the main query, simply choose it for the right operand of the filter and set the type of operand (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries. 
+
+Parameters
+++++++++++
+
+
+The **QbE Engine** also supports the definition and usage of parameters that can be used to filter the data using qbe filter. To create a new parameter, which can be used as a filter inside the main query, click on |parameter| button, in the main query toolbar.
+
+.. |parameter| image:: media/parameter.png
+   :width: 30
+
+.. figure:: media/paramWizard.png
+
+	QBE parameter view.
+
+To use the parameter inside the main query, simply choose from target type **Parameter option** and from **Target** choose parameter that you want. Now the parameter is used to provide values within the filter. 
+
+.. figure:: media/filterParam.png
+	
+	QbE query: use of a parameter in a filter.
+
+
