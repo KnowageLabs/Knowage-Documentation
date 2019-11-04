@@ -115,6 +115,16 @@ Clicking on **Profile Attribute Management**, the list of currently defined attr
 
 Attributes defined in this section will be available to all user profiles. It is not mandatory to assign a value to each attribute for each user, since profile attributes without values will not be considered in the definition of the user profile.
 
+In addition to the profile attributes created by administrator, by default Knowage provides the following profile attributes:
+
+-   **user_id**: set with the user unique identifier;
+
+-   **user_roles**: set with user roles selected from the ROLES tab in Users Management menu;
+
+-   **TENANT_ID**: set with the tenant unique identifier;
+
+-   **user_session_roles**: set like *user_roles* attribute, if no default role is set. Set with default role selected, otherwise.
+
 .. figure:: media/image29.png
 
    Profile attributes Management.
@@ -144,3 +154,20 @@ Last but not least, the **User Management** section includes a left panel that a
 .. figure:: media/image32.png
 
    Users Management.
+
+------------------
+Roles settings
+------------------
+
+Clicking on the ROLES tab you have to select one o more roles to associate with the user.
+After that, if more than one role is associated to the user, you can choose the default role by selecting it from the combo box on the top of the page.
+
+
+Default role is optional: if you don't select a default role, at login time all roles available for the user will be loaded. If you select a role, at login time
+it will be the session role selected.
+
+.. figure:: media/image100.png
+
+    Users Management - Roles settings example
+
+In the example above, for the user "*bitest*" you can choose from "admin" and "*kte_dev*" as default role.

@@ -63,30 +63,41 @@ The menu gives you access to documents, data and all the functionalities that yo
 
 Main menu consists in a set of icons associated with basic features. It is divided in two submenus: the general menu, which is collapsed, and the BI functionalities menu. It is important to underline that not all the components of the menu are mandatory, but they may be configured by the administrator according to user’s needs.
 
+
+.. figure:: media/biAndGeneralMenu.png
+	
+	General and BI functionalities menu.
+
+
+You can open general menu clicking on |mainManu| and then on **username** drop down menu.
+
+.. |mainManu| image:: media/mainManu.png
+   :width: 30
+
+
 .. table:: Menu components - General menu
    :widths: auto
    
-   +-------------------------------+-----------------------+-----------------------+
-   |    Icon                       | Name                  | Description           |
-   +===============================+=======================+=======================+
-   | .. figure:: media/image8.png  | Knowage user          | Open a hidden menu    |
-   |                               |                       | with extra            |
-   |                               |                       | functionalities.      |
-   +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image9.png  | Select role           | Select the            |
-   |                               |                       | authentication role   |
-   |                               |                       | (available if you are |
-   |                               |                       | associated to more    |
-   |                               |                       | than one role).       |
-   +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image10.png | Languages             | Language options.     |
-   +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image11.png | Info                  | Infos about Knowage   |
-   |                               |                       | version.              |
-   +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image12.png | Log Out               | Log out.              |
-   +-------------------------------+-----------------------+-----------------------+
+   +-----------------------+-----------------------+
+   | Name                  | Description           |
+   +-----------------------+-----------------------+
+   | My roles              | Select the            |
+   |                       | authentication role   |
+   |                       | (available if you are |
+   |                       | associated to more    |
+   |                       | than one role).       |
+   +-----------------------+-----------------------+
+   | Languages             | Language options.     |
+   +-----------------------+-----------------------+
+   | Accessibility         | Enable accessibility  |
+   +-----------------------+-----------------------+
+   | Info                  | Infos about Knowage   |
+   |                       | version.              |
+   +-----------------------+-----------------------+
+   | Log Out               | Log out.              |
+   +-----------------------+-----------------------+
    
+
 .. table:: Menu components - BI functionalities menu
    :widths: auto
    
@@ -97,6 +108,15 @@ Main menu consists in a set of icons associated with basic features. It is divid
    |                               |                       | folders and related   |
    |                               |                       | documents.            |
    +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/users.png   | Users management      | Manage list of users. |
+   |                               |                       |    	   			   |
+   |                               |                       | See the list of users,|
+   |                               |                       | create new user, 	   |
+   |                               |                       | update existing, 	   |
+   |                               |                       | delete existing, 	   |
+   |                               |                       | see details of  	   |
+   |                               |                       | existing users.  	   |
+   +-------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image14.png | Workspace             | Inquiry, navigate and |
    |                               |                       | create your data.     |
    |                               |                       |                       |
@@ -106,6 +126,11 @@ Main menu consists in a set of icons associated with basic features. It is divid
    +-------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image15.png | Functions catalog     | Access data mining    |
    |                               |                       | functions.            |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/glossUse.png| Glossary usage        | You can use this 	   |
+   |                               |                       | function to assign the|
+   |                               |                       | word to document and  |
+   |                               |                       | data set.			   |   
    +-------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image16.png | Glossary definition   | Access the glossary   |
    |                               |                       | area.                 |
@@ -121,6 +146,17 @@ Main menu consists in a set of icons associated with basic features. It is divid
    |                               |                       | list. Create a new    |
    |                               |                       | calendar.             |
    +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/internat.png| Internationalization  | Create custom 		   |
+   |                               |                       | internationalized 	   |
+   |                               |                       | labels.               |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/news.png    | News                  | News management.	   |
+   |                               |                       |     				   |
+   +-------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/down.png    | Downloads             | Download manager.     |
+   |                               |                       |                       |
+   +-------------------------------+-----------------------+-----------------------+
+
 
 Document Browser 
    This is a standard functionality of Knowage Server. It enables you to access.
@@ -186,11 +222,7 @@ From BI functionalities Menu, select |image20| to open the Document Browser.
    
    Document Browser
 
-By default the page is divided in two parts, as shown in Figure above: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder. You can switch to the document preview view by clicking on grid icon in the top right corner, as shown in figure below.
-
-.. figure:: media/image22.png
-   
-    Changing documents view
+By default the page is divided in two parts, as shown in Figure above: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
 
 Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date (see Figure below).
 
