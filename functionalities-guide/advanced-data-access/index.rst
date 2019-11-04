@@ -568,6 +568,40 @@ Similar techniques can be applied to the other languages. We leave the reader to
 
       Remember that MongoDB has a limit of maximum 16MB for the returned document (BSON), so pay attention to that when creating your dataset. For more information check this link: https://docs.mongodb.com/manual/reference/limits/
 
+
+Solr Dataset
+^^^^^^^^^^^^^^^^
+
+A dataset of type Solr, see the following figure, reads data from the popular Search Engine Solr. To define a **Solr Dataset** select the Solr type, then choose between Document or Facets type.
+
+.. figure:: media/image41.png
+
+    Solr Dataset, Document type selected.
+
+**Documents**
+
+According to the Solr official documentation, Solr’s basic unit of information is a document, which is a set of data that describes something. A recipe document would contain the ingredients, the instructions, the preparation time, the cooking time, the tools needed, and so on. A document about a person, for example, might contain the person’s name, biography, favorite color, and shoe size. A document about a book could contain the title, author, year of publication, number of pages, and so on.
+
+In the Solr universe, documents are composed of fields, which are more specific pieces of information. Shoe size could be a field. First name and last name could be fields.
+If you have chosen the type "Documents", you can add the document fields to the list below called "Documents".
+
+.. figure:: media/image42.png
+
+.. figure:: media/image43.png
+    Solr Dataset, Optional fields for filtering parameters.
+
+**Faceting**
+
+Faceting is the arrangement of search results into categories based on indexed terms.
+If you choose Facets you can add the Facet Query.
+This parameter allows you to specify an arbitrary query in the Lucene default syntax to generate a facet count.
+The Facet Field is the facet.field parameter and identifies a field that should be treated as a facet. It iterates over each Term in the field and generate a facet count using that Term as the constraint. This parameter can be specified multiple times in a query to select multiple facet fields.
+The Facet Prefix is the facet.prefix parameter limits the terms on which to facet to those starting with the given string prefix. This does not limit the query in any way, only the facets that would be returned in response to the query.
+
+.. figure:: media/image44.png
+
+
+
 Parameters and profile attributes
 --------------------------------------
 
@@ -697,32 +731,4 @@ Before actually using the dataset in a document, it is a good practice to test i
 
 If some parameters have been set, a window with their list will be shown: their values must be entered by double clicking on the set to string, just write the value you want to assign in the preview: quotes will be added automatically. On the other hand, if the type is raw or generic but you want to input text, then remember to add quotes to the test value.
 
-Solr Dataset
-~~~~~~~~~~~~
 
-A dataset of type Solr, see the following figure, reads data from the popular Search Engine Solr. To define a **Solr Dataset** select the Solr type, then choose between Document or Facets type.
-
-.. figure:: media/image41.png
-
-    Solr Dataset, Document type selected.
-
-**Documents**
-
-According to the Solr official documentation, Solr’s basic unit of information is a document, which is a set of data that describes something. A recipe document would contain the ingredients, the instructions, the preparation time, the cooking time, the tools needed, and so on. A document about a person, for example, might contain the person’s name, biography, favorite color, and shoe size. A document about a book could contain the title, author, year of publication, number of pages, and so on.
-
-In the Solr universe, documents are composed of fields, which are more specific pieces of information. Shoe size could be a field. First name and last name could be fields.
-If you have chosen the type "Documents", you can add the document fields to the list below called "Documents".
-
-.. figure:: media/image42.png
-.. figure:: media/image43.png
-    Solr Dataset, Optional fields for filtering parameters.
-
-**Faceting**
-
-Faceting is the arrangement of search results into categories based on indexed terms.
-If you choose Facets you can add the Facet Query.
-This parameter allows you to specify an arbitrary query in the Lucene default syntax to generate a facet count.
-The Facet Field is the facet.field parameter and identifies a field that should be treated as a facet. It iterates over each Term in the field and generate a facet count using that Term as the constraint. This parameter can be specified multiple times in a query to select multiple facet fields.
-The Facet Prefix is the facet.prefix parameter limits the terms on which to facet to those starting with the given string prefix. This does not limit the query in any way, only the facets that would be returned in response to the query.
-
-.. figure:: media/image44.png
