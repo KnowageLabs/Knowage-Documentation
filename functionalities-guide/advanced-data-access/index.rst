@@ -586,7 +586,7 @@ In the Solr universe, documents are composed of fields, which are more specific 
 If you have chosen the type "Documents", you can add the document fields to the list below called "Documents".
 
 .. figure:: media/image42.png
-
+    
 .. figure:: media/image43.png
     Solr Dataset, Optional fields for filtering parameters.
 
