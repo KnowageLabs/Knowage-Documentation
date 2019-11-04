@@ -97,6 +97,7 @@ You can open general menu clicking on |mainManu| and then on **username** drop d
    | Log Out               | Log out.              |
    +-----------------------+-----------------------+
    
+
 .. table:: Menu components - BI functionalities menu
    :widths: auto
    
@@ -155,6 +156,7 @@ You can open general menu clicking on |mainManu| and then on **username** drop d
    | .. figure:: media/down.png    | Downloads             | Download manager.     |
    |                               |                       |                       |
    +-------------------------------+-----------------------+-----------------------+
+
 
 Document Browser 
    This is a standard functionality of Knowage Server. It enables you to access.
