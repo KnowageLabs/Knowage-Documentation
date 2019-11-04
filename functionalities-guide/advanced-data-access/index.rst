@@ -588,6 +588,7 @@ If you have chosen the type "Documents", you can add the document fields to the 
 .. figure:: media/image42.png
     
 .. figure:: media/image43.png
+
     Solr Dataset, Optional fields for filtering parameters.
 
 **Faceting**
