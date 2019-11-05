@@ -570,7 +570,7 @@ See the table below:
 
 
 
-Time functions for creating calculate field
+Time functions for creating calculated fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the qbe calculated field wizard there are available several time finctions.
@@ -608,7 +608,7 @@ See the table below:
 
     Creating calculated field with function current_date().
 
-.. figure:: media/currentTimr.png
+.. figure:: media/currentTime.png
 
     Creating calculated field with function current_Time().
 
@@ -626,7 +626,7 @@ See the table below:
 
 .. figure:: media/month.png
 
-    Creating calculated field with function monte(date).
+    Creating calculated field with function month(date).
 
 .. figure:: media/day.png
 
@@ -645,7 +645,7 @@ In the next picture you can see result of you query:
     Result of the query.
 
 
-Subueries
+Subqueries
 +++++++++
 
 
