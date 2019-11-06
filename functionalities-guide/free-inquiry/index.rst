@@ -364,79 +364,23 @@ The latter are available only in the presence of a geographical Business Model a
 .. table:: Link to Oracle spatial functions.
          :widths: auto
 
-         +-----------------------+-----------------------+-----------------------+
-         |    Function Name      | Oracle Function       | Link to Oracle web    |
-         |                       |                       | pages                 |
-         +=======================+=======================+=======================+
-         |    **distance**       | SDO_GEOM.SDO_DISTANCE | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_objgeo |
-         |                       |                       | m.htm#i857957 <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#i857957>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **dimension**      | GET_DIMS              | `https://docs.oracle. |
-         |                       |                       | com/cd/B10501_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 920/a96630/sdo_meth.h |
-         |                       |                       | tm#BABDEBJA <https:// |
-         |                       |                       | docs.oracle.com/cd/B1 |
-         |                       |                       | 0501_01/appdev.920/a9 |
-         |                       |                       | 6630/sdo_meth.htm#BAB |
-         |                       |                       | DEBJA>`__             |
-         +-----------------------+-----------------------+-----------------------+
-         |    **centroid**       | SDO_GEOM.SDO_CENTROID | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_objgeo |
-         |                       |                       | m.htm#i860848 <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#i860848>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **geometrytype**   | GET_GTYPE             | `https://docs.oracle. |
-         |                       |                       | com/cd/B10501_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 920/a96630/sdo_meth.h |
-         |                       |                       | tm#i866821 <https://d |
-         |                       |                       | ocs.oracle.com/cd/B10 |
-         |                       |                       | 501_01/appdev.920/a96 |
-         |                       |                       | 630/sdo_meth.htm#i866 |
-         |                       |                       | 821>`__               |
-         +-----------------------+-----------------------+-----------------------+
-         |    **length_spa**     | SDO_GEOM.SDO_LENGTH   | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_objgeo |
-         |                       |                       | m.htm#i856257 <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#i856257>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **relate**         | SDO_GEOM.RELATE       | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | m.htm#BGHCDIDG <https:|
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_objgeom.ht |
-         |                       |                       | m#BGHCDIDG>`__        |
-         +-----------------------+-----------------------+-----------------------+
-         |    **intersection**   | SDO_GEOM.INTERSECTION | `https://docs.oracle. |
-         |                       |                       | com/database/121/SPATL|
-         |                       |                       | /sdo_geom-            |
-         |                       |                       | sdo_intersection.htm# |
-         |                       |                       | SPATL1118 <https://   |
-         |                       |                       | docs.oracle.com/      |
-         |                       |                       | database/121/SPATL/   |
-         |                       |                       | sdo_geom-sdo_         |
-         |                       |                       | intersection.htm#>`__ |
-         +-----------------------+-----------------------+-----------------------+
+         +-----------------------+-----------------------+
+         |    Function Name      | Oracle Function       |
+         +=======================+=======================+
+         |    **distance**       | SDO_GEOM.SDO_DISTANCE |
+         +-----------------------+-----------------------+
+         |    **dimension**      | GET_DIMS              |
+         +-----------------------+-----------------------+
+         |    **centroid**       | SDO_GEOM.SDO_CENTROID |
+         +-----------------------+-----------------------+
+         |    **geometrytype**   | GET_GTYPE             |
+         +-----------------------+-----------------------+
+         |    **length_spa**     | SDO_GEOM.SDO_LENGTH   |
+         +-----------------------+-----------------------+
+         |    **relate**         | SDO_GEOM.RELATE       |
+         +-----------------------+-----------------------+
+         |    **intersection**   | SDO_GEOM.INTERSECTION |
+         +-----------------------+-----------------------+
 
 
 
@@ -464,109 +408,29 @@ See the table below:
 .. table:: Link to Oracle filter functions.
          :widths: auto
 
-         +-----------------------+-----------------------+-----------------------+
-         |    Function Name      | Oracle Function       | Link to Oracle web    |
-         |                       |                       | pages                 |
-         +=======================+=======================+=======================+
-         |    **touches**        | SDO_TOUCH             | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BGEHHIGF <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BGEHHIGF>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **filter**         | SDO_FILTER            | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BJAFBCFC <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BJAFBCFC>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **contains**       | SDO_CONTAINS          | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BGEHCFDH <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BGEHCFDH>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **covered by**     | SDO_COVEREDBY         | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BGEHEAEJ <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BGEHEAEJ>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **inside**         | SDO_INSIDE            | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BGEFABDH <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BGEFABDH>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **covers**         | SDO_COVERS            | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BGEGIJFB <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BGEGIJFB>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **overlaps**       | SDO_OVERLAPS          | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BGEDACIF <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BGEDACIF>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **equals to**      | SDO_EQUAL             | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BGEBCEJE <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BGEBCEJE>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **intersects**     | SDO_ANYINTERACT       | `https://docs.oracle. |
-         |                       |                       | com/cd/B19306_01/appd |
-         |                       |                       | ev.                   |
-         |                       |                       | 102/b14255/sdo_operat |
-         |                       |                       | .htm#BGEJHDGD <https: |
-         |                       |                       | //docs.oracle.com/cd/ |
-         |                       |                       | B19306_01/appdev.102/ |
-         |                       |                       | b14255/sdo_operat.htm |
-         |                       |                       | #BGEJHDGD>`__         |
-         +-----------------------+-----------------------+-----------------------+
-         |    **nn**             | SDO_NN                | `https://docs.oracle. |
-		 |						 |					   	 | com/database/121/SPATL|
-		 |						 |						 | /sdo_nn.htm#SPATL1032 |
-		 |						 |						 |<https://docs.oracle.  |
-         |                       |                       | com/cd/B19306_01/     |
-         |                       |                       | appdev.102/b14255/sdo_|
-         |                       |                       | operat.htm#BGEJHDGD   |
-         |                       |                       | >`__                  | 
-         +-----------------------+-----------------------+-----------------------+
+         +-----------------------+-----------------------+
+         |    Function Name      | Oracle Function       |
+         +=======================+=======================+
+         |    **touches**        | SDO_TOUCH             |
+         +-----------------------+-----------------------+
+         |    **filter**         | SDO_FILTER            |
+         +-----------------------+-----------------------+
+         |    **contains**       | SDO_CONTAINS          |
+         +-----------------------+-----------------------+
+         |    **covered by**     | SDO_COVEREDBY         |
+         +-----------------------+-----------------------+
+         |    **inside**         | SDO_INSIDE            |
+         +-----------------------+-----------------------+
+         |    **covers**         | SDO_COVERS            |
+         +-----------------------+-----------------------+
+         |    **overlaps**       | SDO_OVERLAPS          |
+         +-----------------------+-----------------------+
+         |    **equals to**      | SDO_EQUAL             |
+         +-----------------------+-----------------------+
+         |    **intersects**     | SDO_ANYINTERACT       |
+         +-----------------------+-----------------------+
+         |    **nn**             | SDO_NN                |
+         +-----------------------+-----------------------+
 
 
 
@@ -588,19 +452,19 @@ See the table below:
       +-----------------------------------+-----------------------------------+
       |    Function                       | Description                       |
       +===================================+===================================+
-      |    **CURRENT_DATE()**             | Returns current date        	  |
+      |    **CURRENT_DATE()**             | Returns current date              |
       +-----------------------------------+-----------------------------------+
-      |    **CURRENT_TIME()**             | Returns current time 	          |
+      |    **CURRENT_TIME()**             | Returns current time 	      |
       +-----------------------------------+-----------------------------------+
-      |    **Hour(date)**		          | Returns hour from date       	  |
+      |    **Hour(date)**		  | Returns hour from date            |
       +-----------------------------------+-----------------------------------+
-      |    **Second(date)**               | Returns hour from date			  |
+      |    **Second(date)**               | Returns hour from date            |
       +-----------------------------------+-----------------------------------+
       |    **Year(date)**                 | Returns year from date            |
       +-----------------------------------+-----------------------------------+
-      |    **Month(date)**                | Returns month from date       	  |
+      |    **Month(date)**                | Returns month from date           |
       +-----------------------------------+-----------------------------------+
-      |    **Day(date)**                  | Returns day from date        	  |
+      |    **Day(date)**                  | Returns day from date             |
       +-----------------------------------+-----------------------------------+
 
 
