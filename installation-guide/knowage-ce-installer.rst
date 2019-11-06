@@ -32,7 +32,7 @@ Database
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Knowage CE Installer requires one of the following **external databases**:
 
-- MySQL Server 5.5 or 5.6 or 5.7 already installed
+- MySQL Server 5.7 already installed
 - MariaDB Server 10.2 already installed
 
 A user with sufficient **permissions to create schemas** must be provided. Knowage CE Installer connects to database using a JDBC driver via TCP/IP connection.
@@ -89,7 +89,7 @@ Extract the installer SH file typing the command in shell:
 .. code-block:: bash
   :linenos:
 
-  unzip Knowage-6_2_0-CE-Installer-Unix-20180719.zip
+  unzip Knowage-7_0_0-CE-Installer-Unix-20191022.zip     
 
 .. warning::
    On **macOS** the default app used to open ZIP files may fail to extract the installer ZIP file.
@@ -99,7 +99,7 @@ Enable the execute permission on the file, typing the command in shell:
 .. code-block:: bash
   :linenos:
 
-  chmod +x Knowage-6_2_0-CE-Installer-Unix-20180719.sh
+  chmod +x Knowage-7_0_0-CE-Installer-Unix-20191022.sh
 
 Knowage CE installer can run in GUI or console mode.
 
@@ -108,14 +108,14 @@ Knowage CE installer can run in GUI or console mode.
   .. code-block:: bash
     :linenos:
 
-    ./Knowage-6_2_0-CE-Installer-Unix-20180719.sh
+    ./Knowage-7_0_0-CE-Installer-Unix-20191022.sh
 
 - **Console mode** is always available and let complete installation using shell. Run installer in Console mode typing the command in shell:
 
   .. code-block:: bash
     :linenos:
 
-    ./Knowage-6_2_0-CE-Installer-Unix-20180719.sh -c
+    ./Knowage-7_0_0-CE-Installer-Unix-20191022.sh -c
 
 Managing Knowage CE
 ------------------------
