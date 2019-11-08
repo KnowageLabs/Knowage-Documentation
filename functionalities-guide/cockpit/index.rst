@@ -609,7 +609,7 @@ In Map Widget configuration a user can add and remove layers, set the format of 
 
         Map widget configuration.
 
-Every dataset with a spatial attribute is eligible to become a layer in map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
+Every dataset with a spatial attribute is eligible to become a layer in map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. Enabling **Static** switch on a layer make it visible and non clickable, useful when a user wants a fixed background layer with dynamic data from a dataset. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
 
 .. |image478| image:: media/image478.png
    :height: 26
