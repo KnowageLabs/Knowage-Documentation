@@ -3,6 +3,7 @@
 
 ## How to contribute
 
+Before start to contribute, please read and sign the [Contributor License Agreement](https://www.clahub.com/agreements/KnowageLabs/Knowage-Documentation).
 The contribution process is based on GitHub pull requests (https://help.github.com/articles/about-pull-requests/).
 Contributions are taken into account as soon as possible, reviewed by Knowage Labs team and merged only if they comply with our standard (see below).
 
