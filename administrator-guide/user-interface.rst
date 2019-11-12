@@ -22,34 +22,11 @@ Knowage main menu is divided in three submenus: the user menu, the BI functional
 
 The user menu (see below) is identified with the first icon in Table above and a label containing your user name. Opening the user menu you have the following extra buttons:
 
-- **Select role** If your user is associated with more than one role, Knowage requests you to specify the default one. You can select it when executing a document, or right after authentication by clicking on this icon and choosing a default role.
+- **My roles** If your user is associated with more than one role, Knowage requests you to specify the default one. You can select it when executing a document, or right after authentication by clicking on this icon and choosing a default role.
 - **Languages** To select the language of Knowage environment.
+- **Accessibility** To enable or disable accessibility mode.
 - **Info** To view the details of current Knowage version.
-- **Log out** To go back to log in page.
-
-.. table:: Menu components - User menu
-   :widths: auto
-    
-   +--------------------------------+-----------------------+-----------------------+
-   |    Icon                        | Name                  | Description           |
-   +================================+=======================+=======================+
-   | .. figure:: media/image11.png  | Knowage user          | It opens a hidden     |
-   |                                |                       | menu with extra       |
-   |                                |                       | functionalities.      |
-   +--------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image12.png  | Select role           | To select the default |
-   |                                |                       | role (available if    |
-   |                                |                       | the user is           |
-   |                                |                       | associated to more    |
-   |                                |                       | than one role).       |
-   +--------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image13.png  | Languages             | Language options.     |
-   +--------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image14.png  | Info                  | Info on Knowage       |
-   |                                |                       | version.              |
-   +--------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image15.png  | Log out               | log out.              |
-   +--------------------------------+-----------------------+-----------------------+
+- **Logout** To go back to log in page.
 
 The BI functionalities menu consists in a set of icons associated with basic features:
 
@@ -59,18 +36,31 @@ The BI functionalities menu consists in a set of icons associated with basic fea
 .. table:: Menu components - BI Functionalities Menu.
    :widths: auto
 
-   +-------------------------------+-----------------------+-----------------------+
-   |    Icon                       | Name                  | Description           |
-   +===============================+=======================+=======================+
-   | .. figure:: media/image16.png | Documents development | Document creation and |
-   |                               |                       | acces to the archive  |
-   |                               |                       | folders.              |
-   +-------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image17.png | Workspace             | Inquiry your business |
-   |                               |                       | models, navigate and  |
-   |                               |                       | create your datasets  |
-   +-------------------------------+-----------------------+-----------------------+
+   +--------------------------------+-----------------------+-----------------------+
+   |    Icon                        | Name                  | Description           |
+   +================================+=======================+=======================+
+   | .. figure:: media/image105.png | My Account            | Show or update user   |
+   |                                |                       | info                  |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image16.png  | Documents development | Document creation and |
+   |                                |                       | acces to the archive  |
+   |                                |                       | folders.              |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image17.png  | Workspace             | Inquiry your business |
+   |                                |                       | models, navigate and  |
+   |                                |                       | create your datasets  |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image103.png | Download              | Open a dialog that    |
+   |                                |                       | show the available    |
+   |                                |                       | async download        |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image104.png | News                  | Open a dialog that    |
+   |                                |                       | show the news         |
+   +--------------------------------+-----------------------+-----------------------+
 
+
+.. important::
+        **My Account** is visible only when ``SPAGOBI.SECURITY.MY_ACCOUNT_MENU`` configuration is enabled.
 
 The administrator menu is divided in subpanels which maps the different managing areas:
 
