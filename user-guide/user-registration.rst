@@ -1,6 +1,9 @@
 User registration
 ============
 
+.. important::
+        Signup is available only when ``SPAGOBI.SECURITY.ACTIVE_SIGNUP_FUNCTIONALITY`` configuration is enabled.
+
 From the login page, new users can register their self to Knowage clicking on **Signup** button:
 
 .. figure:: media/image6.png
