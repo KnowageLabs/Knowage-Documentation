@@ -40,7 +40,7 @@ The BI functionalities menu consists in a set of icons associated with basic fea
    |    Icon                        | Name                  | Description           |
    +================================+=======================+=======================+
    | .. figure:: media/image105.png | My Account            | Show or update user   |
-   |                                |                       | info                  |
+   |                                |                       | info.                 |
    +--------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image16.png  | Documents development | Document creation and |
    |                                |                       | acces to the archive  |
@@ -48,14 +48,14 @@ The BI functionalities menu consists in a set of icons associated with basic fea
    +--------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image17.png  | Workspace             | Inquiry your business |
    |                                |                       | models, navigate and  |
-   |                                |                       | create your datasets  |
+   |                                |                       | create your datasets. |
    +--------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image103.png | Download              | Open a dialog that    |
    |                                |                       | show the available    |
-   |                                |                       | async download        |
+   |                                |                       | async download.       |
    +--------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image104.png | News                  | Open a dialog that    |
-   |                                |                       | show the news         |
+   |                                |                       | show the news.        |
    +--------------------------------+-----------------------+-----------------------+
 
 
