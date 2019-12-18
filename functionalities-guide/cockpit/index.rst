@@ -303,11 +303,19 @@ Once the columns, rows and measures have been selected the style of each column 
 
 It is possible to sort the crosstab according to the values of the selected column or, alternatively, according to columns not visible in the crosstab. It can also be set the style of the column, such as the font size, the font weight or the cell alignment. There is also the possibility to specify the size of the column in pixels (you can also use percent values but it is better to use pixels).
 
+In case the selected column is of type measure, there is a dialog to configure the behaviour of that field:
+
+.. figure:: media/image490.png
+
+    Measure configuration dialog.
+
+A particular option for a measure is **Exclude from Total and SubTotal**: that checkbox excludes the measure from Total and SubTotal sums.
+
 .. figure:: media/image211.png
 
     Measure column style.
 
-In case the selected column is of type measure, as figure above shows, you can also manage threshold. It is possible to associate a particular icon or a specific background color to a particular measure's value or range.
+As figure above shows, you can also manage threshold. It is possible to associate a particular icon or a specific background color to a particular measure's value or range.
 
 Once the dataset has been properly configured, you can proceed to the “Configuration” tab.
 
