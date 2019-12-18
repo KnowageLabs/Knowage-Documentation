@@ -46,6 +46,11 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
 Configuration of the metadata db dialect
 ----------------------------------------
 
+.. important::
+         **This step is not mandatory anymore**
+
+         Knowage is now able to autonomously determine following configuration. That said, the following is not mandatory anymore however a user can force it to specific value.
+
 Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. We list all the possible dialects that can be used:
 
 .. code-block:: xml
@@ -77,6 +82,12 @@ You have to configure these following Hibernate configuration files and set the 
 
 Modification of the Quartz configuration
 ----------------------------------------
+
+.. important::
+         **This step is not mandatory anymore**
+
+         Knowage is now able to autonomously determine following configuration. That said, the following is not mandatory anymore however a user can force it to specific value.
+
 The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It is essential to enhance in this file the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Following the possible values:
 
 .. code-block:: bash
