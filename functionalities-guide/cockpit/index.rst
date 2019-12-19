@@ -722,7 +722,7 @@ And change the columns order dragging the field to the right position.
 **Changing Date Format for discovery table date columns**
 
 It is also possibile to change the format used to show date columns inside discovery table:
-In order to do that, click on style for date columns in edit mode
+In order to do that, click on style for date columns fields in edit mode
 
 .. figure:: media/image493.png
 And change the "date format" property
