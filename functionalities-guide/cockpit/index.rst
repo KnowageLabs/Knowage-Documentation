@@ -793,6 +793,13 @@ The second tab (Figure below allows to configure some style options of the cockp
 
     Widget style tab.
 
+The third tab allows overriding the common css properties for the whole cockpit.
+The editor will highlight possible sintax errors. 
+
+.. figure:: media/image497.png
+
+    Css editor tab.
+
 Data configuration
 ----------------------
 
