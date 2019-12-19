@@ -870,6 +870,25 @@ The Frequency tab defines a schedulation over dataset involved in the associatio
 
     Frequency settings example.
 
+Variables
+~~~~~~~~~
+
+In this tab the user can define the variables that will be available inside the cockpit.
+
+.. figure:: media/image496.png
+
+    Variables tab
+
+Every variable needs a name that will be used to call it and get the value, a type and a value.
+The available types are the following:
+
+- Static: a static number or string.
+- Dataset: the value of a selected dataset column. If a column is not selected a set of variables key/value will be created using the first two columns of the selected dataset.
+- Profile: a set of profile attributes available. (ie. the username)
+- Driver: the value of a selected analytical driver.
+
+The variables will be available inside the widgets with the $V{variablename} format.
+
 Template
 ~~~~~~~~
 
