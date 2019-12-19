@@ -707,6 +707,30 @@ It is also possible to enable highlight text fields search on each field,  enabl
 
 **Important** The options "show column" and "show facets" are only frontend side. They don't affect the real backend Solr query, discovery widget will search for every field even though they are frontend omitted.
 
+**Facets column ordering**
+
+.. figure:: media/image491.png
+It is possible to change the facets column ordering, for example if there is the need to move up a field.
+As shown in this example, "aggregazione" should be shown upper, just go to the edit widget section:
+
+.. figure:: media/image492.png
+
+And change the columns order dragging the field to the right position.
+
+.. figure:: media/image491b.png
+
+**Changing Date Format for discovery table date columns**
+
+It is also possibile to change the format used to show date columns inside discovery table:
+In order to do that, click on style for date columns fields in edit mode
+
+.. figure:: media/image493.png
+And change the "date format" property
+
+.. figure:: media/image494.png
+
+.. figure:: media/image495.png
+
 Widget properties
 ~~~~~~~~~~~~~~~~~~
 
