@@ -16,9 +16,9 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
    +===========================+=============+
    |    **Operating System**   | **Version** |
    +---------------------------+-------------+
-   |    CentOS                 | 6 64-bit    |
+   |    CentOS                 | 7 64-bit    |
    +---------------------------+-------------+
-   |    Windows                | 7           |
+   |    Windows                | 7 , 10      |
    +---------------------------+-------------+
 
 .. table:: Compatible environments
@@ -29,9 +29,9 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
     +=============================+=============+
     |    **Operating System**     | **Version** |
     +-----------------------------+-------------+
-    |    RHEL Red Hat Enterprise  | 6.4         |
+    |    RHEL Red Hat Enterprise  | 7           |
     +-----------------------------+-------------+
-    |    Ubuntu                   |16 LST,18 LST|
+    |    Ubuntu                   | 18 LST      |
     +-----------------------------+-------------+
     |    Windows server           | 2012, 2008  |
     +-----------------------------+-------------+
@@ -45,6 +45,7 @@ Java environment
 --------------------
 
 The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured. The steps to configure it depend on the OS.
+Knowage 7 is compatible with Open JDK 1.8.
 
 Linux
 ~~~~~~~~~~~~
@@ -142,7 +143,7 @@ Knowage uses a schema to manage metadata, that is all those information required
     +=====================+===============+==================+
     |    Certified        | Oracle        | 8, 9, 10, 11, 12 |
     +---------------------+---------------+------------------+
-    |    Certified        | MySql         | 5.6              |
+    |    Certified        | MySql         | 5.7              |
     +---------------------+---------------+------------------+
     |    Certified        | PostgreSQL    | 8.2, 9.1         |
     +---------------------+---------------+------------------+
@@ -249,6 +250,6 @@ Knowage provides a distribution of Chromium for its functionalities but some oth
         :caption: Installation of Chromium dependencies
 
         # For CentOS
-        yum install -y cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
+        yum install -y at-spi2-atk cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
         # For Ubuntu
         apt-get install -y libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash

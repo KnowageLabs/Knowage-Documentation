@@ -303,11 +303,19 @@ Once the columns, rows and measures have been selected the style of each column 
 
 It is possible to sort the crosstab according to the values of the selected column or, alternatively, according to columns not visible in the crosstab. It can also be set the style of the column, such as the font size, the font weight or the cell alignment. There is also the possibility to specify the size of the column in pixels (you can also use percent values but it is better to use pixels).
 
+In case the selected column is of type measure, there is a dialog to configure the behaviour of that field:
+
+.. figure:: media/image490.png
+
+    Measure configuration dialog.
+
+A particular option for a measure is **Exclude from Total and SubTotal**: that checkbox excludes the measure from the sums of Total and SubTotal fields makin the relatives table cells empty.
+
 .. figure:: media/image211.png
 
     Measure column style.
 
-In case the selected column is of type measure, as figure above shows, you can also manage threshold. It is possible to associate a particular icon or a specific background color to a particular measure's value or range.
+As figure above shows, you can also manage threshold. It is possible to associate a particular icon or a specific background color to a particular measure's value or range.
 
 Once the dataset has been properly configured, you can proceed to the “Configuration” tab.
 
@@ -609,7 +617,7 @@ In Map Widget configuration a user can add and remove layers, set the format of 
 
         Map widget configuration.
 
-Every dataset with a spatial attribute is eligible to become a layer in map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
+Every dataset with a spatial attribute is eligible to become a layer in map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. Enabling **Static** switch on a layer make it visible and non clickable, useful when a user wants a fixed background layer with dynamic data from a dataset. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
 
 .. |image478| image:: media/image478.png
    :height: 26
