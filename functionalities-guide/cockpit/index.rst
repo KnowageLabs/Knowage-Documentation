@@ -309,7 +309,7 @@ In case the selected column is of type measure, there is a dialog to configure t
 
     Measure configuration dialog.
 
-A particular option for a measure is **Exclude from Total and SubTotal**: that checkbox excludes the measure from Total and SubTotal sums.
+A particular option for a measure is **Exclude from Total and SubTotal**: that checkbox excludes the measure from the sums of Total and SubTotal fields makin the relatives table cells empty.
 
 .. figure:: media/image211.png
 
