@@ -182,10 +182,10 @@ The toolbar about query editor sub-section has a toolbar contains additional fun
       |                                   | view                              |
       +-----------------------------------+-----------------------------------+
       |    **Play**                       | Preview query                     |
-      |                                   |                                   |
       +-----------------------------------+-----------------------------------+
-      |    **Three dots**                 | Export query into csv/xls/xlsx    |
-      |                                   |                                   |
+      |    **Three dots**                 | Option to choose between Deleting |
+      |                                   | all fileds from query and Export  |
+      |                                   | query into csv/xls/xlsx           |
       +-----------------------------------+-----------------------------------+
 
 Filters
@@ -229,7 +229,7 @@ With target type **another entity** you will get option to choose field from ano
 
 About target type **subquery** and **parameter** there will be more words later.
 
-You will get the chance to filter your data with fields type of date/time/timestamp using calendar/time/calendar + time option. This depends of what is data type of you field, and this is coming form metamodel creation phase.
+If you have SI license file, you will get the chance to filter your data with fields type of date/time/timestamp using calendar/time/calendar + time option. This depends of what is data type of you field, and this is coming form metamodel creation phase.
 When creating your metamodel, you can set data type of to your field.
 
 .. figure:: media/timeDataType.png
@@ -437,7 +437,7 @@ See the table below:
 Time functions for creating calculated fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the qbe calculated field wizard there are available several time finctions.
+If you have SI licence, in the qbe calculated field wizard there are available several time finctions.
 
 .. figure:: media/timeFunctions.png
 
@@ -454,9 +454,9 @@ See the table below:
       +===================================+===================================+
       |    **CURRENT_DATE()**             | Returns current date              |
       +-----------------------------------+-----------------------------------+
-      |    **CURRENT_TIME()**             | Returns current time 	      |
+      |    **CURRENT_TIME()**             | Returns current time 		      |
       +-----------------------------------+-----------------------------------+
-      |    **Hour(date)**		  | Returns hour from date            |
+      |    **Hour(date)**		 		  | Returns hour from date            |
       +-----------------------------------+-----------------------------------+
       |    **Second(date)**               | Returns hour from date            |
       +-----------------------------------+-----------------------------------+
@@ -465,6 +465,34 @@ See the table below:
       |    **Month(date)**                | Returns month from date           |
       +-----------------------------------+-----------------------------------+
       |    **Day(date)**                  | Returns day from date             |
+      +-----------------------------------+-----------------------------------+
+      |    **get_quarter(date)**		  | Returns quarter of year for date  |
+      +-----------------------------------+-----------------------------------+
+      |    **get_week(date)**             | Returns week of year for date     |
+      +-----------------------------------+-----------------------------------+
+      |    **get_day_of_the_week(date)**  | Returns day of week for date      |
+      +-----------------------------------+-----------------------------------+
+      |    **add_days(date, num)**        | Add some days to date             |
+      +-----------------------------------+-----------------------------------+
+      |    **add_hours(date,num)**        | Add some hours to date            |
+      +-----------------------------------+-----------------------------------+
+      |    **add_months(date,num)**       | Add some months to date           |
+      +-----------------------------------+-----------------------------------+
+      |    **add_years(date,num)**        | Add some years to date            |
+      +-----------------------------------+-----------------------------------+
+      |    **subtract_years(date,num)**   | Remove some years from date       |
+      +-----------------------------------+-----------------------------------+
+      |    **subtract_days(date,num)**    | Remove some days from date        |
+      +-----------------------------------+-----------------------------------+
+      |    **subtract_months(date,num)**  | Remove some months from date      |
+      +-----------------------------------+-----------------------------------+
+      |    **subtract_hours(date,num)**   | Remove some hours from date       |
+      +-----------------------------------+-----------------------------------+
+      |    **datediff_in_days(date)**     | Difference in days between dates  |
+      +-----------------------------------+-----------------------------------+
+      |    **datediff_in_hours(date)**    | Difference in hours between dates |
+      +-----------------------------------+-----------------------------------+
+      |    **datediff_in_minutes(date)**  | Difference in mins between dates  |
       +-----------------------------------+-----------------------------------+
 
 
