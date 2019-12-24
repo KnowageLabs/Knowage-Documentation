@@ -166,7 +166,7 @@ In this view, you see all the Business Class created at the first initialization
 
 If you want to change order of the business classes, you can do it using drad and drop functionality. 
 
-.. figure:: media/entityDragDrop.png.png
+.. figure:: media/entityDragDrop.png
 
 Using the **Property List** tab, the user can custom the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatia functions to the dimension fields available in the QbE interface.
 
@@ -329,7 +329,7 @@ If you want to remove column from buissiness table, you need to click on busines
 
 If you want to change order of columns, you can do it using drad and drop functionality. 
 
-.. figure:: media/columnDragDrop.png.png
+.. figure:: media/columnDragDrop.png
 
 Generate the datamart
 ~~~~~~~~~~~~~~~~~~~~~
