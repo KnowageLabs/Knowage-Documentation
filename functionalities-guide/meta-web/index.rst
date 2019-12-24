@@ -161,6 +161,12 @@ In this view, you see all the Business Class created at the first initialization
 .. figure:: media/image309.png
 
     Exploring Business Class properties.
+	
+	Change the order of the business classes
+
+If you want to change order of the business classes, you can do it using drad and drop functionality. 
+
+.. figure:: media/entityDragDrop.png.png
 
 Using the **Property List** tab, the user can custom the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatia functions to the dimension fields available in the QbE interface.
 
@@ -306,6 +312,24 @@ The **Structural** area covers an important role for the field properties. Here 
 In the **Behavioural Model** area, the user can assign the field’s visbility permission to specific roles.
 
 In the **Physical** area, recalls the physical table and field name from which the field have been take.
+
+	Add new column into business class
+
+If you did not choose all columns from physical table, when you were creating new business class, you can do it easily. Click on business class in which you want to add new column. Open Attributes tab and click on above column name.
+
+.. figure:: media/addNewBusinessColumn.png
+
+	Remove existing column from business class
+
+If you want to remove column from buissiness table, you need to click on business class from which you want to remove column. Open Attributes tab and click on three dots of column syou want to delete. It will open details panel. Click on delete button. 
+
+.. figure:: media/deleteBusinessColumn.png
+
+	Change the order of the columns
+
+If you want to change order of columns, you can do it using drad and drop functionality. 
+
+.. figure:: media/columnDragDrop.png.png
 
 Generate the datamart
 ~~~~~~~~~~~~~~~~~~~~~
