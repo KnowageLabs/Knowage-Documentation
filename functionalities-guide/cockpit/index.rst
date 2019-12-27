@@ -407,6 +407,13 @@ Switching to the “Style” tab you can find the general style settings availab
 
 Once some or all (at least the mandatory) of the above mentioned setting features have been set you can save and the widget will be inserted into the cockpit area.
 
+.. figure:: media/image498.png
+
+    Cross navigation for cross table widget.
+
+In addition to other cross-navigations, for cross table widget it is possible to set as a dynamic value the name of the selected measure column or the selected category. The choice is available from the combobox.
+
+
 Document section
 ~~~~~~~~~~~~~~~~
 
