@@ -279,15 +279,7 @@ Scrolling the table “Property list” tab, the user finds the **Type** menu it
 .. figure:: media/image31819.png
 
     Table property list.
-
-We highlight that for temporal and time dimension type, the user must define at least one hierarchy for the related dimension. the next figure shows that it is possible to set a hierarchy clicking on the button avaiable at the end of the comobobox line. Then, clicking on the “Add” button, the user can configure a new hierarchy. Remember to choose the **Level type** using the dedicated combobox. Note that it is possibile to shift levels using the up and down arrows avaiable at the end of each level row. Furthermore, the user can add a “Has all” node the hierarchy: just enable the “has-all” box and type the all member name.
-
-.. _temphierarcdef:
-.. figure:: media/image32021.png
-
-    Temporal hierarchy definition.
-
-According to the chosen type, the user will be able to use the specific functions introduced in Section **XXX**.
+	
 
 Column property list
 ~~~~~~~~~~~~~~~~~~~~
