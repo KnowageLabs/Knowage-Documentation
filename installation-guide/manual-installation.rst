@@ -167,8 +167,6 @@ To enable the Security Manager a system administrator have to add some options t
 	set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy
 
 
-Please use the same name for Security Policy file
-
 Installation of Chromium Cockpit Export script
 ---------
 .. important::
