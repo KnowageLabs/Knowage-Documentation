@@ -738,6 +738,48 @@ And change the "date format" property
 
 .. figure:: media/image495.png
 
+Python Widget
+~~~~~~~~~~~~~~~~~~
+
+The Python widget allows to directly embed python code inside the cockpit in order to create advanced custom analytics.
+
+In the editor tab it is possible to add the script that will be sent to the python interpreter.
+
+.. figure:: media/PythonEditor.png
+
+    Python widget editor
+    
+Before writing the code it is necessary to specify the **type** of the output produced by the script.
+Knowage has support for three different output types:
+
+- Image
+- HTML
+- Bokeh application
+
+If **Image** or **HTML** is choosen as output type, it is also necessary to specify the name of the file in which the script will save its output.
+
+.. figure:: media/ImageOutputChoosen.png
+
+    Python output type
+    
+The Dataset tab allows the user to select a dataset that will be accessible directly from the python code.
+After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
+
+
+.. figure:: media/DatasetTab.png
+
+    Dataset selection
+    
+Once a dataset has been choosen, it will be possible to access it directly from python code via a **dataframe** variable.
+This variable will have the same name of the dataset label.
+
+The Environment tab allows the user to choose among a list of available python evironments previously defined inside the **configuration management**.
+To support this kind of choice a list of available libraries is displayed for each selected environment.
+
+.. figure:: media/EnvironmentTab.png
+
+    Environment selection
+
 Widget properties
 ~~~~~~~~~~~~~~~~~~
 
