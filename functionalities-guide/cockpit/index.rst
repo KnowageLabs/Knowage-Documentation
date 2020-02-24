@@ -759,7 +759,6 @@ In the editor tab it is possible to add the script that will be sent to the pyth
 
 .. figure:: media/PythonEditor.png
 
-    Python widget editor
     
 Before writing the code it is necessary to specify the **type** of the output produced by the script.
 Knowage has support for three different output types:
@@ -769,10 +768,6 @@ Knowage has support for three different output types:
 - Bokeh application
 
 If **Image** or **HTML** is choosen as output type, it is also necessary to specify the name of the file in which the script will save its output.
-
-.. figure:: media/ImageOutputChoosen.png
-
-    Python output type
     
 The Dataset tab allows the user to select a dataset that will be accessible directly from the python code.
 After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
