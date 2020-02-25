@@ -786,6 +786,11 @@ To support this kind of choice a list of available libraries is displayed for ea
 .. figure:: media/EnvironmentTab.png
 
     Environment selection
+	
+Inside python scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
+	
+.. warning::
+    **Python widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~

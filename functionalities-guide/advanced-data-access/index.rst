@@ -493,6 +493,8 @@ As shown in the picture in the field **Dataframe variable name** the developer h
 
 In the field **Python environment** the user can select a working environment among the available ones.
 
+In the python script it is possible to use parameters by the usual syntax *$P{}*.
+
 Big Data - NoSQL
 ^^^^^^^^^^^^^^^^
 
