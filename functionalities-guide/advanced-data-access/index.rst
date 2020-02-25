@@ -25,7 +25,8 @@ A dataset acts as a data provider for analytical documents that’s why many typ
 -  Federated,
 -  REST,
 -  Big Data,
--  Solr.
+-  Solr,
+-  Python.
 
 All types of dataset share some common operations, while others are specific to each of them. The process for defining a dataset inside Knowage follows:
 
@@ -477,6 +478,20 @@ The REST dataset permits usage of profile attributes and parameters using the sa
             }
                      ]
          }
+
+Python
+^^^^
+
+The Python dataset enables users to create a dataset by writing a python script that directly retrieves data.
+The developer of the dataset is free to write python code which has to produce a **pandas dataframe** variable as output. This variable will contain data that Knowage will later convert into dataset format.
+
+.. figure:: media/PythonDatasetConfigurator.png
+
+    Python dataset interface.
+	
+As shown in the picture in the field **Dataframe variable name** the developer has to specify the name of the python variable in which the final output of the script is stored in the form of a dataframe.
+
+In the field **Python environment** the user can select a working environment among the available ones.
 
 Big Data - NoSQL
 ^^^^^^^^^^^^^^^^

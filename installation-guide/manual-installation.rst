@@ -127,6 +127,46 @@ Shortly, to configure the Knowage log folder the user must execute the following
 - set the property ``log4j.appender.knowageXXXXXEngine.File`` inside the ``WEB-INF/classes/log4j.properties`` file of each engine to ``LOG_DIR_PATH/knwoageXXXXXEngine.log``;
 - only for the Birt Engine, to set the property ``logDirectory`` inside the ``WEB-INF/classes/BirtLogConfig.properties`` file of the knowagebirtreportengine application to ``LOG_DIR_PATH``.
 
+Enable Java Security Manager
+---------
+
+In Knowage, a user can create datasets, LOVs, etc.. with script languages like Javascript. That introduces a security concern where a malicious user can execute code that can break the entire system. Java allows a system administrator to enable a `Security Manager <https://docs.oracle.com/javase/tutorial/essential/environment/security.html>`_ and to create a sandbox to limit privileges around the code that execute the script.
+
+The Security Manager can be enabled with the following steps:
+
+- Write a Security Policy for the Security Manager;
+
+- Enable the Security Manager in the JVM.
+
+The Security Policy is a text file read by a Security Manager that specifies all the privileges that a JVM can give to Java code: Tomcat has already a default policy in the file ``TOMCAT_HOME/conf/catalina.policy`` but is too much strict for Knowage code that needs to write multiple logs, make network connection and execute external applications. Knowage is already secured and can use a more relaxed policy like:
+
+.. code-block:: bash
+        :caption: Complete path of the script
+
+        grant {
+                permission java.security.AllPermission;
+        };
+
+This policy can be saved to ``TOMCAT_HOME/conf/knowage-default.policy``.
+
+To enable the Security Manager a system administrator have to add some options to the Java JVM:
+
+**[LINUX]** Insert at the end of the ``TOMCAT_HOME/bin/setenv.sh`` file this command:
+
+.. code-block:: bash
+	:linenos:
+
+	export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy"
+
+
+**[WIN]** Insert at the end of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
+
+.. code-block:: bash
+	:linenos:
+
+	set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy
+
+
 Installation of Chromium Cockpit Export script
 ---------
 .. important::
