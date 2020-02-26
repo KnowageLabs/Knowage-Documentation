@@ -643,13 +643,25 @@ In layer's metadata, the user set the spatial attribute of the dataset that will
 
          For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
 
-Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup. For a measure type field a user could specify the aggregation function and if it has to be shown on map: at least one field has to be shown on map. For attribute type field a user can specify if it's modal, that allows a user to make a selection on that value and refresh all other widget in the document: the user can specify only one model field.
+Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup.
 
-The threshold button open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
+For measures a user could specify the aggregation function, if it has to be shown on detail popup and if it has to be shown on map: at least one field has to be shown on map.
+
+For attributes a user could specify if it has to be shown on detail popup or if it has to be show as a filter: in that case, the attribute will be available in the control panel with its all distinct values to let the user to have an immediate evidence of which markers have the selected value for the measure
+
+The 3-dots-menu on the right of each column of the dataset contains additional functionalities: for measures, for example, there is the possibility to specify thresholds.
+
+The threshold menu open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
 
     .. figure:: media/image482.png
 
         Threshold dialog.
+
+For all the attributes that are filters, a user could select the relative value from the control panel:
+
+    .. figure:: media/image499.png
+
+        Filter selection.
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
@@ -801,7 +813,7 @@ The second tab (Figure below allows to configure some style options of the cockp
     Widget style tab.
 
 The third tab allows overriding the common css properties for the whole cockpit.
-The editor will highlight possible sintax errors. 
+The editor will highlight possible sintax errors.
 
 .. figure:: media/image497.png
 
