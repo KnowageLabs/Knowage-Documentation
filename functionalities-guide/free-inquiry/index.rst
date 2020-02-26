@@ -229,6 +229,12 @@ With target type **another entity** you will get option to choose field from ano
 
 About target type **subquery** and **parameter** there will be more words later.
 
+
+.. important::
+         **Enterprise Edition only**
+
+         Filtering data with fields type of date/time/timestamp using calendar/time/calendar is available only for Enterprise Edition.
+		 
 If you have SI license file, you will get the chance to filter your data with fields type of date/time/timestamp using calendar/time/calendar + time option. This depends of what is data type of you field, and this is coming form metamodel creation phase.
 When creating your metamodel, you can set data type of to your field.
 
@@ -322,6 +328,11 @@ In this section we focus on advanced features, which can be comfortably managed 
 Spatial fields usage
 ^^^^^^^^^^^^^^^^^^^^^^^
 
+.. important::
+         **Enterprise Edition only**
+
+         Spatial dimension is available only for Enterprise Edition with LI licence.
+		 
 The Qbe engine supports spatial queries through a set of operators (that return true or false) or a set of functions (these usually return a measure). This feature is although available only when the Location Intelligence (LI) license is possessed and when data are stored in Oracle 12c database. It also fundamental that the Business Model has to be tagged as geographical model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
 
 We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |earthIcon|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distiguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
@@ -437,7 +448,12 @@ See the table below:
 Time functions for creating calculated fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have SI licence, in the qbe calculated field wizard there are available several time finctions.
+.. important::
+         **Enterprise Edition only**
+
+         Time functions are available only for Enterprise Edition with SI licence.
+		 
+If you have SI licence, in the qbe calculated field wizard there are available time finctions.
 
 .. figure:: media/timeFunctions.png
 
