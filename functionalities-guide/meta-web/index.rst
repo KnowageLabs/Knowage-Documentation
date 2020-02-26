@@ -279,15 +279,7 @@ Scrolling the table “Property list” tab, the user finds the **Type** menu it
 .. figure:: media/image31819.png
 
     Table property list.
-
-We highlight that for temporal and time dimension type, the user must define at least one hierarchy for the related dimension. the next figure shows that it is possible to set a hierarchy clicking on the button avaiable at the end of the comobobox line. Then, clicking on the “Add” button, the user can configure a new hierarchy. Remember to choose the **Level type** using the dedicated combobox. Note that it is possibile to shift levels using the up and down arrows avaiable at the end of each level row. Furthermore, the user can add a “Has all” node the hierarchy: just enable the “has-all” box and type the all member name.
-
-.. _temphierarcdef:
-.. figure:: media/image32021.png
-
-    Temporal hierarchy definition.
-
-According to the chosen type, the user will be able to use the specific functions introduced in Section **XXX**.
+	
 
 Column property list
 ~~~~~~~~~~~~~~~~~~~~
@@ -356,14 +348,18 @@ In this section, we briefly describe the generic available options for business 
 
 .. figure:: media/image325.png
 
-    Additional functions for business model.
+    Business model lock.
 
-Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the **Metadata** section. Clicking the **Import metadata** button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context). The **Export CWM** allows the user to export metadata information in the CWM format. Vice versa the **Import CWM** allows the user to import a CWM file containing metadata infomration. The user must browse the CWM file into personal folder and then click on the “Import CWM” button to correctly upload it. Remember to save to validate the process.
+Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the **Metadata** section. Clicking the **Import metadata** button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context).
+
+.. figure:: media/image326.png
+
+    Importing metadata.
 
 Finally the **Saved versions** section the user keeps trace of model changes over time. Furthermore it is possible to restore old versions by checking the active column. Selecting the “three-dots” icon the user can download the jar file or the model itself or delete the version.
 Figure belowshows an example.
 
-.. figure:: media/image326.png
+.. figure:: media/image327.png
 
     Saved version functionalities.
    
