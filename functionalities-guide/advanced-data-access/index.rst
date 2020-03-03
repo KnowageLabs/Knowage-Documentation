@@ -491,7 +491,7 @@ The developer of the dataset is free to write python code which has to produce a
 	
 As shown in the picture in the field **Dataframe variable name** the developer has to specify the name of the python variable in which the final output of the script is stored in the form of a dataframe.
 
-In the field **Python environment** the user can select a working environment among the available ones.
+In the field **Python environment** the user can select a working environment among the available ones defined in the **configuration management** section.
 
 In the python script it is possible to use parameters by the usual syntax *$P{}*.
 
