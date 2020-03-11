@@ -170,6 +170,21 @@ In addition, if the navigation expects other parameters to be passed, use the bo
 
     Add all output parameters involved in the cross navigation.
 
+It is also possible using Solr datasets and calculated fields with charts.
+
+Dataset fields editing and configuration is possible using the first tab inside widget edit mode, in this way, for example, users can modify aggregations for measures:
+
+.. figure:: media/image152b.png
+
+In this way it is possible adding new calculated fields on chart by clicking on "Add Calculated field", the standard calculated field editing mode will appear.
+
+.. figure:: media/image152c.png
+
+Adding new calculated fields is easy as using other measure fields, using Chart Engine Designer structure tab:
+
+.. figure:: media/image152d.png
+
+
 Table widget
 ~~~~~~~~~~~~
 
@@ -203,10 +218,10 @@ click on the **Add Column** icon on the top right of the second box. Once opened
 
     Example column group.
 
-Likewise, to add a calculated field you have to click on the **Add Calculated field** icon next to add column icon. Once opened the Calculated Field Wizard you have to type an alias for your calculated field in the dedicated area at the top corner of the wizard. 
-Then you can choose from the left sinebar list the fields that you want to use in your formula. You can also use arithmetical functions or use the functions available in the menu (**aggregations**, **column totals**, **variables**). 
+Likewise, to add a calculated field you have to click on the **Add Calculated field** icon next to add column icon. Once opened the Calculated Field Wizard you have to type an alias for your calculated field in the dedicated area at the top corner of the wizard.
+Then you can choose from the left sinebar list the fields that you want to use in your formula. You can also use arithmetical functions or use the functions available in the menu (**aggregations**, **column totals**, **variables**).
 If you prefer you can create or modify the expression manually directly in the editable panel.
-When you are satisfied with your expression you can click on validate to check your formula sintax or save button and your calculated field appears in the field list. 
+When you are satisfied with your expression you can click on validate to check your formula sintax or save button and your calculated field appears in the field list.
 We provide an example in the following figure.
 
 .. figure:: media/image157.png
@@ -219,6 +234,10 @@ If you choose dataset-level behaviour the calculation result will be done at dat
 .. figure:: media/image157b.png
 
     Dataset-level behaviour
+
+If Dataset is of type Solr, the columns displayed on the right panel are dataset columns fields and the calculated field formula elaboration is calculated on the fly.
+
+.. figure:: media/image158b.png
 
 If variables are set for the present cockpit, the variable menu button will appear, making it possible to add variable values in the calculated field expression.
 
@@ -820,7 +839,7 @@ In the editor tab it is possible to add the script that will be sent to the pyth
 
 .. figure:: media/PythonEditor.png
 
-    
+
 Before writing the code it is necessary to specify the **type** of the output produced by the script.
 Knowage has support for three different output types:
 
@@ -829,7 +848,7 @@ Knowage has support for three different output types:
 - Bokeh application
 
 If **Image** or **HTML** is choosen as output type, it is also necessary to specify the name of the file in which the script will save its output.
-    
+
 The Dataset tab allows the user to select a dataset that will be accessible directly from the python code.
 After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
 
@@ -837,7 +856,7 @@ After choosing a dataset the list of available columns will be shown. Here it is
 .. figure:: media/DatasetTab.png
 
     Dataset selection
-    
+
 Once a dataset has been choosen, it will be possible to access it directly from python code via a **dataframe** variable.
 This variable will have the same name of the dataset label.
 
@@ -847,9 +866,9 @@ To support this kind of choice a list of available libraries is displayed for ea
 .. figure:: media/EnvironmentTab.png
 
     Environment selection
-	
+
 Inside python scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
-	
+
 .. warning::
     **Python widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
 
