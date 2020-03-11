@@ -83,20 +83,31 @@ In the following we go into details of each available widget.
 Text widget
 ~~~~~~~~~~~
 
-By clicking the button Text Widget you can add text to your cockpit. As shown in figure below, the widget editor opens and it is divided in three tabs: the **Text editor**, the **Style**, the **Dataset** and the **Filters** tab.
+By clicking the button Text Widget you can add text to your cockpit. As shown in figure below, the widget editor opens and it is divided in three tabs: the **Text editor**,
+the **Style**, the **Dataset** and the **Filters** tab.
 
 .. _texteditwidgetconf:
 .. figure:: media/image144.png
 
      Text editor of text widget configuration.
 
-On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possible to associate dataset values to the text and read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure first select the desired function and then the field of numeric type.
+On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possible to associate dataset values to the text and 
+read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset 
+columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure 
+first select the desired function and then the field of numeric type.
 
 .. figure:: media/image1454647.png
 
     Editing a dynamic text.
 
-On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be used in the dynamic value. Finally, the “Filters” tab can be used to extract limited output from the dataset. We put details off to the table widget subsection.
+It's also possible to add variables values if at least one of them is defined. During the execution of the widget the value will be displayed based on the current variable value.
+
+.. figure:: media/image144b.png
+
+    Variables in text widget.
+
+On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be 
+used in the dynamic value. Finally, the “Filters” tab can be used to extract limited output from the dataset. We put details off to the table widget subsection.
 
 Image widget
 ~~~~~~~~~~~~
@@ -123,7 +134,9 @@ On the **Cross** tab you can define navigation to another document, as shown in 
 
     Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final user.
 
-For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. If the cross navigation definition is not defined, then when you launch the chart widget cross navigation will be shown a pop up (refer to figure below) with the list of cross navigation definition that exist for this cockpit.
+For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. 
+This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. 
+If the cross navigation definition is not defined, then when you launch the image widget cross navigation will be shown a pop up (refer to figure below) with the list of cross navigation definition that exist for this cockpit.
 
 .. _crossnavmultchoice:
 .. figure:: media/image150.png
@@ -214,7 +227,9 @@ If variables are set for the present cockpit, the variable menu button will appe
 Variables menu
 
 
-In the bottom section of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table by dragging them up or down, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide column options, and the row spanning.
+In the bottom section of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table by dragging 
+them up or down, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. 
+Here you can find configuration features to adjust the column size, max cell characters, hide column or column header options, and the row spanning toggler.
 
 .. figure:: media/image157d.png
 
@@ -761,8 +776,14 @@ The table result can also be configured to show a limited set of fields, please 
 
 .. figure:: media/image481.png
 
-If facets selection is enabled, it is also possibile to configure facets pagination options such as results limit, max number of items and more.
-It is also possible to enable highlight text fields search on each field,  enabling text field search column field option.
+**Settings** 
+
+The settings tab contains the management of the 3 elements that compose a directive:
+    - Data table: enabled by default is the grid containing data. You can choose the number of item per page.
+    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets pagination options such as results limit, max number of items and more.
+    - Text search: if enabled a searcbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
+
+.. figure:: media/image481b.png
 
 **Important** The options "show column" and "show facets" are only frontend side. They don't affect the real backend Solr query, discovery widget will search for every field even though they are frontend omitted.
 
