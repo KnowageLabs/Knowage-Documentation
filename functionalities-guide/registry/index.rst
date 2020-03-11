@@ -10,37 +10,37 @@ A Registry document allows users to write, cancel and modify items of a datamart
 Registry features
 -------------------
 
-The execution of a Registry document opens a plain table: the records are shown in rows and they can be browsed using the pagination available at the bottom of the window. We underline that it is possible to edit each item of the table. Just double-click on a cell you may wish to rearrange and type a string or a numeric value accordingly. Some examples are highlighted below.
+The execution of a Registry document opens a plain table: the records are shown in rows and they can be browsed using the pagination available at the bottom of the window. We underline that it is possible to edit each item of the table if inside template that column is set to be editable. Just click on a cell you may wish to rearrange and type a string or a numeric value accordingly. Some examples are highlighted below.
 
 .. figure:: media/image340.png
 
     Editing table cells.
 
-Moreover, you can add new rows from scratch selecting the “Plus” icon |image335| on the left of the functionality bar (see next figure) available at the top of the window. Insert in each cell the corresponding value: string or number.
+Moreover, you can add new rows from scratch selecting the “Add row” button |image335| in the header of last column. Insert in each cell the corresponding value: string, number or date. “Add row” button will be available if inside template there is a configuration: <CONFIGURATION name="enableAddRecords" value="true"/>
 
 .. |image335| image:: media/image341.png
    :width: 30
-
-.. _functionalitybar:
-.. figure:: media/image342.png
-
-    Functionality bar.
 
 .. figure:: media/image343.png
 
     Adding a new row.
 
-Vice versa, you can delete one or more rows using the “Minus” icon |image338| of the functionality bar (:numref:`functionalitybar`) available at the top of the window. 
+Vice versa, you can delete one or more rows using the “Trash” icon |image338| in the last column. “Trash” button will be available if inside template there is a configuration: <CONFIGURATION name="enableDeleteRecords" value="true"/>
 
 .. |image338| image:: media/image344.png
    :width: 30
 
-It is important to click on the Save button |image339| to store the adjustments done in the datamart.
+It is important to click on the “Save” button |image339| to store the adjustments done in the datamart. “Save” button is available in Functionality bar, above table. 
 
 .. |image339| image:: media/image345.png
    :width: 30
+   
+.. _functionalitybar:
+.. figure:: media/image342.png
 
-Furthermore you can use filters, if implemented, of the functionality bar. Pick one field out of the combobox. Click on the “Filter” icon |image340| to run the functionality. Otherwise, click on the “Cancel” icon |image341| to clear the boxes off.
+    Functionality bar.
+
+Furthermore you can use filters, if implemented, available in the Functionality bar. Click on the “Filter” icon |image340| to run the functionality. Otherwise, click on the “Cancel” icon |image341| to clear the boxes off.
 
 .. |image340| image:: media/image346.png
    :width: 30
@@ -66,7 +66,7 @@ It is possible to implement also a JPivot Registry document. The graphical featu
 
 In this case the table shows columns organized in a hierarchical way and a grouping function is implemented. From the left to the right the columns contain fields at different detail levels. The last column in our example in the figure above contains numeric data. Such a field is grouped at the “country” level. The grouping level depends on the configurations made on template building.
 
-In the JPivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented filters are still available.
+In the JPivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented, filters are still available.
 
 
 Registry development
@@ -81,34 +81,33 @@ Here we exhibit a possible syntax for a Registry document.
     :linenos:
     :caption: Example (a) of template for Registry.
     
-    <?xml version="1.0" encoding="windows-1250"?> 
-    <QBE>  
-      <DATAMART name="RegFoodmartModel" /> 
-         <REGISTRY>                  
-         <ENTITY name="it.eng.spagobi.meta.Product"> 
-             <FILTERS>   
-               <FILTER title="Class" field="product_subcategory" presentation="COMBO" /> 
-               <FILTER title= "Product name" field="product_name" presentation="COMBO" />  
-             </FILTERS>                                                         
-
-             <COLUMNS>  
-                <COLUMN field="product_id" unsigned="true" visible="false" editable="false" format="####" />
-                <COLUMN field="product_name" title="Product name" size="200"       
-                        editor= "MANUAL" sorter="ASC"/> 
-                <COLUMN field="product_subcategory" title="Class" size="200"       
-                        subEntity="rel_product_class_id_in_product_class" foreignKey="rel_product_class_id_in_product_class" />  
-                <COLUMN field="SKU" title="SKU" size="200" editor="MANUAL" /> 
-                <COLUMN field="gross_weight" title="Gross weight" size="200" editor="MANUAL" />     
-                <COLUMN field="net_weight" title="Net weight" size="200" editor="MANUAL" />    
-             </COLUMNS>                                                         
-
-             <CONFIGURATIONS> 
-               <CONFIGURATION name="enableButtons" value="true"/>                 
-               <CONFIGURATION name="isPkAutoLoad" value="true"/> 
-            </CONFIGURATIONS>                                                                  
-         </ENTITY>                                                                       
-      </REGISTRY>                                                                       
-    </QBE>                                                                 
+    <?xml version="1.0" encoding="windows-1250"?>
+    <QBE>
+		<DATAMART name="RegFoodmartModel" />
+		<REGISTRY>
+			<ENTITY name="it.eng.spagobi.meta.Product">
+				<FILTERS>
+					<FILTER title="Class" field="product_subcategory" presentation="COMBO" />
+					<FILTER title= "Product name" field="product_name" presentation="COMBO" />
+				</FILTERS>
+				<COLUMNS>
+					<COLUMN field="product_id" unsigned="true" visible="false" editable="false" format="####" />
+					<COLUMN field="product_name" title="Product name" size="200"
+                        editor= "MANUAL" sorter="ASC"/>
+					<COLUMN field="product_subcategory" title="Class" size="200"
+                        subEntity="rel_product_class_id_in_product_class" foreignKey="rel_product_class_id_in_product_class" />
+					<COLUMN field="SKU" title="SKU" size="200" editor="MANUAL" />
+					<COLUMN field="gross_weight" title="Gross weight" size="200" editor="MANUAL" />
+					<COLUMN field="net_weight" title="Net weight" size="200" editor="MANUAL" />
+				</COLUMNS>
+				<CONFIGURATIONS>
+					<CONFIGURATION name="enableDeleteRecords" value="true"/>
+					<CONFIGURATION name="enableAddRecords" value="true"/>
+					<CONFIGURATION name="isPkAutoLoad" value="true"/>
+				</CONFIGURATIONS>
+			</ENTITY>
+		</REGISTRY>
+	</QBE>
 
 In particular, we give some details for each tag and main attributes.
 
@@ -134,8 +133,8 @@ We stress that it is mandatory to point at one datamart table using a column wit
     :linenos:
     :caption: Pointing at a numerical column.
     
-     <COLUMNS> 
-       <COLUMN field="store_id" visible="false" editable="false" /> 
+	<COLUMNS>
+		<COLUMN field="store_id" visible="false" editable="false" /> 
 
 Still referring to the code above, we underline that the “product_subcategory” field is used as a subcategory. It belongs in fact to another table. In this case it is enough to add the attributes: subEntity="rel_product_class_id_in_product_class"  foreignKey="rel_product_class_id_in_product_class".
 
@@ -148,34 +147,32 @@ The Registry instance allows to develop also a Jpivot table. See the last figure
     :linenos:
     :caption: Example (b) of template code for Registry.
     
-    <QBE> 
-       <DATAMART name="foodmart" /> 
-       <REGISTRY pagination = "false" summaryColor="#00AAAA">    
-          <ENTITY name="it.eng.spagobi.meta.Store"> 
-
-              <FILTERS> 
-                 <FILTER title="Store Type" field="store_type" presentation="COMBO" /> 
-              </FILTERS>                                                         
-
-              <COLUMNS>   
-                   <COLUMN field="store_id" visible="false" editable ="false" />   
-                   <COLUMN field="store_country" title="store country" visible="true" 
-                           type="merge" editable ="false" sorter ="ASC" summaryFunction="sum" />  
-                   <COLUMN field="store_state" title="store state" visible="true"     
-                           type=" merge" editable ="false" sorter ="ASC" />  
-                   <COLUMN field="store_city" title="store city" visible="true"       
-                           type="merge" editable ="false" sorter ="ASC" />   
-                   <COLUMN field="store_type" title="store type" type="merge" sorter="ASC" />  
-                   <COLUMN field="store_number" title="Number" size="150"             
+	<QBE>
+		<DATAMART name="foodmart" />
+		<REGISTRY pagination = "false" summaryColor="#00AAAA">
+			<ENTITY name="it.eng.spagobi.meta.Store">
+				<FILTERS>
+					<FILTER title="Store Type" field="store_type" presentation="COMBO" />
+				</FILTERS>
+				<COLUMNS>
+					<COLUMN field="store_id" visible="false" editable ="false" />
+					<COLUMN field="store_country" title="store country" visible="true"
+                           type="merge" editable ="false" sorter ="ASC" summaryFunction="sum" />
+					<COLUMN field="store_state" title="store state" visible="true"
+                           type=" merge" editable ="false" sorter ="ASC" />
+					<COLUMN field="store_city" title="store city" visible="true"
+                           type="merge" editable ="false" sorter ="ASC" />
+					<COLUMN field="store_type" title="store type" type="merge" sorter="ASC" />
+					<COLUMN field="store_number" title="Number" size="150"
                            editable="true" format="########" color="#f9f9f8" type="measure"/>
-              </COLUMNS>                                                         
-
-              <CONFIGURATIONS>     
-                 <CONFIGURATION name="enableButtons" value="false"/>   
-              </CONFIGURATIONS>  
-          </ENTITY> 
-       </REGISTRY> 
-    </QBE>         
+				</COLUMNS>
+				<CONFIGURATIONS>
+					<CONFIGURATION name="enableDeleteRecords" value="true"/>
+					<CONFIGURATION name="enableAddRecords" value="true"/>
+				</CONFIGURATIONS>
+			</ENTITY>
+		</REGISTRY>
+	</QBE>
 
 Note that to activate the JPivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
     

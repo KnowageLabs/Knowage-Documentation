@@ -161,6 +161,12 @@ In this view, you see all the Business Class created at the first initialization
 .. figure:: media/image309.png
 
     Exploring Business Class properties.
+	
+	Change the order of the business classes
+
+If you want to change order of the business classes, you can do it using drad and drop functionality. 
+
+.. figure:: media/entityDragDrop.png
 
 Using the **Property List** tab, the user can custom the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatia functions to the dimension fields available in the QbE interface.
 
@@ -273,15 +279,7 @@ Scrolling the table “Property list” tab, the user finds the **Type** menu it
 .. figure:: media/image31819.png
 
     Table property list.
-
-We highlight that for temporal and time dimension type, the user must define at least one hierarchy for the related dimension. the next figure shows that it is possible to set a hierarchy clicking on the button avaiable at the end of the comobobox line. Then, clicking on the “Add” button, the user can configure a new hierarchy. Remember to choose the **Level type** using the dedicated combobox. Note that it is possibile to shift levels using the up and down arrows avaiable at the end of each level row. Furthermore, the user can add a “Has all” node the hierarchy: just enable the “has-all” box and type the all member name.
-
-.. _temphierarcdef:
-.. figure:: media/image32021.png
-
-    Temporal hierarchy definition.
-
-According to the chosen type, the user will be able to use the specific functions introduced in Section **XXX**.
+	
 
 Column property list
 ~~~~~~~~~~~~~~~~~~~~
@@ -306,6 +304,24 @@ The **Structural** area covers an important role for the field properties. Here 
 In the **Behavioural Model** area, the user can assign the field’s visbility permission to specific roles.
 
 In the **Physical** area, recalls the physical table and field name from which the field have been take.
+
+	Add new column into business class
+
+If you did not choose all columns from physical table, when you were creating new business class, you can do it easily. Click on business class in which you want to add new column. Open Attributes tab and click on above column name.
+
+.. figure:: media/addNewBusinessColumn.png
+
+	Remove existing column from business class
+
+If you want to remove column from buissiness table, you need to click on business class from which you want to remove column. Open Attributes tab and click on three dots of column syou want to delete. It will open details panel. Click on delete button. 
+
+.. figure:: media/deleteBusinessColumn.png
+
+	Change the order of the columns
+
+If you want to change order of columns, you can do it using drad and drop functionality. 
+
+.. figure:: media/columnDragDrop.png
 
 Generate the datamart
 ~~~~~~~~~~~~~~~~~~~~~
@@ -332,14 +348,18 @@ In this section, we briefly describe the generic available options for business 
 
 .. figure:: media/image325.png
 
-    Additional functions for business model.
+    Business model lock.
 
-Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the **Metadata** section. Clicking the **Import metadata** button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context). The **Export CWM** allows the user to export metadata information in the CWM format. Vice versa the **Import CWM** allows the user to import a CWM file containing metadata infomration. The user must browse the CWM file into personal folder and then click on the “Import CWM” button to correctly upload it. Remember to save to validate the process.
+Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the **Metadata** section. Clicking the **Import metadata** button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context).
+
+.. figure:: media/image326.png
+
+    Importing metadata.
 
 Finally the **Saved versions** section the user keeps trace of model changes over time. Furthermore it is possible to restore old versions by checking the active column. Selecting the “three-dots” icon the user can download the jar file or the model itself or delete the version.
 Figure belowshows an example.
 
-.. figure:: media/image326.png
+.. figure:: media/image327.png
 
     Saved version functionalities.
    

@@ -169,7 +169,7 @@ The **Widget table configuration** opens and it guides you through the steps to 
 
     Table configuration window.
 
-In fact, the column area is divided into two parts: on the left side you have columns ordering, on the right the user has the button to add a new column or a calcutated field. As soon as the dataset is selected, you can indicate the sorting column or modal selection column. The modal selection serves to specify which value will be passed to other widgets (if interaction is enabled) when clicking on the cell at document execution time. You can specify this field by selecting a value from the combobox. In the same way, you indicate the sorting column and the order type that steers the rows ordering. You can select the field and the order from the dedicated comboboxes.
+In fact, the column area is divided into two parts: on the upper part there are the buttons to add a new column or a calcutated field. Also the new functionality of column grouping is available here. In the lower section, as soon as the dataset is selected, you can indicate the sorting column or modal selection column. The modal selection serves to specify which value will be passed to other widgets (if interaction is enabled) when clicking on the cell at document execution time. You can specify this field by selecting a value from the combobox. In the same way, you indicate the sorting column and the order type that steers the rows ordering. You can select the field and the order from the dedicated comboboxes.
 
 When a dataset is added to a table widget, all of its columns are listed below. If the user doesn’t wish to show some of them, he can use the delete button available at the end of each column row, as shown below.
 
@@ -184,14 +184,22 @@ click on the **Add Column** icon on the top right of the second box. Once opened
 
     Add a new column.
 
-Likewise, to add a calculated field you have to click on the **Add Calculated field** icon next to add column icon. Once opened the Calculated Field Wizard you have to type an alias for your calculated field in the dedicated area at the top corner of the wizard. Then you can choose from the Items Tree the fields and the arithmetic function you want to use for building your expression. In the middle you can see the expression you have built. If you prefer you can create or modify the expression manually directly in the panel which
-is editable. When you are satisfied with your expression you can click on save button and your calculated field appears in the field list. We provide an example in the following figure.
+**Manage Columns Groups** will open a menu to add or remove columns groups and to set their style. A column group is a container for more than one column that will show a common header between them.
+
+.. figure:: media/image156b.png
+
+    Example column group.
+
+Likewise, to add a calculated field you have to click on the **Add Calculated field** icon next to add column icon. Once opened the Calculated Field Wizard you have to type an alias for your calculated field in the dedicated area at the top corner of the wizard. 
+Then you can choose from the left sinebar list the fields that you want to use in your formula. You can also use arithmetical functions or use the functions available in the menu (**aggregations**, **column totals**, **variables**). 
+If you prefer you can create or modify the expression manually directly in the editable panel.
+When you are satisfied with your expression you can click on validate to check your formula sintax or save button and your calculated field appears in the field list. 
+We provide an example in the following figure.
 
 .. figure:: media/image157.png
 
     Add a calculated field.
 
-At the very bottom of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide on mobile option, etc.
 You can choose between dataset-level behaviour or table-level (default), that is the calculation modality that will involve table fields or dataset columns to get the result.
 If you choose dataset-level behaviour the calculation result will be done at dataset columns level only and the aggregation will involve the entire result of the calculation.
 
@@ -199,12 +207,40 @@ If you choose dataset-level behaviour the calculation result will be done at dat
 
     Dataset-level behaviour
 
+If variables are set for the present cockpit, the variable menu button will appear, making it possible to add variable values in the calculated field expression.
+
+.. figure:: media/image157c.png
+
+Variables menu
+
+
+In the bottom section of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table by dragging them up or down, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. Here you can find configuration features like the column size, max cell characters, hide column options, and the row spanning.
+
+.. figure:: media/image157d.png
+
+Columns Settings
+
+If you hide the column (from this view or from the column list), the column will not be visible, but will still be used for aggregation purposes.
+If you enable the **row span feature**, all the same visible values of the column will be collapsed in one, to avoid repetitions.
+
+If the column is a measure, more functionalities will become available:
+
+    - Inline chart mode: you can choose the visualization type of the measure, and if you choose chart and maximum/minimum values, a chart will appear in the view to represent the cell measure.
+    - Thresholds: you can choose to set some thresholds that will trigger font color, background color or will show icons if the chosen condition is satisfied.
+    - Format: you can choose the prefix, suffix and the precision (i.e. 9.8 m/s). Please be aware that the data will be formatted following the locale of the user. Otherwise you can choose to treat it as string.
+
+For all the columns, if at least one variable is set, the variables condition box will appear. Depending on the variable usage it will be possible to set a dynamic header or to hide the column conditionally.
+
+
 .. _columnsettings:
 .. figure:: media/image158.png
 
     Column settings.
 
 Note that here you can indicate the column type and the aggregation. To add an aggregation to a column you must control the type of data that column has. An aggregation can only be added if the column value is of “number” type . The different aggregation functions are: *none (you also can not add any aggregation function)*, *Sum*, *Average*, *Maximum*, *Minimum*, *Count* and *Count distinct*.
+
+If a column group has been set another option will become available in order to set the optional group belonging of the column.
+
 
 The **Style** tab is where you can customize the table by using the different options of style. It is divided into eight parts:
 
@@ -264,11 +300,15 @@ Referring to figure below, we sum up how to add a cross navigation to the cockpi
     Cross tab of the table widget configuration.
 
 - activate the cross navigation flag;
-- activate cross Enable on all row flag, if you want to be able to click on all the columns of the table;
-- select the column whose value will be passed through output parameter to the document of arrival;
-- select the output parameter that will pass the value to the document of arrival. This parameter type are defined in the document detail of the cockpit;
+- activate cross Enable the cross-navigation type select:
+    - on all row to enable a click on every column;
+    - on a single column to choose a column where the cross-navigation will be set, other columns will throw a selection;
+    - on an icon to choose an icon that will be render at the end of the row. All the columns will still throw selections;
+- select the output parameters that will pass the value to the document of arrival. Those parameters type are defined in the document detail of the cockpit and will be of the following types:
+    - static: a static value
+    - dynamic: the value of a selected column
+    - analytical driver: the value of a parameter
 - select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
-- add all involved output parameters by adding them one by one in the bottom part of the GUI.
 
 Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
 
@@ -345,7 +385,7 @@ Otherwise, thanks to the “On columns” feature, you can easily compute totals
 
 Switching to the “Style” tab you can find the general style settings available for the crosstab.
 
-- **Crosstab Font General Options**  where the rows' height, the general font and font size can be set;
+- **Crosstab General Options**  where the rows' height, the general font and font size can be set; in particular, the layout combo determines how the columns resize themselves in respect of the contained value;
 
 .. figure:: media/image174.png
 
@@ -406,6 +446,13 @@ Switching to the “Style” tab you can find the general style settings availab
     Other Options for crosstab.
 
 Once some or all (at least the mandatory) of the above mentioned setting features have been set you can save and the widget will be inserted into the cockpit area.
+
+.. figure:: media/image498.png
+
+    Cross navigation for cross table widget.
+
+In addition to other cross-navigations, for cross table widget it is possible to set as a dynamic value the name of the selected measure column or the selected category. The choice is available from the combobox.
+
 
 Document section
 ~~~~~~~~~~~~~~~~
@@ -636,13 +683,25 @@ In layer's metadata, the user set the spatial attribute of the dataset that will
 
          For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
 
-Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup. For a measure type field a user could specify the aggregation function and if it has to be shown on map: at least one field has to be shown on map. For attribute type field a user can specify if it's modal, that allows a user to make a selection on that value and refresh all other widget in the document: the user can specify only one model field.
+Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup.
 
-The threshold button open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
+For measures a user could specify the aggregation function, if it has to be shown on detail popup and if it has to be shown on map: at least one field has to be shown on map.
+
+For attributes a user could specify if it has to be shown on detail popup or if it has to be show as a filter: in that case, the attribute will be available in the control panel with its all distinct values to let the user to have an immediate evidence of which markers have the selected value for the measure
+
+The 3-dots-menu on the right of each column of the dataset contains additional functionalities: for measures, for example, there is the possibility to specify thresholds.
+
+The threshold menu open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
 
     .. figure:: media/image482.png
 
         Threshold dialog.
+
+For all the attributes that are filters, a user could select the relative value from the control panel:
+
+    .. figure:: media/image499.png
+
+        Filter selection.
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
@@ -731,6 +790,48 @@ And change the "date format" property
 
 .. figure:: media/image495.png
 
+Python Widget
+~~~~~~~~~~~~~~~~~~
+
+The Python widget allows to directly embed python code inside the cockpit in order to create advanced custom analytics.
+
+In the editor tab it is possible to add the script that will be sent to the python interpreter.
+
+.. figure:: media/PythonEditor.png
+
+    
+Before writing the code it is necessary to specify the **type** of the output produced by the script.
+Knowage has support for three different output types:
+
+- Image
+- HTML
+- Bokeh application
+
+If **Image** or **HTML** is choosen as output type, it is also necessary to specify the name of the file in which the script will save its output.
+    
+The Dataset tab allows the user to select a dataset that will be accessible directly from the python code.
+After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
+
+
+.. figure:: media/DatasetTab.png
+
+    Dataset selection
+    
+Once a dataset has been choosen, it will be possible to access it directly from python code via a **dataframe** variable.
+This variable will have the same name of the dataset label.
+
+The Environment tab allows the user to choose among a list of available python evironments previously defined inside the **configuration management**.
+To support this kind of choice a list of available libraries is displayed for each selected environment.
+
+.. figure:: media/EnvironmentTab.png
+
+    Environment selection
+	
+Inside python scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
+	
+.. warning::
+    **Python widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
+
 Widget properties
 ~~~~~~~~~~~~~~~~~~
 
@@ -792,6 +893,13 @@ The second tab (Figure below allows to configure some style options of the cockp
 .. figure:: media/image198.png
 
     Widget style tab.
+
+The third tab allows overriding the common css properties for the whole cockpit.
+The editor will highlight possible sintax errors.
+
+.. figure:: media/image497.png
+
+    Css editor tab.
 
 Data configuration
 ----------------------
@@ -869,6 +977,25 @@ The Frequency tab defines a schedulation over dataset involved in the associatio
 .. figure:: media/image204.png
 
     Frequency settings example.
+
+Variables
+~~~~~~~~~
+
+In this tab the user can define the variables that will be available inside the cockpit.
+
+.. figure:: media/image496.png
+
+    Variables tab
+
+Every variable needs a name that will be used to call it and get the value, a type and a value.
+The available types are the following:
+
+- Static: a static number or string.
+- Dataset: the value of a selected dataset column. If a column is not selected a set of variables key/value will be created using the first two columns of the selected dataset.
+- Profile: a set of profile attributes available. (ie. the username)
+- Driver: the value of a selected analytical driver.
+
+The variables will be available inside the widgets with the $V{variablename} format.
 
 Template
 ~~~~~~~~
