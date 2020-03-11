@@ -488,7 +488,7 @@ The developer of the dataset is free to write python code which has to produce a
 .. figure:: media/PythonDatasetConfigurator.png
 
     Python dataset interface.
-	
+
 As shown in the picture in the field **Dataframe variable name** the developer has to specify the name of the python variable in which the final output of the script is stored in the form of a dataframe.
 
 In the field **Python environment** the user can select a working environment among the available ones.
@@ -610,8 +610,13 @@ If you have chosen the type "Documents", you can add the document fields to the 
 .. figure:: media/image43.png
 
   Solr Dataset, Optional fields for filtering parameters.
+
+  Solr dataset can also use Profile Attributes.  
+  The syntax to include attributes into the dataset text is ``${attribute_name}``. Profile attributes can be single-value or multivalue.
+
 The **filter query parameter** is the Solr fq parameter and defines a query that can be used to restrict the superset of documents that can be returned, without influencing score. It can be very useful for speeding up complex queries, since the queries specified with fq are cached independently of the main query.
 These parameters can be used in combo with **document parameters** using the P{} notation like the example picture shows.
+
 
 **Fields Mapping**
 
@@ -636,6 +641,7 @@ The Facet Field is the facet.field parameter and identifies a field that should 
 The Facet Prefix is the facet.prefix parameter limits the terms on which to facet to those starting with the given string prefix. This does not limit the query in any way, only the facets that would be returned in response to the query.
 
 .. figure:: media/image44.png
+
 
 
 
