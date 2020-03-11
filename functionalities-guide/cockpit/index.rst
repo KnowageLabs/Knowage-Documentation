@@ -632,7 +632,7 @@ Every dataset with a spatial attribute is eligible to become a layer in map widg
 .. |image479| image:: media/image479.png
    :height: 26
 
-In layer's metadata, the user set the spatial attribute of the dataset that will be used to display a markers on the map. Actually, many spatial attribute types are supported:
+In layer's metadata, the user can add calculated fields (more on that later) and set the spatial attribute of the dataset that will be used to display a markers on the map. Actually, many spatial attribute types are supported:
 
 -  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
 -  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
@@ -662,6 +662,28 @@ For all the attributes that are filters, a user could select the relative value 
     .. figure:: media/image499.png
 
         Filter selection.
+
+As said, Map widget supports calculated fields, a way for a user to calculate additional data to show on map or to display into popup detail:
+
+.. important::
+         **TODO KNOWAGE-4756 - Calculated fields on map widget**
+
+         Insert image of the Add calculated field button in layer's metadata
+
+From the calculated field's dialog a user can combine measures and operations to add more data to the layer. The user can use a SQL-like syntax to create a statement that describe the new calculated field:
+
+.. important::
+         **TODO KNOWAGE-4756 - Calculated fields on map widget**
+
+         Insert image of the Calculated Field dialog
+
+The newly calculated field added by the user is shown as a measure in layer's dataset: from the 3-dots menu on the right of the field a user can update or delete the calculated field.
+
+.. important::
+         **TODO KNOWAGE-4756 - Calculated fields on map widget**
+
+         Insert image of the 3-dots menu on calculated field.
+
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
@@ -759,7 +781,7 @@ In the editor tab it is possible to add the script that will be sent to the pyth
 
 .. figure:: media/PythonEditor.png
 
-    
+
 Before writing the code it is necessary to specify the **type** of the output produced by the script.
 Knowage has support for three different output types:
 
@@ -768,7 +790,7 @@ Knowage has support for three different output types:
 - Bokeh application
 
 If **Image** or **HTML** is choosen as output type, it is also necessary to specify the name of the file in which the script will save its output.
-    
+
 The Dataset tab allows the user to select a dataset that will be accessible directly from the python code.
 After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
 
@@ -776,7 +798,7 @@ After choosing a dataset the list of available columns will be shown. Here it is
 .. figure:: media/DatasetTab.png
 
     Dataset selection
-    
+
 Once a dataset has been choosen, it will be possible to access it directly from python code via a **dataframe** variable.
 This variable will have the same name of the dataset label.
 
@@ -786,9 +808,9 @@ To support this kind of choice a list of available libraries is displayed for ea
 .. figure:: media/EnvironmentTab.png
 
     Environment selection
-	
+
 Inside python scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
-	
+
 .. warning::
     **Python widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
 
