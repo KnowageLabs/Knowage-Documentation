@@ -17,7 +17,7 @@ A dataset acts as a data provider for analytical documents that’s why many typ
 -  File,
 -  Query,
 -  Java Class,
--  Script (Groovy, Javascript, Embedded Javascript or ECMAScript),
+-  Script (Groovy, JavaScript, Embedded JavaScript or ECMAScript),
 -  Qbe query over the metamodel,
 -  Custom,
 -  Flat,
@@ -118,7 +118,7 @@ In the **Advanced** tab, shown in figure below, you can apply the pivoting trans
 
 .. figure:: media/image27.png
 
-    The dataset trasformation tab.
+    The dataset transformation tab.
 
 Once all those settings have been performed you can see a preview of the dataset results clicking on the **Preview** button available on the top right corner of the page. It is recommended to check preview to detect possible errors in the dataset code before associating it to a document.
 
@@ -159,14 +159,14 @@ The SQL dialect depends on the chosen data source. The SQL text must be written 
           JOIN promotion p on s.promotion_id=p.promotion_id
           GROUP BY p.media_type
 
-It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or Javascript) and associating it to the query. Click on the **Edit Script** button (see next figure) and the script editor will open. Here you can write the script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
+It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or JavaScript) and associating it to the query. Click on the **Edit Script** button (see next figure) and the script editor will open. Here you can write the script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
 
 .. _scripteditingdataset:
 .. figure:: media/image31.png
 
     Script editing for dataset.
 
-In Code Query dataset’s script example we uses Javascript to dynamically modify the ``FROM`` clause of the original query according to the value of the parameter year selected at runtime by the user.
+In Code Query dataset’s script example we uses JavaScript to dynamically modify the ``FROM`` clause of the original query according to the value of the parameter year selected at runtime by the user.
 
 .. code-block:: javascript
          :caption:  Query dataset’s script example
@@ -209,7 +209,7 @@ If you select this option, the results of the dataset will be produced by a scri
                 ...
           </ROWS>
 
-If the script returns a single value, this will be automatically encoded in the XML format above. The script must be written using Groovy or Javascript language. Knowage already provides some Groovy and Javascript functions returning the value of a single or multi-value profile attribute. These functions are explained in the information window that can be opened from the **Dataset Type** tab. New custom functions can be added in ``predefinedGroovyScript.groovy`` and ``predefinedJavascript.js`` files contained in the ``KnowageUtils.jar`` file.
+If the script returns a single value, this will be automatically encoded in the XML format above. The script must be written using Groovy or Javascript language. Knowage already provides some Groovy and JavaScript functions returning the value of a single or multi-value profile attribute. These functions are explained in the information window that can be opened from the **Dataset Type** tab. New custom functions can be added in ``predefinedGroovyScript.groovy`` and ``predefinedJavascript.js`` files contained in the ``KnowageUtils.jar`` file.
 
 QbE
 ~~~
@@ -270,12 +270,12 @@ Ckan
 A Ckan dataset let you use open data as resource. You have to fill all the settings fields properly to let the dataset work successfully. Let’s have a look on them:
 
  -  **File Type**: this field specifies the type of the file you want to import. Allowed ones are: CSV or XML;
- -  **Delimiter Character**: Here you have to insert the delimiter used in the file. Allowe values are: , ; \\t \|
+ -  **Delimiter Character**: Here you have to insert the delimiter used in the file. Allowed values are: , ; \\t \|
  -  **Quote Character**: Allowed values for this field are: “ or ”;
  -  **Encoding**: Here you have to specify the encoding typology used. Allowed values are: UTF-8, UTF-16, windows-1252 , ASCII or    ISO-8859-1;
  -  **Skip rows**: the number inserted stands for the rows not to be imported;
  -  **Limit rows**: it is the maximum number of rows to be imported. If you leave it blank all rows are uploaded;
- -  **XLS numbers**: it is the number of scheets to be imported;
+ -  **XLS numbers**: it is the number of sheets to be imported;
  -  **CKAN ID** : here you have to insert the ID of the resource you are interested in. Look for it among the additional information in Ckan dataset webpage.
  -  **CKAN url**: it is the direct link to download the resources available on Ckan dataset webpage.
 
@@ -595,7 +595,7 @@ A dataset of type Solr, see the following figure, reads data from the popular Se
 
     Solr Dataset, Document type selected.
 
-    The **Query** field is the Solr query using the Solr standard query sintax.
+    The **Query** field is the Solr query using the Solr standard query syntax.
     The **Collection** field is the **core**, in Solr, the term core is used to refer to a single index and associated transaction log and configuration files (including the solrconfig.xml and Schema files, among others). Your Solr installation can have multiple cores if needed, which allows you to index data with different structures in the same server, and maintain more control over how your data is presented to different audiences. In SolrCloud mode you will be more familiar with the term collection. Behind the scenes a collection consists of one or more cores.
 
 **Documents**
@@ -611,7 +611,7 @@ If you have chosen the type "Documents", you can add the document fields to the 
 
   Solr Dataset, Optional fields for filtering parameters.
 
-  Solr dataset can also use Profile Attributes.  
+  Solr dataset can also use Profile Attributes.
   The syntax to include attributes into the dataset text is ``${attribute_name}``. Profile attributes can be single-value or multivalue.
 
 The **filter query parameter** is the Solr fq parameter and defines a query that can be used to restrict the superset of documents that can be returned, without influencing score. It can be very useful for speeding up complex queries, since the queries specified with fq are cached independently of the main query.
@@ -665,7 +665,7 @@ Any parameter added to your dataset must be added to the parameters list, too. T
 -  **String**: the parameter value will be surrounded with single quotes if not already present.
 -  **Number**: the parameter value is treated as a number, with no quotes; an exception is thrown if the value passed is not a number.
 -  **Raw**: the parameter value is treated as a string containing a set of values; single quotes are removed from the containing string, not from the single strings composing it.
--  **Generic**: the parameter is simply passed as it is, with no futher processing.
+-  **Generic**: the parameter is simply passed as it is, with no further processing.
 
 In SQL query example with parameters an example is provided, where ``MediaType`` is a string parameter.
 
@@ -687,7 +687,7 @@ In SQL query example with parameters an example is provided, where ``MediaType``
          p.media_type
 
 
-Datasets of type Query and Script can also use *profile attributes*. Differently from parameters, profile attributes do not need to be   explicitly added to the parameter list since they have been defined elsewhere. Clicking the **Available Profile Attribute** button you can see all profile attributes defined in the behavioral model and choose the one(s) you wish to insert in the dataset query/script   text, as shown below.
+Datasets of type Query and Script can also use *profile attributes*. Differently from parameters, profile attributes do not need to be   explicitly added to the parameter list since they have been defined elsewhere. Clicking the **Available Profile Attribute** button you can see all profile attributes defined in the behavioural model and choose the one(s) you wish to insert in the dataset query/script   text, as shown below.
 
 .. figure:: media/image35.png
 
@@ -715,13 +715,13 @@ Knowage query dataset are endowed of a specific area to insert the script syntax
 
    Editing script.
 
-Typically, scripts are configured to load placeholders with a slice of SQL code. Referring to the following pictures, we show an example of Javascript (JS) code usage. Moving to the "Query" tab the user has to insert a placeholder where he/she's expecting a certain clause to be added. The query will then look like the one shown below.
+Typically, scripts are configured to load placeholders with a slice of SQL code. Referring to the following pictures, we show an example of JavaScript (JS) code usage. Moving to the "Query" tab the user has to insert a placeholder where he/she's expecting a certain clause to be added. The query will then look like the one shown below.
 
 .. figure:: media/image038.png
 
    Setting placeholder using script.
 
-Moving to the "Script" tab instead, the user has to declare how the server has to manage the placeholder. The following picture shows a JS block code where the user first initializes a variable as empty: if certain conditions, on one or more parameters, are satisfied, the variable is assigned an SQL code string. Then, the JS method ".replace" will substitute the placehoder with the content the variable.
+Moving to the "Script" tab instead, the user has to declare how the server has to manage the placeholder. The following picture shows a JS block code where the user first initializes a variable as empty: if certain conditions, on one or more parameters, are satisfied, the variable is assigned an SQL code string. Then, the JS method ".replace" will substitute the placeholder with the content the variable.
 
 .. figure:: media/image040.png
 
@@ -753,7 +753,7 @@ An example of usage is available in figure below, showing the result set of the 
 Dataset persistence
 ~~~~~~~~~~~~~~~~~~~
 
-The **Advanced** tab is used to make a dataset persistent, i.e., to write it on the default database. Making a dataset persisent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. In order to force recalculation of the dataset, you should execute dataset preview again. This will store the newly generated data on the database table.
+The **Advanced** tab is used to make a dataset persistent, i.e., to write it on the default database. Making a dataset persistent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. In order to force recalculation of the dataset, you should execute dataset preview again. This will store the newly generated data on the database table.
 
 Once marked the dataset as persistent, you are asked to insert a table name. This is the table where data are stored and then retrieved.
 

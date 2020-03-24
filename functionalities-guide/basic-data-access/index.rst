@@ -24,7 +24,7 @@ Dataset
 Into the “Dataset” area we find all the datasets classified according to their types. The datasets are categorised as follows:
 
 - **My dataset**: datasets created by yourself uploading a CSV or XLS file or creating a query on a business model using the Qbe interface;
-- **Enterprise dataset**: certified datasets,namely datasets created by the technical/experts users and shared with the end user.
+- **Enterprise dataset**: certified datasets, namely datasets created by the technical/experts users and shared with the end user.
 - **Shared dataset**: datasets created and shared by other end users;
 - **CKAN dataset**: in this area you can download public datasets and visualize your CKAN datasets;
 - **All dataset**: in this folder are stored all the available datasets, namely all datasets contained in the classes just described.
@@ -34,20 +34,20 @@ My dataset
 
 In this area you can create datasets uploading your own files.
 
-Click **Create Dataset** to open the dataset wizard which guides you through the dataset creation. You can choose between XLS or CSV file as in the following figure. 
+Click **Create Dataset** to open the dataset wizard which guides you through the dataset creation. You can choose between XLS or CSV file as in the following figure.
 
 .. _datasetcreation:
 .. figure:: media/image7.png
 
     Dataset creation.
-    
+
 In the example shown in the next figure, we upload an XLS file.
 
 .. _uploadingxlsdat:
 .. figure:: media/image8.png
 
     Uploading XLS for dataset.
-   
+
 The wizard, shown below, leads the user to insert some information to configure the dataset. For instance to specify the number of rows to skip or to limit and which sheet (of the XLS file) to pick up values from.
 
 .. _configfeatures:
@@ -64,7 +64,7 @@ Once you have uploaded the file, you can check and define the metadata (measure 
 Just few steps before saving the dataset:
 
 -  Check the data preview in order to verify the accuracy of your data;
--  enable or disable the persistance of dataset. Thanks to this functionality the server creates a snapshot of the extracted data in order to avoid to reload the dataset each time that the user revokes it;
+-  enable or disable the persistence of dataset. Thanks to this functionality the server creates a snapshot of the extracted data in order to avoid to reload the dataset each time that the user revokes it;
 -  finally, name and save the dataset as shown below.
 
 .. figure:: media/image1314.png
@@ -87,8 +87,8 @@ Thanks to CKAN integration you can easily access to datasets published in the Wo
 
 .. warning::
       **CKAN Datasets**
-         
-      CKAN datasets can be divided in four main categories: “Public”, “Organization private”, “Acquired”, “User private”. You can download and use only the datasets having a **Public** category. 
+
+      CKAN datasets can be divided in four main categories: “Public”, “Organization private”, “Acquired”, “User private”. You can download and use only the datasets having a **Public** category.
 
 CKAN datasets access method
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -121,7 +121,7 @@ Save and handle dataset
 
 If you want to use a dataset not used yet, any action on it will start the metadata import wizard. You access it by clicking the magnifier icon. As a first step, you have to insert some mandatory parameters to set the parser configuration.
 
-As a second step the user have to specify how the dataset will appear and to check metadata. Be careful to choose the proper data type (String, Integer, Double) and field type (Measure, Attribute). After that, click on **Next** to see the validation results, confirm and finalize dataset import. Once completed the dataset importation, the selected dataset will appear in the **DataSet** tab too. These actions just listed on the dataset change for downloded datasets. In particular you have the eye-shaped icon to refresh the dataset or change metadata by repeating the download process and the magnifier icon to inquire it trought the QbE interface.
+As a second step the user have to specify how the dataset will appear and to check metadata. Be careful to choose the proper data type (String, Integer, Double) and field type (Measure, Attribute). After that, click on **Next** to see the validation results, confirm and finalize dataset import. Once completed the dataset importation, the selected dataset will appear in the **DataSet** tab too. These actions just listed on the dataset change for downloaded datasets. In particular you have the eye-shaped icon to refresh the dataset or change metadata by repeating the download process and the magnifier icon to inquire it through the QbE interface.
 
 Models
 ----------
@@ -131,7 +131,7 @@ Here you find the models that the a technical user has built for you. You can qu
 Dataset federation
 ----------------------
 
-Dataset federation is a functionality available only in KnowageBD and KnowageSI. Thanks to the Data federation functionality, you can create a new dataset combining two or more datasets according to your role permissions Let us give you an example. Suppose you have stored in a database your products information, i.e. sales, costs, promotions ecc.) and you find as open data the customers feedbacks on these products. If you create datasets on these Dataset federation resources sharing at least one column, then you can join them on the common column and improve your analysis.
+Dataset federation is a functionality available only in KnowageBD and KnowageSI. Thanks to the Data federation functionality, you can create a new dataset combining two or more datasets according to your role permissions. Let us give you an example. Suppose you have stored in a database your products information (i.e. sales, costs, promotions ecc.) and you find as open data the customers feedbacks on these products. If you create datasets on these Dataset federation resources sharing at least one column, then you can join them on the common column and improve your analysis.
 
 Click on **Create Federation** to see all available datasets and choose the ones you want to federate. Click **Next** and choose which columns the join have to be made on and click the plus icon to add it to the **Association list**. In our example in the following figure we choose Product.
 
