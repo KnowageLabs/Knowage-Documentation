@@ -14,7 +14,7 @@ The administrator will provide you a username and a password to log in Knowage e
 
 These credential identifies you as user and are associated to your *role*.
 
-In Knowage suite, roles represent categorizations of group of users, granting each user with different rights and visiblity criteria on documents and data, according to their business profile.
+In Knowage suite, roles represent categorizations of group of users, granting each user with different rights and visibility criteria on documents and data, according to their business profile.
 
 This is what is called *Behavioural Model*. It allows to:
 
@@ -59,7 +59,7 @@ Main menu
    
     Home page
 
-The menu gives you access to documents, data and all the functionalities that you are allowed to use. By default the menu button is at the left bottom corner of the home page: clik it to open the menu.
+The menu gives you access to documents, data and all the functionalities that you are allowed to use. By default the menu button is at the left bottom corner of the home page: click it to open the menu.
 
 Main menu consists in a set of icons associated with basic features. It is divided in two submenus: the general menu, which is collapsed, and the BI functionalities menu. It is important to underline that not all the components of the menu are mandatory, but they may be configured by the administrator according to user’s needs.
 
@@ -183,7 +183,7 @@ Workspace
    Finally selecting **My Analysis** section, available only for KnowageBD and KnowageSI, you enter a new page where you can navigate and create your self-service analysis.
 
 Functions catalog
-   Lets the user enter the data mining functions a technical user has previuously developed.
+   Lets the user enter the data mining functions a technical user has previously developed.
 
 Glossary definition
    The user can define the proper glossaries and related words useful for his own analysis.
@@ -222,7 +222,7 @@ From BI functionalities Menu, select |image20| to open the Document Browser.
    
    Document Browser
 
-By default the page is divided in two parts, as shown in Figure above: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
+By default, the page is divided in two parts, as shown in Figure above: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
 
 Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date (see Figure below).
 
