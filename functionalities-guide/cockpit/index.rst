@@ -573,6 +573,7 @@ The HTML widget allows to add customized HTML and CSS code to add very custom dy
         For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
 
 The Edit section of the widget is composed by tree tabs: the HTML editor, the style and the dataset.
+
 In the editor tab is possible to add the code that will be shown in the widget. Clicking on the top expander section in the tab, the one named "CSS" also the CSS editor will be available.
 
 .. important::
