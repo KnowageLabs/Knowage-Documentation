@@ -650,6 +650,12 @@ The ``kn-selection-column`` attribute is available to every HTML5 tag and is a w
 
 The **kn-selection-value** attribute is optional and will add a specific value to the column selection.
 
+``[kn-variable='VARIABLE-NAME' key='VARIABLE-KEY']``
+
+The ``kn-variable`` tag is the tool to read the runtime value of one of the defined variables. It will change depending on the current value and can be used inside kn-if and kn-calc.
+
+The **key** attribute is optional and will select a specific key from the variable object if the variable is "Dataset" type, returning a specific value instead of a complete dataset.
+
 **Banned Tags**
 
 In order to avoid Cross-site scripting and other vulnerabilities, some tags are automatically removed by the system when saving the cockpit:
