@@ -505,9 +505,14 @@ A bubble chart requires three dimensions of data; the x-value and y-value to pos
 
 .. figure:: media/bubble_chart.png
 
-    Bubble configuration.
+    Bubble chart.
+
 
 Inside X,Y,Z containers, user can put only **measure values**. Inside Categories container user can put **attributes** that he wants to see in the **tooltip**.
+
+.. figure:: media/bubble_chart_conf.png
+
+    Bubble configuration.
 
 .. figure:: media/bubble_tooltip.png
 
