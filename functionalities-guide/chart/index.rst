@@ -514,15 +514,18 @@ Inside X,Y,Z containers, user can put only **measure values**. Inside Categories
 
     Bubble configuration.
 
+
 .. figure:: media/bubble_tooltip.png
 
     Bubble tooltip.
-	
+
+
 Inside **Advanced tab**, user can find configuration for **plotband** and **plotline** of xaxis and yaxis. 
 
 .. figure:: media/bubble_plotband_and_line.png
 
     Bubble plotband and plotline configuration.
+
 	
 User also has option for **splitting serie** by one of two categories. Split option has limit on **maximum** two categories. User can set which category will be used for coloring bubbles. And also can show/hide values that are inside bubbles.
 
