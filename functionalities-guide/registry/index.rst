@@ -85,7 +85,7 @@ Here we exhibit a possible syntax for a Registry document.
     <QBE>
 		<DATAMART name="RegFoodmartModel" />
 		<REGISTRY>
-			<ENTITY name="it.eng.spagobi.meta.Product">
+			<ENTITY name="it.eng.knowage.meta.regfoodmartmodel.Product">
 				<FILTERS>
 					<FILTER title="Class" field="product_subcategory" presentation="COMBO" />
 					<FILTER title= "Product name" field="product_name" presentation="COMBO" />
@@ -150,7 +150,7 @@ The Registry instance allows to develop also a Jpivot table. See the last figure
 	<QBE>
 		<DATAMART name="foodmart" />
 		<REGISTRY pagination = "false" summaryColor="#00AAAA">
-			<ENTITY name="it.eng.spagobi.meta.Store">
+			<ENTITY name="it.eng.knowage.meta.foodmart.Store">
 				<FILTERS>
 					<FILTER title="Store Type" field="store_type" presentation="COMBO" />
 				</FILTERS>
