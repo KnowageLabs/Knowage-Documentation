@@ -940,8 +940,8 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
     datastore.getDataArray(function(record){
         return {
-        name:record.city,\
-        record.num_children_at_home\
+        name:record.city,
+        record.num_children_at_home
         }
     });
 
@@ -969,6 +969,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
     
     datastore.getColumn('country');
 
+
 **getSeriesAndData**
 
 |   returns: array of series with data for each series
@@ -977,6 +978,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
     :linenos:
+	
     datastore.getSeriesAndData('PRODUCT_FAMILY',function(record){
         return {
             y: record.UNIT_SALES,
@@ -1022,7 +1024,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    datastore.hierarchy({'levels':['QUARTER','PRODUCT_FAMILY'],'measures': {'UNIT_SALES':'SUM'}});
+    var hierarchy = datastore.hierarchy({'levels':['QUARTER','PRODUCT_FAMILY'],'measures': {'UNIT_SALES':'SUM'}});
 
 
 **getChild**
@@ -1042,7 +1044,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    var node = datastore.hierarchy({'levels':['QUARTER','PRODUCT_FAMILY'],'measures':{'UNIT_SALES':'SUM'}}).getChild(0);
+    var node = hierarchy.getChild(0);
 
 
 **getLevel**
