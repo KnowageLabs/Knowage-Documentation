@@ -827,7 +827,7 @@ The table result can also be configured to show a limited set of fields, please 
 
 The settings tab contains the management of the 3 elements that compose a directive:
     - Data table: enabled by default is the grid containing data. You can choose the number of item per page.
-    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets pagination options such as results limit, max number of items and more.
+    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets pagination options such as results limit, max number of items and more. If *enable selection on facets* is enabled, a user click on the facets will throw a cockpit selection instead of just filtering the table.
     - Text search: if enabled a searcbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
 
 .. figure:: media/image481b.png
@@ -838,6 +838,8 @@ The settings tab contains the management of the 3 elements that compose a direct
 
 .. figure:: media/image491.png
 It is possible to change the facets column ordering, for example if there is the need to move up a field.
+
+
 As shown in this example, "aggregazione" should be shown upper, just go to the edit widget section:
 
 .. figure:: media/image492.png
