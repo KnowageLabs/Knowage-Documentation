@@ -498,6 +498,49 @@ For gauge chart you should have only series items, the one that gives you values
 
 When you finished to set all the mandatory and optional parameters and configurations in the **Structure** tab you can select the **Configuration** tab and set the generic configuration of the chart.
 
+Bubble chart
+~~~~~~~~~~~~
+
+A bubble chart requires three dimensions of data; the x-value and y-value to position the bubble along the value axes and a third value for its volume, z-value. It is a generalization of the scatter plot, replacing the dots with bubbles. 
+
+.. figure:: media/bubble_chart.png
+
+    Bubble chart.
+
+
+Inside X,Y,Z containers, user can put only **measure values**. Inside Categories container user can put **attributes** that he wants to see in the **tooltip**.
+
+.. figure:: media/bubble_chart_conf.png
+
+    Bubble configuration.
+
+
+.. figure:: media/bubble_tooltip.png
+
+    Bubble tooltip.
+
+
+Inside **Advanced tab**, user can find configuration for **plotband** and **plotline** of xaxis and yaxis. 
+
+.. figure:: media/bubble_plotband_and_line.png
+
+    Bubble plotband and plotline configuration.
+
+	
+User also has option for **splitting serie** by one of two categories. Split option has limit on **maximum** two categories. User can set which category will be used for coloring bubbles. And also can show/hide values that are inside bubbles.
+
+.. figure:: media/bubble_split_conf.png
+
+    Bubble split configuration.
+
+
+.. figure:: media/bubble_split.png
+
+    Bubble split examples.
+	
+Difference between **One category - split disabled** and **Two categories - split disabled** is what is present in the tooltip.
+
+
 A short comment on chart drill down
 ---------------------------------------
 
