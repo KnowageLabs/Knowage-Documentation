@@ -827,8 +827,12 @@ The table result can also be configured to show a limited set of fields, please 
 
 The settings tab contains the management of the 3 elements that compose a directive:
     - Data table: enabled by default is the grid containing data. You can choose the number of item per page.
-    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets pagination options such as results limit, max number of items and more. If *enable selection on facets* is enabled, a user click on the facets will throw a cockpit selection instead of just filtering the table.
-    - Text search: if enabled a searcbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
+    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets options:
+        - *enable selection on facets*, if enabled a user click on the facets will throw a cockpit selection instead of just filtering the table.
+        - *closed by default*, if enabled the facets will be visible as closed groups by default.
+        - *facets column width*, this setting allows to choose the dimension of the facets column in px, rem or percentage values.
+        - *facets max number*, this setting allows to choose the maximum number of facets visible for every field.
+    - Text search: if enabled a searchbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
 
 .. figure:: media/image481b.png
 
