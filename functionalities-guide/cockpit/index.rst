@@ -940,10 +940,10 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
     datastore.getDataArray(function(record){
         return {
-        name:record.city,
-        record.num_children_at_home
+        name: record.city,
+        y: record.num_children_at_home
         }
-    });
+    })
 
 
 **getRecords**
@@ -955,7 +955,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    datastore.getRecords();
+    datastore.getRecords()
 
 
 **getColumn**
@@ -967,7 +967,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
     
-    datastore.getColumn('country');
+    datastore.getColumn('country')
 
 
 **getSeriesAndData**
@@ -984,7 +984,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
             y: record.UNIT_SALES,
             name: record.QUARTER
         }
-    });
+    })
 
 
 **sort** - angular sort service (sorting is executed on the client side)
@@ -1011,7 +1011,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    datastore.filter({'QUARTER':'Q1','STORE_ID':'1'});
+    datastore.filter({'QUARTER':'Q1','STORE_ID':'1'})
 
 
 **hierarchy**
@@ -1024,7 +1024,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    var hierarchy = datastore.hierarchy({'levels':['QUARTER','PRODUCT_FAMILY'],'measures': {'UNIT_SALES':'SUM'}});
+    var hierarchy = datastore.hierarchy({'levels':['QUARTER','PRODUCT_FAMILY'],'measures': {'UNIT_SALES':'SUM'}})
 
 
 **getChild**
@@ -1036,7 +1036,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    hierarchy.getChild(0);
+    hierarchy.getChild(0)
 
 
 *node* is an instance of Node object. It has convenient functions to explore the node:
@@ -1044,7 +1044,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    var node = hierarchy.getChild(0);
+    var node = hierarchy.getChild(0)
 
 
 **getLevel**
@@ -1056,7 +1056,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    hierarchy.getLevel(0);
+    hierarchy.getLevel(0)
 
 
 **getValue**
@@ -1068,7 +1068,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    node.getValue('UNIT_SALES');
+    node.getValue('UNIT_SALES')
 
 
 **getChild**
@@ -1080,7 +1080,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    node.getChild(0);
+    node.getChild(0)
 
 
 **getParent**
@@ -1092,7 +1092,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    node.getChild(0).getParent();
+    node.getChild(0).getParent()
 
 
 **getChildren**
@@ -1104,7 +1104,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    node.getChildren();
+    node.getChildren()
 
 
 **getSiblings**
@@ -1116,7 +1116,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 .. code-block:: javaScript
     :linenos:
 
-    node.getChild(0).getSiblings();
+    node.getChild(0).getSiblings()
 
 
 It is also possible to interact with the other cockpit widgets, to do so it's possible to use the **clickManager**:
