@@ -1135,12 +1135,13 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 |   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
     throw the set interaction. The dynamic values used will be the ones set in the method arguments.
 
+
 .. important::
          **Chart libraries**
 
-         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5).
-		 It is possible also to include other libraries adding the CDN script tag in the html Editor. Be aware that url not set in the whitelist will be deleted on save.
+         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. Be aware that url not set in the whitelist will be deleted on save.
 
+		 
 .. warning::
     **Whitelist**
     For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
