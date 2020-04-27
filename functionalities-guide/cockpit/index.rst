@@ -572,7 +572,7 @@ The HTML widget allows to add customized HTML and CSS code to add very custom dy
 
         For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
 
-The Edit section of the widget is composed by tree tabs: the HTML editor, the style and the dataset.
+The Edit section of the widget is composed by five tabs: the dataset, HTML editor, style, cross and filters.
 In the editor tab is possible to add the code that will be shown in the widget. Clicking on the top expander section in the tab, the one named "CSS" also the CSS editor will be available.
 
 .. important::
@@ -649,6 +649,12 @@ The ``kn-preview`` attribute is available to every HTML5 tag and is a way to mak
 The ``kn-selection-column`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attributes generates an on click event on the element to set the chosen column and value in the cockpit selections. The default will use as a selection the first row value for the column.
 
 The **kn-selection-value** attribute is optional and will add a specific value to the column selection.
+
+``[kn-variable='VARIABLE-NAME' key='VARIABLE-KEY']``
+
+The ``kn-variable`` tag is the tool to read the runtime value of one of the defined variables. It will change depending on the current value and can be used inside kn-if and kn-calc.
+
+The **key** attribute is optional and will select a specific key from the variable object if the variable is "Dataset" type, returning a specific value instead of a complete dataset.
 
 **Banned Tags**
 
@@ -817,8 +823,12 @@ The table result can also be configured to show a limited set of fields, please 
 
 The settings tab contains the management of the 3 elements that compose a directive:
     - Data table: enabled by default is the grid containing data. You can choose the number of item per page.
-    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets pagination options such as results limit, max number of items and more.
-    - Text search: if enabled a searcbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
+    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets options:
+        - *enable selection on facets*, if enabled a user click on the facets will throw a cockpit selection instead of just filtering the table.
+        - *closed by default*, if enabled the facets will be visible as closed groups by default.
+        - *facets column width*, this setting allows to choose the dimension of the facets column in px, rem or percentage values.
+        - *facets max number*, this setting allows to choose the maximum number of facets visible for every field.
+    - Text search: if enabled a searchbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
 
 .. figure:: media/image481b.png
 
@@ -828,6 +838,8 @@ The settings tab contains the management of the 3 elements that compose a direct
 
 .. figure:: media/image491.png
 It is possible to change the facets column ordering, for example if there is the need to move up a field.
+
+
 As shown in this example, "aggregazione" should be shown upper, just go to the edit widget section:
 
 .. figure:: media/image492.png
@@ -889,6 +901,268 @@ Inside python scripts it is possible to access analytical drivers by the usual p
 
 .. warning::
     **Python widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
+
+Custom Chart Widget
+~~~~~~~~~~~~~~~~~~~~~~
+.. figure:: media/image500.png
+
+The Custom Chart allows the user to directly embed html,css and js code using a supported external chart library and integrating with Knowage data and interactions using custom API.
+
+This widget will be available only if the *create custom chart widget* option is set for the specified role.
+
+The Edit section of the widget is composed by five tabs: dataset, editor, style, cross and filters.
+
+The **dataset tab** allows to select a specific dataset to use as a refferral for the API. Once the dataset has been selected a table with the columns list will appear below.
+In the table will be possible to change column alias, the column aggregation for measures and delete columns interacting with the selected column line.
+Clicking on *add column* or *add calculated field* buttons on top a popup will appear allowing to choose one of the dataset column to add or to insert the calculated field formula.
+
+.. figure:: media/image501.png
+
+The **Editor tab** allows to insert custom code and it's splitted into three components: CSS, HTML, JavaScript.
+
+.. figure:: media/image502.png
+
+The CSS component allows to insert css classes that will be used by the HTML code of the widget. It's also possible to use *@import* command if the referred url is inside the whitelist.
+
+The HTML component allows to insert HTML tags in order to create a structure to host the custom chart and additional structural informations.
+
+The JavaScript component is the code section, and allows to insert the custom chart code, custom Javascript code and the API usage.
+
+To use the api the keyword is **datastore**. datastore is object that contains the actual data; it has methods to iterate over results and get all values, as the Java counterpart, plus some other methods as the following:
+
+
+**getDataArray**
+
+|   returns: *data array*
+|   params: *custom user function*
+|   example: 
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.getDataArray(function(record){
+        return {
+        name: record.city,
+        y: record.num_children_at_home
+        }
+    })
+
+
+**getRecords**
+
+|   returns: array of objects; each object has nameOfDsColumn: value
+|   params: no params
+|   example: 
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.getRecords()
+
+
+**getColumn**
+
+|   returns: array of values for one dataset column
+|   params: dataset's column name
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+    
+    datastore.getColumn('country')
+
+
+**getSeriesAndData**
+
+|   returns: array of series with data for each series
+|   params: serie/measure name, custom user function
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+	
+    datastore.getSeriesAndData('PRODUCT_FAMILY',function(record){
+        return {
+            y: record.UNIT_SALES,
+            name: record.QUARTER
+        }
+    })
+
+
+**sort** - angular sort service (sorting is executed on the client side)
+
+|   returns: datastore sorted by dataset's column/s
+|   params: dataset's column name
+|   optional: sort type object {column:'asc/desc'}
+|   example1:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.sort('STORE_ID') //by default, it is asc
+    OR:
+    datastore.sort({'STORE_ID':'asc'})
+
+
+**filter** - angular filter service (filtering is executed on the client side)
+
+|   returns: datastore filtered by some value for dataset's column/s
+|   params: object that contains dataset's columns names for properties -> value to be filtered
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.filter({'QUARTER':'Q1','STORE_ID':'1'})
+
+
+**hierarchy**
+
+|   returns: hierarchy object with its functions and tree
+|   params: object that contains property levels -> array of dataset's columns names
+|   optional: same object with optional property measures -> object that contains dataset's columns names for properites -> aggreagtion function (sum, min, max)
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    var hierarchy = datastore.hierarchy({'levels':['QUARTER','PRODUCT_FAMILY'],'measures': {'UNIT_SALES':'SUM'}})
+
+
+**getChild**
+
+|   returns: node of hierarchy (node is Node object)
+|   params: index of child in hierarchy
+|   example: 
+
+.. code-block:: javaScript
+    :linenos:
+
+    hierarchy.getChild(0)
+
+
+*node* is an instance of Node object. It has convenient functions to explore the node:
+
+.. code-block:: javaScript
+    :linenos:
+
+    var node = hierarchy.getChild(0)
+
+
+**getLevel**
+
+|   returns: array of nodes of hierarchy on specific level
+|   params: index of level in hierarchy
+|   example: 
+
+.. code-block:: javaScript
+    :linenos:
+
+    hierarchy.getLevel(0)
+
+
+**getValue**
+
+|   returns: a measure's value for a specific hierarchy's child(node)
+|   params: dataset's measures's name
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getValue('UNIT_SALES')
+
+
+**getChild**
+
+|   returns: a specific node's child
+|   params: index of nodes's child
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getChild(0)
+
+
+**getParent**
+
+|   returns: a node parent of specific child
+|   params: no params
+|   example: 
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getChild(0).getParent()
+
+
+**getChildren**
+
+|   returns: an array of node's children
+|   params: no params
+|   example: 
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getChildren()
+
+
+**getSiblings**
+
+|   returns: an array of node siblings to a specific child
+|   params: no params
+|   example: 
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getChild(0).getSiblings()
+
+
+It is also possible to interact with the other cockpit widgets, to do so it's possible to use the **clickManager**:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.clickManager(columnName, columnValue);
+
+|   This method can be added everywhere the code is managing a click event, and will notify Knowage about the 
+    interaction.
+|   The default case (if no cross-navigation or preview-navigation is set) will throw a selection with the 
+    dataset column name and column value set in the method. 
+|   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
+    throw the set interaction. The dynamic values used will be the ones set in the method arguments.
+
+As a default Knowage supports natively Chart.js for the Community edition and HighChart.js for the Enterprise Edition.
+It is possible also to include other libraries adding the CDN script tag in the html Editor. Be aware that url not set in the whitelist will be deleted on save.
+
+.. warning::
+    **Whitelist**
+    For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
+    Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise those external links will be removed by the system. This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
+
+
+.. code-block:: xml
+   :linenos:
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <WHITELIST>
+      <service baseurl="https://www.youtube.com" />
+      <service baseurl="https://player.vimeo.com" />
+      <service baseurl="https://vimeo.com" />
+      <service baseurl="https://media.giphy.com" />
+      <service baseurl="https://giphy.com" />
+      <service baseurl="https://flic.kr" />
+      <service relativepath="/knowage/themes/" />
+      <service relativepath="/knowage/icons/" />
+      <service relativepath="/knowage/restful-services/1.0/images/" />
+   </WHITELIST>
+
+Like other widgets the "Cross", "Style", and the "Filters" tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
+
+
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
