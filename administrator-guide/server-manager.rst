@@ -66,9 +66,9 @@ Below we show the export editor.
 
 First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the ``MyFirstExport.zip``).
 
-Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its childer folders/leaves.
+Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its children folders/leaves.
 
-When you have chose a name and selected some documents, the export icon change colour from grey to pink. This means all elements are set to start exporting.
+When you have chosen a name and selected some documents, the export icon change colour from grey to pink. This means all elements are set to start exporting.
 
 Before going on decide if you want to export **Olap customized View** and/or **Scheduled documents** and/or **BIRT Translation** and/or **Schedule configurations** and/or **Document only in the selected functionality**.
 
@@ -80,7 +80,7 @@ Before going on decide if you want to export **Olap customized View** and/or **S
     Olap customized view
 
 - **Scheduled documents**
-   Checking this property the export the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
+   Checking this property the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
 
 .. figure:: media/SDOC.png
 
