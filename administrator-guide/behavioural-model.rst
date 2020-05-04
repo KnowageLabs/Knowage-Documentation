@@ -125,6 +125,8 @@ In addition to the profile attributes created by administrator, by default Knowa
 
 -   **user_session_roles**: set like *user_roles* attribute, if no default role is set. Set with default role selected, otherwise.
 
+-   **language**: set with the language selected by the user
+
 .. figure:: media/image29.png
 
    Profile attributes Management.
