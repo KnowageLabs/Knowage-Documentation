@@ -14,7 +14,7 @@ To create a Metamodel enter the **Business Model Catalogue** and add a new model
 
 -  Name (mandatory): Name of the model (cannot be changed after the save).
 -  Description: A longer description of your model.
--  Category (mandatory): Select, from the ones avaiables, a category that the model belongs to.
+-  Category (mandatory): Select, from the ones available, a category that the model belongs to.
 -  Data Source (mandatory): select the datasource that will be used to create your model (so the one that contains the tables that you need).
 
 .. _settingthemodelinfo:
@@ -35,7 +35,7 @@ To add a new parameter, you can click on the tab **Drivers** and then on a **Add
 
     Association with analytical driver panel.
 
-Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the meta model.   
+Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the meta model.
 
 Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set if the driver is multivalue or not. By default, drivers are set to be mandatory so you don't have the option to change that like you have for analytical document.
 
@@ -86,14 +86,14 @@ Once defined the correlation, the child parameters will display the labels durin
 Correlation through LOV and drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In previous sections we saw how to set correlation through the GUI available in meta model panel, but there is also the possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously configured a driver that runs values that can be used in the "where" clause of a SQL query. Then the user must set a query-type LOV using the syntax 
+In previous sections we saw how to set correlation through the GUI available in meta model panel, but there is also the possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously configured a driver that runs values that can be used in the "where" clause of a SQL query. Then the user must set a query-type LOV using the syntax
 
 We stress that the ``AD_name`` is the name of the driver the administrator is trying to reach. Syntax for setting correlation through LOV configuration is:
 
 .. code-block:: bash
-  :caption: Syntax for setting correlation through LOV configuration 
+  :caption: Syntax for setting correlation through LOV configuration
   :linenos:
-  
+
    $P{AD_name}
 
 .. figure:: media/image82.png
@@ -109,7 +109,7 @@ As a result, when opening meta model, as soon as the user pick up a value from t
 Create an empty model
 ~~~~~~~~~~~~~~~~~~~~~
 
-The first time you enter the Meta Web, the interface (see Figure 10.2 will show you the available tables extracted from the selected data source.
+The first time you enter the Meta Web, the interface (see Figure 10.2) will show you the available tables extracted from the selected data source.
 
 .. figure:: media/image300.png
 
@@ -119,9 +119,9 @@ For each table you can decide if you want to include it in your metamodel. More 
 
 -  **Physical Model**: it represents a “snapshot” of the database at the moment of the creation of you metamodel. The physical model contains a list of tables and information like columns and foreign keys retrieved from the database. The Physical Model cannot be modified but could be updated to reflect changes made on the database after the creation.
 
--  **Business Model**: it is based on the physical model but let the user recombine some of his informations. For example is possible to create a Business Class that contains only some of the columns of a Physical Table and create new relationships between Business Classes that are not defined on the physical database.
+-  **Business Model**: it is based on the physical model but let the user recombine some of his information. For example is possible to create a Business Class that contains only some of the columns of a Physical Table and create new relationships between Business Classes that are not defined on the physical database.
 
-If you choose to include a table only in the physical model is always pssible to create a corresponding business class later during the editing. When you have finished to select the tables you can proceed to the editing clicking on the **Continue** button.
+If you choose to include a table only in the physical model is always possible to create a corresponding business class later during the editing. When you have finished to select the tables you can proceed to the editing clicking on the **Continue** button.
 
 Editing the metamodel
 ~~~~~~~~~~~~~~~~~~~~~
@@ -134,7 +134,7 @@ The “Physical Model” tab contains the tables that the user has checked earli
 
     Physical Model Tab.
 
-The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to the figure below, selecting the “Update Physical Model” option the user can refresh the model metadata. 
+The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to the figure below, selecting the “Update Physical Model” option the user can refresh the model metadata.
 
 .. _updtphisicalmdl1:
 .. figure:: media/image302a.png
@@ -161,16 +161,16 @@ In this view, you see all the Business Class created at the first initialization
 .. figure:: media/image309.png
 
     Exploring Business Class properties.
-	
+
 	Change the order of the business classes
 
-If you want to change order of the business classes, you can do it using drad and drop functionality. 
+If you want to change order of the business classes, you can do it using drag and drop functionality.
 
 .. figure:: media/entityDragDrop.png
 
-Using the **Property List** tab, the user can custom the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatia functions to the dimension fields available in the QbE interface.
+Using the **Property List** tab, the user can custom the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatial functions to the dimension fields available in the QbE interface.
 
-The **Attributes** tab lets the user to define which columns to be used as primary keys and which are effectively functional for the Business Class (not to be confused with the visibility condition). Note that, for istance, it is not possible to disable the “In Use” option when the field has already been set as foreign key.
+The **Attributes** tab lets the user to define which columns to be used as primary keys and which are effectively functional for the Business Class (not to be confused with the visibility condition). Note that, for instance, it is not possible to disable the “In Use” option when the field has already been set as foreign key.
 
 The **Calculated field** tab is used to configure computed measures or attributes. Click on the dedicated button, as shown below, to create a new field. Use the list of functions to retrieve right function syntax and the list of fields on the left to correctly type the fields name.
 
@@ -221,12 +221,12 @@ Use the second type of cardinality when the type of cardinality can be optional.
 
 SQL Filter
 ~~~~~~~~~~
-    
-There is a new feature that is added in meta web. It is SQL Filter which we can define in Filter tab in meta web as you can see in the figure below. SQL Filter is used for applying already defined drivers in query. 
+
+There is a new feature that is added in meta web. It is SQL Filter which we can define in Filter tab in meta web as you can see in the figure below. SQL Filter is used for applying already defined drivers in query.
 
 .. figure:: media/image1.png
 
-SQL filter is expression that is added in the end of query as part of where clause. The right syntax for sql filter is: 
+SQL filter is expression that is added in the end of query as part of where clause. The right syntax for sql filter is:
 column_name = $P{url_name_of_the_driver}. For example: city = $P{cityUrl}. If you want to add more than one filter, you can connect them with an operator (AND, OR...) as you can see in an example in figure below.
 
 .. figure:: media/image2.png
@@ -238,7 +238,7 @@ city IN ($P{cityUrl}).
 Create a new business class
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the “Business Model” tab, the sandwitch icon lets the user add other Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
+In the “Business Model” tab, the sandwich icon lets the user add other Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
 
 .. figure:: media/image31213.png
 
@@ -247,7 +247,7 @@ In the “Business Model” tab, the sandwitch icon lets the user add other Busi
 
 When clicking on the icon, as shown in Figure above), and selecting “New Business Class”, a new dialog asks to the users to:
 
--  select a Physical Table from the available ones; 
+-  select a Physical Table from the available ones;
 -  insert a description for this new business class;
 -  select one or more columns.
 
@@ -279,7 +279,7 @@ Scrolling the table “Property list” tab, the user finds the **Type** menu it
 .. figure:: media/image31819.png
 
     Table property list.
-	
+
 
 Column property list
 ~~~~~~~~~~~~~~~~~~~~
@@ -290,7 +290,7 @@ As well, the user can employ each field property list (see next figure) to both 
 .. figure:: media/image322.png
 
    Column property list.
-   
+
 The **Structural** area covers an important role for the field properties. Here the user can set:
 
 -  **Visibility** over the field,
@@ -301,7 +301,7 @@ The **Structural** area covers an important role for the field properties. Here 
 -  **Profile attribute filter type**, to define the filter operator among “equals to”, “in”, “like”,
 -  **Data type**, to indicate the field data type.
 
-In the **Behavioural Model** area, the user can assign the field’s visbility permission to specific roles.
+In the **Behavioural Model** area, the user can assign the field’s visibility permission to specific roles.
 
 In the **Physical** area, recalls the physical table and field name from which the field have been take.
 
@@ -313,13 +313,13 @@ If you did not choose all columns from physical table, when you were creating ne
 
 	Remove existing column from business class
 
-If you want to remove column from buissiness table, you need to click on business class from which you want to remove column. Open Attributes tab and click on three dots of column syou want to delete. It will open details panel. Click on delete button. 
+If you want to remove column from business table, you need to click on business class from which you want to remove column. Open Attributes tab and click on three dots of column you want to delete. It will open details panel. Click on delete button.
 
 .. figure:: media/deleteBusinessColumn.png
 
 	Change the order of the columns
 
-If you want to change order of columns, you can do it using drad and drop functionality. 
+If you want to change order of columns, you can do it using drad and drop functionality.
 
 .. figure:: media/columnDragDrop.png
 
@@ -331,8 +331,8 @@ After the editing of the metamodel, click on “Save” on the Meta Web toolbar 
 .. figure:: media/image323.png
 
     Generate datamart dialog.
-   
-If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advacend options” (see fegure below) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to buid the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
+
+If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advanced options” (see figure below) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to build the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
 
 .. _generdatamdialogadv:
 .. figure:: media/image324.png
@@ -357,9 +357,8 @@ Once the model has been saved, some more options are enabled. In fact, the user 
     Importing metadata.
 
 Finally the **Saved versions** section the user keeps trace of model changes over time. Furthermore it is possible to restore old versions by checking the active column. Selecting the “three-dots” icon the user can download the jar file or the model itself or delete the version.
-Figure belowshows an example.
+Figure below shows an example.
 
 .. figure:: media/image327.png
 
     Saved version functionalities.
-   
