@@ -88,7 +88,7 @@ Thanks to CKAN integration you can easily access to datasets published in the Wo
 .. warning::
       **CKAN Datasets**
 
-      CKAN datasets can be divided in four main categories: “Public”, “Organization private”, “Acquired”, “User private”. You can download and use only the datasets having a **Public** category.
+      CKAN datasets can be divided into four main categories: “Public”, “Organization private”, “Acquired”, “User private”. You can download and use only the datasets having a **Public** category.
 
 CKAN datasets access method
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
