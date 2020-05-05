@@ -32,23 +32,24 @@ To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/serv
 .. code-block:: xml
 		:linenos:
 		
-		<Resource auth="Container" 
-				driverClassName="<JDBC driver>" 
+		<Resource auth="Container"
+				driverClassName="<JDBC driver>"
 				name="jdbc/knowage"
-				password="<password>" 
-				type="javax.sql.DataSource" 
-				url="<JDBC URL>" 
+				password="<password>"
+				type="javax.sql.DataSource"
+				url="<JDBC URL>"
 				username="<user name>"
-				maxTotal="10" 
-				maxIdle="1" 
-				validationQuery="<validation query>" 
-				removeAbandoned="true" 
-				removeAbandonedTimeout="3600" 
-				logAbandoned="true" 
-				testOnReturn="true" 
-				testWhileIdle="true" 
-				timeBetweenEvictionRunsMillis="10000" 
-				minEvictableIdleTimeMillis="60000" /> 
+				maxTotal="10"
+				maxWait="-1"
+				maxIdle="1"
+				validationQuery="<validation query>"
+				removeAbandoned="true"
+				removeAbandonedTimeout="3600"
+				logAbandoned="true"
+				testOnReturn="true"
+				testWhileIdle="true"
+				timeBetweenEvictionRunsMillis="10000"
+				minEvictableIdleTimeMillis="60000" />
 
 Cache database connection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,22 +59,23 @@ In some scenarios (for example when defining a cockpit document on top of a file
 .. code-block:: xml
 		:linenos:
 		
-		 <Resource auth="Container" 
-				driverClassName="<JDBC driver>" 
+		 <Resource auth="Container"
+				driverClassName="<JDBC driver>"
 				name="jdbc/ds_cache"
-				password="<password>" 
-				type="javax.sql.DataSource" 
-				url="<JDBC URL>" 
+				password="<password>"
+				type="javax.sql.DataSource"
+				url="<JDBC URL>"
 				username="<user name>"
-				maxTotal="10" 
-				maxIdle="1" 
-				validationQuery="<validation query>" 
-				removeAbandoned="true" 
-				removeAbandonedTimeout="3600" 
-				logAbandoned="true" 
-				testOnReturn="true" 
-				testWhileIdle="true" 
-				timeBetweenEvictionRunsMillis="10000" 
+				maxTotal="10"
+				maxWait="-1"
+				maxIdle="1"
+				validationQuery="<validation query>"
+				removeAbandoned="true"
+				removeAbandonedTimeout="3600"
+				logAbandoned="true"
+				testOnReturn="true"
+				testWhileIdle="true"
+				timeBetweenEvictionRunsMillis="10000"
 				minEvictableIdleTimeMillis="60000" />
 
 Connection to business data
@@ -84,24 +86,24 @@ Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the 
 .. code-block:: xml
 	:linenos:
 	
-	 <Resource auth="Container" 
-			driverClassName="<JDBC driver>" 
+	 <Resource auth="Container"
+			driverClassName="<JDBC driver>"
 			name="jdbc/dwh"
-			password="<password>" 
-			type="javax.sql.DataSource" 
-			url="<JDBC URL>" 
+			password="<password>"
+			type="javax.sql.DataSource"
+			url="<JDBC URL>"
 			username="<user name>"
-			maxWait="-1" 
-			maxTotal="10" 
-			maxIdle="1" 
-			validationQuery="<validation query>" 
-			removeAbandoned="true" 
-			removeAbandonedTimeout="3600" 
-			logAbandoned="true" 
-			testOnReturn="true" 
-			testWhileIdle="true" 
-			timeBetweenEvictionRunsMillis="10000" 
-			minEvictableIdleTimeMillis="60000" 
+			maxTotal="10"
+			maxWait="-1"
+			maxIdle="1"
+			validationQuery="<validation query>"
+			removeAbandoned="true"
+			removeAbandonedTimeout="3600"
+			logAbandoned="true"
+			testOnReturn="true"
+			testWhileIdle="true"
+			timeBetweenEvictionRunsMillis="10000"
+			minEvictableIdleTimeMillis="60000"
 			factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
 

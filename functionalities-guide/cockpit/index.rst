@@ -91,9 +91,9 @@ the **Style**, the **Dataset** and the **Filters** tab.
 
      Text editor of text widget configuration.
 
-On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possible to associate dataset values to the text and 
-read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset 
-columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure 
+On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possible to associate dataset values to the text and
+read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset
+columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure
 first select the desired function and then the field of numeric type.
 
 .. figure:: media/image1454647.png
@@ -106,7 +106,7 @@ It's also possible to add variables values if at least one of them is defined. D
 
     Variables in text widget.
 
-On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be 
+On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be
 used in the dynamic value. Finally, the “Filters” tab can be used to extract limited output from the dataset. We put details off to the table widget subsection.
 
 Image widget
@@ -134,8 +134,8 @@ On the **Cross** tab you can define navigation to another document, as shown in 
 
     Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final user.
 
-For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. 
-This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. 
+For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition.
+This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly.
 If the cross navigation definition is not defined, then when you launch the image widget cross navigation will be shown a pop up (refer to figure below) with the list of cross navigation definition that exist for this cockpit.
 
 .. _crossnavmultchoice:
@@ -246,8 +246,8 @@ If variables are set for the present cockpit, the variable menu button will appe
 Variables menu
 
 
-In the bottom section of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table by dragging 
-them up or down, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. 
+In the bottom section of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table by dragging
+them up or down, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below.
 Here you can find configuration features to adjust the column size, max cell characters, hide column or column header options, and the row spanning toggler.
 
 .. figure:: media/image157d.png
@@ -745,25 +745,21 @@ For all the attributes that are filters, a user could select the relative value 
 
 As said, Map widget supports calculated fields, a way for a user to calculate additional data to show on map or to display into popup detail:
 
-.. important::
-         **TODO KNOWAGE-4756 - Calculated fields on map widget**
+   .. figure:: media/image503.png
 
-         Insert image of the Add calculated field button in layer's metadata
+       Add calculated field button in layer's metadata.
 
 From the calculated field's dialog a user can combine measures and operations to add more data to the layer. The user can use a SQL-like syntax to create a statement that describe the new calculated field:
 
-.. important::
-         **TODO KNOWAGE-4756 - Calculated fields on map widget**
+  .. figure:: media/image504.png
 
-         Insert image of the Calculated Field dialog
+      Calculated Field's dialog.
 
 The newly calculated field added by the user is shown as a measure in layer's dataset: from the 3-dots menu on the right of the field a user can update or delete the calculated field.
 
-.. important::
-         **TODO KNOWAGE-4756 - Calculated fields on map widget**
+  .. figure:: media/image505.png
 
-         Insert image of the 3-dots menu on calculated field.
-
+      The 3-dots menu on calculated field.
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
@@ -823,7 +819,7 @@ The table result can also be configured to show a limited set of fields, please 
 
 .. figure:: media/image481.png
 
-**Settings** 
+**Settings**
 
 The settings tab contains the management of the 3 elements that compose a directive:
     - Data table: enabled by default is the grid containing data. You can choose the number of item per page.
@@ -1139,9 +1135,13 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 |   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
     throw the set interaction. The dynamic values used will be the ones set in the method arguments.
 
-As a default Knowage supports natively Chart.js for the Community edition and HighChart.js for the Enterprise Edition.
-It is possible also to include other libraries adding the CDN script tag in the html Editor. Be aware that url not set in the whitelist will be deleted on save.
 
+.. important::
+         **Chart libraries**
+
+         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. Be aware that url not set in the whitelist will be deleted on save.
+
+		 
 .. warning::
     **Whitelist**
     For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
