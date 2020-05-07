@@ -11,13 +11,13 @@ For Tomcat: the configuration of the pool of thread is available inside the TOMC
         :linenos:
         :caption: Configuration of the pool of thread for Tomcat.
 
-        <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" 
-            maxThreads="5" 
-            minThreads="1" 
-            queueLength="10"   
-            maxDaemons="10" 
-            name="wm/SpagoWorkManager" 
-            type="commonj.work.WorkManager"/>       
+        <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory"
+            maxThreads="5"
+            minThreads="1"
+            queueLength="10"
+            maxDaemons="10"
+            name="wm/SpagoWorkManager"
+            type="commonj.work.WorkManager"/>
 
 
 For JBoss: the configuration of the pool of thread is available inside the JBOSS_HOME/ standalone/configuration/s Refer to Code below.
@@ -26,15 +26,15 @@ For JBoss: the configuration of the pool of thread is available inside the JBOSS
         :linenos:
         :caption: Configuration of the pool of thread for JBoss.
 
-        <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"                
-          class="de.myfoo.commonj.work.MyFooWorkManagerFactory">              
-          <environment>                                                                  
-          <property name="maxThreads" value="5"/>                            
-          <property name="minThreads" value="1"/>   
-          <property name="queueLength" value="10"/> 
-          <property name="maxDaemons" value="10"/>  
-          </environment>                            
-        </object-factory>                            
+        <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"
+          class="de.myfoo.commonj.work.MyFooWorkManagerFactory">
+          <environment>
+          <property name="maxThreads" value="5"/>
+          <property name="minThreads" value="1"/>
+          <property name="queueLength" value="10"/>
+          <property name="maxDaemons" value="10"/>
+          </environment>
+        </object-factory>
 
 In both cases, the meaning of the configuration parameters is the following:
 
@@ -68,47 +68,47 @@ Knowage uses the component Log4J to create the log applications. Each web applic
         :linenos:
         :caption: Logg appender.
 
-         log4j.rootLogger=ERROR, SpagoBI                                        
-                                                                       
-         # SpagoBI Appender                                                    
-         log4j.appender.SpagoBI=org.apache.log4j.RollingFileAppender           
-         log4j.appender.SpagoBI.File=${catalina.base}/logs/knowage.log         
-         log4j.appender.SpagoBI.MaxFileSize=10000KB                            
-         log4j.appender.SpagoBI.MaxBackupIndex=0                               
-         log4j.appender.SpagoBI.layout=org.apache.log4j.PatternLayout          
+         log4j.rootLogger=ERROR, SpagoBI
+
+         # SpagoBI Appender
+         log4j.appender.SpagoBI=org.apache.log4j.RollingFileAppender
+         log4j.appender.SpagoBI.File=${catalina.base}/logs/knowage.log
+         log4j.appender.SpagoBI.MaxFileSize=10000KB
+         log4j.appender.SpagoBI.MaxBackupIndex=0
+         log4j.appender.SpagoBI.layout=org.apache.log4j.PatternLayout
          log4j.appender.SpagoBI.layout.ConversionPattern=[%t] %d{DATE} %5p %c.%M:%L - %m %n
-                                                                   
-         log4j.appender.SpagoBI.append=false                               
-                                                                   
-         log4j.appender.Quartz=org.apache.log4j.RollingFileAppender        
-         log4j.appender.Quartz.File=${catalina.base}/logs/Quartz.log       
-         log4j.appender.Quartz.MaxFileSize=10000KB                         
-         log4j.appender.Quartz.MaxBackupIndex=10                           
-         log4j.appender.Quartz.layout=org.apache.log4j.PatternLayout       
-         log4j.appender.Quartz.layout.ConversionPattern= [%t] %d{DATE} %5p %c.%M:%L - %m  %n    
-                                                                      
-         log4j.appender.SpagoBI_Audit=org.apache.log4j.FileAppender           
-         log4j.appender.SpagoBI_Audit.File=${catalina.base}/logs/knowage_[1]\_OperatorTrace.log    
-                                                                       
-         log4j.appender.SpagoBI_Audit.layout=org.apache.log4j.PatternLayout    
-         log4j.appender.SpagoBI_Audit.layout.ConversionPattern=%m%n            
-                                                                       
-         log4j.appender.CONSOLE = org.apache.log4j.ConsoleAppender             
-         log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout          
-         log4j.appender.CONSOLE.layout.ConversionPattern=%c.%M: %m%n #         
-                                                            
-                                                                       
-         log4j.logger.Spago=ERROR, SpagoBI log4j.additivity.Spago=false        
-                                                                       
-         log4j.logger.it.eng.spagobi=ERROR, SpagoBI, CONSOLE                   
-         log4j.additivity.it.eng.spagobi=false                                 
-                                                                       
-         log4j.logger.it.eng.spagobi.commons.utilities.messages=ERROR, SpagoBI 
-         log4j.logger.it.eng.spagobi.commons.utilities.urls.WebUrlBuilder=ERROR,SpagoBI  
-         log4j.logger.org.quartz=ERROR, Quartz, CONSOLE                        
-         log4j.logger.org.hibernate=ERROR, SpagoBI                             
-                                                                       
-         log4j.logger.audit=INFO, SpagoBI_Audit log4j.additivity.audit=false   
+
+         log4j.appender.SpagoBI.append=false
+
+         log4j.appender.Quartz=org.apache.log4j.RollingFileAppender
+         log4j.appender.Quartz.File=${catalina.base}/logs/Quartz.log
+         log4j.appender.Quartz.MaxFileSize=10000KB
+         log4j.appender.Quartz.MaxBackupIndex=10
+         log4j.appender.Quartz.layout=org.apache.log4j.PatternLayout
+         log4j.appender.Quartz.layout.ConversionPattern= [%t] %d{DATE} %5p %c.%M:%L - %m  %n
+
+         log4j.appender.SpagoBI_Audit=org.apache.log4j.FileAppender
+         log4j.appender.SpagoBI_Audit.File=${catalina.base}/logs/knowage_[1]\_OperatorTrace.log
+
+         log4j.appender.SpagoBI_Audit.layout=org.apache.log4j.PatternLayout
+         log4j.appender.SpagoBI_Audit.layout.ConversionPattern=%m%n
+
+         log4j.appender.CONSOLE = org.apache.log4j.ConsoleAppender
+         log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+         log4j.appender.CONSOLE.layout.ConversionPattern=%c.%M: %m%n #
+
+
+         log4j.logger.Spago=ERROR, SpagoBI log4j.additivity.Spago=false
+
+         log4j.logger.it.eng.spagobi=ERROR, SpagoBI, CONSOLE
+         log4j.additivity.it.eng.spagobi=false
+
+         log4j.logger.it.eng.spagobi.commons.utilities.messages=ERROR, SpagoBI
+         log4j.logger.it.eng.spagobi.commons.utilities.urls.WebUrlBuilder=ERROR,SpagoBI
+         log4j.logger.org.quartz=ERROR, Quartz, CONSOLE
+         log4j.logger.org.hibernate=ERROR, SpagoBI
+
+         log4j.logger.audit=INFO, SpagoBI_Audit log4j.additivity.audit=false
 
 
 If the user wishes to enable the tracing of the information to **DEBUG** level it is enough to modify the following line
@@ -123,7 +123,7 @@ in
 .. code-block:: bash
         :linenos:
 
-        log4j.logger.it.eng.spagobi=DEBUG, SpagoBI, CONSOLE    
+        log4j.logger.it.eng.spagobi=DEBUG, SpagoBI, CONSOLE
 
 For further details we refer to the official Log4J documents.
 
@@ -209,7 +209,7 @@ If the user profile attribute **auth_mode** is defined and its value equals to `
 
 .. warning::
     The only way to mantain access to Knowage for **users not mapped onto LDAP** is to:
-    
+
     * define the user profile attribute **auth_mode**,
     * set **auth_mode** = ``internal`` for every user not mapped onto LDAP,
     * use the connector **ProfiledLdapSecurityServiceSupplier** (see below).
@@ -258,3 +258,15 @@ The final step is to set the LDAP security connector as follow:
         To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value ``it.eng.spagobi.security.InternalSecurityServiceSupplierImpl`` using a database client.
 
 Knowage is now ready to authenticate the users via LDAP credentials.
+
+-----------------------------
+Login security settings
+-----------------------------
+Login security configuration can be set filling fields below:
+
+* **internal.security.login.checkForMaxFailedLoginAttempts**: if active and set to true, users will only be able to access Knowage if they have not reached the maximum number of failed login attempts;
+* **internal.security.login.maxFailedLoginAttempts**: the maximum number of failed login attempts.
+
+.. figure:: media/image32.png
+
+   Advanced configuration - login security settings.
