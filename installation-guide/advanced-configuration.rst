@@ -293,4 +293,4 @@ Login security configuration can be set filling fields below:
 
 .. figure:: media/image32.png
 
-   Advanced configuration - password constraints settings.
+   Advanced configuration - login security settings.
