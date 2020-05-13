@@ -100,3 +100,36 @@ The administrator menu is divided in subpanels which maps the different managing
    |                       |                       | Import-Export         |
    |                       |                       | options               |
    +-----------------------+-----------------------+-----------------------+
+
+
+---------------
+My Account menu
+---------------
+
+*My account* button, if enabled, allows user to access Modify profile page. Here you can modify your information and also permanently delete your account.
+
+Modify
+^^^^^^
+With this feature user can modify their own data such as Name, Surname and Email address. Password and Confirm password fields are mandatory so they must be filled before applying changes clicking on "MODIFY".
+
+.. attention::
+
+	If user fills *Password* and *Confirm password* fields with a valid password that is NOT the current password (used to log in), the password will be updated with the new value.
+
+Delete account
+^^^^^^^^^^^^^^
+
+With this feature user can delete his account clicking on *DELETE ACCOUNT* button. Then a message confirms the correct cancellation and the login page is displayed.
+
+.. attention::
+
+	Account cancellation is irreversible. User will no longer be able to log into Knowage.
+
+Password change
+^^^^^^^^^^^^^^^
+
+If user wants to change his password, he must fill *Password* and *Confirm Password* fields and the click on *MODIFY* button. A confirmation message will be displayed if the update has been successful.
+
+.. figure:: media/image116.png
+
+   My account - Modify profile

@@ -258,3 +258,39 @@ The final step is to set the LDAP security connector as follow:
         To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value ``it.eng.spagobi.security.InternalSecurityServiceSupplierImpl`` using a database client.
 
 Knowage is now ready to authenticate the users via LDAP credentials.
+
+
+-----------------------------
+Password constraints settings
+-----------------------------
+
+User password constraints can be set configuring parameters below:
+
+* **changepwdmodule.len_min**: minimum number of character for the password;
+* **changepwdmodule.special_char**: set of allowed special characters;
+* **changepwdmodule.upper_char**: if active, the password must contain at least one of the uppercase characters set in the value;
+* **changepwdmodule.lower_char**: if active, the password must contain at least one of the lowercase characters set in the value;
+* **changepwdmodule.number**: if active, the password must contain at least one of the digit set in the value;
+* **changepwdmodule.alphabetical**: if active, the password must contain at least one alphabetical set in the value;
+* **changepwdmodule.change**: if true, new password must be different from the latest;
+* **changepwd.change_first**: if true, password must be changed at first login;
+* **changepwd.disactivation_time**: number of months before deactivation;
+* **changepwd.expired_time**: number of days for the expiration.
+
+.. figure:: media/image31.png
+
+   Advanced configuration - password constraints settings.
+
+By default, all above configurations are disabled.
+
+-----------------------------
+Login security settings
+-----------------------------
+Login security configuration can be set filling fields below:
+
+* **internal.security.login.checkForMaxFailedLoginAttempts**: if active and set to true, users will only be able to access Knowage if they have not reached the maximum number of failed login attempts;
+* **internal.security.login.maxFailedLoginAttempts**: the maximum number of failed login attempts.
+
+.. figure:: media/image32.png
+
+   Advanced configuration - login security settings.
