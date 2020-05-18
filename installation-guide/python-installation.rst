@@ -57,6 +57,7 @@ Go to the ``Configuration management`` section, and create a new variable of cat
 Now you will be able to see the address of the so configured environment when creating a Dataset or a Widget.
 
 **Be aware that depending on the architecture of your solution, you might have to define two different addresses for reaching the same instance of Python.**
+
 *  One address is for reaching Python from the client (browser) and will be used when creating a widget,
 *  One address is for reaching Python from the server (Knowage) and will be used when creating a Dataset.
 
