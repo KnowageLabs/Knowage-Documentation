@@ -286,7 +286,7 @@ By default, all above configurations are disabled.
 -----------------------------
 Login security settings
 -----------------------------
-Login security configuration can be set filling fields below:
+Login security configurations can be set filling fields below:
 
 * **internal.security.login.checkForMaxFailedLoginAttempts**: if active and set to true, users will only be able to access Knowage if they have not reached the maximum number of failed login attempts;
 * **internal.security.login.maxFailedLoginAttempts**: the maximum number of failed login attempts.
@@ -294,3 +294,11 @@ Login security configuration can be set filling fields below:
 .. figure:: media/image32.png
 
    Advanced configuration - login security settings.
+
+-----------------------------
+Resource export folder cleaning settings
+-----------------------------
+Resource export folder cleaning configurations can be set filling fields below:
+
+* **KNOWAGE.RESOURCE.EXPORT.FOLDER.CLEANING_PERCENTAGE**: if active, the cleaning procedure will delete the files contained in the export resource folder leaving this percentage of free space (0 - 100). Default 30;
+* **KNOWAGE.RESOURCE.EXPORT.FOLDER.MAX_FOLDER_SIZE**: if active, cleaning procedure will start only if the resource export folder will reach this size (byte). Default 10737418240.
