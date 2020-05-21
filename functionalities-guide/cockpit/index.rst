@@ -767,7 +767,7 @@ For every layer, a user can specify the way the data will be displayed on map: t
 
     Style configuration for every layer.
 
-For marker there are multiple choices between a user can select. The first one is the standard marker, where a user can select only the marker color:
+For marker there are multiple choices between a user can select. The first one is the standard marker, where a user can select the marker color and size. The user can also select the border color if the position attribute is of type JSON or WKT:
 
 .. figure:: media/image483.png
 
@@ -935,7 +935,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: *data array*
 |   params: *custom user function*
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -952,7 +952,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: array of objects; each object has nameOfDsColumn: value
 |   params: no params
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -968,7 +968,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
     :linenos:
-    
+
     datastore.getColumn('country')
 
 
@@ -980,7 +980,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
     :linenos:
-	
+
     datastore.getSeriesAndData('PRODUCT_FAMILY',function(record){
         return {
             y: record.UNIT_SALES,
@@ -1033,7 +1033,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: node of hierarchy (node is Node object)
 |   params: index of child in hierarchy
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1053,7 +1053,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: array of nodes of hierarchy on specific level
 |   params: index of level in hierarchy
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1089,7 +1089,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: a node parent of specific child
 |   params: no params
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1101,7 +1101,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: an array of node's children
 |   params: no params
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1113,7 +1113,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: an array of node siblings to a specific child
 |   params: no params
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1128,10 +1128,10 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 
     datastore.clickManager(columnName, columnValue);
 
-|   This method can be added everywhere the code is managing a click event, and will notify Knowage about the 
+|   This method can be added everywhere the code is managing a click event, and will notify Knowage about the
     interaction.
-|   The default case (if no cross-navigation or preview-navigation is set) will throw a selection with the 
-    dataset column name and column value set in the method. 
+|   The default case (if no cross-navigation or preview-navigation is set) will throw a selection with the
+    dataset column name and column value set in the method.
 |   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
     throw the set interaction. The dynamic values used will be the ones set in the method arguments.
 
@@ -1141,7 +1141,7 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 
          As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. Be aware that url not set in the whitelist will be deleted on save.
 
-		 
+
 .. warning::
     **Whitelist**
     For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
