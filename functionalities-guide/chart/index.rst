@@ -269,7 +269,7 @@ Once you selected the dataset and the type of chart, choose at least two attribu
 
 Then click on **Configuration**. As you can see the features are not exactly the same as traditional chart. We give some tips on most important sunburst settings.
 
-Using the **Generic** button you can set the **opacity** on mouse movement and choose how to display the measure values: absolute, percentage or both. These two features allow the visualization of data just moving the mouse over the slice: the slice is highlighted and values are shown in the center of the ring while the root-node path for the node selected is displayed on the left bottom corner of the page. Opacity and Breadcrumb configuration are available only on Combining Edition. The tooltip is a mandatory field since it shows the value of the selected slice. Therefore be sure to have filled it before saving by using the **Explanation detail** panel. On Comunity Edition you have option custom the root-node path, clicking on the **Sequence** icon and choose position, label tail size and text style. **Sequence** option is not available on Enterprise edition, it is depricated. Figure below sums up the three features.
+Using the **Generic** button you can set the **opacity** on mouse movement and choose how to display the measure values: absolute, percentage or both. These two features allow the visualization of data just moving the mouse over the slice: the slice is highlighted and values are shown in the center of the ring while the root-node path for the node selected is displayed on the left bottom corner of the page. Opacity and Breadcrumb configuration are available only on Comunity Edition. The tooltip is a mandatory field since it shows the value of the selected slice. Therefore be sure to have filled it before saving by using the **Explanation detail** panel. On Comunity Edition you have option custom the root-node path, clicking on the **Sequence** icon and choose position, label tail size and text style. **Sequence** option is not available on Enterprise edition, it is deprecated. Figure below sums up the three features.
 
 .. figure:: media/image1070809.png
 
@@ -386,7 +386,7 @@ In this example three different classes of iris are studied. Combining the value
 
 Therefore, select **parallel** as chart type using the designer interface, then choose one or more attributes in the X-axis panel and one or more measures in the Y-axis panel.
 
-On the **Configuration** tab you can set the generic configuration for the chart and you must fill the **Series as filter column** filed under ”Limit configuration”. Under ”Tooltip configuration” there is new property available - **Maximum number of records to show tooltip**. It is used to limit showing tooltio in case there are lot of records returned from dataset, which make chart more readable. 
+On the **Configuration** tab you can set the generic configuration for the chart and you must fill the **Series as filter column** filed under ”Limit configuration”. Under ”Tooltip configuration” there is new property available - **Maximum number of records to show tooltip**. It is used to limit showing tooltip in case there are lot of records returned from dataset, which make chart more readable. 
 
 Heatmap chart
 ~~~~~~~~~~~~~
