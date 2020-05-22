@@ -947,6 +947,22 @@ To use the api the keyword is **datastore**. datastore is object that contains t
         }
     })
 
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	[
+		{
+			name:'New York',
+			y: 5
+		},
+		{
+			name:'Boston',
+			y: 3
+		}
+	]
+
 
 **getRecords**
 
@@ -959,6 +975,25 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
     datastore.getRecords()
 
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	[
+		{
+			city:'New York',
+			total_children: 5,
+			country: 'USA'
+		},
+		{
+			name:'Boston',
+			total_children: 3,
+			country: 'USA'
+			
+		}
+	]
+
 
 **getColumn**
 
@@ -970,6 +1005,13 @@ To use the api the keyword is **datastore**. datastore is object that contains t
     :linenos:
     
     datastore.getColumn('country')
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	['USA','Mexico','Canada']
 
 
 **getSeriesAndData**
@@ -987,6 +1029,47 @@ To use the api the keyword is **datastore**. datastore is object that contains t
             name: record.QUARTER
         }
     })
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	[
+		{
+			name:'Drink',
+			data: [
+				{
+					y: 5000,
+					name: 'Q1'
+				},
+				{
+					y: 7000,
+					name: 'Q2'
+					
+				}
+			]
+		},
+		{
+			name:'Food',
+			data: [
+				{
+					y: 6000,
+					name: 'Q1'
+				},
+				{
+					y: 4000,
+					name: 'Q2'
+					
+				},
+				{
+					y: 3000,
+					name: 'Q3'
+					
+				}
+			]
+		}
+	]
 
 
 **sort** - angular sort service (sorting is executed on the client side)
@@ -1028,6 +1111,46 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
     var hierarchy = datastore.hierarchy({'levels':['QUARTER','PRODUCT_FAMILY'],'measures': {'UNIT_SALES':'SUM'}})
 
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	[
+		{
+			"name": "Q1",
+			"children": [
+				{
+					"name": "Non-Consumable",
+					"children": [],
+					"UNIT_SALES": 7.4571
+				},
+				{
+					"name": "Food",
+					"children": [],
+					"UNIT_SALES": 12
+				}
+			],
+			"UNIT_SALES": 19.4571
+		},
+		{
+			"name": "Q2",
+			"children": [
+				{
+					"name": "Non-Consumable",
+					"children": [],
+					"UNIT_SALES": 9.9429
+				},
+				{
+					"name": "Food",
+					"children": [],
+					"UNIT_SALES": 7.2
+				}
+			],
+			"UNIT_SALES": 17.1429
+		}
+	]
+
 
 **getChild**
 
@@ -1040,14 +1163,27 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
     hierarchy.getChild(0)
 
-
-*node* is an instance of Node object. It has convenient functions to explore the node:
+|   result:
 
 .. code-block:: javaScript
-    :linenos:
-
-    var node = hierarchy.getChild(0)
-
+	:linenos:
+	
+	{
+		"name": "Q1",
+		"children": [
+			{
+				"name": "Non-Consumable",
+				"children": [],
+				"UNIT_SALES": 7.4571
+			},
+			{
+				"name": "Food",
+				"children": [],
+				"UNIT_SALES": 12
+			}
+		],
+		"UNIT_SALES": 19.4571
+	}
 
 **getLevel**
 
@@ -1060,6 +1196,76 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
     hierarchy.getLevel(0)
 
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	[
+		{
+			"name": "Q1",
+			"children": [
+				{
+					"name": "Non-Consumable",
+					"children": [],
+					"UNIT_SALES": 7.4571
+				},
+				{
+					"name": "Food",
+					"children": [],
+					"UNIT_SALES": 12
+				}
+			],
+			"UNIT_SALES": 19.4571
+		},
+		{
+			"name": "Q2",
+			"children": [
+				{
+					"name": "Non-Consumable",
+					"children": [],
+					"UNIT_SALES": 9.9429
+				},
+				{
+					"name": "Food",
+					"children": [],
+					"UNIT_SALES": 7.2
+				}
+			],
+			"UNIT_SALES": 17.1429
+		}
+	]
+
+
+*node* is an instance of Node object. It has convenient functions to explore the node:
+
+.. code-block:: javaScript
+    :linenos:
+
+    var node = hierarchy.getChild(0)
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	{
+		"name": "Q1",
+		"children": [
+			{
+				"name": "Non-Consumable",
+				"children": [],
+				"UNIT_SALES": 7.4571
+			},
+			{
+				"name": "Food",
+				"children": [],
+				"UNIT_SALES": 12
+			}
+		],
+		"UNIT_SALES": 19.4571
+	}
+	
 
 **getValue**
 
@@ -1071,6 +1277,8 @@ To use the api the keyword is **datastore**. datastore is object that contains t
     :linenos:
 
     node.getValue('UNIT_SALES')
+
+|   result: 19.4571
 
 
 **getChild**
@@ -1084,6 +1292,17 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
     node.getChild(0)
 
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	{
+		"name": "Non-Consumable",
+		"children": [],
+		"UNIT_SALES": 7.4571
+	}
+
 
 **getParent**
 
@@ -1095,6 +1314,28 @@ To use the api the keyword is **datastore**. datastore is object that contains t
     :linenos:
 
     node.getChild(0).getParent()
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	{
+		"name": "Q1",
+		"children": [
+			{
+				"name": "Non-Consumable",
+				"children": [],
+				"sales": 7.4571
+			},
+			{
+				"name": "Food",
+				"children": [],
+				"sales": 12
+			}
+		],
+		"sales": 19.4571
+	}
 
 
 **getChildren**
@@ -1108,6 +1349,24 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
     node.getChildren()
 
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	[
+		{
+			"name": "Non-Consumable",
+			"children": [],
+			"sales": 7.4571
+		},
+		{
+			"name": "Food",
+			"children": [],
+			"sales": 12
+		}
+	]
+
 
 **getSiblings**
 
@@ -1119,6 +1378,24 @@ To use the api the keyword is **datastore**. datastore is object that contains t
     :linenos:
 
     node.getChild(0).getSiblings()
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+	
+	[
+		{
+			"name": "Non-Consumable",
+			"children": [],
+			"sales": 7.4571
+		},
+		{
+			"name": "Food",
+			"children": [],
+			"sales": 12
+		}
+	]
 
 
 It is also possible to interact with the other cockpit widgets, to do so it's possible to use the **clickManager**:

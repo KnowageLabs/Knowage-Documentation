@@ -44,9 +44,6 @@ Furthermore you can use filters, if implemented, available in the Functionality 
 
 .. |image340| image:: media/image346.png
    :width: 30
-   
-.. |image341| image:: media/image347.png
-   :width: 30
 
 Note that, since records are displayed in a plain table, it is available a combobox (see figure below) which allows the user to visualize all fields related to the record of the previous cell and then change from one to another to get all data.
 
