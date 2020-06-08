@@ -27,8 +27,8 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
  :linenos:
 
  <Context docBase="knowage-ee" path="/knowage" reloadable="true">
-	<ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
-	<ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource"/>
+        <ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
+        <ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource"/>
         <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache" type="javax.sql.DataSource"/>
         <ResourceLink global="resource_path" name="resource_path" type="java.lang.String" />
         <ResourceLink global="sso_class" name="sso_class" type="java.lang.String" />
@@ -36,12 +36,16 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
         <ResourceLink global="host_url" name="host_url" type="java.lang.String" />
         <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
         <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
+        <ResourceLink global="password_encryption_secret" name="password_encryption_secret" type="java.lang.String"/>
    </Context>
+
+Due to security reasons, configuration file containing some content to be used for encrypting must be created in Knowage environment. File must not be empty, but there's no minimum length. File can be put everywhere; path and name must be properly configured for each ``knowage*/META-INF/context.xml`` as shown below.
 
 .. important::
          **Context update**
 
          The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
+
 
 Configuration of the metadata db dialect
 ----------------------------------------
@@ -130,7 +134,7 @@ Shortly, to configure the Knowage log folder the user must execute the following
 Enable Java Security Manager
 ---------
 
-In Knowage, a user can create datasets, LOVs, etc.. with script languages like Javascript. That introduces a security concern where a malicious user can execute code that can break the entire system. Java allows a system administrator to enable a `Security Manager <https://docs.oracle.com/javase/tutorial/essential/environment/security.html>`_ and to create a sandbox to limit privileges around the code that execute the script.
+In Knowage, a user can create datasets, LOVs, etc.. with script languages like JavaScript. That introduces a security concern where a malicious user can execute code that can break the entire system. Java allows a system administrator to enable a `Security Manager <https://docs.oracle.com/javase/tutorial/essential/environment/security.html>`_ and to create a sandbox to limit privileges around the code that execute the script.
 
 The Security Manager can be enabled with the following steps:
 

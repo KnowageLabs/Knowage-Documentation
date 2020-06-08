@@ -31,7 +31,7 @@ To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/serv
 
 .. code-block:: xml
 		:linenos:
-		
+
 		<Resource auth="Container"
 				driverClassName="<JDBC driver>"
 				name="jdbc/knowage"
@@ -39,17 +39,19 @@ To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/serv
 				type="javax.sql.DataSource"
 				url="<JDBC URL>"
 				username="<user name>"
-				maxTotal="10"
-				maxWait="-1"
-				maxIdle="1"
-				validationQuery="<validation query>"
-				removeAbandoned="true"
-				removeAbandonedTimeout="3600"
-				logAbandoned="true"
-				testOnReturn="true"
-				testWhileIdle="true"
-				timeBetweenEvictionRunsMillis="10000"
-				minEvictableIdleTimeMillis="60000" />
+        validationQuery="<validation query>"
+        maxTotal="50"
+        maxIdle="50"
+        minIdle="10"
+        validationInterval="34000"
+        removeAbandoned="true"
+        removeAbandonedTimeout="3600"
+        logAbandoned="true"
+        testOnBorrow="true"
+        testWhileIdle="true"
+        timeBetweenEvictionRunsMillis="10000"
+        minEvictableIdleTimeMillis="60000" />
+
 
 Cache database connection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +60,7 @@ In some scenarios (for example when defining a cockpit document on top of a file
 
 .. code-block:: xml
 		:linenos:
-		
+
 		 <Resource auth="Container"
 				driverClassName="<JDBC driver>"
 				name="jdbc/ds_cache"
@@ -66,17 +68,18 @@ In some scenarios (for example when defining a cockpit document on top of a file
 				type="javax.sql.DataSource"
 				url="<JDBC URL>"
 				username="<user name>"
-				maxTotal="10"
-				maxWait="-1"
-				maxIdle="1"
-				validationQuery="<validation query>"
-				removeAbandoned="true"
-				removeAbandonedTimeout="3600"
-				logAbandoned="true"
-				testOnReturn="true"
-				testWhileIdle="true"
-				timeBetweenEvictionRunsMillis="10000"
-				minEvictableIdleTimeMillis="60000" />
+        validationQuery="<validation query>"
+        maxTotal="50"
+        maxIdle="50"
+        minIdle="10"
+        validationInterval="34000"
+        removeAbandoned="true"
+        removeAbandonedTimeout="3600"
+        logAbandoned="true"
+        testOnBorrow="true"
+        testWhileIdle="true"
+        timeBetweenEvictionRunsMillis="10000"
+        minEvictableIdleTimeMillis="60000" />
 
 Connection to business data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,7 +88,7 @@ Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the 
 
 .. code-block:: xml
 	:linenos:
-	
+
 	 <Resource auth="Container"
 			driverClassName="<JDBC driver>"
 			name="jdbc/dwh"
@@ -93,17 +96,18 @@ Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the 
 			type="javax.sql.DataSource"
 			url="<JDBC URL>"
 			username="<user name>"
-			maxTotal="10"
-			maxWait="-1"
-			maxIdle="1"
-			validationQuery="<validation query>"
-			removeAbandoned="true"
-			removeAbandonedTimeout="3600"
-			logAbandoned="true"
-			testOnReturn="true"
-			testWhileIdle="true"
-			timeBetweenEvictionRunsMillis="10000"
-			minEvictableIdleTimeMillis="60000"
+      validationQuery="<validation query>"
+      maxTotal="50"
+      maxIdle="50"
+      minIdle="10"
+      validationInterval="34000"
+      removeAbandoned="true"
+      removeAbandonedTimeout="3600"
+      logAbandoned="true"
+      testOnBorrow="true"
+      testWhileIdle="true"
+      timeBetweenEvictionRunsMillis="10000"
+      minEvictableIdleTimeMillis="60000"
 			factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
 
@@ -116,11 +120,12 @@ Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following co
         :linenos:
         :caption: Tomcat environment variables configuration.
 
-        <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
-	<Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
-	<Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
-	<Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>   
-	<Environment description="HMAC key" name="hmacKey" type="java.lang.String" value="abc123"/>
+  <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
+  <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
+  <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
+  <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>
+  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="<hmac_secret_key_to_substitute>"/>
+  <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="<complete_file_path_with_file_name>"/>
 
 Such environment variables have the following meaning:
 
@@ -128,11 +133,13 @@ Such environment variables have the following meaning:
 - ``sso_class``:SSO connector class name,
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
-- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribuite** it.
+- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
+- ``security_key_bytes_array``: File used for password encryption. It can be a binary file, a text file with a secret key. You **must change** it, and **do not distribute** it.
+
 
 Applications deploy
 ~~~~~~~~~~~~~~~~~~~~~~
-To deploy Knowage you have to copy all the WAR files inside the ``TOMCAT_HOME/webapps`` folder. 
+To deploy Knowage you have to copy all the WAR files inside the ``TOMCAT_HOME/webapps`` folder.
 Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
 
 
@@ -142,8 +149,8 @@ You must configure ``TOMCAT_HOME/conf/server.xml`` file and add the settings rel
 
 .. code-block:: xml
 	:linenos:
-	
-	<Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/> 
+
+	<Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/>
 
 
 Advanced memory settings
@@ -155,13 +162,13 @@ It is recommended to increase the memory dimension used by the application serve
 
 .. code-block:: bash
 	:linenos:
-	
-	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" 
+
+	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m"
 
 
 **[WIN]** Insert at the beginning of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
 
 .. code-block:: bash
 	:linenos:
-	
+
 	set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
