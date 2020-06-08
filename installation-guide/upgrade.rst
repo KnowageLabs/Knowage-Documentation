@@ -101,3 +101,11 @@ To upgrade Knowage installation follow these steps:
 .. important::
 
 	Latest version of Knowage has a higher security level. For this reason log in and password changing is required as a first step after upgrading.
+
+To admin's user it is recommended to check which user/s didn't change the password and tell them to do it as soon as possible.
+
+To extract the list of users that using old method for password encryption, execute the query reported below.
+
+.... code-block:: SQL
+
+  select * from sbi_user where password like '#SHA#%' order by user_id;
