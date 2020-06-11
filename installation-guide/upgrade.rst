@@ -104,7 +104,7 @@ To upgrade Knowage installation follow these steps:
 
 To admin's user it is recommended to check which user/s didn't change the password and tell them to do it as soon as possible.
 
-To extract the list of users that using old method for password encryption, execute the query reported below.
+Run the following query to extract the list of users who are using the old password encryption method.
 
 .... code-block:: SQL
 
