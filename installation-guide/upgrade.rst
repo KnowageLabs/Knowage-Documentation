@@ -1,7 +1,7 @@
 How to upgrade to the latest version
 ==========================
 
-This section describes the main steps to manually update an existing Knowage installation, on top of the certified Apache Tomcat server, to the latest available version. 
+This section describes the main steps to manually update an existing Knowage installation, on top of the certified Apache Tomcat server, to the latest available version.
 
 Pay attention to the fact that Knowage versions' names adhere to the Semantic Versioning 2.0.0.
 
@@ -38,14 +38,14 @@ To upgrade Knowage installation follow these steps:
    .. code-block:: bash
     :linenos:
 
-    ORA_upgradescript_6.0_to_6.1.sql	
+    ORA_upgradescript_6.0_to_6.1.sql
     ORA_upgradescript_6.1_to_6.2.sql
     ORA_upgradescript_6.2_to_6.3.sql
-	
+
    .. note::
     **Moving into a newest patch version within the same <major.minor> family**
 	In case you are moving into a newest patch version that belongs to the same <major.minor> family (for example from Knowage 6.2.0 to 6.2.4) there is no need to execute any SQL script.
-		   
+
 -  delete all ``knowage*.war`` files and all the ``knowage*`` directories from ``TOMCAT_HOME/webapps``;
 
 -  delete the following directories: ``TOMCAT_HOME/temp`` and ``TOMCAT_HOME/work``;
@@ -57,11 +57,11 @@ To upgrade Knowage installation follow these steps:
 -  for Knowage metadata database dialect, check that the right dialect has been set inside hibernate.cfg.xml files: the ``hibernate.dialect`` property should match your RDBMS for Knowage metadata database. Admissible dialects are:
 
    .. code-block:: bash
-	 
+
     org.hibernate.dialect.MySQLDialect
     org.hibernate.dialect.PostgreSQLDialect
     org.hibernate.dialect.Oracle9Dialect
-	
+
 -  list of hibernate.cfg.xml files to check follows:
 
    .. code-block:: bash
@@ -75,20 +75,20 @@ To upgrade Knowage installation follow these steps:
     TOMCAT_HOME/webapps/knowagesvgviewerengine/WEB-INF/classes/hibernate.cfg.xml
 
 -  check Quartz scheduler engine configuration within file ``TOMCAT_HOME/webapps/knowage/WEB-INF/classes/quartz.properties``: it is essential to set the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Admissible values are:
-   
+
    .. code-block:: jproperties
-	          
-	 # Mysql delegate class 
-	 org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
-	 # Postgres delegate class                                                                     
-	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      
-	 # Oracle delegate class                                                                       
+
+	 # Mysql delegate class
+	 org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+	 # Postgres delegate class
+	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+	 # Oracle delegate class
 	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
-	 
+
 -  restore the Quartz cluster modality, in case Knowage is installed within a cluster: add these lines:
-   
+
    .. code-block:: jproperties
-	
+
     org.quartz.jobStore.isClustered = true
     org.quartz.jobStore.clusterCheckinInterval = 20000
     org.quartz.scheduler.instanceId = AUTO
@@ -97,3 +97,15 @@ To upgrade Knowage installation follow these steps:
 -  restore all ``TOMCAT_HOME/webapps/knowage*/META-INF/context.xml`` files from backup copy of previous applications;
 
 -  start Apache Tomcat again.
+
+.. important::
+
+	Latest version of Knowage has a higher security level. For this reason log in and password changing is required as a first step after upgrading.
+
+To admin's user it is recommended to check which user/s didn't change the password and tell them to do it as soon as possible.
+
+Run the following query to extract the list of users who are using the old password encryption method.
+
+.... code-block:: SQL
+
+  select * from sbi_user where password like '#SHA#%' order by user_id;
