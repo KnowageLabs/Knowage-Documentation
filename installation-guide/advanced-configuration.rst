@@ -243,7 +243,7 @@ In a Windows environment using Apache Tomcat you can add a custom JVM property t
 
     set JAVA_OPTS="%JAVA_OPTS% -Dldap.config=C:/Tomcat/resources/ldap.properties"
 
-Below there is an example of the ldap.properties file configuration:
+Below there is an example of the ldap.properties file configuration for the **profiled** LDAP connector:
 
 .. code-block:: properties
 
