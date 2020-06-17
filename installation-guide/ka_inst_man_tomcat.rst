@@ -32,25 +32,25 @@ To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/serv
 .. code-block:: xml
 		:linenos:
 
-		<Resource auth="Container"
-				driverClassName="<JDBC driver>"
-				name="jdbc/knowage"
-				password="<password>"
-				type="javax.sql.DataSource"
-				url="<JDBC URL>"
-				username="<user name>"
-        validationQuery="<validation query>"
-        maxTotal="50"
-        maxIdle="50"
-        minIdle="10"
-        validationInterval="34000"
-        removeAbandoned="true"
-        removeAbandonedTimeout="3600"
-        logAbandoned="true"
-        testOnBorrow="true"
-        testWhileIdle="true"
-        timeBetweenEvictionRunsMillis="10000"
-        minEvictableIdleTimeMillis="60000" />
+    <Resource auth="Container"
+    	driverClassName="<JDBC driver>"
+    	name="jdbc/knowage"
+    	password="<password>"
+    	type="javax.sql.DataSource"
+    	url="<JDBC URL>"
+    	username="<user name>"
+    	validationQuery="<validation query>"
+    	maxTotal="50"
+    	maxIdle="50"
+    	minIdle="10"
+    	validationInterval="34000"
+    	removeAbandoned="true"
+    	removeAbandonedTimeout="3600"
+    	logAbandoned="true"
+    	testOnBorrow="true"
+    	testWhileIdle="true"
+    	timeBetweenEvictionRunsMillis="10000"
+    	minEvictableIdleTimeMillis="60000" />
 
 
 Cache database connection
@@ -61,25 +61,25 @@ In some scenarios (for example when defining a cockpit document on top of a file
 .. code-block:: xml
 		:linenos:
 
-		 <Resource auth="Container"
-				driverClassName="<JDBC driver>"
-				name="jdbc/ds_cache"
-				password="<password>"
-				type="javax.sql.DataSource"
-				url="<JDBC URL>"
-				username="<user name>"
-        validationQuery="<validation query>"
-        maxTotal="50"
-        maxIdle="50"
-        minIdle="10"
-        validationInterval="34000"
-        removeAbandoned="true"
-        removeAbandonedTimeout="3600"
-        logAbandoned="true"
-        testOnBorrow="true"
-        testWhileIdle="true"
-        timeBetweenEvictionRunsMillis="10000"
-        minEvictableIdleTimeMillis="60000" />
+    <Resource auth="Container"
+    	driverClassName="<JDBC driver>"
+    	name="jdbc/ds_cache"
+    	password="<password>"
+    	type="javax.sql.DataSource"
+    	url="<JDBC URL>"
+    	username="<user name>"
+    	validationQuery="<validation query>"
+    	maxTotal="50"
+    	maxIdle="50"
+    	minIdle="10"
+    	validationInterval="34000"
+    	removeAbandoned="true"
+    	removeAbandonedTimeout="3600"
+    	logAbandoned="true"
+    	testOnBorrow="true"
+    	testWhileIdle="true"
+    	timeBetweenEvictionRunsMillis="10000"
+    	minEvictableIdleTimeMillis="60000" />
 
 Connection to business data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,26 +89,26 @@ Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the 
 .. code-block:: xml
 	:linenos:
 
-	 <Resource auth="Container"
-			driverClassName="<JDBC driver>"
-			name="jdbc/dwh"
-			password="<password>"
-			type="javax.sql.DataSource"
-			url="<JDBC URL>"
-			username="<user name>"
-      validationQuery="<validation query>"
-      maxTotal="50"
-      maxIdle="50"
-      minIdle="10"
-      validationInterval="34000"
-      removeAbandoned="true"
-      removeAbandonedTimeout="3600"
-      logAbandoned="true"
-      testOnBorrow="true"
-      testWhileIdle="true"
-      timeBetweenEvictionRunsMillis="10000"
-      minEvictableIdleTimeMillis="60000"
-			factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
+  <Resource auth="Container"
+  	driverClassName="<JDBC driver>"
+  	name="jdbc/dwh"
+  	password="<password>"
+  	type="javax.sql.DataSource"
+  	url="<JDBC URL>"
+  	username="<user name>"
+  	validationQuery="<validation query>"
+  	maxTotal="50"
+  	maxIdle="50"
+  	minIdle="10"
+  	validationInterval="34000"
+  	removeAbandoned="true"
+  	removeAbandonedTimeout="3600"
+  	logAbandoned="true"
+  	testOnBorrow="true"
+  	testWhileIdle="true"
+  	timeBetweenEvictionRunsMillis="10000"
+  	minEvictableIdleTimeMillis="60000"
+  	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
 
 Environment variables definition

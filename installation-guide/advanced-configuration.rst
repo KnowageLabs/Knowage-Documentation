@@ -243,6 +243,27 @@ In a Windows environment using Apache Tomcat you can add a custom JVM property t
 
     set JAVA_OPTS="%JAVA_OPTS% -Dldap.config=C:/Tomcat/resources/ldap.properties"
 
+Below there is an example of the ldap.properties file configuration:
+
+.. code-block:: properties
+
+  INITIAL_CONTEXT_FACTORY 	 = com.sun.jndi.ldap.LdapCtxFactory
+  PROVIDER_URL 				       = ldaps://XXX.XXX.XXX.XXX:389
+  SECURITY_AUTHENTICATION    = simple
+  DN_PREFIX 					       = CN=
+  DN_POSTFIX 					       = ,ou=IT staff,o="Example, Inc",c=US
+  SEARCH_USER_BEFORE 			   = true
+  SEARCH_USER_BEFORE_USER		 =
+  SEARCH_USER_BEFORE_PSW		 =
+  SEARCH_USER_BEFORE_FILTER  = (&((objectclass=person))(uid=%s))
+
+Set ``SEARCH_USER_BEFORE`` key as *true*, if you want to looking for the complete distinguish name before checking authentication. Otherwise set it to *false*.
+
+The ``SEARCH_USER_BEFORE_USER`` and ``SEARCH_USER_BEFORE_PSW`` keys are credentials to authenticate to LDAP server; if the first one is set, the second one will be considered also. *These parameters are used only if anonymous bind is not allowed for LDAP server. For this reason they are optional and can be empty.*
+
+The ``SEARCH_USER_BEFORE_FILTER`` key is the filter used to retrieve the user on the LDAP server; Knowage uses the *username* as a parameter to find it. **Pay attention that %s placeholder must present.**
+
+
 .. important::
     Restart your application server in order to load the custom JVM property.
 
