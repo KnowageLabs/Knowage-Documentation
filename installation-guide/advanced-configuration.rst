@@ -1,3 +1,5 @@
+.. _advanced_configuration:
+
 Advanced configuration
 ==============================
 
@@ -193,7 +195,7 @@ Knowage manages the multi-language. The list of all languages is manageable from
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default**: the default value is [en,US].
 
 LDAP security connectors
---------------------
+------------------------
 
 Knowage provides integration with a LDAP server for authentication purposes.
 
@@ -316,10 +318,20 @@ Login security configurations can be set filling fields below:
 
    Advanced configuration - login security settings.
 
------------------------------
+----------------------------------------
 Resource export folder cleaning settings
------------------------------
+----------------------------------------
 Resource export folder cleaning configurations can be set filling fields below:
 
 * **KNOWAGE.RESOURCE.EXPORT.FOLDER.CLEANING_PERCENTAGE**: if active, the cleaning procedure will delete the files contained in the export resource folder leaving this percentage of free space (0 - 100). Default 30;
 * **KNOWAGE.RESOURCE.EXPORT.FOLDER.MAX_FOLDER_SIZE**: if active, cleaning procedure will start only if the resource export folder will reach this size (byte). Default 10737418240.
+
+
+Import / Export
+----------------
+
+Users
+~~~~~~~~~~~~
+Specific configurations for users import procedure:
+
+* **IMPORTEXPORT.USER.DEFAULT_PASSWORD**: password set for all users imported by the import procedure.
