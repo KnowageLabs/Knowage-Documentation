@@ -135,7 +135,7 @@ Such environment variables have the following meaning:
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
 - ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
-- ``security_key_bytes_array``: File used for password encryption. It can be a binary file, a text file with a secret key. You **must change** it, and **do not distribute** it.
+- ``password_encryption_secret``: File used for password encryption. It can be a binary file, a text file with a secret key. You **must change** it, and **do not distribute** it.
 
 
 Applications deploy
