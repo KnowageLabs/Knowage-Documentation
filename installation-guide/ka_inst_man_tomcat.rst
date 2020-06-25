@@ -30,7 +30,7 @@ Connection to metadata database
 To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the metadata database inside the ``GlobalNamingResources`` tag. Specify: username, password, driver class name, JDBC URL and validation query (any valid query to be executed to validate connections). Connection's name must the ``jdbc/knowage``:
 
 .. code-block:: xml
-		:linenos:
+ :linenos:
 
     <Resource auth="Container"
     	driverClassName="<JDBC driver>"
@@ -59,7 +59,7 @@ Cache database connection
 In some scenarios (for example when defining a cockpit document on top of a file dataset), Knowage requires a database to be used as cache. It is highly recommended to create an empty database schema for this purpose. Then, you need to configure it inside ``TOMCAT_HOME/conf/server.xml`` as you did for metadata database. Feel free to type a name of your choice, in this example we used ``jdbc/ds_cache``:
 
 .. code-block:: xml
-		:linenos:
+ :linenos:
 
     <Resource auth="Container"
     	driverClassName="<JDBC driver>"
@@ -81,13 +81,14 @@ In some scenarios (for example when defining a cockpit document on top of a file
     	timeBetweenEvictionRunsMillis="10000"
     	minEvictableIdleTimeMillis="60000" />
 
+
 Connection to business data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the database containing business data to be analysed by Knowage inside the ``GlobalNamingResources`` tag, specifying username, password, driver class name, URL and validation query. Feel free to type a name of your choice, in this example we used ``jdbc/dwh``:
 
 .. code-block:: xml
-	:linenos:
+ :linenos:
 
   <Resource auth="Container"
   	driverClassName="<JDBC driver>"
@@ -134,7 +135,7 @@ Such environment variables have the following meaning:
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
 - ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
-- ``security_key_bytes_array``: File used for password encryption. It can be a binary file, a text file with a secret key. You **must change** it, and **do not distribute** it.
+- ``password_encryption_secret``: File used for password encryption. It can be a binary file, a text file with a secret key. You **must change** it, and **do not distribute** it.
 
 
 Applications deploy

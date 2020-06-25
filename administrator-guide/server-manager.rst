@@ -170,7 +170,7 @@ To import the .zip in another installation, log in and open the **Server Manager
 
 .. important::
 
-	All users involved into import procedure will have his password changed with the value set in :ref:`_advanced_configuration`.
+	All users involved into import procedure will have his password changed with the value set in advanced configuration.
 
 Catalogs
 ~~~~~~~~
