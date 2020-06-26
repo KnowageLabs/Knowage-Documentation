@@ -135,7 +135,20 @@ Such environment variables have the following meaning:
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
 - ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
-- ``password_encryption_secret``: File used for password encryption. It can be a binary file, a text file with a secret key. You **must change** it, and **do not distribute** it.
+- ``password_encryption_secret``: File used for password encryption. The file must contain random text of any length. This is a security configuration, so don't use short strings. For example, you can create a file and write text into it. **Do not distribute** it for any reason.
+
+Below you can see an example of configuration of the above variables in the server.xml file
+
+.. code-block:: xml
+ :linenos:
+
+  <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
+  <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
+  <Environment name="host_url" type="java.lang.String" value="http://localhost:8080"/>
+  <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
+  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="<value_to_replace>"/>
+  <Environment name="password_encryption_secret" description="File for security encryption location"
+    type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
 
 
 Applications deploy
