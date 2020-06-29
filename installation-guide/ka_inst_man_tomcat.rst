@@ -31,24 +31,24 @@ To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/serv
 
 .. code-block:: xml
 		:linenos:
-		
-		<Resource auth="Container" 
-				driverClassName="<JDBC driver>" 
+
+		<Resource auth="Container"
+				driverClassName="<JDBC driver>"
 				name="jdbc/knowage"
-				password="<password>" 
-				type="javax.sql.DataSource" 
-				url="<JDBC URL>" 
+				password="<password>"
+				type="javax.sql.DataSource"
+				url="<JDBC URL>"
 				username="<user name>"
-				maxTotal="10" 
-				maxIdle="1" 
-				validationQuery="<validation query>" 
-				removeAbandoned="true" 
-				removeAbandonedTimeout="3600" 
-				logAbandoned="true" 
-				testOnReturn="true" 
-				testWhileIdle="true" 
-				timeBetweenEvictionRunsMillis="10000" 
-				minEvictableIdleTimeMillis="60000" /> 
+				maxTotal="10"
+				maxIdle="1"
+				validationQuery="<validation query>"
+				removeAbandoned="true"
+				removeAbandonedTimeout="3600"
+				logAbandoned="true"
+				testOnReturn="true"
+				testWhileIdle="true"
+				timeBetweenEvictionRunsMillis="10000"
+				minEvictableIdleTimeMillis="60000" />
 
 Cache database connection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,23 +57,23 @@ In some scenarios (for example when defining a cockpit document on top of a file
 
 .. code-block:: xml
 		:linenos:
-		
-		 <Resource auth="Container" 
-				driverClassName="<JDBC driver>" 
+
+		 <Resource auth="Container"
+				driverClassName="<JDBC driver>"
 				name="jdbc/ds_cache"
-				password="<password>" 
-				type="javax.sql.DataSource" 
-				url="<JDBC URL>" 
+				password="<password>"
+				type="javax.sql.DataSource"
+				url="<JDBC URL>"
 				username="<user name>"
-				maxTotal="10" 
-				maxIdle="1" 
-				validationQuery="<validation query>" 
-				removeAbandoned="true" 
-				removeAbandonedTimeout="3600" 
-				logAbandoned="true" 
-				testOnReturn="true" 
-				testWhileIdle="true" 
-				timeBetweenEvictionRunsMillis="10000" 
+				maxTotal="10"
+				maxIdle="1"
+				validationQuery="<validation query>"
+				removeAbandoned="true"
+				removeAbandonedTimeout="3600"
+				logAbandoned="true"
+				testOnReturn="true"
+				testWhileIdle="true"
+				timeBetweenEvictionRunsMillis="10000"
 				minEvictableIdleTimeMillis="60000" />
 
 Connection to business data
@@ -83,25 +83,25 @@ Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the 
 
 .. code-block:: xml
 	:linenos:
-	
-	 <Resource auth="Container" 
-			driverClassName="<JDBC driver>" 
+
+	 <Resource auth="Container"
+			driverClassName="<JDBC driver>"
 			name="jdbc/dwh"
-			password="<password>" 
-			type="javax.sql.DataSource" 
-			url="<JDBC URL>" 
+			password="<password>"
+			type="javax.sql.DataSource"
+			url="<JDBC URL>"
 			username="<user name>"
-			maxWait="-1" 
-			maxTotal="10" 
-			maxIdle="1" 
-			validationQuery="<validation query>" 
-			removeAbandoned="true" 
-			removeAbandonedTimeout="3600" 
-			logAbandoned="true" 
-			testOnReturn="true" 
-			testWhileIdle="true" 
-			timeBetweenEvictionRunsMillis="10000" 
-			minEvictableIdleTimeMillis="60000" 
+			maxWait="-1"
+			maxTotal="10"
+			maxIdle="1"
+			validationQuery="<validation query>"
+			removeAbandoned="true"
+			removeAbandonedTimeout="3600"
+			logAbandoned="true"
+			testOnReturn="true"
+			testWhileIdle="true"
+			timeBetweenEvictionRunsMillis="10000"
+			minEvictableIdleTimeMillis="60000"
 			factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
 
@@ -110,38 +110,63 @@ Environment variables definition
 
 Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following constants in the ``GlobalNamingResources`` tag, by setting the domain within the ``host_url`` value. That domain will be used by the browser to call Knowage server.
 
-.. code-block:: xml
-        :linenos:
-        :caption: Tomcat environment variables configuration.
-
-        <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
-	<Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
-	<Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
-	<Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>   
-	<Environment description="HMAC key" name="hmacKey" type="java.lang.String" value="abc123"/>
-
 Such environment variables have the following meaning:
 
 - ``resource_path``: resources folder path,
 - ``sso_class``:SSO connector class name,
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
-- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribuite** it.
+- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
+
+
+Below you can see an example of configuration of the above variables in the server.xml file:
+
+.. code-block:: xml
+        :linenos:
+        :caption: Tomcat environment variables configuration.
+
+        <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
+         <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
+         <Environment name="host_url" type="java.lang.String" value="http://localhost:8080"/>
+         <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
+         <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="...PUT_HMACKEY_VALUE_HERE..."/>
+
+.. important::
+
+	 For security reasons the environment variable ``hmacKey`` must have a different value than **...PUT_HMACKEY_VALUE_HERE...**. Please DO NOT use the value shown in this documentation to avoid reducing the security level.
+
+
+Recommended configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Edit the file ``TOMCAT_HOME/conf/setenv.sh`` in Linux installations or ``TOMCAT_HOME/conf/setenv.bat`` in Windows installations in Tomcat and add the following JVM arguments:
+-Dfile.encoding=UTF8"
+
+# We add -Duser.timezone=UTC to solve error when establishing connection to Oracle metadata database:
+# java.sql.SQLException: ORA-00604: error occurred at recursive SQL level 1
+# ORA-01882: timezone region not found
+
+JAVA_OPTS="${JAVA_OPTS} -Duser.timezone=UTC"
+
+export JAVA_OPTS="${JAVA_OPTS} -Djava.awt.headless=true"
+
+JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/catalina-relaxed.policy"
+
 
 Applications deploy
 ~~~~~~~~~~~~~~~~~~~~~~
-To deploy Knowage you have to copy all the WAR files inside the ``TOMCAT_HOME/webapps`` folder. 
+To deploy Knowage you have to copy all the WAR files inside the ``TOMCAT_HOME/webapps`` folder.
 Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
 
 
-Thread pool defintion
+Thread pool definition
 ~~~~~~~~~~~~~~~~~~~~~~
 You must configure ``TOMCAT_HOME/conf/server.xml`` file and add the settings related to the pool of thread editing the ``GlobalNamingResources`` tag, as shown follow.
 
 .. code-block:: xml
 	:linenos:
-	
-	<Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/> 
+
+	<Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/>
 
 
 Advanced memory settings
@@ -153,13 +178,13 @@ It is recommended to increase the memory dimension used by the application serve
 
 .. code-block:: bash
 	:linenos:
-	
-	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" 
+
+	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m"
 
 
 **[WIN]** Insert at the beginning of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
 
 .. code-block:: bash
 	:linenos:
-	
+
 	set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
