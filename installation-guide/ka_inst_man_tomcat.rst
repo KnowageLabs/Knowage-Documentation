@@ -125,7 +125,7 @@ Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following co
   <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
   <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
   <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="<hmac_secret_key_to_substitute>"/>
+  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="...PUT_HMACKEY_VALUE_HERE..."/>
   <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="<complete_file_path_with_file_name>"/>
 
 Such environment variables have the following meaning:
@@ -136,6 +136,12 @@ Such environment variables have the following meaning:
 - ``host_url``: frontend services address, the one the user types in his browser.
 - ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
 - ``password_encryption_secret``: File used for password encryption. The file must contain random text of any length. This is a security configuration, so don't use short strings. For example, you can create a file and write text into it. **Do not distribute** it for any reason.
+
+
+.. important::
+
+	 For security reasons the environment variable ``hmacKey`` must have a different value than **...PUT_HMACKEY_VALUE_HERE...**. Please DO NOT use the value shown in this documentation to avoid reducing the security level.
+
 
 Below you can see an example of configuration of the above variables in the server.xml file
 
