@@ -322,28 +322,6 @@ The **Style** tab is where you can customize the table by using the different op
 
 Once the table style settings have been implemented you can switch to the next tab. The “Cross” tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator).
 
-.. warning::
-    **Cross navigation only for technical users**
-
-    Due to the fact that parameters can only be managed by technical user, the cross navigation cannot be implemented by the final user.
-
-Referring to figure below, we sum up how to add a cross navigation to the cockpit with the following bullet list:
-
-.. figure:: media/image167.png
-
-    Cross tab of the table widget configuration.
-
-- activate the cross navigation flag;
-- activate cross Enable the cross-navigation type select:
-    - on all row to enable a click on every column;
-    - on a single column to choose a column where the cross-navigation will be set, other columns will throw a selection;
-    - on an icon to choose an icon that will be render at the end of the row. All the columns will still throw selections;
-- select the output parameters that will pass the value to the document of arrival. Those parameters type are defined in the document detail of the cockpit and will be of the following types:
-    - static: a static value
-    - dynamic: the value of a selected column
-    - analytical driver: the value of a parameter
-- select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
-
 Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
 
 .. _filterstabwidgetconf:
@@ -1443,7 +1421,100 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 
 Like other widgets the "Cross", "Style", and the "Filters" tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
 
+Cross Navigation
+~~~~~~~~~~~~~~~~~~
 
+.. warning::
+    **Cross tab is only for technical users**
+
+    Due to the fact that parameters can only be managed by technical user the cross navigation cannot be implemented by the final user.
+
+All widgets (except selector and active selections) have the Cross tab available, that allows the user to interact with the widget in different ways:
+- setting a Cross-navigation between different documents
+- setting a Preview of a specific dataset to popup
+- opening an external link
+The interactions are mutually exclusive, so just one type can be chosen for every widget.
+
+
+**Cross-navigation**
+
+The cross-navigation gives the possibility to connect two documents clicking on a widget as a starting point, opening the second one as arrival and showing the breadcrumbs on top.
+
+.. figure:: media/image212.png
+
+    Table widget cross-navigation configuration.
+
+To enable one first of all is necessary to set a cross navigation inside the "cross-navigation definition" functionality.
+There is possible to set the starting/arrival point and to set the connection between different output/input parameters.
+
+After this passage you will have the possibility to enable the cross-navigation in the tab and choose the user interaction that will start the navigation, if more than one are available.
+
+The most complex example is the table widget cross-navigation, because it allows 3 different interactions:
+
+- *Click on the whole row*, where the interaction will start clicking on any row
+- *Click on a single column*, where the editor will choose a specific column that will start the interaction (the user will see the column values underlined)
+- *Click on an icon*, where the editor will choose an icon positioned to the right side that will start the interaction.
+
+Once the interaction has been chosen you will be able to select the cross-navigation created before. If you created more than one related to that document
+you will be able to choose between them. If you leave this field blank the user will be able to choose that himself.
+
+**Preview**
+
+.. figure:: media/image214.png
+
+    Table widget preview configuration.
+
+The preview configuration is very similar to the cross-navigation one. 
+First of all you will need to enable the navigation using the switch button.
+After you will need to choose an interaction type and a target dataset.
+the selected dataset will be opened in a popup window but, if you check the "Direct download" property you will be able to get the dataset preview directly in the download list.
+
+.. figure:: media/image216.png
+
+    Preview example.
+
+**Cross and Preview Parameters**
+
+.. figure:: media/image213.png
+
+    Parameters example.
+
+Both cross-navigation and preview navigation share the parameters management.
+If one or more output parameters are available, you will find the list below the navigation page.
+You can choose which values to use clicking on the checkbox at the right side of the name, than you will have the possibility to choose between different modes to get the value:
+
+- *Static*, entering a static value
+- *Dynamic*, passing the value of the column at the selected row (or passing the column name if *Selected Column Name* is chosen)
+- *Selection*, passing the current value of the selection for the specified dataset and column. Warning: the selection is not triggered clicking on the navigation, so to pass this value the selection must already be present.
+
+Once the user will click on the widget, those parameters will be evaluated before the navigation.
+
+
+**Link**
+
+The link configuration is very similar to the cross-navigation one too.
+First of all you will need to enable the link navigation using the switch button.
+After you will need to choose an interaction type and a base url. The base url will be the url opened by the user click.
+You can also decide the type of link between the opening of a new page or the document replace opening in the same page.
+
+.. figure:: media/image215.png
+
+    Link configuration with JSON parameter example.
+
+**Link Parameters**
+
+The link parameters are different from the previous because they will be used to make the baseurl selected more precise.
+The resulting example url will be something similar: http://www.knowage-suite.com?**parameter1**=value&**parameter2**=value2
+
+To do so you will have to create and name different parameters, the selected name will be the one used in the url construction.
+You can choose how to get the parameter value with the following modes:
+
+- *Static*, entering a static value
+- *Dynamic*, passing the value of the column at the selected row (or passing the column name if *Selected Column Name* is chosen)
+- *Selection*, passing the current value of the selection for the specified dataset and column. Warning: the selection is not triggered clicking on the navigation, so to pass this value the selection must already be present.
+- *Analytical Driver*, passing a page parameter (input driver)
+- *JSON*, passing an escaped JSON inside the url parameter. You can use the editor to create the desired JSON and use the placeholder to set the value at runtime. The placeholders are the usuals *$F{field}* for the fields, *$P{parameter}* for the parameters, *$V{variable}* for the variables.
+- *JWT*, passing the JWT token of the user 
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
