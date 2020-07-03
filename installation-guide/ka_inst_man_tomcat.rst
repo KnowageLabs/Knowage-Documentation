@@ -140,17 +140,21 @@ Recommended configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Edit the file ``TOMCAT_HOME/conf/setenv.sh`` in Linux installations or ``TOMCAT_HOME/conf/setenv.bat`` in Windows installations in Tomcat and add the following JVM arguments:
--Dfile.encoding=UTF8"
 
-# We add -Duser.timezone=UTC to solve error when establishing connection to Oracle metadata database:
-# java.sql.SQLException: ORA-00604: error occurred at recursive SQL level 1
-# ORA-01882: timezone region not found
+.. code-block:: xml
+        :linenos:
 
-JAVA_OPTS="${JAVA_OPTS} -Duser.timezone=UTC"
+        export JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8"
 
-export JAVA_OPTS="${JAVA_OPTS} -Djava.awt.headless=true"
+        # We add -Duser.timezone=UTC to solve error when establishing connection to Oracle metadata database:
+        # java.sql.SQLException: ORA-00604: error occurred at recursive SQL level 1
+        # ORA-01882: timezone region not found
 
-JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/catalina-relaxed.policy"
+        export JAVA_OPTS="$JAVA_OPTS -Duser.timezone=UTC"
+
+        export JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true"
+
+        export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/catalina-relaxed.policy"
 
 
 Applications deploy
