@@ -38,7 +38,7 @@ For JBoss: the configuration of the pool of thread is available inside the JBOSS
 
 In both cases, the meaning of the configuration parameters is the following:
 
-* minThreads: the mininum number of threads in the thread pool. Default: 2;
+* minThreads: the minimum number of threads in the thread pool. Default: 2;
 * maxThreads: the maximum number of threads in the thread pool. Default: 10;
 * queueLenght: the number of work items that can be queued - 0 means no queuing. Default: 10;
 * maxDaemons: the maximum number of daemon threads to allow for this work manager. Default: 10.
@@ -50,18 +50,18 @@ First of all, the user must configure the distributed cache. This helps to coord
 * **SPAGOBI.CACHE.NAMEPREFIX**: It configures the prefix of temporary table in the cache ( Default : ”sbicache“ )
 * **SPAGOBI.CACHE.SPACE_AVAILABLE**: It resizes cache dimension (bytes) ( Default : 1024 )
 * **SPAGOBI.CACHE.LIMIT_FOR_CLEAN**: It configures the maximum cache section (in percentage) that can be cleaned at runtime when the cache has not enough space to store a dataset. ( Default : 50)
-* **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is  empy. The allowable values are: EVERY_10_MINS, EVERY_15_MINS, EVERY_20_MINS, EVERY_30_MINS, HOURLY,DAILY,WEEKLY,MONTHLY,YEARLY. Every value different from those just listed unenable the periodic cleaning. ( Defualt: DAILY )
+* **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is empty. The allowable values are: EVERY_10_MINS, EVERY_15_MINS, EVERY_20_MINS, EVERY_30_MINS, HOURLY,DAILY,WEEKLY,MONTHLY,YEARLY. Any value other than those listed above does not enable periodic cleaning. ( Default: DAILY )
 * **SPAGOBI.CACHE.DS_LAST_ACCESS_TTL**: It configures the Time To Live of a dataset inside the cache. This parameter defines the minimum TTL (in seconds) so to guarantee that a dataset remains in cache. A too-high value can lead the cache to breakdown (in this case, there is no way to insert new datasets), while a toolow value can lead to situations when there are no certainties of the stability of the dataset in the cache. (Default 600 )
 * **SPAGOBI.CACHE.DATABASE_SCHEMA**: Name of the schema on which the tables are created. Such schema is defined by the datasource when it is set as Write-Default. Generally it is not necessary to configure this parameter since it is calculated at runtime. (default <empty> )
-* **SPAGOBI.CACHE.LIMIT_FOR_STORE**: It configures the ratio (in percentage) between the dimension of the cache and the maximum dimension of a dataset in the cache. If the dimension of the dataset which the user intends to persist is bigger than the configured percentage, the system blocks the that persistance attempt. ( Default : 10 )
+* **SPAGOBI.CACHE.LIMIT_FOR_STORE**: It configures the ratio (in percentage) between the dimension of the cache and the maximum dimension of a dataset in the cache. If the dimension of the dataset which the user intends to persist is bigger than the configured percentage, the system blocks the that persistence attempt. ( Default : 10 )
 * **SPAGOBI.CACHE.CREATE_AND_PERSIST_TABLE.TIMEOUT**: It represents the maximum time (in seconds) to create temporary table for the dataset. ( Default : 120 )
-* **SPAGOBI.WORKMANAGER.SQLDBCACHE.TIMEOUT**: It represents the maximum waiting time (inmilliseconds) of an asynchronus work. (Default: 180000 )
+* **SPAGOBI.WORKMANAGER.SQLDBCACHE.TIMEOUT**: It represents the maximum waiting time (in milliseconds) of an asynchronous work. (Default: 180000 )
 * **SPAGOBI.CACHE.HAZELCAST.TIMEOUT** : It represents the maximum time (in seconds) to get a distributed lock. ( Default 120 )
 * **SPAGOBI.CACHE.HAZELCAST.LEASETIME**: It represents the maximum time (in seconds) for releasing a distributed lock already got. ( Default :240 )
 
 Logging
 ---------
-Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analize the log file of Knowage. In the first part we can set the generation mechanism of the log file, while ih the second one the level of tracing.
+Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analize the log file of Knowage. In the first part we can set the generation mechanism of the log file, while in the second one the level of tracing.
 
 .. _loggappender:
 .. code-block:: bash
@@ -150,20 +150,20 @@ Moreover, each profile has the following values:
 * from: the address to which the mail will be associated,
 * user: the user of the server connection,
 * password: user’s password,
-* useSSL: in case the SSl is in use.
+* useSSL: in case the SSL is in use.
 
 Maximum file size
 -----------------
 
 For security reasons, Knowage has a series of parameters which manage the maximum file size that can be loaded on the server through the web GUI. To modify those parameters, it is required to enter the Knowage server application as administrator and access the ”server settings“ section and then ”configuration management“. The parameters at issue are the following:
 
-* **SPAGOBI.TEMPLATE_MAX_SIZE** : TEMPLATE MAX SIZE: it is the maximum template dimension of an anlytical document, expressed in bytes; the default value is 5MB;
+* **SPAGOBI.TEMPLATE_MAX_SIZE** : TEMPLATE MAX SIZE: it is the maximum template dimension of an analytical document, expressed in bytes; the default value is 5MB;
 
 * **SPAGOBI.DATASET_FILE_MAX_SIZE** : DATASET FILE MAX SIZE: it is the maximum dimension of a file used as a dataset, expressed in bytes; the default value is 10MB;
 
 * **SPAGOBI.DOCUMENTS.MAX_PREVIEW_IMAGE_SIZE** : Max preview image size: it is the maximum dimension of an image used as document preview (in the document browser, for instance), expressed in bytes; the default is 1MB;
 
-*  **IMAGE_GALLERY.MAX_IMAGE_SIZE_KB** : Max image size in Kb:it is the maximum size of the images that can be used in a cockpit creation; the default is 1MB;
+*  **IMAGE_GALLERY.MAX_IMAGE_SIZE_KB** : Max image size in Kb: it is the maximum size of the images that can be used in a cockpit creation; the default is 1MB;
 
 Date format
 ------------
@@ -180,14 +180,14 @@ For each available language there are two parameters:
 
 * **SPAGOBI.DATE-FORMAT-<lingua>_<nazione>.extJsFormat**: it rules the front-end role.
 
-We suggest to valorize the parameters in compliance with each other, according to a local data.
+We suggest to set the parameters in compliance with each other, according to a local data.
 
-The parameters **SPAGOBI.DATE-FORMAT-SERVER.forma**t and **SPAGOBI.DATE-FORMAT-SERVER.extJsFormat** control the link between back-end and front-end. The adjustment of these parameters do not affect the web GUI.
+The parameters **SPAGOBI.DATE-FORMAT-SERVER.format** and **SPAGOBI.DATE-FORMAT-SERVER.extJsFormat** control the link between back-end and front-end. The adjustment of these parameters do not affect the web GUI.
 
 Language
 ---------
 
-Knowage manages the multi-language. The list of all languages is manageable from the "Server  Settings” section. Go to "Configuration management“ and select the LANGUAGE_SUPPORTED category. Here there are two properties:
+Knowage manages the multi-language. The list of all languages is manageable from the "Server Settings” section. Go to "Configuration management“ and select the LANGUAGE_SUPPORTED category. Here there are two properties:
 
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES** :the list of all supported languages underneath this formalism are: [it,IT],[en,US],[fr,FR],[es,ES];
 
@@ -198,7 +198,7 @@ LDAP security connectors
 
 Knowage provides integration with a LDAP server for authentication purposes.
 
-**Remark.** Be sure that the Knowage users have been taken under LDAP census. The LDAP security connectors check the user that is accessing Knowage, but the user must be already defined as a Knowage user. Therefore, the users must cohesist in both authentication systems (LDAP and Knowage).
+**Remark.** Be sure that the Knowage users have been taken under LDAP census. The LDAP security connectors check the user that is accessing Knowage, but the user must be already defined as a Knowage user. Therefore, the users must coexist in both authentication systems (LDAP and Knowage).
 
 Knowage ships with two LDAP security connectors:
 
@@ -209,7 +209,7 @@ LdapSecurityServiceSupplier relies only on a LDAP configuration file, instead Pr
 If the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the logging user, then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
 
 .. warning::
-    The only way to mantain access to Knowage for **users not mapped onto LDAP** is to:
+    The only way to maintain access to Knowage for **users not mapped onto LDAP** is to:
 
     * define the user profile attribute **auth_mode**,
     * set **auth_mode** = ``internal`` for every user not mapped onto LDAP,
