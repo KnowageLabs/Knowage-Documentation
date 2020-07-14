@@ -135,7 +135,7 @@ Such environment variables have the following meaning:
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
 - ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
-- ``password_encryption_secret``: File used for password encryption. The file must contain random text of any length. This is a security configuration, so don't use short strings. For example, you can create a file and write text into it. **Do not distribute** it for any reason.
+- ``password_encryption_secret``: File used for password encryption. The file must contain random text of any length. This is a security configuration, so don't use short strings. For example, you can create a file and write text into it. **Do not distribute** it for any reason, create at least a backup copy of the file. **After the first start of Knowage, it will no longer be possible to change the secret key.**
 
 
 .. important::
@@ -212,16 +212,14 @@ It is recommended to increase the memory dimension used by the application serve
 	:linenos:
 
 	set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
-	
+
 Advanced Connector settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. important::
          It is highly recommend to add  URIEncoding="UTF-8" attribute to server.xml file connector tags in order to avoid special characters issues.
-	 
+
 .. code-block:: bash
 	:linenos:
 
 	<Connector address="0.0.0.0" port="8009" protocol="AJP/1.3" maxPostSize="2097152000" redirectPort="8443" URIEncoding="UTF-8" />
-
-	 
