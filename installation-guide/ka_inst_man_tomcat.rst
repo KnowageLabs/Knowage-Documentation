@@ -152,9 +152,29 @@ Below you can see an example of configuration of the above variables in the serv
   <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
   <Environment name="host_url" type="java.lang.String" value="http://localhost:8080"/>
   <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="<value_to_replace>"/>
+  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="…PUT_HMACKEY_VALUE_HERE…"/>
   <Environment name="password_encryption_secret" description="File for security encryption location"
     type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
+
+Recommended configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Edit ``TOMCAT_HOME/conf/setenv.sh`` (Linux) or ``TOMCAT_HOME/conf/setenv.bat`` (Windows) file in Tomcat by adding the following JVM arguments:
+
+.. code-block:: xml
+        :linenos:
+
+        export JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8"
+
+        # We add -Duser.timezone=UTC to solve error when establishing connection to Oracle metadata database:
+        # java.sql.SQLException: ORA-00604: error occurred at recursive SQL level 1
+        # ORA-01882: timezone region not found
+
+        export JAVA_OPTS="$JAVA_OPTS -Duser.timezone=UTC"
+
+        export JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true"
+
+        export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/catalina-relaxed.policy"
 
 
 Applications deploy
@@ -163,7 +183,7 @@ To deploy Knowage you have to copy all the WAR files inside the ``TOMCAT_HOME/we
 Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
 
 
-Thread pool defintion
+Thread pool definition
 ~~~~~~~~~~~~~~~~~~~~~~
 You must configure ``TOMCAT_HOME/conf/server.xml`` file and add the settings related to the pool of thread editing the ``GlobalNamingResources`` tag, as shown follow.
 

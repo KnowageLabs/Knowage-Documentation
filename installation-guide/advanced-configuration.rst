@@ -153,7 +153,8 @@ Moreover, each profile has the following values:
 * useSSL: in case the SSl is in use.
 
 Maximum file size
-----------------
+-----------------
+
 For security reasons, Knowage has a series of parameters which manage the maximum file size that can be loaded on the server through the web GUI. To modify those parameters, it is required to enter the Knowage server application as administrator and access the ”server settings“ section and then ”configuration management“. The parameters at issue are the following:
 
 * **SPAGOBI.TEMPLATE_MAX_SIZE** : TEMPLATE MAX SIZE: it is the maximum template dimension of an anlytical document, expressed in bytes; the default value is 5MB;
@@ -333,3 +334,23 @@ Users
 Specific configurations for users import procedure:
 
 * **IMPORTEXPORT.USER.DEFAULT_PASSWORD**: password set for all users imported by the import procedure.
+
+
+Password encryption secret change
+---------------------------------
+
+If you want to change password encryption secret stored in the file set with the "password_encryption_secret" environment variable, Knowage provides you a tool to find out the new encrypted value.
+This tool requires:
+
+* knowage-utils-7.2.0.jar library in path
+* the password encryption secret file name with complete path
+* password value in clear text
+
+Below is an example of invoking the tool using biadmin as a plaintext password.
+
+.. code-block:: SQL
+    :linenos:
+
+    java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-7.2.0.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
+
+This procedure must be repeated for all users. Updating the database is the responsibility of Knowage administrators.
