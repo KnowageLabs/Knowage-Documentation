@@ -80,7 +80,7 @@ The following lists the supported application servers:
     +---------------------+------------------------+-------------+
     |    **Support type** | **Application Server** | **Version** |
     +=====================+========================+=============+
-    |    Certified        | Apache Tomcat          | 8.5.37      |
+    |    Certified        | Apache Tomcat          | 8.5.57      |
     +---------------------+------------------------+-------------+
 
 For each application server installation please refer to its official documentation.
@@ -143,9 +143,9 @@ Knowage uses a schema to manage metadata, that is all those information required
     +=====================+===============+==================+
     |    Certified        | Oracle        | 8, 9, 10, 11, 12 |
     +---------------------+---------------+------------------+
-    |    Certified        | MySql         | 5.7              |
+    |    Certified        | MySql         | 5.7, 8           |
     +---------------------+---------------+------------------+
-    |    Certified        | PostgreSQL    | 8.2, 9.1         |
+    |    Certified        | PostgreSQL    | 8.2, 9.1, 12.3   |
     +---------------------+---------------+------------------+
     |    Certified        | MariaDB       | 10.1, 10.2, 10.3 |
     +---------------------+---------------+------------------+
