@@ -22,6 +22,12 @@ We provide an example to let you understand the usage of the interface. Suppose 
 
 You can view available languages and their code (**Value Check column)** in the row SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES.
 
+      .. warning::
+         **Warning**
+
+         Knowage Server may take up to 1 minute to apply the configuration changes.
+
+
 Domain Management
 -----------------
 
