@@ -106,6 +106,6 @@ To admin's user it is recommended to check which user/s didn't change the passwo
 
 Run the following query to extract the list of users who are using the old password encryption method.
 
-.... code-block:: SQL
+.. code-block:: SQL
 
   select * from sbi_user where password like '#SHA#%' order by user_id;
