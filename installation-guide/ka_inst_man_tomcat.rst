@@ -125,7 +125,7 @@ Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following co
   <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
   <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
   <Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="...PUT_HMACKEY_VALUE_HERE..."/>
+  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="<PUT ANY RANDOM STRING HERE>"/>
   <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="<complete_file_path_with_file_name>"/>
 
 Such environment variables have the following meaning:
@@ -134,13 +134,13 @@ Such environment variables have the following meaning:
 - ``sso_class``:SSO connector class name,
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
-- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
-- ``password_encryption_secret``: File used for password encryption. The file must contain random text of any length. This is a security configuration, so don't use short strings. For example, you can create a file and write text into it. **Do not distribute** it for any reason, create at least a backup copy of the file. **After the first start of Knowage, it will no longer be possible to change the secret key.**
+- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it. You can put any random alphanumeric string in it, and you can change it everytime you want, you just need to restart Tomcat to apply the change,
+- ``password_encryption_secret``: the complete path of a file to contain the password encryption secret. The file must contain random text of any length. This is a security configuration, so don't use short strings. For example, you can create a file and write text into it. **Do not distribute** it for any reason, create at least a backup copy of the file. **After the first start of Knowage, it will no longer be possible to change the secret key.**. In case you lost this secret, look at the paragraph below to see how to update the passwords of existing users. 
 
 
 .. important::
 
-	 For security reasons the environment variable ``hmacKey`` must have a different value than **...PUT_HMACKEY_VALUE_HERE...**. Please DO NOT use the value shown in this documentation to avoid reducing the security level.
+	 Again we stress the point that the HMAC key must be a random string. Please DO NOT copy and paste it from this documentation, since this will compromise the security of the application.
 
 
 Below you can see an example of configuration of the above variables in the server.xml file
@@ -151,10 +151,28 @@ Below you can see an example of configuration of the above variables in the serv
   <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
   <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
   <Environment name="host_url" type="java.lang.String" value="http://localhost:8080"/>
-  <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="…PUT_HMACKEY_VALUE_HERE…"/>
+  <Environment name="service_url" type="java.lang.String" value="http://mydomain.com/knowage"/>
+  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="… a random string …"/>
   <Environment name="password_encryption_secret" description="File for security encryption location"
     type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
+
+Changing the secret key for password encryption
+-----------------------------------------------
+
+The password encryption secret key must be set during the installation and cannot be changed **anymore**, otherwise Knowage will no longer be able to authenticate already defined users. *In case the secret key is lost* you must create a new one, configure it into Knowage as described above and update passwords of existing users direclty into Knowage metadata database (SBI_USER table). For this reason Knowage provides you a tool to get new encrypted values.
+This tool is a Java class that is shipped with the ``knowage-utils`` library; it accepts 2 input parameters:
+
+* the complete path of the password encryption secret file;
+* the password value in plaintext.
+
+Below is an example of invoking the tool by command line using 'mypassword' as the plaintext password to be encrypted (of course TOMCAT_HOME must be replaced by the actual Tomcat base folder path).
+
+.. code-block:: SQL
+    :linenos:
+
+    java -cp "<TOMCAT_HOME>/webapps/knowage/WEB-INF/lib/knowage-utils-7.2.0.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain <TOMCAT_HOME>/conf/knowage.secret mypassword
+
+This procedure must be repeated for all already existing users.
 
 Recommended configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~
