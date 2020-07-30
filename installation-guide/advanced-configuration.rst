@@ -282,7 +282,6 @@ The final step is to set the LDAP security connector as follow:
 Knowage is now ready to authenticate the users via LDAP credentials.
 
 
------------------------------
 Password constraints settings
 -----------------------------
 
@@ -305,7 +304,7 @@ User password constraints can be set configuring parameters below:
 
 By default, all above configurations are disabled.
 
------------------------------
+
 Login security settings
 -----------------------------
 Login security configurations can be set filling fields below:
@@ -317,7 +316,7 @@ Login security configurations can be set filling fields below:
 
    Advanced configuration - login security settings.
 
-----------------------------------------
+
 Resource export folder cleaning settings
 ----------------------------------------
 Resource export folder cleaning configurations can be set filling fields below:
