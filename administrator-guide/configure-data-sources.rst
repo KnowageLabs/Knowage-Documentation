@@ -6,13 +6,19 @@ To let all the BI tools work properly you need to configure DB connection. There
 Connect to your data
 --------------------
 
-In order to connect to your data, you have to define a new data source connection. Defining a data source allows Knowage to access data transparently without the need to redefine the connection to the database in case some of its configuration properties change over time.
+In order to connect to your data, you have to define a new data source connection. 
 
 Knowage manages two types of data source connections:
 
-- connections retrieved as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access (e.g. by defining connection pools) and thus are the preferred ones.
+- connections retrieved as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access (e.g. by defining connection pools) and thus are the preferred ones. Here you can find information how create connection pool in Tomcat : https://tomcat.apache.org/tomcat-8.0-doc/jndi-datasource-examples-howto.html
 - direct JDBC connections, which are directly managed by Knowage;
 
+.. important::
+         **How to create connection JNDI on Tomcat**
+
+         - Create connection pool on <Tomcat_home>/conf/server.xml
+         - Add ResourceLink on context.xml
+         
 To add a new connection, first add the relative JDBC driver to the folder ``KnowageServer-<version>/lib`` and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
