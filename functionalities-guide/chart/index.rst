@@ -18,6 +18,7 @@ Knowage provides a chart engine to create several types of charts, including:
 -  Heatmap
 -  Chord
 -  Gauge
+-  Bubble
 
 
 My first Chart
@@ -28,7 +29,7 @@ Once you enter the Knowage environment as a final user, enter the **Analysis** a
 .. important::
          **Enterprise Edition only**
 
-         Please note that this operation is available only in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create charts document, as explained in **Stand alone charts** chapter.
+         Please note that this operation is available only in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create Cockpit document.
 
 Once opened, the cockpit interface is an empty page with a toolbar containing different options, the second of which is the **Add chart** feature.
 
