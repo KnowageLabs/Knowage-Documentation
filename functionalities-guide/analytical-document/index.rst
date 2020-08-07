@@ -237,23 +237,6 @@ After you have completed the definition of a parameter you can save it by clicki
 
 In the following we will see some special operations that can be performed on drivers associated to a document.
 
-Associating a Spatial driver
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-As just seen, to filter on data visualization a user needs to associate an analytical driver using the "Document analytical driver   details" area. As well as for the other driver you can use this interface to associate a spatial driver to the document. The procedure is right the same. When launching the document and opening the filter panel you will find the filter just set. Click on the icon   |image75| to open the map and select the geometric object (the ``State`` in the example in figure below) according to the chosen layer and property.
-
-.. |image75| image:: media/image76.png
-   :width: 30
-
-.. figure:: media/image77.png
-
-    Map filtering selection.
-
-Click on "Close" button to confirm your selection. An example of the output is shown in the following figure.
-
-.. figure:: media/image78.png
-
-    Example of document run with a spatial filter.
 
 Correlation between parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
