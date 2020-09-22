@@ -634,15 +634,34 @@ The ``kn-variable`` tag is the tool to read the runtime value of one of the defi
 
 The **key** attribute is optional and will select a specific key from the variable object if the variable is "Dataset" type, returning a specific value instead of a complete dataset.
 
-**Banned Tags**
-
-In order to avoid Cross-site scripting and other vulnerabilities, some tags are automatically removed by the system when saving the cockpit:
+.. warning::
+    **Banned Tags**
+    In order to avoid Cross-site scripting and other vulnerabilities, some tags are *not allowed* and will automatically be removed by the system when saving the cockpit:
 
 -  ``<button></button>``
 -  ``<object></object>``
 -  ``<script></script>``
 
-If the tag is needed for some specific behaviour (i.e. the button default hover), please replicate it with CSS using a different allowed tag.
+If you need to simulate a button behaviour use a div (or another allowed tag) and replicate the css style like in the following example:
+
+.. code-block:: html
+   :linenos:
+
+   <div class="customButton">Buttonlike div</div>
+
+.. code-block:: css
+   :linenos:
+
+   .customButton {
+        border: 1px solid #ccc;
+        background-color: #ededed;
+        cursor: pointer;
+    }
+    .customButton:hover {
+        background-color: #d8d8d8;
+    }
+
+
 
 .. warning::
     **Whitelist**
