@@ -60,19 +60,19 @@ Each single entity is composed of a title, some attributes or measures and relat
 - **relation**: it refers to relationships or connections between two entities (e.g. relationship between the sales and the product dimension).
 
 .. figure:: media/image300.png
-	
+
 	Relations of one entity.
 
-There are two available views: smart and advance. When qbe is opened by default user will see smart view. Clicking on one filed of one entity that field will be added in the query and user will se executed query in imidiately. 
+There are two available views: smart and advance. When qbe is opened by default user will see smart view. Clicking on one filed of one entity that field will be added in the query and user will se executed query in imidiately.
 
 .. figure:: media/smart.png
-	
+
 	Smart view.
 
-User can switch to advance view clicking on Smart view in top right corner. User can continue adding fields in the query but without seeing result. 
+User can switch to advance view clicking on Smart view in top right corner. User can continue adding fields in the query but without seeing result.
 
 .. figure:: media/advanceView.png
-	
+
 	Advance view
 
 
@@ -129,6 +129,7 @@ With available functions it is possible to:
 - **Order**: define a sorting criteria: double click on the **Order** column to set the ordering criteria;
 - **Group**: in case of aggregations, define the attribute that you want to group on (if you know SQL syntax, these attributes are the ones you should place in the GROUP BY clause);
 - **Visible**: indicate whether a column shall be visible in the result (hidden attributes are used and returned by the generated query, but are not shown in the result table);
+- **In Use**: indicate whether a column shall be used to select the relative one during query execution or just to be used in calculated field
 - **Filter**: add a filter criteria: clicking on this filter icon redirects you to the **Filters** tab;
 
 It is possible to edit alias, clicking on gear icon (smart view) and on **Alias item**. In advance view, alias can be changed clicking on cell of alias column.
@@ -214,7 +215,7 @@ Structure of Filters panel is:
 With target type **manual** you should fill input **target** with value that you want to to be right operand.
 
 .. figure:: media/manualTarget.png
-	
+
 	Manual target type
 
 With target type **value of the field** lookup function is activated to facilitate selection of values. You are able to choose values for right operand. If you are choosing two values, you should set condition to be **beetween**, **not betwee**, **in** or **not in**. If you are choosing more then two values, you should set condition to be **in** or **not in**.
@@ -234,7 +235,7 @@ About target type **subquery** and **parameter** there will be more words later.
          **Enterprise Edition only**
 
          Filtering data with fields type of date/time/timestamp using calendar/time/calendar is available only for Enterprise Edition.
-		 
+
 If you have SI license file, you will get the chance to filter your data with fields type of date/time/timestamp using calendar/time/calendar + time option. This depends of what is data type of you field, and this is coming form metamodel creation phase.
 When creating your metamodel, you can set data type of to your field.
 
@@ -332,7 +333,7 @@ Spatial fields usage
          **Enterprise Edition only**
 
          Spatial dimension is available only for Enterprise Edition with LI licence.
-		 
+
 The Qbe engine supports spatial queries through a set of operators (that return true or false) or a set of functions (these usually return a measure). This feature is although available only when the Location Intelligence (LI) license is possessed and when data are stored in Oracle 12c database. It also fundamental that the Business Model has to be tagged as geographical model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
 
 We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |earthIcon|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distiguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
@@ -452,7 +453,7 @@ Time functions for creating calculated fields
          **Enterprise Edition only**
 
          Time functions are available only for Enterprise Edition with SI licence.
-		 
+
 If you have SI licence, in the qbe calculated field wizard there are available time finctions.
 
 .. figure:: media/timeFunctions.png
@@ -568,7 +569,7 @@ The **QbE Engine** also supports the definition and usage of subqueries similarl
 
 You can easily return to main qiery clicking on **MAIN** button in the query editor toolbar.
 
-To use the sub-query inside the main query, simply choose from target type **Subquery option**, from **Target** choose subquery that you want and set the type of condition (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries. 
+To use the sub-query inside the main query, simply choose from target type **Subquery option**, from **Target** choose subquery that you want and set the type of condition (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries.
 
 .. figure:: media/image281.png
 
@@ -588,10 +589,8 @@ The **QbE Engine** also supports the definition and usage of parameters that can
 
 	QBE parameter view.
 
-To use the parameter inside the main query, simply choose from target type **Parameter option** and from **Target** choose parameter that you want. Now the parameter is used to provide values within the filter. 
+To use the parameter inside the main query, simply choose from target type **Parameter option** and from **Target** choose parameter that you want. Now the parameter is used to provide values within the filter.
 
 .. figure:: media/filterParam.png
-	
+
 	QbE query: use of a parameter in a filter.
-
-
