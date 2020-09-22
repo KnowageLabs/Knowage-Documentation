@@ -347,6 +347,13 @@ Using the “Dataset” tab the user can add the dataset to take values from. Co
 
     Selecting columns, rows and measures of the crosstab.
 
+There is also the possibility to add calculated field as measures clicking on the "Add calculated field button".
+The calculated field will work exactly as in the table widget. After creating a calculated field there will be the possibility to edit, remove it or set the properties for it's column clicking on the new measure buttons.
+
+.. figure:: media/image170b.png
+
+    Calculated field detail.
+
 Once the columns, rows and measures have been selected the style of each column can be set by clicking on the cog settings icon. A popup will open with different options for the selected columnn. See figure below.
 
 .. figure:: media/image210.png
@@ -365,9 +372,25 @@ A particular option for a measure is **Exclude from Total and SubTotal**: that c
 
 .. figure:: media/image211.png
 
-    Measure column style.
+    Measure threshold setting.
 
-As figure above shows, you can also manage threshold. It is possible to associate a particular icon or a specific background color to a particular measure's value or range.
+As figure above shows, you can also manage threshold. For measures only, it is possible to associate a particular icon or a specific background color to a particular measure's value or range.
+To do so add a new threshold, set a condition for it to appear, and choose the icon from the list or select the color that will be changed to the cell.
+It is possible to add more or to remove thresholds using the add or delete button.
+
+.. figure:: media/image211c.png
+
+    Variables header value.
+
+If one or more variables are set, in column and measure settings another field will appear. It is possible to set the header name to be dynamic using one of the variables set.
+If one of the variables are selected in the combo as in example, the header name will be changed dipending on the current variable value.
+
+.. figure:: media/image211b.png
+
+    Column style.
+
+It's also possible to set style elements for both attribute and measures. In measures will also be possible to set the precision and prefix/suffix of the cell value.
+The comma and dot used for decimals and thousands will be automatically changed depending on user's locale.
 
 Once the dataset has been properly configured, you can proceed to the “Configuration” tab.
 
@@ -394,6 +417,23 @@ Otherwise, thanks to the “On columns” feature, you can easily compute totals
 .. figure:: media/image173.png
 
     Computing totals and/or subtotals on columns.
+
+Selecting the "Hide rows on just null values" will hide all the rows with just 0 or null values, avoiding space waste if unneeded.
+
+The "Fix attribute's columns" will pin to the left the columns containing the attributes, so side scrolling will be available without losing those columns.
+
+.. figure:: media/image173b.png
+
+    Pinned columns example.
+
+The "expand/collapse" functionality will add a + and - button in your rows, in order to easily aggregate your data.
+In the widget menu you will also find the expandall/collapse all buttons, in order to reset closing or opening your whole widget.
+
+Be aware that to use this functionality columns subtotal should be selected. If not the functionality check will enable it automatically.
+
+.. figure:: media/image173c.png
+
+    Expand/collapse example.
 
 Switching to the “Style” tab you can find the general style settings available for the crosstab.
 
