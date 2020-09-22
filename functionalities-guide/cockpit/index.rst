@@ -1553,7 +1553,8 @@ Once the user will click on the widget, those parameters will be evaluated befor
 
 The link configuration is very similar to the cross-navigation one too.
 First of all you will need to enable the link navigation using the switch button.
-After you will need to choose an interaction type and a base url. The base url will be the url opened by the user click.
+The you will be able to create one or more link navigations.
+You will need to choose an interaction type and a base url. The base url will be the url opened by the user click.
 You can also decide the type of link between the opening of a new page or the document replace opening in the same page.
 
 .. figure:: media/image215.png
