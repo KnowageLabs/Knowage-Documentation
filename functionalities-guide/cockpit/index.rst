@@ -373,7 +373,7 @@ Once the dataset has been properly configured, you can proceed to the “Configu
 
 The latter is made up of three sections: **General**, **On rows** and **On columns**, as Figure below shows.
 
-.. figure:: media/image171.png
+.. figure:: media/crossTabConfigurationTab.png
 
     Configuration tab interface.
 
@@ -388,6 +388,19 @@ Thanks to the “On rows” feature, you can easily compute totals or subtotals 
 .. figure:: media/image172.png
 
     Computing totals and/or subtotals on rows.
+
+You can also decide to:
+
+- hide by default all the rows containing all zero/null values;
+- enable the expand/collapse rows feature.
+
+This two behaviours can later be manipulated by users in view mode, in the three dot-menu.
+
+.. figure:: media/hidezero.png
+
+.. figure:: media/expandall.png
+
+.. figure:: media/collapseall.png
 
 Otherwise, thanks to the “On columns” feature, you can easily compute totals or subtotals on columns. Figure below exhibit an example.
 
