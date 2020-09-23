@@ -373,7 +373,7 @@ Once the dataset has been properly configured, you can proceed to the “Configu
 
 The latter is made up of three sections: **General**, **On rows** and **On columns**, as Figure below shows.
 
-.. figure:: media/crossTabConfigurationTab.png
+.. figure:: media/image171.png
 
     Configuration tab interface.
 
@@ -388,19 +388,6 @@ Thanks to the “On rows” feature, you can easily compute totals or subtotals 
 .. figure:: media/image172.png
 
     Computing totals and/or subtotals on rows.
-
-You can also decide to:
-
-- hide by default all the rows containing all zero/null values;
-- enable the expand/collapse rows feature.
-
-This two behaviours can later be manipulated by users in view mode, in the three dot-menu.
-
-.. figure:: media/hidezero.png
-
-.. figure:: media/expandall.png
-
-.. figure:: media/collapseall.png
 
 Otherwise, thanks to the “On columns” feature, you can easily compute totals or subtotals on columns. Figure below exhibit an example.
 
@@ -714,6 +701,8 @@ In layer's metadata, the user can add calculated fields (more on that later) and
 
          For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
 
+The first field listed in metadata is the spatial attribute and Knowage let the user to set if the spatial attribute need to be part of the aggregation or not: this let the user to create special query; for example, you may need to just list all the records of a dataset without any aggregations and in this case you can simply uncheck all the aggregate by checks and clean up the aggregation function for the spatial attribute; another example is where the spatial attribute at database side is of a special type like CLOB on Oracle, in that case the user cannot use that field for the aggregation but the user can exclude the spatial attribute from the aggregation, converting the field to measure and setting an aggregation function.
+
 Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup.
 
 For measures a user could specify the aggregation function, if it has to be shown on detail popup and if it has to be shown on map: at least one field has to be shown on map.
@@ -926,7 +915,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: *data array*
 |   params: *custom user function*
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -942,7 +931,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	[
 		{
 			name:'New York',
@@ -959,7 +948,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: array of objects; each object has nameOfDsColumn: value
 |   params: no params
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -970,7 +959,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	[
 		{
 			city:'New York',
@@ -981,7 +970,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 			name:'Boston',
 			total_children: 3,
 			country: 'USA'
-			
+
 		}
 	]
 
@@ -994,14 +983,14 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
     :linenos:
-    
+
     datastore.getColumn('country')
 
 |   result:
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	['USA','Mexico','Canada']
 
 
@@ -1013,7 +1002,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
     :linenos:
-	
+
     datastore.getSeriesAndData('PRODUCT_FAMILY',function(record){
         return {
             y: record.UNIT_SALES,
@@ -1025,7 +1014,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	[
 		{
 			name:'Drink',
@@ -1037,7 +1026,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 				{
 					y: 7000,
 					name: 'Q2'
-					
+
 				}
 			]
 		},
@@ -1051,12 +1040,12 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 				{
 					y: 4000,
 					name: 'Q2'
-					
+
 				},
 				{
 					y: 3000,
 					name: 'Q3'
-					
+
 				}
 			]
 		}
@@ -1106,7 +1095,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	[
 		{
 			"name": "Q1",
@@ -1147,7 +1136,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: node of hierarchy (node is Node object)
 |   params: index of child in hierarchy
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1158,7 +1147,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	{
 		"name": "Q1",
 		"children": [
@@ -1180,7 +1169,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: array of nodes of hierarchy on specific level
 |   params: index of level in hierarchy
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1191,7 +1180,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	[
 		{
 			"name": "Q1",
@@ -1239,7 +1228,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	{
 		"name": "Q1",
 		"children": [
@@ -1256,7 +1245,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 		],
 		"UNIT_SALES": 19.4571
 	}
-	
+
 
 **getValue**
 
@@ -1287,7 +1276,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	{
 		"name": "Non-Consumable",
 		"children": [],
@@ -1299,7 +1288,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: a node parent of specific child
 |   params: no params
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1310,7 +1299,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	{
 		"name": "Q1",
 		"children": [
@@ -1333,7 +1322,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: an array of node's children
 |   params: no params
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1344,7 +1333,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	[
 		{
 			"name": "Non-Consumable",
@@ -1363,7 +1352,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 |   returns: an array of node siblings to a specific child
 |   params: no params
-|   example: 
+|   example:
 
 .. code-block:: javaScript
     :linenos:
@@ -1374,7 +1363,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 .. code-block:: javaScript
 	:linenos:
-	
+
 	[
 		{
 			"name": "Non-Consumable",
@@ -1396,10 +1385,10 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 
     datastore.clickManager(columnName, columnValue);
 
-|   This method can be added everywhere the code is managing a click event, and will notify Knowage about the 
+|   This method can be added everywhere the code is managing a click event, and will notify Knowage about the
     interaction.
-|   The default case (if no cross-navigation or preview-navigation is set) will throw a selection with the 
-    dataset column name and column value set in the method. 
+|   The default case (if no cross-navigation or preview-navigation is set) will throw a selection with the
+    dataset column name and column value set in the method.
 |   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
     throw the set interaction. The dynamic values used will be the ones set in the method arguments.
 
@@ -1409,7 +1398,7 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 
          As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. Be aware that url not set in the whitelist will be deleted on save.
 
-		 
+
 .. warning::
     **Whitelist**
     For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
@@ -1477,7 +1466,7 @@ you will be able to choose between them. If you leave this field blank the user 
 
     Table widget preview configuration.
 
-The preview configuration is very similar to the cross-navigation one. 
+The preview configuration is very similar to the cross-navigation one.
 First of all you will need to enable the navigation using the switch button.
 After you will need to choose an interaction type and a target dataset.
 the selected dataset will be opened in a popup window but, if you check the "Direct download" property you will be able to get the dataset preview directly in the download list.
@@ -1527,7 +1516,7 @@ You can choose how to get the parameter value with the following modes:
 - *Selection*, passing the current value of the selection for the specified dataset and column. Warning: the selection is not triggered clicking on the navigation, so to pass this value the selection must already be present.
 - *Analytical Driver*, passing a page parameter (input driver)
 - *JSON*, passing an escaped JSON inside the url parameter. You can use the editor to create the desired JSON and use the placeholder to set the value at runtime. The placeholders are the usuals *$F{field}* for the fields, *$P{parameter}* for the parameters, *$V{variable}* for the variables.
-- *JWT*, passing the JWT token of the user 
+- *JWT*, passing the JWT token of the user
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
