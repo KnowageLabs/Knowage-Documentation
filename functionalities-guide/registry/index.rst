@@ -165,9 +165,9 @@ __________
 If your profile attribute is a multivalue one, you have to:
 
 -  set *IN* clause as *"Profile attribute Filter Type"* during model's creation
--  set profile attribute values respecting this format *'value1','value2',...,'valueN'*.
+-  set profile attribute values respecting this format *'value1','value2',...,'valueN'* or *{,{value1,value2,...,valueN}}*.
 
-In this way, comma separated value will be treated as a list of values and filter will be applied with this criteria.
+In this way, profile attribute value will be treated as a list of values and filter will be applied with this criteria.
 
 
 JPivot Registry instance
