@@ -6,7 +6,7 @@ A Registry document allows users to write, cancel and modify items of a datamart
 .. figure:: media/image339.png
 
     Example of Registry document.
-   
+
 Registry features
 -------------------
 
@@ -30,11 +30,11 @@ Vice versa, you can delete one or more rows using the “Trash” icon |image338
 .. |image338| image:: media/image344.png
    :width: 30
 
-It is important to click on the “Save” button |image339| to store the adjustments done in the datamart. “Save” button is available in Functionality bar, above table. 
+It is important to click on the “Save” button |image339| to store the adjustments done in the datamart. “Save” button is available in Functionality bar, above table.
 
 .. |image339| image:: media/image345.png
    :width: 30
-   
+
 .. _functionalitybar:
 .. figure:: media/image342.png
 
@@ -77,7 +77,7 @@ Here we exhibit a possible syntax for a Registry document.
 .. code-block:: xml
     :linenos:
     :caption: Example (a) of template for Registry.
-    
+
     <?xml version="1.0" encoding="windows-1250"?>
     <QBE>
 		<DATAMART name="RegFoodmartModel" />
@@ -108,32 +108,67 @@ Here we exhibit a possible syntax for a Registry document.
 
 In particular, we give some details for each tag and main attributes.
 
--  **ENTITY**: the entity name as in the model;
--  **FILTERS**: possibility to define filters by specifing the title, the field (among shown columns) and the type among COMBO, MANUAL      or DRIVER: in this last case user has also to specify the analytical driver that take this filter’s value;
--  **COLUMNS**: columns list specifing:
+-  **ENTITY**: the entity name as in the model. It must be the fully-qualified name of the class representing you registry in the model;
+-  **FILTERS**: possibility to define filters by specifying the title, the field (among shown columns) and the type among COMBO, MANUAL      or DRIVER: in this last case user has also to specify the analytical driver that take this filter’s value;
+-  **COLUMNS**: columns list specifying:
 
-   -  **field name**: the reference to the field identifier into the model,
-   -  **title**: the title of the column shown (optional),
-   -  **visible**: the visibility of the column (Optional, default true),
-   -  **editable**: the editability of the column (Optional, default true),
-   -  **color and format for numbers**: optional,
-   -  **editor**: the editor. Default type is free-text for simple column (not fk values), but for date is possible show the picker         through the type PICKER. The format option specify the format date,
-   -  **subEntity**: If the column is a reference key user can specify the subentity referred and the foreign key name; in this case the       field shown will be of the entity referred and will be shown as combo if editable,
-   -  **dependsFrom**: if the column content is logically correlatd to other registry’s column is possible specifiy this logic through         this parameter. DependsFrom identifies the field name on which it depends (Optional),
-   -  **dependsFromEntity**: usable only with dependsFrom parameter. It defines a different entity to resolve the correlation                 (Optional),
-   -  **orderBy**: is used in case of foreign key, the combo box is ordered by the column here indicated, by default is the column             extracted (Optional).
-   -  **infoColumn**: if true ignore the column when inserting or updating the record (Optional).
+   -  **field name**: the reference to the field identifier into the model;
+   -  **title**: the title of the column shown (optional);
+   -  **visible**: the visibility of the column (optional, default true);
+   -  **editable**: the editability of the column (optional, default true);
+   -  **color and format for numbers**: optional;
+   -  **editor**: the editor. Default type is free-text for simple column (not FK values), but for date is possible to show the picker         through the type PICKER. The format option specifies the format date;
+   -  **subEntity**: if the column is a reference key, the user can specify the subentity referred and the foreign key name. This value must be equals to the name of the relationship object created in the model. The field shown will be of the entity referred and will be shown as COMBO if editable;
+   -  **foreignKey**: if the subEntity property is set, foreignKey property must be set with the name of the foreign key (to lower case);
+   -  **dependsFrom**: if the column content is logically correlated to other registry’s column, it is possible to specify this logic through         this parameter. dependsFrom identifies the field name on which it depends (Optional);
+   -  **dependsFromEntity**: usable only with dependsFrom parameter. It defines a different entity to resolve the correlation                 (optional);
+   -  **orderBy**: is used in case of foreign key. The combo box is ordered by the column here indicated, by default is the column             extracted (optional).
+   -  **infoColumn**: if true ignore the column when inserting or updating the record (optional).
 
 We stress that it is mandatory to point at one datamart table using a column with a numeric key. The code line is highlighted in figure below. While, if not elsewhere specified, a descriptive column will be displayed by default.
-    
+
 .. code-block:: xml
     :linenos:
     :caption: Pointing at a numerical column.
-    
+
 	<COLUMNS>
-		<COLUMN field="store_id" visible="false" editable="false" /> 
+		<COLUMN field="store_id" visible="false" editable="false" />
 
 Still referring to the code above, we underline that the “product_subcategory” field is used as a subcategory. It belongs in fact to another table. In this case it is enough to add the attributes: subEntity="rel_product_class_id_in_product_class"  foreignKey="rel_product_class_id_in_product_class".
+
+
+Analytical driver
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can filter values by using analytical driver. Add them during document creation using DRIVER tab. Registry template must contains FILTER tag. Below an example of configuration for a driver named "UNIT_SALES_AD" insisting on the column "UNIT_SALES".
+
+.. code-block:: xml
+    :linenos:
+    :caption: Pointing at a numerical column.
+
+	<FILTERS>
+		<FILTER title="UNIT_SALES_AD_title" field="UNIT_SALES" presentation="DRIVER" driverName="UNIT_SALES_AD" />
+
+
+Profile attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Another way to filter registry content is using profile attributes. If you want to use profile attributes to filter values you have to follow these steps:
+
+- Create a profile attribute (if necessary) from the Manage Profile Attributes menu
+- Associate the profile attribute with the column during model creation
+
+This way, your data will be filtered by this attribute (if not empty) both when viewing data and when inserting or updating records.
+
+Multivalue
+__________
+
+If your profile attribute is a multivalue one, you have to:
+
+-  set *IN* clause as *"Profile attribute Filter Type"* during model's creation
+-  set profile attribute values respecting this format *'value1','value2',...,'valueN'*.
+
+In this way, comma separated value will be treated as a list of values and filter will be applied with this criteria.
+
 
 JPivot Registry instance
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -143,7 +178,7 @@ The Registry instance allows to develop also a Jpivot table. See the last figure
 .. code-block:: xml
     :linenos:
     :caption: Example (b) of template code for Registry.
-    
+
 	<QBE>
 		<DATAMART name="foodmart" />
 		<REGISTRY pagination = "false" summaryColor="#00AAAA">
@@ -172,4 +207,3 @@ The Registry instance allows to develop also a Jpivot table. See the last figure
 	</QBE>
 
 Note that to activate the JPivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
-    
