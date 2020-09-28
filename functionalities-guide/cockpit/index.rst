@@ -1036,7 +1036,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 
 **getColumn**
 
-|   returns: array of values for one dataset column
+|   returns: array of *unique* values for one dataset column
 |   params: dataset's column name
 |   example:
 
