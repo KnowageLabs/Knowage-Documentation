@@ -347,7 +347,7 @@ Using the “Dataset” tab the user can add the dataset to take values from. Co
 
     Selecting columns, rows and measures of the crosstab.
 
-There is also the possibility to add calculated field as measures clicking on the "Add calculated field button".
+There is also the possibility to add calculated fields as measures clicking on the "Add calculated field button".
 The calculated field will work exactly as in the table widget. After creating a calculated field there will be the possibility to edit, remove it or set the properties for it's column clicking on the new measure buttons.
 
 .. figure:: media/image170b.png
@@ -383,13 +383,13 @@ It is possible to add more or to remove thresholds using the add or delete butto
     Variables header value.
 
 If one or more variables are set, in column and measure settings another field will appear. It is possible to set the header name to be dynamic using one of the variables set.
-If one of the variables are selected in the combo as in example, the header name will be changed dipending on the current variable value.
+If one of the variables are selected in the combo as in example, the header name will be changed depending on the current variable value.
 
 .. figure:: media/image211b.png
 
     Column style.
 
-It's also possible to set style elements for both attribute and measures. In measures will also be possible to set the precision and prefix/suffix of the cell value.
+It's also possible to set style elements for both attributes and measures. In measures will also be possible to set the precision and prefix/suffix of the cell value.
 The comma and dot used for decimals and thousands will be automatically changed depending on user's locale.
 
 Once the dataset has been properly configured, you can proceed to the “Configuration” tab.
@@ -1553,7 +1553,7 @@ Once the user will click on the widget, those parameters will be evaluated befor
 
 The link configuration is very similar to the cross-navigation one too.
 First of all you will need to enable the link navigation using the switch button.
-The you will be able to create one or more link navigations.
+Then you will be able to create one or more link navigations.
 You will need to choose an interaction type and a base url. The base url will be the url opened by the user click.
 You can also decide the type of link between the opening of a new page or the document replace opening in the same page.
 
