@@ -11,7 +11,7 @@ The knowage-python package contains the source code of the webservice that has t
 
 .. code-block:: python
     
-	pip install knowage-python
+	pip install knowage-python==<knowage_version (ex: 7.2.2)>
 	
 or simply you can find it in the Knowage-Server github repository under the Knowage-Python folder.
 
