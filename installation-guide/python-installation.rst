@@ -45,6 +45,11 @@ If you are working on a UNIX environment, take a look at gunicorn (https://gunic
 The service leverages on Flask, for deployment in any other environment take a look at the official documentation (https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment).
 **The entry point for the application is ``Knowage-Python/pythonwebservice/knowage-python.py`` and the default port is ``5000``.**
 
+.. important::
+     **Webservice permissions**
+
+     The knowage-python webservice must have the rights to read/write in its own folders (pythonwebservice/*). 
+
 Configure Knowage to enable Python functionalities
 -------------------
 
