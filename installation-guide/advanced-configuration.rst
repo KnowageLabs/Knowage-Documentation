@@ -407,3 +407,10 @@ Below is an example of invoking the tool using *biadmin* as plaintext password.
     java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-7.2.0.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
 
 The output value will be the second argument passed in input encrypted with the key present in the file. This procedure must be repeated for all users.
+
+
+Main Menu
+----------------
+Specific settings for the main menu can be set updating the fields below:
+
+* **KNOWAGE.DOWNLOAD.POLLING.TIME**: This field defines the number of milliseconds for the download service polling interval. If set to *0* the service will update just once on page load. Default is 10000 (10 seconds).
