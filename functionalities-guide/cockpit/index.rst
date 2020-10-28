@@ -838,12 +838,12 @@ And change the "date format" property
 
 .. figure:: media/image495.png
 
-Python Widget
+Python/R Widget
 ~~~~~~~~~~~~~~~~~~
 
-The Python widget allows to directly embed python code inside the cockpit in order to create advanced custom analytics.
+The Python/R widgets allow to directly embed Python or R scripts inside the cockpit in order to create advanced custom analytics.
 
-In the editor tab it is possible to add the script that will be sent to the python interpreter.
+In the editor tab it is possible to add the script that will be sent to the execution engine.
 
 .. figure:: media/PythonEditor.png
 
@@ -853,11 +853,11 @@ Knowage has support for three different output types:
 
 - Image
 - HTML
-- Bokeh application
+- Bokeh application (only for Python)
 
 If **Image** or **HTML** is choosen as output type, it is also necessary to specify the name of the file in which the script will save its output.
 
-The Dataset tab allows the user to select a dataset that will be accessible directly from the python code.
+The Dataset tab allows the user to select a dataset that will be accessible directly from the code.
 After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
 
 
@@ -865,20 +865,20 @@ After choosing a dataset the list of available columns will be shown. Here it is
 
     Dataset selection
 
-Once a dataset has been choosen, it will be possible to access it directly from python code via a **dataframe** variable.
+Once a dataset has been choosen, it will be possible to access it directly from the code via a **dataframe** variable.
 This variable will have the same name of the dataset label.
 
-The Environment tab allows the user to choose among a list of available python evironments previously defined inside the **configuration management**.
+The Environment tab allows the user to choose among a list of available Python/R evironments previously defined inside the **Configuration Management**.
 To support this kind of choice a list of available libraries is displayed for each selected environment.
 
 .. figure:: media/EnvironmentTab.png
 
     Environment selection
 
-Inside python scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
+Inside Python and R scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
 
 .. warning::
-    **Python widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
+    **This widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
 
 Custom Chart Widget
 ~~~~~~~~~~~~~~~~~~~~~~
