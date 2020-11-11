@@ -108,8 +108,8 @@ Here we exhibit a possible syntax for a Registry document.
 
 In particular, we give some details for each tag and main attributes.
 
--  **ENTITY**: the entity name as in the model. It must be the fully-qualified name of the class representing you registry in the model;
--  **FILTERS**: possibility to define filters by specifying the title, the field (among shown columns) and the type among COMBO, MANUAL      or DRIVER: in this last case user has also to specify the analytical driver that take this filter’s value;
+-  **ENTITY**: the entity name as in the model. It must be the fully-qualified name of the class representing your registry in the model;
+-  **FILTERS**: possibility to define filters by specifying the title, the field (among shown columns) and the type among COMBO, MANUAL or DRIVER: in this last case user has also to specify the analytical driver that take this filter’s value;
 -  **COLUMNS**: columns list specifying:
 
    -  **field name**: the reference to the field identifier into the model;
@@ -117,12 +117,12 @@ In particular, we give some details for each tag and main attributes.
    -  **visible**: the visibility of the column (optional, default true);
    -  **editable**: the editability of the column (optional, default true);
    -  **color and format for numbers**: optional;
-   -  **editor**: the editor. Default type is free-text for simple column (not FK values), but for date is possible to show the picker         through the type PICKER. The format option specifies the format date;
+   -  **editor**: the editor. Default type is free-text for simple column (not FK values), but for date is possible to show the picker through the type PICKER. The format option specifies the format date;
    -  **subEntity**: if the column is a reference key, the user can specify the subentity referred and the foreign key name. This value must be equals to the name of the relationship object created in the model. The field shown will be of the entity referred and will be shown as COMBO if editable;
    -  **foreignKey**: if the subEntity property is set, foreignKey property must be set with the name of the foreign key (to lower case);
-   -  **dependsFrom**: if the column content is logically correlated to other registry’s column, it is possible to specify this logic through         this parameter. dependsFrom identifies the field name on which it depends (Optional);
-   -  **dependsFromEntity**: usable only with dependsFrom parameter. It defines a different entity to resolve the correlation                 (optional);
-   -  **orderBy**: is used in case of foreign key. The combo box is ordered by the column here indicated, by default is the column             extracted (optional).
+   -  **dependsFrom**: if the column content is logically correlated to other registry’s column, it is possible to specify this logic through this parameter. DependsFrom identifies the field name on which it depends (Optional);
+   -  **dependsFromEntity**: usable only with dependsFrom parameter. It defines a different entity to resolve the correlation (optional);
+   -  **orderBy**: is used in case of foreign key. The combo box is ordered by the column here indicated, by default is the column extracted (optional).
    -  **infoColumn**: if true ignore the column when inserting or updating the record (optional).
 
 We stress that it is mandatory to point at one datamart table using a column with a numeric key. The code line is highlighted in figure below. While, if not elsewhere specified, a descriptive column will be displayed by default.
@@ -139,7 +139,7 @@ Still referring to the code above, we underline that the “product_subcategory�
 
 Analytical driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You can filter values by using analytical driver. Add them during document creation using DRIVER tab. Registry template must contains FILTER tag. Below an example of configuration for a driver named "UNIT_SALES_AD" insisting on the column "UNIT_SALES".
+You can filter values by using analytical drivers. Add them during document creation using DRIVER tab. Registry template must contains FILTER tag. Below an example of configuration for a driver named "UNIT_SALES_AD" insisting on the column "UNIT_SALES".
 
 .. code-block:: xml
     :linenos:
