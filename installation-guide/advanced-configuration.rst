@@ -254,7 +254,7 @@ Below there is an example of the ldap.properties file configuration for both LDA
   SEARCH_USER_BEFORE_FILTER = (&((objectclass=person))(uid=%s))
 
 In case you want the users to autenticate using their complete distinguish name, set ``SEARCH_USER_BEFORE`` key to be *false*. 
-In case you want instead the users to autenticate using an LDAP property such as ``uid``, then set ``SEARCH_USER_BEFORE`` key to be *true*; you need also to specify the ``SEARCH_USER_BEFORE_FILTER`` filter that Knowage will exploit in order to retrieve the user's information on the LDAP server. **Pay attention that %s placeholder must present**: it will be replaced by Knowage with the actual username provided by the user when logging in.
+In case you want instead the users to autenticate using an LDAP property such as ``uid``, then set ``SEARCH_USER_BEFORE`` key to be *true*; you need also to specify the ``SEARCH_USER_BEFORE_FILTER`` filter that Knowage will exploit in order to retrieve the user's information on the LDAP server. **Pay attention that %s placeholder must be present**: it will be replaced by Knowage with the actual username provided by the user when logging in.
 
 The ``SEARCH_USER_BEFORE_USER`` and ``SEARCH_USER_BEFORE_PSW`` keys are credentials to authenticate to LDAP server; if the first one is set, the second one will be considered also. *These parameters are used only if anonymous bind is not allowed for LDAP server. For this reason they are optional and can be empty.*
 
@@ -388,7 +388,7 @@ The secret password encryption key must be set during the installation and must 
 
 This tool requires:
 
-* knowage-utils-7.2.0.jar library to be add to the classpath
+* knowage-utils-7.2.0.jar library to be added to the classpath
 * the password encryption secret file name with complete path
 * password value (plaintext)
 
