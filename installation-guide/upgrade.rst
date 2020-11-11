@@ -96,11 +96,20 @@ To upgrade Knowage installation follow these steps:
 
 -  restore all ``TOMCAT_HOME/webapps/knowage*/META-INF/context.xml`` files from backup copy of previous applications;
 
+-  create a file for password encryption secret. The file must contain random text of any length. This is a security configuration, so don’t use short strings. For example, you can create a file and write text into it. **Do not distribute** it for any reason, create at least a backup copy of the file.
+
+-  update ``TOMCAT_HOME/conf/server.xml`` file by creating a new environment variable as shown below and setting value property as the complete path of the file for password encryption secret.
+
+.. code-block:: xml
+
+   <Environment name="password_encryption_secret" description="File for security encryption location"
+      type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
+
 -  start Apache Tomcat again.
 
 .. important::
 
-	Latest version of Knowage has a higher security level. For this reason log in and password changing is required as a first step after upgrading.
+	This version of Knowage has a higher security level. For this reason log in and password changing is required as a first step after upgrading.
 
 To admin's user it is recommended to check which user/s didn't change the password and tell them to do it as soon as possible.
 
