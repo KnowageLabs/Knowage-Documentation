@@ -378,3 +378,25 @@ Users
 Specific configurations for users import procedure:
 
 * **IMPORTEXPORT.USER.DEFAULT_PASSWORD**: password set for all users imported by the import procedure.
+
+
+Changing the secret key for password encryption
+-----------------------------------------------
+
+The secret password encryption key must be set during the installation and must **never** be changed. *In case that the secret key is lost* you must create a new one and update database passwords. For this reason Knowage provides you a tool to find out the new encrypted value.
+
+
+This tool requires:
+
+* knowage-utils-7.2.0.jar library to be add to the classpath
+* the password encryption secret file name with complete path
+* password value (plaintext)
+
+Below is an example of invoking the tool using *biadmin* as plaintext password.
+
+.. code-block:: SQL
+    :linenos:
+
+    java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-7.2.0.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
+
+The output value will be the second argument passed in input encrypted with the key present in the file. This procedure must be repeated for all users.
