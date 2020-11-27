@@ -101,13 +101,13 @@ As shown in the following figure, the function admits two kinds of input: *colum
 
 In the “Column” instance the function takes input columns that will be referenced inside the script. These columns are generic, the user must only specify their type and the name he later wants to use inside the script to access that specific column.
 
-.. figure:: media/image406.png
+.. figure:: media/function_input_tab_column.png
 
     The dataset input of the function settings.
 
 In the “Variable” case, the user must insert one or more variables and match them with values using the dedicated area.
 
-.. figure:: media/image407.png
+.. figure:: media/function_input_tab_variable.png
 
     The variable input of the function settings.
 
@@ -121,7 +121,7 @@ The script tab is where an expert user defines the function through the usage of
     The script tab.
 
 Inside the script users will have at their disposal a read-only `pandas.Series <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html>`__ variable for each column defined in the input tab.
-To reference one specific column users must use the placeholder ${column_name}. Input variables will be accessible with the same syntax.
+To reference one specific column users must use the placeholder *${column_name}*. Input variables will be accessible with the same syntax.
 
 .. code-block:: bash
          :caption: Code syntax to recall inputs
