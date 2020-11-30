@@ -172,9 +172,10 @@ In Code Query dataset’s script example we uses JavaScript to dynamically modif
          :caption:  Query dataset’s script example
          :linenos:
 
-          if( parameters.get('year') == 1997 ) { query = query.replace(FROM
-          sales_fact_1998, FROM sales_fact_1997);
-          } else { query = query; // do nothing
+          if( parameters.get('year') == 1997 ) { 
+            query = query.replace("FROM sales_fact_1998", "FROM sales_fact_1997");
+          } else { 
+            query = query; // do nothing
           }
 
 Java Class Dataset
