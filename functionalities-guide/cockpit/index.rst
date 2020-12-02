@@ -1437,6 +1437,52 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 	]
 
 
+**variables**
+
+|   returns: a key/value object with all the declared variables and values
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    var myvariables = datastore.variables;
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+    {
+        variableCity: 'New York',
+        variableNum: 100
+    }
+	
+
+**profile**
+
+|   returns: a key/value object with all the declared profile attributes for the user
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    var user = datastore.profile;
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+    {
+        name: 'My Name',
+        tenant: 'Knowage',
+        customProfileAttribute: 'Test value',
+        role: 'user'
+    }
+	
+
 It is also possible to interact with the other cockpit widgets, to do so it's possible to use the **clickManager**:
 
 .. code-block:: javaScript
@@ -1455,7 +1501,15 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 .. important::
          **Chart libraries**
 
-         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. Be aware that url not set in the whitelist will be deleted on save.
+         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. 
+         Be aware that url not set in the whitelist will be deleted on save. 
+         To use this import use the kn-import tag like the following example:
+
+
+.. code-block:: html
+   :linenos:
+
+   <kn-import src="yourCDNurl"></kn-import>
 
 
 .. warning::
