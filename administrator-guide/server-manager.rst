@@ -29,7 +29,7 @@ In the image above, on the left you have the list of existing tenants. On the to
 
     Product types tab (Left) Datasources tab (Right).
 
-Note that, in a single-tentant environment admin and superadmin coincides. In a multitenants environment (developed then through the Server Manager functionality), only *one* user has the superadmin role for each tenant, while there can be one or more users with admin role. In particular compared to the admin case, the superadmin has the possibility to manage the multi-tenancy. Moreover, he is the only one who can configure the JNDI datasources and access the cache configuration (through the cache manager menu item).
+Note that, in a single-tenant environment admin and superadmin coincides. In a multitenants environment (developed then through the Server Manager functionality), only *one* user has the superadmin role for each tenant, while there can be one or more users with admin role. In particular compared to the admin case, the superadmin has the possibility to manage the multi-tenancy. Moreover, he is the only one who can configure the JNDI datasources and access the cache configuration (through the cache manager menu item).
 
 Template Management
 -------------------
@@ -92,6 +92,8 @@ Before going on decide if you want to export **Olap customized View** and/or **S
    Checking this property the export will include all the schedulation associated to the chosen documents. At the end of the import you must have the schedulation saved into Scheduler section under the Tools area.
 - **Export the document only in the selected functionality**
    Checking this property the export will include documents only if they are inside a selected functionality.
+- **Related documents**
+   Checking this property the export will include documents linked by cross navigation to the selected ones.
 
 Now you are ready to click on the export icon to generate and download the .zip.
 Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** > **Import\\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure below we show the document import interface.

@@ -202,11 +202,8 @@ Knowage provides integration with a LDAP server for authentication purposes.
 
 Knowage ships with two LDAP security connectors:
 
-* **LdapSecurityServiceSupplier**: a pure LDAP connector that authenticates every user using the LDAP server,
-* **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP connector that can authenticate some users using the LDAP server and other users using the internal Knowage authentication mechanism.
-
-LdapSecurityServiceSupplier relies only on a LDAP configuration file, instead ProfiledLdapSecurityServiceSupplier checks also the Knowage user profile attribute **auth_mode**.
-If the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the logging user, then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
+* **LdapSecurityServiceSupplier**: a pure LDAP connector that authenticates every user using an LDAP server,
+* **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP/internal connector that authenticates users using an LDAP server or the internal Knowage authentication system according to their profile information. More precisely, the choice of the system to be exaploited is based on the **auth_mode** profile attribute: if the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the user, then Knowage will use its internal authentication mechanism, otherwise it will try an LDAP authentication.
 
 .. warning::
     The only way to maintain access to Knowage for **users not mapped onto LDAP** is to:
@@ -215,7 +212,7 @@ If the user profile attribute **auth_mode** is defined and its value equals to `
     * set **auth_mode** = ``internal`` for every user not mapped onto LDAP,
     * use the connector **ProfiledLdapSecurityServiceSupplier** (see below).
 
-In order to setup any LDAP security connector, prepare a .properties file that includes the LDAP configuration:
+In order to setup any LDAP security connector, you need to define a .properties file that includes the LDAP configuration:
 
 * **INITIAL_CONTEXT_FACTORY**: initial context factory Java class,
 * **PROVIDER_URL**: LDAP server IP,
@@ -226,9 +223,7 @@ In order to setup any LDAP security connector, prepare a .properties file that i
 .. important::
          The final concatenation **DN_PREFIX + <Knowage user ID> + DN_POSTFIX** must be equal to the **DN (distinguished name)** of the user as defined in LDAP server. Please check DN examples at https://ldapwiki.com/wiki/DN%20Syntax .
 
-An example of LDAP configuration is the file ``ldap_authorizations.properties``, available in the project ``knowageldapsecurityprovider``.
-
-Then define a custom JVM property ``ldap.config``, setting its value to the path of LDAP configuration file.
+Then define a custom JVM property ``ldap.config``, setting its value to the path of LDAP properties file.
 
 In a Unix-like environment using Apache Tomcat you can add a custom JVM property to variable ``JAVA_OPTS`` in a ``setenv.sh`` file under ``bin`` folder:
 
@@ -244,26 +239,24 @@ In a Windows environment using Apache Tomcat you can add a custom JVM property t
 
     set JAVA_OPTS="%JAVA_OPTS% -Dldap.config=C:/Tomcat/resources/ldap.properties"
 
-Below there is an example of the ldap.properties file configuration for the **profiled** LDAP connector:
+Below there is an example of the ldap.properties file configuration for both LDAP connectors:
 
 .. code-block:: properties
 
-  INITIAL_CONTEXT_FACTORY 	 = com.sun.jndi.ldap.LdapCtxFactory
-  PROVIDER_URL 				       = ldaps://XXX.XXX.XXX.XXX:389
-  SECURITY_AUTHENTICATION    = simple
-  DN_PREFIX 					       = CN=
-  DN_POSTFIX 					       = ,ou=IT staff,o="Example, Inc",c=US
-  SEARCH_USER_BEFORE 			   = true
-  SEARCH_USER_BEFORE_USER		 =
-  SEARCH_USER_BEFORE_PSW		 =
-  SEARCH_USER_BEFORE_FILTER  = (&((objectclass=person))(uid=%s))
+  INITIAL_CONTEXT_FACTORY   = com.sun.jndi.ldap.LdapCtxFactory
+  PROVIDER_URL              = ldaps://<LDAP server address>:389
+  SECURITY_AUTHENTICATION   = simple
+  DN_PREFIX                 = CN=
+  DN_POSTFIX                = ,ou=IT staff,o="Example, Inc",c=US
+  SEARCH_USER_BEFORE        = true
+  SEARCH_USER_BEFORE_USER   =
+  SEARCH_USER_BEFORE_PSW    =
+  SEARCH_USER_BEFORE_FILTER = (&((objectclass=person))(uid=%s))
 
-Set ``SEARCH_USER_BEFORE`` key as *true*, if you want to looking for the complete distinguish name before checking authentication. Otherwise set it to *false*.
+In case you want the users to autenticate using their complete distinguish name, set ``SEARCH_USER_BEFORE`` key to be *false*. 
+In case you want instead the users to autenticate using an LDAP property such as ``uid``, then set ``SEARCH_USER_BEFORE`` key to be *true*; you need also to specify the ``SEARCH_USER_BEFORE_FILTER`` filter that Knowage will exploit in order to retrieve the user's information on the LDAP server. **Pay attention that %s placeholder must be present**: it will be replaced by Knowage with the actual username provided by the user when logging in.
 
 The ``SEARCH_USER_BEFORE_USER`` and ``SEARCH_USER_BEFORE_PSW`` keys are credentials to authenticate to LDAP server; if the first one is set, the second one will be considered also. *These parameters are used only if anonymous bind is not allowed for LDAP server. For this reason they are optional and can be empty.*
-
-The ``SEARCH_USER_BEFORE_FILTER`` key is the filter used to retrieve the user on the LDAP server; Knowage uses the *username* as a parameter to find it. **Pay attention that %s placeholder must present.**
-
 
 .. important::
     Restart your application server in order to load the custom JVM property.
@@ -392,3 +385,23 @@ Main Menu
 Specific settings for the main menu can be set updating the fields below:
 
 * **KNOWAGE.DOWNLOAD.POLLING.TIME**: This field defines the number of milliseconds for the download service polling interval. If set to *0* the service will update just once on page load. Default is 10000 (10 seconds).
+Changing the secret key for password encryption
+-----------------------------------------------
+
+The secret password encryption key must be set during the installation and must **never** be changed. *In case that the secret key is lost* you must create a new one and update database passwords. For this reason Knowage provides you a tool to find out the new encrypted value.
+
+
+This tool requires:
+
+* knowage-utils-7.2.0.jar library to be added to the classpath
+* the password encryption secret file name with complete path
+* password value (plaintext)
+
+Below is an example of invoking the tool using *biadmin* as plaintext password.
+
+.. code-block:: SQL
+    :linenos:
+
+    java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-7.2.0.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
+
+The output value will be the second argument passed in input encrypted with the key present in the file. This procedure must be repeated for all users.

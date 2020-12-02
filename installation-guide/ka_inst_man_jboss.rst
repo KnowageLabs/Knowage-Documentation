@@ -102,7 +102,7 @@ In addition, remember to type the information related to the JDBC driver inside 
 
 Environment variables definition
 --------------------------------
-Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the following constants inside the subsystem domain naming tab, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in :numref:`jbossenvironmentvariables`:
+Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the following constants inside the subsystem domain naming tab.
 
 .. _jbossenvironmentvariables:
 .. code-block:: xml
@@ -116,8 +116,6 @@ Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the followin
                 value="it.eng.spagobi.services.common.JWTSsoService" />
               <simple name="java:/urls/service_url" type="java.lang.String"
                 value="http:// localhost:8080/knowage" />
-              <simple name="java:/urls/host_url" type="java.lang.String"
-                value="<server url which is hosting knowage>"/>
               <simple name="hmacKey" type="java.lang.String"
                 value="<hmac_secret_key_to_substitute>"/>
 		          <simple name="password_encryption_secret" type="java.lang.String"
