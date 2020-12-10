@@ -2,7 +2,7 @@ Python Engine
 ================
 
 These functionalities use a Python standalone webservice, which allows to submit widgets and datasets scripts and get result from a Python environment already installed on the machine where the webservice runs. For this reason, Python environments need to be installed and configured on the same machine of Knowage server or even on a remote one, and the Python webservice has to be running **inside that same environment**. 
-This implies that, in order to use this functionalities, you have to install Python properly (depending on the OS) on the same machine where the service will be running. You can find all information about Python installation at https://www.python.org. The official supported version is Python 3.7, but other 3.x releases might work as well.
+This implies that, in order to use this functionalities, you have to install Python properly (depending on the OS) on the same machine where the service will be running. You can find all information about Python installation at https://www.python.org. The official supported version is Python >=3.6.8, but we recommend to use 3.7.x whenever it's possible.
 
 Install knowage-python webservice
 -------------------
@@ -54,6 +54,7 @@ R Engine
 ================
 
 As for Python, also the R functionalities leverage on a standalone webservice, this time written in R. Take a look at the official R Project documentation and find out how to get R (https://www.r-project.org/).
+The official supported version is R >=3.5.1, but we recommend to use 3.6.x whenever it's possible.
 
 Install knowage-r webservice
 -------------------
