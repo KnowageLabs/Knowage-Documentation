@@ -5,24 +5,27 @@ Before starting
 Documentation structure
 ===========================
 
-Knowage documentation is composed by:
+Knowage documentation is composed by four main areas:
 
 -  **Installation Manual**;
 -  **General User Manual**;
 -  **General Administrator Manual**;
+-  **Functionalities**.
 
-The books focusing on products describe all the BI functionalities included in your installation. For example if you have purchased KnowageBD subscription, you will get the installation and the two general manuals plus a third one which focus on the BI functionalities provided by this product.
+Each one focuses on a specific aspect of the product: how to properly install it, how to generally approach the suite, which are the general tools an administrator has access to and which are the analytical potentialities of the platform.
 
 Target
 ===========================
 
-Each book is thought to be delivered to different users.
+Each area is thought to be delivered to different users.
 
--  **Installation Manual**: it is aimed at technical users. It provides all the instructions needed to install and configure the Knowage   suite. Here the essential steps to succeed with the standard installation on certified environments will be described, including the optional use of CAS as a SSO solution and the use of HTTPS protocol.
+-  **Installation Manual**: it is directed at technical users. It provides all the instructions needed to install and configure the Knowage suite. Here the essential steps to succeed with the standard installation on certified environments will be described, including the optional use of CAS as a SSO solution and the use of HTTPS protocol.
 
--  **General User Manual**: it is aimed at end users. It provides a first approach to Knowage interface and functionalities. It can be used as a first approach to Knowage. It focus on all those elements which are shared among the products and involves the end user.
+-  **General User Manual**: it is directed at unskilled end users. It provides a first approach to Knowage interface and functionalities. It can be used as a first approach to Knowage. It focuses on all those elements which are shared among the products and involves the end user.
 
--  **General Administrator Manual**: it is aimed at Knowage administrator. It describes all the management and configuration tools shared by all Knowage products.
+-  **General Administrator Manual**: it is directed at Knowage administrator. It describes all the management and configuration tools shared by all Knowage products.
+
+-  **Functionalities**: it is directed at all kind of users. Here each user can find detailed instructions on how to develop different kind of analysis exploiting all BI capabilities of Knowage platform. Notice that when a functionality is strictly related to a specific module it will be notified.
 
 About conventions
 ===========================
