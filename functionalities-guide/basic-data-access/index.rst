@@ -12,7 +12,7 @@ We highlight that this chapter describes basic but also advanced features which 
 
 Let us suppose to enter, with end user credentials, the data management area clicking on the **Workspace** icon from BI functionalities menu as shown in figure below and the **Data** section of the window.
 
-.. figure:: media/image56.PNG
+.. figure:: media/image56.png
 
     Access to **My Data** area
 
