@@ -25,7 +25,7 @@ Each area is thought to be delivered to different users.
 
 -  **General Administrator Manual**: it is directed at Knowage administrator. It describes all the management and configuration tools shared by all Knowage products.
 
--  **Functionalities**: it is directed at all kind of users. Here each user can find detailed instructions on how to develop different kind of analysis exploiting all BI capabilities of Knowage platform.
+-  **Functionalities**: it is directed at all kind of users. Here each user can find detailed instructions on how to develop different kind of analysis exploiting all BI capabilities of Knowage platform. Notice that when a functionality is strictly related to a specific module it will be notified.
 
 About conventions
 ===========================
