@@ -380,6 +380,11 @@ Specific configurations for users import procedure:
 * **IMPORTEXPORT.USER.DEFAULT_PASSWORD**: password set for all users imported by the import procedure.
 
 
+Main Menu
+----------------
+Specific settings for the main menu can be set updating the fields below:
+
+* **KNOWAGE.DOWNLOAD.POLLING.TIME**: This field defines the number of milliseconds for the download service polling interval. If set to *0* the service will update just once on page load. Default is 10000 (10 seconds).
 Changing the secret key for password encryption
 -----------------------------------------------
 
