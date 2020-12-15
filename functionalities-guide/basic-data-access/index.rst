@@ -1,14 +1,14 @@
 Basic Data Access
 ===================
 
-This chapter describes advanced features, i.e. available only in KnowageBD and KnowageSI products, to access data as end user.
+A dataset is a way to read data from different sources and represents the portion of data used by various documents. Inside Knowage it plays a crucial role to develop analytical documents such as the interactive dashboards, reports and map documents. In particular, it is the main way to let the unskilled user make his/her own analysis. In fact he/she can create his/her own dataset uploading an XLS or a CSV file or use a dataset already defined. Knowage offers also the chance to download open data from WEB thanks to CKAN integration. Moreover it is possible to can create more complete dataset from different sources through the dataset federation functionality. 
+
+We highlight that this chapter describes basic but also advanced features which are available only in KnowageBD and KnowageSI products.
 
 .. important::
          **Enterprise Edition**
 
-         If you purchased Knowage EE, the following features are available only in KnowageBD and KnowageSI products
-
-A dataset is a way to read data from different sources and represents the portion of data used by various documents. Suppose you want to create a bar chart showing the sales trend for the current year; in this case you need to pass to the document the total sales amount for each month of the current year. You can create your own dataset uploading an XLS or a CSV file or use a dataset already defined. Knowage offers you also the chance to download open data from WEB thanks to CKAN integration. Moreover you can create your own and more complete dataset from different sources through the dataset federation. In the following we will describe all these functionalities.
+         If you purchased Knowage EE, the features marked with an asterics are available only in KnowageBD and KnowageSI products
 
 Let us suppose to enter, with end user credentials, the data management area clicking on the **Workspace** icon from BI functionalities menu as shown in figure below and the **Data** section of the window.
 
