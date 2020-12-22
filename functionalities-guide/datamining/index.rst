@@ -1,11 +1,9 @@
 Data Mining
 ===========
 
-Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making and business strategies. In particular, Knowage **Data Mining Engine** integrates R and Python scripting capabilities.
+Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making and business strategies. In particular, Knowage **Data Mining Engine** integrates Python scripting capabilities.
 
-R is a programming language and software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing advanced algorithms and data analysis tools. Polls and surveys show that R’s popularity is continually increasing. As well, Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Rather than requiring all desired functionality to be built into the language’s core, Python was designed to be highly extensible and it is intended to be a highly readable language.
-
-Thanks to Knowage **Data Mining Engine**, it is possible to execute R and Python scripts in an interactive way and enrich traditional datasets with new information. This means that it allows users to perform statistical or data mining analysis on different Knowage datasets.
+Thanks to Knowage **Data Mining Engine**, it is possible to execute Python scripts in an interactive way and enrich traditional datasets with new information. This means that it allows users to perform statistical or data mining analysis on different Knowage datasets.
 
 The data scientists can thus integrate its own algorithm within Knowage and deliver their output to the end user, together with new advanced visualization options useful to discover meaningful insights hidden in the data.
 
@@ -114,7 +112,7 @@ In the “Variable” case, the user must insert one or more variables and match
 The Script tab
 ~~~~~~~~~~~~~~~~
 
-The script tab is where an expert user defines the function through the usage of datamining languages (such as R or Python), as shown in Figure below.
+The script tab is where an expert user defines the function through the usage of datamining languages (such as Python), as shown in Figure below.
 
 .. figure:: media/function_script_tab.png
 
@@ -157,7 +155,7 @@ Finally it is important to define what kind of outputs the function has produced
 Engine description
 --------------------------
 
-The Catalog Function features leverage on the two Python and R Engines. To understand how to install and configure them, please refer to the `Installation Manual <https://knowage-suite.readthedocs.io/en/master/installation-guide/python-installation.html>`__
+The Catalog Function features leverage on the Python Engine. To understand how to install and configure it, please refer to the `Installation Manual <https://knowage-suite.readthedocs.io/en/master/installation-guide/python-installation.html>`__
 
 Use a function inside documents
 --------------------------------------------------
@@ -176,6 +174,16 @@ Instead, when you are creating a new widget that uses a function, you will need 
 .. figure:: media/catalog_function_usefunction_widget.png
 
     Use a function in a widget.
+	
+.. warning::
+    **You cannot use more than one function in the same widget**
+
+         If you try do so you will get an exception.
+		 
+.. note::
+    **Functions are available only in some widgets**
+	
+		Table, crosstable and custom chart.
 	
 If you are using a function inside a widget it means that you have already selected the dataset you want to use. Therefore on the left card you will be able to select a function among the available ones.
 
