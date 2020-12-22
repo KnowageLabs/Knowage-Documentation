@@ -768,6 +768,8 @@ For measures a user could specify the aggregation function, if it has to be show
 
 For attributes a user could specify if it has to be shown on detail popup or if it has to be show as a filter: in that case, the attribute will be available in the control panel with its all distinct values to let the user to have an immediate evidence of which markers have the selected value for the measure
 
+The user could also select if a specific attribute should be displayed in the tooltip that will be shown when the user hovers a specific feature on the map.
+
 The 3-dots-menu on the right of each column of the dataset contains additional functionalities: for measures, for example, there is the possibility to specify thresholds.
 
 The threshold menu open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
