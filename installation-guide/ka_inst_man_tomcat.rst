@@ -116,8 +116,7 @@ Such environment variables have the following meaning:
 - ``sso_class``:SSO connector class name,
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
 - ``host_url``: frontend services address, the one the user types in his browser.
-- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it.
-
+- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it. You can put any random alphanumeric string in it, and you can change it everytime you want, you just need to restart Tomcat to apply the change.
 
 Below you can see an example of configuration of the above variables in the server.xml file:
 
@@ -129,11 +128,11 @@ Below you can see an example of configuration of the above variables in the serv
          <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
          <Environment name="host_url" type="java.lang.String" value="http://localhost:8080"/>
          <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
-         <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="...PUT_HMACKEY_VALUE_HERE..."/>
+         <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="<PUT ANY RANDOM STRING HERE>"/>
 
 .. important::
 
-	 For security reasons the environment variable ``hmacKey`` must have a different value than **...PUT_HMACKEY_VALUE_HERE...**. Please DO NOT use the value shown in this documentation to avoid reducing the security level.
+	 Again we stress the point that the HMAC key must be a random string. Please DO NOT copy and paste it from this documentation, since this will compromise the security of the application.
 
 
 Recommended configuration
