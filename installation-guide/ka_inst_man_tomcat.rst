@@ -118,15 +118,21 @@ Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following co
 	<Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
 	<Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
 	<Environment name="host_url" type="java.lang.String" value="<server URL which is hosting knowage>"/>   
-	<Environment description="HMAC key" name="hmacKey" type="java.lang.String" value="abc123"/>
+	<Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="<PUT ANY RANDOM STRING HERE>"/>
 
 Such environment variables have the following meaning:
 
 - ``resource_path``: resources folder path,
 - ``sso_class``:SSO connector class name,
 - ``service_url``:backend services address, typically set to ``http://localhost:8080/knowage``,
-- ``host_url``: frontend services address, the one the user types in his browser.
-- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribuite** it.
+- ``host_url``: frontend services address, the one the user types in his browser,
+- ``hmacKey``: secret key to generate JWT tokens used by the default security mechanism. You **must change** it, and **do not distribute** it. You can put any random alphanumeric string in it, and you can change it everytime you want, you just need to restart Tomcat to apply the change.
+
+
+.. important::
+
+	 Again we stress the point that the HMAC key must be a random string. Please DO NOT copy and paste it from this documentation, since this will compromise the security of the application.
+
 
 Applications deploy
 ~~~~~~~~~~~~~~~~~~~~~~
