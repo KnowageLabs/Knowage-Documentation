@@ -94,7 +94,7 @@ To upgrade Knowage installation follow these steps:
     org.quartz.scheduler.instanceId = AUTO
     org.quartz.scheduler.instanceName = RHECMClusteredSchedule
 
--  restore all ``TOMCAT_HOME/webapps/knowage*/META-INF/context.xml`` files from backup copy of previous applications;
+-  restore all ``TOMCAT_HOME/webapps/knowage*/META-INF/context.xml`` files from backup copy of previous applications. If the target version of Knowage needs changes to those files, you need to apply them;
 
 -  start Apache Tomcat again.
 
