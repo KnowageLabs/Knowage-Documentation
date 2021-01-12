@@ -1131,20 +1131,20 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 **filter** - angular filter service (filtering is executed on the client side)
 
 |   returns: datastore filtered by some value for dataset's column/s
-|   params: object that contains dataset's columns names for properties -> value to be filtered
+|   params: object that contains dataset's columns names for properties -> value to be filtered, an optional boolean to enable the strict comparison (false as default)
 |   example:
 
 .. code-block:: javaScript
     :linenos:
 
-    datastore.filter({'QUARTER':'Q1','STORE_ID':'1'})
+    datastore.filter({'QUARTER':'Q1','STORE_ID':'1'}, true)
 
 
 **hierarchy**
 
 |   returns: hierarchy object with its functions and tree
 |   params: object that contains property levels -> array of dataset's columns names
-|   optional: same object with optional property measures -> object that contains dataset's columns names for properites -> aggreagtion function (sum, min, max)
+|   optional: same object with optional property measures -> object that contains dataset's columns names for properites -> aggregation function (sum, min, max)
 |   example:
 
 .. code-block:: javaScript
