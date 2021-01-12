@@ -117,13 +117,15 @@ In particular, we give some details for each tag and main attributes.
    -  **visible**: the visibility of the column (optional, default true);
    -  **editable**: the editability of the column (optional, default true);
    -  **color and format for numbers**: optional;
+   -  **size**: the width of the column (optional);
    -  **editor**: the editor. Default type is free-text for simple column (not FK values), but for date is possible to show the picker through the type PICKER. The format option specifies the format date;
    -  **subEntity**: if the column is a reference key, the user can specify the subentity referred and the foreign key name. This value must be equals to the name of the relationship object created in the model. The field shown will be of the entity referred and will be shown as COMBO if editable;
    -  **foreignKey**: if the subEntity property is set, foreignKey property must be set with the name of the foreign key (to lower case);
    -  **dependsFrom**: if the column content is logically correlated to other registry’s column, it is possible to specify this logic through this parameter. DependsFrom identifies the field name on which it depends (Optional);
    -  **dependsFromEntity**: usable only with dependsFrom parameter. It defines a different entity to resolve the correlation (optional);
-   -  **orderBy**: is used in case of foreign key. The combo box is ordered by the column here indicated, by default is the column extracted (optional).
-   -  **infoColumn**: if true ignore the column when inserting or updating the record (optional).
+   -  **orderBy**: is used in case of foreign key. The combo box is ordered by the column here indicated, by default is the column extracted (optional);
+   -  **infoColumn**: if true ignore the column when inserting or updating the record (optional);
+   -  **defaultValue**: defines the default value for the field; if the user does not set any value for this field during insertion, this value will be set automatically (optional, not allowed if subEntity or foreignKey property is set). For date fields, the correct pattern is "yyyy-MM-dd'T'HH:mm:ss.xxx'Z'".
 
 We stress that it is mandatory to point at one datamart table using a column with a numeric key. The code line is highlighted in figure below. While, if not elsewhere specified, a descriptive column will be displayed by default.
 
@@ -131,15 +133,39 @@ We stress that it is mandatory to point at one datamart table using a column wit
     :linenos:
     :caption: Pointing at a numerical column.
 
-	<COLUMNS>
-		<COLUMN field="store_id" visible="false" editable="false" />
+    <COLUMNS>
+      <COLUMN field="store_id" visible="false" editable="false" />
+      ...
+    </COLUMNS>
+
 
 Still referring to the code above, we underline that the “product_subcategory” field is used as a subcategory. It belongs in fact to another table. In this case it is enough to add the attributes: subEntity="rel_product_class_id_in_product_class"  foreignKey="rel_product_class_id_in_product_class".
 
+Filters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: xml
+    :linenos:
+    :caption: Filter definition example.
+
+    <FILTERS>
+  		<FILTER title="Store type" field="store_type" presentation="MANUAL" />
+  		<FILTER title="Sales city" field="sales_city" presentation="COMBO" />
+  		<FILTER title="Sales first_opened_date" field="first_opened_date" static="true" visible="true" filterValue="29/05/2020 02:00:00.0" />
+    </FILTERS>
+
+
+Filter definition allows to set different properties:
+   -  **title**: the title of the filter;
+   -  **field**: the reference to the field identifier into the model;
+   -  **presentation**: COMBO/DRIVER/MANUAL (optional if static="true");
+   -  **visible**: the visibility of the filter (optional, default false);
+   -  **static**: true/false. Set this property if you want to limit filter value to a specific value (optional);
+   -  **filterValue**: the specific value you want to set for the filter (mandatory if static="true"). For date fields, the correct pattern is " %d/%m/%Y %h:%i:%s".
 
 Analytical driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You can filter values by using analytical drivers. Add them during document creation using DRIVER tab. Registry template must contains FILTER tag. Below an example of configuration for a driver named "UNIT_SALES_AD" insisting on the column "UNIT_SALES".
+Registry filtering by analytical driver is possible using DRIVER value for presentation property in filter TAG. Registry template must contains FILTERS tag. Below an example of configuration for a driver named "UNIT_SALES_AD" insisting on the column "UNIT_SALES".
 
 .. code-block:: xml
     :linenos:
@@ -147,7 +173,7 @@ You can filter values by using analytical drivers. Add them during document crea
 
 	<FILTERS>
 		<FILTER title="UNIT_SALES_AD_title" field="UNIT_SALES" presentation="DRIVER" driverName="UNIT_SALES_AD" />
-
+  </FILTERS>
 
 Profile attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
