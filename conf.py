@@ -78,7 +78,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Knowage'
-copyright = u'2014-2018, Knowage Labs'
+copyright = u'2014-2021, Knowage Labs'
 author = u'Knowage Labs'
 
 # The version info for the project you're documenting, acts as replacement for
