@@ -7,12 +7,13 @@ Pay attention to the fact that Knowage versions' names adhere to the Semantic Ve
 
 In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
 
-The upgrade of both Knowage components is generally needed:
+The upgrade of the following Knowage components is generally needed:
 
 -  the applications that reside within ``TOMCAT_HOME/webapps`` folder: all ``knowage*.war`` files (knowage.war, knowagebirtreportengine.war, knowagecockpitengine.war, ...)
 
--  the Knowage metadata database, where configuration information is stored, in case you are upgrading to a different major or minor version.
+-  the Knowage metadata database, where information about analyses, datasets, etc ... is stored.
 
+The latter component must be upgraded in case you are moving from a different major or minor version (for example: from 6.4.x to 7.2.y, or from 7.1.x to 7.2.y), but there is no need in case you are upgrading to a new patch release of the same major/minor family (for example: from 7.2.0 to 7.2.6, or from 7.2.6 to 7.2.13).
 
 Preliminary operations
 ------------------
@@ -44,25 +45,27 @@ To upgrade Knowage installation follow these steps:
 
    .. note::
     **Moving into a newest patch version within the same <major.minor> family**
-	In case you are moving into a newest patch version that belongs to the same <major.minor> family (for example from Knowage 6.2.0 to 6.2.4) there is no need to execute any SQL script.
+	In case you are moving into a newest patch version that belongs to the same <major.minor> family (for example from Knowage 7.2.0 to 7.2.6, or from 7.2.6 to 7.2.13) there is no need to execute any SQL script.
 
--  delete all ``knowage*.war`` files and all the ``knowage*`` directories from ``TOMCAT_HOME/webapps``;
+-  move all ``knowage*.war`` files and all the ``knowage*`` directories from ``TOMCAT_HOME/webapps`` into a backup directory;
 
 -  delete the following directories: ``TOMCAT_HOME/temp`` and ``TOMCAT_HOME/work``;
 
--  copy and paste all the ``knowage*.war`` files within ``TOMCAT_HOME/webapps`` directory;
+-  copy and paste all the new ``knowage*.war`` packages within ``TOMCAT_HOME/webapps`` directory;
 
--  start Apache Tomcat service, wait until Apache Tomcat is started and then stop it again in order to change some configuration files;
+-  in case you are upgrading from a version prior to 7.2.0, create a file containing the password encryption secret (just a random text of any length). This is a security configuration, so don’t use short strings. **Do not distribute** it for any reason. Then update ``TOMCAT_HOME/conf/server.xml`` file by creating a new environment variable as shown below and set the value property as the complete path of the file with password encryption secret:
 
--  for Knowage metadata database dialect, check that the right dialect has been set inside hibernate.cfg.xml files: the ``hibernate.dialect`` property should match your RDBMS for Knowage metadata database. Admissible dialects are:
+   .. code-block:: xml
 
-   .. code-block:: bash
+   <Environment name="password_encryption_secret" description="File for security encryption location"
+      type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
 
-    org.hibernate.dialect.MySQLDialect
-    org.hibernate.dialect.PostgreSQLDialect
-    org.hibernate.dialect.Oracle9Dialect
 
--  list of hibernate.cfg.xml files to check follows:
+At this point, in some cases you need to deal with some configuration files, in particular when you modified the following files within the previous Knowage installation, then you need to restore those changes (after having unzipped the war files):
+
+- context files ``TOMCAT_HOME/webapps/knowage*/META-INF/context.xml``: they contain links to resources such as datasource connections and environment variables; in case you modified them in order to add a new datasource, you need to restore the changes and check if links to environment variables defined in ``TOMCAT_HOME/conf/server.xml`` are all there. In case you defined contexts with relevant files inside ``TOMCAT_HOME/conf/Catalina/localhost`` and you are upgrading from a version prior to 7.2.0, then you need to add the link to the ``password_encryption_secret`` variable, since that was introduced by 7.2.0 version;
+
+- Hibernate files: they contain the metadata database Hibernate dialect (the ``hibernate.dialect`` property): since versione 7.2.0, Knowage is able to autodetect the dialect by itself but, in case you customized it to a value other than ``org.hibernate.dialect.MySQLDialect`` or ``org.hibernate.dialect.PostgreSQLDialect`` or ``org.hibernate.dialect.Oracle9Dialect``, you have to restore your change: this is the list of Hibernate files to be checked:
 
    .. code-block:: bash
 
@@ -74,18 +77,7 @@ To upgrade Knowage installation follow these steps:
     TOMCAT_HOME/webapps/knowagemeta/WEB-INF/classes/hibernate.cfg.xml
     TOMCAT_HOME/webapps/knowagesvgviewerengine/WEB-INF/classes/hibernate.cfg.xml
 
--  check Quartz scheduler engine configuration within file ``TOMCAT_HOME/webapps/knowage/WEB-INF/classes/quartz.properties``: it is essential to set the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Admissible values are:
-
-   .. code-block:: jproperties
-
-	 # Mysql delegate class
-	 org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
-	 # Postgres delegate class
-	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
-	 # Oracle delegate class
-	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
-
--  restore the Quartz cluster modality, in case Knowage is installed within a cluster: add these lines:
+- Quartz configuration file for metadata database dialect and for cluster configuration (in case of any cluster): again, since versione 7.2.0, Knowage is able to autodetect the dialect by itself but, in case you customized the ``org.quartz.jobStore.driverDelegateClass`` property inside ``TOMCAT_HOME/webapps/knowage/WEB-INF/classes/quartz.properties`` to a value other than ``org.quartz.impl.jdbcjobstore.StdJDBCDelegate`` or  ``org.quartz.impl.jdbcjobstore.PostgreSQLDelegate`` or ``org.quartz.impl.jdbcjobstore.oracle.OracleDelegate``, you have to restore your change. Regarding cluster configuration, by default it is not enabled on released packages therefore you need to restore it in case you have a clustered installation: add these lines in ``TOMCAT_HOME/webapps/knowage/WEB-INF/classes/quartz.properties`` (or restore them from the backup copy):
 
    .. code-block:: jproperties
 
@@ -94,27 +86,13 @@ To upgrade Knowage installation follow these steps:
     org.quartz.scheduler.instanceId = AUTO
     org.quartz.scheduler.instanceName = RHECMClusteredSchedule
 
--  restore all ``TOMCAT_HOME/webapps/knowage*/META-INF/context.xml`` files from backup copy of previous applications;
-
--  create a file for password encryption secret. The file must contain random text of any length. This is a security configuration, so don’t use short strings. For example, you can create a file and write text into it. **Do not distribute** it for any reason, create at least a backup copy of the file.
-
--  update ``TOMCAT_HOME/conf/server.xml`` file by creating a new environment variable as shown below and setting value property as the complete path of the file for password encryption secret.
-
-.. code-block:: xml
-
-   <Environment name="password_encryption_secret" description="File for security encryption location"
-      type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
-
--  start Apache Tomcat again.
 
 .. important::
 
-	This version of Knowage has a higher security level. For this reason log in and password changing is required as a first step after upgrading.
+	Since Knowage 7.2.0, the security level was highly increased. For this reason, users are requested to log in and change their password as a first step after upgrading.
 
-To admin's user it is recommended to check which user/s didn't change the password and tell them to do it as soon as possible.
-
-Run the following query to extract the list of users who are using the old password encryption method.
+To admin users: it is recommended to check which users didn't change the password and tell them to do it as soon as possible. Run the following query on the Knowage metadata database to extract the list of users who are still using the previous password encryption mechanism:
 
 .. code-block:: SQL
 
-  select * from sbi_user where password like '#SHA#%' order by user_id;
+  select * from SBI_USER where password like '#SHA#%' order by user_id;
