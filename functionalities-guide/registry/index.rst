@@ -173,7 +173,8 @@ Registry filtering by analytical driver is possible using DRIVER value for prese
 
 	<FILTERS>
 		<FILTER title="UNIT_SALES_AD_title" field="UNIT_SALES" presentation="DRIVER" driverName="UNIT_SALES_AD" />
-  </FILTERS>
+    </FILTERS>
+
 
 Profile attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
