@@ -51,7 +51,7 @@ First of all, the user must configure the distributed cache. This helps to coord
 * **SPAGOBI.CACHE.SPACE_AVAILABLE**: It resizes cache dimension (bytes) ( Default : 1024 )
 * **SPAGOBI.CACHE.LIMIT_FOR_CLEAN**: It configures the maximum cache section (in percentage) that can be cleaned at runtime when the cache has not enough space to store a dataset. ( Default : 50)
 * **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is empty. The allowable values are: EVERY_10_MINS, EVERY_15_MINS, EVERY_20_MINS, EVERY_30_MINS, HOURLY,DAILY,WEEKLY,MONTHLY,YEARLY. Any value other than those listed above does not enable periodic cleaning. ( Default: DAILY )
-* **SPAGOBI.CACHE.DS_LAST_ACCESS_TTL**: It configures the Time To Live of a dataset inside the cache. This parameter defines the minimum TTL (in seconds) so to guarantee that a dataset remains in cache. A too-high value can lead the cache to breakdown (in this case, there is no way to insert new datasets), while a toolow value can lead to situations when there are no certainties of the stability of the dataset in the cache. (Default 600 )
+* **SPAGOBI.CACHE.DS_LAST_ACCESS_TTL**: It configures the Time To Live of a dataset inside the cache. This parameter defines the minimum TTL (in seconds) so to guarantee that a dataset remains in cache. A too-high value can lead the cache to breakdown (in this case, there is no way to insert new datasets), while a too low value can lead to situations when there are no certainties of the stability of the dataset in the cache. (Default 600 )
 * **SPAGOBI.CACHE.DATABASE_SCHEMA**: Name of the schema on which the tables are created. Such schema is defined by the datasource when it is set as Write-Default. Generally it is not necessary to configure this parameter since it is calculated at runtime. (default <empty> )
 * **SPAGOBI.CACHE.LIMIT_FOR_STORE**: It configures the ratio (in percentage) between the dimension of the cache and the maximum dimension of a dataset in the cache. If the dimension of the dataset which the user intends to persist is bigger than the configured percentage, the system blocks the that persistence attempt. ( Default : 10 )
 * **SPAGOBI.CACHE.CREATE_AND_PERSIST_TABLE.TIMEOUT**: It represents the maximum time (in seconds) to create temporary table for the dataset. ( Default : 120 )
@@ -61,12 +61,12 @@ First of all, the user must configure the distributed cache. This helps to coord
 
 Logging
 ---------
-Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analize the log file of Knowage. In the first part we can set the generation mechanism of the log file, while in the second one the level of tracing.
+Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analyse the log file of Knowage. In the first part we can set the generation mechanism of the log file, while in the second one the level of tracing.
 
 .. _loggappender:
 .. code-block:: bash
         :linenos:
-        :caption: Logg appender.
+        :caption: Log appender.
 
          log4j.rootLogger=ERROR, SpagoBI
 
@@ -116,7 +116,7 @@ If the user wishes to enable the tracing of the information to **DEBUG** level i
 .. code-block:: bash
         :linenos:
 
-         log4j.logger.it.eng.spagobi=ERROR,  SpagoBI, CONSOLE
+         log4j.logger.it.eng.spagobi=ERROR, SpagoBI, CONSOLE
 
 in
 
@@ -189,7 +189,7 @@ Language
 
 Knowage manages the multi-language. The list of all languages is manageable from the "Server Settings” section. Go to "Configuration management“ and select the LANGUAGE_SUPPORTED category. Here there are two properties:
 
-* **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES** :the list of all supported languages underneath this formalism are: [it,IT],[en,US],[fr,FR],[es,ES];
+* **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES**: the list of all supported languages underneath this formalism are: [it,IT],[en,US],[fr,FR],[es,ES];
 
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default**: the default value is [en,US].
 
@@ -203,7 +203,7 @@ Knowage provides integration with a LDAP server for authentication purposes.
 Knowage ships with two LDAP security connectors:
 
 * **LdapSecurityServiceSupplier**: a pure LDAP connector that authenticates every user using an LDAP server,
-* **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP/internal connector that authenticates users using an LDAP server or the internal Knowage authentication system according to their profile information. More precisely, the choice of the system to be exaploited is based on the **auth_mode** profile attribute: if the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the user, then Knowage will use its internal authentication mechanism, otherwise it will try an LDAP authentication.
+* **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP/internal connector that authenticates users using an LDAP server or the internal Knowage authentication system according to their profile information. More precisely, the choice of the system to be exploited is based on the **auth_mode** profile attribute: if the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the user, then Knowage will use its internal authentication mechanism, otherwise it will try an LDAP authentication.
 
 .. warning::
     The only way to maintain access to Knowage for **users not mapped onto LDAP** is to:
@@ -248,13 +248,29 @@ Below there is an example of the ldap.properties file configuration for both LDA
   SECURITY_AUTHENTICATION   = simple
   DN_PREFIX                 = CN=
   DN_POSTFIX                = ,ou=IT staff,o="Example, Inc",c=US
-  SEARCH_USER_BEFORE        = true
+  SEARCH_USER_BEFORE        = false
   SEARCH_USER_BEFORE_USER   =
   SEARCH_USER_BEFORE_PSW    =
   SEARCH_USER_BEFORE_FILTER = (&((objectclass=person))(uid=%s))
 
-In case you want the users to autenticate using their complete distinguish name, set ``SEARCH_USER_BEFORE`` key to be *false*. 
-In case you want instead the users to autenticate using an LDAP property such as ``uid``, then set ``SEARCH_USER_BEFORE`` key to be *true*; you need also to specify the ``SEARCH_USER_BEFORE_FILTER`` filter that Knowage will exploit in order to retrieve the user's information on the LDAP server. **Pay attention that %s placeholder must be present**: it will be replaced by Knowage with the actual username provided by the user when logging in.
+  ldap2.INITIAL_CONTEXT_FACTORY   = com.sun.jndi.ldap.LdapCtxFactory
+  ldap2.PROVIDER_URL              = ldaps://<LDAP 2 server address>:389
+  ldap2.SECURITY_AUTHENTICATION   = simple
+  ldap2.DN_PREFIX                 = CN=
+  ldap2.DN_POSTFIX                = ,ou=IT staff,o="Example, Inc",c=US
+  ldap2.SEARCH_USER_BEFORE        = true
+  ldap2.SEARCH_USER_BEFORE_USER   = user_before_username
+  ldap2.SEARCH_USER_BEFORE_PSW    = user_before_password
+  ldap2.SEARCH_USER_BEFORE_FILTER = (&((objectclass=account))(uid=%s))
+
+
+Using the example above, you can configure:
+   * *auth_mode = internal*: if you want to log in using the Knowage metadata database instead of contacting an LDAP server
+   * *empty auth_mode value*: if you want to login using the first configuration of the properties file (the one without any prefix)
+   * *auth_mode = ldap2*: if you want to log in by contacting the LDAP server using the configuration with "ldap2." prefix
+
+In case you want the users to authenticate using their complete distinguish name, set ``SEARCH_USER_BEFORE`` key to be *false*.
+In case you want instead the users to authenticate using an LDAP property such as ``uid``, then set ``SEARCH_USER_BEFORE`` key to be *true*; you need also to specify the ``SEARCH_USER_BEFORE_FILTER`` filter that Knowage will exploit in order to retrieve the user's information on the LDAP server. **Pay attention that %s placeholder must be present**: it will be replaced by Knowage with the actual username provided by the user when logging in.
 
 The ``SEARCH_USER_BEFORE_USER`` and ``SEARCH_USER_BEFORE_PSW`` keys are credentials to authenticate to LDAP server; if the first one is set, the second one will be considered also. *These parameters are used only if anonymous bind is not allowed for LDAP server. For this reason they are optional and can be empty.*
 
@@ -290,14 +306,14 @@ In order to enable Google Sign-In authentication, please follow these steps:
 * set the value of configuration parameter **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to ``it.eng.spagobi.security.GoogleSecurityServiceSupplier``, then save;
 * stop Knowage application;
 * follow Google Sign-In documentation in order to configure your Knowage application and to get the OAuth client ID;
-* create a text file whereever you want and paste the client ID inside it, for example: create file TOMCAT_HOME/conf/google.signin.config.properties with this content:
+* create a text file wherever you want and paste the client ID inside it, for example: create file TOMCAT_HOME/conf/google.signin.config.properties with this content:
 
 .. code-block:: properties
     :linenos:
 
     client_id=<your client ID>.apps.googleusercontent.com
 
-* add the ``google.signin.config`` Java System property that specifies the location of this properties file: in a Unix-like environment, edit TOMCAT_HOME/bin/setenv.sh and add 
+* add the ``google.signin.config`` Java System property that specifies the location of this properties file: in a Unix-like environment, edit TOMCAT_HOME/bin/setenv.sh and add
 
 .. code-block:: bash
     :linenos:
