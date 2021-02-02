@@ -233,3 +233,61 @@ The Registry instance allows to develop also a Jpivot table. See the last figure
 	</QBE>
 
 Note that to activate the JPivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
+
+Logging & auditing
+-------------------
+
+The Registry engine is logging changes performed by users when interacting with Registry documents (insertions/updates/deletions of entries).
+
+By default, the engine is logging messages such as
+
+.. code-block:: bash
+        :linenos:
+
+        01 feb 2021 11:40:49,750: User <name of the user> is performing operation <INSERTION/UPDATE/DELETION> on entity <name of the entity> from model <model name> for record: old one is ..., new one is ..., number of changes is ...
+
+into the ``TOMCAT_HOME/logs/knowageQbeEngineAudit.log`` file.
+
+In case you want those information to be stored into a database table (for analytical and visualization purposes), you have to create it and then to configure the engine logging system accordingly, following the below example based on MySQL.
+
+Let's create a table:
+
+.. code-block:: SQL
+        :linenos:
+
+    CREATE TABLE `LOG_REGISTRY` (
+      `AUDIT_ID` INT NOT NULL AUTO_INCREMENT,
+      `AUDIT_DATETIME` DATETIME NULL,
+      `AUDIT_OPERATION` VARCHAR(45) NULL,
+      `AUDIT_USER` VARCHAR(100) NULL,
+      `AUDIT_CHANGES_NO` INT NULL,
+      `ENTITY_NAME` VARCHAR(100) NULL,
+      `MODEL_NAME` VARCHAR(100) NULL,
+      `ATTRIBUTES_OLD` TEXT NULL,
+      `ATTRIBUTES_NEW` TEXT NULL,
+      PRIMARY KEY (`AUDIT_ID`));
+
+then edit ``TOMCAT_HOME/webapps/knowageqbeengine/WEB-INF/classes/log4j.properties`` and add:
+
+.. code-block:: jproperties
+        :linenos:
+
+	 # Define the SQL appender
+	 log4j.appender.sql=it.eng.spagobi.utilities.logging.Log4jJNDIAppender
+	 # JNDI connection to be used
+	 log4j.appender.sql.jndi=java:comp/env/jdbc/knowage
+	 # Set the SQL statement to be executed.
+	 log4j.appender.sql.sql=INSERT INTO LOG_REGISTRY (AUDIT_DATETIME,AUDIT_OPERATION,AUDIT_USER,AUDIT_CHANGES_NO,ENTITY_NAME,MODEL_NAME,ATTRIBUTES_OLD,ATTRIBUTES_NEW) VALUES (now(),'%X{operation}','%X{userId}',%X{variations},'%X{entityName}','%X{modelName}','%X{oldRecord}','%X{newRecord}')
+	 # Define the xml layout for file appender
+	 log4j.appender.sql.layout=org.apache.log4j.PatternLayout
+
+pay attention to the JNDI name (in case you created the table within Knowage metadata database, then ``java:comp/env/jdbc/knowage`` is fine) then restart Knowage server: this way, when user is interacting with a registry document, the ``LOG_REGISTRY`` (as per the SQL script above) table will contain:
+
+- ``AUDIT_DATETIME``: the date and time when the operation was performed
+- ``AUDIT_OPERATION``: one of the following values: INSERTION/UPDATE/DELETION
+- ``AUDIT_USER``: the user who performed the operation
+- ``AUDIT_CHANGES_NO``: number of attributes that were actually changed in case of an UPDATE, null otherwise
+- ``ENTITY_NAME``: name of the modified entity type
+- ``MODEL_NAME``: name of the business model
+- ``ATTRIBUTES_OLD``: previous attributes state in case of an UPDATE or DELETION
+- ``ATTRIBUTES_NEW``: new attributes state in case of an INSERTION or UPDATE
