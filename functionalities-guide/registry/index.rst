@@ -252,7 +252,7 @@ In case you want those information to be stored into a database table (for analy
 
 Let's create a table:
 
-.. code-block:: SQL
+.. code-block:: sql
         :linenos:
 
     CREATE TABLE `LOG_REGISTRY` (
@@ -280,6 +280,9 @@ then edit ``TOMCAT_HOME/webapps/knowageqbeengine/WEB-INF/classes/log4j.propertie
 	 log4j.appender.sql.sql=INSERT INTO LOG_REGISTRY (AUDIT_DATETIME,AUDIT_OPERATION,AUDIT_USER,AUDIT_CHANGES_NO,ENTITY_NAME,MODEL_NAME,ATTRIBUTES_OLD,ATTRIBUTES_NEW) VALUES (now(),'%X{operation}','%X{userId}',%X{variations},'%X{entityName}','%X{modelName}','%X{oldRecord}','%X{newRecord}')
 	 # Define the xml layout for file appender
 	 log4j.appender.sql.layout=org.apache.log4j.PatternLayout
+	 
+	 log4j.logger.it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger=INFO, FILE_AUDIT
+	 log4j.additivity.it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger=false
 
 pay attention to the JNDI name (in case you created the table within Knowage metadata database, then ``java:comp/env/jdbc/knowage`` is fine) then restart Knowage server: this way, when user is interacting with a registry document, the ``LOG_REGISTRY`` (as per the SQL script above) table will contain:
 
