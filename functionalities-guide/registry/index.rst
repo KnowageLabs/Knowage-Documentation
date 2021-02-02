@@ -168,12 +168,12 @@ Analytical driver
 Registry filtering by analytical driver is possible using DRIVER value for presentation property in filter TAG. Registry template must contains FILTERS tag. Below an example of configuration for a driver named "UNIT_SALES_AD" insisting on the column "UNIT_SALES".
 
 .. code-block:: xml
-    :linenos:
-    :caption: Pointing at a numerical column.
+   :linenos:
+   :caption: Pointing at a numerical column.
 
-	<FILTERS>
-		<FILTER title="UNIT_SALES_AD_title" field="UNIT_SALES" presentation="DRIVER" driverName="UNIT_SALES_AD" />
-  </FILTERS>
+   <FILTERS>
+      <FILTER title="UNIT_SALES_AD_title" field="UNIT_SALES" presentation="DRIVER" driverName="UNIT_SALES_AD" />
+   </FILTERS>
 
 Profile attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -242,9 +242,9 @@ The Registry engine is logging changes performed by users when interacting with 
 By default, the engine is logging messages such as
 
 .. code-block:: bash
-        :linenos:
+   :linenos:
 
-        01 feb 2021 11:40:49,750: User <name of the user> is performing operation <INSERTION/UPDATE/DELETION> on entity <name of the entity> from model <model name> for record: old one is ..., new one is ..., number of changes is ...
+   01 feb 2021 11:40:49,750: User <name of the user> is performing operation <INSERTION/UPDATE/DELETION> on entity <name of the entity> from model <model name> for record: old one is ..., new one is ..., number of changes is ...
 
 into the ``TOMCAT_HOME/logs/knowageQbeEngineAudit.log`` file.
 
@@ -253,9 +253,9 @@ In case you want those information to be stored into a database table (for analy
 Let's create a table:
 
 .. code-block:: sql
-        :linenos:
+   :linenos:
 
-    CREATE TABLE `LOG_REGISTRY` (
+   CREATE TABLE `LOG_REGISTRY` (
       `AUDIT_ID` INT NOT NULL AUTO_INCREMENT,
       `AUDIT_DATETIME` DATETIME NULL,
       `AUDIT_OPERATION` VARCHAR(45) NULL,
@@ -270,19 +270,19 @@ Let's create a table:
 then edit ``TOMCAT_HOME/webapps/knowageqbeengine/WEB-INF/classes/log4j.properties`` and add:
 
 .. code-block:: jproperties
-        :linenos:
+   :linenos:
+   
+   # Define the SQL appender
+   log4j.appender.sql=it.eng.spagobi.utilities.logging.Log4jJNDIAppender
+   # JNDI connection to be used
+   log4j.appender.sql.jndi=java:comp/env/jdbc/knowage
+   # Set the SQL statement to be executed.
+   log4j.appender.sql.sql=INSERT INTO LOG_REGISTRY (AUDIT_DATETIME,AUDIT_OPERATION,AUDIT_USER,AUDIT_CHANGES_NO,ENTITY_NAME,MODEL_NAME,ATTRIBUTES_OLD,ATTRIBUTES_NEW) VALUES (now(),'%X{operation}','%X{userId}',%X{variations},'%X{entityName}','%X{modelName}','%X{oldRecord}','%X{newRecord}')
+   # Define the xml layout for file appender
+   log4j.appender.sql.layout=org.apache.log4j.PatternLayout
 
-	 # Define the SQL appender
-	 log4j.appender.sql=it.eng.spagobi.utilities.logging.Log4jJNDIAppender
-	 # JNDI connection to be used
-	 log4j.appender.sql.jndi=java:comp/env/jdbc/knowage
-	 # Set the SQL statement to be executed.
-	 log4j.appender.sql.sql=INSERT INTO LOG_REGISTRY (AUDIT_DATETIME,AUDIT_OPERATION,AUDIT_USER,AUDIT_CHANGES_NO,ENTITY_NAME,MODEL_NAME,ATTRIBUTES_OLD,ATTRIBUTES_NEW) VALUES (now(),'%X{operation}','%X{userId}',%X{variations},'%X{entityName}','%X{modelName}','%X{oldRecord}','%X{newRecord}')
-	 # Define the xml layout for file appender
-	 log4j.appender.sql.layout=org.apache.log4j.PatternLayout
-	 
-	 log4j.logger.it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger=INFO, FILE_AUDIT
-	 log4j.additivity.it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger=false
+   log4j.logger.it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger=INFO, FILE_AUDIT
+   log4j.additivity.it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger=false
 
 pay attention to the JNDI name (in case you created the table within Knowage metadata database, then ``java:comp/env/jdbc/knowage`` is fine) then restart Knowage server: this way, when user is interacting with a registry document, the ``LOG_REGISTRY`` (as per the SQL script above) table will contain:
 
