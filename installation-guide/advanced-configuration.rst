@@ -61,7 +61,7 @@ First of all, the user must configure the distributed cache. This helps to coord
 
 Logging
 ---------
-Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analyse the log file of Knowage. In the first part we can set the generation mechanism of the log file, while in the second one the level of tracing.
+Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analyze the log file of Knowage. In the first part we can set the generation mechanism of the log file, while in the second one the level of tracing.
 
 .. _loggappender:
 .. code-block:: bash
