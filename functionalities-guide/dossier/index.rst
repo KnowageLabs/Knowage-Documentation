@@ -26,17 +26,17 @@ In particular, tag allowed are:
 
 -  **DOC_TEMPLATE**: contains properties related to the DOC template (incompatible with PPT_TEMPLATE). You can specify:
 
-  - *name*: the name of the template file name (Supported file types are PPT, DOCX);
+  - *name*: the name of the template file name (Supported file types are DOCX);
   - *downloadable*: true/false. Enable/disable the download of the template (optional);
   - *uploadable*: true/false. Enable/disable the upload of the template (optional);
 
 -  **REPORT**: contains document's properties. You can specify:
 
   - *label*: the label of the document to be executed;
-  - *imageName*: the name of the image to be replaced;
-  - *sheetWidth*: the width of the document sheet (optional);
-  - *sheetHeight*: the height of the document sheet (optional);
-  - *deviceScaleFactor*: the scale factor to apply to the image during taking the screenshots (optional);
+  - *imageName*: the name of the image inside the docx document. If the document is multisheet, imageName value will ends with the suffix "_sheet_<number>". For example, to use the screenshot of the first sheet, the value will be "image_name_sheet_0". This name can be set into title or description using the alternative text menu of the picture;
+  - *sheetWidth*: the value of the width of the sheet (in pixels). This value will be used if sheetHeight is also set (optional);
+  - *sheetHeight*: the value of the height of the sheet (in pixels). This value will be used if sheetWidth is also set (optional);
+  - *deviceScaleFactor*: the value to use as the scaling factor to be applied when capturing the screenshot (optional);
 
 -  **REPORTS**: encloses all REPORT tags;
 -  **PARAMETER**: sets parameter for the document's execution. You can specify:
@@ -53,6 +53,10 @@ In particular, tag allowed are:
   -  *value*: the text to be replaced;
 
 -  **PLACEHOLDERS**: encloses all PLACEHOLDER tags.
+
+.. warning::
+
+  This feature is compatible with docx created with Microsoft Word 2010 and later.
 
 
 Image adding (PPT_TEMPLATE)
@@ -124,24 +128,37 @@ Below is shown an example of an XML template used for this purpose.
     	</REPORTS>
     </DOSSIER>
 
+Also docx document must be modified to be compatible with the replacer.
+
+In particular:
+
+-  images in the document must be inserted by copying and pasting from the file system (or using the "insert image" feature);
+-  each image must have a unique name
+-  imageName in the XML template must match the title (alt text) of the image in the docx.
+
+.. warning::
+
+	To optimize dossier creation procedure, same document will be executed more than one time if and only if its parameters change. In that scenario sheetHeight, sheetWidth and deviceScaleFactor will be set for every execution. Moreover, if parameters don't change, document will be executed only one time and sheetHeight, sheetWidth and deviceScaleFactor values will stay the same as the first execution.
+
+
 My first dossier
 ----------------
 
 You can create a dossier document by using the plus button and choosing "Generic Document". Proceed by filling in the necessary fields, choosing the XML template and selecting "Collaboration" as the type and "Dossier engine" as the engine. If the documents to be executed have one or more analytical drivers, these drivers must be added to the dossier document from the DRIVER tab.
 
-.. figure:: media/image000.png
+.. figure:: media/image000.PNG
 
     Dossier document creation interface.
 
 After saving the document, you can access the dossier activity page by clicking the play button.
 
-.. figure:: media/image001.png
+.. figure:: media/image001.PNG
 
     Dossier activity interface.
 
 If one or more dynamic analytic drivers are set, the required inputs must be provided in the sliding menu that appears from the right. You will then go to the dossier activity page.
 
-.. figure:: media/image002.png
+.. figure:: media/image002.PNG
 
     Dossier activity interface.
 
@@ -154,7 +171,7 @@ If upload/download are enabled, file template can be uploaded/downloaded using t
 
 If you want to execute your document, you must enter a name for the activity and click on "LAUNCH ACTIVITY". A new task will be started in the STARTED state and a new row will be visible in the table below. At the end of the execution of the task, the processed file can be downloaded with the appropriate download icon.
 
-.. figure:: media/image003.png
+.. figure:: media/image003.PNG
 
     Dossier activity execution finished.
 
