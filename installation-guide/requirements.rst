@@ -99,27 +99,27 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
 
 .. code-block:: shell
 
-	useradd -m tomcat
-	passwd <password for the tomcat user>
+        useradd -m tomcat
+        passwd <password for the tomcat user>
 
 - Install the Tomcat using the Tomcat user. Remeber to define the ``TOMCAT_HOME`` variable.
 
 .. code-block:: shell
 
-	export TOMCAT_HOME=<path of the installation Tomcat root folder >
+        export TOMCAT_HOME=<path of the installation Tomcat root folder >
 
 - Be sure that the Tomcat uses the JDK 1.8: usually the Tomcat settings are defined in the ``TOMCAT_HOME/bin/setenv.sh`` file, therefore if the ``TOMCAT_HOME/bin/setenv.sh`` file does not exit, the user must create it and insert it in the content as shown below. Note that ``CATALINA_PID`` contains the ID of the Tomcat process and it kills the process if needed.
 
 .. code-block:: sh
 
-	export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid
-	export JAVA_HOME=<root folder of the JDK 1.8 installation>
+        export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid
+        export JAVA_HOME=<root folder of the JDK 1.8 installation>
 
 - Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
 
 .. code-block:: sh
 
-	exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@"
+        exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@"
 
 Tomcat on Windows
 ^^^^^^^^^^^^^^^^^
@@ -171,22 +171,22 @@ In CentOS you need to erase older versions of NodeJS, if present:
 .. code-block:: bash
         :caption: Command to erase older versions of NodeJS
 
-	yum erase -y nodejs
+        yum erase -y nodejs
 
 Then you need to clear YUM cache and update all local packages:
 
 .. code-block:: sh
         :caption: Cache clearing and system updating
 
-	yum clean all
-	yum update -y
+        yum clean all
+        yum update -y
 
 Next you can install the official repository of NodeJS:
 
 .. code-block:: sh
         :caption: Installation of the repository of NodeJS
 
-	curl -sL https://rpm.nodesource.com/setup_8.x | bash -
+        curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 
 .. important::
          If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
@@ -196,7 +196,7 @@ Finally you can install NodeJS:
 .. code-block:: sh
         :caption: Installation of NodeJS
 
-	yum install -y nodejs
+        yum install -y nodejs
 
 Ubuntu
 ~~~~~~~~~~~~
@@ -206,22 +206,22 @@ In Ubuntu you need to erase older versions of NodeJS, if present:
 .. code-block:: sh
         :caption: Command to erase older versions of NodeJS
 
-	apt-get remove nodejs
+        apt-get remove nodejs
 
 Then you need to clear APT cache and update all local packages:
 
 .. code-block:: sh
         :caption: Cache clearing and system updating
 
-	apt-get update
-	apt-get upgrade -y
+        apt-get update
+        apt-get upgrade -y
 
 Next you can install the official repository of NodeJS:
 
 .. code-block:: sh
         :caption: Installation of the repository of NodeJS
 
-	curl -sL https://deb.nodesource.com/setup_8.x | bash -
+        curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 .. important::
          If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
@@ -231,7 +231,7 @@ Finally you can install NodeJS:
 .. code-block:: sh
         :caption: Installation of NodeJS
 
-	apt-get install -y nodejs
+        apt-get install -y nodejs
 
 Chromium requirements
 -------------------------
@@ -246,11 +246,11 @@ Knowage provides a distribution of Chromium for its functionalities but some oth
 .. code-block:: sh
         :caption: Installation of Chromium dependencies
 
-	# For CentOS
-	yum install -y at-spi2-atk cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
+        # For CentOS
+        yum install -y at-spi2-atk cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
 
-	# For Ubuntu
-	apt-get install -y libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash
+        # For Ubuntu
+        apt-get install -y libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash
 
 
 Support to non-latin languages
@@ -263,17 +263,17 @@ For example, to install non-latin languages fonts you could use:
 .. code-block:: sh
         :caption: Installation of non-latin language fonts
 
-	# For CentOS 7
-	yum groupinstall fonts
+        # For CentOS 7
+        yum groupinstall fonts
 
-	# For Ubuntu
-	sudo apt-get install language-pack-ja
-	sudo apt-get install japan*
+        # For Ubuntu
+        sudo apt-get install language-pack-ja
+        sudo apt-get install japan*
 
-	sudo apt-get install language-pack-zh*
-	sudo apt-get install chinese*
+        sudo apt-get install language-pack-zh*
+        sudo apt-get install chinese*
 
-	sudo apt-get install language-pack-ko
-	sudo apt-get install korean*
+        sudo apt-get install language-pack-ko
+        sudo apt-get install korean*
 
-	etc...
+        etc...
