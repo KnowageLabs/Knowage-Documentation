@@ -53,11 +53,12 @@ Linux
 Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
 
 .. code-block:: shell
-	:caption: Instructions to set the JAVA_HOME variable for Linux environment.
 
-	export JAVA_HOME=<root path of the Java installation>
-	export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/
-	export PATH=$JAVA_HOME/bin:$PATH
+    :caption: Instructions to set the JAVA_HOME variable for Linux environment.
+
+    export JAVA_HOME=<root path of the Java installation>
+    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/
+    export PATH=$JAVA_HOME/bin:$PATH
 
 Windows
 ~~~~~~~~~~~~
@@ -168,14 +169,14 @@ CentOS
 In CentOS you need to erase older versions of NodeJS, if present:
 
 .. code-block:: bash
-	:caption: Command to erase older versions of NodeJS
+        :caption: Command to erase older versions of NodeJS
 
 	yum erase -y nodejs
 
 Then you need to clear YUM cache and update all local packages:
 
 .. code-block:: sh
-	:caption: Cache clearing and system updating
+        :caption: Cache clearing and system updating
 
 	yum clean all
 	yum update -y
@@ -183,7 +184,7 @@ Then you need to clear YUM cache and update all local packages:
 Next you can install the official repository of NodeJS:
 
 .. code-block:: sh
-	:caption: Installation of the repository of NodeJS
+        :caption: Installation of the repository of NodeJS
 
 	curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 
@@ -193,7 +194,7 @@ Next you can install the official repository of NodeJS:
 Finally you can install NodeJS:
 
 .. code-block:: sh
-	:caption: Installation of NodeJS
+        :caption: Installation of NodeJS
 
 	yum install -y nodejs
 
@@ -203,14 +204,14 @@ Ubuntu
 In Ubuntu you need to erase older versions of NodeJS, if present:
 
 .. code-block:: sh
-	:caption: Command to erase older versions of NodeJS
+        :caption: Command to erase older versions of NodeJS
 
 	apt-get remove nodejs
 
 Then you need to clear APT cache and update all local packages:
 
 .. code-block:: sh
-	:caption: Cache clearing and system updating
+        :caption: Cache clearing and system updating
 
 	apt-get update
 	apt-get upgrade -y
@@ -218,7 +219,7 @@ Then you need to clear APT cache and update all local packages:
 Next you can install the official repository of NodeJS:
 
 .. code-block:: sh
-	:caption: Installation of the repository of NodeJS
+        :caption: Installation of the repository of NodeJS
 
 	curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
@@ -228,7 +229,7 @@ Next you can install the official repository of NodeJS:
 Finally you can install NodeJS:
 
 .. code-block:: sh
-	:caption: Installation of NodeJS
+        :caption: Installation of NodeJS
 
 	apt-get install -y nodejs
 
@@ -243,7 +244,7 @@ Chromium requirements
 Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install following Chromium dependencies:
 
 .. code-block:: sh
-	:caption: Installation of Chromium dependencies
+        :caption: Installation of Chromium dependencies
 
 	# For CentOS
 	yum install -y at-spi2-atk cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
@@ -260,7 +261,7 @@ Knowage does some of its job at server side and it could need support for non-la
 For example, to install non-latin languages fonts you could use:
 
 .. code-block:: sh
-	:caption: Installation of non-latin language fonts
+        :caption: Installation of non-latin language fonts
 
 	# For CentOS 7
 	yum groupinstall fonts
