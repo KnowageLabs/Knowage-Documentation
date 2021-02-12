@@ -53,8 +53,6 @@ Linux
 Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
 
 .. code-block:: shell
-
-	:linenos:
 	:caption: Instructions to set the JAVA_HOME variable for Linux environment.
 
 	export JAVA_HOME=<root path of the Java installation>
@@ -100,8 +98,6 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
 
 .. code-block:: shell
 
-	:linenos:
-
 	useradd -m tomcat
 	passwd <password for the tomcat user>
 
@@ -109,15 +105,11 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
 
 .. code-block:: shell
 
-	:linenos:
-
 	export TOMCAT_HOME=<path of the installation Tomcat root folder >
 
 - Be sure that the Tomcat uses the JDK 1.8: usually the Tomcat settings are defined in the ``TOMCAT_HOME/bin/setenv.sh`` file, therefore if the ``TOMCAT_HOME/bin/setenv.sh`` file does not exit, the user must create it and insert it in the content as shown below. Note that ``CATALINA_PID`` contains the ID of the Tomcat process and it kills the process if needed.
 
 .. code-block:: sh
-
-	:linenos:
 
 	export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid
 	export JAVA_HOME=<root folder of the JDK 1.8 installation>
@@ -125,8 +117,6 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
 - Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
 
 .. code-block:: sh
-
-	:linenos:
 
 	exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@"
 
@@ -166,9 +156,9 @@ NodeJS requirements
 -------------------------
 
 .. important::
-         **Enterprise Edition only**
+	**Enterprise Edition only**
 
-         NodeJS is required only for Enterprise Edition.
+	NodeJS is required only for Enterprise Edition.
 
 Knowage includes some NodeJS scripts that need to be executed with NodeJS 8 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
 
@@ -178,7 +168,6 @@ CentOS
 In CentOS you need to erase older versions of NodeJS, if present:
 
 .. code-block:: sh
-
 	:caption: Command to erase older versions of NodeJS
 
 	yum erase -y nodejs
@@ -186,7 +175,6 @@ In CentOS you need to erase older versions of NodeJS, if present:
 Then you need to clear YUM cache and update all local packages:
 
 .. code-block:: sh
-
 	:caption: Cache clearing and system updating
 
 	yum clean all
@@ -195,18 +183,16 @@ Then you need to clear YUM cache and update all local packages:
 Next you can install the official repository of NodeJS:
 
 .. code-block:: sh
-
 	:caption: Installation of the repository of NodeJS
 
 	curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 
 .. important::
-         If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
+ 	If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
 
 Finally you can install NodeJS:
 
 .. code-block:: sh
-
 	:caption: Installation of NodeJS
 
 	yum install -y nodejs
@@ -217,7 +203,6 @@ Ubuntu
 In Ubuntu you need to erase older versions of NodeJS, if present:
 
 .. code-block:: sh
-
 	:caption: Command to erase older versions of NodeJS
 
 	apt-get remove nodejs
@@ -225,7 +210,6 @@ In Ubuntu you need to erase older versions of NodeJS, if present:
 Then you need to clear APT cache and update all local packages:
 
 .. code-block:: sh
-
 	:caption: Cache clearing and system updating
 
 	apt-get update
@@ -234,7 +218,6 @@ Then you need to clear APT cache and update all local packages:
 Next you can install the official repository of NodeJS:
 
 .. code-block:: sh
-
 	:caption: Installation of the repository of NodeJS
 
 	curl -sL https://deb.nodesource.com/setup_8.x | bash -
@@ -245,7 +228,6 @@ Next you can install the official repository of NodeJS:
 Finally you can install NodeJS:
 
 .. code-block:: sh
-
 	:caption: Installation of NodeJS
 
 	apt-get install -y nodejs
@@ -261,7 +243,6 @@ Chromium requirements
 Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install following Chromium dependencies:
 
 .. code-block:: sh
-
 	:caption: Installation of Chromium dependencies
 
 	# For CentOS
@@ -279,7 +260,6 @@ Knowage does some of its job at server side and it could need support for non-la
 For example, to install non-latin languages fonts you could use:
 
 .. code-block:: sh
-
 	:caption: Installation of non-latin language fonts
 
 	# For CentOS 7
