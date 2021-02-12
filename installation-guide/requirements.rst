@@ -156,9 +156,9 @@ NodeJS requirements
 -------------------------
 
 .. important::
-	**Enterprise Edition only**
+         **Enterprise Edition only**
 
-	NodeJS is required only for Enterprise Edition.
+         NodeJS is required only for Enterprise Edition.
 
 Knowage includes some NodeJS scripts that need to be executed with NodeJS 8 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
 
@@ -167,7 +167,7 @@ CentOS
 
 In CentOS you need to erase older versions of NodeJS, if present:
 
-.. code-block:: sh
+.. code-block:: bash
 	:caption: Command to erase older versions of NodeJS
 
 	yum erase -y nodejs
@@ -188,7 +188,7 @@ Next you can install the official repository of NodeJS:
 	curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 
 .. important::
- 	If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
+         If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
 
 Finally you can install NodeJS:
 
