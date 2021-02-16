@@ -53,12 +53,11 @@ Linux
 Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
 
 .. code-block:: shell
+        :caption: Instructions to set the JAVA_HOME variable for Linux environment.
 
-    :caption: Instructions to set the JAVA_HOME variable for Linux environment.
-
-    export JAVA_HOME=<root path of the Java installation>
-    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/
-    export PATH=$JAVA_HOME/bin:$PATH
+        export JAVA_HOME=<root path of the Java installation>
+        export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/
+        export PATH=$JAVA_HOME/bin:$PATH
 
 Windows
 ~~~~~~~~~~~~
