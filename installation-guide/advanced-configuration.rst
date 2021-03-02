@@ -428,7 +428,7 @@ Big data sources
 Google Big Query
 ~~~~~~~~~~~~
 
-Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`.
+Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
 
 For exmaple, to create a JDBC connection to a Google Big Query dataset using a service account you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
 
