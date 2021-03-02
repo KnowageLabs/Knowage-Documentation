@@ -20,6 +20,8 @@ Functionalities
    multidimensional-analysis/index.rst
    what-if-analysis/index.rst
    glossary-and-data-lineage/index.rst
+   dossier/index.rst
+   hierarchies/index.rst
    key-performance-indicator/index.rst
    scorecard/index.rst
    alert/index.rst
