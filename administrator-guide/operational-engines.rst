@@ -257,19 +257,18 @@ Template definition
 As with any other Knowage document, we need to define a template for an external process document. The example below shows a template that corresponds to the classes ``CommandJob`` and ``ProcessTest`` defined in the examples above. Let us note that this template corresponds to the option of implementing an extension of ``CmdExecWork``.
    
 .. code-block:: xml
-         :linenos:
-         :caption: Template Definition
+   :linenos:
+   :caption: Template Definition
 
           <COMMONJ>
-            <WORK workName='JobTest' className='it.eng.spagobi.job.CommandJob'>
-            <PARAMETERS>                                                       
-            <PARAMETER name='cmd'value='C:/Programmi/Java/jdk1.5.0_16/bin/java'/>
-            <PARAMETER name='classpath'
-            value='C:/resources/commonj/CommonjRepository/JobTest/process.jar'/>
-            <PARAMETER name='cmd_par' value='it.eng.test.ProcessTest'/>
-            <PARAMETER name='sbi_analytical_driver' value='update'/>
-            <PARAMETER name='sbi_analytical_driver' value='level'/>
-            </PARAMETERS>
+			<WORK workName='JobTest' className='it.eng.spagobi.job.CommandJob'>
+				<PARAMETERS>                                                       
+					<PARAMETER name='cmd' value='C:/Programmi/Java/jdk1.5.0_16/bin/java'/>
+					<PARAMETER name='classpath' value='C:/resources/commonj/CommonjRepository/JobTest/process.jar'/>
+					<PARAMETER name='cmd_par' value='it.eng.test.ProcessTest'/>
+					<PARAMETER name='sbi_analytical_driver' value='update'/>
+					<PARAMETER name='sbi_analytical_driver' value='level'/>
+				</PARAMETERS>
             </WORK>
           </COMMONJ>
 
@@ -313,9 +312,9 @@ Where:
 
 The class ``CmdExecWork`` (and its extensions) allows the execution of the command specified in the template. In particular, the template above would produce the following command at runtime:
 
-.. code-block:: xml
-         :linenos:
-         :caption: Runtime command line
+.. code-block::
+   :linenos:
+   :caption: Runtime command line
 
          C:/Programmi/Java/jdk1.5.0_16/bin/java 'it.eng.test.ProcessTest'
          update=<val> level=<val>

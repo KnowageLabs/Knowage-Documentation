@@ -7,7 +7,7 @@ Metadata database initialization
 Knowage requires a database schema to store its own metadata (definition of analyses, datasets and so on). For initializing such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following SQL files:
 
 .. code-block:: bash
-        :caption: Scripts for metadata schema
+   :caption: Scripts for metadata schema
 
         XXX_create.sql
         XXX_create_quartz_schema.sql
@@ -24,9 +24,9 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
 - the other for the ``jdbc/foodmart``, which should be renamed with ``jdbc/dwh``.
 
 .. code-block:: xml
- :linenos:
+   :linenos:
 
- <Context docBase="knowage-ee" path="/knowage" reloadable="true">
+    <Context docBase="knowage-ee" path="/knowage" reloadable="true">
         <ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
         <ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource"/>
         <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache" type="javax.sql.DataSource"/>
@@ -36,7 +36,7 @@ You would set up ResourceLink for JNDI datasource. To do so, you have to configu
         <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
         <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
         <ResourceLink global="password_encryption_secret" name="password_encryption_secret" type="java.lang.String"/>
-   </Context>
+    </Context>
 
 Due to security reasons, configuration file containing some content to be used for encrypting must be created in Knowage environment. File must not be empty, but there's no minimum length. File can be put everywhere; path and name must be properly configured for each ``knowage*/META-INF/context.xml`` as shown below.
 
@@ -57,7 +57,7 @@ Configuration of the metadata db dialect
 Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. We list all the possible dialects that can be used:
 
 .. code-block:: xml
-	:linenos:
+   :linenos:
 
  	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
  	<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
@@ -65,8 +65,8 @@ Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. W
 
 You have to configure these following Hibernate configuration files and set the chosen dialect:
 
-.. code-block:: bash
-	:linenos:
+.. code-block::
+   :linenos:
 
 	knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
 	knowagegeoreportengine/WEB-INF/classes/hibernate.cfg.xml
@@ -93,8 +93,8 @@ Modification of the Quartz configuration
 
 The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It is essential to enhance in this file the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Following the possible values:
 
-.. code-block:: bash
-	:linenos:
+.. code-block::
+   :linenos:
 
 	 # Hsqldb delegate class
 	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate
@@ -109,8 +109,8 @@ Clustering
 
 When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the ``knowage/WEB-INF/classes/quartz.properties`` file of every involved machines:
 
-.. code-block:: bash
-	:linenos:
+.. code-block::
+   :linenos:
 
 	 org.quartz.jobStore.isClustered = true
 	 org.quartz.jobStore.clusterCheckinInterval = 20000

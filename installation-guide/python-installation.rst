@@ -9,7 +9,7 @@ Install knowage-python webservice
 
 The knowage-python package contains the source code of the webservice that has to be installed and run on the server. You can download it via ``pip`` with the command:
 
-.. code-block:: python
+.. code-block::
     
 	pip install knowage-python==<knowage_version (ex: 7.2.2)>
 	
@@ -20,8 +20,8 @@ You will now have to create the configuration for the webservice. This configura
 The structure of the file will be as follows:
 
 .. code-block:: xml
-        :linenos:
-        :caption: Example of a knowage-python webservice configuration file
+   :linenos:
+   :caption: Example of a knowage-python webservice configuration file
     
 	<data>
 		<environment name="knowage-python">
