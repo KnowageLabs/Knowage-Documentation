@@ -231,3 +231,17 @@ Example parameters for the connection are:
 -  **Connection URL:** ``jdbc:cassandra://193.109.207.65:9160/foodmart``.
 
 Unless you are using Spark SQL to read from Cassandra, the definition of a business model over Cassandra data using Knowage Meta will be available in the next releases.
+
+Google Big Query
+~~~~~~~~~~~~
+
+Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
+
+For exmaple, to create a JDBC connection to a Google Big Query dataset using a service account you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
+
+.. code-block:: xml
+
+ <Resource auth="Container" driverClassName="com.simba.googlebigquery.jdbc42.Driver" logAbandoned="true" maxActive="20" maxIdle="4"
+     maxWait="300" minEvictableIdleTimeMillis="60000" name="jdbc/my-bigquery-ds" removeAbandoned="true" removeAbandonedTimeout="3600"
+     testOnReturn="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource"
+     url="jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=<<project-id>>;OAuthType=0;OAuthServiceAcctEmail=<<service-account-email>>;OAuthPvtKeyPath=<<json-key>>;DefaultDataset=<<default-dataset>>;FilterTablesOnDefaultDataset=1;"/>
