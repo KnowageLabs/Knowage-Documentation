@@ -72,7 +72,7 @@ Node menu
 .. figure:: media/image6.png
 
    Node menu.
- 
+
 On the individual nodes it is possible to:
 
 -  Add a new subnode
@@ -116,7 +116,7 @@ This feature opens a popup when the user releases the leaf on the node concerned
 .. figure:: media/image8.png
 
    Hierarchies target.
- 
+
 On the OK button the leaf will be added to the hierarchy in the point at which the mouse is released (whether or not hierarchies to propagate have been selected) and with the SAVE button the change will be applied to both the MASTER hierarchy and the TECHNIQUES (always if and only if required).
 
 
@@ -171,11 +171,11 @@ The syntax is XML and the main tags are:
               <DIMENSION NAME="V_DIM_CDC_4_NCONSO" LABEL="CDC_4_NCONSO" PREFIX="CDC" DATASOURCE ="BIENG">
                 <HIERARCHY_TABLE NAME = "HIER_CDC_TEST" />
                 <HIERARCHY_FK NAME = "CDC_LEAF_ID" />
-                <CONFIGS>
-                <DIM_FILTERS>
-                <DIM_FIELDS>
-                <HIER_FIELDS>
-              <DIMENSION>
+                <CONFIGS>... </CONFIGS>
+                <DIM_FILTERS>... </DIM_FILTERS>
+                <DIM_FIELDS>... </DIM_FIELDS>
+                <HIER_FIELDS>... </HIER_FIELDS>
+              </DIMENSION>
         </DIMENSIONS>
         </HIERARCHY_EDITOR_DEFINITION>
 
@@ -259,7 +259,7 @@ Configs tag
       <CONFIG DIMENSION_ID = "PRODUCT_CLASS_ID" />
       <CONFIG DIMENSION_CD = "PRODUCT_CLASS_CD" />
       <CONFIG DIMENSION_NM = "PRODUCT_CLASS_NM" />
-      <CONFIG FILL_EMPTY = "NO" /> <-- YES / NO -->
+      <CONFIG FILL_EMPTY = "NO" />
       <CONFIG FILL_VALUE = "OTHER" />
     </CONFIGS>
 
@@ -318,8 +318,8 @@ Dim Filters Tag (Optional)
     :caption: Tag DIM_FILTERS and its properties.
 
     <DIM_FILTERS>
-      <FILTER TYPE = "Date" NAME = "After Date" CONDITION1 = "BEGIN_DT >=" DEFAULT = "" />
-      <FILTER TYPE = "Date" NAME = "Hierarchy Date" CONDITION1 = "BEGIN_HIER_DT <=" CONDITION2 = "END_HIER_DT >=" DEFAULT = "">
+      <FILTER TYPE = "Date" NAME = "After Date" CONDITION1 = "BEGIN_DT &gt;=" DEFAULT = "" />
+      <FILTER TYPE = "Date" NAME = "Hierarchy Date" CONDITION1 = "BEGIN_HIER_DT &lt;=" CONDITION2 = "END_HIER_DT &gt;=" DEFAULT = ""/>
     ...
     </DIM_FILTERS>
 
@@ -391,9 +391,9 @@ It is composed from three sections: GENERAL_FIELDS, NODE_FIELDS and LEAF_FIELDS.
     :caption: Tag HIER_FIELDS and its properties.
 
     <HIER_FIELDS>
-      <GENERAL_FIELDS>… </GENERAL_FIELDS>
-      <NODE_FIELDS>… </NODE_FIELDS>
-      <LEAF_FIELDS>… </LEAF_FIELDS>
+      <GENERAL_FIELDS>... </GENERAL_FIELDS>
+      <NODE_FIELDS>... </NODE_FIELDS>
+      <LEAF_FIELDS>... </LEAF_FIELDS>
     </HIER_FIELDS>
 
 
@@ -480,7 +480,7 @@ Leaf Fields
     :caption: Tag LEAF_FIELDS and its properties.
 
     <LEAF_FIELDS>
-      <FIELD ID = "PRODUCT_CLASS_LEAF_ID "NAME =" Leaf Id. "VISIBLE =" false "EDITABLE =" false "required =" true "TYPE =" Number "/>
+      <FIELD ID = "PRODUCT_CLASS_LEAF_ID " NAME =" Leaf Id. " VISIBLE =" false " EDITABLE =" false " required =" true " TYPE =" Number "/>
       <FIELD ID = "PRODUCT_CLASS_CD_LEAF" NAME = "Code" VISIBLE = "true" EDITABLE = "false" REQUIRED = "true" TYPE = "String" />
       <FIELD ID = "PRODUCT_CLASS_NM_LEAF" NAME = "Name" VISIBLE = "true" EDITABLE = "true" REQUIRED = "true" TYPE = "String" />
       <FIELD ID = "LEAF_PARENT_CD" NAME = "Parent Code" VISIBLE = "true" EDITABLE = "false" REQUIRED = "true" TYPE = "String" />
@@ -488,6 +488,7 @@ Leaf Fields
       <FIELD ID = "BEGIN_DT" NAME = "Begin Date" VISIBLE = "true" EDITABLE = "true" REQUIRED = "true" TYPE = "Date" />
       <FIELD ID = "END_DT" NAME = "End Date" VISIBLE = "true" EDITABLE = "true" REQUIRED = "true" TYPE = "Date" />
     </LEAF_FIELDS>
+
 
 Defines all fields for the leaf
 
