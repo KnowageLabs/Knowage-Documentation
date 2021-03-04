@@ -7,22 +7,22 @@ Knowage installer is an application which steers the user to the installation an
 **[LINUX]** To launch the installer, it is necessary to enable the flag execution on the installation file, typing the command in the bash:
 
 .. code-block:: bash
-         :linenos:
+   :linenos:
 
-         chmod +x <Knowage_unix_1_0_0.sh> 
+         chmod +x Knowage_unix_1_0_0.sh 
 
 
 Now the installer is executable. Knowage can be installed using a GUI or a command line. In the first case the user must type the the command:
 
 .. code-block:: bash
-         :linenos:
+   :linenos:
 
          ./Knowage_unix_1_0_0.sh
 
 while in the second case he must type the command:
 
 .. code-block:: bash
-         :linenos:
+   :linenos:
 
          ./Knowage_unix_1_0_0.sh -c 
 

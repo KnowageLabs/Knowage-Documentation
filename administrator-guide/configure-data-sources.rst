@@ -173,8 +173,8 @@ Example parameters for the connection are:
 Also please pay attention that the user must have the correct privileges to access the specified database. So for example on MongoDB you can create a user with this command on the Mongo shell:
 
 .. code-block:: javascript
-    :linenos:
-    :caption: User creation.
+   :linenos:
+   :caption: User creation.
 
       db.createUser(
         {

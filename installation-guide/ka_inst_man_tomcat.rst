@@ -30,16 +30,16 @@ Connection to metadata database
 To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the metadata database inside the ``GlobalNamingResources`` tag. Specify: username, password, driver class name, JDBC URL and validation query (any valid query to be executed to validate connections). Connection's name must the ``jdbc/knowage``:
 
 .. code-block:: xml
- :linenos:
+   :linenos:
 
     <Resource auth="Container"
-    	driverClassName="<JDBC driver>"
+    	driverClassName="JDBC driver"
     	name="jdbc/knowage"
-    	password="<password>"
+    	password="password"
     	type="javax.sql.DataSource"
-    	url="<JDBC URL>"
-    	username="<user name>"
-    	validationQuery="<validation query>"
+    	url="JDBC URL"
+    	username="username"
+    	validationQuery="validation query"
     	maxTotal="50"
     	maxIdle="50"
     	minIdle="10"
@@ -59,16 +59,16 @@ Cache database connection
 In some scenarios (for example when defining a cockpit document on top of a file dataset), Knowage requires a database to be used as cache. It is highly recommended to create an empty database schema for this purpose. Then, you need to configure it inside ``TOMCAT_HOME/conf/server.xml`` as you did for metadata database. Feel free to type a name of your choice, in this example we used ``jdbc/ds_cache``:
 
 .. code-block:: xml
- :linenos:
+   :linenos:
 
     <Resource auth="Container"
-    	driverClassName="<JDBC driver>"
+    	driverClassName="JDBC driver"
     	name="jdbc/ds_cache"
-    	password="<password>"
+    	password="password"
     	type="javax.sql.DataSource"
-    	url="<JDBC URL>"
-    	username="<user name>"
-    	validationQuery="<validation query>"
+    	url="JDBC URL"
+    	username="user name"
+    	validationQuery="validation query"
     	maxTotal="50"
     	maxIdle="50"
     	minIdle="10"
@@ -88,28 +88,28 @@ Connection to business data
 Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the database containing business data to be analysed by Knowage inside the ``GlobalNamingResources`` tag, specifying username, password, driver class name, URL and validation query. Feel free to type a name of your choice, in this example we used ``jdbc/dwh``:
 
 .. code-block:: xml
- :linenos:
+   :linenos:
 
-  <Resource auth="Container"
-  	driverClassName="<JDBC driver>"
-  	name="jdbc/dwh"
-  	password="<password>"
-  	type="javax.sql.DataSource"
-  	url="<JDBC URL>"
-  	username="<user name>"
-  	validationQuery="<validation query>"
-  	maxTotal="50"
-  	maxIdle="50"
-  	minIdle="10"
-  	validationInterval="34000"
-  	removeAbandoned="true"
-  	removeAbandonedTimeout="3600"
-  	logAbandoned="true"
-  	testOnBorrow="true"
-  	testWhileIdle="true"
-  	timeBetweenEvictionRunsMillis="10000"
-  	minEvictableIdleTimeMillis="60000"
-  	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
+    <Resource auth="Container"
+  	    driverClassName="JDBC driver"
+  	    name="jdbc/dwh"
+  	    password="password"
+  	    type="javax.sql.DataSource"
+  	    url="JDBC URL"
+  	    username="username"
+  	    validationQuery="validation query"
+  	    maxTotal="50"
+  	    maxIdle="50"
+  	    minIdle="10"
+  	    validationInterval="34000"
+  	    removeAbandoned="true"
+  	    removeAbandonedTimeout="3600"
+  	    logAbandoned="true"
+  	    testOnBorrow="true"
+  	    testWhileIdle="true"
+  	    timeBetweenEvictionRunsMillis="10000"
+  	    minEvictableIdleTimeMillis="60000"
+  	    factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
 
 Environment variables definition
@@ -117,15 +117,14 @@ Environment variables definition
 
 Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following constants in the ``GlobalNamingResources`` tag.
 
-.. code-block:: xml
-        :linenos:
-        :caption: Tomcat environment variables configuration.
+.. code-block::
+   :linenos:
 
-  <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
-  <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
-  <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage"/>
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="<PUT ANY RANDOM STRING HERE>"/>
-  <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="<complete_file_path_with_file_name>"/>
+  <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources" />
+  <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService" />
+  <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage" />
+  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="PUT ANY RANDOM STRING HERE" />
+  <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="complete_file_path_with_file_name" />
 
 Such environment variables have the following meaning:
 
@@ -142,15 +141,14 @@ Such environment variables have the following meaning:
 
 Below you can see an example of configuration of the above variables in the server.xml file
 
-.. code-block:: xml
- :linenos:
+.. code-block::
+   :linenos:
 
   <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
   <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
   <Environment name="service_url" type="java.lang.String" value="http://mydomain.com/knowage"/>
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="… a random string …"/>
-  <Environment name="password_encryption_secret" description="File for security encryption location"
-    type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
+  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="a random string"/>
+  <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
 
 Changing the secret key for password encryption
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -175,8 +173,8 @@ Recommended configuration
 
 Edit ``TOMCAT_HOME/conf/setenv.sh`` (Linux) or ``TOMCAT_HOME/conf/setenv.bat`` (Windows) file in Tomcat by adding the following JVM arguments:
 
-.. code-block:: xml
-        :linenos:
+.. code-block:: bash
+   :linenos:
 
         export JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8"
 
@@ -202,7 +200,7 @@ Thread pool definition
 You must configure ``TOMCAT_HOME/conf/server.xml`` file and add the settings related to the pool of thread editing the ``GlobalNamingResources`` tag, as shown follow.
 
 .. code-block:: xml
-	:linenos:
+   :linenos:
 
 	<Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" maxThreads="5" name="wm/SpagoWorkManager" type="commonj.work.WorkManager"/>
 
@@ -215,7 +213,7 @@ It is recommended to increase the memory dimension used by the application serve
 **[LINUX]** Insert at the beginning of the ``TOMCAT_HOME/bin/setenv.sh`` file this command:
 
 .. code-block:: bash
-	:linenos:
+   :linenos:
 
 	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m"
 
@@ -223,7 +221,7 @@ It is recommended to increase the memory dimension used by the application serve
 **[WIN]** Insert at the beginning of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
 
 .. code-block:: bash
-	:linenos:
+   :linenos:
 
 	set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
 
@@ -233,7 +231,7 @@ Advanced Connector settings
 .. important::
          It is highly recommend to add  URIEncoding="UTF-8" attribute to server.xml file connector tags in order to avoid special characters issues.
 
-.. code-block:: bash
-	:linenos:
+.. code-block:: xml
+   :linenos:
 
 	<Connector address="0.0.0.0" port="8009" protocol="AJP/1.3" maxPostSize="2097152000" redirectPort="8443" URIEncoding="UTF-8" />
