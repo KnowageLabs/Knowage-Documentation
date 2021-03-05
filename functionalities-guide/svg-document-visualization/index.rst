@@ -99,15 +99,14 @@ An example below.
    :linenos:
    :caption: Example of SVG code for template file.
 
-      <?xml version="1.0" encoding="UTF-8"?>                                  
-      <MAP>                                                                                                                             
-          <DATAMART_PROVIDER>                                                                                              
-          <HIERARCHY name="USA">  
-          <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >   
-          <MEMBER name ="states" measure_dataset = "ds_states" level="2" >     
-          <HIERARCHY>  
-          <DATAMART_PROVIDER>                                                                                                       
-      <MAP>                                                                   
+	<MAP>
+		<DATAMART_PROVIDER>
+			<HIERARCHY name="USA">
+				<MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >
+				<MEMBER name ="states" measure_dataset = "ds_states" level="2" >
+			<HIERARCHY>
+		<DATAMART_PROVIDER>
+	<MAP>
 
 Basically, it’s necessary to specify the hierarchy that we want to use, as well as its members (remember that with member we are considering a specific SVG).
 
@@ -115,31 +114,31 @@ We recap the meaning of the main tag in the next table *Recap of properties and 
 
 After, we need to define each member and first of all we can note that is composed by three sections: METADATA, LAYERS and MEASURE, as in Code below:
    
-.. code-block:: xml
+.. code-block::
    :linenos:
    :caption: Example of SVG code for template file.
 
-      <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >                        
-        <METADATA>
-        <LAYERS>     
-        <MEASURES default_kpi="UNIT_SALES">    
-      <MEMBER>                                                              
+	<MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >                        
+		<METADATA>
+		<LAYERS>
+		<MEASURES default_kpi="UNIT_SALES">
+	<MEMBER>
 
 Let us see each of them in more depth.
 
 -  **METADATA.** This is the section where we define the dataset metadata, in fact, each COLUMN tag defines the dataset columns that        we want to use as attribute, as measure (used for thematize the SVG) or other technical meaning usefull for the engine.
 
-	.. code-block:: xml
-	   :linenos:
-	   :caption: Example of SVG code for template file.
+.. code-block:: xml
+   :linenos:
+   :caption: Example of SVG code for template file.
 
-		 <METADATA>                                                                                                                    
-		   <COLUMN TYPE="geoid" column_id="sales_region" />   
-		   <COLUMN TYPE="measure" column_id="store_sales" />
-		   <COLUMN TYPE="measure" column_id="store_costs" /> 
-		   <COLUMN TYPE="measure" column_id="unit_sales" />    
-		   <COLUMN TYPE="drillid" column_id="member_name" /> 
-		   <COLUMN TYPE="info" column_id="info_text" />                          
+		<METADATA>                                                                                                                    
+		<COLUMN TYPE="geoid" column_id="sales_region" />   
+		<COLUMN TYPE="measure" column_id="store_sales" />
+		<COLUMN TYPE="measure" column_id="store_costs" /> 
+		<COLUMN TYPE="measure" column_id="unit_sales" />    
+		<COLUMN TYPE="drillid" column_id="member_name" /> 
+		<COLUMN TYPE="info" column_id="info_text" />                          
 
 Once again we give some details on metadata in next table.
 
@@ -149,15 +148,14 @@ Once again we give some details on metadata in next table.
 
 	       Available layers set by a technical user.
 
-	.. code-block:: xml
-	   :linenos:
-	   :caption: Code relative to the LAYER setting.
+.. code-block:: xml
+   :linenos:
+   :caption: Code relative to the LAYER setting.
 
-		 <LAYERS>                                                                                                                       
-		   <LAYER name="regions" description="Regions" selected="true" />                                               
-		   <LAYER name="Labels_Regions_Name" description="Labels_Regions_Name"   
-			  selected="false" />                                                                             
-         <LAYERS>                                                           
+		<LAYERS>                                                                                                                       
+			<LAYER name="regions" description="Regions" selected="true" />                                               
+			<LAYER name="Labels_Regions_Name" description="Labels_Regions_Name" selected="false" />                                                                             
+		<LAYERS>                                                           
 
 .. _recaptagproperties:
 .. table:: Recap of properties and function.

@@ -40,7 +40,7 @@ It is important to click on the “Save” button |image339| to store the adjust
 
     Functionality bar.
 
-Furthermore you can use filters, if implemented, available in the Functionality bar. Click on the “Filter” icon |image340| to run the functionality. Otherwise, click on the “Cancel” icon |image341| to clear the boxes off.
+Furthermore you can use filters, if implemented, available in the Functionality bar. Click on the “Filter” icon |image340| to run the functionality. Otherwise, click on the “Cancel” icon to clear the boxes off.
 
 .. |image340| image:: media/image346.png
    :width: 30

@@ -1453,7 +1453,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 |   result:
 
 .. code-block:: javaScript
-	:linenos:
+   :linenos:
 
     {
         variableCity: 'New York',
@@ -1468,14 +1468,14 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 |   example:
 
 .. code-block:: javaScript
-    :linenos:
+   :linenos:
 
     var user = datastore.profile;
 
 |   result:
 
 .. code-block:: javaScript
-	:linenos:
+   :linenos:
 
     {
         name: 'My Name',
@@ -1488,7 +1488,7 @@ To use the api the keyword is **datastore**. datastore is object that contains t
 It is also possible to interact with the other cockpit widgets, to do so it's possible to use the **clickManager**:
 
 .. code-block:: javaScript
-    :linenos:
+   :linenos:
 
     datastore.clickManager(columnName, columnValue);
 

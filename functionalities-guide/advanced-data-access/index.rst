@@ -185,13 +185,12 @@ Selecting a dataset of **Java Class** type allows the execution of complex data 
 -  ``public String getValues(Map profile, Map parameters)``. This method provides the result set of the dataset using profile attributes and parameters. The String to return must be the XML result set representation of type:
 
 .. code-block:: xml
-         :linenos:
+   :linenos:
 
-         <ROWS>
-                <ROW value="value1" .../>
-                <ROW value="value2" .../>
-                ...
-          </ROWS>
+        <ROWS>
+            <ROW value="value1" />
+            <ROW value="value2" />
+        </ROWS>
 
 -  ``public List getNamesOfProfileAttributeRequired()``. This method provides the names of profile attributes used by this dataset implementation class. This is a utility method, used during dataset execution.
 
@@ -201,13 +200,12 @@ Script
 If you select this option, the results of the dataset will be produced by a script. Therefore, the developer should write a script returning an XML string containing a list of values with the syntax shown below.
 
 .. code-block:: xml
-         :linenos:
+   :linenos:
 
-          <ROWS>
-                <ROW value="value1" .../>
-                <ROW value="value2" .../>
-                ...
-          </ROWS>
+        <ROWS>
+            <ROW value="value1" />
+            <ROW value="value2" />
+        </ROWS>
 
 If the script returns a single value, this will be automatically encoded in the XML format above. The script must be written using Groovy or Javascript language. Knowage already provides some Groovy and JavaScript functions returning the value of a single or multi-value profile attribute. These functions are explained in the information window that can be opened from the **Dataset Type** tab. New custom functions can be added in ``predefinedGroovyScript.groovy`` and ``predefinedJavascript.js`` files contained in the ``KnowageUtils.jar`` file.
 

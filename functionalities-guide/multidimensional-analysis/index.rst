@@ -657,9 +657,9 @@ The very first step for a multi-dimensional analysis is to identify essential in
 
 If the structure of the relational schema complies with multi-dimensional logics, it will be easier to map the entities of the physical model onto the metadata used in Mondrian schemas. Otherwise, if the structure is highly normalized and scarcely dimensional, the mapping process will probably require to force and approximate the model to obtain a multi-dimensional model. As said above, Mondrian is a ROLAP tool. As such, it maps OLAP structures, such as cubes, dimensions and attributes directly on tables and columns of a relational data base via XMLbased files, called Mondrian schemas. Mondrian schemas are treated by Knowage as resources and organized into catalogues. Hereafter, an example of Mondrian schema in Mondrian schema example:
 
-.. code-block:: xml
-    :linenos:
-    :caption: Mondrian schema example
+.. code-block::
+   :linenos:
+   :caption: Mondrian schema example
     
         <?xml version="1.0"?>                                   
          <Schema name="FoodMart">     
@@ -745,9 +745,9 @@ OLAP template building
 Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user must manually edit the template. The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in next code:
 
 .. _mappingtemplateexample:
-.. code-block:: xml
-    :linenos:
-    :caption: Mapping template example
+.. code-block::
+   :linenos:
+   :caption: Mapping template example
     
      <?xml version="1.0" encoding="UTF-8"?> 
      <olap>                                 
@@ -793,25 +793,25 @@ An explanation of different sections of Mapping template example follows.
 -  The TOOLBAR section is used to configure visibility options for the toolbar in the OLAP document. The exact meaning and functionalities of each toolbar button are explained in next sections. A more complete list of the available options is shown in Menu configurable options:
 
 .. code-block:: xml
-    :linenos:
-    :caption: Menu configurable options
+   :linenos:
+   :caption: Menu configurable options
     
-        <BUTTON_DRILL_THROUGH visible="true"/>    
-        <BUTTON_MDX visible="true"/>              
-        <BUTTON_EDIT_MDX visible="true"/>         
-        <BUTTON_FATHER_MEMBERS visible="true"/>   
-        <BUTTON_CC visible="true"/>               
-        <BUTTON_HIDE_SPANS visible="true"/>       
-        <BUTTON_SORTING_SETTINGS visible="true"/> 
-        <BUTTON_SORTING visible="true" />         
-        <BUTTON_SHOW_PROPERTIES visible="true"/>  
-        <BUTTON_HIDE_EMPTY visible="true"/>       
-        <BUTTON_FLUSH_CACHE visible="true"/>      
-        <BUTTON_SAVE visible="true"/>             
-        <BUTTON_SAVE_NEW visible="true"/>        
-        <BUTTON_UNDO visible="true"/>             
-        <BUTTON_VERSION_MANAGER visible="true"/>  
-        <BUTTON_EXPORT_OUTPUT visible="false"/>   
+        <BUTTON_DRILL_THROUGH visible="true"/>
+        <BUTTON_MDX visible="true"/>
+        <BUTTON_EDIT_MDX visible="true"/>
+        <BUTTON_FATHER_MEMBERS visible="true"/>
+        <BUTTON_CC visible="true"/>
+        <BUTTON_HIDE_SPANS visible="true"/>
+        <BUTTON_SORTING_SETTINGS visible="true"/>
+        <BUTTON_SORTING visible="true" />
+        <BUTTON_SHOW_PROPERTIES visible="true"/>
+        <BUTTON_HIDE_EMPTY visible="true"/>
+        <BUTTON_FLUSH_CACHE visible="true"/>
+        <BUTTON_SAVE visible="true"/>
+        <BUTTON_SAVE_NEW visible="true"/>
+        <BUTTON_UNDO visible="true"/>
+        <BUTTON_VERSION_MANAGER visible="true"/>
+        <BUTTON_EXPORT_OUTPUT visible="false"/>
 
 
 Creating the analytical document
@@ -933,9 +933,9 @@ Knowage offers the possibility to regulate data visibility based on user profile
 To set the filter, which is based on the attribute (or attributes) in the user’s profile, the tecnical user has to type the Mondrian schema. We report Cube level profilation example as a reference guide. Note that data profiling is performed on the cube directly since the filter acts on the data retrieval logics of the Mondrian Server. So the user can only see the data that have been got back by the server according to the filter.
 
 
-.. code-block:: xml
-    :linenos:
-    :caption: Cube level profilation example.
+.. code-block::
+   :linenos:
+   :caption: Cube level profilation example.
     
         <?xml version="1.0"?>                                                 
         <Schema name="FoodMartProfiled"> 
