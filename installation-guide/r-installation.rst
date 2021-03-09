@@ -5,7 +5,7 @@ As for Python, also the R functionalities leverage on a standalone webservice, t
 The official supported version is R >=3.5.1, but we recommend to use 3.6.x whenever it's possible.
 
 Install knowage-r webservice
--------------------
+----------------------------
 
 Inside the Knowage-Server github repository, under the Knowage-R folder you can find the sources of the knowage-r webservice.
 
@@ -16,7 +16,7 @@ The configuration is indeed really simple since you only need to specify the Kno
 In the ``constants.R`` file you can set the default webservice port and a whitelist of IP addresses that can contact the webservice.
 
 Run knowage-r webservice
--------------------
+-------------------------
 
 Once you have installed all the requirements, you need to get the r-webservice running. 
 In order to do so, it's enough to run the main file "knowage-r.R" with the basic R interpreter, via the RScript command or an equivalent one.
@@ -28,7 +28,7 @@ In order to do so, it's enough to run the main file "knowage-r.R" with the basic
 
 
 Configure Knowage to enable Python/R functionalities
-================
+=====================================================
 
 From the Knowage interface you can now enable the Python/R functionalities. 
 

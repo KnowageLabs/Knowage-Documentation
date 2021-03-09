@@ -341,7 +341,7 @@ Once you have saved the LOV, just log out from Knowage and log in with a differe
     Behavioural Model Schema.
 
 Behavioural Model Lineage
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It is possible to show a summary of the links between the LOVs, the analytical driver and the documents by selecting **Behavioural Model** > **Behavioural Model Lineage**.
 

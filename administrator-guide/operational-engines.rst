@@ -275,7 +275,7 @@ As with any other Knowage document, we need to define a template for an external
 Where:
 
 -  ``<COMMONJ>`` is the main tag and includes all the document.
--  The tag ``<WORK> ``specifies the process. In particular:
+-  The tag ``<WORK>`` specifies the process. In particular:
 
    -  ``workName`` is the id of the process
    -  ``className`` contains the name of the class implementing the process (as defined above).

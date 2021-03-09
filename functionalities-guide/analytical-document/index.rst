@@ -173,7 +173,6 @@ You may have edited the template by hand or using the Studio designer. Clearly y
 
 Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab **History**. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button **Browse** to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.
 
-.. _templateversionforanalydoc:
 .. figure:: media/image70.png
 
     Template versioning for analytical documents.

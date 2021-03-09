@@ -168,7 +168,7 @@ Example parameters for the connection are:
 
 -  **Dialect:** MongoDB;
 -  **Driver Class:** mongo;
--  **Connection URL:** ``mongodb://localhost:27017/foodamart``(please don't include user and password in this URL).
+-  **Connection URL:** mongodb://localhost:27017/foodmart(please don't include user and password in this URL).
 
 Also please pay attention that the user must have the correct privileges to access the specified database. So for example on MongoDB you can create a user with this command on the Mongo shell:
 

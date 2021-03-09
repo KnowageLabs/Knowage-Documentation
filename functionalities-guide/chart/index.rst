@@ -134,7 +134,7 @@ To add a custom color simply write the category/serie value or name, select a co
 Indeed, the options available in this tab change according to the chart selected enabling different configurations. See Chart types in detail for a detailed description of the specific options of each chart.
 
 Advanced options
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 The **Advanced** tab contains some advanced options to more customize the chart. Here it is possible, for example, to set the tooltip options, the widget dimensions, if the chart is stacking or not, the grouping type.
 

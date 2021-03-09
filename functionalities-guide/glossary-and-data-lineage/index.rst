@@ -1,5 +1,5 @@
 Glossary and data lineage
-========================
+=========================
 
 The **Glossary** functionality offers a way to find documents by browsing an index page.
 

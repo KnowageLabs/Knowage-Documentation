@@ -1,6 +1,6 @@
 
 JBoss AS Manual Installation
-==========================
+============================
 
 Metadata database
 -------------------

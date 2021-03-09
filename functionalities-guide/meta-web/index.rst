@@ -208,14 +208,14 @@ When all these steps are accomplished, click on “Create” to save.
 We stress that the cardinality of the outbound relationship can be of two types:
 
 -  1 to N,
--  1 to N\ *.
+-  1 to N\*.
 
 Use the second type of cardinality when the type of cardinality can be optional.
 
 As well, the cardinality of the inbound relationship can be of two types:
 
 -  N to 1,
--  N\ * to 1.
+-  N\* to 1.
 
 Use the second type of cardinality when the type of cardinality can be optional.
 

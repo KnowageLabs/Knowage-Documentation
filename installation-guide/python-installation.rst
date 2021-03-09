@@ -5,7 +5,7 @@ These functionalities use a Python standalone webservice, which allows to submit
 This implies that, in order to use this functionalities, you have to install Python properly (depending on the OS) on the same machine where the service will be running. You can find all information about Python installation at https://www.python.org. The official supported version is Python >=3.6.8, but we recommend to use 3.7.x whenever it's possible.
 
 Install knowage-python webservice
--------------------
+---------------------------------
 
 The knowage-python package contains the source code of the webservice that has to be installed and run on the server. You can download it via ``pip`` with the command:
 
@@ -38,7 +38,7 @@ The structure of the file will be as follows:
 *  ``bokehportsrange`` : the range of open ports upon which the service can dinamically instantiate Bokeh Servers.
 
 Run knowage-python webservice
--------------------
+-----------------------------
 
 Once you have installed all the requirements, you need to get the python-webservice running. In order to do so, you can rely on a WSGI Server.
 If you are working on a UNIX environment, take a look at gunicorn (https://gunicorn.org/).
@@ -52,7 +52,7 @@ The service leverages on Flask, for deployment in any other environment take a l
 
 
 Configure Knowage to enable Python/R functionalities
-================
+====================================================
 
 From the Knowage interface you can now enable the Python/R functionalities. 
 
