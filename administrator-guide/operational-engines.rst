@@ -275,7 +275,7 @@ As with any other Knowage document, we need to define a template for an external
 Where:
 
 -  ``<COMMONJ>`` is the main tag and includes all the document.
--  The tag ``<WORK> ``specifies the process. In particular:
+-  The tag ``<WORK>`` specifies the process. In particular:
 
    -  ``workName`` is the id of the process
    -  ``className`` contains the name of the class implementing the process (as defined above).
@@ -312,9 +312,8 @@ Where:
 
 The class ``CmdExecWork`` (and its extensions) allows the execution of the command specified in the template. In particular, the template above would produce the following command at runtime:
 
-.. code-block::
+.. code-block:: bash
    :linenos:
    :caption: Runtime command line
 
-         C:/Programmi/Java/jdk1.5.0_16/bin/java 'it.eng.test.ProcessTest'
-         update=<val> level=<val>
+         C:/Programmi/Java/jdk1.5.0_16/bin/java 'it.eng.test.ProcessTest' update={val} level={val}

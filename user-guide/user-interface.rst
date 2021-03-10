@@ -1,5 +1,5 @@
 User Interface
-=============
+==============
 
 This chapter focuses on Knowage user interface, providing detailed information on the Main Menu, the Document Browser and some general settings concerning analytical documents. First of all, a short introduction on profiling rules its provided.
 

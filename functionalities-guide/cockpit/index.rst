@@ -878,6 +878,7 @@ The settings tab contains the management of the 3 elements that compose a direct
 **Facets column ordering**
 
 .. figure:: media/image491.png
+
 It is possible to change the facets column ordering, for example if there is the need to move up a field.
 
 
@@ -895,6 +896,7 @@ It is also possibile to change the format used to show date columns inside disco
 In order to do that, click on style for date columns fields in edit mode
 
 .. figure:: media/image493.png
+
 And change the "date format" property
 
 .. figure:: media/image494.png

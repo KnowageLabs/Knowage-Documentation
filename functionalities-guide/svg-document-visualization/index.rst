@@ -94,7 +94,6 @@ At the moment there is not yet a designer to create a template for this engine, 
 
 An example below.
 
-.. _enteringhierarchydet:
 .. code-block:: xml
    :linenos:
    :caption: Example of SVG code for template file.

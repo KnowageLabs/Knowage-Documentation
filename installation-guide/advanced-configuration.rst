@@ -292,7 +292,7 @@ Knowage is now ready to authenticate the users via LDAP credentials.
 
 
 Google Sign-In integration
-------------------------
+--------------------------
 
 Knowage provides integration with Google Sign-In for authentication purposes, i.e. users can login into Knowage using their Google accounts.
 
@@ -401,6 +401,7 @@ Main Menu
 Specific settings for the main menu can be set updating the fields below:
 
 * **KNOWAGE.DOWNLOAD.POLLING.TIME**: This field defines the number of milliseconds for the download service polling interval. If set to *0* the service will update just once on page load. Default is 10000 (10 seconds).
+
 Changing the secret key for password encryption
 -----------------------------------------------
 
