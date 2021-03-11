@@ -6,7 +6,7 @@ To let all the BI tools work properly you need to configure DB connection. There
 Connect to your data
 --------------------
 
-In order to connect to your data, you have to define a new data source connection. 
+In order to connect to your data, you have to define a new data source connection.
 
 Knowage manages two types of data source connections:
 
@@ -18,7 +18,7 @@ Knowage manages two types of data source connections:
 
          - Create connection pool on <Tomcat_home>/conf/server.xml
          - Add ResourceLink on context.xml
-         
+
 To add a new connection, first add the relative JDBC driver to the folder ``KnowageServer-<version>/lib`` and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
@@ -74,7 +74,9 @@ Dialect
          +-----------------------+-------------------+
          | Orient DB             | 3.0.2             |
          +-----------------------+-------------------+
-
+         +-----------------------+-------------------+
+         | Amazon RedShift       | (JDBC driver v1)  |
+         +-----------------------+-------------------+
 
 Read Only
    Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
@@ -245,3 +247,16 @@ For exmaple, to create a JDBC connection to a Google Big Query dataset using a s
      maxWait="300" minEvictableIdleTimeMillis="60000" name="jdbc/my-bigquery-ds" removeAbandoned="true" removeAbandonedTimeout="3600"
      testOnReturn="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource"
      url="jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=<<project-id>>;OAuthType=0;OAuthServiceAcctEmail=<<service-account-email>>;OAuthPvtKeyPath=<<json-key>>;DefaultDataset=<<default-dataset>>;FilterTablesOnDefaultDataset=1;"/>
+
+
+Amazon RedShift
+~~~~~~~~~~~~~~~~
+
+Knowage supports Amazon RedShift datasources via Official v1 JDBC Driver: see `official reference <https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html>`_.
+According to documentation using JDBC drivers v1 a RedShift connection configuration can be done exactly like a PostgreSQL configuration.
+You can test it creating an example db like this one:  `official sample testing db <https://docs.aws.amazon.com/redshift/latest/dg/c_sampledb.html>`_.
+To create a JDBC connection to a Amazon RedShift dataset using a RedShift-only connection you can add the following configuration to ``TOMCAT_HOME/conf/server.xml``:
+
+.. code-block:: xml
+
+ <Resource auth="Container" driverClassName="com.amazon.redshift.jdbc.Driver" logAbandoned="true" maxActive="10" maxIdle="1" minEvictableIdleTimeMillis="60000" name="jdbc/redshift" password="password" removeAbandoned="true" removeAbandonedTimeout="3600" testOnReturn="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource" url="jdbc:redshift://examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com:5439/dev" username="user" validationQuery="SELECT 1"/>
