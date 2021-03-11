@@ -1,47 +1,45 @@
-R installation
-===================
+R Engine
+================
 
-It is required the installation of the following components for the correct operation of the data mining engine:
+As for Python, also the R functionalities leverage on a standalone webservice, this time written in R. Take a look at the official R Project documentation and find out how to get R (https://www.r-project.org/).
+The official supported version is R >=3.5.1, but we recommend to use 3.6.x whenever it's possible.
 
--  R
--  R Studio
--  rJava
+Install knowage-r webservice
+----------------------------
 
-**[LINUX]** The first two components, needed for the functionality of the Knowage data mining engine, has to be installed through the ``rpm`` comand, and, the third, through the RStudio GUI. Once retrieved the RPM file, open the folder and launch the comands:
+Inside the Knowage-Server github repository, under the Knowage-R folder you can find the sources of the knowage-r webservice.
 
-.. code-block:: bash
-   :caption: Commands for the rpm file
-   :linenos:
-  
-   rpm -Uvh ./R-3.2.2-1.el6.x86_64.rpm               
-   yum install --nogpgcheck rstudio-server-rhel-0.99.486-x86_64.rpm
-   cp ./RStudio/rJava_0.9-8.tar.gz $TOMCAT_HOME
-   chown tomcat $TOMCAT_HOME/rJava_0.98.tar.gz
-   chown -R tomcat.root /usr/lib64/R/library && chmod -R 775 /usr/lib64/R/library 
-   chown -R tomcat.root /usr/share/doc/R-3.2.2 && chmod -R 775 /usr/share/doc/R
+Once you have downloaded the source code, you will have to create the configuration for the webservice. This configuration will be contained inside a file called ``configs.R`` and placed inside the ``Knowage-R`` folder.
 
-Typing the address ``http://server_ipormachine_name:8787/`` in the browser, the user gets on screen the page showed below:
+The configuration is indeed really simple since you only need to specify the Knowage HMAC key contained in the server.xml file.
 
-.. figure:: media/image24.png
+In the ``constants.R`` file you can set the default webservice port and a whitelist of IP addresses that can contact the webservice.
 
-   Sign in RStudio.
+Run knowage-r webservice
+-------------------------
 
-Then log in with the user credentials used for the Tomcat 7 installation: tomcat / <tomcat_user_password>.
+Once you have installed all the requirements, you need to get the r-webservice running. 
+In order to do so, it's enough to run the main file "knowage-r.R" with the basic R interpreter, via the RScript command or an equivalent one.
 
-The following images show the sequence of steps the user will encounter:
+.. important::
+     **Webservice permissions**
 
-.. figure:: media/image25.png
+     The knowage-r webservice must have the rights to read/write in its own folder. 
 
-.. figure:: media/image26.png
 
-.. figure:: media/image27.png
+Configure Knowage to enable Python/R functionalities
+=====================================================
 
-Meanwhile the package is installed, remember to answer NO when asked to create a personal library in the user home (that can be found under ``$HOME/RStudio/log``). This way, rJava will be installed in the directory ``/usr/lib64/R/library/rJava``.
+From the Knowage interface you can now enable the Python/R functionalities. 
 
-Finally, edit the ``TOMCAT_HOME/bin/setenv.sh`` adding the following commands:
+Go to the ``Roles management`` section, in the *Authorizations* tab under *Widgets* check the ``Edit Python Scripts`` option.
+Now you will be able to see the Python and R Dataset and Widget among the list of available ones.
 
-.. code-block:: bash
-   :linenos:
+Go to the ``Configuration management`` section, and create new variables of category ``PYTHON_CONFIGURATION`` and ``R_CONFIGURATION``. The value of this variables will specify the addresses of the Python and R webservices (es. ``python.webservice.address.com/domain``).
+Now you will be able to see the addresses of the so configured environments when creating a Dataset or a Widget.
 
-   export R_HOME=/usr/lib64/R                          
-   export LD_LIBRARY_PATH=/usr/lib64/R/library/rJava/jri
+**Be aware that depending on the architecture of your solution, you might have to define two different addresses for reaching the same instance of Python.**
+
+*  One address is for reaching Python from the client (browser) and will be used when creating a widget,
+*  One address is for reaching Python from the server (Knowage) and will be used when creating a Dataset.
+

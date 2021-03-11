@@ -94,20 +94,18 @@ At the moment there is not yet a designer to create a template for this engine, 
 
 An example below.
 
-.. _enteringhierarchydet:
 .. code-block:: xml
    :linenos:
    :caption: Example of SVG code for template file.
 
-      <?xml version="1.0" encoding="UTF-8"?>                                  
-      <MAP>                                                                                                                             
-          <DATAMART_PROVIDER>                                                                                              
-          <HIERARCHY name="USA">  
-          <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >   
-          <MEMBER name ="states" measure_dataset = "ds_states" level="2" >     
-          <HIERARCHY>  
-          <DATAMART_PROVIDER>                                                                                                       
-      <MAP>                                                                   
+	<MAP>
+		<DATAMART_PROVIDER>
+			<HIERARCHY name="USA">
+				<MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >
+				<MEMBER name ="states" measure_dataset = "ds_states" level="2" >
+			<HIERARCHY>
+		<DATAMART_PROVIDER>
+	<MAP>
 
 Basically, it’s necessary to specify the hierarchy that we want to use, as well as its members (remember that with member we are considering a specific SVG).
 
@@ -119,27 +117,27 @@ After, we need to define each member and first of all we can note that is compos
    :linenos:
    :caption: Example of SVG code for template file.
 
-      <MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >                        
-        <METADATA>
-        <LAYERS>     
-        <MEASURES default_kpi="UNIT_SALES">    
-      <MEMBER>                                                              
+	<MEMBER name ="regions" measure_dataset = "ds_regions" level="1" >                        
+		<METADATA>
+		<LAYERS>
+		<MEASURES default_kpi="UNIT_SALES">
+	<MEMBER>
 
 Let us see each of them in more depth.
 
 -  **METADATA.** This is the section where we define the dataset metadata, in fact, each COLUMN tag defines the dataset columns that        we want to use as attribute, as measure (used for thematize the SVG) or other technical meaning usefull for the engine.
 
-	.. code-block:: xml
-	   :linenos:
-	   :caption: Example of SVG code for template file.
+.. code-block:: xml
+   :linenos:
+   :caption: Example of SVG code for template file.
 
-		 <METADATA>                                                                                                                    
-		   <COLUMN TYPE="geoid" column_id="sales_region" />   
-		   <COLUMN TYPE="measure" column_id="store_sales" />
-		   <COLUMN TYPE="measure" column_id="store_costs" /> 
-		   <COLUMN TYPE="measure" column_id="unit_sales" />    
-		   <COLUMN TYPE="drillid" column_id="member_name" /> 
-		   <COLUMN TYPE="info" column_id="info_text" />                          
+		<METADATA>                                                                                                                    
+		<COLUMN TYPE="geoid" column_id="sales_region" />   
+		<COLUMN TYPE="measure" column_id="store_sales" />
+		<COLUMN TYPE="measure" column_id="store_costs" /> 
+		<COLUMN TYPE="measure" column_id="unit_sales" />    
+		<COLUMN TYPE="drillid" column_id="member_name" /> 
+		<COLUMN TYPE="info" column_id="info_text" />                          
 
 Once again we give some details on metadata in next table.
 
@@ -149,15 +147,14 @@ Once again we give some details on metadata in next table.
 
 	       Available layers set by a technical user.
 
-	.. code-block:: xml
-	   :linenos:
-	   :caption: Code relative to the LAYER setting.
+.. code-block:: xml
+   :linenos:
+   :caption: Code relative to the LAYER setting.
 
-		 <LAYERS>                                                                                                                       
-		   <LAYER name="regions" description="Regions" selected="true" />                                               
-		   <LAYER name="Labels_Regions_Name" description="Labels_Regions_Name"   
-			  selected="false" />                                                                             
-         <LAYERS>                                                           
+		<LAYERS>                                                                                                                       
+			<LAYER name="regions" description="Regions" selected="true" />                                               
+			<LAYER name="Labels_Regions_Name" description="Labels_Regions_Name" selected="false" />                                                                             
+		<LAYERS>                                                           
 
 .. _recaptagproperties:
 .. table:: Recap of properties and function.
@@ -363,131 +360,133 @@ Now, after the template definiton, you can create it into Knowage. Remember that
 .. table:: Recap of layer tag properties and function.
     	:widths: auto
 
-        +-----------------------+-----------------------+---------------------------------------------------------------+
-        |    Tag                | Property              | Note                                                          |
-        +=======================+=======================+===============================================================+
-        |    MEASURES           | default_kpi           | Mandatory. Defines the default kpi or the kpi that we wont    |
-        |                       |                       | enable at the beginning, when we start the document           |
-        |                       |                       | execution. Its value must exist into the METADATA section as  |
-        |                       |                       | measuere type.                                                |
-        +-----------------------+-----------------------+---------------------------------------------------------------+
-	|    KPI                | column_id             | Mandatory. The column_id property the measure that you        |
-        |                       |                       | are defining. Its value must exist into the METADATA section  |
-	|			|	                | as measure type.                                              |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    KPI                | Description           | Mandatory. The label that you want show into the detail panel.|
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    THRESHOLDS         | type                  | Mandatory. The type of logic to use to define the             |
-	|                       |                       | thematization. It could be:                                   |
-	|                       |                       | -  **quantile**: it partitions the interval into N quintiles. |
-	|                       |                       |                                                               |
-	|                       |                       | -  **perc**: it partitions the interval into subintervals     |
-	|                       |                       | whose extent represents a specific fraction of the overall    |
-	|			|			| interval extent.                                              |
-	|                       |                       |                                                               |
-	|                       |                       | -  **uniform**: it partitions the interval into N subintervals|
-	|                       |                       | of a same extent.                                             |
-	|                       |                       |                                                               |
-	|                       |                       | -  **static**: it partitions the interval into smaller        |
-	|                       |                       | fixed-size subintervals, statically defined by the RANGE      |
-	|			|			| parameter                                                     |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    THRESHOLDS         | lb_value              | Mandatory. The lower value outside of which no value is       |
-	|                       |                       | considered.                                                   |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    THRESHOLDS         | ub_value              | Mandatory. The upper value outside of which no value is       |
-	|                       |                       | considered.                                                   |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    PARAM              | name                  | Mandatory. Specify the parameter value necessaty to define    |
-	|                       |                       | correctly the temhatization. Its value depends by the         |
-	|                       |                       | threshold type.                                               |
-	|                       |                       |                                                               |
-	|                       |                       | This attribite could  be present more than once.              |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    PARAM              | value                 | Mandatory. It’s the parameter name value.                     |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    PARAM              | label                 | Optional. Specify the static labels for the legend when       |
-	|                       |                       | thresholds type is “static”.                                  |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    PARAM              | value                 | Optional. It’s the parameter label value.                     |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    COLOURS            | type                  | Mandatory. Specify the logic type for defining colors range.  |
-	|                       |                       | It could be:                                                  |
-	|                       |                       |                                                               |
-	|                       |                       | -  **static**: it assigns each sub-interval a specific color  |
-	|                       |                       |    that is statically defined.                                |
-	|                       |                       |                                                               |
-	|                       |                       | -  grad: it assigns each sub-interval a specific color that is|
-	|                       |                       |    dynamically calculated through a gradient function.        |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    COLOURS            | outboud_color         | Mandatory. Defines the color to use when the value for the    |
-	|                       |                       | specific area is outbound of the maximum range.165            |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    COLOURS            | null_values_color     | Mandatory. Defines the color to use when the value for the    |
-	|                       |                       | specific area is null                                         |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    PARAM              | name                  | See the PARAM\ name property specified for the THRESHOLD tag  |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    PARAM              | value                 | See the PARAM\ value property specified for the THRESHOLD tag |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    type               | static                | It partitions the interval into smaller fixed-size            |
-	|                       |                       | subintervals, statically defined by the RANGE parameter       |
-	|                       |                       | <TRESHOLDS                                                    |
-	|                       |                       |                                                               |
-	|                       |                       | type="static" lb_value="0" ub_value="none" >                  |
-	|                       |                       |                                                               |
-	|                       |                       | <PARAM name="range" value="0,256,512,1024 " />                |
-	|                       |                       |                                                               |
-	|                       |                       | <PARAM name="label" value="Low,Medium,Hig h,Max" />           |
-	|                       |                       |                                                               |
-	|                       |                       | </TRESHOLDS>                                                  |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    type               | quantile              | it partitions the interval into N quintiles. The exact        |
-	|                       |                       | amount of quintiles to be created is defined by the           |
-	|                       |                       | GROUPS_NUMBER  parameter:                                     |
-	|                       |                       |                                                               |
-	|                       |                       | <TRESHOLDS  type="quantile" lb_value="0" ub_value="none" >    |
-	|                       |                       |                                                               |
-	|                       |                       | <PARAM name="GROUPS_NUMBER"  value="5" />                     |
-	|                       |                       | </TRESHOLDS>                                                  |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    type               | perc                  | it partitions the interval into subintervals whose            |
-	|                       |                       | extent represents a specific fraction of the overall interval |
-	|                       |                       | extent. The extent of each single subinterval is              |
-	|                       |                       | defined by the RANGE parameter.                               |
-	|                       |                       |                                                               |
-	|                       |                       | <TRESHOLDS type="perc" lb_value="0" ub_value="none" >         |
-	|                       |                       |                                                               |
-	|                       |                       | <PARAM name="range" value="30,20,30,20" /> </TRESHOLDS>       |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    type               | uniform               | it partitions the interval into N subintervals of a same      |
-	|                       |                       | extent. The exact number of sub-intervals is defined by the   |
-	|                       |                       | GROUPS_NUMBER parameter.                                      |
-	|                       |                       | <TRESHOLDS type="uniform" lb_value="0" ub_value="none" >      |
-	|                       |                       |                                                               |
-	|                       |                       | <PARAM name="GROUPS_NUMBER" value="4" />                      |
-	|                       |                       |                                                               |
-	|                       |                       | </TRESHOLDS>                                                  |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    type               | static                | Static: it assigns each sub-interval a specific color that    |
-	|                       |                       | is statically defined, through the RANGE parameter            |
-	|                       |                       |                                                               |
-	|                       |                       | <COLOURS type="static" null_values_color="#F  FFFFF">         |
-	|                       |                       | <PARAM name="range"  value="#CCD6E3,#6699F F,#4a7aaf,#283B64" |
-	|                       |                       | />                                                            |
-	|                       |                       | </COLOURS>                                                    |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
-	|    type               | grad                  | Gradient : it assigns each sub-interval a specific color that |
-	|                       |                       | is dynamically calculated through a gradient function,        |
-	|                       |                       | which progressively scales the base color intensity. This is  |
-	|                       |                       | defined through the BASE_COLOR parameter                      |
-	|                       |                       |                                                               |
-	|                       |                       | <COLOURS type="grad" outbound_colour="#CCC CCC"               |
-	|                       |                       | null_values_color="#F FFFFF" >                                |
-	|                       |                       | <PARAM name="BASE_COLOUR" value="#3333CC"                     |
-	|			|			| />                                                            |
-	|                       |                       | </COLOURS>                                                    |
-	+-----------------------+-----------------------+---------------------------------------------------------------+
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    Tag                | Property              | Note                                                           |
+	+=======================+=======================+================================================================+
+	|    MEASURES           | default_kpi           | Mandatory. Defines the default kpi or the kpi that we wont     |
+	|                       |                       | enable at the beginning, when we start the document            |
+	|                       |                       | execution. Its value must exist into the METADATA section as   |
+	|                       |                       | measuere type.                                                 |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    KPI                | column_id             | Mandatory. The column_id property the measure that you         |
+	|                       |                       | are defining. Its value must exist into the METADATA section   |
+	|                       |                       | as measure type.                                               |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    KPI                | Description           | Mandatory. The label that you want show into the detail panel. |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    THRESHOLDS         | type                  | Mandatory. The type of logic to use to define the              |
+	|                       |                       | thematization. It could be:                                    |
+	|                       |                       |                                                                |
+	|                       |                       | -  **quantile**: it partitions the interval into N quintiles.  |
+	|                       |                       |                                                                |
+	|                       |                       | -  **perc**: it partitions the interval into subintervals      |
+	|                       |                       |    whose extent represents a specific fraction of the overall  |
+	|                       |                       |    interval extent.                                            |
+	|                       |                       |                                                                |
+	|                       |                       | -  **uniform**: it partitions the interval into N subintervals |
+	|                       |                       |    of a same extent.                                           |
+	|                       |                       |                                                                |
+	|                       |                       | -  **static**: it partitions the interval into smaller         |
+	|                       |                       |    fixed-size subintervals, statically defined by the RANGE    |
+	|                       |                       |    parameter                                                   |
+	|                       |                       |                                                                |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    THRESHOLDS         | lb_value              | Mandatory. The lower value outside of which no value is        |
+	|                       |                       | considered.                                                    |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    THRESHOLDS         | ub_value              | Mandatory. The upper value outside of which no value is        |
+	|                       |                       | considered.                                                    |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    PARAM              | name                  | Mandatory. Specify the parameter value necessaty to define     |
+	|                       |                       | correctly the temhatization. Its value depends by the          |
+	|                       |                       | threshold type.                                                |
+	|                       |                       |                                                                |
+	|                       |                       | This attribite could  be present more than once.               |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    PARAM              | value                 | Mandatory. It’s the parameter name value.                      |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    PARAM              | label                 | Optional. Specify the static labels for the legend when        |
+	|                       |                       | thresholds type is “static”.                                   |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    PARAM              | value                 | Optional. It’s the parameter label value.                      |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    COLOURS            | type                  | Mandatory. Specify the logic type for defining colors range.   |
+	|                       |                       | It could be:                                                   |
+	|                       |                       |                                                                |
+	|                       |                       | -  **static**: it assigns each sub-interval a specific color   |
+	|                       |                       |    that is statically defined.                                 |
+	|                       |                       |                                                                |
+	|                       |                       | -  grad: it assigns each sub-interval a specific color that is |
+	|                       |                       |    dynamically calculated through a gradient function.         |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    COLOURS            | outboud_color         | Mandatory. Defines the color to use when the value for the     |
+	|                       |                       | specific area is outbound of the maximum range.165             |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    COLOURS            | null_values_color     | Mandatory. Defines the color to use when the value for the     |
+	|                       |                       | specific area is null                                          |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    PARAM              | name                  | See the PARAM\ name property specified for the THRESHOLD tag   |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    PARAM              | value                 | See the PARAM\ value property specified for the THRESHOLD tag  |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    type               | static                | It partitions the interval into smaller fixed-size             |
+	|                       |                       | subintervals, statically defined by the RANGE parameter        |
+	|                       |                       | <TRESHOLDS                                                     |
+	|                       |                       |                                                                |
+	|                       |                       | type="static" lb_value="0" ub_value="none" >                   |
+	|                       |                       |                                                                |
+	|                       |                       | <PARAM name="range" value="0,256,512,1024 " />                 |
+	|                       |                       |                                                                |
+	|                       |                       | <PARAM name="label" value="Low,Medium,Hig h,Max" />            |
+	|                       |                       |                                                                |
+	|                       |                       | </TRESHOLDS>                                                   |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    type               | quantile              | it partitions the interval into N quintiles. The exact         |
+	|                       |                       | amount of quintiles to be created is defined by the            |
+	|                       |                       | GROUPS_NUMBER  parameter:                                      |
+	|                       |                       |                                                                |
+	|                       |                       | <TRESHOLDS  type="quantile" lb_value="0" ub_value="none" >     |
+	|                       |                       |                                                                |
+	|                       |                       | <PARAM name="GROUPS_NUMBER"  value="5" />                      |
+	|                       |                       | </TRESHOLDS>                                                   |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    type               | perc                  | it partitions the interval into subintervals whose             |
+	|                       |                       | extent represents a specific fraction of the overall interval  |
+	|                       |                       | extent. The extent of each single subinterval is               |
+	|                       |                       | defined by the RANGE parameter.                                |
+	|                       |                       |                                                                |
+	|                       |                       | <TRESHOLDS type="perc" lb_value="0" ub_value="none" >          |
+	|                       |                       |                                                                |
+	|                       |                       | <PARAM name="range" value="30,20,30,20" /> </TRESHOLDS>        |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    type               | uniform               | it partitions the interval into N subintervals of a same       |
+	|                       |                       | extent. The exact number of sub-intervals is defined by the    |
+	|                       |                       | GROUPS_NUMBER parameter.                                       |
+	|                       |                       | <TRESHOLDS type="uniform" lb_value="0" ub_value="none" >       |
+	|                       |                       |                                                                |
+	|                       |                       | <PARAM name="GROUPS_NUMBER" value="4" />                       |
+	|                       |                       |                                                                |
+	|                       |                       | </TRESHOLDS>                                                   |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    type               | static                | Static: it assigns each sub-interval a specific color that     |
+	|                       |                       | is statically defined, through the RANGE parameter             |
+	|                       |                       |                                                                |
+	|                       |                       | <COLOURS type="static" null_values_color="#F  FFFFF">          |
+	|                       |                       | <PARAM name="range"  value="#CCD6E3,#6699F F,#4a7aaf,#283B64"  |
+	|                       |                       | />                                                             |
+	|                       |                       | </COLOURS>                                                     |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
+	|    type               | grad                  | Gradient : it assigns each sub-interval a specific color that  |
+	|                       |                       | is dynamically calculated through a gradient function,         |
+	|                       |                       | which progressively scales the base color intensity. This is   |
+	|                       |                       | defined through the BASE_COLOR parameter                       |
+	|                       |                       |                                                                |
+	|                       |                       | <COLOURS type="grad" outbound_colour="#CCC CCC"                |
+	|                       |                       | null_values_color="#F FFFFF" >                                 |
+	|                       |                       | <PARAM name="BASE_COLOUR" value="#3333CC"                      |
+	|                       |                       | />                                                             |
+	|                       |                       | </COLOURS>                                                     |
+	+-----------------------+-----------------------+----------------------------------------------------------------+
 
 Advanced functionalities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

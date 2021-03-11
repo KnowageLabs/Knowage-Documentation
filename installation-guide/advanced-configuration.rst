@@ -11,13 +11,13 @@ For Tomcat: the configuration of the pool of thread is available inside the TOMC
         :linenos:
         :caption: Configuration of the pool of thread for Tomcat.
 
-        <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory" 
-            maxThreads="5" 
-            minThreads="1" 
-            queueLength="10"   
-            maxDaemons="10" 
-            name="wm/SpagoWorkManager" 
-            type="commonj.work.WorkManager"/>       
+        <Resource auth="Container" factory="de.myfoo.commonj.work.FooWorkManagerFactory"
+            maxThreads="5"
+            minThreads="1"
+            queueLength="10"
+            maxDaemons="10"
+            name="wm/SpagoWorkManager"
+            type="commonj.work.WorkManager"/>
 
 
 For JBoss: the configuration of the pool of thread is available inside the JBOSS_HOME/ standalone/configuration/s Refer to Code below.
@@ -26,19 +26,19 @@ For JBoss: the configuration of the pool of thread is available inside the JBOSS
         :linenos:
         :caption: Configuration of the pool of thread for JBoss.
 
-        <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"                
-          class="de.myfoo.commonj.work.MyFooWorkManagerFactory">              
-          <environment>                                                                  
-          <property name="maxThreads" value="5"/>                            
-          <property name="minThreads" value="1"/>   
-          <property name="queueLength" value="10"/> 
-          <property name="maxDaemons" value="10"/>  
-          </environment>                            
-        </object-factory>                            
+        <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"
+          class="de.myfoo.commonj.work.MyFooWorkManagerFactory">
+          <environment>
+          <property name="maxThreads" value="5"/>
+          <property name="minThreads" value="1"/>
+          <property name="queueLength" value="10"/>
+          <property name="maxDaemons" value="10"/>
+          </environment>
+        </object-factory>
 
 In both cases, the meaning of the configuration parameters is the following:
 
-* minThreads: the mininum number of threads in the thread pool. Default: 2;
+* minThreads: the minimum number of threads in the thread pool. Default: 2;
 * maxThreads: the maximum number of threads in the thread pool. Default: 10;
 * queueLenght: the number of work items that can be queued - 0 means no queuing. Default: 10;
 * maxDaemons: the maximum number of daemon threads to allow for this work manager. Default: 10.
@@ -50,65 +50,65 @@ First of all, the user must configure the distributed cache. This helps to coord
 * **SPAGOBI.CACHE.NAMEPREFIX**: It configures the prefix of temporary table in the cache ( Default : ”sbicache“ )
 * **SPAGOBI.CACHE.SPACE_AVAILABLE**: It resizes cache dimension (bytes) ( Default : 1024 )
 * **SPAGOBI.CACHE.LIMIT_FOR_CLEAN**: It configures the maximum cache section (in percentage) that can be cleaned at runtime when the cache has not enough space to store a dataset. ( Default : 50)
-* **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is  empy. The allowable values are: EVERY_10_MINS, EVERY_15_MINS, EVERY_20_MINS, EVERY_30_MINS, HOURLY,DAILY,WEEKLY,MONTHLY,YEARLY. Every value different from those just listed unenable the periodic cleaning. ( Defualt: DAILY )
-* **SPAGOBI.CACHE.DS_LAST_ACCESS_TTL**: It configures the Time To Live of a dataset inside the cache. This parameter defines the minimum TTL (in seconds) so to guarantee that a dataset remains in cache. A too-high value can lead the cache to breakdown (in this case, there is no way to insert new datasets), while a toolow value can lead to situations when there are no certainties of the stability of the dataset in the cache. (Default 600 )
+* **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is empty. The allowable values are: EVERY_10_MINS, EVERY_15_MINS, EVERY_20_MINS, EVERY_30_MINS, HOURLY,DAILY,WEEKLY,MONTHLY,YEARLY. Any value other than those listed above does not enable periodic cleaning. ( Default: DAILY )
+* **SPAGOBI.CACHE.DS_LAST_ACCESS_TTL**: It configures the Time To Live of a dataset inside the cache. This parameter defines the minimum TTL (in seconds) so to guarantee that a dataset remains in cache. A too-high value can lead the cache to breakdown (in this case, there is no way to insert new datasets), while a too low value can lead to situations when there are no certainties of the stability of the dataset in the cache. (Default 600 )
 * **SPAGOBI.CACHE.DATABASE_SCHEMA**: Name of the schema on which the tables are created. Such schema is defined by the datasource when it is set as Write-Default. Generally it is not necessary to configure this parameter since it is calculated at runtime. (default <empty> )
-* **SPAGOBI.CACHE.LIMIT_FOR_STORE**: It configures the ratio (in percentage) between the dimension of the cache and the maximum dimension of a dataset in the cache. If the dimension of the dataset which the user intends to persist is bigger than the configured percentage, the system blocks the that persistance attempt. ( Default : 10 )
+* **SPAGOBI.CACHE.LIMIT_FOR_STORE**: It configures the ratio (in percentage) between the dimension of the cache and the maximum dimension of a dataset in the cache. If the dimension of the dataset which the user intends to persist is bigger than the configured percentage, the system blocks the that persistence attempt. ( Default : 10 )
 * **SPAGOBI.CACHE.CREATE_AND_PERSIST_TABLE.TIMEOUT**: It represents the maximum time (in seconds) to create temporary table for the dataset. ( Default : 120 )
-* **SPAGOBI.WORKMANAGER.SQLDBCACHE.TIMEOUT**: It represents the maximum waiting time (inmilliseconds) of an asynchronus work. (Default: 180000 )
+* **SPAGOBI.WORKMANAGER.SQLDBCACHE.TIMEOUT**: It represents the maximum waiting time (in milliseconds) of an asynchronous work. (Default: 180000 )
 * **SPAGOBI.CACHE.HAZELCAST.TIMEOUT** : It represents the maximum time (in seconds) to get a distributed lock. ( Default 120 )
 * **SPAGOBI.CACHE.HAZELCAST.LEASETIME**: It represents the maximum time (in seconds) for releasing a distributed lock already got. ( Default :240 )
 
 Logging
 ---------
-Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analize the log file of Knowage. In the first part we can set the generation mechanism of the log file, while ih the second one the level of tracing.
+Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analyze the log file of Knowage. In the first part we can set the generation mechanism of the log file, while in the second one the level of tracing.
 
 .. _loggappender:
 .. code-block:: bash
         :linenos:
-        :caption: Logg appender.
+        :caption: Log appender.
 
-         log4j.rootLogger=ERROR, SpagoBI                                        
-                                                                       
-         # SpagoBI Appender                                                    
-         log4j.appender.SpagoBI=org.apache.log4j.RollingFileAppender           
-         log4j.appender.SpagoBI.File=${catalina.base}/logs/knowage.log         
-         log4j.appender.SpagoBI.MaxFileSize=10000KB                            
-         log4j.appender.SpagoBI.MaxBackupIndex=0                               
-         log4j.appender.SpagoBI.layout=org.apache.log4j.PatternLayout          
+         log4j.rootLogger=ERROR, SpagoBI
+
+         # SpagoBI Appender
+         log4j.appender.SpagoBI=org.apache.log4j.RollingFileAppender
+         log4j.appender.SpagoBI.File=${catalina.base}/logs/knowage.log
+         log4j.appender.SpagoBI.MaxFileSize=10000KB
+         log4j.appender.SpagoBI.MaxBackupIndex=0
+         log4j.appender.SpagoBI.layout=org.apache.log4j.PatternLayout
          log4j.appender.SpagoBI.layout.ConversionPattern=[%t] %d{DATE} %5p %c.%M:%L - %m %n
-                                                                   
-         log4j.appender.SpagoBI.append=false                               
-                                                                   
-         log4j.appender.Quartz=org.apache.log4j.RollingFileAppender        
-         log4j.appender.Quartz.File=${catalina.base}/logs/Quartz.log       
-         log4j.appender.Quartz.MaxFileSize=10000KB                         
-         log4j.appender.Quartz.MaxBackupIndex=10                           
-         log4j.appender.Quartz.layout=org.apache.log4j.PatternLayout       
-         log4j.appender.Quartz.layout.ConversionPattern= [%t] %d{DATE} %5p %c.%M:%L - %m  %n    
-                                                                      
-         log4j.appender.SpagoBI_Audit=org.apache.log4j.FileAppender           
-         log4j.appender.SpagoBI_Audit.File=${catalina.base}/logs/knowage_[1]\_OperatorTrace.log    
-                                                                       
-         log4j.appender.SpagoBI_Audit.layout=org.apache.log4j.PatternLayout    
-         log4j.appender.SpagoBI_Audit.layout.ConversionPattern=%m%n            
-                                                                       
-         log4j.appender.CONSOLE = org.apache.log4j.ConsoleAppender             
-         log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout          
-         log4j.appender.CONSOLE.layout.ConversionPattern=%c.%M: %m%n #         
-                                                            
-                                                                       
-         log4j.logger.Spago=ERROR, SpagoBI log4j.additivity.Spago=false        
-                                                                       
-         log4j.logger.it.eng.spagobi=ERROR, SpagoBI, CONSOLE                   
-         log4j.additivity.it.eng.spagobi=false                                 
-                                                                       
-         log4j.logger.it.eng.spagobi.commons.utilities.messages=ERROR, SpagoBI 
-         log4j.logger.it.eng.spagobi.commons.utilities.urls.WebUrlBuilder=ERROR,SpagoBI  
-         log4j.logger.org.quartz=ERROR, Quartz, CONSOLE                        
-         log4j.logger.org.hibernate=ERROR, SpagoBI                             
-                                                                       
-         log4j.logger.audit=INFO, SpagoBI_Audit log4j.additivity.audit=false   
+
+         log4j.appender.SpagoBI.append=false
+
+         log4j.appender.Quartz=org.apache.log4j.RollingFileAppender
+         log4j.appender.Quartz.File=${catalina.base}/logs/Quartz.log
+         log4j.appender.Quartz.MaxFileSize=10000KB
+         log4j.appender.Quartz.MaxBackupIndex=10
+         log4j.appender.Quartz.layout=org.apache.log4j.PatternLayout
+         log4j.appender.Quartz.layout.ConversionPattern= [%t] %d{DATE} %5p %c.%M:%L - %m  %n
+
+         log4j.appender.SpagoBI_Audit=org.apache.log4j.FileAppender
+         log4j.appender.SpagoBI_Audit.File=${catalina.base}/logs/knowage_[1]\_OperatorTrace.log
+
+         log4j.appender.SpagoBI_Audit.layout=org.apache.log4j.PatternLayout
+         log4j.appender.SpagoBI_Audit.layout.ConversionPattern=%m%n
+
+         log4j.appender.CONSOLE = org.apache.log4j.ConsoleAppender
+         log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+         log4j.appender.CONSOLE.layout.ConversionPattern=%c.%M: %m%n #
+
+
+         log4j.logger.Spago=ERROR, SpagoBI log4j.additivity.Spago=false
+
+         log4j.logger.it.eng.spagobi=ERROR, SpagoBI, CONSOLE
+         log4j.additivity.it.eng.spagobi=false
+
+         log4j.logger.it.eng.spagobi.commons.utilities.messages=ERROR, SpagoBI
+         log4j.logger.it.eng.spagobi.commons.utilities.urls.WebUrlBuilder=ERROR,SpagoBI
+         log4j.logger.org.quartz=ERROR, Quartz, CONSOLE
+         log4j.logger.org.hibernate=ERROR, SpagoBI
+
+         log4j.logger.audit=INFO, SpagoBI_Audit log4j.additivity.audit=false
 
 
 If the user wishes to enable the tracing of the information to **DEBUG** level it is enough to modify the following line
@@ -116,14 +116,14 @@ If the user wishes to enable the tracing of the information to **DEBUG** level i
 .. code-block:: bash
         :linenos:
 
-         log4j.logger.it.eng.spagobi=ERROR,  SpagoBI, CONSOLE
+         log4j.logger.it.eng.spagobi=ERROR, SpagoBI, CONSOLE
 
 in
 
 .. code-block:: bash
         :linenos:
 
-        log4j.logger.it.eng.spagobi=DEBUG, SpagoBI, CONSOLE    
+        log4j.logger.it.eng.spagobi=DEBUG, SpagoBI, CONSOLE
 
 For further details we refer to the official Log4J documents.
 
@@ -150,19 +150,20 @@ Moreover, each profile has the following values:
 * from: the address to which the mail will be associated,
 * user: the user of the server connection,
 * password: user’s password,
-* useSSL: in case the SSl is in use.
+* useSSL: in case the SSL is in use.
 
 Maximum file size
-----------------
+-----------------
+
 For security reasons, Knowage has a series of parameters which manage the maximum file size that can be loaded on the server through the web GUI. To modify those parameters, it is required to enter the Knowage server application as administrator and access the ”server settings“ section and then ”configuration management“. The parameters at issue are the following:
 
-* **SPAGOBI.TEMPLATE_MAX_SIZE** : TEMPLATE MAX SIZE: it is the maximum template dimension of an anlytical document, expressed in bytes; the default value is 5MB;
+* **SPAGOBI.TEMPLATE_MAX_SIZE** : TEMPLATE MAX SIZE: it is the maximum template dimension of an analytical document, expressed in bytes; the default value is 5MB;
 
 * **SPAGOBI.DATASET_FILE_MAX_SIZE** : DATASET FILE MAX SIZE: it is the maximum dimension of a file used as a dataset, expressed in bytes; the default value is 10MB;
 
 * **SPAGOBI.DOCUMENTS.MAX_PREVIEW_IMAGE_SIZE** : Max preview image size: it is the maximum dimension of an image used as document preview (in the document browser, for instance), expressed in bytes; the default is 1MB;
 
-*  **IMAGE_GALLERY.MAX_IMAGE_SIZE_KB** : Max image size in Kb:it is the maximum size of the images that can be used in a cockpit creation; the default is 1MB;
+*  **IMAGE_GALLERY.MAX_IMAGE_SIZE_KB** : Max image size in Kb: it is the maximum size of the images that can be used in a cockpit creation; the default is 1MB;
 
 Date format
 ------------
@@ -179,42 +180,39 @@ For each available language there are two parameters:
 
 * **SPAGOBI.DATE-FORMAT-<lingua>_<nazione>.extJsFormat**: it rules the front-end role.
 
-We suggest to valorize the parameters in compliance with each other, according to a local data.
+We suggest to set the parameters in compliance with each other, according to a local data.
 
-The parameters **SPAGOBI.DATE-FORMAT-SERVER.forma**t and **SPAGOBI.DATE-FORMAT-SERVER.extJsFormat** control the link between back-end and front-end. The adjustment of these parameters do not affect the web GUI.
+The parameters **SPAGOBI.DATE-FORMAT-SERVER.format** and **SPAGOBI.DATE-FORMAT-SERVER.extJsFormat** control the link between back-end and front-end. The adjustment of these parameters do not affect the web GUI.
 
 Language
 ---------
 
-Knowage manages the multi-language. The list of all languages is manageable from the "Server  Settings” section. Go to "Configuration management“ and select the LANGUAGE_SUPPORTED category. Here there are two properties:
+Knowage manages the multi-language. The list of all languages is manageable from the "Server Settings” section. Go to "Configuration management“ and select the LANGUAGE_SUPPORTED category. Here there are two properties:
 
-* **SPAGOBI.LANGUAGE\ :sup:`\_`\ SUPPORTED.LANGUAGES** :the list of all supported languages underneath this formalism are: [it,IT],[en,US],[fr,FR],[es,ES];
+* **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES**: the list of all supported languages underneath this formalism are: [it,IT],[en,US],[fr,FR],[es,ES];
 
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default**: the default value is [en,US].
 
 LDAP security connectors
---------------------
+------------------------
 
 Knowage provides integration with a LDAP server for authentication purposes.
 
-**Remark.** Be sure that the Knowage users have been taken under LDAP census. The LDAP security connectors check the user that is accessing Knowage, but the user must be already defined as a Knowage user. Therefore, the users must cohesist in both authentication systems (LDAP and Knowage).
+**Remark.** Be sure that the Knowage users have been taken under LDAP census. The LDAP security connectors check the user that is accessing Knowage, but the user must be already defined as a Knowage user. Therefore, the users must coexist in both authentication systems (LDAP and Knowage).
 
 Knowage ships with two LDAP security connectors:
 
-* **LdapSecurityServiceSupplier**: a pure LDAP connector that authenticates every user using the LDAP server,
-* **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP connector that can authenticate some users using the LDAP server and other users using the internal Knowage authentication mechanism.
-
-LdapSecurityServiceSupplier relies only on a LDAP configuration file, instead ProfiledLdapSecurityServiceSupplier checks also the Knowage user profile attribute **auth_mode**.
-If the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the logging user, then Knowage will use its internal authentication mechanism, otherwise it will try an authentication via LDAP.
+* **LdapSecurityServiceSupplier**: a pure LDAP connector that authenticates every user using an LDAP server,
+* **ProfiledLdapSecurityServiceSupplier**: a mixed LDAP/internal connector that authenticates users using an LDAP server or the internal Knowage authentication system according to their profile information. More precisely, the choice of the system to be exploited is based on the **auth_mode** profile attribute: if the user profile attribute **auth_mode** is defined and its value equals to ``internal`` for the user, then Knowage will use its internal authentication mechanism, otherwise it will try an LDAP authentication.
 
 .. warning::
-    The only way to mantain access to Knowage for **users not mapped onto LDAP** is to:
-    
+    The only way to maintain access to Knowage for **users not mapped onto LDAP** is to:
+
     * define the user profile attribute **auth_mode**,
     * set **auth_mode** = ``internal`` for every user not mapped onto LDAP,
     * use the connector **ProfiledLdapSecurityServiceSupplier** (see below).
 
-In order to setup any LDAP security connector, prepare a .properties file that includes the LDAP configuration:
+In order to setup any LDAP security connector, you need to define a .properties file that includes the LDAP configuration:
 
 * **INITIAL_CONTEXT_FACTORY**: initial context factory Java class,
 * **PROVIDER_URL**: LDAP server IP,
@@ -225,9 +223,7 @@ In order to setup any LDAP security connector, prepare a .properties file that i
 .. important::
          The final concatenation **DN_PREFIX + <Knowage user ID> + DN_POSTFIX** must be equal to the **DN (distinguished name)** of the user as defined in LDAP server. Please check DN examples at https://ldapwiki.com/wiki/DN%20Syntax .
 
-An example of LDAP configuration is the file ``ldap_authorizations.properties``, available in the project ``knowageldapsecurityprovider``.
-
-Then define a custom JVM property ``ldap.config``, setting its value to the path of LDAP configuration file.
+Then define a custom JVM property ``ldap.config``, setting its value to the path of LDAP properties file.
 
 In a Unix-like environment using Apache Tomcat you can add a custom JVM property to variable ``JAVA_OPTS`` in a ``setenv.sh`` file under ``bin`` folder:
 
@@ -242,6 +238,41 @@ In a Windows environment using Apache Tomcat you can add a custom JVM property t
     :linenos:
 
     set JAVA_OPTS="%JAVA_OPTS% -Dldap.config=C:/Tomcat/resources/ldap.properties"
+
+Below there is an example of the ldap.properties file configuration for both LDAP connectors:
+
+.. code-block:: properties
+
+  INITIAL_CONTEXT_FACTORY   = com.sun.jndi.ldap.LdapCtxFactory
+  PROVIDER_URL              = ldaps://<LDAP server address>:389
+  SECURITY_AUTHENTICATION   = simple
+  DN_PREFIX                 = CN=
+  DN_POSTFIX                = ,ou=IT staff,o="Example, Inc",c=US
+  SEARCH_USER_BEFORE        = false
+  SEARCH_USER_BEFORE_USER   =
+  SEARCH_USER_BEFORE_PSW    =
+  SEARCH_USER_BEFORE_FILTER = (&((objectclass=person))(uid=%s))
+
+  ldap2.INITIAL_CONTEXT_FACTORY   = com.sun.jndi.ldap.LdapCtxFactory
+  ldap2.PROVIDER_URL              = ldaps://<LDAP 2 server address>:389
+  ldap2.SECURITY_AUTHENTICATION   = simple
+  ldap2.DN_PREFIX                 = CN=
+  ldap2.DN_POSTFIX                = ,ou=IT staff,o="Example, Inc",c=US
+  ldap2.SEARCH_USER_BEFORE        = true
+  ldap2.SEARCH_USER_BEFORE_USER   = user_before_username
+  ldap2.SEARCH_USER_BEFORE_PSW    = user_before_password
+  ldap2.SEARCH_USER_BEFORE_FILTER = (&((objectclass=account))(uid=%s))
+
+
+Using the example above, you can configure:
+   * *auth_mode = internal*: if you want to log in using the Knowage metadata database instead of contacting an LDAP server
+   * *empty auth_mode value*: if you want to login using the first configuration of the properties file (the one without any prefix)
+   * *auth_mode = ldap2*: if you want to log in by contacting the LDAP server using the configuration with "ldap2." prefix
+
+In case you want the users to authenticate using their complete distinguish name, set ``SEARCH_USER_BEFORE`` key to be *false*.
+In case you want instead the users to authenticate using an LDAP property such as ``uid``, then set ``SEARCH_USER_BEFORE`` key to be *true*; you need also to specify the ``SEARCH_USER_BEFORE_FILTER`` filter that Knowage will exploit in order to retrieve the user's information on the LDAP server. **Pay attention that %s placeholder must be present**: it will be replaced by Knowage with the actual username provided by the user when logging in.
+
+The ``SEARCH_USER_BEFORE_USER`` and ``SEARCH_USER_BEFORE_PSW`` keys are credentials to authenticate to LDAP server; if the first one is set, the second one will be considered also. *These parameters are used only if anonymous bind is not allowed for LDAP server. For this reason they are optional and can be empty.*
 
 .. important::
     Restart your application server in order to load the custom JVM property.
@@ -258,3 +289,136 @@ The final step is to set the LDAP security connector as follow:
         To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value ``it.eng.spagobi.security.InternalSecurityServiceSupplierImpl`` using a database client.
 
 Knowage is now ready to authenticate the users via LDAP credentials.
+
+
+Google Sign-In integration
+--------------------------
+
+Knowage provides integration with Google Sign-In for authentication purposes, i.e. users can login into Knowage using their Google accounts.
+
+**Remark.** Google Sign-In is exploited only for authentication, not for authorization. The authorization part (that consists of defining roles and profile attributes for users) is still in charge of Knowage: this means that, before an user can enter into Knowage with his Google account, the admin user has to define that user inside the regular Knowage users catalogue, keeping in mind that the user id must match the email of his Google account (the provided password will not be considered when user will log in). In case the user is not defined inside Knowage users list, the authentication will fail.
+
+In order to enable Google Sign-In authentication, please follow these steps:
+
+* start Knowage with default configuration;
+* enter Knowage as admin and define users who will be allowed to enter Knowage (use their email address as user id);
+* browse to **Configuration management** via the main menu;
+* set the value of configuration parameter **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to ``it.eng.spagobi.security.GoogleSecurityServiceSupplier``, then save;
+* stop Knowage application;
+* follow Google Sign-In documentation in order to configure your Knowage application and to get the OAuth client ID;
+* create a text file wherever you want and paste the client ID inside it, for example: create file TOMCAT_HOME/conf/google.signin.config.properties with this content:
+
+.. code-block:: properties
+    :linenos:
+
+    client_id=<your client ID>.apps.googleusercontent.com
+
+* add the ``google.signin.config`` Java System property that specifies the location of this properties file: in a Unix-like environment, edit TOMCAT_HOME/bin/setenv.sh and add
+
+.. code-block:: bash
+    :linenos:
+
+    export JAVA_OPTS="${JAVA_OPTS} -Dgoogle.signin.config=<your Tomcat home folder>/conf/google.signin.config.properties"
+
+instead, in a Windows environment using Apache Tomcat, edit TOMCAT_HOME/bin/setenv.bat:
+
+.. code-block:: bash
+    :linenos:
+
+    set JAVA_OPTS="%JAVA_OPTS% -Dgoogle.signin.config=<your Tomcat home folder>/conf/google.signin.config.properties"
+
+* start Knowage application.
+
+When users will connect into Knowage, the login page will display the Google Sing-In button:
+
+.. figure:: media/image33.png
+
+   Advanced configuration - Google Sing-In button.
+
+When clicking on that button, Google Sing-In authentication applies; if successful, users will be redirected into their home page inside Knowage.
+In case the account is not recognized by Knowage (i.e. the provided email address does not match any existing Knowage user id), he will get an error message:
+
+.. figure:: media/image34.png
+
+   Advanced configuration - Authentication error.
+
+
+Password constraints settings
+-----------------------------
+
+User password constraints can be set configuring parameters below:
+
+* **changepwdmodule.len_min**: minimum number of character for the password;
+* **changepwdmodule.special_char**: set of allowed special characters;
+* **changepwdmodule.upper_char**: if active, the password must contain at least one of the uppercase characters set in the value;
+* **changepwdmodule.lower_char**: if active, the password must contain at least one of the lowercase characters set in the value;
+* **changepwdmodule.number**: if active, the password must contain at least one of the digit set in the value;
+* **changepwdmodule.alphabetical**: if active, the password must contain at least one alphabetical set in the value;
+* **changepwdmodule.change**: if true, new password must be different from the latest;
+* **changepwd.change_first**: if true, password must be changed at first login;
+* **changepwd.disactivation_time**: number of months before deactivation;
+* **changepwd.expired_time**: number of days for the expiration.
+
+.. figure:: media/image31.png
+
+   Advanced configuration - password constraints settings.
+
+By default, all above configurations are disabled.
+
+
+Login security settings
+-----------------------------
+Login security configurations can be set filling fields below:
+
+* **internal.security.login.checkForMaxFailedLoginAttempts**: if active and set to true, users will only be able to access Knowage if they have not reached the maximum number of failed login attempts;
+* **internal.security.login.maxFailedLoginAttempts**: the maximum number of failed login attempts.
+
+.. figure:: media/image32.png
+
+   Advanced configuration - login security settings.
+
+
+Resource export folder cleaning settings
+----------------------------------------
+Resource export folder cleaning configurations can be set filling fields below:
+
+* **KNOWAGE.RESOURCE.EXPORT.FOLDER.CLEANING_PERCENTAGE**: if active, the cleaning procedure will delete the files contained in the export resource folder leaving this percentage of free space (0 - 100). Default 30;
+* **KNOWAGE.RESOURCE.EXPORT.FOLDER.MAX_FOLDER_SIZE**: if active, cleaning procedure will start only if the resource export folder will reach this size (byte). Default 10737418240.
+
+
+Import / Export
+----------------
+
+Users
+~~~~~~~~~~~~
+Specific configurations for users import procedure:
+
+* **IMPORTEXPORT.USER.DEFAULT_PASSWORD**: password set for all users imported by the import procedure.
+
+
+Main Menu
+----------------
+Specific settings for the main menu can be set updating the fields below:
+
+* **KNOWAGE.DOWNLOAD.POLLING.TIME**: This field defines the number of milliseconds for the download service polling interval. If set to *0* the service will update just once on page load. Default is 10000 (10 seconds).
+
+Changing the secret key for password encryption
+-----------------------------------------------
+
+The secret password encryption key must be set during the installation and must **never** be changed. *In case that the secret key is lost* you must create a new one and update database passwords. For this reason Knowage provides you a tool to find out the new encrypted value.
+
+
+This tool requires:
+
+* knowage-utils-7.2.0.jar library to be added to the classpath
+* the password encryption secret file name with complete path
+* password value (plaintext)
+
+Below is an example of invoking the tool using *biadmin* as plaintext password.
+
+.. code-block:: SQL
+    :linenos:
+
+    java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-7.2.0.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
+
+The output value will be the second argument passed in input encrypted with the key present in the file. This procedure must be repeated for all users.

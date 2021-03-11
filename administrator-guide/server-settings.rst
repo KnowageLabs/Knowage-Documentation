@@ -22,6 +22,12 @@ We provide an example to let you understand the usage of the interface. Suppose 
 
 You can view available languages and their code (**Value Check column)** in the row SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES.
 
+      .. warning::
+         **Warning**
+
+         Knowage Server may take up to 1 minute to apply the configuration changes.
+
+
 Domain Management
 -----------------
 
@@ -54,7 +60,7 @@ All the values except the **Domain code** to you. the last are mandatory for cor
 You can also modify an existing domain by selecting its dedicated row and clicking the edit button.
 
 Exporters Menu
---------
+--------------
 
 Exporters Menu is the new feature of Knowage. This feature allows administrator to configure the exporters of the documents. When you open this catalogue, on the left side you can see the list of created exporters and if you want to see the details of one of them or to change it, you can do that by selecting it in the list. You can add a new exporter by clicking on a plus icon. See the figure below.
 

@@ -6,13 +6,13 @@ In this chapter we describe all the features related to Knowage analytical docum
 First of all, notice that once you execute a document from the document browser or from the menu, it is visualized full screen. In the first case, you can return to the document browser by clicking on the folder icon located at the top left.
 
 .. figure:: media/image25.png
- 
+
     Back to Document Browser
 
 Parameters management
 -------------------------
 
-Knowage documents may have associated parameters. If any, you will be asked to select the chosen parameter’s values in a collapsible panel located at the top or on the right side of the page. If this is the case, choose the parameters values and then click the **Execute** button to run the document. In case there are only optional parameters or default values are already defined, the document is directly executed after the first click on its relative icon. 
+Knowage documents may have associated parameters. If any, you will be asked to select the chosen parameter’s values in a collapsible panel located at the top or on the right side of the page. If this is the case, choose the parameters values and then click the **Execute** button to run the document. In case there are only optional parameters or default values are already defined, the document is directly executed after the first click on its relative icon.
 
 .. figure:: media/image26.png
 
@@ -44,7 +44,7 @@ The |image34| button is to access the help online as defined in the Glossary and
    :width: 30
 
 The |image35| refreshes the document.
-   
+
 .. |image35| image:: media/image29.png
    :width: 30
 
@@ -52,7 +52,7 @@ The |image36| opens the parameters panel and it is visible only if there are par
 
 .. |image36| image:: media/image30.png
    :width: 30
-   
+
 The |image37| opens the contextual menu shown in figure below. We describe the main functionalities provided by this menu in the following.
 
 .. |image37| image:: media/image31.png
@@ -75,7 +75,7 @@ Business and structural metadata
 
 Knowage allows the definition of business metadata to describe an object, in our case a document. Business metadata, unlike technical metadata used in Knowage Meta to build the metamodel, are business information associated to the document intended to help users to understand, access and classify it. As such, they have been mainly conceived for the end user understanding.
 
-There are three types of business metadata, some of them are editable while others can only be read. In particular, general metadata are read-only, while short and long text metadata are editable. General metadata contain basic information about the document, which cannot Notes be altered because they are related to the structure of the document (e.g., type, engine, label). They provide useful and synthetic information on the document. Short and long text metadata should be used to add relevant business information: all the allowed users will see this information, which will help them understand the purpose and context of that document.
+There are three types of business metadata, some of them are editable while others can only be read. In particular, general metadata are read-only, while short and long text metadata are editable. General metadata contain basic information about the document, which cannot be altered because they are related to the structure of the document (e.g., type, engine, label). They provide useful and synthetic information on the document. Short and long text metadata should be used to add relevant business information: all the allowed users will see this information, which will help them understand the purpose and context of that document.
 
 In general, metadata should be edited by users with adequate expertise and authority to do so. Therefore, it is possible for the administrator to assign the right to edit and save metadata only to some users. The right is not specific to a profile, but it is part of the authorizations that can be granted to any role. This applies to bookmarks as well.
 
@@ -119,5 +119,3 @@ Scheduled Execution
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The administrator has the possibility to set schedulation for documents. These schedulations can be accessed by **Show Scheduled executions**.
- 
-

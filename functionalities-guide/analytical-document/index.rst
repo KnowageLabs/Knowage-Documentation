@@ -21,7 +21,7 @@ Data source
 Parameters
   Parameters allow the connection between the document and analytical drivers associated to it. In other words, at document execution time, each driver generates a value that is assigned to the corresponding parameter.
 
-These elements are then combined inside each document engine, in order to produce different analytical documents. This process generates an HTML output, which can be accessed and navigated using a web browser.Other output formats are supported, including XLS, CSV, PDF, XML.
+These elements are then combined inside each document engine, in order to produce different analytical documents. This process generates an HTML output, which can be accessed and navigated using a web browser. Other output formats are supported, including XLS, CSV, PDF, XML.
 
 .. figure:: media/image57.png
 
@@ -58,7 +58,7 @@ There are two different ways to create a new document on Knowage Server. The fir
 
 .. note::
     **Deploy a document from Knowage Studio**
-      
+
     Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.
 
 The second option is to manually create the document on the Server. This is the most general way since the Studio designer is not yet available for all documents types.
@@ -97,7 +97,7 @@ At the top of this side panel you find four button:
 
 .. |image60| image:: media/image62.png
    :width: 30
-   
+
 - |image61| access document details;
 
 .. |image61| image:: media/image63.png
@@ -107,7 +107,7 @@ At the top of this side panel you find four button:
 
 .. |image62| image:: media/image64.png
    :width: 30
-   
+
 - |image63| erase the document.
 
 .. |image63| image:: media/image65.png
@@ -164,7 +164,7 @@ The main reason for this is that the state of the document has an impact on its 
 Template Versioning
 ^^^^^^^^^^^^^^^^^^^
 
-When you register a document on the Server, you need to associate a template to it. Click on  tab **History** and then on button **Browse** to choose a template from your local file system and upload it. 
+When you register a document on the Server, you need to associate a template to it. Click on  tab **History** and then on button **Browse** to choose a template from your local file system and upload it.
 
 .. _templateversionforanalydoc:
 .. figure:: media/image69.png
@@ -173,7 +173,6 @@ You may have edited the template by hand or using the Studio designer. Clearly y
 
 Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab **History**. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button **Browse** to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.
 
-.. _templateversionforanalydoc:
 .. figure:: media/image70.png
 
     Template versioning for analytical documents.
@@ -185,8 +184,8 @@ After having defined all details, you need to choose where the analytical docume
 
 .. warning::
       **Repository structure and rights**
-         
-         The **Functionalities tree** is Knowage document repository. It is maneged by administrator, who is in charge to profile user visibility too.
+
+         The **Functionalities tree** is Knowage document repository. It is managed by administrator, who is in charge to profile user visibility too.
 
 Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). On the right, you can choose where you wish to save the document by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
 
@@ -219,7 +218,7 @@ To add a new parameter, you can click on the tab **Drivers** and then on a **Add
 
     Association with analytical driver panel.
 
-Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the document.   
+Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the document.
 
 Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set the different features   associated to the driver: you can set its visibility and decide if it is required and multivalue. By default the parameter is visible, not mandatory and not multivalue.
 
@@ -237,23 +236,6 @@ After you have completed the definition of a parameter you can save it by clicki
 
 In the following we will see some special operations that can be performed on drivers associated to a document.
 
-Associating a Spatial driver
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-As just seen, to filter on data visualization a user needs to associate an ananlytical driver using the "Document analytical driver   details" area. As well as for the other driver you can use this interface to associate a spatial driver to the document. The procedure is right the same. When launching the document and opening the filter panel you will find the filter just set. Click on the icon   |image75| to open the map and select the geometric object (the ``State`` in the example in figure below) according to the chosen layer and property.
-
-.. |image75| image:: media/image76.png
-   :width: 30
-
-.. figure:: media/image77.png
-
-    Map filtering selection.
-
-Click on "Close" button to confirm your selection. An example of the output is shown in the following figure.
-
-.. figure:: media/image78.png
-
-    Example of document run with a spatial filter.
 
 Correlation between parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -293,14 +275,14 @@ Once defined the correlation, the child parameters will display the labels durin
 Correlation through LOV and drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In previous sections we saw how to set correlation through the GUI available in the document detail panel, but there is also the   possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously   configured a driver that runs values that can be used in the "where" clause of a SQL query. Then the user must set a query-type LOV using the syntax 
+In previous sections we saw how to set correlation through the GUI available in the document detail panel, but there is also the   possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously   configured a driver that runs values that can be used in the "where" clause of a SQL query. Then the user must set a query-type LOV using the syntax
 
 We stress that the ``AD_name`` is the name of the driver the administrator is trying to reach. Syntax for setting correlation through LOV configuration is:
 
 .. code-block:: bash
-  :caption: Syntax for setting correlation through LOV configuration 
+  :caption: Syntax for setting correlation through LOV configuration
   :linenos:
-  
+
    $P{AD_name}
 
 .. figure:: media/image82.png
@@ -318,17 +300,17 @@ Controlled visibility
 
 Another type of relation between parameters is supported by Knowage. It is possible to define values of a parent parameter that force hiding or showing of a child parameter in the parameters mask. Note that in the first case, the child parameter is hidden by default, while in the second case the parameter is shown by default.
 
-To set a visibility expression, click on the **Add condition** button on the **Driver visibility coonditions** card.
+To set a visibility expression, click on the **Add condition** button on the **Driver visibility conditions** card.
 
 .. figure:: media/image72.png
 
-    Adding visual corelation
+    Adding visual correlation
 
 In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.
 
 .. figure:: media/image84.png
 
-    Visibilty expressions.
+    Visibility expressions.
 
 Cross Navigation
 ---------------------
@@ -347,7 +329,7 @@ It is obviously possible to associate more than one cross navigation to a single
 
 In this chapter we will examine in depth how to set output/input parameters on documents and, consequently, how to activate the cross navigation.
 
-The first step is to define the parameters of the target document. These do not necessarly coincide with all the filters applied to the
+The first step is to define the parameters of the target document. These do not necessarily coincide with all the filters applied to the
 document. Please refer to Chapter of Behavioural model for more detail on how to manage parameters and their association to documents.
 
 Therefore it is required to state which parameters among the ones associated to the target document are going to be involved in the   navigation. Parameters coming out from the source document are said **output parameters** while the ones that receive values through the association (with the source document) are said **input parameters**. By the way, when declaring the parameters they will be called equally **output parameters** at first, since there is no criterion to distinguish output from input before the navigation is configured.
@@ -377,7 +359,7 @@ Finally you need to select the **Cross Navigation Definition** item from the men
 
 It is required to give a name to the navigation; then select the document from which to start the navigation and the target document. The selecting of a document will cause the loading of input/output parameters related to the starting document in the left column and of the possible input parameters of the target document in the right column.
 
-It is possible to configure the associations betweeen input/output parameters by simply dragging and dropping a parameter from the left column on another of the right column.
+It is possible to configure the associations between input/output parameters by simply dragging and dropping a parameter from the left column on another of the right column.
 
 .. figure:: media/image87.png
 
@@ -386,27 +368,27 @@ It is possible to configure the associations betweeen input/output parameters by
 .. figure:: media/image88.png
 
     Relating parameters.
-   
+
 Once set, the association is highlighted as in Figure below.
 
 .. figure:: media/image89.png
 
-    Association betweeen parameters.
+    Association between parameters.
 
-To assign fixed values to target parameters it is necessary to edit first the box labeled **Fixed value parameter** and click on the **plus** icon. Then the value can be associated as fixed value of the one or more target parameters. Remember to click on the **Ok** button to save the cross navigation just set.
+To assign fixed values to target parameters it is necessary to edit first the box labelled **Fixed value parameter** and click on the **plus** icon. Then the value can be associated as fixed value of the one or more target parameters. Remember to click on the **Ok** button to save the cross navigation just set.
 
-As you know, it is possible to define multiple cross navigation starting by the same document. In this case the system will show a popup window to choose the one that you want execute. 
-It is possible set a specific description for each cross navigation so that will be easy to recognize the right navigation definition to use. In the same way it is possible set the text of the bread crumb and personalize it. 
+As you know, it is possible to define multiple cross navigation starting by the same document. In this case the system will show a popup window to choose the one that you want execute.
+It is possible set a specific description for each cross navigation so that will be easy to recognize the right navigation definition to use. In the same way it is possible set the text of the bread crumb and personalize it.
 For both attributes it is possible show parameters (of input or output type) values through the syntax $P{parameter_name}. Just parameters of source documents are available.
 
 .. figure:: media/image90.png
 
    Example of parametric description and breadcrumb text
-   
+
 .. figure:: media/image91.png
 
    Example of popup selection for more cross navigation definition (with params)
-   
+
 .. figure:: media/image92.png
 
    Example of breadcrumb with params

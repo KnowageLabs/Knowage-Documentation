@@ -1,6 +1,6 @@
 
 JBoss AS Manual Installation
-==========================
+============================
 
 Metadata database
 -------------------
@@ -11,8 +11,8 @@ The metadata database must contains a schema which will collect all Knowage meta
 .. code-block:: bash
         :linenos:
         :caption: Scripts for metadata schema.
- 
-        XXX_create.sql                                            
+
+        XXX_create.sql
         XXX_create_quartz_schema.sql
 
 where XXX represents the DBMS type, for instance ORA stands for Oracle. Inside the packages there are the corresponding files for deleting tables.
@@ -43,30 +43,30 @@ In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.
 
 .. _settingthemetadatadata:
 .. code-block:: xml
-        :linenos:
-        :caption: Setting the metadata datasource.
-        
-	<datasource jndi-name="java:/jdbc/knowage" pool-name="knowage">       
-	<connection-url> <JDBC URL> </connection-url>                         
-	<driver> <JDBC driver> </driver>                                      
-	<security>                                                            
-	<user-name> user name> </user-name>                                   
-	<password> <password> </password>                                     
-	</security>                                                           
-	<validation>                                                          
-	<validate-on-match>true</validate-on-match>                           
-	<background-validation>false</background-validation>                  
-		<valid-connection-checker class-name="<connection checkerclass>"/> 
-		<exception-sorter class-name="<exception sorter class>"/>          
-		</validation>                                                      
-	</datasource>  
+   :linenos:
+   :caption: Setting the metadata datasource.
+
+	<datasource jndi-name="java:/jdbc/knowage" pool-name="knowage">
+		<connection-url> JDBC URL </connection-url>
+		<driver> JDBC driver </driver>
+		<security>
+			<user-name> user name </user-name>
+			<password> password </password>
+		</security>
+		<validation>
+			<validate-on-match>true</validate-on-match>
+			<background-validation>false</background-validation>
+			<valid-connection-checker class-name="connection checkerclass"/>
+			<exception-sorter class-name="exception sorter class"/>
+		</validation>
+	</datasource>
 
 In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Below an example:
 
 .. code-block:: xml
-        :linenos:
+   :linenos:
 
-         <driver name="<driver class>" module="<module name>" /> 
+         <driver name="driver class" module="module name" />
 
 Data database connection
 ------------------------
@@ -75,52 +75,54 @@ Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the informat
 
 .. _settingthemetadatadataso:
 .. code-block:: xml
-        :linenos:
-        :caption: Setting the metadata datasource.
+   :linenos:
+   :caption: Setting the metadata datasource.
 
-        <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage">           
-            <connection-url> <JDBC URL> </connection-url>                      
-            <driver> <JDBC driver> </driver>                                   
-            <security>                                                         
-            <user-name> <user name> </user-name>                               
-            <password> <password> </password>                                  
-            </security>                                                        
-            <validation>                                                       
-            <validate-on-match>true</validate-on-match>                        
-            <background-validation>false</background-validation>               
-            <valid-connection-checker class-name="<connection checker class>"/>
-            <exception-sorter class-name="<exception sorter class>"/>          
-            </validation>                                                      
-        </datasource>                                                         
+        <datasource jndi-name="java:/jdbc/dwh" pool-name="knowage">
+            <connection-url> JDBC URL </connection-url>
+            <driver> JDBC driver </driver>
+            <security>
+				<user-name> username </user-name>
+				<password> password </password>
+            </security>
+            <validation>
+				<validate-on-match>true</validate-on-match>
+				<background-validation>false</background-validation>
+				<valid-connection-checker class-name="connection checker class"/>
+				<exception-sorter class-name="exception sorter class"/>
+            </validation>
+        </datasource>
 
 In addition, remember to type the information related to the JDBC driver inside the drivers tag before defining the connection. Code is an example:
 
 .. code-block:: xml
-        :linenos:
+   :linenos:
 
-        <driver name="<driver class>" module="<module name>" /> 
+        <driver name="driver class" module="module name" />
 
 Environment variables definition
 --------------------------------
-Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the following constants inside the subsystem domain naming tab, by setting the domain within the host_url value. That domain will be used by the browser to call Knowage server, as we can see in :numref:`jbossenvironmentvariables`:
+Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the following constants inside the subsystem domain naming tab.
 
 .. _jbossenvironmentvariables:
 .. code-block:: xml
-        :linenos:
-        :caption: JBoss environment variables configuration.
+   :linenos:
+   :caption: JBoss environment variables configuration.
 
-         <bindings>                                                            
-              <simple name="java:/urls/resource_path" type="java.lang.String"    
-              value="${jboss.server.data.dir}/resources" />                      
-              <simple name="java:/urls/sso_class" type="java.lang.String"        
-              value="it.eng.spagobi.services.common.JWTSsoService" /> <simple   
-              name="java:/urls/service_url" type="java.lang.String"              
-              value="http:// localhost:8080/knowage" />                          
-              <simple name="java:/urls/host_url" type="java.lang.String"         
-              value="<server url which is hosting knowage>"/>                    
-        </bindings>                                                           
+         <bindings>
+              <simple name="java:/urls/resource_path" type="java.lang.String"
+                value="${jboss.server.data.dir}/resources" />
+              <simple name="java:/urls/sso_class" type="java.lang.String"
+                value="it.eng.spagobi.services.common.JWTSsoService" />
+              <simple name="java:/urls/service_url" type="java.lang.String"
+                value="http:// localhost:8080/knowage" />
+              <simple name="hmacKey" type="java.lang.String"
+                value="hmac_secret_key_to_substitute"/>
+		      <simple name="password_encryption_secret" type="java.lang.String"
+                value="complete_file_path_with_file_name"/>
+        </bindings>
 
-      
+
 
 Constants have the following meaning:
 
@@ -139,7 +141,7 @@ Execute the following steps:
 - delete the WAR files;
 - create an empty file for each WAR file with the same name plus the suffix “.dodeploy” (for example, “knowage.war.dodeploy“).
 
-Please refer to the instructions that are written in the JBOSS_HOME/standalone/deployments/README.txt. 
+Please refer to the instructions that are written in the JBOSS_HOME/standalone/deployments/README.txt.
 
 Datasource link within the applications
 ---------------------------------------
@@ -148,11 +150,11 @@ Control that in all the JBOSS_HOME/standalone/deployments/knowage*.war/META-INF/
 
 .. _datasourcelink:
 .. code-block:: xml
-        :linenos:
-        :caption: DataSource link syntax.
+   :linenos:
+   :caption: DataSource link syntax.
 
- 	<ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql. DataSource"/>
-	<ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>                                         
+   <ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource" />
+   <ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource" />
 
 
 Configuration of the metadata db dialect
@@ -176,14 +178,14 @@ The scheduler is configured by the following file: knowage.war/WEB-INF/classes/q
         :linenos:
         :caption: Values for the Quartz file.
 
- 	# Hsqldb delegate class                                                                                
- 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate          
- 	# Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate          
- 	# Postgres delegate class                                                                     
- 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate      
- 	# Oracle delegate class                                                                       
+ 	# Hsqldb delegate class
+ 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate
+ 	# Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+ 	# Postgres delegate class
+ 	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+ 	# Oracle delegate class
  	#org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
-	
+
 
 
 Pool of thread definition
@@ -198,7 +200,7 @@ When Knowage is installed in cluster with several nodes, it is necessary to acti
 
  	org.quartz.jobStore.isClustered = true
  	org.quartz.jobStore.clusterCheckinInterval = 20000
- 
+
 	org.quartz.scheduler.instanceId = AUTO
  	org.quartz.scheduler.instanceName = RHECMClusteredSchedule
 
@@ -212,16 +214,16 @@ For the execution of the batch processing ,Knowage uses a thread pool. In the JB
         :linenos:
         :caption: Thread pool configuration for JBoss.
 
- 	<bindings>                                                            
+ 	<bindings>
 	<object-factory name="java:/global/SpagoWorkManager" module="de.myfoo.commonj" class="de.myfoo.commonj.work.MyFooWorkManagerFactory">
-	<environment>                                                         
-        <property name="maxThreads" value="5"/>                               
-        <property name="minThreads" value="1"/>                               
-        <property name="queueLength" value="10"/>                             
-        <property name="maxDaemons" value="10"/>                              
-        </environment>                                                        
-        </object-factory>                                                     
-        </bindings>                                                           
+	<environment>
+        <property name="maxThreads" value="5"/>
+        <property name="minThreads" value="1"/>
+        <property name="queueLength" value="10"/>
+        <property name="maxDaemons" value="10"/>
+        </environment>
+        </object-factory>
+        </bindings>
 
 
 Check of the memory settings
@@ -242,7 +244,7 @@ It is recommended to increase the memory dimension used by the application serve
         :linenos:
         :caption: Memory settings for JBoss in Linux environment.
 
-	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m" 
+	export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m -XX:MaxPermSize=512m"
 
 **[WIN]** Insert at the beginning of the JBOSS_HOME/bin/run.conf.sh file the row in :numref:`memorysettingswind`:
 
@@ -336,9 +338,9 @@ server-config.wsdd tests
 In Knowage server the core and its analytical engines exchange information through some SOAP services. Those services can send/receive attached files: those files are temporarely stored in a folder that is configured in the knowage/WEB-INF/server-config.wsdd file. The :numref:`confofthefl` shows the syntax.
 
 .. _confofthefl:
-.. code-block:: bash
-        :linenos:
-        :caption: Configuration of the files.
+.. code-block:: xml
+   :linenos:
+   :caption: Configuration of the files.
 
 	<parameter name="attachments.Directory" value="../attachments"/>
 

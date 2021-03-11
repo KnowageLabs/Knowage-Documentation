@@ -60,20 +60,20 @@ Each single entity is composed of a title, some attributes or measures and relat
 - **relation**: it refers to relationships or connections between two entities (e.g. relationship between the sales and the product dimension).
 
 .. figure:: media/image300.png
-	
+
 	Relations of one entity.
 
-There are two available views: smart and advance. When qbe is opened by default user will see smart view. Clicking on one filed of one entity that field will be added in the query and user will se executed query in imidiately. 
+There are two available views: smart and advanced. When qbe is opened by default user will see smart view. Clicking on one field of one entity that field will be added in the query and results will be displayed without any other user interaction.
 
 .. figure:: media/smart.png
-	
+
 	Smart view.
 
-User can switch to advance view clicking on Smart view in top right corner. User can continue adding fields in the query but without seeing result. 
+User can switch to advanced view clicking on Smart view in top right corner. User can continue adding fields in the query but without seeing result.
 
 .. figure:: media/advanceView.png
-	
-	Advance view
+
+	Advanced view
 
 
 Let us see more in detail how to add calculated fields.
@@ -81,7 +81,7 @@ Let us see more in detail how to add calculated fields.
 Calculated fields management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can create new calculated fields inside a query. In advance view there will be available option for creating **calculated fields**. Clicking on **Calculator** icon **Calculated field wizard** will open.
+You can create new calculated fields inside a query. In advanced view there will be available option for creating **calculated fields**. Clicking on **Calculator** icon **Calculated field wizard** will open.
 
 To build a calculated field, you shall define:
 
@@ -100,26 +100,26 @@ An example is provided below.
 Query Editor
 ^^^^^^^^^^^^^^^^
 
-Central panel provides a query editor. As we already mantioned, there are two available views: smart and advance.
+Central panel provides a query editor. As we already mentioned, there are two available views: smart and advanced.
 
-Elements from the datamart schema on the left can be added into the query editor. To remove an field from the query editor, just click on the x icon, or if advance view is opened, clicking on three dots icon, **Delete field** is available.
+Elements from the datamart schema on the left can be added into the query editor. To remove an field from the query editor, just click on the x icon, or if advanced view is opened, clicking on three dots icon, **Delete field** is available.
 
 Selected Fields
 ^^^^^^^^^^^^^^^^
 
 Central panel contains the list of columns to be returned by the query. To add a new field in this section, just click on a field in the schema panel tree.
 
-This panel is structured as a table: columns contain the fileds selected from the datamart schema. Every column has **gear icon** on the top (smart view), that is providing applicable functions as shown below, plus icon for deleting field form query and for ordering.
+This panel is structured as a table: columns contain the fields selected from the datamart schema. Every column has **gear icon** on the top (smart view), that is providing applicable functions as shown below, plus icon for deleting field form query and for ordering.
 
 .. figure:: media/image212.png
 
     Select fields interface in smart view.
 
-In the advance view, every row include applicable functions as shown below, plus clicking on **three dots icon** there are few more functions.
+In the advanced view, every row include applicable functions as shown below, plus clicking on **three dots icon** there are few more functions.
 
 .. figure:: media/image213.png
 
-	Select fields interface in advance view.
+	Select fields interface in advanced view.
 
 
 With available functions it is possible to:
@@ -129,9 +129,10 @@ With available functions it is possible to:
 - **Order**: define a sorting criteria: double click on the **Order** column to set the ordering criteria;
 - **Group**: in case of aggregations, define the attribute that you want to group on (if you know SQL syntax, these attributes are the ones you should place in the GROUP BY clause);
 - **Visible**: indicate whether a column shall be visible in the result (hidden attributes are used and returned by the generated query, but are not shown in the result table);
+- **In Use**: indicate whether a column shall be used to select the relative one during query execution or just to be used in calculated field
 - **Filter**: add a filter criteria: clicking on this filter icon redirects you to the **Filters** tab;
 
-It is possible to edit alias, clicking on gear icon (smart view) and on **Alias item**. In advance view, alias can be changed clicking on cell of alias column.
+It is possible to edit alias, clicking on gear icon (smart view) and on **Alias item**. In advanced view, alias can be changed clicking on cell of alias column.
 
 .. figure:: media/aliasChange.png
 
@@ -157,8 +158,8 @@ The toolbar about query editor sub-section has a toolbar contains additional fun
       +-----------------------------------+-----------------------------------+
       |    Button                         | Description                       |
       +===================================+===================================+
-      |    **Join definitions**           | ???????????????????????????       |
-      |                                   | ????????????????                  |
+      |    **Join definitions**           | Displays relations between        |
+      |                                   | query entities                    |
       +-----------------------------------+-----------------------------------+
       |    **SQL**                        | Shows SQL generated by the        |
       |                                   | graphical interface               |
@@ -175,16 +176,16 @@ The toolbar about query editor sub-section has a toolbar contains additional fun
       |    **Three gears**                | Open advanced filters panel       |
       |                                   |                                   |
       +-----------------------------------+-----------------------------------+
-      |    **Eye**                        | Show/hide hidden fileds           |
+      |    **Eye**                        | Show/hide hidden fields           |
       |                                   |                                   |
       +-----------------------------------+-----------------------------------+
-      |    **Smart View**                 | Switch between smart adn advance  |
-      |                                   | view                              |
+      |    **Smart View**                 | Switch between smart and          |
+      |                                   | advanced view                     |
       +-----------------------------------+-----------------------------------+
       |    **Play**                       | Preview query                     |
       +-----------------------------------+-----------------------------------+
       |    **Three dots**                 | Option to choose between Deleting |
-      |                                   | all fileds from query and Export  |
+      |                                   | all fields from query and Export  |
       |                                   | query into csv/xls/xlsx           |
       +-----------------------------------+-----------------------------------+
 
@@ -193,8 +194,8 @@ Filters
 
 The **Filters** panel allows you to define filter criteria (WHERE clause). Filters are structured as a table: here rows contain filters, while columns represent the elements of the filter. Filters panel can be opened in three ways:
 - In smart view clicking on **Filter icon** on the field in entity
-- In smart view clicking on **filter icon** on the alredy added field in the query
-- In advance view clicking on three dots and **Filters item**
+- In smart view clicking on **filter icon** on the already added field in the query
+- In advanced view clicking on three dots and **Filters item**
 
 Adding new filter is possible clicking on **+** icon.
 
@@ -211,13 +212,13 @@ Structure of Filters panel is:
 -  the **Field, Condition, Target** columns allow you to define filters according to the syntax defined above.
 -  the **Target type** column define the types of right operand: manual, value of the field, another entity, parameter, subquery;
 
-With target type **manual** you should fill input **target** with value that you want to to be right operand.
+With target type **manual** you should fill input **target** with value that you want to be right operand.
 
 .. figure:: media/manualTarget.png
-	
+
 	Manual target type
 
-With target type **value of the field** lookup function is activated to facilitate selection of values. You are able to choose values for right operand. If you are choosing two values, you should set condition to be **beetween**, **not betwee**, **in** or **not in**. If you are choosing more then two values, you should set condition to be **in** or **not in**.
+With target type **value of the field** lookup function is activated to facilitate selection of values. You are able to choose values for right operand. If you are choosing two values, you should set condition to be **between**, **not between**, **in** or **not in**. If you are choosing more then two values, you should set condition to be **in** or **not in**.
 
 .. figure:: media/lookupFunction.png
 
@@ -234,7 +235,7 @@ About target type **subquery** and **parameter** there will be more words later.
          **Enterprise Edition only**
 
          Filtering data with fields type of date/time/timestamp using calendar/time/calendar is available only for Enterprise Edition.
-		 
+
 If you have SI license file, you will get the chance to filter your data with fields type of date/time/timestamp using calendar/time/calendar + time option. This depends of what is data type of you field, and this is coming form metamodel creation phase.
 When creating your metamodel, you can set data type of to your field.
 
@@ -254,7 +255,7 @@ When creating your metamodel, you can set data type of to your field.
 
 	Metamodel creation, timestamp data type of the field.
 
-Note that more complex combinations of filters can be defined using the Advance filter wizard, which you ca find selecting the **Three gears** icon.
+Note that more complex combinations of filters can be defined using the advanced filter wizard, which you ca find selecting the **Three gears** icon.
 
 In the following table the possible types of filters in the QbE are summarized. The use of subqueries in filters is explained later in *Advanced QbE functionalities* paragraph.
 
@@ -298,7 +299,7 @@ Query Preview
 ^^^^^^^^^^^^^^^
 
 While you are in smart view you can see preview of you query.
-While you are in advance view, and you are satisfied with your query or if you want to check the results, you can see the returned data by clicking the **Play** button located in the top right corner of the panel. From there, you can go back to the **Designer** to modify the definition of the query.
+While you are in advanced view, and you are satisfied with your query or if you want to check the results, you can see the returned data by clicking the **Play** button located in the top right corner of the panel. From there, you can go back to the **Designer** to modify the definition of the query.
 
 .. figure:: media/preview.png
 
@@ -332,10 +333,10 @@ Spatial fields usage
          **Enterprise Edition only**
 
          Spatial dimension is available only for Enterprise Edition with LI licence.
-		 
+
 The Qbe engine supports spatial queries through a set of operators (that return true or false) or a set of functions (these usually return a measure). This feature is although available only when the Location Intelligence (LI) license is possessed and when data are stored in Oracle 12c database. It also fundamental that the Business Model has to be tagged as geographical model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
 
-We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |earthIcon|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distiguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
+We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |earthIcon|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distinguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
 
 .. |earthIcon| image:: media/earthIcon.png
    :width: 30
@@ -358,7 +359,7 @@ In addition note that the **Items** panel provides all the applicable functions 
 -  time functions,
 -  spatial functions,
 -  sql functions,
--  custom function (if they are registred).
+-  custom function (if they are registered).
 
 .. warning::
      **Take into account the Oracle function definition**
@@ -452,8 +453,8 @@ Time functions for creating calculated fields
          **Enterprise Edition only**
 
          Time functions are available only for Enterprise Edition with SI licence.
-		 
-If you have SI licence, in the qbe calculated field wizard there are available time finctions.
+
+If you have SI licence, in the qbe calculated field wizard there are available time functions.
 
 .. figure:: media/timeFunctions.png
 
@@ -463,53 +464,53 @@ See the table below:
 
 .. _timefunctions:
 .. table:: Time functions.
-         :widths: auto
+    :widths: auto
 
-      +-----------------------------------+-----------------------------------+
-      |    Function                       | Description                       |
-      +===================================+===================================+
-      |    **CURRENT_DATE()**             | Returns current date              |
-      +-----------------------------------+-----------------------------------+
-      |    **CURRENT_TIME()**             | Returns current time 		      |
-      +-----------------------------------+-----------------------------------+
-      |    **Hour(date)**		 		  | Returns hour from date            |
-      +-----------------------------------+-----------------------------------+
-      |    **Second(date)**               | Returns hour from date            |
-      +-----------------------------------+-----------------------------------+
-      |    **Year(date)**                 | Returns year from date            |
-      +-----------------------------------+-----------------------------------+
-      |    **Month(date)**                | Returns month from date           |
-      +-----------------------------------+-----------------------------------+
-      |    **Day(date)**                  | Returns day from date             |
-      +-----------------------------------+-----------------------------------+
-      |    **get_quarter(date)**		  | Returns quarter of year for date  |
-      +-----------------------------------+-----------------------------------+
-      |    **get_week(date)**             | Returns week of year for date     |
-      +-----------------------------------+-----------------------------------+
-      |    **get_day_of_the_week(date)**  | Returns day of week for date      |
-      +-----------------------------------+-----------------------------------+
-      |    **add_days(date, num)**        | Add some days to date             |
-      +-----------------------------------+-----------------------------------+
-      |    **add_hours(date,num)**        | Add some hours to date            |
-      +-----------------------------------+-----------------------------------+
-      |    **add_months(date,num)**       | Add some months to date           |
-      +-----------------------------------+-----------------------------------+
-      |    **add_years(date,num)**        | Add some years to date            |
-      +-----------------------------------+-----------------------------------+
-      |    **subtract_years(date,num)**   | Remove some years from date       |
-      +-----------------------------------+-----------------------------------+
-      |    **subtract_days(date,num)**    | Remove some days from date        |
-      +-----------------------------------+-----------------------------------+
-      |    **subtract_months(date,num)**  | Remove some months from date      |
-      +-----------------------------------+-----------------------------------+
-      |    **subtract_hours(date,num)**   | Remove some hours from date       |
-      +-----------------------------------+-----------------------------------+
-      |    **datediff_in_days(date)**     | Difference in days between dates  |
-      +-----------------------------------+-----------------------------------+
-      |    **datediff_in_hours(date)**    | Difference in hours between dates |
-      +-----------------------------------+-----------------------------------+
-      |    **datediff_in_minutes(date)**  | Difference in mins between dates  |
-      +-----------------------------------+-----------------------------------+
+    +-----------------------------------+-----------------------------------+
+    |    Function                       | Description                       |
+    +===================================+===================================+
+    |    **CURRENT_DATE()**             | Returns current date              |
+    +-----------------------------------+-----------------------------------+
+    |    **CURRENT_TIME()**             | Returns current time              |
+    +-----------------------------------+-----------------------------------+
+    |    **Hour(date)**                 | Returns hour from date            |
+    +-----------------------------------+-----------------------------------+
+    |    **Second(date)**               | Returns hour from date            |
+    +-----------------------------------+-----------------------------------+
+    |    **Year(date)**                 | Returns year from date            |
+    +-----------------------------------+-----------------------------------+
+    |    **Month(date)**                | Returns month from date           |
+    +-----------------------------------+-----------------------------------+
+    |    **Day(date)**                  | Returns day from date             |
+    +-----------------------------------+-----------------------------------+
+    |    **get_quarter(date)**          | Returns quarter of year for date  |
+    +-----------------------------------+-----------------------------------+
+    |    **get_week(date)**             | Returns week of year for date     |
+    +-----------------------------------+-----------------------------------+
+    |    **get_day_of_the_week(date)**  | Returns day of week for date      |
+    +-----------------------------------+-----------------------------------+
+    |    **add_days(date, num)**        | Add some days to date             |
+    +-----------------------------------+-----------------------------------+
+    |    **add_hours(date,num)**        | Add some hours to date            |
+    +-----------------------------------+-----------------------------------+
+    |    **add_months(date,num)**       | Add some months to date           |
+    +-----------------------------------+-----------------------------------+
+    |    **add_years(date,num)**        | Add some years to date            |
+    +-----------------------------------+-----------------------------------+
+    |    **subtract_years(date,num)**   | Remove some years from date       |
+    +-----------------------------------+-----------------------------------+
+    |    **subtract_days(date,num)**    | Remove some days from date        |
+    +-----------------------------------+-----------------------------------+
+    |    **subtract_months(date,num)**  | Remove some months from date      |
+    +-----------------------------------+-----------------------------------+
+    |    **subtract_hours(date,num)**   | Remove some hours from date       |
+    +-----------------------------------+-----------------------------------+
+    |    **datediff_in_days(date)**     | Difference in days between dates  |
+    +-----------------------------------+-----------------------------------+
+    |    **datediff_in_hours(date)**    | Difference in hours between dates |
+    +-----------------------------------+-----------------------------------+
+    |    **datediff_in_minutes(date)**  | Difference in mins between dates  |
+    +-----------------------------------+-----------------------------------+
 
 
 .. figure:: media/currentDate.png
@@ -554,10 +555,10 @@ In the next picture you can see result of you query:
 
 
 Subqueries
-+++++++++
+++++++++++
 
 
-The **QbE Engine** also supports the definition and usage of subqueries similarly to the SQL language. As a result, you can define a subquery and use it within a filter in association to the in/not in operator, as shown in Figure below. To create a new subquery, which can be used as a filter inside the main query, click on |addSubqueries| button, on the left part, in **Derived entities**  toolbar. In the main view you will see that you are abble to add fieds in subquery.
+The **QbE Engine** also supports the definition and usage of subqueries similarly to the SQL language. As a result, you can define a subquery and use it within a filter in association to the in/not in operator, as shown in Figure below. To create a new subquery, which can be used as a filter inside the main query, click on |addSubqueries| button, on the left part, in **Derived entities**  toolbar. In the main view you will see that you are able to add fields in subquery.
 
 .. |addSubqueries| image:: media/addSubquery.png
    :width: 30
@@ -568,7 +569,7 @@ The **QbE Engine** also supports the definition and usage of subqueries similarl
 
 You can easily return to main qiery clicking on **MAIN** button in the query editor toolbar.
 
-To use the sub-query inside the main query, simply choose from target type **Subquery option**, from **Target** choose subquery that you want and set the type of condition (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries. 
+To use the sub-query inside the main query, simply choose from target type **Subquery option**, from **Target** choose subquery that you want and set the type of condition (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries.
 
 .. figure:: media/image281.png
 
@@ -588,10 +589,8 @@ The **QbE Engine** also supports the definition and usage of parameters that can
 
 	QBE parameter view.
 
-To use the parameter inside the main query, simply choose from target type **Parameter option** and from **Target** choose parameter that you want. Now the parameter is used to provide values within the filter. 
+To use the parameter inside the main query, simply choose from target type **Parameter option** and from **Target** choose parameter that you want. Now the parameter is used to provide values within the filter.
 
 .. figure:: media/filterParam.png
-	
+
 	QbE query: use of a parameter in a filter.
-
-

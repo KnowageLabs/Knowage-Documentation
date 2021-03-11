@@ -75,28 +75,61 @@ The administrator menu is divided in subpanels which maps the different managing
 .. table:: Menu components - Administrator Menu.
    :widths: auto
 
-   +-----------------------+-----------------------+-----------------------+
-   |    Icon               | Name                  | Management areas      |
-   +=======================+=======================+=======================+
-   |    |image27|          | Data Providers        | Data source settings. |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image28|          | Profile               | Profile Attributes,   |
-   |                       | Management            | Roles, User and Menu  |
-   |                       |                       | configuration         |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image29|          | Behavioural model     | Lovs, Analytical      |
-   |                       |                       | Driver and Constraints |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image30|          | Catalogs              | Business Models and   |
-   |                       |                       | Layers                |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image31|          | Tools                 | Scheduler             |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image32|          | Server Settings       | User Data Properties, |
-   |                       |                       | Configuration,        |
-   |                       |                       | Domains and Metadata  |
-   +-----------------------+-----------------------+-----------------------+
-   |    |image33|          | Server Manager        | Template manager and  |
-   |                       |                       | Import-Export         |
-   |                       |                       | options               |
-   +-----------------------+-----------------------+-----------------------+
+   +--------------------------------+-----------------------+------------------------+
+   |    Icon                        | Name                  | Management areas       |
+   +================================+=======================+========================+
+   | .. figure:: media/image18.png  | Data Providers        | Data source settings.  |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image19.png  | Profile               | Profile Attributes,    |
+   |                                | Management            | Roles, User and Menu   |
+   |                                |                       | configuration          |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image20.png  | Behavioural model     | Lovs, Analytical       |
+   |                                |                       | Driver and Constraints |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image21.png  | Catalogs              | Business Models and    |
+   |                                |                       | Layers                 |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image22.png  | Tools                 | Scheduler              |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image23.png  | Server Settings       | User Data Properties,  |
+   |                                |                       | Configuration,         |
+   |                                |                       | Domains and Metadata   |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image24.png  | Server Manager        | Template manager and   |
+   |                                |                       | Import-Export          |
+   |                                |                       | options                |
+   +--------------------------------+-----------------------+------------------------+
+
+
+---------------
+My Account menu
+---------------
+
+*My account* button, if enabled, allows user to access Modify profile page. Here you can modify your information and also permanently delete your account.
+
+Modify
+^^^^^^
+With this feature user can modify their own data such as Name, Surname and Email address. Password and Confirm password fields are mandatory so they must be filled before applying changes clicking on "MODIFY".
+
+.. attention::
+
+	If user fills *Password* and *Confirm password* fields with a valid password that is NOT the current password (used to log in), the password will be updated with the new value.
+
+Delete account
+^^^^^^^^^^^^^^
+
+With this feature user can delete his account clicking on *DELETE ACCOUNT* button. Then a message confirms the correct cancellation and the login page is displayed.
+
+.. attention::
+
+	Account cancellation is irreversible. User will no longer be able to log into Knowage.
+
+Password change
+^^^^^^^^^^^^^^^
+
+If user wants to change his password, he must fill *Password* and *Confirm Password* fields and the click on *MODIFY* button. A confirmation message will be displayed if the update has been successful.
+
+.. figure:: media/image116.png
+
+   My account - Modify profile

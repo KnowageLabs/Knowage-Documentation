@@ -91,9 +91,9 @@ the **Style**, the **Dataset** and the **Filters** tab.
 
      Text editor of text widget configuration.
 
-On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possible to associate dataset values to the text and 
-read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset 
-columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure 
+On the “Text editor” tab you can type the desired text in center panel and customize it. Using the dataset tab it is possible to associate dataset values to the text and
+read it real time at each execution. Move to the dataset tab to add a dataset to the widget. Then, going back to the Text editor tab, the user will find the dataset
+columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure
 first select the desired function and then the field of numeric type.
 
 .. figure:: media/image1454647.png
@@ -106,7 +106,7 @@ It's also possible to add variables values if at least one of them is defined. D
 
     Variables in text widget.
 
-On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be 
+On the “Style” tab you can customize the text widget. We have provided all details about this tab in the Table widget. On the “Dataset” tab you can add more dataset to be
 used in the dynamic value. Finally, the “Filters” tab can be used to extract limited output from the dataset. We put details off to the table widget subsection.
 
 Image widget
@@ -134,8 +134,8 @@ On the **Cross** tab you can define navigation to another document, as shown in 
 
     Due to the fact that parameters can only be managed by a technical user the cross navigation cannot be implemented by the final user.
 
-For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition. 
-This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly. 
+For this purpose, you must activate **Enable cross navigation** flag and select the destination document through the list of cross navigation definition.
+This last flag is optional. If you select a cross navigation definition, when you launch the cross navigation it will go to the document of arrival directly.
 If the cross navigation definition is not defined, then when you launch the image widget cross navigation will be shown a pop up (refer to figure below) with the list of cross navigation definition that exist for this cockpit.
 
 .. _crossnavmultchoice:
@@ -246,8 +246,8 @@ If variables are set for the present cockpit, the variable menu button will appe
 Variables menu
 
 
-In the bottom section of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table by dragging 
-them up or down, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below. 
+In the bottom section of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table by dragging
+them up or down, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below.
 Here you can find configuration features to adjust the column size, max cell characters, hide column or column header options, and the row spanning toggler.
 
 .. figure:: media/image157d.png
@@ -322,28 +322,6 @@ The **Style** tab is where you can customize the table by using the different op
 
 Once the table style settings have been implemented you can switch to the next tab. The “Cross” tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator).
 
-.. warning::
-    **Cross navigation only for technical users**
-
-    Due to the fact that parameters can only be managed by technical user, the cross navigation cannot be implemented by the final user.
-
-Referring to figure below, we sum up how to add a cross navigation to the cockpit with the following bullet list:
-
-.. figure:: media/image167.png
-
-    Cross tab of the table widget configuration.
-
-- activate the cross navigation flag;
-- activate cross Enable the cross-navigation type select:
-    - on all row to enable a click on every column;
-    - on a single column to choose a column where the cross-navigation will be set, other columns will throw a selection;
-    - on an icon to choose an icon that will be render at the end of the row. All the columns will still throw selections;
-- select the output parameters that will pass the value to the document of arrival. Those parameters type are defined in the document detail of the cockpit and will be of the following types:
-    - static: a static value
-    - dynamic: the value of a selected column
-    - analytical driver: the value of a parameter
-- select the destination document through the list of cross navigation definition. It is optional. If the Cross navigation is not      selected then when you click to launch the cross navigation, a pop up will be open with all the cross navigations defined for that cockpit. If you select the Cross navigation and you click to launch the cross navigation, then it will go to the document of arrival directly.
-
 Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
 
 .. _filterstabwidgetconf:
@@ -369,6 +347,13 @@ Using the “Dataset” tab the user can add the dataset to take values from. Co
 
     Selecting columns, rows and measures of the crosstab.
 
+There is also the possibility to add calculated fields as measures clicking on the "Add calculated field button".
+The calculated field will work exactly as in the table widget. After creating a calculated field there will be the possibility to edit, remove it or set the properties for it's column clicking on the new measure buttons.
+
+.. figure:: media/image170b.png
+
+    Calculated field detail.
+
 Once the columns, rows and measures have been selected the style of each column can be set by clicking on the cog settings icon. A popup will open with different options for the selected columnn. See figure below.
 
 .. figure:: media/image210.png
@@ -387,9 +372,25 @@ A particular option for a measure is **Exclude from Total and SubTotal**: that c
 
 .. figure:: media/image211.png
 
-    Measure column style.
+    Measure threshold setting.
 
-As figure above shows, you can also manage threshold. It is possible to associate a particular icon or a specific background color to a particular measure's value or range.
+As figure above shows, you can also manage threshold. For measures only, it is possible to associate a particular icon or a specific background color to a particular measure's value or range.
+To do so add a new threshold, set a condition for it to appear, and choose the icon from the list or select the color that will be changed to the cell.
+It is possible to add more or to remove thresholds using the add or delete button.
+
+.. figure:: media/image211c.png
+
+    Variables header value.
+
+If one or more variables are set, in column and measure settings another field will appear. It is possible to set the header name to be dynamic using one of the variables set.
+If one of the variables are selected in the combo as in example, the header name will be changed depending on the current variable value.
+
+.. figure:: media/image211b.png
+
+    Column style.
+
+It's also possible to set style elements for both attributes and measures. In measures will also be possible to set the precision and prefix/suffix of the cell value.
+The comma and dot used for decimals and thousands will be automatically changed depending on user's locale.
 
 Once the dataset has been properly configured, you can proceed to the “Configuration” tab.
 
@@ -416,6 +417,23 @@ Otherwise, thanks to the “On columns” feature, you can easily compute totals
 .. figure:: media/image173.png
 
     Computing totals and/or subtotals on columns.
+
+Selecting the "Hide rows on just null values" will hide all the rows with just 0 or null values, avoiding space waste if unneeded.
+
+The "Fix attribute's columns" will pin to the left the columns containing the attributes, so side scrolling will be available without losing those columns.
+
+.. figure:: media/image173b.png
+
+    Pinned columns example.
+
+The "expand/collapse" functionality will add a + and - button in your rows, in order to easily aggregate your data.
+In the widget menu you will also find the expandall/collapse all buttons, in order to reset closing or opening your whole widget.
+
+Be aware that to use this functionality columns subtotal should be selected. If not the functionality check will enable it automatically.
+
+.. figure:: media/image173c.png
+
+    Expand/collapse example.
 
 Switching to the “Style” tab you can find the general style settings available for the crosstab.
 
@@ -572,7 +590,7 @@ The HTML widget allows to add customized HTML and CSS code to add very custom dy
 
         For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
 
-The Edit section of the widget is composed by tree tabs: the HTML editor, the style and the dataset.
+The Edit section of the widget is composed by five tabs: the dataset, HTML editor, style, cross and filters.
 In the editor tab is possible to add the code that will be shown in the widget. Clicking on the top expander section in the tab, the one named "CSS" also the CSS editor will be available.
 
 .. important::
@@ -650,15 +668,40 @@ The ``kn-selection-column`` attribute is available to every HTML5 tag and is a w
 
 The **kn-selection-value** attribute is optional and will add a specific value to the column selection.
 
-**Banned Tags**
+``[kn-variable='VARIABLE-NAME' key='VARIABLE-KEY']``
 
-In order to avoid Cross-site scripting and other vulnerabilities, some tags are automatically removed by the system when saving the cockpit:
+The ``kn-variable`` tag is the tool to read the runtime value of one of the defined variables. It will change depending on the current value and can be used inside kn-if and kn-calc.
+
+The **key** attribute is optional and will select a specific key from the variable object if the variable is "Dataset" type, returning a specific value instead of a complete dataset.
+
+.. warning::
+    **Banned Tags**
+    In order to avoid Cross-site scripting and other vulnerabilities, some tags are *not allowed* and will automatically be removed by the system when saving the cockpit:
 
 -  ``<button></button>``
 -  ``<object></object>``
 -  ``<script></script>``
 
-If the tag is needed for some specific behaviour (i.e. the button default hover), please replicate it with CSS using a different allowed tag.
+If you need to simulate a button behaviour use a div (or another allowed tag) and replicate the css style like in the following example:
+
+.. code-block:: html
+   :linenos:
+
+   <div class="customButton">Buttonlike div</div>
+
+.. code-block:: css
+   :linenos:
+
+   .customButton {
+        border: 1px solid #ccc;
+        background-color: #ededed;
+        cursor: pointer;
+    }
+    .customButton:hover {
+        background-color: #d8d8d8;
+    }
+
+
 
 .. warning::
     **Whitelist**
@@ -706,7 +749,7 @@ Every dataset with a spatial attribute is eligible to become a layer in map widg
 .. |image479| image:: media/image479.png
    :height: 26
 
-In layer's metadata, the user set the spatial attribute of the dataset that will be used to display a markers on the map. Actually, many spatial attribute types are supported:
+In layer's metadata, the user can add calculated fields (more on that later) and set the spatial attribute of the dataset that will be used to display a markers on the map. Actually, many spatial attribute types are supported:
 
 -  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
 -  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
@@ -717,11 +760,15 @@ In layer's metadata, the user set the spatial attribute of the dataset that will
 
          For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
 
+The first field listed in metadata is the spatial attribute and Knowage let the user to set if the spatial attribute need to be part of the aggregation or not: this let the user to create special query; for example, you may need to just list all the records of a dataset without any aggregations and in this case you can simply uncheck all the aggregate by checks and clean up the aggregation function for the spatial attribute; another example is where the spatial attribute at database side is of a special type like CLOB on Oracle, in that case the user cannot use that field for the aggregation but the user can exclude the spatial attribute from the aggregation, converting the field to measure and setting an aggregation function.
+
 Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup.
 
 For measures a user could specify the aggregation function, if it has to be shown on detail popup and if it has to be shown on map: at least one field has to be shown on map.
 
 For attributes a user could specify if it has to be shown on detail popup or if it has to be show as a filter: in that case, the attribute will be available in the control panel with its all distinct values to let the user to have an immediate evidence of which markers have the selected value for the measure
+
+The user could also select if a specific attribute should be displayed in the tooltip that will be shown when the user hovers a specific feature on the map.
 
 The 3-dots-menu on the right of each column of the dataset contains additional functionalities: for measures, for example, there is the possibility to specify thresholds.
 
@@ -736,6 +783,24 @@ For all the attributes that are filters, a user could select the relative value 
     .. figure:: media/image499.png
 
         Filter selection.
+
+As said, Map widget supports calculated fields, a way for a user to calculate additional data to show on map or to display into popup detail:
+
+   .. figure:: media/image503.png
+
+       Add calculated field button in layer's metadata.
+
+From the calculated field's dialog a user can combine measures and operations to add more data to the layer. The user can use a SQL-like syntax to create a statement that describe the new calculated field:
+
+  .. figure:: media/image504.png
+
+      Calculated Field's dialog.
+
+The newly calculated field added by the user is shown as a measure in layer's dataset: from the 3-dots menu on the right of the field a user can update or delete the calculated field.
+
+  .. figure:: media/image505.png
+
+      The 3-dots menu on calculated field.
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
@@ -795,12 +860,16 @@ The table result can also be configured to show a limited set of fields, please 
 
 .. figure:: media/image481.png
 
-**Settings** 
+**Settings**
 
 The settings tab contains the management of the 3 elements that compose a directive:
     - Data table: enabled by default is the grid containing data. You can choose the number of item per page.
-    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets pagination options such as results limit, max number of items and more.
-    - Text search: if enabled a searcbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
+    - Facets: if enabled the sidepanel with the facets will appear. It is also possibile to configure facets options:
+        - *enable selection on facets*, if enabled a user click on the facets will throw a cockpit selection instead of just filtering the table.
+        - *closed by default*, if enabled the facets will be visible as closed groups by default.
+        - *facets column width*, this setting allows to choose the dimension of the facets column in px, rem or percentage values.
+        - *facets max number*, this setting allows to choose the maximum number of facets visible for every field.
+    - Text search: if enabled a searchbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
 
 .. figure:: media/image481b.png
 
@@ -809,7 +878,10 @@ The settings tab contains the management of the 3 elements that compose a direct
 **Facets column ordering**
 
 .. figure:: media/image491.png
+
 It is possible to change the facets column ordering, for example if there is the need to move up a field.
+
+
 As shown in this example, "aggregazione" should be shown upper, just go to the edit widget section:
 
 .. figure:: media/image492.png
@@ -824,18 +896,19 @@ It is also possibile to change the format used to show date columns inside disco
 In order to do that, click on style for date columns fields in edit mode
 
 .. figure:: media/image493.png
+
 And change the "date format" property
 
 .. figure:: media/image494.png
 
 .. figure:: media/image495.png
 
-Python Widget
+Python/R Widget
 ~~~~~~~~~~~~~~~~~~
 
-The Python widget allows to directly embed python code inside the cockpit in order to create advanced custom analytics.
+The Python/R widgets allow to directly embed Python or R scripts inside the cockpit in order to create advanced custom analytics.
 
-In the editor tab it is possible to add the script that will be sent to the python interpreter.
+In the editor tab it is possible to add the script that will be sent to the execution engine.
 
 .. figure:: media/PythonEditor.png
 
@@ -845,11 +918,11 @@ Knowage has support for three different output types:
 
 - Image
 - HTML
-- Bokeh application
+- Bokeh application (only for Python)
 
 If **Image** or **HTML** is choosen as output type, it is also necessary to specify the name of the file in which the script will save its output.
 
-The Dataset tab allows the user to select a dataset that will be accessible directly from the python code.
+The Dataset tab allows the user to select a dataset that will be accessible directly from the code.
 After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
 
 
@@ -857,20 +930,711 @@ After choosing a dataset the list of available columns will be shown. Here it is
 
     Dataset selection
 
-Once a dataset has been choosen, it will be possible to access it directly from python code via a **dataframe** variable.
+Once a dataset has been choosen, it will be possible to access it directly from the code via a **dataframe** variable.
 This variable will have the same name of the dataset label.
 
-The Environment tab allows the user to choose among a list of available python evironments previously defined inside the **configuration management**.
+The Environment tab allows the user to choose among a list of available Python/R evironments previously defined inside the **Configuration Management**.
 To support this kind of choice a list of available libraries is displayed for each selected environment.
 
 .. figure:: media/EnvironmentTab.png
 
     Environment selection
 
-Inside python scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
+Inside Python and R scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
 
 .. warning::
-    **Python widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
+    **This widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
+
+Custom Chart Widget
+~~~~~~~~~~~~~~~~~~~~~~
+.. figure:: media/image500.png
+
+The Custom Chart allows the user to directly embed html,css and js code using a supported external chart library and integrating with Knowage data and interactions using custom API.
+
+This widget will be available only if the *create custom chart widget* option is set for the specified role.
+
+The Edit section of the widget is composed by five tabs: dataset, editor, style, cross and filters.
+
+The **dataset tab** allows to select a specific dataset to use as a refferral for the API. Once the dataset has been selected a table with the columns list will appear below.
+In the table will be possible to change column alias, the column aggregation for measures and delete columns interacting with the selected column line.
+Clicking on *add column* or *add calculated field* buttons on top a popup will appear allowing to choose one of the dataset column to add or to insert the calculated field formula.
+
+.. figure:: media/image501.png
+
+The **Editor tab** allows to insert custom code and it's splitted into three components: CSS, HTML, JavaScript.
+
+.. figure:: media/image502.png
+
+The CSS component allows to insert css classes that will be used by the HTML code of the widget. It's also possible to use *@import* command if the referred url is inside the whitelist.
+
+The HTML component allows to insert HTML tags in order to create a structure to host the custom chart and additional structural informations.
+
+The JavaScript component is the code section, and allows to insert the custom chart code, custom Javascript code and the API usage.
+
+To use the api the keyword is **datastore**. datastore is object that contains the actual data; it has methods to iterate over results and get all values, as the Java counterpart, plus some other methods as the following:
+
+
+**getDataArray**
+
+|   returns: *data array*
+|   params: *custom user function*
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.getDataArray(function(record){
+        return {
+        name: record.city,
+        y: record.num_children_at_home
+        }
+    })
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	[
+		{
+			name:'New York',
+			y: 5
+		},
+		{
+			name:'Boston',
+			y: 3
+		}
+	]
+
+
+**getRecords**
+
+|   returns: array of objects; each object has nameOfDsColumn: value
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.getRecords()
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	[
+		{
+			city:'New York',
+			total_children: 5,
+			country: 'USA'
+		},
+		{
+			name:'Boston',
+			total_children: 3,
+			country: 'USA'
+
+		}
+	]
+
+
+**getColumn**
+
+|   returns: array of *unique* values for one dataset column
+|   params: dataset's column name
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.getColumn('country')
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	['USA','Mexico','Canada']
+
+
+**getSeriesAndData**
+
+|   returns: array of series with data for each series
+|   params: serie/measure name, custom user function
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.getSeriesAndData('PRODUCT_FAMILY',function(record){
+        return {
+            y: record.UNIT_SALES,
+            name: record.QUARTER
+        }
+    })
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	[
+		{
+			name:'Drink',
+			data: [
+				{
+					y: 5000,
+					name: 'Q1'
+				},
+				{
+					y: 7000,
+					name: 'Q2'
+
+				}
+			]
+		},
+		{
+			name:'Food',
+			data: [
+				{
+					y: 6000,
+					name: 'Q1'
+				},
+				{
+					y: 4000,
+					name: 'Q2'
+
+				},
+				{
+					y: 3000,
+					name: 'Q3'
+
+				}
+			]
+		}
+	]
+
+
+**sort** - angular sort service (sorting is executed on the client side)
+
+|   returns: datastore sorted by dataset's column/s
+|   params: dataset's column name
+|   optional: sort type object {column:'asc/desc'}
+|   example1:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.sort('STORE_ID') //by default, it is asc
+    OR:
+    datastore.sort({'STORE_ID':'asc'})
+
+
+**filter** - angular filter service (filtering is executed on the client side)
+
+|   returns: datastore filtered by some value for dataset's column/s
+|   params: object that contains dataset's columns names for properties -> value to be filtered, an optional boolean to enable the strict comparison (false as default)
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    datastore.filter({'QUARTER':'Q1','STORE_ID':'1'}, true)
+
+
+**hierarchy**
+
+|   returns: hierarchy object with its functions and tree
+|   params: object that contains property levels -> array of dataset's columns names
+|   optional: same object with optional property measures -> object that contains dataset's columns names for properites -> aggregation function (sum, min, max)
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    var hierarchy = datastore.hierarchy({'levels':['QUARTER','PRODUCT_FAMILY'],'measures': {'UNIT_SALES':'SUM'}})
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	[
+		{
+			"name": "Q1",
+			"children": [
+				{
+					"name": "Non-Consumable",
+					"children": [],
+					"UNIT_SALES": 7.4571
+				},
+				{
+					"name": "Food",
+					"children": [],
+					"UNIT_SALES": 12
+				}
+			],
+			"UNIT_SALES": 19.4571
+		},
+		{
+			"name": "Q2",
+			"children": [
+				{
+					"name": "Non-Consumable",
+					"children": [],
+					"UNIT_SALES": 9.9429
+				},
+				{
+					"name": "Food",
+					"children": [],
+					"UNIT_SALES": 7.2
+				}
+			],
+			"UNIT_SALES": 17.1429
+		}
+	]
+
+
+**getChild**
+
+|   returns: node of hierarchy (node is Node object)
+|   params: index of child in hierarchy
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    hierarchy.getChild(0)
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	{
+		"name": "Q1",
+		"children": [
+			{
+				"name": "Non-Consumable",
+				"children": [],
+				"UNIT_SALES": 7.4571
+			},
+			{
+				"name": "Food",
+				"children": [],
+				"UNIT_SALES": 12
+			}
+		],
+		"UNIT_SALES": 19.4571
+	}
+
+**getLevel**
+
+|   returns: array of nodes of hierarchy on specific level
+|   params: index of level in hierarchy
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    hierarchy.getLevel(0)
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	[
+		{
+			"name": "Q1",
+			"children": [
+				{
+					"name": "Non-Consumable",
+					"children": [],
+					"UNIT_SALES": 7.4571
+				},
+				{
+					"name": "Food",
+					"children": [],
+					"UNIT_SALES": 12
+				}
+			],
+			"UNIT_SALES": 19.4571
+		},
+		{
+			"name": "Q2",
+			"children": [
+				{
+					"name": "Non-Consumable",
+					"children": [],
+					"UNIT_SALES": 9.9429
+				},
+				{
+					"name": "Food",
+					"children": [],
+					"UNIT_SALES": 7.2
+				}
+			],
+			"UNIT_SALES": 17.1429
+		}
+	]
+
+
+*node* is an instance of Node object. It has convenient functions to explore the node:
+
+.. code-block:: javaScript
+    :linenos:
+
+    var node = hierarchy.getChild(0)
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	{
+		"name": "Q1",
+		"children": [
+			{
+				"name": "Non-Consumable",
+				"children": [],
+				"UNIT_SALES": 7.4571
+			},
+			{
+				"name": "Food",
+				"children": [],
+				"UNIT_SALES": 12
+			}
+		],
+		"UNIT_SALES": 19.4571
+	}
+
+
+**getValue**
+
+|   returns: a measure's value for a specific hierarchy's child(node)
+|   params: dataset's measures's name
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getValue('UNIT_SALES')
+
+|   result: 19.4571
+
+
+**getChild**
+
+|   returns: a specific node's child
+|   params: index of nodes's child
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getChild(0)
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	{
+		"name": "Non-Consumable",
+		"children": [],
+		"UNIT_SALES": 7.4571
+	}
+
+
+**getParent**
+
+|   returns: a node parent of specific child
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getChild(0).getParent()
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	{
+		"name": "Q1",
+		"children": [
+			{
+				"name": "Non-Consumable",
+				"children": [],
+				"sales": 7.4571
+			},
+			{
+				"name": "Food",
+				"children": [],
+				"sales": 12
+			}
+		],
+		"sales": 19.4571
+	}
+
+
+**getChildren**
+
+|   returns: an array of node's children
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getChildren()
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	[
+		{
+			"name": "Non-Consumable",
+			"children": [],
+			"sales": 7.4571
+		},
+		{
+			"name": "Food",
+			"children": [],
+			"sales": 12
+		}
+	]
+
+
+**getSiblings**
+
+|   returns: an array of node siblings to a specific child
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    node.getChild(0).getSiblings()
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	[
+		{
+			"name": "Non-Consumable",
+			"children": [],
+			"sales": 7.4571
+		},
+		{
+			"name": "Food",
+			"children": [],
+			"sales": 12
+		}
+	]
+
+
+**variables**
+
+|   returns: a key/value object with all the declared variables and values
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+    :linenos:
+
+    var myvariables = datastore.variables;
+
+|   result:
+
+.. code-block:: javaScript
+   :linenos:
+
+    {
+        variableCity: 'New York',
+        variableNum: 100
+    }
+	
+
+**profile**
+
+|   returns: a key/value object with all the declared profile attributes for the user
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+   :linenos:
+
+    var user = datastore.profile;
+
+|   result:
+
+.. code-block:: javaScript
+   :linenos:
+
+    {
+        name: 'My Name',
+        tenant: 'Knowage',
+        customProfileAttribute: 'Test value',
+        role: 'user'
+    }
+	
+
+It is also possible to interact with the other cockpit widgets, to do so it's possible to use the **clickManager**:
+
+.. code-block:: javaScript
+   :linenos:
+
+    datastore.clickManager(columnName, columnValue);
+
+|   This method can be added everywhere the code is managing a click event, and will notify Knowage about the
+    interaction.
+|   The default case (if no cross-navigation or preview-navigation is set) will throw a selection with the
+    dataset column name and column value set in the method.
+|   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
+    throw the set interaction. The dynamic values used will be the ones set in the method arguments.
+
+
+.. important::
+         **Chart libraries**
+
+         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. 
+         Be aware that url not set in the whitelist will be deleted on save. 
+         To use this import use the kn-import tag like the following example:
+
+
+.. code-block:: html
+   :linenos:
+
+   <kn-import src="yourCDNurl"></kn-import>
+
+
+.. warning::
+    **Whitelist**
+    For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
+    Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise those external links will be removed by the system. This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
+
+
+.. code-block:: xml
+   :linenos:
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <WHITELIST>
+      <service baseurl="https://www.youtube.com" />
+      <service baseurl="https://player.vimeo.com" />
+      <service baseurl="https://vimeo.com" />
+      <service baseurl="https://media.giphy.com" />
+      <service baseurl="https://giphy.com" />
+      <service baseurl="https://flic.kr" />
+      <service relativepath="/knowage/themes/" />
+      <service relativepath="/knowage/icons/" />
+      <service relativepath="/knowage/restful-services/1.0/images/" />
+   </WHITELIST>
+
+Like other widgets the "Cross", "Style", and the "Filters" tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
+
+Cross Navigation
+~~~~~~~~~~~~~~~~~~
+
+.. warning::
+    **Cross tab is only for technical users**
+
+    Due to the fact that parameters can only be managed by technical user the cross navigation cannot be implemented by the final user.
+
+All widgets (except selector and active selections) have the Cross tab available, that allows the user to interact with the widget in different ways:
+- setting a Cross-navigation between different documents
+- setting a Preview of a specific dataset to popup
+- opening an external link
+The interactions are mutually exclusive, so just one type can be chosen for every widget.
+
+
+**Cross-navigation**
+
+The cross-navigation gives the possibility to connect two documents clicking on a widget as a starting point, opening the second one as arrival and showing the breadcrumbs on top.
+
+.. figure:: media/image212.png
+
+    Table widget cross-navigation configuration.
+
+To enable one first of all is necessary to set a cross navigation inside the "cross-navigation definition" functionality.
+There is possible to set the starting/arrival point and to set the connection between different output/input parameters.
+
+After this passage you will have the possibility to enable the cross-navigation in the tab and choose the user interaction that will start the navigation, if more than one are available.
+
+The most complex example is the table widget cross-navigation, because it allows 3 different interactions:
+
+- *Click on the whole row*, where the interaction will start clicking on any row
+- *Click on a single column*, where the editor will choose a specific column that will start the interaction (the user will see the column values underlined)
+- *Click on an icon*, where the editor will choose an icon positioned to the right side that will start the interaction.
+
+Once the interaction has been chosen you will be able to select the cross-navigation created before. If you created more than one related to that document
+you will be able to choose between them. If you leave this field blank the user will be able to choose that himself.
+
+**Preview**
+
+.. figure:: media/image214.png
+
+    Table widget preview configuration.
+
+The preview configuration is very similar to the cross-navigation one.
+First of all you will need to enable the navigation using the switch button.
+After you will need to choose an interaction type and a target dataset.
+the selected dataset will be opened in a popup window but, if you check the "Direct download" property you will be able to get the dataset preview directly in the download list.
+
+.. figure:: media/image216.png
+
+    Preview example.
+
+**Cross and Preview Parameters**
+
+.. figure:: media/image213.png
+
+    Parameters example.
+
+Both cross-navigation and preview navigation share the parameters management.
+If one or more output parameters are available, you will find the list below the navigation page.
+You can choose which values to use clicking on the checkbox at the right side of the name, than you will have the possibility to choose between different modes to get the value:
+
+- *Static*, entering a static value
+- *Dynamic*, passing the value of the column at the selected row (or passing the column name if *Selected Column Name* is chosen)
+- *Selection*, passing the current value of the selection for the specified dataset and column. Warning: the selection is not triggered clicking on the navigation, so to pass this value the selection must already be present.
+
+Once the user will click on the widget, those parameters will be evaluated before the navigation.
+
+
+**Link**
+
+The link configuration is very similar to the cross-navigation one too.
+First of all you will need to enable the link navigation using the switch button.
+Then you will be able to create one or more link navigations.
+You will need to choose an interaction type and a base url. The base url will be the url opened by the user click.
+You can also decide the type of link between the opening of a new page or the document replace opening in the same page.
+
+.. figure:: media/image215.png
+
+    Link configuration with JSON parameter example.
+
+**Link Parameters**
+
+The link parameters are different from the previous because they will be used to make the baseurl selected more precise.
+The resulting example url will be something similar: http://www.knowage-suite.com?**parameter1**=value&**parameter2**=value2
+
+To do so you will have to create and name different parameters, the selected name will be the one used in the url construction.
+You can choose how to get the parameter value with the following modes:
+
+- *Static*, entering a static value
+- *Dynamic*, passing the value of the column at the selected row (or passing the column name if *Selected Column Name* is chosen)
+- *Selection*, passing the current value of the selection for the specified dataset and column. Warning: the selection is not triggered clicking on the navigation, so to pass this value the selection must already be present.
+- *Analytical Driver*, passing a page parameter (input driver)
+- *JSON*, passing an escaped JSON inside the url parameter. You can use the editor to create the desired JSON and use the placeholder to set the value at runtime. The placeholders are the usuals *$F{field}* for the fields, *$P{parameter}* for the parameters, *$V{variable}* for the variables.
+- *JWT*, passing the JWT token of the user
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~

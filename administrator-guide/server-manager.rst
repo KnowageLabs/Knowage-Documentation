@@ -7,7 +7,7 @@ Server Manager
          All the functionalities shipped within the Server Manager are available only with Knowage Enterprise Edition
 
 In the **Server Manager** menu panel you find some management functionalities.
-   
+
 .. figure:: media/image60_bis.png
 
     Server Manager Panel
@@ -17,7 +17,7 @@ Those about **Import/Export** let you export some configurations or elements fro
 Tenants Management
 ------------------
 
-We start this section underlining that only those users who have the superadmin role can use this functionality. **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones. 
+We start this section underlining that only those users who have the superadmin role can use this functionality. **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones.
 
 .. figure:: media/image61.png
 
@@ -29,7 +29,7 @@ In the image above, on the left you have the list of existing tenants. On the to
 
     Product types tab (Left) Datasources tab (Right).
 
-Note that, in a single-tentant environment admin and superadmin coincides. In a multitenants environment (developed then through the Server Manager functionality), only *one* user has the superadmin role for each tenant, while there can be one or more users with admin role. In particular compared to the admin case, the superadmin has the possibility to manage the multi-tenancy. Moreover, he is the only one who can configure the JNDI datasources and access the cache configuration (through the cache manager menu item).
+Note that, in a single-tenant environment admin and superadmin coincides. In a multitenants environment (developed then through the Server Manager functionality), only *one* user has the superadmin role for each tenant, while there can be one or more users with admin role. In particular compared to the admin case, the superadmin has the possibility to manage the multi-tenancy. Moreover, he is the only one who can configure the JNDI datasources and access the cache configuration (through the cache manager menu item).
 
 Template Management
 -------------------
@@ -44,7 +44,7 @@ First of all you are asked to insert a date by clicking on the calendar icon. Th
 
     Deleting templates
 
-Import\\Export
+Import/Export
 --------------
 
 These options are about Import\\Export of Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
@@ -63,33 +63,37 @@ Below we show the export editor.
 .. figure:: media/image67.png
 
     Document Export
-   
+
 First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the ``MyFirstExport.zip``).
 
-Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its childer folders/leaves.
+Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its children folders/leaves.
 
-When you have chose a name and select some documents the export icon change color from gray to pink. This means all elements are set to start exporting. Before going on decide if you want to export **Olap customized View** and/or **Scheduled documents** and/or **CrossNavigation** and/or **BIRT Translation** and/or **Schedule configurations** . 
+When you have chosen a name and selected some documents, the export icon change colour from grey to pink. This means all elements are set to start exporting.
+
+Before going on decide if you want to export **Olap customized View** and/or **Scheduled documents** and/or **BIRT Translation** and/or **Schedule configurations** and/or **Document only in the selected functionality**.
 
 - **Olap customized View**
-   Clicking on this functionalities the export will include all the customized views saved into the chosen OLAP documents. You can find the Customized View going on the OLAP Document Menu and clicking on *Show OLAP custom View*. See the figure below:
-   
+   Checking this property the export will include all the customized views saved into the chosen OLAP documents. You can find the Customized View going on the OLAP Document Menu and clicking on *Show OLAP custom View*. See the figure below:
+
 .. figure:: media/OCW.PNG
 
     Olap customized view
-   
+
 - **Scheduled documents**
-   Clicking on this functionalities the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
-   
+   Checking this property the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
+
 .. figure:: media/SDOC.png
 
     Scheduled documents
-   
-- **CrossNavigation**
-   Clicking on this functionalities the export will include all the cross navigation associated to the chosen documents and the documents related to navigation.
+
 - **BIRT Translation**
-   Clicking on this functionalities the export will include all the translation added into 'Localization' functionalities of the BIRT templates. 
+   Checking this property the export will include all the translation added into 'Localization' functionalities of the BIRT templates.
 - **Schedule configurations**
-   Clicking on this functionalities the export will include all the schedulation associated to the chosen documents. At the end of the import you must have the schedulation saved into Scheduler section under the Tools area.
+   Checking this property the export will include all the schedulation associated to the chosen documents. At the end of the import you must have the schedulation saved into Scheduler section under the Tools area.
+- **Export the document only in the selected functionality**
+   Checking this property the export will include documents only if they are inside a selected functionality.
+- **Related documents**
+   Checking this property the export will include documents linked by cross navigation to the selected ones.
 
 Now you are ready to click on the export icon to generate and download the .zip.
 Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** > **Import\\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure below we show the document import interface.
@@ -98,10 +102,30 @@ Suppose you want to upload MyFirstExport.zip in another installation. Log in it 
 
     Document Import
 
-Choose the .zip obtained from the **Export** phase and click on the import icon. Few steps guide you trough importation. You are asked to map from source to target: the Roles, the Engines and the Metadata. If a role doesn’t map any of the existing among the target one, it will be created. Please keep attention during the metadata step because you can choose to overwrite or don’t the target metadata. By default this option is set to false. If you change to yes documents, lov, driver, etc. which has the same label of the exported ones will have metadata overwritten at the end of import procedure.
+Choose the .zip obtained from the **Export** phase and click on the import icon. Few steps guide you trough importation.
+You are asked to map from source to target: Roles, Engines, Datasources and Metadata.
+
+.. figure:: media/image110.png
+
+   Document Import Wizard
+
+If a role doesn’t map any of the existing in the target one, it will be created. **Please pay attention before starting the import because target metadata will be overwritten**: documents, lov, driver, etc. which has the same label of the exported ones will have metadata overwritten at the end of import procedure. After you have carefully checked, you can start import procedure by clicking on "*START IMPORT*"
+
+*Missing licenses*
+If one or more license is not valid or missing, during export procedure you'll be informed with an alert. Related documents cannot and won't be exported.
+
+.. figure:: media/image113.png
+
+   Document Export Missing licenses
+
+Licenses are checked also during import procedure and, if one or more are missing or not valid, related documents will not be imported. These documents will be listed in the last phase before the beginning of the import procedure and for each one the invalid or missing license will be shown.
+
+.. figure:: media/image114.png
+
+   Document Import Missing licenses
 
 Menu
-~~~~~
+~~~~
 
 This feature let you export the menu structure.
 
@@ -117,7 +141,17 @@ To upload it in another installation, accede to the **Import\\Export** Menu area
 
     Menu Import
 
-Then choose between the two import modes: **Override** and **Add Missing**. If you choose **Override**, the menu items which match with existing ones will be override by the imported. If you choose **Add missing** only the menu items which don’t match with the existing one will be added. You are ready to start importation by clicking on **Start Import**.
+After clicking on "*START IMPORT*" menu items which match with existing ones will be override by the exported ones and menu items which don’t match with the existing ones will be added. You are asked to map roles from source to target. If a role doesn’t map any of the existing in the target one, it will be created.
+
+.. figure:: media/image111.png
+
+   Menu Import Wizard
+
+In the first step of import procedure you'll see source-target comparison. In particular source tree contains menu that are in the package you are importing and target tree contains the menu already present in the target system.
+
+.. figure:: media/image112.png
+
+   Menu Import Wizard Tree comparison
 
 Users
 ~~~~~
@@ -136,6 +170,10 @@ To import the .zip in another installation, log in and open the **Server Manager
 
     User Import
 
+.. important::
+
+	All users involved into import procedure will have his password changed with the value set in advanced configuration.
+
 Catalogs
 ~~~~~~~~
 
@@ -152,7 +190,7 @@ To import the .zip in another instance, log in and open the **Server Manager** >
 .. figure:: media/image76.png
 
     Catalogs Import
-   
+
 KPIs
 ~~~~
 
@@ -220,8 +258,8 @@ This option allows to import/export the analytical drivers and their related LOV
 
 .. figure:: media/image86.png
 
-    Import/Export of analytical drivers 
-   
+    Import/Export of analytical drivers
+
 As shown in Figure above, the window contains the Export and the Import tab. Use the Export tab to download the .zip file to be used in the import process.
 
 To produce such a file, the user has to log in as administrator of the source tentant. Then he has to assign a name to the export, check the analytical drivers of interest and click on the red download button available at the top right corner of the page. Note that it is possible to slim down the research of the analytical drivers by filtering on their data of creation.

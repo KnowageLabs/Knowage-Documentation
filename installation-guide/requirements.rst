@@ -52,13 +52,12 @@ Linux
 
 Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
 
-   .. code-block:: bash
-           :linenos:
-           :caption: Instructions to set the JAVA_HOME variable for Linux environment.
+.. code-block:: shell
+        :caption: Instructions to set the JAVA_HOME variable for Linux environment.
 
-           export JAVA_HOME=<root path of the Java installation>
-           export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/
-           export PATH=$JAVA_HOME/bin:$PATH
+        export JAVA_HOME=<root path of the Java installation>
+        export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/
+        export PATH=$JAVA_HOME/bin:$PATH
 
 Windows
 ~~~~~~~~~~~~
@@ -80,7 +79,7 @@ The following lists the supported application servers:
     +---------------------+------------------------+-------------+
     |    **Support type** | **Application Server** | **Version** |
     +=====================+========================+=============+
-    |    Certified        | Apache Tomcat          | 8.5.37      |
+    |    Certified        | Apache Tomcat          | 8.5.57      |
     +---------------------+------------------------+-------------+
 
 For each application server installation please refer to its official documentation.
@@ -90,43 +89,39 @@ Tomcat 8.5
 
 In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
 
-Linux
-^^^^^^^^^^
+Tomcat on Linux
+^^^^^^^^^^^^^^^
 
 It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
 - Create the Tomcat user.
 
-   .. code-block:: bash
-           :linenos:
+.. code-block:: shell
 
-           useradd -m tomcat
-           passwd <password for the tomcat user>
+        useradd -m tomcat
+        passwd <password for the tomcat user>
 
 - Install the Tomcat using the Tomcat user. Remeber to define the ``TOMCAT_HOME`` variable.
 
-   .. code-block:: bash
-           :linenos:
+.. code-block:: shell
 
-           export TOMCAT_HOME=<path of the installation Tomcat root folder >
+        export TOMCAT_HOME=<path of the installation Tomcat root folder >
 
 - Be sure that the Tomcat uses the JDK 1.8: usually the Tomcat settings are defined in the ``TOMCAT_HOME/bin/setenv.sh`` file, therefore if the ``TOMCAT_HOME/bin/setenv.sh`` file does not exit, the user must create it and insert it in the content as shown below. Note that ``CATALINA_PID`` contains the ID of the Tomcat process and it kills the process if needed.
 
-   .. code-block:: bash
-           :linenos:
+.. code-block:: sh
 
-           export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid
-           export JAVA_HOME=<root folder of the JDK 1.8 installation>
+        export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid
+        export JAVA_HOME=<root folder of the JDK 1.8 installation>
 
 - Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
 
-   .. code-block:: bash
-           :linenos:
+.. code-block:: sh
 
-           exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@"
+        exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@"
 
-Windows
-^^^^^^^^^^
+Tomcat on Windows
+^^^^^^^^^^^^^^^^^
 
 It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-8.5-doc/windows-service-howto.html.
 
@@ -143,9 +138,9 @@ Knowage uses a schema to manage metadata, that is all those information required
     +=====================+===============+==================+
     |    Certified        | Oracle        | 8, 9, 10, 11, 12 |
     +---------------------+---------------+------------------+
-    |    Certified        | MySql         | 5.7              |
+    |    Certified        | MySql         | 5.7, 8           |
     +---------------------+---------------+------------------+
-    |    Certified        | PostgreSQL    | 8.2, 9.1         |
+    |    Certified        | PostgreSQL    | 8.2, 9.1, 12.3   |
     +---------------------+---------------+------------------+
     |    Certified        | MariaDB       | 10.1, 10.2, 10.3 |
     +---------------------+---------------+------------------+
@@ -179,7 +174,7 @@ In CentOS you need to erase older versions of NodeJS, if present:
 
 Then you need to clear YUM cache and update all local packages:
 
-.. code-block:: bash
+.. code-block:: sh
         :caption: Cache clearing and system updating
 
         yum clean all
@@ -187,7 +182,7 @@ Then you need to clear YUM cache and update all local packages:
 
 Next you can install the official repository of NodeJS:
 
-.. code-block:: bash
+.. code-block:: sh
         :caption: Installation of the repository of NodeJS
 
         curl -sL https://rpm.nodesource.com/setup_8.x | bash -
@@ -197,7 +192,7 @@ Next you can install the official repository of NodeJS:
 
 Finally you can install NodeJS:
 
-.. code-block:: bash
+.. code-block:: sh
         :caption: Installation of NodeJS
 
         yum install -y nodejs
@@ -207,14 +202,14 @@ Ubuntu
 
 In Ubuntu you need to erase older versions of NodeJS, if present:
 
-.. code-block:: bash
+.. code-block:: sh
         :caption: Command to erase older versions of NodeJS
 
         apt-get remove nodejs
 
 Then you need to clear APT cache and update all local packages:
 
-.. code-block:: bash
+.. code-block:: sh
         :caption: Cache clearing and system updating
 
         apt-get update
@@ -222,7 +217,7 @@ Then you need to clear APT cache and update all local packages:
 
 Next you can install the official repository of NodeJS:
 
-.. code-block:: bash
+.. code-block:: sh
         :caption: Installation of the repository of NodeJS
 
         curl -sL https://deb.nodesource.com/setup_8.x | bash -
@@ -232,7 +227,7 @@ Next you can install the official repository of NodeJS:
 
 Finally you can install NodeJS:
 
-.. code-block:: bash
+.. code-block:: sh
         :caption: Installation of NodeJS
 
         apt-get install -y nodejs
@@ -240,16 +235,44 @@ Finally you can install NodeJS:
 Chromium requirements
 -------------------------
 .. important::
-         **Enterprise Edition only**
 
-         Chromium is required only for Enterprise Edition.
+	**Enterprise Edition only**
+
+	Chromium is required only for Enterprise Edition.
 
 Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install following Chromium dependencies:
 
-.. code-block:: bash
+.. code-block:: sh
         :caption: Installation of Chromium dependencies
 
         # For CentOS
         yum install -y at-spi2-atk cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
+
         # For Ubuntu
         apt-get install -y libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash
+
+
+Support to non-latin languages
+------------------------------
+
+Knowage does some of its job at server side and it could need support for non-latin languages. Some operating systems don't provides support to non-latin language by default: see the official documentation to enable the support to those languages.
+
+For example, to install non-latin languages fonts you could use:
+
+.. code-block:: sh
+        :caption: Installation of non-latin language fonts
+
+        # For CentOS 7
+        yum groupinstall fonts
+
+        # For Ubuntu
+        sudo apt-get install language-pack-ja
+        sudo apt-get install japan*
+
+        sudo apt-get install language-pack-zh*
+        sudo apt-get install chinese*
+
+        sudo apt-get install language-pack-ko
+        sudo apt-get install korean*
+
+        etc...

@@ -154,6 +154,7 @@ to Code below
 
             [Measures].[Store Sales], [Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Version].[0],
             [Region].[Mexico Central], [Customers].[AllCustomers], [Customers].[All Customers]
+
 is as in the following code
 
 .. code-block:: xml

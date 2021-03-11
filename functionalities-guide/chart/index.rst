@@ -18,6 +18,7 @@ Knowage provides a chart engine to create several types of charts, including:
 -  Heatmap
 -  Chord
 -  Gauge
+-  Bubble
 
 
 My first Chart
@@ -28,7 +29,7 @@ Once you enter the Knowage environment as a final user, enter the **Analysis** a
 .. important::
          **Enterprise Edition only**
 
-         Please note that this operation is available only in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create charts document, as explained in **Stand alone charts** chapter.
+         Please note that this operation is available only in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create Cockpit document.
 
 Once opened, the cockpit interface is an empty page with a toolbar containing different options, the second of which is the **Add chart** feature.
 
@@ -133,7 +134,7 @@ To add a custom color simply write the category/serie value or name, select a co
 Indeed, the options available in this tab change according to the chart selected enabling different configurations. See Chart types in detail for a detailed description of the specific options of each chart.
 
 Advanced options
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 The **Advanced** tab contains some advanced options to more customize the chart. Here it is possible, for example, to set the tooltip options, the widget dimensions, if the chart is stacking or not, the grouping type.
 
@@ -269,7 +270,7 @@ Once you selected the dataset and the type of chart, choose at least two attribu
 
 Then click on **Configuration**. As you can see the features are not exactly the same as traditional chart. We give some tips on most important sunburst settings.
 
-Using the **Generic** button you can set the opacity on mouse movement and choose how to display the measure values: absolute, percentage or both. These two features allow the visualization of data just moving the mouse over the slice: the slice is highlighted and values are shown in the center of the ring while the root-node path for the node selected is displayed on the left bottom corner of the page. To custom the root-node path, click on the **Sequence** icon and choose position, label tail size and text style. The tooltip is a mandatory field since it shows the value of the selected slice. Therefore be sure to have filled it before saving by using the **Explanation detail** panel. Figure below sums up the three features.
+Using the **Generic** button you can set the **opacity** on mouse movement and choose how to display the measure values: absolute, percentage or both. These two features allow the visualization of data just moving the mouse over the slice: the slice is highlighted and values are shown in the center of the ring while the root-node path for the node selected is displayed on the left bottom corner of the page. Opacity and Breadcrumb configuration are available only on Comunity Edition. The tooltip is a mandatory field since it shows the value of the selected slice. Therefore be sure to have filled it before saving by using the **Explanation detail** panel. On Comunity Edition you have option custom the root-node path, clicking on the **Sequence** icon and choose position, label tail size and text style. **Sequence** option is not available on Enterprise edition, it is deprecated. Figure below sums up the three features.
 
 .. figure:: media/image1070809.png
 
@@ -386,7 +387,7 @@ In this example three different classes of iris are studied. Combining the value
 
 Therefore, select **parallel** as chart type using the designer interface, then choose one or more attributes in the X-axis panel and one or more measures in the Y-axis panel.
 
-On the **Configuration** tab you can set the generic configuration for the chart and you must fill the **Series as filter column** filed under ”Limit configuration”.
+On the **Configuration** tab you can set the generic configuration for the chart and you must fill the **Series as filter column** filed under ”Limit configuration”. Under ”Tooltip configuration” there is new property available - **Maximum number of records to show tooltip**. It is used to limit showing tooltip in case there are lot of records returned from dataset, which make chart more readable. 
 
 Heatmap chart
 ~~~~~~~~~~~~~
@@ -497,6 +498,49 @@ Gauge chart uses needles to show information as a dial reading. It allows to vis
 For gauge chart you should have only series items, the one that gives you values for the chart. So, the defined dataset to be used should provide numerical data for the Y-axis for the gauge chart. After selecting the dataset go to the designer and select **gauge** in chart type combobox. Then choose one or more measure on the Y-axis panel on the **Structure**. Moreover you must not forget to provide all data needed for the **Axis style configuration** of the Y-axis.
 
 When you finished to set all the mandatory and optional parameters and configurations in the **Structure** tab you can select the **Configuration** tab and set the generic configuration of the chart.
+
+Bubble chart
+~~~~~~~~~~~~
+
+A bubble chart requires three dimensions of data; the x-value and y-value to position the bubble along the value axes and a third value for its volume, z-value. It is a generalization of the scatter plot, replacing the dots with bubbles. 
+
+.. figure:: media/bubble_chart.png
+
+    Bubble chart.
+
+
+Inside X,Y,Z containers, user can put only **measure values**. Inside Categories container user can put **attributes** that he wants to see in the **tooltip**.
+
+.. figure:: media/bubble_chart_conf.png
+
+    Bubble configuration.
+
+
+.. figure:: media/bubble_tooltip.png
+
+    Bubble tooltip.
+
+
+Inside **Advanced tab**, user can find configuration for **plotband** and **plotline** of xaxis and yaxis. 
+
+.. figure:: media/bubble_plotband_and_line.png
+
+    Bubble plotband and plotline configuration.
+
+	
+User also has option for **splitting serie** by one of two categories. Split option has limit on **maximum** two categories. User can set which category will be used for coloring bubbles. And also can show/hide values that are inside bubbles.
+
+.. figure:: media/bubble_split_conf.png
+
+    Bubble split configuration.
+
+
+.. figure:: media/bubble_split.png
+
+    Bubble split examples.
+	
+Difference between **One category - split disabled** and **Two categories - split disabled** is what is present in the tooltip.
+
 
 A short comment on chart drill down
 ---------------------------------------

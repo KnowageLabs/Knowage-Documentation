@@ -269,13 +269,12 @@ To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Det
 
     Detail panel of LOV creation, second step.
 
-The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are selectable at document execution. In fact the user can choose among:
+The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are displayed and selectable when executing the document. In fact the user can choose among:
 
-- **List values selection**: the filter will look like a lookup table;
-- **Pop up**: the filter will look like a lookup table;
-- **Slider**: the user can drag the slider to choose the parameter;
-- **Tree**: made for hierarchical LOV, lets the users navigate the parameters in a hierarchical way;
-- **Combo Box values selection**: the filter will look like a drop down menu.
+- **Select from list**: all admissible values will be displayed directly within the drivers panel;
+- **Select from popup window**: user will be able to select between admissible values by a lookup table displayed within a popup window;
+- **Select from tree**: conceived for hierarchical LOVs, lets the users navigate the values in a hierarchical way;
+- **Select from combobox**: the driver will look like a drop down menu.
 
 The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next sections for this kind of input.
 
@@ -342,7 +341,7 @@ Once you have saved the LOV, just log out from Knowage and log in with a differe
     Behavioural Model Schema.
 
 Behavioural Model Lineage
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It is possible to show a summary of the links between the LOVs, the analytical driver and the documents by selecting **Behavioural Model** > **Behavioural Model Lineage**.
 
