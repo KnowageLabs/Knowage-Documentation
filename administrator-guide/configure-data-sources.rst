@@ -74,7 +74,6 @@ Dialect
          +-----------------------+-------------------+
          | Orient DB             | 3.0.2             |
          +-----------------------+-------------------+
-         +-----------------------+-------------------+
          | Amazon RedShift       | (JDBC driver v1)  |
          +-----------------------+-------------------+
 
@@ -239,7 +238,7 @@ Google Big Query
 
 Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
 
-For exmaple, to create a JDBC connection to a Google Big Query dataset using a service account you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
+For example, to create a JDBC connection to a Google Big Query dataset using a service account you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
 
 .. code-block:: xml
 
@@ -255,7 +254,7 @@ Amazon RedShift
 Knowage supports Amazon RedShift datasources via Official v1 JDBC Driver: see `official reference <https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html>`_.
 According to documentation using JDBC drivers v1 a RedShift connection configuration can be done exactly like a PostgreSQL configuration.
 You can test it creating an example db like this one:  `official sample testing db <https://docs.aws.amazon.com/redshift/latest/dg/c_sampledb.html>`_.
-To create a JDBC connection to a Amazon RedShift dataset using a RedShift-only connection you can add the following configuration to ``TOMCAT_HOME/conf/server.xml``:
+To create a JDBC connection to an Amazon RedShift dataset using a RedShift-only connection you can add the following configuration to ``TOMCAT_HOME/conf/server.xml``:
 
 .. code-block:: xml
 
