@@ -15,7 +15,7 @@ Carry out the following steps:
 * edit ``/cas/WEB-INF/classes/cas_spagobi.properties`` inserting the connection parameters for the metadata database of Knowage,as following
 
 	.. _conneparamknow:
-	.. code-block::
+	.. code-block:: xml
 	   :linenos:
 	   :caption: Connection parameters for Knowage metadata db.
 
@@ -37,28 +37,28 @@ We suggest to refer to the Java documents for more details. In the following we 
 
 * generate a copy of the public/private key-pair into a repository (keystore) called ``keystore.jks``, as below:
 
-	.. code-block:: bash
-       :linenos:
-       :caption: keystore.jks creation.
+.. code-block:: bash
+   :linenos:
+   :caption: keystore.jks creation.
 
-   			$JAVA_HOME/bin/keytool -genkeypair -keystore keystore.jks -storepass <keystore password> -alias <certificate alias> -keyalg RSA -keysize 2048 -validity 5000 -dname CN=<server name that hosts Knowage >, OU=<organization unit>, O=<organization name>,L=<locality name>, ST=<state name>, C=<country>                    
+   	$JAVA_HOME/bin/keytool -genkeypair -keystore keystore.jks -storepass {keystore password} -alias {certificate alias} -keyalg RSA -keysize 2048 -validity 5000 -dname CN={server name that hosts Knowage}, OU={organization unit}, O={organization name},L={locality name}, ST={state name}, C={country}
 
 * export a certificate in a ``cert.crt`` file, as suggested below:
 
-		.. code-block:: bash
-           :linenos:
-		   :caption: Certificate export.
+.. code-block:: bash
+   :linenos:
+   :caption: Certificate export.
 
-   				$JAVA_HOME/bin/keytool -export -alias <alias of the certificate> -file cert.crt -keystore keystore.jks 
+   	$JAVA_HOME/bin/keytool -export -alias {alias of the certificate} -file cert.crt -keystore keystore.jks 
 
 * set the certificate inside the CA certificates of the JDK to make it accessible (the user will be asked the CA certificates password, the default one is *changeit*)
 
-		.. code-block:: bash
-           :linenos:
-           :caption: Importing the certificate into JDK CA repository.
+.. code-block:: bash
+   :linenos:
+   :caption: Importing the certificate into JDK CA repository.
 
-   				$JAVA_HOME/bin/keytool -import -trustcacerts -alias <alias del certificato> -file cert.crt -keystore  
-   				$JAVA_HOME/jre/lib/security/cacerts
+   	$JAVA_HOME/bin/keytool -import -trustcacerts -alias {alias del certificato} -file cert.crt -keystore
+   	$JAVA_HOME/jre/lib/security/cacerts
 
 Configuration of the HTTPS protocol for Tomcat
 ----------------------------------------------
