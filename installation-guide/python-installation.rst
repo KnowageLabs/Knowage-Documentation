@@ -9,9 +9,9 @@ Install knowage-python webservice
 
 The knowage-python package contains the source code of the webservice that has to be installed and run on the server. You can download it via ``pip`` with the command:
 
-.. code-block::
+.. code-block:: bash
     
-	pip install knowage-python==<knowage_version (ex: 7.2.2)>
+	pip install knowage-python=={knowage_version_number}
 	
 or simply you can find it in the Knowage-Server github repository under the Knowage-Python folder.
 
@@ -48,7 +48,7 @@ The service leverages on Flask, for deployment in any other environment take a l
 .. important::
      **Webservice permissions**
 
-     The knowage-python webservice must have the rights to read/write in its own folders (pythonwebservice/*). 
+     The knowage-python webservice must have the OS rights to read/write in its own folders. 
 
 
 Configure Knowage to enable Python/R functionalities

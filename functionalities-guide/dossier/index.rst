@@ -64,7 +64,7 @@ Image adding (PPT_TEMPLATE)
 
 Suppose you have to create a ppt/pptx file where to place the images relating to one or more reports. You have only to configure XML template defining some placeholders to be use for replacing and execute it. Below is shown an example of an XML template used for this purpose.
 
-.. code-block::
+.. code-block:: xml
     :linenos:
     :caption: Example (a) of template for Dossier for Image replacement on docx file.
 

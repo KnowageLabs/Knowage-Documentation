@@ -233,7 +233,7 @@ Example parameters for the connection are:
 Unless you are using Spark SQL to read from Cassandra, the definition of a business model over Cassandra data using Knowage Meta will be available in the next releases.
 
 Google Big Query
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
 

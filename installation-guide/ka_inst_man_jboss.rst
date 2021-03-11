@@ -149,7 +149,7 @@ Datasource link within the applications
 Control that in all the JBOSS_HOME/standalone/deployments/knowage*.war/META-INF/context.xml files there are the links reported in :numref:`datasourcelink`:
 
 .. _datasourcelink:
-.. code-block::
+.. code-block:: xml
    :linenos:
    :caption: DataSource link syntax.
 
@@ -338,7 +338,7 @@ server-config.wsdd tests
 In Knowage server the core and its analytical engines exchange information through some SOAP services. Those services can send/receive attached files: those files are temporarely stored in a folder that is configured in the knowage/WEB-INF/server-config.wsdd file. The :numref:`confofthefl` shows the syntax.
 
 .. _confofthefl:
-.. code-block::
+.. code-block:: xml
    :linenos:
    :caption: Configuration of the files.
 

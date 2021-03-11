@@ -65,7 +65,7 @@ Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. W
 
 You have to configure these following Hibernate configuration files and set the chosen dialect:
 
-.. code-block::
+.. code-block:: xml
    :linenos:
 
 	knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
@@ -93,7 +93,7 @@ Modification of the Quartz configuration
 
 The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It is essential to enhance in this file the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Following the possible values:
 
-.. code-block::
+.. code-block:: xml
    :linenos:
 
 	 # Hsqldb delegate class
@@ -109,7 +109,7 @@ Clustering
 
 When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the ``knowage/WEB-INF/classes/quartz.properties`` file of every involved machines:
 
-.. code-block::
+.. code-block:: xml
    :linenos:
 
 	 org.quartz.jobStore.isClustered = true
@@ -131,7 +131,7 @@ Shortly, to configure the Knowage log folder the user must execute the following
 - only for the Birt Engine, to set the property ``logDirectory`` inside the ``WEB-INF/classes/BirtLogConfig.properties`` file of the knowagebirtreportengine application to ``LOG_DIR_PATH``.
 
 Enable Java Security Manager
----------
+-----------------------------
 
 In Knowage, a user can create datasets, LOVs, etc.. with script languages like JavaScript. That introduces a security concern where a malicious user can execute code that can break the entire system. Java allows a system administrator to enable a `Security Manager <https://docs.oracle.com/javase/tutorial/essential/environment/security.html>`_ and to create a sandbox to limit privileges around the code that execute the script.
 
@@ -143,7 +143,7 @@ The Security Manager can be enabled with the following steps:
 
 The Security Policy is a text file read by a Security Manager that specifies all the privileges that a JVM can give to Java code: Tomcat has already a default policy in the file ``TOMCAT_HOME/conf/catalina.policy`` but is too much strict for Knowage code that needs to write multiple logs, make network connection and execute external applications. Knowage is already secured and can use a more relaxed policy like:
 
-.. code-block:: bash
+.. code-block:: xml
         :caption: Complete path of the script
 
         grant {
@@ -171,7 +171,7 @@ To enable the Security Manager a system administrator have to add some options t
 
 
 Installation of Chromium Cockpit Export script
----------
+-----------------------------------------------
 .. important::
          **Enterprise Edition only**
 
