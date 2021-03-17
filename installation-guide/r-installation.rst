@@ -25,21 +25,3 @@ In order to do so, it's enough to run the main file "knowage-r.R" with the basic
      **Webservice permissions**
 
      The knowage-r webservice must have the rights to read/write in its own folder. 
-
-
-Configure Knowage to enable Python/R functionalities
-=====================================================
-
-From the Knowage interface you can now enable the Python/R functionalities. 
-
-Go to the ``Roles management`` section, in the *Authorizations* tab under *Widgets* check the ``Edit Python Scripts`` option.
-Now you will be able to see the Python and R Dataset and Widget among the list of available ones.
-
-Go to the ``Configuration management`` section, and create new variables of category ``PYTHON_CONFIGURATION`` and ``R_CONFIGURATION``. The value of this variables will specify the addresses of the Python and R webservices (es. ``python.webservice.address.com/domain``).
-Now you will be able to see the addresses of the so configured environments when creating a Dataset or a Widget.
-
-**Be aware that depending on the architecture of your solution, you might have to define two different addresses for reaching the same instance of Python.**
-
-*  One address is for reaching Python from the client (browser) and will be used when creating a widget,
-*  One address is for reaching Python from the server (Knowage) and will be used when creating a Dataset.
-
