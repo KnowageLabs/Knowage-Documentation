@@ -15,7 +15,7 @@ The knowage-python package contains the source code of the webservice that has t
 	
 or simply you can find it in the Knowage-Server github repository under the Knowage-Python folder.
 
-You will now have to create the configuration for the webservice. This configuration will be contained inside a file called ``config.xml`` and placed inside the ``Knowage-Python/src/app`` folder.
+You will now have to create the configuration for the webservice. This configuration will be contained inside a file called ``config.xml`` and placed inside the ``Knowage-Python/pythonwebservice/app`` folder.
 
 The structure of the file will be as follows:
 
@@ -43,7 +43,7 @@ Run knowage-python webservice
 Once you have installed all the requirements, you need to get the python-webservice running. In order to do so, you can rely on a WSGI Server.
 If you are working on a UNIX environment, take a look at gunicorn (https://gunicorn.org/).
 The service leverages on Flask, for deployment in any other environment take a look at the official documentation (https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment).
-**The entry point for the application is ``Knowage-Python/src/knowage-python.py`` and the default port is ``5000``.**
+**The entry point for the application is ``Knowage-Python/pythonwebservice/knowage-python.py`` and the default port is ``5000``.**
 
 .. important::
      **Webservice permissions**
