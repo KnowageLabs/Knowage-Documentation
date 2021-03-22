@@ -3,9 +3,9 @@ Functionalities
 
 .. toctree::
    :caption: Table of Contents
-
+   
    basic-data-access/index.rst
-   advanced-data-access/index.rst
+   advanced-data-access/index.rst 
    behavioural-model/index.rst
    analytical-document/index.rst
    chart/index.rst
@@ -17,6 +17,7 @@ Functionalities
    jasper-reporting/index.rst
    location-intelligence/index.rst
    svg-document-visualization/index.rst
+   datamining/index.rst
    multidimensional-analysis/index.rst
    what-if-analysis/index.rst
    glossary-and-data-lineage/index.rst
