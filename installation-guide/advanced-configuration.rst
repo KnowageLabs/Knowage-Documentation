@@ -150,7 +150,7 @@ Moreover, each profile has the following values:
 * from: the address to which the mail will be associated,
 * user: the user of the server connection,
 * password: user’s password,
-* useSSL: in case the SSL is in use.
+* security: the user must choose between NONE, SSL and STARTTLS.
 
 Maximum file size
 -----------------
