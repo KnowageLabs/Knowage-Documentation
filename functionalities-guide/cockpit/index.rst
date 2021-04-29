@@ -282,6 +282,7 @@ For all the columns, if at least one variable is set, the variables settings box
 
 
 Clicking on the plus button you can add one or more conditions. The possible actions are:
+
     - Hide column: the column will be shown conditionally depending on the condition set.
     - Set column header name: the column name will be replaced by the variable value.
 
