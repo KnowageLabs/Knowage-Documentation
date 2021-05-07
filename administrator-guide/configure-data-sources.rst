@@ -78,6 +78,8 @@ Dialect
          +-----------------------+-------------------+
          | Amazon RedShift       | (JDBC driver v1)  |
          +-----------------------+-------------------+
+         | Azure Synapse         | -                 |
+         +-----------------------+-------------------+
 
 Read Only
    Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
@@ -243,3 +245,18 @@ To create a JDBC connection to an Amazon RedShift dataset using a RedShift-only 
 .. code-block:: xml
 
  <Resource auth="Container" driverClassName="com.amazon.redshift.jdbc.Driver" logAbandoned="true" maxActive="10" maxIdle="1" minEvictableIdleTimeMillis="60000" name="jdbc/redshift" password="password" removeAbandoned="true" removeAbandonedTimeout="3600" testOnReturn="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource" url="jdbc:redshift://examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com:5439/dev" username="user" validationQuery="SELECT 1"/>
+
+Azure Synapse
+~~~~~~~~~~~~~
+
+Knowage supports connections to Azure Synapse datasources via SQL Server JDBC Driver (`official documentation <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/connection-strings>`_).
+
+The following example shows how to create a JDBC connection to an Azure Synapse dataset, by adding the following configuration to ``TOMCAT_HOME/conf/server.xml``:
+
+.. code-block:: xml
+
+<Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" logAbandoned="true" maxIdle="4" maxTotal="50" maxWait="-1"
+	 minEvictableIdleTimeMillis="60000" removeAbandoned="true" removeAbandonedTimeout="3600" testOnReturn="true" testWhileIdle="true"
+	 timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource" name="jdbc/synapse" username="<user>" password="<password>" 
+	 url="jdbc:sqlserver://your-synapse-instance.sql.azuresynapse.net:1433;database=<database>" validationQuery="select 1"/>
+

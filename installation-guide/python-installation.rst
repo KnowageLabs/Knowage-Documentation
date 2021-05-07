@@ -15,7 +15,9 @@ The knowage-python package contains the source code of the webservice that has t
 	
 or simply you can find it in the Knowage-Server github repository under the Knowage-Python folder.
 
-You will now have to create the configuration for the webservice. This configuration will be contained inside a file called ``config.xml`` and placed inside the ``Knowage-Python/src/app`` folder.
+If you downloaded knowage-python via pip, use "pip show knowage-python" to find the pip package installation location. Then copy the source file rom this folder to your own custom folder such as ``/opt/knowagepython``.
+
+You will now have to create the configuration for the webservice. This configuration will be contained inside a file called ``config.xml`` and placed inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder.
 
 The structure of the file will be as follows:
 
@@ -43,13 +45,36 @@ Run knowage-python webservice
 Once you have installed all the requirements, you need to get the python-webservice running. In order to do so, you can rely on a WSGI Server.
 If you are working on a UNIX environment, take a look at gunicorn (https://gunicorn.org/).
 The service leverages on Flask, for deployment in any other environment take a look at the official documentation (https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment).
-**The entry point for the application is ``Knowage-Python/src/knowage-python.py`` and the default port is ``5000``.**
+**The entry point for the application is <KNOWAGE_PYTHON_HOME>/src/knowage-python.py and the default port is 5000.**
 
 .. important::
      **Webservice permissions**
 
-     The knowage-python webservice must have the OS rights to read/write in its own folders. 
+     The knowage-python webservice must have the OS rights to read/write in its own folders.
 
+Following you can find an example that shows you how to run knowage-python with gunicorn.
+First you need to create a configuration file called ``gunicorn.conf.py`` and place it under ``<KNOWAGE_PYTHON_HOME>/src`` folder.
+
+.. code-block:: python
+
+	import multiprocessing
+
+	bind = "0.0.0.0:5000"
+	workers = multiprocessing.cpu_count() * 2 + 1
+	timeout = 30
+	keepalive = 2
+	user = <user>
+	group = <group>
+	loglevel = 'info'
+	accesslog = '/var/log/gunicorn-access.log' 
+	errorlog = '/var/log/gunicorn-error.log' 
+	access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
+
+Then to start the service run the following command inside the ``<KNOWAGE_PYTHON_HOME>/src`` folder.
+
+.. code-block:: bash
+
+	gunicorn --certfile cert.pem -c file:gunicorn.conf.py knowage-python
 
 Configure Knowage to enable Python/R functionalities
 -----------------------------------------------------
