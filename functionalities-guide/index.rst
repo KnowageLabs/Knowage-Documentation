@@ -28,3 +28,4 @@ Functionalities
    alert/index.rst
    news-management/index.rst
    dataset-preview/index.rst
+   widget-gallery/index.rst
