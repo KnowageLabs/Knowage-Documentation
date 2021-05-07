@@ -263,8 +263,6 @@ If the column is a measure, more functionalities will become available:
     - Thresholds: you can choose to set some thresholds that will trigger font color, background color or will show icons if the chosen condition is satisfied.
     - Format: you can choose the prefix, suffix and the precision (i.e. 9.8 m/s). Please be aware that the data will be formatted following the locale of the user. Otherwise you can choose to treat it as string.
 
-For all the columns, if at least one variable is set, the variables condition box will appear. Depending on the variable usage it will be possible to set a dynamic header or to hide the column conditionally.
-
 
 .. _columnsettings:
 .. figure:: media/image158.png
@@ -274,6 +272,27 @@ For all the columns, if at least one variable is set, the variables condition bo
 Note that here you can indicate the column type and the aggregation. To add an aggregation to a column you must control the type of data that column has. An aggregation can only be added if the column value is of “number” type . The different aggregation functions are: *none (you also can not add any aggregation function)*, *Sum*, *Average*, *Maximum*, *Minimum*, *Count* and *Count distinct*.
 
 If a column group has been set another option will become available in order to set the optional group belonging of the column.
+
+
+For all the columns, if at least one variable is set, the variables settings box will appear. Depending on the variable usage it will be possible to set a dynamic header or to hide the column conditionally.
+
+.. figure:: media/image158c.png
+
+    Variable settings box.
+
+
+Clicking on the plus button you can add one or more conditions. The possible actions are:
+
+    - Hide column: the column will be shown conditionally depending on the condition set.
+    - Set column header name: the column name will be replaced by the variable value.
+
+Multiple conditions can be set, but a condition fullfilling the "=" will have higher priority.
+
+.. figure:: media/image158d.png
+
+    Variable action set.
+
+
 
 
 The **Style** tab is where you can customize the table by using the different options of style. It is divided into eight parts:

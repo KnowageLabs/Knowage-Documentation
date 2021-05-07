@@ -150,7 +150,7 @@ Moreover, each profile has the following values:
 * from: the address to which the mail will be associated,
 * user: the user of the server connection,
 * password: user’s password,
-* useSSL: in case the SSL is in use.
+* security: the user must choose between NONE, SSL and STARTTLS.
 
 Maximum file size
 -----------------
@@ -192,6 +192,24 @@ Knowage manages the multi-language. The list of all languages is manageable from
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGES**: the list of all supported languages underneath this formalism are: [it,IT],[en,US],[fr,FR],[es,ES];
 
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default**: the default value is [en,US].
+
+Adding new languages
+--------------------
+
+To add more languages to the list (if not provided) a few steps are required:
+
+* Inside the "Configuration Management" add the language as required in previous chapter. If you don't know the languages and country code you can get them from this `language code table <http://www.lingoes.net/en/translator/langcode.htm>`_
+* Inside the "Domain Management" add the language as language ISO code as in the following image.
+
+.. figure:: media/image35.png
+
+    domain management example.
+
+* Add inside the project folder Knowage-Server/knowage/src/main/webapp/js/lib/angular-localization/ the desired locale file from the `angular locales <https://github.com/angular/angular.js/tree/master/src/ngLocale>`_ and rename it with the lang code from `language code table <http://www.lingoes.net/en/translator/langcode.htm>`_
+* Add inside the project folder Knowage-Server/knowage/src/main/webapp/js/src/messages/ the translations file. The name should be messages_country_LANGUAGE.properties. Ie: messages_country_sw_se.properties. 
+
+Warning: use the last step only if no zanata translations are available. Using Zanata should be the primary translations source.
+
 
 LDAP security connectors
 ------------------------

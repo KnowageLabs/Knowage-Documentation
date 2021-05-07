@@ -276,3 +276,18 @@ For example, to install non-latin languages fonts you could use:
         sudo apt-get install korean*
 
         etc...
+
+
+Supported browsers
+------------------
+
+Knowage supports the newest and the second to last version of these browsers:
+
+- `Google Chrome <https://www.google.com/intl/en_en/chrome/>`_
+- `Firefox <https://www.mozilla.org/en-US/firefox/new/>`_
+- `Microsoft Edge <https://www.microsoft.com/en-us/edge?icid=SSM_AS_Promo_Other_Edge>`_
+
+.. important::
+         **Internet Explorer**
+
+         Internet Explorer is no longer supported by Microsoft and it is also vulnerable. Please, use one of the supported browser listed above.
