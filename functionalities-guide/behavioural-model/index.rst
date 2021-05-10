@@ -76,22 +76,20 @@ It is important to observe that there are only five predefined role types (namel
 
 In the following table we sum up the role type usage.
 
-.. list-table:: Role type schema
-   :widths: 25 25 50
-   :header-rows: 1
++----------------------+-----------------------------------------------------------------------------------------+
+| Role Type            | Description                                                                             | 
++======================+=========================================================================================+
+| User                 | End user: Executes documents visible to him and creates ad-hoc reporting analysis.      | 
++----------------------+-----------------------------------------------------------------------------------------+
+| Administrator        | General administrator: Manages all Knowage functionalities.                             | 
++----------------------+-----------------------------------------------------------------------------------------+
+| Developer            | Developer: Creates and modifies datasets and documents.                                 | 
++----------------------+-----------------------------------------------------------------------------------------+
+| Test user            | Test user: Tests analytical documents.                                                  | 
++----------------------+-----------------------------------------------------------------------------------------+
+| Model Administrator  | Model administrator: Manages the Behavioural Model and its associated functionalities.  | 
++----------------------+-----------------------------------------------------------------------------------------+
 
-   * - Role Type
-     - Description
-   * - User
-     - End user: Executes documents visible to him and creates ad-hoc reporting analysis.
-   * - Administrator
-     - General administrator: Manages all Knowage functionalities.
-   * - Developer
-     - Developer: Creates and modifies datasets and documents.
-   * - Test user
-     - Test user: Tests analytical documents.
-   * - Model Administrator
-     - Model administrator: Manages the Behavioural Model and its associated functionalities.
 
 In addition, the user can assign a Code to the Role, a Description and if it is a public role or not. When the role is checked as a public one, the user that accesses the platform using that role and that executes one document will be able to use the "Copy link" option  available in the three-dots icon, at the top right corner of the page. Passing the link to an external user, the latter will be able to see the document without acessing the platform. 
 
