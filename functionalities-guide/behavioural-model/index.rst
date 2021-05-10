@@ -128,6 +128,12 @@ Click on the red Plus button to define a new profile attribute. The user is aske
 .. figure:: media/image66.png
 
     Defining a new profile attribute.
+    
+Note that if multivalue is enabled the technical user can choose if the syntax to use the "simple" one or a more complex. In both case, an example of the usage is shown below. Remember that in the manual input option values must be edited so the user must be aware of which modality has been chosen.
+
+.. figure:: media/image77.png
+
+    Defining a new profile attribute: multivalue option with simple or complex syntax.
 
 If the profile attribute is loaded by a LOV (List of values) a combobox showing the list of configured LOV will be displayed. 
 
@@ -135,7 +141,11 @@ If the profile attribute is loaded by a LOV (List of values) a combobox showing 
 
     Defining a new profile attribute trough a LOV.
 
-See the dedicated paragragh to know how to configure a new LOV. If Multivalue check is enabled remember to separate the values of the profile attributes using commas.
+See the dedicated paragragh to know how to configure a new LOV. If Multivalue check is enabled again the technical user can choose if the syntax to use the "simple" one or a more complex. In this case values will be passed to the enviroment and used in LOVs or Datasets accordingly.
+
+.. figure:: media/image76.png
+
+    Defining a new profile attribute: multivalue option with simple or complex syntax.
 
 We stress that the Profile Management session is used only to declare the profile attribute. Profile attributes must be assigned to each user accordingly using the Users management session.
 
