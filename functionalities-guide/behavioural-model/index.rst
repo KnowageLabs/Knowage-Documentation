@@ -114,7 +114,7 @@ Then, the technical user must use the Business Models, Datasets and KPI categori
 Profile attributes
 -------------------------------
 
-Before defining a new user, it is a good practice to create the proper set of profile attributes. These are necessary to distinguish users with the same role who have though different tasks in the analysis of data. In other words, profile attributes are variables that are used to filter data *before* the execution of a document, to custom the list of values returned in the parameters panel of a document to the user's domain and to have an additional tool to handle visibility of documents.
+Before defining a new user, it is a good practice to create the proper set of profile attributes. These are necessary to distinguish users with the same role who have though different tasks in the analysis of data. In other words, profile attributes are variables that are used to filter data *before* the execution of a document, to custom to the user's domain the list of values returned in the parameters panel of a document and to have an additional tool to handle visibility of documents.
 
 To create a new profile attributes, select the Profile Attribute Management from the Profile Management section of Knowage main menu.
 
@@ -122,7 +122,7 @@ To create a new profile attributes, select the Profile Attribute Management from
 
     Profile Attribute Management.
 
-Click on the red Plus button to define the profile attribute. The user is asked to insert the **Name**, a **Description**, the **Type** (number, string or date), how the value is associated (Manual Input or Lov), if it is Multivalue and if other users can see the variable editable when defining users' properties (see next paragraph). Then just click on Save and the new attribute will be added to the list on the left of the window.
+Click on the red Plus button to define a new profile attribute. The user is asked to insert the **Name**, a **Description**, the **Type** (number, string or date), how the value is associated (Manual Input or Lov), if it is Multivalue and if other users can see the variable editable when defining users' properties (see next paragraph). Then just click on Save and the new attribute will be added to the list on the left of the window.
 
 .. figure:: media/image66.png
 
