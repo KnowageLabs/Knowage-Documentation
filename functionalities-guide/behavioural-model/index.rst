@@ -128,7 +128,13 @@ Click on the red Plus button to define a new profile attribute. The user is aske
 
     Defining a new profile attribute.
 
-If the profile attribute is loaded by a LOV (List of values) a combobox showing the list of configured LOV will be displayed. See the dedicated paragrapgh to know how to configure a new LOV. If Multivalue check is enabled remember to separate the values of the profile attributes using commas.
+If the profile attribute is loaded by a LOV (List of values) a combobox showing the list of configured LOV will be displayed. 
+
+.. figure:: media/image67.png
+
+    Defining a new profile attribute trough a LOV.
+
+See the dedicated paragragh to know how to configure a new LOV. If Multivalue check is enabled remember to separate the values of the profile attributes using commas.
 
 We stress that the Profile Management session is used only to declare the profile attribute. Profile attributes must be assigned to each user accordingly using the Users management session.
 
