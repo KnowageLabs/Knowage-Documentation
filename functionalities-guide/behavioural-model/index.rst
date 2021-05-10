@@ -179,6 +179,19 @@ If no default role has been given, every time the user executes one document he/
     Document execution when user with more than one role has no default one.
 
 
+Finally initiate the profile attributes using the Attribute tab.
+
+Profile attributes can be single value or multivalue. For single manual input, just type the value. For simple multivalue ones, separate values using commas. 
+
+.. figure:: media/image74.png
+
+    single or multivalues manual input profile attributes.
+  
+If the profile attribute uses a LOV a pop up icon is available at the end of the row. Use the GUI to check values and save.
+    
+.. figure:: media/image75.png
+
+    Loading profile attributes using LOV.
 
 Analytical drivers
 ----------------------
