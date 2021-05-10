@@ -27,6 +27,7 @@ The *role* of a user represents a categorization of a group of users. These role
 
 In the following paragraphs we describe how to properly configure users inside Knowage, how to handle documents vsibility and filter data by profile attributes and manage users' interaction of the Knwowage interface.
 
+
 Roles
 -------------------------------
 
@@ -192,6 +193,8 @@ If the profile attribute uses a LOV a pop up icon is available at the end of the
 .. figure:: media/image75.png
 
     Loading profile attributes using LOV.
+    
+Remember that the profile attributes are loaded **after** the authentication process so if the technical user changes some configuration of an end user remember to ask that end user to log out the environment and log in again.
 
 Analytical drivers
 ----------------------
