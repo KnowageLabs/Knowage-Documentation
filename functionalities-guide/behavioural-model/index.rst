@@ -192,7 +192,7 @@ If no default role has been given, every time the user executes one document he/
 
 Finally initiate the profile attributes using the Attribute tab.
 
-Profile attributes can be single value or multivalue. For single manual input, just type the value. For simple multivalue ones, separate values using commas. 
+Profile attributes can be single value or multivalue. For single manual input, just type the value. For simple multivalue ones, separate values using commas or the complex syntax, according to the setting of the profile attributes. 
 
 .. figure:: media/image74.png
 
