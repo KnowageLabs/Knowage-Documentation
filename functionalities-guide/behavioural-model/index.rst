@@ -65,13 +65,7 @@ In the Detail tab the technical user must define the Name and the Type of the Ro
 .. figure:: media/image61.png
 
     Detail tab.
-
-In addition, the user can assign a Code to the Role, a Description and if it is a public role or not. When the role is checked as a public one, the user that accesses the platform using that role and that executes one document will be able to use the "Copy link" option  available in the three-dots icon, at the top right corner of the page. Passing the link to an external user, the latter will be able to see the document without acessing the platform. 
-
-.. figure:: media/image62.png
-
-    Copy link option for public roles.
-
+    
 It is important to observe that there are only five predefined role types (namely this field cannot be edited):
 
 - User,
@@ -79,6 +73,32 @@ It is important to observe that there are only five predefined role types (namel
 - Developer,
 - Test User
 - Model Administrator.
+
+In the following table we sum up the role type usage.
+
+.. list-table:: Role type schema
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Role Type
+     - Description
+   * - User
+     - End user: Executes documents visible to him and creates ad-hoc reporting analysis.
+   * - Administrator
+     - General administrator: Manages all Knowage functionalities.
+   * - Developer
+     - Developer: Creates and modifies datasets and documents.
+   * - Test user
+     - Test user: Tests analytical documents.
+   * - Model Administrator
+     - Model administrator: Manages the Behavioural Model and its associated functionalities.
+
+In addition, the user can assign a Code to the Role, a Description and if it is a public role or not. When the role is checked as a public one, the user that accesses the platform using that role and that executes one document will be able to use the "Copy link" option  available in the three-dots icon, at the top right corner of the page. Passing the link to an external user, the latter will be able to see the document without acessing the platform. 
+
+.. figure:: media/image62.png
+
+    Copy link option for public roles.
+
 
 In the Authorizations tab the technical user must assign (or deselect) the actions that the role is allowed (or denied) to perform. For instance, to save or view metadata,  to enable the user to persist dataset or create federated ones, to allow the user to create QBE queries and so on.
 
