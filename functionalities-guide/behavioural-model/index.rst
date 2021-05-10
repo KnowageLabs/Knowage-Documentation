@@ -114,6 +114,24 @@ Then, the technical user must use the Business Models, Datasets and KPI categori
 Profile attributes
 -------------------------------
 
+Before defining a new user, it is a good practice to create the proper set of profile attributes. These are necessary to distinguish users with the same role who have though different tasks in the analysis of data. In other words, profile attributes are variables that are used to filter data *before* the execution of a document, to custom the list of values returned in the parameters panel of a document to the user's domain and to have an additional tool to handle visibility of documents.
+
+To create a new profile attributes, select the Profile Attribute Management from the Profile Management section of Knowage main menu.
+
+.. figure:: media/image65.png
+
+    Profile Attribute Management.
+
+Click on the red Plus button to define the profile attribute. The user is asked to insert the **Name**, a **Description**, the **Type** (number, string or date), how the value is associated (Manual Input or Lov), if it is Multivalue and if other users can see the variable editable when defining users' properties (see next paragraph). Then just click on Save and the new attribute will be added to the list on the left of the window.
+
+.. figure:: media/image66.png
+
+    Defining a new profile attribute.
+
+If the profile attribute is loaded by a LOV (List of values) a combobox showing the list of configured LOV will be displayed. See the dedicated paragrapgh to know how to configure a new LOV. If Multivalue check is enabled remember to separate the values of the profile attributes using commas.
+
+We stress that the Profile Management session is used only to declare the profile attribute. Profile attributes must be assigned to each user accordingly using the Users management session.
+
 
 Users
 -------------------------------
