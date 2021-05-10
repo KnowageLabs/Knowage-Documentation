@@ -48,6 +48,10 @@ To define a new role or modify one, click on Roles Management from the Profile M
 
 The Roles List page will open. Here the user can see the list of the existing roles. Each tenant contains an admin by default.
 
+.. figure:: media/image60.png
+
+    Roles List page.
+
 To define a new role, click on the red “Plus” button. Five tabs will be displayed in the right half part of the window:
 
 - detail,
@@ -56,11 +60,17 @@ To define a new role, click on the red “Plus” button. Five tabs will be disp
 - datasets,
 - KPI Categories.
 
-In the Detail tab the technical user must define the Name and the Type of the Role. In addition, the user can assign a Code to the Role, a Description and if it is a public role or not. When the role is checked as a public one, the user that accesses the platform using that role and that executes one document will be able to use the "Copy link" option  available in the three-dots icon, at the top right corner of the page. Passing the link to an external user, the latter will be able to see the document without acessing the platform. 
+In the Detail tab the technical user must define the Name and the Type of the Role. 
 
-.. figure:: media/image60.png
+.. figure:: media/image61.png
 
-    Roles Management.
+    Detail tab.
+
+In addition, the user can assign a Code to the Role, a Description and if it is a public role or not. When the role is checked as a public one, the user that accesses the platform using that role and that executes one document will be able to use the "Copy link" option  available in the three-dots icon, at the top right corner of the page. Passing the link to an external user, the latter will be able to see the document without acessing the platform. 
+
+.. figure:: media/image62.png
+
+    Copy link option for public roles.
 
 It is important to observe that there are only five predefined role types (namely this field cannot be edited):
 
@@ -72,7 +82,15 @@ It is important to observe that there are only five predefined role types (namel
 
 In the Authorizations tab the technical user must assign (or deselect) the actions that the role is allowed (or denied) to perform. For instance, to save or view metadata,  to enable the user to persist dataset or create federated ones, to allow the user to create QBE queries and so on.
 
+.. figure:: media/image63.png
+
+    Check/Uncheck Authorizations.
+
 Then, the technical user must use the Business Models, Datasets and KPI categories tabs to assign the respective categories. The role will therefore be see, manage or modify (according to the authorizations applied) only the business models, the Datasets and the KPI associated to the selected categories.
+
+.. figure:: media/image64.png
+
+    Assigning categories.
 
 
 Profile attributes
