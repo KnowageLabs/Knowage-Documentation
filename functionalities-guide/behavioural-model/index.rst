@@ -142,8 +142,43 @@ We stress that the Profile Management session is used only to declare the profil
 Users
 -------------------------------
 
+Once roles and profile attributes have been set, the technical user can proceed in creating a new (or more) user. To create a new user, click on Users Management from the Profile Management section of Knowage main menu. 
 
-You will not have grants to create new roles or users, but you are asked to match them during document profilation phases. In the following we are going to describe the elements needed for adding parameters. This elements involves profilation too. To conclude we will see how to manage accessibility while creating a document.
+.. figure:: media/image68.png
+
+    Users Management.
+
+Once again, click on the red Plus icon to create a new user. Three tabs open: Detail, Roles and Attributes.
+
+.. figure:: media/image69.png
+
+    Creating a new user.
+    
+The Detail tab is were the user is demanded to assign the **User ID**, **Full Name** and a **Password**. Observe that the new user will log in Knowage using the User ID (as username) and the password assigned. The Full Name will be displayed inside the environment, just beside Knowage logo in the knowage menu panel.
+
+Then associate a role to the user using the Role tab. Note that it is possible to assign more than one role to each role. When checking more then one role, a combobox will appear asking which the user will access the environment using a default role. 
+
+.. figure:: media/image70.png
+
+    Assigning more than one role with default one.
+    
+A user that has more than one role with default one can always change it using the available functionalities from Knowage user's setting panel.
+
+.. figure:: media/image71.png
+
+    Changing role.
+
+If no default role has been given, every time the user executes one document he/she is asked to select one to execute it.
+
+.. figure:: media/image72.png
+
+    No default role.
+    
+.. figure:: media/image73.png
+
+    Document execution when user with more than one role has no default one.
+
+
 
 Analytical drivers
 ----------------------
