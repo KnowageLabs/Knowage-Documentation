@@ -15,7 +15,7 @@ The knowage-python package contains the source code of the webservice that has t
 	
 or simply you can find it in the Knowage-Server github repository under the Knowage-Python folder.
 
-If you downloaded knowage-python via pip, use "pip show knowage-python" to find the pip package installation location. Then copy the source file rom this folder to your own custom folder such as ``/opt/knowagepython``.
+If you downloaded knowage-python via pip, use "pip show knowage-python" to find the pip package installation location. Then copy the source file from this folder to your own custom folder such as ``/opt/knowagepython``.
 
 You will now have to create the configuration for the webservice. This configuration will be contained inside a file called ``config.xml`` and placed inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder.
 
