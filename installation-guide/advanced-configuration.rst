@@ -248,14 +248,14 @@ In a Unix-like environment using Apache Tomcat you can add a custom JVM property
 .. code-block:: bash
         :linenos:
 
-        export JAVA_OPTS="${JAVA_OPTS} -Dldap.config=/opt/tomcat/resources/ldap.properties"
+        export JAVA_OPTS="${JAVA_OPTS} -Dldap.config=/opt/tomcat/conf/ldap.properties"
 
 In a Windows environment using Apache Tomcat you can add a custom JVM property to variable ``JAVA_OPTS`` in a ``setenv.bat`` file under ``bin`` folder:
 
 .. code-block:: bash
     :linenos:
 
-    set JAVA_OPTS="%JAVA_OPTS% -Dldap.config=C:/Tomcat/resources/ldap.properties"
+    set JAVA_OPTS="%JAVA_OPTS% -Dldap.config=C:/Tomcat/conf/ldap.properties"
 
 Below there is an example of the ldap.properties file configuration for both LDAP connectors:
 
