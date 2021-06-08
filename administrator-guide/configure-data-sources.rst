@@ -235,7 +235,7 @@ For example, to create a JDBC connection to a Google Big Query dataset using a s
 
 
 Google Cloud Spanner
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 Knowage supports Google Cloud Spanner datasources via the official open source JDBC driver: see `official documentation <https://cloud.google.com/spanner/docs/use-oss-jdbc>`_.
 
@@ -244,7 +244,7 @@ For example, to create a JDBC connection to a Google Cloud Spanner dataset using
 .. code-block:: xml
 
  <Resource auth="Container" driverClassName="com.google.cloud.spanner.jdbc.JdbcDriver" logAbandoned="true" maxActive="20" maxIdle="4"
-     maxWait="300" minEvictableIdleTimeMillis="60000" name="jdbc/my-bigquery-ds" removeAbandoned="true" removeAbandonedTimeout="3600"
+     maxWait="300" minEvictableIdleTimeMillis="60000" name="jdbc/my-spanner-ds" removeAbandoned="true" removeAbandonedTimeout="3600"
      testOnReturn="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource"
      url="jdbc:cloudspanner:/projects/<<project-id>>/instances/<<instance-name>>/databases/<<db-name>>;credentials=${catalina.home}/conf/google-cloud-spanner-auth-key.json"/>
 
