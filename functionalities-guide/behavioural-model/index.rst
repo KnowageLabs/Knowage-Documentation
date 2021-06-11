@@ -13,9 +13,6 @@ It mainly answers the following questions:
 
 The creation and the management of the behavioural model is in charge of Knowage Administrator. However when it has been designed and built, it has to be shared with developers as well. Indeed in developing phase you have to be aware of the visibility hierarchy. You need these information to set document options correctly.
 
-Roles, users and attributes
--------------------------------
-
 Knowage users are defined by:
 
 - identities,
@@ -24,11 +21,190 @@ Knowage users are defined by:
 
 The *identity* of a user consists of all data used to identify that user, i.e., a username and a password, as well as a human readable full name.
 
-The *profile* of a user consists of a set of properties called attributes, describing general information about the user, e.g., age and gender, but also domain-specific properties, such as the organizational unit to which he belongs. Some attributes, such as name and email, are defined by default in Knowage. Others can be added by the model administrator, as explained in the following sections.
+The *profile* of a user consists of a set of properties called attributes, describing general information about the user, e.g., age and gender, but also domain-specific properties, such as the organizational unit to which he/she belongs. Some attributes, such as name and email, are defined by default in Knowage. Others can be added by the model administrator, as explained in the following sections.
 
-The *role* of a user represents a categorization of a group of users. These roles may correspond to specific positions in the company, e.g., “general manager” or a “sales director”, or to a position with respect to the BI project, e.g., “data administrator” and “BI developer”. Different users may have the same role, as well as the same user may have multiple roles.
+The *role* of a user represents a categorization of a group of users. These roles may correspond to specific positions in the company, e.g., “general manager” or a “sales director”, or to a position with respect to the BI project, e.g., “data administrator” and “BI developer”. Different users may have the same role, as well as the same user may have multiple roles. 
 
-You will not have grants to create new roles or users, but you are asked to match them during document profilation phases. In the following we are going to describe the elements needed for adding parameters. This elements involves profilation too. To conclude we will see how to manage accessibility while creating a document.
+In the following paragraphs we describe how to properly configure users inside Knowage, how to handle documents vsibility and filter data by profile attributes and manage users' interaction of the Knwowage interface.
+
+
+Roles
+-------------------------------
+
+Before configuring a new role, the technical user must be aware of who is going to exploit the platform and which functionality contained in it is goign to be visible to whom. So the very first step is to divide users into groups. Each group will correspond to a role inside Knowage.
+
+Defining a role means to assign the set of permissions on:
+
+- authorizations on the usage of functionalities,
+- user's menu
+- documents visibility,
+- dataset, 
+- KPI exploitation.
+
+To define a new role or modify one, click on Roles Management from the Profile Management menu list, available on Knowage main menu. 
+
+.. figure:: media/image59.png
+
+    Roles Management.
+
+The Roles List page will open. Here the user can see the list of the existing roles. Each tenant contains an admin by default.
+
+.. figure:: media/image60.png
+
+    Roles List page.
+
+To define a new role, click on the red “Plus” button. Five tabs will be displayed in the right half part of the window:
+
+- detail,
+- authorizations,
+- business Models,
+- datasets,
+- KPI Categories.
+
+In the Detail tab the technical user must define the Name and the Type of the Role. 
+
+.. figure:: media/image61.png
+
+    Detail tab.
+    
+It is important to observe that there are only five predefined role types (namely this field cannot be edited):
+
+- User,
+- Administrator,
+- Developer,
+- Test User
+- Model Administrator.
+
+In the following table we sum up the role type usage.
+
++----------------------+-----------------------------------------------------------------------------------------+
+| Role Type            | Description                                                                             | 
++======================+=========================================================================================+
+| User                 | End user: Executes documents visible to him and creates ad-hoc reporting analysis.      | 
++----------------------+-----------------------------------------------------------------------------------------+
+| Administrator        | General administrator: Manages all Knowage functionalities.                             | 
++----------------------+-----------------------------------------------------------------------------------------+
+| Developer            | Developer: Creates and modifies datasets and documents.                                 | 
++----------------------+-----------------------------------------------------------------------------------------+
+| Test user            | Test user: Tests analytical documents.                                                  | 
++----------------------+-----------------------------------------------------------------------------------------+
+| Model Administrator  | Model administrator: Manages the Behavioural Model and its associated functionalities.  | 
++----------------------+-----------------------------------------------------------------------------------------+
+
+
+In addition, the user can assign a Code to the Role, a Description and if it is a public role or not. When the role is checked as a public one, the user that accesses the platform using that role and that executes one document will be able to use the "Copy link" option  available in the three-dots icon, at the top right corner of the page. Passing the link to an external user, the latter will be able to see the document without acessing the platform. 
+
+.. figure:: media/image62.png
+
+    Copy link option for public roles.
+
+
+In the Authorizations tab the technical user must assign (or deselect) the actions that the role is allowed (or denied) to perform. For instance, to save or view metadata,  to enable the user to persist dataset or create federated ones, to allow the user to create QBE queries and so on.
+
+.. figure:: media/image63.png
+
+    Check/Uncheck Authorizations.
+
+Then, the technical user must use the Business Models, Datasets and KPI categories tabs to assign the respective categories. The role will therefore be see, manage or modify (according to the authorizations applied) only the business models, the Datasets and the KPI associated to the selected categories.
+
+.. figure:: media/image64.png
+
+    Assigning categories.
+
+
+Profile attributes
+-------------------------------
+
+Before defining a new user, it is a good practice to create the proper set of profile attributes. These are necessary to distinguish users with the same role who have though different tasks in the analysis of data. In other words, profile attributes are variables that are used to filter data *before* the execution of a document, to custom to the user's domain the list of values returned in the parameters panel of a document and to have an additional tool to handle visibility of documents.
+
+To create a new profile attributes, select the Profile Attribute Management from the Profile Management section of Knowage main menu.
+
+.. figure:: media/image65.png
+
+    Profile Attribute Management.
+
+Click on the red Plus button to define a new profile attribute. The user is asked to insert the **Name**, a **Description**, the **Type** (number, string or date), how the value is associated (Manual Input or Lov), if it is Multivalue and if other users can see the variable editable when defining users' properties (see next paragraph). Then just click on Save and the new attribute will be added to the list on the left of the window.
+
+.. figure:: media/image66.png
+
+    Defining a new profile attribute.
+    
+Note that if multivalue is enabled the technical user can choose if the syntax to use the "simple" one or a more complex. In both case, an example of the usage is shown below. Remember that in the manual input option values must be edited so the user must be aware of which modality has been chosen.
+
+.. figure:: media/image77.png
+
+    Defining a new profile attribute: multivalue option with simple or complex syntax.
+
+If the profile attribute is loaded by a LOV (List of values) a combobox showing the list of configured LOV will be displayed. 
+
+.. figure:: media/image67.png
+
+    Defining a new profile attribute trough a LOV.
+
+See the dedicated paragragh to know how to configure a new LOV. If Multivalue check is enabled again the technical user can choose if the syntax to use the "simple" one or a more complex. In this case values will be passed to the enviroment and used in LOVs or Datasets accordingly.
+
+.. figure:: media/image76.png
+
+    Defining a new profile attribute: multivalue option with simple or complex syntax.
+
+We stress that the Profile Management session is used only to declare the profile attribute. Profile attributes must be assigned to each user accordingly using the Users management session.
+
+
+Users
+-------------------------------
+
+Once roles and profile attributes have been set, the technical user can proceed in creating a new (or more) user. To create a new user, click on Users Management from the Profile Management section of Knowage main menu. 
+
+.. figure:: media/image68.png
+
+    Users Management.
+
+Once again, click on the red Plus icon to create a new user. Three tabs open: Detail, Roles and Attributes.
+
+.. figure:: media/image69.png
+
+    Creating a new user.
+    
+The Detail tab is were the user is demanded to assign the **User ID**, **Full Name** and a **Password**. Observe that the new user will log in Knowage using the User ID (as username) and the password assigned. The Full Name will be displayed inside the environment, just beside Knowage logo in the knowage menu panel.
+
+Then associate a role to the user using the Role tab. Note that it is possible to assign more than one role to each role. When checking more then one role, a combobox will appear asking which the user will access the environment using a default role. 
+
+.. figure:: media/image70.png
+
+    Assigning more than one role with default one.
+    
+A user that has more than one role with default one can always change it using the available functionalities from Knowage user's setting panel.
+
+.. figure:: media/image71.png
+
+    Changing role.
+
+If no default role has been given, every time the user executes one document he/she is asked to select one to execute it.
+
+.. figure:: media/image72.png
+
+    No default role.
+    
+.. figure:: media/image73.png
+
+    Document execution when user with more than one role has no default one.
+
+
+Finally initiate the profile attributes using the Attribute tab.
+
+Profile attributes can be single value or multivalue. For single manual input, just type the value. For simple multivalue ones, separate values using commas or the complex syntax, according to the setting of the profile attributes. 
+
+.. figure:: media/image74.png
+
+    single or multivalues manual input profile attributes.
+  
+If the profile attribute uses a LOV a pop up icon is available at the end of the row. Use the GUI to check values and save.
+    
+.. figure:: media/image75.png
+
+    Loading profile attributes using LOV.
+    
+Remember that the profile attributes are loaded **after** the authentication process so if the technical user changes some configuration of an end user remember to ask that end user to log out the environment and log in again.
 
 Analytical drivers
 ----------------------

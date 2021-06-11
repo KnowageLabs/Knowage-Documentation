@@ -209,29 +209,11 @@ Apache Cassandra is an open source distributed database management system design
 
 There are different ways to connect Knowage to Cassandra.
 
-If you are using Datastax Enterprise you can use Spark SQL connector and query Cassandra using pseudo standard SQL (`https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md) <https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md>`__
+If you are using DataStax Enterprise you can use Spark SQL connector and query Cassandra using pseudo standard SQL (`https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md) <https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md>`__
 
-Another solution is to download the Apache JDBC Driver and query Cassandra using the language CQL. Also in this case the JDBC driver is composed by different jars, and so you should deploy the JDBC driver with all dependencies in your application server.
+Another solution is to download the JDBC Driver suitable for your Cassandra distribution and query Cassandra using the CQL language. You must deploy the JDBC driver with all dependencies in your application server (copy them into ``TOMCAT_HOME/lib`` folder and restart).
 
-An example of Cassandra Apache driver (with dependencies) is:
-
--  apache-cassandra-clientutil-1.2.6.jar
--  apache-cassandra-thrift-1.2.6.jar
--  cassandra-all-1.2.9.jar
--  cassandra-jdbc-2.1.1.jar
--  guava-15.0.jar
--  jackson-core-asl-1.9.2.jar
--  jackson-mapper-asl-1.9.2.jar
--  libthrift-0.7.0.jar
--  log4j-1.2.16.jar
--  sfl4j-api-1.6.1.jar
--  sfl4j-log4j12-1.6.1.jar
-
-Example parameters for the connection are:
-
--  **Dialect:** Cassandra;
--  **Driver Class:** ``org.apache.cassandra.cql.jdbc.CassandraDriver``;
--  **Connection URL:** ``jdbc:cassandra://193.109.207.65:9160/foodmart``.
+Refer to the JDBC driver documentation in order to see how to configure the JDBC connection parameters.
 
 Unless you are using Spark SQL to read from Cassandra, the definition of a business model over Cassandra data using Knowage Meta will be available in the next releases.
 
