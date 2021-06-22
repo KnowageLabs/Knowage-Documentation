@@ -38,11 +38,11 @@ A **Template** is a json file containing a collection of properties describing t
 
 The following fields will be present:
 
--   **Label**: Mandatory. The name of the widget template
+-   **Name**: Mandatory. The name of the widget template
 -   **Type**: Mandatory. The widget type.
 -   **Output type**: Available for the python widget only. Will set the output type of the python code.
 -   **Description**: Optional. The description of the widget template, will be visible as a tooltip on the dashboard selection.
--   **Tags**: Optional. A list of unique tags to easily categorize templates. It's possible to search using tags too.
+-   **Tags**: Optional. A list of unique tags to easily categorize templates. It's possible to search using tags too. Allowed values for tags are uppercase and lowercase letters, numbers, '-', '_'. The space character is not allowed.
 -   **Image**: Optional. The image of the widget that will be shown on the dashboard selection. Maximum image size is 200k.
 -   **Code section**: Mandatory. The code editor.
 
