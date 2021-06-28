@@ -363,9 +363,9 @@ In order to enable Azure Sign-In authentication, please follow these steps:
 .. code-block:: properties
     :linenos:
 
-	enabled=true
+    enabled=true
     client_id=<your client ID>
-	tenant_id=<your tenant ID>
+    tenant_id=<your tenant ID>
 
 * add the ``azure.signin.config`` Java System property that specifies the location of this properties file: in a Unix-like environment, edit TOMCAT_HOME/bin/setenv.sh and add
 
