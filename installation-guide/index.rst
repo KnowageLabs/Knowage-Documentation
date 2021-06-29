@@ -13,6 +13,9 @@ Installation Manual
    r-installation.rst	
    python-installation.rst	
    cas-installation.rst	
+   ldap-connector.rst
+   google-signin-integration.rst
+   azure-signin-integration.rst
    advanced-configuration.rst
 
 .. |image0| image:: media/image1.png
