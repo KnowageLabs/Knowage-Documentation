@@ -17,27 +17,8 @@ or simply you can find it in the Knowage-Server github repository under the Know
 
 If you downloaded knowage-python via pip, use "pip show knowage-python" to find the pip package installation location. Then copy the source file from this folder to your own custom folder such as ``/opt/knowagepython``.
 
-You will now have to create the configuration for the webservice. This configuration will be contained inside a file called ``config.xml`` and placed inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder.
+You will now have to create a file called ``hmackey`` that contains the value of the HMACkey in plaintext, and place it inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder. It must be the same value specified in the server.xml file.
 
-The structure of the file will be as follows:
-
-.. code-block:: xml
-   :linenos:
-   :caption: Example of a knowage-python webservice configuration file
-    
-	<data>
-		<environment name="knowage-python">
-			<hmackey>foobar123</hmackey>
-			<knowageaddress>knowage.server.address.com</knowageaddress>
-			<pythonaddress>python.webservice.address.com</pythonaddress>
-			<bokehportsrange>57000-58000</bokehportsrange>
-		</environment>
-	</data>
-
-*  ``hmackey`` : the Knowage HMAC key contained in the server.xml file,
-*  ``knowageaddress`` : the address at which the python webservice can contact the Knowage server (the two entities can either be on the same machine or on different machines),
-*  ``pythonaddress`` : the address of the current instance of Python (it is needed by the Knowage server to contact back the engine if needed),
-*  ``bokehportsrange`` : the range of open ports upon which the service can dinamically instantiate Bokeh Servers.
 
 Run knowage-python webservice
 -----------------------------
@@ -86,9 +67,3 @@ Now you will be able to see the Python and R Dataset and Widget among the list o
 
 Go to the ``Configuration management`` section, and create new variables of category ``PYTHON_CONFIGURATION`` and ``R_CONFIGURATION``. The value of this variables will specify the addresses of the Python and R webservices (es. ``python.webservice.address.com/domain``).
 Now you will be able to see the addresses of the so configured environments when creating a Dataset or a Widget.
-
-**Be aware that depending on the architecture of your solution, you might have to define two different addresses for reaching the same instance of Python.**
-
-*  One address is for reaching Python from the client (browser) and will be used when creating a widget,
-*  One address is for reaching Python from the server (Knowage) and will be used when creating a Dataset.
-
