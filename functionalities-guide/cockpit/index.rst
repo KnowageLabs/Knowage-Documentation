@@ -937,9 +937,8 @@ Knowage has support for three different output types:
 
 - Image
 - HTML
-- Bokeh application (only for Python)
 
-If **Image** or **HTML** is choosen as output type, it is also necessary to specify the name of the file in which the script will save its output.
+It is also necessary to specify the name of the file in which the script will save its output.
 
 The Dataset tab allows the user to select a dataset that will be accessible directly from the code.
 After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
