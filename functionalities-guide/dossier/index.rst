@@ -33,7 +33,7 @@ In particular, tag allowed are:
 -  **REPORT**: contains document's properties. You can specify:
 
   - *label*: the label of the document to be executed;
-  - *imageName*: the name of the image inside the docx document. If the document is multisheet, imageName value will ends with the suffix "_sheet_<number>". For example, to use the screenshot of the first sheet, the value will be "image_name_sheet_0". This name can be set into title or description using the alternative text menu of the picture;
+  - *imageName*: the name of the image inside the docx document. If the document is multisheet, imageName value will be composed by the document label ending with the suffix "_sheet_<number>". For example, to use the screenshot of the first sheet, the value will be "documentLabel_sheet_0". This name can be set into title or description using the alternative text menu of the picture;
   - *sheetWidth*: the value of the width of the sheet (in pixels). This value will be used if sheetHeight is also set (optional);
   - *sheetHeight*: the value of the height of the sheet (in pixels). This value will be used if sheetWidth is also set (optional);
   - *deviceScaleFactor*: the value to use as the scaling factor to be applied when capturing the screenshot (optional);
