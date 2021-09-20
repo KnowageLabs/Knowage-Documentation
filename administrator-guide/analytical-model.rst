@@ -1,4 +1,4 @@
-Analytical Model
+Analytical Model 
 ====================
 
 The *analytical model* let you organize analytical documents in hierarchies and folders. Let’s have a look on its structure.

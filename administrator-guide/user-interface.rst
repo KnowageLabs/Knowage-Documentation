@@ -12,7 +12,7 @@ Knowage menu gives you access to all its functionalities. By default you find th
 
    Home page
 
-You can minimize it by clicking somewhere else outside the menu. In this way the menu button appears and you can reopen the menu according to your needs. You can move this button around the page by dragging and dropping it. Choose the position that best fits with your work.
+You can minimize it by clicking on the same main icon.
 
 Knowage main menu is divided in three submenus: the user menu, the BI functionalities menu and the administrator one. The left panel contains the user menu, which is collapsed, and the BI functionalities menu, while the administrator menu is on the right panel.
 
@@ -39,9 +39,6 @@ The BI functionalities menu consists in a set of icons associated with basic fea
    +--------------------------------+-----------------------+-----------------------+
    |    Icon                        | Name                  | Description           |
    +================================+=======================+=======================+
-   | .. figure:: media/image105.png | My Account            | Show or update user   |
-   |                                |                       | info.                 |
-   +--------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image16.png  | Documents development | Document creation and |
    |                                |                       | acces to the archive  |
    |                                |                       | folders.              |
@@ -54,13 +51,7 @@ The BI functionalities menu consists in a set of icons associated with basic fea
    |                                |                       | show the available    |
    |                                |                       | async download.       |
    +--------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image104.png | News                  | Open a dialog that    |
-   |                                |                       | show the news.        |
-   +--------------------------------+-----------------------+-----------------------+
 
-
-.. important::
-        **My Account** is visible only when ``SPAGOBI.SECURITY.MY_ACCOUNT_MENU`` configuration is enabled.
 
 The administrator menu is divided in subpanels which maps the different managing areas:
 
@@ -101,35 +92,3 @@ The administrator menu is divided in subpanels which maps the different managing
    |                                |                       | options                |
    +--------------------------------+-----------------------+------------------------+
 
-
----------------
-My Account menu
----------------
-
-*My account* button, if enabled, allows user to access Modify profile page. Here you can modify your information and also permanently delete your account.
-
-Modify
-^^^^^^
-With this feature user can modify their own data such as Name, Surname and Email address. Password and Confirm password fields are mandatory so they must be filled before applying changes clicking on "MODIFY".
-
-.. attention::
-
-	If user fills *Password* and *Confirm password* fields with a valid password that is NOT the current password (used to log in), the password will be updated with the new value.
-
-Delete account
-^^^^^^^^^^^^^^
-
-With this feature user can delete his account clicking on *DELETE ACCOUNT* button. Then a message confirms the correct cancellation and the login page is displayed.
-
-.. attention::
-
-	Account cancellation is irreversible. User will no longer be able to log into Knowage.
-
-Password change
-^^^^^^^^^^^^^^^
-
-If user wants to change his password, he must fill *Password* and *Confirm Password* fields and the click on *MODIFY* button. A confirmation message will be displayed if the update has been successful.
-
-.. figure:: media/image116.png
-
-   My account - Modify profile
