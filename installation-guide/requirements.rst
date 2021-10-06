@@ -79,12 +79,12 @@ The following lists the supported application servers:
     +---------------------+------------------------+-------------+
     |    **Support type** | **Application Server** | **Version** |
     +=====================+========================+=============+
-    |    Certified        | Apache Tomcat          | 8.5.57      |
+    |    Certified        | Apache Tomcat          | 9           |
     +---------------------+------------------------+-------------+
 
 For each application server installation please refer to its official documentation.
 
-Tomcat 8.5
+Tomcat 9.0
 ~~~~~~~~~~~~
 
 In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
@@ -123,7 +123,7 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
 Tomcat on Windows
 ^^^^^^^^^^^^^^^^^
 
-It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-8.5-doc/windows-service-howto.html.
+It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-9.0-doc/windows-service-howto.html.
 
 Database schema for metadata
 ----------------------------
