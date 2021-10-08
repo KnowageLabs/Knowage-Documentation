@@ -79,12 +79,12 @@ The following lists the supported application servers:
     +---------------------+------------------------+-------------+
     |    **Support type** | **Application Server** | **Version** |
     +=====================+========================+=============+
-    |    Certified        | Apache Tomcat          | 8.5.57      |
+    |    Certified        | Apache Tomcat          | 9           |
     +---------------------+------------------------+-------------+
 
 For each application server installation please refer to its official documentation.
 
-Tomcat 8.5
+Tomcat 9.0
 ~~~~~~~~~~~~
 
 In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
@@ -123,7 +123,7 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
 Tomcat on Windows
 ^^^^^^^^^^^^^^^^^
 
-It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-8.5-doc/windows-service-howto.html.
+It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-9.0-doc/windows-service-howto.html.
 
 Database schema for metadata
 ----------------------------
@@ -252,7 +252,7 @@ Knowage provides a distribution of Chromium for its functionalities but some oth
         dnf install -y libX11 libX11-xcb libXcomposite libXcursor libXdamage libXext libXi libXtst nss libXScrnSaver libXrandr alsa-lib atk at-spi2-atk pango gtk3
 
         # For Debian/Ubuntu
-        apt-get install -y libgtk-3-0 libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash
+        apt-get install -y libxss1 libgtk-3-0 libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash
 
 
 Support to non-latin languages
