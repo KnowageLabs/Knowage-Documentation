@@ -27,5 +27,6 @@ Functionalities
    scorecard/index.rst
    alert/index.rst
    news-management/index.rst
+   resource-manager/index.rst
    dataset-preview/index.rst
    widget-gallery/index.rst

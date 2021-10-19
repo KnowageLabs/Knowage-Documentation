@@ -50,7 +50,6 @@ First of all, the user must configure the distributed cache. This helps to coord
 * **SPAGOBI.CACHE.NAMEPREFIX**: It configures the prefix of temporary table in the cache ( Default : ”sbicache“ )
 * **SPAGOBI.CACHE.SPACE_AVAILABLE**: It resizes cache dimension (bytes) ( Default : 1024 )
 * **SPAGOBI.CACHE.LIMIT_FOR_CLEAN**: It configures the maximum cache section (in percentage) that can be cleaned at runtime when the cache has not enough space to store a dataset. ( Default : 50)
-* **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is empty. The allowable values are: EVERY_10_MINS, EVERY_15_MINS, EVERY_20_MINS, EVERY_30_MINS, HOURLY,DAILY,WEEKLY,MONTHLY,YEARLY. Any value other than those listed above does not enable periodic cleaning. ( Default: DAILY )
 * **SPAGOBI.CACHE.DS_LAST_ACCESS_TTL**: It configures the Time To Live of a dataset inside the cache. This parameter defines the minimum TTL (in seconds) so to guarantee that a dataset remains in cache. A too-high value can lead the cache to breakdown (in this case, there is no way to insert new datasets), while a too low value can lead to situations when there are no certainties of the stability of the dataset in the cache. (Default 600 )
 * **SPAGOBI.CACHE.DATABASE_SCHEMA**: Name of the schema on which the tables are created. Such schema is defined by the datasource when it is set as Write-Default. Generally it is not necessary to configure this parameter since it is calculated at runtime. (default <empty> )
 * **SPAGOBI.CACHE.LIMIT_FOR_STORE**: It configures the ratio (in percentage) between the dimension of the cache and the maximum dimension of a dataset in the cache. If the dimension of the dataset which the user intends to persist is bigger than the configured percentage, the system blocks the that persistence attempt. ( Default : 10 )
@@ -58,6 +57,33 @@ First of all, the user must configure the distributed cache. This helps to coord
 * **SPAGOBI.WORKMANAGER.SQLDBCACHE.TIMEOUT**: It represents the maximum waiting time (in milliseconds) of an asynchronous work. (Default: 180000 )
 * **SPAGOBI.CACHE.HAZELCAST.TIMEOUT** : It represents the maximum time (in seconds) to get a distributed lock. ( Default 120 )
 * **SPAGOBI.CACHE.HAZELCAST.LEASETIME**: It represents the maximum time (in seconds) for releasing a distributed lock already got. ( Default :240 )
+* **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is empty. The allowable values are: 
+
++------------------------------------------------------+-------------------------------------------------+
+| Option                                               |     Description                                 |
++======================================================+=================================================+
+|EVERY_1_MIN("EVERY_1_MIN", "0 0/1 * 1/1 * ?  * ")     | every minute starting the changing of hour      |
++------------------------------------------------------+-------------------------------------------------+
+|EVERY_10_MINS("EVERY_10_MINS", "0 0/10 * 1/1 * ?  * ")| every 10 minutes starting the changing of hour  |
++------------------------------------------------------+-------------------------------------------------+
+|EVERY_15_MINS("EVERY_15_MINS","0 0/15 * 1/1 * ? * ")  | every 15 minutes starting the changing of hour  |
++------------------------------------------------------+-------------------------------------------------+
+|EVERY_20_MINS("EVERY_20_MINS", "0 0/20 * 1/1 * ? * ") | every 20 minutes starting the changing of hour  |
++------------------------------------------------------+-------------------------------------------------+
+|EVERY_30_MINS("EVERY_30_MINS", "0 0/30 * 1/1 * ? * ") | every 30 minutes starting the changing of hour  |
++------------------------------------------------------+-------------------------------------------------+
+|HOURLY("HOURLY","0 0 0/1 1/1 * ? * ")                 | every hour                                      |
++------------------------------------------------------+-------------------------------------------------+
+|DAILY("DAILY","0 0 0 1/1 * ? * ")                     | every day at midnight                           |
++------------------------------------------------------+-------------------------------------------------+
+|WEEKLY("WEEKLY", "0 0 0 ? * SUN * ")                  | every week at midnight on Sunday                |
++------------------------------------------------------+-------------------------------------------------+
+|MONTHLY("MONTHLY", "0 0 0 1 1/1 ? * ")                | at midnight on the first day of the month       |
++------------------------------------------------------+-------------------------------------------------+
+|YEARLY("YEARLY", "0 0 0 1 1 ? * ")                    | at midnight on the first day of the year        |
++------------------------------------------------------+-------------------------------------------------+
+
+Any value other than those listed above does not enable periodic cleaning. ( Default: DAILY ) 
 
 Logging
 ---------

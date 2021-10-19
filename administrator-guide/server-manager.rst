@@ -47,7 +47,65 @@ First of all you are asked to insert a date by clicking on the calendar icon. Th
 Import/Export
 --------------
 
-These options are about Import\\Export of Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
+These options are about Import\\Export of Gallery, Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
+
+Gallery
+~~~~~~~~~
+
+This feature let you create and download a .zip of whole or a part of the functions and widgets gallery existing in your Knowage installation. In this way you can upload it in another installation or keep it as backup.
+
+
+**Export Gallery**
+
+Below we show the export editor openable through the EXPORT button on the toolbar. Consists in two sections: Gallery and Functions. Both of them show a list with all widgets and functions existing within the Knowage installation. Details about Type and Tags/Keyword are given.
+
+.. figure:: media/impexp_gallery1.png
+    
+    Gallery Export
+
+You are able to select interested elements to export. Is it possible to choose a subset or all and/or a mix between widgets and functions:
+
+.. figure:: media/impexp_gallery2.png
+    
+    Gallery Export - Items selection
+
+After the selection, is just necessary set a name for the export file and the operation will done.
+
+.. figure:: media/impexp_gallery3.png
+    
+    Gallery Export - setting name for zip file
+
+**Import Gallery**
+
+To use the import functionality is necessary to select the IMPORT button on the toolbar. A new popup window is so opened to choose the exported zip file obtained previously:
+
+.. figure:: media/impexp_gallery4.png
+
+    Gallery Import - Export file selection #1
+
+
+.. figure:: media/impexp_gallery5.png
+
+    Gallery Import - Export file selection #2
+
+At this point, selecting the NEXT button is possible review all elements available and choose which of them you want really import in the target Knowage environment:
+
+.. figure:: media/impexp_gallery6.png
+
+    Gallery Import - items selection
+
+  
+For last, is necessary click on the IMPORT button to start the real import activity.
+
+At this point, widgets and functions will be available too in the target environment as you can see directly opening their specific guis:
+
+.. figure:: media/impexp_gallery7.png
+
+    Gallery Management Gui
+.. figure:: media/impexp_gallery8.png
+
+    Functions Management Gui
+
 
 Documents
 ~~~~~~~~~
