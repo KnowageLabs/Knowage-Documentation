@@ -82,6 +82,12 @@ The **Advanced** tab contains extra features, usually exploited by an expert use
 
 In the next subsections, the available functionalities of the Structure, the Configuration and the Advanced tabs are described in a more specific way.
 
+.. important::
+         **Enterprise Edition only**
+
+         Please note that the "Advanced" tab is available only in Knowage Enterprise Edition.
+
+
 Structure
 ~~~~~~~~~
 
