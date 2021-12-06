@@ -1,22 +1,23 @@
 Welcome to Knowage's official documentation
 ______________________________________________
 
-Knowage is the professional open source suite for modern business analytics over traditional sources and big data systems. Knowage is the new brand for SpagoBI project: this new brand marks the value of the well-known open source business intelligence suite after significant functional and technological transformations and a new offering model. 
-The suite is composed of several modules, each one conceived for a specific analytical domain. They can be used individually as complete solution for a certain task, or combined with one another to ensure full coverage of user’ requirements. 
+KNOWAGE is the professional open source suite for modern business analytics over traditional sources and big data systems. KNOWAGE is the new brand for SpagoBI project: this new brand marks the value of the well-known open source business intelligence suite after significant functional and technological transformations and a new offering model. The suite is composed of two main modules and four different plug-ins, each one conceived for a specific analytical domain.
 
-The sub-products of the suite are:
+The two modules are:
 
-- BD (big data), to analyse data stored on big data clusters or NoSQL databases
-- SI (smart intelligence), the usual business intelligence on structured data, but more oriented to self-service capabilities and agile prototyping
 - ER (enterprise reporting), to produce and distribute static reports
-- LI (location intelligence), to relate business data with spatial or geographical information
-- PM (performance management), to manage KPIs and organize scorecards
-- PA (predictive analysis), for more advanced analyses
+- SI (smart intelligence), the usual business intelligence on structured data, but more oriented to self-service capabilities and agile prototyping
 
-Knowage supports a modern vision of the data analytics, providing new self-service capabilities that give autonomy to the end-user, now able to build his own analysis and explore his own data space, also combining data that come from different sources.
-If this is your first contact with Knowage, it is highly recommended to have a look at the `website`_.
+The four plug-ins that can added to Smart Intelligence module are:
 
-Knowage source code repository is available on GitHub! Visit the `repository`_.
+- SD (smart data), to combine Solr index with other data sources and provide faceted views and full text search
+- LI (location intelligence), to handle spatial data providing multi-layer maps where geographic information joins traditional data shown by other standard widgets
+- PM (performance management), to define KPIs with thresholds, schedule their evaluation and publish them natively in a widget
+- CA (custom analytics), to add what-if capabilities e take full advantage of R/python embedding possibilities
+
+KNOWAGE supports a modern vision of the data analytics, providing new self-service capabilities that give autonomy to the end-user, now able to build his own analysis and explore his own data space, also combining data that come from different sources. If this is your first contact with KNOWAGE, it is highly recommended to have a look at the `website`_.
+
+KNOWAGE source code repository is available on GitHub! Visit the `repository`_.
    
 .. _website: https://www.knowage-suite.com
 .. _repository: https://github.com/KnowageLabs/Knowage-Server
