@@ -85,6 +85,10 @@ The ``SEARCH_USER_BEFORE_USER`` and ``SEARCH_USER_BEFORE_PSW`` keys are credenti
 
 .. important::
     Restart your application server in order to load the custom JVM property.
+	
+.. warning::
+        After enabling the search functionality you may encounter the following exception: javax.naming.PartialResultException: Unprocessed Continuation Reference(s). To solve this just change LDAP port from 389 to 3268 (credits: https://stackoverflow.com/questions/16412236/how-to-resolve-javax-naming-partialresultexception )
+
 
 The final step is to set the LDAP security connector as follow:
 
