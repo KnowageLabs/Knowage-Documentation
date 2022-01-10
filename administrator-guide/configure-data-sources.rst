@@ -16,10 +16,10 @@ Knowage manages two types of data source connections:
 .. important::
          **How to create connection JNDI on Tomcat**
 
-         - Create connection pool on <Tomcat_home>/conf/server.xml
+         - Create connection pool on ``TOMCAT_HOME/conf/server.xml``
          - Add ResourceLink on context.xml
 
-To add a new connection, first add the relative JDBC driver to the folder ``KnowageServer-<version>/lib`` and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
+To add a new connection, first add the relative JDBC driver to the folder ``TOMCAT_HOME/lib`` and restart Knowage. Then, login as administrator (user: *biadmin*, password: *biadmin* are the default credential) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
