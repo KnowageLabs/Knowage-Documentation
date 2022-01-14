@@ -261,7 +261,7 @@ The secret password encryption key must be set during the installation and must 
 
 This tool requires:
 
-* knowage-utils-7.2.0.jar library to be added to the classpath
+* knowage-utils-<major.minor.patch>.jar (e.g. knowage-utils-7.3.0.jar) library to be added to the classpath
 * the password encryption secret file name with complete path
 * password value (plaintext)
 
@@ -270,6 +270,6 @@ Below is an example of invoking the tool using *biadmin* as plaintext password.
 .. code-block:: SQL
     :linenos:
 
-    java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-7.2.0.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
+    java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-<major.minor.patch>.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
 
 The output value will be the second argument passed in input encrypted with the key present in the file. This procedure must be repeated for all users.
