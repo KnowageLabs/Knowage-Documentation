@@ -1787,7 +1787,7 @@ In the "Data cockpit settings" seen in the previous section, we fnd the "autodet
 
 Here the user can decide a minimum percentage of match that Knowage will use to compute and return matching columns. For instance a 20% of similarity means that the values contained by two or more columns of different datasets are the same at least for the 20% of them. Following the example shown in Figure below, we can read that between the three dataset, only two of them have possible associations. The user can use a 100% similarity match using the "produt_family" field, which means that the two columns contained in two different dataset return exaclty the same list of distinct values. Or the user can set an association with a 75.23% similarity using "the_date" field which means that some values of one column are not contained in the other column. The minimum length allows the user to specify the lowest number of datasets to be joined.
 
-.. figure:: media/image210.png
+.. figure:: media/image506.png
 
     Auto Detect page.
 
