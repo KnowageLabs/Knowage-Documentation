@@ -1791,7 +1791,7 @@ Here the user can decide a minimum percentage of match that Knowage will use to 
 
     Auto Detect page.
 
-To select one of suggeested assoiation, simply click on the specific row and then on the save button. Save the settings and save the dashboard. The new association is ready to be used.
+To select one of suggested associations, simply click on the specific row and then on the save button. Save the settings and save the dashboard. The new association is ready to be used.
 
 Indexes
 ~~~~~~~~~~~~
