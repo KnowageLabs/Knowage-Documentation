@@ -14,12 +14,12 @@ The Timespan functionality is available under the Catalog section of Knowage mai
 
 When clicking on menu item "Timespan", Knowage redirects the user to the list of periods, if any was already set. It is possible to open an existing timespan simply clicking on the item from the list, to seach for one using the search box, to delete one item or clone it. THe delete and clone button are available aside the timespan item name.
 
-To configure a new period the user must click on the red plus icon on the top right corner of Timespan list area. After clicking on the button the half right part of the page will display the form to fill in all necessary information. 
-
 .. figure:: media/imageTS002.png
 
    Timespan list page
    
+To configure a new period the user must click on the red plus icon on the top right corner of Timespan list area. After clicking on the button the half right part of the page will display the form to fill in all necessary information. 
+
 In particular, the technical user is asked to assign a name to the new timespan, to specify if it is a time or temporal type period. To associate a category for profiling issues and finally to define the start and the end time or the start and end date, if it is a time or temporal timespan respectively, as we can see in Figure below. 
 
 .. figure:: media/imageTS003.png
