@@ -306,6 +306,7 @@ After selecting one timespan, the user must clcik on apply to ask the server to 
 
 	Filtering date attribute: apply a timespan.
 
+Finally click on the save button and data is filtered accordingly.
 
 Query Preview
 ^^^^^^^^^^^^^^^
