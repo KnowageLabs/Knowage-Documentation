@@ -1779,9 +1779,9 @@ Once you have defined the associations, as soon as you refresh one widget, all r
 
 To correctly set up meaningful associations, the user must have knowledge of extracted data contained in each dataset. There might be though possible matches between datasets that are not known by the user or the columns used are not so similar as thought. Therefore the user can demand to Knowage to retrieve all possible columns that match, to report the percentage of matching values and get knowledge of other possible unexpected matches.
 
-In the "Data cockpit settings" seen in the previous section, we fnd the "autodetect" button that redirects the user to the autodectect page. The button is at the right top corner of the association list area.
+In the "Data cockpit settings" seen in the previous section, we fnd the "Auto Detect" button that redirects the user to the auto dectect page. The button is at the right top corner of the association list area.
 
-.. figure:: media/image202.png
+.. figure:: media/image507.png
 
     Auto Detect button.
 
