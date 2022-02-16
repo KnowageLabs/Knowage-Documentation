@@ -1775,7 +1775,7 @@ Another example is supplied in Figure below. Here the association is performed b
 
 Once you have defined the associations, as soon as you refresh one widget, all related widgets are refreshed simultaneously on data update.
 
-**Autodetect fuctionality**
+**Auto Detect fuctionality**
 
 To correctly set up meaningful associations, the user must have knowledge of extracted data contained in each dataset. There might be though possible matches between datasets that are not known by the user or the columns used are not so similar as thought. Therefore the user can demand to Knowage to retrieve all possible columns that match, to report the percentage of matching values and get knowledge of other possible unexpected matches.
 
