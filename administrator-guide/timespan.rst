@@ -32,6 +32,6 @@ In both cases, the technical user defines the start and the end of the interval 
 
    Adding more than one temporal intervals in one timespan
  
- Once that intervals have been defined they can be used inside the QbE interface to filter time or temportal attributes. For this part we refer to the Free Inquiry chapter, in particular the Filter paragraph.
+Once that intervals have been defined they can be used inside the QbE interface to filter time or temportal attributes. For this part we refer to the Free Inquiry chapter, in particular the Filter paragraph.
    
 
