@@ -6,7 +6,7 @@ Most of times a technical user develops a business solution for the use and cons
 Create a new Timespan
 ---------------------
 
-The Timespan functionality is available under the Catalog section of Knowage main menu. When clicking on menu item "Timespan", Knowage redirects the user to the list of periods, if any was already set.
+The Timespan functionality is available under the Catalog section of Knowage main menu. When clicking on menu item "Timespan", Knowage redirects the user to the list of periods, if any was already set. It is possible to open an existing timespan simply clicking on the item from the list, to seach for one using the search box, to delete one item or clone it. THe delete and clone button are available aside the timespan item name.
 
 .. figure:: media/imageTS001.png
 
@@ -28,4 +28,8 @@ In both cases, the technical user defines the start and the end of the interval 
 
 .. figure:: media/imageTS004.png
 
-   Adding more than one temproal intervals in one timespan
+   Adding more than one temporal intervals in one timespan
+ 
+
+   
+
