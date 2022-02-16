@@ -24,12 +24,12 @@ In particular, the technical user is asked to assign a name to the new timespan,
 
    Time and temporal type
  
-In both cases, the technical user defines the start and the end of the interval and then clicks on the add button to insert it. Note that it is possible, for each type, to add more than one interval.  
+In both cases, the technical user defines the start and the end of the interval and then clicks on the add button to insert it. remember to clcik on the save button to validte the settings. Note that it is possible, for each type, to add more than one interval.  
 
 .. figure:: media/imageTS004.png
 
    Adding more than one temporal intervals in one timespan
  
-
+ Once that intervals have been defined they can be used inside the QbE interface to filter time or temportal attributes. For this part we refer to the Free Inquiry chapter, in particular the Filter paragraph.
    
 
