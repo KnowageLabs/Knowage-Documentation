@@ -10,6 +10,7 @@ Administration Manual
 	behavioural-model.rst
 	analytical-model.rst
 	operational-engines.rst
+	timespan.rst
 	scheduler.rst
 	server-manager.rst
 	server-settings.rst

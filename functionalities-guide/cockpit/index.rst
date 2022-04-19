@@ -1775,6 +1775,24 @@ Another example is supplied in Figure below. Here the association is performed b
 
 Once you have defined the associations, as soon as you refresh one widget, all related widgets are refreshed simultaneously on data update.
 
+**Auto Detect fuctionality**
+
+To correctly set up meaningful associations, the user must have knowledge of extracted data contained in each dataset. There might be though possible matches between datasets that are not known by the user or the columns used are not so similar as thought. Therefore the user can demand to Knowage to retrieve all possible columns that match, to report the percentage of matching values and get knowledge of other possible unexpected matches.
+
+In the "Data cockpit settings" seen in the previous section, we fnd the "Auto Detect" button that redirects the user to the auto dectect page. The button is at the right top corner of the association list area.
+
+.. figure:: media/image507.png
+
+    Auto Detect button.
+
+Here the user can decide a minimum percentage of match that Knowage will use to compute and return matching columns. For instance a 20% of similarity means that the values contained by two or more columns of different datasets are the same at least for the 20% of them. Following the example shown in Figure below, we can read that between the three dataset, only two of them have possible associations. The user can use a 100% similarity match using the "produt_family" field, which means that the two columns contained in two different dataset return exaclty the same list of distinct values. Or the user can set an association with a 75.23% similarity using "the_date" field which means that some values of one column are not contained in the other column. The minimum length allows the user to specify the lowest number of datasets to be joined.
+
+.. figure:: media/image506.png
+
+    Auto Detect page.
+
+To select one of suggested associations, simply click on the specific row and then on the save button. Save the settings and save the dashboard. The new association is ready to be used.
+
 Indexes
 ~~~~~~~~~~~~
 If you want that cockpit loading be faster, you can create indexes on cached data. This feature is available only for cached dataset.
