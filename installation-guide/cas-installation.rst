@@ -6,24 +6,6 @@ CAS is an application that implements a Single-Sign-On (SSO) mechanism. It is a 
 Deploy of the CAS application
 -----------------------------
 
-Carry out the following steps:
-
-* shut down the server if running,
-* deploy CAS application,
-* for Tomcat: unzip the ``cas.war`` file inside the ``TOMCAT_HOME/webapps/cas``
-* for JBoss: copy the ``cas.war`` file inside the ``JBOSS_HOME/standalone/deployments``
-* edit ``/cas/WEB-INF/classes/cas_spagobi.properties`` inserting the connection parameters for the metadata database of Knowage,as following
-
-	.. _conneparamknow:
-	.. code-block:: xml
-	   :linenos:
-	   :caption: Connection parameters for Knowage metadata db.
-
-			spagobi.datasource.driver=<driver JDBC> 
-			spagobi.datasource.url=<URL JDBC> 
-			spagobi.datasource.user=<user_name>                             
-			spagobi.datasource.pwd=<password> encript.password=true               
-
 For further details please refer to the official documents available on CAS website `https://www.apereo.org/projects/cas. <https://www.apereo.org/projects/cas>`__
 
 HTTPS certificate
