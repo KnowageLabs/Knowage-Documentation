@@ -3,9 +3,9 @@ Functionalities
 
 .. toctree::
    :caption: Table of Contents
-   
+
    basic-data-access/index.rst
-   advanced-data-access/index.rst 
+   advanced-data-access/index.rst
    behavioural-model/index.rst
    analytical-document/index.rst
    chart/index.rst
@@ -30,3 +30,4 @@ Functionalities
    resource-manager/index.rst
    dataset-preview/index.rst
    widget-gallery/index.rst
+   data-preparation/index.rst
