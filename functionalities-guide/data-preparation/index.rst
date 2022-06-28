@@ -128,7 +128,7 @@ Two more transformations are present only by clicking on a specific column: **TR
 
 .. figure:: media/image17.png
 
-**Drop column**: Removes the specific column from table.
+**Drop column**: Removes a specific column from table.
 
 .. figure:: media/image18.png
 
@@ -173,10 +173,11 @@ Here you can choose the name, the description and the schedulation if you want t
 
 .. figure:: media/image27.png
 
-After clicking on SAVE button you should see a confirmation:
+After clicking on SAVE button you will see a confirmation message:
+
 .. figure:: media/image28.png
 
-After that, waiting for a few moment you will be able to see your data saved on selected datasource clicking on the eye icon on the right into the data preparation section.
+After that, waiting for a few moments you will be able to see your data saved on selected datasource clicking on the eye icon on the right into the data preparation section.
 
 .. figure:: media/image29.png
 
