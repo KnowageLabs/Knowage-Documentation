@@ -297,3 +297,11 @@ Knowage supports the newest and the second to last version of these browsers:
          **Internet Explorer**
 
          Internet Explorer is no longer supported by Microsoft and it is also vulnerable. Please, use one of the supported browser listed above.
+
+Data Preparation requirements
+-----------------------------
+
+In order to use data preparation functionality, user should have Apache Livy and Apache Spark installed.
+Please check Livy and Spark official documentation for more info (https://livy.apache.org/, https://spark.apache.org/).
+
+This functionality is available as an add-on plugin for Smart Intelligence license.

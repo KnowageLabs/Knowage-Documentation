@@ -185,3 +185,47 @@ Extract archive ``knowage-cockpit-export-installation.zip`` to ``/opt/knowage``:
         /opt/knowage/cockpit-export/cockpit-export.js
 
 For alternatives path you have to fix ``internal.nodejs.chromium.export.path`` in Knowage Configuration Management.
+
+Configuring environment for Data Preparation
+--------------------------------------------
+
+User should have Apache Livy and Apache Spark installed.
+
+Please refer to https://livy.apache.org/ for more details:
+
+To run the Livy server, you will also need an Apache Spark installation.
+You can get Spark releases at https://spark.apache.org/downloads.html.
+Livy requires at least Spark 1.6 and supports both Scala 2.10 and 2.11 builds of Spark. To run Livy with local sessions, first export these variables:
+
+export SPARK_HOME=/usr/lib/spark
+
+export HADOOP_CONF_DIR=/etc/hadoop/conf
+
+Then start the server with:
+
+./bin/livy-server start
+
+Livy uses the Spark configuration under SPARK_HOME by default. You can override the Spark configuration by setting the SPARK_CONF_DIR environment variable before starting Livy.
+
+Please check Livy and Spark official documentation for more info.
+
+After that it is mandatory to set this variable on Tomcat Server: **KNOWAGE_RESOURCE_PATH**
+This variable should point to the Tomcat server's resource folder.
+
+Example for Tomcat development installation:
+
+.. figure:: media/image36.png
+
+    Example for Eclipse Tomcat embedded installation.
+
+You will also need to configure a datasource as "Used for data preparation", it means that the selected datasource will be used for saving prepared dataset data.
+
+Selecting a **DATA PREPARATION DATASOURCE**:
+
+It is really important to set a datasource for the prepared dataset ingestion output.
+This one will be the location of the result prepared data.
+You can do that checking the "Use for data preparation" checkbox using an administration role for Knowage.
+
+.. figure:: media/image37.png
+
+    Datasource management section.
