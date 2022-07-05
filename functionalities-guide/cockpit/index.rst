@@ -667,7 +667,7 @@ This attribute is naturally linked to ``kn-column`` tag. If inside a ``kn-column
 
 Inside a ``kn-repeat`` is possible to use the specific tag [kn-repeat-index], that will print the index of the repeated column row.
 
-The **limit** attribute is optional and is a number type attribute. If added the number of row repeated will be limited to the selected number.
+The **limit** attribute is optional and is a number type attribute. If added the number of row repeated will be limited to the selected number. If no limit is provided just the first row will be returned. If you want to get all records, you can set it to -1, but be careful because big datasets can take a while to load completely.
 
 ``<div kn-if="CODE-TO-EVALUATE"> ... </div>``
 
