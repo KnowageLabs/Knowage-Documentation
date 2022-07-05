@@ -1,0 +1,12 @@
+.. incluír::.. /bookStructures/ka_booksStructureForLocationInteligence.rst
+.. incluír::.. /Misdatos/ka_user_my_data.rst
+.. incluír::.. /Dataset/ka_dev_dataset.rst
+.. incluír::.. /BehavioralModel/ka_dev_behavioralmodel.rst
+.. incluír::.. /AnalyticalDocument/ka_dev_analyticaldoc.rst
+.. incluír::.. /QbeMeta/ka_dev_introqbemeta.rst
+.. incluír::.. /FreeInquiry/ka_user_freeinquiry.rst
+.. incluír::.. /LocationIntelligence/ka_dev_introlocationintelligence.rst
+.. incluír::.. /LocationIntelligence/ka_user_locationintelligence.rst
+.. incluír::.. /LocationIntelligence/ka_dev_locationintelligence.rst
+.. incluír::.. /SVG/ka_user_svg.rst
+.. incluír::.. /SVG/ka_dev_svg.rst
