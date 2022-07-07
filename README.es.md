@@ -4,12 +4,12 @@
 
 ## Cómo contribuir
 
-El knowage está abierto a contribuciones externas. Puede enviar sus contribuciones a este repositorio a través de solicitudes de extracción.
+El knowage está abierto a contribuciones externas. Puede enviar sus contribuciones a este repositorio a través de un pull request.
 Antes de comenzar, aquí hay algunas cosas que debes tener en cuenta:
 
 *   Este proyecto se lanza con un [Código de conducta del colaborador](./CODE_OF_CONDUCT.md). Al participar en este
     proyecto, usted acepta cumplir con sus términos.
-*   Al abrir una solicitud de extracción, debe firmar el
+*   Al abrir un pull request, debe firmar el
     [Acuerdo de licencia de colaborador individual](./CLA.md) indicando en un comentario
     *"He leído el Documento de la CLA y por la presente firmo la CLA"*
 *   Por favor, asegúrese de que su contribución pase todas las pruebas. Si hay fallas en las pruebas, deberá abordarlas
@@ -99,7 +99,7 @@ Inserte el icono `|imageX|` dentro del texto y luego recuérdelo fuera del texto
             :width: dimension
 ```
 
-2.  Añadida una imagen oustide:
+2.  Añadida una imagen esterior:
 
 En el momento en que necesite insertar una imagen, use esto:
 
@@ -158,7 +158,7 @@ En el momento en que necesite insertar una imagen, use esto:
 
 ***
 
-### Mesas
+### Tablas
 
 Para crear una tabla en el documento, debe "dibujar" los contornos de la tabla físicamente como se muestra a continuación.
 
@@ -253,9 +253,9 @@ Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` use
 
 ***
 
-### Caja
+### Box
 
-A veces en el texto necesitas llamar la atención con un cuadro. Utilizamos cuatro tipos diferentes de cajas.
+A veces en el texto necesitas llamar la atención con un cuadro. Utilizamos cuatro tipos diferentes de box.
 
 ```rst
 .. note::
