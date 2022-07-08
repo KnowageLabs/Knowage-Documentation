@@ -3,3 +3,22 @@ ______________________________________________
 
 Knowage is the professional open source suite for modern business analytics over traditional sources and big data systems. Knowage is the new brand for SpagoBI project: this new brand marks the value of the well-known open source business intelligence suite after significant functional and technological transformations and a new offering model. 
 The suite is composed of several modules, each one conceived for a specific analytical domain. They can be used individually as complete solution for a certain task, or combined with one another to ensure full coverage of user’ requirements. 
+
+.. toctree::
+   :hidden:
+   :caption: Table of Contents
+   :maxdepth: 10
+   
+   chapter_1/index.rst
+   chapter_2/index.rst
+   chapter_3/index.rst
+   chapter_4/index.rst
+   chapter_5/index.rst
+   chapter_6/index.rst
+
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
