@@ -6,7 +6,7 @@ What if Knowage
    :caption: Table of Contents
    :maxdepth: 10
    
-   into.rst
+   intro.rst
    description.rst
    open_source.rst
 
