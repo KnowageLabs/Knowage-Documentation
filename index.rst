@@ -14,7 +14,6 @@ The suite is composed of several modules, each one conceived for a specific anal
    chapter_3/index.rst
    chapter_4/index.rst
    chapter_5/index.rst
-   chapter_6/index.rst
 
 .. Indices and tables
 .. ==================
