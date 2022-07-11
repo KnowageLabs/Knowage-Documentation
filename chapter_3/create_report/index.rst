@@ -6,8 +6,8 @@ Create Report
    :caption: Table of Contents
    :maxdepth: 10
    
-   create_report/birt.rst
-   create_report/jasper.rst
+   birt.rst
+   jasper.rst
 
 .. Indices and tables
 .. ==================
