@@ -1,2 +1,2 @@
-Repoditory Management
+Repository Management
 #######

@@ -1,14 +1,14 @@
-Create Report
-###########
+Create Free Inquirt
+#############
 
 .. toctree::
    :hidden:
    :caption: Table of Contents
    :maxdepth: 10
    
-   birt.rst
-   jasper.rst
-
+   meta.rst
+   qbe.rst
+   
 .. Indices and tables
 .. ==================
 

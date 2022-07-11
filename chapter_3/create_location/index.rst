@@ -1,13 +1,13 @@
-Create Report
-###########
+Create location Intelligence
+################
 
 .. toctree::
    :hidden:
    :caption: Table of Contents
    :maxdepth: 10
    
-   birt.rst
-   jasper.rst
+   gis.rst
+   svg.rst
 
 .. Indices and tables
 .. ==================
