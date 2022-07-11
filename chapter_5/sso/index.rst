@@ -1,4 +1,4 @@
-SSO
+How configure the KNOWAGE Single Sign On
 ###########
 
 .. toctree::
