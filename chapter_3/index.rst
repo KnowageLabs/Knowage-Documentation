@@ -14,7 +14,7 @@ How to use Knowage
    create_report/index.rst
    create_qbe/index.rst
    create_registry/index.rst
-   create_lication/index.rst
+   create_location/index.rst
    create_multidimension/index.rst
    create_dossier/index.rst
    create_performance_indicator/index.rst
