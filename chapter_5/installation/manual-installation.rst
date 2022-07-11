@@ -1,5 +1,5 @@
 Manual installation
-==========================
+#############
 
 Metadata database initialization
 --------------------------------------
