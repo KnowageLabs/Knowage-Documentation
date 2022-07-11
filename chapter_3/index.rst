@@ -3,9 +3,7 @@ How to use Knowage
 
 
 .. toctree::
-   :hidden:
    :caption: Table of Contents
-   :maxdepth: 10
    
    security_management/index.rst
    create_datasource/index.rst

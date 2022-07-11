@@ -2,9 +2,7 @@ What if Knowage
 #################
 
 .. toctree::
-   :hidden:
    :caption: Table of Contents
-   :maxdepth: 10
    
    intro.rst
    description.rst
