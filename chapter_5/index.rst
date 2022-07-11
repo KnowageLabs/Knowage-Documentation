@@ -10,7 +10,6 @@ Installation and configuration
    installation/index.rst
    how_upgrade.rst
    sso/index.rst
-   server_manager.rst
    server_settings.rst
    adv_configuration.rst
    
