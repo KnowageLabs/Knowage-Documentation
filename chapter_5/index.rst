@@ -11,7 +11,7 @@ Installation and configuration
    how_upgrade.rst
    sso/index.rst
    server_settings.rst
-   adv_configuration.rst
+
    
    
 .. Indices and tables
