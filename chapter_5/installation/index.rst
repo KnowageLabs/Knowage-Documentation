@@ -8,7 +8,8 @@ The present document illustrates how to install and configure the Knowage suite.
    :caption: Table of Contents
    :maxdepth: 10
    
-   manual.rst
+   software-release.rst
+   manual-installation.rst
    
 .. Indices and tables
 .. ==================
