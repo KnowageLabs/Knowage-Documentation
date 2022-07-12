@@ -49,7 +49,7 @@ Right click on the **Data Source** item and select the corresponding data source
 -  **Database URL**
 -  **Username** and **password**
 
-Note that these configuration parameters will be used by the Studio to connect to the database and let the report to be executed locally. Make sure that the database set in the Server share the same schema of that defined in the designer.
+Note that these configuration parameters will be used by the birt designer to connect to the database and let the report to be executed locally. Make sure that the database set in the Server share the same schema of that defined in the designer.
 
 Since you are setting a local reference to a database inside the report, remember to set an additional information: this will enable Knowage Server to correctly execute the report, by connecting to the data source referenced within the server and not inside the report. 
 Basically you need to tell the server to override the data source configuration. Therefore, add a parameter to the report, called **connectionName**, right-clicking on the "Report Parameters" menu item and selecting "New Parameter". Fill in the form as suggested below.
