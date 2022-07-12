@@ -26,7 +26,7 @@ Firt of all you have to download the Birt report designer from here 'Download Ec
 
 .. _Download Eclipse: https://download.eclipse.org/birt/downloads/drops/R-R1-4_4_2-201502171805/birt-report-designer-all-in-one-4_4_2-20150217.zip
 
-Here you can find some information about how installa and use Birt report designer: 'How  install and use birt'_
+Here you can find some information about how install and use Birt report designer: 'How  install and use birt'_
 
 .. _How  install and use birt:  https://eclipse.github.io/birt-website/docs/installation
 
@@ -45,19 +45,21 @@ After that you can use the designer to create a new report.
     Create a new Report.
 
 3) Configure che data source, create the data set and design the report
+
 .. figure:: media/birt5.png
 
-    Design the report.
-In the designer you can test the report.
+    Design the report
+
+Using the preiew function you can test the report.
 
 Once the document is designed, it is stored as a local file, marked out with an icon and a specific file extension:
 
 -  **.rptdesign:** document template for reports that use the BIRT engine.
 
-4) deploy on KNOWAGE server
+4) Deploy on KNOWAGE server
 using the KNOWAGE document browser you can install the report in the Server and test it.
 
-As previously described in the section Dataset Definition. In this specific example, we will show how to create a report with an internal dataset. 
+In this specific example, we will show how to create a report with an internal dataset. 
 First of all, in case of an internal dataset, define a **JDBC Data Source**.
 
 Right click on the **Data Source** item and select the corresponding data source. A pop up editor will open, prompting you the connection settings:
