@@ -22,12 +22,13 @@ BIRT, acronim for **Business Intelligence and Reporting Tools**, is an open sour
 Developing a BIRT report
 ---------------------------
 
-Firt of all you have to download the Birt report designer from :
+Firt of all you have to download the Birt report designer from here 'Download Eclipse'_
 
-.. _A Download Eclipse: https://download.eclipse.org/birt/downloads/drops/R-R1-4_4_2-201502171805/birt-report-designer-all-in-one-4_4_2-20150217.zip
+.. _Download Eclipse: https://download.eclipse.org/birt/downloads/drops/R-R1-4_4_2-201502171805/birt-report-designer-all-in-one-4_4_2-20150217.zip
 
-Here you can find some information about how installa and use Birt report designer
-.. _A How  install and use birt:  https://eclipse.github.io/birt-website/docs/installation
+Here you can find some information about how installa and use Birt report designer: 'How  install and use birt'_
+
+.. _How  install and use birt:  https://eclipse.github.io/birt-website/docs/installation
 
 After that you can use the designer to create a new report.
 
