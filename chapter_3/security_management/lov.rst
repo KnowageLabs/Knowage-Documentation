@@ -1,7 +1,5 @@
 List Of Value
 ###############
-Creating a List Of Value
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 A *List Of Value* (LOV), is a collection of data organized in attribute-value fashion. For example, the LOV in LOV example retrieves id, name and food family for a product.
 
