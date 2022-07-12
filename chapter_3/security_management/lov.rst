@@ -151,3 +151,124 @@ If the administrator needs to create additional validation rules, he can click o
 - **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
 - **Range**: to set a range the parameters value has to satisfy;
 - **Decimal**: to set a maximal decimal places for the parameters.
+
+Creating an analytical driver
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As explained at the beginning of this section, analytical drivers use information about users, their roles and profiles to filter data returned by their associated LOVs. Users, roles and profiles must have been already defined in the project context so that they are available to the driver.
+
+.. _analyticaldrivermanagbehav:
+.. figure:: media/image52.png
+
+    Analytical Driver Management.
+
+To create a driver, select Behavioural Model > Analytical Drivers Management from the developer menu. Here, you will see the entire   list of available drivers. For each driver, the list shows unique label, description and type. To explore details the user must just   select one menu item from the list and they will appear in the half right side, as shown in the figure above. Otherwise to delete one analytical driver the user must use the icon |image48| available at the end of each row of the list. Notice that you cannot delete a driver if a document is currently using it.
+
+.. |image48| image:: media/image44.png
+   :width: 30
+
+To create a new driver, click on |image49| at the top right corner. The driver creation interface will open. At first execution only the upper part of the window is visible, as shown in the figure below. The upper part is the **Detail** section, where you can set the label, name and description. Choose the type between Date, String or Number depending on the type of expected data. Select Functional or Temporal if the driver is used by an end user or a scheduler, respectively. A click on the save botton, enabled as soon as the form is filled in, will save the driver and let the section below appear.
+
+.. |image49| image:: media/image45.png
+   :width: 30
+
+.. _drivercrationbehav:
+.. figure:: media/image53.png
+
+    Driver creation.
+
+In the Analytical Driver Use Mode Details section, one or more LOVs are linked to the current driver, as well as roles and checks are assigned via the so-called *use modes*.
+
+To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Details” tab. Here the user must set label and name of that specific use mode, the kind of input among **LOV input**, **Manual input** and **Map input**, as shown in below.
+
+.. figure:: media/image54.png
+
+    Detail panel of LOV creation, second step.
+
+The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are displayed and selectable when executing the document. In fact the user can choose among:
+
+- **Select from list**: all admissible values will be displayed directly within the drivers panel;
+- **Select from popup window**: user will be able to select between admissible values by a lookup table displayed within a popup window;
+- **Select from tree**: conceived for hierarchical LOVs, lets the users navigate the values in a hierarchical way;
+- **Select from combobox**: the driver will look like a drop down menu.
+
+The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next sections for this kind of input.
+
+Moreover the user can add default values (namely values that will be passed to the document at its first execution) using the dedicated area. Here it is possible to pick default values from another LOV or to pick the first or the latter value of the current LOV (if the LOV input type was selected).
+
+In case of Manual Input Date the user can specify a maximum value driven by a LOV:
+
+.. figure:: media/image57.png
+
+    Detail panel of LOV creation, specification of a maximum value.
+
+During execution of a document, the date picker will be limited by that value:
+
+.. figure:: media/image58.png
+
+    Detail of a date picker for a date parameter with maximum value specified.
+
+.. note::
+     **Analytical driver of type Manual Input Date with a default value and/or max value**
+
+     In the case you want to use an analytical driver of type Manual Input Date with a particular date as default value and/or a maximum value, you have to use a particular syntax for the LOVs query. See the note *Create a LOV for the default value of an analytical driver of type Manual Input Date* in the section *Creating a List Of Value* for more details.
+
+.. note::
+     **Analytical driver with hierarchical LOV and default LOV**
+
+     In the case you want to use an analytical driver with a hierarchical LOV and a default LOV the latter need to be hierarchical too. For more details see *Create a LOV for the default value of an analytical driver with a hierarchical LOV* note in the section *Creating a List Of Value*.
+
+At the bottom of the page the user must associate roles to the “use mode”. This action is mandatory. The user connects the user’s roles that he/she wants to be allowed to see a certain list of values or certain regions or be able to type values at his/her convenience.
+
+Therefore, since an admin user can decide to separate values according to the other users’ roles, the analytical driver definition allows to configure different use mode. We can also set validation checks if needed. Then it is sufficient to save each use mode and click on **new use mode** to set a new one. We repeat the same procedure for all the use modes. Each use mode is represented in a separate tab. We will go deeper into this at the end of the section.
+
+All the selections can be multi-valued, but note that this option has to be set directly on the document detail during analytical driver
+association.
+
+Creating an analytical driver for a spatial filter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In previous section we explained how to configure a driver and how it can be linked to different kind of inputs. In this part we linger on the possibility to define a spatial analytical driver. Referring to the following figure, we notice that for setting the geographical driver we must select the **map input** option: here, expanding the combobox you choose the layer on which the filter will act. It is then necessary that the layer has been previously created and uploaded into Knowage **Layers catalog**. Then it is mandatory to specify the property name of the geometry in use using the manual text box just below. Remember that the property name must be exactly the same, therefore respect the upper and the lowercase of the string.
+
+.. _spatialanalyticdrivsett:
+.. figure:: media/image55.png
+
+    Spatial analytical driver settings.
+
+These few steps will implent the spatial analytical driver to be associated to a document and be used to set a spatial filter.
+
+Analytical driver’s use modes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sometimes the same analytical driver (i.e., the same concept, like the concept of product brand) should display different values according to the user that is executing it.
+
+Suppose you have a report on sales and costs like the one in the first figure of this chapter and you want to add to it the possibility to filter also on product brands. If you load the report as the general manager, you should choose between all the possible product brands in the corresponding parameter. If instead you load it as, for instance, the food manager, then you should be able to filter only on product brands related to the Food family.
+
+In order to do this, let us focus again on the definition of the LOV and check that the already defined use mode ``All Brands`` is associated to the correct role ``general_manager``. Here you can add a second tab, called for instance ``Profiled_Brands``, and associate it to the role ``product_manager``. This is because the food manager user has ``product_manager`` role with profile attribute ``pr_family = Food``.
+
+Finally, we choose the second LOV created, the one returning only those brands that belong to a specific family (see the code example in section Parametrizing LOVs). The family is selected by checking the value of the family attribute in the user profile.
+
+Notice that here you can also choose a different type of display mode for the LOV. In other terms, different use modes correspond not only to different LOVs, but also to (possibly) different display mode (pop-up windows, combobox, ...). For instance, you can select a combobox display mode for the All Brands use mode and the pop up window display mode for the Profiled_Brands use mode.
+
+Once you have saved the LOV, just log out from Knowage and log in with a different user role, i.e. as a general manager, food manager and drink manager. Executing your report on sales and costs you can now notice the differences on the values and on the display mode of the Product Brand parameters according to the different users. Notice that, for food manager and drink manager, the parameters are always displayed as a pop-up window, while for the general manager also the display mode of the parameter varies.
+
+.. figure:: media/image56.png
+
+    Behavioural Model Schema.
+
+Behavioural Model Lineage
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is possible to show a summary of the links between the LOVs, the analytical driver and the documents by selecting **Behavioural Model** > **Behavioural Model Lineage**.
+
+.. figure:: media/lineage.png
+
+    Behavioural Model Lineage.
+
+The entire list of available LOVs, analytical driver and documents appears, as shown in figure below.
+
+.. figure:: media/lineage2.png
+
+    List of LOVs, analytical driver and documents.
+
+By selecting one LOV or Analytical Driver or Documents the other will refresh showing only the elements associated with the selection done. To come back to the original situation click the refresh button on the top right corner.
