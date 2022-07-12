@@ -1,4 +1,4 @@
-Create Free Inquirt
+Create Free Inquiry
 #############
 
 .. toctree::
