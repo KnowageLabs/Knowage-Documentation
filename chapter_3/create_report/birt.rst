@@ -13,7 +13,7 @@ Reports represent the most popular type of business analysis. Indeed, they allow
 
 For these reasons reports usually have a pervasive level of usage: they are used by developers to perform both synthetic and detailed analysis, having a particularly low level of difficulty.
 
-BIRT, acronim for Business Intelligence and Reporting Tools, is an open source technology platform used to create data visualizations and reports. In Figure below you can see an example of BIRT report.
+BIRT, acronim for **Business Intelligence and Reporting Tools**, is an open source technology platform used to create data visualizations and reports. In Figure below you can see an example of BIRT report.
 
 .. figure:: media/image327.png
 
@@ -22,24 +22,40 @@ BIRT, acronim for Business Intelligence and Reporting Tools, is an open source t
 Developing a BIRT report
 ---------------------------
 
-TODO: descrivere come si crea un nuovo documento sul designer BIRT
+Firt of all you have to download the Birt report designer from :
+
+.. _A Download Eclipse: https://download.eclipse.org/birt/downloads/drops/R-R1-4_4_2-201502171805/birt-report-designer-all-in-one-4_4_2-20150217.zip
+
+Here you can find some information about how installa and use Birt report designer
+.. _A How  install and use birt:  https://eclipse.github.io/birt-website/docs/installation
+
+After that you can use the designer to create a new report.
+
+1) create a new **Report Project**
+
+.. figure:: media/birt1.png
+
+    Create a new Report Project.
+
+2) create a new **Report**
+
+.. figure:: media/birt4.png
+
+    Create a new Report.
+
+3) Configure che data source, create the data set and design the report
+.. figure:: media/birt5.png
+
+    Design the report.
+In the designer you can test the report.
 
 Once the document is designed, it is stored as a local file, marked out with an icon and a specific file extension:
 
 -  **.rptdesign:** document template for reports that use the BIRT engine.
 
+4) deploy on KNOWAGE server
+using the KNOWAGE document browser you can install the report in the Server and test it.
 
-The design and deployment of a BIRT report includes the following steps:
-
--  create the empty document;
--  switch to the report designer perspective;
--  create the data source;
--  create the dataset;
--  design the report via the graphical interface;
--  deploy the report on the server.
-
-
-The next steps are the creation of a datasource and of a dataset. 
 As previously described in the section Dataset Definition. In this specific example, we will show how to create a report with an internal dataset. 
 First of all, in case of an internal dataset, define a **JDBC Data Source**.
 
