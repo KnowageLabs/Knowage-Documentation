@@ -1,5 +1,5 @@
 Widget gallery
-##############
+###############
 
 The **Widget Gallery** is a functionality available since version 8.0 that allows users and editors to create a template and share in multiple dashboards.
 Creating a template and than using it inside a dashboard, the users will have the capability of creating complex dashboard elements quite easily and quickly, keeping a common base template.
