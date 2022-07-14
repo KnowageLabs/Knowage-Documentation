@@ -34,7 +34,7 @@ El *rol* de un usuario representa una categorización de un grupo de usuarios. E
 
 .. \_knowageroletype:
 .. table:: Tipos de roles de knowage.
-:widths: automático
+    :widths: auto
 
     +-----------------------+-----------------------+-----------------------+
     |    Role Type          | Description           | Standard User         |
