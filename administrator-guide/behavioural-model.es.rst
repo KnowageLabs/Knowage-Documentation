@@ -33,7 +33,7 @@ El *perfil* de un usuario consiste en un conjunto de propiedades llamadas atribu
 El *rol* de un usuario representa una categorización de un grupo de usuarios. Estos roles pueden corresponder a puestos específicos en la empresa, por ejemplo, "gerente general" o un "director de ventas", o a un puesto con respecto al proyecto de BI, por ejemplo, "administrador de datos" y "desarrollador de BI". Diferentes usuarios pueden tener el mismo rol, así como el mismo usuario puede tener múltiples roles.
 
 .. \_knowageroletype:
-.. tabla:: Tipos de roles de knowage.
+.. table:: Tipos de roles de knowage.
 :widths: automático
 
     +-----------------------+-----------------------+-----------------------+
@@ -79,7 +79,7 @@ Cuando un usuario inicia sesión en Knowage, su perfil se carga automáticamente
 
 La autenticación puede ser manejada internamente por Knowage o delegada a un sistema externo de inicio de sesión único (SSO).
 
-.. indirecta::
+.. hint::
 **Administración de autenticación**:
 La elección de manejar la autenticación internamente o delegarla en un sistema SSO externo generalmente depende de la presencia de un sistema de autenticación ya implementado. Si este es el caso, Knowage puede integrarse perfectamente con la infraestructura de autenticación existente.
 
@@ -131,7 +131,7 @@ Gestión de atributos de perfil.
 
 Una vez definidos los atributos, el administrador del modelo puede definir roles, utilizando el **Gestión de roles** funcionalidad. La herramienta de administración de roles tiene dos caras: a la izquierda puede ver la lista de roles ya definidos. Al principio de un proyecto, solo se ven los roles predeterminados. Para agregar un nuevo rol, haga clic en el icono **Agregar** y desplazarse al panel derecho. Para eliminar un rol, simplemente haga clic en el botón **Borrar** al final de la fila del rol.
 
-.. indirecta::
+.. hint::
 **Gestión de roles**:
 El modelo de comportamiento debe construirse teniendo en cuenta la especificidad de cada organización y las necesidades del proyecto de BI.    Por lo tanto, es una buena práctica definir roles específicos para el proyecto de BI y evitar usar solo roles técnicos de Knowage.
 
