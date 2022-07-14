@@ -23,7 +23,7 @@ Para crear una nueva carpeta, seleccione **Gestión de perfiles** > **Gestión d
 Una vez que seleccione **Insertar**, se abren los detalles de la funcionalidad.
 
 .. \_createnewfolder:
-.. figura:: media/image34.png
+.. figure:: media/image34.png
 
 Cree una nueva carpeta y asigne permisos.
 
@@ -47,7 +47,7 @@ Knowage permite la definición de un menú para el usuario final. Este menú se 
 
 Basta con hacer clic en el "Más" de la página Configuración del menú para agregar una nueva carpeta al **Árbol de menú**. Al seleccionar un nodo del árbol y hacer clic en el icono "Más", el usuario puede agregar una nueva carpeta como hija de la anterior.
 
-.. figura:: media/image35.png
+.. figure:: media/image35.png
 
 Acciones del árbol de menús.
 
