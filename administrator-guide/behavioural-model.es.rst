@@ -79,15 +79,15 @@ Cuando un usuario inicia sesión en Knowage, su perfil se carga automáticamente
 
 La autenticación puede ser manejada internamente por Knowage o delegada a un sistema externo de inicio de sesión único (SSO).
 
-.. hint::
-**Administración de autenticación**:
-La elección de manejar la autenticación internamente o delegarla en un sistema SSO externo generalmente depende de la presencia de un sistema de autenticación ya implementado. Si este es el caso, Knowage puede integrarse perfectamente con la infraestructura de autenticación existente.
+   .. hint::
+      **Authentication Management**:
+            La elección de manejar la autenticación internamente o delegarla en un sistema SSO externo generalmente depende de la presencia de un sistema de autenticación ya implementado. Si este es el caso, Knowage puede integrarse perfectamente con la infraestructura de autenticación existente.
 
 Una vez que el usuario ha iniciado sesión, se carga su rol. Los roles se administran internamente. En caso de que el usuario esté asociado con varios roles, se le pedirá que elija uno.
 
 Alternativamente, haciendo clic en el icono que se muestra a continuación, puede seleccionar un rol predeterminado que se mantendrá válido hasta que cierre la sesión.
 
-.. figure:: medios/image28\_bis.png
+.. figure:: media/image28_bis.png
 
 Roles de usuario en Knowage.
 
