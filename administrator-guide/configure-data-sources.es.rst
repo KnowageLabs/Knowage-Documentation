@@ -11,8 +11,8 @@ Knowage administra dos tipos de conexiones de origen de datos:
 *   conexiones recuperadas como recursos JNDI, que son administrados por el servidor de aplicaciones en el que knowage está trabajando. Esto permite al servidor de aplicaciones optimizar el acceso a los datos (por ejemplo, definiendo grupos de conexiones) y, por lo tanto, son los preferidos. Aquí puede encontrar información sobre cómo crear un grupo de conexiones en Tomcat: https://tomcat.apache.org/tomcat-8.0-doc/jndi-datasource-examples-howto.html
 *   conexiones JDBC directas, que son administradas directamente por Knowage;
 
-.. importante::
-**Cómo crear JNDI de conexión en Tomcat**
+.. important::
+	**Cómo crear JNDI de conexión en Tomcat**
 
          - Create connection pool on ``TOMCAT_HOME/conf/server.xml``
          - Add ResourceLink on context.xml
@@ -21,11 +21,11 @@ Para agregar una nueva conexión, primero agregue el controlador JDBC relativo a
 
 Haciendo clic en el botón **Agregar** en la esquina superior derecha del panel izquierdo, se mostrará un formulario vacío a la derecha.
 
-.. figura:: media/image25.png
+.. figure:: media/image25.png
 
      Add a new data source
 
-.. figura:: media/image26.png
+.. figure:: media/image26.png
 
      Data source details.
 
@@ -106,8 +106,8 @@ Una vez que haya completado el formulario, puede probar la nueva fuente de datos
 
 En esta sección describimos cómo puede conectar Knowage a diferentes fuentes de datos de Big Data.
 
-.. importante::
-**Solo Enterprise Edition**
+.. important::
+	**Solo Enterprise Edition**
 
          Please note that these connections are available for products KnowageBD and KnowagePM only.
 
