@@ -87,7 +87,7 @@ Una vez que el usuario ha iniciado sesión, se carga su rol. Los roles se admini
 
 Alternativamente, haciendo clic en el icono que se muestra a continuación, puede seleccionar un rol predeterminado que se mantendrá válido hasta que cierre la sesión.
 
-.. figura:: medios/image28\_bis.png
+.. figure:: medios/image28\_bis.png
 
 Roles de usuario en Knowage.
 
@@ -125,7 +125,7 @@ Además de los atributos de perfil creados por el administrador, de forma predet
 
 *   **Idioma**: establecido con el idioma seleccionado por el usuario
 
-.. figura:: media/image29.png
+.. figure:: media/image29.png
 
 Gestión de atributos de perfil.
 
@@ -137,7 +137,7 @@ El modelo de comportamiento debe construirse teniendo en cuenta la especificidad
 
 En el panel derecho hay tres pestañas. El **Detalle** permite al administrador definir el nombre y el tipo de rol (obligatorio). El tipo de rol regula la visibilidad de ese rol en función de los tipos ya descritos. También se puede agregar un código y una descripción, como se muestra a continuación.
 
-.. figura:: media/image3031.png
+.. figure:: media/image3031.png
 
 Gestión de roles.
 
@@ -155,7 +155,7 @@ Puede crear nuevas categorías para modelos de negocio y conjuntos de datos medi
 
 Por último, pero no menos importante, el **Gestión de usuarios** incluye un panel izquierdo que permite al administrador crear y eliminar usuarios, y un panel derecho que le permite administrar los detalles, roles y atributos del usuario.
 
-.. figura:: media/image32.png
+.. figure:: media/image32.png
 
 Gestión de usuarios.
 
@@ -164,7 +164,7 @@ Desbloqueo de usuario
 
 Si el usuario alcanza el número máximo de intentos de inicio de sesión fallidos (editable en configuraciones avanzadas), Será bloqueado por Knowage y se denegará el acceso. Al acceder a Knowage con un usuario que tiene privilegios de administración de usuarios, el usuario bloqueado se mostrará con una señal de advertencia roja y será posible desbloquearlo utilizando el botón "desbloquear usuario". Después de eso, el usuario podrá iniciar sesión con el último conjunto de credenciales.
 
-.. figura:: media/image115.png
+.. figure:: media/image115.png
 
     Users Management - Roles settings example
 
@@ -177,7 +177,7 @@ Después de eso, si hay más de un rol asociado al usuario, puede elegir el rol 
 El rol predeterminado es opcional: si no selecciona un rol predeterminado, en el momento del inicio de sesión se cargarán todos los roles disponibles para el usuario. Si selecciona un rol, en el momento del inicio de sesión
 será el rol de sesión seleccionado.
 
-.. figura:: media/image100.png
+.. figure:: media/image100.png
 
     Users Management - Roles settings example
 
