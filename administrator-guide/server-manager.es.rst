@@ -7,7 +7,7 @@
 
 En **Administrador del servidor** en el panel de menú encontrará algunas funcionalidades de administración.
 
-.. figura:: medios/image60\_bis.png
+.. figure:: medios/image60\_bis.png
 
     Server Manager Panel
 
@@ -17,13 +17,13 @@ Aquellos sobre **Importación/Exportación** permite exportar algunas configurac
 
 Comenzamos esta sección subrayando que solo aquellos usuarios que tienen el rol de superadministrador pueden usar esta funcionalidad. **Gestión de inquilinos** solo está disponible para usuarios que posean la licencia de Knowage Enterprise Reporting (ER). Un **arrendatario** es generalmente un usuario que puede o no puede emplear tipos de productos específicos o acceder a algunas (o todas) las fuentes de datos dentro del mismo entorno. Luego, esta funcionalidad le permite crear nuevos inquilinos o administrar los antiguos.
 
-.. figura:: media/image61.png
+.. figure:: media/image61.png
 
     Tenants Management window.
 
 En la imagen de arriba, a la izquierda tiene la lista de inquilinos existentes. En la parte superior de dicha lista está disponible el **Buscar** para ayudar a los usuarios a explorar los inquilinos. Al hacer clic en el icono "Más", puede crear un nuevo inquilino. Se abre un formulario en el área derecha. Insertar un **Nombre** y un **Tema**. A continuación, cambie las pestañas para establecer el acceso a los tipos de producto y seleccione qué fuentes de datos se pueden lograr.
 
-.. figura:: media/image6465.PNG
+.. figure:: media/image6465.PNG
 
     Product types tab (Left) Datasources tab (Right).
 
@@ -37,7 +37,7 @@ El **Gestión de plantillas** le permite elegir una fecha de inicio antes de la 
 
 En primer lugar, se le pide que inserte una fecha haciendo clic en el icono del calendario. Luego haga clic en el icono de la lupa y seleccione los documentos que le interesan. La lista que se muestra contiene sólo documentos creados antes de la fecha seleccionada. Al hacer clic en el icono de la papelera, se elimina la plantilla de los documentos seleccionados que se cargaron antes de la fecha elegida. Si todas las plantillas de un documento preceden a la fecha elegida, se conservará la última plantilla cargada, de modo que ningún documento se elimine accidentalmente. Resumimos los pasos descritos en la Figura a continuación.
 
-.. figura:: media/image66.png
+.. figure:: media/image66.png
 
     Deleting templates
 
@@ -115,7 +115,7 @@ Echemos un vistazo a los pasos para crear el .zip.
 
 A continuación mostramos el editor de exportación.
 
-.. figura:: media/image67.png
+.. figure:: media/image67.png
 
     Document Export
 
@@ -130,14 +130,14 @@ Antes de continuar decide si quieres exportar **Vista personalizada de Olap** y/
 *   **Vista personalizada de Olap**
     Al comprobar esta propiedad, la exportación incluirá todas las vistas personalizadas guardadas en los documentos OLAP elegidos. Puede encontrar la Vista personalizada en el menú del documento OLAP y hacer clic en *Mostrar vista personalizada OLAP*. Vea la siguiente figura:
 
-.. figura:: media/OCW.PNG
+.. figure:: media/OCW.PNG
 
     Olap customized view
 
 *   **Documentos programados**
     Comprobando esta propiedad, la exportación incluirá toda la ejecución programada guardada en los documentos elegidos. Puede encontrar la ejecución programada en el menú del documento y haciendo clic en *Mostrar ejecución programada*. Vea la siguiente figura:
 
-.. figura:: media/SDOC.png
+.. figure:: media/SDOC.png
 
     Scheduled documents
 
@@ -153,14 +153,14 @@ Antes de continuar decide si quieres exportar **Vista personalizada de Olap** y/
 Ahora está listo para hacer clic en el icono de exportación para generar y descargar el .zip.
 Supongamos que desea cargar MyFirstExport.zip en otra instalación. Inicie sesión y muévase a **Administrador del servidor** > **Importar\Exportar documentos** área Cambie al **Importación** y haga clic en **Hojear** para acceder a sus carpetas personales. En la siguiente figura mostramos la interfaz de importación de documentos.
 
-.. figura:: media/image68.png
+.. figure:: media/image68.png
 
     Document Import
 
 Elija el .zip obtenido en el **Exportar** y haga clic en el icono de importación. Pocos pasos lo guían a través de la importación.
 Se le pedirá que asigne de origen a destino: roles, motores, orígenes de datos y metadatos.
 
-.. figura:: media/image110.png
+.. figure:: media/image110.png
 
 Asistente para importación de documentos
 
@@ -169,13 +169,13 @@ Si un rol no asigna ninguno de los existentes en el de destino, se creará. **Pr
 *Faltan licencias*
 Si una o más licencias no son válidas o faltan, durante el procedimiento de exportación se le informará con una alerta. Los documentos relacionados no se pueden exportar ni se exportarán.
 
-.. figura:: media/image113.png
+.. figure:: media/image113.png
 
 Exportación de documentos Licencias faltantes
 
 Las licencias también se comprueban durante el procedimiento de importación y, si faltan uno o más o no son válidos, no se importarán los documentos relacionados. Estos documentos se enumerarán en la última fase antes del inicio del procedimiento de importación y para cada uno se mostrará la licencia no válida o faltante.
 
-.. figura:: media/image114.png
+.. figure:: media/image114.png
 
 Importación de documentos Licencias faltantes
 
@@ -214,7 +214,7 @@ Users
 
 En esta área puede exportar los usuarios de una instalación a otra, consulte la siguiente figura.
 
-.. figura:: media/image73.png
+.. figure:: media/image73.png
 
     User Export
 
@@ -222,7 +222,7 @@ Para generar el .zip hay que marcar el usuario a incluir en la exportación e in
 
 Para importar el .zip en otra instalación, inicie sesión y abra el **Administrador del servidor** > **Importar\Exportar usuarios**, cambiar a **Importación** área. Aquí haga clic en **Hojear** para elegir el .zip creado por exportación. Luego haga clic en el icono de importación. Los usuarios contenidos en el archivo se cargan y los catálogos se muestran en el lado izquierdo de la pantalla. Elige entre los usuarios que se muestran el que quieres importar, márcalos y haz clic en la flecha para moverlos por el otro lado. Ahora haga clic en **Iniciar importación** y los usuarios también se crean correctamente en esta instalación. Preste atención al marcar la casilla de verificación carpeta personal si desea que se importen carpetas personales. En la siguiente figura puedes ver **Importación de usuarios** interfaz.
 
-.. figura:: media/image74.png
+.. figure:: media/image74.png
 
     User Import
 
@@ -313,7 +313,7 @@ Analytical Drivers
 
 Esta opción permite importar/exportar los controladores analíticos y su LOV relacionado.
 
-.. figura:: media/image86.png
+.. figure:: media/image86.png
 
     Import/Export of analytical drivers
 
@@ -325,15 +325,15 @@ Cambie de inquilino e inicie sesión como administrador. Utilice la pestaña Imp
 
 Utilice la GUI para cargar la carpeta comprimida, para especificar si desea sobrescribir en los controladores analíticos existentes o agregar los que faltan. Luego haga clic en siguiente y continúe asignando roles entre inquilinos y fuentes de datos.
 
-.. figura:: media/image87.png
+.. figure:: media/image87.png
 
     Import of analytical drivers
 
-.. figura:: media/image88.png
+.. figure:: media/image88.png
 
     Import of analytical drivers
 
-.. figura:: media/image89.png
+.. figure:: media/image89.png
 
     Import of analytical drivers
 
@@ -372,7 +372,7 @@ Esta funcionalidad permite Exportar/Importar los siguientes elementos
 
 Los pasos para realizar la Exportación/Importación son iguales a los vistos en las secciones anteriores. Es decir, el usuario tiene que entrar en el **Catálogo de importación/exportación** del panel de menús del Administrador del servidor. La ventana contendrá las pestañas Importar y Exportar. La ficha exportar se utiliza para producir la carpeta zip que se va a importar en el inquilino de interés. Tenga en cuenta que el usuario puede aplicar un filtro temporal para ayudarle a buscar elementos en la lista.
 
-.. figura:: media/image92.png
+.. figure:: media/image92.png
 
     Import of catalog
 
