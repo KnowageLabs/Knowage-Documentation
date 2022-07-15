@@ -31,24 +31,24 @@ El menú de funcionalidades de BI consiste en un conjunto de iconos asociados co
 *   **Desarrollo de documentos** Esta es una funcionalidad estándar de Knowage Server. Le permite crear el documento analítico, así como acceder y ejecutarlos.
 *   **Área de trabajo** Desde esta sección se puede acceder a la **Modelos** y crear conjuntos de datos y federaciones.
 
-.. table:: Componentes de menú - Menú de funcionalidades de BI.
+.. table:: Menu components - BI Functionalities Menu.
    :widths: auto
 
-\+--------------------------------+-----------------------+-----------------------+
-|    | de iconos Nombre | Descripción |
-\+================================+=======================+=======================+
-| .. figure:: media/image16.png | | de desarrollo de documentos Creación y | de documentos
-|                                |                       | acceso al archivo |
-|                                |                       | Carpetas.              |
-\+--------------------------------+-----------------------+-----------------------+
-| .. figure:: media/image17.png | espacio de trabajo | Consulta el | de tu negocio
-|                                |                       | modelos, navegación y |
-|                                |                       | crear los conjuntos de datos. |
-\+--------------------------------+-----------------------+-----------------------+
-| .. figure:: media/image103.png | Descargar | Abrir un cuadro de diálogo que |
-|                                |                       | mostrar los | disponibles
-|                                |                       | descarga asincrónica.       |
-\+--------------------------------+-----------------------+-----------------------+
+   +--------------------------------+-----------------------+-----------------------+
+   |    Icon                        | Name                  | Description           |
+   +================================+=======================+=======================+
+   | .. figure:: media/image16.png  | Documents development | Document creation and |
+   |                                |                       | acces to the archive  |
+   |                                |                       | folders.              |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image17.png  | Workspace             | Inquiry your business |
+   |                                |                       | models, navigate and  |
+   |                                |                       | create your datasets. |
+   +--------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/image103.png | Download              | Open a dialog that    |
+   |                                |                       | show the available    |
+   |                                |                       | async download.       |
+   +--------------------------------+-----------------------+-----------------------+
 
 El menú del administrador está dividido en subpaneles que mapean las diferentes áreas de gestión:
 
@@ -60,31 +60,31 @@ El menú del administrador está dividido en subpaneles que mapean las diferente
 *   **Configuración del servidor** En este panel tiene acceso a todas las opciones de configuración de configuración del servidor, como la configuración o la administración de dominios.
 *   **Administrador del servidor** Este es un paquete opcional. Le da acceso a diferentes funcionalidades del servidor, como la gestión de plantillas y todas las funciones de importación / exportación.
 
-.. table:: Componentes del menú - Menú del administrador.
-:widths: automo
+.. table:: Menu components - Administrator Menu.
+   :widths: auto
 
-\+--------------------------------+-----------------------+------------------------+
-|    | de iconos Nombre | Áreas de gestión |
-\+================================+=======================+========================+
-| .. figure:: media/image18.png | Proveedores de datos | Configuración del origen de datos.  |
-\+--------------------------------+-----------------------+------------------------+
-| .. figure:: media/image19.png | | de perfil Atributos de perfil, |
-|                                | Gestión | Roles, usuario y | de menú
-|                                |                       | | de configuración
-\+--------------------------------+-----------------------+------------------------+
-| .. figure:: media/image20.png | Modelo de comportamiento | Lovs, | analíticos
-|                                |                       | | de controladores y restricciones
-\+--------------------------------+-----------------------+------------------------+
-| .. figure:: media/image21.png | Catálogos | Modelos de Negocio y |
-|                                |                       | Capas |
-\+--------------------------------+-----------------------+------------------------+
-| .. figure:: media/image22.png | Herramientas | | del programador
-\+--------------------------------+-----------------------+------------------------+
-| .. figure:: media/image23.png | Configuración del servidor | Propiedades de datos de usuario, |
-|                                |                       | Configuración, |
-|                                |                       | Dominios y metadatos |
-\+--------------------------------+-----------------------+------------------------+
-| .. figure:: media/image24.png | Administrador del servidor | Administrador de plantillas y |
-|                                |                       | | de Importación-Exportación
-|                                |                       | opciones |
-\+--------------------------------+-----------------------+------------------------+
+   +--------------------------------+-----------------------+------------------------+
+   |    Icon                        | Name                  | Management areas       |
+   +================================+=======================+========================+
+   | .. figure:: media/image18.png  | Data Providers        | Data source settings.  |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image19.png  | Profile               | Profile Attributes,    |
+   |                                | Management            | Roles, User and Menu   |
+   |                                |                       | configuration          |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image20.png  | Behavioural model     | Lovs, Analytical       |
+   |                                |                       | Driver and Constraints |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image21.png  | Catalogs              | Business Models and    |
+   |                                |                       | Layers                 |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image22.png  | Tools                 | Scheduler              |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image23.png  | Server Settings       | User Data Properties,  |
+   |                                |                       | Configuration,         |
+   |                                |                       | Domains and Metadata   |
+   +--------------------------------+-----------------------+------------------------+
+   | .. figure:: media/image24.png  | Server Manager        | Template manager and   |
+   |                                |                       | Import-Export          |
+   |                                |                       | options                |
+   +--------------------------------+-----------------------+------------------------+
