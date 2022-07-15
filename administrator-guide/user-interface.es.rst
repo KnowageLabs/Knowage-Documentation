@@ -6,7 +6,7 @@ Este capítulo se centra en la interfaz de usuario de Knowage, proporcionando in
 
 El menú Knowage te da acceso a todas sus funcionalidades. De forma predeterminada, encontrará el botón de menú en la esquina inferior izquierda de la página de inicio, haga clic en él para abrir el menú.
 
-.. figura:: medios/image9\_bis.png
+.. figure:: medios/image9\_bis.png
 
 Página principal
 
@@ -14,7 +14,7 @@ Puede minimizarlo haciendo clic en el mismo icono principal.
 
 El menú principal de Knowage se divide en tres submenús: el menú de usuario, el menú de funcionalidades de BI y el de administrador. El panel izquierdo contiene el menú de usuario, que está contraído, y el menú de funcionalidades de BI, mientras que el menú de administrador está en el panel derecho.
 
-.. figura:: media/image10.png
+.. figure:: media/image10.png
 
 Menú
 
@@ -32,7 +32,7 @@ El menú de funcionalidades de BI consiste en un conjunto de iconos asociados co
 *   **Área de trabajo** Desde esta sección se puede acceder a la **Modelos** y crear conjuntos de datos y federaciones.
 
 .. table:: Componentes de menú - Menú de funcionalidades de BI.
-:widths: automático
+:widths: auto
 
 \+--------------------------------+-----------------------+-----------------------+
 |    | de iconos Nombre | Descripción |
@@ -61,7 +61,7 @@ El menú del administrador está dividido en subpaneles que mapean las diferente
 *   **Administrador del servidor** Este es un paquete opcional. Le da acceso a diferentes funcionalidades del servidor, como la gestión de plantillas y todas las funciones de importación / exportación.
 
 .. table:: Componentes del menú - Menú del administrador.
-:widths: automático
+:widths: automo
 
 \+--------------------------------+-----------------------+------------------------+
 |    | de iconos Nombre | Áreas de gestión |
