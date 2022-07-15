@@ -6,20 +6,20 @@ Knowage scheduler permite programar la ejecución de uno o más documentos anal�
 
 Para definir una nueva actividad programada, el administrador debe especificar qué documentos componen la actividad y cómo ejecutarlos. La lista de todas las actividades programadas se puede ver seleccionando **Herramientas** > **Programador**. Para crear una nueva actividad, haga clic en el icono "Más" en la parte superior de la página en el área izquierda. En la siguiente figura puede ver la página principal del programador y la nueva GUI de actividad.
 
-.. figura:: media/image4041.PNG
+.. figure:: media/image4041.PNG
 
 Izquierda: página principal del programador. Derecha: Nueva GUI de actividad
 
 Asigne un nombre y una descripción a la nueva actividad. Luego seleccione los documentos que lo componen haciendo clic en el icono "Más" y seleccionándolos del asistente emergente, consulte la Figura a continuación.
 
-.. figura:: media/image42.png
+.. figure:: media/image42.png
 
 Agregar un documento a una actividad.
 
 Ahora debe especificar cómo el programador debe manejar los controladores analíticos de cada documento seleccionado que tenga parámetros.
 
 .. \_manageparameters:
-.. figura:: media/image43.png
+.. figure:: media/image43.png
 
 Administrar parámetros.
 
@@ -30,8 +30,8 @@ Hay dos posibilidades:
 
 Una actividad programada puede estar compuesta por más de un informe. También es posible añadir el mismo informe a una actividad programada más veces. Puede utilizar el icono |image50| para duplicar fácilmente un documento. Una vez que se hayan agregado todos los documentos deseados y se haya configurado la configuración de administración de sus parámetros, guarde la actividad haciendo clic en el botón Guardar. La nueva actividad se muestra en la lista y se puede modificar o eliminar utilizando los iconos específicos previstos.
 
-.. |image50| imagen:: media/image44.png
-:ancho: 30
+.. |image50| image:: media/image44.png
+   :width: 30
 
 Puede administrar su actividad en cualquier momento simplemente haciendo clic en el nombre del elemento de programación (lado izquierdo de la ventana) y todas sus características se mostrarán a un lado (mitad derecha de la ventana).
 
@@ -40,7 +40,7 @@ a actividades de nueva creación.
 
 Se abren los detalles de la schedulación (Figura a continuación).
 
-.. figura:: media/image45.png
+.. figure:: media/image45.png
 
     Schedulation detail panel.
 
@@ -70,7 +70,7 @@ Si eliges **Verificación del conjunto de datos**, debe seleccionar un conjunto 
 
 Una vez que haya terminado, cambie al **Gestión Documental** pestaña.
 
-.. figura:: media/image46.png
+.. figure:: media/image46.png
 
     Document management.
 
