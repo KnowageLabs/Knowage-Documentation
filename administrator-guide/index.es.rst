@@ -1,81 +1,83 @@
-Manual de administración
-\#########################
+Administration Manual
+#########################
 
 .. toctree::
-:caption: Tabla de contenido
+   	:caption: Table of Contents
 
-    knowage-at-a-glance.rst
-    user-interface.rst
-    configure-data-sources.rst
-    behavioural-model.rst
-    analytical-model.rst
-    operational-engines.rst
-    timespan.rst
-    scheduler.rst
-    server-manager.rst
-    server-settings.rst
+   	knowage-at-a-glance.rst
+	user-interface.rst
+	configure-data-sources.rst
+	behavioural-model.rst
+	analytical-model.rst
+	operational-engines.rst
+	timespan.rst
+	scheduler.rst
+	server-manager.rst
+	server-settings.rst
 
-.. |imagen11| imagen:: media/image11.png
-:ancho: 0.27561in
-:altura: 0.27561in
-.. |imagen12| imagen:: media/image12.png
-:ancho: 0.2756in
-:altura: 0.2756in
-.. |imagen13| imagen:: media/image13.png
-:ancho: 0.2756in
-:altura: 0.2756in
-.. |imagen14| imagen:: media/image14.png
-:ancho: 0.2756in
-:altura: 0.27559in
-.. |imagen15| imagen:: media/image15.png
-:ancho: 0.2756in
-:altura: 0.27559in
-.. |imagen18| imagen:: media/image16.png
-:ancho: 0.2756in
-:altura: 0.2756in
-.. |image19| imagen:: media/image17.png
-:ancho: 0.2756in
-:altura: 0.2756in
-.. |image27| imagen:: media/image18.png
-:ancho: 0.2756in
-:altura: 0.2756in
-.. |image28| imagen:: media/image19.png
-:ancho: 0.2756in
-:altura: 0.2756in
-.. |image29| imagen:: media/image20.png
-:ancho: 0.2756in
-:altura: 0.27561in
-.. |image30| imagen:: media/image21.png
-:ancho: 0.27561in
-:altura: 0.2756in
-.. |image31| imagen:: media/image22.png
-:ancho: 0.27561in
-:altura: 0.27561in
-.. |image32| imagen:: media/image23.png
-:ancho: 0.2756in
-:altura: 0.27561in
-.. |image33| imagen:: media/image24.png
-:ancho: 0.27559in
-:altura: 0.2756in
-.. |image50| imagen:: media/image44.png
-:ancho: 0.39371in
-:altura: 0.25131in
+.. |image11| image:: media/image11.png
+   :width: 0.27561in
+   :height: 0.27561in
+.. |image12| image:: media/image12.png
+   :width: 0.2756in
+   :height: 0.2756in
+.. |image13| image:: media/image13.png
+   :width: 0.2756in
+   :height: 0.2756in
+.. |image14| image:: media/image14.png
+   :width: 0.2756in
+   :height: 0.27559in
+.. |image15| image:: media/image15.png
+   :width: 0.2756in
+   :height: 0.27559in
+.. |image18| image:: media/image16.png
+   :width: 0.2756in
+   :height: 0.2756in
+.. |image19| image:: media/image17.png
+   :width: 0.2756in
+   :height: 0.2756in
+.. |image27| image:: media/image18.png
+   :width: 0.2756in
+   :height: 0.2756in
+.. |image28| image:: media/image19.png
+   :width: 0.2756in
+   :height: 0.2756in
+.. |image29| image:: media/image20.png
+   :width: 0.2756in
+   :height: 0.27561in
+.. |image30| image:: media/image21.png
+   :width: 0.27561in
+   :height: 0.2756in
+.. |image31| image:: media/image22.png
+   :width: 0.27561in
+   :height: 0.27561in
+.. |image32| image:: media/image23.png
+   :width: 0.2756in
+   :height: 0.27561in
+.. |image33| image:: media/image24.png
+   :width: 0.27559in
+   :height: 0.2756in
+.. |image50| image:: media/image44.png
+   :width: 0.39371in
+   :height: 0.25131in
+   
 
-.. |imagen0| imagen:: media/image1.png
-:ancho: 8.25in
-:altura: 10.97333in
-.. |imagen1| imagen:: media/image2.png
-:ancho: 5.0075in
-:altura: 4.14184in
-.. |imagen36| imagen:: media/image4.png
-:ancho: 5.0075in
-:altura: 1.41271in
-.. |image39| imagen:: media/image4.png
-:ancho: 5.0075in
-:altura: 1.25635in
-.. |imagen43| imagen:: media/image3.png
-:ancho: 5.78738in
-:altura: 1.58376in
-.. |image93| imagen:: media/image99.png
-:ancho: 8.25in
-:altura: 8.28333in
+
+.. |image0| image:: media/image1.png
+   :width: 8.25in
+   :height: 10.97333in
+.. |image1| image:: media/image2.png
+   :width: 5.0075in
+   :height: 4.14184in
+.. |image36| image:: media/image4.png
+   :width: 5.0075in
+   :height: 1.41271in
+.. |image39| image:: media/image4.png
+   :width: 5.0075in
+   :height: 1.25635in
+.. |image43| image:: media/image3.png
+   :width: 5.78738in
+   :height: 1.58376in
+.. |image93| image:: media/image99.png
+   :width: 8.25in
+   :height: 8.28333in
