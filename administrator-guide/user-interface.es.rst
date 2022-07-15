@@ -6,7 +6,7 @@ Este capítulo se centra en la interfaz de usuario de Knowage, proporcionando in
 
 El menú Knowage te da acceso a todas sus funcionalidades. De forma predeterminada, encontrará el botón de menú en la esquina inferior izquierda de la página de inicio, haga clic en él para abrir el menú.
 
-.. figure:: medios/image9bis.png
+.. figure:: media/image9_bis.png
 
 Página principal
 
