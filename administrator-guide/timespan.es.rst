@@ -6,13 +6,13 @@ La mayoría de las veces un usuario técnico desarrolla una solución empresaria
 
 La funcionalidad Timespan está disponible en la sección Catálogo del menú principal de Knowage.
 
-.. figura:: media/imageTS001.png
+.. figure:: media/imageTS001.png
 
 Intervalo de tiempo
 
 Al hacer clic en el elemento de menú "Intervalo de tiempo", Knowage redirige al usuario a la lista de períodos, si alguno ya estaba configurado. Es posible abrir un intervalo de tiempo existente simplemente haciendo clic en el elemento de la lista, buscar uno usando el cuadro de búsqueda, eliminar un elemento o clonarlo. El botón de eliminación y clonación está disponible aparte del nombre del elemento de intervalo de tiempo.
 
-.. figura:: media/imageTS002.png
+.. figure:: media/imageTS002.png
 
 Página de lista de intervalo de tiempo
 
@@ -20,13 +20,13 @@ Para configurar un nuevo período, el usuario debe hacer clic en el icono rojo m
 
 En particular, se solicita al usuario técnico que asigne un nombre al nuevo intervalo de tiempo, para especificar si se trata de un período de tiempo o de tipo temporal. Asociar una categoría para problemas de generación de perfiles y, finalmente, definir la hora de inicio y finalización o la fecha de inicio y finalización, si es un intervalo de tiempo o temporal respectivamente, como podemos ver en la Figura a continuación.
 
-.. figura:: media/imageTS003.png
+.. figure:: media/imageTS003.png
 
 Tiempo y tipo temporal
 
 En ambos casos, el usuario técnico define el inicio y el final del intervalo y luego hace clic en el botón agregar para insertarlo. recuerde clcik en el botón Guardar para validar la configuración. Tenga en cuenta que es posible, para cada tipo, agregar más de un intervalo.
 
-.. figura:: media/imageTS004.png
+.. figure:: media/imageTS004.png
 
 Agregar más de un intervalo temporal en un intervalo de tiempo
 
