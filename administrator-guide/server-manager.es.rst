@@ -1,6 +1,6 @@
 # Administrador del servidor
 
-.. importante::
+.. important::
 **Solo Enterprise Edition**
 
          All the functionalities shipped within the Server Manager are available only with Knowage Enterprise Edition
