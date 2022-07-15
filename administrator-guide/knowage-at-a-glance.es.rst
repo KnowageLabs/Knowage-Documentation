@@ -11,7 +11,7 @@ Knowage es la suite de inteligencia de negocios desarrollada y administrada por 
 
 ## Módulos
 
-.. figura:: media/image6.png
+.. figure:: media/image6.png
 
 Módulos de conocimiento.
 
@@ -37,7 +37,7 @@ Representa una solución de nivel empresarial para BI, soportando todo el ciclo 
 
 La arquitectura de Knowage Server está funcionalmente en capas en tres niveles principales.
 
-.. figura:: media/image7.png
+.. figure:: media/image7.png
 
 Estructura de la arquitectura de Knowage Server.
 
@@ -50,7 +50,7 @@ Regula la carga de datos a través de muchas estrategias de acceso.
 
 Cada capa de la arquitectura funcional se compone de diferentes módulos de aplicación.
 
-.. figura:: media/image8.png
+.. figure:: media/image8.png
 
 Detalle de la arquitectura de Knowage Server.
 
