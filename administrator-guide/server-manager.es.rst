@@ -7,7 +7,7 @@
 
 En **Administrador del servidor** en el panel de menú encontrará algunas funcionalidades de administración.
 
-.. figure:: medios/image60\_bis.png
+.. figure:: medios/image60_bis.png
 
     Server Manager Panel
 
