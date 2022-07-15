@@ -37,15 +37,15 @@ El menú de funcionalidades de BI consiste en un conjunto de iconos asociados co
 \+--------------------------------+-----------------------+-----------------------+
 |    | de iconos Nombre | Descripción |
 \+================================+=======================+=======================+
-| .. figura:: media/image16.png | | de desarrollo de documentos Creación y | de documentos
+| .. figure:: media/image16.png | | de desarrollo de documentos Creación y | de documentos
 |                                |                       | acceso al archivo |
 |                                |                       | Carpetas.              |
 \+--------------------------------+-----------------------+-----------------------+
-| .. figura:: media/image17.png | espacio de trabajo | Consulta el | de tu negocio
+| .. figure:: media/image17.png | espacio de trabajo | Consulta el | de tu negocio
 |                                |                       | modelos, navegación y |
 |                                |                       | crear los conjuntos de datos. |
 \+--------------------------------+-----------------------+-----------------------+
-| .. figura:: media/image103.png | Descargar | Abrir un cuadro de diálogo que |
+| .. figure:: media/image103.png | Descargar | Abrir un cuadro de diálogo que |
 |                                |                       | mostrar los | disponibles
 |                                |                       | descarga asincrónica.       |
 \+--------------------------------+-----------------------+-----------------------+
@@ -66,25 +66,25 @@ El menú del administrador está dividido en subpaneles que mapean las diferente
 \+--------------------------------+-----------------------+------------------------+
 |    | de iconos Nombre | Áreas de gestión |
 \+================================+=======================+========================+
-| .. figura:: media/image18.png | Proveedores de datos | Configuración del origen de datos.  |
+| .. figure:: media/image18.png | Proveedores de datos | Configuración del origen de datos.  |
 \+--------------------------------+-----------------------+------------------------+
-| .. figura:: media/image19.png | | de perfil Atributos de perfil, |
+| .. figure:: media/image19.png | | de perfil Atributos de perfil, |
 |                                | Gestión | Roles, usuario y | de menú
 |                                |                       | | de configuración
 \+--------------------------------+-----------------------+------------------------+
-| .. figura:: media/image20.png | Modelo de comportamiento | Lovs, | analíticos
+| .. figure:: media/image20.png | Modelo de comportamiento | Lovs, | analíticos
 |                                |                       | | de controladores y restricciones
 \+--------------------------------+-----------------------+------------------------+
-| .. figura:: media/image21.png | Catálogos | Modelos de Negocio y |
+| .. figure:: media/image21.png | Catálogos | Modelos de Negocio y |
 |                                |                       | Capas |
 \+--------------------------------+-----------------------+------------------------+
-| .. figura:: media/image22.png | Herramientas | | del programador
+| .. figure:: media/image22.png | Herramientas | | del programador
 \+--------------------------------+-----------------------+------------------------+
-| .. figura:: media/image23.png | Configuración del servidor | Propiedades de datos de usuario, |
+| .. figure:: media/image23.png | Configuración del servidor | Propiedades de datos de usuario, |
 |                                |                       | Configuración, |
 |                                |                       | Dominios y metadatos |
 \+--------------------------------+-----------------------+------------------------+
-| .. figura:: media/image24.png | Administrador del servidor | Administrador de plantillas y |
+| .. figure:: media/image24.png | Administrador del servidor | Administrador de plantillas y |
 |                                |                       | | de Importación-Exportación
 |                                |                       | opciones |
 \+--------------------------------+-----------------------+------------------------+
