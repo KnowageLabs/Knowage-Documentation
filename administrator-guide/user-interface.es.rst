@@ -32,7 +32,7 @@ El menú de funcionalidades de BI consiste en un conjunto de iconos asociados co
 *   **Área de trabajo** Desde esta sección se puede acceder a la **Modelos** y crear conjuntos de datos y federaciones.
 
 .. table:: Componentes de menú - Menú de funcionalidades de BI.
-    :widths: auto
+   :widths: auto
 
 \+--------------------------------+-----------------------+-----------------------+
 |    | de iconos Nombre | Descripción |
