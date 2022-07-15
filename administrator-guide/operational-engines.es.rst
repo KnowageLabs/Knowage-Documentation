@@ -5,7 +5,7 @@
 El knowage permite la carga de datos de los sistemas de origen de acuerdo con una lógica ETL común, así como el monitoreo de los flujos de datos que alimentan continuamente el almacén de datos. Con este fin, Knowage proporciona el ETL **Knowage Talend Engine**.
 
 .. importante::
-**Solo Enterprise Edition**
+	**Solo Enterprise Edition**
 
          Please note that in the Enterprise Edition, **KnowageTalendEngine** is shipped with KnowageBD and KnowageSI only. 
 
