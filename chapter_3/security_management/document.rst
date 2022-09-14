@@ -78,13 +78,6 @@ By default the page is divided into two parts, as shown in figure below: in the 
 
     Documents Development section.
 
-You can switch to the document preview view by clicking on grid icon in the top right corner, as shown in figure below.
-
-.. _changingdocumentsview:
-.. figure:: media/image60.png
-
-    Changing documents view.
-
 Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date.
 
 .. figure:: media/image61.png
