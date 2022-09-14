@@ -1,4 +1,4 @@
-What if Knowage
+What is Knowage
 #################
 
 .. toctree::
