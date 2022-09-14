@@ -9,7 +9,7 @@ Knowage allow end users to *self-build interactive cockpits* through an intuitiv
 
 It enables *data mash-up* to integrate enterprise data and externally sourced data.
 
-Cockpit documents can be created and executed both by technical users and end users and are part of Knowage ad-hoc reporting system. A key aspect is that different widget can rely on different datasets and hence on different data sources. The only requirement needed to define associations between two or more datasets is the presence in each of them of one or more columns containing the same data.
+Cockpit document can be created and executed both by technical users and end users and are part of Knowage ad-hoc reporting system. A key aspect is that different widget can rely on different datasets and hence on different data sources. The only requirement needed to define associations between two or more datasets is the presence in each of them of one or more columns containing the same data.
 
 .. warning::
     **Section structure exception**
