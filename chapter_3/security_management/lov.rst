@@ -48,7 +48,7 @@ Once completed the form, click on **Preview** button to enable the **Test** butt
 .. _previewandteslov2:
 .. figure:: media/image48.png
 
-    Preview and Test of the LOV.
+    Test of the LOV.
 
 .. note::
      **Correlating analytical drivers**
@@ -183,7 +183,7 @@ To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Det
 
 .. figure:: media/image54.png
 
-    Detail panel of LOV creation, second step.
+    Detail panel of Analytical Driver creation, second step.
 
 The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are displayed and selectable when executing the document. In fact the user can choose among:
 
@@ -200,7 +200,7 @@ In case of Manual Input Date the user can specify a maximum value driven by a LO
 
 .. figure:: media/image57.png
 
-    Detail panel of LOV creation, specification of a maximum value.
+    Detail panel of Analytical Driver creation, specification of a maximum value.
 
 During execution of a document, the date picker will be limited by that value:
 
