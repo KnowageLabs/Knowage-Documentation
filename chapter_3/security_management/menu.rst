@@ -58,7 +58,7 @@ If you decide to upload a new image, click on "*Browse...*" and select your file
 
 There are four types of menu item content: empty, document, static page and functionality.
 
-.. figure:: media/image3637.PNG
+.. figure:: media/image3637.png
 
    **Empty** (left) and **document** (right) content type.
 
