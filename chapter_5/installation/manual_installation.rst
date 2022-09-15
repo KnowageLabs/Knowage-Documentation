@@ -212,11 +212,24 @@ Please check Livy and Spark official documentation for more info.
 After that it is mandatory to set this variable on Tomcat Server: **KNOWAGE_RESOURCE_PATH**
 This variable should point to the Tomcat server's resource folder.
 
-Example for Tomcat development installation:
+Our advice, if you are on Linux environment, is to create a service for Tomcat Server and then let the variable setting available for the system, for example:
+KNOWAGE_RESOURCE_PATH = /home/knowage/knowage8_1/apache-tomcat-9/resources
 
-.. figure:: media/image36.png
+After that, you should fill this property inside Knowage Configuration:  **KNOWAGE.DATAPREP.LIVY_URL**
+with the right url of Livy server.
 
-    Example for Eclipse Tomcat embedded installation.
+In order to allow Spark transformations working, you should provide those libraries on Spark  /jars  installation folder:
+
+- json-20210307.jar
+- livy-api-0.7.1-incubating.jar
+- livy-client-http-0.7.1-incubating.jar
+- spark-avro_2.11-2.4.8.jar
+
+And:
+
+- knowage-spark-[**CURRENT VERSION OF KNOWAGE**].jar
+
+This library can be found inside knowage deployed projects jars folder.
 
 You will also need to configure a datasource as "Used for data preparation", it means that the selected datasource will be used for saving prepared dataset data.
 
