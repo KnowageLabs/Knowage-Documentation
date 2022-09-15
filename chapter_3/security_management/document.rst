@@ -356,7 +356,7 @@ It is possible to configure the associations between input/output parameters by 
 
 .. figure:: media/image87.png
 
-    Setting the cross navigation through the tree item.
+    Setting the cross navigation.
 
 .. figure:: media/image88.png
 
