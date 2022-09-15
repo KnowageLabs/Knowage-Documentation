@@ -123,15 +123,15 @@ First of all, choose a label, a name and a description. It is important to point
 
     Select Type and Engine for a new document.
 
-Now you have to select the dataset and/or data source that will feed your document with data. In this example you can see the pop-up window with datasets to select on the following figure.
+Now you have to select the datasource that will feed your document with data.
 
 .. figure:: media/image68.png
 
-    Selecting a dataset for the document.
+    Selecting a datasource for the document.
 
-Both should have already been defined in the corresponding sections for Knowage to show them in the available options of the menus. You can select the data source from the drop down menu. And select the dataset from the pop-up window and click save.
+You can select the data source from the drop down menu. And select the dataset from the pop-up window and click save.
 
-Note that some types of document do not require the definition of a dataset at this point because they use embedded datasets. Depending on the type, it may also be necessary to select the data source.
+Note that some types of document do not require the definition of a dataset at this point because they use embedded datasets.
 
 It is advisable to regularly save the document in this process, by clicking the related button save at the top right corner of the window.
 
@@ -183,7 +183,7 @@ After having defined all details, you need to choose where the analytical docume
 Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). On the right, you can choose where you wish to save the document by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
 
 .. _functionaltreedocsav:
-.. figure:: media/image66.png
+.. figure:: media/image66bis.png
 
     Functionality Tree, document saving settings.
 
