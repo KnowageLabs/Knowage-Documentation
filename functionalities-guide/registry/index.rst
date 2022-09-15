@@ -116,7 +116,8 @@ In particular, we give some details for each tag and main attributes.
    -  **title**: the title of the column shown (optional);
    -  **visible**: the visibility of the column (optional, default true);
    -  **editable**: the editability of the column (optional, default true);
-   -  **color and format for numbers**: optional;
+   -  **color**: optional;
+   -  **format**: In the case of a date field, the format to be set is that provided for in the PrimeVue documentation https://primefaces.org/primevue/calendar in the DateFormat paragraph;
    -  **size**: the width of the column (optional);
    -  **editor**: the editor. Default type is free-text for simple column (not FK values), but for date is possible to show the picker through the type PICKER. The format option specifies the format date;
    -  **subEntity**: if the column is a reference key, the user can specify the subentity referred and the foreign key name. This value must be equals to the name of the relationship object created in the model. The field shown will be of the entity referred and will be shown as COMBO if editable;
@@ -272,7 +273,7 @@ then edit ``TOMCAT_HOME/webapps/knowageqbeengine/WEB-INF/classes/log4j.propertie
 
 .. code-block:: jproperties
    :linenos:
-   
+
    # Define the SQL appender
    log4j.appender.sql=it.eng.spagobi.utilities.logging.Log4jJNDIAppender
    # JNDI connection to be used
