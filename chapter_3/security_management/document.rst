@@ -1,9 +1,9 @@
 Analitycal Document 
 ##################
 
-The *analytical model* is the core of Knowage Server and covers the whole range of analytical needs, providing many solutions for each analytical area, like reports, charts, OLAP documents, KPIs and so on.
+The *analytical model* is the core of Knowage Server and covers the whole range of analytical needs, providing many solutions for each analytical area, like reports, cockpits, OLAP documents, KPIs and so on.
 
-The main element of the analytical model is the so called *analytical document*, a word used to group under a common concept all different types of documents that can be developed with Knowage (report, chart, cockpit, etc.) when performing a BI analysis.
+The main element of the analytical model is the so called *analytical document*, a word used to group under a common concept all different types of documents that can be developed with Knowage (report, cockpit, etc.) when performing a BI analysis.
 
 In this chapter we describe step by step how to create a new analytical document. There exist many different document types, each with its own peculiarities. Here we provide a generic overview on common features, will focus on available types peculiarities in each dedicated part.
 
@@ -13,7 +13,7 @@ Main concepts
 The creation and management of analytical documents in Knowage involves different elements:
 
 Template
-  The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage Studio designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.
+  The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.
 Dataset
   Each document is associated to one or more datasets. The dataset provides actual data that will be represented according to the defined template. That is to say, the dataset provides the actual content of the analysis and the template is in charge of giving it a meaningful structure.
 Data source
@@ -54,7 +54,7 @@ In the next sections we describe in detail how to create and manage analytical d
 Register an analytical document
 -----------------------------------
 
-There are two different ways to create a new document on Knowage Server. The first option involves Knowage Studio: within it you can simply click on **Deploy** and the document window will open with pre-filled options. Please note that Knowage Studio can be used to create Birt or Dashboard document only.
+There are two different ways to create a new document on Knowage Server. The first option involves Knowage Studio: within it you can simply click on **Deploy** and the document window will open with pre-filled options. Please note that Knowage Studio can be used to create Birt document only.
 
 .. note::
     **Deploy a document from Knowage Studio**
@@ -157,14 +157,14 @@ The main reason for this is that the state of the document has an impact on its 
 Template Versioning
 ^^^^^^^^^^^^^^^^^^^
 
-When you register a document on the Server, you need to associate a template to it. Click on  tab **History** and then on button **Browse** to choose a template from your local file system and upload it.
+When you register a document on the Server, you need to associate a template to it. Click on  tab **History** and then on button **Add** to choose a template from your local file system and upload it.
 
 .. _templateversionforanalydoc:
 .. figure:: media/image69.png
 
 You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
 
-Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab **History**. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button **Browse** to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.
+Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab **History**. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button **Add** to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.
 
 .. figure:: media/image70.png
 
