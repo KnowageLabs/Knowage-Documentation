@@ -50,7 +50,7 @@ If you decide to choose a predefined icon, select it click on "CHOOSE" to apply 
 
    Menu choose selected icon
 
-If you decide to upload a new image, click on "*Browse...*" and select your file. After that, the icon will be displayed as in the image below. Click on "*CHOOSE*" and apply the changes.
+If you decide to upload a new image, click on "*Browse...*" and select your file. After that, the icon will be displayed as in the image below. 
 
 .. figure:: media/image109.png
 
