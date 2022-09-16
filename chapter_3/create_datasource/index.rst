@@ -5,7 +5,7 @@ In order to connect to your data, you have to define a new data source connectio
 
 Knowage manages two types of data source connections:
 
-- connections retrieved as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access (e.g. by defining connection pools) and thus are the preferred ones. Here you can find information how create connection pool in Tomcat : https://tomcat.apache.org/tomcat-8.0-doc/jndi-datasource-examples-howto.html
+- connections retrieved as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access (e.g. by defining connection pools) and thus are the preferred ones. Here you can find information how create connection pool in Tomcat : https://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html
 - direct JDBC connections, which are directly managed by Knowage;
 
 .. important::
