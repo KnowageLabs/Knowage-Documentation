@@ -42,13 +42,3 @@ A field type definition can include four types of information:
     Field type properties - depending on the implementation class, some properties may be mandatory.
 
 Example: ``<field name="REG_T_MP"    type="pdouble"   indexed="true" required="false" stored="true" multiValued="false"/>``
-
-**Faceting**
-
-Faceting is the arrangement of search results into categories based on indexed terms.
-If you choose Facets you can add the Facet Query.
-This parameter allows you to specify an arbitrary query in the Lucene default syntax to generate a facet count.
-The Facet Field is the facet.field parameter and identifies a field that should be treated as a facet. It iterates over each Term in the field and generate a facet count using that Term as the constraint. This parameter can be specified multiple times in a query to select multiple facet fields.
-The Facet Prefix is the facet.prefix parameter limits the terms on which to facet to those starting with the given string prefix. This does not limit the query in any way, only the facets that would be returned in response to the query.
-
-.. figure:: media/image44.png
