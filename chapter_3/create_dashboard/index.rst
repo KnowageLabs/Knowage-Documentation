@@ -59,8 +59,9 @@ Let us see how to build a cockpit and how the interface is displayed within the 
    |                                |                       | datasets and the      |
    |                                |                       | refresh frequency.    |
    +--------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image140.png | **Selections**        | It adds a widget that |
-   |                                |                       | manages selections.   |
+   | .. figure:: media/image140.png | **Selections**        | It opens a window     |
+   |                                |                       | where you can         |
+   |                                |                       | manage selections.    |
    +--------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image141.png | **Clear Cache**       | It cleans temporary   |
    |                                |                       | data.                 |
@@ -72,7 +73,7 @@ Let us see how to build a cockpit and how the interface is displayed within the 
    +--------------------------------+-----------------------+-----------------------+
 
 
-By clicking the button **Add Widget** you can add a widget containing a **Text**, an **Image**, a **Chart**, a **Table**, a **Cross table**, a **Document**,the **Active selections** or the **Selector** to your cockpit, as shown below.
+By clicking the button **Add Widget** you can add a widget containing a **Text**, an **Image**, a **Chart**, an **HTML**, a **Table**, a **Cross table**, a **Document**, a **Map**, the **Active selections** or the **Selector** to your cockpit, as shown below. **Python**, **R**, **Discovery** and **Custom charts** are available according to the license installed.
 
 .. figure:: media/image143_bis.png
 
@@ -219,7 +220,7 @@ click on the **Add Column** icon on the top right of the second box. Once opened
     Example column group.
 
 Likewise, to add a calculated field you have to click on the **Add Calculated field** icon next to add column icon. Once opened the Calculated Field Wizard you have to type an alias for your calculated field in the dedicated area at the top corner of the wizard.
-Then you can choose from the left sinebar list the fields that you want to use in your formula. You can also use arithmetical functions or use the functions available in the menu (**aggregations**, **column totals**, **variables**).
+Then you can choose from the left sidebar list the fields that you want to use in your formula. You can also use arithmetical functions or use the functions available in the menu (**aggregations**, **column totals**, **variables**).
 If you prefer you can create or modify the expression manually directly in the editable panel.
 When you are satisfied with your expression you can click on validate to check your formula sintax or save button and your calculated field appears in the field list.
 We provide an example in the following figure.
@@ -227,13 +228,6 @@ We provide an example in the following figure.
 .. figure:: media/image157.png
 
     Add a calculated field.
-
-You can choose between dataset-level behaviour or table-level (default), that is the calculation modality that will involve table fields or dataset columns to get the result.
-If you choose dataset-level behaviour the calculation result will be done at dataset columns level only and the aggregation will involve the entire result of the calculation.
-
-.. figure:: media/image157b.png
-
-    Dataset-level behaviour
 
 If Dataset is of type Solr, the columns displayed on the right panel are dataset columns fields and the calculated field formula elaboration is calculated on the fly.
 
@@ -243,7 +237,7 @@ If variables are set for the present cockpit, the variable menu button will appe
 
 .. figure:: media/image157c.png
 
-Variables menu
+    Variables menu
 
 
 In the bottom section of the window, you can see the table fields (with their aggregation type) listed and you also can sort columns displayed in the table by dragging
@@ -252,7 +246,7 @@ Here you can find configuration features to adjust the column size, max cell cha
 
 .. figure:: media/image157d.png
 
-Columns Settings
+    Columns Settings
 
 If you hide the column (from this view or from the column list), the column will not be visible, but will still be used for aggregation purposes.
 If you enable the **row span feature**, all the same visible values of the column will be collapsed in one, to avoid repetitions.
