@@ -24,7 +24,7 @@ It is also possible to dynamically change the original text of the query at runt
 In Code Query dataset’s script example we uses JavaScript to dynamically modify the ``FROM`` clause of the original query according to the value of the parameter year selected at runtime by the user. You can notice that the variable ``query``, provided by Knowage, contains the text of the SQL query.
 
 .. code-block:: javascript
-         :caption:  Query dataset’s script example ``query``
+         :caption:  Query dataset’s script example query
          :linenos:
 
           if( parameters.get('year') == 1997 ) {
