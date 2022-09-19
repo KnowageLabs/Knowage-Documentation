@@ -302,6 +302,7 @@ Data Preparation requirements
 -----------------------------
 
 In order to use data preparation functionality, user should have Apache Livy and Apache Spark installed.
+This feature is tested on Apache Livy 0.71 and Apache Spark 2.4.8 with Scala 2_11 version.
 Please check Livy and Spark official documentation for more info (https://livy.apache.org/, https://spark.apache.org/) and manual installation paragraph for technical details.
 
 This functionality is available as an add-on plugin for Smart Intelligence license.
