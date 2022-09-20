@@ -11,7 +11,7 @@ Knowage allow the upload of data from source systems according to a common ETL l
 KnowageTalendEngine
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage Talend Engine integrates the open source tool Talent Open Studio (TOS). Talend Open Studio (TOS) is a graphical designer for defining ETL flows. Each designed flow produces a self-alone Java or Perl package. TOS is based on Eclipse and offers a complete environment including test, debug and support for documentation.
+Knowage Talend Engine integrates the open source tool Talend Open Studio (TOS). Talend Open Studio (TOS) is a graphical designer for defining ETL flows. Each designed flow produces a self-alone Java or Perl package. TOS is based on Eclipse and offers a complete environment including test, debug and support for documentation.
 
 The integration between Talend and Knowage is twofold. TOS includes Knowage as a possible execution target for its job, while Knowage implements the standard context interface for communicating with Talend. Jobs can be directly executed from Knowage web interface or possibly scheduled.
 
@@ -39,6 +39,9 @@ Talend also supports data quality management. Furthermore, it enables the execut
 The tMap tool allows the association of sources to targets according to defined rules. The main input is the source table in the data warehouse, while secondary (or lookup) inputs are dimensions to be linked to data. The output (target) is the data structure used for aggregation.
 
 It is also possible to design parametric ETL jobs. We will see how to manage them in the next steps.
+
+Job deploy
+~~~~~~~~~~~~
 
 Once you have designed the ETL job, you should deploy it on Knowage Server. First of all, configure connections properties to Knowage Server. Select **Preferences** > **Talend** > **Import/export** from within Talend. Then set connection options as described below.
 
@@ -87,12 +90,12 @@ As with any other Knowage document, you need to define a template for the ETL do
 		/>
           </etl>
 
-Where the tag job includes all the following configuration attributes:
+The tag job includes all the following configuration attributes:
 
--  project is the name of the Talend project
+-  project is the name of the Talend project.
 -  jobName is the label assigned to the job in Talends repository.
 -  context is the name of the context grouping all job parameters. Typically it is the standard context, denoted with the name **Default**.
--  version is the job version
+-  version is the job version.
 -  language is the chosen language for code generation. The two possible options are: Java and Perl.
 
 Values in the template must be consistent with those defined in Talend, in order to ensure the proper execution of the ETL document on Knowage Server.
