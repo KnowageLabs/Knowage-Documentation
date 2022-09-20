@@ -287,27 +287,23 @@ Multiple conditions can be set, but a condition fullfilling the "=" will have hi
     Variable action set.
 
 
-
-
 The **Style** tab is where you can customize the table by using the different options of style. It is divided into eight parts:
 
-- In the **Summary** section you can show the total of the column and customize it by typing the summary name and using font and style configurations. Refer to Figure below.
+-- REVIEW THIS SECTION --
+
+- In the **Summary** section you can customize the appearance of the total of columns it by typing the summary name and using font and style configurations. Refer to Figure below.
 
 .. figure:: media/image159.png
 
     Summary section of the Style tab.
 
-- In the **Rows** section you can set the table rows to be adapted in automatic or select a fixed height. You can also show the total of rows. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other      external documents. Refer to figure below.
+- In the **Rows** section you can set the table rows to be adapted in automatic or select a fixed height. You can also show the total of rows. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other external documents. Refer to figure below.
 
 .. figure:: media/image160.png
 
     Rows section of the Style tab.
 
 - In the **Grid** section you can add borders to the table and add color to alternate rows. In this section you can find different options to customize them. Refer to figure below.
-
-.. figure:: media/image161.png
-
-    Grid section of the Style tab.
 
 - In the **Header Style** section you find the different options of  style for the table header. Refer to Figure below.
 
