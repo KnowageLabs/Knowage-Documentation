@@ -292,11 +292,13 @@ The **Style** tab is where you can customize the table by using the different op
 - In the **Header Style** section you can find different options for styling the table header. Refer to Figure below.
 
 .. figure:: media/image162.png
+    
     Header style section of the Style tab.    
 
 - In the **Rows** section you can set the generic style for all the rows (such as alternate color background) or specify different styles according to specific conditions on values. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other external documents. Refer to figure below.
 
 .. figure:: media/image160.png 
+    
     Rows section of the Style tab.   
 
 - In the **Summary** section you can customize the appearance of the total of columns using font and style configurations. Refer to Figure below.
