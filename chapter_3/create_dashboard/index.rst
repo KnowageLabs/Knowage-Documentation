@@ -528,7 +528,7 @@ Once some or all (at least the mandatory) of the above mentioned setting feature
 Document section
 ~~~~~~~~~~~~~~~~
 
-The Document widget allows to add an external document into the cockpit area. This widget supports documents like reports, graphs, maps, etc.
+The Document widget allows to add an external document into the cockpit area. This widget supports documents like reports, maps, etc.
 
 Use the Data configuration button to add a document source to the cockpit. Click on the “Plus” icon on the right half of the page to choose among all available documents.
 
@@ -540,25 +540,24 @@ The Document Widget configuration is divided into two parts: **Custom** tab and 
 
 The Custom tab is the place where the document is uploaded while the Style tab is where all style options are set.
 
-Selection widget
+Acrive Selections widget
 ~~~~~~~~~~~~~~~~
 
-This widget is related to the association concept so in this subsection we give information on how to add and custom the **Selection Widget** into the cockpit area and its functioning, while we refer to the dedicated Document section for details on how to set (global) associations.
+This widget is related to the association concept so in this subsection we give information on how to add and customize the **Active Selections Widget** into the cockpit area and its functioning, while we refer to the dedicated Document section for details on how to set (global) associations.
 
-To enable the Selection widget, which means the possibility to have all associations listed and accessible on a widget, the user must open the “Selection” feature through the “Add widget” functionality and configure the demanded options. Figure below shows the “Selection widget configuration” interface.
+To enable the Active Selections widget, which means the possibility to have all the currently applied selections listed and accessible on a widget, the user must open the **“Active Selections”** feature through the **“Add widget”** functionality and configure the demanded options. Figure below shows the **“Active Selections widget configuration”** interface.
 
 .. figure:: media/image186.png
 
-    Selection widget configuration.
+    Active Selections widget configuration.
 
-The Selection Widget will display the elements selected by the user. Figure below shows an example.
+The Active Selections will display the elements selected by the user. Figure below shows an example.
 
 .. figure:: media/image187.png
 
-    Selection widget outlook.
+    Active Selections widget outlook.
 
-If global associations have been set, clicking on table, cross table or chart elements will update all corresponding widgets. Otherwise, only the widget on which selection has been made Selector Widget will be updated. In both cases the Selection widget will display the
-highlighted attribute values.
+If global associations have been set, clicking on table, cross table or chart elements will update all corresponding widgets. Otherwise, only the widget on which selection has been made will be updated. In both cases the Selection widget will display the highlighted attribute values.
 
 Selector Widget
 ~~~~~~~~~~~~~~~
