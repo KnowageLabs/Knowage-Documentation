@@ -6,7 +6,7 @@ Knowage management
    :caption: Table of Contents
       
    add_datasource.rst
-   scheduler.rst
+   schedule.rst
    server_manager.rst
    timespan.rst
    news.rst
