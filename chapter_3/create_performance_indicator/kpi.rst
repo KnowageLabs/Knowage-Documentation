@@ -29,14 +29,14 @@ We introduce the KPI tool by splitting the topic in steps. We briefly sum up her
 
 Therefore, we go into further details.
 
-**Measure definition.** The first step is to create a new measure or rule. Select **Measure/Rule Definition** from the contextual menu of the main page, as shown below.
+**Measure definition.** The first step is to create a new measure or rule. Select **Measure/Rule** from the contextual menu of the main page, as shown below.
 
 .. _measureruledefmenu:
 .. figure:: media/image121.png
 
-    Measure/Rule Definition menu item.
+    Measure/Rule menu item.
 
-Click on the “Plus” icon to set a new measure/rule. A query editor page is opened. Note that once the data source is selected, pressing simultaneously the CRTL key and the space bar opens a contextual menu containing the available datasource columns and the database keywords. Refer to thefollowing figure to have an example.
+Click on the “Plus” icon to set a new measure/rule. A query editor page is opened. Note that once the data source is selected, pressing simultaneously the CTRL key and the space bar opens a contextual menu containing the available datasource columns and the database keywords. Refer to the following figure to have an example.
 
 .. figure:: media/image122.png
 
@@ -54,6 +54,8 @@ Generally the rule such a query can return one or more measures and possibly an 
 
     Query definition.
 
+The **Preview** button allows you to check the query execution and have a look on a part of the result set.
+
 A typology (measure, attribute and temporal attribute) and a category can be assigned to each fields returned by the query using the **Metadata** tab as highlighted in the next figure. The typology is required to associate a type to each field returned by the query. In particular, if the field is a temporal one, it is mandatory to specify to which level you want it to be considered, that is if it corresponds to a day, a month, a year, a century or a millennium. For measures and attribute it is possible to assign also a category to easily look them up in a second moment.
 
 .. _metadatasettings:
@@ -64,7 +66,7 @@ A typology (measure, attribute and temporal attribute) and a category can be ass
 We say in advance that, it is important to distinguish these metedata categories from the required field “Category” that occurs while saving the KPI definition (see next figure).
 
 .. _kpidefinitioncat:
-.. figure:: media/image161.png
+.. figure:: media/image160_2.png
     
     Category assigned when saving a KPI definition.
 
@@ -80,14 +82,12 @@ In fact, the category assigned when saving the KPI definition will be added (if 
          
          The category defined in the metadata tab of the "Measure definition" functionally are not the same categories selected in the tab area of the "Roles management" functionality (see the figure above). The first are used to classify the metadata while the second are needed for the profiling issue.
 
-As we told, a proper categorization exists for the aggregations of type temporal. In fact, when associating “temporal attribute” as metadata typology, the technical user must indicate the hierarchy level of the data: day, month or year. You can see an example in the following figure. Note that the field set as temporal type must contains numbers (therefore string types are not allowed). For example, if one wants to set a field as “month”, such a field must contain {01,02,03,...,12} that will be considered as {January, February, March,...,December}.
+As we told, a proper categorization exists for the aggregations of type temporal. In fact, when associating “temporal attribute” as metadata typology, the technical user must indicate the temporal level of the data in the category section: day, month, year or others. You can see an example in the following figure. Note that the field set as temporal type must contains numbers (therefore string types are not allowed). For example, if one wants to set a field as “month”, such a field must contain {01,02,03,...,12} that will be considered as {January, February, March,...,December}.
 
 .. _hierarchyleveltempattrib:
 .. figure:: media/image127.png
 
-    Hierarchy level for temporal attributes.
-
-The **Preview** tab allows you to check the query execution and have a look on a part of the result set.
+    Level for temporal attributes.
 
 Let’s now examine extra features available on the right top corner. There you can find the following tab:
 
@@ -106,24 +106,17 @@ Let’s now examine extra features available on the right top corner. There you 
 -  **Save**: to save the query and other settings just configured.
 -  **Close**: to exit the rule configuration window.
 
-**KPI definition.** Select the **KPI definition** item from the contextual menu of the main page of Knowage, as shown in figure below. Click on the “Plus” icon to configure a new KPI.
+**KPI definition.** Select the **KPI** item from the contextual menu of the main page of Knowage, as shown in figure below. Click on the “Plus” icon to configure a new KPI.
 
 .. figure:: media/image131.png
 
     Configure a new KPI.
 
-The window opens a first tag, entitled **Formula** (see figure below), where you must type the formula to enable calculations.
+The window opens a first tag, entitled **Formula** (see figure below), where you must type the formula to enable calculations. Press CTRL key and space bar simultaneously to access all measures defined in the rules, as shown below.
 
 .. figure:: media/image132.png
 
     Formula definition tab.
-
-Press CTRL key and space bar simultaneously to access all measures defined in the rules, as shown below.
-
-.. _pressctrlspacemeasure:
-.. figure:: media/image133.png
-
-    Press crtl and space to get measures.
   
 Once a measure is selected, you need to choose which function must act on it. This can be done by clicking on the *f*\ () that surrounds the chosen measure. See figure below.
 
@@ -138,7 +131,7 @@ Clicking on the *f*\ () the interface opens a pop up where you can select which 
 
     Available functions.
 
-Once a complete formula (an example is given in figure below) has been inserted you can move to the next tab.
+Once a complete formula (an example is given in figure below) has been inserted you can set a name for it and then move to the next tab.
 
 .. figure:: media/image136.png
 
