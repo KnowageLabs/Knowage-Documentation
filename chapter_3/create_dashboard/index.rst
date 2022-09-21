@@ -540,10 +540,8 @@ The Document Widget configuration is divided into two parts: **Custom** tab and 
 
 The Custom tab is the place where the document is uploaded while the Style tab is where all style options are set.
 
-Acrive Selections widget
+Active Selections widget
 ~~~~~~~~~~~~~~~~
-
-This widget is related to the association concept so in this subsection we give information on how to add and customize the **Active Selections Widget** into the cockpit area and its functioning, while we refer to the dedicated Document section for details on how to set (global) associations.
 
 To enable the Active Selections widget, which means the possibility to have all the currently applied selections listed and accessible on a widget, the user must open the **“Active Selections”** feature through the **“Add widget”** functionality and configure the demanded options. Figure below shows the **“Active Selections widget configuration”** interface.
 
@@ -562,18 +560,13 @@ If global associations have been set, clicking on table, cross table or chart el
 Selector Widget
 ~~~~~~~~~~~~~~~
 
-The **Selector Widget** is useful when an end user (a user with a USER tole type) wants to add a parameter to the document.
-
-.. note::
-    **Selector widget**
-
-        A technical user can use the association with an Analytical Driver to filter on cockpit.
+The **Selector Widget** is a way to include a dataset filter, directly inside the cockpit, that can be displayed like a combobox, radio button or checkboxes.
 
 .. figure:: media/image188.png
 
     Selector widget outlook.
 
-In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then custom the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further choose among “vertical”, “horizontal” or “grid”. You can also decide to add a default value, chosen from main column’s first item, main column’s last item or to simply assign a static value. Finally, by clicking on the Wrap Text option it is possible to wrap the text shown in the selector; this option is useful when the categories to choose from are sting of long dimensions.
+In detail, use the **Columns** tab to select the dataset and the dataset column on which you want to apply the filter. Then select the **Select modality** options; for instance, choose between single or multivalue or to use a list or a combobox. Note that for the list option you can further choose among “vertical”, “horizontal” or “grid”. You can also decide to add a default value, chosen from main column’s first item, main column’s last item or to simply assign a static value. Finally, by clicking on the Wrap Text option it is possible to wrap the text shown in the selector; this option is useful when the categories to choose from are sting of long dimensions.
 
 In the case of the selector of type list "grid" it is also possible to set the grid columns width.
 
