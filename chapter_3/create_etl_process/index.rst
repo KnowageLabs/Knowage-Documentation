@@ -100,7 +100,7 @@ Creating the analytical document
 
 Once we have created the template, we can create a new analytical document following the standard procedure. Use the plus button and choose "Generic Document". Proceed by filling in the necessary fields, uploading the XML template we have just created and selecting “ETL Process” as the type and “Talend engine” as the engine. Select then the corrisponding data source and the document state.
 
-.. figure:: media/doc_etl.PNG
+.. figure:: media/doc_etl.png
 
     ETL document creation interface.
 
@@ -112,7 +112,7 @@ Job execution
 A Talend job can be executed directly from the web interface of Knowage Server and of course from a Talend client.
 To execute the job on Knowage, click on the play button near the document in the document browser, like with any other analytical document. The execution page will show a message to inform that the process was started.
 
-.. figure:: media/doc_execution.PNG
+.. figure:: media/doc_execution.png
 
     ETL document execution interface.
 
