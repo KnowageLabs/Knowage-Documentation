@@ -420,25 +420,25 @@ The latter is made up of three sections: **General**, **On rows** and **On colum
 
     Configuration tab interface.
 
-In the “General” section you can set the following features:
+In the **“General”** section you can set the following features:
 
 - define the maximum cell number to show;
 - decide to hook measures to columns or rows;
 - decide to show percentages of measures related to columns or rows.
 
-Thanks to the “On rows” feature, you can easily compute totals or subtotals on rows. Figure below exhibit an example.
+Thanks to the **“On rows”** feature, you can easily compute totals or subtotals on rows. Figure below exhibit an example.
 
 .. figure:: media/image172.png
 
     Computing totals and/or subtotals on rows.
 
-Otherwise, thanks to the “On columns” feature, you can easily compute totals or subtotals on columns. Figure below exhibit an example.
+Otherwise, thanks to the **“On columns”** feature, you can easily compute totals or subtotals on columns. Figure below exhibit an example.
 
 .. figure:: media/image173.png
 
     Computing totals and/or subtotals on columns.
 
-Selecting the "Hide rows on just null values" will hide all the rows with just 0 or null values, avoiding space waste if unneeded.
+Selecting the **"Hide rows on just null values"** will hide all the rows with just 0 or null values, avoiding space waste if unneeded.
 
 The "Fix attribute's columns" will pin to the left the columns containing the attributes, so side scrolling will be available without losing those columns.
 
@@ -446,8 +446,8 @@ The "Fix attribute's columns" will pin to the left the columns containing the at
 
     Pinned columns example.
 
-The "expand/collapse" functionality will add a + and - button in your rows, in order to easily aggregate your data.
-In the widget menu you will also find the expandall/collapse all buttons, in order to reset closing or opening your whole widget.
+The **"expand/collapse"** functionality will add a + and - button in your rows, in order to easily aggregate your data.
+In the widget menu you will also find the expand all/collapse all buttons, in order to reset closing or opening your whole widget.
 
 Be aware that to use this functionality columns subtotal should be selected. If not the functionality check will enable it automatically.
 
@@ -455,7 +455,7 @@ Be aware that to use this functionality columns subtotal should be selected. If 
 
     Expand/collapse example.
 
-Switching to the “Style” tab you can find the general style settings available for the crosstab.
+Switching to the **“Style”** tab you can find the general style settings available for the crosstab.
 
 - **Crosstab General Options**  where the rows' height, the general font and font size can be set; in particular, the layout combo determines how the columns resize themselves in respect of the contained value;
 
@@ -511,20 +511,19 @@ Switching to the “Style” tab you can find the general style settings availab
 
     Border settings.
 
-- In the **Other Options** section you can add a shadow to widget layout and indicate its measure, color the widget background at convenience and it is possible to disable or enable the screenshot option for that particular widget.
+- In the **Other Options** section you can add a shadow to widget layout and indicate its measure, color the widget background at convenience and it is possible to disable or enable the screenshot option or the Excel export for that particular widget.
 
 .. figure:: media/image183.png
 
     Other Options for crosstab.
 
-Once some or all (at least the mandatory) of the above mentioned setting features have been set you can save and the widget will be inserted into the cockpit area.
+Opening the **Cross** tab is possible to set a cross navigation to another document or an external link. In addition to other cross-navigations, for cross table widget it is possible to set as a dynamic value the name of the selected measure column or the selected category. The choice is available from the combobox.    
 
 .. figure:: media/image498.png
 
     Cross navigation for cross table widget.
 
-In addition to other cross-navigations, for cross table widget it is possible to set as a dynamic value the name of the selected measure column or the selected category. The choice is available from the combobox.
-
+Once some or all (at least the mandatory) of the above mentioned setting features have been set you can save and the widget will be inserted into the cockpit area.
 
 Document section
 ~~~~~~~~~~~~~~~~
