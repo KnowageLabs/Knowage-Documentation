@@ -595,13 +595,13 @@ The Selector widget works effectively as a ready-to-use filter panel.
 HTML Widget
 ~~~~~~~~~~~
 
-The HTML widget allows to add customized HTML and CSS code to add very custom dynamic elements to the cockpit. This widget supports all HTML5 standard tags and CSS3 properties.
+The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements to the cockpit. This widget supports all HTML5 standard tags and CSS3 properties.
 
 .. warning::
 
-        For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the filter.
+        For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted after saving the document.
 
-The Edit section of the widget is composed by five tabs: the dataset, HTML editor, style, cross and filters.
+The **Edit** section of the widget is composed by five tabs: the Dataset, HTML editor, Style, Cross and Filters.
 In the editor tab is possible to add the code that will be shown in the widget. Clicking on the top expander section in the tab, the one named "CSS" also the CSS editor will be available.
 
 .. important::
@@ -612,10 +612,10 @@ In the editor tab is possible to add the code that will be shown in the widget. 
 
     HTML widget editor
 
-In the right side of the editor is possible to take available tags to copy inside the code, those tags will be explained in details in the following paragraphs. Is not possible to add custom JavaScript code inside the html editor, so the available tags are the tools to make the widget dynamic and to use the dataset data.
+In the right side of the editor is possible to explore the available tags that can be copied inside the code, those tags will be explained in details in the following paragraphs. Given that is not possible to add custom JavaScript code inside the html editor, this available tags are the tools to make the widget dynamic and to use the dataset data.
 
-The Dataset tab allows the user to select a dataset to make the Widget dynamic and to bind it to dataset data.
-After choosing a dataset the list of available columns will be show. Those names will be useful inside the dynamic tags. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
+The **Dataset** tab allows the user to select a dataset to make the Widget dynamic and to bind it to dataset data.
+After choosing a dataset the list of available columns will be shown. Those names will be useful inside the dynamic tags. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
 
 .. figure:: media/image209.png
 
@@ -631,19 +631,25 @@ By clicking on the icon |image302| of a specific column the dataset will be orde
 
 **Available Tags**
 
+*kn-column*
+
 ``[kn-column='COLUMN-NAME' row='COLUMN-ROW-NUMBER' aggregation='COLUMN-AGGREGATION' precision='COLUMN-DECIMALS']``
 
-The ``kn-column`` tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to print its value. The value of the kn-column attribute should be the name of the column value you want to read in execution.
+The ``kn-column`` tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to display its values. The value of the kn-column attribute should be the name of the column value you want to read in execution.
 
-The **row** attribute is optional and is a number type attribute. If no row is selected the first row column value will be shown.
+The **row** attribute is optional and is a number type attribute. This attribute can let you retrieve a specific row according to the position in the dataset. If no row is selected the first row column value will be shown.
 
-The **aggregation** attribute is optional and is a string type attribute. If inserted the value shown will be the aggregation of all column rows values. The available aggregations are: AVG|MIN|MAX|SUM|COUNT_DISTINCT|COUNT|DISTINCT COUNT.
+The **aggregation** attribute is optional and is a string type attribute. If inserted the value shown will be the aggregation of all column rows values. The available aggregations are: AVG,MIN,MAX,SUM,COUNT_DISTINCT,COUNT,DISTINCT COUNT.
 
 The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
 
+*kn-parameter*
+
 ``[kn-parameter='PARAMETER-NAME']``
 
-The kn-parameter tag is the tool to show a dataset parameter inside the widget execution. The value of the kn-parameter attribute should be the name of the set attribute.
+The kn-parameter tag is the tool to show a dataset parameter inside the widget execution. The value of the kn-parameter attribute should be the name of the parameter to display.
+
+*kn-calc*
 
 ``[kn-calc=(CODE-TO-EVALUATE) precision='VALUE-PRECISION']``
 
@@ -651,37 +657,49 @@ The ``kn-calc`` tag is the tool to calculate expressions between different value
 
 The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
 
+*kn-repeat*
+
 ``<div kn-repeat="true" limit="LIMIT-NUMBER"> ... REPEATED-CONTENT ... </div>``
 
 The ``kn-repeat`` attribute is available to every HTML5 tag, and is a tool to repeat the element for every row of the selected dataset.
 
 This attribute is naturally linked to ``kn-column`` tag. If inside a ``kn-column`` tag without a row attribute is present, the ``kn-repeat`` will show the column value for every row of the dataset.
 
-Inside a ``kn-repeat`` is possible to use the specific tag [kn-repeat-index], that will print the index of the repeated column row.
+Inside a ``kn-repeat`` is possible to use the specific tag ``[kn-repeat-index]``, that will print the index of the repeated column row.
 
 The **limit** attribute is optional and is a number type attribute. If added the number of row repeated will be limited to the selected number. If no limit is provided just the first row will be returned. If you want to get all records, you can set it to -1, but be careful because big datasets can take a while to load completely.
 
+*kn-if*
+
 ``<div kn-if="CODE-TO-EVALUATE"> ... </div>``
 
-The ``kn-if`` attribute is available to every HTML5 tag and is a way to conditionally show or hide an element based on some other value. The attribute content will be evaluated after the other tags substitution, so will be possible to use other tags inside. If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
+The ``kn-if`` attribute is available to every HTML5 tag and is a way to conditionally show or hide an element based on some other value. The attribute content will be evaluated after the other tags substitution, so it will be possible to use other tags inside. If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
+
+*kn-cross*
 
 ``<div kn-cross> ... </div>``
 
-The ``kn-cross`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attribute generates an on click event on the element to open the cross navigation set. If there is no cross navigation set this tag will not work.
+The ``kn-cross`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attribute makes the element clickable to open the cross navigation specified in the widget settings. If there is no cross navigation set this tag will not work.
+
+*kn-preview*
 
 ``<div kn-preview="DATASET-TO-SHOW"> ... </div>``
 
-The ``kn-preview`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attribute generates an on click event on the element to open the dataset preview dialog. The attribute value will be the *dataset label* of the dataset that you want to open. If a dataset is not specified the cockpit will use the one set for the widget. If no dataset has been set and the attribute has no value this tag will not work.
+The ``kn-preview`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attribute makes the element clickable to open the dataset preview dialog. The attribute value will be the *dataset label* of the dataset that you want to open. If a dataset is not specified the cockpit will use the one set for the widget. If no dataset has been set and the attribute has no value this tag will not work.
+
+*kn-selection*
 
 ``<div kn-selection-column="COLUMN-NAME" kn-selection-value="COLUMN-VALUE"> ... </div>``
 
-The ``kn-selection-column`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attributes generates an on click event on the element to set the chosen column and value in the cockpit selections. The default will use as a selection the first row value for the column.
+The ``kn-selection-column`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attributes makes the element clickable to set the chosen column and value as a selection filter in the cockpit. The default will use as a selection the first row value of the column.
 
-The **kn-selection-value** attribute is optional and will add a specific value to the column selection.
+The **kn-selection-value** attribute is optional and will let you specify a specific value as a column selection filter.
+
+*kn-variable*
 
 ``[kn-variable='VARIABLE-NAME' key='VARIABLE-KEY']``
 
-The ``kn-variable`` tag is the tool to read the runtime value of one of the defined variables. It will change depending on the current value and can be used inside kn-if and kn-calc.
+The ``kn-variable`` tag is the tool to read the runtime value of one of the defined variables. It will change depending on the current value and can be used inside ``kn-if`` and ``kn-calc``.
 
 The **key** attribute is optional and will select a specific key from the variable object if the variable is "Dataset" type, returning a specific value instead of a complete dataset.
 
@@ -689,9 +707,9 @@ The **key** attribute is optional and will select a specific key from the variab
     **Banned Tags**
     In order to avoid Cross-site scripting and other vulnerabilities, some tags are *not allowed* and will automatically be removed by the system when saving the cockpit:
 
--  ``<button></button>``
--  ``<object></object>``
--  ``<script></script>``
+    -  ``<button></button>``
+    -  ``<object></object>``
+    -  ``<script></script>``
 
 If you need to simulate a button behaviour use a div (or another allowed tag) and replicate the css style like in the following example:
 
