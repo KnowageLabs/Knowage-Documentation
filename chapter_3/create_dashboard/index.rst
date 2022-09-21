@@ -253,9 +253,9 @@ If you enable the **row span feature**, all the same visible values of the colum
 
 If the column is a measure, more functionalities will become available:
 
-    - Inline chart mode: you can choose the visualization type of the measure, and if you choose chart and maximum/minimum values, a chart will appear in the view to represent the cell measure.
-    - Thresholds: you can choose to set some thresholds that will trigger font color, background color or will show icons if the chosen condition is satisfied.
-    - Format: you can choose the prefix, suffix and the precision (i.e. 9.8 m/s). Please be aware that the data will be formatted following the locale of the user. Otherwise you can choose to treat it as string.
+    - **Inline chart mode**: you can choose the visualization type of the measure, and if you choose chart and maximum/minimum values, a chart will appear in the view to represent the cell measure.
+    - **Thresholds**: you can choose to set some thresholds that will trigger font color, background color or will show icons if the chosen condition is satisfied.
+    - **Format**: you can choose the prefix, suffix and the precision (i.e. 9.8 m/s). Please be aware that the data will be formatted following the locale of the user. Otherwise you can choose to treat it as string.
 
 
 .. _columnsettings:
@@ -289,29 +289,23 @@ Multiple conditions can be set, but a condition fullfilling the "=" will have hi
 
 The **Style** tab is where you can customize the table by using the different options of style. It is divided into eight parts:
 
--- REVIEW THIS SECTION --
+- In the **Header Style** section you can find different options for styling the table header. Refer to Figure below.
 
-- In the **Summary** section you can customize the appearance of the total of columns it by typing the summary name and using font and style configurations. Refer to Figure below.
+.. figure:: media/image162.png
+    Header style section of the Style tab.    
+
+- In the **Rows** section you can set the generic style for all the rows (such as alternate color background) or specify different styles according to specific conditions on values. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other external documents. Refer to figure below.
+
+.. figure:: media/image160.png 
+    Rows section of the Style tab.   
+
+- In the **Summary** section you can customize the appearance of the total of columns using font and style configurations. Refer to Figure below.
 
 .. figure:: media/image159.png
 
     Summary section of the Style tab.
 
-- In the **Rows** section you can set the table rows to be adapted in automatic or select a fixed height. You can also show the total of rows. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other external documents. Refer to figure below.
-
-.. figure:: media/image160.png
-
-    Rows section of the Style tab.
-
-- In the **Grid** section you can add borders to the table and add color to alternate rows. In this section you can find different options to customize them. Refer to figure below.
-
-- In the **Header Style** section you find the different options of  style for the table header. Refer to Figure below.
-
-.. figure:: media/image162.png
-
-    Header style section of the Style tab.
-
-- In the **Titles** section you can add the titles to the widget and modify the font size and weight. In this section you can also      change the height of the widget title. Refer to Figure below.
+- In the **Titles** section you can add the titles to the widget and modify the font size and weight. In this section you can also change the height of the widget title. Refer to Figure below.
 
 .. figure:: media/image163.png
 
@@ -323,22 +317,37 @@ The **Style** tab is where you can customize the table by using the different op
 
     Borders section of the Style tab.
 
-- In the **Other Options** section you can add the shadows in the widget, you can set the background color of the widget and it is possible to disable or enable the screenshot option for that particular widget. Refer to the following figure.
+- In the **Padding** section you can add a padding inside the widget area, specifying a value for top, bottom, left and right zones. Refer to the following figure.
+.. figure:: media/image164b.png
+
+    Padding section of the Style tab.
+
+- In the **Other Options** section you can add the shadows in the widget, you can set the background color of the widget and it is possible to disable or enable the screenshot option or the Excel export (when available) for that particular widget. Refer to the following figure.
 
 .. figure:: media/image165.png
 
     Other Options section of the Style tab.
 
-Once the table style settings have been implemented you can switch to the next tab. The “Cross” tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator).
+- In the **Export PDF** section you can enable the export of the widget in PDF format and also specify the orientation and size. Refer to the following figure.
 
-Finally, the “Filters” tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
+.. figure:: media/image165b.png
+
+   Export PDF section of the Style tab.
+
+Once the table style settings have been implemented you can switch to the next tab. The **“Cross”** tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator). In this tab is possible to select between three different type of interactions: cross navigation to another document, open a preview popup of a dataset content or link to an external URL. 
+
+.. figure:: media/image165c.png
+
+   Cross tab with preview of a dataset enabled.
+
+Finally, the **“Filters”** tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
 
 .. _filterstabwidgetconf:
 .. figure:: media/image168.png
 
     Filters tab of the table widget configuration.
 
-Once you have finished setting the different configuration options of the table widget, then just click on “Save” and your new widget is
+Once you have finished setting the different configuration options of the table widget, then just click on **“Save”** and your new widget is
 displayed inside the cockpit.
 
 Cross Table widget
