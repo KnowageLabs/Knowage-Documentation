@@ -3,11 +3,6 @@ ETL Process
 
 Knowage allow the upload of data from source systems according to a common ETL logic, as well as the monitoring of data flows continuously feeding the data warehouse. To this end, Knowage provides the ETL **Knowage Talend Engine**.
 
-.. important::
-         **Enterprise Edition only**
-
-         Please note that in the Enterprise Edition, **KnowageTalendEngine** is shipped with KnowageBD and KnowageSI only. 
-
 KnowageTalendEngine
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -103,18 +98,23 @@ Values in the template must be consistent with those defined in Talend, in order
 Creating the analytical document
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once we have created the template, we can create a new analytical document.
+Once we have created the template, we can create a new analytical document following the standard procedure. Use the plus button and choose "Generic Document". Proceed by filling in the necessary fields, uploading the XML template we have just created and selecting “ETL Process” as the type and “Talend engine” as the engine. Select then the corrisponding data source and the document state.
 
-Before starting to create the document, it is recommended to check whether the engine is properly installed and configured. In case the engine is not visible in the Engine Configuration list (**Data Providers** > **Engine Management**), you should check that the web application is active by invoking the URL ``http://myhost:myport/KnowageTalendEngine``.
+.. figure:: media/doc_etl.PNG
 
-Now you can create the analytical document on the Server, following the standard procedure. The template for this document is the one we have just created.
+    ETL document creation interface.
+
 If the job has parameters, they should be associated to the corresponding analytical drivers, as usually. In other words, you have to create an analytical driver for each context variable defined in the Talend job.
 
 Job execution
 ~~~~~~~~~~~~~~
 
 A Talend job can be executed directly from the web interface of Knowage Server and of course from a Talend client.
-To execute the job on Knowage, click on the document icon in the document browser, like with any other analytical document. The execution page will show a message to inform that the process was started.
+To execute the job on Knowage, click on the play button near the document in the document browser, like with any other analytical document. The execution page will show a message to inform that the process was started.
+
+.. figure:: media/doc_execution.PNG
+
+    ETL document execution interface.
 
 Job scheduling
 ~~~~~~~~~~~~~~~~
