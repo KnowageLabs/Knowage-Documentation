@@ -753,7 +753,7 @@ If you need to simulate a button behaviour use a div (or another allowed tag) an
       <service relativepath="/knowage/restful-services/1.0/images/" />
    </WHITELIST>
 
-Like other widgets the "Style" tab and the "Filters" tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
+Like other widgets the **"Style"** tab and the **"Filters"** tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
 
 Map Widget
 ~~~~~~~~~~~
