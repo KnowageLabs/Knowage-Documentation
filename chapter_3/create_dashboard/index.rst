@@ -986,6 +986,12 @@ The Custom Chart allows the user to directly embed html, css and js code using a
          As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. 
          Be aware that url not set in the whitelist will be deleted on save. 
          To use this import use the kn-import tag like the following example:
+         
+         .. code-block:: html
+            :linenos:
+
+            <kn-import src="yourCDNurl"></kn-import>
+
 
 This widget will be available only if the *create custom chart widget* option is enable for the specified user's role.
 
@@ -1536,13 +1542,6 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
     dataset column name and column value set in the method.
 |   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
     throw the set interaction. The dynamic values used will be the ones set in the method arguments.
-
-
-.. code-block:: html
-   :linenos:
-
-   <kn-import src="yourCDNurl"></kn-import>
-
 
 .. warning::
     **Whitelist**
