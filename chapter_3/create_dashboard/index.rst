@@ -886,7 +886,7 @@ Discovery Widget
 
 The Discovery Widget is used to easily use and navigate into a Solr Dataset using facets aggregation and a table results.
 In order to make searches, aggregations using facets and so on, after selecting the Solr dataset it is possible to choose the fields that should be shown as the result.
-The table result can also be configured to show a limited set of fields, please open edit mode:
+The table result can also be configured to show a limited set of fields, as you can see in the widget configuration:
 
 .. figure:: media/image481.png
 
@@ -944,7 +944,7 @@ In the editor tab it is possible to add the script that will be sent to the exec
 
 
 Before writing the code it is necessary to specify the **type** of the output produced by the script.
-Knowage has support for three different output types:
+Knowage has support for two different output types:
 
 - Image
 - HTML
@@ -972,15 +972,22 @@ To support this kind of choice a list of available libraries is displayed for ea
 Inside Python and R scripts it is possible to access analytical drivers by the usual placeholder syntax *$P{}*.
 
 .. warning::
-    **This widget is sensible to associative logic, meaning that the widget is updated every time that an association is changed, but it DOES NOT trigger associative logic itself.**
+    **This widget is sensible to associative logic, meaning that the widget is updated every time an association is changed, but it DOES NOT trigger associative logic itself.**
 
 Custom Chart Widget
 ~~~~~~~~~~~~~~~~~~~~~~
 .. figure:: media/image500.png
 
-The Custom Chart allows the user to directly embed html,css and js code using a supported external chart library and integrating with Knowage data and interactions using custom API.
+The Custom Chart allows the user to directly embed html, css and js code using a supported external chart library and integrating with Knowage data and interactions using custom API.
 
-This widget will be available only if the *create custom chart widget* option is set for the specified role.
+.. important::
+         **Chart libraries**
+
+         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. 
+         Be aware that url not set in the whitelist will be deleted on save. 
+         To use this import use the kn-import tag like the following example:
+
+This widget will be available only if the *create custom chart widget* option is enable for the specified user's role.
 
 The Edit section of the widget is composed by five tabs: dataset, editor, style, cross and filters.
 
@@ -1529,14 +1536,6 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
     dataset column name and column value set in the method.
 |   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
     throw the set interaction. The dynamic values used will be the ones set in the method arguments.
-
-
-.. important::
-         **Chart libraries**
-
-         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. 
-         Be aware that url not set in the whitelist will be deleted on save. 
-         To use this import use the kn-import tag like the following example:
 
 
 .. code-block:: html
