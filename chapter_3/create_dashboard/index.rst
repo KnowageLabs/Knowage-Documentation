@@ -1007,13 +1007,13 @@ The **Editor tab** allows to insert custom code and it's splitted into three com
 
 .. figure:: media/image502.png
 
-The CSS component allows to insert css classes that will be used by the HTML code of the widget. It's also possible to use *@import* command if the referred url is inside the whitelist.
+The CSS component allows to insert css classes that will be used by the HTML code of the widget. It's also possible to use `@import` command if the referred url is inside the whitelist.
 
 The HTML component allows to insert HTML tags in order to create a structure to host the custom chart and additional structural informations.
 
 The JavaScript component is the code section, and allows to insert the custom chart code, custom Javascript code and the API usage.
 
-To use the api the keyword is **datastore**. datastore is object that contains the actual data; it has methods to iterate over results and get all values, as the Java counterpart, plus some other methods as the following:
+To use the API the keyword is **datastore**. Datastore is an object that contains the actual data; it has methods to iterate over results and get all values plus some other methods as the following:
 
 
 **getDataArray**
@@ -1536,12 +1536,9 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
 
     datastore.clickManager(columnName, columnValue);
 
-|   This method can be added everywhere the code is managing a click event, and will notify Knowage about the
-    interaction.
-|   The default case (if no cross-navigation or preview-navigation is set) will throw a selection with the
-    dataset column name and column value set in the method.
-|   If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will
-    throw the set interaction. The dynamic values used will be the ones set in the method arguments.
+This method can be added everywhere the code is managing a click event, and will notify Knowage about the interaction.
+The default case (if no cross-navigation or preview-navigation is set) will throw a selection filter with the dataset column name and column value set in the method.
+If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will trigger the specified interaction. The dynamic values used will be the ones set in the method arguments.
 
 .. warning::
     **Whitelist**
@@ -1565,7 +1562,7 @@ It is also possible to interact with the other cockpit widgets, to do so it's po
       <service relativepath="/knowage/restful-services/1.0/images/" />
    </WHITELIST>
 
-Like other widgets the "Cross", "Style", and the "Filters" tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
+Like other widgets the *"Cross"*, *"Style"*, and the *"Filters"* tab are available in order to set the general style options for the widget and to filter the results displayed in the Custom Chart widget.
 
 Cross Navigation
 ~~~~~~~~~~~~~~~~~~
