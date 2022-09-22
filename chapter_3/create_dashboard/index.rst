@@ -1654,7 +1654,7 @@ You can also decide the type of link between the opening of a new page or the do
 **Link Parameters**
 
 The link parameters are different from the previous because they will be used to make the baseurl selected more precise.
-The resulting example url will be something similar: http://www.knowage-suite.com?**parameter1**=value&**parameter2**=value2
+The resulting example url will be something similar: *http://www.knowage-suite.com?**parameter1**=value&**parameter2**=value2*
 
 To do so you will have to create and name different parameters, the selected name will be the one used in the url construction.
 You can choose how to get the parameter value with the following modes:
@@ -1662,14 +1662,14 @@ You can choose how to get the parameter value with the following modes:
 - *Static*, entering a static value
 - *Dynamic*, passing the value of the column at the selected row (or passing the column name if *Selected Column Name* is chosen)
 - *Selection*, passing the current value of the selection for the specified dataset and column. Warning: the selection is not triggered clicking on the navigation, so to pass this value the selection must already be present.
-- *Analytical Driver*, passing a page parameter (input driver)
+- *Analytical Driver*, passing a document parameter (input driver)
 - *JSON*, passing an escaped JSON inside the url parameter. You can use the editor to create the desired JSON and use the placeholder to set the value at runtime. The placeholders are the usuals *$F{field}* for the fields, *$P{parameter}* for the parameters, *$V{variable}* for the variables.
 - *JWT*, passing the JWT token of the user
 
 Widget properties
 ~~~~~~~~~~~~~~~~~~
 
-Once one or more (above mentioned) widgets have been implemented, the technical user has some more options exploring the icon available at the right top corner of the widget itself, as Figure below highlights.
+Once one or more (above mentioned) widgets have been implemented, the technical user has some more options exploring the icon available at the left bottom corner of the widget itself, as Figure below highlights.
 
 .. figure:: media/image192.png
 
@@ -1683,7 +1683,7 @@ Here the user can:
 -  activate the on-click interaction of the widget with the other ones;
 -  activate the updating of widget data due to the interaction with other widgets.
 
-When executing the cockpit in visualization mode, the user has also some more options for widgets. For all widget the user can use the icon |image197| to expand the widget to all page and use the icon |image198| to reduce it again. There are also two new widget options: using th icon |image300| it is possible to capture the screenshot of the widget and clicking on the icon |image301| the data plotted on a chart or displayed in a table or crosstab are exported in an excel file.
+When executing the cockpit in visualization mode, the user has also some more options for widgets. For all widget the user can use the icon |image197| to expand the widget to all page and use the icon |image198| to reduce it again. There are also two other widget options: using the icon |image300| it is possible to capture the screenshot of the widget and clicking on the icon |image301| the data plotted on a chart or displayed in a table or crosstab are exported in an Excel file.
 
 .. |image197| image:: media/image193.png
    :width: 30
@@ -1703,7 +1703,7 @@ Chart widget are endowed with an additional option that allows the user to chang
 
     Change chart type button.
 
-Referring to figure below, the available chart types are: parallel, scatter, wordcloud, line, radar, bar and pie.
+In this case, the available chart types are: parallel, scatter, wordcloud, line, radar, bar and pie. These charts depends on the original chart type, not all can be available at the same time. 
 
 .. figure:: media/image196.png
 
@@ -1714,22 +1714,21 @@ Pay attention though to the fact that when grouping functions have been used, th
 General configuration
 -------------------------
 
-This option allows the user to manage all cockpit general settings that we are going to describe through images of the interface. Clicking on the **General configuration** button the window in figure below opens. This contains the **General Settings** tab and the **Widget Style** tab.
+This option allows the user to manage all cockpit general settings that we are going to describe through images of the interface. Clicking on the **General configuration** button the window in figure below opens. This contains the **General Settings** tab, the **Widget Style** tab and the **CSS Editor** tab.
 
 .. figure:: media/image197.png
 
     General configuration window.
 
-Editing the fields of the first tab you can add or change the name and/or the description of your cockpit; moreover here you can choose the sheet color or a background image and its size. In particular, in order to add a background image for the sheets, firstly you have to add the image to the catalogue of the image widget and then copy the link of the image. It is also possible to decide to enable the menu and the widgets functionalities when the document runs in display mode or to disable the screenshot functionality for every widgets.
+Editing the fields of the first tab, **General Settings**, you can add or change the name and/or the description of your cockpit; moreover here you can choose the sheet color or a background image and its size. In particular, in order to add a background image for the sheets, firstly you have to add the image to the catalogue of the image widget and then copy the link of the image. It is also possible to decide to enable the menu and the widgets functionalities when the document runs in display mode or to disable the screenshot functionality for every widgets.
 
-The second tab (Figure below allows to configure some style options of the cockpit, like borders, shadows, titles and background color.
+The second tab, **Widget Style**, (Figure below) allows to configure a default style for the widgets, like borders, shadows, titles and background color.
 
 .. figure:: media/image198.png
 
     Widget style tab.
 
-The third tab allows overriding the common css properties for the whole cockpit.
-The editor will highlight possible sintax errors.
+The third tab allows to specify CSS properties for the whole cockpit and widgets. Here is also possible to override common CSS properties of the widgets. The editor will highlight possible syntax errors.
 
 .. figure:: media/image497.png
 
