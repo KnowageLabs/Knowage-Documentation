@@ -1562,20 +1562,22 @@ If a cross-navigation or a preview has been set in the cross tab, those will hav
       <service relativepath="/knowage/restful-services/1.0/images/" />
    </WHITELIST>
 
-Like other widgets the *"Cross"*, *"Style"*, and the *"Filters"* tab are available in order to set the general style options for the widget and to filter the results displayed in the Custom Chart widget.
+Like other widgets the **"Cross"**, **"Style"**, and the **"Filters"** tab are available in order to set the general style options for the widget and to filter the results displayed in the Custom Chart widget.
 
 Cross Navigation
 ~~~~~~~~~~~~~~~~~~
 
 .. warning::
-    **Cross tab is only for technical users**
+    **Cross navigation tab is only for technical users**
 
     Due to the fact that parameters can only be managed by technical user the cross navigation cannot be implemented by the final user.
 
-All widgets (except selector and active selections) have the Cross tab available, that allows the user to interact with the widget in different ways:
+All widgets (except selector and active selections) have the **Cross** tab available, that allows the user to interact with the widget in different ways:
+
 - setting a Cross-navigation between different documents
-- setting a Preview of a specific dataset to popup
+- setting a Preview of a specific dataset in a popup
 - opening an external link
+
 The interactions are mutually exclusive, so just one type can be chosen for every widget.
 
 
@@ -1587,10 +1589,10 @@ The cross-navigation gives the possibility to connect two documents clicking on 
 
     Table widget cross-navigation configuration.
 
-To enable one first of all is necessary to set a cross navigation inside the "cross-navigation definition" functionality.
+To enable one, first of all is necessary to set a cross navigation inside the *"Cross-navigation definition"* functionality from the administration menu.
 There is possible to set the starting/arrival point and to set the connection between different output/input parameters.
 
-After this passage you will have the possibility to enable the cross-navigation in the tab and choose the user interaction that will start the navigation, if more than one are available.
+After this passage you will have the possibility to enable the cross-navigation in the widget's tab and choose the user interaction that will start the navigation, if more than one are available.
 
 The most complex example is the table widget cross-navigation, because it allows 3 different interactions:
 
@@ -1598,7 +1600,7 @@ The most complex example is the table widget cross-navigation, because it allows
 - *Click on a single column*, where the editor will choose a specific column that will start the interaction (the user will see the column values underlined)
 - *Click on an icon*, where the editor will choose an icon positioned to the right side that will start the interaction.
 
-Once the interaction has been chosen you will be able to select the cross-navigation created before. If you created more than one related to that document
+Once the interaction has been chosen you will be able to select the cross-navigation defined before. If you have created more cross-navigation related to the same document
 you will be able to choose between them. If you leave this field blank the user will be able to choose that himself.
 
 **Preview**
@@ -1609,12 +1611,16 @@ you will be able to choose between them. If you leave this field blank the user 
 
 The preview configuration is very similar to the cross-navigation one.
 First of all you will need to enable the navigation using the switch button.
-After you will need to choose an interaction type and a target dataset.
-the selected dataset will be opened in a popup window but, if you check the "Direct download" property you will be able to get the dataset preview directly in the download list.
+After that, you will need to choose an interaction type and a target dataset.
+The selected dataset will be opened in a popup window but, if you check the "Direct download" property, you will be able to get the dataset content directly in the *download list* functionality.
 
 .. figure:: media/image216.png
 
     Preview example.
+
+.. figure:: media/image216b.png
+
+    Download list functionality icon.
 
 **Cross and Preview Parameters**
 
