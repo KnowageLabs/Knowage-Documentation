@@ -1542,25 +1542,25 @@ If a cross-navigation or a preview has been set in the cross tab, those will hav
 
 .. warning::
     **Whitelist**
+
     For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the system.
     Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise those external links will be removed by the system. This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
 
+        .. code-block:: xml
+        :linenos:
 
-.. code-block:: xml
-   :linenos:
-
-   <?xml version="1.0" encoding="UTF-8"?>
-   <WHITELIST>
-      <service baseurl="https://www.youtube.com" />
-      <service baseurl="https://player.vimeo.com" />
-      <service baseurl="https://vimeo.com" />
-      <service baseurl="https://media.giphy.com" />
-      <service baseurl="https://giphy.com" />
-      <service baseurl="https://flic.kr" />
-      <service relativepath="/knowage/themes/" />
-      <service relativepath="/knowage/icons/" />
-      <service relativepath="/knowage/restful-services/1.0/images/" />
-   </WHITELIST>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <WHITELIST>
+            <service baseurl="https://www.youtube.com" />
+            <service baseurl="https://player.vimeo.com" />
+            <service baseurl="https://vimeo.com" />
+            <service baseurl="https://media.giphy.com" />
+            <service baseurl="https://giphy.com" />
+            <service baseurl="https://flic.kr" />
+            <service relativepath="/knowage/themes/" />
+            <service relativepath="/knowage/icons/" />
+            <service relativepath="/knowage/restful-services/1.0/images/" />
+        </WHITELIST>
 
 Like other widgets the **"Cross"**, **"Style"**, and the **"Filters"** tab are available in order to set the general style options for the widget and to filter the results displayed in the Custom Chart widget.
 
@@ -1778,7 +1778,7 @@ The same procedure can be done in the case of dataset columns and dataset parame
 
     Associations between dataset column and dataset parameter.
 
-Another example is supplied in Figure below. Here the association is performed between a dataset Frequency column and document parameter.
+Another example is supplied in Figure below. Here the association is performed between a dataset column and document parameter.
 
 .. figure:: media/image203.png
 
@@ -1796,7 +1796,7 @@ In the "Data cockpit settings" seen in the previous section, we fnd the "Auto De
 
     Auto Detect button.
 
-Here the user can decide a minimum percentage of match that Knowage will use to compute and return matching columns. For instance a 20% of similarity means that the values contained by two or more columns of different datasets are the same at least for the 20% of them. Following the example shown in Figure below, we can read that between the three dataset, only two of them have possible associations. The user can use a 100% similarity match using the "produt_family" field, which means that the two columns contained in two different dataset return exaclty the same list of distinct values. Or the user can set an association with a 75.23% similarity using "the_date" field which means that some values of one column are not contained in the other column. The minimum length allows the user to specify the lowest number of datasets to be joined.
+Here the user can decide a minimum percentage of match that Knowage will use to compute and return matching columns. For instance a 20% of similarity means that the values contained by two or more columns of different datasets are the same at least for the 20% of them. Following the example shown in Figure below, we can read that between the three dataset, only two of them have possible associations. The user can use a 100% similarity match using the "produt_family" field, which means that the two columns contained in two different dataset return exactly the same list of distinct values. Or the user can set an association with a 75.23% similarity using "the_date" field which means that some values of one column are not contained in the other column. The minimum length allows the user to specify the lowest number of datasets to be joined.
 
 .. figure:: media/image506.png
 
@@ -1807,9 +1807,9 @@ To select one of suggested associations, simply click on the specific row and th
 
 Indexes
 ~~~~~~~~~~~~
-If you want that cockpit loading be faster, you can create indexes on cached data. This feature is available only for cached dataset.
+To have faster loading time of the cockpit, is possible to create indexes on cached data. This feature is available only for cached dataset.
 
-If you want to create an index on a column you have to choose that column by clicking. The name of the column will appears in the Indexes List
+If you want to create an index on a column you have to choose that column by clicking on it. The name of the column will appears in the Indexes List
 section of the page. If you want to confirm your choose, click on the save icon. If you want to cancel it, click on the cross icon. After saving
 a index you'll see in the list surrounded by a continuous border.
 
@@ -1842,10 +1842,10 @@ In this tab the user can define the variables that will be available inside the 
 Every variable needs a name that will be used to call it and get the value, a type and a value.
 The available types are the following:
 
-- Static: a static number or string.
-- Dataset: the value of a selected dataset column. If a column is not selected a set of variables key/value will be created using the first two columns of the selected dataset.
-- Profile: a set of profile attributes available. (ie. the username)
-- Driver: the value of a selected analytical driver.
+- *Static*: a static number or string.
+- *Dataset*: the value of a selected dataset column. If a column is not selected a set of variables key/value will be created using the first two columns of the selected dataset.
+- *Profile*: a set of profile attributes available. (ie. the username)
+- *Driver*: the value of a selected analytical driver.
 
 The variables will be available inside the widgets with the $V{variablename} format.
 
