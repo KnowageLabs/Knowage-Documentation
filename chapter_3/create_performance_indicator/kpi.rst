@@ -139,7 +139,7 @@ Once a complete formula (an example is given in figure below) has been inserted 
 
 The **Cardinality** tab allows you to define the granularity level (namely the grouping level) for the attributes of the defined measures.
 
-Referring to the example below, selecting (with a check) both measures for the attribute product_name, the KPI measures are computed, grouped on each product_name; otherwise no grouping will be done.
+Referring to the example below, selecting (with a check) all the measures for the attribute product_name the KPI measures are computed for each value of the product_name; otherwise no grouping will be done.
 
 .. figure:: media/image137.png
 
