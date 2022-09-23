@@ -1862,7 +1862,13 @@ In this tab the user can find the json code (at the current stage of the work) w
 Selections
 --------------
 
-Adding the **Selections** to your widgets, namely the possibility to reload all widget data according to selection made through the click on a specific item of the cockpit (cell value, chart bar, etc.). Moreover, thanks to this functionality the user can reproduce the drill down feature that we introduced in Chapter of Chart. You can check which selections are active on your cockpit at anytime thanks to the **Selection** functionality. In Section 7.1 we already described how to add the “Selection” widget inside the cockpit area. If the user do not wish for the widget to stay visible, selections can still be accessed and managed through the menu configuration bar. Clicking on the “Selection” menu icon you can enter the “Selections” window. Here all selections and associations are listed, as shown in Figure below. The “Delete” button is available just aside each row to let the user to remove that specific selections. Click on the “Cancel” button to exit the window.
+Is possible to keep track of the **Selections** applied to your widgets, namely the possibility to filter widget data according to selection made through the click on a specific item of the cockpit (cell value, chart bar, etc.), also from the cockpit menu. You can check which selections are active on your cockpit at anytime thanks to the *Selections list* functionality. Previously, we already described how to add the *“Active Selections”* widget inside the cockpit area. If the user don't want to add a widget that stay visible inside the cockpit, selections can still be accessed and managed through the cockpit menu by clicking on the *“Selections”* icon (see the figure).
+
+.. figure:: media/image206.png
+
+    Selections icon from cockpit menu.
+
+Here all selections and associations are listed, as shown in Figure below. The “Delete” button is available just aside each row to let the user to remove that specific selections. Click on the “Cancel” button to exit the window.
 
 
 .. figure:: media/image206.png
@@ -1873,7 +1879,7 @@ Adding the **Selections** to your widgets, namely the possibility to reload all 
 Clear cache
 ---------------
 
-The **Clear cache** button lets you realign the data shown in your widget to the ones in your database. When you create your widget and associate your datafields, a photo of data is made and stored in temporary tables. This means that your cockpit will display the same data at each execution until you clean the chace by clicking on the dedicated button and execute the document again. Now your data are refreshed and updated to the one contained in your database at last execution time. As discussed before this button is available also in “Read only” modality.
+The **Clear cache** button lets you realign the data shown in your widget to the ones in your database. When you create your widget and associate your datafields, a photo of data is made and stored in temporary tables. This means that your cockpit will display the same data at each execution until you clean the cache, by clicking on the dedicated button, and execute the document again. Now your data are refreshed and updated to the one contained in your database at last execution time. As discussed before this button is available also in “View mode” modality for end users.
 
 Save
 --------
@@ -1884,15 +1890,14 @@ You can save the cockpit by clicking on the save button in the right-top corner.
 Multisheet functionality
 ----------------------------
 
-Cockpit allows to manage data visualization splitting it in two or more sheets. In each layer the user can find and employ the features shown above. Indeed, it is possible to perform a new analysis (as highlighted in Figure below) selecting different datasets and gadgets.
+The Cockpit engine allows to manage contents in multiple sheets. In each sheet the user can find and employ the features shown above. Indeed, it is possible to perform a new analysis (as highlighted in Figure below) selecting different datasets and gadgets. The multisheet functionality is particularly useful to focus the analysis in a single spot and have a general overview over it in few clicks at the same time.
 
 .. figure:: media/image207_bis.png
 
     Multisheet cockpit example.
 
-A user can take advantage of the “move widget” functionality we saw in My first Cockpit to bring widget from one sheet to another.
-
-Furthermore it is possible, but not mandatory, to set associations between datasets underlying different sheets. The multisheet functionality is particularly useful to focus the analysis in a single spot and have a general overview over it in few clicks at the same time.
+A user can also take advantage of the “move widget” functionality to bring a widget from one sheet to another.
+Furthermore it is possible, but not mandatory, to set associations between datasets underlying different sheets. 
 
 
 Export cockpit
