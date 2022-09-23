@@ -131,7 +131,7 @@ Clicking on the *f*\ () the interface opens a pop up where you can select which 
 
     Available functions.
 
-Once a complete formula (an example is given in figure below) has been inserted you can set a name for it and then move to the next tab.
+Once a complete formula (an example is given in figure below) has been inserted you must set a name for it and then move to the next tab.
 
 .. figure:: media/image136.png
 
@@ -151,39 +151,32 @@ Limit values can be set using the Threshold tab (Figure below). It is mandatory 
 
     Setting thresholds.
 
-To insert a new threshold it is mandatory to insert a name and assign a type, while the description is optional. Clicking on **Add new threshold** item a new item appears. It is necessary to define the **Position**, **Label**, **Minimum** and **Maximum** values. It is possible to choose if to include the minimum and maximum values in the value slot. The **Severity** is used to link colors to their meaning and make the thresholds readable by other technical users. Note that the color can be defined through the RGB code, the hexadecimal code or choosing it from the panel.
-
-Remember to save once all thresholds have been set.
+To insert a new threshold it is mandatory to insert a name and assign a type, while the description is optional. Clicking on **Add new threshold item** a new item appears. It is necessary to define the **Label**, **Minimum** and **Maximum** values. It is possible to choose whether to include the minimum and maximum values in the value slot or not. The **Severity** is used to link colors to their meaning and make the thresholds readable by other technical users. Note that the color can be defined through the RGB code, the hexadecimal code or choosing it from the panel.
    
 .. warning::
       **"Standard" colors for thresholds**
          
          Well call **standard colors** for thresholds the ones listed below (in terms of hexadecimals):
-         
             - green: #00FF00,
-            - yellow: #FFF00,
+            - yellow: #FFF000,
             - red: #FF0000.
 
-Finally the user must save the KPI definition clicking on the “Save” button, available at the right top corner of the page. Once the user clicks on the “Save” button, the “Add KPI associations” wizard opens, as you can see from next figure. Here, it is mandatory to assign a name to the KPI. In addition, the user can set the KPI category so that only users whose roles have the permmissions to this specific category can access the KPI. Remember that it is possible to assign permissions over KPI when defining roles using the “Roles management” functionality available on Knowage main page. Furthermore, the user can check or uncheck the “\ **Enable Versioning**\ ” button if he/she wishes to keep track of the rules/measures/targets that generate the KPI response at each KPI execution.
+Finally the user must save the KPI definition clicking on the “Save” button, available at the right top corner of the page. Once the user clicks on the “Save” button, the “Add KPI associations” wizard opens, as you can see from next figure. Here, it is mandatory to set the KPI category so that only users whose roles have the permissions to this specific category can access the KPI. Remember that it is possible to assign permissions over KPI when defining roles using the “Roles management” functionality. Furthermore, the user can check or uncheck the **Enable Versioning** button if he/she wishes to keep track of the rules/measures/targets that generate the KPI response at each KPI execution.
 
 .. _savekpidefcategory:
 .. figure:: media/image139.png
 
     Save the KPI definition and set category.
 
-**Target.** This step is not mandatory. Enter the **Target Definition** menu item as shown below.
+**Target.** This step is not mandatory. Enter the **Target** menu item as shown below.
 
 .. figure:: media/image140.png
 
     Target Definition menu item.
 
-Clicking on the “Plus” icon you can add a new target (Figure below).
+Clicking on the “Plus” icon you can add a new target.
 
-.. figure:: media/image141.png
-
-    Add a new target.
-
-The definition of a new target requires to type a name, a validity start date/end date and the association to at least one target. It is possibile to associate a target clicking on the item **Add KPI** and selecting the KPI of interest. Once the association is set, the “Value” box gets editable and you can insert the value you wish to send to the selected KPI. An example is given in figure below. 
+The define a new target you must insert a name, a validity start date/end date and the association to at least one target. It is possibile to associate a target clicking on the item **Add KPI association** and selecting the KPI of interest. Once the association is set, the “Value” box gets editable and you can insert the value you wish to send to the selected KPI. An example is given in figure below. 
 
 .. _kpitargetassoc:
 .. figure:: media/image142.png
@@ -197,9 +190,7 @@ In the KPI visualization phase, a red bold thick will be displayed on the indica
 
     Target mark in KPI scale of values.
 
-Note that once targets are set, the window in Figure 7.20 gets populated with a list. Note that here the category serves as description and only to order the records.
-
-**Schedulation.** Once the KPI has been defined, it is necessary to schedule them to proceed with the creation of an analytical document. For this purpose, click on the **KPI Scheduler** from the contextual menu that you can see below.
+**Schedulation.** Once the KPI has been defined, it is necessary to schedule it before proceeding with the creation of an analytical document. For this purpose, click on the **KPI Scheduler** from the contextual menu that you can see below.
 
 .. figure:: media/image144.png
 
@@ -213,7 +204,7 @@ As for the other interfaces it is enough to click on the “Plus” icon to crea
 
     KPI tab window.
  
--  **Filters**: here you assign values to the filters (if configured) associated to the schedulation. Note that it is possibile to assign values to the filters by means of a LOV, a fixed list of values or a temporal function. In case the LOV option is chosen, remember that the LOV must return one unique value. This choice can be useful for profiling tasks.
+-  **Filters**: here you assign values to the filters (if configured) associated to the corresponding rule. Note that it is possibile to assign values to the filters through a LOV, a fixed list of values or a temporal function. In case the LOV option is chosen, remember that the LOV must return one unique value. This choice can be useful for profiling tasks.
 
 .. figure:: media/image146.png
 
