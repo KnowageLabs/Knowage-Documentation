@@ -37,21 +37,21 @@ An example is given in the following figure.
 
     Perspective list example.
 
-In fact, each perspective manages one or more targets accordingly to the user’s requirements. A target consists of one or more KPIs and it is assigned a threshold color according to the chosen **Evaluation criterion**. In fact, if one selects:
+Each perspective manages one or more targets accordingly to the user’s requirements. A target consists of one or more KPIs and it is assigned a threshold color according to the chosen **Evaluation criterion**. The available evaluation criterion are:
 
--  **Policy “Majority”** the target gets the threshold of the KPI threshold that numerically exceeds the others,
--  **Policy “Majority with Priority”** the target gets the threshold of a specific KPI,
--  **Policy “Priority”** the target gets the majority threshold of the KPIs in case the primary stated KPI returns the lower threshold,       namely the “green” one, while it gets the threshold of a primary stated KPI in case the latter returns the other thresholds, namely the “yellow” or the “red” one.
+-  **Policy “Majority” (M)**, the target gets the threshold of the KPI threshold that numerically exceeds the others,
+-  **Policy “Majority with Priority (MP)”**, the target gets the threshold of a specific KPI,
+-  **Policy “Priority” (P)**, the target gets the majority threshold of the KPIs in case the primary stated KPI returns the lower threshold, namely the “green” one, while it gets the threshold of a primary stated KPI in case the latter returns the other thresholds, namely the “yellow” or the “red” one.
 
 .. warning::
     **Thresholds of selected KPIs must have the right colors**
        
-       Note that the scorecard shows the right colors accordingly with the selected policy only if the KPIs which compose the targets          have **no filters** and **standard colors** (see Section 7.1, Step 2 for definitions) to highlight the threshold.
+       Note that the scorecard shows the right colors accordingly with the selected policy only if the KPIs which compose the targets have **no filters** and **standard colors** (see the **Create KPI** section for definitions) to highlight the threshold.
 
 .. warning:: 
     **“Standard” colors for thresholds**
        
-       When the targets contain parametric KPIs the target/perspective evaluation cannot be completed for value absence. Therefore the          warning lights turn grey. The right visualization of the scorecard must be implemented through a scorecard document. Check              Section 8.2 to have more details on how to develop a scorecard document.
+       When the targets contain parametric KPIs the target/perspective evaluation cannot be completed for value absence. Therefore the warning lights turn grey. The right visualization of the scorecard must be implemented through a scorecard document. Check the following to have more details on how to develop a scorecard document.
 
 An example is showed below.
 
@@ -63,7 +63,7 @@ The same choice is available at the perspective level (refer to next figure), th
 
 -  **Policy “Majority”** the perspective gets the threshold of the target threshold that numerically exceeds the others,
 -  **Policy “Majority with Priority”** the perspective gets the threshold of a specific target,
--  **Policy “Priority”** the perspective gets the majority threshold of the targets in case the primary stated target returns the lower    threshold, namely the “green” one, while it gets the threshold of a primary stated target in case the latter returns the other          thresholds, namely the “yellow” or the “red” one.
+-  **Policy “Priority”** the perspective gets the majority threshold of the targets in case the primary stated target returns the lower    threshold, namely the “green” one, while it gets the threshold of a primary stated target in case the latter returns the other thresholds, namely the “yellow” or the “red” one.
 
 .. _prespectpolicy:
 .. figure:: media/image167.png
@@ -75,13 +75,15 @@ Remember to save once perspectives and targets have been set.
 Creation of a Scorecard document
 -------------------------------------
 
-Once saved it is possible to develop a scorecard document which can be easily consulted by (authorized) end users. To create a scorecard document click on the “Plus” icon available in the document browser and then “Generic document” from the panel as shown below. Here fill
+Once saved it is possible to develop a scorecard document which can be easily consulted by (authorized) end users. To create a scorecard document click on the “Plus” icon available in the document browser and then “Generic document”. 
+
+Here fill in mandatory fields (marked with an asterisk) selecting the **KPI type** and **KPI engine** and save. 
 
 .. figure:: media/image168.png
 
-    Create a generic document from document browser.
+    Create a generic document of type KPI.
 
-in mandatory fields (marked with an asterisk) and select the KPI type and **KPI engine**. Then open the “Template build”. Here select the “Scorecard” option as in figure below9 and consequently Creation of a Scorecard document choose an existing scorecard from the list. Make the desired customizations and save.
+Then click on “Open Designer” to develop the template. Here select the “Scorecard” option as in figure below and choose an existing scorecard from the list opened clicking on “Add Scorecard Assiociation”. Make the desired customizations and save.
 
 .. figure:: media/image169.png
 
@@ -95,7 +97,4 @@ Figure below gives an example of the scorecard document interface. The arrows po
 
 Note that it is possible to check the policy used for each perspective. In fact, by clicking on one of them a wizard opens showing the policy adopted and the goal got by ach KPI.
 
-.. figure:: media/image170.png
-
-    Scorecard document interface.
    
