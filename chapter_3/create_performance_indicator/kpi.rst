@@ -237,30 +237,26 @@ Once the schedulation is completed click on the “Save” button. Remember to g
 Creation of a KPI document
 ------------------------------
 
-**Document creation.** Now the schedulation has been set and it is possible to visualize the results. We need at this point to create a new analytical document of type KPI and that uses the KPI engine (Figure below). Then we save.
+Now the schedulation has been set and it is possible to visualize the results. The user need at this point to create a new analytical document of type KPI and that uses the KPI engine (Figure below). Add also a Label, a Name and a State for the document and then save clicking on the icon at the top right corner.
 
 .. figure:: media/image151.png
 
     Overview of the KPI case.
 
-Click on the **Template build** icon to develop the template. Here you can choose between KPI and Scorecard (refer to Scorecard Chapter for details on the Scorecard option). In the KPI case it is possible to choose between the two following type of document.
+After saving the document click on **Open designer** link to develop the template. Here you can choose between KPI and Scorecard (refer to Scorecard Chapter for details on the Scorecard option). In the KPI case it is possible to choose between the two following type of document.
 
 -  **List**: with this option it is possible to add several KPI that will be shown in the same page with a default visualization.
--  **Widget**: with this option it is always possible to add several KPI that will be shown in the same page but in this case you will also be asked to select its visualization: Speedometer or KPI Card; then the minimum value and the maximum value that the KPI can assume and if you want to add a prefix or a suffix (for example the unit of measure of the value) to the showed value.
+-  **Widget**: with this option it is always possible to add several KPI that will be shown in the same page but in this case you will also be asked to select its visualization: Speedometer or KPI Card; then you have to add the minimum value and the maximum value that the KPI can assume and if you want to add a prefix or a suffix (for example the unit of measure of the value) to the showed value.
 
-Then practically you must add the KPI association using the KPI List area of the interface. As you can see in figure below you can select the KPI after clicking on the “ADD KPI ASSOCIATION” link. The latter opens a wizard that allows to pick up a multiple choice of the KPIs. Once chosen, you need to specify all empty fields of the form, like “Category”, “View as” and so on (refer to figure below). Note that the “View as” field is were you can decide if the widget will be a Speedometer or a KPI Card.
+Then you must add the KPI association using the KPI List area of the interface. As you can see in figure below you can select the KPI after clicking on the **ADD KPI ASSOCIATION** link. The latter opens a wizard that allows to select one or more KPIs. Once chosen, you need to specify all empty fields of the form, like “View as”. minimum and maximum value for the range and so on (refer to figure below). Note that the “View as” field is were you can decide if the widget will be a Speedometer or a KPI Card.
 
 .. figure:: media/image152.png
 
     Setting the KPI associations using the dedicated area.
    
-Moreover, you can set the other properties of the KPI document using the **Options** and the **Style** areas (Figure below).
+Moreover, you can set the other properties of the KPI document using the **Options** and the **Style** areas at the bottom of the page.
 
-.. figure:: media/image153.png
-
-    Areas of the Template Build for KPI.
-
-In particular, it is possible to steer the time granularity used by the KPI engine to improve the performances. For this purpose, in the “Options” area (following figure) the user is invited to indicate the level of aggregation choosing among “day”, “week”, “month”, “quarter”, “year”.
+In particular, it is possible to select the time granularity used by the KPI engine to improve the performances. For this purpose, in the “Options” area (following figure) the user is invited to indicate the level of aggregation choosing among “day”, “week”, “month”, “quarter”, “year”.
 
 .. figure:: media/image154.png
 
@@ -268,29 +264,17 @@ In particular, it is possible to steer the time granularity used by the KPI engi
 
 Finally in the “Style” area the user can customize the size of the widget, the font, the color and size of texts.
 
-.. figure:: media/image155.png
+Then save and run the document.
 
-    Style settings.
-
-Then save and run the document. Examples are shown in the last three figures below.
-
-In case the document contains KPIs that involves grouping functions upon some attributes, it is possible to filter data returned on those attributes. To easily retrieve the attributes on which measures are grouped, it is sufficient to check the fields listed in the "Cardinality" tab of the KPI definition. WE recall it in the picture below.
+In case the document contains KPIs that involves grouping functions upon some attributes, it is possible to filter data returned on those attributes. To easily retrieve the attributes on which measures are grouped, it is sufficient to check the fields listed in the "Cardinality" tab of the KPI definition. We recall it in the picture below.
 
 .. figure:: media/image137.png
 
     Cardinality settings example.
 
-Then to use them to filter the document, first add the proper analytical drivers. Refer to Section 5.4 to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). Then it is mandatory that the URL of the analytical driver *must* coincide with the *attribute aliases* on which you have defined the grouping.
+Then to use them to filter the document, first add the proper analytical drivers. Refer to Section 5.4 to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). It is mandatory that the URL of the analytical driver *must* coincide with the *attribute aliases* on which you have defined the grouping.
 
-.. _kpiassociation:
-.. figure:: media/image156.png
-
-    KPI association.
-
-.. _widgetdocument:
-.. figure:: media/image157.png
-
-    Widget document.
+In the following figures you can find examples on the three type of KPIs you can design: Speedometer, KPI Card and KPI List.
 
 .. _kpispeedometer:
 .. figure:: media/image158.png
