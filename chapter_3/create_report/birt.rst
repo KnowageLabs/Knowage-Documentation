@@ -50,13 +50,13 @@ After that you can use the designer to create a new report.
 
     Design the report
 
-Using the preiew function you can test the report.
+Using the preview function (under the *Run* menu) you can test the report.
 
 Once the document is designed, it is stored as a local file, marked out with an icon and a specific file extension:
 
 -  **.rptdesign:** document template for reports that use the BIRT engine.
 
-4) Deploy on KNOWAGE server
+4) Deploy on KNOWAGE server: 
 using the KNOWAGE document browser you can install the report in the Server and test it.
 
 In this specific example, we will show how to create a report with an internal dataset. 
@@ -68,10 +68,10 @@ Right click on the **Data Source** item and select the corresponding data source
 -  **Database URL**
 -  **Username** and **password**
 
-Note that these configuration parameters will be used by the birt designer to connect to the database and let the report to be executed locally. Make sure that the database set in the Server share the same schema of that defined in the designer.
+Note that these configuration parameters will be used by the birt designer to connect to the database and let the report to be executed locally. Make sure that the database set in the Knowage server share the same *schema* of that defined in the designer.
 
-Since you are setting a local reference to a database inside the report, remember to set an additional information: this will enable Knowage Server to correctly execute the report, by connecting to the data source referenced within the server and not inside the report. 
-Basically you need to tell the server to override the data source configuration. Therefore, add a parameter to the report, called **connectionName**, right-clicking on the "Report Parameters" menu item and selecting "New Parameter". Fill in the form as suggested below.
+Since you are setting a local reference to a database inside the report, you need to add an additional information to enable Knowage Server to correctly execute the report by connecting to the data source referenced within the server and not inside the report. 
+Basically, you need to tell the server to override the data source configuration of the report. Therefore, add a parameter to the report, called **connectionName**, by right-clicking on the "Report Parameters" menu item and selecting "New Parameter". Fill in the form as suggested below.
 
 .. figure:: media/image333.png
 
@@ -106,6 +106,7 @@ While developing a report, it is particularly useful to test it regularly. To th
 While developing a report, it is particularly useful to test it regularly. To this end, click on the Preview tab below the editor area. To revert back to the editor, just click on the Layout tab. In the Master Page tab, you can set the dimensions and layout of the report; the Script tab supports advanced scripting functionalities; finally, the XML Source tab shows the editable source code of your report.
 
 .. _datasetedtwithprw:
+
 .. figure:: media/image336.png
 
     Dataset editor, with preview.
