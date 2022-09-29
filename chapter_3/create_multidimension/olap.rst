@@ -249,17 +249,17 @@ If the user re-opens the dialog window, he/she sees the selected hieararchies an
 
     Changing the hierarchies.
 
-We give an example of the output when the hierarchy “Time” is selected in first next figure and hierarchy “Time Weekly” in the second next figure.
+We give an example of the output when the hierarchy “All Customers” is selected in first next figure and hierarchy “Customers by segment” in the second next figure.
 
 .. _timehierarchieshowsdays:
 .. figure:: media/image159.png
 
-     Time hierachy: the table shows days in the month.
+     All Customers hierachy: the table shows customers by state.
 
 .. _timeweeklyhierarchyshowsweek:
 .. figure:: media/image160.png
 
-    Time Weekly hierachy: table shows weeks in the month.
+    Customers by segment hierachy: table shows customers by segment.
 
 Slicing
 ~~~~~~~
