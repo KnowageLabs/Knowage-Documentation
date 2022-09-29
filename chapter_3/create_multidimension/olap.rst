@@ -457,6 +457,7 @@ To change sorting mode user should click on sorting settings button in the side 
     Sorting settings window.
 
 The available types of sorting are:
+
 -  no sorting (it is the default); 
 -  basic, it is the standard ascending or descending order according to the column values where the ordering is done;
 -  breaking, it means that the hierarchy will be broken;
