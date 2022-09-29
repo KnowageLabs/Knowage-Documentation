@@ -95,7 +95,7 @@ Once the data source has been configured, you can proceed with the creation of a
 
     Dataset definition.
 
-Now you can define your dataset by writing the SQL query in the editor and testing the results (see :numref:`datasetedtwithprw`). At any time, you can modify the dataset by clicking on it, which will re-open the query editor.
+Now you can define your dataset by writing the SQL query in the editor and testing the results (see figure below). At any time, you can modify the dataset by clicking on it, which will re-open the query editor.
 
 Let us design a very simple report, which contains a table showing the data from the defined dataset. The easiest way to create a table from a dataset is to drag & drop the dataset from the tree menu into the editor area.
 
