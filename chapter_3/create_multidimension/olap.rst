@@ -6,19 +6,13 @@ OLAP tools enable users to analyse multidimensional data interactively from mult
 OLAP user manual step by step
 -------------------------------
 
-We start our lecture on the OLAP engine by analysing an existing OLAP document. Open the document browser folder of the Knowage suite as in figure below and launch an OLAP document.
-
-.. figure:: media/image134.png
-
-    Browse the documents and select an OLAP document.
-
-Here an example.
+We start our lecture on the OLAP engine by analysing an existing OLAP document. Here you can find an example of OLAP document.
 
 .. figure:: media/image135.png
 
       Exploring an existing OLAP document.
 
-We will describe the main parts of the OLAP page in the following.
+In the following we will describe the main parts of the OLAP page.
 
 The filter panel
 ~~~~~~~~~~~~~~~~
@@ -32,7 +26,7 @@ Once the document is executed, the central area of the window contains the table
 The filter cards
 ~~~~~~~~~~~~~~~~
 
-Filter cards can be placed on the filter panel or on column axis. You can switch their position dragging and dropping them from one place to the other.
+Filter cards can stay on the filter panel or be placed on column axis. You can move them from the filter panel to the axis or viceversa by dragging and dropping them from one place to the other.
 
 .. figure:: media/image137.png
 
@@ -43,16 +37,15 @@ Filter cards are used to:
 -  inform the user about available dimensions defined in OLAP schema,
 -  inform the user about dimension’s name,
 -  perfom slices,
--  Add the dimensions to the cube visualization,
+-  add the dimensions to the cube visualization,
 -  place hierarchies in different axes,
 -  filter visible members.
 
 Considering the next figure, we can see that a filter card is made up of:
 
--  an icon for opening dimension chooser dialog (a),
--  a dimension name (b),
--  icon slicer (c)+(e),
--  choosed filter name (d),
+-  an icon for opening hierachy selection dialog (a),
+-  the dimension name (b),
+-  filter icon (if a filter is selected the icon is red) (c)+(d).
 
 .. _featuresoffiltcard:
 .. figure:: media/image13839.png
@@ -65,7 +58,7 @@ Axes panel
 In the panel axes you can:
 
 -  drag and drop one or more dimensions,
--  organise the dimensions visualization,
+-  organize the dimensions visualization,
 -  swap axes.
 
 Referring to the following figure, the axes panel consists of the following items:
@@ -107,8 +100,7 @@ Referring to next figure, Pivot table consists of:
 -  cells with data (b),
 -  icons for drill down and drill up (c),
 -  icons for sorting (only if enabled by the developer) (d),
--  icons for showing properties (only if enabled and configured by the developer) (e),
--  links for cross navigation (only if enabled and configured by the developer) (f).
+-  links for cross navigation (only if enabled and configured by the developer) (e).
 
 .. _pivottablefeat:
 .. figure:: media/image142a.png
@@ -129,32 +121,31 @@ Side bar is used to:
 
 -  choose between different data representations,
 -  choose between different drill types,
--  call dialogs and functionalities that effect the pivot table,
--  get additional data based on loaded model.
+-  call dialogs and functionalities that effect the pivot table.
 
 .. _sidebar:
 .. figure:: media/image144.png
 
     Side bar.
 
-The side bar shows the **Menu**. This area let you customize the Olap layout. As highlighted in the figure below, the Menu is divided in three subsections:
+The side bar shows the **Settings**. This area let you customize the Olap layout. As highlighted in the figure below, the Menu is divided in three subsections:
 
 -  drill options (a),
 -  OLAP functions (b),
 -  table functions (c), 
--  what if.
+-  what if (if it is a what-if document).
 
 .. _sidebarmenu:
 .. figure:: media/image145a.png
 
     Side bar Menu.
 
-We start introducing the interface and leave the description to the next *Functionalities* paragraph. In particular, referring to next figure, drill types consists of:
+We start introducing the interface and leave the description on how they works to the next *Functionalities* paragraph. In particular, referring to next figure, drill types consists of:
 
--  position (a),
--  member (b),
--  replace (c),
--  drill through (d).
+-  position,
+-  member,
+-  replace,
+-  drill through.
 
 .. _drilltypes:
 .. figure:: media/image146.png
@@ -163,8 +154,9 @@ We start introducing the interface and leave the description to the next *Functi
 
 Meanwhile, referring to the following figure, the OLAP functions consist of:
 
--  show MDX (a),
--  reload model (b).
+-  show MDX Query (a),
+-  reload model (b),
+-  enable cross navigation (if enabled and configured by the developer) (c).
 
 .. _olapfunctions:
 .. figure:: media/image147a.png
@@ -174,12 +166,11 @@ Meanwhile, referring to the following figure, the OLAP functions consist of:
 Referring to figure below, table functions consist of:
 
 -  show parent members (a),
--  sorting settings (b),
--  save customized view (c),
+-  hide spans (b),
+-  sorting settings (c),
 -  show properties (d),
 -  suppress empty rows/columns (e),
--  hide spans (f),
--  calculated field wizard (g).
+-  save customized view (f).
 
 .. _tablefunctions1:
 .. figure:: media/image148a.png
@@ -189,12 +180,11 @@ Referring to figure below, table functions consist of:
 Referring to next figure, what if consists of:
 
 -  lock/unlock model (a),
--  delete versions (b),
--  select an algotithm (c),
--  output wizard (d), 
--  save as new version (e), 
--  undo (f),
--  export excel for edit (g).
+-  save as new version (b), 
+-  undo (c),
+-  delete versions (d),
+-  output wizard (e), 
+-  select an algotithm (f).
 
 .. _tablefunctions2:
 .. figure:: media/image149a.png
