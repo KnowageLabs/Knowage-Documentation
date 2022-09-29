@@ -228,19 +228,13 @@ To swap axes the user should click on the icon |image151|. The user will get the
 Selecting different hierarchies on dimension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If an OLAP schema is defined, the user can choose different hierarchies of the same dimension. The icon for opening the dialog is positioned on the top left corner of the filter card (if the dimension has more than one hierarchy). Select the hierarchies icon underlined below.
+If an OLAP schema is defined, the user can choose different hierarchies of the same dimension. The icon for opening the dialog is positioned on the left of the filter card (if the dimension has more than one hierarchy). Select the hierarchies icon underlined below.
 
 .. figure:: media/image154.png
 
     Hierarchies icon.
 
-A pop up will be displayed. The following figure shows its characteristics. The window will present:
-
--  the dimension name (a),
--  name of selected hierarchies (b),
--  drop down list of available hierarchies (c),
--  save button (d),
--  cancel button (e).
+A pop up will be displayed. The following figure shows its characteristics. Here it is possible to change the hierachy through the combo-box and then save.
 
 .. _hierarchiesdialogpopup:
 .. figure:: media/image155.png
@@ -444,19 +438,11 @@ To hide or show spans the user should click on show/hide spans button in the sid
 Showing properties
 ~~~~~~~~~~~~~~~~~~
 
-In OLAP schema the XML member properties, if configured, could be represented in two possible ways:
-
-1. as part of pivot table where a property values are placed in rows and columns. To get these values, the user needs to click on show      properties button in the side bar. Results will be shown in the pivot table;
+In OLAP schema the XML member properties, if configured, is represented as part of pivot table where a property values are placed in rows and columns. To get these values, the user needs to click on show      properties button in the side bar. Results will be shown in the pivot table;
 
 .. figure:: media/image179.png
 
     Show properties.
-
-2. in a pop up as compact properties. To enable compact properties user should click on enable compact properties button in the side bar. In this way in all the cells of members Suppressing empty colunms/rows which has property set, a table icon appears. This icon lets the property pop up opens. Figure below shows an example.
-
-.. figure:: media/image180a.png
-
-    Show properties summarized in a pop up.
 
 Suppressing empty colunms/rows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -498,111 +484,6 @@ To remove the sorting, the user just have to click on the icon again. To change 
 Note that “breaking mode” means that the hierarchy will be broken.
 
 If the user selects “Count sorting” mode the top or last 10 members will be shown by default in the pivot table. Furthermore, the user can also define a custom number of members that should be shown. 
-
-Calculated members and sets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Firstly we stress that to enable **Calculated fields** in your Olap document a proper button tag is needed in your Olap template. Such a tag is <BUTTON_CC visible="true"/>.
-
-Once enabled, to create a calculated member/set the user should:
-
-.. figure:: media/image186.png
-
-   Calculated member.
-
-1. select a member of the pivot table, as in figure above, which will be the parent of the calculated member,
-
-2. click on the “calculated field” button in the side bar panel: a “Select function” dialog will appear. The latter consists of            (refer to next figure):
-
-   -  a name input field (a),
-   -  an aggregation functions tab (b),
-   -  an arithmetic functions tab (c),
-   -  a temporal functions tab (d),
-   -  a custom functions tab (e), 
-   -  a recent functions tab (f),
-   -  an available functions list (g),
-   -  ok and cancel buttons (h).
-
-.. _selectfunctiondialog:
-.. figure:: media/image187.png
-
-    Select function dialog.
-
-The function definition used to create calculated members are read from the formula.xml file, located at: ROOT/resources/yourTennant/Olap folder. Functions are divided by few different tabs. In particular,\ **Tab Recent** contains calculated members and calculated sets created by user and saved in cookies. If there are no sets/members stored in the cookies, that tab will be empty. **Tab Custom** is where to define custom functions. These functions can be used to make really complex operations that are not part of predefined MDX functions. There you can use combination of few functions together or use operators for complex mathematical  calculations. They are also defined in formulas xml. If a specific tab doesn’t contain any formula, it will not be displayed. The “Name” field is mandatory, indeed the creation of a function without a name is forbidden. In **Recent tab**, the “Name” field is hidden. the figure below provides an example of edited formula in the formulas.xml file.
-
-.. figure:: media/image188.png
-
-    Example of one formula inside of formulas xml.
-
-3. Select a function and enter a calculated member/set name and click on “Ok”. A dialog for arguments defintion will show up, as shown in the following figure. This is made up of the following elements:
-
--  selected function name (a),
--  function description (b),
--  text input fields for argument expression (c),
--  expected MDX expression return type (d),
--  argument’s MDX expression description (e),
--  open saved button (f), 
--  select from table button (g),
--  ok and cancel buttons (h).
-
-.. _argumentdefdialog:
-.. figure:: media/image189.png
-
-    Argument defintion dialog.
-
-In particular, to input MDX expression argument, the user has three options, listed in the following.
-
-1. Type it manually (for advance users).
-
-2. Select members from the pivot table: to select a members that are going to be included in a set, the user should (see next figure):
-
-   -  click on select from table button,
-   -  click on members in a pivot table,
-   -  click ok in dialog to finish selection.
-
-.. _selectingmembers:
-.. figure:: media/image190.png
-
-    Selecting members.
-
-The expression of selected members will be imported in text input fields for argument expression as figure below shows.
-
-.. figure:: media/image191.png
-
-    Expression of the selected members.
-
-3. Import expression from saved calculated members or sets. To import calculated member/set, the user should:
-
-   • Click on open saved button. Then the dialog of saved calculated members/sets will appear (next figure) and it consists of:
-
-     -  a list of saved calculated members and sets,
-     -  a calculated member/set name,
-     -  calculated member/set return type is shown by round icon.
-
-.. _savedsetsdialog:
-.. figure:: media/image192.png
-   
-    Saved sets dialog.
-
-•  Click on calculated member/set. The expression of saved calculated member/set will be imported in text input fields for argument         expression, as highlighted below.
-   
-.. figure:: media/image193.png
-
-    Expression of the saved/calculated member/set.
-
-•  After filling all the arguments of function, clicking on OK button will:
-
-      -  add calculated member in a pivot table,
-      -  save calculated set and it will be available for creation of other calculated member and sets.
-
-
-In tab “Recent”, opening the “Select function” dialog the user can find a list of saved calculated member and sets which can be edited or deleted. Editing is done by clicking on one of them. 
-
-.. figure:: media/image194.png
-
-   Edit a calculated member.
-
-Deleting is done by Delete button as shown in figure above.
 
 Creation of an OLAP document\*
 ------------------------------
