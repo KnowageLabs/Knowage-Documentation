@@ -1,10 +1,10 @@
 Jasper reporting
 ##########
 
-Jasper is a stand-alone reporting tool developed by the Jaspersoft Community. An example of Jasper report is represented in the next figure. Jasper Report Engine manages Jasper report templates inside Knowage Server. A report template for Jasper is a text file with .jrxml extension that can be manually modified by very expert users by editing XML code. Otherwise, iReport, a graphical template designer, is provided for all developers who want to easily design a report for this engine.
+Jasper is a stand-alone reporting tool developed by the Jaspersoft Community. An example of Jasper report is represented in the next figure. Jasper Report Engine manages Jasper report templates inside Knowage Server. A report template for Jasper is a text file with .jrxml extension that can be manually modified by very expert users by editing XML code. Otherwise, *iReport*, a graphical template designer, is provided for all developers who want to easily design a report for this engine.
 
 .. _exjasperreprt:
-.. figure:: media/image342.png
+.. figure:: media/image342b.png
 
     Example of a Jasper report.
 
@@ -18,7 +18,7 @@ Unlike the BIRT designer, iReport is not integrated in Eclipse. Therefore, befor
 .. note::
       **iReport download**
          
-         Download the iReport designer at <http://community.jaspersoft.com/project/ireport-designer/releases>. Knowage support any kind of version.
+         Download the iReport designer at http://community.jaspersoft.com/project/ireport-designer/releases. Knowage support any kind of version.
 
 Then you will have to set the path to the iReport designer in Knowage Studio. Open Window > Preferences > iReport Editor Configuration and set the correct path to the ireport.exe file.
 
@@ -80,5 +80,5 @@ To insert dataset columns into the report, use the syntax showed in following sy
 
 Once the document has been developed, technical users can use Knowage Studio deployment service to easily register the report with its template on Knowage Server. Alternatively, any valid Jasper template (developed with or without Knowage Studio) can be directly uploaded to Knowage Server using the web interface for the document management.
 
-This section does not provide any further detail about graphical development since it focuses on specific aspects of Knowage Jasper Report Engine. All Jasper standard functionalities work with Jasper Report Engine. For a full overview of Jasper reporting tool and a detailed developer guide, please refer to the official documentation at `http://community.jaspersoft.com/`.
+This section does not provide any further detail about graphical development since it focuses on specific aspects of Knowage Jasper Report Engine. All Jasper standard functionalities work with Jasper Report Engine. For a full overview of Jasper reporting tool and a detailed developer guide, please refer to the official documentation at http://community.jaspersoft.com/.
 
