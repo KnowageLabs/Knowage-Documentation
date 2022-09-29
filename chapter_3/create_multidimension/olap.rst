@@ -322,21 +322,21 @@ The procedure to search for a member using the filter dialog has no meaningful d
 Drill down and drill up
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-User can choose between drill types by clicking on one of the three buttons in the drill types section of the side bar. There are three drill types. In the following we give some details on them.
+User can choose between different drill types by clicking on one of the three buttons in the "Drill On Dimensions" section of the side bar. There are three drill types. In the following we give some details on them.
 
-1. **Position**: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with          child members of a member with that particular command. See below.
+1. **Position**: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with child members of a member. See below.
 
 .. figure:: media/image168.png
 
      “Position” drill down.
 
-2. **Member**: if the user wants to perform drill operation not only on one member per time but on all members of the same name and        level at the same time it is needed to select member drill type. See below.
+2. **Member**: if the user wants to perform drill operation not only on one member per time but on all members of the same name and level at the same time it is needed to select member drill type. See below.
 
 .. figure:: media/image169.png
 
     “Member” drill down.
 
-3. **Replace**: This option lets the user replace the parent member with his child member during drill down operation. To drill up the      user should click on the arrow icon next to the dimension name on which to perform operation. See figure below.
+3. **Replace**: this option lets the user replace the parent member with his child member during drill down operation. To drill up the user should click on the arrow icon next to the dimension name on which to perform operation. See figure below.
 
 .. figure:: media/image170.png
 
@@ -345,7 +345,7 @@ User can choose between drill types by clicking on one of the three buttons in t
 Drill through
 ~~~~~~~~~~~~~
 
-To perform drill through operation the user needs first to select a cell, as in the following figure, on which to perform operations. Then clicking on the button for a drill through in the side bar, a dialog will open with results (this pop up could take some time to    open).
+To perform drill through operation the user needs to click on the corresponding button in the side bar. Then clicking on the magnifying glass button in one of the pivot cell a dialog will open with results (this pop up could take some time to open).
 
 .. figure:: media/image171.png
 
@@ -353,29 +353,33 @@ To perform drill through operation the user needs first to select a cell, as in 
 
 In particular, referring to the next figure, drill though dialog consists of:
 
--   a hierarchy menu (a),
--   a table of values (b),
--   a maximum rows drop down list (c),
--   a pagination (d),
--   a apply button (e),
--   a export button (f),
--   a cancel button (g),
--   a clear all button (h).
+-   a hierarchy menu,
+-   a table of values,
+-   a maximum rows drop down list,
+-   an apply button,
+-   an export button,
+-   a cancel button,
+-   a clear all button.
 
 .. _drillthoroughwindow:
 .. figure:: media/image172a.png
 
     Drill thorugh window.
 
-The user must therefore select a cell, open the side bar and select the drill through item from the panel. A pop up will show up: here the user can choose the level of detail with which data will be displayed. The steps to follow are:
+Here the user can choose the level of detail with which data will be displayed thorough the hierachy menu. The steps to follow are:
 
-1. to click on hierarchy in hierarchy menu,
+1. click on a hierarchy in hierarchy menu,
 
-2. to check the checkbox of the level,
+2. check the checkbox of the level,
 
-3. to click on the “Apply” button (after checking the checkbox, remember to click outside of the level list and then select apply).
+.. _checkboxlevel:
+.. figure:: media/image172b.png
 
-The user can also select the maximum rows to load by choosing one of the options in the drop down list (see figure above, (c)). Finally, loaded data can be exported in csv format by clicking on the “Export” button.
+    Checkbox of the level.
+
+3. click on the “Apply” button.
+
+The user can also select the maximum rows to load by choosing one of the options in the drop down list. Finally, loaded data can be exported in csv format by clicking on the “Export” button.
 
 Refreshing model
 ~~~~~~~~~~~~~~~~
@@ -392,31 +396,10 @@ To show current mdx query user should click on show mdx button in the side bar. 
 
      Showing MDX query example.
 
-
-Sending MDX
-~~~~~~~~~~~
-
-If you want to execute an MDX query you need to:
-
--  click on send MDX button in the sidebar,
--  type a query in a text area of send MDX dialogs, 
--  click on the save button.
-
-.. figure:: media/image174.png
-
-    Sending MDX query example.
-
-Result of the MDX query “should” appear in pivot table as in figure below. In fact, the user is responsable for entering *valid* MDX query.
-
-.. figure:: media/image175.png
-
-    Sending MDX query example.
-
-
 Showing parent members
 ~~~~~~~~~~~~~~~~~~~~~~
 
-If a user wants to see additional information about members shown in the pivot table (for example: member’s hierarchy, level or parent member) he should click on a show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in the following two figures.
+If a user wants to see additional information about members shown in the pivot table (for example: member’s hierarchy, level or parent member) he should click on show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in the following two figures.
 
 .. figure:: media/image176.png
 
@@ -438,7 +421,7 @@ To hide or show spans the user should click on show/hide spans button in the sid
 Showing properties
 ~~~~~~~~~~~~~~~~~~
 
-In OLAP schema the XML member properties, if configured, is represented as part of pivot table where a property values are placed in rows and columns. To get these values, the user needs to click on show      properties button in the side bar. Results will be shown in the pivot table;
+In OLAP schema the XML member properties, if configured, is represented as part of pivot table where property values are placed in rows and columns. To get these values, the user needs to click on show      properties button in the side bar. Results will be shown in the pivot table;
 
 .. figure:: media/image179.png
 
@@ -456,34 +439,28 @@ To hide the empty rows and/or colums, if any, from pivot table the user can clic
 Sorting
 ~~~~~~~
 
-To enable member ordering the user must click on the “Enable sorting” button in the side bar panel. The command for sorting will appear next to the member’s name in the pivot table. In addition, the sorting command will show the members of “Measures” hieararchy or members that are crossjoined with them, as shown below. 
+To enable member ordering the user must click on the “Sorting settings” button in the side bar panel. The command for sorting will appear next to the member’s name in the pivot table, as shown below. 
 
 .. figure:: media/image18283.png
 
     Member sorting.
 
-To sort members the user needs to click on the sorting command |image179|, available next to each member of the pivot table. Note that the sorting criteria is ascending at first execution. If the user clicks on the sorting icon, criteria will change to descending and the result will be shown in pivot table.
+To sort members the user needs to click on the sorting command (two opposite arrows) available next to each member of the pivot table. Note that the sorting criteria is descending at first execution and it represented by a red down arrow. If the user clicks again on the sorting icon, criteria will change to ascending and the icon becomes an upper green arrow. To remove the sorting, the user just have to click on the icon again. 
 
 .. |image179| image:: media/image184.png
    :width: 65
 
-To remove the sorting, the user just have to click on the icon again. To change sorting mode user should click on sorting settings button in the side bar. Referring to the following figure, dialog sorting settings consists of:
+To change sorting mode user should click on sorting settings button in the side bar. 
    
 .. figure:: media/image185a.png
 
     Sorting settings window.
 
--  sorting modes (a),
--  no sorting (by default) (b), 
--  basic (c),
--  breaking (d),
--  count (e),
--  a number input field for count mode definition (f),
--  a save button (g).
-
-Note that “breaking mode” means that the hierarchy will be broken.
-
-If the user selects “Count sorting” mode the top or last 10 members will be shown by default in the pivot table. Furthermore, the user can also define a custom number of members that should be shown. 
+The available types of sorting are:
+-  no sorting (it is the default); 
+-  basic, it is the standard ascending or descending order according to the column values where the ordering is done;
+-  breaking, it means that the hierarchy will be broken;
+-  count, only the top or last members will be shown in the pivot table; the user can change the number of members shown (by default first or last 10) using the number input field that appears clicking on this type of sorting.
 
 Creation of an OLAP document\*
 ------------------------------
