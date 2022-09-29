@@ -101,9 +101,7 @@ Let us design a very simple report, which contains a table showing the data from
 
 The most generic way, which applies to all graphical elements, consists in switching to the **Palette** menu on the left panel, keeping the designer in the central panel. Drag and drop the table into the editor area. Consider that this can be done with all other elements listed in the Palette. At this point, you can edit the table (as well as any other graphical element on the report) using the **Property Editor** tab below the editor area.
 
-While developing a report, it is particularly useful to test it regularly. To this end, click on the **Preview** tab below the editor area. To revert back to the editor, just click on the **Layout** tab. In the **Master Page** tab, you can set the dimensions and layout of the report; the **Script** tab supports advanced scripting functionalities; finally, the **XML Source** tab shows the editable source code of your report.
-
-While developing a report, it is particularly useful to test it regularly. To this end, click on the Preview tab below the editor area. To revert back to the editor, just click on the Layout tab. In the Master Page tab, you can set the dimensions and layout of the report; the Script tab supports advanced scripting functionalities; finally, the XML Source tab shows the editable source code of your report.
+While developing a report, it is particularly useful to test it regularly. To this end, click on the **Run** menu on top of the screen and select *Run as HTML*. To revert back to the editor, just click on the **Layout** tab. In the **Master Page** tab, you can set the dimensions and layout of the report; the **Script** tab supports advanced scripting functionalities; finally, the **XML Source** tab shows the editable source code of your report.
 
 .. _datasetedtwithprw:
 
@@ -120,14 +118,14 @@ Once your report is done, you can deploy it on Knowage Server.
 .. note::
      **Deploy on Knowage Server**
          
-         To deploy the report you have to upload the template file directly in the document detail page.
+         To deploy the report you have to create a new *Generic document* and then upload the template file directly in the document detail page.
 
 The BIRT report designer allows the creation of complex reports, with different graphical elements such as cross tabs, charts, images and different text areas. In this section we do not provide any details on graphical development but we focus on specific aspects of Knowage BIRT Report Engine.
 
 .. note::
      **BIRT Designer**
          
-         For a detailed explanation of report design, pleas refer to BIRT documentation at www.eclipse.org/birt/.
+         For a detailed explanation of report design, please refer to BIRT documentation at https://www.eclipse.org/birt/.
 
 Adding parameters to reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -138,9 +136,9 @@ To use these parameters, you first need to add them to your report. Right-click 
 
 .. warning::
    
-    **Parameters URI**
+    **Parameters URL**
 
-      Be careful when assigning a name to a parameter inside a report. This name must correspond to the parameters URI when you               deploy the document on Knowage Server.
+      Be careful when assigning a name to a parameter inside a report. This name must correspond to the parameters URL when you deploy the document on Knowage Server.
 
 Once you have defined all parameters, open the (or create a new) dataset. Parameters are identified by a question mark **?** . For each **?** that you insert in your query, you must set the corresponding link in the **Parameters** tab: this will allow parameters substitution at report execution time.
 
@@ -175,7 +173,7 @@ Cross Navigation for BIRT Reports
 
 A powerful feature of Knowage analytical documents is cross-navigation, i.e., the ability to navigate documents in a browser-like fashion following logical data flows. Although crossnavigation is uniformly provided on all documents executed in Knowage Server, each type of document has its own modality to set the link pointing to another document.
 
-Notice that the pointer can reference any Knowage document, regardless of the source document. For example, a BIRT report can point to another birt report, to a dashboard, a geo or any other analytical document.
+Notice that the cross navigation can reference any Knowage document, regardless of the type of the source document. For example, a BIRT report can point to another BIRT report, to a dashboard, a geo or any other analytical document.
 
 It is obviously possible to associate more than one cross navigation to a single document. 
 It means that by clicking on different elements of the same document the user can be directed to different documents.
@@ -193,7 +191,7 @@ Click on the table cell and select the **Hyperlink** item in the **Properties** 
 
     Hyperlink editor.
 
-To edit the Location, click on the right drop down button and select the JavaScript syntax. This will open BIRT JavaScript editor. Here you must write down the javascript function "javascript:parent.execExternalCrossNavigation" passing JSON arguments like ParName: string, null and string.
+To edit the Location, click on the right drop down button and select the JavaScript syntax. This will open BIRT JavaScript editor. Here you must write down the javascript function ``javascript:parent.execExternalCrossNavigation`` passing JSON arguments like ``{ParName1: string}``, ``null`` and ``Cross_Navigation_Name: string``.
 
 In Cross Navigation syntax we give an idea of how the syntax should be like:
 
@@ -215,9 +213,9 @@ In Cross Navigation syntax we give an idea of how the syntax should be like:
     
     **Type the right cross navigation name**
 
-       It is important to underline that the "Cross_Navigation_Name" of Cross Navigation syntax is the cross navigation name                    related to the document and set using the "Cross Navigation Definition" feature we described in *Analytical Document* Chapter, *Cross Navigation* Section. 
+       It is important to underline that the ``"Cross_Navigation_Name"`` of Cross Navigation syntax is the cross navigation name                    related to the document and set using the "Cross Navigation Definition" feature we described in *Analytical Document* Chapter, *Cross Navigation* Section. 
        
-It will be necessary to type the right cross navigation name related to the document as defined using the "Tool" settings of Knowage      server and to define those parameters (OUT_PAR, OUT_STRING, etc.) as output parameters in the deployed document on the Server            (see *Analytical Document* Chapter, *Cross Navigation* Section).
+It will be necessary to type the right cross navigation name related to the document as defined using the "Cross Navigation definition" feature of Knowage      server and to define those parameters (OUT_PAR, OUT_STRING, etc.) as output parameters in the deployed document on the Server            (see *Analytical Document* Chapter, *Cross Navigation* Section).
 
 Note that the syntax of the string is fixed, while you need to assign values to the parameters that will be passed to the destination document. The JavaScript editor helps you to insert dataset column bindings, as shown in Figure below, and report parameters automatically.
 
@@ -237,10 +235,10 @@ or
 .. code-block:: javascript
    :linenos:
    
-    OUT_SeveralNames:[5,9,31938]
+    OUT_SeveralValues:[5,9,31938]
 
 
-Finally, it is possible to set a sort of "multi"-cross navigation if for example the exit document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document goes to a target document and the name of the navigation is "CrossNav1" and simultaneously the source document goes to a second target document and the name of the navigation is "CrossNav2". If in the JavaScript function of *Cross Navigation syntax* code the "Cross_Navigation_Name" is left empty as in the code below, when the user clicks on the object for which the navigation has been enabled a pop up opens asking for the user to choose between the "CrossNav1" navigation or the "CrossNav2" one. This procedure allows the user to have a more than one possible navigation starting from the same object.
+Finally, it is possible to set a sort of "multi"-cross navigation if for example the source document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document is linked to a target document with the navigation called *"CrossNav1"* and simultaneously the source document is linked to a second target document with the navigation called "*CrossNav2"*. If in the JavaScript function of *Cross Navigation syntax* code the "Cross_Navigation_Name" is left empty, as in the code below, when the user clicks on the object for which the navigation has been enabled a pop up opens asking to the user to choose between the *"CrossNav1"* navigation or the *"CrossNav2"* one. This procedure allows the user to have more than one possible navigation starting from the same object.
    
 .. _crossnavsyntax2:
 .. code-block:: javascript
