@@ -502,7 +502,7 @@ The very first step for a multi-dimensional analysis is to identify essential in
 
         The logical structure of the database has an impact on the mapping approach to be adopted when creating the multidimensional             model, as well as on query performances.
 
-If the structure of the relational schema complies with multi-dimensional logics, it will be easier to map the entities of the physical model onto the metadata used in Mondrian schemas. Otherwise, if the structure is highly normalized and scarcely dimensional, the mapping process will probably require to force and approximate the model to obtain a multi-dimensional model. As said above, Mondrian is a ROLAP tool. As such, it maps OLAP structures, such as cubes, dimensions and attributes directly on tables and columns of a relational data base via XMLbased files, called Mondrian schemas. Mondrian schemas are treated by Knowage as resources and organized into catalogues. Hereafter, an example of Mondrian schema in Mondrian schema example:
+If the structure of the relational schema complies with multi-dimensional logics, it will be easier to map the entities of the physical model onto the metadata used in Mondrian schemas. Otherwise, if the structure is highly normalized and scarcely dimensional, the mapping process will probably require to force and approximate the model to obtain a multi-dimensional model. As said above, Mondrian is a ROLAP tool. As such, it maps OLAP structures, such as cubes, dimensions and attributes directly on tables and columns of a relational data base via XMLbased files, called Mondrian schemas. Mondrian schemas are treated by Knowage as resources and organized into catalogues. Hereafter, an example of Mondrian schema:
 
 .. code-block:: xml
    :linenos:
@@ -512,13 +512,14 @@ If the structure of the relational schema complies with multi-dimensional logics
          <Schema name="FoodMart">     
                <!-- Shared dimensions -->   
                <Dimension name="Customers"> 
+
                   <Hierarchy hasAll="true" allMemberName="All Customers"             
-                             primaryKey=" customer_id">                                         
+                             primaryKey=" customer_id">  
+
                       <Table name="customer"/>                                           
                       <Level name="Country" column="country" uniqueMembers="true"/>      
                       <Level name="State Province" column="state_province"               
                              uniqueMembers="true"/>                                             
-
                       <Level name="City" column="city" uniqueMembers="false"/>           
 
                   </Hierarchy> ...                                                   
@@ -563,7 +564,6 @@ If the structure of the relational schema complies with multi-dimensional logics
                       <Formula>        
                            [Measures].[Store Sales] - [Measures].[Store Cost]  
                       </Formula>                                                         
-
                       <CalculatedMemberProperty name="format_string" value="$#,##0.00"/> 
                   </CalculatedMember>                                                
 
@@ -576,20 +576,30 @@ Each mapping file contains one schema only, as well as multiple dimensions and c
 .. note::
       **Mondrian**
          
-         For a detailed explanation of Mondrian schemas, please refer to the documentation available at the official project webpage: http://mondrian.pentaho.com/.
+         For a detailed explanation of Mondrian schemas, please refer to the documentation available at the official project webpage: http://mondrian.pentaho.com/documentation.
          
          
 Engine catalogue configuration
 +++++++++++++++++++++++++++++++
 
-To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to **Catalogs> Mondrian schemas catalog**. Here you can define the new schema uploading you XML schema file and choosing **Name** and **Description**. When creating a new OLAP template, you will choose among the available cubes defined in the registered schemas.
+To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to **Catalogs> Mondrian schemas** in the Knowage menu, as shown below. 
 
-Note that the Lock option forbids other technical users to modify settings.
+.. figure:: media/image225.png
+
+    Mondrian schemas menu item.
+
+Here you can find the list of already created mondrian schemas and clicking on the plus button you can define a new one uploading your XML schema file. A new window will open where you have to choose a **Name**, an optional **Description** and to upload your XML file, as you can see in figure below. 
+
+.. figure:: media/image226.png
+
+    Creating a new mondrian schema.
+
+When creating a new OLAP template, you will choose among the available cubes defined in the registered schemas.
 
 OLAP template building
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user must manually edit the template. The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in next code:
+Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user can manually edit the template or use the guided Knowage designer (look at the "OLAP Designer" section for this functionality). The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in next code:
 
 .. _mappingtemplateexample:
 .. code-block:: xml
@@ -599,7 +609,14 @@ Once the cube has been created, you need to build a template which maps the cube
      <?xml version="1.0" encoding="UTF-8"?> 
      <olap>                                 
         <!-- schema configuration -->       
-        <cube reference="FoodMart"/>        
+        <cube reference="FoodMart"/>       
+
+        <MDXMondrianQuery>                                    
+            SELECT {[Measures].[Unit Sales]} ON COLUMNS           
+            , {[Region].[All Regions]} ON ROWS                    
+            FROM [Sales]                                          
+            WHERE [Product].[All Products].[Drink]                
+        </MDXMondrianQuery>        
 
         <!-- query configuration -->        
         <MDXquery>  
@@ -610,13 +627,6 @@ Once the cube has been created, you need to build a template which maps the cube
             <parameter name="family" as="family"/>                
         </MDXquery>                                           
 
-        <MDXMondrianQuery>                                    
-            SELECT {[Measures].[Unit Sales]} ON COLUMNS           
-            , {[Region].[All Regions]} ON ROWS                    
-            FROM [Sales]                                          
-            WHERE [Product].[All Products].[Drink]                
-        </MDXMondrianQuery>                                   
-
         <!-- toolbar configuration -->                        
         <TOOLBAR>                                             
             <BUTTON_MDX visible="true" menu="false" />            
@@ -624,10 +634,7 @@ Once the cube has been created, you need to build a template which maps the cube
             <BUTTON_HIDE_SPANS visible="true" menu="false"/>      
             <BUTTON_SHOW_PROPERTIES visible="true" menu="false"/> 
             <BUTTON_HIDE_EMPTY visible="true" menu="false" />     
-            <BUTTON_FLUSH_CACHE visible="true" menu="false" />    
-            <BUTTON_SAVE visible="true" menu="false" />           
-            <BUTTON_SAVE_NEW visible="true" menu="false" />       
-            <BUTTON_EXPORT_OUTPUT visible="true" menu="false" />  
+            <BUTTON_FLUSH_CACHE visible="true" menu="false" />         
         </TOOLBAR>                                            
                                       
      </olap>                                                  
@@ -637,7 +644,7 @@ An explanation of different sections of Mapping template example follows.
 -  The CUBE section sets the Mondrian schema. It should reference the exact name of the schema, as registered in the catalogue on the Server.
 -  The MDXMondrianQuery section contains the original MDX query defining the starting view (columns and rows) of the OLAP document.
 -  The MDX section contains a variation of the original MDX query, as used by the Knowage Engine. This version includes parameters (if any). The name of the parameter will allow Knowage to link the analytical driver associated to the document via the parameter (on the Server).
--  The TOOLBAR section is used to configure visibility options for the toolbar in the OLAP document. The exact meaning and functionalities of each toolbar button are explained in next sections. A more complete list of the available options is shown in Menu configurable options:
+-  The TOOLBAR section is used to configure visibility options for the side bar in the OLAP document. The exact meaning and functionalities of each toolbar button has been explained in "Functionalities" section. A more complete list of the available options is shown in Menu configurable options in the Knowage designer.
 
 .. code-block:: xml
    :linenos:
@@ -645,72 +652,71 @@ An explanation of different sections of Mapping template example follows.
     
         <BUTTON_DRILL_THROUGH visible="true"/>
         <BUTTON_MDX visible="true"/>
-        <BUTTON_EDIT_MDX visible="true"/>
         <BUTTON_FATHER_MEMBERS visible="true"/>
-        <BUTTON_CC visible="true"/>
         <BUTTON_HIDE_SPANS visible="true"/>
         <BUTTON_SORTING_SETTINGS visible="true"/>
-        <BUTTON_SORTING visible="true" />
         <BUTTON_SHOW_PROPERTIES visible="true"/>
         <BUTTON_HIDE_EMPTY visible="true"/>
         <BUTTON_FLUSH_CACHE visible="true"/>
-        <BUTTON_SAVE visible="true"/>
+        <!-- toolbar configuration for what-if documents: --> 
         <BUTTON_SAVE_NEW visible="true"/>
         <BUTTON_UNDO visible="true"/>
         <BUTTON_VERSION_MANAGER visible="true"/>
         <BUTTON_EXPORT_OUTPUT visible="false"/>
-
+        <BUTTON_SAVE_SUBOBJECT clicked="false" visible="true"/>
+        <BUTTON_EDITABLE_EXCEL_EXPORT clicked="false" visible="true"/>
+        <BUTTON_ALGORITHMS clicked="false" visible="true"/>
+  
 
 Creating the analytical document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have the template ready you can create the OLAP document on Knowage Server.
 
-To create a new OLAP document, click on the “create a new document” button in the **Document Development** area and select **Online analytical processing** as Type. Then you can choose the available engines. In this case we have only the **OLAP engine**. 
-
-Type a name, a functionality, load the XML template and save. You will see the document in the functionality (folder) you selected, displayed with the typical cube icon as shown below.
+To create a new OLAP document, click on the plus button in the **Document Broswer** area and then choose “Generic document”. Filling in the mandatory fields: select a Label and a Name, select **On-Line Analytical Processing** as Type and **OLAP Engine** as Engine, add the Data Source from which the data comes from and the State of the document. Finally, upload the XML template developed in the previous section and click on save. 
 
 .. _olapdocserver:
 .. figure:: media/image195.png
 
-    OLAP document on server.
+    OLAP document creation interface.
 
-OLAP Designer\*
+You will see the document in the functionality (folder) you selected.
+
+OLAP Designer
 ~~~~~~~~~~~~~~~~~
 
 Knowage Server is also endowed of an efficient OLAP designer which avoid the user to edit manually the XML-based template that we discussed on in Development of an OLAP document. We will therefore describe here all features of this functionality. 
 
-The user needs to have a functioning Modrian schema to start the work with. Select **Mondrian Schemas Catalog** to check the available Mondrian schemas on server. It is mandatory that the chosen Mondrian schema has no parameters applied.
+The user needs to have a functioning Modrian schema to start the work with. As we have already seen in the previous sections, select **Mondrian Schemas** to check the available Mondrian schemas on server. It is mandatory that the chosen Mondrian schema has no parameters applied.
 
 .. warning::
       **Mondrian schema for OLAP designer**
          
-         The Mondrian schema must not be filtered thorough any parameter or profile attribute.
+         If you want to use the designer the Mondrian schema must not be filtered thorough any parameter or profile attribute.
 
 The page as the one in figure below will open.
 
 .. figure:: media/image196.png
 
-    Schema Mondrian from catalog.
+    Catalogs list of Schema Mondrian.
 
-Then we start entering the **Document Browser** and clicking on the “Plus” icon at the top right corner of the page. Fill in the mandatory boxes as Label and Name of the document, select the On-line Analytica Process Type of document and the What-if Engine (we stress that the What-if engine is available only for who have purchased the Knowage SI package). Remember to save to move to the next step: open the Template Build. The latter can be opend clicking on the editor icon |image195| and it is available at the bottom of the document detail page.
+Then enter in the **Document Browser**, click on the “Plus” icon at the top right corner of the page and choose "Gneric document". As described in the previous section, fill in the mandatory boxes as Label and Name of the document, select the **On-Line Analytical Processing** Type of document and the **OLAP Engine**, add the data source and the state. Remember to save to move to the next step: open the Designer. The latter can be opend clicking on the **Open Designer** link.
 
-.. |image195| image:: media/image197.png
-   :width: 30
-
-The action opens a first page asking for the kind of template. Here we choose the Mondrian one. Consequently you will be asked to choose the Mondrian Schema and after that to select a cube. Next figure sums up these three steps. Following the example just given below you will enter a page like that of the second figure below. 
+A new page will be opened, the first thing to choose is the kind of template between XMLA Server and Mondrian, we choose Mondrian one. Then you will be asked to choose the Mondrian Schema and after that to select a cube. Next figure sums up these three steps. 
 
 .. _olapcoreconfig:
 .. figure:: media/image198.png
 
     OLAP core configuration.
 
+Then clicking on start button you will enter a page like that of the following figure. 
+
 .. _definingolaptempl:
 .. figure:: media/image199.png
 
     Defining OLAP template.
 
-Once entered the page the user can freely set the fields as filter panels or as filter cards, according to requirements. Refer to *Functionalities* Chapter to review the terminology. Make your selection and you can already save the template as shown below.  
+Once entered the page the user can freely set the fields as axis or as filter cards, according to requirements. Refer to *Functionalities* Chapter to review the terminology. Make your selection and you can already save the template as shown below.  
 
 .. _definingolaptempl2:
 .. figure:: media/image200.png
@@ -729,7 +735,7 @@ You can notice that the side panel contains some features (see next figure):
 .. |image200| image:: media/image202.png
    :width: 30
 
-- |image201| to configure the scenario; 
+- |image201| to show the Mdx query; 
 
 .. |image201| image:: media/image203.png
    :width: 30
@@ -744,30 +750,23 @@ You can notice that the side panel contains some features (see next figure):
 .. |image203| image:: media/image205.png
    :width: 30
 
-Refer to Section *Functionalities* to recall the action of the different drills. To select between them will affect the navigation of the OLAP outputs by users. Instead the scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to to the following figure, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
+Refer to Section *Functionalities* to recall the action of the different drills, the one selcted in the template will be the default used in the OLAP document. 
 
-.. _wizconfigscena:
-.. figure:: media/image20607.png
+You can define a cross navigation opening the wizard and clicking on the “Add” button at the top right corner.
 
-    Wizard to configure the scenario.
-
-Once one cross navigation has been set you keep on adding as many as required. Just open the wizard and click on the “Add” button at the top right corner.
-
-Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the the user must access the “Cross Navigation Definition” functionalities available in Knowage Server. Here, referring to *Cross Navigation* section of *Analytical document* chapter, you will use the parameter just set as output parameter.
+Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the user must access the “Cross Navigation” functionalities available in Knowage Server. Here, referring to *Cross Navigation* section of *Analytical document* chapter, you will use the parameter just set as output parameter.
 
 .. figure:: media/image2080910.png
 
     Cross navigation definition.
 
-As shown in figure below, the buttons visibility serves to decide which permissions are granted to the end-user. Some features can only be let visible while the admin can also grant the selection for others. 
+As shown in figure below, the buttons wizard helps to decide which permissions are granted to the end-user. Some features can only be let visible while others can also be selected by default when a user open the document. 
 
 .. figure:: media/image211.png
 
-    Wizard to configure the scenario.
+    Buttons wizard.
 
-Once the configuration is done click on the **Save template** button and on the **Close designer** button to exit template. As :numref:`sidepanelfeatolapdes` highlights, these two buttons are available at the bottom of the side panel.
-
-The admin can develop the OLAP document using also the OLAP engine. In this case the OLAP designer will lack of the scenario configuration since in this case the end-user must not have the grants for editing the records. So in this instance the “Configure scenario” button is not available at all. For the other two options the instructions are right the same as the What-if engine.
+Once the configuration is done click on the **Save template** button and on the **Close designer** button to exit template available at the bottom of the side panel.
 
 
 Profiled access
