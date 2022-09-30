@@ -264,25 +264,23 @@ We give an example of the output when the hierarchy “All Customers” is selec
 Slicing
 ~~~~~~~
 
-The slicing operation consists in the analysis of a subset of a multi-dimensional array corresponding to a single value for one or more members of the dimensions. In order to perform this operation you need to drag and drop the dimesion of interest in the axis panel.  Then clicking on the filter icon choose the new single focus and apply it. Once concluded these steps the cube will show only the selected level of the dimension, while the others have been sliced out.
+The slicing operation consists in the analysis of a subset of a multi-dimensional array corresponding to a single value for one or more members of the dimensions. In order to perform this operation you need to drag and drop the dimension of interest in the axis panel.  Then clicking on the filter icon choose the new single focus and apply it. Once concluded these steps the cube will show only the selected level of the dimension, while the others have been sliced out.
 
-The following figure shows the slicer option panel which consists of:
-
--  a dimension name (a),
--  a search input field (b),
--  a search button (c),
--  a show/hide siblings checkbox (d),
--  a member tree (e),
--  a selected member icon (f),
--  a highlighted member (result of searching) (g), 
--  a save and a cancel buttons (h).
+The following figure shows the slicer option panel where the user can see which items is selected and used in the pivot table.
 
 .. _dialogforslicerchoosing:
-.. figure:: media/image161.png
+.. figure:: media/image161a.png
 
     Dialog for slicer choosing.
 
-In particular, it is possible to search for a member in three ways:
+In order to unlock the whole member tree and to define a new slicing you have to click on the add button. As you can see in the following figure, here it is possible to navigate the member tree, search for a specific value in the member tree, clear all the selections and apply a new one.
+
+.. _dialogforslicerchoosing:
+.. figure:: media/image161b.png
+
+    Define a new slicing.
+
+In particular, it is possible to search for a member value in two ways:
 
 1. by browsing the member tree;
 
@@ -290,34 +288,34 @@ In particular, it is possible to search for a member in three ways:
 
    Browsing the member tree.
 
-2. by typing member’s name or it’s part in the input field and clicking on the search button. The research will be possible if the user enters at least four letters. If the user wishes to include member’s siblings to the research, the checkbox (:numref:`dialogforslicerchoosing` (d))needs to be checked;
+2. by typing member’s name or it’s part in the input field. The research will be possible if the user enters at least three letters;
 
 .. figure:: media/image16364.png
 
    Using the research box.
 
-3. after the first research, if the user types some other member’s name before clicking on the search button, visible members whose        names contains a entered text will be highlighted.
+The check on the checkbox of the selected values and click on the apply button to save the selection. After that, the users choice will affect the pivot table, example is given in the figure below.
 
 .. figure:: media/image165.png
 
-    Using the research box after a first investigation.
-
-Once the selection has been saved, the users choice will affect the pivot table and the filter cards slicer name will rearrange.
+   Results for slicing operation.
 
 Filtering
 ~~~~~~~~~
 
-To filter dimension members in a pivot table, the user should click on a button (see :numref:`featuresoffiltcard`) located on the right side of dimension’s filter card placed in the filter area.
+To filter dimension members in a pivot table, the user should click on the funnel icon located on the right side of dimension’s filter card placed in the filter area.
 
-The procedure to search for a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog. The pop up interface is the one showed below. After selecting a member, the user should click on the save button. The pivot table will display the changements. Otherwise click on the cancel button to discard changes.
+The procedure to search for a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog. The pop up interface is the one showed below. After selecting a member, the user should click on the apply button in order to filter the values in the pivot. The pivot table will then display the changements. Otherwise click on the cancel button to discard changes.
 
 .. figure:: media/image166.png
 
     Filter dialog.
-    
+
+When a filter is applied on a card the filter button becomes red, as shown in the picture below.
+
 .. figure:: media/image167.png
 
-    Filter effects on pivot table.
+    Filter icon when a filter is applied.
 
 Drill down and drill up
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -463,7 +461,7 @@ The available types of sorting are:
 -  breaking, it means that the hierarchy will be broken;
 -  count, only the top or last members will be shown in the pivot table; the user can change the number of members shown (by default first or last 10) using the number input field that appears clicking on this type of sorting.
 
-Creation of an OLAP document\*
+Creation of an OLAP document
 ------------------------------
 
 Multidimensional analysis allows the hierarchical inquiry of numerical measures over predefined dimensions. In Cockpit we explained how the user can monitor data on different detail levels and from different perspectives. Here we want to go into details of how a technical user can create an OLAP document. We recall that the main characteristics of OLAP documents are:
