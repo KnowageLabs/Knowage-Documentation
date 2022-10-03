@@ -319,9 +319,17 @@ First of all, here you have also to configure the scenario. Opening the side bar
 
       Configure scenario button.
 
-The scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to to the following figure, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
+The scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures for which the end-user will have the permission to edit and modify. Referring to the following figure, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
 
 .. _wizconfigscena:
 .. figure:: media/image20607.png
 
     Wizard to configure the scenario.
+
+Finally, as far as the buttons wizard the what-if has more available buttons for which the user can only check the visibility. Here after the additional available buttons.
+
+.. _wizconfigscena:
+.. figure:: media/image229.png
+
+    Buttons wizard.
+
