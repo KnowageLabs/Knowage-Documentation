@@ -772,7 +772,7 @@ Once the configuration is done click on the **Save template** button and on the 
 Profiled access
 ^^^^^^^^^^^^^^^^^^^^^^
 
-As for any other analytical document, Knowage provides filtered access to data via its behavioural model. The behavioural model is a very important concept in Knowage. For a full understanding of its meaning and functionalities, please refer to Behavioural Model.
+As for any other analytical document, Knowage provides filtered access to data via its behavioural model. The behavioural model is a very important concept in Knowage. For a full understanding of its meaning and functionalities, please refer to *Data security and access management* section.
 
 Knowage offers the possibility to regulate data visibility based on user profiles. Data visibility can be profiled at the level of the OLAP cube, namely the cube itself is filtered and all queries over that cube share the same data visibility criteria.
 
@@ -824,35 +824,35 @@ To set the filter, which is based on the attribute (or attributes) in the user�
          ...                                       
         </Schema> 
 
-In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax “pr.product_family = '${family}'”.                         
+In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax **pr.product_family = '${family}'**.                         
 
 The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.
 
-You can filter more than one dimensions/cubes and use more profile attributes. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’, and insert into the query a condition like “and pc.product_family IN (${family})”.
+You can filter more than one dimensions/cubes and use more profile attributes. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’ and insert into the query a condition like **and pc.product_family IN (${family})**.
 
 Once the OLAP document has been created using the template designer the user can insert parameters to profile the document. To set parameters the user has to download the Mondrian schema and edit it; modify the dimension(s) (that will update according to the value parameter(s)) inserting an SQL query which presents the parametric filtering clause.
 
 .. hint::
     **Filter through the interface**
 
-       Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with             profile attributes while all the filtering issue is performed through the interface, using the filter panel.
+       Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with profile attributes while all the filtering issue is performed through the interface, using the filter panel.
 
 Cross Navigation
 ~~~~~~~~~~~~~~~~~~~
 
-The cross navigation must be implemented at template level but also at analytical document level. The latter has been already wildly described in Cross Navigation . In the following we will see the first case. Observe that both procedures are mandatory.
+The cross navigation must be implemented at template level but also at analytical document level. The latter has been already wildly described in *Cross Navigation* section. In the following we will see the first case. Observe that both procedures are mandatory.
 
 For OLAP documents it is possible to enable the cross navigation on members or on cells and we will give more details on these two cases in the following.
 
-Generally speaking, the user must modify the template file to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in *Cross Navigation* section of *Analytical document* chapter of this manual. 
+Generally speaking, the user must modify the template file using the designer to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in *Cross Navigation* section of *Analytical document* chapter of this manual. 
 
 Cross navigation on members
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To activate the cross navigation on a member means that the user can click on a member of a dimension to be sent and visualize a target document. The first type of navigation can be set by editing the OLAP query template. In the first case you need to add a section called “clickable” inside the MDX query tag. In fact,
+To activate the cross navigation on a member means that the user can click on a member of a dimension to send its value and visualize a target document. The first type of navigation can be set by directly editing the OLAP query template or by using the Knowage designer, as described in previous *OLAP designer* section. In the first case you need to add a section called “clickable” inside the MDX query tag. In particular:
 
 -  the attribute value is equal to the hierarchy level containing the member(s) that shall be clickable;
--  the element represents the parameter that will be passed to the destination document. The name attribute is the URI of the              parameter that will be passed to the target document. The value 0 represents the currently selected member, as a convention: this        value will be assigned to the parameter whose URI is null.
+-  the element represents the parameter that will be passed to the destination document. The name attribute is the URL of the parameter that will be passed to the target document. The value 0 represents the currently selected member, as a convention: this value will be assigned to the parameter whose URL is null.
 
 Figure below gives an example. Note that you can recognize that the cross navigation is activated when elements are shown blue highlighted and underlined.
 
@@ -870,7 +870,7 @@ If you open the template file you will read instructions similar to the ones rep
        select {[Measures].[Unit Sales]} ON COLUMNS,               
        {([Region].[All Regions], [Product].[All Products])} ON ROWS from     
        [Sales_V]                                                             
-       <clickable uniqueName="[Product].[Product Family]" >                  
+       <clickable name="family" type="From Member" uniqueName="[Product].[Product Family]" >                  
           <clickParameter name="family" value="{0}"/>                           
        </clickable>                                                          
      </MDXquery>                                                           
@@ -878,7 +878,7 @@ If you open the template file you will read instructions similar to the ones rep
 Cross navigation from a cell of the pivot table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This case is similar to the one-dimension drill except that in this case values of all dimensions can be passed to the target document. In other words, the whole dimensional context of a cell can be passed. Now let us suppose the user wishes to click on a cell and pass to the target document the value of the level family of product dimension and year of time dimension. It should creates two parameters one for family where dimension is product, hierarchy is product, level is product family and one for year parameter where dimension in type, hierarchy is time and level is year. Let see what happens when user clicks on a cell. Depending on the selected cell, the analytical driver family of the target document will have a different value: it will be the name of the context member (of the selected cell) of the “Product” dimension, i.e. the [Product] hierarchy, at [Product].[ProductFamily] level. Look at the following Table for some examples:
+This case is similar to the cross navigation on members except that in this case values of all dimensions can be passed to the target document. In other words, the whole dimensional context of a cell can be passed. Now let us suppose the user wishes to click on a cell and pass to the target document the value of the level family of product dimension and year of time dimension. It should creates two parameters: one for family where dimension is product, hierarchy is product, level is product family and one for year parameter where dimension in type, hierarchy is time and level is year. Let see what happens when user clicks on a cell. Depending on the selected cell, the analytical driver family of the target document will have a different value: it will be the name of the context member (of the selected cell) of the “Product” dimension, i.e. the [Product] hierarchy, at [Product].[ProductFamily] level. Look at the following Table for some examples:
 
 .. table:: Context member on product dimension
         :widths: auto
@@ -913,5 +913,9 @@ Let us have a look at the template. Syntax used to set cross navigation shows ho
             </PARAMETERS>                                                      
         </CROSS_NAVIGATION>                                                   
 
-A green arrow will be visible in the toolbar to show that cross navigation is enabled. When user clicks on that icon in each cell a green arrow will displayed in each cell. User can click on that icon to start cross navigation from a cell.
+In order to activate cross navigation on cells the user must click on the correponding button in the side bar, then a green arrow will be desplayed in each cells to show that cross navigation is enabled. User can click on that icon to start cross navigation from a cell.
+
+.. figure:: media/image227.png
+
+    Cross navigation on cells.
 
