@@ -10,7 +10,7 @@ An analytical driver (hereafter simply driver) models a concept or a piece of da
 
 The Figure above represents a report with two parameters:
 
-- the Department, a mandatory field, displayed as a combo box and with possible values: Alcoholic Beverages, Baked Goods, Baking Goods and so on;
+- the Department, a mandatory field, displayed as a lookup and with possible values: Alcoholic Beverages, Baked Goods, Baking Goods and so on;
 - the Age Range, a mandatory field, displayed as list of values and with possible values 0-10, 10-20 and so on.
 
 All these aspects are regulated by the analytical driver behind each parameter. In particular, each driver provides many *use modes*, defining:
