@@ -8,14 +8,14 @@ The Meta Web allows the user to access these information through the usage of a 
 Metamodel creation
 -----------------------
 
-Using the Meta Web application, it is possible to reverse the content of a database and manipulate this information creating a new model that can fit the user’s needs. In this section will we see what are the steps need in order to create a metamodel and query it with the QBE.
+Using the Meta Web application, it is possible to reverse the content of a database and manipulate this information creating a new model that can fit the user’s needs. In this section will we see what are the steps needed in order to create a metamodel and query it with the QBE.
 
 To create a Metamodel enter the **Business Model Catalogue** and add a new model clicking on the “Plus” icon. Referring to next figure, you will be prompted to enter the following fields:
 
--  Name (mandatory): Name of the model (cannot be changed after the save).
--  Description: A longer description of your model.
--  Category (mandatory): Select, from the ones available, a category that the model belongs to.
--  Data Source (mandatory): select the datasource that will be used to create your model (so the one that contains the tables that you need).
+-  *Name* (mandatory): Name of the model (cannot be changed after the save).
+-  *Description*: A longer description of your model.
+-  *Category* (mandatory): Select, from the ones available, a category that the model belongs to.
+-  *Data Source* (mandatory): select the datasource that will be used to create your model (so the one that contains the tables that you need).
 
 .. _settingthemodelinfo:
 .. figure:: media/image299.png
@@ -27,7 +27,7 @@ After you have compiled these information, you can use the browse button to uplo
 Association with analytical drivers
 ----------------------------------------
 
-The new feature in meta web are analytical drivers and their connection to meta model via filters. In this section we will show how to practically define this association.
+With this feature in Meta web is possible to create filters using associations with analytical drivers. In this section we will show how to practically define this kind of association.
 
 To add a new parameter, you can click on the tab **Drivers** and then on a **Add** button, see the next figure.
 
@@ -35,9 +35,9 @@ To add a new parameter, you can click on the tab **Drivers** and then on a **Add
 
     Association with analytical driver panel.
 
-Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the meta model.
+Choose a name for the title of the driver. Then choose an analytical driver from drop-down menu that you wish to associate to the meta model.
 
-Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set if the driver is multivalue or not. By default, drivers are set to be mandatory so you don't have the option to change that like you have for analytical document.
+Once you have selected the driver, you should write the **exact URL** of the corresponding parameter. Then set if the driver is multivalue or not. By default, drivers are set to be mandatory so you don't have the option to change that like you have for analytical documents.
 
 After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.
 
@@ -45,16 +45,16 @@ After you have completed the definition of a parameter you can save it by clicki
 
     Association with analytical driver panel.
 
-In the following we will see some special operations that can be performed on drivers associated to a meta model.
+In the following chapter we'll see some special operations that can be performed on drivers associated to a meta model.
 
 Correlation between parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the context of a meta model, two different parameters may be connected to each other: this means that the possible values of a   parameter are limited by the value(s) of another parameter.
 
-This feature can be useful when two (or more) parameters are logically related. For example, suppose to have a parameter for all the possible countries and another one for all the possible cities. If the user selects a region, it is meaningless to show him all cities: he should only be enabled to choose among the cities in the selected region.
+This feature can be useful when two (or more) parameters are logically related. For example, suppose to have a parameter for all the possible countries and another one for all the possible cities. If the user selects a country, it is meaningless to show him all cities: he should only be enabled to choose among the cities in the selected country.
 
-To set the correlation, select child parameter which will show you the details of that particular driver and then click on the **Add condition** button to open pop-up window for defining data correlation.
+To set the correlation, select the child parameter which will show you the details of that particular driver and then click on the **Add condition** button to open a pop-up window for defining a data correlation.
 
 .. figure:: media/image299c.png
 
@@ -68,11 +68,11 @@ In general, to configure a correlation within a meta model you should make sure 
 
 Here you need to define:
 
--  the parent parameter;
+-  the parent parameter's AD;
 
--  the type of logical operator, in order to compare values of the parent parameter with values of the child parameter;
+-  the type of filter operator, in order to compare values of the parent parameter with values of the child parameter;
 
--  the column, generated by the child parameter, whose value will be compared with the value of the same column in the parent   parameter.
+-  the column, generated by the current parameter's LOV, whose value will be compared with the value of the same column in the parent parameter.
 
 
 If a parameter depends on multiple parent parameters, you can define multiple correlations.
