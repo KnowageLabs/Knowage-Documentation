@@ -1,4 +1,4 @@
-Data Mining
+Create Data Mining analysis
 ===========
 
 Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making and business strategies. In particular, Knowage **Data Mining Engine** integrates Python scripting capabilities.
@@ -13,7 +13,7 @@ Functions Catalog
 
 The Data Mining can be managed through the **Functions** framework. In this section we will see how to explore and handle this part, while in *Use a function inside documents* we will see how to use functions.
 
-First click on the **Functions Catalog** from the Knowage main page as shown below.
+First click on the **Functions** menu under the **Catalogs** section from the Knowage main page as shown below.
 
 .. figure:: media/menu_catalogo.png
 
@@ -26,18 +26,18 @@ You will enter a page like the one shown in figure below.
 
    Functions Catalog interface.
 
-The actions that a user can perform depend on the user’s role. However, independently from the user’s role, once entered the feature all functions are shown by default. Referring to the figure above, one has the page made up of:
+The actions that a user can perform depend on the user’s role. However, independently from the user’s role, in the interface all functions are shown by default. Referring to the figure above, the page is composed by:
 
--  **categories**: these are set by an administrator user and are used to classify the functions accordingly to their definition and goals. Moreover they’re of help in browsing the functions; only the admin user can add and/or modify categories.
+-  **categories**: these are set by an administrator user and are used to classify the functions accordingly to their definition and goals. Moreover they help in browsing the functions; only the admin user can add and/or modify categories.
 
--  **tags**: they are used to easily sharpen the research and easily recall the functions that are tagged with that word; once again only the admin user can add and/or modify tags;
+-  **search**: to easily sharpen search a specific functions in the list;t
 
 -  **list of functions** (if there are any): these are visible and explorable by any kind of user. Anyway only an admin user can add and/or modify them.
 
 .. hint::
     **Add or modify the categories**
 
-         The admin can add a new category using the Domain management available on Knowage Server under the Server Settings section. To know more about this section, please refer to Section “Server settings” of the General Administration Manual.
+         The admin can add a new category using the Domain management available on Knowage Server under the Server Settings section. To know more about this section, please refer to Section “Server settings” under the Installation and configuration section.
 
 The categories for functions depends on an admin user. Taking *Functions Catalog interface* figure as an example, we have:
 
@@ -51,32 +51,17 @@ The categories for functions depends on an admin user. Taking *Functions Catalog
 
 5. **All**: visualizes all your functions; this is the only category that cannot be changed or removed.
 
-To facilitate the comprehension we created some functions to be examined. We recall here that one can look for a function in different ways: using the categories or the tags or using the Functions Catalog “Search” box available at the top of the functions list as highlighted below.
-
-.. figure:: media/image398.png
-
-    Search box to look for a function.
-
-We suppose here to select one category, which means to click on the category box, in order to be able to analyse the functions belonging to it.
-
-Note that the underlined part in figure below contains a list of tags. These help to focus on the subjects and therefore functions associated to that category. Vice versa when all functions are shown, all tags are shown as well and they can be used to pick up functions related to that subject.
-
-.. figure:: media/image399400.png
-
-    Using tags and categories to look for functions.
+It is possible to search for a specific function in two ways: using the categories and clicking on one of them in order to filter the functions list or using the search box on the top of th list.
 
 A preview of the function can be executed using the icon |image417| which opens a dialog in which you can select and configure a dataset among the available ones in order to test the function. Use the icon |image4172| for deleting the function. Functions cannot be deleted if they are used inside one or more documents.
 
 .. |image417| image:: media/image401.png
    :width: 30
 
-.. |image4171| image:: media/image402.png
-   :width: 30
-
 .. |image4172| image:: media/image403.png
    :width: 30
 
-To create a new function an admin user must click on the “Plus” icon available at the right top corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.
+To create a new function an admin user must click on the “Plus” icon available at the top right corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.
 
 .. _creatingnewfunct:
 .. figure:: media/image404.png
