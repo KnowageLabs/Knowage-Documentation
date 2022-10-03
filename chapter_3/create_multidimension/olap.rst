@@ -177,7 +177,7 @@ Referring to figure below, table functions consist of:
 
     Table functions.
 
-Referring to next figure, what if consists of:
+Referring to next figure, if the document is a what-if the what if section consists of:
 
 -  lock/unlock model (a),
 -  save as new version (b), 
@@ -189,7 +189,7 @@ Referring to next figure, what if consists of:
 .. _tablefunctions2:
 .. figure:: media/image149a.png
 
-    Table functions.
+    What if.
 
 Functionalities
 ----------------

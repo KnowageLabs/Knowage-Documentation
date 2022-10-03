@@ -35,12 +35,12 @@ The workflow has an impact on data visualization. A user can understand the stat
 
 We briefly recall the functionality of the main buttons:
 
--  Unlock model: it changes the state of the workflow in order to move control to next user.
--  Save: it persists modification in the database.
+-  Unlock schema: it changes the state of the workflow in order to move control to next user.
 -  Save as new version: it persists modification in the database in a new version.
 -  Undo: it undoes last modification.
 -  Delete versions: it opens a wizard user can use to delete versions.
 -  Output wizard: it allows user to export the edit cube in two different formats, table and csv in the specific.
+-  Select an algorithm.
 
 Meta-language description
 ---------------------------
@@ -51,15 +51,19 @@ The computation 100 + 10% is a simple example of usage of the operation %. Note 
 
 To activate the editing of a measure cell that is not shown in the OLAP you must first click on the filter icon of the measure filter card and check the target measure. Then select the version you want to use and change values of figure below shows where are available these objects in the interface.
 
-.. figure:: media/image21616.png
+.. figure:: media/image216.png
 
-    Checking measures and selecting version.
+    Checking measures.
 
-Then double-click on the target measure cell and a box will appear allowing you to insert a formula. Type the computation syntax and click on the *f*\ (*x*) icon to convalidate it or cancel it, as shown below.
+.. figure:: media/image216.png
 
-.. figure:: media/image21819.png
+    Select the version.
 
-    Inserting formula and its convalidation.
+Then double-click on the target measure cell and a box will appear allowing you to insert a formula. Type the computation syntax and click on the submit button on the keyboard to convalidate it or on the close button to cancel it, as shown below.
+
+.. figure:: media/image218.png
+
+    Inserting formula.
 
 We stress that you can also refer to members that are not included in the tuple represented by the cell that is going to be modified. Let’s see some examples. For example suppose the cell refers to the following tuple reported in Code below:
 
@@ -92,7 +96,7 @@ You can refer to the tuple in the next code with just Product.Eggs and at the sa
 
 Note that if you create a formula on a cell and you want to move it along a dimension (for example the cell refers to member Time.2016 and you want to get value for Time.2017) you have to refer to a member of same level. So for example you can get value of the cell for Time.2017, but not for Time.2017.May.
 
-The syntax is as the one shown in Referring to different members or, in case you are using another hierarchy, as in the second code below where you can concatenate different members with ";".
+The syntax is as the one shown in *Referring to different members* or, in case you are using another hierarchy, as in the second code below where you can concatenate different members with ";".
 
 .. code-block:: xml
          :linenos:
@@ -177,10 +181,10 @@ What-if analysis implementation
 
 In this chapter we will deal with some technical fetaures of the What-If analysis that can be handled only by expert users.
 
-Workflow description\*
+Workflow description
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When you perform a what-if analysis the schema is shared in order to be used as a data source. Therefore each time a document linked to a schema can be edited only by one user per time. This behaviour is managed by the Workflow of the schema. The administrator can configure a workflow opening the details of the model in OLAP schema catalogue, selecting the schema and going on the workflow tab available on the top of the right sided area. The tab is red circled below.
+When you perform a what-if analysis the schema is shared in order to be used as a data source. Therefore each time a document linked to a schema can be edited only by one user per time. This behaviour is managed by the Workflow of the schema. The administrator can configure a workflow opening the details of the model in Mondrian schemas catalogue, selecting the schema and going on the workflow tab available on the top of the right sided area.
 
 .. figure:: media/image220.png
 
@@ -196,32 +200,23 @@ Referring to the next figure, the interface for the definition of the workflow i
 
      Workflow tab interface.
 
-When an administrator clicks on the user in the list “available users” the user will be added in the workflow as shown in Figure 10.3.
+When an administrator clicks on the user in the list “available users” the user will be added in the workflow.
 
-Administrator can move the users in the sequence or remove them clicking on the “action buttons”. When the workflow is defined, the administrator can start it clicking on the button start. To start a workflow means to enable the first user of the sequence to apply the what-if on that schema. When a workflow is started it can not be edited by anyone else and an icon appears in the row of actual active user so that the administrators can monitor the state of the schema. An example is provided by Figure 10.4
+Administrator can move the users in the sequence using the arrows or remove them clicking again on them. When the workflow is defined, the administrator can start it clicking on the button start. To start a workflow means to enable the first user of the sequence to apply the what-if on that schema. When a workflow is started it can not be edited by anyone else and an icon appears in the row of actual active user so that the administrators can monitor the state of the schema.
 
-Schema definition\*
+Schema definition
 ~~~~~~~~~~~~~~~~~~~~~~
 
-As we foresaid, the What-If analysis requires some modification on the database. The first step is to create a new table in the database to store the named version of the modified data. The user will then change the values of the cube; it is then mandatory to create a new table with a structure similar to the analysed cube and a new table (wbversion) that will contain the versioning of the definitions set in the analysis.
+As we foresaid, the What-If analysis requires some changes in the database. The first step is to create a new table in the database to store the named version of the modified data. The user will then change the values of the cube; it is then mandatory to create a new table with a structure similar to the analysed cube and a new table (wbversion) that will contain the versioning of the definitions set in the analysis.
 
 Therefore the structure of the new fact table should contain:
 
 -  all the foreign keys to the dimensions (all the ones visible in the cube),
-
-.. figure:: media/image222.png
-
-       Selecting users for workflows.
-
-.. figure:: media/image223.png
-
-       Selecting users for workflows.
-
 -  all the editable measures,
 -  a new numeric column that is a foreign key referencing the version table.
 
 
-In Figure belowthere is an example where the cube is sales_fact_1998 and the new table is sales_fact_1998_virtual.
+In Figure below there is an example where the cube is sales_fact_1998 and the new table is sales_fact_1998_virtual.
 
 .. figure:: media/image224.png
 
@@ -229,12 +224,12 @@ In Figure belowthere is an example where the cube is sales_fact_1998 and the new
 
 The sales_fact_1998_virtual table should be initialized with the same data contained in sales_fact_1998 plus 0 as version; the wbversion table should be initialized with one record with wbversion = 0 and a name plus a description for the “original values”.
 
-Changes in the mondrian schema\*
+Changes in the mondrian schema
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now you should map the new tables in the mondrian schema. In order to merge the fact table and the table with the editable measure we create a virtual cube. A virtual cube is a special cube where the values are the result of the join of other cubes. In our case the join keys are the dimensions. The actions to be performed in the mondrian schema are listed right below.
 
--  To create a new "Version" dimension as inChanging the Mondrian Schema.
+-  To create a new "Version" dimension as in *Changing the Mondrian Schema*.
 
 .. code-block:: xml
    :linenos:
@@ -249,7 +244,7 @@ Now you should map the new tables in the mondrian schema. In order to merge the 
           </Hierarchy>
        </Dimension>
 
--  To create the mapping of the editable cube (in our example the table sales_fact_1998_virtual) as shown in Code Creating the mapping of the editable cube.
+-  To create the mapping of the editable cube (in our example the table sales_fact_1998_virtual) as shown in *Code Creating the mapping of the editable cube*.
 
 .. code-block:: xml
    :linenos:
@@ -270,7 +265,7 @@ Now you should map the new tables in the mondrian schema. In order to merge the 
 
 The name of the cube ("Sales_Edit") is the value of the edit Cube attribute of the tag scenario in the template. Note that the name of the dimension Version must be exactly "Version"!!
 
-• To create the virtual cube that will contain the mapping of the columns as in Code below.
+• To create the virtual cube that will contain the mapping of the columns as in code below.
 
 .. code-block:: xml
    :linenos:
@@ -307,6 +302,26 @@ Specifically, in the virtual cube you should specify:
 
 - the list of cubes to be joined (CubeUsages);
 - the list of the dimensions of the cube (as you can see it contains all the common dimensions, plus the Version that belongs only to the editable cube);
-- the list of the measures. You can perceive that there is a calculated member for the measure Sales Count Original (Sales Count Original is the name of a measure in the Sales cube). This is a trick for the not editable measures. This type of measure lives only in the DWH cube and not in the editable cube. This is due to the fact that the engine doesnt know how to give a value for these measures for the different values of the Version dimension (remember that only the editable cube has the Version dimension). The calculated field solve this problem propagating the same version of the not editable (and versionable) measure for all the version.
+- the list of the measures. You can perceive that there is a calculated member for the measure Sales Count Original (Sales Count Original is the name of a measure in the Sales cube). This is a trick for the not editable measures. This type of measure lives only in the DWH cube and not in the editable cube. This is due to the fact that the engine doesn't know how to give a value for these measures for the different values of the Version dimension (remember that only the editable cube has the Version dimension). The calculated field solve this problem propagating the same version of the not editable (and versionable) measure for all the version.
 
 Now all the MDX queries can be performed in the virtual cube.
+
+Changes in the designer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The development of a what-if analytical document is the same as described for the OLAP document but herw you have to choos the **What-If Engine** as the engine instead of the **OLAP Engine**.
+
+All the functionalities described in the *OLAP designer* section are also available for the what-if document. Besides these there are others available only for the what-if documents.
+
+First of all, here you have also to configure the scenario. Opening the side bar in thee designer it will be available a button in order to do this, as shown in figure below.
+
+.. figure:: media/image228.png
+
+      Configure scenario button.
+
+The scenario is used to allow the end-user to edit or not the records contained in the OLAP table. The user is first asked to select the cube in order to get the measures that the admin lets the end-user the permission to edit and modify. Referring to to the following figure, an admin user must simply check the measures using the wizard. At the bottom of the page there is also the possibility to add a parameter that can be used by the end-user when editing the measure, for example if one has a frequent multiplication factor that changes accordingly to the user’s needs, the end-user can use that factor to edit measures and ask the admin to update it periodically.
+
+.. _wizconfigscena:
+.. figure:: media/image20607.png
+
+    Wizard to configure the scenario.
