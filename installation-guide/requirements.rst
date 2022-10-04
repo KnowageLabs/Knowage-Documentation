@@ -160,7 +160,7 @@ NodeJS requirements
 
          NodeJS is required only for Enterprise Edition.
 
-Knowage includes some NodeJS scripts that need to be executed with NodeJS 12 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
+Knowage includes some NodeJS scripts that need to be executed with NodeJS 14 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
 
 CentOS
 ~~~~~~~~~~~~
@@ -185,7 +185,7 @@ Next you can install the official repository of NodeJS:
 .. code-block:: sh
         :caption: Installation of the repository of NodeJS
 
-        curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+        curl -sL https://rpm.nodesource.com/setup_14.x | bash -
 
 .. important::
          If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
@@ -220,7 +220,7 @@ Next you can install the official repository of NodeJS:
 .. code-block:: sh
         :caption: Installation of the repository of NodeJS
 
-        curl -sL https://deb.nodesource.com/setup_12.x | bash -
+        curl -sL https://deb.nodesource.com/setup_14.x | bash -
 
 .. important::
          If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
