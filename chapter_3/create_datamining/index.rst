@@ -30,7 +30,7 @@ The actions that a user can perform depend on the user’s role. However, indepe
 
 -  **categories**: these are set by an administrator user and are used to classify the functions accordingly to their definition and goals. Moreover they help in browsing the functions; only the admin user can add and/or modify categories.
 
--  **search**: to easily sharpen search a specific functions in the list;t
+-  **search**: to easily search for a specific functions in the list;
 
 -  **list of functions** (if there are any): these are visible and explorable by any kind of user. Anyway only an admin user can add and/or modify them.
 
@@ -53,7 +53,7 @@ The categories for functions depends on an admin user. Taking *Functions Catalog
 
 It is possible to search for a specific function in two ways: using the categories and clicking on one of them in order to filter the functions list or using the search box on the top of th list.
 
-A preview of the function can be executed using the icon |image417| which opens a dialog in which you can select and configure a dataset among the available ones in order to test the function. Use the icon |image4172| for deleting the function. Functions cannot be deleted if they are used inside one or more documents.
+A preview of the function can be executed using the icon |image417| which opens a dialog, here you can select and configure a dataset among the available ones in order to test the function. Use the icon |image4172| for deleting the function. Functions cannot be deleted if they are used inside one or more documents.
 
 .. |image417| image:: media/image401.png
    :width: 30
@@ -71,7 +71,7 @@ To create a new function an admin user must click on the “Plus” icon availab
 The General tab
 ~~~~~~~~~~~~~~~~~
 
-In this tab the user gives the general information about the function as the figure above shows. The admin user must type: the *name* of the function, the *label* with which it is identified uniquely (remember to use only numbers or letters and do not leave spaces between them). The *keywords* are were tags are defined. The *Description* is where the user can insert a text or images to be shown when the function is being configured inside documents. In the *Benchmarks* field users can insert information about the function performances.
+In this tab the user gives the general information about the function as the figure above shows. The admin user must type: the *name* of the function, the *label* with which it is identified uniquely (remember to use only numbers or letters and do not leave spaces between them) and the *type* that is the function category. The *keywords* are tags that can be assigned to a function, searching for a specific tag in the search box will retrive all the functions that have that tag. In order to add a new keyword you have to write the desired text and then press the submit button on the pc keyboard. The *Description* is where the user can insert a long text or images to be shown when the function is being configured inside documents. In the *Benchmarks* field users can insert information about the function performances.
 
 The Input tab
 ~~~~~~~~~~~~~~~
@@ -118,7 +118,7 @@ To reference one specific column users must use the placeholder *${column_name}*
 
          If you want to manipulate them you should first make a local copy and work on it.
 
-The script will have to produce as output one or more *pandas.Series* variables, and will store them inside the corresponding output placeholders. The following is an example of function template.
+The script will have to produce as output one or more *pandas.Series* variables and will store them inside the corresponding output placeholders. The following is an example of function template.
 
 .. figure:: media/catalog_function_example_script.png
 
