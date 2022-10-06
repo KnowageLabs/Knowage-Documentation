@@ -323,5 +323,7 @@ The audit table tracks documents changes and other operations made to knowage da
 User can enable audit table tracing (database table name: **SBI_AUDIT**) setting the **KNOWAGE.AUDIT_ENABLED** property to **true** inside **Configuration Management** panel:
 
 .. figure:: media/image36.png
+   
+    Enabling audit table tracing.
 
 The **KNOWAGE.AUDIT_DATA_RETENTION** property is used to set the retention period, in order to manage audit table cleanup.
