@@ -57,7 +57,7 @@ First of all, the user must configure the distributed cache. This helps to coord
 * **SPAGOBI.WORKMANAGER.SQLDBCACHE.TIMEOUT**: It represents the maximum waiting time (in milliseconds) of an asynchronous work. (Default: 180000 )
 * **SPAGOBI.CACHE.HAZELCAST.TIMEOUT** : It represents the maximum time (in seconds) to get a distributed lock. ( Default 120 )
 * **SPAGOBI.CACHE.HAZELCAST.LEASETIME**: It represents the maximum time (in seconds) for releasing a distributed lock already got. ( Default :240 )
-* **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is empty. The allowable values are: 
+* **SPAGOBI.CACHE.SCHEDULING_FULL_CLEAN**: It schedules the recurring operation of complete cleaning of the cache. This periodic cleaning delete all dataset in the cache, without considering further parameters. At the end of the cleaning, the cache is empty. The allowable values are:
 
 +------------------------------------------------------+-------------------------------------------------+
 | Option                                               |     Description                                 |
@@ -83,7 +83,7 @@ First of all, the user must configure the distributed cache. This helps to coord
 |YEARLY("YEARLY", "0 0 0 1 1 ? * ")                    | at midnight on the first day of the year        |
 +------------------------------------------------------+-------------------------------------------------+
 
-Any value other than those listed above does not enable periodic cleaning. ( Default: DAILY ) 
+Any value other than those listed above does not enable periodic cleaning. ( Default: DAILY )
 
 Logging
 ---------
@@ -232,7 +232,7 @@ To add more languages to the list (if not provided) a few steps are required:
     domain management example.
 
 * Add inside the project folder Knowage-Server/knowage/src/main/webapp/js/lib/angular-localization/ the desired locale file from the `angular locales <https://github.com/angular/angular.js/tree/master/src/ngLocale>`_ and rename it with the lang code from `language code table <http://www.lingoes.net/en/translator/langcode.htm>`_
-* Add inside the project folder Knowage-Server/knowage/src/main/webapp/js/src/messages/ the translations file. The name should be messages_country_LANGUAGE.properties. Ie: messages_country_sw_se.properties. 
+* Add inside the project folder Knowage-Server/knowage/src/main/webapp/js/src/messages/ the translations file. The name should be messages_country_LANGUAGE.properties. Ie: messages_country_sw_se.properties.
 
 Warning: use the last step only if no zanata translations are available. Using Zanata should be the primary translations source.
 
@@ -316,3 +316,12 @@ Below is an example of invoking the tool using *biadmin* as plaintext password.
     java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-<major.minor.patch>.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
 
 The output value will be the second argument passed in input encrypted with the key present in the file. This procedure must be repeated for all users.
+
+Audit Table Management
+-----------------------------------------------
+The audit table tracks documents changes and other operations made to knowage data at the database level.
+User can enable audit table tracing (database table name: **SBI_AUDIT**) setting the **KNOWAGE.AUDIT_ENABLED** property to **true** inside **Configuration Management** panel:
+
+.. figure:: media/image36.png
+
+The **KNOWAGE.AUDIT_DATA_RETENTION** property is used to set the retention period, in order to manage audit table cleanup.
