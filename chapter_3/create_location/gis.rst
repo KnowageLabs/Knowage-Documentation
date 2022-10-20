@@ -204,13 +204,13 @@ Go to **Catalogs > Layers** in the Knowage menu, as shown below.
 
     Layers catalog menu item
 
-Here there is the list of already created layers and you can reate a new one clicking on the dedicated plus icon. On the right side you are asked to fill few settings before saving the new layer, like a label, a name and a type. At the bottom part of layer configuration you can manage the layer visibility. Mark the role you want to give visibility previlegies on this layer. If none is marked, the layer is visibile to all role by default. The first settings are equals for all types of layers. Once you choose the layer type, instead, some fields may change according to the layer needs. For example if you choose **File** as type you have the possibility to chose your own .json file and upload it. After having done this, the path where your file is been uploaded is shown among the setting. If you chose **WFS** or **WMS** you are asked to insert a specific url. Below you can find an example of creation of a new layer of type file.
+Here there is the list of already created layers and you can reate a new one clicking on the dedicated plus icon. On the right side you are asked to fill few settings before saving the new layer, like a label, a name and a type. At the bottom part of layer configuration you can manage the layer visibility. Mark the role you want to give visibility previlegies on this layer. If none is marked, the layer is visibile to all role by default. The first settings are equals for all types of layers. Once you choose the layer type, instead, some fields may change according to the layer needs. For example if you choose **File** as type you have the possibility to chose your own .json file and upload it. After having done this, the path where your file is been uploaded is shown among the setting. If you choose **WFS** or **WMS** you are asked to insert a specific url. Below you can find an example of creation of a new layer of type file.
 
 .. figure:: media/new_layer.png
 
     Creating a new file layer
 
-Once you have set all layer configuration you can switch to filter setting. Click on the tab you can find in the upper part of the screen, see the following figure.
+Once you have set all layer configuration you can switch to filter setting. Click on the tab you can find in the upper part of the screen, as the following figure shows.
 
 .. figure:: media/image379.png
 
@@ -218,31 +218,31 @@ Once you have set all layer configuration you can switch to filter setting. Clic
 
 Here you can choose which filters will be active during visualization phase. Choose among the properties of your layer, the available ones are only the string type.
 
-Now you need to have a well-configured dataset to work with the base layer. The dataset has to contain one column matching a property field as type and contents otherwise you will not be able to correctly visualize your data on the map.
+Now you need to have a well-configured dataset to work with the base layer. The dataset has to contain one column matching a property field as type and values otherwise you will not be able to correctly visualize your data on the map.
 
-For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in Code15.1.
+For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in the following code.
 
 .. code-block:: sql
       	 :caption: GeojSON file except.
          :linenos:
 	 
-         SELECT r.region_id as region_id
-              , s.store_country
-              , r.sales_state as sales_state
-              , r.sales_region
-              , s.store_city
-              , sum(f.store_sales) + (CAST(RAND() \*60 AS UNSIGNED) + 1) store_sales
-              , avg (f.unit_sales)+(CAST(RAND()\* 60 AS UNSIGNED) + 1) unit_sales
-              , sum(f. store_cost) store_cost
-         FROM sales_fact_1998 f
-            , store s
-            , time_by_day t
-            , sales_region r 
+         SELECT r.region_id,
+            s.store_country,
+            r.sales_state,
+            r.sales_region,
+            s.store_city,
+            sum(f.store_sales) as store_sales,
+            avg(f.unit_sales) as unit_sales,
+            sum(f.store_cost) as store_cost
+         FROM sales_fact_1998 f,
+            store s,
+            time_by_day t,
+            sales_region r 
          WHERE s.store_id=f.store_id 
-         AND f.time_id=t.time_id 
-         AND s.region_id = r.region_id                  
-         AND STORE_COUNTRY = 'USA' 
-         GROUP BY region_id, s.store_country,r.sales_state, r.sales_region, s.store_city                                     
+            AND f.time_id=t.time_id 
+            AND s.region_id = r.region_id                  
+            AND STORE_COUNTRY = 'USA' 
+         GROUP BY region_id, s.store_country, r.sales_state, r.sales_region, s.store_city                                     
 
    
 Create and save the dataset you want to use and go on preparing the document template.
@@ -250,49 +250,50 @@ Create and save the dataset you want to use and go on preparing the document tem
 Template building with GIS designer
 ----------------------------------------
 
-GIS engine document templates can now be built using GIS designer. Designer is available both for administrator user and for end users. The first can create a new GIS document in the document broswer section (for this part refer to **Template building with GIS designer for technical user**) while an end user must use the workspace section to create a new document. The creation process for an end user and designer sections are described in the text below.
+GIS engine document template can now be built using GIS designer. Designer is available both for administrator users and for end users. The first can create a new GIS document in the document broswer section (for this part refer to **Template building with GIS designer for technical user** section) while an end user must use the workspace section to create a new document. The creation process for an end user and designer sections are described in the text below.
 
-A GIS document can be created by a final user from workspace area of Knowage Server. Follow My Workspace » Analysis and click on the “Plus” icon available at the top right corner of the page and launch a new **Geo-referenced analysis**.
+A GIS document can be created by a final user from workspace area of Knowage Server. Follow **My Workspace » My Analysis** and click on the “Plus” icon available at the top right corner of the page and launch a new **Geo-referenced analysis**.
 
 .. figure:: media/image362.png
 
     Start a new Geo-referenced analysis.
 
-When the designer is opened there is option to choose dataset for joining spatial data and business data. When the dataset is selected the Dataset join columns and indicators sections will appear. By default dataset is not chosen and there is interface to create map without business data
+The designer is divided in four sections that will be described in detail in the following.
 
 .. figure:: media/image363.png
 
-    GIS document designer window.
-
+    GIS designer.
 
 Designer sections
 ----------------------
 
-Layer section
-~~~~~~~~~~~~~
+Dataset & Layer
+~~~~~~~~~~~~~~~
 
-Definition of the target layer is configurable in layer section. If the dataset is selected one of the available layers is chosen from list of layers catalogs. Button change layer (next figure) opens a pop up with a list of all available layer catalogs. Selecting one item from the list and clicking save the selected item will be chosen for template.
-
-.. _targetlayerdef:
-.. figure:: media/image364.png
-
-    Target layer definition.
+In the first section the user can choose a dataset for joining spatial data and business data and define the target layer. Click on **add dataset** to choose among the available datasets and on **add layer** to select a target layer. These buttons will open a popup with the list of all available datasets and layer catalogs, selecting one item from the list and clicking save the selected item will be chosen for template.
 
 .. _listavailbcatalog:
 .. figure:: media/image365.png
 
     List of available layer catalogs.
 
-In case when there is no dataset multiple layers can be selected below.
+Once the dataset and the layer have been selected the Dataset join and Indicators sections will be activated. The user can also change the dataset and layer in a second moment through the buttons **change dataset** and **change layer**.
+
+.. _targetlayerdef:
+.. figure:: media/image364.png
+
+    Dataset and target layer definition.
+
+It is also possible to create map without business data. When there is no dataset multiple layers can be selected, like figure below shows.
 
 .. figure:: media/image366.png
 
     Multiple selection of available layers.
 
-Dataset join columns
-~~~~~~~~~~~~~~~~~~~~
+Dataset join
+~~~~~~~~~~~~
 
-Dataset join columns section is for configuring joining spatial data and business data. This section is only present when the dataset is selected for the document. Designer data structure for joining is represented by the pairs of dataset columns and corresponding layer columns. Clicking on add join column that you can see in figure below new empty pair appears. Dataset join column can be selected from columns on selected dataset by choosing an option from combo box. Layer join column should be added as a free text by editing corresponding table column.
+Dataset join section is for configuring joining spatial data and business data. This section is only available when the dataset is selected for the document. Clicking on **add join column** a new emptu row appears with two comboboxes with which the user has to select the dataset column and layer column to join. 
 
 .. figure:: media/image367.png
 
@@ -301,7 +302,7 @@ Dataset join columns section is for configuring joining spatial data and busines
 Indicators
 ~~~~~~~~~~
 
-Measures definition is configurable by adding indicators. The interface is shown below. This section is only present when dataset is chosen for the document. Indicators are represented by pairs of measure field from selected dataset and corresponding label that will be used on map. Clicking on add indicators creates empty pair. Measure filed should be selected by picking one option from combo box that contains measure fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
+Measures definition is configurable by adding indicators. The interface is shown below. This section is available only when dataset is chosen for the document. In order to add a new indicator the user must click on **add indicator** and choose the measure field from selected dataset and a correspondig label that will be used on map. Label should be inserted as free text by editing corresponding table column.
 
 .. _indicatorsinterface:
 .. figure:: media/image368.png
