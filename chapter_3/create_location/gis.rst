@@ -172,11 +172,85 @@ Select **Cross Navigation**, the **Spatial Item** tab appears. In this tab you c
 
 When selection is made, a box appears. In this box you find cross navigation information. The number of features selected and a botton to perform the cross navigation with the active selection.
 
+GEOReport Engine
+-----------------------
+
+The **GEOReport Engine** implements a *bridge integration* architecture.
+
+Generally speaking, a bridge integration involves both the BI and the GIS systems, still keeping them completely separated. The integration between spatial data and business data is performed by a dedicated application that acts as a *bridge* between the GIS and the BI suite. This application extracts the spatial data from the GIS system and the business data from the BI suite, to answer the users’ requests. Afterwards, it joins them and provides the desired results.
+
+In particular, the **GEOReport Engine** extracts spatial data from an external GIS system and join them dynamically with the business data extracted from the Data Warehouse, in order to produce a thematic map according to the user’s request. In other words, it acts as a *bridge* between the two systems, which can consequently be kept totally decoupled.
+
+.. figure:: media/image378.png
+
+    Bridge integration architecture of the **GEOReport Engine**.
+
+The thematic map is composed of different overlapping layers that can be uploaded from various GIS engines at the same time. Among them just one layer is used to produce the effective thematization of the map: this is called *target layer*.
+
+You can manage your layers inside the **Layers Catalogue**.
+
+Here you can upload the following layer types:
+
+-  File;
+-  WFS;
+-  WMS;
+-  TMS;
+-  Google;
+-  OSM.
+   
+Go to **Catalogs > Layers** in the Knowage menu, as shown below.
+
+.. figure:: media/layer_menu.png
+
+    Layers catalog menu item
+
+Here there is the list of already created layers and you can reate a new one clicking on the dedicated plus icon. On the right side you are asked to fill few settings before saving the new layer, like a label, a name and a type. At the bottom part of layer configuration you can manage the layer visibility. Mark the role you want to give visibility previlegies on this layer. If none is marked, the layer is visibile to all role by default. The first settings are equals for all types of layers. Once you choose the layer type, instead, some fields may change according to the layer needs. For example if you choose **File** as type you have the possibility to chose your own .json file and upload it. After having done this, the path where your file is been uploaded is shown among the setting. If you chose **WFS** or **WMS** you are asked to insert a specific url. Below you can find an example of creation of a new layer of type file.
+
+.. figure:: media/new_layer.png
+
+    Creating a new file layer
+
+Once you have set all layer configuration you can switch to filter setting. Click on the tab you can find in the upper part of the screen, see the following figure.
+
+.. figure:: media/image379.png
+
+    Filter tab
+
+Here you can choose which filters will be active during visualization phase. Choose among the properties of your layer, the available ones are only the string type.
+
+Now you need to have a well-configured dataset to work with the base layer. The dataset has to contain one column matching a property field as type and contents otherwise you will not be able to correctly visualize your data on the map.
+
+For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in Code15.1.
+
+.. code-block:: sql
+      	 :caption: GeojSON file except.
+         :linenos:
+	 
+         SELECT r.region_id as region_id
+              , s.store_country
+              , r.sales_state as sales_state
+              , r.sales_region
+              , s.store_city
+              , sum(f.store_sales) + (CAST(RAND() \*60 AS UNSIGNED) + 1) store_sales
+              , avg (f.unit_sales)+(CAST(RAND()\* 60 AS UNSIGNED) + 1) unit_sales
+              , sum(f. store_cost) store_cost
+         FROM sales_fact_1998 f
+            , store s
+            , time_by_day t
+            , sales_region r 
+         WHERE s.store_id=f.store_id 
+         AND f.time_id=t.time_id 
+         AND s.region_id = r.region_id                  
+         AND STORE_COUNTRY = 'USA' 
+         GROUP BY region_id, s.store_country,r.sales_state, r.sales_region, s.store_city                                     
+
+   
+Create and save the dataset you want to use and go on preparing the document template.
 
 Template building with GIS designer
 ----------------------------------------
 
-GIS engine document templates can now be built using GIS designer. Designer is available from administrator document detail page (for this part refer to Section 15.8) and also for end users workspace. The creation process and designer sections are described in the text below.
+GIS engine document templates can now be built using GIS designer. Designer is available both for administrator user and for end users. The first can create a new GIS document in the document broswer section (for this part refer to **Template building with GIS designer for technical user**) while an end user must use the workspace section to create a new document. The creation process for an end user and designer sections are described in the text below.
 
 A GIS document can be created by a final user from workspace area of Knowage Server. Follow My Workspace » Analysis and click on the “Plus” icon available at the top right corner of the page and launch a new **Geo-referenced analysis**.
 
@@ -281,75 +355,6 @@ Clicking the edit map button will open created map. An example is given below. I
 .. figure:: media/image373.png
 
     Map in edit mode with save template available.
-
-GEOReport Engine\*
------------------------
-
-The **GEOReport Engine** implements a *bridge integration* architecture.
-
-Generally speaking, a bridge integration involves both the BI and the GIS systems, still keeping them completely separated. The integration between spatial data and business data is performed by a dedicated application that acts as a *bridge* between the GIS and the BI suite. This application extracts the spatial data from the GIS system and the business data from the BI suite, to answer the users’ requests. Afterwards, it joins them and provides the desired results.
-
-In particular, the **GEOReport Engine** extracts spatial data from an external GIS system and join them dynamically with the business data extracted from the Data Ware House, in order to produce a thematic map, according to the user’s request. In other words, it acts as a *bridge* between the two systems, which can consequently be kept totally decoupled.
-
-.. figure:: media/image378.png
-
-    Bridge integration architecture of the **GEOReport Engine**.
-
-The thematic map is composed of different overlapping layers that can be uploaded from various GIS engines at the same time. Among them just one layer is used to produce the effective thematization of the map: this is called *target layer*.
-
-You can manage your layers inside the **Layers Catalogue**.
-
-Here you can upload the following layer types:
-
--  File;
--  WFS;
--  WMS;
--  TMS;
--  Google;
--  OSM.
-   
-Create a new layer clicking on the dedicated plus icon. On the right side you are asked to fill few settings before saving the new layer. Among these settings the firsts are equals for all types of layers. Once you choose the layer type, instead, some fields may change. This happens to manage all layers types from the same interface. For example if you choose **File** as type you have the possibility to chose your own .json file and upload it. After having done this, the path where your file is been uploaded is shown among the setting.
-
-If you chose **WFS** or **WMS** you are asked to insert a specific url.
-
-At the bottom part of layer configuration you can manage the layer visibility. Mark the role you want to give visibility previlegies on this layer. If none is marked, the layer is visibile to all role by default.
-
-Once you have set all layer configuration you can switch to filter setting. Click on the tab you can find in the upper part of the screen, see the following figure.
-
-.. figure:: media/image379.png
-
-    Filter tab
-
-Here you can choose which filters will be active during visualization phase. Choose among the properties of your layer, the available ones are only the string type.
-
-Now you need to have a well-configured dataset to work with the base layer. The dataset has to contain one column matching a property field as type and contents otherwise you will not be able to correctly visualize your data on the map.
-
-For example you can use a query dataset, connected to the foodmart data source, whose SQL query is shown in Code15.1.
-
-.. code-block:: sql
-      	 :caption: GeojSON file except.
-         :linenos:
-	 
-         SELECT r.region_id as region_id
-              , s.store_country
-              , r.sales_state as sales_state
-              , r.sales_region
-              , s.store_city
-              , sum(f.store_sales) + (CAST(RAND() \*60 AS UNSIGNED) + 1) store_sales
-              , avg (f.unit_sales)+(CAST(RAND()\* 60 AS UNSIGNED) + 1) unit_sales
-              , sum(f. store_cost) store_cost
-         FROM sales_fact_1998 f
-            , store s
-            , time_by_day t
-            , sales_region r 
-         WHERE s.store_id=f.store_id 
-         AND f.time_id=t.time_id 
-         AND s.region_id = r.region_id                  
-         AND STORE_COUNTRY = 'USA' 
-         GROUP BY region_id, s.store_country,r.sales_state, r.sales_region, s.store_city                                     
-
-   
-Create and save the dataset you want to use and go on preparing the document template.
 
 Template building with GIS designer for technical user\*
 ----------------------------------------------------------

@@ -582,7 +582,7 @@ Each mapping file contains one schema only, as well as multiple dimensions and c
 Engine catalogue configuration
 +++++++++++++++++++++++++++++++
 
-To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to **Catalogs> Mondrian schemas** in the Knowage menu, as shown below. 
+To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to **Catalogs > Mondrian schemas** in the Knowage menu, as shown below. 
 
 .. figure:: media/image225.png
 
