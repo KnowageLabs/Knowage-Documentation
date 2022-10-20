@@ -95,7 +95,7 @@ Analytical document execution
 
 Let’s have a look on the user interface of Knowage Location Intelligence features.
 
-In Figure belowwe provide an example of a BI analysis carried out thanks to map. In our example, the colour intensity of each state shown proportionally increases according to the value of the indicator selected. States who have no record connected are not coloured at all.
+Figure below provide an example of a BI analysis carried out thanks to map. In our example, the colour intensity of each state shows proportionally increases according to the value of the indicator selected. States who have no record connected are not coloured at all.
 
 .. figure:: media/image352.png
 
@@ -277,7 +277,7 @@ In the first section the user can choose a dataset for joining spatial data and 
 
     List of available layer catalogs.
 
-Once the dataset and the layer have been selected the Dataset join and Indicators sections will be activated. The user can also change the dataset and layer in a second moment through the buttons **change dataset** and **change layer**.
+Once the dataset and the layer have been selected the Dataset join and Indicators sections will be enabled. The user can also change the dataset and layer in a second moment through the buttons **change dataset** and **change layer**.
 
 .. _targetlayerdef:
 .. figure:: media/image364.png
@@ -309,55 +309,34 @@ Measures definition is configurable by adding indicators. The interface is shown
 
     Indicators interface.
 
-Filters
-~~~~~~~
+Filters & Menu
+~~~~~~~~~~~~~~
 
-Using the filtering dedicated area, as ahown in figure below, you define which dataset attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "store_country", label:"COUNTRY"). The first value (name : "store_country") is the name of the attribute as it is displayed among the properties. The second one label: "COUNTRY" is the label which will be displayed to the user. This section is only present when dataset is chosen for the document. Clicking on add filter creates empty pair. Label field should be selected by picking one option from combobox that contains attribute fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
+Through the **Menu** panel the user can enable or disable some available map functions and features, like the legend, the distance calculator and so on.
+
+Using the filtering dedicated area you can define which dataset attributes can be used to filter the geometry. Each filter element is defined by a name (e.g. "store_country") and a label (e.g. "COUNTRY"). The first value is the name of the attribute as it is displayed among the dataset attribute fields. The second one is the label that will be displayed to the user. This section is only present when dataset is chosen for the document. Clicking on add filter creates empty pair.
 
 .. _filtersinterfac:
 .. figure:: media/image369.png
 
-    Filters interface.
-
-Map menu configuration
-~~~~~~~~~~~~~~~~~~~~~~
-
-Through the **Map menu configuration** panel the user can desides to enable or disable some available functions and features, like the legend, the distance calculator and so on. See next figure to have a glimpse at the available items.
-
-.. _mapmenuconfig:
-.. figure:: media/image369.png
-
-    Map menu configuration.
-
-Layer filters
-~~~~~~~~~~~~~
-
-Here, as you can see from figure below, you define which target layer attributes can be used to filter the geometry. This section is only present when a dataset has been selected. Add filters button opens pop up where you can choose all available filters of the selected layers. Figure below gives an example.
-
-.. figure:: media/image370.png
-
-    Layer filters interface.
-    
-.. figure:: media/image371.png
-
-    List of available filters.
+    Filters & Menu interface.
 
 Edit map
 ~~~~~~~~
 
-When all required fields are filled basic template can be saved. From workspace user is first asked to enter name and description of new created document as in the following figure. When the template is saved successfuly EDIT MAP button is enabled in the right part of the main toolbar.
+When all required fields are filled in the basic template can be saved. From workspace user is first asked to enter label and description of new created document as in the following figure. 
     
 .. figure:: media/image372.png
 
-    interface for name and description of new geo document for end user.
+    Saving a new geo document for end user.
 
-Clicking the edit map button will open created map. An example is given below. In edit mode you are able to save all custom setting made on map.
+When the template is saved successfuly EDIT MAP button is enabled on the top right corner of the main toolbar. Clicking the edit map button will open created map. An example is given below. In edit mode you are able to save all custom setting made on map; all the available settings are explained in the previous section **Analytical document execution**.
    
 .. figure:: media/image373.png
 
     Map in edit mode with save template available.
 
-Template building with GIS designer for technical user\*
+Template building with GIS designer for technical user
 ----------------------------------------------------------
 
 When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to next figure). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
@@ -381,7 +360,7 @@ When the list of selected layers is changed the filter list will be empty so you
 
     List of available filters with list of analytical drivers.
 
-Cross navigation definition\*
+Cross navigation definition
 -----------------------------------
 
 It is possible to enable cross navigation from a map document to other Knowage documents. This means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
