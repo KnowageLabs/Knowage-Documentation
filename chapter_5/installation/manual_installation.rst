@@ -159,7 +159,9 @@ To enable the Security Manager a system administrator have to add some options t
 .. code-block:: bash
 	:linenos:
 
-	export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy"
+      export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy -Dsymmetric_encryption_key=<generic_random_string>"
+
+The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
 
 
 **[WIN]** Insert at the end of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
@@ -167,8 +169,9 @@ To enable the Security Manager a system administrator have to add some options t
 .. code-block:: bash
 	:linenos:
 
-	set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy
+      set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy -Dsymmetric_encryption_key=<generic_ASCII_string>
 
+The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
 
 Installation of Chromium Cockpit Export script
 -----------------------------------------------
