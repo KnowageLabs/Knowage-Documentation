@@ -171,7 +171,7 @@ This procedure must be repeated for all already existing users.
 Recommended configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Edit ``TOMCAT_HOME/conf/setenv.sh`` (Linux) or ``TOMCAT_HOME/conf/setenv.bat`` (Windows) file in Tomcat by adding the following JVM arguments:
+**[LINUX]** Edit the ``TOMCAT_HOME/conf/setenv.sh`` file in Tomcat by adding the following JVM arguments:
 
 .. code-block:: bash
    :linenos:
@@ -186,8 +186,33 @@ Edit ``TOMCAT_HOME/conf/setenv.sh`` (Linux) or ``TOMCAT_HOME/conf/setenv.bat`` (
 
         export JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true"
 
-        export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/catalina-relaxed.policy"
+        export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy"
 
+        export JAVA_OPTS="$JAVA_OPTS -Dsymmetric_encryption_key=<generic_random_string>"
+
+The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
+
+
+**[WIN]** Edit the ``TOMCAT_HOME/conf/setenv.bat`` file in Tomcat by adding the following JVM arguments:
+
+.. code-block:: bash
+   :linenos:
+
+        export JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8"
+
+        # We add -Duser.timezone=UTC to solve error when establishing connection to Oracle metadata database:
+        # java.sql.SQLException: ORA-00604: error occurred at recursive SQL level 1
+        # ORA-01882: timezone region not found
+
+        export JAVA_OPTS="$JAVA_OPTS -Duser.timezone=UTC"
+
+        export JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true"
+
+        export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy"
+
+        export JAVA_OPTS="$JAVA_OPTS -Dsymmetric_encryption_key=<generic_random_string>"
+
+The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
 
 Applications deploy
 ~~~~~~~~~~~~~~~~~~~~~~

@@ -61,6 +61,12 @@ To upgrade Knowage installation follow these steps:
       type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
 
 
+-  in case you are upgrading from a previous version to 8.1.0, you need to add the new symmetric_encryption_key JVM argument inside the file:
+    - ``TOMCAT_HOME/bin/setenv.sh`` in case of a Linux installation
+    - ``TOMCAT_HOME/bin/setenv.bat`` in case of a Windows installation
+
+    The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
+
 At this point, in some cases you need to deal with some configuration files, in particular when you modified the following files within the previous Knowage installation, then you need to restore those changes (after having unzipped the war files):
 
 - context files ``TOMCAT_HOME/webapps/knowage*/META-INF/context.xml``: they contain links to resources such as datasource connections and environment variables; in case you modified them in order to add a new datasource, you need to restore the changes and check if links to environment variables defined in ``TOMCAT_HOME/conf/server.xml`` are all there. In case you defined contexts with relevant files inside ``TOMCAT_HOME/conf/Catalina/localhost`` and you are upgrading from a version prior to 7.2.0, then you need to add the link to the ``password_encryption_secret`` variable, since that was introduced by 7.2.0 version;
