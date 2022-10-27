@@ -46,7 +46,7 @@ Due to security reasons, configuration file containing some content to be used f
          The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
 
-Configuration of the metadata db dialect
+Configuration of the metadata DB dialect
 ----------------------------------------
 
 .. important::
@@ -159,7 +159,9 @@ To enable the Security Manager a system administrator have to add some options t
 .. code-block:: bash
 	:linenos:
 
-	export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy"
+	export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy -Dsymmetric_encryption_key=<generic_random_string>"
+
+The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
 
 
 **[WIN]** Insert at the end of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
@@ -167,7 +169,13 @@ To enable the Security Manager a system administrator have to add some options t
 .. code-block:: bash
 	:linenos:
 
-	set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy
+	set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy -Dsymmetric_encryption_key=<generic_ASCII_string>
+
+The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
+
+.. warning::
+
+  If you are using Oracle provided Java, this configuration may lead to the error *"Illegal key size or default parameters"*. This is a problem with limited Java security policies. See https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppC for more information.
 
 
 Installation of Chromium Cockpit Export script
@@ -227,7 +235,7 @@ You can do that checking the "Use for data preparation" checkbox using an admini
 .. figure:: media/image37.png
 
     Datasource management section.
- 
+
 In order to allow Spark transformations working, you should provide those libraries on Spark  /jars  installation folder:
 
 - json-20210307.jar
