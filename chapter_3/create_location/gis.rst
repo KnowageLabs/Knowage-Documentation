@@ -105,23 +105,23 @@ Click on the arrow on the top right to open the Location Inteligence options pan
 
 .. figure:: media/image35354.png
 
-    Arrow button (left) Location Inteligence options panel (right) .
+    Arrow button (left), Location Inteligence options panel (right) .
 
 The **Map Type** available are:
 
 -  **Map Zone**: the different map zone are filled with different colour range according to the indicator values
--  **Map Point**: the indicator values are displayed by points with differs on the radius. A bigger radius means a higher indicator’s value.
+-  **Map Point**: the indicator values are displayed by points with different radius. A bigger radius means a higher indicator’s value.
 -  **Map Chart**: thanks to this visualization type you can compare more than one indicators simultaneously. Choose which indicators compare among the available ones. You have to mark them in the **indicator** panel area to visualize them. The charts appears on the map displaying the selected indicators’ values.
 
 These three typologies of data visualization on map are compared below.
 
 .. figure:: media/image3555657.png
 
-    Map Zone (left) Map Point (center) and Map Chart (right).
+    Map Zone (left), Map Point (center) and Map Chart (right).
 
 Now you can add extra layers on the default one. Switch to the **layer** tab of the Location Inteligence options panel.
 
-Here click on **select form catalog**, choose the layers you want to add. Mark them in the bottom part of the Location Intelligence area in the Layer box and the selected layer are displayed. These steps are shown in figure below. 
+Here click on the plus button near the **Layer** section and choose the layers you want to add. Mark them once added in the Location Intelligence area in the Layer box and the selected layer are displayed. 
 
 .. _stepsforlayeradd:
 .. figure:: media/image358.png
@@ -135,13 +135,13 @@ In our example we upload some waypoints, you can see the results obtained in nex
 
     Map with two layers
 
-Now let’s focus on **Configuration** tab of Location Inteligence panel option. Here you can set some extra configurations. Let’s have a look them for each data visualization typology.
+Now let’s focus on **Configuration** tab of Location Inteligence panel option. Here you can set some extra configurations. Let’s have a look on them for each data visualization typology.
 
 For the **Map Zone** you can set:
 
--  **Method**: the available ones are quantiles or equal intervals. If you choose quantiles data are classified into a certain number of classes with an equal number of units in each classe. If you choose equal Intervals the value are divided in ranges for each classe, the classes are equal in size and their number can be set. The entire range of data values (max - min) is divided equally into however many classes have been chosen.
--  **N°of classes**: the number of intervals in which data are subdivided.
--  **Range colours**: You can choose the first and the last colour of the range. For both of them you can use a colour pixer by clicking on the coloured square. An example is provided below.
+-  **Method**: the available ones are quantiles or equal intervals. If you choose quantiles data are classified into a certain number of classes with an equal number of units in each class. If you choose equal intervals the value are divided in ranges for each class, the classes are equal in size and their number can be set. The entire range of data values (max - min) is divided equally into classes however many classes have been chosen.
+-  **N° of classes**: the number of intervals in which data are divided.
+-  **Range colors**: you can choose the first and the last color of the range. For both of them you can use a color pixel by clicking on the coloured square. An example is provided below.
 
 .. figure:: media/image360.png
 
@@ -149,14 +149,12 @@ For the **Map Zone** you can set:
 
 For the **Map Point** you can set:
 
--  **Colour**: the colour of the circle.
+-  **Color**: the color of the circle.
 -  **Min/Max value**: the minimum and the maximum circles radius.
 
-For the **Map Chart** you can set the colour of each chart’s bar.
+For the **Map Chart** you can set the color of each chart’s bar.
 
-The last tab of the panel is dedicate to the template preview, it is provided for advanced user who want to have an approach on generated code.
-
-We can conclude our overview on GIS document describing the buttons located at the bottom right corner, you can see them underlined in the following figure. From the left to the right this bottons can be used for: have a look at the legend, compute a measure of an area of the map and do the .pdf export of the map.
+We can conclude our overview on GIS document describing the buttons located at the bottom right corner, you can see them underlined in the following figure. From the left to the right this bottons can be used for: se the preview of the linked dataset, have a look at the legend, compute a measure of an area of the map, do the .pdf export of the map and save the map.
 
 .. _legendmeasurexport:
 .. figure:: media/image361.png
@@ -166,11 +164,11 @@ We can conclude our overview on GIS document describing the buttons located at t
 Extra functionalities
 ~~~~~~~~~~~~~~~~~~~~~
 
-Let’s come back to Location Layer main tab ad focus on the **Select Mode** area. If cross navigation has been set you find two options: **identify** and **Cross navigation**.
+Let’s come back to Location Layer main tab and focus on the **Select Mode** area. If cross navigation has been set you find two options: **Identify** and **Cross navigation**.
 
-Select **Cross Navigation**, the **Spatial Item** tab appears. In this tab you can configure your selection. To make your selection hide CTRL key and choose the area on the map with the mouse. If you choose **near**, the features in the Km set are selected. If you choose **intersect**, the features which borders intersect your designed area. If you choose **inside**, only the features completely inside your area of selection are considered for the cross navigation.
+Selecting **Cross Navigation** the **Spatial Item** tab appears. In this tab you can configure your selection. To make your selection press CTRL key and choose the area on the map with the mouse. If you choose **near**, the features in the Km set are selected. If you choose **intersect**, the features which borders intersect your designed area. If you choose **inside**, only the features completely inside your area of selection are considered for the cross navigation.
 
-When selection is made, a box appears. In this box you find cross navigation information. The number of features selected and a botton to perform the cross navigation with the active selection.
+When the selection is made, a box appears. In this box you find cross navigation information. The number of features selected and a button to perform the cross navigation with the active selection.
 
 GEOReport Engine
 -----------------------
@@ -339,26 +337,16 @@ When the template is saved successfuly EDIT MAP button is enabled on the top rig
 Template building with GIS designer for technical user
 ----------------------------------------------------------
 
-When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to next figure). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
+The administrator can create a new GIS document clicking on the plus button in the document broswer section and selecting "Gneric document". Choose a Label and a Name, **Location Intelligence** as Type and **GIS Engine** as Engine and the State. The selection of a dataset and the corresponding data source from which the data come from are optional.
+
+Open then the designer clicking on the **Open Designer** button. When the designer is opened the interface for building a basic template is different depending on if the dataset is chosen for the document or not.
 
 .. _gisdesigneraccestemplbuild:
 .. figure:: media/image381.png
 
-    Gis designer accessible from the template build.
+    Gis document creation interface.
 
-We have already described the Gis Designer when it is accessed by a final user. Since the difference relies only in how the designer is launched we will not repeat the component part and recall to *Designer section* paragraph for getting details. By the way we highlight that there is a last slight difference when defining a filter on layers. In fact, using the administrator interface, if the document has analytical driver parameters, you can also choose one of the available parameters to filter the geometry, as shown below. It is not mandatory to choose layer filters so you can also save the template without any filter selected. 
-
-.. _layerfiltranalytdriv:
-.. figure:: media/image382.png
-
-    Layer filters interface with analytical drivers.
-
-When the list of selected layers is changed the filter list will be empty so you have to select filter list after filling the layer list, this is the way designer keeps consistency between layers and corresponding filters (see next figure).
-
-.. _listavailfiltranalydriv:
-.. figure:: media/image383.png
-
-    List of available filters with list of analytical drivers.
+We have already described the Gis Designer in the previous section, when it is created by a final user. The difference relies only in how the designer is launched so we will not repeat the component part and recall to *Designer section* paragraph for getting details. 
 
 Cross navigation definition
 -----------------------------------
