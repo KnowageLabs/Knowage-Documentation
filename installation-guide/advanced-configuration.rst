@@ -316,3 +316,69 @@ Below is an example of invoking the tool using *biadmin* as plaintext password.
     java -cp "TOMCAT_HOME/webapps/knowage/WEB-INF/lib/knowage-utils-<major.minor.patch>.jar" it.eng.spagobi.security.utils.PasswordEncryptionToolMain password/encryption/secret/file/name/with/complete/path biadmin
 
 The output value will be the second argument passed in input encrypted with the key present in the file. This procedure must be repeated for all users.
+
+Configure data decryption
+-----------------------------------------------
+
+At the moment there is two ways to support data decryption in datasets:
+
+- Generic decryption
+- Privacy Manager by `Engineering Ingegneria Informatica S.p.a. <https://eng.it/>`_
+
+Watch out that the list of supported encryption algorithms strongly depends from JVM producer/version and the list of the installed JCE providers: please read the official documentation from your JVM.
+
+Second, only password-based encryption algorithms are supported.
+
+An example of supported algorithms in OpenJDK 8 is:
+
+- PBEWithHmacSHA1AndAES_128
+- PBEWithHmacSHA1AndAES_256
+- PBEWithHmacSHA224AndAES_128
+- PBEWithHmacSHA224AndAES_256
+- PBEWithHmacSHA256AndAES_128
+- PBEWithHmacSHA256AndAES_256
+- PBEWithHmacSHA384AndAES_128
+- PBEWithHmacSHA384AndAES_256
+- PBEWithHmacSHA512AndAES_128
+- PBEWithHmacSHA512AndAES_256
+- PBEWithMD5AndDES
+- PBEWithMD5AndTripleDES
+- PBEWithSHA1AndDESede
+- PBEWithSHA1AndRC2_128
+- PBEWithSHA1AndRC2_40
+- PBEWithSHA1AndRC4_128
+- PBEWithSHA1AndRC4_40
+
+Generic decryption
+~~~~~~~~~~~~
+
+Generic decryption is set via Java system properties **encryption.algorithm** and **encryption.password**: see the official Apache Tomcat documentation on how to do this.
+
+We suggest to use **CATALINA_OPTS** environment variable via **TOMCAT_HOME\\bin\\setenv.bat** on Windows installations, or **TOMCAT_HOME/bin/setenv.sh** in Unix/Linux installations:
+
+.. code-block:: console
+    :linenos:
+
+    # In TOMCAT_HOME\\bin\\setenv.bat
+    set "CATALINA_OPTS=%CATALINA_OPTS% -Dencryption.algorithm=PBEWithMD5AndDES -Dencryption.password=knowage"
+
+    # In TOMCAT_HOME/bin/setenv.sh
+    export CATALINA_OPTS="$CATALINA_OPTS -Dencryption.algorithm=PBEWithMD5AndDES -Dencryption.password=knowage"
+
+Privacy Manager by `Engineering Ingegneria Informatica S.p.a. <https://eng.it/>`_
+~~~~~~~~~~~~
+
+The Privacy Manager is a web app reachable via an URL. To the access the web abb KNOWAGE requires an account, as username, password and application ID, provided by the administrator. KNOWAGE will get the decryption password from the Privacy Manager automatically.
+ 
+Privacy Manager is set via Java system properties **pm.url**, **pm.user**, **pm.password**, **pm.application** and **pm.algorithm**: see the official Apache Tomcat documentation on how to do this.
+
+We suggest to use **CATALINA_OPTS** environment variable via **TOMCAT_HOME\\bin\\setenv.bat** on Windows installations, or **TOMCAT_HOME/bin/setenv.sh** in Unix/Linux installations:
+
+.. code-block:: console
+    :linenos:
+
+    # In TOMCAT_HOME\\bin\\setenv.bat
+    set "CATALINA_OPTS=%CATALINA_OPTS% -Dpm.url=https://pm.local/ -Dpm.user=myuser -Dpm.password=mypwd -Dpm.application=KNOWAGE -Dpm.algorithm=PBEWithMD5AndDES"
+
+    # In TOMCAT_HOME/bin/setenv.sh
+    export CATALINA_OPTS="$CATALINA_OPTS -Dpm.url=https://pm.local/ -Dpm.user=myuser -Dpm.password=mypwd -Dpm.application=KNOWAGE -Dpm.algorithm=PBEWithMD5AndDES"
