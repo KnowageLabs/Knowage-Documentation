@@ -9,10 +9,6 @@ The suite is composed of several modules, each one conceived for a specific anal
    :caption: Table of Contents
    :maxdepth: 10
    
-..
-   chapter_1/index.rst
-   chapter_2/index.rst
-..  
    chapter_3/index.rst
    chapter_4/index.rst
    chapter_5/index.rst
