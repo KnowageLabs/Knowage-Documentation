@@ -159,7 +159,7 @@ To enable the Security Manager a system administrator have to add some options t
 .. code-block:: bash
 	:linenos:
 
-      export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy -Dsymmetric_encryption_key=<generic_random_string>"
+        export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy -Dsymmetric_encryption_key=<generic_random_string>"
 
 The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
 
@@ -169,9 +169,13 @@ The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source
 .. code-block:: bash
 	:linenos:
 
-      set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy -Dsymmetric_encryption_key=<generic_ASCII_string>
+        set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy -Dsymmetric_encryption_key=<generic_ASCII_string>
 
 The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
+
+.. warning::
+
+  If you are using Oracle provided Java, this configuration may lead to the error *"Illegal key size or default parameters"*. This is a problem with limited Java security policies. See https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppC for more information.
 
 Installation of Chromium Cockpit Export script
 -----------------------------------------------
@@ -194,6 +198,8 @@ Configuring environment for Data Preparation
 
 User should have Apache Livy and Apache Spark installed.
 
+This feature is tested on Apache Livy 0.71 and Apache Spark 2.4.8 with Scala 2_11 version.
+
 Please refer to https://livy.apache.org/ for more details:
 
 To run the Livy server, you will also need an Apache Spark installation.
@@ -201,8 +207,6 @@ You can get Spark releases at https://spark.apache.org/downloads.html.
 Livy requires at least Spark 1.6 and supports both Scala 2.10 and 2.11 builds of Spark. To run Livy with local sessions, first export these variables:
 
 export SPARK_HOME=/usr/lib/spark
-
-export HADOOP_CONF_DIR=/etc/hadoop/conf
 
 Then start the server with:
 
@@ -215,24 +219,9 @@ Please check Livy and Spark official documentation for more info.
 After that it is mandatory to set this variable on Tomcat Server: **KNOWAGE_RESOURCE_PATH**
 This variable should point to the Tomcat server's resource folder.
 
-Our advice, if you are on Linux environment, is to create a service for Tomcat Server and then let the variable setting available for the system, for example:
-KNOWAGE_RESOURCE_PATH = /home/knowage/knowage8_1/apache-tomcat-9/resources
+Our advice, if you are on Linux environment, is to create a service for Tomcat Server and then let the variable setting available for the system, for example: KNOWAGE_RESOURCE_PATH = /home/knowage/knowage8_1/apache-tomcat-9/resources
 
-After that, you should fill this property inside Knowage Configuration:  **KNOWAGE.DATAPREP.LIVY_URL**
-with the right url of Livy server.
-
-In order to allow Spark transformations working, you should provide those libraries on Spark  /jars  installation folder:
-
-- json-20210307.jar
-- livy-api-0.7.1-incubating.jar
-- livy-client-http-0.7.1-incubating.jar
-- spark-avro_2.11-2.4.8.jar
-
-And:
-
-- knowage-spark-[**CURRENT VERSION OF KNOWAGE**].jar
-
-This library can be found inside knowage deployed projects jars folder.
+After that, you should fill this property inside Knowage Configuration:  **KNOWAGE.DATAPREP.LIVY_URL** with the right url of Livy server.
 
 You will also need to configure a datasource as "Used for data preparation", it means that the selected datasource will be used for saving prepared dataset data.
 
@@ -245,3 +234,19 @@ You can do that checking the "Use for data preparation" checkbox using an admini
 .. figure:: media/image37.png
 
     Datasource management section.
+
+In order to allow Spark transformations working, you should provide those libraries on Spark  /jars  installation folder:
+
+- json-20210307.jar
+
+- livy-api-0.7.1-incubating.jar
+
+- livy-client-http-0.7.1-incubating.jar
+
+- spark-avro_2.11-2.4.8.jar
+
+And:
+
+- knowage-spark-[**CURRENT VERSION OF KNOWAGE**].jar
+
+This library can be found inside knowage deployed projects jars folder.
