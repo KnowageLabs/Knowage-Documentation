@@ -16,8 +16,8 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
    +===========================+=============+
    |    **Operating System**   | **Version** |
    +---------------------------+-------------+
-   |    CentOS                 | 7 64-bit    |
-   +---------------------------+-------------+
+   |    CentOS                 | 7,8         |
+   +---------------------------+-------------+   
    |    Windows                | 7 , 10      |
    +---------------------------+-------------+
 
@@ -45,7 +45,7 @@ Java environment
 --------------------
 
 The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured. The steps to configure it depend on the OS.
-Knowage 7 is compatible with Open JDK 1.8.
+Knowage is compatible with Open JDK 1.8.
 
 Linux
 ~~~~~~~~~~~~
@@ -138,7 +138,7 @@ Knowage uses a schema to manage metadata, that is all those information required
     +=====================+===============+==================+
     |    Certified        | Oracle        | 8, 9, 10, 11, 12 |
     +---------------------+---------------+------------------+
-    |    Certified        | MySql         | 5.7, 8           |
+    |    Certified        | MySql         | 5.7, 8.0         |
     +---------------------+---------------+------------------+
     |    Certified        | PostgreSQL    | 8.2, 9.1, 12.3   |
     +---------------------+---------------+------------------+
@@ -249,7 +249,7 @@ Knowage provides a distribution of Chromium for its functionalities but some oth
         yum install -y at-spi2-atk cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
 
         # For CentOS 8
-        dnf install -y libX11 libX11-xcb libXcomposite libXcursor libXdamage libXext libXi libXtst nss libXScrnSaver libXrandr alsa-lib atk at-spi2-atk pango gtk3
+        dnf install -y libX11 libX11-xcb libXcomposite libXcursor libXdamage libXext libXi libXtst nss libXScrnSaver libXrandr alsa-lib atk at-spi2-atk pango gtk3 libgbm
 
         # For Debian/Ubuntu
         apt-get install -y libxss1 libgtk-3-0 libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash
