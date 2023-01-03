@@ -325,6 +325,6 @@ Scheduler Monitor
 
 You can monitor the whole scheduling agenda by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
   
-.. figure:: media/image59.png
+.. figure:: media/image59_new.png
 
     Schedulation Agenda tab
