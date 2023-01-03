@@ -14,14 +14,14 @@ In order to define a new scheduled activity the administrator must specify which
 
 Give a name and a description to the new activity. Then select the documents that compose it by clicking on the “Plus” icon and selecting them from the pop up wizard, see Figure below.
 
-.. figure:: media/image42.png
+.. figure:: media/image42_new.png
 
    Adding a document to an activity.
 
 Now you need to specify how the scheduler must handle the analytical drivers of each selected document having parameters.
 
 .. _manageparameters:
-.. figure:: media/image43.png
+.. figure:: media/image43_new.png
 
    Manage parameters.
 
@@ -30,24 +30,24 @@ There are two possibilities:
 - selecting a value from those available for the specific analytical driver at definition time; 
 - executing the report one time for each possible values of the analytical driver.
 
-A scheduled activity can be composed by more than one report. It is also possible to add the same report to a scheduled activity more times. You can use the icon |image50| to easily duplicate a document. Once all desired documents have been added and the management configuration of their parameters has been set up, save the activity by clicking on the save button. The new activity is shown in the list and can be modified or deleted using intended specifically icons.
+A scheduled activity can be composed by more than one report. Once all desired documents have been added and the management configuration of their parameters has been set up, save the activity by clicking on the save (disk) icon. The new activity is shown in the list and can be modified or deleted using intended specifically icons.
 
 .. |image50| image:: media/image44.png
    :width: 30
 
 You can manage your activity at any time just clicking on the name of the scheduling item (left side of the window) and all its features will be displayed aside (right half part of the window).
 
-To see and modify the list of the schedules associated to an activity, click on the “Plus” icon you find in the schedulation area in the bottom right side. Similarly, click on the same button to associate schedules
+To see and modify the list of the schedules associated to an activity, click on the “ADD” option you find in the "Timing & Output" area in the bottom right side. Similarly, click on the same option to associate schedules
 to newly created activities.
 
-Schedulation details opens (Figure below).
+Timing & Output panel opens (Figure below).
 
-.. figure:: media/image45.png
+.. figure:: media/image45_new.png
 
-    Schedulation detail panel.
+    Timing & Output panel.
 
-It is composed by two areas: **Detail** and **Documents management**.
-The details tab let you set all properties of you schedulation. Indeed here you decide its name, description and timing.
+It is composed by two areas: **Timing** and **Output**.
+The Timing tab let you set all properties of you schedulation. Indeed here you decide its description and timing.
 A schedulation can be made in a chosen date and time if you choose **Single Execution** as type.
 Otherwise it can be realized for fixed periods or start on a fixed event.
 
@@ -56,25 +56,24 @@ You can decide it, by choosing the schedulation type.
 Available schedulation type are:
 
 -  Single Execution;
--  Customized Execution;
+-  Periodic Execution;
 -  Event Exectution.
 
-A **Single Execution** is a fixed execution for a date and a time which happens only once. A **Customized Execution** repeats your schedulation periodically according to your settings. The **Event Execution** starts the scheduling when an event happens.
+A **Single Execution** is a fixed execution for a date and a time which happens only once. A **Periodic Execution** repeats your schedulation periodically according to your settings. The **Event Execution** starts the scheduling when an event happens.
 
 You can choose among these event types:
 
--  REST service,
--  JMS Queue,
--  ContextBroker message,
--  Dataset verification.
+-  REST WS service,
+-  Context Broker message,
+-  Dataset.
 
-If you choose **Dataset verification**, you have to select a right structured dataset. It has to give as results only true or false. Then set the frequency in seconds. This is the frequency the dataset will be verified. For example if you set it on 10 seconds it means that each 10 seconds the dataset is executed. If the result of its execution is true, the schedulation is trigged otherwise it isn’t.
+If you choose **Dataset**, you have to select a right structured dataset. It has to give as results only true or false. Then set the frequency in seconds. This is the frequency the dataset will be verified. For example if you set it on 10 seconds it means that each 10 seconds the dataset is executed. If the result of its execution is true, the schedulation is trigged otherwise it isn’t.
 
-Once you are done, switch to the **Document Management** tab.
+Once you are done, switch to the **Output** tab.
 
-.. figure:: media/image46.png
+.. figure:: media/image46_new.png
 
-    Document management.
+    Output panel.
 
 Here you can find the dispatch configurations, that can be different for all the documents that compose the scheduled activity. All documents that compose the activity have their own dispatch configuration and the same document can be distributed along multiple dispatch channels. You can switch among the documents included in your activity by clicking on their name in the upper toolbar. There are many different possible dispatch channels that can be used to distribute the results of the execution of a scheduled activity:
 
@@ -93,7 +92,7 @@ The executed document can be saved as snapshots in cyclic buffers of configurabl
 
 The list of all snapshots contained in the buffer can be accessed from the **Show scheduled executions** contained in the **Shortcuts** menu. You can find it in the document toolbar at the top right corner. Each snapshot can be opened or deleted from this panel. These steps are shown in the following figure. A snapshot contains data queried from the database at the moment of its execution performed by the scheduler.
 
-.. figure:: media/image47.png
+.. figure:: media/image47_new.png
 
     Steps to open saved snapshots
 
@@ -102,7 +101,7 @@ Save as file
 
 The executed document can be saved as file on the filesystem in the path /knowage-<version> /resources (if no destination folder is specified). Otherwise, you can create the relative path of this subfolder by writing your subfolder name. For instance, if you write “MyFirstScheduler” as file name and “Schedulation” as destination folder, after the schedulation execution a subfolder Schedulation containing the file “MyFirstScheduler” is created in /knowage-<version> /resources. If the subfolder Schedulation already exist your file is added to this subfolder. You can have a look at the form in Figure below.
 
-.. figure:: media/image51.png
+.. figure:: media/image51_new.png
 
    Save as File form.
    
@@ -256,7 +255,7 @@ The executed document can be sent to one or more mail recipients. The list of ma
 
 In Figure below you can have a look at the mail form. In the following we will focus on each typology, clicking on the info icon you get detailed information.
 
-.. figure:: media/image52.png
+.. figure:: media/image52_new.png
 
     Sending mail form.
 
@@ -300,11 +299,9 @@ To conclude our overview on the scheduler features, save your settings and go ba
 
 Here you can select one of the available scheduled activities to explore details. 
 
-.. figure:: media/image55a.png
+.. figure:: media/image55a_new.png
 
-    Exploring the detailed of a scheduled activity.
-
-A general overview of the selected schedulation is given in the right side of the page. You can inspect two tabs: **Overview activity** and **Detail**. In the Overview activity tab the main details of the schedulation are displayed summed up. Namely it is showed the documents involved, the related parameters and their eventually default values, what kind of scheduling has been chosen (Single Execution, Customized Execution or Event Exectution), the start date and so on. Note that at the end of the row you have the possibilities to explore more details by clicking on the “three dots” icon.
+    Exploring the detail of a scheduled activity in Timing & Output panel (three dots menu).
 
 Here you find the following information:
 
@@ -319,20 +316,15 @@ Here you find the following information:
 - **Execute now**, by clicking it you immediately start the execution of your schedulation.
 - **Pause schedulation**, it lets you pause your schedulation.
 - **Resume schedulation**, it appears after having paused a schedulation, it enables you to resume it.
-- **Delete Schedulation**, it lets you delete a schedulation.
 
-In the **Detail** tab you can analyze the settings on document, that is which parameters are associated to it and how to manage them.
+In order to delete a schedulation you can use delete (recycle bin) icon, on the right side of a schedulation.
 
-.. _scheduldettab:
-.. figure:: media/image58.png
-
-    Schedulation detail tab
 
 Scheduler Monitor
 ----------------------
 
-You can monitor the whole scheduling situation by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
+You can monitor the whole scheduling agenda by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
   
 .. figure:: media/image59.png
 
-    Schedulation detail tab
+    Schedulation Agenda tab
