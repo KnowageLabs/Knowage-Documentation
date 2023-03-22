@@ -1,40 +1,39 @@
 How to build a QBE
 ##########
 
-This detailed user guide is dedicated to the Qbe (acronym of Query By Example), a Free Inquiry instrument which empowers users with easy and free access to information via graphical interfaces.
+This detailed user guide is dedicated to the Qbe (Query By Example), a Free Inquiry instrument which empowers users with easy and free access to information via graphical interfaces.
 
-Free Inquiry indicates the modus operandi of analysts and operational users that are usually seeking for business analysis that are not limited to pre-arranged lists of results. This method has a medium level of difficulty since it requires an adequate knowledge of data management and a structured organization of work.
+Free Inquiry indicates the modus operandi of analysts and operational users that are usually seeking for business analysis that are not limited to pre-arranged lists of results. This method requires a medium level of complexity as an adequate knowledge of data management and a structured organization of work are required.
 
-QbE is the tool that lets you develop your free inquiry through an entirely graphical modality. Moreover, you can execute the query, check the results, export them and save the query for further use.
+QbE is a tool that allows you to develop your free inquiry through an entirely graphical modality. Moreover, you can execute the query, check the results, export them and save the query for further use.
 
-The material will be divided in two main sections. The first is dedicated to build queries in the Knowage Server environment, supposing that an expert user has already created a suitable business model to analyse. In the second part, we will provide the user for the principal steps to build a proper business model through the Qbe designer available in Knowage Meta.
+The material will be divided in two main sections. The first is dedicated to build queries in the Knowage Server environment, supposing the availability of a business model to analyse. In the second part, we will provide the user with the principal steps to build a proper business model through the Qbe designer, available in Knowage Meta.
 
 My first Query By Example
 --------------------------
 
-**QbE** (i.e., Query By Example) allows you to query (a subset of) a database through a high-level representation of the entities and relations. Its main characteristics are:
+**QbE** allows you to query (a subset of) a database through a high-level representation of the entities and relations. 
+Qbe main features are:
 
--  it has a rich end user GUI;
--  it allows to select attributes and set filters;
--  it does not require any knowledge of data structures;
--  it requires a semantic knowledge of data;
--  it is useful every time the free inquiry on data is more important than their graphical layout;
--  it leaves the management of results free;
--  it supports export capabilities;
--  it allows the repeatable execution of inquiries;
--  it works on a data domain with limitations.
+-  rich end user GUI;
+-  selection of attributes and setting of filters;
+-  no knowledge of data structures;
+-  semantic knowledge of data;
+-  management of results free;
+-  support of export capabilities;
+-  repeatable execution of inquiries.
 
 Building a QbE query does not require any technical knowledge, but data domain knowledge: technical aspects, such as creating filters, aggregation and ordering criteria, are managed by a user-friendly graphical interface.
 
-Let’s suppose that an administrator has built a business model and, consequently, released it on Knowage Server. This permits the user to access the model, query the available entities and save results as a dataset, usable later in other Knowage documents, such as cockpits.
+Let’s suppose that an administrator has built a business model and, consequently, released it on Knowage Server. This allows the user to access the model, query the available entities and save the results as a dataset, for further usage in different Knowage documents, such as cockpits.
 
-In the following we discuss each step in detail, showing basic and advanced functionalities of the **QbE Editor**.
+In the following we will discuss each step in detail, showing the basic and advanced functionalities of the **QbE Editor**.
 
 
 Query design and execution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To open the QbE editor, access the **Models** section, available in the end user's **Workspace**. Then, simply click on the model icon to reach the QbE graphical interface.
+To open the QbE editor, access the **Models** section, available in the end user **Workspace**. Then, simply click on the model icon to reach the QbE graphical interface.
 
 In this paragraph we show how to build a simple query with the QbE editor.
 
@@ -42,57 +41,56 @@ In this paragraph we show how to build a simple query with the QbE editor.
 
     QbE editor.
 
-As shown in Figure 9.1 the window of the QbE editor contains the **Query designer**. In next sections we explain in detail all the areas of the **Query Designer**, the **Datamart Schema** tab, the query editor and a hidden tab dedicated to the management of queries, subqueries and parameters catalogue.
+The above figure shows the **Query designer**. In next sections we will explain in detail all the areas of the **Query Designer**, the **Datamart Schema** tab, the query editor and the hidden tab dedicated to the management of queries, subqueries and parameters catalogue.
 
 Datamart Schema
 ^^^^^^^^^^^^^^^^
 
 Starting from the left side:
-	The upper Panel shows the searchable logical schema and the list of entities that can be queried to generate the query. Entities are represented in a tree structure, with user-defined names. Field can be added in the query (right area) clicking on it.
-	The lower Panel shows list of created subqueries in a tree structure where children are fields of subquery
+	The upper Panel shows the searchable logical schema and the list of entities that can be queried to generate the query. Entities are represented in a tree structure, with user-defined names. Fields can be added to the query (right side) by clicking on it.
+	The lower Panel shows the list of created subqueries in a tree structure where the children are the fields of a subquery
 
-There are few types of entities: *facts*, represented by a cube symbol.(i.e., the Sales entity), *dimensions*, represented by a four-arrows symbol (i.e., the Product entity), *geographical dimension*, represented by *earth* icon.
+Types of entities are: *facts*, represented by a cube symbol.(i.e., the Sales entity), *dimensions*, represented by a four-arrows symbol (i.e., the Product entity), *geographical dimension*, represented by *earth* icon.
 
-Each single entity is composed of a title, some attributes or measures and relationships with other entities. Relations are available clicking on *i* icon of one entity. In particular, by exploding the content of an entity (i.e. Sales as in figure above), you may encounter the following elements:
+Each single entity contains a title, a list of attributes or measures and relationships with other entities. Relations are available clicking on the *i* icon of a single entity. In particular, by exploding the content of an entity (i.e. Sales), you may encounter the following elements:
 
-- **measure**: it refers to fields associated with numeric data (e.g. UNIT SALES);
-- **attribute**: it refers to fields that can be associated to a category (e.g. PRODUCT ID);
-- **relation**: it refers to relationships or connections between two entities (e.g. relationship between the sales and the product dimension).
+- **measure**: refers to fields related to numeric data (e.g. UNIT SALES);
+- **attribute**: refers to fields that can be associated to a category (e.g. PRODUCT ID);
+- **relation**: refers to relationships or connections between two entities (e.g. relationship between the sales and the product dimension).
 
-.. figure:: media/image300.png
+.. figure:: media/image300_bis.png
 
-	Relations of one entity.
+	Relations of an entity.
 
-There are two available views: smart and advanced. When qbe is opened by default user will see smart view. Clicking on one field of one entity that field will be added in the query and results will be displayed without any other user interaction.
+There are two available views: Smart and Advanced. When the QbE is opened, by default the user will see the Smart view. To add a field of a specific entity to the query,just click on it and no other user interaction will be necessary to display the results.
 
-.. figure:: media/smart.png
+.. figure:: media/smart_8.1.png
 
 	Smart view.
 
-User can switch to advanced view clicking on Smart view in top right corner. User can continue adding fields in the query but without seeing result.
+User can display the Advanced view by switching off the Smart view option displayed on the top right corner. User can continue adding fields in the query but without seeing result.
 
-.. figure:: media/advanceView.png
+.. figure:: media/advanceView_8.1.png
 
 	Advanced view
 
 
-Let us see more in detail how to add calculated fields.
 
 Calculated fields management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can create new calculated fields inside a query. In advanced view there will be available option for creating **calculated fields**. Clicking on **Calculator** icon **Calculated field wizard** will open.
+You can add calculated fields to a query. This functionality is only available in the Advanced view through the  item  **Calculated field** ot the three dots menu.
 
-To build a calculated field, you shall define:
+To build a calculated field, you shall define a:
 
-- **Name**;
+- **Column Name**;
 - **Type**: string, number or date;
-- **Nature**: measure or attribute;
-- **Formula**: you can click on the fields included on the left and build the formula.
+- **Column Type**: measure or attribute;
+- **Formula**: drag and drop the fields included on the left and build the formula using the available functions.
 
 An example is provided below.
 
-.. figure:: media/calculateFieldWizard.png
+.. figure:: media/calculateField_8.1.png
 
     Calculated field wizard.
 
