@@ -41,13 +41,13 @@ In this paragraph we show how to build a simple query with the QbE editor.
 
     QbE editor.
 
-The above figure shows the **Query designer**. In next sections we will explain in detail all the areas of the **Query Designer**, the **Datamart Schema** tab, the query editor and the hidden tab dedicated to the management of queries, subqueries and parameters catalogue.
+The above figure shows the **Query designer**. In next sections we will explain in detail all the components related to the **Query Designer**, the **Datamart Schema** tab, the query editor and the hidden tab dedicated to the management of queries, subqueries and parameters catalogue.
 
 Datamart Schema
 ^^^^^^^^^^^^^^^^
 
 Starting from the left side:
-	The upper Panel shows the searchable logical schema and the list of entities that can be queried to generate the query. Entities are represented in a tree structure, with user-defined names. Fields can be added to the query (right side) by clicking on it.
+	The upper Panel shows the searchable logical schema and the list of entities that can be queried to generate the query. Entities are represented in a tree structure, with user-defined names. Fields can be added to the query (right side) by clicking on them.
 	The lower Panel shows the list of created subqueries in a tree structure where the children are the fields of a subquery
 
 Types of entities are: *facts*, represented by a cube symbol.(i.e., the Sales entity), *dimensions*, represented by a four-arrows symbol (i.e., the Product entity), *geographical dimension*, represented by *earth* icon.
@@ -68,7 +68,7 @@ There are two available views: Smart and Advanced. When the QbE is opened, by de
 
 	Smart view.
 
-User can display the Advanced view by switching off the Smart view option displayed on the top right corner. User can continue adding fields in the query but without seeing result.
+The user can display the Advanced view by switching off the Smart view option displayed on the top right corner. User can continue adding fields in the query but without seeing result.
 
 .. figure:: media/advanceView_8.1.png
 
@@ -79,7 +79,7 @@ User can display the Advanced view by switching off the Smart view option displa
 Calculated fields management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can add calculated fields to a query. This functionality is only available in the Advanced view through the  item  **Calculated field** ot the three dots menu.
+You can also add calculated fields to a query. This functionality is only available in the Advanced view through the  item  **Calculated field** ot the three dots menu.
 
 To build a calculated field, you shall define a:
 
@@ -88,9 +88,9 @@ To build a calculated field, you shall define a:
 - **Column Type**: measure or attribute;
 - **Formula**: drag and drop the fields included on the left and build the formula using the available functions.
 
-An example is provided below.
+The image below shows the wizard.
 
-.. figure:: media/calculateField_8.1.png
+.. figure:: media/calculatedField_8.1.png
 
     Calculated field wizard.
 
@@ -98,9 +98,9 @@ An example is provided below.
 Query Editor
 ^^^^^^^^^^^^^^^^
 
-Central panel provides a query editor. As we already mentioned, there are two available views: smart and advanced.
+Central panel provides a query editor. As we already mentioned, there are two available views: Smart and Advanced.
 
-Elements from the datamart schema on the left can be added into the query editor. To remove an field from the query editor, just click on the x icon, or if advanced view is opened, clicking on three dots icon, **Delete field** is available.
+Elements from the datamart schema on the left can be added into the query editor. To remove an field from the query editor, just click on the *X* icon available for each column in the Smart view or click on the  **delete** item of the three dots menu available inthe Advanced view.
 
 Selected Fields
 ^^^^^^^^^^^^^^^^
