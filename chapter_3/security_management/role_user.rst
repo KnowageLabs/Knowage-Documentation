@@ -1,4 +1,18 @@
-User profile and role
+An important topic related to the visibility on documents and data according to the roles and profiles of the end users, is the **Behavioural Model**.
+The behavioural model is based on four main concepts:
+
+-  *user profile*, defining the user roles and attributes;
+-  *repository rights*, defining the users rights in terms of document accessibility;
+-  *analytical drivers*, defining which data of a document can be shown to the user;
+-  *presentation environment* settings, defining how the user can reach and run his own documents.
+
+and mainly answers the following questions:
+
+-  *WHO* uses the business intelligence solution (user profile);
+-  *WHAT* is visible to users, in terms of documents and data (repository rights and analytical drivers);
+-  *HOW* users work with their documents (analytical drivers and presentation environment settings).
+
+User profile and roles
 ############
 
 Knowage users are defined by:
@@ -121,7 +135,7 @@ Once the attributes are defined, the model administrator can define roles, using
 The right panel contains the following tabs. 
 The **Detail** tab allows the administrator to define role name and role type (mandatory). The role type regulates the visibility of that role based on the types already described. A code and a description can be added too, as shown below.
 
-.. figure:: media/image3031.png
+.. figure:: media/image3031_bis.png
 
    Roles Management.
 
@@ -141,7 +155,7 @@ User Management
 
 The **User Management** section includes a left panel that allows the administrator to create and delete users, and a right panel that allows the management of user details, roles and attributes.
 
-.. figure:: media/image32.png
+.. figure:: media/image32_bis.png
 
    Users Management.
 
@@ -166,7 +180,7 @@ After that, if more than one role is associated to the user, you can choose the 
 Default role is optional: if you don't select a default role, at login time all roles available for the user will be loaded. If you select a role, at login time
 it will be the session role selected.
 
-.. figure:: media/image100.png
+.. figure:: media/image100_bis.png
 
     Users Management - Roles settings example
 
