@@ -77,30 +77,29 @@ The user can display the Advanced view by switching off the Smart view option di
 The structure of the panel containing the fields of the query as well as the functionalities, changes depending which view is displayed.
 For example, to remove a field from the query editor, just click on the *X* icon available for each column in the Smart view or click on the  **delete** item of the three dots menu available inthe Advanced view.
 In any case, the Smart view, shows a table structure where each column of the table corresponds to a field of the query and contains:
+
 - a **gear** icon providing functionalities like *Show field, Rename Alias,Group*
 - a **deleting** icon
 - a **filter** icon
 
-.. figure:: media/image212.png
+.. figure:: media/image212_8.1.png
 
-    Fields interface in smart view.
+    Smart view functionalities.
 
-The Advanced view shows a set of rows where any row contains the **Entity name**, the **Field name**, the **Alias** plus some other functionalities.
+The Advanced view shows a set of rows where any row contains the **Entity name**, the **Field name**, the **Alias** plus some other functionalities:
 
 
-With available functions it is possible to:
+- **Alias**: define aliases for fields
+- **Aggregation**: define the aggregation function (e.g., **SUM**, **AVERAGE**, …) on non-grouped items;
+- **Order**: define a sorting criteria: click on the arrow to select an ascending or descending criteria;
+- **Group**: in case of aggregations, define the attribute that you want to group on (due to the SQL syntax, these attributes appear in the GROUP BY clause);
+- **Show**: indicate whether a column shall be visible in the result or not (hidden attributes are used and returned by the generated query, but are not shown in the result table);
+- **In use**: indicate whether a column shall be used in the select clause of the query or not
+- **Filter**: to add a filter criteria;
 
-- **Alias**: define aliases for fields: those aliases are shown as column headers in the result table; it is editable
-- **Function**: in case of aggregation, define the aggregation function (e.g., **SUM**, **AVERAGE**, …) on the non-grouped items;
-- **Order**: define a sorting criteria: double click on the **Order** column to set the ordering criteria;
-- **Group**: in case of aggregations, define the attribute that you want to group on (if you know SQL syntax, these attributes are the ones you should place in the GROUP BY clause);
-- **Visible**: indicate whether a column shall be visible in the result (hidden attributes are used and returned by the generated query, but are not shown in the result table);
-- **In Use**: indicate whether a column shall be used to select the relative one during query execution or just to be used in calculated field
-- **Filter**: add a filter criteria: clicking on this filter icon redirects you to the **Filters** tab;
+.. figure:: media/image213_8.1.png
 
-.. figure:: media/image213.png
-
-	Fields interface in advanced view.
+Advanced view functionalities.
 
 It is possible to edit alias, clicking on gear icon (smart view) and on **Alias item**. In advanced view, alias can be changed clicking on cell of alias column.
 
