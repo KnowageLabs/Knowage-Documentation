@@ -108,7 +108,7 @@ In addition to the profile attributes created by administrator, by default Knowa
 
 -   **language**: set with the language selected by the user
 
-.. figure:: media/image29.png
+.. figure:: media/image29_bis.png
 
    Profile attributes Management.
 
