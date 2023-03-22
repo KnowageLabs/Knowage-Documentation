@@ -1,5 +1,5 @@
 An important topic related to the visibility on documents and data according to the roles and profiles of the end users, is the **Behavioural Model**.
-The behavioural model is based on four main concepts:
+The c is based on four main concepts:
 
 -  *user profile*, defining the user roles and attributes;
 -  *repository rights*, defining the users rights in terms of document accessibility;
@@ -82,13 +82,13 @@ Authentication can be handled internally by Knowage or delegated to an external 
 
 Once the user has logged in, his role is loaded. Roles are managed internally. In case the user is associated with multiple roles, he will be asked to choose one.
 
-Alternatively, by clicking on the icon shown below, he can select a default role that will be kept valid until he logs out.
+Alternatively, from the Knowage Administrator menu, he can select a default role that will be kept valid until he logs out.
 
-.. figure:: media/image28_bis.png
+.. figure:: media/image28_tris.png
 
    User roles in Knowage.
 
-Steps to follow:
+Steps to follow in the definition of a behavioural model:
 
 -  Create profile attributes;
 -  Create roles;
@@ -177,11 +177,11 @@ Clicking on the ROLES tab you have to select one o more roles to associate with 
 After that, if more than one role is associated to the user, you can choose the default role by selecting it from the combo box on the top of the page.
 
 
-Default role is optional: if you don't select a default role, at login time all roles available for the user will be loaded. If you select a role, at login time
+Default role is optional: if you don't select a default role, at login time all the available roles for the user will be loaded. If you select a role, at login time
 it will be the session role selected.
 
 .. figure:: media/image100_bis.png
 
     Users Management - Roles settings example
 
-In the example above, for the user "*bitest*" you can choose from "admin" and "*kte_dev*" as default role.
+In the example above, for the user "*Prep_admin*" you can choose from "admin" and "*kte_admin*" as default role.
