@@ -68,56 +68,24 @@ There are two available views: Smart and Advanced. When the QbE is opened, by de
 
 	Smart view.
 
-The user can display the Advanced view by switching off the Smart view option displayed on the top right corner. User can continue adding fields in the query but without seeing result.
+The user can display the Advanced view by switching off the Smart view option displayed on the top right corner. The user can continue adding fields to the query but without seeing result. A specific icon has to be clicked to run the query.
 
 .. figure:: media/advanceView_8.1.png
 
 	Advanced view
 
-
-
-Calculated fields management
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You can also add calculated fields to a query. This functionality is only available in the Advanced view through the  item  **Calculated field** ot the three dots menu.
-
-To build a calculated field, you shall define a:
-
-- **Column Name**;
-- **Type**: string, number or date;
-- **Column Type**: measure or attribute;
-- **Formula**: drag and drop the fields included on the left and build the formula using the available functions.
-
-The image below shows the wizard.
-
-.. figure:: media/calculatedField_8.1.png
-
-    Calculated field wizard.
-
-
-Query Editor
-^^^^^^^^^^^^^^^^
-
-Central panel provides a query editor. As we already mentioned, there are two available views: Smart and Advanced.
-
-Elements from the datamart schema on the left can be added into the query editor. To remove an field from the query editor, just click on the *X* icon available for each column in the Smart view or click on the  **delete** item of the three dots menu available inthe Advanced view.
-
-Selected Fields
-^^^^^^^^^^^^^^^^
-
-Central panel contains the list of columns to be returned by the query. To add a new field in this section, just click on a field in the schema panel tree.
-
-This panel is structured as a table: columns contain the fields selected from the datamart schema. Every column has **gear icon** on the top (smart view), that is providing applicable functions as shown below, plus icon for deleting field form query and for ordering.
+The structure of the panel containing the fields of the query as well as the functionalities, changes depending which view is displayed.
+For example, to remove a field from the query editor, just click on the *X* icon available for each column in the Smart view or click on the  **delete** item of the three dots menu available inthe Advanced view.
+In any case, the Smart view, shows a table structure where each column of the table corresponds to a field of the query and contains:
+- a **gear** icon providing functionalities like *Show field, Rename Alias,Group*
+- a **deleting** icon
+- a **filter** icon
 
 .. figure:: media/image212.png
 
-    Select fields interface in smart view.
+    Fields interface in smart view.
 
-In the advanced view, every row include applicable functions as shown below, plus clicking on **three dots icon** there are few more functions.
-
-.. figure:: media/image213.png
-
-	Select fields interface in advanced view.
+The Advanced view shows a set of rows where any row contains the **Entity name**, the **Field name**, the **Alias** plus some other functionalities.
 
 
 With available functions it is possible to:
@@ -129,6 +97,10 @@ With available functions it is possible to:
 - **Visible**: indicate whether a column shall be visible in the result (hidden attributes are used and returned by the generated query, but are not shown in the result table);
 - **In Use**: indicate whether a column shall be used to select the relative one during query execution or just to be used in calculated field
 - **Filter**: add a filter criteria: clicking on this filter icon redirects you to the **Filters** tab;
+
+.. figure:: media/image213.png
+
+	Fields interface in advanced view.
 
 It is possible to edit alias, clicking on gear icon (smart view) and on **Alias item**. In advanced view, alias can be changed clicking on cell of alias column.
 
@@ -186,6 +158,25 @@ The toolbar about query editor sub-section has a toolbar contains additional fun
       |                                   | all fields from query and Export  |
       |                                   | query into csv/xls/xlsx           |
       +-----------------------------------+-----------------------------------+
+
+Calculated fields management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can also add calculated fields to a query. This functionality is only available in the Advanced view through the  item  **Calculated field** ot the three dots menu.
+
+To build a calculated field, you shall define a:
+
+- **Column Name**;
+- **Type**: string, number or date;
+- **Column Type**: measure or attribute;
+- **Formula**: drag and drop the fields included on the left and build the formula using the available functions.
+
+The image below shows the wizard.
+
+.. figure:: media/calculatedField_8.1.png
+
+    Calculated field wizard.
+
 
 Filters
 ^^^^^^^^
