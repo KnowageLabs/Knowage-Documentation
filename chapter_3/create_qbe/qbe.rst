@@ -99,7 +99,7 @@ The Advanced view shows a set of rows where any row contains the **Entity name**
 
 .. figure:: media/image213_8.1.png
 
-Advanced view functionalities.
+    Advanced view functionalities.
 
 It is possible to edit alias, clicking on gear icon (smart view) and on **Alias item**. In advanced view, alias can be changed clicking on cell of alias column.
 
