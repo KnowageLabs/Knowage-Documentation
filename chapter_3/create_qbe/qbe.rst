@@ -104,7 +104,7 @@ The Advanced view shows a set of rows where any row contains the **Entity name**
 The below image shows how to change the alias for a specific field from the Advanced view. Just click on the cell containing the alias name to be able to edit it.
 .. figure:: media/aliasChange_8.1.png
 
-	Change alias.
+	Change alias example.
 
 To change the alias of a field in the Smart view, just click on the **gear** icon and select *Rename Alias*
 Pay attention to grouping options: if you want to define an aggregation function on a field (like, for instance, the **COUNT** of the sold items), you shall tick the Group checkbox for all the other fields added in the query editor, without an aggregation function defined, otherwise you will get an SQL exception. The possible grouping functions are shown in the following figure.
