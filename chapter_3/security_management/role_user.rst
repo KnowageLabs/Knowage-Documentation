@@ -109,12 +109,6 @@ The **Profile Management** menu section contains three sub-menu items:
 In the following, we show how the model administrator can define user profiles and roles using these functionalities. Remember that Knowage profile management can also be integrated with external profiling systems.
 
 Clicking on **Profile Attributes**, the list of currently defined attributes is shown. To add a new attribute, click on the **Plus icon**: a new row is added to the list, where you can insert the Name, the Description and the Data type. To delete an attribute, select the corresponding row and click on the **Delete** icon.
-The image below, shows a new *Profile attribute* named *Country* manually fed. The other option to feed the attribute is by means of a Lov.
-
-.. figure:: media/profile_attributes_8.1.png
-
-    Create a new Profile Attribute
-
 
 Attributes defined in this section will be available to all user profiles. It is not mandatory to assign a value to each attribute for each user, since profile attributes without values will not be considered in the definition of the user profile.
 
@@ -129,6 +123,9 @@ In addition to the profile attributes created by administrator, by default Knowa
 -   **user_session_roles**: set like *user_roles* attribute, if no default role is set. Set with default role selected, otherwise.
 
 -   **language**: set with the language selected by the user
+
+The image below, shows a new *Profile attribute* named *Country* manually fed. The alternative option to feed the attribute is by means of a Lov, from where a value is going to be picked up when assigning the attribute to a user. Multivalue option in this case is not enabled, so only one value is inserted.
+
 
 .. figure:: media/image29_bis.png
 
