@@ -260,24 +260,24 @@ The following table summarizes the possible types of filters in the QbE. The use
       |             | operand     |             | operand     |             |
       +=============+=============+=============+=============+=============+
       |    Basic    | Entity.attr | Any         | value       | Prod.family |
-      |             |ibute        |             |             | = 'Food'    |
+      |             | ibute       |             |             | = 'Food'    |
       |             |             |             |             |             |
       |             |             |             |             |             |
       +-------------+-------------+-------------+-------------+-------------+
       |    Basic    | Entity.attr | Any         | Entity.attr | Sales.sales |
-      |             |ibute        |             | ibute       | >           |
+      |             | ibute       |             | ibute       | >           |
       |             |             |             |             | Sales.cost  |
       +-------------+-------------+-------------+-------------+-------------+
       |  Parametric | Entity.attr | Any         | [parameter] | Prod.family |
-      |             |ibute        |             |             | = [p_family]|
+      |             | ibute       |             |             | = [p_family]|
       |             |             |             |             |             |
       |             |             |             |             |             |
       +-------------+-------------+-------------+-------------+-------------+
       |    Dynamic  | Entity.attr | Any         | prompt      | Prod.family |
-      |             |ibute        |             |             | = ?         |
+      |             | ibute       |             |             | = ?         |
       +-------------+-------------+-------------+-------------+-------------+
       |    Value    | Entity.attr | In          | subquery    | Sales.custo |
-      |    list     |ibute        |             |             | mer         |
+      |    list     | ibute       |             |             | mer         |
       |    from     |             | /not in     |             | in subquery |
       |    subquery |             |             |             |             |
       +-------------+-------------+-------------+-------------+-------------+
@@ -317,12 +317,9 @@ In case you have started the QbE editor directly from a model (that is, you have
 
 We highlight that when the save button is selected, a pop up shows asking you to fill in the details, split in three tabs:
 
--  **Generic**, in this tab you set basic information for your dataset like its **Label**, **Name**, **Description** and **Scope**.
--  **Persistence**, you have the chance to persist your dataset, i.e., to write it on the default database. Making a dataset persistent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the    documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. You can also decide to schedule the persistence operation: this means that the data stored will be update according to the frequency defined in the **scheduling** options.
-
-Choose your scheduling option and save the dataset. Now the table where your data are stored will be persisted according to the settings provided.
-
--  **Metadata** It recaps the metadata associated to the fields involved in your query.
+-  **Details**, in this tab you set basic information for your dataset like its **Label**, **Name**, **Description**, **Catgory** and **Scope**.
+-  **Persistence**, you can persist your dataset, i.e., to write it on the default database. Making a dataset persistent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. You can also decide to schedule the persistence operation: this means that the data stored will be updated according to the frequency defined in the **scheduling** options.
+-  **Metadata**, contains the metadata associated to the fields involved in your query.
 
 .. figure:: media/saveQbeDS_8.1.png
 
@@ -340,9 +337,9 @@ Spatial fields usage
 .. important::
          **Enterprise Edition only**
 
-         Spatial dimension is available only for Enterprise Edition with LI licence.
+         Spatial dimension is only available for Enterprise Edition with LI licence.
 
-The Qbe engine supports spatial queries through a set of operators (that return true or false) or a set of functions (these usually return a measure). This feature is although available only when the Location Intelligence (LI) license is possessed and when data are stored in Oracle 12c database. It also fundamental that the Business Model has to be tagged as geographical model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
+The Qbe engine supports *spatial* queries through a set of operators (that return true or false) or a set of functions (that usually return a measure). This feature is only available when the Location Intelligence (LI) license is possessed and when data are stored in Oracle 12c database. It is also fundamental that the Business Model has to be tagged as *geographical* model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
 
 We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |earthIcon|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distinguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
 
@@ -353,7 +350,7 @@ We suppose that we have a BM with geographical dimensions enabled (by a technica
 
     QbE spatial dimensions.
 
-After a first selection of fields, it is possible to add calculated fields. Click on the **Calculator** option available on the query editor area as shown by the blue arrow in figure below. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields.The circles of the next figure underline that the fields on which you can operate are the one previously selected by a simple click on the field.
+After a first selection of fields, it is possible to add calculated fields. Click on the **Calculation field** option available on the query editor area as shown by the blue arrow in figure below. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields.The circles of the next figure underline that the fields on which you can operate are the ones previously selected by a simple click on the field.
 
 .. _calculfldwizardspt:
 .. figure:: media/image219.png
