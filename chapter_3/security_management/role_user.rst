@@ -1,5 +1,5 @@
 An important topic related to the visibility on documents and data according to the roles and profiles of the end users, is the **Behavioural Model**.
-The c is based on four main concepts:
+The behavioural model is based on four main concepts:
 
 -  *user profile*, defining the user roles and attributes;
 -  *repository rights*, defining the users rights in terms of document accessibility;
@@ -145,7 +145,7 @@ The **Authorizations** tab allows you to assign permissions to each role. Rights
 
 The **Business Models**, **Data sets** and **KPI Categories** tabs are intended to assign specific categories to each role, in a way that each user can only see the business models, datasets or KPI that belong to the categories associated with his role.
 
-The **Business Models** tab is available only for modules KnowageBD and KnowageSI, while the **KPI Categories** tab is only available for KnowagePM. More details on business models and KPIs can be found in the corresponding chapters.
+The **Business Models** tab is only available for modules KnowageBD and KnowageSI, while the **KPI Categories** tab is only available for KnowagePM. More details on business models and KPIs can be found in the corresponding chapters.
 
 
 
@@ -165,7 +165,7 @@ The **User Management** section includes a left panel that allows the administra
 User unlock
 ^^^^^^^^^^^
 
-If user reaches the maximum number of failed login attempts (editable in advanced configurations), it will be blocked by Knowage and access will be denied. By accessing Knowage with an user having user management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it using the "unlock user" button. After that user will be able to log in using the latest credentials set.
+If user reaches the maximum number of failed login attempts (editable in advanced configurations), it will be blocked by Knowage and access will be denied. By accessing Knowage with a user having user management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it using the "unlock user" button. After that, the user will be able to log in using the latest set of credentials.
 
 .. figure:: media/image115.png
 
@@ -187,3 +187,11 @@ it will be the session role selected.
     Users Management - Roles settings example
 
 In the example above, for the user "*Prep_admin*" you can choose from "admin" and "*kte_admin*" as default role.
+
+You can also assign an attribute profile to a user. In this case it is enough to valorize the attribute that you want to assign.
+The below image, shows an example. The attribute *Country* formerly created as a *Profile attribute* has been assigned to the user kte_admin.
+The image shows that some other attributes are available but they are not considered as they remain empty.
+
+.. figure:: media/attributes_8.1.png
+
+    Users Management - Attributes settings example
