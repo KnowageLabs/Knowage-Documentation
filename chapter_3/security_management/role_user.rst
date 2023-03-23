@@ -12,6 +12,8 @@ and mainly answers the following questions:
 -  *WHAT* is visible to users, in terms of documents and data (repository rights and analytical drivers);
 -  *HOW* users work with their documents (analytical drivers and presentation environment settings).
 
+
+
 User profile and roles
 ############
 
@@ -155,7 +157,7 @@ User Management
 
 The **User Management** section includes a left panel that allows the administrator to create and delete users, and a right panel that allows the management of user details, roles and attributes.
 
-.. figure:: media/image32_bis.png
+.. figure:: media/image32_8.1.png
 
    Users Management.
 
