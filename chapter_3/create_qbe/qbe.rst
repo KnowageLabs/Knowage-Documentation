@@ -566,39 +566,40 @@ Subqueries
 ++++++++++
 
 
-The **QbE Engine** also supports the definition and usage of subqueries similarly to the SQL language. As a result, you can define a subquery and use it within a filter in association to the in/not in operator, as shown in Figure below. To create a new subquery, which can be used as a filter inside the main query, click on |addSubqueries| button, on the left part, in **Derived entities**  toolbar. In the main view you will see that you are able to add fields in subquery.
+The **QbE Engine** also supports the definition and usage of SQL subqueries to use within a filter in association to the **In/Not in** operator, as shown in the figure below. To create a subquery, click on **+** icon, on the right of **Derived entities**. 
+.
 
 .. |addSubqueries| image:: media/addSubquery.png
    :width: 30
 
-.. figure:: media/subqueries.png
+.. figure:: media/subqueries_8.1.png
 
 	QbE subquery view.
 
-You can easily return to main qiery clicking on **MAIN** button in the query editor toolbar.
+You can easily add fields and return to the main query clicking on **MAIN** link in the query editor toolbar.
 
-To use the sub-query inside the main query, simply choose from target type **Subquery option**, from **Target** choose subquery that you want and set the type of condition (**IN** or **NOT IN**). Now the subquery is used to provide values within the filter, in a similar way to SQL subqueries.
+To use the subquery inside the main query, simply choose **Subquery** from *Target type* and set the *Condition* to (**IN** or **NOT IN**).
 
 .. figure:: media/image281.png
 
-    QbE query: use of a subquery in a filter.
+    QbE query: Use of a subquery in a filter.
 
 
 Parameters
 ++++++++++
 
 
-The **QbE Engine** also supports the definition and usage of parameters that can be used to filter the data using qbe filter. To create a new parameter, which can be used as a filter inside the main query, click on |parameter| button, in the main query toolbar.
+The **QbE Engine** also supports the definition and usage of parameters that can be used to filter data using the QbE filter. To create a new parameter to be used as a filter inside the main query, click on **Parameters** from the three dots menu of the main query toolbar.
 
 .. |parameter| image:: media/parameter.png
    :width: 30
 
-.. figure:: media/paramWizard.png
+.. figure:: media/parameter_8.1.png
 
 	QBE parameter view.
 
-To use the parameter inside the main query, simply choose from target type **Parameter option** and from **Target** choose parameter that you want. Now the parameter is used to provide values within the filter.
+To use the parameter inside the main query, simply choose **Parameter** from Target type and choose parameter name from the **Target** list.
 
-.. figure:: media/filterParam.png
+.. figure:: media/filterParam_8.1.png
 
 	QbE query: use of a parameter in a filter.
