@@ -186,8 +186,8 @@ Filters are expressions of type:
 
                                       **Left operand + Operator + Right operand.**
 
-How to add a filter:
-- in the Smart view, clicking on **Funnel icon**
+How to add a filter:                                                                                                                                                                                                                  
+- in the Smart view, clicking on **Funnel icon**                                                                                                                                   
 - in the Advanced view, selecting **Filters** from the *three dots* field menu
 
 In both cases a pop up opens and click on the **+** icon to add your filter.
@@ -230,8 +230,8 @@ The option **Another entity** allows the selection of a field from another entit
          Filtering data on fields with type of Date/Time/Timestamp through Calendar/Time functions is only available for the Enterprise Edition.
 
 If you have the SI license file, you could filter your data with fields type of date/time/timestamp using Calendar/Time/Calendar + Time options.
-This depends on which data type is your field, and this comes from the metamodel creation phase.
-When creating your metamodel, you can set the data type of your field.
+This depends on which data type your field is: the dat type is assigned when creating the metamodel.
+
 
 .. figure:: media/timeDataType.png
 
@@ -239,15 +239,15 @@ When creating your metamodel, you can set the data type of your field.
 
 .. figure:: media/date.png
 
-	Filters creation on date data type of the field.
+	Filters on date fields.
 
 .. figure:: media/time.png
 
-	Filters creation on time data type of the field.
+	Filters on time fields.
 
 .. figure:: media/timestamp.png
 
-	Metamodel creation, timestamp data type of the field.
+	Filters on timestamp fields.
 
 
 The following table summarizes the possible types of filters in the QbE. The use of subqueries in filters will be explained later in the *Advanced QbE functionalities* paragraph.
@@ -260,24 +260,24 @@ The following table summarizes the possible types of filters in the QbE. The use
       |             | operand     |             | operand     |             |
       +=============+=============+=============+=============+=============+
       |    Basic    | Entity.attr | Any         | value       | Prod.family |
-      |             | ibute       |             |             | =           |
+      |             |ibute        |             |             | = 'Food'    |
       |             |             |             |             |             |
-      |             |             |             |             | 'Food'      |
+      |             |             |             |             |             |
       +-------------+-------------+-------------+-------------+-------------+
       |    Basic    | Entity.attr | Any         | Entity.attr | Sales.sales |
-      |             | ibute       |             | ibute       | >           |
+      |             |ibute        |             | ibute       | >           |
       |             |             |             |             | Sales.cost  |
       +-------------+-------------+-------------+-------------+-------------+
       |  Parametric | Entity.attr | Any         | [parameter] | Prod.family |
-      |             | ibute       |             |             | =           |
+      |             |ibute        |             |             | = [p_family]|
       |             |             |             |             |             |
-      |             |             |             |             | [p_family]  |
+      |             |             |             |             |             |
       +-------------+-------------+-------------+-------------+-------------+
       |    Dynamic  | Entity.attr | Any         | prompt      | Prod.family |
-      |             | ibute       |             |             | = ?         |
+      |             |ibute        |             |             | = ?         |
       +-------------+-------------+-------------+-------------+-------------+
       |    Value    | Entity.attr | In          | subquery    | Sales.custo |
-      |    list     | ibute       |             |             | mer         |
+      |    list     |ibute        |             |             | mer         |
       |    from     |             | /not in     |             | in subquery |
       |    subquery |             |             |             |             |
       +-------------+-------------+-------------+-------------+-------------+
@@ -287,26 +287,27 @@ The following table summarizes the possible types of filters in the QbE. The use
       |    subquery |             |             |             |             |
       +-------------+-------------+-------------+-------------+-------------+
 
-When filtering a date attribute or a time attribute it is possible to apply a timespan to ease the insertion of values. Following the images below, we can see that the Timespan button appears when filterting, for instance, a date attribute. We recall that is it possible to configure a new timespan using the dedicated Knowage functionality we described in the administrator guide.
+When filtering a date attribute or a time attribute it is possible to apply a timespan to ease the insertion of values. Following the images below, we can see that the Timespan button appears when filterting, for instance, a date attribute. We recall that is it possible to configure a new timespan using the dedicated Knowage functionality that we described in the administrator guide.
 
 .. figure:: media/imageTS005.png
 
 	Filtering date attribute: use a timespan.
 
-After selecting one timespan, the user must clcik on apply to ask the server to insert the start and end values.
+After selecting a timespan and clicking on apply, the user has to insert the start and end date values.
 
 .. figure:: media/imageTS006.png
 
 	Filtering date attribute: apply a timespan.
 
-Finally click on the save button and data is filtered accordingly.
+Save now to filter data accordingly.
 
 
 Query Preview
 ^^^^^^^^^^^^^^^
 
-While you are in smart view you can see preview of you query.
-While you are in advanced view, and you are satisfied with your query or if you want to check the results, you can see the returned data by clicking the **Play** button located in the top right corner of the panel. From there, you can go back to the **Designer** to modify the definition of the query.
+The Smart automatically shows the preview of you query.
+The Advanced view contains a **Play** icon located in the top right corner of the panel, that opens a window with the results of the query. 
+Just close the window to go back to the **Designer**.
 
 .. figure:: media/preview.png
 
@@ -323,7 +324,7 @@ Choose your scheduling option and save the dataset. Now the table where your dat
 
 -  **Metadata** It recaps the metadata associated to the fields involved in your query.
 
-.. figure:: media/saveQbeDS.png
+.. figure:: media/saveQbeDS_8.1.png
 
 	Save qbe dataset.
 
