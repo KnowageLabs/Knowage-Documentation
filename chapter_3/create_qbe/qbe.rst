@@ -232,12 +232,12 @@ The option **Another entity** allows the selection of a field from another entit
          Filtering data on fields with type of Date/Time/Timestamp through Calendar/Time functions is only available for the Enterprise Edition.
 
 If you have the SI license file, you could filter your data with fields type of date/time/timestamp using Calendar/Time/Calendar + Time options.
-This depends on which data type your field is: the dat type is assigned when creating the metamodel.
+This depends on which data type your field is: the data type is assigned when creating the metamodel.
 
 
-.. figure:: media/timeDataType.png
+.. figure:: media/timeDataType_8.1.png
 
-	Metamodel creation.
+	Creation of a Metamodel.
 
 .. figure:: media/date.png
 
