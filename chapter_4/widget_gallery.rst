@@ -16,7 +16,7 @@ Gallery management
 -------------------
 
 To open the *Gallery Management*, select **Gallery Management** from the *CATALOGS* option of the Knowage main menu.
-The first step consists in creating a new template or in importing a template already available.
+The first step consists in creating a new template or in importing a template not available in the list.
 
 
 .. figure:: media/image2_8.1.png
@@ -33,7 +33,7 @@ The image below, shows the information to be filled in when adding a new templat
 
 Using import you will see a dialog to choose the template to be imported. Clicking "import" it will be added to the current list.
 
-A **Template** is a json file containing a collection of properties describing the widget and the code that will compose it.
+A **Template** is a json file containing a collection of properties describing the widget and the code componing it.
 
 The following fields will be present:
 
