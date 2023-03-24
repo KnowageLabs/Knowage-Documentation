@@ -1,16 +1,16 @@
 News
 ############
 
-The **news management** is an helpful functionality to keep the end user constantly informed on any changements or updates on the Knowage platform itself. In this section we will describe the main steps to insert a latest piece of news.
+The **news management** is a helpful functionality to keep the end user constantly informed on any changements or updates on the Knowage platform. In this section we will describe the main steps to insert a news.
 
 How to publish news
 ---------------------------
 
-To put news in place is mandatory to have administration priviledges. An admin user can insert the news entering the “news management” functionality from Knowage main menu, as the following picture highlights:
+To add news is mandatory to have administration priviledges. An admin user can insert news entering the **News Management** functionality from the Knowage main menu.
 
 .. figure:: media/image01.png
 
-    News management menu item.
+    News Management list item.
     
 Consequently, the user is redirected to the News management list. The page is divided into two areas. On the left side, all previously inserted news are listed. When clicking on one of them, its details are shown on the right side. 
 
