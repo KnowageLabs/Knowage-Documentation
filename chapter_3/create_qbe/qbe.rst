@@ -315,9 +315,9 @@ Just close the window to go back to the **Designer**.
 
 	Preview wizard.
 
-In case you have started the QbE editor directly from a model (that is, you have clicked on a model icon in the **My Data** > **Models** section) from here you can also click the **Save** button located in the top right corner of the page to save your query as a new dataset, reachable later from the **My Data**> **Dataset** section. Please note that this operation saves the *definition* of your query and not the snapshot of the resulting data. This means that every time you re-execute the saved dataset, a query on the database is performed to recover the updated data.
+In case of starting the QbE editor directly from a model **My Data** > **Models**,you can also save your query as a new dataset by clicking on the **Save** icon located in the top right corner of the page; the dataset would be reachable later from **My Data**> **Dataset**. Please note that this operation saves the *definition* of your query and not the snapshot of the query result. This means that every time you re-execute the saved dataset, a query on the database is performed to recover the updated data.
 
-We highlight that when the save button is selected, a pop up shows asking you to fill in the details, split in three tabs:
+When saving your query as dataset, a pop up opens asking you to fill in some information, split in three tabs:
 
 -  **Details**, in this tab you set basic information for your dataset like its **Label**, **Name**, **Description**, **Catgory** and **Scope**.
 -  **Persistence**, you can persist your dataset, i.e., to write it on the default database. Making a dataset persistent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. You can also decide to schedule the persistence operation: this means that the data stored will be updated according to the frequency defined in the **scheduling** options.
@@ -341,9 +341,9 @@ Spatial fields usage
 
          Spatial dimension is only available for Enterprise Edition with LI licence.
 
-The Qbe engine supports *spatial* queries through a set of operators (that return true or false) or a set of functions (that usually return a measure). This feature is only available when the Location Intelligence (LI) license is possessed and when data are stored in Oracle 12c database. It is also fundamental that the Business Model has to be tagged as *geographical* model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
+The Qbe engine supports *spatial* queries through a set of operators (that return true or false) or a set of functions (that usually return a measure). This feature is only available for the Location Intelligence (LI) license and when data is stored in Oracle 12c databases. It is also fundamental that the Business Model has to be tagged as *geographical* model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
 
-We suppose that we have a BM with geographical dimensions enabled (by a technical user). In this case the dimensions which has spatial fields are marked with the compass icon |earthIcon|. Once the spatial dimension is expanded the fields are listed. Here there is no tracking symbol to distinguish between geographical attributes and the “normal” one. Therefore it is very important that the user is previously informed of which fields has geometrical properties.
+In a BM with geographical dimensions enabled (by a technical user), the dimensions which has spatial fields are marked with the compass icon |earthIcon|. Expanding the spatial dimension the list of fields is shown and there is no way to distinguish between geographical and non geographical attributes. Therefore the user has to be already aware of which fields have geometrical properties.
 
 .. |earthIcon| image:: media/earthIcon.png
    :width: 30
@@ -352,213 +352,27 @@ We suppose that we have a BM with geographical dimensions enabled (by a technica
 
     QbE spatial dimensions.
 
-After a first selection of fields, it is possible to add calculated fields. Click on the **Calculation field** option available on the query editor area as shown by the blue arrow in figure below. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields.The circles of the next figure underline that the fields on which you can operate are the ones previously selected by a simple click on the field.
+Also for a geographical dimension is possible to add fields to the query, including *Calculated* fields. This functionality is the same as shown before, as the three dots menu of the Advanced view contains the **Calculated field** option. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields. In this case, the wizard offers a set of spatial functions that can be used in your formula.
 
 .. _calculfldwizardspt:
-.. figure:: media/image219.png
+.. figure:: media/image219_8.1.png
 
     Calculated field wizard with spatial filters.
 
-In addition note that the **Items** panel provides all the applicable functions sorted by categories:
+Remember to select *SPATIAL* from the Category menu list to see all the spatial functions. Drag and drop the fields and your function(s) to the text editor and refer to the Oracle function description for a proper use.
 
--  aggregation functions,
--  string functions
--  time functions,
--  spatial functions,
--  sql functions,
--  custom function (if they are registered).
+.. figure:: media/spatialFunctions_8.1.png
 
-.. warning::
-     **Take into account the Oracle function definition**
-
-         It is important to refer to Oracle Documentation to know the arguments, in terms of type and number, of each function to                assure the right functioning and do not occur in errors while running the Qbe document.
-
-The latter are available only in the presence of a geographical Business Model and *must* be properly applied to spatial attributes or measures. Figure below shows the list of the available spatial functions while next table helps you to use them properly, supplying the corresponding Oracle function name and a link to grab more specific information about usage, number of arguments, type and output.
-
-.. figure:: media/image220.png
-
-    Spatial function list.
-
-.. _linkoraclesptfnct:
-.. table:: Link to Oracle spatial functions.
-         :widths: auto
-
-         +-----------------------+-----------------------+
-         |    Function Name      | Oracle Function       |
-         +=======================+=======================+
-         |    **distance**       | SDO_GEOM.SDO_DISTANCE |
-         +-----------------------+-----------------------+
-         |    **dimension**      | GET_DIMS              |
-         +-----------------------+-----------------------+
-         |    **centroid**       | SDO_GEOM.SDO_CENTROID |
-         +-----------------------+-----------------------+
-         |    **geometrytype**   | GET_GTYPE             |
-         +-----------------------+-----------------------+
-         |    **length_spa**     | SDO_GEOM.SDO_LENGTH   |
-         +-----------------------+-----------------------+
-         |    **relate**         | SDO_GEOM.RELATE       |
-         +-----------------------+-----------------------+
-         |    **intersection**   | SDO_GEOM.INTERSECTION |
-         +-----------------------+-----------------------+
+    Spatial functions.
 
 
+In addition to the *SPATIAL* functions, the **Category** field provides some more options:
 
-To apply one function click on the function name and the “Operands selection window” wizard opens. Figure below shows an example for the funtion “Distance”. Fill in all boxes since all fields are mandatory.
-
-.. figure:: media/image221.png
-
-    Operands selection window.
-
-Finally you can use spatial function to add a calculated field, as shown below.
-
-.. figure:: media/image222.png
-
-    Example of added calculated field using a spatial function.
-
-As well as calculated fields it is possible to filter on spatial fields using specific geometric operators. Once again we report in Figure below the available geometric operator (you can find them scrolling the panel to the bottom) and report the link to the Oracle web pages in the next table.
-
-.. figure:: media/image223.png
-
-    Spatial filters.
-
-See the table below:
-
-.. _linkoraclefltrfnct:
-.. table:: Link to Oracle filter functions.
-         :widths: auto
-
-         +-----------------------+-----------------------+
-         |    Function Name      | Oracle Function       |
-         +=======================+=======================+
-         |    **touches**        | SDO_TOUCH             |
-         +-----------------------+-----------------------+
-         |    **filter**         | SDO_FILTER            |
-         +-----------------------+-----------------------+
-         |    **contains**       | SDO_CONTAINS          |
-         +-----------------------+-----------------------+
-         |    **covered by**     | SDO_COVEREDBY         |
-         +-----------------------+-----------------------+
-         |    **inside**         | SDO_INSIDE            |
-         +-----------------------+-----------------------+
-         |    **covers**         | SDO_COVERS            |
-         +-----------------------+-----------------------+
-         |    **overlaps**       | SDO_OVERLAPS          |
-         +-----------------------+-----------------------+
-         |    **equals to**      | SDO_EQUAL             |
-         +-----------------------+-----------------------+
-         |    **intersects**     | SDO_ANYINTERACT       |
-         +-----------------------+-----------------------+
-         |    **nn**             | SDO_NN                |
-         +-----------------------+-----------------------+
-
-
-
-Time functions for creating calculated fields
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. important::
-         **Enterprise Edition only**
-
-         Time functions are available only for Enterprise Edition with SI licence.
-
-If you have SI licence, in the qbe calculated field wizard there are available time functions.
-
-.. figure:: media/timeFunctions.png
-
-    Time functions.
-
-See the table below:
-
-.. _timefunctions:
-.. table:: Time functions.
-    :widths: auto
-
-    +-----------------------------------+-----------------------------------+
-    |    Function                       | Description                       |
-    +===================================+===================================+
-    |    **CURRENT_DATE()**             | Returns current date              |
-    +-----------------------------------+-----------------------------------+
-    |    **CURRENT_TIME()**             | Returns current time              |
-    +-----------------------------------+-----------------------------------+
-    |    **Hour(date)**                 | Returns hour from date            |
-    +-----------------------------------+-----------------------------------+
-    |    **Second(date)**               | Returns hour from date            |
-    +-----------------------------------+-----------------------------------+
-    |    **Year(date)**                 | Returns year from date            |
-    +-----------------------------------+-----------------------------------+
-    |    **Month(date)**                | Returns month from date           |
-    +-----------------------------------+-----------------------------------+
-    |    **Day(date)**                  | Returns day from date             |
-    +-----------------------------------+-----------------------------------+
-    |    **get_quarter(date)**          | Returns quarter of year for date  |
-    +-----------------------------------+-----------------------------------+
-    |    **get_week(date)**             | Returns week of year for date     |
-    +-----------------------------------+-----------------------------------+
-    |    **get_day_of_the_week(date)**  | Returns day of week for date      |
-    +-----------------------------------+-----------------------------------+
-    |    **add_days(date, num)**        | Add some days to date             |
-    +-----------------------------------+-----------------------------------+
-    |    **add_hours(date,num)**        | Add some hours to date            |
-    +-----------------------------------+-----------------------------------+
-    |    **add_months(date,num)**       | Add some months to date           |
-    +-----------------------------------+-----------------------------------+
-    |    **add_years(date,num)**        | Add some years to date            |
-    +-----------------------------------+-----------------------------------+
-    |    **subtract_years(date,num)**   | Remove some years from date       |
-    +-----------------------------------+-----------------------------------+
-    |    **subtract_days(date,num)**    | Remove some days from date        |
-    +-----------------------------------+-----------------------------------+
-    |    **subtract_months(date,num)**  | Remove some months from date      |
-    +-----------------------------------+-----------------------------------+
-    |    **subtract_hours(date,num)**   | Remove some hours from date       |
-    +-----------------------------------+-----------------------------------+
-    |    **datediff_in_days(date)**     | Difference in days between dates  |
-    +-----------------------------------+-----------------------------------+
-    |    **datediff_in_hours(date)**    | Difference in hours between dates |
-    +-----------------------------------+-----------------------------------+
-    |    **datediff_in_minutes(date)**  | Difference in mins between dates  |
-    +-----------------------------------+-----------------------------------+
-
-
-.. figure:: media/currentDate.png
-
-    Creating calculated field with function current_date().
-
-.. figure:: media/currentTime.png
-
-    Creating calculated field with function current_Time().
-
-.. figure:: media/hour.png
-
-    Creating calculated field with function hour(date).
-
-.. figure:: media/second.png
-
-    Creating calculated field with function second(date).
-
-.. figure:: media/year.png
-
-    Creating calculated field with function year(date).
-
-.. figure:: media/month.png
-
-    Creating calculated field with function month(date).
-
-.. figure:: media/day.png
-
-    Creating calculated field with function day(date).
-
-In the picture below, you can see list of all created calculated fields:
-
-.. figure:: media/advanceViewTime.png
-
-    List of created calculated fields.
-
-In the next picture you can see result of you query:
-
-.. figure:: media/previewTime.png
-
-    Result of the query.
+-  AGGREGATION functions,
+-  STRING functions,
+-  TIME functions,
+-  SQL functions,
+-  CUSTOM functions (if previously developed).
 
 
 Subqueries
