@@ -55,7 +55,9 @@ Editors will look like different, depending on the type of widget:
     Selected widget template.
 
 Use the *Save* icon to save the template.
-It's also possible to export a single template-
+It is also possible to export a single template.
+
+
 .. figure:: media/image3.png
 
     Toolbar icons.
