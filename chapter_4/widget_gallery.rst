@@ -55,8 +55,6 @@ Editors will look like different, depending on the type of widget:
     Selected widget template.
 
 Use the *Save* icon to save the template.
-It is also possible to export a single template.
-
 
 .. figure:: media/image3.png
 
@@ -65,19 +63,17 @@ It is also possible to export a single template.
 Dashboard gallery
 ---------------------------
 
-Inside a cockpit or the dashboard functionality, a new tab will be present when creating a new widget.
+When adding a widget in a dashboard (cockpit document), the wizard shows a *Gallery* tab, containing a first empty template and then a set of available templates showing their image, tags and eventually the description. 
+The empty template allows users to create a custom widget without starting from an already created template.
+The *Gallery* tab would not be available if any templates were not already formerly saved and therefore available to be used.
 
 .. figure:: media/image4.png
 
     New widget templates list.
 
-This tab will not be available when no template is defined and if the widget is opened after its first saving.
 
-The first template will always be empty, in order to allow users to create a custom widget without starting from a template.
-After the empty template, some other templates will be available showing the associate image, the tags formerly set and when hovering, the description of the template.
-
-Clicking on an item, the code set in the gallery management will be copied in the new widget template, to allow the customization of the widget.
-The user just needs to link the dynamic data or change some css code to create the desired widget.
+Clicking on a given template, the code is automatically copied in the new widget template.
+The user just needs to make some changes some to the code to customize and create the desired widget.
 
 .. figure:: media/image5.png
 
