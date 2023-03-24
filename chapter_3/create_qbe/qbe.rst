@@ -374,6 +374,14 @@ In addition to the *SPATIAL* functions, the **Category** field provides some mor
 -  SQL functions,
 -  CUSTOM functions (if previously developed).
 
+Time functions are only available for the Enterprise Edition with SI licence.
+
+In addition to calculated fields, it is possible to filter on spatial fields using specific geometric operators
+
+.. figure:: media/image223.png
+
+    Spatial filters.
+
 
 Subqueries
 ++++++++++
