@@ -23,6 +23,7 @@ To add a new connection, first add the relative JDBC driver to the folder ``TOMC
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
+
 .. figure:: media/image25_8.1.png
 
      Add a new data source
@@ -31,14 +32,10 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 
      Data source details.
 
-The detail page of each data source (on the right side as shown in the figures above) includes the following properties:
+Requested information to create a datasource:
 
-Label
-  Mandatory identifier of the data source.
-Description
-  Description of the data source.
-Dialect
-  The dialect used to access the database. Supported dialects are:
+**Name**, identifier of the data source.
+**Dialect**, used to access the database. Supported dialects are:
 
       .. table:: Certified Data Sources
          :widths: auto
@@ -81,28 +78,24 @@ Dialect
          | Azure Synapse         | -                 |
          +-----------------------+-------------------+
 
-Read Only
-   Available options are: *Read Only* and *Read-and-write*. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.
-Write
-   Default If a data source is set as *Write Default* then it is used by Knowage for writing temporary tables also coming from other *Read Only* data sources. Note that each Knowage installation can have only one *Write Default* data source.
-Type
-   The available options are
 
-      + If you want to define a direct **JDBC** connection, then you have to also set the following fields:
+**Read Only**, by default set to *Read Only*
+In case the data source is defined as *Read-and-write*, it will be used by Knowage to write temporary tables.
+**Type**, by default set to *JDBC*
+      + In case of a *JDBC* connection, additional fields to fill in are:
 
-         - **URL** Database URL. An example for MySQL databases is ``jdbc:mysql://localhost:3306/foodmart_key``
          - **User** Database username.
          - **Password** Database password.
          - **Driver** Driver class name. An example for MySQL databases is ``com.mysql.jdbc.Driver``.
-      + If instead you want to define a **JNDI** connection, fill in the following fields:
+      + In case of a *JNDI* connection, additional fields to fill in:
 
          - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
          - **Schema attribute** The name of the profile attribute that determines the schema name.
          - **JNDI NAME** It depends on the application server. For instance, for Tomcat 7 it has the format ``java:comp/env/jdbc/<resource_name>``. If the data source is multischema, then the string is ``java:comp/env/jdbc/<prefix>``.
 
-Once you have filled the form, you can test the new data source by clicking on the *Test* button at the top right corner of the page and then save it.
+Afterwards, test the new data source by clicking on the *Test* button at the top right corner of the page and then *Save* it.
 
-Now you are connected to your data and you can start a new Business Intelligence project with Knowage!
+Now you are connected to your data and you can start a new Business Intelligence project with Knowage.
 
 Big Data and NoSQL
 -------------------
@@ -112,7 +105,7 @@ In this section we describe how you can connect Knowage to different Big Data da
 .. important::
          **Enterprise Edition only**
 
-         Please note that these connections are available for products KnowageBD and KnowagePM only.
+         Please note that these connections are only available for products KnowageBD and KnowagePM.
 
 Hive
 ~~~~~~
