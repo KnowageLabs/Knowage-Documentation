@@ -7,13 +7,13 @@ Resource manager
 
          With the Knowage Community Edition the Resource Manager  will be able to manage just the **models** folder in order to define metadata for data mining analysis. With the Knowage Enterprise Edition,  will be able to manage all Knowage's installation resources.
 
-The **Resource Manager** functionality available under the **TOOLS** section of Knowage main menu, as shown in Figure below, allows you to manage all files within the Resources folder of the Knowage's installation. In next sections we will see in details how to use the Resource Manager feature.
+The **Resource Manager** functionality available under the **TOOLS** section of the Knowage main menu, allows the management of all files within the *Resources* folder of the Knowage installation.
 
 .. figure:: media/resource_mng_1_8.1.png
 
     Resource Manager from menu.
    
-As default, the system shows files starting by the root directory:
+By default, the system shows files starting by the root directory:
 
 .. figure:: media/resource_mng_2.png
 
@@ -22,7 +22,7 @@ As default, the system shows files starting by the root directory:
 Resource Manager functionalities
 --------------------------------
 
-The Resource Manager window diplays two sections: on the left the tree representing the existing system resources; on the right the details of the selected left-folder. On the right-top is available the current path:
+The Resource Manager window diplays two sections: on the left the tree structure representing the existing resource system; on the right the details of the selected folder.
 
 .. figure:: media/resource_mng_2_bis.png
 
