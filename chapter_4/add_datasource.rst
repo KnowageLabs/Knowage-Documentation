@@ -116,7 +116,7 @@ In this section we describe how you can connect Knowage to different Big Data da
 Hive
 ~~~~~~
 
-Apache Hive is a data warehouse infrastructure built on top of Hadoop for providing data summarization, query, and analysis. Apache Hive supports analysis of large datasets stored in Hadoop’s HDFS and compatible file systems such as Amazon S3 filesystem. It provides an   SQL-like language called HiveQL with schema on read and transparently converts queries to map/reduce, Apache Tez and Spark. All three execution engines can run in Hadoop YARN.
+Apache Hive is a data warehouse infrastructure built on top of Hadoop for providing data summarization, query and analysis. Apache Hive supports analysis of large datasets stored in Hadoop’s HDFS and compatible file systems such as Amazon S3 filesystem. It provides an   SQL-like language called HiveQL with schema on read and transparently converts queries to map/reduce, Apache Tez and Spark. All three execution engines can run in Hadoop YARN.
 
 Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you to use or the Apache one or the one specific of your distribution. In general the JDBC driver for Hive is composed by different .jars, and so you should deploy the JDBC driver with all dependencies in your application server. If you are creating a model you should create a new *Data Source Connection* and import the JDBC driver and all the dependencies.
 
@@ -153,7 +153,7 @@ Look at the Hive section for the details about parameters. The port in this case
 Impala
 ~~~~~~
 
-Impala (currently an Apache Incubator project) is the open source, analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it, with all dependencies, on the application server. The definition of the URL can be different between versions of the driver, please check on the Cloudera web site.
+Impala (currently an Apache Incubator project) is the open source, analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it with all the dependencies, on the application server. The definition of the URL can be different between versions of the driver, please check on the Cloudera web site.
 
 Example parameters for Impala connection are:
 
@@ -166,7 +166,7 @@ MongoDB
 
 MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling. MongoDB obviates the need for an Object Relational Mapping (ORM) to facilitate development.
 
-MongoDB is different from the other dbs Knowage can handle, because it doesn't provide a JDBC driver, but a Java connector. The MongoDB Java driver (at this moment version 3.5.0 is included) is already included inside Knowage so isn't required to download and add it to the application server.
+MongoDB is different from the other dbs that Knowage can handle, because it does not provide a JDBC driver, but a Java connector. The MongoDB Java driver (at this moment version 3.5.0 is included) is already included inside Knowage so no download is required to add it to the application server.
 
 Example parameters for the connection are:
 
@@ -174,7 +174,7 @@ Example parameters for the connection are:
 -  **Driver Class:** mongo;
 -  **Connection URL:** mongodb://localhost:27017/foodmart(please don't include user and password in this URL).
 
-Also please pay attention that the user must have the correct privileges to access the specified database. So for example on MongoDB you can create a user with this command on the Mongo shell:
+Please keep in mind that the user needs the correct privileges to access to the specified database. For example, on MongoDB you can create a user using this command on the Mongo shell:
 
 .. code-block:: javascript
    :linenos:
@@ -188,7 +188,7 @@ Also please pay attention that the user must have the correct privileges to acce
         }
       )
 
-Then you must create a role that is able to run functions (this is the way used by Knowage to run the code wrote in the MongoDB's dataset definition) and assign it to the user:
+Afterwards you must create a role that is able to run functions (this is the way used by Knowage to run the code wrote in the MongoDB's dataset definition) and assign it to the user:
 
 .. code-block:: javascript
     :linenos:
@@ -210,7 +210,7 @@ Apache Cassandra is an open source distributed database management system design
 
 There are different ways to connect Knowage to Cassandra.
 
-If you are using DataStax Enterprise you can use Spark SQL connector and query Cassandra using pseudo standard SQL (`https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md) <https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md>`__
+If you are working with DataStax Enterprise you can use Spark SQL connector and query Cassandra with pseudo standard SQL (`https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md) <https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md>`__
 
 Another solution is to download the JDBC Driver suitable for your Cassandra distribution and query Cassandra using the CQL language. You must deploy the JDBC driver with all dependencies in your application server (copy them into ``TOMCAT_HOME/lib`` folder and restart).
 
@@ -221,9 +221,9 @@ Unless you are using Spark SQL to read from Cassandra, the definition of a busin
 Google Big Query
 ~~~~~~~~~~~~~~~~
 
-Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
+Knowage supports Google Big Query datasources trough Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
 
-For example, to create a JDBC connection to a Google Big Query dataset using a service account you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
+For example, to create a JDBC connection to a Google Big Query dataset using a service account, you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
 
 .. code-block:: xml
 
@@ -238,7 +238,7 @@ Google Cloud Spanner
 
 Knowage supports Google Cloud Spanner datasources via the official open source JDBC driver: see `official documentation <https://cloud.google.com/spanner/docs/use-oss-jdbc>`_.
 
-For example, to create a JDBC connection to a Google Cloud Spanner dataset using a service account you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
+For example, to create a JDBC connection to a Google Cloud Spanner dataset using a service account, you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
 
 .. code-block:: xml
 
@@ -251,8 +251,8 @@ For example, to create a JDBC connection to a Google Cloud Spanner dataset using
 Amazon RedShift
 ~~~~~~~~~~~~~~~~
 
-Knowage supports Amazon RedShift datasources via Official v1 JDBC Driver: see `official reference <https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html>`_.
-According to documentation using JDBC drivers v1 a RedShift connection configuration can be done exactly like a PostgreSQL configuration.
+Knowage supports Amazon RedShift datasources through the Official v1 JDBC Driver: see `official reference <https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html>`_.
+According to the documentation related to the use of JDBC drivers v1, a RedShift connection configuration can be done exactly like a PostgreSQL configuration.
 You can test it creating an example db like this one:  `official sample testing db <https://docs.aws.amazon.com/redshift/latest/dg/c_sampledb.html>`_.
 To create a JDBC connection to an Amazon RedShift dataset using a RedShift-only connection you can add the following configuration to ``TOMCAT_HOME/conf/server.xml``:
 
