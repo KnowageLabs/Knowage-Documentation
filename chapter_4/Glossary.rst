@@ -88,12 +88,14 @@ The details of all the defined glossaries can be displayed just selecting **Glos
 
     Glossary Usage graphic interface.
 
+
 Select a glossary from the combobox available and search for a word inside the glossary. The page refreshes showing the links of that word with the components metioned above.
-In case of no links with i.e. a Table a message appears informing that tere are no links to the word.
 
-.. figure:: media/image465_8.1.png
+In case of no links with i.e. a Table, a message prompts informing that there are no links to the word.
 
-    Visualization of glossary details.
+.. figure:: media/no_links_table_8.1.png
+
+    No table links to words.
 
 
 Help Online functionality
