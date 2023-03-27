@@ -88,7 +88,8 @@ The details of all the defined glossaries can be displayed just selecting **Glos
 
     Glossary Usage graphic interface.
 
-Select a glossary from the combobox available and search for a word inside the glossary. The page refreshes showing the links of that word with the components metioned above
+Select a glossary from the combobox available and search for a word inside the glossary. The page refreshes showing the links of that word with the components metioned above.
+In case of no links with i.e. a Table a message appears informing that tere are no links to the word.
 
 .. figure:: media/image465_8.1.png
 
@@ -98,16 +99,16 @@ Select a glossary from the combobox available and search for a word inside the g
 Help Online functionality
 ---------------------------
 
-The user can inspect the association of a specific analytical element (dataset, document or model) by using the **Help Online** funcitonality. The latter can be reached:
+The user can view the association of a specific analytical element (dataset, document or model) by using the **Help Online** functionality from:
 
--  from the Document Browser,
--  from the toolbar of each document, once launched,
--  from every dataset,
--  from every entity of the Qbe model,
--  from Birt reports,
--  from the cockpit.
+-  the Document Browser,
+-  the toolbar of each document, once launched,
+-  every dataset,
+-  every entity of the Qbe model,
+-  Birt reports,
+-  the cockpit.
 
-As an example, we show in figure below the graphic interface the user will encounter once he/she has launched a document and wishes to use the Help Online functionality.
+As an example, the figure below shows the graphic interface that the user will see once launched a document and used the Help Online functionality.
 
 .. figure:: media/image474.png
 
