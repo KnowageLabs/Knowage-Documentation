@@ -7,11 +7,11 @@ Resource manager
 
          With the Knowage Community Edition the Resource Manager  will be able to manage just the **models** folder in order to define metadata for data mining analysis. With the Knowage Enterprise Edition,  will be able to manage all Knowage's installation resources.
 
-The **Resource Manager** functionality available under the **Tool** section of Knowage main menu, as shown in Figure below, allows you to manage all files within the Resources folder of the Knowage's installation. In next sections we will see in details how to use the Resource Manager feature.
+The **Resource Manager** functionality available under the **TOOLS** section of Knowage main menu, as shown in Figure below, allows you to manage all files within the Resources folder of the Knowage's installation. In next sections we will see in details how to use the Resource Manager feature.
 
-.. figure:: media/resource_mng_1.png
+.. figure:: media/resource_mng_1_8.1.png
 
-    Resource Manager from contextual menu.
+    Resource Manager from menu.
    
 As default, the system shows files starting by the root directory:
 
@@ -45,21 +45,22 @@ The tree shows exactly the phisical structure of the file system from the **reso
 
     Creation result.
 
-Pay attention that the new folder is created attached to the folder selected in the tree ('KNOWAGE-5058' in this case).
+The new folder will be created under the selected folder of the tree ( in this case, 'KNOWAGE-5058').
 
-Clicking on the “Download” icon on a specific folder you can download all files contained :
+By clicking on the *Download* icon of a specific folder, you can download all files contained:
 
 .. figure:: media/resource_mng_tree_1.png
 
     Download functionality icon.
    
-Give a name, select a folder for the download  and the zip file will be available on your local system.
+Select a folder for the download and give a name to the zip file to be available in your local system.
 
 .. figure:: media/resource_mng_3.png
 
     Download functionality.
 
-Clicking on the "Delete" icon on a specific folder you can remove folder fisically from the Knowage server (after confirmed the operation). Please attention because this is an irreversible operation.
+By clicking on the *Delete* icon of a specific folder, the folder can be fisically removed from the Knowage server after confirming the operation.
+Please remember that the deletion of a folder is an irrecoverable operation.
 
 .. figure:: media/resource_mng_tree_2.png
 
@@ -72,19 +73,19 @@ Clicking on the "Delete" icon on a specific folder you can remove folder fisical
 
 **Detail panel**
 
-When a folder is selected, the right panel shows all files it contains. For each one shows Name, Size and Last Modified Date:
+When a folder is selected, the right panel shows the properties *Name*, *Size* and *Last Modified Date* of all contained files.
 
 .. figure:: media/resource_mng_6.png
 
     Detail view.
 
-All items are checkable, this permits you to select which ones you want download or remove throught specific icons in the toolbar:
+All items are selectable for downloading or removal trough specific icons of the toolbar.
 
 .. figure:: media/resource_mng_7.png
 
-   Massive functionalities available for selected files
+   Functionalities available for selected files
 
-If you want, you can too add one or more files directly throught the **Upload** icon on the top of the list:
+An **Upload** functionality is also available through a dedicated icon. See image below.
 
 .. figure:: media/resource_mng_5.png
 
