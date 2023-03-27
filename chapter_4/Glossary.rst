@@ -6,21 +6,21 @@ The **Glossary** functionality offers a way to find documents by browsing an ind
 Glossary management
 ---------------------
 
-The Glossary management is split in two section. Once logged in, the user can find the two menu items: **Glossary Definition** and **Glossary Usage**, as showed below.
+Once logged in, the user can find the two menu items, **Glossary Definition** and **Glossary Usage** in *CATALOGS* of the Knowage main menu, as showed below.
 
-.. figure:: media/image456.png
+.. figure:: media/image456_8.1.png
 
     Glossary menu items.
 
-To create a new glossary, click on the Glossary Definition menu item that you can find under the **Catalogs** section of the Knowage
-interface. As shown in the figure below the page contains two areas:
+To create a new glossary, click on the *Glossary Definition* menu item.
+As shown in the figure below, the page contains two areas:
 
-- **Word**: here there is a list of terms. The latter are used as labels to attach to analytical objects as datasets or documents in order to link those objects to the glossary;
+- **Words List**: contains the list of all the defined words to be used as labels to attach to analytical objects, as datasets or documents;
       
-- **Glossary**: it is intended a hierarchical structure made up of “Words”.
+- **Glossary**: intended as a hierarchical structure made up of *Words*.
 
 .. _glossarydefwindow:
-.. figure:: media/image457.png
+.. figure:: media/image457_8.1.png
 
     Glossary definition window.
 
