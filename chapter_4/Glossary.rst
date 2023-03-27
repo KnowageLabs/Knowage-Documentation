@@ -75,7 +75,7 @@ The image below shows the *ADD Node* functionality and also how to add words to 
 Glossary Usage
 -------------------
 
-This functionality works accordingly to the user role and it includes features that allow to visualiza the associations of the words of a glossary to:
+This functionality works accordingly to the user role and includes features that allow to visualize the associations of the words of a glossary to:
 
 -  documents,
 -  datasets,
@@ -88,7 +88,7 @@ The details of all the defined glossaries can be displayed just selecting **Glos
 
     Glossary Usage graphic interface.
 
-Select a glossary from the combobox available to show the details.
+Select a glossary from the combobox available and search for a word inside the glossary. The page refreshes showing the links of that word with the components metioned above
 
 .. figure:: media/image465_8.1.png
 
