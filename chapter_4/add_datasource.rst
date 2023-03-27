@@ -30,7 +30,7 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 
 .. figure:: media/image26_8.1.png
 
-     Data source details.
+     Data source details - JDBC.
 
 Requested information to create a datasource:
 
@@ -93,7 +93,14 @@ In case the data source is defined as *Read-and-write*, it will be used by Knowa
          - **Schema attribute** The name of the profile attribute that determines the schema name.
          - **JNDI NAME** It depends on the application server. For instance, for Tomcat 7 it has the format ``java:comp/env/jdbc/<resource_name>``. If the data source is multischema, then the string is ``java:comp/env/jdbc/<prefix>``.
 
-Afterwards, test the new data source by clicking on the *Test* button at the top right corner of the page and then *Save* it.
+
+.. figure:: media/image_JNDI_8.1.png
+
+     Data source details - JNDI.
+
+
+
+After filling in all the necessary information, test the new data source by clicking on the *Test* button at the top right corner of the page and then *Save* it.
 
 Now you are connected to your data and you can start a new Business Intelligence project with Knowage.
 
