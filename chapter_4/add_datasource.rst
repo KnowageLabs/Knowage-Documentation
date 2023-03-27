@@ -84,14 +84,13 @@ In case the data source is defined as *Read-and-write*, it will be used by Knowa
 **Type**, by default set to *JDBC*
       + In case of a *JDBC* connection, the fields to fill in are:
 
-         - **User** Database username.
-         - **Password** Database password.
-         - **Driver** Driver class name. An example for MySQL databases is ``com.mysql.jdbc.Driver``.
+         - **User**, Database username.
+         - **Password**, Database password.
+         - **Driver**, Driver class name. An example for MySQL databases is ``com.mysql.jdbc.Driver``.
       + In case of a *JNDI* connection, the fields to fill in are:
 
-         - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
-         - **Schema attribute** The name of the profile attribute that determines the schema name.
-         - **JNDI NAME** It depends on the application server. For instance, for Tomcat 7 it has the format ``java:comp/env/jdbc/<resource_name>``. If the data source is multischema, then the string is ``java:comp/env/jdbc/<prefix>``.
+         - **Multischema**, if *checked*, the JNDI resource full name is calculated at runtime by appending a user profile attribute (specified in the *Multischema attribute* field) to the JNDI base name, defined in the server.xml.
+         - **JNDI Name**, depends on the application server. For instance, in case of Tomcat 7, the format ``java:comp/env/jdbc/<resource_name>`` is used. If the data source is multischema, then the format is ``java:comp/env/jdbc/<prefix>``.
 
 
 .. figure:: media/image_JNDI_8.1.png
