@@ -82,12 +82,12 @@ Requested information to create a datasource:
 **Read Only**, by default set to *Read Only*
 In case the data source is defined as *Read-and-write*, it will be used by Knowage to write temporary tables.
 **Type**, by default set to *JDBC*
-      + In case of a *JDBC* connection, additional fields to fill in are:
+      + In case of a *JDBC* connection, the fields to fill in are:
 
          - **User** Database username.
          - **Password** Database password.
          - **Driver** Driver class name. An example for MySQL databases is ``com.mysql.jdbc.Driver``.
-      + In case of a *JNDI* connection, additional fields to fill in:
+      + In case of a *JNDI* connection, the fields to fill in are:
 
          - **Multischema** Available options are *Yes* or *No*. If *Yes*, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the *Multischema attribute* field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.
          - **Schema attribute** The name of the profile attribute that determines the schema name.
