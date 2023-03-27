@@ -95,13 +95,13 @@ An **Upload** functionality is also available through a dedicated icon. See imag
 
    Selection file popup
 
-In this context, if you upload a zip file, you are able to choose if you want to mantein the file zipped:
+In case of a zipped file want to be uploaded, it is possible to keep the file zipped.
 
 .. figure:: media/resource_mng_5_ter.png
 
    Uploaded zipped file
 
-or if you want unzip it throught the selection of 'Extract Files' option in the popup:
+It is also possible to unzip the file to upload selecting the *Extract Files*. See figure below.
 
 .. figure:: media/resource_mng_5_quat.png
 
@@ -113,9 +113,9 @@ or if you want unzip it throught the selection of 'Extract Files' option in the 
 
 **Model Metadata Definition**
 
-As already told at the beginning, **models** is the unique folder managed both by the Community and the Enterprise Edition. It contains all data-mining models usable by the Knowage Function Catalog.
+As already told at the beginning, **models** is the unique folder managed both by the Community and the Enterprise Edition. It contains all the data-mining models usable by the Knowage Function Catalog.
 
-For each model is possible to define its metadata, download and/or delete the model using directly the tree options:
+For each model it is possible to define its metadata, download and/or delete the model using directly the tree options:
 
 .. figure:: media/resource_mng_8.png
 
