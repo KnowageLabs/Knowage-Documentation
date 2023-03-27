@@ -101,19 +101,19 @@ In case of a zipped file want to be uploaded, it is possible to keep the file zi
 
    Uploaded zipped file
 
-It is also possible to unzip the file to upload selecting the *Extract Files*. See figure below.
+It is also possible to unzip the file to upload by enabling the *Extract Files* option. See figure below.
 
 .. figure:: media/resource_mng_5_quat.png
 
-   Upload unzipped file
+   Uploading an unzipped file
 
-.. figure:: media/resource_mng_3_bis.png
+.. figure:: media/resource_mng_3_8.1.png
 
-   Uploaded unzipped files result
+   Results of uploading an unzipped file
 
 **Model Metadata Definition**
 
-As already told at the beginning, **models** is the unique folder managed both by the Community and the Enterprise Edition. It contains all the data-mining models usable by the Knowage Function Catalog.
+As already told at the beginning, **models** is the unique folder managed by both the Community and the Enterprise Edition. It contains all the data-mining models usable by the Knowage Function Catalog.
 
 For each model it is possible to define its metadata, download and/or delete the model using directly the tree options:
 
@@ -123,18 +123,8 @@ For each model it is possible to define its metadata, download and/or delete the
 
 *Metadata management*
 
-The **Metadata** option opens a gui in which the user can defines metadata information about the model in use.
+The **Metadata** option opens a GUI where the user can define the metadata information for the model, into the specific see image below:
    
-So, it's possible insert:
-   - a more specific Name for the model
-   - the Version number of the model
-   - the Type of analytics: a value selectable between 'Descriptive', 'Predictive' and 'Prescriptive'
-   - an image to represent the logic of the model uploadable througth the specific icon
-   - a detailed description
-   - information about the Accuracy and then Performance for the model
-   - information about the way of usage of the model
-   - information about formats for input and output data
-
 .. figure:: media/resource_meta_4.png
 
    Metadata example
