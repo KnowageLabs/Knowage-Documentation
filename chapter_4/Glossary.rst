@@ -24,53 +24,53 @@ As shown in the figure below, the page contains two areas:
 
     Glossary definition window.
 
-In the following we give some more technical information about these two sections.
+As shown above, next to each word, there are two icons:
+
+- *i*: prompts the details of the selected word: name of the *Word*, *Status*, *Category*, *Description*, *Formula*, *Links* to other words and *Attributes*
+      
+- *delete*: deletes the selected word
 
 In the “Word” area are listed, if any, the words created in a previous moment. To explore the detail of each of them, the user just has to right click on it. A panel containing three features will be shown, as figure below highlights .
 
-.. figure:: media/image458.png
+.. figure:: media/image458_8.1.png
 
-    Exploring an existing word.
+    Exploring the details of an existing word.
 
-When exploring the detail a wizard will pop up showing the following characteristics:
 
--  description,
--  state,
--  category,
--  a formula description,
--  a list of links to other words,
--  a list of attributes which can be added a value to.
-
-The same panel can be used to modify or delete the word.
-
-To add a new word, click on the “Plus” icon available in the right up corner of the “Word” area as the figure below shows. A format will be open in the right half part of the screen. Insert “Name” and “Description”, which are all mandatory fields and add additional details by necessity. Then click on the Save button. Observe that it is possible to look a “Word” up using the dedicated filter available at the top of the Words list. Type a string in the box and the research will start automatically. Remember to cancel the string from the box to get back to the entire list.
+To add a new word, click on the *Plus* icon available next to the *Word List* text item an fill in at leats the mandatory information,*Word*, *Category* and *Description*.
+Use the *Save* button to save it a. 
+Once saved, you can search for it or a different word just using the search filter.
 
 .. _addanewword:
-.. figure:: media/image459.png
+.. figure:: media/image459_8.1.png
 
     Add a new word.
 
-In the “Glossary” area are listed, if any, all glossaries created in a previous moment. To explore an existing glossary the user must simply click on the item. Figure below shows an example. Here the hierarchical structure of the glossary is underlined. To add a new glossary click on the “Plus” icon at the right top corner of the designated area.
+The *Glossary* panel contains all the glossaries formerly created. To explore an existing glossary just open the menu of the *Glossary Definition* item and select one of the test options. The figure below shows an example. 
+A hierarchical structure of the glossary appears, where each node has its own words .
 
-.. figure:: media/image460.png
+.. figure:: media/image460_8.1.png
 
     Exploring a glossary from the menu.
 
-Right clicking on the glossary label as shown in the following figure (right side) the user can add a new child. The “New Node” wizard will open. It is mandatory to give a Name to the node while it is recommended to add a Code and a Description. Once the user has set the nodes, it is possible to add children or words to each of them.
+To add a new glossary click on the *Plus* icon next to the *Glossary Definition* text item.
 
 .. _newglossnewahild:
-.. figure:: media/image46162.png
+.. figure:: media/image46162_8.1.png
 
-    (Left) New glossary wizard. (Right) Add a new child to the glossary.
+   New glossary wizard.
 
-In particular, if one right clicks on the node name, as in the next figure, a panel will be opened. It allows the user to add one (or more) child or word to the node. In both cases, the user must fill in the mandatory fields. We remark that if the user chooses to add a word through the panel item, the word will be created from scratch and added to the Word list after saving it. To add an existing word the user has to drag and drop the word from the list to the node.
+After assigning a name to the *Glossary Definition* field, the Glossary is automatically saved.
+ 
+
+Click on *ADD NODE*, fill in the node name and save.
+The image below shows the *ADD Node* functionality and also how to add words to a node once created.
+
 
 .. _additemstonode:
-.. figure:: media/image463.png
+.. figure:: media/image463_8.1.png
 
-    Add items to the node(s).
-
-Complete the tree structure of the glossary. Use the panel features of each node or of the glossary itself (remember to right click on the items to get such a panel) to add, modify, inspect or delete elements.
+    Add items to the node(s) and words to nodes.
 
 Glossary Usage
 -------------------
