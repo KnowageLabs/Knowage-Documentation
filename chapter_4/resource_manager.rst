@@ -13,7 +13,7 @@ The **Resource Manager** functionality available under the **TOOLS** section of 
 
     Resource Manager from menu.
    
-By default, the system shows files starting by the root directory:
+By default, the system shows the files starting from the root directory:
 
 .. figure:: media/resource_mng_2.png
 
