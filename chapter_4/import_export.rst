@@ -8,9 +8,8 @@ Artifacts
 ~~~~~~~~~
 
 
-**Export**
-It is possibile to export widgets and functions existing within the Knowage installation.
-Select the items of your interest and click on *EXPORT* 
+It is possible to export widgets and functions existing within the Knowage installation.
+Select the items of your interest and click on *EXPORT*.
 
 .. figure:: media/impexp_gallery1.png
     
@@ -20,7 +19,7 @@ Select the items of your interest and click on *EXPORT*
     
     Artifacts Export - Items selection
 
-After the selection, give a name to the file and confirm.
+After the selection, give a name to the file and confirm with *Export* button.
 
 .. figure:: media/impexp_gallery3.png
     
@@ -28,7 +27,8 @@ After the selection, give a name to the file and confirm.
 
 **Import**
 
-Click on IMPORT, select the zip file, as shown below:
+If you move to a different tenant, you can import the zip file formerly exported. In this case, click on *IMPORT* and select the zip file, as shown below:
+
 .. figure:: media/impexp_gallery4.png
 
     Artifacts Import - Export file selection #1
@@ -38,14 +38,14 @@ Click on IMPORT, select the zip file, as shown below:
 
     Artifacts Import - Export file selection #2
 
-Clicking on *NEXT*, it is possible to see all the items available and choose which of them to import to the *target* Knowage environment.
+Clicking on *NEXT*, it is possible to see and select the items to be imported to the *target* Knowage environment.
 
 .. figure:: media/impexp_gallery6.png
 
     Artifacts Import - items selection
 
   
-Click on the *IMPORT* button to make widgets and functions in Knowage.
+Click on the *IMPORT* button to make selected widgets and functions available in the new environment.
 
 .. figure:: media/impexp_gallery7.png
 
