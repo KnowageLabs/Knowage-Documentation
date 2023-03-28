@@ -91,15 +91,15 @@ Before exporting you can decide whether to include or not the following options:
     Scheduled documents
 
 - **BIRT Translation**
-   Checking this property the export will include all the translation added into 'Localization' functionalities of the BIRT templates.
+   By checking this property, the export will include all the *translation* added into the *Localization* functionalities of BIRT templates.
 - **Schedule configurations**
-   Checking this property the export will include all the schedulation associated to the chosen documents. At the end of the import you must have the schedulation saved into Scheduler section under the Tools area.
+   By checking this property, the export will include all the scheduling associated to the selected documents. At the end of the import, the scheduling information will be saved into the Scheduler section.
 - **Export the document only in the selected functionality**
-   Checking this property the export will include documents only if they are inside a selected functionality.
+   By checking this property, the export will include documents only if they are inside a selected functionality.
 - **Related documents**
-   Checking this property the export will include documents linked by cross navigation to the selected ones.
+   By checking this property, the export will include all those documents linked through the cross navigation to the selected documents.
 
-Now you are ready to click on the export icon to generate and download the .zip.
+Now you are ready to click on the export icon to download the zip file.
 Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** > **Import\\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure below we show the document import interface.
 
 .. figure:: media/image68.png
