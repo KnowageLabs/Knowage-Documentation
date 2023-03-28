@@ -6,7 +6,7 @@ The **Glossary** functionality offers a way to find documents by browsing an ind
 Glossary management
 ---------------------
 
-Once logged in, the user can find the two menu items, **Glossary Definition** and **Glossary Usage** in *CATALOGS* of the Knowage main menu, as showed below.
+Once logged in, the user can find the two menu items, **Glossary Definition** and **Glossary Usage** in *CATALOGS* of the Knowage main menu, as shown below.
 
 .. figure:: media/image456_8.1.png
 
