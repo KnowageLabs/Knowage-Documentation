@@ -4,28 +4,30 @@ Server manager
 .. important::
          **Enterprise Edition only**
 
-         All the functionalities shipped within the Server Manager are available only with Knowage Enterprise Edition
+         Server Manager functionalities are only available with Knowage Enterprise Edition
 
-In the **Server Manager** menu panel you find some management functionalities.
+All the management functionalities can be found under **Server Manager** of the Knowage main menu.
 
-.. figure:: media/image60_bis.png
+.. figure:: media/image60_8.1.png
 
-    Server Manager Panel
+    Server Manager Functionalities
 
 Those about **Import/Export** let you export some configurations or elements from one installation to another. This can be helpful for example in managing a test and a production areas. We are going to give the full description of these functionalities in the following.
 
 Tenants Management
 ------------------
 
-We start this section underlining that only those users who have the superadmin role can use this functionality. **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones.
+This feature allows you to create or manage tenants.
+A tenant is typically a user who may or may not use specific product types or access some (or all) data sources within the same environment.
+The *Tenants* functionality is only available for the Knowage Enterprise Reporting (ER) license and users must have the superadmin role. 
 
-.. figure:: media/image61.png
+.. figure:: media/image61_8.1.png
 
     Tenants Management window.
 
 In the image above, on the left you have the list of existing tenants. On the top of such list it is available the **Search** box to help users to browse the tenants. When clicking on the “Plus” icon you can create a new tenant. A form opens on the right area. Insert a **Name** and a **Theme**. Then change tabs to set product types access and select which datasources are achievable.
 
-.. figure:: media/image6465.PNG
+.. figure:: media/image6465_8.1.png
 
     Product types tab (Left) Datasources tab (Right).
 
