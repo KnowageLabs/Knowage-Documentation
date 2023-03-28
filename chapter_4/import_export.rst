@@ -62,35 +62,29 @@ Click on the *IMPORT* button to make selected widgets and functions available in
 Documents
 ~~~~~~~~~
 
-This feature let you create and download a .zip of whole or a part of the documents existing in your Knowage installation. In this way you can upload it in another installation or keep it as backup.
+This feature allows to download a zip file of the whole or a part of the documents existing in your Knowage installation. 
 
-When you import, all the “objects” associated to those documents (such as datasets, lovs, drivers, roles and folders) are created. Instead users, menu configurations, KPI, catalog, glossary and alert are not exported with this tool.
-
-Let’s have a look on the steps to create the .zip.
-
-Below we show the export editor.
+Below, you can see how the export editor looks like.
 
 .. figure:: media/image67.png
 
     Document Export
 
-First of all choose the name to give to your exportation (i.e. if you choose MyFirstExport, you will create the ``MyFirstExport.zip``).
+Fill in the name of your export and select which documents to export. You can browse through folders by clicking on the relative icon. Check the items to include in the file.
+The export icon changes colour from grey to pink. This means that you can start exporting.
 
-Then select which documents do you want to export. You can browse the folder by clicking the folder icon. Choose the elements or folders you want to include by marking the related checkbox. A check in a parent folder will automatically select/deselect all its children folders/leaves.
-
-When you have chosen a name and selected some documents, the export icon change colour from grey to pink. This means all elements are set to start exporting.
-
-Before going on decide if you want to export **Olap customized View** and/or **Scheduled documents** and/or **BIRT Translation** and/or **Schedule configurations** and/or **Document only in the selected functionality**.
+Before exporting you can decide whether to include or not the following options:
 
 - **Olap customized View**
-   Checking this property the export will include all the customized views saved into the chosen OLAP documents. You can find the Customized View going on the OLAP Document Menu and clicking on *Show OLAP custom View*. See the figure below:
+   By checking this property, the export will include all the customized views saved into the selected OLAP documents. 
+   Customized views can be retrieved clicking on the option *Show OLAP custom View* of the Document Menu. See below image for more details:
 
 .. figure:: media/OCW.PNG
 
     Olap customized view
 
 - **Scheduled documents**
-   Checking this property the export will include all the scheduled execution saved into the chosen documents. You can find the scheduled execution going on the Document Menu and clicking on *Show Scheduled Execution*. See the figure below:
+   By checking this property, the export will include all the scheduled executions saved into the selected documents. You can find the scheduled executions clicking on the option *Show Scheduled Execution* of the Document Menu. See the figure below:
 
 .. figure:: media/SDOC.png
 
