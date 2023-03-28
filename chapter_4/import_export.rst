@@ -8,8 +8,10 @@ Artifacts
 ~~~~~~~~~
 
 
-It is possible to export widgets and functions existing within the Knowage installation.
-Select the items of your interest and click on *EXPORT*.
+**Export**
+
+It is possible to export widgets and functions to a zip file to use afterwards as a sourceto be imported to a different environment.
+As shown below, select the items of your interest and click on *EXPORT*.
 
 .. figure:: media/impexp_gallery1.png
     
@@ -27,7 +29,7 @@ After the selection, give a name to the file and confirm with *Export* button.
 
 **Import**
 
-If you move to a different tenant, you can import the zip file formerly exported. In this case, click on *IMPORT* and select the zip file, as shown below:
+You can import the zip file formerly exported just clicking on *IMPORT*. See below image:
 
 .. figure:: media/impexp_gallery4.png
 
@@ -38,7 +40,7 @@ If you move to a different tenant, you can import the zip file formerly exported
 
     Artifacts Import - Export file selection #2
 
-Clicking on *NEXT*, it is possible to see and select the items to be imported to the *target* Knowage environment.
+Clicking on *NEXT*, it is possible to see and select the items to be imported..
 
 .. figure:: media/impexp_gallery6.png
 
