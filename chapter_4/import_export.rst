@@ -213,10 +213,6 @@ In this section we describe how to manage the import/export of KPIs between two 
 
 The user must enter Knowage as administrator of the source tenant and click on **KPIs** from the *Import/Export* menu panel.
 
-.. figure:: media/image77.png
-
-    KPIs Import/Export from menu
-
 The page contains the *Export* and the *Import* tab, where the user can select the KPIs for the export/import respectively.
 
 .. figure:: media/image78.png
