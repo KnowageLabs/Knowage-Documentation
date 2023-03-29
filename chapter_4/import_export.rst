@@ -150,7 +150,7 @@ Click on *NEXT* as shown below.
     Menu Import
 
 
-After clicking on *NEXT*, you will be asked to map roles from source to target. If a role does match map any of the existing in the target one, it will be created.
+After clicking on *NEXT*, you will be asked to map roles from source to target. If a role does not match map any of the existing ones in the target environment, it will be created.
 
 .. figure:: media/image111.png
 
