@@ -75,7 +75,14 @@ This feature allows the management of Knowage licenses by adding, updating, down
 
 Events
 -------------------
-This feature allows search through all the events existing on the Knowage server, specifyinf a range of dates and the *type* of event.
+This feature allows to search through all the events (i.e. the scheduling of a report) existing on the Knowage server, specifying a range of dates and the *type* of event.
+Types of events are:
+
+- Scheduler
+- ETL
+- CommonJ
+- Data_Mining
+
 See below image.
 
 
