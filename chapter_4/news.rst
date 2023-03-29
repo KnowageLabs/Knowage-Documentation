@@ -24,7 +24,8 @@ To add a news, just click on the *plus* icon. Below, the information requested f
 -  **Expiration Date**, after this date the news will no longer be visible to the user
 -  **News Type**, three possible values between *News*, *Notification* and *Warning*
 -  **Content of the news**
--  **Activation of the news*
+-  **Activation of the news**
+-  **Roles Permissions**
     
 .. figure:: media/image03.png
 
