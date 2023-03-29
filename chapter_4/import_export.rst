@@ -150,17 +150,13 @@ Click on *NEXT* as shown below.
     Menu Import
 
 
-After clicking on *NEXT*, you will be asked to map roles from source to target. If a role does not match map any of the existing ones in the target environment, it will be created.
+After clicking on *NEXT*, you will be asked to map roles from *Source* to *Target*. If a role does not match map any of the existing ones in the target environment, it will be created.
 
 .. figure:: media/image111.png
 
    Menu Import Wizard
 
-In the first step of import procedure you'll see source-target comparison. In particular source tree contains menu that are in the package you are importing and target tree contains the menu already present in the target system.
-
-.. figure:: media/image112.png
-
-   Menu Import Wizard Tree comparison
+You can click on *START IMPORT*.
 
 Users
 ~~~~~
