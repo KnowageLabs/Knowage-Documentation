@@ -184,15 +184,23 @@ Now click on the *Start import* button and your users will be created. See figur
 Catalogs
 ~~~~~~~~
 
-You can export different types of catalogs (such as datasets catalogs, business models catalogs and so on) from one installation/tenant to another. See the figure below.
+This functionality allows to Export/Import the following elements:
 
-.. figure:: media/image75.png
+-  Datasets,
+-  Business models,
+-  Mondrian catalogs,
+-  Layers,
+-  SVG files.
+
+The details are shown in the below figure.
+
+.. figure:: media/image75_8.1.png
 
     Catalogs Export
 
-To generate the zip file, mark the items to include and fill in the export name. Save the export file somewhere in your local system. You can also include the personal folder of the selected users just machecking the option *Export Personal folder* checkbox and choose if also include snapshots and subviews.
+To generate the zip file, mark the items to include and fill in the export name. Save the export file in your local system. 
 
-To import the zip file, log in and select **Catalogs** and switch to the *Import* tab. Click on *Browse* and choose the file previously created through the exportation. Uploading the file, the list of available catalogs are displayed. Choose the ones to be imported, decide if you want to override them or just add the missing ones and then click on *Start import*. Your catalogs will be created in this environment.
+To import the zip file, log in to the source tenant, select **Catalogs** from the *Import/Export* menu and switch to the *Import* tab. Click on *Browse* and choose the file previously created through the exportation. Uploading the file, the list of available catalogs are displayed. Choose the ones to be imported, decide if you want to override them or just add the missing ones and then click on *Start import*. Your catalogs will be created in this environment.
 
 .. figure:: media/image76.png
 
@@ -209,7 +217,7 @@ The user must enter Knowage as administrator of the source tenant and click on *
 
     KPIs Import/Export from menu
 
-The page contains the **Export** and the **Import** tab, where the user can select the KPIs for the export/import respectively.
+The page contains the *Export* and the *Import* tab, where the user can select the KPIs for the export/import respectively.
 
 .. figure:: media/image78.png
 
@@ -315,22 +323,16 @@ Afterwards, connecting as admin to target tenant, the user selects the *Import* 
 
 The user uses the arrows to indicate the glossaries to consider for the import.
 
-Catalog
+Alerts
 ~~~~~~~~
 
-This functionality allows to Export/Import the following elements
+This functionality allows to Export/Import alerts.
 
--  Datasets,
--  Business models,
--  Mondrian catalogs,
--  Layers,
--  SVG files.
+.. figure:: media/export_alerts_8.1.png
 
-Enter the **Import/Export catalog** menu item from Server Manager menu panel. The window will contain the Import and Export tabs. The export tab is used to produce the zip folder to be imported in the tenant of interest. Note that the user can apply a temporal filter to help him/her to look up elements in the list.
+    Export alerts
 
-.. figure:: media/image92.png
 
-    Import of catalog
+.. figure:: media/import_alerts_8.1.png
 
-The import requires the zip file to be uploaded, to check the elements to import, to map roles among tenants and to map datasources.
-
+    Import alerts
