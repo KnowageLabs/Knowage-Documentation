@@ -134,15 +134,23 @@ This feature lets you import/export the menu structure. The image below refers t
 
     Menu Export
 
-To start the export you need only to insert the Export name. Once inserted the name, the export icon changes color from grey to pink to let you understand all mandatory fields to start the export were filled. Click on this icon and the related .zip is downloaded.
+Fill in the name of the export file. Although the export icon changes color from grey to pink you need to select at least one item from the menu structure. 
 
-To upload it in another installation, accede to the **Import\\Export** Menu area and switch to the tab **import**. Here click on **Browse** to search in your folders the .zip previously created, see the following Figure.
+To upload the zip file generated with the above process, in another installation, just click on **Menu** of the **Import\\Export** item, switch to the **IMPORT** tab and click on *Browse* to search the zip file.
 
 .. figure:: media/image72.png
 
     Menu Import
 
-After clicking on "*START IMPORT*" menu items which match with existing ones will be override by the exported ones and menu items which don’t match with the existing ones will be added. You are asked to map roles from source to target. If a role doesn’t map any of the existing in the target one, it will be created.
+
+Click on *NEXT* as shown below.
+
+.. figure:: media/next_import_menu_8.1.png
+
+    Menu Import
+
+
+After clicking on *NEXT*, you will be asked to map roles from source to target. If a role does match map any of the existing in the target one, it will be created.
 
 .. figure:: media/image111.png
 
