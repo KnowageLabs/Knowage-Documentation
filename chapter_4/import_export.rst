@@ -83,7 +83,7 @@ The export icon changes colour from grey to pink. Before starting to export, you
    By checking this property, the export will include all the customized views saved into the selected OLAP documents. 
    Customized views can be retrieved clicking on the option *Show OLAP custom View* of the Document Menu. See below image for more details:
 
-.. figure:: media/OCW.png
+.. figure:: media/OCW_8.1.png
 
     Olap customized view
 
@@ -328,11 +328,11 @@ Alerts
 
 This functionality allows to Export/Import alerts.
 
-.. figure:: media/export_alerts_8.1.png
+.. figure:: media/export_alert_8.1.png
 
     Export alerts
 
 
-.. figure:: media/import_alerts_8.1.png
+.. figure:: media/import_alert_8.1.png
 
     Import alerts
