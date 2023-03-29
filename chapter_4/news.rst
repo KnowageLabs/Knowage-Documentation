@@ -18,7 +18,7 @@ A new page opens where the left side contains the list of all the already insert
 
     Access news management list.
     
-To add a news, just click on the *plus* icon. Below, the information requested for the addition of a new.
+To add a news, just click on the *plus* icon. Below, the information requested for the addition of a news.
 
 -  **News title**
 -  **Expiration Date**, after this date the news will no longer be visible to the user
@@ -26,7 +26,7 @@ To add a news, just click on the *plus* icon. Below, the information requested f
 -  **Content of the news**
 -  **Activation of the news*
     
-.. figure:: media/image03_8.1.png
+.. figure:: media/image03.png
 
     Access news management list.
     
