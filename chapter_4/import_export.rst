@@ -106,14 +106,14 @@ The export icon changes colour from grey to pink. Before starting to export, you
 
     Document Import
 
-You will be asked to match Roles, Engines, Datasources and Metadata from source to target.
+You will be asked to map *Roles*, *Engines*, *Datasources* and *Metadata* from *Source* to *Target*.
 
 .. figure:: media/image110.png
 
    Document Import Wizard
 
 If a role does not match any of the existing ones, the role will be created. 
-**Please bear in mind that all target metadata with the same label i.e. documents, lovs, drivers will be overwritten when importing**.
+**Please bear in mind that all the target metadata with the same label i.e. documents, lovs, drivers will be overwritten when importing**.
 
 .. figure:: media/image113.png
 
@@ -128,7 +128,7 @@ Before starting the import procedure, licenses are checked and if one or more ar
 Menu
 ~~~~
 
-This feature lets you export the menu structure.
+This feature lets you import/export the menu structure. The image below refers to the export funtionality.
 
 .. figure:: media/image71.png
 
