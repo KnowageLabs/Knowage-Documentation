@@ -12,7 +12,7 @@ Once logged in, the user can find the two menu items, **Glossary Definition** an
 
     Glossary menu items.
 
-To create a new glossary, click on the *Glossary Definition* menu item.
+To create a new glossary, just click on the *Glossary Definition* menu item.
 As shown in the figure below, the page contains two areas:
 
 - **Words List**: contains the list of all the defined words to be used as labels to attach to analytical objects, as datasets or documents;
@@ -75,7 +75,7 @@ The image below shows the *ADD Node* functionality and also how to add words to 
 Glossary Usage
 -------------------
 
-This functionality works accordingly to the user role and includes features that allow to visualize the associations of the words of a glossary to:
+This functionality works accordingly to the user role and includes features that allow to create/visualize the associations of the words of a glossary to:
 
 -  documents,
 -  datasets,
@@ -96,6 +96,23 @@ In case of no links with i.e. a Table, a message prompts informing that there ar
 .. figure:: media/no_links_table_8.1.png
 
     No table links to words.
+
+To associate the glossary to a specific component, just click on the *LINK* functionality next to each element.
+See figure below as example.
+
+.. figure:: media/links_dataset_1_8.1.png
+
+    Linking a word to a dataset .
+
+After clickin on *LINK*, a wizard opens. Here you can select the glossary and to associate the word it is enough to drag and drop it in the editor area of the chosen dataset.
+After closing the wizard, clicking on the *i* icon you can see the list of words associated.
+See image below:
+
+.. figure:: media/links_dataset_2_8.1.png
+
+    Linking a word to a dataset .
+
+
 
 
 Help Online functionality

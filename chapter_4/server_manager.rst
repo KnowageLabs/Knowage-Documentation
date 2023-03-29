@@ -37,10 +37,10 @@ Templates
 
 Each Knowage document is associated to a *template*. The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage Studio designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.
 
-The **Templates** functionality allows the deletion of all those documents whose templates have been created before a specific date. This kind of operation allows the administrator to clean the environment and save some space in the Knowage metadata database once a *document life cycle* is completed.
+The **Templates** functionality allows the deletion of all those templates that have been created before a specific date. This kind of operation allows the administrator to clean the environment and save some space in the Knowage metadata database once a *document life cycle* is completed.
 
-After inserting a date by clicking on the *calendar* icon, click on the *funnel* icon and select the documents of your interest. The *trash* icon deletes the template of the selected documents which were uploaded before the chosen date. If all the templates of a document precede the chosen date, the last template uploaded will be kept, so that no document is deleted accidentally. 
-We sum up the steps described in Figure below.
+After inserting a date by clicking on the *calendar* icon, click on the *funnel* icon and select the documents of your interest. The *Delete* button deletes the templates (of the selected documents), uploaded before the specified date. If all the templates of a document come first of the specified date, the last template uploaded will be kept, so that no document is accidentally deleted. 
+See figure below.
 
 .. figure:: media/image66_8.1.png
 
@@ -49,7 +49,7 @@ We sum up the steps described in Figure below.
 
 Themes
 -------------------
-This functionality allows the creation/management of themes to be used.
+This functionality allows the creation/management of themes to be used in the css style of your documents.
 
 .. figure:: media/themes_8.1.png
 
