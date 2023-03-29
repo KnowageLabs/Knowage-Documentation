@@ -1,7 +1,12 @@
 Import/Export
 --------------
 
-This functionality allows to import/export items to/from Gallery, Documents, Menu, Users, KPIs and Catalogs.
+This functionality allows to import/export items belonging to *Gallery*, *Documents*, *Menu*, *Users*, *KPIs* and *Catalogs*.
+
+
+.. figure:: media/ie_menu_8.1.png
+
+   Import/Export menu
 
 
 Artifacts
@@ -71,15 +76,13 @@ Below, you can see how the export editor looks like.
     Document Export
 
 Fill in the name of your export and select which documents to export. You can browse through folders by clicking on the relative icon. Check the items to include in the file.
-The export icon changes colour from grey to pink. This means that you can start exporting.
-
-Before exporting you can decide whether to include or not the following options:
+The export icon changes colour from grey to pink. Before starting to export, you can decide whether to include or not the following options:
 
 - **Olap customized View**
    By checking this property, the export will include all the customized views saved into the selected OLAP documents. 
    Customized views can be retrieved clicking on the option *Show OLAP custom View* of the Document Menu. See below image for more details:
 
-.. figure:: media/OCW.PNG
+.. figure:: media/OCW.png
 
     Olap customized view
 
@@ -99,30 +102,24 @@ Before exporting you can decide whether to include or not the following options:
 - **Related documents**
    By checking this property, the export will include all those documents linked through the cross navigation to the selected documents.
 
-Now you are ready to click on the export icon to download the zip file.
-Suppose you want to upload MyFirstExport.zip in another installation. Log in it and move to **Server Manager** > **Import\\Export Documents** area Switch to the **Import** tab and click on **Browse** to accede your personal folders. In Figure below we show the document import interface.
-
 .. figure:: media/image68.png
 
     Document Import
 
-Choose the .zip obtained from the **Export** phase and click on the import icon. Few steps guide you trough importation.
-You are asked to map from source to target: Roles, Engines, Datasources and Metadata.
+You will be asked to match Roles, Engines, Datasources and Metadata from source to target.
 
 .. figure:: media/image110.png
 
    Document Import Wizard
 
-If a role doesn’t map any of the existing in the target one, it will be created. **Please pay attention before starting the import because target metadata will be overwritten**: documents, lov, driver, etc. which has the same label of the exported ones will have metadata overwritten at the end of import procedure. After you have carefully checked, you can start import procedure by clicking on "*START IMPORT*"
-
-*Missing licenses*
-If one or more license is not valid or missing, during export procedure you'll be informed with an alert. Related documents cannot and won't be exported.
+If a role does not match any of the existing ones, the role will be created. 
+**Please bear in mind that all target metadata with the same label i.e. documents, lovs, drivers will be overwritten when importing**.
 
 .. figure:: media/image113.png
 
    Document Export Missing licenses
 
-Licenses are checked also during import procedure and, if one or more are missing or not valid, related documents will not be imported. These documents will be listed in the last phase before the beginning of the import procedure and for each one the invalid or missing license will be shown.
+Before starting the import procedure, licenses are checked and if one or more are missing or are not valid, the user will be informed with the list of all those documents that will not be imported. See image below.
 
 .. figure:: media/image114.png
 
@@ -131,7 +128,7 @@ Licenses are checked also during import procedure and, if one or more are missin
 Menu
 ~~~~
 
-This feature let you export the menu structure.
+This feature lets you export the menu structure.
 
 .. figure:: media/image71.png
 
