@@ -7,6 +7,7 @@ Data security and access management
    :caption: Table of Contents
    :maxdepth: 10
    
+   behavioural_model.rst
    role_user.rst
    driver.rst
    lov.rst
