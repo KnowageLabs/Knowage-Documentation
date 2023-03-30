@@ -284,7 +284,7 @@ It is possible to narrow the search of the analytical drivers by filtering on th
 
 Switch to the target tenant and log in as administrator. Use the Import tab to upload the zipped folder and finalize the import.
 
-Use the GUI to upload the zip file and specify if overwriting the existing analytical drivers or just adding the missing ones. Then click on *NEXT* and continue by mapping roles between source and target tenants.
+Use the GUI to upload the zip file and specify if overwriting the existing analytical drivers or just adding the missing ones. Then click on *NEXT* and continue by mapping roles between the source and the target tenants.
 
 .. figure:: media/image87.png
 
