@@ -34,8 +34,8 @@ By clicking the **Add** button on the top right corner of the left panel, an emp
 
 Requested information to create a datasource:
 
-**Name**, identifier of the data source.
-**Dialect**, used to access the database. Supported dialects are:
+- **Name**, identifier of the data source.
+- **Dialect**, used to access the database. Supported dialects are:
 
       .. table:: Certified Data Sources
          :widths: auto
@@ -79,9 +79,8 @@ Requested information to create a datasource:
          +-----------------------+-------------------+
 
 
-**Read Only**, by default set to *Read Only*
-In case the data source is defined as *Read-and-write*, it will be used by Knowage to write temporary tables.
-**Type**, by default set to *JDBC*
+- **Read Only/Read and write**, the option *Read Only* is set by default. In case the data source is defined as *Read-and-write*, it will be used by Knowage to write temporary tables.
+- **Type**, by default set to *JDBC*
       + In case of a *JDBC* connection, the fields to fill in are:
 
          - **User**, Database username.
@@ -97,7 +96,7 @@ In case the data source is defined as *Read-and-write*, it will be used by Knowa
 
      Data source details - JNDI.
 
-
+In case of checking the option *Use as cache*, the datasource will be used as cache in Knowage.
 
 After filling in all the necessary information, test the new data source by clicking on the *Test* button at the top right corner of the page and then *Save* it.
 
