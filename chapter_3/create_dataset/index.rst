@@ -1,5 +1,6 @@
 Create a new Data set
 ############
+A dataset allows you to read data from multiple sources and represents the portion of data used by the analytical documents. 
 
 .. toctree::
    :hidden:
