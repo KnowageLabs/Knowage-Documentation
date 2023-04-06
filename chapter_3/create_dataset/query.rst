@@ -27,8 +27,12 @@ In the script below we use JavaScript to dynamically modify the ``FROM`` clause 
          :caption:  Example of a script in a *Query* dataset
          :linenos:
 
-          if( isValid('year') == 1997 ) {
-            query = query.replace('FROM sales_fact_1998', 'FROM sales_fact_1997');
-          } else { 
-            query = query; // do nothing
-          }
+          if(isValid('year')) {		  
+		          if( parameters.get('year') == 1997 ) {
+                  query = query.replace('FROM sales_fact_1998', 'FROM sales_fact_1997');
+              } else { 
+                  query = query; // do nothing
+              }
+            }	  
+
+In the above example we use the function *isValid* to test if the parameter value contains a not null value.
