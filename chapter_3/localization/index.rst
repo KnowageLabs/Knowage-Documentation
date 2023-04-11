@@ -9,14 +9,43 @@ Knowage allows to change the *localization* in order to use different languages.
 The user can change the language to use in Knowage by doing the following:
 
 
-.. figure:: media/image001_8.1.png
+.. figure:: media/image000_8.1.png
 
     How to change language in Knowage.
 
 
 System labels
 ------------
+It is also possible to change the default language to use the first time the user logs in; to do this the admin needs to:
 
+-  Open the menu and select under Server Settings, Configuration Management
+-  Change the property SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default and insert the locale under the column *valueCheck* using the format languageCode, nationalVariety (e.g.: en,US)
+
+The currently supported languages for system labels are:
+-  Italian
+-  English
+-  French
+-  Spanish
+
+
+
+.. figure:: media/image000_8.3.png
+
+    Change default language.
+
+
+
+It is also possible to translate objects created by the user like:
+
+-  Analytical Driver name shown in the Parameter Panel
+-  Name and description of an analytical document
+-  Name of a menu entry
+-  Name of a dataset shown in the Workspace
+-  Name of a business model shown in the Workspace
+-  Name of a federation shown in the Workspace
+-  Name of a functionality (folder) in the document browser
+-  Name of a cross navigation when requested to a final user
+-  Inside a dashboard: Title of columns in a table widget and crosstab, title, subtitle, no data message, axis and legend title in the charts
 
 
 User labels
@@ -31,7 +60,7 @@ The name of the properties file is *messages_* plus the current locale, e.g. for
 
 
 
-.. figure:: media/image002_8.1.png
+.. figure:: media/image001_8.1.png
 
     BIRT Property Editor - Resources
 
@@ -39,7 +68,7 @@ The name of the properties file is *messages_* plus the current locale, e.g. for
 
 
 
-.. figure:: media/image003_8.1.png
+.. figure:: media/image002_8.1.png
 
     BIRT Property Editor - Localization
 
