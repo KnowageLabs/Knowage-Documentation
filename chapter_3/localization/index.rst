@@ -29,7 +29,7 @@ The currently supported languages for system labels are:
 
 
 
-.. figure:: media/image000_8.3.png
+.. figure:: media/image004_8.1.png
 
     Change default language.
 
@@ -50,6 +50,14 @@ It is also possible to translate objects created by the user like:
 
 User labels
 ------------
+To set *User labels*:
+
+-  Check the available languages under the Domains configuration in the Admin menu (see the entry with domain code LANG). The ValueCd must have the ISO code of the language (three letters).
+-  Inside the knowage metadata database the table SBI_I18N_MESSAGES contains the labels translations.
+        -  LANGUAGE_CD: must be the ID of the language from the SBI_DOMAINS table
+        -  LABEL: is the label name to be used as placeholder, must begin with i18n
+        -  MESSAGE: contains the translated string in that particular language that corresponds to that label
+        -  ORGANIZATION: the tenant name
 
 
 
@@ -65,6 +73,11 @@ The name of the properties file is *messages_* plus the current locale, e.g. for
     BIRT Property Editor - Resources
 
 
+The messages file has a syntax like this for each label, *message_code = internationalised message*
+For example: title_code = title of the document
+
+
+To localize a message in a field within a report template, the user needs to define the code filling the Text key field by clicking on the Localization voice under the field properties tab.
 
 
 
