@@ -18,7 +18,7 @@ How to use Knowage
    create_dossier/index.rst
    create_performance_indicator/index.rst
    create_etl_process/index.rst
-   how use localization/index.rst
+   localization/index.rst
    create_a_data-preparation/index.rst
 
 .. Indices and tables

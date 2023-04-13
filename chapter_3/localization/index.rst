@@ -1,4 +1,4 @@
-Localization Management
+How use Localization Management
 ############
 
 Knowage allows to change the *localization* in order to use different languages. We can distinguish two main categories:
