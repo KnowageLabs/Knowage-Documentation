@@ -1529,6 +1529,57 @@ To use the API the keyword is **datastore**. Datastore is an object that contain
     }
 	
 
+**selections**
+
+|   returns: an array with all the selections done; each selection has informations about the dataset where the selection has been done, the column e the value passed through the selection
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+   :linenos:
+
+    var activeSelection = datastore.selections;
+
+|   result:
+
+.. code-block:: javaScript
+	:linenos:
+
+	[
+		{
+			"ds": "FOODMART_SALES",
+			"column": "PRODUCT_FAMILY",
+			"value": "Food"
+		},
+		{
+			"ds": "FOODMART_COST",
+			"column": "QUARTER",
+			"value": "Q1"
+		}
+	]
+
+**parameters**
+
+|   returns: a key/value object with all the parameters associated to the dashboard
+|   params: no params
+|   example:
+
+.. code-block:: javaScript
+   :linenos:
+
+    var myParameters = datastore.parameters;
+
+|   result:
+
+.. code-block:: javaScript
+   :linenos:
+
+    {
+        "par_family": "Non-Consumable",
+        "par_number": 10
+    }
+
+
 It is also possible to interact with the other cockpit widgets, to do so it's possible to use the **clickManager**:
 
 .. code-block:: javaScript

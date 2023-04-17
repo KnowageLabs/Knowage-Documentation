@@ -5,15 +5,15 @@ Resource manager
 .. important::
          **Enterprise Edition only**
 
-         With the Knowage Community Edition the Resource Manager  will be able to manage just the **models** folder in order to define metadata for data mining analysis. With the Knowage Enterprise Edition,  will be able to manage all Knowage's installation resources.
+         The Knowage Community Edition only allows the management of the *models* folder, in order to define metadata for data mining analysis. The Knowage Enterprise Edition allows the management of all the Knowage installation resources.
 
-The **Resource Manager** functionality available under the **Tool** section of Knowage main menu, as shown in Figure below, allows you to manage all files within the Resources folder of the Knowage's installation. In next sections we will see in details how to use the Resource Manager feature.
+The **Resource Manager** functionality available under the **TOOLS** section of the Knowage main menu, allows the management of all files within the *Resources* folder of the Knowage installation.
 
-.. figure:: media/resource_mng_1.png
+.. figure:: media/resource_mng_1_8.1.png
 
-    Resource Manager from contextual menu.
+    Resource Manager from menu.
    
-As default, the system shows files starting by the root directory:
+By default, the system shows the files starting from the root directory:
 
 .. figure:: media/resource_mng_2.png
 
@@ -22,7 +22,7 @@ As default, the system shows files starting by the root directory:
 Resource Manager functionalities
 --------------------------------
 
-The Resource Manager window diplays two sections: on the left the tree representing the existing system resources; on the right the details of the selected left-folder. On the right-top is available the current path:
+The Resource Manager window diplays two sections: on the left the tree structure representing the existing resource system; on the right the details of the selected folder.
 
 .. figure:: media/resource_mng_2_bis.png
 
@@ -45,21 +45,22 @@ The tree shows exactly the phisical structure of the file system from the **reso
 
     Creation result.
 
-Pay attention that the new folder is created attached to the folder selected in the tree ('KNOWAGE-5058' in this case).
+The new folder will be created under the selected folder of the tree ( in this case, 'KNOWAGE-5058').
 
-Clicking on the “Download” icon on a specific folder you can download all files contained :
+By clicking on the *Download* icon of a specific folder, you can download all files contained:
 
 .. figure:: media/resource_mng_tree_1.png
 
     Download functionality icon.
    
-Give a name, select a folder for the download  and the zip file will be available on your local system.
+Select a folder for the download and give a name to the zip file to be available in your local system.
 
 .. figure:: media/resource_mng_3.png
 
     Download functionality.
 
-Clicking on the "Delete" icon on a specific folder you can remove folder fisically from the Knowage server (after confirmed the operation). Please attention because this is an irreversible operation.
+By clicking on the *Delete* icon of a specific folder, the folder can be fisically removed from the Knowage server after confirming the operation.
+Please remember that the deletion of a folder is an irrecoverable operation.
 
 .. figure:: media/resource_mng_tree_2.png
 
@@ -72,19 +73,19 @@ Clicking on the "Delete" icon on a specific folder you can remove folder fisical
 
 **Detail panel**
 
-When a folder is selected, the right panel shows all files it contains. For each one shows Name, Size and Last Modified Date:
+When a folder is selected, the right panel shows the properties *Name*, *Size* and *Last Modified Date* of all contained files.
 
 .. figure:: media/resource_mng_6.png
 
     Detail view.
 
-All items are checkable, this permits you to select which ones you want download or remove throught specific icons in the toolbar:
+All items are selectable for downloading or removal trough specific icons of the toolbar.
 
 .. figure:: media/resource_mng_7.png
 
-   Massive functionalities available for selected files
+   Functionalities available for selected files
 
-If you want, you can too add one or more files directly throught the **Upload** icon on the top of the list:
+An **Upload** functionality is also available through a dedicated icon. See image below.
 
 .. figure:: media/resource_mng_5.png
 
@@ -94,27 +95,27 @@ If you want, you can too add one or more files directly throught the **Upload** 
 
    Selection file popup
 
-In this context, if you upload a zip file, you are able to choose if you want to mantein the file zipped:
+In case of a zipped file want to be uploaded, it is possible to keep the file zipped.
 
 .. figure:: media/resource_mng_5_ter.png
 
    Uploaded zipped file
 
-or if you want unzip it throught the selection of 'Extract Files' option in the popup:
+It is also possible to unzip the file to upload by enabling the *Extract Files* option. See figure below.
 
 .. figure:: media/resource_mng_5_quat.png
 
-   Upload unzipped file
+   Uploading an unzipped file
 
-.. figure:: media/resource_mng_3_bis.png
+.. figure:: media/resource_mng_3_8.1.png
 
-   Uploaded unzipped files result
+   Results of uploading an unzipped file
 
 **Model Metadata Definition**
 
-As already told at the beginning, **models** is the unique folder managed both by the Community and the Enterprise Edition. It contains all data-mining models usable by the Knowage Function Catalog.
+As already told at the beginning, **models** is the unique folder managed by both the Community and the Enterprise Edition. It contains all the data-mining models usable by the Knowage Function Catalog.
 
-For each model is possible to define its metadata, download and/or delete the model using directly the tree options:
+For each model it is possible to define its metadata, download and/or delete the model using directly the tree options:
 
 .. figure:: media/resource_mng_8.png
 
@@ -122,18 +123,8 @@ For each model is possible to define its metadata, download and/or delete the mo
 
 *Metadata management*
 
-The **Metadata** option opens a gui in which the user can defines metadata information about the model in use.
+The **Metadata** option opens a GUI where the user can define the metadata information for the model, into the specific see image below:
    
-So, it's possible insert:
-   - a more specific Name for the model
-   - the Version number of the model
-   - the Type of analytics: a value selectable between 'Descriptive', 'Predictive' and 'Prescriptive'
-   - an image to represent the logic of the model uploadable througth the specific icon
-   - a detailed description
-   - information about the Accuracy and then Performance for the model
-   - information about the way of usage of the model
-   - information about formats for input and output data
-
 .. figure:: media/resource_meta_4.png
 
    Metadata example

@@ -8,6 +8,7 @@ Knowage management
    add_datasource.rst
    schedule.rst
    server_manager.rst
+   import_export.rst
    timespan.rst
    news.rst
    Glossary.rst
