@@ -51,19 +51,19 @@ Note that, since records are displayed in a plain table, it is available a combo
 
     Select one field from a combobox.
 
-JPivot Registry characteristics
+Pivot Registry characteristics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to implement also a JPivot Registry document. The graphical features are very similar to the ones exposed in *Registry development* paragraph. An example is given below.
+It is possible to implement also a Pivot Registry document. The graphical features are very similar to the ones exposed in *Registry development* paragraph. An example is given below.
 
 .. _examplejpivotregdoc:
 .. figure:: media/image349.png
 
-    Example of Jpivot Registry document.
+    Example of Pivot Registry document.
 
 In this case the table shows columns organized in a hierarchical way and a grouping function is implemented. From the left to the right the columns contain fields at different detail levels. The last column in our example in the figure above contains numeric data. Such a field is grouped at the “country” level. The grouping level depends on the configurations made on template building.
 
-In the JPivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented, filters are still available.
+In the Pivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented, filters are still available.
 
 
 Registry development
@@ -197,10 +197,10 @@ If your profile attribute is a multivalue one, you have to:
 In this way, profile attribute value will be treated as a list of values and filter will be applied with this criteria.
 
 
-JPivot Registry instance
+Pivot Registry instance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Registry instance allows to develop also a Jpivot table. See the last figure (above) to have an idea while the syntax example is given in the next code:
+The Registry instance allows to develop also a pivot table. See the last figure (above) to have an idea while the syntax example is given in the next code:
 
 .. code-block:: xml
     :linenos:
@@ -233,7 +233,7 @@ The Registry instance allows to develop also a Jpivot table. See the last figure
 		</REGISTRY>
 	</QBE>
 
-Note that to activate the JPivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
+Note that to activate the Pivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
 
 Logging & auditing
 -------------------
