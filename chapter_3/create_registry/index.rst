@@ -301,6 +301,7 @@ Auditing with table's technical columns
 -------------------
 
 Another simple audit mechanism is available, that enables also final users to:
+
 - discover the user who inserted a record and when;
 - discover the last user who modified a record and when;
 - discover the user who logically deleted (*) a record and when;
@@ -315,25 +316,26 @@ These information (except the logically deletion column) are set automatically b
 
    CREATE TABLE store_with_audit (
      store_id int NOT NULL,
-     store_name varchar(30) DEFAULT NULL,
+     store_name varchar(100) DEFAULT NULL,
      ... other stores related columns ...
-     user_in varchar(45) DEFAULT NULL,
-     user_up varchar(45) DEFAULT NULL,
-     user_de varchar(45) DEFAULT NULL,
+     user_in varchar(100) DEFAULT NULL,
+     user_up varchar(100) DEFAULT NULL,
+     user_de varchar(100) DEFAULT NULL,
      time_in datetime DEFAULT NULL,
      time_up datetime DEFAULT NULL,
      time_de datetime DEFAULT NULL,
      deleted tinyint(1) DEFAULT NULL
    )
 
-The meaning of the last columns is:
-- user_in: the user who inserted the record;
-- time_in: insertion timestamp;
-- user_up: the last user who modified the record;
-- time_up: last modification timestamp;
-- user_de: the user who logically deleted the record;
-- time_de: logical deletion timestamp;
-- deleted: boolean flag to represent if the record is logically deleted or not.
+The last columns are meant to contain:
+
+- ``user_in``: the user who inserted the record;
+- ``time_in``: insertion timestamp;
+- ``user_up``: the last user who modified the record;
+- ``time_up``: last modification timestamp;
+- ``user_de``: the user who logically deleted the record;
+- ``time_de``: logical deletion timestamp;
+- ``deleted``: boolean flag to represent if the record is logically deleted or not.
 
 Of course this is a simple audit management system, it cannot track all the records history: for example, only the last modification information is kept.
 
@@ -355,6 +357,7 @@ As you can see, the audit columns must have the "audit" attribute with one of th
 USER_INSERT, USER_UPDATE, USER_DELETE, TIME_INSERT, TIME_UPDATE, TIME_DELETE, IS_DELETED
 
 Some notes:
+
 - the audit columns are not mandatory: you can have a subset of those (for example you can have only insertion columns, or only deletion columns) or even none;
 - a record can be logically deleted but also reactivated: when a record is being reactivated, deletion user and time are reset to null;
 - all audit columns (except the "deleted" column) must be readonly; setting them as visible and editable is not permitted, since they are managed by KNOWAGE;
