@@ -289,13 +289,13 @@ Column property list
 As well, the user can employ each field property list (see next figure) to both inspect the object and custom it.
 
 .. _clmnproprtylist:
-.. figure:: media/image322.png
+.. figure:: media/image322_8.1.png
 
    Column property list.
 
 The **Structural** area covers an important role for the field properties. Here the user can set:
 
--  **Visibility** over the field,
+-  **Visibility** over the field by handling the contents of the field **Roles enabled**,
 -  **Type**, among measure, attribute, calendar, temporal_id, the_date and hour_id,
 -  **Aggregation type** for measure field type,
 -  **Format string**, to custom the format of the string for measure field type,
