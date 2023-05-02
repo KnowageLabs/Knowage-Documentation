@@ -111,9 +111,9 @@ As a result, when opening meta model, as soon as the user pick up a value from t
 Create an empty model
 ~~~~~~~~~~~~~~~~~~~~~
 
-The first time you enter the Meta Web, the interface (see Figure 10.2) will show you the available tables extracted from the selected data source.
+The first time you enter the Meta Web, the interface will show you the available tables extracted from the selected data source.
 
-.. figure:: media/image300.png
+.. figure:: media/metaweb.png
 
     Metaweb interface.
 
