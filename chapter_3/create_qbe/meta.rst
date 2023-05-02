@@ -113,7 +113,7 @@ Create an empty model
 
 The first time you enter the Meta Web, the interface will show you the available tables extracted from the selected data source.
 
-.. figure:: media/metaweb.png
+.. figure:: media/metaweb_8.1.png
 
     Metaweb interface.
 
