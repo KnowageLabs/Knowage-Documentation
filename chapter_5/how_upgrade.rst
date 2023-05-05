@@ -1,7 +1,7 @@
-How upgrade KNOWAGE
+How to upgrade KNOWAGE
 #############
 
-This section describes the main steps to manually update an existing Knowage installation, on top of the certified Apache Tomcat server, to the latest available version.
+This section describes the main steps to manually update an existing Knowage installation, on top of the certified Apache Tomcat server, to the latest available version. In case you are moving between 2 KNOWAGE versions with different certified Apache Tomcat servers, we recommend to follow all the instructions described on the manual installation section.
 
 Pay attention to the fact that Knowage versions' names adhere to the Semantic Versioning 2.0.0.
 
@@ -60,6 +60,15 @@ To upgrade Knowage installation follow these steps:
    <Environment name="password_encryption_secret" description="File for security encryption location"
       type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
 
+-  in case you are upgrading from a version prior to 8.1.0, you need to add the ``symmetric_encryption_key`` system property in file ``TOMCAT_HOME/bin/setenv.sh`` or ``TOMCAT_HOME/bin/setenv.bat``; that property is required to encrypt/decrypt the JDBC data source passwords:
+
+.. code-block:: bash
+
+  export JAVA_OPTS="$JAVA_OPTS -Dsymmetric_encryption_key=<any random string>"
+  
+.. code-block:: bash
+
+   set JAVA_OPTS=%JAVA_OPTS% -Dsymmetric_encryption_key=<any random string>
 
 At this point, in some cases you need to deal with some configuration files, in particular when you modified the following files within the previous Knowage installation, then you need to restore those changes (after having unzipped the war files):
 
