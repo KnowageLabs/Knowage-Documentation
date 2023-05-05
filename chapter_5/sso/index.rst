@@ -1,4 +1,4 @@
-How configure the KNOWAGE Single Sign On
+How to configure the KNOWAGE Single Sign On
 ###########
 
 .. toctree::
