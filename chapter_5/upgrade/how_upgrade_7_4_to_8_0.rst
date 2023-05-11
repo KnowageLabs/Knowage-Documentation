@@ -1,9 +1,11 @@
 How to upgrade KNOWAGE 7.4 to 8.0
 #############
 
-This section describes the main steps to manually update an existing Knowage installation, on top of the certified Apache Tomcat server, to the latest available version. In case you are moving between 2 KNOWAGE versions with different certified Apache Tomcat servers, we recommend to follow all the instructions described on the manual installation section.
+This section describes the main steps to manually update an existing Knowage installation.
 
 Pay attention to the fact that Knowage versions' names adhere to the Semantic Versioning 2.0.0.
+
+First of all you need to update the Tomcat version to 9.0.*
 
 In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
 
