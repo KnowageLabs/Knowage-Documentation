@@ -77,7 +77,7 @@ Suppose you have to create a ppt/pptx file where to place the images relating to
     				<PLACEHOLDER value = "ph1"/>
     			<PLACEHOLDERS>
     			<PARAMETERS>
-    				<PARAMETER type="static" dossier_url_name="state" url_name="state" 
+    				<PARAMETER type="static" dossier_url_name="state" url_name="state"
             url_name_description="State" value="Canada"/>
     			</PARAMETERS>
     		</REPORT>
@@ -166,3 +166,89 @@ If you want to execute your document, you must enter a name for the activity and
     Dossier activity execution finished.
 
 Each line allows you to see useful information on the activity (such as the values of the drivers used for execution) by clicking on the info icon, download the processed file by clicking on the download icon and remove itself by clicking on the trash icon.
+
+Dossier Wizard
+----------------
+
+Starting from Knowage 8.2 it is possible to configure the dossier template document and his xml template easily using the Dossier Wizard.
+
+You can use this feature opening the wizard from a saved dossier document or directly from the workspace.
+
+Starting from a saved document
+------------------------------
+
+.. figure:: media/image004.png
+
+    Dossier document detail page. Click on Open Designer to open the Dossier Wizard.
+
+.. figure:: media/image005.png
+
+    Dossier Wizard first page.
+
+In the first Dossier Wizard page user can select a new document template (docx or pptx format) , input the image prefix (the prefix of images text placeholder, for example in our case "img") and the Uploadable/Downloadable feature, in order to allow user to download and update the document template inside the dossier document.
+
+.. figure:: media/image007.png
+
+    It is mandatory to select the images placeholder prefix.
+
+.. figure:: media/image006.png
+
+    This page will show image placeholders found inside the template document, the icon shows that they should be managed.
+
+In the next page if placeholders are found inside the template document, they are shown on the left side panel.
+In the central-right panel user can click on + button and add a source document in order to link it to the image placeholder.
+
+
+.. figure:: media/image008.png
+
+    After selecting the document, user can select the parameters (drivers or views) to be linked to the placeholder. In this example there are 2 drivers ("familia","categoria")
+
+When user selects the document and drivers, they will be shown on the panel and can be configurated as follows.
+Driver Link  Type can be of Dynamic, Static or Inherit type. Inherit type means that the parameter selected will be the same used in the source document selected.
+We kindly suggest to use "Inherit" for simplifying configuration assets.
+
+.. figure:: media/image009.png
+
+    User can select the Driver Type.
+
+.. figure:: media/image010.png
+
+    Driver Link Inherit type.
+
+On other hands user can select to link a VIEW from the source document to the image placeholder:
+
+.. figure:: media/image011.png
+
+    User can select the view linked to the document.
+
+If user wants to rollback and reset modification, he can click on "Reset placeholder" icon on the image placeholders panel.
+
+.. figure:: media/image012.png
+
+    Reset placeholder feature.
+
+After clicking on SAVE BUTTON, the xml template should be updated and visible on History-template panel:
+
+
+.. figure:: media/image013.png
+
+    Updated dossier xml template.
+
+Starting from the workspace
+------------------------------
+
+Another way to use the Dossier Wizard is starting from the Workspace.
+
+.. figure:: media/image014.png
+
+    Select "My Analysis" for starting a new Dossier document with Dossier Wizard.
+
+.. figure:: media/image015.png
+
+        Click on + button and select "Dossier".
+
+Note: End users can create dossier documents using views only. Drivers are not usable for end users.
+
+.. figure:: media/image016.png
+
+        Example of document with no views associated.
