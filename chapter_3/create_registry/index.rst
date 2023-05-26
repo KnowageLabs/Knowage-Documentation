@@ -51,19 +51,19 @@ Note that, since records are displayed in a plain table, it is available a combo
 
     Select one field from a combobox.
 
-JPivot Registry characteristics
+Pivot Registry characteristics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to implement also a JPivot Registry document. The graphical features are very similar to the ones exposed in *Registry development* paragraph. An example is given below.
+It is possible to implement also a Pivot Registry document. The graphical features are very similar to the ones exposed in *Registry development* paragraph. An example is given below.
 
 .. _examplejpivotregdoc:
 .. figure:: media/image349.png
 
-    Example of Jpivot Registry document.
+    Example of Pivot Registry document.
 
 In this case the table shows columns organized in a hierarchical way and a grouping function is implemented. From the left to the right the columns contain fields at different detail levels. The last column in our example in the figure above contains numeric data. Such a field is grouped at the “country” level. The grouping level depends on the configurations made on template building.
 
-In the JPivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented, filters are still available.
+In the Pivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented, filters are still available.
 
 
 Registry development
@@ -197,10 +197,10 @@ If your profile attribute is a multivalue one, you have to:
 In this way, profile attribute value will be treated as a list of values and filter will be applied with this criteria.
 
 
-JPivot Registry instance
+Pivot Registry instance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Registry instance allows to develop also a Jpivot table. See the last figure (above) to have an idea while the syntax example is given in the next code:
+The Registry instance allows to develop also a pivot table. See the last figure (above) to have an idea while the syntax example is given in the next code:
 
 .. code-block:: xml
     :linenos:
@@ -233,7 +233,7 @@ The Registry instance allows to develop also a Jpivot table. See the last figure
 		</REGISTRY>
 	</QBE>
 
-Note that to activate the JPivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
+Note that to activate the Pivot modality it is important to add the attribute type="merge" and have at least one numeric field. Furthermore the selected column fields must be hierarchically structured.
 
 Logging & auditing
 -------------------
@@ -295,3 +295,73 @@ pay attention to the JNDI name (in case you created the table within Knowage met
 - ``MODEL_NAME``: name of the business model
 - ``ATTRIBUTES_OLD``: previous attributes state in case of an UPDATE or DELETION
 - ``ATTRIBUTES_NEW``: new attributes state in case of an INSERTION or UPDATE
+
+
+Auditing with table's technical columns
+-------------------
+
+Another simple audit mechanism is available, that enables also final users to:
+
+- discover the user who inserted a record and when;
+- discover the last user who modified a record and when;
+- discover the user who logically deleted (*) a record and when;
+- logically delete a record.
+
+(*) Logical deletion means that the records is flagged as "deleted", but it is still physically stored within the database table.
+
+These information (except the logically deletion column) are set automatically by KNOWAGE when user interacts with the registry document, and then saved inside the same table the registry document is built upon. A suitable table has to contain some technical columns to be used specifically for auditing purposes: for example, consider the following table:
+
+.. code-block:: sql
+   :linenos:
+
+   CREATE TABLE store_with_audit (
+     store_id int NOT NULL,
+     store_name varchar(100) DEFAULT NULL,
+     ... other stores related columns ...
+     user_in varchar(100) DEFAULT NULL,
+     user_up varchar(100) DEFAULT NULL,
+     user_de varchar(100) DEFAULT NULL,
+     time_in datetime DEFAULT NULL,
+     time_up datetime DEFAULT NULL,
+     time_de datetime DEFAULT NULL,
+     deleted tinyint(1) DEFAULT NULL
+   )
+
+The last columns are meant to contain:
+
+- ``user_in``: the user who inserted the record;
+- ``time_in``: insertion timestamp;
+- ``user_up``: the last user who modified the record;
+- ``time_up``: last modification timestamp;
+- ``user_de``: the user who logically deleted the record;
+- ``time_de``: logical deletion timestamp;
+- ``deleted``: boolean flag to represent if the record is logically deleted or not.
+
+Of course this is a simple audit management system, it cannot track all the records history: for example, only the last modification information is kept.
+
+A valid template for this registry looks like:
+
+.. code-block:: xml
+    :linenos:
+    :caption: Example (b) of template code for Registry.
+
+    <COLUMN field="user_in" visible="true" editable="false" title="User insert" audit="USER_INSERT"	/>
+    <COLUMN field="user_up" visible="true" editable="false" title="User update" audit="USER_UPDATE"	/>
+    <COLUMN field="user_de" visible="true" editable="false" title="User delete" audit="USER_DELETE"	/>
+    <COLUMN field="time_in" visible="true" editable="false" title="Time insert" audit="TIME_INSERT"	/>
+    <COLUMN field="time_up" visible="true" editable="false" title="Time update" audit="TIME_UPDATE"	/>
+    <COLUMN field="time_de" visible="true" editable="false" title="Time delete" audit="TIME_DELETE"	/>
+    <COLUMN field="deleted" visible="true" editable="true"  title="Is deleted?" audit="IS_DELETED"	/>
+
+As you can see, the audit columns must have the "audit" attribute with one of the following admissible values (no other values are permitted):
+USER_INSERT, USER_UPDATE, USER_DELETE, TIME_INSERT, TIME_UPDATE, TIME_DELETE, IS_DELETED
+
+Some notes:
+
+- the audit columns are not mandatory: you can have a subset of those (for example you can have only insertion columns, or only deletion columns) or even none;
+- a record can be logically deleted but also reactivated: when a record is being reactivated, deletion user and time are reset to null;
+- all audit columns (except the "deleted" column) must be readonly; setting them as visible and editable is not permitted, since they are managed by KNOWAGE;
+- all audit columns can be set to be not visible; of course, setting the "deleted" column to be invisible does not make much sense, since it means that nobody will be able to exploit it and to logically delete records;
+- when cloning a record, audit columns are NOT cloned;
+- physical deletion is permitted, you can enable it in case you need.
+
