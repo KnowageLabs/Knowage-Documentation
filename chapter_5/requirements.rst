@@ -16,9 +16,9 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
    +===========================+=============+
    |    **Operating System**   | **Version** |
    +---------------------------+-------------+
-   |    CentOS                 | 7,8         |
+   |    CentOS                 | 7, 8        |
    +---------------------------+-------------+   
-   |    Windows                | 7 , 10      |
+   |    Windows                | 7, 10       |
    +---------------------------+-------------+
 
 .. table:: Compatible environments
@@ -31,7 +31,7 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
     +-----------------------------+-------------------+
     |    RHEL Red Hat Enterprise  | 7                 |
     +-----------------------------+-------------------+
-    |    Ubuntu                   | 18 LST            |
+    |    Ubuntu                   | 22.04 LST         |
     +-----------------------------+-------------------+
     |    Windows server           | 2019, 2012, 2008  |
     +-----------------------------+-------------------+
