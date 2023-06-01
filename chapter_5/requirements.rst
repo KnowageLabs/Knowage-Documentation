@@ -160,7 +160,7 @@ NodeJS requirements
 
          NodeJS is required only for Enterprise Edition.
 
-Knowage includes some NodeJS scripts that need to be executed with NodeJS 12 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
+Knowage includes some NodeJS scripts that need to be executed with NodeJS 14 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
 
 CentOS
 ~~~~~~~~~~~~
