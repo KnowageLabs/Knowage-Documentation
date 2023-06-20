@@ -745,50 +745,7 @@ And so on to the fourth subcategory. Selecting the “Back to: ...” icon avail
       .. warning::
          **This functionality is deprecated**
          
-         Design of stand alone charts is **deprecated** and may be removed in future releases, therefore we invite users to exploit the cockpit designer for charts instead.
-
-
-The previous chapters were dedicated to the end user approaching the Knowage Chart engine. We stressed how the final user must pass through the Cockpit interface to develop graphs. We want now spend some words about the developer experience. Indeed, if you are a technical user you can also create a chart as a stand alone document.
-
-Once you enter the Knowage environment with developer credentials, open the technical menu directly into the **Documents Development** area, as shown in Figure below.
-
-.. figure:: media/charts/image130.png
-
-    Documents Development.
-
-Then click on the “Plus” icon of the **Create Document** feature and select **Generic Document**.
-
-.. figure:: media/charts/image131.png
-
-    Create a new document.
-
-You will be asked to fill in the form. We give an example in the following figure.
-
-.. _documentdetailschart:
-.. figure:: media/charts/image132.png
-
-    Document Details.
-
-The fields marked with an asterisk are mandatory. Select the Chart type and engine. Choose the dataset with which you want to manage your analysis. Use the magnifier to choose among the available datasets. Remember to pick out in which folder you want your chart to be stored (see next figure) and finally save.
-
-.. _selectfolderforchart:
-.. figure:: media/charts/image133.png
-
-    Select the folder in which you want your chart to be saved.
-
-A new template can be generated through the editor clicking on **Template build** as showed below or a template previously created can be uploaded.
-
-.. figure:: media/charts/image134.png
-
-    Template build.
-
-If you choose to implement the new Chart through the Template Build feature, the steps to follow are exactly the same of those seen for the final user. In fact, once you click on the Template Build icon, you are redirected to the Chart designer. In this case, by the way, another functionality is enabled, the Cross Navigation.
-
-When you develop a standalone chart it is possible to add a cross navigation path to it. This means that, once the chart is launched, its elements becomes clickable and it redirects the user to a second document.
-
-For charts, documents outputs parameters are automatically generated during the creation of the document. Therefore you can define cross
-navigation in the default way, as explained in Cross Navigation.
-
+         Design of stand alone charts is **deprecated** and has been removed for this release.
 
 Table widget
 ~~~~~~~~~~~~
