@@ -268,8 +268,6 @@ In the next subsections, the available functionalities of the Structure, the Con
          Please note that the "Advanced" tab is available only in Knowage Enterprise Edition.
 
 
-Structure
-~~~~~~~~~
 
 The “Structure” tab of the designer is the core of the Chart development. Here it is possible and mandatory to choose the measures and the attributes. When selected, the tab shows a two axes panel. The horizontal axis indicates the X-axis where you must choose one or more attributes. As well, the left axis is the Y-axis and here you must choose measures. You can also insert manually the axis title for both the X and the Y axis if the chart is configured to have axis titles.
 
@@ -292,8 +290,6 @@ In this section it’s possible to customize the labels of the axis, titleand gr
 
     Series tooltip details.
 
-Configuration
-~~~~~~~~~~~~~
 
 The **Configuration** section contains options to define the generic style of the chart. Here you can set the dimensions of the chart, the background color, insert the title and subtitle and define their style, choose the series palette, associate a specific color to a particular serie or category, add and configure the legend. The listed options are an example of what you can configure in the tab.
 
@@ -318,9 +314,6 @@ With this new option it is possible to assign a specific color to a particular c
 To add a custom color simply write the category/serie value or name, select a color with the color piker and then click on the plus button. In the figure example it is assigned a color for each value of the ‘QUARTER’ category.
 
 Indeed, the options available in this tab change according to the chart selected enabling different configurations. See Chart types in detail for a detailed description of the specific options of each chart.
-
-Advanced options
-~~~~~~~~~~~~~~~~
 
 The **Advanced** tab contains some advanced options to more customize the chart. Here it is possible, for example, to set the tooltip options, the widget dimensions, if the chart is stacking or not, the grouping type.
 
@@ -352,10 +345,9 @@ The **min** and **max** options are under the path AXES_LIST -> AXIS -> 0 or ano
 
 Following, a description on how to create charts within the **Chart Engine** of Knowage.
 
-Traditional charts
-~~~~~~~~~~~~~~~~~~
+**Traditional charts**
 
-Knowage allows you to create the so-called traditional charts like bar, line, pie, radar and scatter chart in a fancy way.
+Knowage allows you to create the so-called *traditional charts* like bar, line, pie, radar and scatter chart in a fancy way.
 
 Each chart type is built on a specific dataset. Despite all, there are some general rules that can be applied to those “simplier” and common charts. The minimum requirement is to define/have a dataset with at least one attribute column and one measure column. Then you can select the type of chart you want to use from the **Chart** section; meanwhile using the **Structure** section you can fill in the category box with one or more attributes (typically these will be place in the X-axis) and in the series box with one or more measures (typically placed as Y-axis’ values). Refer to *Chart Structure* figure as example.
 
@@ -400,8 +392,7 @@ In **Advanced** section you can specify to align these axis to 0 (zero) value. I
  
 For pie chart inside **Advanced** section you can set configuration for your toolip: to show/hide absolute value and/or percentage. Inside **tooltip** property of serie object you can find properies **showAbsValueTooltip** and **showPercentageTooltip**.
 
-Scatter chart
-~~~~~~~~~~~~~
+**Scatter chart**
 
 A scatter chart is a graphical representation of scattering phenomenon of data. It is useful when the user wants to underlight the density of data upon certain spots to the detriment of readability of single points. If you select a scatter chart in the **Configuration** section you will have Ticks and Lables Details instead of Advanced Series Configuration. Be carefull to fill in the **Scatter configuration** with the **Zoom type**, as showed below.
 
@@ -411,8 +402,7 @@ A scatter chart is a graphical representation of scattering phenomenon of data. 
 
 You must check if you want that the values in the Y-axis start (or end) in the first (last) tick or in the first (last) value of the dataset and if you want that the last label of the category axis should be showed.
 
-Sunburst chart
-~~~~~~~~~~~~~~
+**Sunburst chart**
 
 The sunburst chart is a graph with a radial layout which depicts the hierarchical structure of data displaying a set of concentric rings. The circle in the center represents the root nodes, with the hierarchy moving outward from the center. The slices in the external rings are children of the slice in the inner circle which means they lie within the angular sweep of the inner circle. The area of each slice corresponds to the value of the node. Even if sunburst charts are not efficient space-wise, they enable the user to represent hierarchies in a more immediate and fascinating way.
 
@@ -467,8 +457,7 @@ In Figure below you find the sunburst obtained with data of :numref:`exampleofda
     
 Inside **Advanced** section you can set value for scale that will increase/decrease your chart. You need to set numeric value for property **scale**. 
 
-Wordcloud chart
-~~~~~~~~~~~~~~~
+**Wordcloud chart**
 
 The wordcloud chart is a graphic to visualize text data. The dimension of the words and colors depend on a specified weight or on the frequency of each word.
 
@@ -481,8 +470,7 @@ Switch to the **Configuration** section to set the generic configuration of the 
      Wordcloud chart specific configuration.
 
 
-Treemap chart
-~~~~~~~~~~~~~
+**Treemap chart**
 
 The treemap is a graphical representation of hierarchical data, which are displayed as nestled rectangles. Each branch of the tree is given by a rectangle, which is tiled with smaller rectangles representing sub-branches. The area of the rectangles is proportional to a measure specified by a numerical attribute. The treemap is usefull to display a large amount of hierarchical data in a small space.
 
@@ -498,8 +486,7 @@ In Figure below we show the Treemap resulting with data of our example
 
     From left to right: (a) Treemap. (b) Treemap sub-branches.
 
-Parallel chart
-~~~~~~~~~~~~~~
+**Parallel chart**
 
 The parallel chart is a way to visualize high-dimensional geometry and multivarious data. The axes of a multidimensional space are represented by parallel lines, usually equally spaced-out, and a point of the space is represented by a broken line with vertices on the parallel axes. The position of the vertex on an axis correspond to the coordinate of the point in that axis.
 
@@ -572,8 +559,7 @@ Therefore, select **parallel** as chart type using the designer interface, then 
 
 On the **Configuration** tab you can set the generic configuration for the chart and you must fill the **Series as filter column** filed under ”Limit configuration”. Under ”Tooltip configuration” there is new property available - **Maximum number of records to show tooltip**. It is used to limit showing tooltip in case there are lot of records returned from dataset, which make chart more readable. 
 
-Heatmap chart
-~~~~~~~~~~~~~
+**Heatmap chart**
 
 Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend. Each point of the Cartesian system is identified by a couple of attributes. Note that one attribute must be a datetime one. Meanwhile, each couple corresponds to a measure that serves to highlight the spot with a certain color according to the chosen gradient. Figure below gives an example of how an heatmap chart looks like inside Knowage.
 
@@ -609,8 +595,7 @@ some intermediate color to leave more contrast between them.
 
 Remember to edit both **Legend** and **Tooltip** configuration in the **Tooltip details** panel to improve the readability of the chart.
 
-Chord chart
-~~~~~~~~~~~
+**Chord chart**
 
 Chord diagram is a graph which allows to show relationship between entities and between data in a matrix. The entities can belong to an unique category while the arc be non-oriented or belong to two different categories. In this latter case, they have direct arcs. The data are arranged radially with arcs that represent the connection between points. The width of the arc connecting two points depends on the weight assigned to the edge connecting these two points. This graphic is usefull when you want to represent a large number of data in a small space.
 
@@ -673,8 +658,7 @@ Once you have selected the dataset open the designer and select chord chart type
 
     Chord configuration.
 
-Gauge chart
-~~~~~~~~~~~
+**Gauge chart**
 
 Gauge chart uses needles to show information as a dial reading. It allows to visualize data in a way that resembles a real-life speedometer needle. The value of the needle is read on a colored data scale. Colors are used to provide additional performance context (typically green for good and red for bad). This chart type usually is used in dashboards to show key performance indicators or any measure having reference values.
 
@@ -682,8 +666,8 @@ For gauge chart you should have only series items, the one that gives you values
 
 When you finished to set all the mandatory and optional parameters and configurations in the **Structure** tab you can select the **Configuration** tab and set the generic configuration of the chart.
 
-Bubble chart
-~~~~~~~~~~~~
+**Bubble chart**
+
 
 A bubble chart requires three dimensions of data; the x-value and y-value to position the bubble along the value axes and a third value for its volume, z-value. It is a generalization of the scatter plot, replacing the dots with bubbles. 
 
@@ -703,6 +687,7 @@ Inside X,Y,Z containers, user can put only **measure values**. Inside Categories
 
     Bubble tooltip.
 
+**Advanced functionalities**
 
 Inside **Advanced tab**, user can find configuration for **plotband** and **plotline** of xaxis and yaxis. 
 
@@ -724,9 +709,6 @@ User also has option for **splitting serie** by one of two categories. Split opt
 	
 Difference between **One category - split disabled** and **Two categories - split disabled** is what is present in the tooltip.
 
-
-A short comment on chart drill down
----------------------------------------
 
 Knowage **Chart Engine** allows you to drill down into categories. This means that the user can explore the details of each category as many times as configured. Indeed, to let the chart admits the drill down, it is necessary first that the chart in place allows it. Secondly the user must have dragged and dropped multiple attributes into the category axis in the **Configuration** tab. The order of the attributes in the X-axis panel determines the sequence in which the categories are going to be showed. When executing the chart the label of the category is linkable and it is possible to click on the label to drill down.
 
@@ -757,8 +739,8 @@ Once again, we can select ``Frozen food`` subcategory and drill to a second sub-
 
 And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to the previous level. This efficient feature allows the user to have a deep insight of the analysis and draw important conclusions from it.
 
-Stand alone charts
-------------------------
+**Stand alone charts**
+
 
       .. warning::
          **This functionality is deprecated**
