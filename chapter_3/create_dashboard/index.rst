@@ -739,14 +739,6 @@ Once again, we can select ``Frozen food`` subcategory and drill to a second sub-
 
 And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to the previous level. This efficient feature allows the user to have a deep insight of the analysis and draw important conclusions from it.
 
-**Stand alone charts**
-
-
-      .. warning::
-         **This functionality is deprecated**
-         
-         Design of stand alone charts is **deprecated** and has been removed for this release.
-
 Table widget
 ~~~~~~~~~~~~
 
