@@ -18,4 +18,4 @@ jobs:
       - name: Install rst
         run: pip install rstcheck rstcheck[sphinx]
       - name: Check rst files
-        run: 'find -name *.rst | xargs -L 1 rstcheck'
+        run: "find -name '*.rst' | xargs -L 1 rstcheck"
