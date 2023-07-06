@@ -22,7 +22,7 @@ You will now have to create a file called ``hmackey`` that contains the value of
 Run knowage-python webservice
 -----------------------------
 
-Once you have installed all the requirements, you need to get the python-webservice running. The Python service for KNOWAGE is a Flask application: please take a look at `the official documentation <https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment>`. In order to do so, you should rely on a WSGI Server.
+Once you have installed all the requirements, you need to get the python-webservice running. The Python service for KNOWAGE is a Flask application: please take a look at `the official documentation <https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment>`_. In order to do so, you should rely on a WSGI Server.
 
 On Linux with Gunicorn
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -70,7 +70,7 @@ If you are working on a Windows environment, take a look at `Waitress <https://d
 Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the following content:
 
 .. code-block:: python
-	import multiprocessing
+    import multiprocessing
 	from waitress import serve
 	import importlib
 
