@@ -10,8 +10,8 @@ Install knowage-python webservice
 The knowage-python package contains the source code of the webservice that has to be installed and run on the server. You can download it via ``pip`` with the command:
 
 .. code-block:: bash
-    
-	pip install knowage-python=={knowage_version_number}
+
+    pip install knowage-python=={knowage_version_number}
 	
 or simply you can find it in the Knowage-Server GitHub repository under the Knowage-Python folder.
 
@@ -57,7 +57,9 @@ First you need to create a configuration file called ``gunicorn.conf.py`` and pl
 Then to start the service run the following command inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder.
 
 .. code-block:: bash
-	/usr/local/bin/gunicorn -c file:gunicorn.conf.py knowage-python
+
+    /usr/local/bin/gunicorn -c file:gunicorn.conf.py knowage-python
+
 	/usr/local/bin/gunicorn --certfile cert.pem -c file:gunicorn.conf.py knowage-python
 
 You can now create a service to start/stop Gunicorn: see your operating system documentation for that.
@@ -70,7 +72,9 @@ If you are working on a Windows environment, take a look at `Waitress <https://d
 Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the following content:
 
 .. code-block:: python
+
     import multiprocessing
+
 	from waitress import serve
 	import importlib
 
@@ -86,7 +90,9 @@ Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the
 Then run:
 
 .. code-block:: shell
+
     python waitress_server.py
+
 
 Configure Knowage to enable Python/R functionalities
 -----------------------------------------------------
