@@ -42,25 +42,23 @@ First you need to create a configuration file called ``gunicorn.conf.py`` and pl
 .. code-block:: python
 
     import multiprocessing
-
-	bind = "0.0.0.0:5000"
-	workers = multiprocessing.cpu_count() * 2 + 1
-	timeout = 30
-	keepalive = 2
-	user = <user>
-	group = <group>
-	loglevel = 'info'
-	accesslog = '/var/log/gunicorn-access.log' 
-	errorlog = '/var/log/gunicorn-error.log' 
-	access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
+    bind = "0.0.0.0:5000"
+    workers = multiprocessing.cpu_count() * 2 + 1
+    timeout = 30
+    keepalive = 2
+    user = <user>
+    group = <group>
+    loglevel = 'info'
+    accesslog = '/var/log/gunicorn-access.log' 
+    errorlog = '/var/log/gunicorn-error.log' 
+    access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
 
 Then to start the service run the following command inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder.
 
 .. code-block:: bash
 
     /usr/local/bin/gunicorn -c file:gunicorn.conf.py knowage-python
-
-	/usr/local/bin/gunicorn --certfile cert.pem -c file:gunicorn.conf.py knowage-python
+    /usr/local/bin/gunicorn --certfile cert.pem -c file:gunicorn.conf.py knowage-python
 
 You can now create a service to start/stop Gunicorn: see your operating system documentation for that.
 
@@ -74,18 +72,17 @@ Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the
 .. code-block:: python
 
     import multiprocessing
-
-	from waitress import serve
-	import importlib
-
-	knowage = importlib.import_module("knowage-python")
-
-	serve(knowage.application,
-		channel_timeout=30,
-		host='0.0.0.0',
-		port=5000,
-		threads=multiprocessing.cpu_count() * 2 + 1
-	)
+    from waitress import serve
+    import importlib
+    
+    knowage = importlib.import_module("knowage-python")
+    
+    serve(knowage.application,
+    	channel_timeout=30,
+    	host='0.0.0.0',
+    	port=5000,
+    	threads=multiprocessing.cpu_count() * 2 + 1
+    )
 
 Then run:
 
