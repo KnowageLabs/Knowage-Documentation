@@ -86,8 +86,7 @@ Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the
 Then run:
 
 .. code-block:: shell
-
-	python waitress_server.py
+    python waitress_server.py
 
 Configure Knowage to enable Python/R functionalities
 -----------------------------------------------------
