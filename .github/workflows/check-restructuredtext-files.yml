@@ -1,0 +1,21 @@
+name: "Check reStructureText files"
+on:
+  pull_request_target:
+    types: [open,synchronize]
+  workflow_dispatch:
+  
+jobs:
+  main:
+    name: "Main"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v3.8
+        with:
+          python-version: '3.8'
+      - name: Install rst
+        run: pip install rstcheck rstcheck[sphinx]
+      - name: Check rst files
+        run: 'find -name *.rst | xargs -L 1 rstcheck'
