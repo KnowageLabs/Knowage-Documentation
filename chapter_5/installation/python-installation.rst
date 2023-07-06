@@ -2,7 +2,7 @@ Python Engine
 ================
 
 These functionalities use a Python standalone webservice, which allows to submit widgets and datasets scripts and get result from a Python environment already installed on the machine where the webservice runs. For this reason, Python environments need to be installed and configured on the same machine of Knowage server or even on a remote one, and the Python webservice has to be running **inside that same environment**. 
-This implies that, in order to use this functionalities, you have to install Python properly (depending on the OS) on the same machine where the service will be running. You can find all information about Python installation at https://www.python.org. The official supported version is Python >=3.6.8, but we recommend to use 3.7.x whenever it's possible.
+This implies that, in order to use this functionalities, you have to install Python properly (depending on the OS) on the same machine where the service will be running. You can find all information about Python installation at https://www.python.org. The official supported version is Python >=3.8.
 
 Install knowage-python webservice
 ---------------------------------
@@ -13,31 +13,23 @@ The knowage-python package contains the source code of the webservice that has t
     
 	pip install knowage-python=={knowage_version_number}
 	
-or simply you can find it in the Knowage-Server github repository under the Knowage-Python folder.
+or simply you can find it in the Knowage-Server GitHub repository under the Knowage-Python folder.
 
 If you downloaded knowage-python via pip, use "pip show knowage-python" to find the pip package installation location. Then copy the source file from this folder to your own custom folder such as ``/opt/knowagepython``.
 
-You will now have to create a file called ``hmackey`` that contains the value of the HMACkey in plaintext, and place it inside the ``<KNOWAGE_PYTHON_HOME>/`` folder. It must be the same value specified in the server.xml file.
-
+You will now have to create a file called ``hmackey`` that contains the value of the HMACkey in plaintext, and place it inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder. It must be the same value specified in ``TOMCAT_HOME/conf/server.xml`` file.
 
 Run knowage-python webservice
 -----------------------------
 
-Once you have installed all the requirements, you need to get the python-webservice running. In order to do so, you can rely on a WSGI Server.
-If you are working on a UNIX environment, take a look at gunicorn (https://gunicorn.org/).
-The service leverages on Flask, for deployment in any other environment take a look at the official documentation (https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment).
-**The entry point for the application is <KNOWAGE_PYTHON_HOME>/knowage-python.py and the default port is 5000.**
+Once you have installed all the requirements, you need to get the python-webservice running. The Python service for KNOWAGE is a Flask application: please take a look at `the official documentation <https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment>`. In order to do so, you should rely on a WSGI Server.
 
-To install GUNICORN you can use:
-.. code-block:: bash
+On Linux with Gunicorn
+~~~~~~~~~~~~~~~~~~~~~~
 
-	pip3 install gunicorn greenlet eventlet gevent wheel
-	pip3 install gunicorn eventlet gevent gthread setproctitle
-	pip3 install flask flask_cors bokeh pandas
-	pip3 install matplotlib
-	pip3 install PyJWT
-	pip3 install pandas
+If you are working on a Linux environment, take a look at `Gunicorn <https://gunicorn.org/>`_.
 
+**The entry point for the application is <KNOWAGE_PYTHON_HOME>/src/knowage-python.py and the default port is 5000.**
 
 .. important::
      **Webservice permissions**
@@ -49,7 +41,7 @@ First you need to create a configuration file called ``gunicorn.conf.py`` and pl
 
 .. code-block:: python
 
-	import multiprocessing
+    import multiprocessing
 
 	bind = "0.0.0.0:5000"
 	workers = multiprocessing.cpu_count() * 2 + 1
@@ -62,13 +54,40 @@ First you need to create a configuration file called ``gunicorn.conf.py`` and pl
 	errorlog = '/var/log/gunicorn-error.log' 
 	access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
 
-Then to start the service run the following command inside the ``<KNOWAGE_PYTHON_HOME>/`` folder.
+Then to start the service run the following command inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder.
 
 .. code-block:: bash
-    /usr/local/bin/gunicorn -c file:gunicorn.conf.py knowage-python
+	/usr/local/bin/gunicorn -c file:gunicorn.conf.py knowage-python
 	/usr/local/bin/gunicorn --certfile cert.pem -c file:gunicorn.conf.py knowage-python
 
-You can create service to start/stop Gunicorn.
+You can now create a service to start/stop Gunicorn: see your operating system documentation for that.
+
+On Windows with Waitress
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you are working on a Windows environment, take a look at `Waitress <https://docs.pylonsproject.org/projects/waitress>`_.
+
+Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the following content:
+
+.. code-block:: python
+	import multiprocessing
+	from waitress import serve
+	import importlib
+
+	knowage = importlib.import_module("knowage-python")
+
+	serve(knowage.application,
+		channel_timeout=30,
+		host='0.0.0.0',
+		port=5000,
+		threads=multiprocessing.cpu_count() * 2 + 1
+	)
+
+Then run:
+
+.. code-block:: shell
+
+	python waitress_server.py
 
 Configure Knowage to enable Python/R functionalities
 -----------------------------------------------------

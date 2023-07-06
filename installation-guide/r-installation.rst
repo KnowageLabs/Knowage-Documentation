@@ -7,11 +7,11 @@ The official supported version is R >=3.5.1, but we recommend to use 3.6.x whene
 Install knowage-r webservice
 ----------------------------
 
-Inside the Knowage-Server github repository, under the Knowage-R folder you can find the sources of the knowage-r webservice.
+Inside the Knowage-Server GitHub repository, under the Knowage-R folder you can find the sources of the knowage-r webservice.
 
 Once you have downloaded the source code, you will have to create the configuration for the webservice. This configuration will be contained inside a file called ``configs.R`` and placed inside the ``Knowage-R`` folder.
 
-The configuration is indeed really simple since you only need to specify the Knowage HMAC key contained in the server.xml file.
+The configuration is indeed really simple since you only need to specify the Knowage HMAC key contained in ``TOMCAT_HOME/conf/server.xml`` file.
 
 In the ``constants.R`` file you can set the default webservice port and a whitelist of IP addresses that can contact the webservice.
 
