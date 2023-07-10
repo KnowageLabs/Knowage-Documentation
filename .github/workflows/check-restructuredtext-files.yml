@@ -1,7 +1,7 @@
 name: "Check reStructureText files"
 on:
   pull_request_target:
-    types: [open,synchronize]
+    types: [opened,closed,synchronize]
   workflow_dispatch:
   
 jobs:
