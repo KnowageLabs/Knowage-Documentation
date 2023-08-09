@@ -6,8 +6,8 @@ How to upgrade KNOWAGE
    :caption: Table of Contents
    :maxdepth: 10
    
-   upgrade/how_upgrade_7_4_yo_8_0.rst
-   upgrade/how_upgrade_8_8_yo_8_1.rst
+   upgrade/how_upgrade_7_4_to_8_0.rst
+   upgrade/how_upgrade_8_0_to_8_1.rst
    
    
 .. Indices and tables
