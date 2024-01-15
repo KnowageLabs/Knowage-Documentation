@@ -933,7 +933,7 @@ In the editor tab it is possible to add the script that will be sent to the exec
 
 
 Before writing the code it is necessary to specify the **type** of the output produced by the script.
-Knowage has support for three different output types:
+Knowage has support for two different output types:
 
 - Image
 - HTML
