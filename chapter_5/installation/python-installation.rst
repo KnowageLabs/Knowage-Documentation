@@ -31,6 +31,17 @@ If you are working on a Linux environment, take a look at `Gunicorn <https://gun
 
 **The entry point for the application is <KNOWAGE_PYTHON_HOME>/src/knowage-python.py and the default port is 5000.**
 
+To install GUNICORN you can use:
+
+.. code-block:: bash
+
+	pip3 install gunicorn greenlet eventlet gevent wheel
+	pip3 install gunicorn eventlet gevent gthread setproctitle
+	pip3 install flask flask_cors bokeh pandas
+	pip3 install matplotlib
+	pip3 install PyJWT
+	pip3 install pandas
+
 .. important::
      **Webservice permissions**
 
