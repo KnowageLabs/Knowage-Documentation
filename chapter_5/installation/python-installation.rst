@@ -29,6 +29,7 @@ The service leverages on Flask, for deployment in any other environment take a l
 **The entry point for the application is <KNOWAGE_PYTHON_HOME>/knowage-python.py and the default port is 5000.**
 
 To install GUNICORN you can use:
+
 .. code-block:: bash
 
 	pip3 install gunicorn greenlet eventlet gevent wheel
