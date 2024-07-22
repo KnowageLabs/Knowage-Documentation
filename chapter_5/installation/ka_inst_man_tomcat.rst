@@ -117,14 +117,14 @@ Environment variables definition
 
 Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following constants in the ``GlobalNamingResources`` tag.
 
-.. code-block::
+.. code-block:: xml
    :linenos:
 
-  <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources" />
-  <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService" />
-  <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage" />
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="PUT ANY RANDOM STRING HERE" />
-  <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="complete_file_path_with_file_name" />
+    <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources" />
+    <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService" />
+    <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage" />
+    <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="PUT ANY RANDOM STRING HERE" />
+    <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="complete_file_path_with_file_name" />
 
 Such environment variables have the following meaning:
 
@@ -141,14 +141,14 @@ Such environment variables have the following meaning:
 
 Below you can see an example of configuration of the above variables in the server.xml file
 
-.. code-block::
+.. code-block:: xml
    :linenos:
 
-  <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
-  <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
-  <Environment name="service_url" type="java.lang.String" value="http://mydomain.com/knowage"/>
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="a random string"/>
-  <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
+    <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
+    <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
+    <Environment name="service_url" type="java.lang.String" value="http://mydomain.com/knowage"/>
+    <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="a random string"/>
+    <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
 
 Changing the secret key for password encryption
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

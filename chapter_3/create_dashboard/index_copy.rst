@@ -1598,8 +1598,8 @@ If a cross-navigation or a preview has been set in the cross tab, those will hav
     For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the system.
     Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise those external links will be removed by the system. This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
 
-        .. code-block:: xml
-        :linenos:
+    .. code-block:: xml
+       :linenos:
 
         <?xml version="1.0" encoding="UTF-8"?>
         <WHITELIST>
