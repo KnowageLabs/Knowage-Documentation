@@ -1,5 +1,5 @@
 How to upgrade to the latest version
-=====================================
+========================================================================================================================
 
 This section describes the main steps to manually update an existing Knowage installation, on top of the certified Apache Tomcat server, to the latest available version.
 
@@ -16,7 +16,7 @@ The upgrade of the following Knowage components is generally needed:
 The latter component must be upgraded in case you are moving from a different major or minor version (for example: from 6.4.x to 7.2.y, or from 7.1.x to 7.2.y), but there is no need in case you are upgrading to a new patch release of the same major/minor family (for example: from 7.2.0 to 7.2.6, or from 7.2.6 to 7.2.13).
 
 Preliminary operations
------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Before starting upgrade procedure, you have to:
 
@@ -28,7 +28,7 @@ Before starting upgrade procedure, you have to:
 
 
 Upgrade operations
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 To upgrade Knowage installation follow these steps:
 

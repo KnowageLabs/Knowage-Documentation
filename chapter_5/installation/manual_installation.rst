@@ -1,8 +1,8 @@
 Manual installation
-#############
+########################################################################################################################
 
 Metadata database initialization
---------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage requires a database schema to store its own metadata (definition of analyses, datasets and so on). For initializing such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following SQL files:
 
@@ -17,7 +17,8 @@ where XXX represents the DBMS type (as instance ORA stands for Oracle). The corr
 .. include:: ka_inst_man_tomcat.rst
 
 Datasource link within the applications
----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
 You would set up ResourceLink for JNDI datasource. To do so, you have to configure each ``knowage*/META-INF/context.xml`` and set the ResourceLink for each JNDI data source previously created. Inside the released packages two links are already defined:
 
 - one for the ``jdbc/knowage`` resource, which the user must keep
@@ -47,7 +48,7 @@ Due to security reasons, configuration file containing some content to be used f
 
 
 Configuration of the metadata db dialect
-----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. important::
          **This step is not mandatory anymore**
@@ -84,7 +85,7 @@ You have to configure these following Hibernate configuration files and set the 
          The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
 Modification of the Quartz configuration
-----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. important::
          **This step is not mandatory anymore**
@@ -105,7 +106,7 @@ The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It
 	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
 
 Clustering
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the ``knowage/WEB-INF/classes/quartz.properties`` file of every involved machines:
 
@@ -118,7 +119,7 @@ When Knowage is installed in cluster with several nodes, it is necessary to acti
 	 org.quartz.scheduler.instanceName = RHECMClusteredSchedule
 
 Logging
----------
+------------------------------------------------------------------------------------------------------------------------
 
 It is necessary to set up a folder where Knowage and its analytical engines can store their respective log files. From now on, we will call ``LOG_DIR`` such folder and ``LOG_DIR_PATH`` the path that leads to it. This path is configured in file ``log4j.properties`` located inside the ``\WEB-INF\classes\`` available in each web application.
 Shortly, to configure the Knowage log folder the user must execute the following steps:
@@ -131,7 +132,7 @@ Shortly, to configure the Knowage log folder the user must execute the following
 - only for the Birt Engine, to set the property ``logDirectory`` inside the ``WEB-INF/classes/BirtLogConfig.properties`` file of the knowagebirtreportengine application to ``LOG_DIR_PATH``.
 
 Enable Java Security Manager
------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 In Knowage, a user can create datasets, LOVs, etc.. with script languages like JavaScript. That introduces a security concern where a malicious user can execute code that can break the entire system. Java allows a system administrator to enable a `Security Manager <https://docs.oracle.com/javase/tutorial/essential/environment/security.html>`_ and to create a sandbox to limit privileges around the code that execute the script.
 
@@ -178,7 +179,7 @@ The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source
   If you are using Oracle provided Java, this configuration may lead to the error *"Illegal key size or default parameters"*. This is a problem with limited Java security policies. See https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppC for more information.
 
 Installation of Chromium Cockpit Export script
------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 .. important::
          **Enterprise Edition only**
 
@@ -194,7 +195,7 @@ Extract archive ``knowage-cockpit-export-installation.zip`` to ``/opt/knowage``:
 For alternatives path you have to fix ``internal.nodejs.chromium.export.path`` in Knowage Configuration Management.
 
 Configuring environment for Data Preparation
---------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 User should have Apache Livy and Apache Spark installed.
 

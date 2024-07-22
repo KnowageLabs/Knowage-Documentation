@@ -1,5 +1,5 @@
 Behavioural Model
-############
+########################################################################################################################
 
 
 An important topic related to the visibility on documents and data according to the roles and profiles of the end users, is the **Behavioural Model**.

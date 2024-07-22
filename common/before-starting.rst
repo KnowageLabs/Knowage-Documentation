@@ -1,9 +1,9 @@
 Before starting
-#################
+########################################################################################################################
 
 
 Documentation structure
-===========================
+========================================================================================================================
 
 Knowage documentation is composed by four main areas:
 
@@ -15,7 +15,7 @@ Knowage documentation is composed by four main areas:
 Each one focuses on a specific aspect of the product: how to properly install it, how to generally approach the suite, which are the general tools an administrator has access to and which are the analytical potentialities of the platform.
 
 Target
-===========================
+========================================================================================================================
 
 Each area is thought to be delivered to different users.
 
@@ -28,7 +28,7 @@ Each area is thought to be delivered to different users.
 -  **Functionalities**: it is directed at all kind of users. Here each user can find detailed instructions on how to develop different kind of analysis exploiting all BI capabilities of Knowage platform. Notice that when a functionality is strictly related to a specific module it will be notified.
 
 About conventions
-===========================
+========================================================================================================================
 
 Some graphical conventions have been adopted to allow readers to easily identify special contents such as notes, summaries and essential information. All conventions are explained here after.
 

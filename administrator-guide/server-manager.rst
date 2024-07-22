@@ -1,5 +1,5 @@
 Server Manager
-==============
+========================================================================================================================
 
 .. important::
          **Enterprise Edition only**
@@ -15,7 +15,7 @@ In the **Server Manager** menu panel you find some management functionalities.
 Those about **Import/Export** let you export some configurations or elements from one installation to another. This can be helpful for example in managing a test and a production areas. We are going to give the full description of these functionalities in the following.
 
 Tenants Management
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 We start this section underlining that only those users who have the superadmin role can use this functionality. **Tenants Management** is available only for users who possess the Knowage Enterprise Reporting (ER) license. A **tenant** is generally a user who can or cannot employ specific product types or access some (or all) datasources inside the same environment. Then, this functionality allows you to create new tenants or manage old ones.
 
@@ -32,7 +32,7 @@ In the image above, on the left you have the list of existing tenants. On the to
 Note that, in a single-tenant environment admin and superadmin coincides. In a multitenants environment (developed then through the Server Manager functionality), only *one* user has the superadmin role for each tenant, while there can be one or more users with admin role. In particular compared to the admin case, the superadmin has the possibility to manage the multi-tenancy. Moreover, he is the only one who can configure the JNDI datasources and access the cache configuration (through the cache manager menu item).
 
 Template Management
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Each Knowage document is associated to a *template*. The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage Studio designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.
 
@@ -45,12 +45,12 @@ First of all you are asked to insert a date by clicking on the calendar icon. Th
     Deleting templates
 
 Import/Export
---------------
+------------------------------------------------------------------------------------------------------------------------
 
 These options are about Import\\Export of Gallery, Documents, Menu, Users, KPIs and Catalogs. Let’s focus on each of these features.
 
 Gallery
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature let you create and download a .zip of whole or a part of the functions and widgets gallery existing in your Knowage installation. In this way you can upload it in another installation or keep it as backup.
 
@@ -108,7 +108,7 @@ At this point, widgets and functions will be available too in the target environ
 
 
 Documents
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature let you create and download a .zip of whole or a part of the documents existing in your Knowage installation. In this way you can upload it in another installation or keep it as backup.
 
@@ -183,7 +183,7 @@ Licenses are checked also during import procedure and, if one or more are missin
    Document Import Missing licenses
 
 Menu
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature let you export the menu structure.
 
@@ -212,7 +212,7 @@ In the first step of import procedure you'll see source-target comparison. In pa
    Menu Import Wizard Tree comparison
 
 Users
-~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this area you can export the users from an installation to another, see the following Figure.
 
@@ -233,7 +233,7 @@ To import the .zip in another installation, log in and open the **Server Manager
 	All users involved into import procedure will have his password changed with the value set in advanced configuration.
 
 Catalogs
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this area you can export the different catalogs (such as datasets catalogs, business models catalogs and so on) from one installation to another, see the following Figure.
 
@@ -250,7 +250,7 @@ To import the .zip in another instance, log in and open the **Server Manager** >
     Catalogs Import
 
 KPIs
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this section we describe how to manage the import/export of KPIs between two tenants.
 
@@ -310,7 +310,7 @@ The process ends successfully when the wizard shows up as following.
     Import KPIs ended successfully
 
 Analytical Drivers
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This option allows to import/export the analytical drivers and their related LOV.
 
@@ -341,7 +341,7 @@ Use the GUI to upload the zipped folder, to specify if to overwrite on the exist
 The process ends with a message containing the information about the import.
 
 Glossary
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The export/import of glossary allows the user to align glossaries among tenants.
 
@@ -360,7 +360,7 @@ Once the user has got the zipped folder he/she must switch tenant and enter as i
 The user must use the arrows to indicate the glossaries he/she wants to import in the target tenant. No further information are needed to end the process. Then the user has to enter the target tenant as administrator and use the import tab to finalize the import.
 
 Catalog
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This functionality allows to Export/Import the following elements
 

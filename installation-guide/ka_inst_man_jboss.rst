@@ -1,9 +1,9 @@
 
 JBoss AS Manual Installation
-============================
+========================================================================================================================
 
 Metadata database
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The metadata database must contains a schema which will collect all Knowage metadata. For configuring such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following scripts in :numref:`scriptsformetadat`:
 
@@ -18,7 +18,7 @@ The metadata database must contains a schema which will collect all Knowage meta
 where XXX represents the DBMS type, for instance ORA stands for Oracle. Inside the packages there are the corresponding files for deleting tables.
 
 Dependencies
--------------------
+------------------------------------------------------------------------------------------------------------------------
 You must add some modules inside the folder JBOSS_HOME/modules/system/layers/base:
 
 - the JDBC module of the metadata database with its dependencies (if any);
@@ -33,12 +33,12 @@ You must add some modules inside the folder JBOSS_HOME/modules/system/layers/bas
 - the fasterxml Classmate, Jackson Core e Jackson JAXRS modules.
 
 File system resources
----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 In the JBoss instance, create the folder JBOSS_HOME/standalone/data/resources. Equally in the Tomcat instance, create the folder TOMCAT_HOME/resources. Such a folder will contain some useful static resources and the indexes for the research engine used by Knowage.
 
 Metadata database connection
-----------------------------
+------------------------------------------------------------------------------------------------------------------------
 In the JBoss case, edit the file JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the metadata database inside the “datasources” tag: specify the username, the password and driver class name, URL, connection checker class and exception sorter class. The following :numref:`settingthemetadatadata` is an example:
 
 .. _settingthemetadatadata:
@@ -69,7 +69,7 @@ In addition, remember to type the information related to the JDBC driver inside 
          <driver name="driver class" module="module name" />
 
 Data database connection
-------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the information related to the data database inside the datasources tag. Specify: username, password, driver class name, URL, connection checker class and exception sorter class. The following :numref:`settingthemetadatadataso` shows an example:
 
@@ -101,7 +101,7 @@ In addition, remember to type the information related to the JDBC driver inside 
         <driver name="driver class" module="module name" />
 
 Environment variables definition
---------------------------------
+------------------------------------------------------------------------------------------------------------------------
 Edit the JBOSS_HOME/standalone/configuration/standalone.xml and add the following constants inside the subsystem domain naming tab.
 
 .. _jbossenvironmentvariables:
@@ -132,7 +132,7 @@ Constants have the following meaning:
 - **host\_\ url**: frontend services address, the one the user types in his browser.
 
 Applications deploy
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Execute the following steps:
 
@@ -144,7 +144,7 @@ Execute the following steps:
 Please refer to the instructions that are written in the JBOSS_HOME/standalone/deployments/README.txt.
 
 Datasource link within the applications
----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Control that in all the JBOSS_HOME/standalone/deployments/knowage*.war/META-INF/context.xml files there are the links reported in :numref:`datasourcelink`:
 
@@ -158,7 +158,7 @@ Control that in all the JBOSS_HOME/standalone/deployments/knowage*.war/META-INF/
 
 
 Configuration of the metadata db dialect
-----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 Verify that the right dialect has been set in all JBOSS_HOME/standalone/deployments/knowage*.war/WEB-INF/classes/hibernate.cfg.xml files.
 
 -  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
@@ -170,7 +170,7 @@ Verify that the right dialect has been set in all JBOSS_HOME/standalone/deployme
 **Remark.** The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
 
 Modification of the Quartz configuration
-----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 The scheduler is configured by the following file: knowage.war/WEB-INF/classes/quartz.properties. It is essential to enhance in this file the property ”org.quartz.jobStore.driverDelegateClass“ with the right value, according to the metadata database in use. These in :numref:`valuesfortheqz` the possible values:
 
 .. _valuesfortheqz:
@@ -189,7 +189,7 @@ The scheduler is configured by the following file: knowage.war/WEB-INF/classes/q
 
 
 Pool of thread definition
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters, in :numref:`clustermodalityman`, to the quartz.properties file of every involved machines:
 
@@ -205,7 +205,7 @@ When Knowage is installed in cluster with several nodes, it is necessary to acti
  	org.quartz.scheduler.instanceName = RHECMClusteredSchedule
 
 Pool of thread definition
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 For the execution of the batch processing ,Knowage uses a thread pool. In the JBoss case it is possible to modify the configuration by editing the JBOSS_HOME/standalone/configuration/standalone.xml and adding the configuration related to thread pool inside the **subsystem domain naming** tag, as showed in :numref:`threadpoolconf`:
 
@@ -227,7 +227,7 @@ For the execution of the batch processing ,Knowage uses a thread pool. In the JB
 
 
 Check of the memory settings
-----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 It is recommended to increase the memory dimension used by the application server; this can be done by adjusting some properties. The memory space required by each application server depends on several different factors: number of users, analysis type, amount of handled data, etc. The smallest memory requirements are:
 
@@ -256,7 +256,7 @@ It is recommended to increase the memory dimension used by the application serve
 	set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
 
 LOG files
----------
+------------------------------------------------------------------------------------------------------------------------
 
 It is necessary to arrange a folder where Knowage and its analytical engines can store their respective log files. From now on, we will call LOG_DIR such folder and LOG_DIR_PATH the path that leads to it. This path is configured in file log4j.properties located inside the *\\*\ WEB-INF\ *\\*\ classes\ *\\* available in each web application.
 In short, to configure the Knowage log folder the user must execute the following steps:
@@ -271,7 +271,7 @@ In short, to configure the Knowage log folder the user must execute the followin
 In case you are using JBoss , in all configuration log4j.properties files substitute the string ”catalina.base/logs“ with "jboss.server.log.dir”.
 
 Configuration file
-------------------
+------------------------------------------------------------------------------------------------------------------------
 It is necessary to modify some configuration files reported in :numref:`stringreplacc`. Apply the string replacements for each web application.
 Moreover, apply the string substitutions to the configs.xml file included in the JBOSS_HOME/standalone/deploymen file, as reported in :numref:`stringreplacctothe`:
 
@@ -318,7 +318,7 @@ Moreover, apply the string substitutions to the configs.xml file included in the
 -  comment all blocks bounded by the comments “START ProxyTicketReceptor” and “END ProxyTicketReceptor”.
 
 JAR library file
-----------------
+------------------------------------------------------------------------------------------------------------------------
 
 Considering the JBoss instance, delete all of the following files from each web application:
 
@@ -334,7 +334,7 @@ Moreover, still for JBoss delete only from the Knowage web application the follo
 -  WEB-INF/lib/resteasy-jackson2-provider-3.0.9.Final.jar.
 
 server-config.wsdd tests
-------------------------
+------------------------------------------------------------------------------------------------------------------------
 In Knowage server the core and its analytical engines exchange information through some SOAP services. Those services can send/receive attached files: those files are temporarely stored in a folder that is configured in the knowage/WEB-INF/server-config.wsdd file. The :numref:`confofthefl` shows the syntax.
 
 .. _confofthefl:

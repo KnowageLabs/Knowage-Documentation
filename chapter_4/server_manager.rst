@@ -1,5 +1,5 @@
 Server manager
-#############
+########################################################################################################################
 
 .. important::
          **Enterprise Edition only**
@@ -13,7 +13,7 @@ All the management functionalities can be found under **Server Manager** of the 
     Server Manager Functionalities
 
 Tenants
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 This feature allows you to create or manage tenants.
 A single Knowage instance can have one or more tenants. In case of a multi-tenant environment, each tenant owns and manages its own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
@@ -33,7 +33,7 @@ In a *single-tenant* environment the *admin* role matches with the *superadmin*.
 Furthermore, the superadmin is the only one who can set up JNDI datasources and access the cache configuration.
 
 Templates
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Each Knowage document is associated to a *template*. The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage Studio designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.
 
@@ -48,7 +48,7 @@ See figure below.
 
 
 Themes
--------------------
+------------------------------------------------------------------------------------------------------------------------
 This functionality allows the creation/management of themes to be used in the css style of your documents.
 
 .. figure:: media/themes_8.1.png
@@ -59,13 +59,13 @@ This functionality allows the creation/management of themes to be used in the cs
 
 
 Download installation configuration
--------------------
+------------------------------------------------------------------------------------------------------------------------
 This feature allows the downloading of a *config.zip* file containing the details of the installation configuration.
 
 
 
 Licenses
--------------------
+------------------------------------------------------------------------------------------------------------------------
 This feature allows the management of Knowage licenses by adding, updating, downloading or removing a license.
 
 .. figure:: media/licenses_8.1.png
@@ -74,7 +74,7 @@ This feature allows the management of Knowage licenses by adding, updating, down
 
 
 Events
--------------------
+------------------------------------------------------------------------------------------------------------------------
 This feature allows to search through all the events (i.e. the scheduling of a report) existing on the Knowage server, specifying a range of dates and the *type* of event.
 Types of events are:
 

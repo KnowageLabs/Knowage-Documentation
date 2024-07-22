@@ -1,5 +1,5 @@
 User profile and roles
-############
+########################################################################################################################
 
 Knowage users are defined by:
 
@@ -137,9 +137,9 @@ The **Business Models** tab is only available for modules KnowageBD and KnowageS
 
 
 
-------------------
+------------------------------------------------------------------------------------------------------------------------
 User Management
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 
 The **User Management** section includes a left panel that allows the administrator to create and delete users, and a right panel that allows the management of user details, roles and attributes.
@@ -150,7 +150,7 @@ The **User Management** section includes a left panel that allows the administra
 
 
 User unlock
-^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If user reaches the maximum number of failed login attempts (editable in advanced configurations), it will be blocked by Knowage and access will be denied. By accessing Knowage with a user having user management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it using the "unlock user" button. After that, the user will be able to log in using the latest set of credentials.
 
@@ -160,7 +160,7 @@ If user reaches the maximum number of failed login attempts (editable in advance
 
 
 Roles settings
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clicking on the ROLES tab you have to select one o more roles to associate with the user.
 After that, if more than one role is associated to the user, you can choose the default role by selecting it from the combo box on the top of the page.

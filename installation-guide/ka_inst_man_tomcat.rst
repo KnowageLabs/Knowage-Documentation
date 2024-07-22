@@ -1,8 +1,8 @@
 Using Tomcat
-----------------
+------------------------------------------------------------------------------------------------------------------------
 
 Dependencies
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You must add required libraries into ``TOMCAT_HOME/lib`` folder:
 
 -  the JDBC connector for the metadata database with its dependencies (if any);
@@ -20,12 +20,12 @@ You must add required libraries into ``TOMCAT_HOME/lib`` folder:
 
 
 File system resources
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create the folder ``TOMCAT_HOME/resources``. Such a folder will contain some useful static resources and the indexes for the search engine used by Knowage.
 
 Connection to metadata database
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the metadata database inside the ``GlobalNamingResources`` tag. Specify: username, password, driver class name, JDBC URL and validation query (any valid query to be executed to validate connections). Connection's name must the ``jdbc/knowage``:
 
@@ -54,7 +54,7 @@ To define connection towards metadata database, edit the ``TOMCAT_HOME/conf/serv
 
 
 Cache database connection
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In some scenarios (for example when defining a cockpit document on top of a file dataset), Knowage requires a database to be used as cache. It is highly recommended to create an empty database schema for this purpose. Then, you need to configure it inside ``TOMCAT_HOME/conf/server.xml`` as you did for metadata database. Feel free to type a name of your choice, in this example we used ``jdbc/ds_cache``:
 
@@ -83,7 +83,7 @@ In some scenarios (for example when defining a cockpit document on top of a file
 
 
 Connection to business data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the database containing business data to be analysed by Knowage inside the ``GlobalNamingResources`` tag, specifying username, password, driver class name, URL and validation query. Feel free to type a name of your choice, in this example we used ``jdbc/dwh``:
 
@@ -91,40 +91,40 @@ Edit the ``TOMCAT_HOME/conf/server.xml`` and add the information related to the 
    :linenos:
 
     <Resource auth="Container"
-  	    driverClassName="JDBC driver"
-  	    name="jdbc/dwh"
-  	    password="password"
-  	    type="javax.sql.DataSource"
-  	    url="JDBC URL"
-  	    username="username"
-  	    validationQuery="validation query"
-  	    maxTotal="50"
-  	    maxIdle="50"
-  	    minIdle="10"
-  	    validationInterval="34000"
-  	    removeAbandoned="true"
-  	    removeAbandonedTimeout="3600"
-  	    logAbandoned="true"
-  	    testOnBorrow="true"
-  	    testWhileIdle="true"
-  	    timeBetweenEvictionRunsMillis="10000"
-  	    minEvictableIdleTimeMillis="60000"
-  	    factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
+        driverClassName="JDBC driver"
+        name="jdbc/dwh"
+        password="password"
+        type="javax.sql.DataSource"
+        url="JDBC URL"
+        username="username"
+        validationQuery="validation query"
+        maxTotal="50"
+        maxIdle="50"
+        minIdle="10"
+        validationInterval="34000"
+        removeAbandoned="true"
+        removeAbandonedTimeout="3600"
+        logAbandoned="true"
+        testOnBorrow="true"
+        testWhileIdle="true"
+        timeBetweenEvictionRunsMillis="10000"
+        minEvictableIdleTimeMillis="60000"
+        factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" />
 
 
 Environment variables definition
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Edit the file ``TOMCAT_HOME/conf/server.xml`` in Tomcat and add the following constants in the ``GlobalNamingResources`` tag.
 
-.. code-block::
+.. code-block:: xml
    :linenos:
 
-  <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources" />
-  <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService" />
-  <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage" />
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="PUT ANY RANDOM STRING HERE" />
-  <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="complete_file_path_with_file_name" />
+    <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources" />
+    <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService" />
+    <Environment name="service_url" type="java.lang.String" value="http://localhost:8080/knowage" />
+    <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="PUT ANY RANDOM STRING HERE" />
+    <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="complete_file_path_with_file_name" />
 
 Such environment variables have the following meaning:
 
@@ -141,17 +141,17 @@ Such environment variables have the following meaning:
 
 Below you can see an example of configuration of the above variables in the server.xml file
 
-.. code-block::
+.. code-block:: xml
    :linenos:
 
-  <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
-  <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
-  <Environment name="service_url" type="java.lang.String" value="http://mydomain.com/knowage"/>
-  <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="a random string"/>
-  <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
+    <Environment name="resource_path" type="java.lang.String" value="${catalina.home}/resources"/>
+    <Environment name="sso_class" type="java.lang.String" value="it.eng.spagobi.services.common.JWTSsoService"/>
+    <Environment name="service_url" type="java.lang.String" value="http://mydomain.com/knowage"/>
+    <Environment name="hmacKey" description="HMAC key" type="java.lang.String" value="a random string"/>
+    <Environment name="password_encryption_secret" description="File for security encryption location" type="java.lang.String" value="${catalina.home}/conf/knowage.secret"/>
 
 Changing the secret key for password encryption
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The password encryption secret key must be set during the installation and cannot be changed **anymore**, otherwise Knowage will no longer be able to authenticate already defined users. *In case the secret key is lost* you must create a new one, configure it into Knowage as described above and update passwords of existing users direclty into Knowage metadata database (SBI_USER table). For this reason Knowage provides you a tool to get new encrypted values.
 This tool is a Java class that is shipped with the ``knowage-utils`` library; it accepts 2 input parameters:
@@ -169,7 +169,7 @@ Below is an example of invoking the tool by command line using 'mypassword' as t
 This procedure must be repeated for all already existing users.
 
 Recommended configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **[LINUX]** Edit the ``TOMCAT_HOME/conf/setenv.sh`` file in Tomcat by adding the following JVM arguments:
 
@@ -215,13 +215,13 @@ The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source
 The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
 
 Applications deploy
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To deploy Knowage you have to copy all the WAR files inside the ``TOMCAT_HOME/webapps`` folder.
 Once the first start is ended each WAR file will be unzipped. It is also possible to unzip the WAR files manually using the unzip utility.
 
 
 Thread pool definition
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You must configure ``TOMCAT_HOME/conf/server.xml`` file and add the settings related to the pool of thread editing the ``GlobalNamingResources`` tag, as shown follow.
 
 .. code-block:: xml
@@ -231,7 +231,7 @@ You must configure ``TOMCAT_HOME/conf/server.xml`` file and add the settings rel
 
 
 Advanced memory settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It is recommended to increase the memory dimension used by the application server. This can be done by adjusting some properties. The memory required by each application server depends on many factors: number of users, type of analyses, amount of handled data, etc. The minimum requirements are ``Xms1024m`` and ``Xmx2048m``.
 
@@ -251,7 +251,7 @@ It is recommended to increase the memory dimension used by the application serve
 	set JAVA_OPTS= %JAVA_OPTS% -Xms1024m Xmx2048m -XX:MaxPermSize=512m
 
 Advanced Connector settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. important::
          It is highly recommend to add  URIEncoding="UTF-8" attribute to server.xml file connector tags in order to avoid special characters issues.

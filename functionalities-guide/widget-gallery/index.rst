@@ -1,5 +1,5 @@
 Widget Gallery
-=================
+========================================================================================================================
 
 The **Widget Gallery** is a functionality available since version 8.0 that allows users and editors to create a template and share in multiple dashboards.
 Creating a template and than using it inside a dashboard, the users will have the capability of creating complex dashboard elements quite easily and quickly, keeping a common base template.
@@ -14,7 +14,7 @@ This functionality is available for:
 The first step is to create a template gallery or to upload some template.
 
 Gallery management
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Inside the administrator panel a new element should appear named **Gallery Management**. 
 This link will bring you to the gallery management, the widget templates creation gallery.
@@ -64,7 +64,7 @@ It's also possible to export the single template selected or simply to close the
     Toolbar icons.
 
 Dashboard gallery
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Inside the cockpit or dashboard functionality, a new tab will be present when creating a new widget of the available types.
 

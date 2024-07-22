@@ -1,5 +1,5 @@
 Resource Manager
-================
+========================================================================================================================
 
 .. important::
          **Enterprise Edition only**
@@ -19,7 +19,7 @@ As default, the system shows files starting by the root directory:
     Resource Manager starting view.
 
 Resource Manager functionalities
---------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The Resource Manager window diplays two sections: on the left the tree representing the existing system resources; on the right the details of the selected left-folder. On the right-top is available the current path:
 

@@ -1,5 +1,5 @@
 Azure SSO
-############
+########################################################################################################################
 
 Knowage provides integration with Azure Sign-In for authentication purposes, i.e. users can login into Knowage using their Azure accounts.
 

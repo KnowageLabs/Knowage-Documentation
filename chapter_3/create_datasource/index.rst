@@ -1,5 +1,5 @@
 Create a new Data Source
-############
+########################################################################################################################
 
 In order to connect to your data, you have to define a new data source connection.
 
@@ -100,7 +100,7 @@ Once you have filled the form, you can test the new data source by clicking on t
 Now you are connected to your data and you can start a new Business Intelligence project with Knowage!
 
 Big Data and NoSQL
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 In this section we describe how you can connect Knowage to different Big Data data sources.
 
@@ -110,7 +110,7 @@ In this section we describe how you can connect Knowage to different Big Data da
          Please note that these connections are available for products KnowageBD and KnowagePM only.
 
 Hive
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Apache Hive is a data warehouse infrastructure built on top of Hadoop for providing data summarization, query, and analysis. Apache Hive supports analysis of large datasets stored in Hadoop’s HDFS and compatible file systems such as Amazon S3 filesystem. It provides an   SQL-like language called HiveQL with schema on read and transparently converts queries to map/reduce, Apache Tez and Spark. All three execution engines can run in Hadoop YARN.
 
@@ -136,7 +136,7 @@ Here ``<host1>:<port1>,<host2>:<port2>`` is a server instance or a comma separat
 A simple example of connection URL is ``jdbc:\hive2://192.168.0.125:10000``.
 
 Spark SQL
-~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Spark SQL reuses the Hive front end and metastore, giving you full compatibility with existing Hive data, queries and UDFs. Simply install it alongside Hive. For the installation of Spark we suggest you to look at the spark website `http://spark.apache.org/. <http://spark.apache.org/>`__ To create a connection to the Spark SQL Apache Thrift server you should use the same JDBC driver of Hive.
 
@@ -147,7 +147,7 @@ Spark SQL reuses the Hive front end and metastore, giving you full compatibility
 Look at the Hive section for the details about parameters. The port in this case is not the port of Hive but the one of Spark SQL thrift server (usually ``10001``).
 
 Impala
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Impala (currently an Apache Incubator project) is the open source, analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it, with all dependencies, on the application server. The definition of the URL can be different between versions of the driver, please check on the Cloudera web site.
 
@@ -158,7 +158,7 @@ Example parameters for Impala connection are:
 -  **Connection URL:** ``jdbc:\impala://dn03:21050/default``.
 
 MongoDB
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling. MongoDB obviates the need for an Object Relational Mapping (ORM) to facilitate development.
 
@@ -200,7 +200,7 @@ See also this useful links:
 - (`https://www.claudiokuenzler.com/blog/555/allow-mongodb-user-execute-command-eval-mongodb-3.x#.W59wiaYzaUl) <https://www.claudiokuenzler.com/blog/555/allow-mongodb-user-execute-command-eval-mongodb-3.x#.W59wiaYzaUl>`__
 
 Cassandra
-~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
 
@@ -215,7 +215,7 @@ Refer to the JDBC driver documentation in order to see how to configure the JDBC
 Unless you are using Spark SQL to read from Cassandra, the definition of a business model over Cassandra data using Knowage Meta will be available in the next releases.
 
 Google Big Query
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
 
@@ -230,7 +230,7 @@ For example, to create a JDBC connection to a Google Big Query dataset using a s
 
 
 Google Cloud Spanner
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage supports Google Cloud Spanner datasources via the official open source JDBC driver: see `official documentation <https://cloud.google.com/spanner/docs/use-oss-jdbc>`_.
 
@@ -245,7 +245,7 @@ For example, to create a JDBC connection to a Google Cloud Spanner dataset using
 
 
 Amazon RedShift
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage supports Amazon RedShift datasources via Official v1 JDBC Driver: see `official reference <https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html>`_.
 According to documentation using JDBC drivers v1 a RedShift connection configuration can be done exactly like a PostgreSQL configuration.
@@ -257,7 +257,7 @@ To create a JDBC connection to an Amazon RedShift dataset using a RedShift-only 
  <Resource auth="Container" driverClassName="com.amazon.redshift.jdbc.Driver" logAbandoned="true" maxActive="10" maxIdle="1" minEvictableIdleTimeMillis="60000" name="jdbc/redshift" password="password" removeAbandoned="true" removeAbandonedTimeout="3600" testOnReturn="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource" url="jdbc:redshift://examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com:5439/dev" username="user" validationQuery="SELECT 1"/>
 
 Azure Synapse
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage supports connections to Azure Synapse datasources via SQL Server JDBC Driver (`official documentation <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/connection-strings>`_).
 

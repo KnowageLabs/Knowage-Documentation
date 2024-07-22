@@ -1,5 +1,5 @@
 How to build a QBE
-##########
+########################################################################################################################
 
 This detailed user guide is dedicated to the Qbe (Query By Example), a Free Inquiry instrument which empowers users with easy and free access to information via graphical interfaces.
 
@@ -10,7 +10,7 @@ QbE is a tool that allows you to develop your free inquiry through an entirely g
 The material will be divided in two main sections. The first is dedicated to build queries in the Knowage Server environment, supposing the availability of a business model to analyse. In the second part, we will provide the user with the principal steps to build a proper business model through the Qbe designer, available in Knowage Meta.
 
 My first Query By Example
---------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 **QbE** allows you to query (a subset of) a database through a high-level representation of the entities and relations. 
 Qbe main features are:
@@ -31,7 +31,7 @@ In the following we will discuss each step in detail, showing the basic and adva
 
 
 Query design and execution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To open the QbE editor, access the **Models** section, available in the end user **Workspace**. Then, simply click on the model icon to reach the QbE graphical interface.
 
@@ -44,7 +44,7 @@ In this paragraph we show how to build a simple query with the QbE editor.
 The above figure shows the **Query designer**. In next sections we will explain in detail all the components related to the **Query Designer**, the **Datamart Schema** tab, the query editor and the hidden tab dedicated to the management of queries, subqueries and parameters catalogue.
 
 Datamart Schema
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Starting from the left side:
 	The upper Panel shows the searchable logical schema and the list of entities that can be queried to generate the query. Entities are represented in a tree structure, with user-defined names. Fields can be added to the query (right side) by clicking on them.
@@ -157,12 +157,12 @@ The below table summarizes some of the toolbar functionalities.
       |                                   | Advanced view                     |
       +-----------------------------------+-----------------------------------+
       |    **Three dots field menu**      | Contains functionalities like     |
-      |                                   |Delete, Filters, Havings (only for |                               |
+      |                                   |Delete, Filters, Havings (only for |
       |                                   | the Advanced view                 |
       +-----------------------------------+-----------------------------------+
 
 Calculated fields management
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also add calculated fields to a query. This functionality is only available in the Advanced view through the  item  **Calculated field** ot the three dots menu.
 
@@ -181,7 +181,7 @@ The image below shows the wizard.
 
 
 Filters
-^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The **Filters** panel allows you to define a filter criteria, a WHERE clause to add to the query.
 Filters are expressions of type:
@@ -305,7 +305,7 @@ Save now to filter data accordingly.
 
 
 Query Preview
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Smart automatically shows the preview of you query.
 The Advanced view contains a **Play** icon located in the top right corner of the panel, that opens a window with the results of the query. 
@@ -329,12 +329,12 @@ When saving your query as dataset, a pop up opens asking you to fill in some inf
 
 
 Advanced QbE functionalities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this section we focus on advanced features, which can be comfortably managed by more expert users.
 
 Spatial fields usage
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. important::
          **Enterprise Edition only**

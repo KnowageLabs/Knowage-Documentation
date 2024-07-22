@@ -1,8 +1,8 @@
-LDAP 
-################
+LDAP
+########################################################################################################################
 
 Authentication
----------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage provides integration with a LDAP server for authentication purposes.
 
@@ -105,7 +105,7 @@ Knowage is now ready to authenticate the users via LDAP credentials.
 
 
 Authentication + authorization
--------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 A third LDAP connector is available, which does not need users to be present in Knowage metadata (but only on LDAP system). This connector allows you to build the UserProfile object based on the information contained in the LDAP system. Only if the user is not found in the LDAP system, the Knowage metadata will be used (this scenario is useful for technical users that are not registered inside the LDAP).
 

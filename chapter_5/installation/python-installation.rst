@@ -1,11 +1,11 @@
 Python Engine
-================
+========================================================================================================================
 
 These functionalities use a Python standalone webservice, which allows to submit widgets and datasets scripts and get result from a Python environment already installed on the machine where the webservice runs. For this reason, Python environments need to be installed and configured on the same machine of Knowage server or even on a remote one, and the Python webservice has to be running **inside that same environment**. 
 This implies that, in order to use this functionalities, you have to install Python properly (depending on the OS) on the same machine where the service will be running. You can find all information about Python installation at https://www.python.org. The official supported version is Python >=3.8.
 
 Install knowage-python webservice
----------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The knowage-python package contains the source code of the webservice that has to be installed and run on the server. You can download it via ``pip`` with the command:
 
@@ -20,12 +20,12 @@ If you downloaded knowage-python via pip, use "pip show knowage-python" to find 
 You will now have to create a file called ``hmackey`` that contains the value of the HMACkey in plaintext, and place it inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder. It must be the same value specified in ``TOMCAT_HOME/conf/server.xml`` file.
 
 Run knowage-python webservice
------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Once you have installed all the requirements, you need to get the python-webservice running. The Python service for KNOWAGE is a Flask application: please take a look at `the official documentation <https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment>`_. In order to do so, you should rely on a WSGI Server.
 
 On Linux with Gunicorn
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are working on a Linux environment, take a look at `Gunicorn <https://gunicorn.org/>`_.
 
@@ -74,7 +74,7 @@ Then to start the service run the following command inside the ``<KNOWAGE_PYTHON
 You can now create a service to start/stop Gunicorn: see your operating system documentation for that.
 
 On Windows with Waitress
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are working on a Windows environment, take a look at `Waitress <https://docs.pylonsproject.org/projects/waitress>`_.
 
@@ -103,7 +103,7 @@ Then run:
 
 
 Configure Knowage to enable Python/R functionalities
------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 From the Knowage interface you can now enable the Python/R functionalities. 
 

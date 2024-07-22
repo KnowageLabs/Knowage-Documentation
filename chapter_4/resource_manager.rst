@@ -1,5 +1,5 @@
 Resource manager
-#######
+########################################################################################################################
 
 
 .. important::
@@ -20,7 +20,7 @@ By default, the system shows the files starting from the root directory:
     Resource Manager starting view.
 
 Resource Manager functionalities
---------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The Resource Manager window diplays two sections: on the left the tree structure representing the existing resource system; on the right the details of the selected folder.
 

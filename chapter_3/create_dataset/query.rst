@@ -1,5 +1,5 @@
 SQL Query Data Set
-#############
+########################################################################################################################
 
 Selecting the query option requires the BI developer to write an SQL statement to retrieve data.
 

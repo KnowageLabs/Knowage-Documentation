@@ -1,8 +1,8 @@
 Operational engines
-====================
+========================================================================================================================
 
 ETL
-----
+------------------------------------------------------------------------------------------------------------------------
 
 
 Knowage allow the upload of data from source systems according to a common ETL logic, as well as the monitoring of data flows continuously feeding the data warehouse. To this end, Knowage provides the ETL **Knowage Talend Engine**.
@@ -13,7 +13,7 @@ Knowage allow the upload of data from source systems according to a common ETL l
          Please note that in the Enterprise Edition, **KnowageTalendEngine** is shipped with KnowageBD and KnowageSI only. 
 
 KnowageTalendEngine
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage Talend Engine integrates the open source tool Talent Open Studio (TOS). Talend Open Studio (TOS) is a graphical designer for defining ETL flows. Each designed flow produces a self-alone Java or Perl package. TOS is based on Eclipse and offers a complete environment including test, debug and support for documentation.
 
@@ -30,7 +30,7 @@ Furthermore, the analytical model for monitoring ETL flows can be successfully a
 In the remainder of the section, we discuss in detail all steps by providing examples.
 
 Job design
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The job is designed directly using Talend.
 
@@ -74,7 +74,7 @@ Once you have designed the ETL job, you should deploy it on Knowage Server. Firs
 Once you have set the connection, you can right click on a job and select **Deploy on Knowage**. This will produce the Java code implementing the ETL and make a copy of the corresponding jar file at ``\\resources\\talend\\RuntimeRepository\\java\\Talend`` project name of Knowage Server. It is possible to deploy multiple jobs at the same time. Exported code is consistent and self-standing. It may include libraries referenced by ETL operators and default values of job parameters, for each context defined in the job. On its side, Knowage manages Talend jobs from an internal repository at ``resources/talend/RuntimeRepository``, under the installation root folder.
 
 Template building
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As with any other Knowage document, you need to define a template for the ETL document that you wish to create. The ETL template has a very simple structure, as shown in the example below:
 
@@ -102,7 +102,7 @@ Where the tag job includes all the following configuration attributes:
 Values in the template must be consistent with those defined in Talend, in order to ensure the proper execution of the ETL document on Knowage Server.
 
 Creating the analytical document
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once we have created the template, we can create a new analytical document.
 
@@ -112,19 +112,19 @@ Now you can create the analytical document on the Server, following the standard
 If the job has parameters, they should be associated to the corresponding analytical drivers, as usually. In other words, you have to create an analytical driver for each context variable defined in the Talend job.
 
 Job execution
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A Talend job can be executed directly from the web interface of Knowage Server and of course from a Talend client.
 To execute the job on Knowage, click on the document icon in the document browser, like with any other analytical document. The execution page will show a message to inform that the process was started.
 
 Job scheduling
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most often it is useful to schedule the execution of ETL jobs instead of directly running them. You can rely on Knowage scheduling functionality to plan the execution of Talend jobs.
 While defining a scheduled execution, you can set a notification option which will send an email to a set of recipients or a mailing list once the job has completed its execution. To enable this option, check the flag **Send Mail**.
 
 External processes
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage support the execution of processes that are external to its own activity. When analyzing data, for example through the real time console, it may be useful to perform activities such as sending notification emails or taking actions on the components of the monitored system (e.g., business processes, network nodes).
 
@@ -142,7 +142,7 @@ To enable the management of an external process, the following steps are require
 In the following sections, we provide details about both class and template creation, and document creation.
 
 Class definition
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First of all, the developer should write a Java class that defines the desired logics for processing start and stop. In particular, this class must extend one of these two classes of the engine:
 
@@ -252,7 +252,7 @@ Therefore, we also define an external class, called ``ProcessTest``, which conta
 Now that classes are ready, we pack them in .jar file containing all classes and their paths. Then we copy the jar file under the resource folder of Knowage at ``RESOURCE_PATH]/commonj/ CommonjRepository/[JAR\\_NAME``. In the next section we will explain how to define the template, based on the class definition chosen above.
 
 Template definition
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As with any other Knowage document, we need to define a template for an external process document. The example below shows a template that corresponds to the classes ``CommandJob`` and ``ProcessTest`` defined in the examples above. Let us note that this template corresponds to the option of implementing an extension of ``CmdExecWork``.
    

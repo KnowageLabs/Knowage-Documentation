@@ -1,5 +1,5 @@
 How use Localization Management
-############
+########################################################################################################################
 
 Knowage allows to change the *localization* in order to use different languages. We can distinguish two main categories:
 
@@ -15,7 +15,7 @@ The user can change the language to use in Knowage by doing the following:
 
 
 System labels
-------------
+------------------------------------------------------------------------------------------------------------------------
 It is also possible to change the default language to use the first time the user logs in; to do this the admin needs to:
 
 -  Open the menu and select under Server Settings, Configuration Management
@@ -49,7 +49,7 @@ It is also possible to translate objects created by the user like:
 
 
 User labels
-------------
+------------------------------------------------------------------------------------------------------------------------
 To set *User labels*:
 
 -  Check the available languages under the Domains configuration in the Admin menu (see the entry with domain code LANG). The ValueCd must have the ISO code of the language (three letters).
@@ -62,7 +62,7 @@ To set *User labels*:
 
 
 BIRT labels
-------------
+------------------------------------------------------------------------------------------------------------------------
 Select the report and set the resource file bundle name in the resources tab of the Property Editor; the default message bundle is *messages*.
 The name of the properties file is *messages_* plus the current locale, e.g. for English USA language: *messages_en_US.properties*
 

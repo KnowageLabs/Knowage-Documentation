@@ -1,7 +1,7 @@
 
 
 Knowage EE Installer usage
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 Knowage installer is an application which steers the user to the installation and the first configuration of the product. It works in both Linux and Windows operating systems.
 
 **[LINUX]** To launch the installer, it is necessary to enable the flag execution on the installation file, typing the command in the bash:
@@ -106,7 +106,7 @@ To configure a data DB the user must check the relative feature of the wizard, a
     End of the installation.
 
 Uninstaller
---------------
+------------------------------------------------------------------------------------------------------------------------
 
 At the end of the installation, the user can find the **uninstaller** file inside the installation folder. This can be executed to unistall Knowage.
 

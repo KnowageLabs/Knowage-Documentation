@@ -1,10 +1,10 @@
 Requirements
-====================
+========================================================================================================================
 
 Before going into details on Knowage installation, it is necessary to check if certain requirements are satisfied. We start to distinguish between the certified environments and the compatible ones. The first are those where check tests take place. The latter are those environments technically compatibles but where integration tests are not executed.
 
 Operating systems
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The following Operating Systems (OS) are those ones which suit with Knowage platform.
 
@@ -37,18 +37,18 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
     +-----------------------------+-------------------+
 
 Disk usage
---------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The Knowage installation requires 2 GB of available space on file system. This space does not include the space relative to the data and the metadata storage.
 
 Java environment
---------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured. The steps to configure it depend on the OS.
 Knowage 7 is compatible with Open JDK 1.8.
 
 Linux
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
 
@@ -60,7 +60,7 @@ Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` use
         export PATH=$JAVA_HOME/bin:$PATH
 
 Windows
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Define the ``JAVA_HOME`` variable and ``PATH`` in the section "Environment variables" which can be reached from the "System".
 
@@ -69,7 +69,7 @@ Define the ``JAVA_HOME`` variable and ``PATH`` in the section "Environment varia
       Setting the path for the JAVA_HOME variable for Windows
 
 Application server
----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The following lists the supported application servers:
 
@@ -85,12 +85,12 @@ The following lists the supported application servers:
 For each application server installation please refer to its official documentation.
 
 Tomcat 9.0
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
 
 Tomcat on Linux
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
 
@@ -121,12 +121,12 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
         exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@"
 
 Tomcat on Windows
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-9.0-doc/windows-service-howto.html.
 
 Database schema for metadata
-----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage uses a schema to manage metadata, that is all those information required for its operation. These concern the configuration, the users and the analytical documents. It is possible to use the following DBMSs for the creation of this schema.
 
@@ -148,12 +148,12 @@ Knowage uses a schema to manage metadata, that is all those information required
 Therefore, a schema must be available. It can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *metadata DB* in the following. Observe that Knowage includes all the DDL for table creation.
 
 Database schema for data
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *data DB* in the following.
 
 NodeJS requirements
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. important::
          **Enterprise Edition only**
@@ -163,7 +163,7 @@ NodeJS requirements
 Knowage includes some NodeJS scripts that need to be executed with NodeJS 14 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
 
 CentOS
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In CentOS you need to erase older versions of NodeJS, if present:
 
@@ -198,7 +198,7 @@ Finally you can install NodeJS:
         yum install -y nodejs
 
 Ubuntu
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In Ubuntu you need to erase older versions of NodeJS, if present:
 
@@ -233,7 +233,7 @@ Finally you can install NodeJS:
         apt-get install -y nodejs
 
 Chromium requirements
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 .. important::
 
 	**Enterprise Edition only**
@@ -259,7 +259,7 @@ Knowage provides a distribution of Chromium for its functionalities but some oth
 
 
 Support to non-latin languages
-------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage does some of its job at server side and it could need support for non-latin languages. Some operating systems don't provides support to non-latin language by default: see the official documentation to enable the support to those languages.
 
@@ -285,7 +285,7 @@ For example, to install non-latin languages fonts you could use:
 
 
 Supported browsers
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage supports the newest and the second to last version of these browsers:
 
@@ -299,7 +299,7 @@ Knowage supports the newest and the second to last version of these browsers:
          Internet Explorer is no longer supported by Microsoft and it is also vulnerable. Please, use one of the supported browser listed above.
 
 Data Preparation requirements
------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 In order to use data preparation functionality, user should have Apache Livy and Apache Spark installed.
 Please check Livy and Spark official documentation for more info (https://livy.apache.org/, https://spark.apache.org/) and manual installation paragraph for technical details.

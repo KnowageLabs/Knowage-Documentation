@@ -1,5 +1,5 @@
 How to upgrade KNOWAGE 8.0 to 8.1
-#############
+########################################################################################################################
 
 This section describes the main steps to manually update an existing Knowage installation.
 
@@ -16,7 +16,7 @@ The upgrade of the following Knowage components is generally needed:
 The latter component must be upgraded in case you are moving from a different major or minor version (for example: from 8.0.1 to 8.1.2), but there is no need in case you are upgrading to a new patch release of the same major/minor family (for example: from 8.0.2 to 8.0.4).
 
 Preliminary operations
------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Before starting upgrade procedure, you have to:
 
@@ -28,7 +28,7 @@ Before starting upgrade procedure, you have to:
 
 
 Upgrade operations
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 To upgrade Knowage installation follow these steps:
 

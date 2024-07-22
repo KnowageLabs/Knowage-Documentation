@@ -1,10 +1,10 @@
 Glossary
-##############
+########################################################################################################################
 
 The **Glossary** functionality offers a way to find documents by browsing an index page.
 
 Glossary management
----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Once logged in, the user can find the two menu items, **Glossary Definition** and **Glossary Usage** in *CATALOGS* of the Knowage main menu, as shown below.
 
@@ -73,7 +73,7 @@ The image below shows the *ADD Node* functionality and also how to add words to 
     Add items to the node(s) and words to nodes.
 
 Glossary Usage
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 This functionality works accordingly to the user role and includes features that allow to create/visualize the associations of the words of a glossary to:
 
@@ -116,7 +116,7 @@ See image below:
 
 
 Help Online functionality
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The user can view the association of a specific analytical element (dataset, document or model) by using the **Help Online** functionality from:
 

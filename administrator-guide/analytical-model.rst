@@ -1,10 +1,10 @@
-Analytical Model 
-====================
+Analytical Model
+========================================================================================================================
 
 The *analytical model* let you organize analytical documents in hierarchies and folders. Let’s have a look on its structure.
 
 Repository structure and rights
----------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage adopts a virtual folder structure to organize analytical documents in hierarchies and folders. This structure is called the Functionalities tree and is accessible via **Profile Management** > **Functionalities management**.
 
@@ -44,7 +44,7 @@ To assign permissions to roles, check the related boxes. Each user with that rol
             A subfolder inherits the permissions assigned to the parent folder. While it is possible to further restrict inherited permissions, the opposite is not allowed: rights cannot be extended going down the hierarchy.
 
 Menu configuration
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage allows the definition of a menu for the end user. This menu will be displayed in the left bar of Knowage homepage, under the Knowage icon. It is possible to associate to each node a static page, a document, a functionality (as a folder) or nothing (empty node). Every node can be associated to different roles. This menu structure can be created and modified exclusively by the administrator in the **Tools** area. To access the Menu configuration area, go to **Profile Management** > **Menu Configuration** from the Main Menu.
 
@@ -65,7 +65,7 @@ In general you can:
 Observe that when one inserts a menu item as a child, this will inherit the general details of a menu node.
 
 Setting menu icon
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creating a menu, you can choose an icon to be shown in the main menu. **This feature is available only for first level menu**.
 

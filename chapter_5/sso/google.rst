@@ -1,5 +1,5 @@
 Google SSO
-###########
+########################################################################################################################
 
 Knowage provides integration with Google Sign-In for authentication purposes, i.e. users can login into Knowage using their Google accounts.
 

@@ -1,5 +1,5 @@
 Key Performance Indicator
-=====================================
+========================================================================================================================
 
 KPI stands for Key Performance Indicator. It denotes a set of metrics, usually derived from simple measures, which allow managers to take a snapshot on key aspects of their business. The main characteristics of KPIs follow:
 
@@ -17,7 +17,7 @@ For these reasons, KPIs are always defined by expert analysts and then used to a
 Knowage allows the configuration of a KPI document thanks to a specific **KPI engine**. The critical value (or values) can be computed and visualized through the functionalities available in the ’KPI model’ section of Knowage menu area (see the next figure).
 
 KPI development
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 We introduce the KPI tool by splitting the topic in steps. We briefly sum up here the arguments that we will cover in the following sections in order to have a general overview of the KPI implemetation.
 
@@ -251,7 +251,7 @@ Once the schedulation is completed click on the “Save” button. Remember to g
     Creation of a KPI Document.
 
 Creation of a KPI document
-------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 **Document creation.** Now the schedulation has been set and it is possible to visualize the results. We need at this point to create a new analytical document of type KPI and that uses the KPI engine (Figure below). Then we save.
 

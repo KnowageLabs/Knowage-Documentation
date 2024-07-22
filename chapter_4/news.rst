@@ -1,10 +1,10 @@
 News
-############
+########################################################################################################################
 
 The **News management** is a helpful functionality to keep the end user constantly informed on any changements or updates on the Knowage platform. In this section we will describe the main steps to insert a news.
 
 How to publish news
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 To add a news is mandatory to have administration priviledges. An admin user can insert news entering the **News Management** functionality from the Knowage main menu.
 
@@ -33,7 +33,7 @@ To add a news, just click on the *plus* icon. Below, the information requested f
     
 
 How the end user can read the news
-------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 When some news are added, the **news** icon prompts the number of unread news.
 .. figure:: media/image04.png

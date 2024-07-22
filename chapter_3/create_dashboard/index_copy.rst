@@ -1,5 +1,5 @@
 Create a New Dashboard
-=======
+========================================================================================================================
 
 Knowage allow end users to *self-build interactive cockpits* through an intuitive and interactive interface, with a few clicks and simple drag and drop. This allows you to compose your analytical documents with multiple widgets and define associations among them, so that clicking on one widget data are automatically updated in other widgets.
 
@@ -17,7 +17,7 @@ Cockpit document can be created and executed both by technical users and end use
     Since there are no differences between the cockpit interface reached by a final user and the one reached by a technical user, the cockpit designer is described in one unique My first Cockpit for both those kind of users. By the way, when necessary we will   highlight how the same functionality can be exploited accordingly to the user’s role.
 
 My first Cockpit
---------------------
+------------------------------------------------------------------------------------------------------------------------
 
 You can create your new Cockpit from the **Analysis** area of the **Workspace** by clicking on the “Plus” icon and selecting **Cockpits** if you enter Knowage Server as final user, while you can enter the document browser and start a new cockpit using the “Plus” icon if you enter Knowage Server as admin.
 
@@ -82,7 +82,7 @@ By clicking the button **Add Widget** you can add a widget containing a **Text**
 In the following we go into details of each available widget.
 
 Text widget
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By clicking the button Text Widget you can add text to your cockpit. As shown in figure below, the widget editor opens and it is divided in three tabs: the **Text editor**,
 the **Style**, the **Dataset** and the **Filters** tab.
@@ -111,7 +111,7 @@ On the “Style” tab you can customize the text widget. We have provided all d
 used in the dynamic value. Finally, the “Filters” tab can be used to extract limited output from the dataset. We put details off to the table widget subsection.
 
 Image widget
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By clicking the button **Image Widget** you can add images to your cockpit. As already seen the widget editor opens and it is divided in
 three sections.
@@ -145,7 +145,7 @@ If the cross navigation definition is not defined, then when you launch the imag
     Cross navigation multiple choices.
 
 Chart widget
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Charts are an essential representation of data, Knowage let you use many different charts type and configure them according to your needs. We have provided all details about charts type and configuration in Chart chapter.
 
@@ -187,7 +187,7 @@ Adding new calculated fields is easy as using other measure fields, using Chart 
 
 
 Table widget
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The **Widget table configuration** opens and it guides you through the steps to configure the widget. The pop up opens showing the **column** tab, as you can see from Figure below. In details, it is mandatory to select a dataset using the combobox (only if at least one dataset has been loaded using the **Data Configuration** feature) or clicking on the icon |image156| available just aside the combobox line. You can page the table specifying the number of rows per sheet. Consequently the user can set columns properties.
 
@@ -320,6 +320,7 @@ The **Style** tab is where you can customize the table by using the different op
     Borders section of the Style tab.
 
 - In the **Padding** section you can add a padding inside the widget area, specifying a value for top, bottom, left and right zones. Refer to the following figure.
+
 .. figure:: media/image164b.png
 
     Padding section of the Style tab.
@@ -353,7 +354,7 @@ Once you have finished setting the different configuration options of the table 
 displayed inside the cockpit.
 
 Cross Table widget
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar configurations are available also for the Cross Table widget. In this data visualization option, you still have the tabs: **Dataset** tab, **Configuration** tab, the **Style** tab and the **Filters** tab as you can see below.
 
@@ -526,7 +527,7 @@ Opening the **Cross** tab is possible to set a cross navigation to another docum
 Once some or all (at least the mandatory) of the above mentioned setting features have been set you can save and the widget will be inserted into the cockpit area.
 
 Document section
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Document widget allows to add an external document into the cockpit area. This widget supports documents like reports, maps, etc.
 
@@ -541,7 +542,7 @@ The Document Widget configuration is divided into two parts: **Custom** tab and 
 The Custom tab is the place where the document is uploaded while the Style tab is where all style options are set.
 
 Active Selections widget
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To enable the Active Selections widget, which means the possibility to have all the currently applied selections listed and accessible on a widget, the user must open the **“Active Selections”** feature through the **“Add widget”** functionality and configure the demanded options. Figure below shows the **“Active Selections widget configuration”** interface.
 
@@ -558,7 +559,7 @@ The Active Selections will display the elements selected by the user. Figure bel
 If global associations have been set, clicking on table, cross table or chart elements will update all corresponding widgets. Otherwise, only the widget on which selection has been made will be updated. In both cases the Selection widget will display the highlighted attribute values.
 
 Selector Widget
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The **Selector Widget** is a way to include a dataset filter, directly inside the cockpit, that can be displayed like a combobox, radio button or checkboxes.
 
@@ -593,7 +594,7 @@ The Selector widget works effectively as a ready-to-use filter panel.
     Selector widget execution example.
 
 HTML Widget
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements to the cockpit. This widget supports all HTML5 standard tags and CSS3 properties.
 
@@ -757,7 +758,7 @@ If you need to simulate a button behaviour use a div (or another allowed tag) an
 Like other widgets the **"Style"** tab and the **"Filters"** tab are available in order to set the general style options for the widget and to filter the results displayed in the HTML widget.
 
 Map Widget
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Map Widget is useful when a user needs to visualize data related to a geographic position. The widget supports multiple layers, one for every dataset added to widget configuration, and one data field for every layer: the user can switch on-the-fly between all data available on the layer.
 
@@ -881,7 +882,7 @@ The choroplet visualization allows a user to precisely associate values to areas
     Choroplet configuration.
 
 Discovery Widget
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. figure:: media/image480.png
 
 The Discovery Widget is used to easily use and navigate into a Solr Dataset using facets aggregation and a table results.
@@ -934,7 +935,7 @@ And change the "date format" property
 .. figure:: media/image495.png
 
 Python/R Widget
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Python/R widgets allow to directly embed Python or R scripts inside the cockpit in order to create advanced custom analytics.
 
@@ -975,7 +976,7 @@ Inside Python and R scripts it is possible to access analytical drivers by the u
     **This widget is sensible to associative logic, meaning that the widget is updated every time an association is changed, but it DOES NOT trigger associative logic itself.**
 
 Custom Chart Widget
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. figure:: media/image500.png
 
 The Custom Chart allows the user to directly embed html, css and js code using a supported external chart library and integrating with Knowage data and interactions using custom API.
@@ -1597,8 +1598,8 @@ If a cross-navigation or a preview has been set in the cross tab, those will hav
     For security reasons no dangerous Javascript code can be added to html tags. Every tag considered dangerous will be deleted on save by the system.
     Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise those external links will be removed by the system. This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
 
-        .. code-block:: xml
-        :linenos:
+    .. code-block:: xml
+       :linenos:
 
         <?xml version="1.0" encoding="UTF-8"?>
         <WHITELIST>
@@ -1616,7 +1617,7 @@ If a cross-navigation or a preview has been set in the cross tab, those will hav
 Like other widgets the **"Cross"**, **"Style"**, and the **"Filters"** tab are available in order to set the general style options for the widget and to filter the results displayed in the Custom Chart widget.
 
 Cross Navigation
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
     **Cross navigation tab is only for technical users**
@@ -1718,7 +1719,7 @@ You can choose how to get the parameter value with the following modes:
 - *JWT*, passing the JWT token of the user
 
 Widget properties
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once one or more (above mentioned) widgets have been implemented, the technical user has some more options exploring the icon available at the left bottom corner of the widget itself, as Figure below highlights.
 
@@ -1763,7 +1764,7 @@ In this case, the available chart types are: parallel, scatter, wordcloud, line,
 Pay attention though to the fact that when grouping functions have been used, the change chart type may not report the same level of aggregation. In fact, not all type of chart allows the grouping function. Refer to Chart types in detail to read more about each chart type configuration. Pay also attention when a two-series chart is chaned with a single-series one. For instance the parallel chart works only when (at least) two series have been set, while the wordcloud works with only one series.
 
 General configuration
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 This option allows the user to manage all cockpit general settings that we are going to describe through images of the interface. Clicking on the **General configuration** button the window in figure below opens. This contains the **General Settings** tab, the **Widget Style** tab and the **CSS Editor** tab.
 
@@ -1786,7 +1787,7 @@ The third tab allows to specify CSS properties for the whole cockpit and widgets
     Css editor tab.
 
 Data configuration
-----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 This feature manages the data storage and usage. In fact, here there is the possibility to save data in cache, create associations between datasets, create indexes on cached data, schedule the (data) refresh frequency and so on. Referring to the figure below, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **indexes**, the **Frequency** and the **Template** tab.
 
@@ -1796,12 +1797,12 @@ This feature manages the data storage and usage. In fact, here there is the poss
     Data configuration window.
 
 Source
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Source tab is split into two areas. On the left side the user can find the list of those dataset that are currently used by the cockpit. Here it is possible to add new dataset that will be passed to widgets. In other words, datasets inserted in this area will be listed in the dataset combobox of widgets like the Table, the Pivot Table and the Chart one. Note that the user can delete datasets as well.
 
 Parametric sources management
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the user is adding a parametric dataset the window will exhibit them in an expandable box right below. It is also mandatory to give default values or to associate proper drivers to the document to secure its correct execution. By the way, a final user has no access to parametric dataset and he/she cannot handle analytical drivers, therefore **parametric sources can be managed only by an admin user**. We stress that the user must also type the driver name in the field box as highlighted in Figure below. You can type it manually or use the look up just aside the parameter line.
 
@@ -1812,7 +1813,7 @@ If the user is adding a parametric dataset the window will exhibit them in an ex
 On the right side of the window the user finds the list of external documents that can be added to the cockpit (through Document widgets), or as well as for the dataset case, of documents that are already in use in (previously set) Document widgets. In the occurrence of Associations parametric documents, parameter boxes are shown below. Note that it is mandatory to link them to analytical drivers (previously hooked to the document) or be assigned a fixed (default) value.
 
 Associations
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your goal is to show data from a single dataset, it is not necessary to define any association. *Associations should be set within the designer when widgets are built on different datasets*. Associations can be set with the elements: dataset columns, dataset parameters and document parameters. Note that to implement an association the user must have at least one column. We show some examples in the following.
 
@@ -1857,7 +1858,7 @@ To select one of suggested associations, simply click on the specific row and th
 
 
 Indexes
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To have faster loading time of the cockpit, is possible to create indexes on cached data. This feature is available only for cached dataset.
 
 If you want to create an index on a column you have to choose that column by clicking on it. The name of the column will appears in the Indexes List
@@ -1872,7 +1873,7 @@ For example, in the figure above index on the column "customer_id" of ALL_CUSTOM
 "store_name" column of "SPARKSQL_STORE" dataset is selected. If you want to create an index on it, you have to save it.
 
 Frequency
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Frequency tab defines a schedulation over dataset involved in the associations. An example is supplied in the next figure. This means that associations are activated automatically and data are reloaded according to this feature. In particular, groups of realtime datasets that compose one or more associations can have different update frequencies. We stress that, in order to secure the right document execution, the group frequency do not affect the other ones and each group is reloaded at different times. In addition, realtime dataset that are not involved in any association can have their own frequency.
 
@@ -1882,7 +1883,7 @@ The Frequency tab defines a schedulation over dataset involved in the associatio
     Frequency settings example.
 
 Variables
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this tab the user can define the variables that will be available inside the cockpit.
 
@@ -1901,7 +1902,7 @@ The available types are the following:
 The variables will be available inside the widgets with the $V{variablename} format.
 
 Template
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this tab the user can find the json code (at the current stage of the work) which composes the template. Figure below shows an example.
 
@@ -1911,7 +1912,7 @@ In this tab the user can find the json code (at the current stage of the work) w
 
 
 Selections
---------------
+------------------------------------------------------------------------------------------------------------------------
 
 Is possible to keep track of the **Selections** applied to your widgets, namely the possibility to filter widget data according to selection made through the click on a specific item of the cockpit (cell value, chart bar, etc.), also from the cockpit menu. You can check which selections are active on your cockpit at anytime thanks to the *Selections list* functionality. Previously, we already described how to add the *“Active Selections”* widget inside the cockpit area. If the user don't want to add a widget that stay visible inside the cockpit, selections can still be accessed and managed through the cockpit menu by clicking on the *“Selections”* icon (see the figure).
 
@@ -1928,18 +1929,18 @@ Here all selections and associations are listed, as shown in Figure below. The �
 
 
 Clear cache
----------------
+------------------------------------------------------------------------------------------------------------------------
 
 The **Clear cache** button lets you realign the data shown in your widget to the ones in your database. When you create your widget and associate your datafields, a photo of data is made and stored in temporary tables. This means that your cockpit will display the same data at each execution until you clean the cache, by clicking on the dedicated button, and execute the document again. Now your data are refreshed and updated to the one contained in your database at last execution time. As discussed before this button is available also in “View mode” modality for end users.
 
 Save
---------
+------------------------------------------------------------------------------------------------------------------------
 
 You can save the cockpit by clicking on the save button in the right-top corner. The document will be saved in the personal folder (technical users) or in the **My Analysis** section. We remember that it is possible to share the new cockpit with other users clicking on the dedicated icon. You can also choose in which folder, among the ones visible to your role, to place your shared document.
 
 
 Multisheet functionality
-----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The Cockpit engine allows to manage contents in multiple sheets. In each sheet the user can find and employ the features shown above. Indeed, it is possible to perform a new analysis (as highlighted in Figure below) selecting different datasets and gadgets. The multisheet functionality is particularly useful to focus the analysis in a single spot and have a general overview over it in few clicks at the same time.
 
@@ -1952,7 +1953,7 @@ Furthermore it is possible, but not mandatory, to set associations between datas
 
 
 Export cockpit
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Cockpit document allows to export data into csv file without executing document. This is very useful when you produce data using a heavy query. This option is available if your document has parameters. When you start execution of your document, you will get opened filter panel so you can fill values. To start export, you should click on drop down menu, next to execute button, as on image below.
 

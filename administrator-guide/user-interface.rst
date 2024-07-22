@@ -1,10 +1,10 @@
 User Interface
-================
+========================================================================================================================
 
 This chapter focuses on Knowage user interface, providing detailed information on the Main Menu.
 
 Main menu
------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage menu gives you access to all its functionalities. By default you find the menu button at the left bottom corner of the home page, click it to open the menu.
 
