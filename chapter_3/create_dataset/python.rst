@@ -1,5 +1,5 @@
 Python Data Set
-###########
+########################################################################################################################
 
 The Python/R dataset enables users to create a dataset by writing a Python or R script that directly retrieves data.
 The developer of the dataset is free to write code which has to produce a **dataframe** variable as output (for Python scripts we refer to pandas dataframes). This variable will contain data that Knowage will later convert into its own format.

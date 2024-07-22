@@ -1,15 +1,15 @@
 How create a Data Preparation
-=================
+========================================================================================================================
 
 What is that for?
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 **Data Preparation** is a functionality available since version 8.1 that allows users to create a prepared dataset, starting from an existing one.
 In this way users can create a prepared dataset and than using it inside a dashboard or simply using it as another dataset.
 Users have the capability of creating complex and specific datasets quite easily and quickly, in order to use them for any purpose.
 
 Preparing a dataset
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The first step is selecting a dataset to work on.
 You can do it selecting the desired dataset into your workspace section (there should be also a  **Data Preparation** entry):
@@ -63,7 +63,7 @@ Data preparation main screen:
     Data Preparation main screen.
 
 Data Preparation Transformations
---------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 You can apply transformations to the source dataset just picking the transformation action, step by step, until you reach the desired result.
 
@@ -156,7 +156,7 @@ Two more transformations are present only by clicking on a specific column: **TR
     Trim column dialog example.
 
 Data Preparation technical detail
----------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 **What is an AVRO file?**
 
@@ -177,7 +177,7 @@ This file is read and then it will be used as data source for data transformatio
 
 
 Saving and Using a prepared dataset
------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Now let's see how to save a prepared dataset. For our documentation example we use two transformations: DROP and then a FILTER on "age" column.
 

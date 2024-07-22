@@ -1,5 +1,5 @@
 Create Scorecard
-################
+########################################################################################################################
 
 The **Scorecard** feature, available in Knowage suite as highlighted in the following figure, allows to supervise different KPIs at the same time. This option gives an exclusive complete overview of the KPIs situation when the user is not interested in a single threshold check. This tool is in fact useful when the user is interested in monitoring the overcoming of two or more critical KPI values.
 
@@ -9,7 +9,7 @@ The **Scorecard** feature, available in Knowage suite as highlighted in the foll
     Scorecard from the contextual menu.
 
 Scorecard development
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 A scorecard is structured in hierarchical levels. Shortly, there is a first level called **Perspectives** composed of KPIs grouped on targets. Otherwise, **Targets** are assigned a threshold depending on the KPIs they are composed of. In the following we will describe in detail a scorecard configuration. When clicking on the Scorecard menu item the window of figure below opens. Here the implemented scorecards are listed and can be opened and edited.
 
@@ -73,7 +73,7 @@ The same choice is available at the perspective level (refer to next figure), th
 Remember to save once perspectives and targets have been set.
 
 Creation of a Scorecard document
--------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Once saved it is possible to develop a scorecard document which can be easily consulted by (authorized) end users. To create a scorecard document click on the “Plus” icon available in the document browser and then “Generic document”. 
 

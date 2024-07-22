@@ -1,5 +1,5 @@
 Behavioural Model
-====================
+========================================================================================================================
 
 An important topic to explore before starting a new project is the creation and managing the so-called *behavioural model*.
 
@@ -20,7 +20,7 @@ questions:
 -  *HOW* users work with their documents (analytical drivers and presentation environment settings).
 
 Roles, users and attributes
--------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage users are defined by:
 
@@ -152,9 +152,9 @@ The **Business Models** tab is available only for KnowageBD and KnowageSI, while
 You can create new categories for business models and datasets using the **Server Settings** > **Domain management** menu item.
 
 
-------------------
+------------------------------------------------------------------------------------------------------------------------
 User Management
-------------------
+------------------------------------------------------------------------------------------------------------------------
 
 
 Last but not least, the **User Management** section includes a left panel that allows the administrator create and delete users, and a right panel that allows him to manage user details, roles and attributes.
@@ -165,7 +165,7 @@ Last but not least, the **User Management** section includes a left panel that a
 
 
 User unlock
-^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If user reaches the maximum number of failed login attempts (editable in advanced configurations), it will be blocked by Knowage and access will be denied. By accessing Knowage with an user having user management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it using the "unlock user" button. After that user will be able to log in using the latest credentials set.
 
@@ -175,7 +175,7 @@ If user reaches the maximum number of failed login attempts (editable in advance
 
 
 Roles settings
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clicking on the ROLES tab you have to select one o more roles to associate with the user.
 After that, if more than one role is associated to the user, you can choose the default role by selecting it from the combo box on the top of the page.

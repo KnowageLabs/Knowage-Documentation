@@ -1,10 +1,10 @@
 Server settings
-############
+########################################################################################################################
 
 In this chapter we will describe all the advanced configuration parameters of Knowage.
 
 Thread manager
-------------------
+------------------------------------------------------------------------------------------------------------------------
 For Tomcat: the configuration of the pool of thread is available inside the TOMCAT_HOME/conf/server.xml. Refer to Code below.
 
 .. code-block:: xml
@@ -44,7 +44,7 @@ In both cases, the meaning of the configuration parameters is the following:
 * maxDaemons: the maximum number of daemon threads to allow for this work manager. Default: 10.
 
 Cache parameters
-------------------
+------------------------------------------------------------------------------------------------------------------------
 First of all, the user must configure the distributed cache. This helps to coordinate the parallel access to the distributed cache, guaranteeing a thread-safe access. It is necessary to configure the hazelcast.xml file (available in the knowage/WEB-INF/classes/) typing in the ”member“ tag the IP address or hostname of the machine on which Knowage is installed (for example  <member> 192.168.29.43</member>). In case of multi-node configuration, it is obviously important to report all cluster members. This operation must be carried out on every node. Furthermore, it is possible to implement a finer tuning of the cache behaviour, changing the Knowage configuration. The user must edit some values of the SBI_CONFIG table using the specific administrator interface.
 
 * **SPAGOBI.CACHE.NAMEPREFIX**: It configures the prefix of temporary table in the cache ( Default : ”sbicache“ )
@@ -86,7 +86,7 @@ First of all, the user must configure the distributed cache. This helps to coord
 Any value other than those listed above does not enable periodic cleaning. ( Default: DAILY )
 
 Logging
----------
+------------------------------------------------------------------------------------------------------------------------
 Knowage uses the component Log4J to create the log applications. Each web application has its own file inside the folder /knowageXXXX/WEB-INF/classes/log4j.properties. The content of this file change accordingly to the settings: the **appenders** allows to modify the level of the log. As an example, in the following code block, we analyze the log file of Knowage. In the first part we can set the generation mechanism of the log file, while in the second one the level of tracing.
 
 .. _loggappender:
@@ -154,7 +154,7 @@ in
 For further details we refer to the official Log4J documents.
 
 Mail server
-------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage uses in some situations the mail server to send emails. The configuration of this feature can be done right straight through the Knowage GUI, after accessing with administrator credentials.
 
@@ -179,7 +179,7 @@ Moreover, each profile has the following values:
 * security: the user must choose between NONE, SSL and STARTTLS.
 
 Maximum file size
------------------
+------------------------------------------------------------------------------------------------------------------------
 
 For security reasons, Knowage has a series of parameters which manage the maximum file size that can be loaded on the server through the web GUI. To modify those parameters, it is required to enter the Knowage server application as administrator and access the ”server settings“ section and then ”configuration management“. The parameters at issue are the following:
 
@@ -192,7 +192,7 @@ For security reasons, Knowage has a series of parameters which manage the maximu
 *  **IMAGE_GALLERY.MAX_IMAGE_SIZE_KB** : Max image size in Kb: it is the maximum size of the images that can be used in a cockpit creation; the default is 1MB;
 
 Date format
-------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage allows the user to visualize the date time in a format that depends on the selected language. To change the visualization of such formats, the user must enter Knowage as administrator and access the "Server Settings“ section and, consequently, the ”Configuration management“. Then finally select ”\ **DATE-FORMAT**\ “.
 
@@ -211,7 +211,7 @@ We suggest to set the parameters in compliance with each other, according to a l
 The parameters **SPAGOBI.DATE-FORMAT-SERVER.format** and **SPAGOBI.DATE-FORMAT-SERVER.extJsFormat** control the link between back-end and front-end. The adjustment of these parameters do not affect the web GUI.
 
 Language
----------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage manages the multi-language. The list of all languages is manageable from the "Server Settings” section. Go to "Configuration management“ and select the LANGUAGE_SUPPORTED category. Here there are two properties:
 
@@ -220,7 +220,7 @@ Knowage manages the multi-language. The list of all languages is manageable from
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default**: the default value is [en,US].
 
 Adding new languages
---------------------
+------------------------------------------------------------------------------------------------------------------------
 
 To add more languages to the list (if not provided) a few steps are required:
 
@@ -238,7 +238,7 @@ Warning: use the last step only if no zanata translations are available. Using Z
 
 
 Password constraints settings
------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 User password constraints can be set configuring parameters below:
 
@@ -261,7 +261,8 @@ By default, all above configurations are disabled.
 
 
 Login security settings
------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
 Login security configurations can be set filling fields below:
 
 * **internal.security.login.checkForMaxFailedLoginAttempts**: if active and set to true, users will only be able to access Knowage if they have not reached the maximum number of failed login attempts;
@@ -273,7 +274,7 @@ Login security configurations can be set filling fields below:
 
 
 Resource export folder cleaning settings
-----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 Resource export folder cleaning configurations can be set filling fields below:
 
 * **KNOWAGE.RESOURCE.EXPORT.FOLDER.CLEANING_PERCENTAGE**: if active, the cleaning procedure will delete the files contained in the export resource folder leaving this percentage of free space (0 - 100). Default 30;
@@ -281,23 +282,23 @@ Resource export folder cleaning configurations can be set filling fields below:
 
 
 Import / Export
-----------------
+------------------------------------------------------------------------------------------------------------------------
 
 Users
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Specific configurations for users import procedure:
 
 * **IMPORTEXPORT.USER.DEFAULT_PASSWORD**: password set for all users imported by the import procedure.
 
 
 Main Menu
-----------------
+------------------------------------------------------------------------------------------------------------------------
 Specific settings for the main menu can be set updating the fields below:
 
 * **KNOWAGE.DOWNLOAD.POLLING.TIME**: This field defines the number of milliseconds for the download service polling interval. If set to *0* the service will update just once on page load. Default is 10000 (10 seconds).
 
 Changing the secret key for password encryption
------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The secret password encryption key must be set during the installation and must **never** be changed. *In case that the secret key is lost* you must create a new one and update database passwords. For this reason Knowage provides you a tool to find out the new encrypted value.
 
@@ -318,7 +319,7 @@ Below is an example of invoking the tool using *biadmin* as plaintext password.
 The output value will be the second argument passed in input encrypted with the key present in the file. This procedure must be repeated for all users.
 
 Audit Table Management
------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 The audit table tracks documents changes and other operations made to knowage data at the database level.
 User can enable audit table tracing (database table name: **SBI_AUDIT**) setting the **KNOWAGE.AUDIT_ENABLED** property to **true** inside **Configuration Management** panel:
 

@@ -1,8 +1,8 @@
 Knowage at a glance
-=======================
+========================================================================================================================
 
 Discovering Knowage
-----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage is the business intelligence suite developed and managed by Engineering Group. Knowage is *flexible*, since it is based on a modular architecture and open standards in order to facilitates its customization and integration according to users’ needs. It also provides a *comprehensive* set of analytical features and capabilities ranging from traditional reporting and charting tools, to more advanced analytics.
 
@@ -12,7 +12,7 @@ Knowage is the business intelligence suite developed and managed by Engineering 
          KnowageER and KnowageSI, as submodules of Knowage Enterprise Edition, also supports **multi-tenancy** (i.e. a single Knowage instance serving multiple organizations, called tenants). In a multi-tenancy architecture, each tenant owns and manages his own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
 
 Modules
------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. figure:: media/image6.png
    
@@ -37,7 +37,7 @@ functionalities.
 It represents an enterprise level solution for BI, supporting the whole project life-cycle, managing security and guaranteeing scalability, clustering and high availability architectures. Moreover, it is the main reference for all potential users and usages; it leads the development trend in terms of features, services and delivery models.
 
 Layers
--------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage Server architecture is functionally layered on three main levels.
    
@@ -59,7 +59,7 @@ Every layer of the functional architecture is composed of different application 
    Knowage Server architecture detail.
 
 Delivery layer
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The delivery layer covers all publication requirements. It can be accessed by third-party applications, and it offers end users all features and services needed to perform their BI analysis.
 
@@ -77,7 +77,7 @@ BI API
    For the integration of enterprise applications behind or without the end user GUI.
 
 Analytical layer
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The analytical layer is the core of the Server. It provides all analytical features and capabilities, in a secure and role-based access
 mode. Its main components are:
@@ -92,7 +92,7 @@ Behavioural Model
 Offering multiple solutions for the same analytical requirement and/or multiple instances for the same engine, Knowage logic and architecture provide various benefits, such as: limited workload on each engine, guaranteeing high performances; openness to improve or extend the suite and its capabilities, minimizing the impact on exiting environments; high flexibility and modularity; high scalability, with minimum economic, infrastructural and application level impact.
 
 Data layer
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The data layer allows data and metadata storage and usage. BI data is often located in a data warehouse, whose design is out of the BI product scope and strictly related to the specific customer’s world. Most of Knowage products offer a specific ETL tool allowing to load data at this level, covering the whole BI stack.
 
@@ -103,7 +103,7 @@ As described in the next chapters, Knowage can also access less traditional data
 All Knowage metadata are stored in a private repository hosted on a generic RDBMS and accessed by means of a generic description based on Hibernate technology. Knowage metadata contains technical information, business metadata and metamodels registry.
 
 What you can do with Knowage
-----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 This section focuses on Knowage analytical and operational functionalities, administration tools and cross services.
 
@@ -114,7 +114,7 @@ consistency, thanks to the independence of the behavioural model that regulates 
 Moreover, Knowage has a distributed logic and handles more instances of a same engine. This allows the workload distribution on several servers, ensuring the linear system scalability.
 
 Analytical and operational functionalities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage server provides a wide range of analytical functionalities,
 covered by the different products of the suite.
@@ -126,7 +126,7 @@ Concerning the operative level, Knowage Server works with:
 - **Master data**, to manually manage domain data.
 
 Administrative tools and cross services
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Besides its analytical, delivery and data access capabilities, Knowage Server provides all the administration tool needed to handle your
 Knowage instance, as well as several cross-product services to make its features even more powerful.

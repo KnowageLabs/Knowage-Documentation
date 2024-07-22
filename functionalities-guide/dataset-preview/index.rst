@@ -1,10 +1,10 @@
 Dataset Preview
-===================
+========================================================================================================================
 
 The **dataset preview** is a functionality present in workspace, in cockpit and in BIRT report that will manage to get a preview of the selected dataset and parameter.
 
 Dataset preview structure
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 .. figure:: media/image01.png
 
     Dataset preview example screenshot.
@@ -24,7 +24,7 @@ selected format.
     Dataset export bar.
 
 Dataset preview export
--------------------------------
+------------------------------------------------------------------------------------------------------------------------
 Clicking on the export button, or if the default for that preview is set to download, an exportation process
 will start in background. 
 
@@ -36,7 +36,7 @@ After the process is over a notification badge will appear on the *downloads* me
 
 
 Inside workspace
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Inside workspace you can access the dataset preview clicking on the preview button like in the example below.
 
@@ -45,7 +45,7 @@ Inside workspace you can access the dataset preview clicking on the preview butt
     How to access workspace preview.
 
 Inside cockpit
-------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Inside cockpit you can find the dataset preview settings in the following widget configuration:
     - Table widget

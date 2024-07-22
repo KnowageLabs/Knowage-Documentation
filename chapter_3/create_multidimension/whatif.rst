@@ -1,5 +1,5 @@
 Create What-If
-################
+########################################################################################################################
 
 The **What-if** analysis is the capability to make hypothesis and see how these impacts on the business. In practise user can perform What-if analysis using an extension of the OLAP tool. The process of What-if is composed in three phases:
 
@@ -10,7 +10,7 @@ The **What-if** analysis is the capability to make hypothesis and see how these 
 We start then focusing on this last phase.
 
 Interface details
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The workflow has an impact on data visualization. A user can understand the state of the workflow looking at the What-if section of the sidebar. There are three possibilities described in the following.
 
@@ -43,7 +43,7 @@ We briefly recall the functionality of the main buttons:
 -  Select an algorithm.
 
 Meta-language description
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 We saw that the What-If engine allows the final user to change data values. Here we see how it is possible to modify a cell value through a formula, unconditionally from the aggragation level of the cell. The formula must be written using a particular language called **meta-language** that is described below. Firstly the available arithmetic symbols are: + - :sub:`\*` / ( ) %.
 
@@ -177,12 +177,12 @@ Note that the last part of the expression is the portion of the path to the targ
 
 
 What-if analysis implementation
--------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 In this chapter we will deal with some technical fetaures of the What-If analysis that can be handled only by expert users.
 
 Workflow description
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you perform a what-if analysis the schema is shared in order to be used as a data source. Therefore each time a document linked to a schema can be edited only by one user per time. This behaviour is managed by the Workflow of the schema. The administrator can configure a workflow opening the details of the model in Mondrian schemas catalogue, selecting the schema and going on the workflow tab available on the top of the right sided area.
 
@@ -205,7 +205,7 @@ When an administrator clicks on the user in the list “available users” the u
 Administrator can move the users in the sequence using the arrows or remove them clicking again on them. When the workflow is defined, the administrator can start it clicking on the button start. To start a workflow means to enable the first user of the sequence to apply the what-if on that schema. When a workflow is started it can not be edited by anyone else and an icon appears in the row of actual active user so that the administrators can monitor the state of the schema.
 
 Schema definition
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As we foresaid, the What-If analysis requires some changes in the database. The first step is to create a new table in the database to store the named version of the modified data. The user will then change the values of the cube; it is then mandatory to create a new table with a structure similar to the analysed cube and a new table (wbversion) that will contain the versioning of the definitions set in the analysis.
 
@@ -225,7 +225,7 @@ In Figure below there is an example where the cube is sales_fact_1998 and the ne
 The sales_fact_1998_virtual table should be initialized with the same data contained in sales_fact_1998 plus 0 as version; the wbversion table should be initialized with one record with wbversion = 0 and a name plus a description for the “original values”.
 
 Changes in the mondrian schema
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now you should map the new tables in the mondrian schema. In order to merge the fact table and the table with the editable measure we create a virtual cube. A virtual cube is a special cube where the values are the result of the join of other cubes. In our case the join keys are the dimensions. The actions to be performed in the mondrian schema are listed right below.
 
@@ -307,7 +307,7 @@ Specifically, in the virtual cube you should specify:
 Now all the MDX queries can be performed in the virtual cube.
 
 Changes in the designer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The development of a what-if analytical document is the same as described for the OLAP document but herw you have to choos the **What-If Engine** as the engine instead of the **OLAP Engine**.
 

@@ -1,10 +1,10 @@
 CAS SSO
-############
+########################################################################################################################
 
 CAS is an application that implements a Single-Sign-On (SSO) mechanism. It is a good practise in production environments to install it and configure it so to have secure access to the Knowage server applications. CAS expects the use of the HTTPS protocol.
 
 Deploy of the CAS application
------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Carry out the following steps:
 
@@ -27,7 +27,7 @@ Carry out the following steps:
 For further details please refer to the official documents available on CAS website `https://www.apereo.org/projects/cas. <https://www.apereo.org/projects/cas>`__
 
 HTTPS certificate
------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Since CAS application requires the use of the HTTPS protocol, the user must own an SSL certificate: it can be released a Certification Authority (CA) or it can be self-signed (it is recommended the use of the ``keytool`` utility -http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html- available in the JDK).
 
@@ -61,7 +61,7 @@ We suggest to refer to the Java documents for more details. In the following we 
    	$JAVA_HOME/jre/lib/security/cacerts
 
 Configuration of the HTTPS protocol for Tomcat
-----------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 To enable the HTTPS protocol it is necessary to operate according to these steps:
 
@@ -91,7 +91,7 @@ To enable the HTTPS protocol it is necessary to operate according to these steps
 		/>
 
 Knowage configuration
----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Once the CAS has been installed, it is necessary to modify the Knowage configuration. The user must edit some values of the ``SBI_CONFIG`` table using the administrator interface
 

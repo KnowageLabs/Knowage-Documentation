@@ -1,5 +1,5 @@
-Analitycal Document 
-##################
+Analitycal Document
+########################################################################################################################
 
 The *analytical model* is the core of Knowage Server and covers the whole range of analytical needs, providing many solutions for each analytical area, like reports, cockpits, OLAP documents, KPIs and so on.
 
@@ -8,7 +8,7 @@ The main element of the analytical model is the so called *analytical document*,
 In this chapter we describe step by step how to create a new analytical document. There exist many different document types, each with its own peculiarities. Here we provide a generic overview on common features, will focus on available types peculiarities in each dedicated part.
 
 Main concepts
------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The creation and management of analytical documents in Knowage involves different elements:
 
@@ -28,7 +28,7 @@ These elements are then combined inside each document engine, in order to produc
    Components of Knowage analytical document.
 
 Document types
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Regardless of their type, all analytical documents interact with some generic components (such as cross-services) and with the specific engine that generate them (e.g. Report engine, OLAP engine). Therefore, all analytical documents are managed in the same way in terms of:
 
@@ -52,7 +52,7 @@ This means that the above mentioned features are also inherited by every new eng
 In the next sections we describe in detail how to create and manage analytical documents in Knowage.
 
 Register an analytical document
------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 There are two different ways to create a new document on Knowage Server. The first option involves Knowage Studio: within it you can simply click on **Deploy** and the document window will open with pre-filled options. Please note that Knowage Studio can be used to create Birt document only.
 
@@ -64,7 +64,7 @@ There are two different ways to create a new document on Knowage Server. The fir
 The second option is to manually create the document on the Server. This is the most general way since the Studio designer is not yet available for all documents types.
 
 Analytical documents on Server
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First of all click on **Document Development** from the BI functionalities menu, as shown .
 
@@ -136,7 +136,7 @@ Note that some types of document do not require the definition of a dataset at t
 It is advisable to regularly save the document in this process, by clicking the related button save at the top right corner of the window.
 
 Document lifecycle
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The next step is to choose the status of the document using the **State** drop down menu. At any time in fact, each document is   associated to a state, which will typically change over time following the development of the project. Those states are:
 
@@ -155,7 +155,7 @@ The main reason for this is that the state of the document has an impact on its 
          In KnowageER you may also decide to temporary "lock" a document while he is working with it: it is enough to set the **Lock by user** item. This prevent other developers from modifying the same document you are working on.
 
 Template Versioning
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you register a document on the Server, you need to associate a template to it. Click on  tab **History** and then on button **Add** to choose a template from your local file system and upload it.
 
@@ -171,7 +171,7 @@ Knowage Server supports versioning of uploaded templates, as shown below. To vie
     Template versioning for analytical documents.
 
 Document Visibility
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After having defined all details, you need to choose where the analytical document shall be saved in the functionality tree. This   choice has an impact on the visibility of the document. Since folders in the functionality tree are subject to different access policies, which can be set when creating the node, then each document saved in that folder will inherit permissions accordingly.
 
@@ -188,7 +188,7 @@ Note that the same document can be saved in different points of the functionalit
     Functionality Tree, document saving settings.
 
 Visibility rules
----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 In addition to the standard mechanism supported by the functionalities tree, it is possible to further customize access to a document based on user profile attributes. This allows administrators to rule access to documents at a very fine-grained level, beyond simple repository-based policies.
 
@@ -199,7 +199,7 @@ This can be done by editing conditions in the **Visibility restrictions** sectio
     Visibility restrictions.
 
 Association with analytical drivers
-----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 We have already discussed the role of analytical drivers and how they are connected to analytical documents via parameters. In this section we will show how to practically define this association.
 
@@ -231,7 +231,7 @@ In the following we will see some special operations that can be performed on dr
 
 
 Correlation between parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the context of a document, two different parameters may be connected to each other: this means that the possible values of a   parameter are limited by the value(s) of another parameter.
 
@@ -266,7 +266,7 @@ If a parameter depends on multiple parent parameters, you can define multiple co
 Once defined the correlation, the child parameters will display the labels during the runtime in italics.
 
 Correlation through LOV and drivers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In previous sections we saw how to set correlation through the GUI available in the document detail panel, but there is also the   possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously   configured a driver that runs values that can be used in the "where" clause of a SQL query. Then the user must set a query-type LOV using the syntax
 
@@ -289,7 +289,7 @@ As a result, at document execution, as soon as the user pick up a value from the
     Filtering with correlation.
 
 Controlled visibility
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Another type of relation between parameters is supported by Knowage. It is possible to define values of a parent parameter that force hiding or showing of a child parameter in the parameters mask. Note that in the first case, the child parameter is hidden by default, while in the second case the parameter is shown by default.
 
@@ -306,7 +306,7 @@ In the graphical editor you can define visibility rules similarly to   correlati
     Visibility expressions.
 
 Cross Navigation
----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 A powerful feature of Knowage analytical documents is cross-navigation, i.e., the ability to navigate documents in a browser-like fashion following logical data flows. Although crossnavigation is uniformly provided on all documents executed in Knowage Server, each type of document has its own modality to set the link pointing to another document.
 
@@ -330,7 +330,7 @@ Therefore it is required to state which parameters among the ones associated to 
 The definition of the output parameters is performed using the **Manage outputparameters** button but it differs   from document to document, according to its type. We will describe these differences in detail in each dedicated chapter, here we   explain the common steps.
 
 Declaration of the output parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Enter the **Document details** of the document of interest. Then click on **Output parameters** tab and then on the button **Add** for adding new output parameter.
 
@@ -342,7 +342,7 @@ Here you have to state which parameters are going to be used as output parameter
     Setting an output parameter.
 
 Cross navigation definition
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finally you need to select the **Cross Navigation Definition** item from the menu to configure the cross navigation. The figure below shows the cross navigation definition window.
 

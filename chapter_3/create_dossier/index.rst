@@ -1,5 +1,5 @@
 Create a Dossier
-############
+########################################################################################################################
 
 A dossier document allows you to obtain a file processed starting from an input template. A typical example of using this feature is the creation of a file with variable content updated at each run. To do this, you need to create a dossier document with a well-configured XML template.
 
@@ -10,10 +10,10 @@ A dossier document allows you to obtain a file processed starting from an input 
 
 
 XML Template
-------------
+------------------------------------------------------------------------------------------------------------------------
 
 Tags and properties
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 XML template is an XML file used to configure parameters needed to the elaboration. This file is uploaded during document creation and can be updated using the HISTORY tab visible in document edit mode.
 
@@ -60,7 +60,7 @@ In particular, tag allowed are:
 
 
 Image adding (PPT_TEMPLATE)
-------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Suppose you have to create a ppt/pptx file where to place the images relating to one or more reports. You have only to configure XML template defining some placeholders to be use for replacing and execute it. Below is shown an example of an XML template used for this purpose.
 
@@ -92,7 +92,7 @@ The example above is using one placeholder and one static analytical driver.
 
 
 Image replacing (DOC_TEMPLATE)
---------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Suppose that you have to draw up a document where text is static but images related to need to be updated. With this functionality you will be able to use a docx file as a template and replace images inside it. More precisely, you can configure your XML and docx templates to allow Knowage to replace specific images with new ones obtained by the execution of specified documents.
 
@@ -136,7 +136,7 @@ In particular:
 	To optimize dossier creation procedure, same document will be executed more than one time if and only if its parameters change. In that scenario sheetHeight, sheetWidth and deviceScaleFactor will be set for every execution. Moreover, if parameters don't change, document will be executed only one time and sheetHeight, sheetWidth and deviceScaleFactor values will stay the same as the first execution.
 
 My first dossier
-----------------
+------------------------------------------------------------------------------------------------------------------------
 
 You can create a dossier document by using the plus button and choosing "Generic Document". Proceed by filling in the necessary fields, selecting "Collaboration" as the type and "Dossier engine" as the engine and then choosing the XML template. If the documents to be executed have one or more analytical drivers, these drivers must be added to the dossier document from the DRIVER tab.
 
@@ -168,14 +168,14 @@ If you want to execute your document, you must enter a name for the activity and
 Each line allows you to see useful information on the activity (such as the values of the drivers used for execution) by clicking on the info icon, download the processed file by clicking on the download icon and remove itself by clicking on the trash icon.
 
 Dossier Wizard
-----------------
+------------------------------------------------------------------------------------------------------------------------
 
 Starting from Knowage 8.2 it is possible to configure the dossier template document and his xml template easily using the Dossier Wizard.
 
 You can use this feature opening the wizard from a saved dossier document or directly from the workspace.
 
 Starting from a saved document
-------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. figure:: media/image004.png
 
@@ -235,7 +235,7 @@ After clicking on SAVE BUTTON, the xml template should be updated and visible on
     Updated dossier xml template.
 
 Starting from the workspace
-------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Another way to use the Dossier Wizard is starting from the Workspace.
 

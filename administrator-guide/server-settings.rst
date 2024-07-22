@@ -1,5 +1,5 @@
 Server Settings
-===============
+========================================================================================================================
 
 In this chapter we describe all functionalities available in Server Settings panel of the Administrator Menu shown below.
 
@@ -10,7 +10,7 @@ In this chapter we describe all functionalities available in Server Settings pan
 Similar editors give you access to configurations and domains. We are going to provide an example of both cases to let you understand how their management works. A complete overview of metadata creation, editing and management conclude this chapter.
 
 Configuration Management
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 By clicking on the **Server Settings** > **Configuration Management**, you can manage many configuration elements. For example here you can set default language as well as mail settings. Start typing ``DEFAULT`` in the search form, as shown below, to filter among available items and find what you are interested it.
 
@@ -29,7 +29,7 @@ You can view available languages and their code (**Value Check column)** in the 
 
 
 Domain Management
------------------
+------------------------------------------------------------------------------------------------------------------------
 
 By clicking on **Domains Management** item menu, you can manage categories. In the figure below we show Domain Management editor. You can add for example new categories for a business model, for a dataset and for all domain you can see in the **Domain name column**.
 
@@ -60,7 +60,7 @@ All the values except the **Domain code** to you. the last are mandatory for cor
 You can also modify an existing domain by selecting its dedicated row and clicking the edit button.
 
 Exporters Menu
---------------
+------------------------------------------------------------------------------------------------------------------------
 
 Exporters Menu is the new feature of Knowage. This feature allows administrator to configure the exporters of the documents. When you open this catalogue, on the left side you can see the list of created exporters and if you want to see the details of one of them or to change it, you can do that by selecting it in the list. You can add a new exporter by clicking on a plus icon. See the figure below.
 
@@ -77,7 +77,7 @@ On the right side of catalogue you have two drop down menus where you can choose
 You also have possibility to change existing exporter and delete it.
 
 Metadata
---------
+------------------------------------------------------------------------------------------------------------------------
 
 Knowage offers the possibility to define metadata categories and then give them a value for each analytical document and for each subobject.
 

@@ -1,10 +1,10 @@
 Time Span
-################
+########################################################################################################################
 
 Most of times a technical user develops a business solution for the use and consumption of a third not-skilled end user. In the contest of self-service capability of Knowage, when business models are available to allow end users to query data, it is possible to arrange time or temporal intervals so that end users can use these time periods to filter data when working with the QbE interface.
 
 Create a new Timespan
----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The Timespan functionality is available under the *CATALOGS* section of the Knowage main menu. 
 

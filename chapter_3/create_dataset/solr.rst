@@ -1,5 +1,5 @@
 SolR Data Set
-############
+########################################################################################################################
 
 A dataset of type Solr, see the following figure, reads data from the popular Search Engine Solr. To define a **Solr Dataset** select the Solr type and fill in the required settings.
 

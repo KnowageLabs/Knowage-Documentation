@@ -1,5 +1,5 @@
 User registration
-=================
+========================================================================================================================
 
 .. important::
         Signup is available only when ``SPAGOBI.SECURITY.ACTIVE_SIGNUP_FUNCTIONALITY`` configuration is enabled.

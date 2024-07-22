@@ -1,10 +1,10 @@
 Glossary and data lineage
-=========================
+========================================================================================================================
 
 The **Glossary** functionality offers a way to find documents by browsing an index page.
 
 Glossary management
----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The Glossary management is split in two section. Once logged in, the user can find the two menu items: **Glossary Definition** and **Glossary Usage**, as showed below.
 
@@ -73,7 +73,7 @@ In particular, if one right clicks on the node name, as in the next figure, a pa
 Complete the tree structure of the glossary. Use the panel features of each node or of the glossary itself (remember to right click on the items to get such a panel) to add, modify, inspect or delete elements.
 
 Glossary Usage
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 This functionality is profiled accordingly to the user role and it includes features that allow to
 
@@ -139,7 +139,7 @@ elements inside the Knowage suite.
 
 
 Help Online functionality
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The user can inspect the association of a specific analytical element (dataset, document or model) by using the **Help Online** funcitonality. The latter can be reached:
 

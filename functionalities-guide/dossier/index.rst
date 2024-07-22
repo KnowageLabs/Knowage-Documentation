@@ -1,5 +1,5 @@
 Dossier
-========
+========================================================================================================================
 
 A dossier document allows you to obtain a file processed starting from an input template. A typical example of using this feature is the creation of a file with variable content updated at each run. To do this, you need to create a dossier document with a well-configured XML template.
 
@@ -10,10 +10,10 @@ A dossier document allows you to obtain a file processed starting from an input 
 
 
 XML Template
-------------
+------------------------------------------------------------------------------------------------------------------------
 
 Tags and properties
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 XML template is an XML file used to configure parameters needed to the elaboration. This file is uploaded during document creation and can be updated using the HISTORY tab visible in document edit mode.
 
@@ -60,7 +60,7 @@ In particular, tag allowed are:
 
 
 Image adding (PPT_TEMPLATE)
-------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Suppose you have to create a ppt/pptx file where to place the images relating to one or more reports. You have only to configure XML template defining some placeholders to be use for replacing and execute it. Below is shown an example of an XML template used for this purpose.
 
@@ -91,7 +91,7 @@ The example above is using one placeholder and one static analytical driver.
 
 
 Image replacing (DOC_TEMPLATE)
---------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Suppose that you have to draw up a document where text is static but images related to need to be updated.
 
@@ -142,7 +142,7 @@ In particular:
 
 
 My first dossier
-----------------
+------------------------------------------------------------------------------------------------------------------------
 
 You can create a dossier document by using the plus button and choosing "Generic Document". Proceed by filling in the necessary fields, choosing the XML template and selecting "Collaboration" as the type and "Dossier engine" as the engine. If the documents to be executed have one or more analytical drivers, these drivers must be added to the dossier document from the DRIVER tab.
 

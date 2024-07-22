@@ -1,5 +1,5 @@
 Create Data Mining analysis
-===========
+========================================================================================================================
 
 Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making and business strategies. In particular, Knowage **Data Mining Engine** integrates Python scripting capabilities.
 
@@ -9,7 +9,7 @@ The data scientists can thus integrate its own algorithm within Knowage and deli
 
 
 Functions Catalog
-----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The Data Mining can be managed through the **Functions** framework. In this section we will see how to explore and handle this part, while in *Use a function inside documents* we will see how to use functions.
 
@@ -69,12 +69,12 @@ To create a new function an admin user must click on the “Plus” icon availab
     Creating a new function.
 
 The General tab
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this tab the user gives the general information about the function as the figure above shows. The admin user must type: the *name* of the function, the *label* with which it is identified uniquely (remember to use only numbers or letters and do not leave spaces between them) and the *type* that is the function category. The *keywords* are tags that can be assigned to a function, searching for a specific tag in the search box will retrive all the functions that have that tag. In order to add a new keyword you have to write the desired text and then press the submit button on the pc keyboard. The *Description* is where the user can insert a long text or images to be shown when the function is being configured inside documents. In the *Benchmarks* field users can insert information about the function performances.
 
 The Input tab
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As shown in the following figure, the function admits two kinds of input: *columns* and *variables*.
 
@@ -95,7 +95,7 @@ In the “Variable” case, the user must insert one or more variables and match
     The variable input of the function settings.
 
 The Script tab
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The script tab is where an expert user defines the function through the usage of datamining languages (such as Python), as shown in Figure below.
 
@@ -125,7 +125,7 @@ The script will have to produce as output one or more *pandas.Series* variables 
     Function template example.
 
 The Output tab
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finally it is important to define what kind of outputs the function has produced, according to the script generated in the previous tab. Using the “Output“ tab shown below, you must specify:
 
@@ -138,12 +138,12 @@ Finally it is important to define what kind of outputs the function has produced
 
 
 Engine description
---------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The Catalog Function features leverage on the Python Engine. To understand how to install and configure it, please refer to the `Installation Manual <https://knowage-suite.readthedocs.io/en/master/installation-guide/python-installation.html>`__
 
 Use a function inside documents
---------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Now that functions have been created, they must be used inside documents. In this section we will go through all the steps that allow users to execute a function with a specific dataset.
 This works both for the function preview and for the function used inside cockpits.

@@ -1,5 +1,5 @@
 Basic Data Access
-===================
+========================================================================================================================
 
 This chapter describes advanced features, i.e. available only in KnowageBD and KnowageSI products, to access data as end user.
 
@@ -19,7 +19,7 @@ Let us suppose to enter, with end user credentials, the data management area cli
 Afterward you have the subsections: **Dataset** and **Models**. Select **Models** to explore the models and the **Dataset Federation** area. Please note that the **Dataset Federation** functionality is available only in KnowageBD and KnowageSI.
 
 Dataset
---------
+------------------------------------------------------------------------------------------------------------------------
 
 Into the “Dataset” area we find all the datasets classified according to their types. The datasets are categorised as follows:
 
@@ -30,7 +30,7 @@ Into the “Dataset” area we find all the datasets classified according to the
 - **All dataset**: in this folder are stored all the available datasets, namely all datasets contained in the classes just described.
 
 My dataset
-~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this area you can create datasets uploading your own files.
 
@@ -81,7 +81,7 @@ Note that dedicated area “\ **Shared Dataset**\ ” contains all acquired data
     Share a dataset.
 
 CKAN integration
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Thanks to CKAN integration you can easily access to datasets published in the World Wide Web (e.g. datahub.io, data.gov, data.lab.fiware.org, dati.gov.it, and more). Indeed, CKAN is the world’s leading open-source data portal platform. It is a powerful data management system that makes data accessible by providing tools to streamline publishing, sharing, finding and using data. CKAN is addressed to data publishers (national and regional governments, companies and organizations) who want to make their data open and available. So you can search and handle open data in a self-service manner.
 
@@ -91,7 +91,7 @@ Thanks to CKAN integration you can easily access to datasets published in the Wo
       CKAN datasets can be divided into four main categories: “Public”, “Organization private”, “Acquired”, “User private”. You can download and use only the datasets having a **Public** category.
 
 CKAN datasets access method
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To start using CKAN datasets inside Knowage suite, go to the **CKAN Dataset** tab in the “Dataset” subsection of “Data” section under “My Workspace”. As shown in figure below, choose from the combobox the repository that you are interested in and then click on the repository name to access it.
 
@@ -108,7 +108,7 @@ These are not usable yet, but you can start to handle them as we will show in th
     CKAN dataset details.
 
 Export dataset
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Note that once the dataset has been created, the user may find useful to get an excel from it. Knowage has designed a specific button to fulfil this need that the user can find exploring the detail panel of the dataset, as reported below.
 
@@ -117,19 +117,19 @@ Note that once the dataset has been created, the user may find useful to get an 
     Export dataset.
 
 Save and handle dataset
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to use a dataset not used yet, any action on it will start the metadata import wizard. You access it by clicking the magnifier icon. As a first step, you have to insert some mandatory parameters to set the parser configuration.
 
 As a second step the user have to specify how the dataset will appear and to check metadata. Be careful to choose the proper data type (String, Integer, Double) and field type (Measure, Attribute). After that, click on **Next** to see the validation results, confirm and finalize dataset import. Once completed the dataset importation, the selected dataset will appear in the **DataSet** tab too. These actions just listed on the dataset change for downloaded datasets. In particular you have the eye-shaped icon to refresh the dataset or change metadata by repeating the download process and the magnifier icon to inquire it through the QbE interface.
 
 Models
-----------
+------------------------------------------------------------------------------------------------------------------------
 
 Here you find the models that the a technical user has built for you. You can query it using the QbE interface and create your own dataset from them.
 
 Dataset federation
-----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Dataset federation is a functionality available only in KnowageBD and KnowageSI. Thanks to the Data federation functionality, you can create a new dataset combining two or more datasets according to your role permissions. Let us give you an example. Suppose you have stored in a database your products information (i.e. sales, costs, promotions ecc.) and you find as open data the customers feedbacks on these products. If you create datasets on these Dataset federation resources sharing at least one column, then you can join them on the common column and improve your analysis.
 

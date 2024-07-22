@@ -1,5 +1,5 @@
 Software release
-###############
+########################################################################################################################
 
 You can download Knowage through the following links:
 
@@ -25,7 +25,8 @@ A typical release contains three elements:
           +------------------------------------+
 
 Optional: using MAC address for license
----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
 If you're using a VM on AWS cloud and you want to use Knowage EE with license, you should be sure that hardware id doesn't change every start and stop.
 To avoid this behaviour you can choose for using MAC address instead of default hardware id calculation.
 You just have to add this optional row in "setenv.sh" file:

@@ -1,5 +1,5 @@
 Create a Birt report
-##########
+########################################################################################################################
 
 Reports represent the most popular type of business analysis. Indeed, they allow the visualization of data in a structured way and accordingly to predefined formats. The main characteristics of a report are:
 
@@ -20,7 +20,7 @@ BIRT, acronim for **Business Intelligence and Reporting Tools**, is an open sour
     Example of a BIRT report.
 
 Developing a BIRT report
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Firt of all you have to download the Birt report designer from here `Download Eclipse`_.
 
@@ -128,7 +128,7 @@ The BIRT report designer allows the creation of complex reports, with different 
          For a detailed explanation of report design, please refer to BIRT documentation at https://www.eclipse.org/birt/.
 
 Adding parameters to reports
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most times reports show data analysis that depend on variable parameters, such as time, place, type. Birt designer allows to add parameters to a report and link them to analytical drivers defined in Knowage Server.
 
@@ -169,7 +169,7 @@ Parameters can also be used within some graphical elements, such as dynamic text
 
 
 Cross Navigation for BIRT Reports
-----------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 A powerful feature of Knowage analytical documents is cross-navigation, i.e., the ability to navigate documents in a browser-like fashion following logical data flows. Although crossnavigation is uniformly provided on all documents executed in Knowage Server, each type of document has its own modality to set the link pointing to another document.
 

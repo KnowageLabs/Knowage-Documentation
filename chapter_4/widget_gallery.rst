@@ -1,5 +1,5 @@
 Widget gallery
-###############
+########################################################################################################################
 
 The **Widget Gallery** is a feature available since version 8.0 that allows users and editors to create a template and 
 share it in multiple dashboards. By creating a template and then using it within a dashboard, users will have the ability 
@@ -13,7 +13,7 @@ This functionality is available for the following types of widgets:
 -   Python
 
 Gallery management
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 To open the *Gallery Management*, select **Gallery Management** from the *CATALOGS* option of the Knowage main menu.
 The first step consists in creating a new template or importing a template not available in the list.
@@ -61,7 +61,7 @@ Use the *Save* icon to save the template.
     Toolbar icons.
 
 Dashboard gallery
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 When adding a widget in a dashboard (cockpit document), the wizard shows a *Gallery* tab, containing a first empty template and then a set of available templates showing their image, tags and eventually the description. 
 The empty template allows users to create a custom widget without starting from an already created template.

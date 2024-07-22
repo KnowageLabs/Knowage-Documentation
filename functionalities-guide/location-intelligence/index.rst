@@ -1,5 +1,5 @@
 Location Intelligence
-======================
+========================================================================================================================
 
 Location intelligence is based on the idea that geographical spaces are a particular analytical dimension in the BI domain. It is based on:
 
@@ -18,7 +18,7 @@ Location Intelligence usually guarantees:
 Location Intelligence is becoming widely used, mostly thanks to the emergence of location services such as Google Maps. This domain is very easy to use for all kinds of users, usually analysts and operational profiles. By contrast, its management is not as easy, especially if it implies an internal management of the geographical data base.
 
 Basic concepts
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The term Location Intelligence refers to all those processes, technologies, applications and practices capable to join spatial data with business data, in order to gain critical insights, to better support decisional processes and to optimize business activities.
 
@@ -27,10 +27,10 @@ At the technological level, this correlation is the result of the integration be
 Location Intelligence applications significantly improve the quality of users’ analysis based on a geographic dimension. Indeed, a Data Warehouse (DWH) almost always included such information. By representing the geographic distribution of one or more business measures on interactive thematic maps , users can quickly identify patterns, trends or critical areas, with an effectiveness that would be unfeasible using traditional analytical tools.
 
 More on GIS and Spatial Data\*
------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Spatial Data
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The term *spatial data* refers to any kind of information that can be placed in a real or virtual geometric space. In particular, if the spatial data is located in a real geometric space — which is a geometric space that models the real space — it can be defined as *geo-referenced* data.
 
@@ -60,7 +60,7 @@ A feature includes:
 There is a wide range of standards that can be used for the vector encoding of spatial data (e.g. GeoJSON, GML, Shape File, etc.). Most geographic information systems can perform the needed conversions among various encodings.
 
 GIS
-~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Geographic Information Systems (GIS) provide a set of software tools designed to capture, store, extract, transform and display spatial data. Therefore, the term GIS refers a set of sole technological components that manage the spatial data during its whole life cycle, starting from the capture of the data up to its representation and re-distribution.
 
@@ -91,7 +91,7 @@ As for the integration between GIS and BI systems, the OGC has defined two main 
 Knowage suite offers an engine supporting the Location Intelligence analytical area, the **GEOReport Engine**, generating thematic maps.
 
 Analytical document execution
-----------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Let’s have a look on the user interface of Knowage Location Intelligence features.
 
@@ -164,7 +164,7 @@ We can conclude our overview on GIS document describing the buttons located at t
     From the left to the right: Legend, Measure and Export bottom.
 
 Extra functionalities
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let’s come back to Location Layer main tab ad focus on the **Select Mode** area. If cross navigation has been set you find two options: **identify** and **Cross navigation**.
 
@@ -174,7 +174,7 @@ When selection is made, a box appears. In this box you find cross navigation inf
 
 
 Template building with GIS designer
-----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 GIS engine document templates can now be built using GIS designer. Designer is available from administrator document detail page (for this part refer to Section 15.8) and also for end users workspace. The creation process and designer sections are described in the text below.
 
@@ -192,10 +192,10 @@ When the designer is opened there is option to choose dataset for joining spatia
 
 
 Designer sections
-----------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Layer section
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Definition of the target layer is configurable in layer section. If the dataset is selected one of the available layers is chosen from list of layers catalogs. Button change layer (next figure) opens a pop up with a list of all available layer catalogs. Selecting one item from the list and clicking save the selected item will be chosen for template.
 
@@ -216,7 +216,7 @@ In case when there is no dataset multiple layers can be selected below.
     Multiple selection of available layers.
 
 Dataset join columns
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dataset join columns section is for configuring joining spatial data and business data. This section is only present when the dataset is selected for the document. Designer data structure for joining is represented by the pairs of dataset columns and corresponding layer columns. Clicking on add join column that you can see in figure below new empty pair appears. Dataset join column can be selected from columns on selected dataset by choosing an option from combo box. Layer join column should be added as a free text by editing corresponding table column.
 
@@ -225,7 +225,7 @@ Dataset join columns section is for configuring joining spatial data and busines
     Dataset join columns interface.
 
 Indicators
-~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Measures definition is configurable by adding indicators. The interface is shown below. This section is only present when dataset is chosen for the document. Indicators are represented by pairs of measure field from selected dataset and corresponding label that will be used on map. Clicking on add indicators creates empty pair. Measure filed should be selected by picking one option from combo box that contains measure fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
 
@@ -235,7 +235,7 @@ Measures definition is configurable by adding indicators. The interface is shown
     Indicators interface.
 
 Filters
-~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using the filtering dedicated area, as ahown in figure below, you define which dataset attributes can be used to filter the geometry. Each filter element is defined by an array (e.g. name : "store_country", label:"COUNTRY"). The first value (name : "store_country") is the name of the attribute as it is displayed among the properties. The second one label: "COUNTRY" is the label which will be displayed to the user. This section is only present when dataset is chosen for the document. Clicking on add filter creates empty pair. Label field should be selected by picking one option from combobox that contains attribute fields from selected dataset. Label should be inserted as free text by editing corresponding table column.
 
@@ -245,7 +245,7 @@ Using the filtering dedicated area, as ahown in figure below, you define which d
     Filters interface.
 
 Map menu configuration
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Through the **Map menu configuration** panel the user can desides to enable or disable some available functions and features, like the legend, the distance calculator and so on. See next figure to have a glimpse at the available items.
 
@@ -255,7 +255,7 @@ Through the **Map menu configuration** panel the user can desides to enable or d
     Map menu configuration.
 
 Layer filters
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Here, as you can see from figure below, you define which target layer attributes can be used to filter the geometry. This section is only present when a dataset has been selected. Add filters button opens pop up where you can choose all available filters of the selected layers. Figure below gives an example.
 
@@ -268,7 +268,7 @@ Here, as you can see from figure below, you define which target layer attributes
     List of available filters.
 
 Edit map
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When all required fields are filled basic template can be saved. From workspace user is first asked to enter name and description of new created document as in the following figure. When the template is saved successfuly EDIT MAP button is enabled in the right part of the main toolbar.
     
@@ -283,7 +283,7 @@ Clicking the edit map button will open created map. An example is given below. I
     Map in edit mode with save template available.
 
 GEOReport Engine\*
------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The **GEOReport Engine** implements a *bridge integration* architecture.
 
@@ -352,7 +352,7 @@ For example you can use a query dataset, connected to the foodmart data source, 
 Create and save the dataset you want to use and go on preparing the document template.
 
 Template building with GIS designer for technical user\*
-----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 When creating new location intelligence document using GIS engine basic template can be build using GIS designer interface. For administrator designer opens from document detail page clicking on build template button (refer to next figure). When the designer is opened the interface for basic template build is different depending on if the dataset is chosen for the document or not.
 
@@ -376,7 +376,7 @@ When the list of selected layers is changed the filter list will be empty so you
     List of available filters with list of analytical drivers.
 
 Cross navigation definition\*
------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 It is possible to enable cross navigation from a map document to other Knowage documents. This means that, for instance, clicking on the state of Texas will open a new datail documents with additional information relative to the selected state.
 

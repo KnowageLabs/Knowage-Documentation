@@ -1,5 +1,5 @@
 Import/Export
---------------
+------------------------------------------------------------------------------------------------------------------------
 
 This functionality allows to import/export items belonging to *Gallery*, *Documents*, *Menu*, *Users*, *KPIs* and *Catalogs*.
 After exporting, the user can import the information previously extracted into a different Knowage installation or tenant.
@@ -11,7 +11,7 @@ After exporting, the user can import the information previously extracted into a
 
 
 Artifacts
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **Export**
@@ -66,7 +66,7 @@ Click on the *IMPORT* button to make selected widgets and functions available in
 
 
 Documents
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature allows to download a zip file of the whole or a part of the documents existing in your Knowage installation. 
 
@@ -127,7 +127,7 @@ Before starting the import procedure, licenses are checked and if one or more ar
    Document Import Missing licenses
 
 Menu
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature lets you import/export the menu structure. The image below refers to the export funtionality.
 
@@ -160,7 +160,7 @@ After clicking on *NEXT*, you will be asked to map roles from *Source* to *Targe
 You can click on *START IMPORT*.
 
 Users
-~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This functionality allows to export/import users from one installation/tenant to another.See the image below.
 
@@ -182,7 +182,7 @@ Now click on the *Start import* button and your users will be created. See figur
 	All users involved in the import procedure will have the password changed with the value set in *Advanced configuration*.
 
 Catalogs
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This functionality allows to Export/Import the following elements:
 
@@ -207,7 +207,7 @@ To import the zip file, log in to the source tenant, select **Catalogs** from th
     Catalogs Import
 
 KPIs
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this section we describe how to manage the import/export of KPIs between two tenants.
 
@@ -263,7 +263,7 @@ The process ends successfully when the wizard shows up as following.
     Import KPIs ended successfully
 
 Analytical Drivers
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This option allows to import/export the analytical drivers and their related LOVs.
 
@@ -301,7 +301,7 @@ Use the GUI to upload the zip file and specify if overwriting the existing analy
 The process ends with a message containing the information about the import.
 
 Glossary
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The export/import of glossary allows the user to align glossaries among tenants.
 
@@ -320,7 +320,7 @@ Afterwards, connecting as admin to a target tenant, the user selects the *Import
 Arrows are used to indicate the glossaries to consider for the import.
 
 Alerts
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This functionality allows to Export/Import alerts.
 

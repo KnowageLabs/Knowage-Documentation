@@ -1,5 +1,5 @@
 Hierarchies
-============
+========================================================================================================================
 
 
 
@@ -11,7 +11,7 @@ The first two show on the right the editable objects in the form of trees, while
 
 
 TABS
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In detail:
 
@@ -19,7 +19,7 @@ In detail:
 -  **The TECHNICAL tab**: allows the creation of new technical hierarchies and their modification starting from other existing hierarchies (master or technical)
 
 FILTERS
-~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: media/image1.png
 
@@ -37,7 +37,7 @@ These same filters will be applied by the system to manage the creation of maste
 
 
 MASTER hierarchies
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: media/image2.png
 
@@ -67,7 +67,7 @@ Each element of the tree (node ​​or leaf) has a context menu with active fun
    MASTER hierarchy.
 
 Node menu
----------
+------------------------------------------------------------------------------------------------------------------------
 
 .. figure:: media/image6.png
 
@@ -82,7 +82,7 @@ On the individual nodes it is possible to:
 
 
 Leaf menu
----------
+------------------------------------------------------------------------------------------------------------------------
 
 .. figure:: media/image7.png
 
@@ -97,7 +97,7 @@ On single leaves it is possible:
 
 
 Synchronization management
---------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The synchronization function is provided only for MASTER hierarchies and allows the hierarchy to be updated by adding new leaves or modifying existing ones.
 
@@ -108,7 +108,7 @@ this is the approach used:
 
 
 Management of propagation of changes between MASTER and TECHNICIAN
------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 If a node of the master hierarchy with which one or more technical hierarchies has been modified (with drag & drop of a leaf retrieved from the table), it is proposed to propagate these changes also to the technical hierarchies.
 This feature opens a popup when the user releases the leaf on the node concerned which proposes a list with all the nodes of the technical hierarchies in which the node just modified is present. At this point, the user can select all, some or no hierarchy in which to propagate the change.
@@ -121,7 +121,7 @@ On the OK button the leaf will be added to the hierarchy in the point at which 
 
 
 Technical Hierarchies
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: media/image9.png
 
@@ -132,7 +132,7 @@ The technical hierarchies can only be created in the TECHNICAL tab using the app
 The management of filters and context menus are the same as for the master hierarchies, so we refer to the previous sections for further details
 
 Backup
--------
+------------------------------------------------------------------------------------------------------------------------
 
 .. figure:: media/image10.png
 
@@ -154,7 +154,7 @@ For each line displayed in this interface it is possible to:
 
 
 Configuration management
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Behind the hierarchy editor there is a configuration xml file that guides the management of the entire interface.
 This file is called hierarchies.xml and can be found on the application server under the resources folder for the reference tenant ``TOMCAT_HOME/resources/<TENANT_NAME>/hierarchies/`` path.
@@ -198,7 +198,7 @@ To guide are the dimensions therefore for each dimension it is specified:
 
 
 Hierarchy Table tag
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: xml
     :linenos:
@@ -221,7 +221,7 @@ Defines the hierarchy physical table reference.
 
 
 Hierarchy Foreign Key tag
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: xml
     :linenos:
@@ -240,7 +240,7 @@ Defines the hierarchy foreign key to link it to the dimension table.
 
 
 Configs tag
-------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: xml
     :linenos:
@@ -311,7 +311,7 @@ Contains all possible generic configuration for the GUI management
 
 
 Dim Filters Tag (Optional)
---------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: xml
     :linenos:
@@ -343,7 +343,7 @@ Defines optional filters on the dimension section
 
 
 Dim Fields Tag (Mandatory)
---------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: xml
       :linenos:
@@ -379,7 +379,7 @@ Specifies all dimension fields managed by the GUI.
     +----------+-----------------------------------------------------------------------------+------------+
 
 Hier Fields Tag
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Mandatory. Specifies all dimension fields managed by the GUI.
 
@@ -398,7 +398,7 @@ It is composed from three sections: GENERAL_FIELDS, NODE_FIELDS and LEAF_FIELDS.
 
 
 General Fields
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: xml
     :linenos:
@@ -433,7 +433,7 @@ Defines all generic fields of the hierarchy
     +----------+----------------------------------------------------------------------------------------+------------+
 
 Node Fields
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: xml
     :linenos:
@@ -473,7 +473,7 @@ Defines all fields for the nodes
 
 
 Leaf Fields
--------------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: xml
     :linenos:
@@ -514,7 +514,7 @@ Defines all fields for the leaf
 
 
 FILTERS DETAIL
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Below is a list of the filters that can be applied through the GUI on the MASTER tab with the details of the queries performed by the system to retrieve information related to dimensions in order to explain how the filters set through the GUI affect the result.
 In general, all filters are applied with the 'AND' logic, so the records must satisfy ALL the defined settings to be selected.
@@ -522,10 +522,10 @@ In general, all filters are applied with the 'AND' logic, so the records must sa
 Note: for the selection of dates it is recommended to use the date-picker in order to be independent of the managed format due to the active language.
 
 BASIC FILTERS
---------------
+------------------------------------------------------------------------------------------------------------------------
 
 1. Size
-^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/image11.png
 
@@ -535,7 +535,7 @@ BASIC FILTERS
 As mentioned previously, the dimension is mandatory for the recovery of the data to be managed. The usable values ​​are retrieved from the configuration file (see the 'Configuration Management' paragraph defined above).
 
 2. Filter on validity date
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/image12.png
 
@@ -547,10 +547,10 @@ By setting the validity date, all 'valid' records will be retrieved from the spe
 
 
 OPTIONAL FILTERS
------------------
+------------------------------------------------------------------------------------------------------------------------
 
 3. Filter on a given hierarchy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/image13.png
 
@@ -564,7 +564,7 @@ Therefore, according to the current configuration, by setting the hierarchy date
 This means if an element of the dimension were created with a given hierarchy after the one set, it would not be considered.
 
 4. Filter on date 'after ...'
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/image14.png
 
@@ -576,7 +576,7 @@ The date 'after ..' is also part of the optional filter panel (see the 'Dim Filt
 Therefore, according to the current configuration, by setting the date 'after ...', all the 'valid' records from that date onwards will be retrieved from the specified size or with the BEGIN_DT attribute greater than or equal to the specified date; in this case the END_DT attribute is not considered.
 
 5. Filter 'Show missing elements ...'
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/image15.png
 
@@ -587,7 +587,7 @@ In order to choose the 'Show missing elements' option, the user must previously 
 At this point, considering the other options set, all the records that are not yet present on the target hierarchy with the same conditions will be selected.
 
 6. Compound filters
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: media/image15.png
 

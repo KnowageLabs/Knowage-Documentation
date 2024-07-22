@@ -1,10 +1,10 @@
 User Interface
-==============
+========================================================================================================================
 
 This chapter focuses on Knowage user interface, providing detailed information on the Main Menu, the Document Browser and some general settings concerning analytical documents. First of all, a short introduction on profiling rules its provided.
 
 Preliminary information
----------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 The administrator will provide you a username and a password to log in Knowage environment.
 
@@ -52,7 +52,7 @@ Every role belongs to a predefined *role type*. The available role types are lis
 From now on we suppose the reader has a role of type “End user”. If some grants are optional for this role we will state it.
 
 Main menu
--------------
+------------------------------------------------------------------------------------------------------------------------
 
 .. _homepage:
 .. figure:: media/image7_bis.png
@@ -168,7 +168,7 @@ My Account
 *My account* button, if enabled, allows user to access Modify profile page. Here you can modify your information and also permanently delete your account.
 
 Modify
-^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 With this feature user can modify their own data such as Name, Surname and Email address. Password and Confirm password fields are mandatory so they must be filled before applying changes clicking on "MODIFY".
 
 .. attention::
@@ -176,7 +176,7 @@ With this feature user can modify their own data such as Name, Surname and Email
 	If user fills *Password* and *Confirm password* fields with a valid password that is NOT the current password (used to log in), the password will be updated with the new value.
 
 Delete account
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 With this feature user can delete his account clicking on *DELETE ACCOUNT* button. Then a message confirms the correct cancellation and the login page is displayed.
 
@@ -185,7 +185,7 @@ With this feature user can delete his account clicking on *DELETE ACCOUNT* butto
 	Account cancellation is irreversible. User will no longer be able to log into Knowage.
 
 Password change
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If user wants to change his password, he must fill *Password* and *Confirm Password* fields and the click on *MODIFY* button. A confirmation message will be displayed if the update has been successful.
 
@@ -246,7 +246,7 @@ To conclude the overview of this area we describe a not mandatory element. When 
 You can minimize the main menu by clicking the right arrow at its bottom right corner. This way the main menu is replaced by the menu button, so that you can close/open it according to your needs. You can move this button around the page by dragging and dropping it. Choose the position that best fits with your work.
 
 Document Browser overview
------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 From BI functionalities Menu, select |image20| to open the Document Browser.
 
