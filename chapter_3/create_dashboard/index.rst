@@ -2271,6 +2271,32 @@ You can choose how to get the parameter value with the following modes:
 - *JSON*, passing an escaped JSON inside the url parameter. You can use the editor to create the desired JSON and use the placeholder to set the value at runtime. The placeholders are the usuals *$F{field}* for the fields, *$P{parameter}* for the parameters, *$V{variable}* for the variables.
 - *JWT*, passing the JWT token of the user
 
+
+**Iframe Message**
+
+Iframe messages are a new interaction type that allows the cockpit widgets to send a message to a container via the `postMessage` js API.
+
+First of all you need to select the interaction type, as for the other cross-navigations, then you will have to set the message you want to provide the container with. The only accepted format is JSON, but you can use placeholders like *$P{parameter}* or *$V{variable}* to pass dynamic data.
+
+.. figure:: media/image508.png
+
+    Table widget iframe message configuration.
+
+The following message will be sent:
+
+.. code-block:: javaScript
+    :linenos:
+
+        parentWindow.postMessage({
+            "source": "knowage",
+            "type": "message",
+            "json": <YOUR JSON CONTENT>
+        }, "*")
+
+
+To retrieve the informations sent you can use a `window.addEventListener()` in the parent, expecting a "message" coming from "knowage" source. You can add more security layers as needed by checking the JSON sent data.
+
+
 Widget properties
 ~~~~~~~~~~~~~~~~~~
 
