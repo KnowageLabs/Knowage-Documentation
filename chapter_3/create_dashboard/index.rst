@@ -2283,13 +2283,15 @@ First of all you need to select the interaction type, as for the other cross-nav
 
 The following message will be sent:
 
-```
-    parentWindow.postMessage({
-        "source": "knowage",
-        "type": "message",
-        "json": <YOUR JSON CONTENT>
-    }, "*")
-```
+.. code-block:: javaScript
+    :linenos:
+
+        parentWindow.postMessage({
+            "source": "knowage",
+            "type": "message",
+            "json": <YOUR JSON CONTENT>
+        }, "*")
+
 
 To retrieve the informations sent you can use a `window.addEventListener()` in the parent, expecting a "message" coming from "knowage" source. You can add more security layers as needed by checking the JSON sent data.
 
