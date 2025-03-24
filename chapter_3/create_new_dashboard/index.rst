@@ -9,3 +9,22 @@ the presence of the new Pivot widget and the Map widget .
 
 
 .. figure:: media/chart_gallery.png
+
+
+   Chart gallery example.
+
+
+.. figure:: media/new_widgets.png
+
+   Widgets types
+
+
+   A dashboard document can be created:
+
+            -	by final users from the Workspace
+            -	by admin users from the document browser area
+
+
+In both cases the user should click on the plus icon available in the right top corner and choose the Dashboard item menu as shown below.
+
+.. figure:: media/new_dashboard.png
