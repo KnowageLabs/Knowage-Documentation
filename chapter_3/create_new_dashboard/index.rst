@@ -28,3 +28,18 @@ the presence of the new Pivot widget and the Map widget .
 In both cases the user should click on the plus icon available in the right top corner and choose the Dashboard item menu as shown below.
 
 .. figure:: media/new_dashboard.png
+
+The functionalities for inserting a new data set and a new widget are immediately available on the page shown. 
+
+.. table:: Dashboard functionalities.
+   :widths: auto
+
+   +----------------------------------+-----------------------+-----------------------+
+   |    Icon                          | Name                  | Function              |
+    +=================================+=======================+=======================+
+   | .. figure:: media/add_ds.png     | **Add new dataset**   | Opens the list of     |
+   |                                  |                       | datasets to choose    |
+   +----------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/add_widget.png | **Add new widget**    | Opens the widget      |
+   |                                  |                       | gallery               |
+   +----------------------------------+-----------------------+-----------------------+
