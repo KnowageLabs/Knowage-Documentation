@@ -91,14 +91,10 @@ By clicking on the **Text Widget** icon you can add text to your dashboard. As s
    |                    |   - change the aggregate function for a measure columns                      |
    |                    |   - add a calculated field by clicking on the *Add Column* button            |
    +--------------------+------------------------------------------------------------------------------+
-   | **Settings**       |   In this section the user can manage the following properties:              |
-   |                    |   - Configuration                                                            |
-   |                    |   - Editor                                                                   |
-   |                    |   - Style                                                                    |
-   |                    |   - Interactions                                                             |
-   |                    |   - Responsive                                                               |
-   |                    |   - Help                                                                     |
-   +--------------------+------------------------------------------------------------------------------+
+
+
+
+
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
