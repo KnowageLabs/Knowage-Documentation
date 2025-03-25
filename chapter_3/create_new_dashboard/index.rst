@@ -74,6 +74,13 @@ The below table shows a further explanation. In particular properties summed up 
 widget among its settings we will find the Gallery property which does not belong to the Text widget.
 All relevant settings will be furtherly described for each widget.
 
+| Rank | Languages |
+|-----:|-----------|
+|     1| JavaScript|
+|     2| Python    |
+|     3| SQL       |
+
+
 .. table:: Widget sections example.
    :widths: auto
    +--------------------+------------------------------------------------------------------------------+
