@@ -70,8 +70,8 @@ Let's see them in detail, one by one. Simply click on the desired one.
 When clicking the editor for that widget appears.
 A widget's editor always has two sections, one for the data management and the other containing the list properties that can vary
 from one widget to another.
-The below table shows a further explanation. In particular properties summed up are relevant to Text widget. So that, in the case of an Image 
-widget among its settings we will find the *Gallery* property which does not belong to the Text widget.
+The below table shows a further explanation. In particular properties summed up are relevant to *Text* widget. So that, in the case of an *Image* 
+widget among its settings we will find the *Gallery* property which does not belong to the *Text* widget.
 All relevant settings will be furtherly described for each widget.
 
 
@@ -96,27 +96,31 @@ All relevant settings will be furtherly described for each widget.
    +--------------------+------------------------------------------------------------------------------+
 
 
-
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing the two sections 
 formerly introduced.
+Using the *Data* section it is possible to associate dataset values to the text and read it real time at each execution.
+You can drag a single column into the *Selected Columns* area or just all of them by using the arrow next to the *Add Column* button.
 
 .. figure:: media/image009.png
+
+ For each
 
    Text Widget Data Editor
 
 .. figure:: media/image010.png
 
+
    Text Widget Settings Editor
 
-Using the *Data* section it is possible to associate dataset values to the text and read it real time at each execution.
+
 Select the *Editor* property and type in the desired text.
 Select the *[] placeholder* menu item to find the dataset column(s) previously selected as shown in the below image.
 
 .. figure:: media/image011.png
 
-  Inserting a dtaset column in the text editor 
+  Inserting a dataset column in the text editor 
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
