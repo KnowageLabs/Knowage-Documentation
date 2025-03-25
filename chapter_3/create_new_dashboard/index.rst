@@ -173,8 +173,14 @@ The drop down menu with your choice will show all the available options for the 
 
 .. figure:: media/image016.png
 
-Anayway let's have a look to each chart. 
 
+**Activity Gauge**
+
+The Activity Gauge uses circular-shaped bars to compare multiple categories against the target.
+
+.. figure:: media/image017.png
+
+   Activity Gauge example
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
