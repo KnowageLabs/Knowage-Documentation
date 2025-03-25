@@ -81,7 +81,7 @@ All relevant settings will be furtherly described for each widget.
    +====================+==============================================================================+
    | Data               | In this section the user can:                                                |
    |                    |   - select the data set to work with                                         |
-   |                    |   - select the columns to show.                                              |
+   |                    |   - select the columns to show (use the *Arrow* to insert all columns)       |
    |                    |   - specify a *Sorting Column* and an *Ascending/Descending* order           |
    |                    |   - change the aggregate function for measure columns                        |
    |                    |   - add a calculated field by clicking on the *Add Column* button            |
@@ -99,12 +99,18 @@ All relevant settings will be furtherly described for each widget.
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing two sections 
+By clicking on the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing the two sections 
 formerly introduced.
 
 .. figure:: media/image009.png
 
-Text Widget
+   Text Widget Data Editor
+
+.. figure:: media/image010.png
+
+   Text Widget Settings Editor
+
+
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
