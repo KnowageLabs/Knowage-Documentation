@@ -42,7 +42,7 @@ The functionalities for inserting a new data set and a new widget are immediatel
    | .. figure:: media/image004.png   | **Add new dataset**   | Opens the list of     |
    |                                  |                       | datasets to choose    |
    +----------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image005.png | **Add new widget**    | Opens the widget      |
+   | .. figure:: media/image005.png | **Add new widget**      | Opens the widget      |
    |                                  |                       | gallery from the sheet|
    +----------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image006.png   | **Add new widget**    | Opens the widget      |
