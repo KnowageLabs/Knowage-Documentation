@@ -83,10 +83,9 @@ By clicking on the **Text Widget** icon you can add text to your dashboard. As s
    +====================+==============================================================================+
    | **Data**           | In this section the user can:                                                |
    |                    |   - select the data set to work with                                         |
-   |                    |   - select the columns to show. In case all columns have to be used,just     |
-   |                    |     click on the arrow next to the *Add Column* button                       |
-   |                    |   - specify a *Sorting Column* and an *Ascending/Descending* order by        |
-   |                    |   - change the aggregate function for a measure columns                      |
+   |                    |   - select the columns to show.                                              |
+   |                    |   - specify a *Sorting Column* and an *Ascending/Descending* order           |
+   |                    |   - change the aggregate function for measure columns                        |
    |                    |   - add a calculated field by clicking on the *Add Column* button            |
    +--------------------+------------------------------------------------------------------------------+
    | **Settings**       | To manage widget properties such as:                                         |
