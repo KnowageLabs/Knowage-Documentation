@@ -110,7 +110,13 @@ formerly introduced.
 
    Text Widget Settings Editor
 
+Using the *Data* section it is possible to associate dataset values to the text and read it real time at each execution.
+Select the *Editor* property and type in the desired text.
+Select the *[] placeholder* menu item to find the dataset column(s) previously selected as shown in the below image.
 
+.. figure:: media/image011.png
+
+  Inserting a dtaset column in the text editor 
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
