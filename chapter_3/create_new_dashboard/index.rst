@@ -75,8 +75,7 @@ widget among its settings we will find the Gallery property which does not belon
 All relevant settings will be furtherly described for each widget.
 
 
-.. table:: Widget sections example.
-   :widths: auto
+
    +--------------------+------------------------------------------------------------------------------+
    |  Section Name      | Description                                                                  |
    +====================+==============================================================================+
@@ -93,11 +92,12 @@ All relevant settings will be furtherly described for each widget.
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing two sections,
-*Data* and *Settings*.
+By clicking on the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing two sections 
+formerly introduced.
 
 .. figure:: media/image009.png
 
+Text Widget
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
