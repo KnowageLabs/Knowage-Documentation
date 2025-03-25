@@ -141,7 +141,19 @@ Inside you can also will find a new property called *Widget Themes*. For more ex
 
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+As previously mentioned the new dashboard comes with an enriched chart gallery. In fact, new ones have been added to those previously available. 
+Among these we find:
 
+   - Activity Gauge
+   - Bubble
+   - Dumble
+   - Funnel
+   - Packed Bubble
+   - Pictorial
+   - Sankey
+   - Scatter
+   - Stream
+   - Waterfall
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
