@@ -155,6 +155,27 @@ Among these we find:
    - Stream
    - Waterfall
 
+As a first step choose the dataset and the by clicking on the *Add widget* icon, you will be asked to pick up the chart from the gallery.
+Drag your columns first into the *Dimension(s)* area and then into the *Values* area.
+After dragging your dimension(s) and attribute(s), you will see that the information contained in the *Settings* section could be different from one chart.
+to another.
+The below image refers to a *Funnel* chart where you need to define both the measure(s) and the sttribute(s).
+
+
+.. figure:: media/image014.png
+
+Not all charts need both information as if you refer to an *Activity Gauge* you only need to define the measure. See image below.
+
+.. figure:: media/image015.png
+
+One important peculiarity to highlight is the possibility to change the type of chart once a selection has already been done.
+The drop down menu with your choice will show all the available options for the graphs and in case can be changed. See below picture.
+
+.. figure:: media/image016.png
+
+Anayway let's have a look to each chart. 
+
+
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
