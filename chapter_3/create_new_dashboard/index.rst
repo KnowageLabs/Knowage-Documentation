@@ -51,11 +51,15 @@ The functionalities for inserting a new data set and a new widget are immediatel
 
 Widgets Types
 ------------------------------------------------------------------------------------------------------------------------
+As seen above, the addition of a widget can be done either through the icon that is displayed when the dashboard is created or 
+from the appropriate button appearing in the upper right bar of the page. 
+In both cases, a palette containing the entire range of available widgets will be shown. 
+Let's see them in detail, one by one. Simply click on the desired one. 
 
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+By clicking the Text Widget icon you can add text to your dashboard. As shown below, the widget editor opens and ...
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
