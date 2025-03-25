@@ -124,7 +124,20 @@ Select the *[] placeholder* menu item and then *Columns Data* to find the datase
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the **Image Widget** icon you can add an image to the dashboard.
+By clicking on the **Image Widget** icon you can add an image to the dashboard. You can both pick up a previous image from the *Gallery* or
+upload a new one by clicking on the *Upload* button as show in the below image.
+
+.. figure:: media/image012.png
+
+    Inserting an image
+
+The *Style* setting will let you handle the properties styles for the image such as *Title, Background, Borders, Padding and Shadows*.
+
+.. figure:: media/image013.png
+
+    Image styles
+
+Inside you can also will find a new property called *Widget Themes*. For more explanation please refer to the dedicated section.
 
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -177,4 +190,7 @@ Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
 
 Theaming
+------------------------------------------------------------------------------------------------------------------------
+
+Widget Theame
 ------------------------------------------------------------------------------------------------------------------------
