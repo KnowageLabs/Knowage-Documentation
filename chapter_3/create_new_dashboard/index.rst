@@ -77,7 +77,7 @@ By clicking on the **Text Widget** icon you can add text to your dashboard. As s
 .. figure:: media/image009.png
 
 .. table:: Text widget sections.
-
+   :widths: auto
    +--------------------+------------------------------------------------------------------------------+
    |  Section Name      | Components                                                                   |
    +====================+==============================================================================+
