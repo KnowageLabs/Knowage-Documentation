@@ -70,8 +70,8 @@ Let's see them in detail, one by one. Simply click on the desired one.
 When clicking the editor for that widget appears.
 A widget's editor always has two sections, one for the data management and the other containing the list properties that can vary
 from one widget to another.
-The below table shows a further explanation. In particular properties summed up are relevant to Text widget. So taht, in the case of an Image 
-widget among its settings we will find the Gallery property which does not belong to the Text widget.
+The below table shows a further explanation. In particular properties summed up are relevant to Text widget. So that, in the case of an Image 
+widget among its settings we will find the *Gallery* property which does not belong to the Text widget.
 All relevant settings will be furtherly described for each widget.
 
 
@@ -86,7 +86,14 @@ All relevant settings will be furtherly described for each widget.
    |                    |   - change the aggregate function for measure columns                        |
    |                    |   - add a calculated field by clicking on the *Add Column* button            |
    +--------------------+------------------------------------------------------------------------------+
-
+   | Settings           | To manage widget properties such as:                                         |
+   |                    |   - Configuration                                                            |
+   |                    |   - Editor                                                                   |
+   |                    |   - Style                                                                    |
+   |                    |   - Interactions                                                             |
+   |                    |   - Help                                                                     |
+   |                    |   - Responsive                                                               |
+   +--------------------+------------------------------------------------------------------------------+
 
 
 
