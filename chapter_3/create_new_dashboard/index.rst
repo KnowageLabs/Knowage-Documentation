@@ -14,7 +14,7 @@ the presence of the new *Pivot* widget and the *Map widget* .
    Chart gallery example
 
 
-.. figure:: media/new_widgets.png
+.. figure:: media/image003.png
 
    Widgets types
 
