@@ -68,7 +68,7 @@ from the appropriate button appearing in the upper right bar of the page.
 In both cases, a palette containing the entire range of available widgets will be shown. 
 Let's see them in detail, one by one. Simply click on the desired one. 
 When clicking the editor for that widget appears.
-A widget's editor always has two sections, one for the data management and the other containing the list properties that can vary
+A widget's editor normally has two sections, one for the data management (not available for the *Image* widget) and the other containing the list properties that can vary
 from one widget to another.
 The below table shows a further explanation. In particular properties summed up are relevant to *Text* widget. So that, in the case of an *Image* 
 widget among its settings we will find the *Gallery* property which does not belong to the *Text* widget.
@@ -116,15 +116,15 @@ You can drag a single column into the *Selected Columns* area or just all of the
 
 
 Select the *Editor* property and type in the desired text.
-Select the *[] placeholder* menu item to find the dataset column(s) previously selected as shown in the below image.
+Select the *[] placeholder* menu item and then *Columns Data* to find the dataset column(s) previously selected as shown in the below image.
 
 .. figure:: media/image011.png
 
-  Inserting a dataset column in the text editor 
+  Inserting a dataset column in the text editor
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+By clicking on the **Image Widget** icon you can add an image to the dashboard.
 
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
