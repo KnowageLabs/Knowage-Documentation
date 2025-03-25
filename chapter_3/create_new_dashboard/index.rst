@@ -82,15 +82,20 @@ By clicking on the **Text Widget** icon you can add text to your dashboard. As s
    |  Section Name      | Components                                                                   |
    +====================+==============================================================================+
    | **Data**           | In this section the user can:                                                |
-   |                    |   - select the data set to work with (in case of more data sets)             |
-   |                    |   - select the columns to show. In case all columns have to be used,just|
+   |                    |   - select the data set to work with                                         |
+   |                    |   - select the columns to show. In case all columns have to be used,just     |
    |                    |     click on the arrow next to the *Add Column* button                       |
    |                    |   - specify a *Sorting Column* and an *Ascending/Descending* order by        |
-   |                    |     clicking on the  appropriate drop down menus                             |
    |                    |   - change the aggregate function for a measure columns                      |
    |                    |   - add a calculated field by clicking on the *Add Column* button            |
    +--------------------+------------------------------------------------------------------------------+
-
+   | **Settings**       | To manage widget properties such as:                                         |
+   |                    |   - Configuration                                                            |
+   |                    |   - Editor                                                                   |
+   |                    |   - Style                                                                    |
+   |                    |   - Interactions                                                             |
+   |                    |   - Responsive                                                               |
+   +--------------------+------------------------------------------------------------------------------+
 
 
 
