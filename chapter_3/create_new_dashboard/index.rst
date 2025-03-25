@@ -5,13 +5,13 @@ The graphical interface for creating the new dashboard looks slightly different 
 New features have been added, such as new charts and new widgets
 
 The below pictures respectively show the chart gallery with the availability of new charts and new widgets enriched with 
-the presence of the new Pivot widget and the Map widget .
+the presence of the new *Pivot* widget and the *Map widget* .
 
 
 .. figure:: media/chart_gallery.png
 
 
-   Chart gallery example.
+   Chart gallery example
 
 
 .. figure:: media/new_widgets.png
@@ -29,6 +29,8 @@ In both cases the user should click on the plus icon available in the right top 
 
 .. figure:: media/new_dashboard.png
 
+   Creating a dashboard from the menu
+
 The functionalities for inserting a new data set and a new widget are immediately available on the page shown. 
 
 .. table:: Dashboard functionalities.
@@ -41,8 +43,18 @@ The functionalities for inserting a new data set and a new widget are immediatel
    |                                  |                       | datasets to choose    |
    +----------------------------------+-----------------------+-----------------------+
    | .. figure:: media/add_widget.png | **Add new widget**    | Opens the widget      |
-   |                                  |                       | gallery               |
+   |                                  |                       | gallery from the sheet|
    +----------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/add_w.png      | **Add new widget**    | Opens the widget      |
+   |                                  |                       | gallery from the bar  |
+   +----------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/hamburger.png  | **Data set Mgmt**     | Opens the dataset mgmt|
+   |                                  |                       | window from the bar   |
+   +----------------------------------+-----------------------+-----------------------+
+   | .. figure:: media/save.png       | **Save dashboard**    | Saves the dashboard   |
+   |                                  |                       |                       |
+   +----------------------------------+-----------------------+-----------------------+
+
 
 
 
@@ -59,7 +71,7 @@ Let's see them in detail, one by one. Simply click on the desired one.
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking the Text Widget icon you can add text to your dashboard. As shown below, the widget editor opens and ...
+By clicking the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens and ...
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
