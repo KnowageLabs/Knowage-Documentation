@@ -39,19 +39,19 @@ The functionalities for inserting a new data set and a new widget are immediatel
    +----------------------------------+-----------------------+-----------------------+
    |    Icon                          | Name                  | Function              |
    +==================================+=======================+=======================+
-   | .. figure:: media/image004.png     | **Add new dataset**   | Opens the list of     |
+   | .. figure:: media/image004.png   | **Add new dataset**   | Opens the list of     |
    |                                  |                       | datasets to choose    |
    +----------------------------------+-----------------------+-----------------------+
    | .. figure:: media/image005.png | **Add new widget**    | Opens the widget      |
    |                                  |                       | gallery from the sheet|
    +----------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image006.png      | **Add new widget**    | Opens the widget      |
+   | .. figure:: media/image006.png   | **Add new widget**    | Opens the widget      |
    |                                  |                       | gallery from the bar  |
    +----------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image007.png  | **Data set Mgmt**     | Opens the dataset mgmt|
+   | .. figure:: media/image007.png   | **Data set Mgmt**     | Opens the dataset mgmt|
    |                                  |                       | window from the bar   |
    +----------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image008.png       | **Save dashboard**    | Saves the dashboard   |
+   | .. figure:: media/image008.png   | **Save dashboard**    | Saves the dashboard   |
    |                                  |                       |                       |
    +----------------------------------+-----------------------+-----------------------+
 
@@ -71,10 +71,23 @@ Let's see them in detail, one by one. Simply click on the desired one.
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing two sections,
+By clicking on the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing two sections,
 *Data* and *Settings*.
 
 .. figure:: media/image009.png
+
+.. table:: Text widget sections.
+   :widths: auto
+
+   +----------------------------------+-----------------------------------------------+
+   |  Section Name                    | Components                                    |
+   +==================================+===============================================+
+   | Data                             |                                               |
+   |                                  |                                               |
+   +----------------------------------+-----------------------------------------------+
+   | Settings                         |                                               |
+   |                                  |                                               |
+   +----------------------------------+-----------------------------------------------+
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
