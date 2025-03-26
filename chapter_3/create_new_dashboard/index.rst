@@ -188,29 +188,34 @@ The *Bubble* chart is useful in case of three series. The size of the bubble dep
 After pressing the *Add widget* button pick up the Bubble chart from the gallery.
 
 **Dumbbell**
+A *Dumbbell* chart uses circles and lines to show changes over time.
+After pressing the *Dumbbell* button pick up the Bubble chart from the gallery.
 
 
 **Funnel**
+This kind of chart provides a visual representation of how data progresses through different stages of a process starting 
+from a broad head and ending in a narrow neck.
 
 
 **Packed Bubble**
-
+A *Packed Bubble* is similar to a Bubble Chart where bubbles are tightly packed rather than spread over a grid of X and Y-Axis.
 
 **Pictorial**
-
+A *Pictorial* chart represents data using icons, symbols, or images.
 
 **Sankey**
-
+A *Sankey* chart is useful to highlight the flow of data from one value to another
 
 **Scatter**
+A *Scatter* chart is like a cloud where two variables from a data set are plotted on a Cartesian space by using dots.
 
-
-**Stream**
-
+**Streamgraph**
+A *Streamgraph* represents a variation of the area chart where areas are plotted around a central axis and not a fixed one. This shapes the
+graph with no corners but with rounded edges giving the impression of a flow.
 
 **Waterfall**
-
-
+A *Waterfall* chart can be useful to understand how data is affected by positive or negative values. It' s like a bar chart where in the middle of two normal bars 
+there are suspended bars as the beguinning of the bar is represented by the end of the previous bar.
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
