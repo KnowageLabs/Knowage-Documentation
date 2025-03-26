@@ -148,17 +148,32 @@ refer to the dedicated section.
 
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-As previously mentioned the new dashboard comes with an enriched chart gallery. In fact, new ones have been added to those previously available. 
-Among these we find:
+As previously mentioned the new dashboard comes with an enriched chart gallery. 
+So, in addition to the charts available for creating the old cockpit:
+   - Bar
+   - Line
+   - Pie
+   - Sunburst
+   - Wordcloud
+   - Treemap
+   - Parallel
+   - Radar
+   - Scatter
+   - Heatmap
+   - Chord
+   - Gauge
+   - Bubble
+
+we can find the following ones:
 
    - Activity Gauge
-   - Bubble
+   - **Bubble**
    - Dumbbell
    - Funnel
    - Packed Bubble
    - Pictorial
    - Sankey
-   - Scatter
+   - **Scatter**
    - Stream
    - Waterfall
 
