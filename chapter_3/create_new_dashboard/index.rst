@@ -205,6 +205,14 @@ After pressing the *Add widget* button pick up the Activity Gauge chart from the
 
    Activity Gauge example
 
+.. figure:: media/image018.png
+
+   Setting Alias example
+
+.. figure:: media/image019.png
+
+   Setting Series example
+
 **Bubble**
 The *Bubble* chart is useful in case of three series. The size of the bubble depends on the third dimension.
 After pressing the *Add widget* button pick up the Bubble chart from the gallery.
