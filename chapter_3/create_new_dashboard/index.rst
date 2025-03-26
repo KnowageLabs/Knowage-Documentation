@@ -21,9 +21,14 @@ the presence of the new *Pivot* widget and the *Map widget* .
 
    A dashboard document can be created:
 
-            -	by final users from the Workspace
+            -	by final users from the Workspace (1)
             -	by admin users from the document browser area
 
+
+.. important::
+         **Enterprise Edition only**
+
+         (1) Only possible in KnowageBD and KnowageSI. Using the KnowagePM license, only a technical user can create Dashboard document.
 
 In both cases the user should click on the plus icon available in the right top corner and choose the Dashboard item menu as shown below.
 
