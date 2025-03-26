@@ -146,7 +146,7 @@ Among these we find:
 
    - Activity Gauge
    - Bubble
-   - Dumble
+   - Dumbbell
    - Funnel
    - Packed Bubble
    - Pictorial
@@ -176,16 +176,18 @@ The drop down menu with your choice will show all the available options for the 
 
 **Activity Gauge**
 
-The Activity Gauge uses circular-shaped bars to compare multiple categories against the target.
+The *Activity Gauge* uses circular-shaped bars to compare multiple categories against the target.
+After pressing the *Add widget* button pick up the Activity Gauge chart from the gallery.
 
 .. figure:: media/image017.png
 
    Activity Gauge example
 
 **Bubble**
+The *Bubble* chart is useful in case of three series. The size of the bubble depends on the third dimension.
+After pressing the *Add widget* button pick up the Bubble chart from the gallery.
 
-
-**Dumble**
+**Dumbbell**
 
 
 **Funnel**
