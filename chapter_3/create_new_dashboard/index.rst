@@ -182,9 +182,38 @@ The Activity Gauge uses circular-shaped bars to compare multiple categories agai
 
    Activity Gauge example
 
+**Bubble**
+
+
+**Dumble**
+
+
+**Funnel**
+
+
+**Packed Bubble**
+
+
+**Pictorial**
+
+
+**Sankey**
+
+
+**Scatter**
+
+
+**Stream**
+
+
+**Waterfall**
+
+
+
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements to the cockpit. 
+This widget supports all HTML5 standard tags and CSS3 properties.
 
 Table widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
