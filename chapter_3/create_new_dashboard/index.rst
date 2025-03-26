@@ -156,10 +156,10 @@ Among these we find:
    - Stream
    - Waterfall
 
-As a first step choose the dataset and the by clicking on the *Add widget* icon, you will be asked to pick up the chart from the gallery.
-Drag your columns first into the *Dimension(s)* area and then into the *Values* area.
-After dragging your dimension(s) and attribute(s), you will see that the information contained in the *Settings* section could be different from one chart.
-to another.
+As a first step select the dataset and then by clicking on the *Add widget* icon you will be asked to pick up the chart from the gallery.
+At this point just drag and drop your column(s) into the *Dimension(s)* area (for measures) and then into the *Values* area (for attributes).
+After dragging your dimension(s) and attribute(s), you will see that the information contained in the *Settings* section could be different 
+from one chart to another.
 The below image refers to a *Funnel* chart where you need to define both the measure(s) and the sttribute(s).
 
 
