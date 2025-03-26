@@ -137,7 +137,8 @@ The *Style* setting will let you handle the properties styles for the image such
 
     Image styles
 
-Inside you can also will find a new property called *Widget Themes*. For more explanation please refer to the dedicated section.
+As you can see, inside the list of settings you will find a new one called *Widget Themes*. For more explanation on this setting please 
+refer to the dedicated section.
 
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
