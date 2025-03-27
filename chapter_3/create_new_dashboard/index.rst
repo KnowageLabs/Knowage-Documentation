@@ -395,9 +395,144 @@ Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements. 
 This widget supports all HTML5 standard tags and CSS3 properties.
+By clicking on the *Add widget* button or icon and then *HTML* you can insert the HTML widget.
 
 For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted 
 after saving the document.
+
+.. important::
+
+        A CSS property will be extended to all the classes in the cockpit with the same name; to apply the property 
+        only to the current widget use the id prefix shown in the info panel of the CSS editor
+
+.. figure:: media/image048.png
+HTML widget editor
+
+**Available Tags**
+
+*kn-column*
+
+``[kn-column='COLUMN-NAME' row='COLUMN-ROW-NUMBER' aggregation='COLUMN-AGGREGATION' precision='COLUMN-DECIMALS']``
+
+The ``kn-column`` tag is the main dynamic HTML Widget tool, it allows to select a column name from the selected dataset and to display its values. The value of the kn-column attribute should be the name of the column value you want to read in execution.
+
+The **row** attribute is optional and is a number type attribute. This attribute can let you retrieve a specific row according to the position in the dataset. If no row is selected the first row column value will be shown.
+
+The **aggregation** attribute is optional and is a string type attribute. If inserted the value shown will be the aggregation of all column rows values. The available aggregations are: AVG, MIN, MAX, SUM, COUNT_DISTINCT, COUNT, DISTINCT COUNT.
+
+The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
+
+*kn-parameter*
+
+``[kn-parameter='PARAMETER-NAME']``
+
+The kn-parameter tag is the tool to show a dataset parameter inside the widget execution. The value of the kn-parameter attribute should be the name of the parameter to display.
+
+*kn-calc*
+
+``[kn-calc=(CODE-TO-EVALUATE) precision='VALUE-PRECISION']``
+
+The ``kn-calc`` tag is the tool to calculate expressions between different values on widget execution. Everything inside the brackets will be evaluated after the other tags substitution, so will be possible to use other tags inside.
+
+The **precision** attribute is optional and is a number type attribute. If added and if the result value is a number, the decimal precision will be forced to the selected one.
+
+*kn-repeat*
+
+``<div kn-repeat="true" limit="LIMIT-NUMBER"> ... REPEATED-CONTENT ... </div>``
+
+The ``kn-repeat`` attribute is available to every HTML5 tag, and is a tool to repeat the element for every row of the selected dataset.
+
+This attribute is naturally linked to ``kn-column`` tag. If inside a ``kn-column`` tag without a row attribute is present, the ``kn-repeat`` will show the column value for every row of the dataset.
+
+Inside a ``kn-repeat`` is possible to use the specific tag ``[kn-repeat-index]``, that will print the index of the repeated column row.
+
+The **limit** attribute is optional and is a number type attribute. If added the number of row repeated will be limited to the selected number. If no limit is provided just the first row will be returned. If you want to get all records, you can set it to -1, but be careful because big datasets can take a while to load completely.
+
+*kn-if*
+
+``<div kn-if="CODE-TO-EVALUATE"> ... </div>``
+
+The ``kn-if`` attribute is available to every HTML5 tag and is a way to conditionally show or hide an element based on some other value. The attribute content will be evaluated after the other tags substitution, so it will be possible to use other tags inside. If the evaluation returns true the tag will be shown, otherwise it will be deleted from the execution.
+
+*kn-cross*
+
+``<div kn-cross> ... </div>``
+
+The ``kn-cross`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attribute makes the element clickable to open the cross navigation specified in the widget settings. If there is no cross navigation set this tag will not work.
+
+*kn-preview*
+
+``<div kn-preview="DATASET-TO-SHOW"> ... </div>``
+
+The ``kn-preview`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attribute makes the element clickable to open the dataset preview dialog. The attribute value will be the *dataset label* of the dataset that you want to open. If a dataset is not specified the cockpit will use the one set for the widget. If no dataset has been set and the attribute has no value this tag will not work.
+
+*kn-selection*
+
+``<div kn-selection-column="COLUMN-NAME" kn-selection-value="COLUMN-VALUE"> ... </div>``
+
+The ``kn-selection-column`` attribute is available to every HTML5 tag and is a way to make the element interactive on click. This attributes makes the element clickable to set the chosen column and value as a selection filter in the cockpit. The default will use as a selection the first row value of the column.
+
+The **kn-selection-value** attribute is optional and will let you specify a specific value as a column selection filter.
+
+*kn-variable*
+
+``[kn-variable='VARIABLE-NAME' key='VARIABLE-KEY']``
+
+The ``kn-variable`` tag is the tool to read the runtime value of one of the defined variables. It will change depending on the current value and can be used inside ``kn-if`` and ``kn-calc``.
+
+The **key** attribute is optional and will select a specific key from the variable object if the variable is "Dataset" type, returning a specific value instead of a complete dataset.
+
+.. warning::
+    **Banned Tags**
+    In order to avoid Cross-site scripting and other vulnerabilities, some tags are *not allowed* and will automatically be removed by the system when saving the cockpit:
+
+    -  ``<button></button>``
+    -  ``<object></object>``
+    -  ``<script></script>``
+
+If you need to simulate a button behaviour use a div (or another allowed tag) and replicate the css style like in the following example:
+
+.. code-block:: html
+   :linenos:
+
+   <div class="customButton">Buttonlike div</div>
+
+.. code-block:: css
+   :linenos:
+
+   .customButton {
+        border: 1px solid #ccc;
+        background-color: #ededed;
+        cursor: pointer;
+    }
+    .customButton:hover {
+        background-color: #d8d8d8;
+    }
+
+
+
+.. warning::
+    **Whitelist**
+    
+    Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise these links will be removed by the system. 
+    This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
+
+
+.. code-block:: xml
+   :linenos:
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <WHITELIST>
+      <service baseurl="https://www.youtube.com" />
+      <service baseurl="https://player.vimeo.com" />
+      <service baseurl="https://vimeo.com" />
+      <service baseurl="https://media.giphy.com" />
+      <service baseurl="https://giphy.com" />
+      <service baseurl="https://flic.kr" />
+      <service relativepath="/knowage/themes/" />
+      <service relativepath="/knowage/icons/" />
+      <service relativepath="/knowage/restful-services/1.0/images/" />
+   </WHITELIST>
 
 Table widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
