@@ -579,7 +579,15 @@ This way the user can view the list of curren selections applied on a widget. An
 be visible and by clicking on it the list of current selections will be visible. On each item of this list a *trash* icon lets the
 deletion of that selection.
 
+.. figure:: media/image052.png
 
+   Active selections widget
+ 
+ To get the result shown in the above image just go to the *Settings* and select the *Style* property
+
+ .. figure:: media/image053.png
+
+   Be aware that a selection can be locked. In this case it will be not possible to delete the selection until unlocked.
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
