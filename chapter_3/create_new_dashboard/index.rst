@@ -101,6 +101,15 @@ All relevant settings will be furtherly described for each widget.
    |                    |   - Responsive                                                               |
    +--------------------+------------------------------------------------------------------------------+
 
+Once the chart has been inserted in your dashboard sheet, a three dots icon displays a menu with some actions.
+See below image.
+
+.. figure:: media/image028.png
+
+Menu on a chart
+
+You can resize the chart just drugging the little corner in the right bottom of the chart.
+
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
