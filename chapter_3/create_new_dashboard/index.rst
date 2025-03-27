@@ -425,6 +425,14 @@ Activate the functionality just switching on the slidind button and select the n
 .. figure:: media/image040.png
    Activating cross navigation
 
+As show in the above images together with the cross navigation functionalities some others can be defined on a chart.
+Functionalities that can be activated just switching on the corresponding sliding button are:
+   - Selection: if deactivated the chart is not clickable
+   - Link, to open a specific URL when clicking on a chart
+   - Preview, to download a file when clicking on a chart
+
+Only one option can be activated at the same time.
+
 
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
