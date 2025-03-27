@@ -216,12 +216,12 @@ See below image.
 Preview functionality for a chart
 
 Furthermore after inserting a chart you can simply move it inside the dashboard just dragging it inside the whole sheet. 
-This functionalitu is available for a whatever widget you need to use.
+This functionality is available for a whatever widget you need to use.
 See below image.
 
 .. figure:: media/image042.png
 
- Just go with the mouse over the tree lines and little hand let you move your widget.  
+ Just go with the mouse over the two vertical dotted lines and little hand appears to move your widget.  
 
 **Activity Gauge**
 
@@ -450,6 +450,23 @@ Add a Custom Header
 
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
+Steps to add a calculated field:
+ - a dataset has been selected
+ - click on the *Add Columns* button as shown in the below image.
+ - follow the instructions appearing in the pop up (assign a name, a function,..)
+ - close the pop-up by clicking on *Apply*. The button remains graid off until validation is done.
+
+ .. figure:: media/image045.png
+
+   Adding a calculated field
+
+ Once the new field has been added you will see the new column added to the ones of your dataset.
+ By using the icon highlighted in the below image you can reopen the details pop-up.
+
+ .. figure:: media/image045.png
+
+   Reopend details of a calculated field
+
 
 
 Widget Theame
