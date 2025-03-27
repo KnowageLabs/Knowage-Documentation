@@ -244,6 +244,7 @@ It is possible to change the position of the Legend just setting Left/Middle/Rig
 Some othe properties you can manage are: Bold, Font size and family, Borders, Background.
 
 **Bubble**
+
 The *Bubble* chart is useful in case of three series. The size of the bubble depends on the third dimension.
 After pressing the *Add widget* button pick up the Bubble chart from the gallery.
 
@@ -265,7 +266,7 @@ An example of bubble chart is shown below, bubbles color has been set through th
 
    Bubble chart example
 
-**Bumbell**
+**Dumbell**
 
 A *Dumbbell* chart uses circles and lines to show changes over time.
 After pressing the *Dumbbell* button pick up the Bubble chart from the gallery.
@@ -314,7 +315,12 @@ See below image.
 
 **Pictorial**
 
-A *Pictorial* chart represents data using icons, symbols, or images.
+A *Pictorial* chart represents different satges of data using a bulb.
+Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
+Select *Pictorial* as chart, choose just one measure to define the Serie and one attribute for the category.
+See below image
+
+ .. figure:: media/image032.png
 
 **Sankey**
 
