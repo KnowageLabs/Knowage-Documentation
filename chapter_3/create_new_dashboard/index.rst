@@ -444,9 +444,24 @@ Only one option can be activated at the same time.
 
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
+To manage the cache and frequency of your data you need to select the dataset form the list of the available ones 
+and switching on the sliding button for the *Cache* option as shown in the below image.
+
+.. figure:: media/image046.png
+
+   Managing cache and frequency
+
+You can also index columns.
+
+.. figure:: media/image047.png
+
+   Managing indexes on columns
 
 Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
+In case of more sheets inside a dashboard there is the requirement to have the same header.
+You can create the header and making it available for all sheets just in one shot. 
+
 
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
