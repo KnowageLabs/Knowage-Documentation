@@ -447,3 +447,15 @@ Add a Calculated Field
 Widget Theame
 ------------------------------------------------------------------------------------------------------------------------
 
+This is a functionality introduced on the new *Dashboard* available in the *Settings* section just clicking on *Style*.
+See below image.
+
+.. figure:: media/image041.png
+   Activating cross navigation
+
+The below image shows an example of two different themes applied to the corresponding table widgets.
+
+.. figure:: media/image043.png
+   Activating cross navigation
+
+To be available themes have to be previously defined also according to the type of widget.
