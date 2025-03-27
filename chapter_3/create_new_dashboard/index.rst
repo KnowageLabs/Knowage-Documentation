@@ -536,28 +536,61 @@ If you need to simulate a button behaviour use a div (or another allowed tag) an
 
 Table widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Table* widget to the dashboard.
+After selecting the dataset, drag and drop the columns to show.
+You can active Pagination just switching on the sliding button and then specify the number of items to be visualized in the page.
+To handle each column settings just click on the seting icon before the trash. You will be able to set aliases, the aggragation function
+and filters on that column.
 
+.. figure:: media/image049.png
+
+   Table widget editor
+
+ To manage styles and other functionalities for columns just move to the *Settings* section.
+ The below image shows how to apply *Conditional Styles* to a specific column of the table.
+ If a given condition for a measure occurs it is possible to set properties as font size, font Family, background, etc.
+
+ .. figure:: media/image050.png
+
+   Table widget - conditional styles
+
+*Visibility* conditions can also be set for column. Just click the *Visualization* property as shown below.
+
+ .. figure:: media/image051.png
+
+   Table widget - visibility conditions
+
+ 
 
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Pivot* widget to the dashboard.
 
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Map* widget to the dashboard.
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Active Selections* widget to the dashboard.
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Selector* widget to the dashboard.
 
 Custom chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Custom* widget to the dashboard.
 
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Discovery* widget to the dashboard.
 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Python* widget to the dashboard.
+
+
 
 Cross Navigation on a chart and other functionalities
 ------------------------------------------------------------------------------------------------------------------------
