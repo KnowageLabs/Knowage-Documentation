@@ -215,6 +215,14 @@ See below image.
 
 Preview functionality for a chart
 
+Furthermore after inserting a chart you can simply move it inside the dashboard just dragging it inside the whole sheet. 
+This functionalitu is available for a whatever widget you need to use.
+See below image.
+
+.. figure:: media/image042.png
+
+ Just go with the mouse over the tree lines and little hand let you move your widget.  
+
 **Activity Gauge**
 
 The *Activity Gauge* uses circular-shaped bars to compare multiple categories against the target.
