@@ -13,6 +13,9 @@ the presence of the new *Pivot* widget and the *Map widget* .
 
    Chart gallery example
 
+Given the wide range of graphs, you can search for the desired one using the dedicated search function. 
+Simply enter the type of graph you want to draw and press the search icon.
+
 
 .. figure:: media/image003.png
 
@@ -101,14 +104,7 @@ All relevant settings will be furtherly described for each widget.
    |                    |   - Responsive                                                               |
    +--------------------+------------------------------------------------------------------------------+
 
-Once the chart has been inserted in your dashboard sheet, a three dots icon displays a menu with some actions.
-See below image.
 
-.. figure:: media/image028.png
-
-Menu on a chart
-
-You can resize the chart just drugging the little corner in the right bottom of the chart.
 
 
 Text widget
@@ -201,6 +197,24 @@ The drop down menu with your choice will show all the available options for the 
 
 .. figure:: media/image016.png
 
+Once the chart has been inserted in your sheet, a three dots icon displays a menu with the list of possible actions.
+See below image.
+
+.. figure:: media/image028.png
+
+Menu on a chart
+
+You can resize the chart just drugging the little corner in the right bottom of the chart.
+
+Another peculiarity is that the user can immediatly have a preview of the graph just using the magnifying glass.
+located at the upper right corner for each property of the *Settings* section. This means that you don't necessarily have to save the graph 
+as a first step to see how it looks like but you can see changes as they are applied.
+See below image.
+
+.. figure:: media/image031.png
+
+Preview functionality for a chart
+
 **Activity Gauge**
 
 The *Activity Gauge* uses circular-shaped bars to compare multiple categories against the target.
@@ -251,7 +265,8 @@ An example of bubble chart is shown below, bubbles color has been set through th
 
    Bubble chart example
 
-**Dumbbell**
+**Bumbell**
+
 A *Dumbbell* chart uses circles and lines to show changes over time.
 After pressing the *Dumbbell* button pick up the Bubble chart from the gallery.
 To define the chart you need one attribute and two measures to define the series. See the below image.
@@ -275,26 +290,47 @@ Once created you can handle the settings of the start Serie as shown below.
   Dumbell chart example
 
 **Funnel**
+
 This kind of chart provides a visual representation of how data progresses through different stages of a process starting 
 from a broad head and ending in a narrow neck.
 
+Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
+Select *Funnel* as chart, choose just one measure and one attribute and then press *Save* to get the graph visualized.
+See below image.
+
+
+.. figure:: media/image029.png
+
 **Packed Bubble**
+
 A *Packed Bubble* is similar to a Bubble Chart where bubbles are tightly packed rather than spread over a grid of X and Y-Axis.
+Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
+Select *Funnel* as chart, choose just one measure and two attributes. The first attribute is used for grouping and the second one for labels. 
+Then press *Save* to get the graph visualized.
+See below image.
+
+.. figure:: media/image030.png
+
 
 **Pictorial**
+
 A *Pictorial* chart represents data using icons, symbols, or images.
 
 **Sankey**
+
 A *Sankey* chart is useful to highlight the flow of data from one value to another
 
 **Scatter**
+
 A *Scatter* chart is like a cloud where two variables from a data set are plotted on a Cartesian space by using dots.
 
 **Streamgraph**
+
 A *Streamgraph* represents a variation of the area chart where areas are plotted around a central axis and not a fixed one. This shapes the
 graph with no corners but with rounded edges giving the impression of a flow.
 
 **Waterfall**
+
 A *Waterfall* chart can be useful to understand how data is affected by positive or negative values. It' s like a bar chart where in the middle of two normal bars 
 there are suspended bars as the beguinning of the bar is represented by the end of the previous bar.
 
