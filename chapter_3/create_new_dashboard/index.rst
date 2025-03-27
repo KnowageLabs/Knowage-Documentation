@@ -412,8 +412,19 @@ Discovery widget
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Defining a Cross Navigation
+Cross Navigation on a chart and other functionalities
 ------------------------------------------------------------------------------------------------------------------------
+The cross navigation lets you navigate from one document to another.
+You will find the cross navigation functionality in the *Settings* section of chart. Just click on *Interactions* as shown below.
+
+.. figure:: media/image039.png
+   Searching the cross navigation functionality
+
+Activate the functionality just switching on the slidind button and select the name of the cross navigation previously defined.
+
+.. figure:: media/image040.png
+   Activating cross navigation
+
 
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
