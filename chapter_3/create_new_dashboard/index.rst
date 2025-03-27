@@ -549,6 +549,7 @@ and filters on that column.
  To manage styles and other functionalities for columns just move to the *Settings* section.
  The below image shows how to apply *Conditional Styles* to a specific column of the table.
  If a given condition for a measure occurs it is possible to set properties as font size, font Family, background, etc.
+ In case variables and parameters have been defined for the dashboard just make your choice from the *Value Type* menu to enter the related value.
 
  .. figure:: media/image050.png
 
@@ -559,6 +560,7 @@ and filters on that column.
  .. figure:: media/image051.png
 
    Table widget - visibility conditions
+
 
  
 
