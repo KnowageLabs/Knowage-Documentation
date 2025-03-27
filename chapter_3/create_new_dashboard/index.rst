@@ -302,6 +302,8 @@ See below image.
 
 .. figure:: media/image029.png
 
+Funnel chart example
+
 **Packed Bubble**
 
 A *Packed Bubble* is similar to a Bubble Chart where bubbles are tightly packed rather than spread over a grid of X and Y-Axis.
@@ -312,6 +314,7 @@ See below image.
 
 .. figure:: media/image030.png
 
+Packed bubble chart example
 
 **Pictorial**
 
@@ -322,9 +325,19 @@ See below image
 
  .. figure:: media/image032.png
 
+Pictorial chart example
+
+
 **Sankey**
 
-A *Sankey* chart is useful to highlight the flow of data from one value to another
+A *Sankey* chart is useful to highlight the flow of data from one value to another.
+The gallery offers two kinds of charts: *Sankey* and *Sankey Inverted*. The last chart is just the inverted represention of the normal Sankey.
+Once selected the dataset, you need to choose two attributes representing the *from* and the *to* categories of the flow and a measure.
+
+ .. figure:: media/image033.png
+
+Sankey chart example
+
 
 **Scatter**
 
