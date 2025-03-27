@@ -218,7 +218,7 @@ Preview functionality for a chart
 **Activity Gauge**
 
 The *Activity Gauge* uses circular-shaped bars to compare multiple categories against the target.
-After pressing the *Add widget* button pick up the Activity Gauge chart from the gallery.
+After clicking the *Add widget* button pick up Chart and then the Activity Gauge chart from the gallery.
 
 .. figure:: media/image017.png
 
@@ -246,7 +246,7 @@ Some othe properties you can manage are: Bold, Font size and family, Borders, Ba
 **Bubble**
 
 The *Bubble* chart is useful in case of three series. The size of the bubble depends on the third dimension.
-After pressing the *Add widget* button pick up the Bubble chart from the gallery.
+After clicking the *Add widget* button pick up Chart and then the Bubble chart from the gallery.
 
 .. figure:: media/image021.png
 
@@ -269,7 +269,7 @@ An example of bubble chart is shown below, bubbles color has been set through th
 **Dumbell**
 
 A *Dumbbell* chart uses circles and lines to show changes over time.
-After pressing the *Dumbbell* button pick up the Bubble chart from the gallery.
+After pressing the *Add Widget* button pick up Cahrt and then the *Dumbell* chart from the gallery.
 To define the chart you need one attribute and two measures to define the series. See the below image.
 
 .. figure:: media/image024.png
@@ -294,7 +294,7 @@ Once created you can handle the settings of the start Serie as shown below.
 
 This kind of chart provides a visual representation of how data progresses through different stages of a process starting 
 from a broad head and ending in a narrow neck.
-
+By clicking the *Add widget* pick up Chart and then *Funnel* from the gallery.
 Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
 Select *Funnel* as chart, choose just one measure and one attribute and then press *Save* to get the graph visualized.
 See below image.
@@ -308,7 +308,7 @@ Funnel chart example
 
 A *Packed Bubble* is similar to a Bubble Chart where bubbles are tightly packed rather than spread over a grid of X and Y-Axis.
 Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
-Select *Funnel* as chart, choose just one measure and two attributes. The first attribute is used for grouping and the second one for labels. 
+Select Chart and then *Funnel* as chart, choose just one measure and two attributes. The first attribute is used for grouping and the second one for labels. 
 Then press *Save* to get the graph visualized.
 See below image.
 
@@ -320,7 +320,7 @@ Packed bubble chart example
 
 A *Pictorial* chart represents different satges of data using a bulb.
 Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
-Select *Pictorial* as chart, choose just one measure to define the Serie and one attribute for the category.
+Select Chart and then *Pictorial* as chart, choose just one measure to define the Serie and one attribute for the category.
 See below image
 
  .. figure:: media/image032.png
@@ -331,8 +331,10 @@ Pictorial chart example
 **Sankey**
 
 A *Sankey* chart is useful to highlight the flow of data from one value to another.
+By clicking on the *Add widget* button press Chart and then *Sankey*.
 The gallery offers two kinds of charts: *Sankey* and *Sankey Inverted*. The last chart is just the inverted represention of the normal Sankey.
 Once selected the dataset, you need to choose two attributes representing the *from* and the *to* categories of the flow and a measure.
+
 
  .. figure:: media/image033.png
 
@@ -342,16 +344,24 @@ Sankey chart example
 **Scatter**
 
 A *Scatter* chart is like a cloud where two variables from a data set are plotted on a Cartesian space by using dots.
+By clicking on the *Add widget* button press Chart and then *Scatter*.
+After selecting the dataset to define this chart you need to pick up two *numerical* values representing the measure and the category.
+
+ .. figure:: media/image034.png
+
+   Scatter chart example
 
 **Streamgraph**
 
 A *Streamgraph* represents a variation of the area chart where areas are plotted around a central axis and not a fixed one. This shapes the
 graph with no corners but with rounded edges giving the impression of a flow.
+By clicking on the *Add widget* button press Chart and then *Streamgraph*.
 
 **Waterfall**
 
 A *Waterfall* chart can be useful to understand how data is affected by positive or negative values. It' s like a bar chart where in the middle of two normal bars 
 there are suspended bars as the beguinning of the bar is represented by the end of the previous bar.
+By clicking on the *Add widget* button press Chart and then *Waterfall*.
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
