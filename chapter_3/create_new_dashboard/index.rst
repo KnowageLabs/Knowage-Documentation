@@ -126,9 +126,7 @@ You can drag a single column into the *Selected Columns* area or just all of the
 
 .. figure:: media/image010.png
 
-
    Text Widget Settings Editor
-
 
 Select the *Editor* property and type in the desired text.
 Select the *[] placeholder* menu item and then *Columns Data* to find the dataset column(s) previously selected as shown in the below image.
@@ -192,7 +190,6 @@ After dragging your dimension(s) and attribute(s), you will see that the informa
 from one chart to another.
 The below image refers to a *Funnel* chart where you need to define both the measure(s) and the sttribute(s).
 
-
 .. figure:: media/image014.png
 
 Not all charts need both information as if you refer to an *Activity Gauge* you only need to define the measure. See image below.
@@ -204,7 +201,6 @@ The drop down menu with your choice will show all the available options for the 
 
 .. figure:: media/image016.png
 
-
 **Activity Gauge**
 
 The *Activity Gauge* uses circular-shaped bars to compare multiple categories against the target.
@@ -214,27 +210,73 @@ After pressing the *Add widget* button pick up the Activity Gauge chart from the
 
    Activity Gauge example
 
+Below you can see how to set the aliases. From the drop down menu you can choose the column(s) previously selected as measures and rename them.
+
 .. figure:: media/image018.png
 
    Setting Alias example
+ Once renamed changed are applied and you can see it in the below image.
 
 .. figure:: media/image019.png
 
    Setting Series example
+If you want to set properties for the Tooltip just click on Tooltip and set Bold and Backgroud color as shown in the below image
+
+.. figure:: media/image020.png
+
+   Setting Tooltip example
+
+It is possible to change the position of the Legend just setting Left/Middle/Right. In the above picture the legend is set to appear in the middle.
+Some othe properties you can manage are: Bold, Font size and family, Borders, Background.
 
 **Bubble**
 The *Bubble* chart is useful in case of three series. The size of the bubble depends on the third dimension.
 After pressing the *Add widget* button pick up the Bubble chart from the gallery.
 
+.. figure:: media/image021.png
+
+   Bubble chart - dragging and dropping measures and attributes
+
+You can set some properties for the series. It is possible to define them for all series or just for one.
+As shown in the below image in the last case just press the *plus* icon and the drop down menu will show you the list of 
+columns.
+
+.. figure:: media/image022.png
+
+   Bubble chart - setting series
+
+An example of bubble chart is shown below, bubbles color has been set through the Color property inside Settings section.
+
+.. figure:: media/image023.png
+
+   Bubble chart example
+
 **Dumbbell**
 A *Dumbbell* chart uses circles and lines to show changes over time.
 After pressing the *Dumbbell* button pick up the Bubble chart from the gallery.
+To define the chart you need one attribute and two measures to define the series. See the below image.
 
+.. figure:: media/image024.png
+
+Dumbell chart example - defining measures and atributes
+
+Once created you can handle the settings of the start Serie as shown below.
+
+.. figure:: media/image025.png
+
+  Dumbell chart - settings serie
+
+.. figure:: media/image026.png
+
+  Dumbell chart - renaming measures
+
+.. figure:: media/image027.png
+
+  Dumbell chart example
 
 **Funnel**
 This kind of chart provides a visual representation of how data progresses through different stages of a process starting 
 from a broad head and ending in a narrow neck.
-
 
 **Packed Bubble**
 A *Packed Bubble* is similar to a Bubble Chart where bubbles are tightly packed rather than spread over a grid of X and Y-Axis.
@@ -264,38 +306,32 @@ This widget supports all HTML5 standard tags and CSS3 properties.
 Table widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 Custom chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Defining a Cross Navigation
+------------------------------------------------------------------------------------------------------------------------
 
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
-
 
 Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
@@ -303,8 +339,7 @@ Add a Custom Header
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
 
-Theaming
-------------------------------------------------------------------------------------------------------------------------
 
 Widget Theame
 ------------------------------------------------------------------------------------------------------------------------
+
