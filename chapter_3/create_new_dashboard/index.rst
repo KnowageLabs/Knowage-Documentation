@@ -393,11 +393,15 @@ Select yor dataset and then you will be asked to enter just one attribute as cat
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements to the cockpit. 
+The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements. 
 This widget supports all HTML5 standard tags and CSS3 properties.
+
+For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted 
+after saving the document.
 
 Table widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -433,7 +437,10 @@ Activate the functionality just switching on the slidind button and select the n
 .. figure:: media/image040.png
    Activating cross navigation
 
-As show in the above images together with the cross navigation functionalities some others can be defined on a chart.
+
+Select, Link and Preview functionalities
+------------------------------------------------------------------------------------------------------------------------
+As show in the above images for the cross navigation together with the cross navigation functionalities some others can be defined on a chart.
 Functionalities that can be activated just switching on the corresponding sliding button are:
    - Selection: if deactivated the chart is not clickable
    - Link, to open a specific URL when clicking on a chart
