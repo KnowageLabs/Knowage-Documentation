@@ -575,6 +575,11 @@ By clicking on the *Add widget* button or icon and then on Add it is possible to
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Active Selections* widget to the dashboard.
+This way the user can view the list of curren selections applied on a widget. An icon on the right upper corner of the dashboard will 
+be visible and by clicking on it the list of current selections will be visible. On each item of this list a *trash* icon lets the
+deletion of that selection.
+
+
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
