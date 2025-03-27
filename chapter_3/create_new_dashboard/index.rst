@@ -350,13 +350,23 @@ See below image
 
  .. figure:: media/image034.png
 
-   Scatter chart - definind series and categories
+   Scatter chart - defining series and categories
 
 **Streamgraph**
 
 A *Streamgraph* represents a variation of the area chart where areas are plotted around a central axis and not a fixed one. This shapes the
 graph with no corners but with rounded edges giving the impression of a flow.
-By clicking on the *Add widget* button press Chart and then *Streamgraph*.
+By clicking on the *Add widget* button press Chart and then *Streamgraph*. You need to choose one attribute for the X-axis, one attribute as category
+and one measure as shown below.
+
+.. figure:: media/image035.png
+
+   Streamgraph chart - defining series and categories
+
+
+.. figure:: media/image036.png
+
+   Streamgraph chart example
 
 **Waterfall**
 
