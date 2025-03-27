@@ -346,10 +346,11 @@ Sankey chart example
 A *Scatter* chart is like a cloud where two variables from a data set are plotted on a Cartesian space by using dots.
 By clicking on the *Add widget* button press Chart and then *Scatter*.
 After selecting the dataset to define this chart you need to pick up two *numerical* values representing the measure and the category.
+See below image
 
  .. figure:: media/image034.png
 
-   Scatter chart example
+   Scatter chart - definind series and categories
 
 **Streamgraph**
 
