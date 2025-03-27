@@ -373,6 +373,15 @@ and one measure as shown below.
 A *Waterfall* chart can be useful to understand how data is affected by positive or negative values. It' s like a bar chart where in the middle of two normal bars 
 there are suspended bars as the beguinning of the bar is represented by the end of the previous bar.
 By clicking on the *Add widget* button press Chart and then *Waterfall*.
+Select yor dataset and then you will be asked to enter just one attribute as category and one measure as a serie as shown below.
+
+.. figure:: media/image037.png
+
+   Waterfall - defining measures and attributes
+
+.. figure:: media/image038.png
+
+   Waterfall chart example
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
