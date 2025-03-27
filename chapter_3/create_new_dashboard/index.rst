@@ -536,7 +536,7 @@ If you need to simulate a button behaviour use a div (or another allowed tag) an
 
 Table widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Table* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Table* it is possible to add a *Table* widget to the dashboard.
 After selecting the dataset, drag and drop the columns to show.
 You can active Pagination just switching on the sliding button and then specify the number of items to be visualized in the page.
 To handle each column settings just click on the seting icon before the trash. You will be able to set aliases, the aggragation function
@@ -566,15 +566,15 @@ and filters on that column.
 
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Pivot* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Pivot* it is possible to add a *Pivot* widget to the dashboard.
 
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Map* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Map* it is possible to add a *Map* widget to the dashboard.
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Active Selections* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Active Selections* it is possible to add a *Active Selections* widget to the dashboard.
 This way the user can view the list of curren selections applied on a widget. An icon on the right upper corner of the dashboard will 
 be visible and by clicking on it the list of current selections will be visible. On each item of this list a *trash* icon lets the
 deletion of that selection.
@@ -591,7 +591,12 @@ deletion of that selection.
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Selector* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Selector* it is possible to add a *Selector* widget to the dashboard.
+The *Selector* Widget allows a dataset filtering by means of a combobox, radio button or checkboxes.
+
+.. figure:: media/image054.png
+
+   Active selections widget
 
 Custom chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
