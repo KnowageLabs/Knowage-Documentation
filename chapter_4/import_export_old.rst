@@ -318,3 +318,17 @@ Afterwards, connecting as admin to a target tenant, the user selects the *Import
     Import of glossaries
 
 Arrows are used to indicate the glossaries to consider for the import.
+
+Alerts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This functionality allows to Export/Import alerts.
+
+.. figure:: media/export_alert_8.1.png
+
+    Export alerts
+
+
+.. figure:: media/import_alert_8.1.png
+
+    Import alerts
