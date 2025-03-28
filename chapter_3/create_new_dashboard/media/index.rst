@@ -675,7 +675,6 @@ The choroplet visualization allows a user to precisely associate values to areas
 
 
 Map widgets also support the addition of calculated fields.
-
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Active Selections* it is possible to add a *Active Selections* widget to the dashboard.
