@@ -104,7 +104,7 @@ All relevant settings will be furtherly described for each widget.
    |                    |   - Responsive                                                               |
    +--------------------+------------------------------------------------------------------------------+
 
-
+INSERIRE TABELLA CON DESCRIZIONE DI TUTTI O QUASI I SETTINGS
 
 
 Text widget
@@ -119,7 +119,7 @@ You can drag a single column into the *Selected Columns* area or just all of the
    Text Widget Data Editor
 
 .. figure:: media/image010.png
-   
+
    Text Widget Settings Editor
 
 Select the *Editor* property and type in the desired text.
@@ -258,16 +258,36 @@ An example below.
 **Pie**
 
 **Treemap**
+The treemap is a graphical representation of hierarchical data, which is displayed as nested rectangles.
+Each branch of the tree is given by a rectangle, which is tiled with smaller rectangles representing sub-branches. 
+The area of the rectangles is proportional to a measure specified by a numerical attribute. The treemap is usefull to display a 
+large amount of hierarchical data in a small space.
+By clicking the *Add widget* button pick up *Chart* and then the *Treemap* chart from the gallery.
+Once you have selected the dataset, choose at least two attributes into the X-axis panel and one measure and press *Save*. 
+See below image.
+
+.. figure:: media/image061.png
+
+   Treemap chart - attributes and measures
+
+The order of the attributes in the X-axis panel must reflects the order of the attributes in the hierarchy starting from the root to the top.
+
+In Figure below an example of a Treemap chart
+
+.. figure:: media/image11415.PNG
+
+    From left to right: (a) Treemap. (b) Treemap sub-branches.
 
 Bar, column, line, pie and treemap charts allow the *drill-down* functionality.
 Drill down leads the user from a more general view of the data to a more specific view just by clicking the mouse.
 
 Let's have an example 
+INSERIRE ESEMPIO DEL cockpit
 
 **Activity Gauge**
 
 The *Activity Gauge* uses circular-shaped bars to compare multiple categories against the target.
-After clicking the *Add widget* button pick up Chart and then the Activity Gauge chart from the gallery.
+After clicking the *Add widget* button or icon pick up *Chart* and then the *Activity Gauge* chart from the gallery.
 
 .. figure:: media/image017.png
 
@@ -278,7 +298,7 @@ Below you can see how to set the aliases. From the drop down menu you can choose
 .. figure:: media/image018.png
 
    Setting Alias example
- Once renamed changed are applied and you can see it in the below image.
+ Once renamed changed are applied and you can see it in the below image. Remember always to press *Save*
 
 .. figure:: media/image019.png
 
