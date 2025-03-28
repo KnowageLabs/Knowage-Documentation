@@ -7,7 +7,6 @@ Create Multi dimensional analisys
    :maxdepth: 10
    
    olap.rst
-   whatif.rst
 
 .. Indices and tables
 .. ==================
