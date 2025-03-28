@@ -58,7 +58,7 @@ This functionality allows the creation/management of themes to be used in the cs
 Dashboard Themes
 ------------------------------------------------------------------------------------------------------------------------
 This functionality allows to define themes that can be inherited by one or more widgets of a dashboard.
-Into the specific, when defining a new theme for each type of widget you can set properties such as *Title, Borders, Padding, Shadows and Background*.
+Into the specific, when defining a new theme for each type of widget you can set properties such as *Title, Borders, Padding, Shadows and Background*
 in relation to that theme.
 
 .. figure:: media/dash_themes.png
