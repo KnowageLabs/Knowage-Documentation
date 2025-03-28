@@ -189,8 +189,7 @@ This functionality allows to Export/Import the following elements:
 -  Datasets,
 -  Business models,
 -  Mondrian catalogs,
--  Layers,
--  SVG files.
+-  Layers
 
 The details are shown in the below figure.
 
