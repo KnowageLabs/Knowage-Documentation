@@ -115,9 +115,11 @@ Using the *Data* section it is possible to associate dataset values to the text 
 You can drag a single column into the *Selected Columns* area or just all of them by using the arrow next to the *Add Column* button.
 
 .. figure:: media/image009.png
+
    Text Widget Data Editor
 
 .. figure:: media/image010.png
+   
    Text Widget Settings Editor
 
 Select the *Editor* property and type in the desired text.
