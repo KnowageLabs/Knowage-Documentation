@@ -13,6 +13,8 @@ A dataset allows you to read data from multiple sources and represents the porti
    flat.rst
    rest.rst
    solr.rst
+   sparkql.rst
+   ckan.rst
    python.rst
    qbe.rst
 
