@@ -592,7 +592,8 @@ deletion of that selection.
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Selector* it is possible to add a *Selector* widget to the dashboard.
-The *Selector* Widget allows a dataset filtering by means of a combobox, radio button or checkboxes.
+The *Selector* widget allows a dataset filtering by means of a combobox, radio button or checkboxes.
+After choosing the column to use as a filter just move to the *Setting* section and then *Configuration*.
 
 .. figure:: media/image054.png
 
@@ -600,15 +601,15 @@ The *Selector* Widget allows a dataset filtering by means of a combobox, radio b
 
 Custom chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Custom* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Custom* it is possible to add a *Custom* widget to the dashboard.
 
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Discovery* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Discovery* it is possible to add a *Discovery* widget to the dashboard.
 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on Add it is possible to add a *Python* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Python* it is possible to add a *Python* widget to the dashboard.
 
 
 
@@ -628,7 +629,7 @@ Activate the functionality just switching on the slidind button and select the n
 
 Select, Link and Preview functionalities
 ------------------------------------------------------------------------------------------------------------------------
-As show in the above images for the cross navigation together with the cross navigation functionalities some others can be defined on a chart.
+As shown in the above images for the cross navigation together with the cross navigation functionalities some others can be defined on a chart.
 Functionalities that can be activated just switching on the corresponding sliding button are:
    - Selection: if deactivated the chart is not clickable
    - Link, to open a specific URL when clicking on a chart
