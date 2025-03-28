@@ -281,8 +281,29 @@ In Figure below an example of a Treemap chart
 Bar, column, line, pie and treemap charts allow the *drill-down* functionality.
 Drill down leads the user from a more general view of the data to a more specific view just by clicking the mouse.
 
-Let's have an example 
-INSERIRE ESEMPIO DEL cockpit
+The following example shows how drill-down works.
+
+The selected categories are four and called: ``product_family``, ``product_department``, ``product_category`` and ``product_subcategory``. 
+Once we open the document, we get as shown below:
+
+.. figure:: media/charts/image127.png
+
+    Drillable Bar Chart
+
+When selecting ``shelf_depth`` measure of the Food category one gets (see next figure):
+
+.. figure:: media/image128.png
+
+    Drillable Bar Chart: first drill
+
+Once again, we can select ``Frozen food`` subcategory and drill to a second sub-level as below:
+
+.. figure:: media/image129.png
+
+    Drillable Bar Chart: second drill
+
+And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to the previous level. This efficient feature allows the user to have a deep insight of the analysis and draw important conclusions from it.
+
 
 **Activity Gauge**
 
