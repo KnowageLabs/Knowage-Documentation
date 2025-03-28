@@ -225,11 +225,13 @@ vertical orientation.
 Below is shown how to define measures and attributes
 
 .. figure:: media/image057.png
+
    Column chart - measures and attributes
 
 The above image shows the *Maximum number of records* property enabled and set to 3. In this case only three bars are shown.
 
 .. figure:: media/image058.png
+   
    Column chart example
 
 **Activity Gauge**
