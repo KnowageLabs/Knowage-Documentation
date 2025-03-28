@@ -286,7 +286,7 @@ The following example shows how drill-down works.
 The selected categories are four and called: ``product_family``, ``product_department``, ``product_category`` and ``product_subcategory``. 
 Once we open the document, we get as shown below:
 
-.. figure:: media/charts/image127.png
+.. figure:: media/image127.png
 
     Drillable Bar Chart
 
