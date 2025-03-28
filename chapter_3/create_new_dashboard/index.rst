@@ -257,7 +257,15 @@ An example below.
 
 **Pie**
 
+A *pie* chart helps organize and show data in a circular form as a percentage of a whole.
+
+.. figure:: media/image062.png
+
+   Pie chart example
+
+   
 **Treemap**
+
 The treemap is a graphical representation of hierarchical data, which is displayed as nested rectangles.
 Each branch of the tree is given by a rectangle, which is tiled with smaller rectangles representing sub-branches. 
 The area of the rectangles is proportional to a measure specified by a numerical attribute. The treemap is usefull to display a 
