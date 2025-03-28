@@ -562,11 +562,10 @@ and filters on that column.
    Table widget - visibility conditions
 
 
- 
-
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Pivot* it is possible to add a *Pivot* widget to the dashboard.
+
 
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -582,97 +581,6 @@ In Map Widget configuration a user can add and remove layers, set the format of 
     .. figure:: media/image056.png
 
         Map widget configuration.
-
-Every dataset with a spatial attribute is eligible to become a layer in a map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. Enabling **Static** switch on a layer make it visible and non clickable, useful when a user wants a fixed background layer with dynamic data from a dataset. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
-
-.. |image478| image:: media/image478.png
-   :height: 26
-
-.. |image479| image:: media/image479.png
-   :height: 26
-
-In layer's metadata, the user can add calculated fields (more on that later) and set the spatial attribute of the dataset that will be used to display a markers on the map. Actually, many spatial attribute types are supported:
-
--  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
--  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
--  WKT: where the value is a text string in `Well-known Text <https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry>`_ format;
-
-.. important::
-         **Geographic coordinates format**
-
-         For every format above user have to specify what is the format of geographic coordinate: user have to specify if latitude comes first or vice versa.
-
-The first field listed in metadata is the spatial attribute and Knowage let the user to set if the spatial attribute need to be part of the aggregation or not: this let the user to create special query; for example, you may need to just list all the records of a dataset without any aggregations and in this case you can simply uncheck all the aggregate by checks and clean up the aggregation function for the spatial attribute; another example is where the spatial attribute at database side is of a special type like CLOB on Oracle, in that case the user cannot use that field for the aggregation but the user can exclude the spatial attribute from the aggregation, converting the field to measure and setting an aggregation function.
-
-Every field of the dataset, except for the spatial one, can have a custom alias to show on map widget: just double click the label to edit it. A user can also specify if a field have to be shown on detail popup.
-
-For measures a user could specify the aggregation function, if it has to be shown on detail popup and if it has to be shown on map: at least one field has to be shown on map.
-
-For attributes a user could specify if it has to be shown on detail popup or if it has to be show as a filter: in that case, the attribute will be available in the control panel with its all distinct values to let the user to have an immediate evidence of which markers have the selected value for the measure
-
-The user could also select if a specific attribute should be displayed in the tooltip that will be shown when the user hovers a specific feature on the map.
-
-The 3-dots-menu on the right of each column of the dataset contains additional functionalities: for measures, for example, there is the possibility to specify thresholds.
-
-The threshold menu opens a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
-
-    .. figure:: media/image057.png
-
-        Threshold dialog.
-For all the attributes that are filters, a user could select the relative value from the control panel:
-
-    .. figure:: media/image058.png
-
-        Filter selection.
-
-For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
-
-.. figure:: media/image477.png
-
-    Style configuration for every layer.
-
-For marker there are multiple choices between a user can select. The first one is the standard marker, where a user can select only the marker color:
-
-.. figure:: media/image483.png
-
-    Standard marker configuration.
-
-The second possibility is to use a custom color and custom scale with a custom marker, for example and icon available in Font Awesome catalog:
-
-.. figure:: media/image484.png
-
-    Custom marker configuration.
-
-A user can also use an image from Knowage media as a marker:
-
-.. figure:: media/image485.png
-
-    Marker from Knowage images.
-
-Finally a user can use an image from external URL as a marker:
-
-.. figure:: media/image486.png
-
-    Marker from Knowage images.
-
-Cluster visualization renders circles of different size where every circle aggregating positions by relative values. A user can zoom in to disaggregate the cluster until he see the single data. For this type of visualization, a user can set size and color of the circle and the size and the color of the font used to display the aggregated value:
-
-.. figure:: media/image487.png
-
-    Cluster configuration.
-
-When heatmap is selected, a user can display values by areas colored by a color range from green to red where the values are respectively lower and higher. Setting the radius and the blur, a user can specify the scale of the areas and the scale of the blur around it:
-
-.. figure:: media/image488.png
-
-    Heatmap configuration.
-
-The choroplet visualization allows a user to precisely associate values to areas, very useful when spatial attribute specify a geometry instead of a single point. The classes method specify the subdivision algorithm and the classes number specify how many subdivision to make; the colors specify the start and the end of the range color that will follow the same range of the values:
-
-.. figure:: media/image489.png
-
-    Choroplet configuration.
-
 
 Map widgets also support the addition of calculated fields.
 
