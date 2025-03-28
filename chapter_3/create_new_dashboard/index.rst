@@ -253,7 +253,7 @@ The *Column chart* uses points connected by line segments from left to right to 
 An example below.
 
 .. figure:: media/image059.png
-
+ Line chart example
 
 **Pie**
 
@@ -263,7 +263,7 @@ A *pie* chart helps organize and show data in a circular form as a percentage of
 
    Pie chart example
 
-   
+
 **Treemap**
 
 The treemap is a graphical representation of hierarchical data, which is displayed as nested rectangles.
