@@ -115,13 +115,9 @@ Using the *Data* section it is possible to associate dataset values to the text 
 You can drag a single column into the *Selected Columns* area or just all of them by using the arrow next to the *Add Column* button.
 
 .. figure:: media/image009.png
-
- For each
-
    Text Widget Data Editor
 
 .. figure:: media/image010.png
-
    Text Widget Settings Editor
 
 Select the *Editor* property and type in the desired text.
@@ -222,6 +218,19 @@ See below image.
 .. figure:: media/image042.png
 
  Just go with the mouse over the two vertical dotted lines and little hand appears to move your widget.  
+
+ **Column**
+The *Column chart* allows a method of displaying data with categories represented by a rectangle. It is like a *Bar* chart with
+vertical orientation.
+Below is shown how to define measures and attributes
+
+.. figure:: media/image057.png
+   Column chart - measures and attributes
+
+The above image shows the *Maximum number of records* property enabled and set to 3. In this case only three bars are shown.
+
+.. figure:: media/image058.png
+   Column chart example
 
 **Activity Gauge**
 
