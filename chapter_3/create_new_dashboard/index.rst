@@ -217,12 +217,19 @@ See below image.
 
 .. figure:: media/image042.png
 
+   Moving a widget along the dashboard
+
  Just go with the mouse over the two vertical dotted lines and little hand appears to move your widget.  
 
+Let's start introducing some of the most common used charts.
+
+ **Bar**
+The *Bar chart* allows a method of displaying data with categories represented by rectagles (or groups) horizontally oriented.
+
+
  **Column**
-The *Column chart* allows a method of displaying data with categories represented by a rectangle. It is like a *Bar* chart with
-vertical orientation.
-Below is shown how to define measures and attributes
+The *Column chart* is like a *Bar* chart with vertical orientation.
+How to define measures and attributes is shown below
 
 .. figure:: media/image057.png
 
@@ -231,8 +238,24 @@ Below is shown how to define measures and attributes
 The above image shows the *Maximum number of records* property enabled and set to 3. In this case only three bars are shown.
 
 .. figure:: media/image058.png
-   
+
    Column chart example
+
+**Line**
+The *Column chart* uses points connected by line segments from left to right to show how data changes.
+An example below.
+
+.. figure:: media/image059.png
+
+
+**Pie**
+
+**Treemap**
+
+Bar, column, line, pie and treemap charts allow the *drill-down* functionality.
+Drill down leads the user from a more general view of the data to a more specific view just by clicking the mouse.
+
+Let's have an example 
 
 **Activity Gauge**
 
