@@ -224,8 +224,13 @@ See below image.
 Let's start introducing some of the most common used charts.
 
  **Bar**
-The *Bar chart* allows a method of displaying data with categories represented by rectagles (or groups) horizontally oriented.
+The *Bar chart* allows a method of displaying data with categories represented by rectangles (or groups) horizontally oriented.
 
+An example below.
+
+.. figure:: media/image060.png
+
+Bar chart example
 
  **Column**
 The *Column chart* is like a *Bar* chart with vertical orientation.
