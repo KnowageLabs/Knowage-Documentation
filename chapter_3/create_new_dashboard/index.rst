@@ -630,7 +630,7 @@ By clicking on the *Add widget* button or icon and then on *Python* it is possib
 
 
 
-Cross Navigation on a chart and other functionalities
+Cross Navigation
 ------------------------------------------------------------------------------------------------------------------------
 The cross navigation lets you navigate from one document to another.
 You will find the cross navigation functionality in the *Settings* section of chart. Just click on *Interactions* as shown below.
@@ -644,7 +644,7 @@ Activate the functionality just switching on the slidind button and select the n
    Activating cross navigation
 
 
-Select, Link and Preview functionalities
+Select, Link and Preview
 ------------------------------------------------------------------------------------------------------------------------
 As shown in the above images for the cross navigation together with the cross navigation functionalities some others can be defined on a chart.
 Functionalities that can be activated just switching on the corresponding sliding button are:
@@ -675,7 +675,6 @@ Add a Custom Header
 In case of more sheets inside a dashboard there is the requirement to have the same header.
 You can create the header and making it available for all sheets just in one shot. 
 
-
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
 Steps to add a calculated field:
@@ -695,8 +694,6 @@ Steps to add a calculated field:
 
    Reopend details of a calculated field
 
-
-
 Widget Theame
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -711,4 +708,4 @@ The below image shows an example of two different themes applied to the correspo
 .. figure:: media/image043.png
    Activating cross navigation
 
-To be available themes have to be previously defined also according to the type of widget.
+The available themes have to be previously defined by an *admin user*.
