@@ -11,7 +11,6 @@ The present document illustrates how to install and configure the Knowage suite.
    software_release.rst
    manual_installation.rst
    python-installation.rst
-   r-installation.rst
    knowage-ce-installer.rst
 
    

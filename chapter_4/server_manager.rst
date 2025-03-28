@@ -56,14 +56,6 @@ This functionality allows the creation/management of themes to be used in the cs
     Themes
 
 
-
-
-Download installation configuration
-------------------------------------------------------------------------------------------------------------------------
-This feature allows the downloading of a *config.zip* file containing the details of the installation configuration.
-
-
-
 Licenses
 ------------------------------------------------------------------------------------------------------------------------
 This feature allows the management of Knowage licenses by adding, updating, downloading or removing a license.
