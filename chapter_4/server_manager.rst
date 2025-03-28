@@ -63,6 +63,8 @@ in relation to that theme.
 
 .. figure:: media/dash_themes.png
 
+    Dashboard themes
+
 Licenses
 ------------------------------------------------------------------------------------------------------------------------
 This feature allows the management of Knowage licenses by adding, updating, downloading or removing a license.
