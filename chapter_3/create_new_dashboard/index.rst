@@ -593,7 +593,7 @@ Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Selector* it is possible to add a *Selector* widget to the dashboard.
 The *Selector* widget allows a dataset filtering by means of a combobox, radio button or checkboxes.
-After choosing the column to use as a filter just move to the *Setting* section and then *Configuration*.
+After choosing the column to use as a filter just move to the *Setting* section and then *Configuration*. See below image.
 
 .. figure:: media/image054.png
 
@@ -601,7 +601,7 @@ After choosing the column to use as a filter just move to the *Setting* section 
 
 Custom chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on *Custom* it is possible to add a *Custom* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then on *Custom Chart* it is possible to add a *Custom Chart* widget to the dashboard.
 
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
