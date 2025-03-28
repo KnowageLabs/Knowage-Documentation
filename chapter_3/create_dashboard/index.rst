@@ -1,4 +1,4 @@
-Create a New Dashboard (old)
+Create a New Cockpit (old functionality)
 ========================================================================================================================
 
 Knowage allow end users to *self-build interactive cockpits* through an intuitive and interactive interface, with a few clicks and simple drag and drop. This allows you to compose your analytical documents with multiple widgets and define associations among them, so that clicking on one widget data are automatically updated in other widgets.
