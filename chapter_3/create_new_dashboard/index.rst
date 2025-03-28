@@ -583,7 +583,7 @@ In Map Widget configuration a user can add and remove layers, set the format of 
 
         Map widget configuration.
 
-Every dataset with a spatial attribute is eligible to become a layer in map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. Enabling **Static** switch on a layer make it visible and non clickable, useful when a user wants a fixed background layer with dynamic data from a dataset. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
+Every dataset with a spatial attribute is eligible to become a layer in a map widget. Only one layer of the widget can be susceptible to user selection: that layer will be the only one with **Target** slide set to on. For each layer a user can also specify its default visibility with **Default visibile** slide. Enabling **Static** switch on a layer make it visible and non clickable, useful when a user wants a fixed background layer with dynamic data from a dataset. With buttons |image478| and |image479| the user can set the metadata and the layer style respectively.
 
 .. |image478| image:: media/image478.png
    :height: 26
@@ -614,7 +614,7 @@ The user could also select if a specific attribute should be displayed in the to
 
 The 3-dots-menu on the right of each column of the dataset contains additional functionalities: for measures, for example, there is the possibility to specify thresholds.
 
-The threshold menu open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
+The threshold menu opens a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
 
     .. figure:: media/image057.png
 
@@ -710,6 +710,11 @@ By clicking on the *Add widget* button or icon and then on *Custom Chart* it is 
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Discovery* it is possible to add a *Discovery* widget to the dashboard.
+The Discovery Widget is used to easily use and navigate into a Solr Dataset by using facets aggregation and a table results. 
+In order to make searches, aggregations using facets and so on, after selecting the Solr dataset it is possible to choose the fields 
+that should be shown as the result. 
+The table result can also be configured to show a limited set of fields, as shown in the widget configuration.
+
 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
