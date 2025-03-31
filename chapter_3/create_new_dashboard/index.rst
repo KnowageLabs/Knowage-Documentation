@@ -153,6 +153,7 @@ Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As previously mentioned the new dashboard comes with an enriched chart gallery. 
 So, in addition to those charts used for creating the old cockpit:
+
    - Bar
    - Line
    - Pie
@@ -264,6 +265,55 @@ A *pie* chart helps organize and show data in a circular form as a percentage of
 
    Pie chart example
 
+
+**Sunburst**
+
+The sunburst chart is a graph with a radial layout which depicts the hierarchical structure of data displaying a set of concentric rings. 
+The circle in the center represents the root nodes, with the hierarchy moving outward from the center. The slices in the external rings represent the 
+children of the slice in the inner circle which means they lie within the angular sweep of the inner circle. 
+The area of each slice corresponds to the value of the node. Even if sunburst charts are not efficient space-wise, 
+they enable the user to represent hierarchies in a more immediate and fascinating way.
+
+To create a sunburst chart you need to select at least two attributes describing the hierarchy and just one measure representing the width of the 
+slices. An example of dataset for the sunburst chart is shown below.
+
+.. figure:: media/charts/image065.png
+
+Sunburst chart - defining attributes and measure
+
+.. _exampleofdatsetsunburst:
+.. table:: Example of dataset for the sunburst chart.
+   :widths: auto
+   
+   +----------------------+----------------+------+
+   |    CATEGORY          | SUBCATEGORY    | UNIT |
+   +======================+================+======+
+   |    Baking Goods      | Cooking Oil    | 349  |
+   +----------------------+----------------+------+
+   |    Baking Goods      | Sauces         | 109  |
+   +----------------------+----------------+------+
+   |    Baking Goods      | Spices         | 290  |
+   +----------------------+----------------+------+
+   |    Baking Goods      | Sugar          | 205  |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Conditioner    | 64   |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Mouthwash      | 159  |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Shampoo        | 254  |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Toilet Brushes | 92   |
+   +----------------------+----------------+------+
+   |    Bathroom Products | Toothbrushes   | 94   |
+   +----------------------+----------------+------+
+
+
+
+The below image shows an example of a sunburst chart using the dataset previously described.
+
+.. figure:: media/charts/image1101112.png
+
+    From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
 
 **Treemap**
 
