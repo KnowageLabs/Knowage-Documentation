@@ -881,11 +881,11 @@ After choosing the column to use as a filter just move to the *Setting* section 
 
 Custom chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on *Custom Chart* it is possible to add a *Custom Chart* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then then *Custom Chart*  it is possible to add a *Custom Chart* widget to the dashboard.
 
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on *Discovery* it is possible to add a *Discovery* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then *Discovery* it is possible to add a *Discovery* widget to the dashboard.
 The Discovery Widget is used to easily use and navigate into a Solr Dataset by using facets aggregation and a table results. 
 In order to make searches, aggregations using facets and so on, after selecting the Solr dataset it is possible to choose the fields 
 that should be shown as the result. 
@@ -1006,3 +1006,10 @@ The below image shows an example of two different themes applied to the correspo
    Activating cross navigation
 
 The available themes have to be previously defined by an *admin user*.
+
+Variables and Associations
+------------------------------------------------------------------------------------------------------------------------
+
+
+Multisheet
+------------------------------------------------------------------------------------------------------------------------
