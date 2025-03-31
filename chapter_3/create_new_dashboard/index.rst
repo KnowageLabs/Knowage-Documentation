@@ -1009,6 +1009,21 @@ The available themes have to be previously defined by an *admin user*.
 
 Variables and Associations
 ------------------------------------------------------------------------------------------------------------------------
+To create variables just click on the three dots menu of the bar, select *General* and then *Variables* as shown below.
+
+.. figure:: media/image074.png
+   Creating a variable - step 1
+
+Select *Variables* from the menu and click on the *Plus* icon
+
+.. figure:: media/image075.png
+Creating a variable - step 2
+
+ Type in the variable name, the type and *Save*  
+
+ .. figure:: media/image076.png
+   Creating a variable - step 3
+
 
 
 Multisheet
