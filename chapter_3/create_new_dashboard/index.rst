@@ -967,18 +967,6 @@ You can also index columns.
 
    Managing indexes on columns
 
-Add a Custom Header
-------------------------------------------------------------------------------------------------------------------------
-In case of more sheets inside a dashboard there is the requirement to have the same header.
-You can create the header and making it available for all sheets just in one shot. 
-To create a custom Header click on the three dots menu of the bar, select *Custom Header* as shown below.
-
-.. figure:: media/image077.png
-   Custom Header
-
-This functionality allows selecting the image form the Gallery.
-It is also possible to select a dataset an typing some CSS/HTML code in the *Editor*
-
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
 Steps to add a calculated field:
@@ -1031,7 +1019,24 @@ Creating a variable - step 2
  .. figure:: media/image076.png
    Creating a variable - step 3
 
+Add a Custom Header
+------------------------------------------------------------------------------------------------------------------------
+In case of more sheets inside a dashboard there is the requirement to have the same header.
+You can create the header and making it available for all sheets just in one shot. 
+To create a custom Header click on the three dots menu of the bar, select *Custom Header* as shown below.
+
+.. figure:: media/image077.png
+   Custom Header
+
+This functionality allows selecting the image form the Gallery.
+It is also possible to select a dataset an typing some CSS/HTML code in the *Editor*.
 
 
 Multisheet
 ------------------------------------------------------------------------------------------------------------------------
+The Cockpit engine allows to manage contents in multiple sheets. 
+Each sheet can contain different analysis with different datasets.
+Just click on the *Plus* icon and rename the new sheet.
+
+.. figure:: media/image078.png
+   Multisheet functionality
