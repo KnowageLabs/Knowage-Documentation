@@ -1547,19 +1547,19 @@ Activate the functionality just switching on the slidind button and select the n
    Activating cross navigation
 
 
-Select, Link, Preview and Drill-down
+Select, Link, Preview
 ------------------------------------------------------------------------------------------------------------------------
 The *Interaction* property contains some otherfunctionalities such as:
    - Selection: if deactivated i.e. the chart is not clickable
    - Link, to open a specific URL when clicking i.e. on a chart
    - Preview, to download a file when clicking i.e. on a chart
-   - Drill-down
 
 Only one option can be activated at the same time. To activate the option just switch on the corresponding sliding button.
 
 Drill-down
 ------------------------------------------------------------------------------------------------------------------------
 Drill down leads the user from a more general view of the data to a more specific view just by clicking the mouse.
+This functionality is also listed under the *Interactions* property of the *Settings* section.
 
 The following example shows how drill-down works.
 
