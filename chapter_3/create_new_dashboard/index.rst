@@ -739,12 +739,11 @@ Activate the functionality just switching on the slidind button and select the n
 Select, Link and Preview
 ------------------------------------------------------------------------------------------------------------------------
 Together with the cross navigation functionalities some others can be defined on a widget.
-Functionalities that can be activated just switching on the corresponding sliding button are:
-   - Selection: if deactivated the chart is not clickable
-   - Link, to open a specific URL when clicking on a chart
-   - Preview, to download a file when clicking on a chart
+   - Selection: if deactivated i.e. the chart is not clickable
+   - Link, to open a specific URL when clicking i.e. on a chart
+   - Preview, to download a file when clicking i.e. on a chart
 
-Only one option can be activated at the same time.
+Only one option can be activated at the same time. To activate the option just switch on the corresponding sliding button.
 
 
 Manage Cache/Frequency
