@@ -349,7 +349,7 @@ The parallel chart is a way to visualize high-dimensional geometry and multivari
 To create a parallel chart select a dataset with at least one attribute and two columns with numerical values. You can find an interesting example of dataset in the next table where we display some of its rows.
 
 .. _exampleofdatsetparallel:
-.. table:: Example of dataset for the parallel chart.
+.. table:: Example of a dataset for a parallel chart.
    :widths: auto
    
    +--------+--------------+-------------+--------------+-------------+-----------------+
@@ -419,9 +419,39 @@ The second side of the image (part b) shows thanks to selection, that all iris w
 
 Parallel chart - measures and attributes
 
+
+**Heatmap**
+A *Heatmap* is a two-dimensional representation of data whose values are represented by colors.
+Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend trough two categories
+
+.. figure:: media/charts/image070.png
+
+Heatmap chart - measures and attributes
+
+.. figure:: media/charts/image071.png
+
+Heatmap chart example
+
+
+**Radar**
+
+A *radar* chart is a two-dimensional chart showing more series of values over a varied number of variables having its own axis.
+All axes are joined in the center of the graph.
+
+To plot this graph at least one attribute and one measure are needed.
+
+.. figure:: media/charts/image072.png
+
+Radar chart - defining attributes and measures
+
+.. figure:: media/charts/image073.png
+
+Radar chart example
+
+
 **Treemap**
 
-The *Treemap* is a graphical representation of hierarchical data, which is displayed as nested rectangles.
+The *Treemap* is a graphical representation of hierarchical data displayed as nested rectangles.
 Each branch of the tree is given by a rectangle, which is tiled with smaller rectangles representing sub-branches. 
 The area of the rectangles is proportional to a measure specified by a numerical attribute. The treemap is usefull to display a 
 large amount of hierarchical data in a small space.
@@ -441,31 +471,8 @@ In Figure below an example of a Treemap chart
 
     From left to right: (a) Treemap. (b) Treemap sub-branches.
 
-Bar, column, line, pie and treemap charts allow the *drill-down* functionality.
-Drill down leads the user from a more general view of the data to a more specific view just by clicking the mouse.
+Bar, column, line, pie, radar and treemap charts allow the *drill-down* functionality.
 
-The following example shows how drill-down works.
-
-The selected categories are four and called: ``product_family``, ``product_department``, ``product_category`` and ``product_subcategory``. 
-Once we open the document, we get as shown below:
-
-.. figure:: media/image127.png
-
-    Drillable Bar Chart
-
-When selecting ``shelf_depth`` measure of the Food category one gets (see next figure):
-
-.. figure:: media/image128.png
-
-    Drillable Bar Chart: first drill
-
-Once again, we can select ``Frozen food`` subcategory and drill to a second sub-level as below:
-
-.. figure:: media/image129.png
-
-    Drillable Bar Chart: second drill
-
-And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to the previous level. This efficient feature allows the user to have a deep insight of the analysis and draw important conclusions from it.
 
 
 **Activity Gauge**
@@ -907,15 +914,43 @@ Activate the functionality just switching on the slidind button and select the n
    Activating cross navigation
 
 
-Select, Link and Preview
+Select, Link, Preview and Drill-down
 ------------------------------------------------------------------------------------------------------------------------
-Together with the cross navigation functionalities some others can be defined on a widget.
+The *Interaction* property contains some otherfunctionalities such as:
    - Selection: if deactivated i.e. the chart is not clickable
    - Link, to open a specific URL when clicking i.e. on a chart
    - Preview, to download a file when clicking i.e. on a chart
+   - Drill-down
 
 Only one option can be activated at the same time. To activate the option just switch on the corresponding sliding button.
 
+Drill-down
+------------------------------------------------------------------------------------------------------------------------
+Drill down leads the user from a more general view of the data to a more specific view just by clicking the mouse.
+
+The following example shows how drill-down works.
+
+The selected categories are four and called: ``product_family``, ``product_department``, ``product_category`` and ``product_subcategory``. 
+Once we open the document, we get as shown below:
+
+.. figure:: media/image127.png
+
+    Drillable Bar Chart
+
+When selecting ``shelf_depth`` measure of the Food category one gets (see next figure):
+
+.. figure:: media/image128.png
+
+    Drillable Bar Chart: first drill
+
+Once again, we can select ``Frozen food`` subcategory and drill to a second sub-level as shown below:
+
+.. figure:: media/image129.png
+
+    Drillable Bar Chart: second drill
+
+And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to 
+the previous level. This efficient feature allows a deep insight of the analysis that leads to important conclusions.
 
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
