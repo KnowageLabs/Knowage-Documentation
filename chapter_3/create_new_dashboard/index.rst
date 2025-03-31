@@ -410,26 +410,22 @@ The second side of the image (part b) shows thanks to selection, that all iris w
 
 .. _fromleftparallrighetchart:
 .. figure:: media/charts/image11617.png
-
     From left to right: (a) Parallel. (b) Parallel chart selection.
 
     To create this chart two attributes and one measure are needed.
 
 .. figure:: media/charts/image070.png
-
 Parallel chart - measures and attributes
 
 
 **Heatmap**
 A *Heatmap* is a two-dimensional representation of data whose values are represented by colors.
-Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend trough two categories
+Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend trough two categories.
 
-.. figure:: media/charts/image070.png
-
+.. figure:: media/charts/image070_1.png
 Heatmap chart - measures and attributes
 
 .. figure:: media/charts/image071.png
-
 Heatmap chart example
 
 
@@ -441,11 +437,9 @@ All axes are joined in the center of the graph.
 To plot this graph at least one attribute and one measure are needed.
 
 .. figure:: media/charts/image072.png
-
 Radar chart - defining attributes and measures
 
 .. figure:: media/charts/image073.png
-
 Radar chart example
 
 
