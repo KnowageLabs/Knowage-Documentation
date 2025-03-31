@@ -150,7 +150,7 @@ refer to the dedicated section.
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As previously mentioned the new dashboard comes with an enriched chart gallery. 
-So, in addition to the charts available for creating the old cockpit:
+So, in addition to those charts used for creating the old cockpit:
    - Bar
    - Line
    - Pie
@@ -165,16 +165,15 @@ So, in addition to the charts available for creating the old cockpit:
    - Gauge
    - Bubble
 
-we can find the following ones:
+new ones are now available:
 
    - Activity Gauge
-   - **Bubble**
    - Dumbbell
    - Funnel
-   - Packed Bubble
+   - **Packed Bubble**
    - Pictorial
    - Sankey
-   - **Scatter**
+   - **Scatter Jitter**
    - Stream
    - Waterfall
 
@@ -449,6 +448,22 @@ See below image
  .. figure:: media/image034.png
 
    Scatter chart - defining series and categories
+
+
+**Scatter Jitter**
+
+ This chart is wseful when there are so many points piled up that data reading data turns out to be very tricky thus each point will be slightly 
+ offset horizontally to reduce overlap and to allow reading.
+
+ 
+.. figure:: media/image063.png
+
+   Scatter jitter - defining attribute and measure
+
+
+.. figure:: media/image064.png
+
+   Scatter jitter chart example
 
 **Streamgraph**
 
