@@ -723,20 +723,22 @@ By clicking on the *Add widget* button or icon and then on *Python* it is possib
 Cross Navigation
 ------------------------------------------------------------------------------------------------------------------------
 The cross navigation lets you navigate from one document to another.
-You will find the cross navigation functionality in the *Settings* section of chart. Just click on *Interactions* as shown below.
+You will find the cross navigation functionality in the *Settings* section of a widget. Just click on *Interactions* as shown below.
 
 .. figure:: media/image039.png
-   Searching the cross navigation functionality
+
+   Searching cross navigation
 
 Activate the functionality just switching on the slidind button and select the name of the cross navigation previously defined.
 
 .. figure:: media/image040.png
+
    Activating cross navigation
 
 
 Select, Link and Preview
 ------------------------------------------------------------------------------------------------------------------------
-As shown in the above images for the cross navigation together with the cross navigation functionalities some others can be defined on a chart.
+Together with the cross navigation functionalities some others can be defined on a widget.
 Functionalities that can be activated just switching on the corresponding sliding button are:
    - Selection: if deactivated the chart is not clickable
    - Link, to open a specific URL when clicking on a chart
