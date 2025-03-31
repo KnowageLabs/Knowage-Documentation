@@ -971,6 +971,13 @@ Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
 In case of more sheets inside a dashboard there is the requirement to have the same header.
 You can create the header and making it available for all sheets just in one shot. 
+To create a custom Header click on the three dots menu of the bar, select *Custom Header* as shown below.
+
+.. figure:: media/image077.png
+   Custom Header
+
+This functionality allows selecting the image form the Gallery.
+It is also possible to select a dataset an typing some CSS/HTML code in the *Editor*
 
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
@@ -989,7 +996,7 @@ Steps to add a calculated field:
 
  .. figure:: media/image045.png
 
-   Reopend details of a calculated field
+   Reopen details of a calculated field
 
 Widget Theame
 ------------------------------------------------------------------------------------------------------------------------
