@@ -906,6 +906,8 @@ The **Editor** property under the *Settings* section allows to insert custom cod
 
 .. figure:: media/image079.png
 
+   Custom chart editor
+
 The CSS component allows to insert css classes that will be used by the HTML code of the widget. It's also possible to use `@import` command if the referred url is inside the whitelist.
 
 The HTML component allows to insert HTML tags in order to create a structure to host the custom chart and additional structural informations.
