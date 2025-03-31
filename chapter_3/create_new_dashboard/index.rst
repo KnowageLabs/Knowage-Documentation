@@ -272,7 +272,7 @@ The sunburst chart is a graph with a radial layout which depicts the hierarchica
 The circle in the center represents the root nodes, with the hierarchy moving outward from the center. The slices in the external rings represent the 
 children of the slice in the inner circle which means they lie within the angular sweep of the inner circle. 
 The area of each slice corresponds to the value of the node. Even if sunburst charts are not efficient space-wise, 
-they enable the user to represent hierarchies in a more immediate and fascinating way.
+they enable users to represent hierarchies in a more immediate and fascinating way.
 
 To create a sunburst chart you need to select at least two attributes describing the hierarchy and just one measure representing the width of the 
 slices. An example of dataset for the sunburst chart is shown below.
@@ -315,6 +315,34 @@ The below image shows an example of a sunburst chart using the dataset previousl
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
 
+**Wordcloud**
+
+The *Wordcloud* Chart allows you to quickly see which words appear more frequently in a bunch of text.
+Size and colors of the words depend on a specified weight of the measure.
+
+To create the Workcloud chart exactly one attribute and one measure are needed.
+The below example highlights what happens if two attributes are dragged and dropped in the specific area. In this case an error is shown.
+
+.. figure:: media/image066.png
+
+   Workcloud chart - attributes and measures
+
+.. figure:: media/image067.png
+
+   Workcloud chart example
+
+**Chort**
+ A Chort chart allows to show the relationship between two entities though your data. Data flows from one entity (start category) to a second entity (final category)
+
+ .. figure:: media/image068.png
+
+   Workcloud chart - attributes and measures
+ 
+
+ .. figure:: media/image069.png
+
+   Chort chart example
+
 **Treemap**
 
 The treemap is a graphical representation of hierarchical data, which is displayed as nested rectangles.
@@ -322,7 +350,7 @@ Each branch of the tree is given by a rectangle, which is tiled with smaller rec
 The area of the rectangles is proportional to a measure specified by a numerical attribute. The treemap is usefull to display a 
 large amount of hierarchical data in a small space.
 By clicking the *Add widget* button pick up *Chart* and then the *Treemap* chart from the gallery.
-Once you have selected the dataset, choose at least two attributes into the X-axis panel and one measure and press *Save*. 
+Once a dataset has been selected at least two attributes into the X-axis panel and one measure are needed. Press *Save* to apply the changes. 
 See below image.
 
 .. figure:: media/image061.png
