@@ -331,25 +331,101 @@ The below example highlights what happens if two attributes are dragged and drop
 
    Workcloud chart example
 
-**Chort**
- A Chort chart allows to show the relationship between two entities though your data. Data flows from one entity (start category) to a second entity (final category)
+**Chord**
+ A Chord chart shows the relationship between two entities though your data. Data flows from one entity (start category) to a second entity (final category)
 
  .. figure:: media/image068.png
 
-   Workcloud chart - attributes and measures
+   Chord chart - attributes and measures
  
-
  .. figure:: media/image069.png
 
-   Chort chart example
+   Chord chart example
+
+**Parallel**
+
+The parallel chart is a way to visualize high-dimensional geometry and multivarious data. The axes of a multidimensional space are represented by parallel lines, usually equally spaced-out, and a point of the space is represented by a broken line with vertices on the parallel axes. The position of the vertex on an axis correspond to the coordinate of the point in that axis.
+
+To create a parallel chart select a dataset with at least one attribute and two columns with numerical values. You can find an interesting example of dataset in the next table where we display some of its rows.
+
+.. _exampleofdatsetparallel:
+.. table:: Example of dataset for the parallel chart.
+   :widths: auto
+   
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    ID  | sepal_length | sepal_width | petal_length | petal_width | class           |
+   +========+==============+=============+==============+=============+=================+
+   |    36  |    5.0       |    3.2      |    1.2       |    0.2      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    37  |    5.5       |    3.5      |    1.3       |    0.2      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    38  |    4.9       |    3.1      |    1.5       |    0.1      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    39  |    4.4       |    3.0      |    1.3       |    0.2      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    40  |    5.1       |    3.4      |    1.5       |    0.2      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    41  |    5.0       |    3.5      |    1.3       |    0.3      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    42  |    4.5       |    2.3      |    1.3       |    0.3      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    43  |    4.4       |    3.2      |    1.3       |    0.2      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    44  |    5.0       |    3.5      |    1.6       |    0.6      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    45  |    5.1       |    3.8      |    1.9       |    0.4      | Iris-setosa     |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    66  |    6.7       |    3.1      |    4.4       |    1.4      | Iris-versicolor |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    67  |    5.6       |    3.0      |    4.5       |    1.5      | Iris-versicolor |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    68  |    5.8       |    2.7      |    4.1       |    1.0      | Iris-versicolor |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    69  |    6.2       |    2.2      |    4.5       |    1.5      | Iris-versicolor |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    70  |    5.6       |    2.5      |    3.9       |    1.1      | Iris-versicolor |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    71  |    5.9       |    3.2      |    4.8       |    1.8      | Iris-versicolor |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    101 |    6.3       |    3.3      |    6.0       |    2.5      | Iris-virginica  |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    102 |    5.8       |    2.7      |    5.1       |    1.9      | Iris-virginica  |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    103 |    7.1       |    3.0      |    5.9       |    2.1      | Iris-virginica  |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    104 |    6.3       |    2.9      |    5.6       |    1.8      | Iris-virginica  |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    105 |    6.5       |    3.0      |    5.8       |    2.2      | Iris-virginica  |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    106 |    7.6       |    3.0      |    6.6       |    2.1      | Iris-virginica  |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    107 |    4.9       |    2.5      |    4.5       |    1.7      | Iris-virginica  |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+   |    108 |    7.3       |    2.9      |    6.3       |    1.8      | Iris-virginica  |
+   +--------+--------------+-------------+--------------+-------------+-----------------+
+    
+In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, 
+we are able to find out which class we are looking at. One side of the below image (part a) shows a parallel chart related to the previous dataset. 
+The second side of the image (part b) shows thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
+
+.. _fromleftparallrighetchart:
+.. figure:: media/charts/image11617.png
+
+    From left to right: (a) Parallel. (b) Parallel chart selection.
+
+    To create this chart two attributes and one measure are needed.
+
+.. figure:: media/charts/image070.png
+
+Parallel chart - measures and attributes
 
 **Treemap**
 
-The treemap is a graphical representation of hierarchical data, which is displayed as nested rectangles.
+The *Treemap* is a graphical representation of hierarchical data, which is displayed as nested rectangles.
 Each branch of the tree is given by a rectangle, which is tiled with smaller rectangles representing sub-branches. 
 The area of the rectangles is proportional to a measure specified by a numerical attribute. The treemap is usefull to display a 
 large amount of hierarchical data in a small space.
-By clicking the *Add widget* button pick up *Chart* and then the *Treemap* chart from the gallery.
+By clicking the *Add widget* button pick up *Chart* and then the *Treemap* from the gallery.
 Once a dataset has been selected at least two attributes into the X-axis panel and one measure are needed. Press *Save* to apply the changes. 
 See below image.
 
