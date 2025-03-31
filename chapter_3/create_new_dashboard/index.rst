@@ -65,6 +65,9 @@ The functionalities for inserting a new data set and a new widget are immediatel
    +----------------------------------+-----------------------+-----------------------+
 
 
+   The below image shows an example of dashboard.
+
+   .. figure:: media/dashboard.png
 
 
 
@@ -104,7 +107,6 @@ All relevant settings will be furtherly described for each widget.
    |                    |   - Responsive                                                               |
    +--------------------+------------------------------------------------------------------------------+
 
-INSERIRE TABELLA CON DESCRIZIONE DI TUTTI O QUASI I SETTINGS
 
 
 Text widget
