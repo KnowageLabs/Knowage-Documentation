@@ -410,6 +410,7 @@ The second side of the image (part b) shows thanks to selection, that all iris w
 
 
 .. figure:: media/image11617.png
+
     From left to right: (a) Parallel. (b) Parallel chart selection.
 
     To create this chart two attributes and one measure are needed.
@@ -1629,7 +1630,7 @@ The below image shows an example of two different themes applied to the correspo
 
 The available themes have to be previously defined by an *admin user*.
 
-Variables and Associations
+Variables
 ------------------------------------------------------------------------------------------------------------------------
 To create variables just click on the three dots menu of the bar, select *General* and then *Variables* as shown below.
 
@@ -1645,6 +1646,22 @@ Creating a variable - step 2
 
  .. figure:: media/image076.png
    Creating a variable - step 3
+
+Associations
+------------------------------------------------------------------------------------------------------------------------
+To create an association at least two datasets have to be selected.
+
+ .. figure:: media/image080.png
+    Defining an association -step 1
+
+Once the datasets have been selected, two attributes have to be choosen to establish the association.
+
+ .. figure:: media/image081.png
+    Defining an association -step 2
+
+The below image shows the associaton created between the fields of the two datasets. It is possible to delete the association just clicking on the trash icon appearing on the right side of the association name.
+ .. figure:: media/image081.png
+    Defining an association -step 3
 
 Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
