@@ -436,10 +436,10 @@ All axes are joined in the center of the graph.
 
 To plot this graph at least one attribute and one measure are needed.
 
-.. figure:: media/charts/image072.png
+.. figure:: media/charts/image072_1.png
 Radar chart - defining attributes and measures
 
-.. figure:: media/charts/image073.png
+.. figure:: media/charts/image073_1.png
 Radar chart example
 
 
