@@ -1671,7 +1671,7 @@ The below image shows the associaton created between the fields of the two datas
 It is possible to delete the association just clicking on the trash icon appearing on the right side of the association name.
 
  .. figure:: media/image081.png
-   
+
    Defining an association -step 3
 
 Add a Custom Header
