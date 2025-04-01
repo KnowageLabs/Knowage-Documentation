@@ -408,7 +408,7 @@ In this example three different classes of iris are studied. Combining the value
 we are able to find out which class we are looking at. One side of the below image (part a) shows a parallel chart related to the previous dataset. 
 The second side of the image (part b) shows thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
 
-.. _fromleftparallrighetchart:
+
 .. figure:: media/image11617.png
     From left to right: (a) Parallel. (b) Parallel chart selection.
 
