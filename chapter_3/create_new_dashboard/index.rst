@@ -317,7 +317,7 @@ The below image shows an example of a sunburst chart using the dataset previousl
 
 **Wordcloud**
 
-The *Wordcloud* Chart allows you to quickly see which words appear more frequently in a bunch of text.
+The *Wordcloud* chart allows you to quickly see which words appear more frequently in a bunch of text.
 Size and colors of the words depend on a specified weight of the measure.
 
 To create the Workcloud chart exactly one attribute and one measure are needed.
@@ -332,7 +332,7 @@ The below example highlights what happens if two attributes are dragged and drop
    Workcloud chart example
 
 **Chord**
- A Chord chart shows the relationship between two entities though your data. Data flows from one entity (start category) to a second entity (final category)
+ A *Chord* chart shows the relationship between two entities though your data. Data flows from one entity (start category) to a second entity (final category)
 
  .. figure:: media/image068.png
 
@@ -344,7 +344,7 @@ The below example highlights what happens if two attributes are dragged and drop
 
 **Parallel**
 
-The parallel chart is a way to visualize high-dimensional geometry and multivarious data. The axes of a multidimensional space are represented by parallel lines, usually equally spaced-out, and a point of the space is represented by a broken line with vertices on the parallel axes. The position of the vertex on an axis correspond to the coordinate of the point in that axis.
+The *parallel* chart is a way to visualize high-dimensional geometry and multivarious data. The axes of a multidimensional space are represented by parallel lines, usually equally spaced-out, and a point of the space is represented by a broken line with vertices on the parallel axes. The position of the vertex on an axis correspond to the coordinate of the point in that axis.
 
 To create a parallel chart select a dataset with at least one attribute and two columns with numerical values. You can find an interesting example of dataset in the next table where we display some of its rows.
 
