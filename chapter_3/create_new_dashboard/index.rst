@@ -1652,16 +1652,18 @@ Associations
 To create an association at least two datasets have to be selected.
 
  .. figure:: media/image080.png
-    Defining an association -step 1
+   Defining an association -step 1
 
 Once the datasets have been selected, two attributes have to be choosen to establish the association.
 
  .. figure:: media/image081.png
-    Defining an association -step 2
+   Defining an association -step 2
 
-The below image shows the associaton created between the fields of the two datasets. It is possible to delete the association just clicking on the trash icon appearing on the right side of the association name.
+The below image shows the associaton created between the fields of the two datasets. 
+It is possible to delete the association just clicking on the trash icon appearing on the right side of the association name.
+
  .. figure:: media/image081.png
-    Defining an association -step 3
+   Defining an association -step 3
 
 Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
