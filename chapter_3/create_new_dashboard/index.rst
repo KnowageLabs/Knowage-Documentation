@@ -1524,7 +1524,41 @@ The below image shows an example of dicovery widget.
 
 .. figure:: media/image084.png
 
+   Discovery widget example
 
+For facets it is necessary to enable the related option as shown below.
+It is also possible to select which faces to visualize.
+
+To throw the filtering on the table the property *Enable Selection* has to be enabled
+
+Other properties to handled are:
+
+   - closed by default, if enabled the facets will be visible as closed groups by default.
+
+   - facets column width, this setting allows to choose the dimension of the facets column in px, rem or percentage values.
+
+   - facets max number, this setting allows to choose the maximum number of facets visible for every field.
+
+.. figure:: media/image085.png
+
+   Discovery widget - Facets
+
+A related table shows the selection(s) made on facets as shown in the below image.
+
+.. figure:: media/image088.png
+
+   Selected facets
+
+The below image shows how to enable the search bar. It is possible to select on which fields to run the search and also 
+if it is a static search or the search can be run by using an analytical driver.
+
+.. figure:: media/image086.png
+
+   Discovery widget - search bar
+
+.. figure:: media/image087.png
+
+   Discovery widget - Types of search
 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
