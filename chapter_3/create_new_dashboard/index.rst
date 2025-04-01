@@ -277,7 +277,7 @@ they enable users to represent hierarchies in a more immediate and fascinating w
 To create a sunburst chart you need to select at least two attributes describing the hierarchy and just one measure representing the width of the 
 slices. An example of dataset for the sunburst chart is shown below.
 
-.. figure:: media/charts/image065.png
+.. figure:: media/image065.png
 
 Sunburst chart - defining attributes and measure
 
@@ -311,7 +311,7 @@ Sunburst chart - defining attributes and measure
 
 The below image shows an example of a sunburst chart using the dataset previously described.
 
-.. figure:: media/charts/image1101112.png
+.. figure:: media/image1101112.png
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
 
@@ -409,12 +409,12 @@ we are able to find out which class we are looking at. One side of the below ima
 The second side of the image (part b) shows thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
 
 .. _fromleftparallrighetchart:
-.. figure:: media/charts/image11617.png
+.. figure:: media/image11617.png
     From left to right: (a) Parallel. (b) Parallel chart selection.
 
     To create this chart two attributes and one measure are needed.
 
-.. figure:: media/charts/image070.png
+.. figure:: media/image070.png
 Parallel chart - measures and attributes
 
 
@@ -422,10 +422,10 @@ Parallel chart - measures and attributes
 A *Heatmap* is a two-dimensional representation of data whose values are represented by colors.
 Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend trough two categories.
 
-.. figure:: media/charts/image070_1.png
+.. figure:: media/image070_1.png
 Heatmap chart - measures and attributes
 
-.. figure:: media/charts/image071.png
+.. figure:: media/image071.png
 Heatmap chart example
 
 
@@ -436,10 +436,10 @@ All axes are joined in the center of the graph.
 
 To plot this graph at least one attribute and one measure are needed.
 
-.. figure:: media/charts/image072_1.png
+.. figure:: media/image072_1.png
 Radar chart - defining attributes and measures
 
-.. figure:: media/charts/image073_1.png
+.. figure:: media/image073_1.png
 Radar chart example
 
 
