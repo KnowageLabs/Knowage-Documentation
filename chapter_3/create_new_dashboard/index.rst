@@ -109,9 +109,9 @@ All relevant settings will be furtherly described for each widget.
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing the two sections 
+By clicking the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing the two sections 
 formerly introduced.
-Using the *Data* section it is possible to associate dataset values to the text and read it real time at each execution.
+Using the *Data* section it is possible to associate dataset values to the text to show real time values at each execution.
 You can drag a single column into the *Selected Columns* area or just all of them by using the arrow next to the *Add Column* button.
 
 .. figure:: media/image009.png
