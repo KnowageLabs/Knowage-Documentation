@@ -34,7 +34,7 @@ Simply enter the type of graph you want to draw and press the search icon.
          (1) Allowance for final users only with KnowageBD and KnowageSI licences. Using the KnowagePM license, 
           only a technical user can create a Dashboard document.
 
-In both cases the user should click on the plus icon available in the right top corner and choose the Dashboard item menu as shown below.
+In both cases the user should click the *plus* icon available in the right top corner and choose the Dashboard item menu as shown below.
 
 .. figure:: media/new_dashboard.png
 
@@ -80,9 +80,9 @@ from the appropriate button appearing in the upper right bar of the page.
 In both cases, a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
 A widget's editor normally has two sections, one for the data management (not available for the *Image* widget) and the other containing the list properties that can vary
 from one widget to another.
-The below table shows a further explanation. In particular properties summed up are relevant to *Text* widget. So that, in the case of an *Image* 
-widget among its settings we will find the *Gallery* property which does not belong to the *Text* widget.
-All relevant settings will be furtherly described for each widget.
+The below table shows an example of how the *Data* and the *Settings* seciions appear for *Text* widget. So in case of an *Image* 
+widget the *Settings* will contain the *Gallery* property which does not belong to the *Text* widget.
+
 
 
 
@@ -94,7 +94,7 @@ All relevant settings will be furtherly described for each widget.
    |                    |   - select the columns to show (use the *Arrow* to insert all columns)       |
    |                    |   - specify a *Sorting Column* and an *Ascending/Descending* order           |
    |                    |   - change the aggregate function for measure columns                        |
-   |                    |   - add a calculated field by clicking on the *Add Column* button            |
+   |                    |   - add a calculated field by clicking the *Add Column* button            |
    +--------------------+------------------------------------------------------------------------------+
    | Settings           | To manage widget properties such as:                                         |
    |                    |   - Configuration                                                            |
@@ -104,6 +104,34 @@ All relevant settings will be furtherly described for each widget.
    |                    |   - Help                                                                     |
    |                    |   - Responsive                                                               |
    +--------------------+------------------------------------------------------------------------------+
+
+Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
+
+
+
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Settings          |  Properties 		              											                 |
+   +======================+================================================================================+
+   |    Configuration     |to manage date format, annotations, the text message when no data is retrieved  |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Legend	  	        | to show aliases for measures                                                   |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Tooltips	  	     | to apply visualizazion styles to the hover text                                |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Style      		  | to define visualization styles such as font size, font family, background      |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    X-axis       	  | to manage properties related to the X - axis as title, position, rotation, etc |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Y-axis            | to manage properties related to the X - axis as title, position, rotation, etc |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Colors            | to manage the palette of colors                                                |
+   +----------------------+---------------------------------------------------------------------------------
+   |    Interactions      | to manage cross navigations, links, drill-downs, etc                           |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Series            | to manage format styles related to the values shown                            |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Responsive        | to handle the size of your widgets on tablets, mobiles, small and large devices|
+   +----------------------+--------------------------------------------------------------------------------+
 
 
 
@@ -487,7 +515,8 @@ Below you can see how to set the aliases. From the drop down menu you can choose
 .. figure:: media/image019.png
 
    Setting Series example
-If you want to set properties for the Tooltip just click on Tooltip and set Bold and Backgroud color as shown in the below image
+
+If you want to set properties for the Tooltip just click Tooltip and set Bold and Backgroud color as shown in the below image
 
 .. figure:: media/image020.png
 
@@ -548,7 +577,7 @@ Once created you can handle the settings of the start Serie as shown below.
 This kind of chart provides a visual representation of how data progresses through different stages of a process starting 
 from a broad head and ending in a narrow neck.
 By clicking the *Add widget* pick up Chart and then *Funnel* from the gallery.
-Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
+Once a dataset has been selected, click the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
 Select *Funnel* as chart, choose just one measure and one attribute and then press *Save* to get the graph visualized.
 See below image.
 
@@ -560,7 +589,7 @@ Funnel chart example
 **Packed Bubble**
 
 A *Packed Bubble* is similar to a Bubble Chart where bubbles are tightly packed rather than spread over a grid of X and Y-Axis.
-Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
+Once a dataset has been selected, click the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
 Select Chart and then *Funnel* as chart, choose just one measure and two attributes. The first attribute is used for grouping and the second one for labels. 
 Then press *Save* to get the graph visualized.
 See below image.
@@ -572,7 +601,7 @@ Packed bubble chart example
 **Pictorial**
 
 A *Pictorial* chart represents different satges of data using a bulb.
-Once a dataset has been selected, click on the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
+Once a dataset has been selected, click the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
 Select Chart and then *Pictorial* as chart, choose just one measure to define the Serie and one attribute for the category.
 See below image
 
