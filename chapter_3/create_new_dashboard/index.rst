@@ -834,6 +834,8 @@ in the *Settings* section of the widget.
 
  .. figure:: media/image083.png
 
+   Pivot widget example
+
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Map* it is possible to add a *Map* widget to the dashboard.
