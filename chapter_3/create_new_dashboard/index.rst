@@ -1711,6 +1711,26 @@ The below image shows an example of two different themes applied to the correspo
 
 The available themes have to be previously defined by an *admin user*.
 
+Filters and ordering on fields
+------------------------------------------------------------------------------------------------------------------------
+
+The below two images shows how to enable the filtering functionality on a specific field of a dataset.
+You need to click the gear icon and switch on the *Enable filter* to choose the *comperison operator* with a specific value.
+
+.. figure:: media/image095.png
+
+   Activating filters - 1
+
+.. figure:: media/image096.png
+
+   Activating filters - 2
+
+ From the same editor it is also possible to set the ordering on a field as shown below.
+
+.. figure:: media/image097.png
+
+  Ordering on a field
+
 Variables
 ------------------------------------------------------------------------------------------------------------------------
 To create variables just click on the three dots menu of the bar, select *General* and then *Variables* as shown below.
