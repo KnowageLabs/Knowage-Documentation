@@ -109,7 +109,7 @@ Below a brief description of the usefulness of some of the properties listed in 
    +----------------------+--------------------------------------------------------------------------------+
    |    Settings          |  Properties 		              											                 |
    +======================+================================================================================+
-   |    Configuration     |to manage date format, annotations, the text message when no data is retrieved  |
+   |    Configuration     | to manage date format, annotations, the text message when no data is retrieved |
    +----------------------+--------------------------------------------------------------------------------+
    |    Legend	  	        | to show aliases for measures                                                   |
    +----------------------+--------------------------------------------------------------------------------+
@@ -122,7 +122,7 @@ Below a brief description of the usefulness of some of the properties listed in 
    |    Y-axis            | to manage properties related to the X - axis as title, position, rotation, etc |
    +----------------------+--------------------------------------------------------------------------------+
    |    Colors            | to manage the palette of colors                                                |
-   +----------------------+---------------------------------------------------------------------------------
+   +----------------------+--------------------------------------------------------------------------------+
    |    Interactions      | to manage cross navigations, links, drill-downs, etc                           |
    +----------------------+--------------------------------------------------------------------------------+
    |    Series            | to manage format styles related to the values shown                            |
