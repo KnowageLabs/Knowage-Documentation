@@ -1797,14 +1797,15 @@ Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
 In case of more sheets inside a dashboard there is the requirement to have the same header.
 You can create the header and making it available for all sheets just in one shot. 
-To create a custom Header click on the three dots menu of the bar, select *Custom Header* as shown below.
+To create a custom Header click the three dots menu of the bar, select *Custom Header* as shown below.
+
 
 .. figure:: media/image077.png
-
+   
    Custom Header
 
-This functionality allows selecting the image form the Gallery.
-It is also possible to select a dataset an typing some CSS/HTML code in the *Editor*.
+The image used for the header can be selected from the Gallery if available and the *Editor* allows typing custom CSS/HTML if necessary
+
 
 
 Multisheet
@@ -1817,10 +1818,12 @@ Just click on the *Plus* icon and rename the new sheet.
 
    Multisheet functionality
 
+
   Settings
 ------------------------------------------------------------------------------------------------------------------------
 
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
+
 
 
    +----------------------+--------------------------------------------------------------------------------+
