@@ -5,7 +5,7 @@ The graphical interface for creating the new dashboard looks slightly different 
 New features have been added, such as new charts and new widgets
 
 The below pictures respectively show the chart gallery with the availability of new charts and new widgets enriched with 
-the presence of the new *Pivot* widget and the *Map widget* .
+the presence of the new *Pivot* and *Map* widgets.
 
 
 .. figure:: media/chart_gallery.png
@@ -828,7 +828,11 @@ and filters on that column.
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Pivot* it is possible to add a *Pivot* widget to the dashboard.
+With this widget the user can decide wich fields of a dataset could be represented as a *column* and wich one as a *row*.
+The below image shows an example of a *Pivot* widget. Chachges to the layout can be made by handling the *Style* properties defined 
+in the *Settings* section of the widget.
 
+ .. figure:: media/image083.png
 
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1531,11 +1535,11 @@ To throw the filtering on the table the property *Enable Selection* has to be en
 
 Other properties to handled are:
 
-   - closed by default, if enabled the facets will be visible as closed groups by default.
+   - *Closed by default*, if enabled the facets will be visible as closed groups by default.
 
-   - facets column width, this setting allows to choose the dimension of the facets column in px, rem or percentage values.
+   - *Facets column width*, this setting allows to choose the dimension of the facets column in px, rem or percentage values.
 
-   - facets max number, this setting allows to choose the maximum number of facets visible for every field.
+   - *Facets max number*, this setting allows to choose the maximum number of facets visible for every field.
 
 .. figure:: media/image085.png
 
