@@ -1801,7 +1801,7 @@ To create a custom Header click the three dots menu of the bar, select *Custom H
 
 
 .. figure:: media/image077.png
-   
+
    Custom Header
 
 The image used for the header can be selected from the Gallery if available and the *Editor* allows typing custom CSS/HTML if necessary
@@ -1819,7 +1819,7 @@ Just click on the *Plus* icon and rename the new sheet.
    Multisheet functionality
 
 
-  Settings
+Settings
 ------------------------------------------------------------------------------------------------------------------------
 
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
