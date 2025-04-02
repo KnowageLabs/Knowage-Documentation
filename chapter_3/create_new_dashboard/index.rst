@@ -870,7 +870,9 @@ You can also apply conditional styles to a measure so that when resulting i.e. g
    Pivot widget - applying styles to fields
 
 
+       .. figure:: media/image094.png
 
+   Pivot widget after applying styles to fields
 
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
