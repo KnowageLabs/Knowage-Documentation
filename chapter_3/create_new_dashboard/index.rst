@@ -827,7 +827,7 @@ and filters on that column.
 
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on *Pivot* it is possible to add a *Pivot* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then *Pivot* it is possible to add a *Pivot* widget to the dashboard.
 With this widget the user can decide wich fields of a dataset could be represented as a *column* and wich one as a *row*.
 The below image shows an example of a *Pivot* widget. Chachges to the layout can be made by handling the *Style* properties defined 
 in the *Settings* section of the widget.
@@ -850,15 +850,31 @@ Here you can handle some properties as ordering just by clicking the arrow appea
 
    Pivot widget - Field chooser
 
-You can also apply filters on values just by clicking on the funnel icon.
+You can also apply filters on values just by clicking the funnel icon.
 
        .. figure:: media/image091.png
 
    Pivot widget - applying filters
-   
+
+You can also decide to visualize a measure as simple text or icon or both. By default all fields are visualized as text. In case you need a specific measure to represented
+i.e. as an icon you just need to click the *plus icon*, select a measure column from the drop down menu and the *visualization* type.
+
+       .. figure:: media/image092.png
+
+   Pivot widget - displaying measures as text or icon
+
+You can also apply conditional styles to a measure so that when resulting i.e. greater that a specific value the color can be a different one.
+
+       .. figure:: media/image093.png
+
+   Pivot widget - applying styles to fields
+
+
+
+
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on *Map* it is possible to add a *Map* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then *Map* it is possible to add a *Map* widget to the dashboard.
 The Map Widget is useful when a user needs to visualize data related to a geographic position. The widget supports multiple layers, one for every dataset added to widget configuration, and one data field for every layer: the user can switch on-the-fly between all data available on the layer.
 
 .. figure:: media/image055.png
