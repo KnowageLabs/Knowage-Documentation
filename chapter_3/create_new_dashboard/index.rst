@@ -105,8 +105,7 @@ widget the *Settings* will contain the *Gallery* property which does not belong 
 
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
 
-.. table:: Settings.
-   :widths: auto
+
    +----------------------+--------------------------------------------------------------------------------+
    |    Settings          |  Properties 		              											                 |
    +======================+================================================================================+
@@ -126,7 +125,7 @@ Below a brief description of the usefulness of some of the properties listed in 
    +----------------------+--------------------------------------------------------------------------------+
    |    Interactions      | to manage cross navigations, links, drill-downs, etc                           |
    +----------------------+--------------------------------------------------------------------------------+
-   |    Series            | to manage format styles related to the values shown                            |
+   |    Series            | to manage format styles related to the values of the serie(s)                  |
    +----------------------+--------------------------------------------------------------------------------+
    |    Responsive        | to handle the size of your widgets on tablets, mobiles, small and large devices|
    +----------------------+--------------------------------------------------------------------------------+
