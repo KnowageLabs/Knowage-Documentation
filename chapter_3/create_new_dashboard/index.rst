@@ -1800,6 +1800,7 @@ You can create the header and making it available for all sheets just in one sho
 To create a custom Header click on the three dots menu of the bar, select *Custom Header* as shown below.
 
 .. figure:: media/image077.png
+
    Custom Header
 
 This functionality allows selecting the image form the Gallery.
@@ -1813,4 +1814,35 @@ Each sheet can contain different analysis with different datasets.
 Just click on the *Plus* icon and rename the new sheet.
 
 .. figure:: media/image078.png
+
    Multisheet functionality
+
+  Settings
+------------------------------------------------------------------------------------------------------------------------
+
+Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
+
+
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Settings          |  Properties 		              											                 |
+   +======================+================================================================================+
+   |    Configuration     | to manage date format, annotations, the text message when no data is retrieved |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Legend	  	        | to show aliases for measures                                                   |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Tooltips	  	     | to apply visualizazion styles to the hover text                                |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Style      		  | to define visualization styles such as font size, font family, background      |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    X-axis       	  | to manage properties related to the X axis as title, position, rotation, etc   |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Y-axis            | to manage properties related to the Y axis as title, position, rotation, etc   |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Colors            | to manage the palette of colors                                                |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Interactions      | to manage cross navigations, links, drill-downs, etc                           |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Series            | to manage format styles related to the values of the serie(s)                  |
+   +----------------------+--------------------------------------------------------------------------------+
+   |    Responsive        | to handle the size of your widgets on tablets, mobiles, small and large devices|
+   +----------------------+--------------------------------------------------------------------------------+
