@@ -118,9 +118,9 @@ Below a brief description of the usefulness of some of the properties listed in 
    +----------------------+--------------------------------------------------------------------------------+
    |    Style      		  | to define visualization styles such as font size, font family, background      |
    +----------------------+--------------------------------------------------------------------------------+
-   |    X-axis       	  | to manage properties related to the X - axis as title, position, rotation, etc |
+   |    X-axis       	  | to manage properties related to the X axis as title, position, rotation, etc   |
    +----------------------+--------------------------------------------------------------------------------+
-   |    Y-axis            | to manage properties related to the X - axis as title, position, rotation, etc |
+   |    Y-axis            | to manage properties related to the Y axis as title, position, rotation, etc   |
    +----------------------+--------------------------------------------------------------------------------+
    |    Colors            | to manage the palette of colors                                                |
    +----------------------+--------------------------------------------------------------------------------+
