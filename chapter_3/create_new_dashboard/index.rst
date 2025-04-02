@@ -1821,7 +1821,6 @@ Just click on the *Plus* icon and rename the new sheet.
 
 Settings
 ------------------------------------------------------------------------------------------------------------------------
-
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
 
 
