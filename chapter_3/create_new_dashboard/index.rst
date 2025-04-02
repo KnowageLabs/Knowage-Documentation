@@ -1526,9 +1526,8 @@ The below image shows an example of dicovery widget.
 
    Discovery widget example
 
-For facets it is necessary to enable the related option as shown below.
-It is also possible to select which faces to visualize.
-
+Facets properties can be handled by enabling the related option i.e. selecting which faces to visualize.
+See below images.
 To throw the filtering on the table the property *Enable Selection* has to be enabled
 
 Other properties to handled are:
@@ -1543,14 +1542,13 @@ Other properties to handled are:
 
    Discovery widget - Facets
 
-A related table shows the selection(s) made on facets as shown in the below image.
+A related table shows the selection(s) made on facets.
 
 .. figure:: media/image088.png
 
    Selected facets
 
-The below image shows how to enable the search bar. It is possible to select on which fields to run the search and also 
-if it is a static search or the search can be run by using an analytical driver.
+The below image shows how to enable the search bar by specifing on which fields to run the search and whether it is a static search or just run through an analytical driver.
 
 .. figure:: media/image086.png
 
