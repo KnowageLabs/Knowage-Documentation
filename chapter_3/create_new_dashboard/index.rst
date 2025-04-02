@@ -84,8 +84,6 @@ The below table shows an example of how the *Data* and the *Settings* seciions a
 widget the *Settings* will contain the *Gallery* property which does not belong to the *Text* widget.
 
 
-
-
    +--------------------+------------------------------------------------------------------------------+
    |  Section Name      | Description                                                                  |
    +====================+==============================================================================+
@@ -106,7 +104,6 @@ widget the *Settings* will contain the *Gallery* property which does not belong 
    +--------------------+------------------------------------------------------------------------------+
 
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
-
 
 
    +----------------------+--------------------------------------------------------------------------------+
