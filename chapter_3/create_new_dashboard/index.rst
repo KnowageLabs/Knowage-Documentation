@@ -1514,11 +1514,10 @@ If a cross-navigation or a preview has been set in the cross tab, those will hav
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then *Discovery* it is possible to add a *Discovery* widget to the dashboard.
-The Discovery Widget is used to easily use and navigate into a Solr Dataset by using facets aggregation and a table results. 
-In order to make searches, aggregations using facets and so on, after selecting the Solr dataset it is possible to choose the fields 
-that should be shown as the result. 
-The table result can also be configured to show a limited set of fields and facets. Facets are shown on the left side and data can be filtered
-just clicking on a specific value inside one of them.
+The Discovery Widget is used to easily use and navigate into a Solr dataset by using facets aggregation and by showing table results. 
+It is possible to choose the fields that should be shown as the result. 
+The table result can also be configured to show a limited set of fields and facets. Facets are shown on the left side of the table and data 
+can be filtered just clicking on a specific value inside one of them.
 The search bar can also be set up from the configuration settings.
 The below image shows an example of dicovery widget.
 
