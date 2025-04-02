@@ -836,6 +836,26 @@ in the *Settings* section of the widget.
 
    Pivot widget example
 
+After selecting the dataset, you can drag and drop fields to define columns, rows and measures of the pivot table.
+
+    .. figure:: media/image089.png
+
+   Pivot widget - defining colums, rows and measures
+
+
+By clicking on the icon highlighted in the below image a *Field chooser* appears.
+Here you can handle some properties as ordering just by clicking the arrow appearing on the right side of each field. 
+
+       .. figure:: media/image090.png
+
+   Pivot widget - Field chooser
+
+You can also apply filters on values just by clicking on the funnel icon.
+
+       .. figure:: media/image091.png
+
+   Pivot widget - applying filters
+   
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Map* it is possible to add a *Map* widget to the dashboard.
