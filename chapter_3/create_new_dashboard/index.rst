@@ -104,9 +104,6 @@ widget the *Settings* will contain the *Gallery* property which does not belong 
    +--------------------+------------------------------------------------------------------------------+
 
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
-
-
-
    +----------------------+--------------------------------------------------------------------------------+
    |    Settings          |  Properties 		              											                 |
    +======================+================================================================================+
