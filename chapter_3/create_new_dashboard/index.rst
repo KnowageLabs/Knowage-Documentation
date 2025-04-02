@@ -94,7 +94,7 @@ widget the *Settings* will contain the *Gallery* property which does not belong 
    |                    |   - select the columns to show (use the *Arrow* to insert all columns)       |
    |                    |   - specify a *Sorting Column* and an *Ascending/Descending* order           |
    |                    |   - change the aggregate function for measure columns                        |
-   |                    |   - add a calculated field by clicking the *Add Column* button            |
+   |                    |   - add a calculated field by clicking the *Add Column* button               |
    +--------------------+------------------------------------------------------------------------------+
    | Settings           | To manage widget properties such as:                                         |
    |                    |   - Configuration                                                            |
