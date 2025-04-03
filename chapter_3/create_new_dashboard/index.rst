@@ -34,7 +34,7 @@ Simply enter the type of graph you want to draw and press the search icon.
          (1) Allowance for final users only with KnowageBD and KnowageSI licences. Using the KnowagePM license, 
           only a technical user can create a Dashboard document.
 
-In both cases the user should click the *plus* icon available in the right top corner and choose the Dashboard item menu as shown below.
+In both cases the user should click the *plus* icon available in the right top corner and select *Dashboard* from the menu as shown below.
 
 .. figure:: media/new_dashboard.png
 
@@ -75,12 +75,12 @@ The functionalities for inserting a new data set and a new widget are immediatel
 
 Widgets Types
 ------------------------------------------------------------------------------------------------------------------------
-As seen above, the addition of a widget can be done either through the icon displayed when the heet of a dashboard when created or 
-from the appropriate button appearing in the upper right bar of the page. 
+As seen above, the addition of a widget can be done either through the icon displayed from the sheet of a dashboard or 
+from the appropriate button appearing in the upper right bar. 
 In both cases, a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
-A widget's editor normally has two sections, one for the data management (not available for the *Image* widget) and the other containing the list properties that can vary
+A widget's editor normally has two sections, one for the *Data* management (not available i.e. for the *Image* widget) and another for the *Settings* containing the list properties that can vary
 from one widget to another.
-The below table shows an example of how the *Data* and the *Settings* seciions appear for *Text* widget. So in case of an *Image* 
+The below table shows an example of how the *Data* and the *Settings* sections appear for a *Text* widget. In case of i.e. an *Image* 
 widget the *Settings* will contain the *Gallery* property which does not belong to the *Text* widget.
 
 
