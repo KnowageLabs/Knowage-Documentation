@@ -118,29 +118,6 @@ Below a brief description of the usefulness of some of the properties listed in 
    - *Series*, to manage format styles related to the values of the serie(s)  
    - *Responsive*, to handle the size of your widgets on tablets, mobiles, small and large devices
 
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Settings          |  Properties 		              											                 |
-   +======================+================================================================================+
-   |    Configuration     | to manage date format, annotations, the text message when no data is retrieved |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Legend	  	        | to show aliases for measures                                                   |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Tooltips	  	     | to apply visualizazion styles to the hover text                                |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Style      		  | to define visualization styles such as font size, font family, background      |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    X-axis       	  | to manage properties related to the X axis as title, position, rotation, etc   |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Y-axis            | to manage properties related to the Y axis as title, position, rotation, etc   |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Colors            | to manage the palette of colors                                                |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Interactions      | to manage cross navigations, links, drill-downs, etc                           |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Series            | to manage format styles related to the values of the serie(s)                  |
-   +----------------------+--------------------------------------------------------------------------------+
-   |    Responsive        | to handle the size of your widgets on tablets, mobiles, small and large devices|
-   +----------------------+--------------------------------------------------------------------------------+
 
 
 
@@ -1789,7 +1766,7 @@ Creating a variable - step 2
  Type in the variable name, the type and *Save*  
 
  .. figure:: media/image076.png
-   
+
    Creating a variable - step 3
 
 Associations
