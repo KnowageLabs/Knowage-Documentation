@@ -38,7 +38,7 @@ In both cases the user should click the *plus* icon available in the right top c
 
    Creating a dashboard from the menu
 
-The functionalities for inserting a new data set and a new widget are immediately available on the page shown. 
+The functionalities for inserting a new dataset and a new widget are immediately available on the page shown. 
 
 .. table:: Dashboard functionalities.
    :widths: auto
