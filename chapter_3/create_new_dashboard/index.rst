@@ -79,6 +79,7 @@ As seen above, the addition of a widget can be done either through the icon disp
 from the appropriate button appearing in the upper right bar. 
 When clicking a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
 A widget's editor normally has two sections:
+
    - *Data*, to associate datasets to the dashboard (this section is not available i.e. for the *Image* widget)
    - *Settings*, with a list of components varying from one widget to another
 
@@ -175,14 +176,12 @@ upload a new one by clicking on the *Upload* button as show in the below image.
 
     Inserting an image
 
-The *Style* setting will let you handle the properties styles for the image such as *Title, Background, Borders, Padding and Shadows*.
+The *Style* setting allows to handle the properties styles for the image such as *Title, Background, Borders, Padding and Shadows*.
 
 .. figure:: media/image013.png
 
     Image styles
 
-As you can see, inside the list of settings you will find a new one called *Widget Themes*. For more explanation on this setting please 
-refer to the dedicated section.
 
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,10 +214,16 @@ new ones are now available:
    - Stream
    - Waterfall
 
-As a first step select the dataset and then by clicking on the *Add widget* icon you will be asked to pick up the chart from the gallery.
-At this point just drag and drop your column(s) into the *Dimension(s)* area (for measures) and then into the *Values* area (for attributes).
-After dragging your dimension(s) and attribute(s), you will see that the information contained in the *Settings* section could be different 
-from one chart to another.
+Below the general steps to be followed to insert a chart.
+After selecting the dataset and clicking the *Add widget* icon the chart gallery opens to pick up desired chart to draw.
+
+Select a chart. The *Data* section or better *Editor* opens. Drag and drop your column(s) into:
+
+   - the *Dimension(s)* area, for measures
+   - the *Values* area, for attributes.
+
+Aftrwards, depending on the chart or widget type set up the properties contained in the *Settings* section. This section could be different from
+one widget to another.
 The below image refers to a *Funnel* chart where you need to define both the measure(s) and the sttribute(s).
 
 .. figure:: media/image014.png
@@ -228,39 +233,39 @@ Not all charts need both information as if you refer to an *Activity Gauge* you 
 .. figure:: media/image015.png
 
 One important peculiarity to highlight is the possibility to change the type of chart once a selection has already been done.
-The drop down menu with your choice will show all the available options for the graphs and in case can be changed. See below picture.
+The drop down menu with your choice will still make available all the other charts as options to choose and in case the chart can be changed. 
+See below picture.
 
 .. figure:: media/image016.png
 
-Once the chart has been inserted in your sheet, a three dots icon displays a menu with the list of possible actions.
+Once the chart has been inserted in the sheet of the dashboard, a three dots icon in the lower left part of the widget the displays a menu with the list of possible actions.
 See below image.
 
 .. figure:: media/image028.png
 
 Menu on a chart
 
-You can resize the chart just drugging the little corner in the right bottom of the chart.
+The chart can be resized just drugging the little corner in the lower right part of the chart.
 
-Another peculiarity is that the user can immediatly have a preview of the graph just using the magnifying glass.
-located at the upper right corner for each property of the *Settings* section. This means that you don't necessarily have to save the graph 
-as a first step to see how it looks like but you can see changes as they are applied.
+Another functionality really useful is the *preview* of the graph just using the magnifying glass 
+located at the upper right corner for each property of the *Settings* section. This means that saving the graph is not necessary to see how it 
+looks like as changes can be seen as they are applied.
 See below image.
 
 .. figure:: media/image031.png
 
 Preview functionality for a chart
 
-Furthermore after inserting a chart you can simply move it inside the dashboard just dragging it inside the whole sheet. 
-This functionality is available for a whatever widget you need to use.
+A chart can simply be moved in a dashboard just dragging it inside the whole sheet. 
+This functionality is available for all widgets.
 See below image.
 
 .. figure:: media/image042.png
 
    Moving a widget along the dashboard
 
- Just go with the mouse over the two vertical dotted lines and little hand appears to move your widget.  
+ When hoving the two vertical dotted lines a little hand appears to move the widget.  
 
-Let's start introducing some of the most common used charts.
 
  **Bar**
 The *Bar chart* allows a method of displaying data with categories represented by rectangles (or groups) horizontally oriented.
