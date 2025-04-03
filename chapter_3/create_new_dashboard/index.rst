@@ -41,8 +41,7 @@ To create a dashboard the user should click the *plus* icon available in the rig
 The functionalities for inserting a dataset and a widget are immediately available in the sheet of the new dashboard. 
 Below the list of the available functionalities.
 
-.. table:: Dashboard functionalities.
-   :widths: auto
+
 
    +----------------------------------+-----------------------+-----------------------+
    |    Icon                          | Name                  | Function              |
@@ -1742,7 +1741,7 @@ This is a functionality introduced on the new *Dashboard* available in the *Sett
 See below image.
 
 .. figure:: media/image041.png
-   
+
    Activating cross navigation
 
 The below image shows an example of two different themes applied to the corresponding table widgets.
