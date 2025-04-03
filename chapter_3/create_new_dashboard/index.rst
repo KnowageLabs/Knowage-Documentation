@@ -1719,7 +1719,7 @@ You can also index columns.
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
 Steps to add a calculated field:
- - a dataset has been selected
+ - select a dataset 
  - click on the *Add Columns* button as shown in the below image.
  - follow the instructions appearing in the pop up (assign a name, a function,..)
  - close the pop-up by clicking on *Apply*. The button remains graid off until validation is done.
@@ -1728,7 +1728,7 @@ Steps to add a calculated field:
 
    Adding a calculated field
 
- Once the new field has been added you will see the new column added to the ones of your dataset.
+ Once the new field has been added you will see the new column appearing toghether with the ones of your dataset.
  By using the icon highlighted in the below image you can reopen the details pop-up.
 
  .. figure:: media/image045.png
