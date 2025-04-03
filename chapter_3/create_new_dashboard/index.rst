@@ -1,11 +1,11 @@
 Create a New Dashboard
 ========================================================================================================================
 
-The graphical interface for creating the new dashboard looks slightly different from the one used for the old cockpit.
+The graphical interface for creating the new dashboard looks slightly different from the one used for the previous cockpit.
 New features have been added, such as new charts and new widgets
 
 The below pictures respectively show the chart gallery with the availability of new charts and new widgets enriched with 
-the presence of the new *Pivot* and *Map* widgets.
+the presence of the *Pivot* and *Map* widgets.
 
 
 .. figure:: media/chart_gallery.png
@@ -24,21 +24,22 @@ Simply enter the type of graph you want to draw and press the search icon.
 
    A dashboard document can be created:
 
-            -	by final users from the Workspace (1)
+            -	by final users from the Workspace
             -	by admin users from the document browser area
 
 
 .. important::
          **Enterprise Edition only**
-         (1) Allowance for final users only with KnowageBD and KnowageSI licences. With a KnowagePM license, only a technical user can create a Dashboard document.
+         Final users can create dashboards only with KnowageBD and KnowageSI licences. With a KnowagePM license, only a technical user can create a Dashboard document.
 
-In both cases the user should click the *plus* icon available in the right top corner and select *Dashboard* from the menu as shown below.
+To create a dashboard the user should click the *plus* icon available in the right top corner and select *Dashboard* from the menu as shown below.
 
 .. figure:: media/new_dashboard.png
 
    Creating a dashboard from the menu
 
-The functionalities for inserting a new dataset and a new widget are immediately available on the page shown. 
+The functionalities for inserting a dataset and a widget are immediately available in the sheet of the new dashboard. 
+Below the list of the available functionalities.
 
 .. table:: Dashboard functionalities.
    :widths: auto
@@ -76,7 +77,7 @@ Widgets Types
 ------------------------------------------------------------------------------------------------------------------------
 As seen above, the addition of a widget can be done either through the icon displayed from the sheet of a dashboard or 
 from the appropriate button appearing in the upper right bar. 
-In both cases, a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
+When clicking a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
 A widget's editor normally has two sections, one for the *Data* management (not available i.e. for the *Image* widget) and another for the *Settings* containing the list properties that can vary
 from one widget to another.
 The below table shows an example of how the *Data* and the *Settings* sections appear for a *Text* widget. In case of i.e. an *Image* 
