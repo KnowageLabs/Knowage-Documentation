@@ -1561,16 +1561,16 @@ Through a variety of methods it is possible to iterate over the results and get 
     }
 
 
-It is also possible to interact with the other cockpit widgets, to do so it's possible to use the **clickManager**:
+Interactionx with the other widgets is also possible just by using the **clickManager**:
 
 .. code-block:: javaScript
    :linenos:
 
     datastore.clickManager(columnName, columnValue);
 
-This method can be added everywhere the code is managing a click event, and will notify Knowage about the interaction.
+This method can be added everywhere the code manages a click event and will notify Knowage about the interaction.
 The default case (if no cross-navigation or preview-navigation is set) will throw a selection filter with the dataset column name and column value set in the method.
-If a cross-navigation or a preview has been set in the cross tab, those will have priority on the selection and will trigger the specified interaction. The dynamic values used will be the ones set in the method arguments.
+Any enabling of cross-navigations or previews will have priority on the selection and will trigger the specified interaction. The dynamic values used will be the ones set in the method arguments.
 
 .. warning::
     **Whitelist**
@@ -1598,9 +1598,9 @@ If a cross-navigation or a preview has been set in the cross tab, those will hav
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then *Discovery* it is possible to add a *Discovery* widget to the dashboard.
-The Discovery Widget is used to easily use and navigate into a Solr dataset by using facets aggregation and by showing table results. 
+The Discovery widget is used to easily use and navigate into a SOLR dataset by using facets aggregation and by showing the results in a tabular representation . 
 It is possible to choose the fields that should be shown as the result. 
-The table result can also be configured to show a limited set of fields and facets. Facets are shown on the left side of the table and data 
+The result to be visualized can also be configured to show a limited set of fields and facets. Facets are shown on the left side of the table and data 
 can be filtered just clicking on a specific value inside one of them.
 The search bar can also be set up from the configuration settings.
 The below image shows an example of dicovery widget.
