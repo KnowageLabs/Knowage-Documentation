@@ -30,9 +30,7 @@ Simply enter the type of graph you want to draw and press the search icon.
 
 .. important::
          **Enterprise Edition only**
-
-         (1) Allowance for final users only with KnowageBD and KnowageSI licences. Using the KnowagePM license, 
-          only a technical user can create a Dashboard document.
+         (1) Allowance for final users only with KnowageBD and KnowageSI licences. Using the KnowagePM license, only a technical user can create a Dashboard document.
 
 In both cases the user should click the *plus* icon available in the right top corner and select *Dashboard* from the menu as shown below.
 
@@ -66,7 +64,7 @@ The functionalities for inserting a new data set and a new widget are immediatel
 
 
    The below image shows an example of dashboard.
-   
+
 
    .. figure:: media/dashboard.png
 
