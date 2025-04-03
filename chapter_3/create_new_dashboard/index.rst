@@ -108,6 +108,7 @@ widget, the *Settings* section will contain the *Gallery* property that does not
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
 
    - *Configuration*, to manage date format, annotations, the text message when no data is retrieved
+   - *Visualization*, to pin columns, to set visibility conditions on columns or to show columns as text, icon
    - *Legend*, to show aliases for measures 
    - *Tooltips*, to apply visualizazion styles to the hover text
    - *Style*, to define visualization styles such as font size, font family, background
