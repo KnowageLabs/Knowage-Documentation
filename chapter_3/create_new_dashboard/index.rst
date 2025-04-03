@@ -1742,11 +1742,13 @@ This is a functionality introduced on the new *Dashboard* available in the *Sett
 See below image.
 
 .. figure:: media/image041.png
+   
    Activating cross navigation
 
 The below image shows an example of two different themes applied to the corresponding table widgets.
 
 .. figure:: media/image043.png
+
    Activating cross navigation
 
 The available themes have to be previously defined by an *admin user*.
