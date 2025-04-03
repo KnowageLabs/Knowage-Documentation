@@ -847,6 +847,7 @@ The *plus* icon will add a new line where the column to be pinned has to be pick
 
    Table widget - conditional styles
 
+
 *Visibility* conditions can also be set for column. Just click the *Visualization* property as shown below.
 
  .. figure:: media/image051.png
