@@ -827,6 +827,7 @@ and filters on that column.
 
     Table widget editor
 
+To manage styles and other functionalities for columns just move to the *Settings* section.
 The below image shows how to pin colums in a table. Pinned columns are columns that are fixed to the left or to the right of the table.
 The *plus* icon will add a new line where the column to be pinned has to be picked up from the *Columns* drop down menu. The field *Pinned* has toset to *Left* or *Right*.
 
@@ -838,7 +839,6 @@ The *plus* icon will add a new line where the column to be pinned has to be pick
 
     Pinned column in a table
 
- To manage styles and other functionalities for columns just move to the *Settings* section.
  The below image shows how to apply *Conditional Styles* to a specific column of the table.
  If a given condition for a measure occurs it is possible to set properties as font size, font Family, background, etc.
  In case variables and parameters have been defined for the dashboard just make your choice from the *Value Type* menu to enter the related value.
