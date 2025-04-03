@@ -268,7 +268,7 @@ See below image.
 
 
  **Bar**
-The *Bar chart* allows a method of displaying data with categories represented by rectangles (or groups) horizontally oriented.
+The *Bar* chart allows a method of displaying data with categories represented by rectangles (or groups) horizontally oriented.
 
 An example below.
 
@@ -277,7 +277,7 @@ An example below.
 Bar chart example
 
  **Column**
-The *Column chart* is like a *Bar* chart with vertical orientation.
+The *Column* chart is like a *Bar* chart with vertical orientation.
 How to define measures and attributes is shown below
 
 .. figure:: media/image057.png
@@ -291,7 +291,7 @@ The above image shows the *Maximum number of records* property enabled and set t
    Column chart example
 
 **Line**
-The *Column chart* uses points connected by line segments from left to right to show how data changes.
+The *Line* chart uses points connected by line segments from left to right to show how data changes.
 An example below.
 
 .. figure:: media/image059.png
@@ -309,12 +309,12 @@ A *pie* chart helps organize and show data in a circular form as a percentage of
 **Sunburst**
 
 The sunburst chart is a graph with a radial layout which depicts the hierarchical structure of data displaying a set of concentric rings. 
-The circle in the center represents the root nodes, with the hierarchy moving outward from the center. The slices in the external rings represent the 
+The circle in the center represents the root node, with the hierarchy moving outward from the center. The slices in the external rings represent the 
 children of the slice in the inner circle which means they lie within the angular sweep of the inner circle. 
 The area of each slice corresponds to the value of the node. Even if sunburst charts are not efficient space-wise, 
-they enable users to represent hierarchies in a more immediate and fascinating way.
+they enable users to represent *hierarchies* in a more immediate and fascinating way.
 
-To create a sunburst chart you need to select at least two attributes describing the hierarchy and just one measure representing the width of the 
+To create a sunburst chart select at least two attributes describing the hierarchy and just one measure representing the width of the 
 slices. An example of dataset for the sunburst chart is shown below.
 
 .. figure:: media/image065.png
@@ -384,7 +384,7 @@ The below example highlights what happens if two attributes are dragged and drop
 
 **Parallel**
 
-The *parallel* chart is a way to visualize high-dimensional geometry and multivarious data. The axes of a multidimensional space are represented by parallel lines, usually equally spaced-out, and a point of the space is represented by a broken line with vertices on the parallel axes. The position of the vertex on an axis correspond to the coordinate of the point in that axis.
+The *Parallel* chart is a way to visualize high-dimensional geometry and multivarious data. The axes of a multidimensional space are represented by parallel lines, usually equally spaced-out, and a point of the space is represented by a broken line with vertices on the parallel axes. The position of the vertex on an axis correspond to the coordinate of the point in that axis.
 
 To create a parallel chart select a dataset with at least one attribute and two columns with numerical values. You can find an interesting example of dataset in the next table where we display some of its rows.
 
@@ -445,7 +445,7 @@ To create a parallel chart select a dataset with at least one attribute and two 
    +--------+--------------+-------------+--------------+-------------+-----------------+
     
 In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, 
-we are able to find out which class we are looking at. One side of the below image (part a) shows a parallel chart related to the previous dataset. 
+it is possible to find out which class we are looking at. One side of the below image (part a) shows a parallel chart related to the previous dataset. 
 The second side of the image (part b) shows thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
 
 
@@ -472,7 +472,7 @@ Heatmap chart example
 
 **Radar**
 
-A *radar* chart is a two-dimensional chart showing more series of values over a varied number of variables having its own axis.
+A *Radar* chart is a two-dimensional chart showing more series of values over a varied number of variables having its own axis.
 All axes are joined in the center of the graph.
 
 To plot this graph at least one attribute and one measure are needed.
