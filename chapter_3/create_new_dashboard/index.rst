@@ -498,7 +498,7 @@ See below image.
 
    Treemap chart - attributes and measures
 
-The order of the attributes in the X-axis panel must reflects the order of the attributes in the hierarchy starting from the root to the top.
+The order of the attributes in the X-axis panel should reflect the order of the attributes in the hierarchy starting from the root to the top.
 
 In Figure below an example of a Treemap chart
 
@@ -556,7 +556,7 @@ columns.
 
    Bubble chart - setting series
 
-An example of bubble chart is shown below, bubbles color has been set through the Color property inside Settings section.
+An example of bubble chart is shown below, bubbles color has been set through the *Color* property inside Settings section.
 
 .. figure:: media/image023.png
 
@@ -565,7 +565,7 @@ An example of bubble chart is shown below, bubbles color has been set through th
 **Dumbell**
 
 A *Dumbbell* chart uses circles and lines to show changes over time.
-After pressing the *Add Widget* button pick up Cahrt and then the *Dumbell* chart from the gallery.
+After pressing the *Add Widget* button or icon pick up Chart and then the *Dumbell* chart from the gallery.
 To define the chart you need one attribute and two measures to define the series. See the below image.
 
 .. figure:: media/image024.png
@@ -788,13 +788,13 @@ The **key** attribute is optional and will select a specific key from the variab
 
 .. warning::
     **Banned Tags**
-    In order to avoid Cross-site scripting and other vulnerabilities, some tags are *not allowed* and will automatically be removed by the system when saving the cockpit:
+    To avoid Cross-site scripting and other vulnerabilities, some tags are *not allowed* and will automatically be removed by the system when saving the dashboard:
 
     -  ``<button></button>``
     -  ``<object></object>``
     -  ``<script></script>``
 
-If you need to simulate a button behaviour use a div (or another allowed tag) and replicate the css style like in the following example:
+If you need to simulate a button behaviour use a div (or another allowed tag) and replicate the css style as shown below:
 
 .. code-block:: html
    :linenos:
@@ -934,10 +934,9 @@ Map widgets also support the addition of calculated fields.
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on *Active Selections* it is possible to add a *Active Selections* widget to the dashboard.
-This way the user can view the list of curren selections applied on a widget. An icon on the right upper corner of the dashboard will 
-be visible and by clicking on it the list of current selections will be visible. On each item of this list a *trash* icon lets the
-deletion of that selection.
+By clicking on the *Add widget* button or icon and then *Active Selections* it is possible to add a *Active Selections* widget to the dashboard.
+This chart shows the list of current selections applied on a widget. An icon on the right upper corner of the dashboard will 
+be visible and clickable to open the list. On each item of the list a *trash* icon is available for the deletion of that selection.
 
 .. figure:: media/image052.png
 
@@ -947,11 +946,11 @@ deletion of that selection.
 
  .. figure:: media/image053.png
 
-   Be aware that a selection can be locked. In this case it will be not possible to delete the selection until unlocked.
+ Be aware that a selection can be locked. In this case it will be not possible to delete the selection until unlocked.
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on *Selector* it is possible to add a *Selector* widget to the dashboard.
+By clicking on the *Add widget* button or icon and then *Selector* it is possible to add a *Selector* widget to the dashboard.
 The *Selector* widget allows a dataset filtering by means of a combobox, radio button or checkboxes.
 After choosing the column to use as a filter just move to the *Setting* section and then *Configuration*. See below image.
 
