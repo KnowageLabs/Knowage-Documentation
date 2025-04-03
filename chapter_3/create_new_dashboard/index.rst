@@ -108,7 +108,7 @@ widget, the *Settings* section will contain the *Gallery* property that does not
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
 
    - *Configuration*, to manage date format, annotations, the text message when no data is retrieved
-   - *Visualization*, to pin columns, to set visibility conditions on columns or to show columns as text, icon
+   - *Visualization*, to pin columns, to set visibility conditions on columns, to show columns as text or icon, to show totals
    - *Legend*, to show aliases for measures 
    - *Tooltips*, to apply visualizazion styles to the hover text
    - *Style*, to define visualization styles such as font size, font family, background
@@ -819,13 +819,24 @@ Table widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Table* it is possible to add a *Table* widget to the dashboard.
 After selecting the dataset, drag and drop the columns to show.
-You can active Pagination just switching on the sliding button and then specify the number of items to be visualized in the page.
-To handle each column settings just click on the seting icon before the trash. You will be able to set aliases, the aggragation function
+You can active Pagination just switching on the sliding button and then specify the number of items to be visualized per page.
+To handle each column settings just click on the setting icon before the trash. You will be able to set aliases, the aggragation function
 and filters on that column.
 
 .. figure:: media/image049.png
 
-   Table widget editor
+    Table widget editor
+
+The below image shows how to pin colums in a table. Pinned columns are columns that are fixed to the left or to the right of the table.
+The *plus* icon will add a new line where the column to be pinned has to be picked up from the *Columns* drop down menu. The field *Pinned* has toset to *Left* or *Right*.
+
+  .. figure:: media/image098.png
+
+    Pinning a column
+
+.. figure:: media/image099.png
+
+    Pinned column in a table
 
  To manage styles and other functionalities for columns just move to the *Settings* section.
  The below image shows how to apply *Conditional Styles* to a specific column of the table.
