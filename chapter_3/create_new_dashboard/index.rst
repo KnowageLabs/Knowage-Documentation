@@ -78,10 +78,12 @@ Widgets Types
 As seen above, the addition of a widget can be done either through the icon displayed from the sheet of a dashboard or 
 from the appropriate button appearing in the upper right bar. 
 When clicking a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
-A widget's editor normally has two sections, one for the *Data* management (not available i.e. for the *Image* widget) and another for the *Settings* containing the list properties that can vary
-from one widget to another.
+A widget's editor normally has two sections:
+   - *Data*, to associate datasets to the dashboard (this section is not available i.e. for the *Image* widget)
+   - *Settings*, with a list of components varying from one widget to another
+
 The below table shows an example of how the *Data* and the *Settings* sections appear for a *Text* widget. In case of i.e. an *Image* 
-widget the *Settings* will contain the *Gallery* property which does not belong to the *Text* widget.
+widget, the *Settings* section will contain the *Gallery* property that does not belong to the *Text* widget.
 
 
    +--------------------+------------------------------------------------------------------------------+
@@ -144,7 +146,7 @@ Below a brief description of the usefulness of some of the properties listed in 
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking the **Text Widget** icon you can add text to your dashboard. As shown below, the widget editor opens showing the two sections 
+By clicking the **Text Widget** icon you can add text to your dashboard. The widget editor opens showing the two sections 
 formerly introduced.
 Using the *Data* section it is possible to associate dataset values to the text to show real time values at each execution.
 You can drag a single column into the *Selected Columns* area or just all of them by using the arrow next to the *Add Column* button.
@@ -157,8 +159,8 @@ You can drag a single column into the *Selected Columns* area or just all of the
 
    Text Widget Settings Editor
 
-Select the *Editor* property and type in the desired text.
-Select the *[] placeholder* menu item and then *Columns Data* to find the dataset column(s) previously selected as shown in the below image.
+The *Editor* property allows typing the desired text.
+From the *[] placeholder* menu the item *Columns Data* makes available the dataset column(s) previously selected as shown in the below image.
 
 .. figure:: media/image011.png
 
