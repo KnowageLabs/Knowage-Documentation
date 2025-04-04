@@ -272,6 +272,7 @@ The *Line* chart uses points connected by line segments from left to right to sh
 An example below.
 
 .. figure:: media/image059.png
+   
  Line chart example
 
 **Pie**
