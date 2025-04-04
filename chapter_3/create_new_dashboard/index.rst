@@ -820,7 +820,7 @@ Table widget
 By clicking on the *Add widget* button or icon and then on *Table* it is possible to add a *Table* widget to the dashboard.
 After selecting the dataset, drag and drop the columns to show.
 You can active Pagination just switching on the sliding button and then specify the number of items to be visualized per page.
-To handle each column settings just click on the setting icon before the trash. You will be able to set aliases, the aggragation function
+To handle each column settings just click on the setting icon before the trash. You will be able to set aliases, the aggregation function
 and filters on that column.
 
 .. figure:: media/image049.png
@@ -847,8 +847,26 @@ The *plus* icon will add a new line where the column to be pinned has to be pick
 
    Table widget - conditional styles
 
+The value of a specific column can also be represented by using an *icon*.
+See below image.
 
-*Visibility* conditions can also be set for column. Just click the *Visualization* property as shown below.
+ .. figure:: media/image100.png
+
+   Table widget - representing a value trough an icon
+
+However, it is important to have previously specified that column as being represented as an icon otherwise choices will not be applied.
+
+ .. figure:: media/image101.png
+
+   Table widget - representing a value trough an icon
+
+
+ .. figure:: media/image102.png
+
+   Table widget - representing a value trough an icon
+
+
+*Visibility* conditions can also be applied for a column. Just click the *Visualization* property as shown below.
 
  .. figure:: media/image051.png
 
