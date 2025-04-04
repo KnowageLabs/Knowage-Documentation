@@ -852,18 +852,21 @@ See below image.
 
  .. figure:: media/image100.png
 
-   Table widget - representing a value trough an icon
+
+   Table widget - choosing the icon to visualize
 
 However, it is important to have previously specified that column as being represented as an icon otherwise choices will not be applied.
 
  .. figure:: media/image101.png
 
-   Table widget - representing a value trough an icon
+
+   Table widget - set visualization type as icon
 
 
  .. figure:: media/image102.png
 
-   Table widget - representing a value trough an icon
+
+   Table widget with icons for a measure column
 
 
 *Visibility* conditions can also be applied for a column. Just click the *Visualization* property as shown below.
