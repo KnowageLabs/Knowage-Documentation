@@ -875,6 +875,12 @@ However, it is important to have previously specified that column as being repre
 
    Table widget - visibility conditions
 
+The below example shows how ordering a column.
+
+ .. figure:: media/image103.png
+
+   Table widget - ordering a column
+
 
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1573,7 +1579,7 @@ Through a variety of methods it is possible to iterate over the results and get 
     }
 
 
-Interactionx with the other widgets is also possible just by using the **clickManager**:
+Interaction with the other widgets is also possible just by using the **clickManager**:
 
 .. code-block:: javaScript
    :linenos:
