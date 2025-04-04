@@ -837,7 +837,7 @@ The *plus* icon will add a new line where the column to be pinned has to be pick
 
 .. figure:: media/image099.png
 
-    Pinned column in a table
+    A pinned column example
 
  The below image shows how to apply *Conditional Styles* to a specific column of the table.
  If a given condition for a measure occurs it is possible to set properties as font size, font Family, background, etc.
@@ -866,7 +866,7 @@ However, it is important to have previously specified that column as being repre
  .. figure:: media/image102.png
 
 
-   Table widget with icons for a measure column
+   Table widget example with icons as values 
 
 
 *Visibility* conditions can also be applied for a column. Just click the *Visualization* property as shown below.
@@ -955,6 +955,8 @@ be visible and clickable to open the list. On each item of the list a *trash* ic
  To get the result shown in the above image just go to the *Settings* and select the *Style* property
 
  .. figure:: media/image053.png
+
+   Active selections widget - Style property
 
  Be aware that a selection can be locked. In this case it will be not possible to delete the selection until unlocked.
 
