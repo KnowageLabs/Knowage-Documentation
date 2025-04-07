@@ -953,7 +953,7 @@ In the *Data* section the user can add and remove layers, set the format of a sp
 
         Map widget - choosing a dataset for a layer.
 
-In Layer Metadata section, the user can set the spatial attribute of the dataset that will be used to display markers on the map. Currently, the following spatial attribute types are supported:
+In the *Layer* Metadata section, the user can set the spatial attribute of the dataset that will be used to display markers on the map. Currently, the following spatial attribute types are supported:
 
 -  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
 -  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
@@ -969,6 +969,9 @@ In Layer Metadata section, the user can set the spatial attribute of the dataset
          **Geographic coordinates format**
 
          For every type defined above the user has to specify the format of the geographic coordinate: wether latitude comes first or vice versa.
+
+Attributes and measures can be given an alias.
+For measures the user can also specify the aggregation function.
 
 Map widgets also support the addition of calculated fields.
 
