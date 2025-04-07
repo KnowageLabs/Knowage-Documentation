@@ -286,7 +286,7 @@ A *pie* chart helps organize and show data in a circular form as a percentage of
 
 **Sunburst**
 
-The sunburst chart is a graph with a radial layout which depicts the hierarchical structure of data displaying a set of concentric rings. 
+The *sunburst* chart is a graph with a radial layout which depicts the hierarchical structure of data displaying a set of concentric rings. 
 The circle in the center represents the root node, with the hierarchy moving outward from the center. The slices in the external rings represent the 
 children of the slice in the inner circle which means they lie within the angular sweep of the inner circle. 
 The area of each slice corresponds to the value of the node. Even if sunburst charts are not efficient space-wise, 
@@ -935,17 +935,24 @@ You can also apply conditional styles to a measure so that when resulting i.e. g
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then *Map* it is possible to add a *Map* widget to the dashboard.
-The Map Widget is useful when a user needs to visualize data related to a geographic position. The widget supports multiple layers, one for every dataset added to widget configuration, and one data field for every layer: the user can switch on-the-fly between all data available on the layer.
+The Map Widget is useful when a user needs to visualize data related to a geographic position. The widget supports multiple layers, one for every dataset added to widget and one data field for every layer.
 
 .. figure:: media/image055.png
 
-    Map widget.
+    Map widget example.
 
-In Map Widget configuration a user can add and remove layers, set the format of the spatial attribute to use and specify the attributes to display on map and on the detail popup:
+In the *Data* section the user can add and remove layers, set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
 
-    .. figure:: media/image056.png
+    .. figure:: media/image104.png
 
-        Map widget configuration.
+        Map widget - choosing a dataset for a layer.
+
+ The below image shows a map widget with two layers where each dataset is related to one layer.
+
+    .. figure:: media/image105.png
+
+        Map widget - choosing a dataset for a layer.
+
 
 Map widgets also support the addition of calculated fields.
 
