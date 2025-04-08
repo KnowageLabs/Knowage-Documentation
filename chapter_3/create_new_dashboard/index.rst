@@ -968,12 +968,36 @@ In the *Layer* Metadata section, the user can set the spatial attribute of the d
 .. important::
          **Geographic coordinates format**
 
-         For every type defined above the user has to specify the format of the geographic coordinate: wether latitude comes first or vice versa.
+         For every type defined above the user has to specify the format of the geographic coordinate that is wether latitude comes first or vice versa.
 
 Attributes and measures can be given an alias.
 For measures the user can also specify the aggregation function.
 
-Map widgets also support the addition of calculated fields.
+For every layer, it is possible to specify how data will be displayed on the map: markers, cluster, heatmaps and choroplet.
+
+The image below shows an example for layers related to the dataset *GEO DATASET TEST*. To select the dataset it is enough to open the associated
+drop down menu and select the name of the dataset. 
+
+.. figure:: media/image108.png
+
+        Data visualization for layers - 1
+
+In case of more layers the *plus* icon to the left of the *trash* icon will let the addition of new information for further layers as shown below.
+
+.. figure:: media/image109.png
+
+        Data visualization for layers - 2
+
+In case of representing data as markers the user can choose between *Icon, Image and Web Image* markers. The below image shows an example where an Icon has been chosen.
+In red is highlated the picker for choosing icons and the icon selected that in this case corresponds to the *anchor* icon.
+
+.. figure:: media/image110.png
+
+        Marker represented as icon
+
+
+
+
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
