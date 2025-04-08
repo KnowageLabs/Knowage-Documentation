@@ -1888,6 +1888,7 @@ Just click on the *Plus* icon and rename the new sheet.
 Export dashboard
 ------------------------------------------------------------------------------------------------------------------------
 The below image shows how to export the contents of a dashboard by using the *Export* functionality available in the menu.
+From the three dots, select *Export* and then one of the three options: PDF, XLSX, PNG.
 
 .. figure:: media/image107.png
 
