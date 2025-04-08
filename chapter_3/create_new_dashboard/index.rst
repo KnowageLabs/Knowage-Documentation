@@ -1712,6 +1712,7 @@ The below image shows how to enable the search bar by specifing on which fields 
 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Python widget allows to embed a Python script inside the dashboard to create advanced custom analytics.
 By clicking on the *Add widget* button or icon and then on *Python* it is possible to add a *Python* widget to the dashboard.
 
 
