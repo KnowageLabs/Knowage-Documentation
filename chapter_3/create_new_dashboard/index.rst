@@ -1712,10 +1712,28 @@ The below image shows how to enable the search bar by specifing on which fields 
 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The Python widget allows to embed a Python script inside the dashboard to create advanced custom analytics.
 By clicking on the *Add widget* button or icon and then on *Python* it is possible to add a *Python* widget to the dashboard.
+The editor widget allows embedding a Python script. Before writing the code it is necessary to specify the type of the output produced by the script:
+ - Image
+ - HTML
 
+It is also necessary to specify the name of the file where to save the output of the script. See below image
 
+.. figure:: media/image111.png
+
+   Python widget editor
+
+The below image shows an example of Python script.
+
+   .. figure:: media/image112.png
+
+   Python script example
+
+Possibility to add columns names from the dataset or parameters names to the script.
+
+   .. figure:: media/image113.png
+
+   Adding parameters or columns to a Python script
 
 Cross Navigation
 ------------------------------------------------------------------------------------------------------------------------
