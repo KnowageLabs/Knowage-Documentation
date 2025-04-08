@@ -193,15 +193,13 @@ new ones are now available:
 
 Below the general steps to be followed to insert a chart.
 After selecting the dataset and clicking the *Add widget* icon the chart gallery opens to pick up desired chart to draw.
-
-Select a chart. The *Data* section or better *Editor* opens. Drag and drop your column(s) into:
-
+Once a chart has been selected The *Data* section or *Editor* opens. Here it is possible to drag and drop your column(s) into:
    - the *Dimension(s)* area, for measures
    - the *Values* area, for attributes.
 
-Aftrwards, depending on the chart or widget type set up the properties contained in the *Settings* section. This section could be different from
+Afterwards the user can keep on with the set up of the properties contained in the *Settings* section. This section could be different from
 one widget to another.
-The below image refers to a *Funnel* chart where you need to define both the measure(s) and the sttribute(s).
+The below image refers to a *Funnel* chart where the definition of both the measure(s) and the sttribute(s) is needed.
 
 .. figure:: media/image014.png
 
