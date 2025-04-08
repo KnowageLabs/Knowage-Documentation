@@ -1947,3 +1947,17 @@ From the three dots, select *Export* and then one of the three options: PDF, XLS
 .. figure:: media/image107.png
 
    Export functionality
+
+
+Dashboard Template
+------------------------------------------------------------------------------------------------------------------------
+
+.. important::
+         **For technical users only**
+         This functionality is only available for technical users.
+
+The template of a dashboard is available editing the analytical document from the *Document browsers* and downloading it from the *History* tab.
+
+.. figure:: media/image115.png
+
+   Dashboard template
