@@ -1884,3 +1884,11 @@ Just click on the *Plus* icon and rename the new sheet.
 
    Multisheet functionality
 
+
+Export dashboard
+------------------------------------------------------------------------------------------------------------------------
+The below image shows how to export the contents of a dashboard by using the *Export* functionality available in the menu.
+
+.. figure:: media/image107.png
+
+   Export functionality
