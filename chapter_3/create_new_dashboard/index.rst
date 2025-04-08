@@ -1735,6 +1735,17 @@ Possibility to add columns names from the dataset or parameters names to the scr
 
    Adding parameters or columns to a Python script
 
+Inside Python scripts analytical drivers can be also accessed by using the usual placeholder syntax $P{}.
+
+The user can define more environment where to run scripts. The below image shows how to handle all the evironments previously defined. 
+To support this kind of choice a list of available libraries is displayed for each selected environment.
+
+   .. figure:: media/image114.png
+
+   Python environments
+
+
+
 Cross Navigation
 ------------------------------------------------------------------------------------------------------------------------
 The cross navigation lets you navigate from one document to another.
