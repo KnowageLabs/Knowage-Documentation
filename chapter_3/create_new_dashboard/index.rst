@@ -1892,6 +1892,17 @@ Creating a variable - step 2
 
    Creating a variable - step 3
 
+ Types of variables:
+
+   - Static: a static number or string
+   - Dataset: the value of a selected dataset column
+   - Profile: a set of profile attributes available (ie. the username)
+   - Driver: the value of a selected analytical driver
+   - Execution time: Simple Time or Time with seconds
+   - Execution date: date of execution of the dashboard with format options such as short date, medium date or full date and time
+   - Locale: values coming from the local settings
+   - Active selections: active selection on a specific column of the dataset
+
 Associations
 ------------------------------------------------------------------------------------------------------------------------
 To create an association at least two datasets have to be selected.
