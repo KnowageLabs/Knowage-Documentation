@@ -27,11 +27,6 @@ Simply enter the type of graph you want to draw and press the search icon.
             -	by final users from the Workspace
             -	by admin users from the document browser area
 
-
-.. important::
-         **Enterprise Edition only**
-         Final users can create dashboards only with KnowageBD and KnowageSI licences. With a KnowagePM license, only a technical user can create a Dashboard document.
-
 To create a dashboard the user should click the *plus* icon available in the right top corner and select *Dashboard* from the menu as shown below.
 
 .. figure:: media/new_dashboard.png
@@ -117,7 +112,8 @@ Below a brief description of the usefulness of some of the properties listed in 
    - *Colors*, to manage the palette of colors
    - *Interactions*, to manage cross navigations, links, drill-downs, etc 
    - *Series*, to manage format styles related to the values of the serie(s)  
-   - *Responsive*, to handle the size of your widgets on tablets, mobiles, small and large devices
+   - *Responsive*, to manage the wisualization of your widgets on different devices such as tablets, mobiles, small and large devices
+   - *Help*, to add additional explanation for a specific widget i.e. by means of an icon opening a pop up that shows some information
 
 
 
