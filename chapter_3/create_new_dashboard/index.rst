@@ -544,7 +544,7 @@ To define the chart you need one attribute and two measures to define the series
 
 Dumbell chart example - defining measures and atributes
 
-Once inserted your attributes and measures you can handle the settings of the start Serie as shown below.
+Once inserted your attributes and measures you can manage the settings of the start of your *Series* as shown below.
 
 .. figure:: media/image025.png
 
