@@ -965,7 +965,7 @@ Currently, the following spatial attribute types are supported:
         Geographic coordinates
 For every layer, there are different ways to display data on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
 
- The *plus* icon to the left of the *trash* allows the addition of new information for further layers as shown below.
+The *plus* icon to the left of the *trash* allows the addition of new information for further layers as shown below.
 
 .. figure:: media/image109.png
 
