@@ -902,26 +902,29 @@ After selecting the dataset, you can drag and drop fields to define columns, row
 
 
 By clicking on the icon highlighted in the below image a *Field chooser* appears.
-Here you can handle some properties as ordering just by clicking the arrow appearing on the right side of each field. 
+Here you can handle some properties as ordering just by clicking the arrow appearing on the right side of each field or you can simply change the attributes
+to show in your pivot table.
 
        .. figure:: media/image090.png
 
    Pivot widget - Field chooser
 
-You can also apply filters on values just by clicking the funnel icon.
+Filters on values can be applied just by clicking the funnel icon.
 
        .. figure:: media/image091.png
 
    Pivot widget - applying filters
 
-You can also decide to visualize a measure as simple text or icon or both. By default all fields are visualized as text. In case you need a specific measure to represented
-i.e. as an icon you just need to click the *plus icon*, select a measure column from the drop down menu and the *visualization* type.
+By default all fields are visualized as text. In case you need a specific measure to represented i.e. as an icon you just need 
+to click the *plus icon*, select a measure column from the drop down menu and the *visualization* type.
 
        .. figure:: media/image092.png
 
    Pivot widget - displaying measures as text or icon
 
-You can also apply conditional styles to a measure so that when resulting i.e. greater that a specific value the color can be a different one.
+
+Conditional styles can also be applied to a measure so that when resulting i.e. greater that a specific value the color can be a different one.
+If a given column has to be represented as an icon it is important to handle this property. 
 
        .. figure:: media/image093.png
 
