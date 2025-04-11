@@ -968,7 +968,6 @@ For measures the user has to specify the aggregation function to be used when di
 
 For every layer, there are different ways to display data on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
 
-
 .. figure:: media/image108.png
 
         Data visualization for layers - 1
