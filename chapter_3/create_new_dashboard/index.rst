@@ -119,6 +119,10 @@ Below a brief description of the usefulness of some of the properties listed in 
 
        After changing whatever property of the Settings section remember always to press *Save*.
 
+Below an example of *Help* applied on a widget.
+
+.. figure:: media/image117.png
+
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
