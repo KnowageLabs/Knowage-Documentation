@@ -924,7 +924,8 @@ to click the *plus icon*, select a measure column from the drop down menu and th
 
 
 Conditional styles can also be applied to a measure so that when resulting i.e. greater that a specific value the color can be a different one.
-If a given column has to be represented as an icon it is important to handle this property. 
+If a particular for column to be represented as an icon, it is important to handle this property to specify the range of values ​​for which the measure will appear as an icon. 
+Outside the range(s) the measure will appear as text.
 
        .. figure:: media/image093.png
 
