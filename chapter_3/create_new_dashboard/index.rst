@@ -935,7 +935,9 @@ The Map Widget is useful when a user needs to visualize data related to a geogra
 
     Map widget example.
 
-Unlike the most of the widgets that have a *Data* section for data configuration here we find the *Layer* section where the user can add and remove layers, set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
+Unlike the most of the widgets that have a *Data* section for data configuration here we find the *Layer* section where the user can add and remove layers, 
+set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
+
 
 The below image shows a map widget with two layers where each dataset is related to one layer.
 
@@ -962,18 +964,16 @@ Currently, the following spatial attribute types are supported:
 
         Geographic coordinates
 
+For measures the user has to specify the aggregation function to be used when displaying data on the map.
 
-Attributes and measures can be given an alias whereas for measures the user has to specify the aggregation function to be used when displaying data on the map.
 For every layer, there are different ways to display data on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
 
-The image below shows an example for layers related to the dataset *GEO DATASET TEST*. To select the dataset it is enough to open the associated
-drop down menu and select the name of the dataset. 
 
 .. figure:: media/image108.png
 
         Data visualization for layers - 1
 
-In case of more layers the *plus* icon to the left of the *trash* icon will let the addition of new information for further layers as shown below.
+ The *plus* icon to the left of the *trash* icon will let the addition of new information for further layers as shown below.
 
 .. figure:: media/image109.png
 
