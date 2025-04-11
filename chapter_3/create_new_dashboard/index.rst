@@ -973,6 +973,7 @@ For every layer, there are different ways to display data on the map: markers, b
 
         Data visualization for layers - 1
 
+
  The *plus* icon to the left of the *trash* icon will let the addition of new information for further layers as shown below.
 
 .. figure:: media/image109.png
