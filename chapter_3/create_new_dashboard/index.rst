@@ -74,7 +74,7 @@ from the appropriate button appearing in the upper right bar.
 When clicking a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
 A widget's editor normally has two sections:
 
-   - *Data*, to associate datasets to the dashboard (this section is not available i.e. for the *Image* widget)
+   - *Data*, to associate datasets to the dashboard (this section is not available i.e. for the *Image* and *Map* widgets)
    - *Settings*, with a list of components varying from one widget to another
 
 The below table shows an example of how the *Data* and the *Settings* sections appear for a *Text* widget. In case of i.e. an *Image* 
@@ -935,7 +935,7 @@ The Map Widget is useful when a user needs to visualize data related to a geogra
 
     Map widget example.
 
-In the *Data* section the user can add and remove layers, set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
+Unlike the most of the widgets that have a *Data* section for data configuration here we find the *Layer* section where the user can add and remove layers, set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
 
     .. figure:: media/image104.png
 
