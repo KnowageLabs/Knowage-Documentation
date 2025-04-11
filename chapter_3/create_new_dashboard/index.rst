@@ -586,7 +586,7 @@ Packed bubble chart example
 
 **Pictorial**
 
-A *Pictorial* chart represents different satges of data using a bulb.
+A *Pictorial* chart represents different stages of data using a bulb.
 Once a dataset has been selected, click the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
 Select Chart and then *Pictorial* as chart, choose just one measure to define the Serie and one attribute for the category.
 See below image
