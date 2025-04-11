@@ -964,14 +964,6 @@ Currently, the following spatial attribute types are supported:
 
         Geographic coordinates
 
-For measures the user has to specify the aggregation function to be used when displaying data on the map.
-For every layer, there are different ways to display data on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
-
-.. figure:: media/image108.png
-
-        Data visualization for layers - 1
-
-
  The *plus* icon to the left of the *trash* allows the addition of new information for further layers as shown below.
 
 .. figure:: media/image109.png
@@ -985,7 +977,7 @@ In red is highlated the picker for choosing icons and the icon selected that in 
 
         Marker represented as icon
 
-Below an example of how a map can look like depending from how data is visualized.
+Below an example of how a map can look like depending on how data is visualized.
 
 .. figure:: media/image106_2.png
 
