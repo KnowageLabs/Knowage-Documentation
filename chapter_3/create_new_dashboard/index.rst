@@ -965,9 +965,9 @@ In the *Layer* Metadata section, the user can set the spatial attribute of the d
          For every type defined above the user has to specify the format of the geographic coordinate that is wether latitude comes first or vice versa.
 
 Attributes and measures can be given an alias.
-For measures the user can also specify the aggregation function.
 
-For every layer, it is possible to specify how data will be displayed on the map: markers, cluster, heatmaps and choroplet.
+For measures the user can also specify the aggregation function.
+For every layer, it is possible to specify how data will be displayed on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
 
 The image below shows an example for layers related to the dataset *GEO DATASET TEST*. To select the dataset it is enough to open the associated
 drop down menu and select the name of the dataset. 
