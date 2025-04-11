@@ -937,37 +937,34 @@ The Map Widget is useful when a user needs to visualize data related to a geogra
 
 Unlike the most of the widgets that have a *Data* section for data configuration here we find the *Layer* section where the user can add and remove layers, set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
 
-    .. figure:: media/image104.png
+The below image shows a map widget with two layers where each dataset is related to one layer.
+
+    .. figure:: media/image104_n.png
 
         Map widget - choosing a dataset for a layer.
 
- The below image shows a map widget with two layers where each dataset is related to one layer.
-
-    .. figure:: media/image105.png
-
-        Map widget - choosing a dataset for a layer.
-
-In the *Layer* Metadata section, the user can set the spatial attribute of the dataset that will be used to display markers on the map. Currently, the following spatial attribute types are supported:
+In the *Layer* Metadata section, the user can set the spatial attribute of the dataset that will be used to display markers on the map. 
+Currently, the following spatial attribute types are supported:
 
 -  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
 -  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
 -  WKT: where the value is a text string in `Well-known Text <https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry>`_ format;
 
-.. figure:: media/image104.png
+.. figure:: media/image105_n.png
 
         Layer metadata section
 
-
-
 .. important::
          **Geographic coordinates format**
-
          For every type defined above the user has to specify the format of the geographic coordinate that is wether latitude comes first or vice versa.
 
-Attributes and measures can be given an alias.
+.. figure:: media/image106_n.png
 
-For measures the user can also specify the aggregation function.
-For every layer, it is possible to specify how data will be displayed on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
+        Geographic coordinates
+
+
+Attributes and measures can be given an alias whereas for measures the user has to specify the aggregation function to be used when displaying data on the map.
+For every layer, there are different ways to display data on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
 
 The image below shows an example for layers related to the dataset *GEO DATASET TEST*. To select the dataset it is enough to open the associated
 drop down menu and select the name of the dataset. 
