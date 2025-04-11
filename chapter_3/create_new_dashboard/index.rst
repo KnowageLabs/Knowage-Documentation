@@ -115,7 +115,9 @@ Below a brief description of the usefulness of some of the properties listed in 
    - *Responsive*, to manage the wisualization of your widgets on different devices such as tablets, mobiles, small and large devices
    - *Help*, to add additional explanation for a specific widget i.e. by means of an icon opening a pop up that shows some information
 
+. important::
 
+       After changing whatever property of the Settings section remember always to press *Save*.
 
 
 Text widget
@@ -496,7 +498,7 @@ Below you can see how to set the aliases. From the drop down menu you can choose
 .. figure:: media/image018.png
 
    Setting Alias example
- Once renamed changed are applied and you can see it in the below image. Remember always to press *Save*
+ The below image shows how changes are applied after renaming the measures.
 
 .. figure:: media/image019.png
 
