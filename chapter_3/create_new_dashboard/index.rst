@@ -1978,7 +1978,6 @@ Dashboard Template
 ------------------------------------------------------------------------------------------------------------------------
 
 .. important::
-         **For technical users only**
          This functionality is only available for technical users.
 
 The template of a dashboard is available editing the analytical document from the *Document browsers* and downloading it from the *History* tab.
