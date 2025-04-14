@@ -1725,6 +1725,7 @@ Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Python* it is possible to add a *Python* widget to the dashboard.
 The editor widget allows embedding a Python script. Before writing the code it is necessary to specify 
+
    1 - the type of the output produced by the script:
          - Image
          - HTML
