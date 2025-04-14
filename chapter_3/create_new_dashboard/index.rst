@@ -1724,31 +1724,33 @@ The below image shows how to enable the search bar by specifing on which fields 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then on *Python* it is possible to add a *Python* widget to the dashboard.
-The editor widget allows embedding a Python script. Before writing the code it is necessary to specify the type of the output produced by the script:
- - Image
- - HTML
-
-It is also necessary to specify the name of the file where to save the output of the script. See below image
+The editor widget allows embedding a Python script. Before writing the code it is necessary to specify 
+   1 - the type of the output produced by the script:
+         - Image
+         - HTML
+   2 - the name of the file where to save the output of the script. 
+   
+   See below image
 
 .. figure:: media/image111.png
 
    Python widget editor
 
-The below image shows an example of Python script.
+The below image shows an example of a *Python* script.
 
    .. figure:: media/image112.png
 
    Python script example
 
-Possibility to add columns names from the dataset or parameters names to the script.
+There ia also the possibility to add columns names from the dataset or parameters names to the script.
 
    .. figure:: media/image113.png
 
    Adding parameters or columns to a Python script
 
-Inside Python scripts analytical drivers can be also accessed by using the usual placeholder syntax $P{}.
+Inside the Python scripts analytical drivers can be also accessed by using the usual placeholder syntax $P{}.
 
-The user can define more environment where to run scripts. The below image shows how to handle all the evironments previously defined. 
+Additionaly more environments where to run scripts can be created. The below image shows how to handle all the evironments previously defined. 
 To support this kind of choice a list of available libraries is displayed for each selected environment.
 
    .. figure:: media/image114.png
@@ -1756,10 +1758,9 @@ To support this kind of choice a list of available libraries is displayed for ea
    Python environments
 
 
-
 Cross Navigation
 ------------------------------------------------------------------------------------------------------------------------
-The cross navigation lets you navigate from one document to another.
+The cross navigation allows navigation from one document to another.
 You will find the cross navigation functionality in the *Settings* section of a widget. Just click on *Interactions* as shown below.
 
 .. figure:: media/image039.png
