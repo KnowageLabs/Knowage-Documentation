@@ -8,7 +8,7 @@ The below pictures respectively show the chart gallery with the availability of 
 the presence of the *Pivot* and *Map* widgets.
 
 
-.. figure:: media/chart_gallery.png
+.. figure:: media/chart_gallery_1.png
 
 
    Chart gallery example
