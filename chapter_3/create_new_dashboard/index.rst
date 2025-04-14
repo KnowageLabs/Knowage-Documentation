@@ -1026,7 +1026,8 @@ be visible and clickable to open the list. On each item of the list a *trash* ic
 
    Active selections widget - Style property
 
- Be aware that a selection can be locked. In this case it will be not possible to delete that selection until unlocked.
+ Be aware that a selection can be locked. In this case it will be not possible to delete that selection until unlocked. This can only be done by admin users.
+ This forces the final user to run the dashboard with that selection that will not be removed as locked.
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1743,7 +1744,7 @@ The below image shows an example of a *Python* script.
 
    Python script example
 
-There ia also the possibility to add columns names from the dataset or parameters names to the script.
+Dataset columns and/or parameters can also be added to the script as shown below.
 
    .. figure:: media/image113.png
 
