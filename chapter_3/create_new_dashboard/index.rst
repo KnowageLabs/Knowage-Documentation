@@ -75,7 +75,7 @@ When clicking a palette containing the entire range of available widgets will be
 A widget's editor normally has two sections:
 
    - *Data*, to associate datasets to the dashboard (this section is not available i.e. for the *Image* and *Map* widgets)
-   - *Settings*, with a list of components varying from one widget to another
+   - *Settings*, containing a list of properties varying from one widget to another
 
 The below table shows an example of how the *Data* and the *Settings* sections appear for a *Text* widget. In case of i.e. an *Image* 
 widget, the *Settings* section will contain the *Gallery* property that does not belong to the *Text* widget.
@@ -117,7 +117,8 @@ Below a brief description of the usefulness of some of the properties listed in 
 
 . important::
 
-       After changing whatever property of the Settings section remember always to press *Save*.
+       After changing whatever property of the Settings section remember always to press *Save* to apply changes to the widget.
+       When all prorerties have been set up a further *Save* action will be necessary to permanently save the widget in Knowage.
 
 Below an example of *Help* applied on a widget.
 
