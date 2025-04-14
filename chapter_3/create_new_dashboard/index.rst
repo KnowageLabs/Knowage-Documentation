@@ -115,7 +115,7 @@ Below a brief description of the usefulness of some of the properties listed in 
    - *Responsive*, to manage the wisualization of your widgets on different devices such as tablets, mobiles, small and large devices
    - *Help*, to add additional explanation for a specific widget i.e. by means of an icon opening a pop up that shows some information
 
-. important::
+.. important::
 
        After changing whatever property of the Settings section remember always to press *Save* to apply changes to the widget.
        When all properties have been set up a further *Save* action will be necessary to permanently save the widget (dashboard) in Knowage.
