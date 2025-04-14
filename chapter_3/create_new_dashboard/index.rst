@@ -1026,7 +1026,7 @@ be visible and clickable to open the list. On each item of the list a *trash* ic
 
    Active selections widget - Style property
 
- Be aware that a selection can be locked. In this case it will be not possible to delete the selection until unlocked.
+ Be aware that a selection can be locked. In this case it will be not possible to delete that selection until unlocked.
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
