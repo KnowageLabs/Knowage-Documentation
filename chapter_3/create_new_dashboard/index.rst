@@ -13,8 +13,8 @@ the presence of the *Pivot* and *Map* widgets.
 
    Chart gallery example
 
-Given the wide range of graphs, you can search for the desired one using the dedicated search function. 
-Simply enter the type of graph you want to draw and press the search icon.
+Given the wide range of graphs, a dedicated search function allows looking for the desired widget. 
+Simply enter the type of graph to draw and press the search icon.
 
 
 .. figure:: media/image003.png
