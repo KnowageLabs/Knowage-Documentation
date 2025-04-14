@@ -118,7 +118,7 @@ Below a brief description of the usefulness of some of the properties listed in 
 . important::
 
        After changing whatever property of the Settings section remember always to press *Save* to apply changes to the widget.
-       When all prorerties have been set up a further *Save* action will be necessary to permanently save the widget in Knowage.
+       When all properties have been set up a further *Save* action will be necessary to permanently save the widget (dashboard) in Knowage.
 
 Below an example of *Help* applied on a widget.
 
