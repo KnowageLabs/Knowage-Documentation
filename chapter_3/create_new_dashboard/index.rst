@@ -1727,7 +1727,7 @@ By clicking on the *Add widget* button or icon and then on *Python* it is possib
 The editor widget allows embedding a Python script. Before writing the code it is necessary to specify 
 
    1 - the type of the output produced by the script:
-         - Image
+         - Image or
          - HTML
    2 - the name of the file where to save the output of the script. 
    
