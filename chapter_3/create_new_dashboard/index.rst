@@ -13,11 +13,11 @@ the presence of the *Pivot* and *Map* widgets.
 
    Chart gallery example
 
-Given the wide range of graphs, a dedicated search function allows looking for the desired widget. 
+Given the wide range of graphs, a dedicated search function allows looking for the desired chart. 
 Simply enter the type of graph to draw and press the search icon.
 
 
-.. figure:: media/image003.png
+.. figure:: media/image003_1.png
 
    Widgets types
 
