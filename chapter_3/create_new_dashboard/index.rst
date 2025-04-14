@@ -594,13 +594,26 @@ Packed bubble chart example
 **Pictorial**
 
 A *Pictorial* chart represents different stages of data using a bulb.
-Once a dataset has been selected, click the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
+Once a dataset has been selected, click the *Add Widget* icon of your sheet or the icon of the menu bar.
 Select Chart and then *Pictorial* as chart, choose just one measure to define the Serie and one attribute for the category.
 See below image
 
- .. figure:: media/image032.png
+ .. figure:: media/image032_1.png
 
 Pictorial chart example
+
+This kind of chart lets the upload of an SVG image that can transform the look and feel of your pictorial chart.
+See below image.
+
+ .. figure:: media/image032_2.png
+
+Pictorial chart with SVG example
+
+The following image shows where the SVG property can be found.
+
+ .. figure:: media/image032_3.png
+
+SVG property
 
 
 **Sankey**
