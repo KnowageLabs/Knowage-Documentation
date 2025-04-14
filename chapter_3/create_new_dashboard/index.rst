@@ -1048,7 +1048,7 @@ The Custom Chart allows the user to directly embed HTML, CSS and JS code using a
 .. important::
          **Chart libraries**
 
-         As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. 
+         Knowage EE supports the inclusion of other libraries adding the CDN script tag in the html Editor. 
          Be aware that all urls not set in the whitelist will be deleted on save. 
          To use this import apply the kn-import tag like the following example:
          
