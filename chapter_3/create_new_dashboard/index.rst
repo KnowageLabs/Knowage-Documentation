@@ -69,7 +69,7 @@ Below the list of the available functionalities.
 
 Widgets Types
 ------------------------------------------------------------------------------------------------------------------------
-As seen above, the addition of a widget can be done either through the icon displayed from the sheet of a dashboard or 
+As seen in the above table, the addition of a widget can be done either through the icon displayed from the sheet of a dashboard or 
 from the appropriate button appearing in the upper right bar. 
 When clicking a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
 A widget's editor normally has two sections:
@@ -195,8 +195,8 @@ new ones are now available:
    - Waterfall
 
 Below the general steps to be followed to insert a chart.
-After selecting the dataset and clicking the *Add widget* icon the chart gallery opens to pick up desired chart to draw.
-Once a chart has been selected The *Data* section or *Editor* opens. Here it is possible to drag and drop your column(s) into:
+After selecting the dataset and clicking the *Add widget* icon the chart gallery opens to pick up the desired chart to draw.
+Once a chart has been selected The *Data* section opens. Here it is possible to drag and drop your column(s) into:
    - the *Dimension(s)* area, for measures
    - the *Values* area, for attributes.
 
