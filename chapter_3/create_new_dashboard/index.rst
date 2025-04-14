@@ -85,7 +85,7 @@ widget, the *Settings* section will contain the *Gallery* property that does not
    |  Section Name      | Description                                                                  |
    +====================+==============================================================================+
    | Data               | In this section the user can:                                                |
-   |                    |   - select the data set to work with                                         |
+   |                    |   - select the dataset to work with                                         |
    |                    |   - select the columns to show (use the *Arrow* to insert all columns)       |
    |                    |   - specify a *Sorting Column* and an *Ascending/Descending* order           |
    |                    |   - change the aggregate function for measure columns                        |
