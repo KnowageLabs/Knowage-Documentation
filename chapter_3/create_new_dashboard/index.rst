@@ -691,7 +691,7 @@ Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements. 
 This widget supports all HTML5 standard tags and CSS3 properties.
-By clicking on the *Add widget* button or icon and then *HTML* you can insert the HTML widget.
+By clicking the *Add widget* button or icon and then *HTML* you can insert the HTML widget.
 
 For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted 
 after saving the document.
@@ -1040,17 +1040,17 @@ After choosing the column to use as a filter just move to the *Setting* section 
 
 Custom chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then *Custom Chart*  it is possible to add a *Custom Chart* widget to the dashboard.
+By clicking the *Add widget* button or icon and then *Custom Chart*  it is possible to add a *Custom Chart* widget to the dashboard.
 
 
-The Custom Chart allows the user to directly embed html, css and js code using a supported external chart library and integrating with Knowage data and interactions using custom API.
+The Custom Chart allows the user to directly embed HTML, CSS and JS code using a supported external chart library and integrating with Knowage data and interactions using custom API.
 
 .. important::
          **Chart libraries**
 
          As a default Knowage supports natively Chart.js (version 1.0.2) for the Community edition and Highcharts.js (version 7.1.1) for the Enterprise Edition. In CE and EE, Knowage supports d3.js library (version 3.5.5). It is possible also to include other libraries adding the CDN script tag in the html Editor. 
-         Be aware that url not set in the whitelist will be deleted on save. 
-         To use this import use the kn-import tag like the following example:
+         Be aware that all urls not set in the whitelist will be deleted on save. 
+         To use this import apply the kn-import tag like the following example:
          
          .. code-block:: html
             :linenos:
@@ -1058,7 +1058,7 @@ The Custom Chart allows the user to directly embed html, css and js code using a
             <kn-import src="yourCDNurl"></kn-import>
 
 
-This widget will be available only if the *create custom chart widget* option is enabled for a specific user role.
+This widget will only be available if the *Create custom chart widget* option is enabled for a specific user role.
 
 
 The **Editor** property under the *Settings* section allows to insert custom code for CSS, HTML and JavaScript.
@@ -1067,7 +1067,7 @@ The **Editor** property under the *Settings* section allows to insert custom cod
 
    Custom chart editor
 
-The CSS component allows to insert css classes that will be used by the HTML code of the widget. It's also possible to use `@import` command if the referred url is inside the whitelist.
+The CSS component allows to insert CSS classes that will be used by the HTML code of the widget. It's also possible to use `@import` command if the referred url is inside the whitelist.
 
 The HTML component allows to insert HTML tags in order to create a structure to host the custom chart and additional structural informations.
 
@@ -1723,7 +1723,7 @@ The below image shows how to enable the search bar by specifing on which fields 
 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then on *Python* it is possible to add a *Python* widget to the dashboard.
+By clicking the *Add widget* button or icon and then on *Python* it is possible to add a *Python* widget to the dashboard.
 The editor widget allows embedding a Python script. Before writing the code it is necessary to specify 
 
    1 - the type of the output produced by the script:
