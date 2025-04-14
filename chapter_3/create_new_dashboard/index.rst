@@ -1940,16 +1940,16 @@ It is possible to delete the association just clicking on the trash icon appeari
 
 Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
-In case of more sheets inside a dashboard there is the requirement to have the same header.
-You can create the header and making it available for all sheets just in one shot. 
-To create a custom Header click the three dots menu of the bar, select *Custom Header* as shown below.
+In case of more sheets inside a dashboard there may be a need to have the same header for all sheets.
+By enabling the header it can be made available for all sheets just in one shot. 
+To create a *custom header* click the three dots menu of the menu bar and select *Custom Header* as shown below.
 
 
 .. figure:: media/image077.png
 
    Custom Header
 
-The image used for the header can be selected from the Gallery if available and the *Editor* allows typing custom CSS/HTML if necessary
+The image used for the header can be selected from the Gallery if available and the *Editor* allows typing custom CSS/HTML if necessary.
 
 
 
