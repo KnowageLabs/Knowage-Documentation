@@ -4,7 +4,7 @@ Create a New Dashboard
 The graphical interface for creating the new dashboard looks slightly different from the one used for the previous cockpit.
 New features have been added, such as new charts and new widgets
 
-The below pictures respectively show the chart gallery with the availability of new charts and new widgets enriched with 
+The below pictures respectively show the chart gallery with the availability of new charts (some of them are highlighted in yellow) and new widgets enriched with 
 the presence of the *Pivot* and *Map* widgets.
 
 
@@ -165,8 +165,8 @@ The *Style* setting allows to handle the properties styles for the image such as
 
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-As previously mentioned the new dashboard comes with an enriched chart gallery. 
-So, in addition to those charts used for creating the old cockpit:
+As previously mentioned the new dashboard comes with an enriched gallery of charts. 
+That means that in addition to those charts used for creating the old cockpit:
 
    - Bar
    - Line
@@ -187,10 +187,10 @@ new ones are now available:
    - Activity Gauge
    - Dumbbell
    - Funnel
-   - **Packed Bubble**
+   - Packed Bubble
    - Pictorial
    - Sankey
-   - **Scatter Jitter**
+   - Scatter Jitter
    - Stream
    - Waterfall
 
