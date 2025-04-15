@@ -69,9 +69,9 @@ Themes can be downloaded and imported on a new installation.
 
 Licenses
 ------------------------------------------------------------------------------------------------------------------------
-This feature allows the management of Knowage licenses by adding, updating, downloading or removing a license.
+This feature allows the management of Knowage licenses by adding, updating or removing a license.
 
-.. figure:: media/licenses_8.1.png
+.. figure:: media/licenses.png
 
     Events
 
