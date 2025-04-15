@@ -1855,13 +1855,13 @@ See below image.
 
 .. figure:: media/image041.png
 
-   Activating cross navigation
+   Widget Theame
 
 The below image shows an example of two different themes applied to the corresponding table widgets.
 
 .. figure:: media/image043.png
 
-   Activating cross navigation
+   Widget Theame example
 
 The available themes have to be previously defined by an *admin user*.
 
