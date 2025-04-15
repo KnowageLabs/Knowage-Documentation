@@ -899,9 +899,9 @@ The below example shows how ordering a column.
 
 Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then *Pivot* it is possible to add a *Pivot* widget to the dashboard.
-With this widget the user can decide wich fields of a dataset could be represented as a *column* and wich one as a *row*.
-The below image shows an example of a *Pivot* widget. Chachges to the layout can be made by handling the *Style* properties defined 
+By clicking the *Add widget* button or icon and then *Pivot* it is possible to add a *Pivot* widget to the dashboard.
+With this widget the user can decide wich field of a dataset could be represented as a *column* and wich one as a *row*.
+The below image shows an example of a *Pivot* widget. Changes to the layout can be made by handling the *Style* properties defined 
 in the *Settings* section of the widget.
 
  .. figure:: media/image083.png
@@ -916,8 +916,8 @@ After selecting the dataset, you can drag and drop fields to define columns, row
 
 
 By clicking on the icon highlighted in the below image a *Field chooser* appears.
-Here you can handle some properties as ordering just by clicking the arrow appearing on the right side of each field or you can simply change the attributes
-to show in your pivot table.
+Here you can handle some properties as ordering just by clicking the arrow appearing on the right side of each field or you can simply exchange the attributes
+previosly selected to show in your pivot table.
 
        .. figure:: media/image090.png
 
@@ -929,7 +929,7 @@ Filters on values can be applied just by clicking the funnel icon.
 
    Pivot widget - applying filters
 
-By default all fields are visualized as text. In case you need a specific measure to represented i.e. as an icon you just need 
+By default all fields are visualized as text. In case you need a specific measure to be represented i.e. as an icon you just need 
 to click the *plus icon*, select a measure column from the drop down menu and the *visualization* type.
 
        .. figure:: media/image092.png
@@ -938,8 +938,8 @@ to click the *plus icon*, select a measure column from the drop down menu and th
 
 
 Conditional styles can also be applied to a measure so that when resulting i.e. greater that a specific value the color can be a different one.
-If a particular for column to be represented as an icon, it is important to handle this property to specify the range of values ​​for which the measure will appear as an icon. 
-Outside the range(s) the measure will appear as text.
+For all those columns to be represented as an icon, it is important to handle this property to specify the range of values ​​for which the measure will appear as an icon. 
+Outside the specified range(s) the measure will appear as text.
 
        .. figure:: media/image093.png
 
@@ -952,7 +952,7 @@ Outside the range(s) the measure will appear as text.
 
 Map widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then *Map* it is possible to add a *Map* widget to the dashboard.
+By clicking the *Add widget* button or icon and then *Map* it is possible to add a *Map* widget to the dashboard.
 The Map Widget is useful when a user needs to visualize data related to a geographic position. The widget supports multiple layers, one for every dataset added to widget and one data field for every layer.
 
 .. figure:: media/image055.png
@@ -995,9 +995,8 @@ The *plus* icon to the left of the *trash* allows the addition of new informatio
 
         Data visualization for layers
 
-For every layer, there are different ways to display data on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
-When representing data as markers the user can choose between *Icon, Image and Web Image* markers. The below image shows an example where an Icon has been chosen.
-In red is highlated the picker for choosing icons and the icon selected that in this case corresponds to the *anchor* icon.
+When representing data as markers the user can choose between *Icon, Image and Web Image* markers. The below image shows an example where an icon has been chosen.
+The image highlights both the picker for choosing icons and the icon selected that in this case corresponds to the *anchor* icon.
 
 .. figure:: media/image110.png
 
@@ -1027,7 +1026,7 @@ be visible and clickable to open the list. On each item of the list a *trash* ic
    Active selections widget - Style property
 
  Be aware that a selection can be locked. In this case it will be not possible to delete that selection until unlocked. This can only be done by admin users.
- This forces the final user to run the dashboard with that selection that will not be removed as locked.
+ This forces the final user to run the dashboard with that selection that will not be removed as locked by the admin user.
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1835,7 +1834,7 @@ Steps to add a calculated field:
  - select a dataset 
  - click on the *Add Columns* button as shown in the below image.
  - follow the instructions appearing in the pop up (assign a name, a function,..)
- - close the pop-up by clicking on *Apply*. The button remains graid off until validation is done.
+ - close the pop-up by clicking *Apply*. The button remains graid off until validation is done.
 
  .. figure:: media/image045.png
 
@@ -1955,7 +1954,7 @@ The image used for the header can be selected from the Gallery if available and 
 
 Multisheet
 ------------------------------------------------------------------------------------------------------------------------
-The Cockpit engine allows to manage contents in multiple sheets. 
+The dashboard engine allows to manage contents in multiple sheets. 
 Each sheet can contain different analysis with different datasets.
 Just click on the *Plus* icon and rename the new sheet.
 
