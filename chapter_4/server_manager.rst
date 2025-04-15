@@ -73,7 +73,7 @@ This feature allows the management of Knowage licenses by adding, updating or re
 
 .. figure:: media/licenses.png
 
-    Events
+    Licenses
 
 
 Events
