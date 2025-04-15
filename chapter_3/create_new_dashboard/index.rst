@@ -1691,9 +1691,9 @@ The below image shows an example of dicovery widget.
 
 Facets properties can be handled by enabling the related option i.e. selecting which faces to visualize.
 See below images.
-To throw the filtering on the table the property *Enable Selection* has to be enabled
+To throw the filtering on the table the property *Enable Selection* has to be enabled.
 
-Other properties to handled are:
+Other properties to handle are:
 
    - *Closed by default*, if enabled the facets will be visible as closed groups by default.
 
@@ -1941,7 +1941,7 @@ Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
 In case of more sheets inside a dashboard there may be a need to have the same header for all sheets.
 By enabling the header it can be made available for all sheets just in one shot. 
-To create a *custom header* click the three dots menu of the menu bar and select *Custom Header* as shown below.
+To create a *custom header* click the three dots item of the menu bar and select *Custom Header* as shown below.
 
 
 .. figure:: media/image077.png
