@@ -1,18 +1,18 @@
-Create Data Mining analysis
+Create Advanced Data Analysis
 ========================================================================================================================
 
 Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making and business strategies. In particular, Knowage **Data Mining Engine** integrates Python scripting capabilities.
 
-Thanks to Knowage **Data Mining Engine**, it is possible to execute Python scripts in an interactive way and enrich traditional datasets with new information. This means that it allows users to perform statistical or data mining analysis on different Knowage datasets.
+Thanks to this functionality, it is possible to execute Python scripts in an interactive way and enrich traditional datasets with new information. This means that it allows users to perform statistical or data mining analysis on different Knowage datasets.
 
 The data scientists can thus integrate its own algorithm within Knowage and deliver their output to the end user, together with new advanced visualization options useful to discover meaningful insights hidden in the data.
 
+The Catalog Function features leverage on the Python Engine. To understand how to install and configure it, please refer to the `Installation Manual <https://knowage-suite.readthedocs.io/en/master/installation-guide/python-installation.html>`__
 
 Functions Catalog
 ------------------------------------------------------------------------------------------------------------------------
 
-The Data Mining can be managed through the **Functions** framework. In this section we will see how to explore and handle this part, while in *Use a function inside documents* we will see how to use functions.
-
+In this section we will see how to explore and handle the **Functions** framework., while in *Use a function inside documents* we will see how to use functions.
 First click on the **Functions** menu under the **Catalogs** section from the Knowage main page as shown below.
 
 .. figure:: media/menu_catalogo.png
@@ -136,11 +136,6 @@ Finally it is important to define what kind of outputs the function has produced
 -  **Field Type**: it can be *ATTRIBUTE* or *MEASURE*, and defines how the column will behave inside documents;
 -  **Type**: it depends on the selected Field Type, it can be *String*, *Number (float)* or *Date*;
 
-
-Engine description
-------------------------------------------------------------------------------------------------------------------------
-
-The Catalog Function features leverage on the Python Engine. To understand how to install and configure it, please refer to the `Installation Manual <https://knowage-suite.readthedocs.io/en/master/installation-guide/python-installation.html>`__
 
 Use a function inside documents
 ------------------------------------------------------------------------------------------------------------------------
