@@ -1003,6 +1003,7 @@ The image highlights both the picker for choosing icons and the icon selected th
         Marker represented as icon
 
 Below an example of how a map can look like depending on how data is visualized.
+The below example shows a map with markers.
 
 .. figure:: media/markers_map.png
 
