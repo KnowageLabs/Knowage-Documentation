@@ -1004,7 +1004,7 @@ The image highlights both the picker for choosing icons and the icon selected th
 
 Below an example of how a map can look like depending on how data is visualized.
 
-.. figure:: media/image106_2.png
+.. figure:: media/markers_map.png
 
         Data visualization types on a map
 
