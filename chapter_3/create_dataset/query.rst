@@ -36,3 +36,21 @@ In the script below we use JavaScript to dynamically modify the ``FROM`` clause 
             }	  
 
 In the above example we use the function *isValid* to test whether the parameter *year* contains a *null* value or not.
+
+The above SQL query refers to an example where no parameters have been used.
+In KNOWAGE when creating a dataset of QUERY type it is also possible to handle parameters in queries.
+Below are shown the steps to associate parameters to a dataset and manage their values (coming i.e. from an analytical driver) inside the query.
+
+.. figure:: media/ds_create_param_plus.png
+
+Create parameters in a dataset.
+
+As shown above the plus icon allows the creation of parameters that can be single or multi value.
+
+After creating your parameters they can be handled in the query using the syntax $P{parameter_name}.
+
+Below an example of a query with the parameter formerly created.
+
+.. figure:: media/query_with_param.png
+
+Create parameters in a dataset.
