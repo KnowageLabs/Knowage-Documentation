@@ -1030,6 +1030,12 @@ As a result of the former configuration you will see a map as shown below.
 
         Example of a map with tooltip
 
+Instead of a tooltip it can also be used a dialog box.
+
+.. figure:: media/dialog_map.png
+
+        Defining a dialog for a map
+
 It is also possible to use a combination made of a dataset and a topojson file, thus use two layers with an attribute used as a kind of join.
 
 .. figure:: media/set_map_04.png
