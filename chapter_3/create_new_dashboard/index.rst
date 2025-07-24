@@ -1030,6 +1030,12 @@ As a result of the former configuration you will see a map as shown below.
 
         Example of a map with tooltip
 
+It is also possible to use a combination of a dataset and a topojson file, thus use two layers with a common attribute 
+(with the same name), which will be used as a kind of join.
+
+.. figure:: media/set_map_04.png
+
+        Example of settings for a map using two layers
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
