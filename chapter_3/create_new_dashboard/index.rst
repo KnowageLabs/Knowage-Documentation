@@ -1009,10 +1009,31 @@ The below example shows a map with markers.
 
         Data visualization types on a map
 
+Below, we will see an example of a map created by using a topojson file and choroplet as the visualization type.
+The topojson file was initially used to create a layer under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
+Once added, it is enough to set the visualization criteria as shown in the figure below.
+
+.. figure:: media/set_map_01.png
+
+        Example of map settings
+
+The goal is to show the unit sales for each region when hovered over with the mouse. To do this, you will need to enable a *Tooltip* by choosing 
+the layer and property to display.
+
+.. figure:: media/set_map_02.png
+
+        Defining a tooltip
+
+As a result of the former configuration you will see a map as shown below.
+
+.. figure:: media/set_map_03.png
+
+        Example of a map with tooltip
+
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking on the *Add widget* button or icon and then *Active Selections* it is possible to add a *Active Selections* widget to the dashboard.
+By clicking the *Add widget* button or icon and then *Active Selections* it is possible to add a *Active Selections* widget to the dashboard.
 This chart shows the list of current selections applied on a widget. An icon on the right upper corner of the dashboard will 
 be visible and clickable to open the list. On each item of the list a *trash* icon is available for the deletion of that selection.
 
