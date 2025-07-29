@@ -1093,7 +1093,7 @@ The Custom Chart allows the user to directly embed HTML, CSS and JS code using a
 
 .. figure:: media/js_library_custom.png
 
-   Javascript section for libraries
+   Libraries section
 
 This widget will only be available if the *Create custom chart widget* option is enabled for a specific user role.
 
