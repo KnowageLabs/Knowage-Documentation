@@ -1089,7 +1089,7 @@ The Custom Chart allows the user to directly embed HTML, CSS and JS code using a
 
             <kn-import src="yourCDNurl"></kn-import>
 
-         Now you can insert the library link from the Javascript section of the Editor panel as shown below.
+         Now you can insert the library link from the *Libraries* section of the Editor panel as shown below.
 
 .. figure:: media/js_library_custom.png
 
