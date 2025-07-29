@@ -1081,26 +1081,30 @@ The Custom Chart allows the user to directly embed HTML, CSS and JS code using a
 .. important::
          **Chart libraries**
 
-         Knowage EE supports the inclusion of other libraries adding the CDN script tag in the html Editor. 
-         Be aware that all urls not set in the whitelist will be deleted on save. 
-         To use this import apply the kn-import tag like the following example:
+         Former versions of Knowage EE supported the inclusion of other libraries adding the CDN script tag in the html Editor by means of the
+         kn-import tag:
          
          .. code-block:: html
             :linenos:
 
             <kn-import src="yourCDNurl"></kn-import>
 
+         Now you can insert the library link from the Javascript section of the Editor panel as shown below.
+
+.. figure:: media/js_library_custom.png
+
+   Javascript section for libraries
 
 This widget will only be available if the *Create custom chart widget* option is enabled for a specific user role.
 
 
-The **Editor** property under the *Settings* section allows to insert custom code for CSS, HTML and JavaScript.
+Trough the  **Editor** panel alloit is also possible to insert custom code for CSS and HTML.
 
 .. figure:: media/image079.png
 
    Custom chart editor
 
-The CSS component allows to insert CSS classes that will be used by the HTML code of the widget. It's also possible to use `@import` command if the referred url is inside the whitelist.
+The CSS component allows to type in CSS classes that will be used by the HTML code of the widget. It's also possible to use `@import` command if the referred url is inside the whitelist.
 
 The HTML component allows to insert HTML tags in order to create a structure to host the custom chart and additional structural informations.
 
