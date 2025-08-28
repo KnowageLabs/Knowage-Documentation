@@ -8,6 +8,7 @@ How to upgrade KNOWAGE
    
    upgrade/how_upgrade_7_4_to_8_0.rst
    upgrade/how_upgrade_8_0_to_8_1.rst
+   upgrade/how_upgrade_8_1_to_9_0.rst
    
    
 .. Indices and tables
