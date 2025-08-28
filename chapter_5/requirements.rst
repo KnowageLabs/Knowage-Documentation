@@ -16,7 +16,7 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
    +===========================+=============+
    |    **Operating System**   | **Version** |
    +---------------------------+-------------+
-   |    CentOS                 | 7, 8        |
+   |    CentOS                 | 8,9         |
    +---------------------------+-------------+   
    |    Windows                | 7, 10       |
    +---------------------------+-------------+
@@ -29,7 +29,7 @@ The following Operating Systems (OS) are those ones which suit with Knowage plat
     +=============================+===================+
     |    **Operating System**     | **Version**       |
     +-----------------------------+-------------------+
-    |    RHEL Red Hat Enterprise  | 7                 |
+    |    RHEL Red Hat Enterprise  | 8                 |
     +-----------------------------+-------------------+
     |    Ubuntu                   | 22.04 LST         |
     +-----------------------------+-------------------+
@@ -44,8 +44,8 @@ The Knowage installation requires 2 GB of available space on file system. This s
 Java environment
 ------------------------------------------------------------------------------------------------------------------------
 
-The enviroment in which Knowage will be installed must include a JDK 1.8 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured. The steps to configure it depend on the OS.
-Knowage is compatible with Open JDK 1.8.
+The enviroment in which Knowage will be installed must include a JDK 17 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured. The steps to configure it depend on the OS.
+Knowage is compatible with Open JDK 17.
 
 Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,7 +56,7 @@ Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` use
         :caption: Instructions to set the JAVA_HOME variable for Linux environment.
 
         export JAVA_HOME=<root path of the Java installation>
-        export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60/
+        export JAVA_HOME=/usr/lib/jvm/jdk17....0_60/
         export PATH=$JAVA_HOME/bin:$PATH
 
 Windows
@@ -107,12 +107,12 @@ It is recommended to create a proper user for the execution of Tomcat. We state 
 
         export TOMCAT_HOME=<path of the installation Tomcat root folder >
 
-- Be sure that the Tomcat uses the JDK 1.8: usually the Tomcat settings are defined in the ``TOMCAT_HOME/bin/setenv.sh`` file, therefore if the ``TOMCAT_HOME/bin/setenv.sh`` file does not exit, the user must create it and insert it in the content as shown below. Note that ``CATALINA_PID`` contains the ID of the Tomcat process and it kills the process if needed.
+- Be sure that the Tomcat uses the JDK 17: usually the Tomcat settings are defined in the ``TOMCAT_HOME/bin/setenv.sh`` file, therefore if the ``TOMCAT_HOME/bin/setenv.sh`` file does not exit, the user must create it and insert it in the content as shown below. Note that ``CATALINA_PID`` contains the ID of the Tomcat process and it kills the process if needed.
 
 .. code-block:: sh
 
         export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid
-        export JAVA_HOME=<root folder of the JDK 1.8 installation>
+        export JAVA_HOME=<root folder of the JDK 17 installation>
 
 - Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
 
@@ -136,7 +136,7 @@ Knowage uses a schema to manage metadata, that is all those information required
     +---------------------+---------------+------------------+
     | **Support Type**    | **DBMS**      | **Version**      |
     +=====================+===============+==================+
-    |    Certified        | Oracle        | 8, 9, 10, 11, 12 |
+    |    Certified        | Oracle        | 10, 11, 12, 19   |
     +---------------------+---------------+------------------+
     |    Certified        | MySql         | 5.7, 8.0         |
     +---------------------+---------------+------------------+
@@ -160,7 +160,7 @@ NodeJS requirements
 
          NodeJS is required only for Enterprise Edition.
 
-Knowage includes some NodeJS scripts that need to be executed with NodeJS 14 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
+Knowage includes some NodeJS scripts that need to be executed with NodeJS 16 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
 
 CentOS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -245,8 +245,6 @@ Knowage provides a distribution of Chromium for its functionalities but some oth
 .. code-block:: sh
         :caption: Installation of Chromium dependencies
 
-        # For CentOS 7
-        yum install -y at-spi2-atk cups-libs expat glib2 glibc.i686 glibc libcanberra-gtk3 libgcc libstdc++ libX11 libXScrnSaver minizip nspr nss-mdns nss-util nss policycoreutils-python policycoreutils zlib
 
         # For CentOS 8
         dnf install -y libX11 libX11-xcb libXcomposite libXcursor libXdamage libXext libXi libXtst nss libXScrnSaver libXrandr alsa-lib atk at-spi2-atk pango gtk3 libgbm
@@ -268,7 +266,7 @@ For example, to install non-latin languages fonts you could use:
 .. code-block:: sh
         :caption: Installation of non-latin language fonts
 
-        # For CentOS 7
+        # For CentOS 8
         yum groupinstall fonts
 
         # For Ubuntu
