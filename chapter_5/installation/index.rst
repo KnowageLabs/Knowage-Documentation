@@ -9,9 +9,11 @@ The present document illustrates how to install and configure the Knowage suite.
    :maxdepth: 10
    
    software_release.rst
+   knowage-ce-installer.rst
+   docker_instalation_ee.rst
    manual_installation.rst
    python-installation.rst
-   knowage-ce-installer.rst
+   
 
    
 .. Indices and tables
