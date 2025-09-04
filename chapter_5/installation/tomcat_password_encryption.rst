@@ -4,14 +4,16 @@ Encrypted Passwords for Tomcat DataSources
 This feature allows you to store encrypted JNDI DataSource passwords in server.xml (prefixed with “#encr#…”) while keeping the decryption key protected outside server.xml.
 
 Goals:
+
 - Only “#encr#BASE64…” is stored in server.xml
 - The decryption key is read from a system property 'symmetric_encryption_key'
 
 Includes:
+
 - A custom Tomcat DataSourceFactory
 - A small CLI to encrypt a password once
 - Build, install, and configuration steps
-- Examples and troubleshooting
+- Examples
 
 How it works
 ------------------------------------------------------------------------------------------------------------------------
@@ -29,6 +31,7 @@ Build
 ------------------------------------------------------------------------------------------------------------------------
 
 Clean and package
+
 .. code-block:: bash
   mvn clean package
 
