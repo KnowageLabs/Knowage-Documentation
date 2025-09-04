@@ -74,8 +74,10 @@ Configure the DataSource (server.xml)
 ------------------------------------------------------------------------------------------------------------------------
 
 Example (MySQL):
+
 .. code-block:: xml
    :linenos:
+
     <Resource
       name="jdbc/yourDS"
       auth="Container"
@@ -87,7 +89,8 @@ Example (MySQL):
       password="#encr#BASE64_CIPHERTEXT"
       maxActive="20"
       maxIdle="4"
-      validationQuery="SELECT 1"/>
+      validationQuery="SELECT 1"
+      />
 
 Quick checklist
 ------------------------------------------------------------------------------------------------------------------------
