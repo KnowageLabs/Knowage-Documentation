@@ -36,14 +36,17 @@ Clean and package
   	    :linenos:
 
         mvn clean package
+        
 
 Install on Tomcat
 ------------------------------------------------------------------------------------------------------------------------
 
 Place the jar on Tomcat’s common classpath:
+
 - Location: ${CATALINA_BASE}/lib
 
 Options:
+
 - Shaded jar: copy only target/tomcat-password-encryption-<version>-shaded.jar
 - Lean jar: copy target/tomcat-password-encryption-<version>.jar and also jasypt-1.9.3.jar into ${CATALINA_BASE}/lib
 
@@ -56,22 +59,19 @@ Set the JVM property:
 
 - -Dsymmetric_encryption_key=your_secret
 
-## Generate an encrypted password (“#encr#…”)
+Generate an encrypted password (“#encr#…”)
 ------------------------------------------------------------------------------------------------------------------------
 
 Use the included CLI to produce the encrypted string you will paste into server.xml. Use the same key source as Tomcat (JVM property symmetric_encryption_key).
 
-If the jar already includes Jasypt (single jar on classpath):
-
 .. code-block:: bash
         :linenos:
 
-        java -cp target/tomcat-password-encryption-<version>.jar
-        -Dsymmetric_encryption_key='YOUR_SECRET'
-        it.eng.knowage.tomcatpasswordencryption.helper.EncryptOnce 'CLEAR_PASSWORD'
+        java -cp target/tomcat-password-encryption-<version>.jar -Dsymmetric_encryption_key='YOUR_SECRET' it.eng.knowage.tomcatpasswordencryption.helper.EncryptOnce 'CLEAR_PASSWORD'
 
 
 Output:
+
 - A string starting with:
 
   #encr#BASE64_CIPHERTEXT
