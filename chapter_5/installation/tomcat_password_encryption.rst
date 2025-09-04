@@ -34,7 +34,7 @@ Clean and package
 
 .. code-block:: bash
   	    :linenos:
-        
+
         mvn clean package
 
 Install on Tomcat
@@ -64,13 +64,16 @@ Use the included CLI to produce the encrypted string you will paste into server.
 If the jar already includes Jasypt (single jar on classpath):
 
 .. code-block:: bash
-  java -cp target/tomcat-password-encryption-<version>.jar
-  -Dsymmetric_encryption_key='YOUR_SECRET'
-  it.eng.knowage.tomcatpasswordencryption.helper.EncryptOnce 'CLEAR_PASSWORD'
+        :linenos:
+
+        java -cp target/tomcat-password-encryption-<version>.jar
+        -Dsymmetric_encryption_key='YOUR_SECRET'
+        it.eng.knowage.tomcatpasswordencryption.helper.EncryptOnce 'CLEAR_PASSWORD'
 
 
 Output:
 - A string starting with:
+
   #encr#BASE64_CIPHERTEXT
 
 Paste this into the password attribute of your Resource in server.xml.
