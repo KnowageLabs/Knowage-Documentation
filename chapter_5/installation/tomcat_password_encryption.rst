@@ -33,7 +33,9 @@ Build
 Clean and package
 
 .. code-block:: bash
-  mvn clean package
+  	    :linenos:
+        
+        mvn clean package
 
 Install on Tomcat
 ------------------------------------------------------------------------------------------------------------------------
