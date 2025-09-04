@@ -1,4 +1,5 @@
-# Encrypted Passwords for Tomcat DataSources
+Encrypted Passwords for Tomcat DataSources
+========================================================================================================================
 
 This feature allows you to store encrypted JNDI DataSource passwords in server.xml (prefixed with “#encr#…”) while keeping the decryption key protected outside server.xml.
 
@@ -12,33 +13,27 @@ Includes:
 - Build, install, and configuration steps
 - Examples and troubleshooting
 
----
-
-## How it works
+How it works
+------------------------------------------------------------------------------------------------------------------------
 
 - In server.xml, your JNDI Resource uses a custom DataSourceFactory.
 - If the password starts with “#encr#…”, the factory decrypts it at runtime before the pool is initialized.
 - System property -Dsymmetric_encryption_key=your_secret
 
-Note: If the password does not start with “#encr#…”, it’s used as-is.
+.. important::
+    **CLEAR PASSWORDS**
 
----
+    Note: If the password does not start with “#encr#…”, it’s used as-is.
 
-## Build
+Build
+------------------------------------------------------------------------------------------------------------------------
 
-1) Clean and package
-```shell script
-# bash
-mvn clean package
-```
+Clean and package
+.. code-block:: bash
+  mvn clean package
 
-2) Verify the produced jar. It must contain only this module’s classes (it/eng/knowage/tomcatpasswordencryption/…).
-
-Tip: Prefer a shaded jar (single file, embedded dependencies) to avoid managing Jasypt separately.
-
----
-
-## Install on Tomcat
+Install on Tomcat
+------------------------------------------------------------------------------------------------------------------------
 
 Place the jar on Tomcat’s common classpath:
 - Location: ${CATALINA_BASE}/lib
@@ -49,28 +44,25 @@ Options:
 
 Restart Tomcat.
 
----
-
-## Configure the key
+Configure the key
+------------------------------------------------------------------------------------------------------------------------
 
 Set the JVM property:
 
 - -Dsymmetric_encryption_key=your_secret
 
----
-
 ## Generate an encrypted password (“#encr#…”)
+------------------------------------------------------------------------------------------------------------------------
 
 Use the included CLI to produce the encrypted string you will paste into server.xml. Use the same key source as Tomcat (JVM property symmetric_encryption_key).
 
 If the jar already includes Jasypt (single jar on classpath):
 
-```shell script
-# bash
-java -cp target/tomcat-password-encryption-<version>.jar \
-  -Dsymmetric_encryption_key='YOUR_SECRET' \
+.. code-block:: bash
+  java -cp target/tomcat-password-encryption-<version>.jar
+  -Dsymmetric_encryption_key='YOUR_SECRET'
   it.eng.knowage.tomcatpasswordencryption.helper.EncryptOnce 'CLEAR_PASSWORD'
-```
+
 
 Output:
 - A string starting with:
@@ -78,37 +70,30 @@ Output:
 
 Paste this into the password attribute of your Resource in server.xml.
 
----
-
-## Configure the DataSource (server.xml)
+Configure the DataSource (server.xml)
+------------------------------------------------------------------------------------------------------------------------
 
 Example (MySQL):
-```xml
-<!-- xml -->
-<Resource
-  name="jdbc/yourDS"
-  auth="Container"
-  type="javax.sql.DataSource"
-  factory="it.eng.knowage.tomcatpasswordencryption.KnowageTomcatEncryptedPasswordDatasource"
-  driverClassName="com.mysql.cj.jdbc.Driver"
-  url="jdbc:mysql://db-host:3306/yourdb?useSSL=false&serverTimezone=UTC"
-  username="dbuser"
-  password="#encr#BASE64_CIPHERTEXT"
-  maxActive="20"
-  maxIdle="4"
-  validationQuery="SELECT 1"/>
-```
+.. code-block:: xml
+   :linenos:
+    <Resource
+      name="jdbc/yourDS"
+      auth="Container"
+      type="javax.sql.DataSource"
+      factory="it.eng.knowage.tomcatpasswordencryption.KnowageTomcatEncryptedPasswordDatasource"
+      driverClassName="com.mysql.cj.jdbc.Driver"
+      url="jdbc:mysql://db-host:3306/yourdb?useSSL=false&serverTimezone=UTC"
+      username="dbuser"
+      password="#encr#BASE64_CIPHERTEXT"
+      maxActive="20"
+      maxIdle="4"
+      validationQuery="SELECT 1"/>
 
+Quick checklist
+------------------------------------------------------------------------------------------------------------------------
 
-Notes:
-- Plain text passwords still work; decryption is attempted only when the value starts with “#encr#”.
-
----
-
-## Quick checklist
-
-- [ ] Build a clean (or shaded) jar.
-- [ ] Copy the jar to ${CATALINA_BASE}/lib.
-- [ ] Set the JVM option symmetric_encryption_key
-- [ ] Generate a “#encr#…” value with the CLI and paste it into server.xml.
-- [ ] Restart Tomcat and verify DB connectivity.
+- Build a clean (or shaded) jar.
+- Copy the jar to ${CATALINA_BASE}/lib.
+- Set the JVM option symmetric_encryption_key
+- Generate a “#encr#…” value with the CLI and paste it into server.xml.
+- Restart Tomcat and verify DB connectivity.
