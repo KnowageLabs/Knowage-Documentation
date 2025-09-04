@@ -13,6 +13,7 @@ The present document illustrates how to install and configure the Knowage suite.
    docker_instalation_ee.rst
    manual_installation.rst
    python-installation.rst
+   tomcat_password_encryption.rst
    
 
    
