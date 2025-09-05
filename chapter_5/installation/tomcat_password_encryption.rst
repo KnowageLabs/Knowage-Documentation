@@ -47,8 +47,7 @@ Place the jar on Tomcat’s common classpath:
 
 Options:
 
-- Shaded jar: copy only target/tomcat-password-encryption-<version>-shaded.jar
-- Lean jar: copy target/tomcat-password-encryption-<version>.jar and also jasypt-1.9.3.jar into ${CATALINA_BASE}/lib
+- jar: copy target/tomcat-password-encryption.jar and also jasypt-1.9.3.jar into ${CATALINA_BASE}/lib
 
 Restart Tomcat.
 
@@ -67,7 +66,7 @@ Use the included CLI to produce the encrypted string you will paste into server.
 .. code-block:: bash
         :linenos:
 
-        java -cp target/tomcat-password-encryption-<version>.jar -Dsymmetric_encryption_key='YOUR_SECRET' it.eng.knowage.tomcatpasswordencryption.helper.EncryptOnce 'CLEAR_PASSWORD'
+        java -cp target/tomcat-password-encryption.jar -Dsymmetric_encryption_key='YOUR_SECRET' it.eng.knowage.tomcatpasswordencryption.helper.EncryptOnce 'CLEAR_PASSWORD'
 
 
 Output:
