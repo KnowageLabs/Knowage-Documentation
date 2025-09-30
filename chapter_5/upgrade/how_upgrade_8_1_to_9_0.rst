@@ -41,7 +41,8 @@ To upgrade Knowage installation follow these steps:
    .. code-block:: bash
     :linenos:
 
-    ORA_upgradescript_8.1_to_9.0.sql
+    ORA_upgradescript_8.1_to_8.2.sql
+    ORA_upgradescript_8.2_to_9.0.sql
 
 
 
@@ -51,7 +52,7 @@ To upgrade Knowage installation follow these steps:
 
 -  copy and paste all the new ``knowage*.war`` packages within ``TOMCAT_HOME/webapps`` directory;
 
--  you need to add the ``symmetric_encryption_key`` system property in file ``TOMCAT_HOME/bin/setenv.sh`` or ``TOMCAT_HOME/bin/setenv.bat``; that property is required to encrypt/decrypt the JDBC data source passwords:
+-  Make sure you have set the ``symmetric_encryption_key`` system property in file ``TOMCAT_HOME/bin/setenv.sh`` or ``TOMCAT_HOME/bin/setenv.bat``; that property is required to encrypt/decrypt the JDBC data source passwords:
 
 .. code-block:: bash
 
@@ -60,6 +61,16 @@ To upgrade Knowage installation follow these steps:
 .. code-block:: bash
 
    set JAVA_OPTS=%JAVA_OPTS% -Dsymmetric_encryption_key=<any random string>
+
+-  Make sure you have set the ``hazelcast.ignoreXxeProtectionFailures`` system property in file ``TOMCAT_HOME/bin/setenv.sh`` or ``TOMCAT_HOME/bin/setenv.bat``;
+
+.. code-block:: bash
+
+  export JAVA_OPTS="$JAVA_OPTS  -Dhazelcast.ignoreXxeProtectionFailures=true"
+  
+.. code-block:: bash
+
+   set JAVA_OPTS=%JAVA_OPTS%  -Dhazelcast.ignoreXxeProtectionFailures=true
 
 - In case you defined contexts with relevant files inside ``TOMCAT_HOME/conf/Catalina/localhost`` 
 
