@@ -651,6 +651,12 @@ See below image
 
    Scatter chart - defining series and categories
 
+Below an example of a *Scatter chart*.
+
+ .. figure:: media/scatter.png
+
+   An example of a *Scatter* chart
+
 
 **Scatter Jitter**
 
@@ -663,7 +669,7 @@ See below image
    Scatter jitter - defining attribute and measure
 
 
-.. figure:: media/image064.png
+.. figure:: media/scatter_jitter.png
 
    Scatter jitter chart example
 
