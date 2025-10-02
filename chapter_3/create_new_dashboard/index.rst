@@ -635,10 +635,16 @@ The gallery offers two kinds of charts: *Sankey* and *Sankey Inverted*. The last
 Once selected the dataset, you need to choose two attributes representing the *from* and the *to* categories of the flow and a measure.
 
 
- .. figure:: media/image033.png
+ .. figure:: media/sankey.png
 
-Sankey chart example
+ Example of a *Sankey* chart
+ 
 
+The *Sankey inverted* will look like as shown below:
+
+ .. figure:: media/sankey_inverted.png
+
+ Example of a *Sankey Inverted* chart
 
 **Scatter**
 
