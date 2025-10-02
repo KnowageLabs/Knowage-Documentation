@@ -260,7 +260,7 @@ An example below.
 
 Bar chart example
 
- **Column**
+**Column**
 The *Column* chart is like a *Bar* chart with vertical orientation.
 How to define measures and attributes is shown below
 
@@ -339,6 +339,10 @@ The below image shows an example of a sunburst chart using the dataset previousl
 .. figure:: media/image1101112.png
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
+
+Another example of a Sunburst chart is shown by the following image.
+
+.. figure:: media/sunburst.png
 
 **Wordcloud**
 
@@ -518,6 +522,7 @@ Below you can see how to set the aliases. From the drop down menu you can choose
 If you want to set properties for the Tooltip just click Tooltip and set Bold and Backgroud color as shown in the below image
 
 .. figure:: media/image020.png
+   
 
    Setting Tooltip example
 
