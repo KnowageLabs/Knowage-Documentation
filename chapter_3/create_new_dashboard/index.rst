@@ -216,7 +216,7 @@ See below picture.
 
 .. figure:: media/image016.png
 
-Once the chart has been inserted in the sheet of the dashboard, a three dots icon in the lower left part of the widget the displays a menu with the list of possible actions.
+Once the chart has been inserted in the sheet of the dashboard, a three dots icon in the lower left part of the widget displays a menu with the list of all the possible actions to perform.
 See below image.
 
 .. figure:: media/image028.png
