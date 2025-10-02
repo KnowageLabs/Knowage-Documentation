@@ -206,15 +206,21 @@ The below image refers to a *Funnel* chart where the definition of both the meas
 
 .. figure:: media/image014.png
 
+Example of Dimensions and Values areas for a chart
+
 Not all charts need both information as if you refer to an *Activity Gauge* you only need to define the measure. See image below.
 
 .. figure:: media/image015.png
+
+Example of Measures (Values area) 
 
 One important peculiarity to highlight is the possibility to change the type of chart once a selection has already been done.
 The drop down menu with your choice will still make available all the other charts as options to choose and in case the chart can be changed. 
 See below picture.
 
 .. figure:: media/image016.png
+
+Example of how to change a type of chart
 
 Once the chart has been inserted in the sheet of the dashboard, a three dots icon in the lower left part of the widget displays a menu with the list of all the possible actions to perform.
 See below image.
