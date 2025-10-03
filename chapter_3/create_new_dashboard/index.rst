@@ -331,11 +331,11 @@ An example below.
 
 **Pie**
 
-A *pie* chart helps organize and show data in a circular form as a percentage of a whole.
+A *Pie* chart helps organize and show data in a circular form as a percentage of a whole.
 
 .. figure:: media/image062.png
 
-   Pie chart example
+   A *Pie* chart example
 
 
 **Sunburst**
