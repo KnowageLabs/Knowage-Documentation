@@ -815,6 +815,20 @@ To set grids details just folow the path as shown below.
 
 **Series**
 
+To add some details to the values of your measures of a chart there is a specific section named *Series*.
+Here you have the chance to set prefix/suffix i.e.
+The suffix could be used to specify which currency that measure represent in case of costs or sales for example.
+
+.. figure:: media/serie1.png
+
+   Setting series details
+
+In case of further series the interface allows to insert a new one just pressing the *plus* icon.
+In case new series details are inserted they will overwrite the former ones. for that serie.
+
+All changes need always a save action to be applied to the chart.
+In case you do not want to apply details anymore just disable the option.
+
 **Advanced**
 
 This section allows you to write properties from the *Highcharts API*.
