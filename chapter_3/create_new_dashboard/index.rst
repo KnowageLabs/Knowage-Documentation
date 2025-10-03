@@ -800,6 +800,19 @@ In addition there some other functionalities:
 
 **Axis Major/Minor Grids Details**
 
+The below image shows an example of a chart with grids defined for the Y-axis. There are two grids both highligted with dashed lines.
+Intervals are respectively set to 1500 (Minor Grid) and to 4000 (Major Grid).
+
+.. figure:: media/grid1.png
+
+   Grids on the Y-axis
+
+To set grids details just folow the path as shown below.
+
+.. figure:: media/grid2.png
+
+   Setting grids details on the Y-axis
+
 **Series**
 
 **Advanced**
