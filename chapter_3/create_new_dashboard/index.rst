@@ -808,7 +808,27 @@ In addition there some other functionalities:
 
 **No data message**
 
+**Colors**
 
+Go to this sections in case you need to add additional colors to be represented in your graph.
+
+For example if you want that your column chart displays a green color with #7FFFD4 as hex code to be used for a specific measure.
+
+.. figure:: media/colors1.png
+
+   Inserting a new color
+
+After filling the hex code of your color click the plus icon to include it in the list of colors and drag it to the first place of the list.
+
+.. figure:: media/colors2.png
+
+   Dragging a new color
+
+As a result the chart will look like as shown below.
+
+.. figure:: media/colors3.png
+
+   A new color in the chart
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
