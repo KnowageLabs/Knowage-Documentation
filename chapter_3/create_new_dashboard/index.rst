@@ -252,6 +252,7 @@ See below image.
 
 
 **Area**
+
 An area chart is based on the line chart and displays the area between axis and lines with colors. 
 Commonly used to compare two or more measures. Below an example of an *Area* chart.
 
@@ -260,6 +261,7 @@ Commonly used to compare two or more measures. Below an example of an *Area* cha
 Note that the measures are not summed along the Y-axis as happens with a *Stacked Area* chart and as you will see later.
 
 **Bar**
+
 The *Bar* chart allows a method of displaying data with categories represented by rectangles (or groups) horizontally oriented.
 
 An example below.
@@ -269,6 +271,7 @@ An example below.
 Bar chart example
 
 **Column**
+
 The *Column* chart is like a *Bar* chart with vertical orientation.
 How to define measures and attributes is shown below
 
