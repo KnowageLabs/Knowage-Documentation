@@ -784,6 +784,16 @@ As you can see the ordering for the category is set to NONE as there is an asced
 
 **Filtering**
 
+The *Data* sections also alllow to set filtering on a specific category/measure.
+
+To apply filtering you just need to click the *Gear* icon the the enable the Functionlaity as shown in the below image.
+
+.. figure:: media/filtering.png
+
+   An example of filtering
+
+After enabling filtering a menu will be available and you will be able to select a criterion to apply from the list.
+
 **Grouping**
 
 In addition there some other functionalities:
