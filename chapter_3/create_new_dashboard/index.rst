@@ -825,7 +825,9 @@ In case you had a category with date type you can enable the format to be displa
 
 .. figure:: media/dataformat1.png
 
+   Enabling the Date type option
 
+You need to enable the option, choose a specific format form the menu list and save.
 
 **No data message**
 
