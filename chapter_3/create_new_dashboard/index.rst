@@ -774,7 +774,7 @@ To apply a specific sorting criterion, simply click the appropriate icon, as sho
 
    Descending ordering example
 
-Please note that this ASC/DESC option on a category will automatically be disabled when you set a sort order for the measurements.
+Please note that the ASC/DESC option on a category will automatically be disabled when you set a sort order for the measurements.
 
 .. figure:: media/ordering_measures.png
 
@@ -796,6 +796,31 @@ After enabling filtering a menu will be available and you will be able to select
 
 **Grouping**
 
+This functionality allows to group two categories of a chart and show the values of a given measure for each group.
+
+.. figure:: media/grouping.png
+
+   Enabling grouping
+
+In the above image the *Group by categories* option is shown. You need to enable it and save your settings.
+
+.. figure:: media/grouping2.png
+
+   Categories grouped along the X-axis
+
+The Grouping functionality contains also the *Second Category* option. By enabling this option you need to select a specific series and the chart will show
+the values of that series for each value of the second category along the X-axis represented by the first category.
+
+.. figure:: media/grouping_3.png
+
+   Second category option
+
+.. figure:: media/grouping_4.png
+
+   A Chart showing values based on the second category
+
+
+
 In addition there some other functionalities:
 
 **Axis Major/Minor Grids Details**
@@ -807,7 +832,7 @@ Intervals are respectively set to 1500 (Minor Grid) and to 4000 (Major Grid).
 
    Grids on the Y-axis
 
-To set grids details just folow the path as shown below.
+To set grids details just follow the path as shown below.
 
 .. figure:: media/grid2.png
 
