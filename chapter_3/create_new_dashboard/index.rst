@@ -819,7 +819,7 @@ To add some details to the values of your measures of a chart there is a specifi
 Here you have the chance to set prefix/suffix i.e.
 The suffix could be used to specify which currency that measure represent in case of costs or sales for example.
 
-.. figure:: media/serie1.png
+.. figure:: media/series1.png
 
    Setting series details
 
