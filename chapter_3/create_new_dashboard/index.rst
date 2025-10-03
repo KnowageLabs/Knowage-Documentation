@@ -828,6 +828,11 @@ In case you had a category with date type you can enable the format to be displa
    Enabling the Date type option
 
 You need to enable the option, choose a specific format from the menu list and save.
+In case of a Line chart the result will look like as below.
+
+.. figure:: media/dateformat2.png
+
+   Date type option in the chart
 
 **No data message**
 
