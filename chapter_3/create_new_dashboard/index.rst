@@ -256,9 +256,21 @@ See below image.
 An area chart is based on the line chart and displays the area between axis and lines with colors. 
 Commonly used to compare two or more measures. Below an example of an *Area* chart.
 
-.. figure:: media/area.png
+.. figure:: media/area_2.png
+
+   Example of an Area chart
 
 Note that the measures are not summed along the Y-axis as happens with a *Stacked Area* chart and as you will see later.
+
+**Stacked Area**
+
+A stacked area chart extends the area chart by stacking areas on top of each other.
+
+.. figure:: media/stacked_area.png
+
+   Example of a Stacked Area chart
+
+Note that measures are summed along the Y-axis.
 
 **Bar**
 
