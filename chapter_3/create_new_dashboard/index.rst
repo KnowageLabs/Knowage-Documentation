@@ -496,6 +496,7 @@ Parallel chart - measures and attributes
 
 
 **Heatmap**
+
 A *Heatmap* is a two-dimensional representation of data whose values are represented by colors.
 Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend trough two categories.
 
@@ -514,6 +515,7 @@ All axes are joined in the center of the graph.
 To plot this graph at least one attribute and one measure are needed.
 
 .. figure:: media/image072_1.png
+
 Radar chart - defining attributes and measures
 
 .. figure:: media/image073_1.png
@@ -756,6 +758,32 @@ Select yor dataset and then you will be asked to enter just one attribute as cat
 .. figure:: media/image038.png
 
    Waterfall chart example
+
+After describing most of the graphs below we provide an overview of the main features available and useful when creating charts.
+
+**Ordering**
+
+The below image shows an example of how to apply ordering for a given *category*
+
+
+
+**Filtering**
+
+**Grouping**
+
+In addition there some other functionalities:
+
+**Axis Major/Minor Grids Details**
+
+**Series**
+
+**Advanced**
+
+**Date type**
+
+**No data message**
+
+
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
