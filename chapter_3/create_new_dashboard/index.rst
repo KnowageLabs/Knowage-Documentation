@@ -297,6 +297,23 @@ The above image shows the *Maximum number of records* property enabled and set t
 
    Column chart example
 
+**Stacked Bar**
+
+A stacked bar chart is used to break down and compare different categories as part of a whole represented by a bar.
+
+.. figure:: media/stacked_bar.png
+
+   An example of Stacked bar chart
+
+**Stacked Column**
+
+A stacked column column is similar to the stacked bar char but changes the orientation of the bars to vertical.
+
+.. figure:: media/stacked_column.png
+
+   An example of Stacked column chart
+
+
 **Line**
 The *Line* chart uses points connected by line segments from left to right to show how data changes.
 An example below.
