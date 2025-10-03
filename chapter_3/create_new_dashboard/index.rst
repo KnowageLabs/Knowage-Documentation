@@ -804,6 +804,21 @@ In addition there some other functionalities:
 
 **Advanced**
 
+This section allows you to write properties from the *Highcharts API*.
+As an example a property to write could be *plotOptions.column.borderRadius*.
+
+
+.. figure:: media/advanced1.png
+
+   The Advanced section
+
+After saving the property the columns of the chart be more rounded.
+
+.. figure:: media/advanced2.png
+
+   Example of a chart displayng changes after inserting a new API property
+
+
 **Date type**
 
 **No data message**
