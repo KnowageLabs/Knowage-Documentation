@@ -257,6 +257,7 @@ Commonly used to compare two or more measures. Below an example of an *Area* cha
 
 .. figure:: media/area.png
 
+Note that the measures are not summed along the Y-axis as happens with a *Stacked Area* chart and as you will see later.
 
 **Bar**
 The *Bar* chart allows a method of displaying data with categories represented by rectangles (or groups) horizontally oriented.
