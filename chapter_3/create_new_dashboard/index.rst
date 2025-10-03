@@ -305,6 +305,13 @@ A stacked bar chart is used to break down and compare different categories as pa
 
    An example of Stacked bar chart
 
+If you want to represent the percentage and not the value of the measurements, you need to set the *Stacking* property 
+to *Percent* as shown below.
+
+.. figure:: media/stacking.png
+
+   Stacking property for Stacked chart
+
 **Stacked Column**
 
 A stacked column column is similar to the stacked bar char but changes the orientation of the bars to vertical.
