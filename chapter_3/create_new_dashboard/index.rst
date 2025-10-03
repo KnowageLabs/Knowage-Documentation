@@ -821,6 +821,12 @@ After saving the property the columns of the chart be more rounded.
 
 **Date type**
 
+In case you had a category with date type you can enable the format to be displayed on the chart.
+
+.. figure:: media/dataformat1.png
+
+
+
 **No data message**
 
 If you want to customize the message when no data is retrieved you can do it just going to a specific section as shown below.
