@@ -823,6 +823,22 @@ After saving the property the columns of the chart be more rounded.
 
 **No data message**
 
+If you want to customize the message when no data is retrieved you can do it just going to a specific section as shown below.
+
+For example if you want the message *No data to show* to be displayed at the left top and want it to appear in red as color go to
+*Settings>Configuration>No Data*.
+
+.. figure:: media/nodata1.png
+
+   No data message section
+
+After inserting your message and set the related properties you will see the following
+
+.. figure:: media/nodata2.png
+
+   Visualization of your message
+
+
 **Colors**
 
 Go to this sections in case you need to add additional colors to be represented in your graph.
