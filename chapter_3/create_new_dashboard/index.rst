@@ -251,7 +251,14 @@ See below image.
  When hoving the two vertical dotted lines a little hand appears to move the widget.  
 
 
- **Bar**
+**Area**
+An area chart is based on the line chart and displays the area between axis and lines with colors. 
+Commonly used to compare two or more measures. Below an example of an *Area* chart.
+
+.. figure:: media/area.png
+
+
+**Bar**
 The *Bar* chart allows a method of displaying data with categories represented by rectangles (or groups) horizontally oriented.
 
 An example below.
