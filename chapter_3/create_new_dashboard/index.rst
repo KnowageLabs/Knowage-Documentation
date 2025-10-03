@@ -763,9 +763,24 @@ After describing most of the graphs below we provide an overview of the main fea
 
 **Ordering**
 
-The below image shows an example of how to apply ordering for a given *category*
+The below images shows an example of how to apply ordering for a given *category*.
+To apply a specific sorting criterion, simply click the appropriate icon, as shown in the image.
 
+.. figure:: media/ordering_asc.png
 
+   Ascending ordering example
+
+.. figure:: media/ordering_desc.png
+
+   Descending ordering example
+
+Please note that this ASC/DESC option on a category will automatically be disabled when you set a sort order for the measurements.
+
+.. figure:: media/ordering_measures.png
+
+   Setting ordering for measures
+
+As you can see the ordering for the category is set to NONE as there is an asceding criterion applied for the sales measure.
 
 **Filtering**
 
