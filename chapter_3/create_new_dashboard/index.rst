@@ -2118,6 +2118,13 @@ Once again, we can select ``Frozen food`` subcategory and drill to a second sub-
 And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to 
 the previous level. This efficient feature allows a deep insight of the analysis that leads to important conclusions.
 
+The below image shows where to enable the drill-down functionality.
+
+.. figure:: media/drill.png
+
+   Enabling the drill-down
+
+
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
 To manage the cache and frequency of your data you need to select the dataset form the list of the available ones 
