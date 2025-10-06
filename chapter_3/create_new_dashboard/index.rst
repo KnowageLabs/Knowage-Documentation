@@ -1330,7 +1330,7 @@ The Custom Chart allows the user to directly embed HTML, CSS and JS code using a
 
          Now you can insert the library link from the *Libraries* section of the Editor panel as shown below.
 
-.. figure:: media/js_library_custom.png
+.. figure:: media/libraries.png
 
    Libraries section
 
