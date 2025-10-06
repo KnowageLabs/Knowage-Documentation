@@ -2152,7 +2152,7 @@ Steps to add a calculated field:
 
    Reopen details of a calculated field
 
-Widget Theme
+Widget Theme and Title
 ------------------------------------------------------------------------------------------------------------------------
 
 This is a functionality introduced on the new *Dashboard* available in the *Settings* section just clicking on *Style*.
