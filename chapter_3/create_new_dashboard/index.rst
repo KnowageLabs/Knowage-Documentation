@@ -2182,13 +2182,7 @@ From the *Data* section you need to click the gear icon and switch on the *Enabl
 
 Afterwards you need to choose the *comparison operator* and specify a value.
 
-
-.. figure:: media/filtering_3.png
-
-   Activating filters - 2
-
-
- From the same editor it is also possible to set the ordering on a field as shown below.
+From the same editor it is also possible to set the ordering on a field as shown below.
 
 .. figure:: media/ordering_4.png
 
