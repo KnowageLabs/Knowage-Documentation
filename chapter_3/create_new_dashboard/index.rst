@@ -2152,7 +2152,7 @@ Steps to add a calculated field:
 
    Reopen details of a calculated field
 
-Widget Theame
+Widget Theme
 ------------------------------------------------------------------------------------------------------------------------
 
 This is a functionality introduced on the new *Dashboard* available in the *Settings* section just clicking on *Style*.
@@ -2160,15 +2160,21 @@ See below image.
 
 .. figure:: media/image041.png
 
-   Widget Theame
+   Widget Theme
 
 The below image shows an example of two different themes applied to the corresponding table widgets.
 
 .. figure:: media/image043.png
 
-   Widget Theame example
+   Widget Theme example
 
 The available themes have to be previously defined by an *admin user*.
+
+The *Style* section allows also to give a title to the chart defining its display properties.
+
+.. figure:: media/widget_title.png
+
+   Widget Title
 
 Filters and ordering on fields
 ------------------------------------------------------------------------------------------------------------------------
