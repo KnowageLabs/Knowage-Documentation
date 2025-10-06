@@ -2272,6 +2272,11 @@ Just click on the *Plus* icon and rename the new sheet.
 
    Multisheet functionality
 
+To move the widget from ine sheet to another just open the three dots menu in the left bottom side, select *Move Widget* and specify the name of the Sheet.
+
+.. figure:: media/move_widget.png
+
+   Multisheet functionality
 
 Export dashboard
 ------------------------------------------------------------------------------------------------------------------------
