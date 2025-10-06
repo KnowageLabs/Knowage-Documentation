@@ -2176,6 +2176,7 @@ Filters and ordering on fields
 The below two images shows how to enable the filtering functionality on a specific field of a dataset.
 From the *Data* section you need to click the gear icon and switch on the *Enable filter* to choose the *comparison operator* with a specific value.
 
+
 .. figure:: media/filtering_2.png
 
    Activating filters - 1
@@ -2183,6 +2184,7 @@ From the *Data* section you need to click the gear icon and switch on the *Enabl
 .. figure:: media/filtering_3.png
 
    Activating filters - 2
+
 
  From the same editor it is also possible to set the ordering on a field as shown below.
 
