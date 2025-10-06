@@ -2035,6 +2035,35 @@ To support this kind of choice a list of available libraries is displayed for ea
    Python environments
 
 
+Add a dataset to the dashboard
+------------------------------------------------------------------------------------------------------------------------
+To add a dataset to the dashboard there are two options. You can click the two icons highlighted in the below image.
+
+   .. figure:: media/add_ds_1.png
+
+   Adding a dataset
+
+By clicking on them you need to click the *Add Datset* button to display the list of all datsets available.
+
+   .. figure:: media/add_ds_2.png
+
+   Selecting a dataset from a list
+
+The below image shows the datset that have been selected for the new dashboard.
+
+   .. figure:: media/add_ds_3.png
+
+   List of dataset for a dashboard
+
+As you can see, the above list contains a dataset with parameters. In case you need to set up the value of the parameterjust click
+the name of the dataset and select the type of parameter.
+
+   .. figure:: media/add_ds_4.png
+
+   Dataset with parameter
+
+For static parameters just put the value otherwise specify the name of the parameter that will contain the value.
+
 Cross Navigation
 ------------------------------------------------------------------------------------------------------------------------
 The cross navigation allows navigation from one document to another.
