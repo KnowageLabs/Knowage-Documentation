@@ -2184,14 +2184,16 @@ Afterwards you need to choose the *comparison operator* and specify a value as s
 
 .. figure:: media/filtering_3.png
 
-   Activating filters - 2
+   Activating filters -2
 
 From the same editor it is also possible to set the ordering on a field as shown below.
 
 .. figure:: media/ordering_4.png
 
-
   Ordering on a field
+
+Ordering is available both on *categories* and *values* and are mutually exclusive as it is only possible to arrange an order
+eather for one or for the other. The order criterion established on a given category will be automatically disabled when clicking the arrow icon of a value.
 
 Variables
 ------------------------------------------------------------------------------------------------------------------------
