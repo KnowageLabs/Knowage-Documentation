@@ -11,9 +11,11 @@ Data security and access management
    role_user.rst
    driver.rst
    lov.rst
+   check.rst
    document.rst
    repository_management.rst
    menu.rst
+   bm_lineage.rst
    
 .. Indices and tables
 .. ==================
