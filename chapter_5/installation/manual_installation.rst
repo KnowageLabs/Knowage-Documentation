@@ -178,6 +178,17 @@ The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source
 
   If you are using Oracle provided Java, this configuration may lead to the error *"Illegal key size or default parameters"*. This is a problem with limited Java security policies. See https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppC for more information.
 
+-  Make sure you have set the ``hazelcast.ignoreXxeProtectionFailures`` system property in file ``TOMCAT_HOME/bin/setenv.sh`` or ``TOMCAT_HOME/bin/setenv.bat``;
+
+.. code-block:: bash
+
+  export JAVA_OPTS="$JAVA_OPTS  -Dhazelcast.ignoreXxeProtectionFailures=true"
+  
+.. code-block:: bash
+
+   set JAVA_OPTS=%JAVA_OPTS%  -Dhazelcast.ignoreXxeProtectionFailures=true
+
+
 Installation of Chromium Cockpit Export script
 ------------------------------------------------------------------------------------------------------------------------
 .. important::
