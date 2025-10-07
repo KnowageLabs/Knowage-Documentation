@@ -15,6 +15,7 @@ A dataset allows you to read data from multiple sources and represents the porti
    solr.rst
    python.rst
    qbe.rst
+   advanced.rst
 
 .. Indices and tables
 .. ==================
