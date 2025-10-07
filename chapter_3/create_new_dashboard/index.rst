@@ -310,7 +310,14 @@ to *Percent* as shown below.
 
 .. figure:: media/stacking.png
 
-   Stacking property for Stacked chart
+   Stacking property for a Stacked chart
+
+
+As shown below, after enabling the *Staking* property values along the Y-axis changes to *percent* values.
+
+.. figure:: media/stacking_2.png
+
+   Stacking values on a Stacked chart
 
 **Stacked Column**
 
