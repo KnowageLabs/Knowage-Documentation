@@ -510,7 +510,7 @@ Heatmap chart uses a chromatic Cartesian coordinate system to represent a measur
 .. figure:: media/image070_1.png
 Heatmap chart - measures and attributes
 
-.. figure:: media/image071.png
+.. figure:: media/heatmap_chart.png
 Heatmap chart example
 
 
