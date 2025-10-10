@@ -139,7 +139,7 @@ This functionality allows to export/import users from one installation/tenant to
 
 .. figure:: media/image73.png
 
-    User Export
+    Exporting Users
 
 To generate the zip file, fill in the name of your file and select the users to include. You can also include the personal folder of the users just checking the option **Export Personal folder**.
 
@@ -148,7 +148,7 @@ Now click on the *Start import* button and your users will be created. See figur
 
 .. figure:: media/image74.png
 
-    User Import
+    Importing Users
 
 .. important::
 
