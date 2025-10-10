@@ -78,6 +78,12 @@ After clicking the *Export* button you can decide whether to include or not the 
 - **Related documents**
    By checking this property, the export will include all those documents linked through the cross navigation to the selected documents.
 
+.. figure:: media/image67_b.png
+
+    Document Export options
+
+To import documents click on the *IMPORT* link, choose or drag your file and click the *NEXT* button.
+
 .. figure:: media/image68.png
 
     Document Import
