@@ -57,15 +57,6 @@ Clicking on *NEXT*, it is possible to see and select the items to be imported..
   
 Click on the *IMPORT* button to make selected widgets and functions available in the new environment.
 
-.. figure:: media/impexp_gallery7.png
-
-    Gallery Management Gui
-
-
-.. figure:: media/impexp_gallery8.png
-
-    Functions Management Gui
-
 
 Documents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
