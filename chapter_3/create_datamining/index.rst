@@ -15,7 +15,7 @@ Functions Catalog
 In this section we will see how to explore and handle the **Functions** framework., while in *Use a function inside documents* we will see how to use functions.
 First click on the **Functions** menu under the **Catalogs** section from the Knowage main page as shown below.
 
-.. figure:: media/menu_catalog.png
+.. figure:: media/menu_catalogo.png
 
     Functions Catalog from Knowage menu.
 
