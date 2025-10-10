@@ -197,11 +197,7 @@ Let’s start from the export feature. The user at first selects the KPIs to be 
 - the scorecards related to the selected KPIs,
 - schedulations.
 
-Click on the red download button to get a zip file.
-
-.. figure:: media/image792.png
-
-    Start export button
+Click on the download icon to get the zip file.
 
 Once the zip file is downloaded, the user has to switch to the tenant used for the import and as admin enter the Import/Export KPIs functionality and move to the Import tab.
 
