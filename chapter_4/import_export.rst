@@ -35,12 +35,14 @@ After the selection, give a name to the file and confirm with *Export* button.
 
 **Import**
 
-You can import the zip file formerly exported just clicking on *IMPORT*. See below image:
+You can import the zip file formerly exported just clicking on *IMPORT* and then clicking the *CHOOSE* button to select the file. See below image:
+You can also drag the file.
 
 .. figure:: media/impexp_gallery4.png
 
     Artifacts Import - Export file selection #1
 
+ After selecting the file to import the *NEXT* button will became available.
 
 .. figure:: media/impexp_gallery5.png
 
