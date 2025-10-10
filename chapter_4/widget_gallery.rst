@@ -63,7 +63,7 @@ When adding a widget in a dashboard, the wizard shows a *Gallery* tab, containin
 The empty template allows users to create a custom widget without starting from an already created template.
 The *Gallery* tab would not be available if any templates were not already formerly saved and therefore available to be used.
 
-.. figure:: media/image4-b.png
+.. figure:: media/image4_b.png
 
     New widget templates list.
 
