@@ -56,18 +56,14 @@ Editors will look like different, depending on the type of widget:
 
 Use the *Save* icon to save the template.
 
-.. figure:: media/image3.png
-
-    Toolbar icons.
-
 Dashboard gallery
 ------------------------------------------------------------------------------------------------------------------------
 
-When adding a widget in a dashboard (cockpit document), the wizard shows a *Gallery* tab, containing a first empty template and then a set of available templates showing their image, tags and eventually the description. 
+When adding a widget in a dashboard, the wizard shows a *Gallery* tab, containing a first empty template and then a set of available templates showing their image, tags and eventually the description. 
 The empty template allows users to create a custom widget without starting from an already created template.
 The *Gallery* tab would not be available if any templates were not already formerly saved and therefore available to be used.
 
-.. figure:: media/image4.png
+.. figure:: media/image4-b.png
 
     New widget templates list.
 
@@ -75,6 +71,6 @@ The *Gallery* tab would not be available if any templates were not already forme
 Clicking on a given template, the code is automatically copied in the new widget template.
 The user just needs to make some changes some to the code to customize and create the desired widget.
 
-.. figure:: media/image5.png
+.. figure:: media/image5_b.png
 
     Selected template editor.
