@@ -168,13 +168,9 @@ If you are using a function inside a widget it means that you have already selec
 
     Catalog function interface in widgets.
 	
-From this point forward the rest of the configuration is identical for both widget and preview. The first thing that you have to do on the right tab, is bind the input columns of the function with the actual columns coming from the chosen dataset.
-
-By doing this you are providing the **actual data** to the function template. From time to time you can provide different data to the same function just by changing the selected dataset. Depending on this, the same algorithm that is saved inside the function template will work on a different set of data and return different outputs. 
-
-.. figure:: media/function_input_column_binding.png
-
-    Input columns binding.
+From this point forward the rest of the configuration is identical for both widget and preview.
+The first thing that you have to do is to bind the input columns of the function with the columns 
+coming from the selected dataset.
 	
 The below image shows an example of a Logarithm function inside a document.
 Into the specific we are going to add a new column that will be the logarithm of a value of a specific column that already exists from the dataset.
