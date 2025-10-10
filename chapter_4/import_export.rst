@@ -249,14 +249,6 @@ Use the GUI to upload the zip file and specify if overwriting the existing analy
 
     Import of analytical drivers
 
-.. figure:: media/image88.png
-
-    Import of analytical drivers
-
-.. figure:: media/image89.png
-
-    Import of analytical drivers
-
 The process ends with a message containing the information about the import.
 
 Glossary
