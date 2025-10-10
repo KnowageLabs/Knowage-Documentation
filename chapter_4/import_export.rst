@@ -70,27 +70,9 @@ Below, you can see how the export editor looks like.
     Document Export
 
 Fill in the name of your export and select which documents to export. You can browse through folders by clicking on the relative icon. Check the items to include in the file.
-The export icon changes colour from grey to pink. Before starting to export, you can decide whether to include or not the following options:
+The export icon changes colour from grey to pink. 
+After clicking the *Export* button you can decide whether to include or not the following options:
 
-- **Olap customized View**
-   By checking this property, the export will include all the customized views saved into the selected OLAP documents. 
-   Customized views can be retrieved clicking on the option *Show OLAP custom View* of the Document Menu. See below image for more details:
-
-.. figure:: media/OCW_8.1.png
-
-    Olap customized view
-
-- **Scheduled documents**
-   By checking this property, the export will include all the scheduled executions saved into the selected documents. You can find the scheduled executions clicking on the option *Show Scheduled Execution* of the Document Menu. See the figure below:
-
-.. figure:: media/SDOC.png
-
-    Scheduled documents
-
-- **BIRT Translation**
-   By checking this property, the export will include all the *translation* added into the *Localization* functionalities of BIRT templates.
-- **Schedule configurations**
-   By checking this property, the export will include all the scheduling associated to the selected documents. At the end of the import, the scheduling information will be saved into the Scheduler section.
 - **Export the document only in the selected functionality**
    By checking this property, the export will include documents only if they are inside a selected functionality.
 - **Related documents**
