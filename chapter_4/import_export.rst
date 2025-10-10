@@ -168,7 +168,7 @@ The details are shown in the below figure.
 
 .. figure:: media/image75_8.1.png
 
-    Catalogs Export
+    Exporting Catalogs
 
 To generate the zip file, mark the items to include and fill in the export name. Save the export file in your local system. 
 
@@ -176,7 +176,7 @@ To import a zip file, log in to the source tenant, select **Catalogs** from the 
 
 .. figure:: media/image76.png
 
-    Catalogs Import
+    Importing Catalogs
 
 KPIs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -220,14 +220,6 @@ Referring to the following image, the user has to specify if:
 
 Once the import is started, the GUI leads the user to finalize the import procedure. 
 
-
-    Mapping data sources
-
-The process ends successfully when the wizard shows up as following.
-
-.. figure:: media/image85.png
-
-    Import KPIs ended successfully
 
 Analytical Drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
