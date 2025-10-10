@@ -258,14 +258,15 @@ The export/import of glossary allows the user to align glossaries among tenants.
 
 .. figure:: media/image90.png
 
-    Export/Import of glossaries window
+    Export/Import glossaries window
 
-In the *Export* tab, the user is asked to select the glossaries to export and type a name that will be assigned to the zip file. The searching functionality can be used for the selection.
+In the *Export* tab, the user is asked to select the glossaries to export and type a name that will be assigned to the zip file.
+The searching functionality can be used for the selection of the glossaries. Use the download icon to get the zip file.
 
-Afterwards, connecting as admin to a target tenant, the user selects the *Import* tab from the Export/Import main window.
+By connecting with admin privileges to a target tenant, the user selects the *Import* tab from the Export/Import main window.
 
 .. figure:: media/image91.png
 
-    Import of glossaries
+    Importing glossaries
 
 Arrows are used to indicate the glossaries to consider for the import.
