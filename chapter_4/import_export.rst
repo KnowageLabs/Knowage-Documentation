@@ -236,8 +236,8 @@ Afterwards:
 
 - log in as administrator to the source tentant,
 - assign a name to the export, 
-- check the analytical drivers of interest and 
-- click on the download icon, available at the top right corner of the page to get the zip file. 
+- select the analytical drivers of your interest and 
+- click the download icon, available at the top right corner of the page to get the zip file. 
 
 It is possible to narrow the search of the analytical drivers by filtering on their creation date.
 
