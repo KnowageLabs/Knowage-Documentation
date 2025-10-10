@@ -199,7 +199,7 @@ Let’s start from the export feature. The user at first selects the KPIs to be 
 
 Click on the red download button to get a zip file.
 
-.. figure:: media/image79.png
+.. figure:: media/image792.png
 
     Start export button
 
@@ -207,7 +207,7 @@ Once the zip file is downloaded, the user has to switch to the tenant used for t
 
 The user must therefore browse the personal folder to catch the zip file and click on the red upload button, as shown below.
 
-.. figure:: media/image82.png
+.. figure:: media/image823.png
 
     Import tab
 
