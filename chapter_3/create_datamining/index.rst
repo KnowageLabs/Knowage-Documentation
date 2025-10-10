@@ -41,11 +41,11 @@ The actions that a user can perform depend on the user’s role. However, indepe
 
 The categories for functions depends on an admin user. Taking *Functions Catalog interface* figure as an example, we have:
 
-1. **Text Analysis**: make sense of unstructured text,
+1. **Text Analysis**: makes sense of unstructured text,
 
-2. **Machine Learning**: teach your app to teach himself,
+2. **Machine Learning**: teachs your app to teach itself,
 
-3. **Computer Vision**: identify objects in images,
+3. **Computer Vision**: identifies objects in images,
 
 4. **Utilities**: ready to use microservices,
 
