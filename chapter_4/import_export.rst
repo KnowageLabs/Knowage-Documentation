@@ -264,6 +264,7 @@ In the *Export* tab, the user is asked to select the glossaries to export and ty
 The searching functionality can be used for the selection of the glossaries. Use the download icon to get the zip file.
 
 By connecting with admin privileges to a target tenant, the user selects the *Import* tab from the Export/Import main window.
+once selected the zip file through the browsing button just click the uploading icon.
 
 .. figure:: media/image91.png
 
