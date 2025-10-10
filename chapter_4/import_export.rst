@@ -89,6 +89,7 @@ To import documents click on the *IMPORT* link, choose or drag your file and cli
     Document Import
 
 You will be asked to map *Roles*, *Engines*, *Datasources* and *Metadata* from *Source* to *Target*.
+After compliting all the steps to Metadata, you can start the import.
 
 .. figure:: media/image110.png
 
@@ -97,15 +98,6 @@ You will be asked to map *Roles*, *Engines*, *Datasources* and *Metadata* from *
 If a role does not match any of the existing ones, the role will be created. 
 **Please bear in mind that all the target metadata with the same label i.e. documents, lovs, drivers will be overwritten when importing**.
 
-.. figure:: media/image113.png
-
-   Document Export Missing licenses
-
-Before starting the import procedure, licenses are checked and if one or more are missing or are not valid, the user will be informed with the list of all those documents that will not be imported. See image below.
-
-.. figure:: media/image114.png
-
-   Document Import Missing licenses
 
 Menu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
