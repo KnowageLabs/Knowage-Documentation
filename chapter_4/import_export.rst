@@ -5,7 +5,7 @@ This functionality allows to import/export items belonging to *Gallery*, *Docume
 After exporting, the user can import the information previously extracted into a different Knowage installation or tenant.
 
 
-.. figure:: media/ie_menu_8.1.png
+.. figure:: media/import_export.png
 
    Import/Export menu
 
