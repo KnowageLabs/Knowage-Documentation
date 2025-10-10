@@ -90,10 +90,6 @@ In the “Column” instance the function takes input columns that will be refer
 
 In the “Variable” case, the user must insert one or more variables and match them with values using the dedicated area.
 
-.. figure:: media/function_input_tab_variable.png
-
-    The variable input of the function settings.
-
 The Script tab
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
