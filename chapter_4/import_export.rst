@@ -218,9 +218,8 @@ Referring to the following image, the user has to specify if:
 
     Import KPIs settings
 
-Once the import is started, the GUI leads the user to finalize the import procedure. In particular, the user is asked to map data sources correctly. See figure below.
+Once the import is started, the GUI leads the user to finalize the import procedure. 
 
-.. figure:: media/image84.png
 
     Mapping data sources
 
