@@ -146,7 +146,7 @@ When you are previewing the output of a function, you need to select the dataset
 
     Preview interface.
 	
-Instead, when you are creating a new widget that uses a function, you will need to click on the *Use function button* to access the configurator.
+Instead, when you are creating a new widget that uses a function, you will need to click on the *Add function* link to access the configurator.
 
 .. figure:: media/catalog_function_usefunction_widget.png
 
