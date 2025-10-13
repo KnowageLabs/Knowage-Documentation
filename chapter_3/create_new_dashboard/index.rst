@@ -2319,3 +2319,13 @@ The template of a dashboard is available editing the analytical document from th
 .. figure:: media/image115.png
 
    Dashboard template
+
+
+Responsive Functionality
+------------------------------------------------------------------------------------------------------------------------
+This functionality allows your new dashboard to adapt to the various devices.
+The below image shows the set of options that can be enabled.
+
+.. figure:: media/responsive.png
+
+   Responsive functionality
