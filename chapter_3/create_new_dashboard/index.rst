@@ -2325,6 +2325,7 @@ Responsive Functionality
 ------------------------------------------------------------------------------------------------------------------------
 This functionality allows your new dashboard to be adapted to the various i.e. small or large devices.
 The below image shows the set of options that can be enabled.
+As a first option there is one in case of only one widget in a dashboard.
 
 .. figure:: media/responsive.png
 
