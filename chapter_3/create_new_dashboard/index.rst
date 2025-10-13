@@ -2323,7 +2323,7 @@ The template of a dashboard is available editing the analytical document from th
 
 Responsive Functionality
 ------------------------------------------------------------------------------------------------------------------------
-This functionality allows your new dashboard to adapt to the various devices.
+This functionality allows your new dashboard to be adapted to the various i.e. small or large devices.
 The below image shows the set of options that can be enabled.
 
 .. figure:: media/responsive.png
