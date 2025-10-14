@@ -3,6 +3,10 @@ Scheduler
 
 Knowage scheduler allows to schedule the execution of one or more analytical documents published on the Server. Documents executed by the scheduler can then be distributed along different dispatching channels. In the following we describe how to create an activity, schedule it and dispatch the results.
 
+.. figure:: media/scheduler.png
+
+   Scheduler from menu
+
 Create an Activity
 ------------------------------------------------------------------------------------------------------------------------
 
