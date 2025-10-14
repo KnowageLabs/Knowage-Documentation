@@ -38,16 +38,16 @@ The following panel will be visible.
     Exploring the details of an existing word.
 
 
-To add a new word, click on the *Plus* icon available next to the *Word List* text item an fill in at leats the mandatory information,*Word*, *Category* and *Description*.
-Use the *Save* button to save it. 
-Once saved, you can search for it or a different word just using the search filter.
+To add a new word, click the *Plus* icon available next to the *Word List* text item an fill in at leats the mandatory information,*Word*, *Category* and *Description*.
+Use the *Save* button for saving. 
+Once saved, you can search it or a different word just by using the search filter.
 
 .. _addanewword:
 .. figure:: media/image459_8.1.png
 
     Add a new word.
 
-The *Glossary* panel contains all the glossaries formerly created. To explore an existing glossary just open the menu of the *Glossary Definition* item and select one of the test options. The figure below shows an example. 
+The *Glossary* panel contains all the glossaries formerly created. To explore an existing glossary just open the menu of the *Glossary Definition* item and select one of the options. The figure below shows an example. 
 A hierarchical structure of the glossary appears, where each node has its own words .
 
 .. figure:: media/image460_8.1.png
