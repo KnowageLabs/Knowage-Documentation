@@ -47,14 +47,15 @@ Once saved, you can search it or a different word just by using the search filte
 
     Add a new word.
 
-The *Glossary* panel contains all the glossaries formerly created. To explore an existing glossary just open the menu of the *Glossary Definition* item and select one of the options. The figure below shows an example. 
+The *Glossary* panel contains all the glossaries formerly created. 
+To explore an existing glossary just open the menu of the *Glossary Definition* item and select one of the options. The figure below shows an example. 
 A hierarchical structure of the glossary appears, where each node has its own words .
 
 .. figure:: media/image460_8.1.png
 
     Exploring a glossary from the menu.
 
-To add a new glossary click on the *Plus* icon next to the *Glossary Definition* text item.
+To add a new glossary click the *Plus* icon next to the *Glossary Definition* text item.
 
 .. _newglossnewahild:
 .. figure:: media/image46162_8.1.png
