@@ -27,7 +27,7 @@ The left side of the image above, presents the list of existing tenants with the
 
 .. figure:: media/image6465_8.1.png
 
-    Product types tab and Datasources tabs.
+    Datasources tab.
 
 In a *single-tenant* environment the *admin* role matches with the *superadmin*. In a *multi-tenants* environment only *one* user has the *superadmin* role for each tenant, while there can be more than one user with the *admin* role. 
 Furthermore, the superadmin is the only one who can set up JNDI datasources and access the cache configuration.
