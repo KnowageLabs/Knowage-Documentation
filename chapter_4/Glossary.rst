@@ -30,7 +30,8 @@ As shown above, next to each word, there are two icons:
       
 - *delete*: deletes the selected word
 
-In the “Word” area are listed, if any, the words created in a previous moment. To explore the detail of each of them, the user just has to right click on it. A panel containing three features will be shown, as figure below highlights .
+The Word list contains all the words previously created whose details can be visualized just clicking on them.
+The following panel will be visible.
 
 .. figure:: media/image458_8.1.png
 
@@ -38,7 +39,7 @@ In the “Word” area are listed, if any, the words created in a previous momen
 
 
 To add a new word, click on the *Plus* icon available next to the *Word List* text item an fill in at leats the mandatory information,*Word*, *Category* and *Description*.
-Use the *Save* button to save it a. 
+Use the *Save* button to save it. 
 Once saved, you can search for it or a different word just using the search filter.
 
 .. _addanewword:
