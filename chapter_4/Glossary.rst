@@ -69,11 +69,6 @@ Click on *ADD NODE*, fill in the node name and save.
 The image below shows the *ADD Node* functionality and also how to add words to a node once created.
 
 
-.. _additemstonode:
-.. figure:: media/image463_8.1.png
-
-    Add items to the node(s) and words to nodes.
-
 Glossary Usage
 ------------------------------------------------------------------------------------------------------------------------
 
