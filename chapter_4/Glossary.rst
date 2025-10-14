@@ -92,7 +92,7 @@ In case of no links with i.e. a Table, a message prompts informing that there ar
 
 .. figure:: media/no_links_table_8.1.png
 
-    No table links to words.
+    Example of no links to words in the table component.
 
 To associate the glossary to a specific component, just click the *LINK* functionality next to each element.
 See figure below as example.
