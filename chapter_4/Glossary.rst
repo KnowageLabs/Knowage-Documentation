@@ -94,7 +94,7 @@ In case of no links with i.e. a Table, a message prompts informing that there ar
 
     No table links to words.
 
-To associate the glossary to a specific component, just click on the *LINK* functionality next to each element.
+To associate the glossary to a specific component, just click the *LINK* functionality next to each element.
 See figure below as example.
 
 .. figure:: media/links_dataset_1_8.1.png
