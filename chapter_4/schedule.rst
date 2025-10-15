@@ -89,7 +89,6 @@ Here you can find the dispatch configurations, that can be different for all the
 - Save as snapshot,
 - Save as file,
 - Save as document,
-- Send to Java class,
 - Send mail
 
 In the following sections we explain them in detail.
@@ -101,7 +100,7 @@ The executed document can be saved as snapshots in cyclic buffers of configurabl
 
 The list of all snapshots contained in the buffer can be accessed from the **Show scheduled executions** contained in the **Shortcuts** menu. You can find it in the document toolbar at the top right corner. Each snapshot can be opened or deleted from this panel. These steps are shown in the following figure. A snapshot contains data queried from the database at the moment of its execution performed by the scheduler.
 
-.. figure:: media/image47_new.png
+.. figure:: media/image47_b.png
 
     Steps to open saved snapshots
 
@@ -125,128 +124,6 @@ The executed document can be saved as an **Ad hoc reporting** document in the Kn
 -  the second containing the label of the folder where the document shall be dispatched when the document is executed with the corresponding parameter value.
 
 Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. Like in the previous case, the scheduler will execute the report one time for each possible value of the parameter. This time, however, execution results will be dispatched in different folders, according to the mapping defined in the dataset.
-
-Send to Java class
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The executed document can be sent to a Java class implementing a custom dispatch logic. The custom class must extend the abstract class JavaClassDestination that implements the method execute. This method is called by the scheduler after document execution. Below an example of Java class.
-   
-.. code-block:: java
-         :linenos:
-         :caption: Java Class Code Example.
-
-            package it.eng.spagobi.tools;
-            import it.eng.spagobi.analiticalmodel.document.bo.BIObject
-            public abstract class JavaClassDestination
-            implements IJavaClassDestination {
-            BIObject biObj=null;
-            byte[] documentByte=null;
-            public abstract void execute();
-            public byte[] getDocumentByte() { 
-            return documentByte;
-            } public void setDocumentByte(byte[] documentByte) {
-            this.documentByte = documentByte;
-            }
-            public BIObject getBiObj() {
-            return biObj;
-            }
-            public void setBiObj(BIObject biObj) {
-            this.biObj = biObj;
-            }
-            }
-
-
-The method getDocumentByte can be used to get the executed document, while the method getBiObj can be used to get all metadata related to the executed document. The following code snippet shows an example of a possible extension of class JavaClassDestination.
-   
-.. code-block:: java
-         :linenos:
-         :caption: JavaClassDestination example.
-
-         public class FileDestination extends JavaClassDestination {
-         public static final String OUTPUT_FILE_DIR = "D:\\ScheduledRpts\\";
-         public static final String OUTPUT_FILE_NAME = "output.dat";
-         private static transient Logger logger = Logger.getLogger(FileDestination.class);
-         public void execute() {
-         File outputDir;
-         File outputFile;
-         OutputStream out;
-         byte[] content = this.getDocumentByte();
-         String outputFileName;
-         logger.debug("IN");
-         outputFile = null;
-         out = null;
-         try {
-         outputFileName = getFileName();
-         logger.debug("Output dir [" + OUTPUT_FILE_DIR + "]");
-         logger.debug("Output filename [" + outputFileName + "]");
-         outputDir = new File(OUTPUT_FILE_DIR);
-         outputFile = new File(outputDir, outputFileName);
-         if(!outputDir.exists()) {
-         logger.debug("Creating output dir [" + OUTPUT_FILE_DIR + "] ...");
-         if(outputDir.mkdirs()) {
-         logger.debug("Output dir [" + OUTPUT_FILE_DIR + "] succesfully created");
-         } else {
-         throw new SpagoBIRuntimeException( "Impossible to create outputd dir
-         [" + OUTPUT_FILE_DIR + "]");
-         }
-         } else {
-         if(!outputDir.isDirectory()) {
-         throw new SpagoBIRuntimeException( "Outputd dir [" + OUTPUT_FILE_DIR + "]
-         is not a valid directory");
-         }
-         }
-         try {
-         out = new BufferedOutputStream( new FileOutputStream(outputFile));
-         } catch (FileNotFoundException e) {
-         throw new SpagoBIRuntimeException(
-         "Impossible to open a byte stream to file
-         [" + outputFile.getName() + "]", e);
-         } try {
-         out.write(content);
-         } catch (IOException e) {
-         throw new SpagoBIRuntimeException( "Impossible to write on file
-         [" + outputFile.getName() + "]", e);
-         }
-         } catch(Throwable t) {
-         throw new SpagoBIRuntimeException( "An unexpected error occurs while saving
-         document" + " to file [" + outputFile.getName() + "]", t);
-         } finally {
-         if(out != null) {
-         try {
-         out.flush(); out.close();
-         } catch (IOException e) {
-         throw new SpagoBIRuntimeException( "Impossible to properly close file
-         [" + outputFile.getName() + "]", e);
-         }
-         }
-         logger.debug("OUT");
-         }
-         }
-         private String getFileName() {
-         String filename = "";
-         BIObject analyticalDoc;
-         List analyticalDrivers;
-         BIObjectParameter analyticalDriver;
-         String extension = "pdf";
-         analyticalDoc = getBiObj();
-         analyticalDrivers = analyticalDoc.getBiObjectParameters();
-         for(int i = 0; i < analyticalDrivers.size(); i++) {
-         analyticalDriver = (BIObjectParameter)analyticalDrivers.get(i);
-         String parameterUrlName = analyticalDriver.getParameterUrlName();
-         List values = analyticalDriver.getParameterValues();
-         if(!parameterUrlName.equalsIgnoreCase("outputType")){
-         filename += values.get(0);
-         } else {
-         extension = "" + values.get(0);
-         }
-         }
-         filename = filename.replaceAll("[^a-zA-Z0-9]", "_");
-         filename += "." + extension;
-         return filename;
-         }
-         }
-
-The class FileDestination copies the executed documents to the local filesystem in a folder named D:\\textbackslashScheduledRpts . The name of the report file is generated concatenating all the parameter values used by the scheduler during execution. Once implemented and properly compiled, the Java class must be exposed to the classpath of Knowage web application. For example, you can pack the compiled class into a .jar file, copy it into the lib folder of Knowage web application and restart the server. As a last step, it is necessary to assign the fully qualified name of the new class, e.g., it.eng.spagobi.tools.DestinationFile., to the configuration property classpath.
 
 Send mail
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
