@@ -119,10 +119,8 @@ Save as document
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The executed document can be saved as an **Ad hoc reporting** document in the Knowage functionality tree. The document execution will be saved in the specified folder and will be visible to all yous that can access that particular folder. 
-The *Output type* option allows to choose the output type of the document to be saved under the specified location:
-- HTML
-- PDF
-- XLS
+
+The *Output type* option allows to choose the output type of the document to be saved under the specified location: HTML, PDF, XLS.
 
 For those documents whose execution is iterated over a parameter value, it is also possible to use the value of the parameter to decide to which folder the document shall be dispatched. To do so, define a mapping dataset composed of two columns:
 
