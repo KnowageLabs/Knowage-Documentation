@@ -16,15 +16,15 @@ A new page opens where the left side contains the list of all the already insert
 
 .. figure:: media/image02.png
 
-    Access news management list.
+   Access news management list.
     
-To add a news, just click on the *plus* icon. Below, the information requested for the addition of a news.
+To add a news, just click the *plus* icon. Below, the information requested for the addition of a news.
 
--  **News title**
+-  **Title**
 -  **Expiration Date**, after this date the news will no longer be visible to the user
--  **News Type**, three possible values between *News*, *Notification* and *Warning*
--  **Content of the news**
--  **Activation of the news**
+-  **Type**, three possible values between *News*, *Notification* and *Warning*
+-  **Content**
+-  **Activation**
 -  **Roles Permissions**
     
 .. figure:: media/image03.png
