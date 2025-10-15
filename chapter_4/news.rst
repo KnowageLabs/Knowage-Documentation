@@ -36,13 +36,14 @@ How the end user can read the news
 ------------------------------------------------------------------------------------------------------------------------
 
 When some news are added, the **news** icon prompts the number of unread news.
-.. figure:: media/image04.png
+
+.. figure:: media/image04_b.png
 
     News notification.
 
-Clicking on the icon, the user can access the content of the news.
+Clicking the icon, the user can access the content of the news.
 
-.. figure:: media/image05.png
+.. figure:: media/image05_b.png
 
     News notification pop up.
 
