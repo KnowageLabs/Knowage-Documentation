@@ -25,18 +25,19 @@ To add a new connection, first add the relative JDBC driver to the folder ``TOMC
 
      Data source management
 
-By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
+By clicking the **Add** button on the top right corner of the left panel, an empty panel will be displayed on the right.
 
 
 .. figure:: media/image25_8.1.png
 
      Add a new data source
 
+Below how the panel looks like and information needed to create a datasource:
+
 .. figure:: media/image26_8.1.png
 
      Data source details - JDBC.
 
-Requested information to create a datasource:
 
 - **Name**, identifier of the data source.
 - **Dialect**, used to access the database. Supported dialects are:
