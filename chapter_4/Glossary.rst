@@ -115,7 +115,7 @@ See image below:
 Help Online functionality
 ------------------------------------------------------------------------------------------------------------------------
 
-After linking a document to a glossary the user can use the **Help Online** functionality when running that document:
+After linking a document to a glossary the user can use the **Help Online** functionality when running that document.
 
 The image below shows the linking between the words of a glossary and a specific document as a former step after creating a new glossary.
 
@@ -137,4 +137,4 @@ As a result of the former linking the *Help Online* will display the following.
 
     Help Online wizard.
 
-All those words belonging to the glossary will be displayed
+All those words belonging to the glossary will be displayed.
