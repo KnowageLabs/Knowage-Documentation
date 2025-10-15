@@ -39,12 +39,12 @@ The top bar contains two funcionalities: **Refresh tree** and **Create new folde
 
 .. figure:: media/resource_mng_0_bis.png
 
-    Creation detail.
+    How to create a new folder.
 
 
 .. figure:: media/resource_mng_0_ter.png
 
-    Creation result.
+    New folder.
 
 The new folder will be created under the selected folder of the tree ( in this case, 'KNOWAGE-5058').
 
@@ -52,25 +52,17 @@ By clicking on the *Download* icon of a specific folder, you can download all fi
 
 .. figure:: media/resource_mng_tree_1.png
 
-    Download functionality icon.
-   
-Select a folder for the download and give a name to the zip file to be available in your local system.
-
-.. figure:: media/resource_mng_3.png
-
     Download functionality.
+   
+A zip file will be prpduced ss a result of the download process.
 
-By clicking on the *Delete* icon of a specific folder, the folder can be fisically removed from the Knowage server after confirming the operation.
+By clicking the *Delete* icon of a specific folder, the folder can be fisically removed from the Knowage server after a confirmation message.
 Please remember that the deletion of a folder is an irrecoverable operation.
 
 .. figure:: media/resource_mng_tree_2.png
 
-    Delete functionality icon.
+    Delete functionality.
 
-
-.. figure:: media/resource_mng_tree_3.png
-
-    Delete functionality confirmation.
 
 **Detail panel**
 
@@ -82,35 +74,15 @@ When a folder is selected, the right panel shows the properties *Name*, *Size* a
 
 All items are selectable for downloading or removal trough specific icons of the toolbar.
 
-.. figure:: media/resource_mng_7.png
-
-   Functionalities available for selected files
-
-An **Upload** functionality is also available through a dedicated icon. See image below.
-
-.. figure:: media/resource_mng_5.png
-
-   Upload files
+An **Upload** functionality is also available through a dedicated icon.
 
 .. figure:: media/resource_mng_5_bis.png
 
-   Selection file popup
+   Uploading a file
 
 In case of a zipped file want to be uploaded, it is possible to keep the file zipped.
 
-.. figure:: media/resource_mng_5_ter.png
-
-   Uploaded zipped file
-
-It is also possible to unzip the file to upload by enabling the *Extract Files* option. See figure below.
-
-.. figure:: media/resource_mng_5_quat.png
-
-   Uploading an unzipped file
-
-.. figure:: media/resource_mng_3_8.1.png
-
-   Results of uploading an unzipped file
+It is also possible to unzip the file to upload by enabling the *Extract Files* option as shown in the above image.
 
 **Model Metadata Definition**
 
