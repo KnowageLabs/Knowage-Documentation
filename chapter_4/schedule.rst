@@ -111,7 +111,7 @@ The executed document can be saved as file on the filesystem in the path /knowag
 
 .. figure:: media/image51_new.png
 
-   Save as File form.
+   Save as File Option.
    
 If you prefer to generate a .zip file containing the scheduled documents, you can check the dedicated mark.
 
