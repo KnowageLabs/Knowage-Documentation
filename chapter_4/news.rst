@@ -32,7 +32,7 @@ To add a news, just click the *plus* icon. Below, the information requested for 
     Access news management list.
     
 
-How the end user can read the news
+How reading news
 ------------------------------------------------------------------------------------------------------------------------
 
 When some news are added, the **news** icon prompts the number of unread news.
@@ -41,7 +41,7 @@ When some news are added, the **news** icon prompts the number of unread news.
 
     News notification.
 
-Clicking the icon, the user can access the content of the news.
+Clicking the icon, the user displays the content of the news.
 
 .. figure:: media/image05_b.png
 
