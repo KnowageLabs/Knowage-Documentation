@@ -21,6 +21,10 @@ Knowage manages two types of data source connections:
 
 To add a new connection, first add the relative JDBC driver to the folder ``TOMCAT_HOME/lib`` and restart Knowage. Then, log in as administrator (user: *biadmin*, password: *biadmin* are the default credentials) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
+.. figure:: media/ds.png
+
+     Data source management
+
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
 
