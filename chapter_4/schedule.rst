@@ -187,29 +187,30 @@ Here you can select one of the available scheduled activities to explore details
 
 .. figure:: media/image55a_new.png
 
-    Exploring the detail of a scheduled activity in Timing & Output panel (three dots menu).
+    Details of a scheduled activity in Timing & Output panel.
 
 Here you find the following information:
 
-- **Schedulation informations**, it give some extra information about your schedulation concerning sending emails
+- **Schedulation informations**, gives some extra information about your schedulation concerning sending emails
    
-- **Schedulation detail**, it opens the scheduling configuration and let you change them.
-   
-   .. figure:: media/image57.png
-
-    Schedulation information pop up example
-    
+- **Schedulation detail**, opens the scheduling configuration and let you change them.
 - **Execute now**, by clicking it you immediately start the execution of your schedulation.
 - **Pause schedulation**, it lets you pause your schedulation.
 - **Resume schedulation**, it appears after having paused a schedulation, it enables you to resume it.
 
-In order to delete a schedulation you can use delete (recycle bin) icon, on the right side of a schedulation.
+In case, use the recycle bin icon to delete the scheduling.
 
 
 Scheduler Monitor
 ------------------------------------------------------------------------------------------------------------------------
 
-You can monitor the whole scheduling agenda by entering the **Scheduler Monitor** item from the Knowage Menu. This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
+You can monitor the whole scheduling agenda by entering the **Scheduler Monitor** item from the Knowage Menu. 
+
+.. figure:: media/scheduler_m.png
+
+    Details of a scheduled activity in Timing & Output panel.
+
+This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
   
 .. figure:: media/image59_new.png
 
