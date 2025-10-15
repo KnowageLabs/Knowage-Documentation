@@ -22,7 +22,14 @@ After ginving a name and a description to the new activity select the documents 
 
    Adding a document to an activity.
 
-Now you need to specify how the scheduler must handle the analytical drivers of each selected document having parameters.
+The new activity can contain documents with or without parameters. The below image shows an activity with documents with and without parameters.
+In case of parameters an icon will signal the need to specify them by using the pencil icon.
+
+.. figure:: media/image42_b.png
+
+   Adding a documents with and without parameters.
+
+In case of parameters you need to specify how the scheduler will handle the analytical drivers of each selected document having parameters.
 
 .. _manageparameters:
 .. figure:: media/image43_new.png
