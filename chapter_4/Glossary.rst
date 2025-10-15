@@ -115,18 +115,26 @@ See image below:
 Help Online functionality
 ------------------------------------------------------------------------------------------------------------------------
 
-The user can view the association of a specific analytical element (dataset, document or model) by using the **Help Online** functionality from:
+After linking a document to a glossary the user can use the **Help Online** functionality when running that document:
 
--  the Document Browser,
--  the toolbar of each document, once launched,
--  every dataset,
--  every entity of the Qbe model,
--  Birt reports,
--  the cockpit.
+The image below shows the linking between the words of a glossary and a specific document as a former step after creating a new glossary.
 
-As an example, the figure below shows the graphic interface that the user will see once launched a document and used the Help Online functionality.
+.. figure:: media/image474_1.png
 
-.. figure:: media/image474.png
+    Linking words to documents
+
+
+When the user runs the document the graphical interface allows from the three dots menu to see the *Help Online*.
+
+.. figure:: media/image474_2.png
 
     Help Online wizard.
 
+As a result of the former linking the *Help Online* will display the following.
+
+
+.. figure:: media/image474_3.png
+
+    Help Online wizard.
+
+All those words belonging to the glossary will be displayed
