@@ -54,7 +54,7 @@ By clicking on the *Download* icon of a specific folder, you can download all fi
 
     Download functionality.
    
-A zip file will be prpduced ss a result of the download process.
+A zip file with the contents of the selected folder will be produced as a result of the download process.
 
 By clicking the *Delete* icon of a specific folder, the folder can be fisically removed from the Knowage server after a confirmation message.
 Please remember that the deletion of a folder is an irrecoverable operation.
@@ -90,7 +90,7 @@ As already told at the beginning, **models** is the unique folder managed by bot
 
 For each model it is possible to define its metadata, download and/or delete the model using directly the tree options:
 
-.. figure:: media/resource_mng_8.png
+.. figure:: media/resource_mng_8_b.png
 
    Models folder options
 
@@ -98,6 +98,6 @@ For each model it is possible to define its metadata, download and/or delete the
 
 The **Metadata** option opens a GUI where the user can define the metadata information for the model, into the specific see image below:
    
-.. figure:: media/resource_meta_4.png
+.. figure:: media/resource_meta_4_b.png
 
    Metadata example
