@@ -41,10 +41,8 @@ A scheduled activity can be composed by more than one report. Once all desired d
 
 You can manage your activity at any time just clicking on the name of the scheduling item (left side of the window) and all its features will be displayed aside (right half part of the window).
 
-To see and modify the list of the schedules associated to an activity, click on the “ADD” option you find in the "Timing & Output" area in the bottom right side. Similarly, click on the same option to associate schedules
-to newly created activities.
-
-Timing & Output panel opens (Figure below).
+To see and modify the list of the schedules associated to an activity, click the *ADD* option of the "Timing & Output" panel. Similarly, click on the same option to associate schedules
+to the newly created activities. The below image shows the *Timing & Output* panel.
 
 .. figure:: media/image45_new.png
 
@@ -61,7 +59,7 @@ Available schedulation type are:
 
 -  Single Execution;
 -  Periodic Execution;
--  Event Exectution.
+-  Event Execution.
 
 A **Single Execution** is a fixed execution for a date and a time which happens only once. A **Periodic Execution** repeats your schedulation periodically according to your settings. The **Event Execution** starts the scheduling when an event happens.
 
