@@ -16,12 +16,16 @@ When clicking on **Timespan**, the user sees the list of already defined periods
 Possible actions are opening, searching, deleting or cloning a specific timespan. 
 The delete and clone icons are available next to the timespan item name.
 
-.. figure:: media/imageTS002_8.1.png
+.. figure:: media/imageTS002_b.png
 
    Timespan list page
    
-To add a new timespan item just click on the *plus* icon on the top right corner of the item list. 
-The technical user is asked to assign a *Name* and to specify the *Type*, i.e. if it is a *Time* or a *Temporal* period. 
+To add a new timespan item just click the *plus* icon on the top right corner of the item list. 
+The technical user is asked to assign a *Name* and to specify the *Type*, whether it is a *Time* or a *Temporal* period. 
+
+*Time*: need of a starting time and an endining time
+*Temporal*: need of a starting date and an ending date 
+
 In case of Time, the start and the end time should be entered otherwise the start and the end date should be entered.
 There is also the possibility to associate a *Category* for profiling issues. See the below figure, as an example.
 
