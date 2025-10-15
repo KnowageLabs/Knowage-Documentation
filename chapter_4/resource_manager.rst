@@ -30,7 +30,8 @@ The Resource Manager window diplays two sections: on the left the tree structure
 
 **Tree functionalities**
 
-The tree shows exactly the phisical structure of the file system from the **resources** folder. On the top bar are present two funcionalities: **Refresh tree** and **Create new folder**:
+The tree shows exactly the phisical structure of the file system from the **resources** folder. 
+The top bar contains two funcionalities: **Refresh tree** and **Create new folder**:
 
 .. figure:: media/resource_mng_0.png
 
