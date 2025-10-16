@@ -61,12 +61,13 @@ As explained at the beginning of this section, analytical drivers use informatio
 
     Analytical Driver Management.
 
-To create a driver, select Behavioural Model > Analytical Drivers Management from the menu. Here, you will see the entire   list of available drivers. For each driver, the list shows unique label, description and type. To explore details the user must just   select one menu item from the list and they will appear in the half right side, as shown in the figure above. Otherwise to delete one analytical driver the user must use the icon |image48| available at the end of each row of the list. Notice that you cannot delete a driver if a document is currently using it.
+To create a driver, select Behavioural Model > Analytical Drivers Management from the menu. Here, you will see the entire   list of available drivers. For each driver, the list shows unique label, description and type. To explore details the user must just   select one menu item from the list and they will appear in the half right side, as shown in the figure above. Otherwise to delete one analytical driver the user must use the *Trash* icon available at the end of each row of the list. Notice that you cannot delete a driver if a document is currently using it.
 
 .. |image48| image:: media/image44.png
    :width: 30
 
-To create a new driver, click the *Plus* icon at the top right corner. The driver creation interface will open. At first execution only the upper part of the window is visible, as shown in the figure below. The upper part is the **Detail** section, where you can set the label, name and description. Choose the type between Date, String or Number depending on the type of expected data. Select Functional or Temporal if the driver is used by an end user or a scheduler, respectively. A click on the save botton, enabled as soon as the form is filled in, will save the driver and let the section below appear.
+To create a new driver, click the *Plus* icon at the top right corner. The driver creation interface will open. At first execution only the upper part of the window is visible, as shown in the figure below. 
+The upper part is the **Detail** section, where you can set the label, name and description. Choose the type between Date, String or Number depending on the type of expected data. Select Functional or Temporal if the driver is used by an end user or a scheduler, respectively. A click on the save botton, enabled as soon as the form is filled in, will save the driver and let the section below appear.
 
 .. |image49| image:: media/image45.png
    :width: 30
@@ -74,7 +75,7 @@ To create a new driver, click the *Plus* icon at the top right corner. The drive
 .. _drivercrationbehav:
 .. figure:: media/image53_b.png
 
-    Driver creation.
+    Creating a new Driver.
 
 In the Analytical Driver Use Mode Details section, one or more LOVs are linked to the current driver, as well as roles and checks are assigned via the so-called *use modes*.
 
@@ -82,7 +83,7 @@ To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Det
 
 .. figure:: media/image54.png
 
-    Detail panel of Analytical Driver creation, second step.
+    Details tab of an AD
 
 The first type allows the user to pick values from a previously defined LOV. When selecting this option the interface spread out the configuration panel where the user is asked to select a LOV from the list and a **Modality**. The latter defines how values are displayed and selectable when executing the document. In fact the user can choose among:
 
