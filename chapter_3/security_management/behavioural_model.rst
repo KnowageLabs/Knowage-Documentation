@@ -20,4 +20,4 @@ The picture below shows the functionalities for the *Profile Management* and the
 
 .. figure:: media/menu_profile_mng.png
 
-   Profile Management and behavioural Model in Knowage
+   Profile Management and Behavioural Model in Knowage
