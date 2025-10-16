@@ -150,7 +150,7 @@ User Management
 ------------------------------------------------------------------------------------------------------------------------
 
 
-The **User Management** section includes a left panel that allows the administrator to create and delete users, and a right panel that allows the management of user details, roles and attributes.
+The **Users Management** section includes a left panel that allows the administrator to create and delete users, and a right panel that allows the management of user details, roles and attributes.
 
 .. figure:: media/image32_8.1.png
 
