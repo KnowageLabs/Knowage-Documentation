@@ -211,7 +211,7 @@ To add a new parameter, you can click on the tab **Drivers** and then on a **Add
 
 .. figure:: media/image74.png
 
-    Association with analytical driver panel.
+    Association with analytical driver panel - 1.
 
 Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the document.
 
@@ -227,7 +227,7 @@ After you have completed the definition of a parameter you can save it by clicki
 
 .. figure:: media/image75.png
 
-    Association with analytical driver panel.
+    Association with analytical driver panel - 2.
 
 In the following we will see some special operations that can be performed on drivers associated to a document.
 
