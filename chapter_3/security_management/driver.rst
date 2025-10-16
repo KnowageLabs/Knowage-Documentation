@@ -72,7 +72,7 @@ To create a new driver, click the *Plus* icon at the top right corner. The drive
    :width: 30
 
 .. _drivercrationbehav:
-.. figure:: media/image53.png
+.. figure:: media/image53_b.png
 
     Driver creation.
 
