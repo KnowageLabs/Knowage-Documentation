@@ -128,7 +128,7 @@ This means that if you are the food manager and your user has the profile attrib
      - *user_roles* contains the current user's roles, joined as a SQL IN clause fashion, for example: 'general_management','human_resources_management'
      - *TENANT_ID* contains the tenant to which the user belongs
 
-Note that an information button and a profile attribute button are available to guide user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
+Note that an information icon and a profile attribute icon are available to guide the user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
 
 .. figure:: media/image50.png
 
