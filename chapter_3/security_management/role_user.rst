@@ -58,7 +58,7 @@ Knowage allows you to create several roles, according to your project needs. How
 
 Pre-defined roles are summarized in the Table 5.1. The first four roles are technical roles, while the last one, the user, is the actual end user. Each role type has a default user associated to it. Other users can be created and associated to a role type.
 
-When a user logs in into Knowage, his profile is automatically loaded. The full name is visible by clicking on the info button at the bottom left corner of the page.
+Users' profiles are automatically loaded when logging in into Knowage. The full name is visible by clicking on the info button at the bottom left corner of the page.
 
 Authentication can be handled internally by Knowage or delegated to an external Single Sign On (SSO) system.
 
@@ -66,13 +66,13 @@ Authentication can be handled internally by Knowage or delegated to an external 
       **Authentication Management**:
          The choice of handling authentication internally or delegating it to an external SSO system typically depends on the presence of an authentication system already in place. If this is the case, Knowage can seamlessly integrate with the existing authentication infrastructure.
 
-Once the user has logged in, his role is loaded. Roles are managed internally. In case the user is associated with multiple roles, he will be asked to choose one.
+As for profiles, users' roles are loaded when they log in into Knowage. Roles are managed internally. In case of multiple roles, they will be asked to choose one.
 
-Alternatively, from the Knowage Administrator menu, he can select a default role that will be kept valid until he logs out.
+Alternatively, from the Knowage Administrator menu *PROFILE MANAGEMENT > Users* it is possible to select a default role that will be kept valid until logging out.
 
-.. figure:: media/image28_tris.png
+.. figure:: media/image28_b.png
 
-   User roles in Knowage.
+   User's roles in Knowage.
 
 Steps to follow in the definition of a behavioural model:
 
@@ -80,7 +80,7 @@ Steps to follow in the definition of a behavioural model:
 -  Create roles;
 -  Create users and associate profile attribute values and roles to them.
 
-Knowage supports the management of user profiles and roles through the **Profile Management** menu section. This menu is only visible to Knowage administrator and to the model administrator, since users and roles management is a critical operation that requires an appropriate level of responsibility.
+As shown before, Knowage supports the management of user's profiles and roles through the **Profile Management** menu section. This menu is only visible to Knowage administrators and model administrators, since users and roles management is a critical operation that requires an appropriate level of responsibility.
 
 The **Profile Management** menu section contains three sub-menu items:
 
@@ -108,7 +108,7 @@ In addition to the profile attributes created by administrator, by default Knowa
 
 -   **language**: set with the language selected by the user
 
-The image below, shows a new *Profile attribute* named *Country* manually fed. The alternative option to feed the attribute is by means of a Lov, from where a value is going to be picked up when assigning the attribute to a user. Multivalue option in this case is not enabled, so only one value is inserted.
+The image below shows a new *Profile attribute* named *Country* whose value has been manually entered. An alternative option is to feed attribute values by means of a Lov: one or more of its values will be asigned by the user. Multivalue option in this case is not enabled, so only one value is inserted.
 
 
 .. figure:: media/image29_bis.png
@@ -122,13 +122,19 @@ Once the attributes are defined, the model administrator can define roles, using
          The behavioural model should be built taking into account the specificity of each organization and the needs of the BI project.    Therefore, it is a good practice to define specific roles for the BI project and avoid using Knowage technical roles only.
 
 The right panel contains the following tabs. 
-The **Detail** tab allows the administrator to define role name and role type (mandatory). The role type regulates the visibility of that role based on the types already described. A code and a description can be added too, as shown below.
+The **Detail** tab allows the administrator to define role name and role type (mandatory). 
+The role type regulates the visibility of that role based on the types already described. 
+A code and a description can be added as shown below.
 
-.. figure:: media/image3031_bis.png
+.. figure:: media/image3031_a.png
 
-   Roles Management.
+   Details tab in Roles Management.
 
 The **Authorizations** tab allows you to assign permissions to each role. Rights are predefined and grouped into categories, as shown above.
+
+.. figure:: media/image3031_b.png
+
+   Authorization tab in Roles Management.
 
 The **Business Models**, **Data sets** and **KPI Categories** tabs are intended to assign specific categories to each role, in a way that each user can only see the business models, datasets or KPI that belong to the categories associated with his role.
 
