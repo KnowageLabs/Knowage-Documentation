@@ -15,7 +15,7 @@ There may be multiple attributes in a LOV, but only one of them is the core valu
 
 .. figure:: media/image46_b.png
 
-    LOV from Knowage menu.
+    LOVs functionality from Knowage menu.
 
 Knowage allows to create different types of LOV:
 
@@ -26,7 +26,7 @@ Knowage allows to create different types of LOV:
 - **Dataset**: Dataset already defined in Knowage Server that is used to retrieve values. Note that the dataset must not contain parameters, while profile attributes are allowed.
 
 .. _lovlistbehav:
-.. figure:: media/image43.png
+.. figure:: media/image46.png
 
     List of LOV.
 
@@ -42,11 +42,14 @@ The LOV creation interface will open, where you   can set label, name and descri
 .. |image38| image:: media/image45.png
    :width: 30
 
-.. figure:: media/image46.png
+.. figure:: media/image46_a.png
 
     Creating a LOV.
 
-Once completed the form, click on **Preview** button to enable the **Test** button. Notice that you cannot save the LOV without testing  it, since this allows to detect errors before the LOV is actually used in a driver and associated to a document. After testing, you will be able to define which column is the actual value of the LOV, i.e., which value will be passed to the analytical driver using this LOV. Only *one* column can be the value attribute and only *one* column can be chosen as Descriptive attribute, while the others can be visible. The two figures below exhibit an example. Columns that are not visible can be used for correlating drivers.
+Once completed the form, click on **Preview** icon to see the results of your query and then on the **Test** icon.
+Notice that you cannot save the LOV without testing  it, since this allows to detect errors before the LOV is actually used in a driver and associated to a document. 
+By testing the LOV, you will be able to define which column is the actual value of the LOV, i.e. which value will be passed to the analytical driver using this LOV. 
+Only *one* column can be the value attribute and only *one* column can be chosen as Descriptive attribute, while the others can be visible. The two figures below exhibit an example. Columns that are not visible can be used for correlating drivers.
 
 .. _previewandteslov1:
 .. figure:: media/image47.png
