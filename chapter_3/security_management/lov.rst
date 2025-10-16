@@ -11,7 +11,13 @@ A *List Of Value* (LOV), is a collection of data organized in attribute-value fa
     {522, Tell Tale Walnuts, Food};
     {844, Very Good Soda, Drink};
 
-There may be multiple attributes in a LOV, but only one of them is the core value that is actually used in the analytical driver. Other  values have a descriptive function: they can be used to provide a human readable description of the LOV, as well as to store information used, for example, to correlate analytical drivers. In our example, the core value is the customer’s id, while the others are additional data describing the customer. Knowage allows to create different types of LOV:
+There may be multiple attributes in a LOV, but only one of them is the core value that is actually used in the analytical driver. Other  values have a descriptive function: they can be used to provide a human readable description of the LOV, as well as to store information used, for example, to correlate analytical drivers. In our example, the core value is the customer’s id, while the others are additional data describing the customer. 
+
+.. figure:: media/image46_b.png
+
+    LOV from Knowage menu.
+
+Knowage allows to create different types of LOV:
 
 -  **Query**: SQL query to retrieve values from the database;
 -  **Script**: Groovy or JavaScript to dynamically return values;
@@ -22,21 +28,23 @@ There may be multiple attributes in a LOV, but only one of them is the core valu
 .. _lovlistbehav:
 .. figure:: media/image43.png
 
-    LOV list.
+    List of LOV.
 
-To create and manage LOVs, select **Behavioural Model** > **Lovs Management** from the administration menu. The entire list of available   LOVs appears, as shown in figure above. For each LOV, the list shows the label, description and type; to see the details of a LOV the user  must simply select it and they will appear in the right half of the page. On the contrary, to delete one dataset click on the icon |image37| available at the end of the row. Notice that you cannot delete a LOV if a driver is currently using it.
+To create and manage LOVs, select **Behavioural Model** > **Lovs Management** from the administration menu. The entire list of available   LOVs appears, as shown in figure above. 
+For each LOV, the list shows the label, description and type; to see the details of a LOV the user  must simply select it and they will appear in the right half of the page. On the contrary, to delete one dataset click on the *Trash* icon available at the end of the row. Notice that you cannot delete a LOV if a driver is currently using it.
 
 .. |image37| image:: media/image44.png
    :width: 30
 
-To create a new LOV, click on the icon |image38| at the top right corner of the page. The LOV creation interface will open, where you   can set label, name and description, choose the LOV type and define its values accordingly.
+To create a new LOV, click the * Plus* icon at the top right corner of the page. 
+The LOV creation interface will open, where you   can set label, name and description, choose the LOV type and define its values accordingly.
 
 .. |image38| image:: media/image45.png
    :width: 30
 
 .. figure:: media/image46.png
 
-    LOV Creation interface.
+    Creating a LOV.
 
 Once completed the form, click on **Preview** button to enable the **Test** button. Notice that you cannot save the LOV without testing  it, since this allows to detect errors before the LOV is actually used in a driver and associated to a document. After testing, you will be able to define which column is the actual value of the LOV, i.e., which value will be passed to the analytical driver using this LOV. Only *one* column can be the value attribute and only *one* column can be chosen as Descriptive attribute, while the others can be visible. The two figures below exhibit an example. Columns that are not visible can be used for correlating drivers.
 
