@@ -93,6 +93,8 @@ Here you can find the dispatch configurations, that can be different for all the
 
 In the following sections we explain them in detail.
 
+As shown in the image of the Output panel, there is a new option for the *Output type* that allows to choose the type of the document to be produced as a result of the process: HTML, PDF, XLS.
+
 Save as snapshot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -119,8 +121,6 @@ Save as document
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The executed document can be saved as an **Ad hoc reporting** document in the Knowage functionality tree. The document execution will be saved in the specified folder and will be visible to all yous that can access that particular folder. 
-
-The *Output type* option allows to choose the type of the document to be saved as a result under the specified location of your web browser in Knowage: HTML, PDF, XLS.
 
 For those documents whose execution is iterated over a parameter value, it is also possible to use the value of the parameter to decide to which folder the document shall be dispatched. To do so, define a mapping dataset composed of two columns:
 
