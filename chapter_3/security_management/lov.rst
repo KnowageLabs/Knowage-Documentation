@@ -26,9 +26,9 @@ Knowage allows to create different types of LOV:
 - **Dataset**: Dataset already defined in Knowage Server that is used to retrieve values. Note that the dataset must not contain parameters, while profile attributes are allowed.
 
 .. _lovlistbehav:
-.. figure:: media/image46.png
+.. figure:: media/image46_a.png
 
-    List of LOV.
+    List of LOVs.
 
 To create and manage LOVs, select **Behavioural Model** > **Lovs Management** from the administration menu. The entire list of available   LOVs appears, as shown in figure above. 
 For each LOV, the list shows the label, description and type; to see the details of a LOV the user  must simply select it and they will appear in the right half of the page. On the contrary, to delete one dataset click on the *Trash* icon available at the end of the row. Notice that you cannot delete a LOV if a driver is currently using it.
@@ -42,7 +42,7 @@ The LOV creation interface will open, where you   can set label, name and descri
 .. |image38| image:: media/image45.png
    :width: 30
 
-.. figure:: media/image46_a.png
+.. figure:: media/image46.png
 
     Creating a LOV.
 
@@ -52,14 +52,14 @@ By testing the LOV, you will be able to define which column is the actual value 
 Only *one* column can be the value attribute and only *one* column can be chosen as Descriptive attribute, while the others can be visible. The two figures below exhibit an example. Columns that are not visible can be used for correlating drivers.
 
 .. _previewandteslov1:
-.. figure:: media/image47.png
+.. figure:: media/preview.png
 
-    Preview and Test of the LOV.
+    LOV - Preview functionality.
 
 .. _previewandteslov2:
 .. figure:: media/image48.png
 
-    Test of the LOV.
+    LOV - Test functionality
 
 .. note::
      **Correlating analytical drivers**
