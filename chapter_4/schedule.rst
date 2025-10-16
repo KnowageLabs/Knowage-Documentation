@@ -218,4 +218,4 @@ This feature allows you to check which schedulations are active in a certain fut
   
 .. figure:: media/image59_new.png
 
-    Schedulation Agenda tab
+    Schedulation Agenda
