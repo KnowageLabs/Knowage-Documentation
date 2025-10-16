@@ -94,19 +94,19 @@ The first type allows the user to pick values from a previously defined LOV. Whe
 
 The second kind of input expects the user to type manually the value. Otherwise the third opens a map from which the user must select one or more regions accordingly to the layer property. When selecting this option the interface spread out the configuration panel where the user is asked to choose a layer and the layer property. More details are supplied in next sections for this kind of input.
 
-Moreover the user can add default values (namely values that will be passed to the document at its first execution) using the dedicated area. Here it is possible to pick default values from another LOV or to pick the first or the latter value of the current LOV (if the LOV input type was selected).
+The user can also add default values (namely values that will be passed to the document at its first execution) using the dedicated area. Here it is possible to pick default values from another LOV or to pick the first or the latter value of the current LOV (if the LOV input type was selected).
 
 In case of Manual Input Date the user can specify a maximum value driven by a LOV:
 
 .. figure:: media/image57.png
 
-    Detail panel of Analytical Driver creation, specification of a maximum value.
+    Example of a Detail tab of an AD with a maximum value.
 
 During execution of a document, the date picker will be limited by that value:
 
 .. figure:: media/image58.png
 
-    Detail of a date picker for a date parameter with maximum value specified.
+    Date picker with a maximum value specified.
 
 .. note::
      **Analytical driver of type Manual Input Date with a default value and/or max value**
@@ -125,6 +125,9 @@ Therefore, since an admin user can decide to separate values according to the ot
 All the selections can be multi-valued, but note that this option has to be set directly on the document detail during analytical driver
 association.
 
+.. figure:: media/image57_b.png
+
+    The Roles tab of an AD.
 
 
 Analytical driver’s use modes
