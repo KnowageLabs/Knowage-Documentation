@@ -161,14 +161,16 @@ When you register a document on the Server, you need to associate a template to 
 
 .. _templateversionforanalydoc:
 .. figure:: media/image69.png
-
-You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
+    
+    Template versioning for analytical documents.
+Y
+ou may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
 
 Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab **History**. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button **Add** to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.
 
 .. figure:: media/image70.png
 
-    Template versioning for analytical documents.
+    
 
 Document Visibility
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
