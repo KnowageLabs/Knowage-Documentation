@@ -1,11 +1,17 @@
 Creating a validation rule
 ########################################################################################################################
 
-Knowage supports the validation of the document’s input parameters via validation rules. Validation rules can be defined in  **Behavioural model** > **Constraints Management**. A validation rule checks parameter values as given by LOVs to verify that they comply with the defined constraints.
+Knowage supports the validation of the document’s input parameters via validation rules. Validation rules can be defined in  **Behavioural model** > **Constraints Management**.
 
-.. figure:: media/image51.png
+.. figure:: media/constraints.png
 
-    Contraints Management.
+    Contraints functionality.
+
+A validation rule checks parameter values as given by LOVs to verify that they comply with the defined constraints.
+
+.. figure:: media/image51_b.png
+
+    Contraints Management Panel.
 
 Knowage default checks are:
 
