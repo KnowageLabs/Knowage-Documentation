@@ -16,3 +16,8 @@ and mainly answers the following questions:
 -  *WHAT* is visible to users, in terms of documents and data (repository rights and analytical drivers);
 -  *HOW* users work with their documents (analytical drivers and presentation environment settings).
 
+The picture below shows the functionalities for the *Profile Management* and the *Behavioural Model* in Knowage.
+
+.. figure:: media/menu_profile_mng.png
+
+   Profile Management and behavioural Model in Knowage
