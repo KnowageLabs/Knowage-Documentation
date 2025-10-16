@@ -101,7 +101,7 @@ At the top of this side panel you find four button:
 .. |image62| image:: media/image64.png
    :width: 30
 
-- |image63| erase the document.
+- |image63| delete the document.
 
 .. |image63| image:: media/image65.png
    :width: 30
@@ -111,7 +111,7 @@ The figure below shows the detail panel of a document. On the left, document det
 .. _detailpanelofknowanalydoc:
 .. figure:: media/image66.png
 
-    Detail panel of Knowage analytical document.
+    Detail panel of an Analytical document.
 
 In order to create a new document you need to click on the red plus button in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
 
