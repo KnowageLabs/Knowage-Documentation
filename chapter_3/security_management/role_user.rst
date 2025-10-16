@@ -140,7 +140,7 @@ The **Business Models**, **Data sets** and **KPI Categories** tabs are intended 
 
 The **Business Models** tab is only available for modules KnowageBD and KnowageSI, while the **KPI Categories** tab is only available for KnowagePM. More details on business models and KPIs can be found in the corresponding chapters.
 
-There is a last tab **Usage** that represents a summary tab of the usage of that riole inside Knowage.
+There is a last tab **Usage** that represents a summary tab of the usage of that role inside Knowage.
 
 .. figure:: media/image3031_c.png
 
