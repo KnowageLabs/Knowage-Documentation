@@ -160,9 +160,11 @@ The **Users Management** section includes a left panel that allows the administr
 User unlock
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If user reaches the maximum number of failed login attempts (editable in advanced configurations), it will be blocked by Knowage and access will be denied. By accessing Knowage with a user having user management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it using the "unlock user" button. After that, the user will be able to log in using the latest set of credentials.
+If a user reaches the maximum number of failed login attempts (editable in advanced configurations), that user will be blocked by Knowage and access will be denied. 
+By accessing Knowage with management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it by using the "unlock user" button. 
+After that, the user will be able to log in using the latest set of credentials.
 
-.. figure:: media/image115.png
+.. figure:: media/image115_b.png
 
     Users Management - Roles settings example
 
@@ -177,16 +179,15 @@ After that, if more than one role is associated to the user, you can choose the 
 Default role is optional: if you don't select a default role, at login time all the available roles for the user will be loaded. If you select a role, at login time
 it will be the session role selected.
 
-.. figure:: media/image100_bis.png
+.. figure:: media/image100_b.png
 
-    Users Management - Roles settings example
+    Users Management - Roles tab
 
-In the example above, for the user "*Prep_admin*" you can choose from "admin" and "*kte_admin*" as default role.
+In the example above, for the user "*Dte user*" whose role is just *user*.
 
 You can also assign an attribute profile to a user. In this case it is enough to valorize the attribute that you want to assign.
-The below image, shows an example. The attribute *Country* formerly created as a *Profile attribute* has been assigned to the user kte_admin.
-The image shows that some other attributes are available but they are not considered as they remain empty.
+The below image, shows an example. The attribute *par_family* that has been formerly created as a *Profile attribute*.
 
-.. figure:: media/attributes_8.1.png
+.. figure:: media/attributes.png
 
-    Users Management - Attributes settings example
+    Users Management - Attributes tab
