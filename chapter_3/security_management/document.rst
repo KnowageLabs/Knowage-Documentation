@@ -66,11 +66,11 @@ The second option is to manually create the document on the Server. This is the 
 Analytical documents on Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First of all click on **Document Development** from the BI functionalities menu, as shown .
+First of all click on **Documents Browser** from the BI functionalities menu, as shown below.
 
 .. figure:: media/image58bis.png
 
-    Documents Development button.
+    Documents Browser functionality.
 
 By default the page is divided into two parts, as shown in figure below: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
 
