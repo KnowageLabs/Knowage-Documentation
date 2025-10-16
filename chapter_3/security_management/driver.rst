@@ -129,6 +129,7 @@ association.
 
     The Roles tab of an AD.
 
+After completing the mandatory information requested in the tabs Detail and Roles it will be possible to save the new Analytical Driver.
 
 Analytical driver’s use modes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
