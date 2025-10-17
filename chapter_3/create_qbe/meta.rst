@@ -136,7 +136,7 @@ The “Physical Model” tab contains the tables that the user has checked earli
 
     Physical Model Tab.
 
-The “hambuger-like” icon lets the user to update the Physical Model at any time. Referring to the figure below, selecting the “Update Physical Model” option the user can refresh the model metadata.
+Use the specific link to update the Physical Model at any time. Referring to the figure below, selecting the “Update Physical Model” option the user can refresh the model metadata.
 
 .. _updtphisicalmdl1:
 .. figure:: media/image302a.png
