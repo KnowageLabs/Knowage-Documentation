@@ -36,8 +36,6 @@ To associate an icon to the menu, select the name of your menu and click the *CH
 -  pick an icon from the predefined icons included in Knowage;
 -  upload a new file containing a custom icon (*File types allowed are .ico, .svg, .png and the maximum size allowed is 50 KB*).
 
-To remove the menu icon, click on the trash basket.
-
 Dialog shown in figure below allows you to select an icon or click on "Browse..." to choose the image on your pc and upload it. After choose is completed, click on "*CHOOSE*" button to apply the changes. If no errors occurred, you'll come back to menu configuration and see the icon you choose. If you want to filter predefined icons, you can start writing in the text field on the top of the dialog.
 
 .. figure:: media/image107.png
@@ -56,7 +54,15 @@ If you decide to upload a new image, click on "*Browse...*" and select your file
 
    Selecting a new file as icon
 
-There are four types of menu item content: empty, document, static page and functionality.
+In case you need to delete an icon, the image below shows how to do it.
+
+.. figure:: media/delete_icon.png
+
+   Removing an icon from a menu item
+
+Once the name and icon of a menu item have been choosen, we need to associate it with the content that will be displayed when clicking on that specific item.
+
+There are four types of items to associate with a menu: empty, document, static page and functionality.
 
 .. figure:: media/image3637.png
 
