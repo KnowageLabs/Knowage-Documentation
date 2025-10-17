@@ -299,7 +299,7 @@ To set a visibility expression, click on the **Add condition** button on the **D
 
 In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.
 
-.. figure:: media/image84.png
+.. figure:: media/image84_b.png
 
     Visibility expressions.
 
