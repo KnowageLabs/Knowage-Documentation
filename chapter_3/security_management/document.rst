@@ -377,7 +377,7 @@ As you know, it is possible to define multiple cross navigation starting by the 
 It is possible set a specific description for each cross navigation so that will be easy to recognize the right navigation definition to use. In the same way it is possible set the text of the bread crumb and personalize it.
 For both attributes it is possible show parameters (of input or output type) values through the syntax $P{parameter_name}. Just parameters of source documents are available.
 
-.. figure:: media/image90.png
+.. figure:: media/cross_05.png
 
    Example of parametric description and breadcrumb text
 
