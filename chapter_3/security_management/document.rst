@@ -327,12 +327,14 @@ Therefore it is required to state which parameters among the ones associated to 
 
 The definition of the output parameters is performed using the **Manage outputparameters** button but it differs   from document to document, according to its type. We will describe these differences in detail in each dedicated chapter, here we   explain the common steps.
 
-Declaration of the output parameters
+Adding output parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Enter the **Document details** of the document of interest. Then click on **Output parameters** tab and then on the button **Add** for adding new output parameter.
+From the Document Browser select a document and enter the **Document details**. 
+Then click on **Output parameters** tab and then on the button **Add** to add the output parameter(s) to be passed to other analytical documents.
 
-Here you have to state which parameters are going to be used as output parameters. If, for instance, you select the Date type (see next figure), it is possible to choose the format in which your date has been coded. The default value is related to the location defined in   (**Menu** > **Languages**).
+The figure below shows an example of a parameter with a DATE type. 
+The default value is related to the location defined in   (**Menu** > **Languages**).
 
 .. _settinganotuparam:
 .. figure:: media/image85.png
