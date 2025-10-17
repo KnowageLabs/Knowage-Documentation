@@ -330,8 +330,8 @@ The definition of the output parameters is performed using the **Manage outputpa
 Adding output parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From the Document Browser select a document and enter the **Document details**. 
-Then click on **Output parameters** tab and then on the button **Add** to add the output parameter(s) to be passed to other analytical documents by defining a cross navigation.
+Knowage allows the definition of output parameters. From the Document Browser select a document and enter the **Document details**. 
+Then click on **Output parameters** tab and then on the button **Add** to add the output parameter(s) to be passed to other analytical documents..
 
 The figure below shows an example of a parameter with a DATE type. 
 The default value is related to the location defined in   (**Menu** > **Languages**).
@@ -373,9 +373,9 @@ Once set, the association is highlighted as in Figure below.
 
 To assign fixed values to target parameters it is necessary to edit first the box labelled **Fixed value parameter** and click on the **plus** icon. Then the value can be associated as fixed value of the one or more target parameters. Remember to click on the **Ok** button to save the cross navigation just set.
 
-As you know, it is possible to define multiple cross navigation starting by the same document. In this case the system will show a popup window to choose the one that you want execute.
+It is possible to define multiple cross navigation starting by the same document. In this case the system will show a popup window to choose the one that you want execute.
 It is possible set a specific description for each cross navigation so that will be easy to recognize the right navigation definition to use. In the same way it is possible set the text of the bread crumb and personalize it.
-For both attributes it is possible show parameters (of input or output type) values through the syntax $P{parameter_name}. Just parameters of source documents are available.
+For both attributes it is possible to show parameters (of input or output type) values through the syntax $P{parameter_name}. Just parameters of source documents are available.
 
 .. figure:: media/cross_05.png
 
@@ -384,7 +384,9 @@ For both attributes it is possible show parameters (of input or output type) val
 .. figure:: media/image91.png
 
    Example of popup selection for more cross navigation definition (with params)
+  
+  Please bear in mind that for breadcrumbs as the case below, you need to set the *modality* to *Normal*.
 
-.. figure:: media/image92.png
+.. figure:: media/cross_06.png
 
-   Example of breadcrumb with params
+   Example of breadcrumbs with params
