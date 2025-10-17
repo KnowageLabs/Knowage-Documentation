@@ -331,7 +331,7 @@ Adding output parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From the Document Browser select a document and enter the **Document details**. 
-Then click on **Output parameters** tab and then on the button **Add** to add the output parameter(s) to be passed to other analytical documents.
+Then click on **Output parameters** tab and then on the button **Add** to add the output parameter(s) to be passed to other analytical documents by defining a cross navigation.
 
 The figure below shows an example of a parameter with a DATE type. 
 The default value is related to the location defined in   (**Menu** > **Languages**).
@@ -344,9 +344,15 @@ The default value is related to the location defined in   (**Menu** > **Language
 Cross navigation definition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally you need to select the **Cross Navigation Definition** item from the menu to configure the cross navigation. The figure below shows the cross navigation definition window.
+Finally you need to select the **Cross Navigation Definition** item from the menu to configure the cross navigation.
 
-.. figure:: media/image86.png
+.. figure:: media/cross_03.png
+
+    Cross navigation functionality.
+
+The figure below shows the cross navigation definition window.
+
+.. figure:: media/cross_00.png
 
     Cross navigation GUI.
 
@@ -354,13 +360,10 @@ It is required to give a name to the navigation; then select the document from w
 
 It is possible to configure the associations between input/output parameters by simply dragging and dropping a parameter from the left column on another of the right column.
 
-.. figure:: media/image87.png
+.. figure:: media/cross_02.png
 
     Setting the cross navigation.
 
-.. figure:: media/image88.png
-
-    Relating parameters.
 
 Once set, the association is highlighted as in Figure below.
 
