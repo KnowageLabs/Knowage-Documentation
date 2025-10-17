@@ -31,10 +31,10 @@ Creating a menu, you can choose an icon to be shown in the main menu. **This fea
 
    Menu choose icon feature
 
-To associate an icon to the menu, click on "*CHOOSE ICON*" and then you can:
+To associate an icon to the menu, select the name of your menu and click the *CHOOSE ICON* functionality and you can:
 
--  choose icon from the predefined icons included in Knowage;
--  upload a new file containing a custom icon (*File type allowed are .ico, .svg, .png and the maximum size allowed is 50 KB*).
+-  pick an icon from the predefined icons included in Knowage;
+-  upload a new file containing a custom icon (*File types allowed are .ico, .svg, .png and the maximum size allowed is 50 KB*).
 
 To remove the menu icon, click on the trash basket.
 
@@ -54,7 +54,7 @@ If you decide to upload a new image, click on "*Browse...*" and select your file
 
 .. figure:: media/image109.png
 
-   Menu choose uploaded icon
+   Selecting a new file as icon
 
 There are four types of menu item content: empty, document, static page and functionality.
 
