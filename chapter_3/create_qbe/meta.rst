@@ -98,13 +98,13 @@ In previous sections we saw how to set correlation through the GUI available in 
 
 We stress that the ``AD_name`` is the name of the driver the administrator is trying to reach. 
 
-.. figure:: media/image82.png
+.. figure:: media/image82_a.png
 
     Correlation passing driver values to LOV query .
 
 As a result, when opening meta model, as soon as the user pick up a value from the "free" parameter, the other one is filtered and it will show only the value related to the previous selection, as shown in Figure below.
 
-.. figure:: media/image83.png
+.. figure:: media/image83_a.png
 
     Filtering with correlation.
 
