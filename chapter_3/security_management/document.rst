@@ -306,7 +306,7 @@ In the graphical editor you can define visibility rules similarly to   correlati
 Cross Navigation
 ------------------------------------------------------------------------------------------------------------------------
 
-A powerful feature of Knowage analytical documents is cross-navigation, i.e., the ability to navigate documents in a browser-like fashion following logical data flows. Although crossnavigation is uniformly provided on all documents executed in Knowage Server, each type of document has its own modality to set the link pointing to another document.
+A powerful feature of Knowage is the cross-navigation that is the ability to navigate documents in a browser-like fashion following logical data flows. Although crossnavigation is uniformly provided on all documents executed in Knowage Server, each type of document has its own modality to set the link pointing to another document.
 
 Notice that the pointer can reference any Knowage document, regardless of the source document. For example, a BIRT report can point to a chart, a console, a geo or any other analytical document.
 
