@@ -276,7 +276,7 @@ We stress that the ``AD_name`` is the name of the driver the administrator is tr
 
    $P{AD_name}
 
-.. figure:: media/image82.png
+.. figure:: media/image82_b.png
 
     Correlation passing driver values to LOV query .
 
