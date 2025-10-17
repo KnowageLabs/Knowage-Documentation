@@ -37,7 +37,7 @@ To add a new parameter, you can click on the tab **Drivers** and then on a **Add
 
 .. figure:: media/image299a.png
 
-    Association with analytical driver panel.
+    Association with analytical driver panel - 1.
 
 Choose a name for the title of the driver. Then choose an analytical driver from drop-down menu that you wish to associate to the meta model.
 
@@ -47,9 +47,9 @@ After you have completed the definition of a parameter you can save it by clicki
 
 .. figure:: media/image299b.png
 
-    Association with analytical driver panel.
+    Association with analytical driver panel - 2.
 
-In the following chapter we'll see some special operations that can be performed on drivers associated to a meta model.
+In the following chapter we will see some special operations that can be performed on drivers associated to a meta model.
 
 Correlation between parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
