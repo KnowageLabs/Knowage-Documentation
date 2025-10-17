@@ -17,7 +17,7 @@ Remember that the SQL dialect depends on the data source that has been chosen. T
 It is also possible to dynamically change the original text of the query at runtime. This can be done by defining a script (Groovy or JavaScript) and associating it to the query. Click on the **Edit Script** section (see next figure) to open the script editor and write your script. The base query is bounded to the execution context of the script (variable query) together with its parameters (variable parameters) and all the profile attributes of the user that executes the dataset (variable attributes).
 
 .. _scripteditingdataset:
-.. figure:: media/image31.png
+.. figure:: media/image31_b.png
 
     Script editing for dataset.
 
