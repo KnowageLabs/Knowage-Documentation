@@ -33,8 +33,8 @@ Once you click the *Plus* icon, the functionality details section opens.
 
    Create a new folder and assign permissions.
 
-Enter a label and name for the new folder (functionality). In the table, assign permissions to roles.
-There are four types of permission:
+Enter a *label* and a *Name* for the new folder (called functionality)  and assigg permissions by selecting the roles to that folder.
+There are four types of permissions:
 
 -  **Development**: to create, edit and delete analytical documents;
 -  **Test**: to execute the document and modify its status from test to released;
