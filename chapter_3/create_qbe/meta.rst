@@ -60,10 +60,6 @@ This feature can be useful when two (or more) parameters are logically related. 
 
 To set the correlation, select the child parameter which will show you the details of that particular driver and then click on the **Add condition** button to open a pop-up window for defining a data correlation.
 
-.. figure:: media/image299c.png
-
-    Adding data correlation.
-
 In general, to configure a correlation within a meta model you should make sure that the LOV associated with the parent parameter and the  one associated to the child parameter share at least one column. This column defines which value from the parent parameter will be applied to the child, in order to constrain the results.
 
 .. figure:: media/image299d.png
