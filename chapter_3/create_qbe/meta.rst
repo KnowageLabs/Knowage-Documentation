@@ -5,12 +5,16 @@ In this chapter we go into details of how to build your own metamodel. Knowage a
 
 The Meta Web allows the user to access these information through the usage of a graphic interface and to easily combine, redefine and query them on an abstract model, guaranteeing the safety of the source model. In addition, we stress that the users can perform queries over data without the usage of a data query language.
 
-Metamodel creation
+Creating a Metamodel
 ------------------------------------------------------------------------------------------------------------------------
 
 Using the Meta Web application, it is possible to reverse the content of a database and manipulate this information creating a new model that can fit the user’s needs. In this section will we see what are the steps needed in order to create a metamodel and query it with the QBE.
 
 To create a Metamodel enter the **Business Model Catalogue** and add a new model clicking on the “Plus” icon. Referring to next figure, you will be prompted to enter the following fields:
+
+.. figure:: media/bm_KN.png
+
+    Business Model functionality.
 
 -  *Name* (mandatory): Name of the model (cannot be changed after the save).
 -  *Description*: A longer description of your model.
