@@ -22,6 +22,8 @@ In general you can:
 
 Observe that when one inserts a menu item as a child, this will inherit the general details of a menu node.
 
+You can move up/down menu items just by using the arrows or delete an item by using the trash icon.
+
 Setting menu icon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
