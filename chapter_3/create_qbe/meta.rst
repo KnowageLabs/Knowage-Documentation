@@ -108,7 +108,7 @@ As a result, when opening meta model, as soon as the user pick up a value from t
 
     Filtering with correlation.
 
-Create an empty model
+Creating an empty model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The first time you enter the Meta Web, the interface will show you the available tables extracted from the selected data source.
