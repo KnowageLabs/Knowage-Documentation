@@ -162,10 +162,6 @@ In this view, you see all the Business Classes created at the first initializati
 The Business Classes are represented in a tree structure on the left side of the page. 
 Clicking on them, generic information are reported in the six tabs available on the right side of the page. See below.
 
-.. figure:: media/image309.png
-
-    Exploring Business Class properties.
-
 You can change the order of the business classes just by using the drag and drop functionality.
 
 By means of the **Property List** tab, the user can customize the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatial functions to the dimension fields available in the QbE interface.
@@ -228,12 +224,12 @@ There is a new feature that is added in meta web. It is SQL Filter which we can 
 .. figure:: media/image1_sql.png
 
 SQL filter is expression that is added in the end of query as part of where clause. The right syntax for sql filter is:
-column_name = $P{url_name_of_the_driver}. For example: city = $P{cityUrl}. If you want to add more than one filter, you can connect them with an operator (AND, OR...) as you can see in an example in figure below.
+column_name = $P{name_of_the_driver}. For example: city = $P{city}. If you want to add more than one filter, you can relate them with an operator (AND, OR...) as you can see in an example in figure below.
 
 .. figure:: media/image2_sql.png
 
-If you want to add filter for multivalue driver the right syntax is this: column_name IN ($P{url_name_of_the_driver}). For example:
-city IN ($P{cityUrl}).
+If you want to add filter for multivalue driver the right syntax is this: column_name IN ($P{name_of_the_driver}). For example:
+city IN ($P{city}).
 
 
 Create a new business class
