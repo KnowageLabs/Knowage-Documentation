@@ -60,7 +60,7 @@ Each single entity contains a title, a list of attributes or measures and relati
 
 .. figure:: media/image300_bis.png
 
-	Relations of an entity.
+	Entity relations.
 
 There are two available views: Smart and Advanced. When the QbE is opened, by default the user will see the Smart view. To add a field of a specific entity to the query,just click on it and no other user interaction will be necessary to display the results.
 
