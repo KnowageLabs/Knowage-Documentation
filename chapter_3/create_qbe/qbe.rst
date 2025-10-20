@@ -243,24 +243,6 @@ The option **Another entity** allows the selection of a field from another entit
 If you have the SI license file, you could filter your data with fields type of date/time/timestamp using Calendar/Time/Calendar + Time options.
 This depends on which data type your field is: the data type is assigned when creating the metamodel.
 
-
-.. figure:: media/timeDataType_8.1.png
-
-	Creation of a Metamodel.
-
-.. figure:: media/date.png
-
-	Filters on date fields.
-
-.. figure:: media/time.png
-
-	Filters on time fields.
-
-.. figure:: media/timestamp.png
-
-	Filters on timestamp fields.
-
-
 The following table summarizes the possible types of filters in the QbE. The use of subqueries in filters will be explained later in the *Advanced QbE functionalities* paragraph.
 
 .. table:: Possible combinations of filters in the QbE.
