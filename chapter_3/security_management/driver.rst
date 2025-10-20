@@ -4,7 +4,7 @@ Analytical Driver
 An analytical driver (hereafter simply driver or AD) models a concept or a piece of data frequently used as a distinguishing criterion on the global data context. A driver highlights the concepts guiding the analysis, providing a unique representation of them and describing how they are shown and checked according to the end users’ roles. When connected to analytical documents, a driver produces an explicit or implicit parameter used to filter data.
 
 .. _parametrreportbehav:
-.. figure:: media/image39.png
+.. figure:: media/image39_c.png
 
     Parametric Report.
 
