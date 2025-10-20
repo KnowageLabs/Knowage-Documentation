@@ -348,7 +348,7 @@ In a BM with geographical dimensions enabled (by a technical user), the dimensio
 .. |earthIcon| image:: media/earthIcon.png
    :width: 30
 
-.. figure:: media/image218.png
+.. figure:: media/image218_a.png
 
     QbE spatial dimensions.
 
