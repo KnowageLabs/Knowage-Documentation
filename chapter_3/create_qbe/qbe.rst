@@ -199,14 +199,20 @@ How to add a filter:
 - in the Smart view, clicking on **Funnel icon**                                                                                                                                   
 - in the Advanced view, selecting **Filters** from the *three dots* field menu
 
+.. figure:: media/add_filter.png
+
+   Add filter from the Advanced view.
+
+
 In both cases a pop up opens and click on the **+** icon to add your filter.
 
-To remove the filter just click on **eraser** icon as shown in the below image.
+To remove the filter just click on the **erase** icon as shownbelow.
 
 .. figure:: media/addDeleteFilter.png
 
+ Removing a filter.
 
-The Filters panel contains the following components:
+The Filter panel contains the following components:
 
 -  **Field, Condition, Target**, these components allow you to define filters according to the syntax defined above.
 -  **Target type**, defines the types of right operand: *Manual set value, Value of the field, Another entity, Parameter, Subquery*;
