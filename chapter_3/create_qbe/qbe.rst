@@ -286,13 +286,13 @@ When filtering a date attribute or a time attribute it is possible to apply a ti
 
 	Filtering date attribute: use a timespan.
 
-After selecting a timespan and clicking on apply, the user has to insert the start and end date values.
+After selecting a timespan, click on Save to apply it. 
 
 .. figure:: media/imageTS006.png
 
 	Filtering date attribute: apply a timespan.
 
-Save now to filter data accordingly.
+Save again the filter.
 
 
 Query Preview
