@@ -318,12 +318,12 @@ Click on the business class where you want to add a new column to open the pop u
 
 	Selecting columns
 
-If you want to remove columns from a business table just click the *Trash* icon.
+If you want to remove columns from a business class just click the *Trash* icon.
 .. figure:: media/deleteBusinessColumn.png
 
 	Deleting a column
 
-To change order of columns, you can do it just by using the drag and drop functionality.
+To change the order of the columns, you can do it just by using the drag and drop functionality.
 
 
 Generate the datamart
