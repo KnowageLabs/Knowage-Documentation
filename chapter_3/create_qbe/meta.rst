@@ -351,7 +351,7 @@ In this section, we briefly describe the generic available options for business 
 
 .. figure:: media/image325.png
 
-    Business model lock.
+    Locking a Business Model.
 
 Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the **Metadata** section. Clicking the **Import metadata** button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context).
 
