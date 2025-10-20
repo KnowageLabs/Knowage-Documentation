@@ -228,10 +228,6 @@ When the user chooses **Value of the field** as *Target type*, a lookup function
 To use a range of values as a right operand, the *Condition* should be to **In** or **Not in**. 
 
 
-.. figure:: media/lookupFunction.png
-
-    Filter lookup for right operand selection.
-
 The option **Another entity** allows the selection of a field from another entity, to be used as a right operand.
 
 .. figure:: media/anotherEntity.png
