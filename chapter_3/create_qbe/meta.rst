@@ -315,17 +315,15 @@ If you did not choose all columns from physical table, when you were creating ne
 
 .. figure:: media/addNewBusinessColumn.png
 
-	Remove existing column from business class
+	Remove existing columns from business class
 
-If you want to remove column from business table, you need to click on business class from which you want to remove column. Open Attributes tab and click on three dots of column you want to delete. It will open details panel. Click on delete button.
-
+If you want to remove columns from a business table just click the *Trash* icon.
 .. figure:: media/deleteBusinessColumn.png
 
 	Change the order of the columns
 
-If you want to change order of columns, you can do it using drad and drop functionality.
+To change order of columns, you can do it just by using the drag and drop functionality.
 
-.. figure:: media/columnDragDrop.png
 
 Generate the datamart
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
