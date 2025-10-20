@@ -202,11 +202,11 @@ In Figure above the outbound relationship is shown. Here you have to:
 -  enter the business relationship name,
 -  select the cardinality of the relationship (1 to N is suggested),
 -  select the Source and Target Business Classes,
--  Then is possible to drag and drop a Business attribute from the source Business Class to another Business attribute in the target Business Class. This will create a link between the two attributes.
+-  drag and drop an attribute from the source Business Class to another attribute in the target Business Class. This will create a link between the two attributes.
 
-When all these steps are accomplished, click on “Create” to save.
+When all these steps are accomplished, click *Create* to save the new relationship.
 
-We stress that the cardinality of the outbound relationship can be of two types:
+From the example you see that the cardinality of the outbound relationship can be of two types:
 
 -  1 to N,
 -  1 to N\*.
