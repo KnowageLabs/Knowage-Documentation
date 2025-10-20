@@ -298,9 +298,11 @@ Save again the filter.
 
 Query Preview
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The QBE panel allows you to preview the results of your query.
-The Smart automatically shows the preview of you query.
-The Advanced view contains a *Play* icon located in the top right corner of the panel that opens a window with the results of the query. 
+The QBE editor allows you to preview the results of your query.
+The QbE editor can be opened directly from the left side menu **My Data** > **Models**.
+
+The Smart functionality of the QbE automatically shows the preview of you query.
+The Advanced functionality of a QbE view contains a *Play* icon located in the top right corner of the panel that opens a window with the results of the query. 
 
 .. figure:: media/preview_1.png
 
@@ -312,17 +314,18 @@ Just close the window to go back to the **Designer**.
 
 	Preview wizard.
 
-In case of starting the QbE editor directly from a model **My Data** > **Models**,you can also save your query as a new dataset by clicking on the **Save** icon located in the top right corner of the page; the dataset would be reachable later from **My Data**> **Dataset**. Please note that this operation saves the *definition* of your query and not the snapshot of the query result. This means that every time you re-execute the saved dataset, a query on the database is performed to recover the updated data.
+After running the QbE you can also save your query as a new dataset by clicking on the **Save** icon located in the top right corner of the page; the dataset would be reachable later from **My Data**> **Dataset**. 
+Please note that this operation saves the *definition* of your query and not the snapshot of the query result. This means that every time you re-execute the saved dataset, a query on the database is performed to recover the updated data.
 
 When saving your query as dataset, a pop up opens asking you to fill in some information, split in three tabs:
 
--  **Details**, in this tab you set basic information for your dataset like its **Label**, **Name**, **Description**, **Catgory** and **Scope**.
+-  **Details**, in this tab you set basic information for your dataset like its **Label**, **Name**, **Description**, **Category** and **Scope**.
 -  **Persistence**, you can persist your dataset, i.e., to write it on the default database. Making a dataset persistent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. You can also decide to schedule the persistence operation: this means that the data stored will be updated according to the frequency defined in the **scheduling** options.
 -  **Metadata**, contains the metadata associated to the fields involved in your query.
 
 .. figure:: media/saveQbeDS_8.1.png
 
-	Save qbe dataset.
+	Saving the qbe dataset.
 
 
 Advanced QbE functionalities
