@@ -298,12 +298,17 @@ Save again the filter.
 
 Query Preview
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+The QBE panel allows you to preview the results of your query.
 The Smart automatically shows the preview of you query.
-The Advanced view contains a **Play** icon located in the top right corner of the panel, that opens a window with the results of the query. 
+The Advanced view contains a *Play* icon located in the top right corner of the panel that opens a window with the results of the query. 
+
+.. figure:: media/preview_1.png
+
+	Open the Preview wizard.
+
 Just close the window to go back to the **Designer**.
 
-.. figure:: media/preview.png
+.. figure:: media/preview_2.png
 
 	Preview wizard.
 
