@@ -173,6 +173,13 @@ To build a calculated field, you shall define a:
 - **Column Type**: measure or attribute;
 - **Formula**: drag and drop the fields included on the left and build the formula using the available functions.
 
+The image below shows how to open the wizard to add a calculated field.
+
+.. figure:: media/calculatedField_8.1_a.png
+
+    Calculated field wizard.
+
+
 The image below shows the wizard.
 
 .. figure:: media/calculatedField_8.1.png
