@@ -281,12 +281,19 @@ Scrolling the table “Property list” tab, the user finds the **Type** menu it
 Column property list
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As well, the user can employ each field property list (see next figure) to both inspect the object and custom it.
+Below the Property tab of a Business Class
+
+.. figure:: media/image31819_b.png
+
+   Column property list.
+
+
+Click the modify icon to display all the details related to a specific attribute.
 
 .. _clmnproprtylist:
 .. figure:: media/image322_8.1.png
 
-   Column property list.
+   Attribute details.
 
 The **Structural** area covers an important role for the field properties. Here the user can set:
 
