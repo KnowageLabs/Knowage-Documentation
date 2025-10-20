@@ -311,16 +311,17 @@ In the **Physical** area, recalls the physical table and field name from which t
 
 	Add new column into business class
 
-If you did not choose all columns from physical table, when you were creating new business class, you can do it easily. Click on business class in which you want to add new column. Open Attributes tab and click on above column name.
+If you did not choose all the columns from physical table when you were creating new business class, you can do it easily.
+Click on the business class where you want to add a new column to open the pop up to select the missing columns.
 
 .. figure:: media/addNewBusinessColumn.png
 
-	Remove existing columns from business class
+	Selecting columns
 
 If you want to remove columns from a business table just click the *Trash* icon.
 .. figure:: media/deleteBusinessColumn.png
 
-	Change the order of the columns
+	Deleting a column
 
 To change order of columns, you can do it just by using the drag and drop functionality.
 
