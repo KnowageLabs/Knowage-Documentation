@@ -235,14 +235,14 @@ city IN ($P{city}).
 Create a new business class
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the “Business Model” tab, the sandwich icon lets the user add other Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
+In the “Business Model” tab, the *Plus* icon allows to add new Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
 
 .. figure:: media/image31213.png
 
 
-    Create a new business class.
+    Creating a new business class.
 
-When clicking on the icon, as shown in Figure above), and selecting “New Business Class”, a new dialog asks to the users to:
+When clicking on the icon, as shown in Figure above, and selecting “New Business Class”, a new dialog asks to the users to:
 
 -  select a Physical Table from the available ones;
 -  insert a description for this new business class;
