@@ -280,7 +280,8 @@ The following table summarizes the possible types of filters in the QbE. The use
       |    subquery |             |             |             |             |
       +-------------+-------------+-------------+-------------+-------------+
 
-When filtering a date attribute or a time attribute it is possible to apply a timespan to ease the insertion of values. Following the images below, we can see that the Timespan button appears when filterting, for instance, a date attribute. We recall that is it possible to configure a new timespan using the dedicated Knowage functionality that we described in the administrator guide.
+When filtering a date attribute or a time attribute it is possible to apply a timespan to ease the insertion of values as shown in the images below.
+We recall that is it possible to configure a new timespan using the dedicated Knowage functionality that we described in the administrator guide.
 
 .. figure:: media/imageTS005.png
 
