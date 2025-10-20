@@ -101,7 +101,7 @@ The Advanced view shows a set of rows where any row contains the **Entity name**
 
     Advanced view functionalities.
 
-The below image shows how to change the alias for a specific field from the Advanced view. Just click on the cell containing the alias name to be able to edit it.
+The image below shows how to change the alias for a specific field from the Advanced view. Just click on the cell containing the alias name to be able to edit it.
 
 
 .. figure:: media/aliasChange_8.1.png
