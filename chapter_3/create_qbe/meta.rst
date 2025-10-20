@@ -158,23 +158,22 @@ As shown below, the Business Model tab allows the user to custom the model in te
 
     Business Model Tab.
 
-In this view, you see all the Business Class created at the first initialization. As well, the Business Classes are represented in a tree structure on the left side of the page. Clicking on each business class name, generic information are reported in the five tabs available on the right side of the page (Figure below).
+In this view, you see all the Business Classes created at the first initialization. 
+The Business Classes are represented in a tree structure on the left side of the page. 
+Clicking on them, generic information are reported in the six tabs available on the right side of the page. See below.
 
 .. figure:: media/image309.png
 
     Exploring Business Class properties.
 
-	Change the order of the business classes
+You can change the order of the business classes just by using the drag and drop functionality.
 
-If you want to change order of the business classes, you can do it using drag and drop functionality.
-
-.. figure:: media/entityDragDrop.png
-
-Using the **Property List** tab, the user can custom the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatial functions to the dimension fields available in the QbE interface.
+By means of the **Property List** tab, the user can customize the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatial functions to the dimension fields available in the QbE interface.
 
 The **Attributes** tab lets the user to define which columns to be used as primary keys and which are effectively functional for the Business Class (not to be confused with the visibility condition). Note that, for instance, it is not possible to disable the “In Use” option when the field has already been set as foreign key.
 
-The **Calculated field** tab is used to configure computed measures or attributes. Click on the dedicated button, as shown below, to create a new field. Use the list of functions to retrieve right function syntax and the list of fields on the left to correctly type the fields name.
+The **Calculated field** tab is used to configure computed measures or attributes. 
+Click on the dedicated button, as shown below, to create a new field. Use the list of functions to retrieve right function syntax and the list of fields on the left to correctly type the fields name.
 
 .. figure:: media/image310.png
 
