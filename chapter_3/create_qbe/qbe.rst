@@ -417,7 +417,11 @@ The **QbE Engine** also supports the definition and usage of parameters that can
 
 .. figure:: media/parameter_8.1.png
 
-	QBE parameter view.
+	QbE parameters view.
+
+    .. figure:: media/filterParam_8.1.1_2.png
+
+	Defining a new parameter in a QbE.
 
 To use the parameter inside the main query, simply choose **Parameter** from Target type and choose parameter name from the **Target** list.
 
