@@ -143,7 +143,7 @@ Use the specific link to update the Physical Model at any time. Referring to the
 
     Update the physical model.
 
-As shown below, the interface shows if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
+As shown below, the interface indicates if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
 
 .. _updtphisicalmdl2:
 .. figure:: media/image30607.png
@@ -152,11 +152,11 @@ As shown below, the interface shows if tables have been added or deleted to the 
 
 Each table of Physical Model brings the information read from data base. Selecting each table, the interface shows on the right the list of its properties (**Property List** tab) and its foreign keys (**Foreign Keys** tab). Clicking on the icon on the left of each Physical Table, it is possible to expand the corresponding node. Highlight each column name to see (on the right side of the screen) a list of properties, like data type or length.
 
-The Business Model tab, shown below, allows the user to custom the model in terms of column name, type, visibility, format, etc.
+As shown below, the Business Model tab allows the user to custom the model in terms of column name, type, visibility, format, etc.
 
 .. figure:: media/image308.png
 
-    Physical Model Tab.
+    Business Model Tab.
 
 In this view, you see all the Business Class created at the first initialization. As well, the Business Classes are represented in a tree structure on the left side of the page. Clicking on each business class name, generic information are reported in the five tabs available on the right side of the page (Figure below).
 
