@@ -387,7 +387,8 @@ Subqueries
 ++++++++++
 
 
-The **QbE Engine** also supports the definition and usage of SQL subqueries to use within a filter in association to the **In/Not in** operator, as shown in the figure below. To create a subquery, click on **+** icon, on the right of **Derived entities**. 
+The **QbE Engine** also supports the definition and usage of SQL subqueries to use within a filter in
+ association to the **In/Not in** operator, as shown in the figure below. To create a subquery, click the *Plus* icon, on the right of **Derived entities**. 
 .
 
 .. |addSubqueries| image:: media/addSubquery.png
@@ -397,7 +398,7 @@ The **QbE Engine** also supports the definition and usage of SQL subqueries to u
 
 	QbE subquery view.
 
-You can easily add fields and return to the main query clicking on **MAIN** link in the query editor toolbar.
+You can easily add fields and return to the main query clicking on the **MAIN** link in the query editor toolbar.
 
 To use the subquery inside the main query, simply choose **Subquery** from *Target type* and set the *Condition* to (**IN** or **NOT IN**).
 
