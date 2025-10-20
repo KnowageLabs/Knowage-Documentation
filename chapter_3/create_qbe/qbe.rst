@@ -221,7 +221,7 @@ Above, an example of filter with *Target type* set to **Manual set value**: the 
 
 .. figure:: media/manualTarget.png
 
-	Manual *Target type*
+	Set a Manual Value for the *Target type*
 
 **Manual set value** can be also used choosing **Between**, **Not between** as *Condition*. In this case, a Low and High Limit is needed for *Target* values.
 When the user chooses **Value of the field** as *Target type*, a lookup function is automatically activated on the field values, to facilitate the selection of values to be used as the right operand. 
