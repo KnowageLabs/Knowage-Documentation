@@ -54,7 +54,7 @@ Additional functionalities are *Filter* and *Cancel*. Click *Filter* to apply th
 Pivot Registry characteristics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to implement also a Pivot Registry document. The graphical features are very similar to the ones exposed in *Registry development* paragraph. An example is given below.
+There is also the possibility to implement a *Pivot* Registry document. The graphical features are very similar to the ones exposed in *Registry development* paragraph. An example is given below.
 
 .. _examplejpivotregdoc:
 .. figure:: media/image349.png
