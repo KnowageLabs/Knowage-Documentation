@@ -6,18 +6,15 @@ The **Alert** functionality available under the **Tool** section of Knowage main
 .. _alertfunctfrom:
 .. figure:: media/image172.png
 
-    Alert functionality from contextual menu.
+    Alert functionality from menu.
    
 Alert implementation
 ------------------------------------------------------------------------------------------------------------------------
 
-The Alert definition window (refer to the figure below) diplays the list of existing alerts and a search box at the top of the page to facilitate to browse over the items. In the right top corner of the list it is available the “Plus” icon to configure a new alert.
+The Alert definition window diplays the list of existing alerts and a search box at the top of the page to facilitate to browse over the items. In the right top corner of the list it is available the “Plus” icon to configure a new alert.
 
-.. figure:: media/image173.png
-
-    Alert definition window.
    
-Clicking on the “Plus” icon the page in the following figure opens.
+By Clicking the *Plus* icon the Alert editor section opens.
 
 Give a name and select the **KPI listener** from the combobox. Then indicate the start date, the start time and eventually the Alert implementation end date. Specify the time interval and how many times it must be repeated. At this point choose between **Single Execution** and **Event before trigger actions**: in the first case the alert must signal the anomaly just once its occurence while in the other case it must send the alarms when the irregularity occurs as many times as specified. Note indeed that the box is editable and it must contain a number which indicates the number of irregularities that has to be detected before the alert starts.
 
