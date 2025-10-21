@@ -106,7 +106,7 @@ This is useful in order to avoid aliases already in use when defining a new rule
 
 .. figure:: media/image131.png
 
-    Configure a new KPI.
+    Configuring a new KPI.
 
 The window opens a first tag, entitled **Formula** (see figure below), where you must type the formula to enable calculations. Press CTRL key and space bar simultaneously to access all measures defined in the rules, as shown below.
 
