@@ -108,32 +108,25 @@ This is useful in order to avoid aliases already in use when defining a new rule
 
     Configuring a new KPI.
 
-The window opens a first tag, entitled **Formula** (see figure below), where to type in the formula to enable calculations. Press CTRL key and space bar simultaneously to access all measures defined in the rules, as shown below.
-
-.. figure:: media/image132.png
-
-    Formula definition tab.
+The window opens a first tag, entitled **Formula** (see figure below), where to type in the formula to enable calculations. 
+Press CTRL key and space bar simultaneously to access all measures defined throug the definition of the rules. In case of *No Suggestions* you will need to type in the name manually.
   
-Once a measure is selected, you need to choose which function must act on it. This can be done by clicking on the *f*\ () that surrounds the chosen measure. See figure below.
+Once typed in the name of the measure(s), you need to choose the aggregation function to apply to just by clicking on the name. See figure below.
 
-.. _formulasyntax:
-.. figure:: media/image134.png
-
-    Formula syntax.
-
-Clicking on the *f*\ () the interface opens a pop up where you can select which function apply to the measure, see figure below. Once the selection is made the formula will be autofilled with the proper sintax and you can go on editing it.
 
 .. figure:: media/image135.png
 
     Available functions.
 
-Once a complete formula (an example is given in figure below) has been inserted you must set a name for it and then move to the next tab.
-
 .. figure:: media/image136.png
 
-   Complete formula example.
+   Example of a KPI formula.
 
-The **Cardinality** tab allows you to define the granularity level (namely the grouping level) for the attributes of the defined measures.
+
+After completing the insertion of the formula move to the next tab *Cardinality*
+
+
+The *Cardinality* tab allows you to define the granularity level (namely the grouping level) for the attributes of the defined measures.
 
 Referring to the example below, selecting (with a check) all the measures for the attribute product_name the KPI measures are computed for each value of the product_name; otherwise no grouping will be done.
 
