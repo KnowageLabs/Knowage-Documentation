@@ -53,11 +53,6 @@ Each perspective manages one or more targets accordingly to the user’s require
        
        When the targets contain parametric KPIs the target/perspective evaluation cannot be completed for value absence. Therefore the warning lights turn grey. The right visualization of the scorecard must be implemented through a scorecard document. Check the following to have more details on how to develop a scorecard document.
 
-An example is showed below.
-
-.. figure:: media/image166.png
-
-    Select the KPI with priority.
 
 The same choice is available at the perspective level (refer to next figure), that is:
 
@@ -65,12 +60,8 @@ The same choice is available at the perspective level (refer to next figure), th
 -  **Policy “Majority with Priority”** the perspective gets the threshold of a specific target,
 -  **Policy “Priority”** the perspective gets the majority threshold of the targets in case the primary stated target returns the lower    threshold, namely the “green” one, while it gets the threshold of a primary stated target in case the latter returns the other thresholds, namely the “yellow” or the “red” one.
 
-.. _prespectpolicy:
-.. figure:: media/image167.png
 
-    Perspective policy.
-
-Remember to save once perspectives and targets have been set.
+Remember to save once perspectives and targets have been set up.
 
 Creation of a Scorecard document
 ------------------------------------------------------------------------------------------------------------------------
