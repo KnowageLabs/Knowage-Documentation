@@ -48,13 +48,13 @@ Each rule is based on a query to which you can add placeholders. A placeholder r
 
     Setting placeholder in query definition.
 
-Generally the rule such a query can return one or more measures and possibly an attribute. An example is given below.
-
-.. figure:: media/image124.png
-
-    Query definition.
+Generally the rule of a query can return one or more measures and possibly an attribute as the example above also shows.
 
 The **Preview** button allows you to check the query execution and have a look on a part of the result set.
+
+.. figure:: media/image124_b.png
+
+    Preview functionality.
 
 A typology (measure, attribute and temporal attribute) and a category can be assigned to each fields returned by the query using the **Metadata** tab as highlighted in the next figure. The typology is required to associate a type to each field returned by the query. In particular, if the field is a temporal one, it is mandatory to specify to which level you want it to be considered, that is if it corresponds to a day, a month, a year, a century or a millennium. For measures and attribute it is possible to assign also a category to easily look them up in a second moment.
 
