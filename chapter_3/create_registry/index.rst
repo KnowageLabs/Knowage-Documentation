@@ -1,11 +1,14 @@
 Create a new Registry
 ########################################################################################################################
 
-A Registry document allows users to write, cancel and modify items of a datamart. Knowage allows users to implement a Registry document through the **Qbe Engine**. By the way it has a different graphical interface compared to the Qbe one. An example is given in the following figure. In next chapters we will see how to navigate a Registry document (*Registry features* paragraph) and how to create a new one (*Registry development* paragraph).
+A *Registry* document allows users to write, delete and modify the items of a datamart. 
+Knowage allows users to implement a registry document through the **Qbe Engine**. 
+In this case, the graphical interface is different from the Qbe one. Below an exmple of a registry document.
+In the next chapters we will see how to navigate a Registry document (see *Registry features* paragraph for more details) and how to create a new one (see *Registry development* paragraph for more details).
 
 .. figure:: media/image339.png
 
-    Example of Registry document.
+    Example of a Registry document.
 
 Registry features
 ------------------------------------------------------------------------------------------------------------------------
@@ -14,7 +17,7 @@ The execution of a Registry document opens a plain table: the records are shown 
 
 .. figure:: media/image340.png
 
-    Editing table cells.
+    Editing table cells in a registry.
 
 Moreover, you can add new rows from scratch selecting the “Add row” button |image335| in the header of last column. Insert in each cell the corresponding value: string, number or date. “Add row” button will be available if inside template there is a configuration: <CONFIGURATION name="enableAddRecords" value="true"/>
 
@@ -23,14 +26,14 @@ Moreover, you can add new rows from scratch selecting the “Add row” button |
 
 .. figure:: media/image343.png
 
-    Adding a new row.
+    Adding a new row to a registry.
 
-Vice versa, you can delete one or more rows using the “Trash” icon |image338| in the last column. “Trash” button will be available if inside template there is a configuration: <CONFIGURATION name="enableDeleteRecords" value="true"/>
+You can delete one or more rows using the *Trash* icon |image338|. The *Trash* button will only be available if the template configuration contains the following: <CONFIGURATION name="enableDeleteRecords" value="true"/>
 
 .. |image338| image:: media/image344.png
    :width: 30
 
-It is important to click on the “Save” button |image339| to store the adjustments done in the datamart. “Save” button is available in Functionality bar, above table.
+After all the changes applied to the datamart click the *Save* button |image339| as shown below.
 
 .. |image339| image:: media/image345.png
    :width: 30
