@@ -246,7 +246,7 @@ In particular, it is possible to select the time granularity used by the KPI eng
 
 .. figure:: media/image154.png
 
-    Choose the time granularity.
+    Choosing the time granularity.
 
 Finally in the “Style” area the user can customize the size of the widget, the font, the color and size of texts.
 
@@ -260,7 +260,7 @@ In case the document contains KPIs that involves grouping functions upon some at
 
 Then to use them to filter the document, first add the proper analytical drivers. Refer to **Analytical Document** section to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). It is mandatory that the URL of the analytical driver *must* coincide with the *attribute aliases* on which you have defined the grouping.
 
-In the following figures you can find examples on the three type of KPIs you can design: Speedometer, KPI Card and KPI List.
+In the following figures you can find examples on two types of KPIs you can design: a Speedometer and a KPI Card.
 
 .. _kpispeedometer:
 .. figure:: media/image158.png
@@ -272,8 +272,4 @@ In the following figures you can find examples on the three type of KPIs you can
 
     KPI Card.
 
-.. _kkpilist:
-.. figure:: media/image160.png
-
-    KPI List.
 
