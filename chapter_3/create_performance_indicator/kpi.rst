@@ -63,12 +63,7 @@ A typology (measure, attribute and temporal attribute) and a category can be ass
 
     Metadata settings.
 
-We say in advance that, it is important to distinguish these metedata categories from the required field “Category” that occurs while saving the KPI definition (see next figure).
-
-.. _kpidefinitioncat:
-.. figure:: media/image160_2.png
-    
-    Category assigned when saving a KPI definition.
+We say in advance that, it is important to distinguish these metedata categories from the required field “Category” that occurs while saving the KPI definition.
 
 In fact, the category assigned when saving the KPI definition will be added (if it doesn’t exist) in the “KPI categories“ list, used to profile KPIs on roles (see Figure below).
 
@@ -78,7 +73,7 @@ In fact, the category assigned when saving the KPI definition will be added (if 
     KPI category.
 
 .. warning::
-      **Do not mistake metadata category with the KPI category**
+      **Do not confuse metadata category with the KPI category**
          
          The category defined in the metadata tab of the "Measure definition" functionally are not the same categories selected in the tab area of the "Roles management" functionality (see the figure above). The first are used to classify the metadata while the second are needed for the profiling issue.
 
