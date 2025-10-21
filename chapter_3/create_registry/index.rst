@@ -298,10 +298,10 @@ pay attention to the JNDI name (in case you created the table within Knowage met
 - ``ATTRIBUTES_NEW``: new attributes state in case of an INSERTION or UPDATE
 
 
-Auditing with table's technical columns
+Auditing with columns of technical tables
 ------------------------------------------------------------------------------------------------------------------------
 
-Another simple audit mechanism is available, that enables also final users to:
+Another simple audit mechanism is available to allow  final users to:
 
 - discover the user who inserted a record and when;
 - discover the last user who modified a record and when;
