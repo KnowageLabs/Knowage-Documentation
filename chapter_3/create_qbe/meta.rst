@@ -250,28 +250,10 @@ When clicking on the icon, as shown in Figure above, and selecting “New Busine
 
 Then click on save to add the business class.
 
-As well, when clicking on “New Business View”, as reported in Figure below the user is asked to select two or more tables from the available ones and insert a description for this new business view.
-
-.. figure:: media/image31214.png
-
-    Create a new business view.
-
-Then, moving to the next step, the user must join tables through specific columns, typically the tables’ foreign keys. Figure below shows an example.
-
-.. figure:: media/image31516.png
-
-    Create a new business view.
-
-For each business view, the interface reports the same property tabs we saw for each business class. In addition, the user finds the **Join relationships** tab and the **Physical table** tab, as highlighted in the  following figure. The “Join relationships” tab shows the join clauses set to create the business view while the “Physical Table” tab recalls the physical table names.
-
-.. figure:: media/image317.png
-
-    Additional property tabs for business view.
-
 Table property list
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Scrolling the table “Property list” tab, the user finds the **Type** menu item. Expanding the related combobox the user can custom the table type among the ones available and listed below.
+Scrolling the *Property list* tab, you can find the *Type* menu item. The related combobox contains the types to be associated with the tables of your model.
 
 .. figure:: media/image31819.png
 
