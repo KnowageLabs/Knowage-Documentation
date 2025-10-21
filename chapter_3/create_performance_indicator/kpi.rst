@@ -212,22 +212,18 @@ Click the *Plus* icon to create a new scheduling.
 
     Execute tab window.
 
-In Figure below we sum up the example case we have referred to since now.
-
-.. figure:: media/image149.png
-
-    Overview of the KPI case.
-
-Once the schedulation is completed click on the “Save” button. Remember to give a name to the schedulation as in the following figure.
+Once the information of the new scheduling has been completed click the *Save* icon and assign a name.
 
 .. figure:: media/image150.png
 
-    Creation of a KPI Document.
+    Saving of a KPI Scheduling
 
-Creation of a KPI document
+Creating a KPI document
 ------------------------------------------------------------------------------------------------------------------------
 
-Now the schedulation has been set and it is possible to visualize the results. The user need at this point to create a new analytical document of type KPI and that uses the KPI engine (Figure below). Add also a Label, a Name and a State for the document and then save clicking on the icon at the top right corner.
+After the schedulation has been set it is possible to visualize the results. 
+At this point you need to create a new generic document of type KPI that uses the KPI engine (see figure below). 
+Type in the mandatory information and save by clicking the specific icon at the top right corner.
 
 .. figure:: media/image151.png
 
