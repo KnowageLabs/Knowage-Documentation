@@ -34,7 +34,7 @@ You can delete one or more rows using the *Trash* icon |image338|. The *Trash* b
 .. |image338| image:: media/image344.png
    :width: 30
 
-Changes are applied to the datamart by clicking the *Save* icon |image339| as shown below.
+Changes are applied to the datamart by clicking the *Save* icon as shown below.
 
 .. _functionalitybar:
 .. figure:: media/image345.png
@@ -46,7 +46,6 @@ Additional functionalities are *Filter* and *Cancel*. Click *Filter* to apply th
 .. |image340| image:: media/image346.png
    :width: 30
 
-Note that, since records are displayed in a plain table, it is available a combobox (see figure below) which allows the user to visualize all fields related to the record of the previous cell and then change from one to another to get all data.
 
 .. figure:: media/image348.png
 
