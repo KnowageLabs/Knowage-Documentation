@@ -19,7 +19,8 @@ The execution of a Registry document opens a plain table: the records are shown 
 
     Editing table cells in a registry.
 
-Moreover, you can add new rows from scratch selecting the “Add row” button |image335| in the header of last column. Insert in each cell the corresponding value: string, number or date. “Add row” button will be available if inside template there is a configuration: <CONFIGURATION name="enableAddRecords" value="true"/>
+You can add new rows from scratch selecting the *Add row* icon as shown in the image below. 
+Just type in in each cell the corresponding value depending on the type: string, number or date. The *Add row* functionality will be available if the template configuration contains the following: <CONFIGURATION name="enableAddRecords" value="true"/>
 
 .. |image335| image:: media/image341.png
    :width: 30
@@ -33,7 +34,7 @@ You can delete one or more rows using the *Trash* icon |image338|. The *Trash* b
 .. |image338| image:: media/image344.png
    :width: 30
 
-After all the changes applied to the datamart click the *Save* button |image339| as shown below.
+Changes are applied to the datamart by clicking the *Save* icon |image339| as shown below.
 
 .. |image339| image:: media/image345.png
    :width: 30
