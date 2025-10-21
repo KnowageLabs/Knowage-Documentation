@@ -1,7 +1,7 @@
-Create KPI
+Create a KPI
 ########################################################################################################################
 
-KPI stands for Key Performance Indicator. It denotes a set of metrics, usually derived from simple measures, which allow managers to take a snapshot on key aspects of their business. The main characteristics of KPIs follow:
+KPI stands for Key Performance Indicator. It denotes a set of metrics, usually derived from simple measures, allowing managers to take a snapshot on the key aspects of their business. The main features of KPIs are listed below:
 
 -  summary indicators,
 -  complex calculations,
@@ -36,7 +36,7 @@ Therefore, we go into further details.
 
     Measure/Rule menu item.
 
-Click on the “Plus” icon to set a new measure/rule. A query editor page is opened. Note that once the data source is selected, pressing simultaneously the CTRL key and the space bar opens a contextual menu containing the available datasource columns and the database keywords. Refer to the following figure to have an example.
+Click the *Plus* icon to set a new measure/rule. A query editor page opens. Note that after the selection of a the data source bypressing simultaneously the CTRL key and the space bar opens a contextual menu containing the available datasource columns and the database keywords. Refer to the following figure to have an example.
 
 .. figure:: media/image122.png
 
