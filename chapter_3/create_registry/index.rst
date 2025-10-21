@@ -61,7 +61,8 @@ There is also the possibility to implement a *Pivot* Registry document. The grap
 
     Example of Pivot Registry document.
 
-In this case the table shows columns organized in a hierarchical way and a grouping function is implemented. From the left to the right the columns contain fields at different detail levels. The last column in our example in the figure above contains numeric data. Such a field is grouped at the “country” level. The grouping level depends on the configurations made on template building.
+The table above shows columns organized in a hierarchical way by grouping them. From the left to the right the columns contain fields at different detail levels. The last column in our example in the figure above contains numeric data. 
+Such a field is grouped for every *Family* category at the *Brand* level. The grouping level depends on the configurations made on template building.
 
 In the Pivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented, filters are still available.
 
@@ -165,7 +166,7 @@ Filter definition allows to set different properties:
 
 Analytical driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Registry filtering by analytical driver is possible using DRIVER value for presentation property in filter TAG. Registry template must contains FILTERS tag. Below an example of configuration for a driver named "UNIT_SALES_AD" insisting on the column "UNIT_SALES".
+Registry filtering by an analytical driver is possible using a DRIVER value for the presentation property in filter TAG. Registry template must contains FILTERS tag. Below an example of configuration for a driver named "UNIT_SALES_AD" insisting on the column "UNIT_SALES".
 
 .. code-block:: xml
    :linenos:
@@ -179,7 +180,7 @@ Registry filtering by analytical driver is possible using DRIVER value for prese
 Profile attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Another way to filter registry content is using profile attributes. If you want to use profile attributes to filter values you have to follow these steps:
+Another way to filter a registry content is by using profile attributes. If you want to use profile attributes to filter values you have to follow these steps:
 
 - Create a profile attribute (if necessary) from the Manage Profile Attributes menu
 - Associate the profile attribute with the column during model creation
@@ -194,13 +195,13 @@ If your profile attribute is a multivalue one, you have to:
 -  set *IN* clause as *"Profile attribute Filter Type"* during model's creation
 -  set profile attribute values respecting this format *'value1','value2',...,'valueN'* or *{,{value1,value2,...,valueN}}*.
 
-In this way, profile attribute value will be treated as a list of values and filter will be applied with this criteria.
+In this way, the profile attribute value will be treated as a list of values and a filter will be applied with this criteria.
 
 
 Pivot Registry instance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Registry instance allows to develop also a pivot table. See the last figure (above) to have an idea while the syntax example is given in the next code:
+The syntax below shows a *Registry* instance used to develop a pivot table. 
 
 .. code-block:: xml
     :linenos:
