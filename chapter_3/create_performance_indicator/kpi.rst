@@ -163,9 +163,10 @@ Finally the user must save the KPI definition clicking on the “Save” button,
 
     Target Definition menu item.
 
-Clicking on the “Plus” icon you can add a new target.
+By clicking the *Plus* icon a new target can be added.
 
-The define a new target you must insert a name, a validity start date/end date and the association to at least one target. It is possibile to associate a target clicking on the item **Add KPI association** and selecting the KPI of interest. Once the association is set, the “Value” box gets editable and you can insert the value you wish to send to the selected KPI. An example is given in figure below. 
+The define a new target you need to type in a name, a validity start date/end date and the association to at least one target.
+ The association with a target can be done by clicking the item **Add KPI association** and selecting the KPI of interest. Once the association is set, the “Value” box gets editable and you can insert the value you wish to send to the selected KPI. An example is given in figure below. 
 
 .. _kpitargetassoc:
 .. figure:: media/image142.png
@@ -179,15 +180,15 @@ In the KPI visualization phase, a red bold thick will be displayed on the indica
 
     Target mark in KPI scale of values.
 
-**Schedulation.** Once the KPI has been defined, it is necessary to schedule it before proceeding with the creation of an analytical document. For this purpose, click on the **KPI Scheduler** from the contextual menu that you can see below.
+**Schedulation.** Once the KPI has been defined, there is the need to schedule it before proceeding with the creation of an analytical document. For this purpose, click on the **KPI Scheduler** from the contextual menu that you can see below.
 
 .. figure:: media/image144.png
 
     KPI Scheduler menu item.
 
-As for the other interfaces it is enough to click on the “Plus” icon to create a new schedulation. The new schedulation window presents several tabs.
+Click the *Plus* icon to create a new scheduling.
 
--  **KPI**: it is possible to associate one or more KPI to the schedulation clicking on “Add KPI Association”.
+-  **KPI**: it is possible to associate one or more KPI with a scheduling by clicking the “Add KPI Association”.
  
 .. figure:: media/image145.png
 
