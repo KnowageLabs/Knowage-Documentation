@@ -37,7 +37,7 @@ Furthermore, note that the mail body can contain a plain text message or a table
 
    Send email containing a table with detected values.
 
-If the “Execute ETL document” option is selected, the alert will launch an ETL process when the chosen thresholds are ovecomed. Namely, the functionality will launch a process to execute batch actions as the writing of proper tables of a DWH, creation of a file, the call to a log service. Note that the ETL process must exist as a document in Knowage server. An example is given in the following figure.
+An example in case the  *Execute ETL document* option is selected, the alert will launch an ETL process when the chosen thresholds are ovecomed. Namely, the functionality will launch a process to execute batch actions as the writing of proper tables of a DWH, creation of a file, the call to a log service. Note that the ETL process must exist as a document in Knowage server. An example is given in the following figure.
 
 .. _executedocument:
 .. figure:: media/image177.png
