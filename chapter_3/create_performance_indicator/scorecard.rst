@@ -61,20 +61,16 @@ The same choice is available at the perspective level (refer to next figure), th
 -  **Policy “Priority”** the perspective gets the majority threshold of the targets in case the primary stated target returns the lower    threshold, namely the “green” one, while it gets the threshold of a primary stated target in case the latter returns the other thresholds, namely the “yellow” or the “red” one.
 
 
-Remember to save once perspectives and targets have been set up.
+Plese remember always to save scorecards after all the related details are being set up.
 
 Creation of a Scorecard document
 ------------------------------------------------------------------------------------------------------------------------
 
-Once saved it is possible to develop a scorecard document which can be easily consulted by (authorized) end users. To create a scorecard document click on the “Plus” icon available in the document browser and then “Generic document”. 
+After saving your scorecard it is possible to develop a scorecard document which can be easily run by (authorized) end users. 
+To create a scorecard document just follow the same steps as for the KPI document.
 
-Here fill in mandatory fields (marked with an asterisk) selecting the **KPI type** and **KPI engine** and save. 
-
-.. figure:: media/image168.png
-
-    Create a generic document of type KPI.
-
-Then click on “Open Designer” to develop the template. Here select the “Scorecard” option as in figure below and choose an existing scorecard from the list opened clicking on “Add Scorecard Assiociation”. Make the desired customizations and save.
+This time by clicking the *Open Designer* section you need select the *Scorecard* option as shown below. 
+Choose an existing scorecard from the list opened by clicking the *Add Scorecard Assiociation* and *save*.
 
 .. figure:: media/image169.png
 
