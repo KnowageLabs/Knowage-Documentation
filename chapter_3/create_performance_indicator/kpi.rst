@@ -86,7 +86,8 @@ As we told, a proper categorization exists for the aggregations of type temporal
 
 Let’s now examine extra features available on the right top corner. There you can find the following tab:
 
--  **Alias**: you can see the aliases defined in other rules; note that only the aliases of those colums saved as attribute are stored and showed. This is useful in order to avoid aliases already in use when defining a new rule. Indeed an alias can not be saved twice even if contained in different rules.
+-  **Alias**: you can see the aliases defined in other rules; note that only the aliases of those colums saved as attribute are stored and shown. 
+This is useful in order to avoid aliases already in use when defining a new rule. Indeed an alias can not be saved twice even if contained in different rules.
 
 .. figure:: media/image128.png
 
