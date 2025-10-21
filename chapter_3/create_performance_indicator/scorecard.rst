@@ -54,7 +54,7 @@ Each perspective manages one or more targets accordingly to the user’s require
        When the targets contain parametric KPIs the target/perspective evaluation cannot be completed for value absence. Therefore the warning lights turn grey. The right visualization of the scorecard must be implemented through a scorecard document. Check the following to have more details on how to develop a scorecard document.
 
 
-The same choice is available at the perspective level (refer to next figure), that is:
+The same choice is available at the perspective level that is:
 
 -  **Policy “Majority”** the perspective gets the threshold of the target threshold that numerically exceeds the others,
 -  **Policy “Majority with Priority”** the perspective gets the threshold of a specific target,
@@ -76,7 +76,7 @@ Choose an existing scorecard from the list opened by clicking the *Add Scorecard
 
     Template creation window.
 
-Figure below gives an example of the scorecard document interface. The arrows point out the perspectives’ achievement of the goals or, on the contrary, the missing of the targets. As well the achievement/failure of the single targets is pinpointed by the arrow signals close to each target.
+Figure below gives an example of a scorecard document interface. The arrows point out the perspectives’ achievement of the goals or, on the contrary, the missing of the targets. As well the achievement/failure of the single targets is pinpointed by the arrow signals close to each target.
 
 .. figure:: media/image170.png
 
