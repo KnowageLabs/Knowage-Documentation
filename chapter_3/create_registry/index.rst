@@ -20,7 +20,7 @@ The execution of a Registry document opens a plain table: the records are shown 
     Editing table cells in a registry.
 
 You can add new rows from scratch selecting the *Add row* icon as shown in the image below. 
-Just type in in each cell the corresponding value depending on the type: string, number or date. The *Add row* functionality will be available if the template configuration contains the following: <CONFIGURATION name="enableAddRecords" value="true"/>
+Just type in in each cell the corresponding value depending on the type: string, number or date. The *Add row* functionality will be available if the template configuration contains the following: *<CONFIGURATION name="enableAddRecords" value="true"/>*.
 
 .. |image335| image:: media/image341.png
    :width: 30
@@ -29,22 +29,19 @@ Just type in in each cell the corresponding value depending on the type: string,
 
     Adding a new row to a registry.
 
-You can delete one or more rows using the *Trash* icon |image338|. The *Trash* button will only be available if the template configuration contains the following: <CONFIGURATION name="enableDeleteRecords" value="true"/>
+You can delete one or more rows using the *Trash* icon |image338|. The *Trash* button will only be available if the template configuration contains the following: *<CONFIGURATION name="enableDeleteRecords" value="true"/>*.
 
 .. |image338| image:: media/image344.png
    :width: 30
 
 Changes are applied to the datamart by clicking the *Save* icon |image339| as shown below.
 
-.. |image339| image:: media/image345.png
-   :width: 30
-
 .. _functionalitybar:
-.. figure:: media/image342.png
+.. figure:: media/image345.png
 
-    Functionality bar.
+    Registry - Save icon.
 
-Furthermore you can use filters, if implemented, available in the Functionality bar. Click on the “Filter” icon |image340| to run the functionality. Otherwise, click on the “Cancel” icon to clear the boxes off.
+Additional functionalities are *Filter* and *Cancel*. Click *Filter* to apply the selected filters to the rows or just click *Clear* to cancel filters.
 
 .. |image340| image:: media/image346.png
    :width: 30
