@@ -178,24 +178,21 @@ Click the *Open Designer* link inside the dossier document.
 
    Document Designer.
 
-The following wizard page appears requesting the document template (docx or pptx format) and 
+The following wizard page appears requesting the document template (docx or pptx format) and the image prefix.
 
 .. figure:: media/image005.png
 
     Dossier Wizard
 
-As shown you user can select a new document template (docx or pptx format) and the image prefix. 
+
 The Uploadable/Downloadable features can be enabled in order to allow the downloading and updating of the document template inside the dossier document.
 
-.. figure:: media/image007.png
+By clicking on *NEXT* the new popup will show the list of image placeholders found inside the document template document
 
-    It is mandatory to select the images placeholder prefix.
+.. figure:: media/image005_b.png
 
-.. figure:: media/image006.png
+    Image placeholders
 
-    This page will show image placeholders found inside the template document, the icon shows that they should be managed.
-
-In the next page if placeholders are found inside the template document, they are shown on the left side panel.
 In the central-right panel user can click on + button and add a source document in order to link it to the image placeholder.
 
 
