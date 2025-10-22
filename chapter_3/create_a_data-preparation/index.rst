@@ -129,7 +129,7 @@ For more info see https://spark.apache.org/docs/2.4.8/api/sql/index.html.
 
     Replace dialog example.
 
-Two more transformations are present only by clicking on a specific column: **TRIM** and **DROP** transformations.
+From the three dots menu of a specific column two more transformations are available: **TRIM** and **DROP** transformations.
 
 .. figure:: media/image17.png
 
