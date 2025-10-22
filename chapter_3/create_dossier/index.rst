@@ -161,26 +161,24 @@ If upload/download are enabled, docx file template can be uploaded/downloaded us
 
 If you want to execute your document, you must enter a name for the activity and click on "LAUNCH ACTIVITY". A new task will be started in the STARTED state and a new row will be visible in the table below. At the end of the execution of the task, the processed file can be downloaded with the appropriate download icon.
 
-.. figure:: media/image003.png
-
-    Dossier activity execution finished.
-
-Each line allows you to see useful information on the activity (such as the values of the drivers used for execution) by clicking on the info icon, download the processed file by clicking on the download icon and remove itself by clicking on the trash icon.
+Each line allows you to see useful information on the activity such as the values of the drivers used for the execution by clicking on the info icon, download the processed file by clicking on the download icon and remove itself by clicking on the trash icon.
 
 Dossier Wizard
 ------------------------------------------------------------------------------------------------------------------------
 
 Starting from Knowage 8.2 it is possible to configure the dossier template document and his xml template easily using the Dossier Wizard.
 
-You can use this feature opening the wizard from a saved dossier document or directly from the workspace.
+You can use this feature opening the wizard from an dossier document already saved or directly from the workspace.
 
 Starting from a saved document
 ------------------------------------------------------------------------------------------------------------------------
+Click the *Open Designer* link inside the dossier document.
 
 .. figure:: media/image004.png
 
-    Dossier document detail page. Click on Open Designer to open the Dossier Wizard.
+   Document Designer.
 
+The following 
 .. figure:: media/image005.png
 
     Dossier Wizard first page.
