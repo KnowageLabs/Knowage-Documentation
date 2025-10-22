@@ -1,10 +1,10 @@
-How create a Data Preparation
+How to create a Data Preparation
 ========================================================================================================================
 
-What is that for?
+What is Data Preparation for?
 ------------------------------------------------------------------------------------------------------------------------
 
-**Data Preparation** is a functionality available since version 8.1 that allows users to create a prepared dataset, starting from an existing one.
+The **Data Preparation** is a functionality available since version 8.1 that allows the users to create a prepared dataset, starting from an existing one.
 In this way users can create a prepared dataset and than using it inside a dashboard or simply using it as another dataset.
 Users have the capability of creating complex and specific datasets quite easily and quickly, in order to use them for any purpose.
 
