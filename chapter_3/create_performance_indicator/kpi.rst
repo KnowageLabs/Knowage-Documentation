@@ -14,12 +14,12 @@ KPI stands for Key Performance Indicator. It denotes a set of metrics, usually d
 
 For these reasons, KPIs are always defined by expert analysts and then used to analyze performances through synthetic views that select and outline only meaningful information.
 
-Knowage allows the configuration of a KPI document thanks to a specific **KPI engine**. The critical value (or values) can be computed and visualized through the functionalities available in the ’KPI model’ section of Knowage menu area (see the next figure).
+Knowage allows the configuration of a KPI document thanks to a specific **KPI engine**. The critical value (or values) can be computed and visualized through the functionalities available in the *KPI model* section of Knowage menu area.
 
 KPI development
 ------------------------------------------------------------------------------------------------------------------------
 
-We introduce the KPI tool by splitting the topic in steps. We briefly sum up here the arguments that we will cover in the following sections in order to have a general overview of the KPI implemetation.
+We briefly sum up here the contents that we will cover in the following sections in order to have a general overview of the KPI implemetation.
 
 -  **Measure definition**: it is necessary to define first the measures and attributes, eventually with parameters, to compute the critical value of interest.
 -  **KPI definition**: here you compute the requested value through a formula using the measures and attributes set in previuos step and  configure thresholds.
@@ -126,17 +126,17 @@ Once typed in the name of the measure(s), you need to choose the aggregation fun
 After completing the insertion of the formula move to the next tab *Cardinality*
 
 
-The *Cardinality* tab allows you to define the granularity level (namely the grouping level) for the attributes of the defined measures.
+The *Cardinality* tab allows to define the granularity level (namely the grouping level) for the attributes of the defined measures.
 
 Referring to the example below, selecting (with a check) all the measures for the attribute product_name the KPI measures are computed for each value of the product_name; otherwise no grouping will be done.
 
-.. figure:: media/image137.png
+.. figure:: media/image137_b.png
 
     Cardinality settings example.
 
 Limit values can be set using the Threshold tab (Figure below). It is mandatory to set at least one threshold otherwise the KPI cannot be saved. You can choose a threshold already defined clicking on “Threshold” list or create a new one.
 
-.. figure:: media/image138.png
+.. figure:: media/image138_b.png
 
     Setting thresholds.
 
@@ -145,15 +145,16 @@ To insert a new threshold it is mandatory to insert a name and assign a type, wh
 .. warning::
       **"Standard" colors for thresholds**
          
-         Well call **standard colors** for thresholds the ones listed below (in terms of hexadecimals):
+         Below are represented the **standard colors** for thresholds (in terms of hexadecimals):
             - green: #00FF00,
             - yellow: #FFF000,
             - red: #FF0000.
 
-Finally the user must save the KPI definition clicking on the “Save” button, available at the right top corner of the page. Once the user clicks on the “Save” button, the “Add KPI associations” wizard opens, as you can see from next figure. Here, it is mandatory to set the KPI category so that only users whose roles have the permissions to this specific category can access the KPI. Remember that it is possible to assign permissions over KPI when defining roles using the “Roles management” functionality. Furthermore, the user can check or uncheck the **Enable Versioning** button if he/she wishes to keep track of the rules/measures/targets that generate the KPI response at each KPI execution.
+After completing all the mandatory information the KPI definition can be saved by clicking the *Save* icon, available at the right top corner of the page. 
+After saving the *Add KPI associations* wizard opens, as shown below. Here, it is mandatory to set the KPI category so that only users whose roles have the permissions to this specific category can access the KPI. Remember that it is possible to assign permissions over KPI when defining roles using the “Roles management” functionality. Furthermore, the user can check or uncheck the **Enable Versioning** button if he/she wishes to keep track of the rules/measures/targets that generate the KPI response at each KPI execution.
 
 .. _savekpidefcategory:
-.. figure:: media/image139.png
+.. figure:: media/image139_b.png
 
     Save the KPI definition and set category.
 
