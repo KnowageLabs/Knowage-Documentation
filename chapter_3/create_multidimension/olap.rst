@@ -705,7 +705,7 @@ Then enter in the **Document Browser**, click on the “Plus” icon at the top 
 A new page will be opened, the first thing to choose is the kind of template between XMLA Server and Mondrian, we choose Mondrian one. Then you will be asked to choose the Mondrian Schema and after that to select a cube. Next figure sums up these three steps. 
 
 .. _olapcoreconfig:
-.. figure:: media/image198.png
+.. figure:: media/image198_1.png
 
     OLAP core configuration.
 
