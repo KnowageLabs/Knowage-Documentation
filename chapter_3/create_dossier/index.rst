@@ -159,7 +159,7 @@ If upload/download are enabled, docx file template can be uploaded/downloaded us
        This feature is available only for image replacing procedure.
 
 
-If you want to execute your document, you must enter a name for the activity and click on "LAUNCH ACTIVITY". A new task will be started in the STARTED state and a new row will be visible in the table below. At the end of the execution of the task, the processed file can be downloaded with the appropriate download icon.
+To execute the document, enter a name for the activity and click *LAUNCH ACTIVITY*. A new task will be started in the STARTED state and a new row will be visible in the table below. At the end of the execution of the task, the processed file can be downloaded with the appropriate download icon.
 
 Each line allows you to see useful information on the activity such as the values of the drivers used for the execution by clicking on the info icon, download the processed file by clicking on the download icon and remove itself by clicking on the trash icon.
 
@@ -178,12 +178,14 @@ Click the *Open Designer* link inside the dossier document.
 
    Document Designer.
 
-The following 
+The following wizard page appears requesting the document template (docx or pptx format) and 
+
 .. figure:: media/image005.png
 
-    Dossier Wizard first page.
+    Dossier Wizard
 
-In the first Dossier Wizard page user can select a new document template (docx or pptx format) , input the image prefix (the prefix of images text placeholder, for example in our case "img") and the Uploadable/Downloadable feature, in order to allow user to download and update the document template inside the dossier document.
+As shown you user can select a new document template (docx or pptx format) and the image prefix. 
+The Uploadable/Downloadable features can be enabled in order to allow the downloading and updating of the document template inside the dossier document.
 
 .. figure:: media/image007.png
 
