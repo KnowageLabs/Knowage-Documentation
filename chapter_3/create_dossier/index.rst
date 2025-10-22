@@ -215,9 +215,9 @@ If user wants to rollback and reset modification, he can click on "Reset placeho
 
 .. figure:: media/image005_d.png
 
-    Reset placeholder feature.
+    Reset placeholder functionality.
 
-As a lsta step you can click *SAVE* or *Save and Run*. By saving the xml template should be updated and visible on the *History* tab.
+As a last step remains clicking *SAVE* or *Save and Run*. By saving the xml template should be updated and visible on the *History* tab.
 
 
 .. figure:: media/image013.png
@@ -227,18 +227,11 @@ As a lsta step you can click *SAVE* or *Save and Run*. By saving the xml templat
 Starting from the workspace
 ------------------------------------------------------------------------------------------------------------------------
 
-Another way to use the Dossier Wizard is starting from the Workspace.
+Another way to run the Dossier Wizard is starting from *my Workspace*. Select *My Analysis* for starting a new Dossier document with Dossier Wizard.
 
 .. figure:: media/image014.png
 
-    Select "My Analysis" for starting a new Dossier document with Dossier Wizard.
+    Creating a Dossier from My Analysis
 
-.. figure:: media/image015.png
+*Note*: End users can create dossier documents using views only as drivers are not allowed to use for them.
 
-        Click on + button and select "Dossier".
-
-Note: End users can create dossier documents using views only. Drivers are not usable for end users.
-
-.. figure:: media/image016.png
-
-        Example of document with no views associated.
