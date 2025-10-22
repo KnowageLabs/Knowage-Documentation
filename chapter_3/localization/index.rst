@@ -11,7 +11,7 @@ The user can change the language to use in Knowage by doing the following:
 
 .. figure:: media/image000_8.1.png
 
-    How to change language in Knowage.
+    Setting the language in Knowage.
 
 
 System labels
