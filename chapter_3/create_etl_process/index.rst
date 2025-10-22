@@ -102,7 +102,7 @@ Once we have created the template, we can create a new analytical document follo
 
 .. figure:: media/doc_etl.png
 
-    ETL document creation interface.
+    Creating an ETL document.
 
 If the job has parameters, they should be associated to the corresponding analytical drivers, as usually. In other words, you have to create an analytical driver for each context variable defined in the Talend job.
 
