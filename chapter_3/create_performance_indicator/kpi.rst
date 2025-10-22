@@ -245,7 +245,7 @@ Moreover, you can set the other properties of the KPI document using the **Optio
 
 In particular, it is possible to select the time granularity used by the KPI engine to improve the performances. For this purpose, in the “Options” area (following figure) the user is invited to indicate the level of aggregation choosing among “day”, “week”, “month”, “quarter”, “year”.
 
-.. figure:: media/image154.png
+.. figure:: media/image154_b.png
 
     Choosing the time granularity.
 
