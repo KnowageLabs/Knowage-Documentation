@@ -6,7 +6,7 @@ A dossier document allows you to obtain a file processed starting from an input 
 .. important::
        **Enterprise Edition**
 
-       If you purchased Knowage EE, the following features are available only in KnowageER license.
+       If you purchased Knowage EE, the following features are available only with the right license.
 
 
 XML Template
