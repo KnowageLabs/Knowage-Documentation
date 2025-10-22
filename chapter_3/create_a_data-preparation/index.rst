@@ -105,6 +105,14 @@ For more info see https://spark.apache.org/docs/2.4.8/api/sql/index.html.
 
     Applying filters
 
+The image below shows how to remove a filter.
+
+.. figure:: media/removef.png
+
+    Removing filters
+
+As you can see the transformation applied by a filter is highlighted. In this example we only have one trasnformation related to the filter.
+
 **Padding**: to add characters on left or right side of a selected column.
 
 .. figure:: media/image13.png
@@ -130,8 +138,6 @@ For more info see https://spark.apache.org/docs/2.4.8/api/sql/index.html.
     Replace dialog example.
 
 From the three dots menu of a specific column two more transformations are available: **TRIM** and **DROP** transformations.
-
-.. figure:: media/image17.png
 
 **Drop column**: Removes a specific column from table.
 
@@ -169,82 +175,39 @@ This file is read and then it will be used as data source for data transformatio
 Saving and Using a prepared dataset
 ------------------------------------------------------------------------------------------------------------------------
 
-Now let's see how to save a prepared dataset. For our documentation example we use two transformations: DROP and then a FILTER on "age" column.
-
-We removed "golden_members" column:
-
-.. figure:: media/image23.png
-
-    Drop columns dialog example.
-
-And then we filtered by age minor than 60:
-
-.. figure:: media/image21.png
-
-    Filter columns dialog example.
-
-The resulting transformations chain can be seen on the right of the page:
-
-.. figure:: media/image22.png
-
-    Transformations list is present on the right panel.
-
-As you can see you can remove or preview the last operation (in our case the FILTER transformation).
-
-To see a description of the transformation just click on the eye icon (if present, some transformations don't need it):
-
-.. figure:: media/image24.png
-
-    Transformation preview dialog example.
-
-You can see how transformation has been configured.
-Then you can also remove the transformation by clicking on the trash bin:
-
-.. figure:: media/image25.png
-
-    You can delete the last one only.
-
-If you want to save the prepared dataset click on the save icon on the top right of the page:
+After applying all the trasformation to the original dataset you can save it. 
+The image below shows an example with a daily schedulation.
 
 .. figure:: media/image26.png
 
-    Save panel example.
+    Saving the prepared dataset.
 
-Here you can choose the name, the description and the schedulation if you want to update the dataset, using the transformation selected, periodically.
+After saving, the prepared dataset will be available in the list of all the prepared datasets.
 
-.. figure:: media/image27.png
+.. figure:: media/image29_a.png
 
-    Split columns dialog example.
+    New prepared dataset.
 
-After clicking on SAVE button you will see a confirmation message:
-
-.. figure:: media/image28.png
-
-    Saving confirmation.
-
-After that, waiting for a few moments you will be able to see your data saved on selected datasource clicking on the eye icon on the right into the data preparation section.
+You can use the preview functionality to display all the contents.
 
 .. figure:: media/image29.png
 
-    Prepared data preview panel.
+    Preview functionality.
 
-If the ingest operation has not finished yet or if there were problems with saving data you will see a warning message telling that the operation is not completed.
-
-You can monitor the process using the monitor section, right click on your saved prepared dataset and clicking on "Monitoring":
+You can monitor the process by clicking on *Monitoring* from the three dots menu.
 
 .. figure:: media/image30.png
 
-    Select monitoring entry.
+    Monitoring menu entry.
 
-You will see a popup with the process results, in case of errors you can download a log file.
-On the left side you can also change the schedulation of the periodic prepared dataset update.
+The Schedulation details are visualized from a pop-up. You can change them and save in case.
 
 .. figure:: media/image31.png
 
     Schedulations and monitoring panel example.
 
-Now it is possible to see the prepared dataset into the Dataset Management section or into MyData Workpace section, so for example you can use it later for a dashboard.
+It is possible to see the prepared dataset into the *Dataset Management* section. In our example if you look for dataset ds__9056592 you should find it.
 
 .. figure:: media/image32.png
 
-    Dataset Management panel example.
+    Dataset Management panel.
