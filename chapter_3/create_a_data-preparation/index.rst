@@ -12,55 +12,48 @@ Preparing a dataset
 ------------------------------------------------------------------------------------------------------------------------
 
 The first step is selecting a dataset to work on.
-You can do it selecting the desired dataset into your workspace section (there should be also a  **Data Preparation** entry):
+You can do it selecting the desired dataset into your workspace section:
 
 .. figure:: media/image1.png
 
     The Data Preparation entry.
 
 There are two ways to prepare and start a data preparation process.
-The first one is starting from MyData section.
-Click on MyData and select your desired dataset.
+The first one is starting from *MyData* section.
+By Clicking MyData and selecting the desired dataset whenever a data preparation has been formerly launched.
 
 .. figure:: media/image2.png
 
-    Search for your dataset example.
+    Searching your dataset.
 
-Then click with the right click of mouse and select "Open Data Preparation":
+Afterwards, from the three dots menu select *Open Data Preparation*.
 
 .. figure:: media/image5.png
 
-    Select "Open Data Preparation"
+    Open Data Preparation
 
-This operation triggers the avro-file creation process.
+*Opening the data preparation* triggers the process depicted below. The process consists of five steps
 
-.. figure:: media/image6.png
+.. figure:: media/image4_b.png
 
-    For more info about what "Preparing avro file" means please refer to "Data Preparation technical detail" section.
+    Data preparation process
 
-The second way is clicking on + botton on the top right of Data Preparation section:
+After completing the last step, the interface shows the structure of the dataset with the associated information.
+
+.. figure:: media/image4_c.png
+
+    Data preparation wizard
+
+As highlighted above, the wizard contains the *transformation* functionalities allowing to work on the data preparation.
+
+The second way is clicking the *Plus* botton on the top right of the section in order to select the dataset.
 
 .. figure:: media/image3.png
 
-    Click on + botton on the top right of the page.
+    Creating a data preparation.
 
-And then select your source dataset.
+After clicking *Open* the data preparation process starts as depicted above and the final wizard with the data of the dataset is displayed.
 
-.. figure:: media/image4.png
-
-    Search for your dataset example.
-
-If  avro file is created now you should be able to open the data preparation screen, there should be a check icon next to the actions menu:
-
-.. figure:: media/image7.png
-
-    There is a check icon on the left icons menu for your selected dataset.
-
-Data preparation main screen:
-
-.. figure:: media/image8.png
-
-    Data Preparation main screen.
 
 Data Preparation Transformations
 ------------------------------------------------------------------------------------------------------------------------
