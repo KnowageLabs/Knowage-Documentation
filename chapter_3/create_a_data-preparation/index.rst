@@ -87,41 +87,37 @@ For more info see https://spark.apache.org/docs/2.4.8/api/sql/index.html.
 
     Available functions
 
-**Merge columns**: Adds a new column merging two selected ones using a separator.
+**Merge columns**: to add a new column by merging two selected columns through a separator.
 
 .. figure:: media/image10.png
 
-    Merge columns dialog example.
+    Merge columns dialog.
 
-**Split columns**: Creates two new columns by splitting a selected column through a specific condition (ie a character).
+**Split columns**: to create two new columns by splitting a selected column through a specific condition (ie a character).
 
 .. figure:: media/image11.png
 
-    Split columns dialog example.
+    Split columns dialog.
 
-**Filter**: Filters a selected column by special conditions.
+**Filter**: to filter a selected column by special conditions.
 
 .. figure:: media/image12.png
 
-.. figure:: media/image12a.png
+    Applying filters
 
-.. figure:: media/image12b.png
-
-    Filter dialog example.
-
-**Padding**: Adds characters on left or right side of a selected column.
+**Padding**: to add characters on left or right side of a selected column.
 
 .. figure:: media/image13.png
 
     Padding dialog example.
 
-**Remove duplicates**: Removes duplicates from selected columns.
+**Remove duplicates**: Removes duplicated values from a selected column.
 
 .. figure:: media/image14.png
 
     Remove duplicates dialog example.
 
-**Remove null**: Removes null values from selected columns.
+**Remove null**: Removes null values from a selected column.
 
 .. figure:: media/image15.png
 
