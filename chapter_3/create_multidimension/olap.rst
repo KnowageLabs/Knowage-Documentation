@@ -588,7 +588,7 @@ To reference an OLAP cube, first insert the corresponding Mondrian schema into t
 
     Mondrian schemas menu item.
 
-Here you can find the list of already created mondrian schemas and clicking on the plus button you can define a new one uploading your XML schema file. A new window will open where you have to choose a **Name**, an optional **Description** and to upload your XML file, as you can see in figure below. 
+Here you can find the list of already created mondrian schemas and by clicking the *Plus* icon you can define a new one uploading your XML schema file. A new window will open where you have to choose a **Name**, an optional **Description** and to upload your XML file, as you can see in figure below. 
 
 .. figure:: media/image226.png
 
@@ -678,7 +678,7 @@ To create a new OLAP document, click on the plus button in the **Document Broswe
 .. _olapdocserver:
 .. figure:: media/image195.png
 
-    OLAP document creation interface.
+    Creating an OLAP document.
 
 You will see the document in the functionality (folder) you selected.
 
