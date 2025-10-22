@@ -78,13 +78,14 @@ In the main toolbar menu, there is a set of main transformations (most of them c
 -   **Drop**: Remove a specific columns. (Available for single column only)
 
 The **Add column** transformation allow user to add a **calculated field** of type numeric, string or temporal.
-These functions are a subset of Spark SQL language functions and are used for calculations or manipulating data.
+These functions are a subset of Spark SQL language functions and are used for calculations or handling with data.
+The available functions are a subset of the Spark SQL language functions.
 For more info see https://spark.apache.org/docs/2.4.8/api/sql/index.html.
 
 
 .. figure:: media/image9.png
 
-    Available functions are a subset of Spark SQL language functions
+    Available functions
 
 **Merge columns**: Adds a new column merging two selected ones using a separator.
 
@@ -92,7 +93,7 @@ For more info see https://spark.apache.org/docs/2.4.8/api/sql/index.html.
 
     Merge columns dialog example.
 
-**Split columns**: Creates two new columns splitting a selected one using a specific condition (ie a character).
+**Split columns**: Creates two new columns by splitting a selected column through a specific condition (ie a character).
 
 .. figure:: media/image11.png
 
