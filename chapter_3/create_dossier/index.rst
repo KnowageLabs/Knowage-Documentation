@@ -187,49 +187,42 @@ The following wizard page appears requesting the document template (docx or pptx
 
 The Uploadable/Downloadable features can be enabled in order to allow the downloading and updating of the document template inside the dossier document.
 
-By clicking on *NEXT* the new popup will show the list of image placeholders found inside the document template document
+By clicking on *NEXT* the new popup will show the list of image placeholders found inside the document template.
 
 .. figure:: media/image005_b.png
 
     Image placeholders
 
-In the central-right panel user can click on + button and add a source document in order to link it to the image placeholder.
+By clicking the *Plus* button it is possible to link a source document to the image placeholder.
 
 
-.. figure:: media/image008.png
+.. figure:: media/image005_c.png
 
-    After selecting the document, user can select the parameters (drivers or views) to be linked to the placeholder. In this example there are 2 drivers ("familia","categoria")
+    Linking documents to placeholders 
 
-When user selects the document and drivers, they will be shown on the panel and can be configurated as follows.
-Driver Link  Type can be of Dynamic, Static or Inherit type. Inherit type means that the parameter selected will be the same used in the source document selected.
+After selecting the document you need to select the parameters (drivers or views) to be linked to the placeholder.
+In the example above there is one driver *Family*. The wizard allows to specify how the parameter of the driver should be feed by
+selecting the *Link  Type* to the driver: *Dynamic, Static or Inherit* type. Inherit means that the parameter selected will be the same used in the selected source document.
 We kindly suggest to use "Inherit" for simplifying configuration assets.
 
-.. figure:: media/image009.png
+On the other hand by clicking the *Plus* icon the image placeholders can be linked also to *Views*.
 
-    User can select the Driver Type.
+.. figure:: media/image011_a.png
 
-.. figure:: media/image010.png
-
-    Driver Link Inherit type.
-
-On other hands user can select to link a VIEW from the source document to the image placeholder:
-
-.. figure:: media/image011.png
-
-    User can select the view linked to the document.
+    Linking to Views.
 
 If user wants to rollback and reset modification, he can click on "Reset placeholder" icon on the image placeholders panel.
 
-.. figure:: media/image012.png
+.. figure:: media/image005_d.png
 
     Reset placeholder feature.
 
-After clicking on SAVE BUTTON, the xml template should be updated and visible on History-template panel:
+As a lsta step you can click *SAVE* or *Save and Run*. By saving the xml template should be updated and visible on the *History* tab.
 
 
 .. figure:: media/image013.png
 
-    Updated dossier xml template.
+    Xml template.
 
 Starting from the workspace
 ------------------------------------------------------------------------------------------------------------------------
