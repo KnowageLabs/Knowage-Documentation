@@ -251,7 +251,7 @@ If the user re-opens the dialog window, he/she sees the selected hieararchies an
 
     Changing the hierarchies.
 
-We give an example of the output when the hierarchy “All Customers” is selected in first next figure and hierarchy “Customers by segment” in the second next figure.
+Below an example of the output in case the hierarchy *All Customers* is selected and in case the hierarchy *Customers by segment* is selected.
 
 .. _timehierarchieshowsdays:
 .. figure:: media/image159.png
@@ -261,7 +261,7 @@ We give an example of the output when the hierarchy “All Customers” is selec
 .. _timeweeklyhierarchyshowsweek:
 .. figure:: media/image160.png
 
-    Customers by segment hierachy: table shows customers by segment.
+    Customers by segment hierachy: the table shows customers by segment.
 
 Slicing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
