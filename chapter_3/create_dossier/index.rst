@@ -19,7 +19,7 @@ XML template is an XML file used to configure parameters needed to the elaborati
 
 In particular,the tags allowed are:
 
--  **DOSSIER**: main tag used to define the dossier template;
+-  **DOSSIER**: is the main tag used to define the dossier template;
 -  **PPT_TEMPLATE**: contains properties related to the PPT template  (incompatible with DOC_TEMPLATE). You can specify:
 
   - *name*: the name of the template file name (supported file types are PPT, PPTX);
