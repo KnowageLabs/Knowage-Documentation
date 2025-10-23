@@ -19,20 +19,10 @@ You can do it selecting the desired dataset into your workspace section:
     The Data Preparation entry.
 
 There are two ways to prepare and start a data preparation process.
-The first one is starting from *MyData* section.
-By Clicking MyData and selecting the desired dataset whenever a data preparation has been formerly launched.
+The first one is starting from *MyData* section and then selecting/searching the desired dataset.
+Once the dataset has been selected click the *OPen Data Preparation* option from the three dots menu as shown below.
 
-.. figure:: media/image2.png
-
-    Searching your dataset.
-
-Afterwards, from the three dots menu select *Open Data Preparation*.
-
-.. figure:: media/image5.png
-
-    Open Data Preparation
-
-*Opening the data preparation* triggers the process depicted below. The process consists of five steps
+ The option *Opening the data preparation* triggers a process that will create the *avro* file (for more information see the dedicated section). This process consists of five steps
 
 .. figure:: media/image4_b.png
 
@@ -46,13 +36,22 @@ After completing the last step, the interface shows the structure of the dataset
 
 As highlighted above, the wizard contains the *transformation* functionalities allowing to work on the data preparation.
 
-The second way is clicking the *Plus* botton on the top right of the section in order to select the dataset.
+The second way consists in clicking the *Plus* button on the top right of the section in order to select the dataset.
+
+.. figure:: media/image3_dp.png
+
+    Creating a data preparation - 2.
+
+After clicking *Open* the data preparation process starts as depicted above in oreder to create the *avro* file.
+Note that this process starts only the firts time the dataset is prepared and saved.
+
+In case of an already existing dataset you could be able to open it always by clicking the *Open in Data Preparation* from *Data Preparation*
+and in this case the final wizard with the data of the dataset is displayed.
 
 .. figure:: media/image3.png
 
-    Creating a data preparation.
+    Opening an existing prepared dataset
 
-After clicking *Open* the data preparation process starts as depicted above and the final wizard with the data of the dataset is displayed.
 
 
 Data Preparation Transformations
