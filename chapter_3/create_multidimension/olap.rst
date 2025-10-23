@@ -1,20 +1,21 @@
-Create OLAP
+OLAP cubes
 ########################################################################################################################
 
-OLAP tools enable users to analyse multidimensional data interactively from multiple perspectives. OLAP consists of basic analytical operations: slice and dice, roll up, drill down and pivot.
+OLAP tools enable users to analyse multidimensional data interactively from multiple perspectives.
+An OLAP consists of some basic analytical operations such as slice and dice, roll up, drill down and pivot.
 
-OLAP user manual step by step
+Steps for building an OLAP cube
 ------------------------------------------------------------------------------------------------------------------------
 
-We start our lecture on the OLAP engine by analysing an existing OLAP document. Here you can find an example of OLAP document.
+Let's start by analyzing an OLAP document already created as shown below. 
 
 .. figure:: media/image135.png
 
       Exploring an existing OLAP document.
 
-In the following we will describe the main parts of the OLAP page.
+In the following we will describe the main components of the OLAP page.
 
-The filter panel
+Filter panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the document is executed, the central area of the window contains the table whose measures are aggregated on dimensions. At the top of this area, panels are available to configure filters on attributes. We see in the following figure that the filter panel is made up of **Filter cards**. Here you can find the cube dimensions and their hierarchies as defined in the OLAP schema by the developer.
@@ -23,7 +24,7 @@ Once the document is executed, the central area of the window contains the table
 
     The filter panel.
 
-The filter cards
+Filter cards
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Filter cards can stay on the filter panel or be placed on column axis. You can move them from the filter panel to the axis or viceversa by dragging and dropping them from one place to the other.
