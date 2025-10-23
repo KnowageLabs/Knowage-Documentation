@@ -720,42 +720,31 @@ Click the *Start* link. The image below shows the outcome.
 
     Defining OLAP template.
 
-Aaccording to requirements set the fields as axis or as filter cards. Please refer to the *Functionalities* chapter for the terminology. 
-Make your selection(s) and in save the template as shown below.  
+Aaccording to the requirements set which fields ar axis or filter cards. Please refer to the *Functionalities* chapter for the terminology. 
+Save the template.  
 
 .. _definingolaptempl2:
 .. figure:: media/image200.png
 
     Defining OLAP template.
 
-The next figure shows the *Setting* panel.
+The *Setting* panel contains:
+    - Drilling functionalities as *Position, Member, Replace*
+    - OLAP functions as *Preview, Button visibility*
 
-.. _sidepanelfeatolapdes:
-.. figure:: media/image201.png
+Please refer to the *Functionalities* chapter to recall the effects of the different drills: the one selected in the template will be the default used in the OLAP document. 
 
-    Side panel features for the OLAP Designer.
+To display the *MDX query* click the *Preview* button.
 
-- |image200| to set the drill on Position, Member or Replace;
+.. figure:: media/image200_2.png
 
-.. |image200| image:: media/image202.png
-   :width: 30
+    Preview in OLAP.
 
-- |image201| to show the Mdx query; 
+To set the visibity on the buttons click the *Configure Button Visibility* as shown below.
 
-.. |image201| image:: media/image203.png
-   :width: 30
+.. figure:: media/image200_1.png
 
-- |image202| to define the cross navigation;
-
-.. |image202| image:: media/image204.png
-   :width: 30
-
-- |image203| to configure buttons visibility.
-
-.. |image203| image:: media/image205.png
-   :width: 30
-
-Refer to Section *Functionalities* to recall the action of the different drills, the one selcted in the template will be the default used in the OLAP document. 
+    Preview in OLAP.
 
 You can define a cross navigation opening the wizard and clicking on the “Add” button at the top right corner.
 
