@@ -240,7 +240,7 @@ The option **Another entity** allows the selection of a field from another entit
 
          Filtering data on fields with type of Date/Time/Timestamp through Calendar/Time functions is only available for the Enterprise Edition.
 
-If you have the SI license file, you could filter your data with fields type of date/time/timestamp using Calendar/Time/Calendar + Time options.
+If you are allowed by the right license file, you could filter your data with fields type of date/time/timestamp using Calendar/Time/Calendar + Time options.
 This depends on which data type your field is: the data type is assigned when creating the metamodel.
 
 The following table summarizes the possible types of filters in the QbE. The use of subqueries in filters will be explained later in the *Advanced QbE functionalities* paragraph.
@@ -339,9 +339,9 @@ Spatial fields usage
 .. important::
          **Enterprise Edition only**
 
-         Spatial dimension is only available for Enterprise Edition with LI licence.
+         Spatial dimension is only available for Enterprise Edition with the right licence.
 
-The Qbe engine supports *spatial* queries through a set of operators (that return true or false) or a set of functions (that usually return a measure). This feature is only available for the Location Intelligence (LI) license and when data is stored in Oracle 12c databases. It is also fundamental that the Business Model has to be tagged as *geographical* model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
+The Qbe engine supports *spatial* queries through a set of operators (that return true or false) or a set of functions (that usually return a measure). This feature is only available with the right license and when data is stored in Oracle 12c databases. It is also fundamental that the Business Model has to be tagged as *geographical* model. You can refer to Meta Web Section to have details on how to set the geographical option using Knowage Meta.
 
 In a BM with geographical dimensions enabled (by a technical user), the dimensions which has spatial fields are marked with the compass icon |earthIcon|. Expanding the spatial dimension the list of fields is shown and there is no way to distinguish between geographical and non geographical attributes. Therefore the user has to be already aware of which fields have geometrical properties.
 
@@ -374,7 +374,7 @@ In addition to the *SPATIAL* functions, the **Category** field provides some mor
 -  SQL functions,
 -  CUSTOM functions (if previously developed).
 
-Time functions are only available for the Enterprise Edition with SI licence.
+Time functions are only available for the Enterprise Edition with the right licence.
 
 In addition to calculated fields, it is possible to filter on spatial fields using specific geometric operators
 
