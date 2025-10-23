@@ -42,11 +42,12 @@ The second way consists in clicking the *Plus* button on the top right of the se
 
     Creating a data preparation - 2.
 
-After clicking *Open* the data preparation process starts as depicted above in oreder to create the *avro* file.
+After clicking *Open* the data preparation process starts as depicted above in the first option to create the prepared dataset.
+Also in this second case the *avro* file will be created.
 Note that this process starts only the firts time the dataset is prepared and saved.
 
 In case of an already existing dataset you could be able to open it always by clicking the *Open in Data Preparation* from *Data Preparation*
-and in this case the final wizard with the data of the dataset is displayed.
+and this time the final wizard with the data of the dataset is displayed.
 
 .. figure:: media/image3.png
 
