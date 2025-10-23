@@ -1,7 +1,7 @@
 OLAP cubes
 ########################################################################################################################
 
-OLAP tools enable users to analyse multidimensional data interactively from multiple perspectives.
+OLAP cubes enable users to analyse multidimensional data interactively from multiple perspectives.
 An OLAP consists of some basic analytical operations such as slice and dice, roll up, drill down and pivot.
 
 Steps for building an OLAP cube
@@ -27,7 +27,8 @@ Once the document is executed, the central area of the window contains the table
 Filter cards
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Filter cards can stay on the filter panel or be placed on column axis. You can move them from the filter panel to the axis or viceversa by dragging and dropping them from one place to the other.
+Filter cards can stay on the filter panel or be placed on the column axis. 
+You can move them from the filter panel to the axis or viceversa by dragging and dropping them from one place to the other.
 
 .. figure:: media/image137.png
 
@@ -35,7 +36,7 @@ Filter cards can stay on the filter panel or be placed on column axis. You can m
 
 Filter cards are used to:
 
--  inform the user about available dimensions defined in OLAP schema,
+-  inform the user about available dimensions defined in the OLAP schema,
 -  inform the user about dimension’s name,
 -  perfom slices,
 -  add the dimensions to the cube visualization,
@@ -44,9 +45,9 @@ Filter cards are used to:
 
 Considering the next figure, we can see that a filter card is made up of:
 
--  an icon for opening hierachy selection dialog (a),
+-  an icon for opening the hierachy selection dialog (a),
 -  the dimension name (b),
--  filter icon (if a filter is selected the icon is red) (c)+(d).
+-  a filter icon (when a filter is selected the icon is red) (c)+(d).
 
 .. _featuresoffiltcard:
 .. figure:: media/image13839.png
