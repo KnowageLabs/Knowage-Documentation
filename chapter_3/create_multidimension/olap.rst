@@ -268,35 +268,36 @@ Slicing
 
 The slicing operation consists in the analysis of a subset of a multi-dimensional array corresponding to a single value for one or more members of the dimensions. In order to perform this operation you need to drag and drop the dimension of interest in the axis panel.  Then clicking on the filter icon choose the new single focus and apply it. Once concluded these steps the cube will show only the selected level of the dimension, while the others have been sliced out.
 
-The following figure shows the slicer option panel where the user can see which items is selected and used in the pivot table.
+The figure below shows the slicer options panel consisting of all those items selected and used in the pivot table.
 
 .. _dialogforslicerchoosing:
-.. figure:: media/image161a.png
+.. figure:: media/image161_a.png
 
-    Dialog for slicer choosing.
+    Choosing a slicer.
 
-In order to unlock the whole member tree and to define a new slicing you have to click on the add button. As you can see in the following figure, here it is possible to navigate the member tree, search for a specific value in the member tree, clear all the selections and apply a new one.
+To unlock the whole member tree and define a new slicing just click  the *Add* button. 
+As you can see in the following figure, here it is possible to navigate the member tree, search for a specific value in the member tree, clear all the selections and apply a new one.
 
 .. _dialogforslicerchoosing:
-.. figure:: media/image161b.png
+.. figure:: media/image161_b.png
 
-    Define a new slicing.
+    Defining a new slicing.
 
 In particular, it is possible to search for a member value in two ways:
 
-1. by browsing the member tree;
+1. by browsing the member tree
 
-.. figure:: media/image162.png
+.. figure:: media/image162-1.png
 
    Browsing the member tree.
 
-2. by typing member’s name or it’s part in the input field. The research will be possible if the user enters at least three letters;
+2. by typing the member’s name or part of it in the input field.
 
 .. figure:: media/image16364.png
 
    Using the research box.
 
-The check on the checkbox of the selected values and click on the apply button to save the selection. After that, the users choice will affect the pivot table, example is given in the figure below.
+Then check the values and click the *Apply* button to save the selection. These choices will affect the pivot table. See figure below.
 
 .. figure:: media/image165.png
 
@@ -307,17 +308,15 @@ Filtering
 
 To filter dimension members in a pivot table, the user should click on the funnel icon located on the right side of dimension’s filter card placed in the filter area.
 
-The procedure to search for a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog. The pop up interface is the one showed below. After selecting a member, the user should click on the apply button in order to filter the values in the pivot. The pivot table will then display the changements. Otherwise click on the cancel button to discard changes.
+The procedure to search a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog. 
+The pop up interface is the one shown below. 
+After selecting a member, you should click on the *Apply* button to filter the values in the pivot. The pivot table will then display the changes. 
+Otherwise click the *Cancel* button to discard changes.
 
-.. figure:: media/image166.png
+.. figure:: media/image166_1.png
 
     Filter dialog.
 
-When a filter is applied on a card the filter button becomes red, as shown in the picture below.
-
-.. figure:: media/image167.png
-
-    Filter icon when a filter is applied.
 
 Drill down and drill up
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
