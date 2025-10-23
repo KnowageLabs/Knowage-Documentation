@@ -696,11 +696,11 @@ The user needs to have a functioning Modrian schema to start the work with. As w
          
          If you want to use the designer the Mondrian schema must not be filtered thorough any parameter or profile attribute.
 
-The page as the one in figure below will open.
+The catalog with the list of all the *Mondrian Schemas* opens as shown below .
 
 .. figure:: media/image196.png
 
-    Catalogs list of Schema Mondrian.
+    Mondrian Schema Catalog.
 
 Then enter in the **Document Browser**, click on the “Plus” icon at the top right corner of the page and choose "Gneric document". As described in the previous section, fill in the mandatory boxes as Label and Name of the document, select the **On-Line Analytical Processing** Type of document and the **OLAP Engine**, add the data source and the state. Remember to save to move to the next step: open the Designer. The latter can be opend clicking on the **Open Designer** link.
 
