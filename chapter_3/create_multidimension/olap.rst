@@ -755,19 +755,13 @@ The image below shows an example with another OLAP function: *Cross Navigation*.
 
     Enabling the cross navigation - 1
 
-As shown above, by clicking the icon highlighted in the image, you can enable a cross navigation.
+As shown above, by clicking the icon highlighted in the image, you can enable a cross navigation previously configured by choosing the current olap document as source.
+and another document as target.
 
 .. figure:: media/image200_4.png
 
     Enabling the cross navigation - 2
 
-Clicking on the “Add” button at the top right corner.
-
-Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the user must access the “Cross Navigation” functionalities available in Knowage Server. Here, referring to *Cross Navigation* section of *Analytical document* chapter, you will use the parameter just set as output parameter.
-
-.. figure:: media/image2080910.png
-
-    Cross navigation definition.
 
 Once the configuration is completed click the *Save Template** button and then the *Close designer* button to exit and return to the Document browser.
 
