@@ -365,31 +365,33 @@ In particular, referring to the next figure, drill though dialog consists of:
 
     Drill thorugh window.
 
-Here the user can choose the level of detail with which data will be displayed thorough the hierachy menu. The steps to follow are:
+Here you can choose the level of detail with which data will be displayed through the hierachy menu. 
+The steps to follow are:
 
-1. click on a hierarchy in hierarchy menu,
+1. clicking on a hierarchy in hierarchy menu,
 
-2. check the checkbox of the level,
+2. checking the checkbox of the level,
 
 .. _checkboxlevel:
 .. figure:: media/image172b.png
 
     Checkbox of the level.
 
-3. click on the “Apply” button.
+3. clicking on the “Apply” button.
 
-The user can also select the maximum rows to load by choosing one of the options in the drop down list. Finally, loaded data can be exported in csv format by clicking on the “Export” button.
+You can also select the maximum rows to load by choosing one of the options in the drop down list. Finally, loaded data can be exported in csv format by clicking on the “Export” button.
 
 Refreshing model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To refresh a loaded model the user needs to click on the “Refresh” button available in the side bar panel. This action will clear the cash, load pivot table and the rest of data again.
+To refresh a loaded model just click on the *Refresh* button available in the side bar panel. 
+This action will clear the cash, load the pivot table and the rest of the data again.
 
 
 Showing MDX
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To show current mdx query user should click on show mdx button in the side bar. Figure below shows an example.
+To show the current MDX query you should The specific *Show mdx query* button of the side bar. Figure below shows an example.
 
 .. figure:: media/image173.png
 
@@ -398,7 +400,7 @@ To show current mdx query user should click on show mdx button in the side bar. 
 Showing parent members
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If a user wants to see additional information about members shown in the pivot table (for example: member’s hierarchy, level or parent member) he should click on show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in the following two figures.
+If yoy want to see additional information about members shown in the pivot table (for example: member’s hierarchy, level or parent member) he should click on show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in the following two figures.
 
 .. figure:: media/image176.png
 
@@ -429,7 +431,8 @@ In OLAP schema the XML member properties, if configured, is represented as part 
 Suppressing empty colunms/rows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To hide the empty rows and/or colums, if any, from pivot table the user can click on the “Suppress empty rows/colums” button in the side bar panel. An example is given in Figure below.
+To hide the empty rows and/or colums, if any, you can click the table function *Suppress empty rows/colums* button of the side bar panel. 
+An example below.
 
 .. figure:: media/image181.png
 
@@ -438,18 +441,18 @@ To hide the empty rows and/or colums, if any, from pivot table the user can clic
 Sorting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To enable member ordering the user must click on the “Sorting settings” button in the side bar panel. The command for sorting will appear next to the member’s name in the pivot table, as shown below. 
+To enable members' ordering you click the *Sorting settings* button of the side bar panel. The command for sorting will appear next to the member’s name in the pivot table, as shown below. 
 
 .. figure:: media/image18283.png
 
     Member sorting.
 
-To sort members the user needs to click on the sorting command (two opposite arrows) available next to each member of the pivot table. Note that the sorting criteria is descending at first execution and it represented by a red down arrow. If the user clicks again on the sorting icon, criteria will change to ascending and the icon becomes an upper green arrow. To remove the sorting, the user just have to click on the icon again. 
+To sort members you have to click on the sorting command (two opposite arrows) available next to each member of the pivot table. Note that the sorting criteria is descending at first execution and it represented by a red down arrow. If the user clicks again on the sorting icon, criteria will change to ascending and the icon becomes an upper green arrow. To remove the sorting, the user just have to click on the icon again. 
 
 .. |image179| image:: media/image184.png
    :width: 65
 
-To change sorting mode user should click on sorting settings button in the side bar. 
+To change the sorting mode you should click the sorting settings button of the side bar. 
    
 .. figure:: media/image185a.png
 
