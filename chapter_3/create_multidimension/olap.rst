@@ -720,15 +720,15 @@ Click the *Start* link. The image below shows the outcome.
 
     Defining OLAP template.
 
-Aaccording to requirements set the fields as axis or as filter cards. 
-Please refer to the *Functionalities* chapter for the terminology. Make your selection and you can already save the template as shown below.  
+Aaccording to requirements set the fields as axis or as filter cards. Please refer to the *Functionalities* chapter for the terminology. 
+Make your selection(s) and in save the template as shown below.  
 
 .. _definingolaptempl2:
 .. figure:: media/image200.png
 
     Defining OLAP template.
 
-You can notice that the side panel contains some features (see next figure):
+The next figure shows the *Setting* panel.
 
 .. _sidepanelfeatolapdes:
 .. figure:: media/image201.png
