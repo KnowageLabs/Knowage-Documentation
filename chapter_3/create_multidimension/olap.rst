@@ -702,23 +702,26 @@ The catalog with the list of all the *Mondrian Schemas* opens as shown below .
 
     Mondrian Schema Catalog.
 
-Then enter in the **Document Browser**, click on the “Plus” icon at the top right corner of the page and choose "Gneric document". As described in the previous section, fill in the mandatory boxes as Label and Name of the document, select the **On-Line Analytical Processing** Type of document and the **OLAP Engine**, add the data source and the state. Remember to save to move to the next step: open the Designer. The latter can be opend clicking on the **Open Designer** link.
+From the **Document Browser**, click on the *Plus* icon at the top right corner of the page and choose *Generic document*. 
+Fill in the mandatory information such as *Name* and *Label*, select *On-Line Analytical Processing* as Type of document and *OLAP Engine* as Engine. Add the data source and the state. 
+Remember *to save* before clicking the **Open Designer** link.
 
-A new page will be opened, the first thing to choose is the kind of template between XMLA Server and Mondrian, we choose Mondrian one. Then you will be asked to choose the Mondrian Schema and after that to select a cube. Next figure sums up these three steps. 
+At this point choose Mondrian as *Template*, the *Mondrian Schema* and finally the *cube*. See below. 
 
 .. _olapcoreconfig:
 .. figure:: media/image198_1.png
 
     OLAP core configuration.
 
-Then clicking on start button you will enter a page like that of the following figure. 
+Click the *Start* link. The image below shows the outcome. 
 
 .. _definingolaptempl:
 .. figure:: media/image199.png
 
     Defining OLAP template.
 
-Once entered the page the user can freely set the fields as axis or as filter cards, according to requirements. Refer to *Functionalities* Chapter to review the terminology. Make your selection and you can already save the template as shown below.  
+Aaccording to requirements set the fields as axis or as filter cards. 
+Please refer to the *Functionalities* chapter for the terminology. Make your selection and you can already save the template as shown below.  
 
 .. _definingolaptempl2:
 .. figure:: media/image200.png
