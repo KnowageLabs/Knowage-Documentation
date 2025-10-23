@@ -720,8 +720,7 @@ Click the *Start* link. The image below shows the outcome.
 
     Defining OLAP template.
 
-Aaccording to the requirements set which fields ar axis or filter cards. Please refer to the *Functionalities* chapter for the terminology. 
-Save the template.  
+Aaccording to the requirements set which fields ar axis or filter cards. Please refer to the *Functionalities* chapter for the terminology.  
 
 .. _definingolaptempl2:
 .. figure:: media/image200.png
@@ -729,6 +728,7 @@ Save the template.
     Defining OLAP template.
 
 The *Setting* panel contains:
+
     - Drilling functionalities as *Position, Member, Replace*
     - OLAP functions as *Preview, Button visibility*
 
@@ -741,12 +741,25 @@ To display the *MDX query* click the *Preview* button.
     Preview in OLAP.
 
 To set the visibity on the buttons click the *Configure Button Visibility* as shown below.
+Through the buttons wizard you can decide which permissions are granted to the end-user.
 
 .. figure:: media/image200_1.png
 
-    Preview in OLAP.
+    Visibility on buttons.
 
-You can define a cross navigation opening the wizard and clicking on the “Add” button at the top right corner.
+The image below shows an example with another OLAP function: *Cross Navigation*.
+
+.. figure:: media/image200_3.png
+
+    Enabling the cross navigation - 1
+
+As shown above, by clicking the icon highlighted in the image, you can enable a cross navigation.
+
+.. figure:: media/image200_4.png
+
+    Enabling the cross navigation - 2
+
+Clicking on the “Add” button at the top right corner.
 
 Note that the parameter name will be used to configure the (external) cross navigation. In fact, to properly set the cross navigation the user must access the “Cross Navigation” functionalities available in Knowage Server. Here, referring to *Cross Navigation* section of *Analytical document* chapter, you will use the parameter just set as output parameter.
 
@@ -754,13 +767,7 @@ Note that the parameter name will be used to configure the (external) cross navi
 
     Cross navigation definition.
 
-As shown in figure below, the buttons wizard helps to decide which permissions are granted to the end-user. Some features can only be let visible while others can also be selected by default when a user open the document. 
-
-.. figure:: media/image211.png
-
-    Buttons wizard.
-
-Once the configuration is done click on the **Save template** button and on the **Close designer** button to exit template available at the bottom of the side panel.
+Once the configuration is completed click the *Save Template** button and then the *Close designer* button to exit and return to the Document browser.
 
 
 Profiled access
