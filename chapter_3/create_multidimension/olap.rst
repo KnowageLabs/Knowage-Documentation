@@ -720,7 +720,7 @@ Click the *Start* link. The image below shows the outcome.
 
     Defining OLAP template.
 
-Aaccording to the requirements set which fields ar axis or filter cards. Please refer to the *Functionalities* chapter for the terminology.  
+Aaccording to the requirements set which fields ar axis or filter cards. Please refer to the *Functionalities* section of this documention for the terminology.  
 
 .. _definingolaptempl2:
 .. figure:: media/image200.png
