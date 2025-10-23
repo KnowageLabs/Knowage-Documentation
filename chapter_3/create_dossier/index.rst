@@ -17,7 +17,7 @@ Tags and properties
 
 XML template is an XML file used to configure parameters needed to the elaboration. This file is uploaded during document creation and can be updated using the HISTORY tab visible in document edit mode.
 
-In particular, tag allowed are:
+In particular,the tags allowed are:
 
 -  **DOSSIER**: main tag used to define the dossier template;
 -  **PPT_TEMPLATE**: contains properties related to the PPT template  (incompatible with DOC_TEMPLATE). You can specify:
@@ -211,7 +211,7 @@ On the other hand by clicking the *Plus* icon the image placeholders can be link
 
     Linking to Views.
 
-If user wants to rollback and reset modification, he can click on "Reset placeholder" icon on the image placeholders panel.
+To rollback and reset changes, just click the "Reset placeholder" icon on the image placeholders panel.
 
 .. figure:: media/image005_d.png
 
