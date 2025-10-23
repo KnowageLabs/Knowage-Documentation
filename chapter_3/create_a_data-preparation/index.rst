@@ -150,7 +150,7 @@ From the three dots menu of a specific column two more transformations are avail
 
     Trim column dialog example.
 
-Data Preparation technical detail
+Data Preparation technical details
 ------------------------------------------------------------------------------------------------------------------------
 
 **What is an AVRO file?**
