@@ -22,7 +22,7 @@ There are two ways to prepare and start a data preparation process.
 The first one is starting from *MyData* section and then selecting/searching the desired dataset.
 Once the dataset has been selected click the *OPen Data Preparation* option from the three dots menu as shown below.
 
- The option *Opening the data preparation* triggers a process that will create the *avro* file (for more information see the dedicated section). This process consists of five steps
+The option *Opening the data preparation* triggers a process that will create the *avro* file (for more information see the dedicated section). This process consists of five steps
 
 .. figure:: media/image4_b.png
 
