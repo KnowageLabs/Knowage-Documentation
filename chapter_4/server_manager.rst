@@ -17,7 +17,7 @@ Tenants
 
 This feature allows you to create or manage tenants.
 A single Knowage instance can have one or more tenants. In case of a multi-tenant environment, each tenant owns and manages its own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
-The *Tenants* functionality is only available for the Knowage Enterprise Reporting (ER) license and users must have the superadmin role. 
+The *Tenants* functionality is only available by having the appropriate license and users must have the superadmin role. 
 
 .. figure:: media/image61_8.1.png
 
