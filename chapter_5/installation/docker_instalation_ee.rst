@@ -45,7 +45,7 @@ Mandatory parameters:
 
 • DB_USER: database user
 
-• DB_PASS_ENCRYPTED: encrypted database password (see chapter 6)
+• DB_PASS_ENCRYPTED: encrypted database password (see paragraph 'DB password encryption')
 
 • DB_TYPE: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
 
@@ -57,7 +57,7 @@ Mandatory parameters:
 
 • CACHE_DB_USER: cache database user
 
-• CACHE_DB_PASS_ENCRYPTED: encrypted database password (see chapter 5)
+• CACHE_DB_PASS_ENCRYPTED: encrypted database password (see paragraph 'DB password encryption')
 
 • CACHE _TYPE: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
 
@@ -75,5 +75,68 @@ Parameters in the docker-compose.yml file
 • HAZELCAST_HOSTS: comma-separated Hazelcast hosts (e.g. "host1,host2,host3")
 
 • HAZELCAST_PORT: Hazelcast port (e.g. "5701")
+
+DB password encryption
+------------------------------------------------------------------------------------------------------------------------
+To encrypt the database password you need:
+
+1. download the “tomcat-password-encryption.jar” jar in the “knowage-enterprise” directory from https://knowage-devops.knowage-suite.eu/webdav
+
+2. run the following command (with java 17 or later): 
+
+java -cp tomcat-password-encryption.jar -Dsymmetric_encryption_key=KEY_SECRET
+en.eng.knowage.enterprise.tomcatpasswordencryption.helper.EncryptOnce DB_CLEAR_PASSWORD
+where KEY_SECRET corresponds to the value indicated in the SENSIBLE_DATA_ENCRYPTION_SECRET environment variable
+where DB_CLEAR_PASSWORD is the plaintext password of the database
+
+3. replace the values ​​obtained in correspondence with the DB_PASS_ENCRYPTED and CACHE_DB_PASS_ENCRYPTED environment variables respectively
+
+Installation of Database Schemas
+------------------------------------------------------------------------------------------------------------------------
+It is necessary to manually install the knowage and knowage_cache schemes on the customer database, executing the related DDLs. 
+
+Make sure to update the parameters in the .env file with the correct data for DB access.
+
+Check the connectivity between the host machine where Knowage will be installed and the DB.
+
+Adding JNDI Resources
+------------------------------------------------------------------------------------------------------------------------
+To add new JNDI resources, edit the following files:
+
+• conf/context.xml.d/extContext
+
+• conf/server.xml.d/extGlobalResources
+
+Example of ResourceLink in extContext:
+
+<ResourceLink global="jdbc/foodmart" name="jdbc/foodmart" type="javax.sql.DataSource" />
+
+Example of Resource in extGlobalResources:
+
+<Resource
+    auth="Container"
+    driverClassName="com.mysql.jdbc.Driver"
+    logAbandoned="true"
+    maxTotal="20"
+    maxIdle="4"
+    maxWait="300"
+    minEvictableIdleTimeMillis="60000"
+    name="jdbc/foodmart"
+    password="foodmart"
+    removeAbandoned="true"
+    removeAbandonedTimeout="3600"
+    testOnReturn="true"
+    testWhileIdle="true"
+    timeBetweenEvictionRunsMillis="10000"
+    type="javax.sql.DataSource"
+    url="jdbc:mysql://foodmart:3306/foodmart"
+    username="foodmart"/>
+
+Mounting volumes in docker-compose.yml in the volumes section of the knowage service:
+
+- ./conf/confServerFoodmart:/home/knowage/apache-tomcat/conf/server.xml.d
+
+- ./conf/context.xml.d:/home/knowage/apache-tomcat/conf/context.xml.d
+
 
 
