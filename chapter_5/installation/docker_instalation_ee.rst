@@ -86,7 +86,9 @@ To encrypt the database password you need:
 
 java -cp tomcat-password-encryption.jar -Dsymmetric_encryption_key=KEY_SECRET
 en.eng.knowage.enterprise.tomcatpasswordencryption.helper.EncryptOnce DB_CLEAR_PASSWORD
+
 where KEY_SECRET corresponds to the value indicated in the SENSIBLE_DATA_ENCRYPTION_SECRET environment variable
+
 where DB_CLEAR_PASSWORD is the plaintext password of the database
 
 3. replace the values ​​obtained in correspondence with the DB_PASS_ENCRYPTED and CACHE_DB_PASS_ENCRYPTED environment variables respectively
@@ -137,6 +139,28 @@ Mounting volumes in docker-compose.yml in the volumes section of the knowage ser
 - ./conf/confServerFoodmart:/home/knowage/apache-tomcat/conf/server.xml.d
 
 - ./conf/context.xml.d:/home/knowage/apache-tomcat/conf/context.xml.d
+
+Note on paths and mounted volumes
+------------------------------------------------------------------------------------------------------------------------
+The paths and directories specified in the docker-compose.yml file volumes (e.g. ./resources, ./conf/server.xml.d, etc.) must be adapted according to the structure and needs of the host machine on which Knowage is running.
+
+Make sure the directories exist and contain the necessary files before starting the containers. Otherwise, the service may not start correctly or work as expected.
+
+On the directories change the permissions with the following commands: 
+
+Example:
+
+chown -R knowage:knowage /portal_data/knowage_*
+
+chmod -R 750 /portal_data/knowage_*
+
+Create the following file with the command: 
+
+vim ~/.config/containers/containers.conf and write 
+
+[containers]
+
+ userns="keep-id"
 
 
 
