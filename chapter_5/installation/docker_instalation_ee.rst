@@ -160,7 +160,42 @@ vim ~/.config/containers/containers.conf and write
 
 [containers]
 
- userns="keep-id"
+userns="keep-id"
+
+Configuring additional hosts
+------------------------------------------------------------------------------------------------------------------------
+You can add the extra_hosts parameter within the service definition in the docker-compose.yml file to map custom hostnames to specific IP addresses.
+
+This can be useful, for example, to resolve internal DNS names or to facilitate communication with external services not managed by Docker.
+
+Example:
+
+extra_hosts:
+
+  - "hostname:192.168.1.100"
+
+Container network setup
+------------------------------------------------------------------------------------------------------------------------
+In the docker-compose.yml file, the network_mode: "host" parameter is used to make containers share the host's network.
+
+However, this configuration is not always the most suitable, especially in multi-container or production environments, where it is preferable to isolate services.
+
+Alternatively, you can define a dedicated Docker network and assign it to containers, improving the security and flexibility of communication between services.
+
+Caution with network_mode parameter: "host" cannot install the Hazelcast container for clustering
+
+Dedicated network example:
+
+networks:
+  knowage_net
+
+services:
+  know-how:
+    networks:
+      - knowage_net
+  hazelcast:
+    networks:
+      - knowage_net
 
 
 
