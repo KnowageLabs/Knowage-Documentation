@@ -1,6 +1,8 @@
 KNOWAGE Enterprise Installation using Docker
 ########################################################################################################################
 
+Prerequisites
+------------------------------------------------------------------------------------------------------------------------
 Installation on the host machine of Docker/Podman.
 
 Internet access from the host machine is required at the time of installation (for OS updates and Knowage image updates).
