@@ -146,6 +146,6 @@ Installing the Demo Version
 ------------------------------------------------------------------------------------------------------------------------
 To install the demo version with preconfigured reports:
 
-docker compose -f docker-compose-demo.yml up -d
+podman compose -f docker-compose-demo.yml up -d
 
 
