@@ -197,5 +197,26 @@ services:
     networks:
       - knowage_net
 
+Launching Knowage Services
+------------------------------------------------------------------------------------------------------------------------
+Go to the knowage-ee-server-docker directory and authenticate in the private repository:
+
+podman login knowage.azurecr.io
+
+After login, start the services:
+
+podman composed up –d
+
+Components Installed
+------------------------------------------------------------------------------------------------------------------------
+• Knowage Tomcat with all packages
+
+• Hazelcast for clustering
+
+• KnowagePython for integration with Python
+
+
+Access the web interface: http://localhost:8080/knowage-vue/
+
 
 
