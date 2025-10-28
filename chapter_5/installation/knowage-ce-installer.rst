@@ -103,4 +103,49 @@ If you have an external database:
 
 The same applies to using an external database for the cache (knowagecache).
 
+Adding JNDI Resources
+------------------------------------------------------------------------------------------------------------------------
+To add new JNDI resources, edit the following files:
+
+• conf/context.xml.d/extContext
+
+• conf/server.xml.d/extGlobalResources
+
+Example of ResourceLink in extContext:
+
+<ResourceLink global="jdbc/foodmart" name="jdbc/foodmart" type="javax.sql.DataSource" />
+
+Example of Resource in extGlobalResources:
+
+<Resource
+    auth="Container"
+    driverClassName="com.mysql.jdbc.Driver"
+    logAbandoned="true"
+    maxTotal="20"
+    maxIdle="4"
+    maxWait="300"
+    minEvictableIdleTimeMillis="60000"
+    name="jdbc/foodmart"
+    password="foodmart"
+    removeAbandoned="true"
+    removeAbandonedTimeout="3600"
+    testOnReturn="true"
+    testWhileIdle="true"
+    timeBetweenEvictionRunsMillis="10000"
+    type="javax.sql.DataSource"
+    url="jdbc:mysql://foodmart:3306/foodmart"
+    username="foodmart"/>
+
+Mounting volumes in docker-compose.yml in the volumes section of the knowage service:
+
+- ./conf/confServerFoodmart:/home/knowage/apache-tomcat/conf/server.xml.d
+
+- ./conf/context.xml.d:/home/knowage/apache-tomcat/conf/context.xml.d
+
+Installing the Demo Version
+------------------------------------------------------------------------------------------------------------------------
+To install the demo version with preconfigured reports:
+
+docker compose -f docker-compose-demo.yml up -d
+
 
