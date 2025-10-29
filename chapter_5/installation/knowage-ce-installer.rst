@@ -122,12 +122,16 @@ To add new JNDI resources, edit the following files:
 
 Example of ResourceLink in extContext:
 
-<ResourceLink global="jdbc/foodmart" name="jdbc/foodmart" type="javax.sql.DataSource" />
+.. code-block:: xml
+   :linenos:
+
+      <ResourceLink global="jdbc/foodmart" name="jdbc/foodmart" type="javax.sql.DataSource" />
 
 Example of Resource in extGlobalResources:
 
 .. code-block:: xml
    :linenos:
+
       <Resource
     auth="Container"
     driverClassName="com.mysql.jdbc.Driver"
