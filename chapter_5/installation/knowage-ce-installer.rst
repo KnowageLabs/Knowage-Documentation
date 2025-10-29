@@ -128,8 +128,7 @@ Example of Resource in extGlobalResources:
 
 .. code-block:: xml
    :linenos:
-
-<Resource
+      <Resource
     auth="Container"
     driverClassName="com.mysql.jdbc.Driver"
     logAbandoned="true"
