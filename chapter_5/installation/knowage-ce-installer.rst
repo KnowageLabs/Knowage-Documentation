@@ -6,7 +6,7 @@ Repository cloning
 To install Knowage CE via Docker, you need to clone the GitHub repository:
 
 .. code-block:: bash
-   :caption: command
+   :caption: git command
 
         git clone https://github.com/KnowageLabs/Knowage-Server-Docker.git
 
@@ -15,6 +15,7 @@ Preparation of the Environment
 Access the project directory:
 
 .. code-block:: bash
+   :caption: shell command
 
       cd Knowage-Server-Docker
 
@@ -74,6 +75,7 @@ Complete Installation
 To install all Knowage components, run:
 
 .. code-block:: bash
+   :caption: docker command
 
       podman compose up -d
 
@@ -152,7 +154,9 @@ Mounting volumes in docker-compose.yml in the volumes section of the knowage ser
 Installing the Demo Version
 ------------------------------------------------------------------------------------------------------------------------
 To install the demo version with preconfigured reports:
+
 .. code-block:: bash
+   :caption: docker command
 
       podman compose -f docker-compose-demo.yml up -d
 
