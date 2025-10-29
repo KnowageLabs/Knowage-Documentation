@@ -23,7 +23,7 @@ Configuration of Environment Variables
 ------------------------------------------------------------------------------------------------------------------------
 Knowage requires several variables to be configured to launch correctly. 
 
-These can be defined in the .env file present in the project directory.
+These can be defined in the ``.env`` file present in the project directory.
 
 Mandatory parameters:
 
@@ -145,7 +145,7 @@ Example of Resource in extGlobalResources:
     url="jdbc:mysql://foodmart:3306/foodmart"
     username="foodmart"/>
 
-Mounting volumes in docker-compose.yml in the volumes section of the knowage service:
+Mounting volumes in ``docker-compose.yml`` in the volumes section of the knowage service:
 
 - ./conf/confServerFoodmart:/home/knowage/apache-tomcat/conf/server.xml.d
 
