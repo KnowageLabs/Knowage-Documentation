@@ -11,6 +11,7 @@ Preparation of the Environment
 ------------------------------------------------------------------------------------------------------------------------
 Access the project directory:
 
+.. code-block:: bash
 cd Knowage-Server-Docker
 
 Configuration of Environment Variables
