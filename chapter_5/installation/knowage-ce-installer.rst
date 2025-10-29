@@ -126,6 +126,9 @@ Example of ResourceLink in extContext:
 
 Example of Resource in extGlobalResources:
 
+.. code-block:: xml
+   :linenos:
+
 <Resource
     auth="Container"
     driverClassName="com.mysql.jdbc.Driver"
