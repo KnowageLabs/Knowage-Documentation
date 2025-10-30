@@ -6,7 +6,7 @@ You can install Knowage by connecting it to an existing external database, or by
 
 Repository cloning
 ------------------------------------------------------------------------------------------------------------------------
-To install Knowage CE via Docker, you need to clone the GitHub repository:
+First f all, to install Knowage CE via Docker, you need to clone the GitHub repository:
 
 .. code-block:: bash
    :caption: git command
@@ -24,11 +24,15 @@ Access the project directory:
 
 Configuration of Environment Variables
 ------------------------------------------------------------------------------------------------------------------------
+ --------- come quagliano conil DB ??? se uso il DB interno le devo mettere ?
+ che serve indirizzo pubblico ??
+
 Knowage requires several variables to be configured to launch correctly. 
 
 These can be defined in the ``.env`` file present in the project directory.
 
-Mandatory parameters:
+Data base parameters:
+KNOWAGE need to use 2 DB schema, une for the metadata and una for the temporary cache.
 
 • **DB_HOST**: database host
 
@@ -54,15 +58,15 @@ Mandatory parameters:
 
 • **CACHE_DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
 
-• **HMAC_KEY**: HMAC key to configure in Tomcat
+• **HMAC_KEY**: HMAC key to configure in Tomcat, it is important to configure it carefully, avoiding the use of trivial or predictable strings, as this setup is used to generate the token.
 
-• **PASSWORD_ENCRYPTION_SECRET**: key for password encryption
+• **PASSWORD_ENCRYPTION_SECRET**: key for password encryption. Key used to securely store user passwords
 
-• **SENSIBLE_DATA_ENCRYPTION_SECRET**: key for encrypting sensitive data
+• **SENSIBLE_DATA_ENCRYPTION_SECRET**: key for encrypting sensitive data. It is used for data decryption functionalities.
 
 • **DB_TYPE** and **CACHE_DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
 
-• **PUBLIC_ADDRESS**: IP or hostname visible from the outside (e.g. http://$PUBLIC_ADDRESS:8080/knowage)
+• **PUBLIC_ADDRESS**: IP or hostname visible from the outside (e.g. http://$PUBLIC_ADDRESS:8080/knowage)  
 
 Parameters in the docker-compose.yml file
 ------------------------------------------------------------------------------------------------------------------------
