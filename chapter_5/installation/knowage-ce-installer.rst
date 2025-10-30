@@ -1,6 +1,9 @@
 KNOWAGE Community  Installation using Docker
 ########################################################################################################################
 
+In this guide, you will find instructions on how to install KNOWAGE Community Edition using Docker.
+You can install Knowage by connecting it to an existing external database, or by loading the Docker image of the MySQL database as well.
+
 Repository cloning
 ------------------------------------------------------------------------------------------------------------------------
 To install Knowage CE via Docker, you need to clone the GitHub repository:
