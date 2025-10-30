@@ -28,9 +28,11 @@ Configuration of Environment Variables
 Knowage requires several variables to be configured to launch correctly. 
 
 These can be defined in the ``.env`` file present in the project directory.
+KNOWAGE need to use 2 DB schema, une for the metadata and una for the temporary cache.
+For an initial demo installation using the included database, you can keep the database configuration settings as default.
+You must change them if you are using an existing external database — see **Using External Databases** section.
 
 Data base parameters:
-KNOWAGE need to use 2 DB schema, une for the metadata and una for the temporary cache.
 
 • **DB_HOST**: database host
 
