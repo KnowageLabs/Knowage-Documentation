@@ -24,8 +24,6 @@ Access the project directory:
 
 Configuration of Environment Variables
 ------------------------------------------------------------------------------------------------------------------------
- --------- come quagliano conil DB ??? se uso il DB interno le devo mettere ?
- che serve indirizzo pubblico ??
 
 Knowage requires several variables to be configured to launch correctly. 
 
@@ -44,8 +42,6 @@ KNOWAGE need to use 2 DB schema, une for the metadata and una for the temporary 
 
 • **DB_PASS**: user password
 
-• **DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
-
 • **CACHE_DB_HOST**: cache database host
 
 • **CACHE_DB_PORT**: cache database port
@@ -56,17 +52,13 @@ KNOWAGE need to use 2 DB schema, une for the metadata and una for the temporary 
 
 • **CACHE_DB_PASS**: cache user password
 
-• **CACHE_DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
-
 • **HMAC_KEY**: HMAC key to configure in Tomcat, it is important to configure it carefully, avoiding the use of trivial or predictable strings, as this setup is used to generate the token.
 
 • **PASSWORD_ENCRYPTION_SECRET**: key for password encryption. Key used to securely store user passwords
 
 • **SENSIBLE_DATA_ENCRYPTION_SECRET**: key for encrypting sensitive data. It is used for data decryption functionalities.
 
-• **DB_TYPE** and **CACHE_DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
 
-• **PUBLIC_ADDRESS**: IP or hostname visible from the outside (e.g. http://$PUBLIC_ADDRESS:8080/knowage)  
 
 Parameters in the docker-compose.yml file
 ------------------------------------------------------------------------------------------------------------------------
@@ -77,6 +69,12 @@ Parameters in the docker-compose.yml file
 
 • **HAZELCAST_PORT**: Hazelcast port (e.g., "5701")
 
+• **PUBLIC_ADDRESS**: IP or hostname visible from the outside (e.g. http://$PUBLIC_ADDRESS:8080/knowage)  
+
+• **DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
+
+• **CACHE_DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
+
 Complete Installation
 ------------------------------------------------------------------------------------------------------------------------
 To install all Knowage components, run:
@@ -85,6 +83,16 @@ To install all Knowage components, run:
    :caption: docker command
 
       podman compose up -d
+
+Installing the Demo Version
+------------------------------------------------------------------------------------------------------------------------
+If you want to  install the demo version with preconfigured reports:
+
+.. code-block:: bash
+   :caption: docker command
+
+      podman compose -f docker-compose-demo.yml up -d
+
 
 Components Installed
 ------------------------------------------------------------------------------------------------------------------------
@@ -98,12 +106,30 @@ Components Installed
 
 • KnowageCache (cache)
 
-Access the web interface: http://localhost:18080/knowage-vue/
+Access the web interface: http://localhost:18080/knowage
 
 Changing the Access Port
 ------------------------------------------------------------------------------------------------------------------------
 
 To change the port on which Knowage is exposed, edit the **docker-compose.yml file in the knowage service section.
+
+.. code-block:: bash
+   :caption: docker command
+
+      version: "3.8"
+services:
+  knowage:
+    image: knowagelabs/knowage-server-docker:9.1-SNAPSHOT
+    hostname: knowage
+    depends_on:
+      - knowagedb
+      - knowagecache
+      - hazelcast
+    ports:
+      - "18080:8080"
+    networks:
+      - main
+    environment:
 
 Using External Databases
 ------------------------------------------------------------------------------------------------------------------------
@@ -111,7 +137,22 @@ If you have an external database:
 
 - Remove the knowagedb service from `docker-compose.yml`.
 
-- Install the Knowage schema on your database via DDL.
+.. code-block:: bash
+   :caption: docker command
+
+        knowagedb:
+    image: mariadb:10.3
+    environment:
+      - MYSQL_USER=$DB_USER
+      - MYSQL_PASSWORD=$DB_PASS
+      - MYSQL_DATABASE=$DB_DB
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    networks:
+      - main
+    volumes:
+      - "db:/var/lib/mysql"
+
+- Install the Knowage schema on your database via DDL, you can find here the DDL https://github.com/KnowageLabs/Knowage-Server/tree/knowage-server-9.0/knowagedatabasescripts
 
 - Update the parameters in the `.env` file.
 
@@ -141,22 +182,22 @@ Example of Resource in extGlobalResources:
 
       <Resource
     auth="Container"
-    driverClassName="com.mysql.jdbc.Driver"
+    driverClassName="<DRIVER JDBC>"
     logAbandoned="true"
     maxTotal="20"
     maxIdle="4"
     maxWait="300"
     minEvictableIdleTimeMillis="60000"
-    name="jdbc/foodmart"
-    password="foodmart"
+    name="jdbc/<JNDI NAME>"
+    password="<PASSWORD>"
     removeAbandoned="true"
     removeAbandonedTimeout="3600"
     testOnReturn="true"
     testWhileIdle="true"
     timeBetweenEvictionRunsMillis="10000"
     type="javax.sql.DataSource"
-    url="jdbc:mysql://foodmart:3306/foodmart"
-    username="foodmart"/>
+    url="jdbc:mysql://<IP ADRESS>:<PORT>/<DB NAME>"
+    username="<USERNAME>"/>
 
 Mounting volumes in ``docker-compose.yml`` in the volumes section of the knowage service:
 
@@ -164,14 +205,7 @@ Mounting volumes in ``docker-compose.yml`` in the volumes section of the knowage
 
 - ./conf/context.xml.d:/home/knowage/apache-tomcat/conf/context.xml.d
 
-Installing the Demo Version
-------------------------------------------------------------------------------------------------------------------------
-To install the demo version with preconfigured reports:
 
-.. code-block:: bash
-   :caption: docker command
-
-      podman compose -f docker-compose-demo.yml up -d
 
 How upgrade KNOWAGE version
 ------------------------------------------------------------------------------------------------------------------------
