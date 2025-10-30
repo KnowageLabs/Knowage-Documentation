@@ -117,19 +117,19 @@ To change the port on which Knowage is exposed, edit the **docker-compose.yml fi
    :caption: docker command
 
       version: "3.8"
-services:
-  knowage:
-    image: knowagelabs/knowage-server-docker:9.1-SNAPSHOT
-    hostname: knowage
-    depends_on:
-      - knowagedb
-      - knowagecache
-      - hazelcast
-    ports:
-      - "18080:8080"
-    networks:
-      - main
-    environment:
+         services:
+         knowage:
+            image: knowagelabs/knowage-server-docker:9.0
+            hostname: knowage
+         depends_on:
+            - knowagedb
+            - knowagecache
+            - hazelcast
+         ports:
+            - "18080:8080"
+         networks:
+            - main
+
 
 Using External Databases
 ------------------------------------------------------------------------------------------------------------------------
@@ -138,25 +138,25 @@ If you have an external database:
 - Remove the knowagedb service from `docker-compose.yml`.
 
 .. code-block:: bash
-   :caption: docker command
+   :caption: docker compose fragment
 
         knowagedb:
-    image: mariadb:10.3
-    environment:
-      - MYSQL_USER=$DB_USER
-      - MYSQL_PASSWORD=$DB_PASS
-      - MYSQL_DATABASE=$DB_DB
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
-    networks:
-      - main
-    volumes:
-      - "db:/var/lib/mysql"
+         image: mariadb:10.3
+            environment:
+               - MYSQL_USER=$DB_USER
+               - MYSQL_PASSWORD=$DB_PASS
+               - MYSQL_DATABASE=$DB_DB
+               - MYSQL_RANDOM_ROOT_PASSWORD=yes
+            networks:
+               - main
+         volumes:
+            - "db:/var/lib/mysql"
 
 - Install the Knowage schema on your database via DDL, you can find here the DDL https://github.com/KnowageLabs/Knowage-Server/tree/knowage-server-9.0/knowagedatabasescripts
 
 - Update the parameters in the `.env` file.
 
-- Set DB_DO_INITIALIZATION=false.
+- Set **DB_DO_INITIALIZATION**=false.
 
 The same applies to using an external database for the cache (knowagecache).
 
@@ -210,4 +210,12 @@ Mounting volumes in ``docker-compose.yml`` in the volumes section of the knowage
 How upgrade KNOWAGE version
 ------------------------------------------------------------------------------------------------------------------------
 
+If you want to upgrade the KNOAGE installation to the last patch version released ( eg. from 9.0.0  to 9.0.1) you have to:
+
+.. code-block:: bash
+   :caption: docker command
+
+    podman compose down
+    podman rmi <IMAGE ID>
+    podman compose up -d
 
