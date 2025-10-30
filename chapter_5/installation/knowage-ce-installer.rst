@@ -173,4 +173,7 @@ To install the demo version with preconfigured reports:
 
       podman compose -f docker-compose-demo.yml up -d
 
+How upgrade KNOWAGE version
+------------------------------------------------------------------------------------------------------------------------
+
 
