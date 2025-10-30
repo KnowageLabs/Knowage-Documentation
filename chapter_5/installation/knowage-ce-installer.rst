@@ -154,7 +154,7 @@ It may be useful to use an existing external database instead of the one include
          volumes:
             - "db:/var/lib/mysql"
 
-- Install the Knowage schema on your database via DDL, you can find here the DDL `<https://github.com/KnowageLabs/Knowage-Server/tree/knowage-server-9.0/knowagedatabasescripts>`_.
+- Install the Knowage schema on your database via DDL, you can find here the  `DDL <https://github.com/KnowageLabs/Knowage-Server/tree/knowage-server-9.0/knowagedatabasescripts>`_.
 
 - Update the parameters in the `.env` file.
 
