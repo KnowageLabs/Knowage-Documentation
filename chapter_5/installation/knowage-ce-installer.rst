@@ -63,7 +63,7 @@ KNOWAGE need to use 2 DB schema, une for the metadata and una for the temporary 
 Parameters in the docker-compose.yml file
 ------------------------------------------------------------------------------------------------------------------------
 
-• **DB_DO_INITIALIZATION**: Defaults to true; set to false to skip DB initialization.
+• **DB_DO_INITIALIZATION**: Defaults to true; Set to false to avoid initializing the database. This is useful when using an already initialized external database, see **Using External Databases** section.
 
 • **HAZELCAST_HOSTS**: Comma-separated Hazelcast hosts (e.g., "host1,host2,host3")
 
@@ -133,7 +133,7 @@ To change the port on which Knowage is exposed, edit the **docker-compose.yml fi
 
 Using External Databases
 ------------------------------------------------------------------------------------------------------------------------
-If you have an external database:
+It may be useful to use an existing external database instead of the one included in the standard distribution. In that case, you should:
 
 - Remove the knowagedb service from `docker-compose.yml`.
 
@@ -156,7 +156,7 @@ If you have an external database:
 
 - Update the parameters in the `.env` file.
 
-- Set **DB_DO_INITIALIZATION**=false.
+- Set **DB_DO_INITIALIZATION** : false.
 
 The same applies to using an external database for the cache (knowagecache).
 
