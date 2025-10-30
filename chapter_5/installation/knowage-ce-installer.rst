@@ -28,7 +28,8 @@ Configuration of Environment Variables
 Knowage requires several variables to be configured to launch correctly. 
 
 These can be defined in the ``.env`` file present in the project directory.
-KNOWAGE need to use 2 DB schema, une for the metadata and una for the temporary cache.
+KNOWAGE need to use 2 DB schema, one for the metadata and una for the temporary cache.
+
 For an initial demo installation using the included database, you can keep the database configuration settings as default.
 You must change them if you are using an existing external database — see **Using External Databases** section.
 
@@ -79,16 +80,14 @@ Parameters in the docker-compose.yml file
 
 Complete Installation
 ------------------------------------------------------------------------------------------------------------------------
-To install all Knowage components, run:
+To install all Knowage components without demo content, run:
 
 .. code-block:: bash
    :caption: docker command
 
       podman compose up -d
 
-Installing the Demo Version
-------------------------------------------------------------------------------------------------------------------------
-If you want to  install the demo version with preconfigured reports:
+Instead, if you want to  install the demo version with preconfigured reports, run:
 
 .. code-block:: bash
    :caption: docker command
@@ -100,7 +99,7 @@ Components Installed
 ------------------------------------------------------------------------------------------------------------------------
 • Knowage Tomcat with all packages
 
-• Hazelcast for clustering
+• Hazelcast
 
 • KnowagePython for Python integration
 
@@ -109,6 +108,7 @@ Components Installed
 • KnowageCache (cache)
 
 Access the web interface: http://localhost:18080/knowage
+
 
 Changing the Access Port
 ------------------------------------------------------------------------------------------------------------------------
@@ -154,7 +154,7 @@ It may be useful to use an existing external database instead of the one include
          volumes:
             - "db:/var/lib/mysql"
 
-- Install the Knowage schema on your database via DDL, you can find here the DDL <https://github.com/KnowageLabs/Knowage-Server/tree/knowage-server-9.0/knowagedatabasescripts>`_.
+- Install the Knowage schema on your database via DDL, you can find here the DDL `<https://github.com/KnowageLabs/Knowage-Server/tree/knowage-server-9.0/knowagedatabasescripts>`_.
 
 - Update the parameters in the `.env` file.
 
