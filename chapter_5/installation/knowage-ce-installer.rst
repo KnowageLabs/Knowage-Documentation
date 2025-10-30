@@ -212,7 +212,7 @@ Mounting volumes in ``docker-compose.yml`` in the volumes section of the knowage
 How upgrade KNOWAGE version
 ------------------------------------------------------------------------------------------------------------------------
 
-If you want to upgrade the KNOAGE installation to the last patch version released ( eg. from 9.0.0  to 9.0.1) you have to:
+If you want to upgrade the KNOWAGE packages to the last patch version released ( eg. from 9.0.0  to 9.0.1) you have to:
 
 .. code-block:: bash
    :caption: docker command
