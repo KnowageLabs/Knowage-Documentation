@@ -526,10 +526,11 @@ To plot this graph at least one attribute and one measure are needed.
 
 .. figure:: media/image072_1.png
 
-Radar chart - defining attributes and measures
+   Radar chart - defining attributes and measures
 
 .. figure:: media/image073_1.png
-Radar chart example
+   
+   Radar chart example
 
 
 **Treemap**
@@ -540,7 +541,7 @@ The area of the rectangles is proportional to a measure specified by a numerical
 large amount of hierarchical data in a small space.
 By clicking the *Add widget* button pick up *Chart* and then the *Treemap* from the gallery.
 Once a dataset has been selected at least two attributes into the X-axis panel and one measure are needed. Press *Save* to apply the changes. 
-See below image.
+The image below highlights the fact that one attribute is missing and the chart cannot be saved.
 
 .. figure:: media/image061.png
 
@@ -548,7 +549,7 @@ See below image.
 
 The order of the attributes in the X-axis panel should reflect the order of the attributes in the hierarchy starting from the root to the top.
 
-In Figure below an example of a Treemap chart
+The figure below shows an example of a Treemap chart
 
 .. figure:: media/image11415.PNG
 
