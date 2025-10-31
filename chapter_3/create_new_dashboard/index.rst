@@ -768,7 +768,7 @@ Select yor dataset and then you will be asked to enter just one attribute as cat
 
 .. figure:: media/image038.png
 
-   Waterfall chart example
+   Example of a Waterfall chart
 
 After describing most of the graphs below we provide an overview of the main features available and useful when creating charts.
 
