@@ -671,20 +671,20 @@ See below image
 
  .. figure:: media/image032_1.png
 
-Pictorial chart example
+    Pictorial chart example
 
 This kind of chart lets the upload of an SVG image that can transform the look and feel of your pictorial chart.
 See below image.
 
  .. figure:: media/image032_2.png
 
-Pictorial chart with SVG example
+    Pictorial chart with SVG example
 
 The following image shows where the SVG property can be found.
 
  .. figure:: media/image032_3.png
 
-SVG property
+    SVG property
 
 
 **Sankey**
@@ -697,14 +697,14 @@ Once selected the dataset, you need to choose two attributes representing the *f
 
  .. figure:: media/sankey.png
 
- Example of a *Sankey* chart
+   Example of a *Sankey* chart
  
 
 The *Sankey inverted* will look like as shown below:
 
  .. figure:: media/sankey_inverted.png
 
- Example of a *Sankey Inverted* chart
+    Example of a *Sankey Inverted* chart
 
 **Scatter**
 
@@ -715,7 +715,7 @@ See below image
 
  .. figure:: media/image034.png
 
-   Scatter chart - Defining series and categories
+    Scatter chart - Defining series and categories
 
 Below an example of a *Scatter chart*.
 
