@@ -334,7 +334,7 @@ An example below.
 
 .. figure:: media/image059.png
    
- Line chart example
+   Line chart example
 
 **Pie**
 
@@ -358,7 +358,7 @@ slices. An example of dataset for the sunburst chart is shown below.
 
 .. figure:: media/image065.png
 
-Sunburst chart - defining attributes and measure
+   Sunburst chart - defining attributes and measures
 
 .. _exampleofdatsetsunburst:
 .. table:: Example of dataset for the sunburst chart.
