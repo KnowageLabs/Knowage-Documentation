@@ -732,12 +732,12 @@ Below an example of a *Scatter chart*.
  
 .. figure:: media/image063.png
 
-   Scatter jitter - defining attribute and measure
+   Scatter jitter - Defining attributes and measures
 
 
 .. figure:: media/scatter_jitter.png
 
-   Scatter jitter chart example
+   Example of a Scatter jitter chart
 
 **Streamgraph**
 
@@ -748,12 +748,12 @@ and one measure as shown below.
 
 .. figure:: media/image035.png
 
-   Streamgraph chart - defining series and categories
+   Streamgraph chart - Defining series and categories
 
 
 .. figure:: media/image036.png
 
-   Streamgraph chart example
+   Example of Streamgraph chart
 
 **Waterfall**
 
@@ -764,7 +764,7 @@ Select yor dataset and then you will be asked to enter just one attribute as cat
 
 .. figure:: media/image037.png
 
-   Waterfall - defining measures and attributes
+   Waterfall - Defining measures and attributes
 
 .. figure:: media/image038.png
 
