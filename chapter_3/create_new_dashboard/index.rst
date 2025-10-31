@@ -27,7 +27,7 @@ Simply enter the type of graph to draw and press the search icon.
             -	by final users from the Workspace
             -	by admin users from the document browser area
 
-To create a dashboard the user should click the *plus* icon available in the right top corner and select *Dashboard* from the menu as shown below.
+To create a dashboard click the *Plus* icon available in the right top corner and select *Dashboard* from the menu as shown below.
 
 .. figure:: media/new_dashboard.png
 
