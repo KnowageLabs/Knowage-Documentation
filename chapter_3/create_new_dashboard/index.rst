@@ -726,7 +726,7 @@ Below an example of a *Scatter chart*.
 
 **Scatter Jitter**
 
- This chart is wseful when there are so many points piled up that data reading data turns out to be very tricky thus each point will be slightly 
+ This chart is useful when there are so many points piled up that data reading data turns out to be very tricky thus each point will be slightly 
  offset horizontally to reduce overlap and to allow reading.
 
  
