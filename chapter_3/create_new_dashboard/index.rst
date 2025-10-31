@@ -620,21 +620,21 @@ To define the chart you need one attribute and two measures to define the series
 
 .. figure:: media/image024.png
 
-Dumbell chart example - defining measures and atributes
+   Dumbell chart example - defining measures and atributes
 
 Once inserted your attributes and measures you can manage the settings of the start of your *Series* as shown below.
 
 .. figure:: media/image025.png
 
-  Dumbell chart - settings serie
+   Dumbell chart - settings series
 
 .. figure:: media/image026.png
 
-  Dumbell chart - renaming measures
+   Dumbell chart - renaming measures
 
 .. figure:: media/image027.png
 
-  Dumbell chart example
+   Dumbell chart example
 
 **Funnel**
 
