@@ -2336,7 +2336,7 @@ As a first option there is one in case of only one widget in a dashboard.
 
    Responsive functionality
 
- How migrate from the Cockpit to the Dashboard
+How migrate from the Cockpit to the Dashboard
 ------------------------------------------------------------------------------------------------------------------------
 It is possible to migrate from the Cockpit functionality to the new dashboard simply by changing the engine type within the analytical document detail form.
 
