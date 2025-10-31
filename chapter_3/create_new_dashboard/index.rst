@@ -715,7 +715,7 @@ See below image
 
  .. figure:: media/image034.png
 
-   Scatter chart - defining series and categories
+   Scatter chart - Defining series and categories
 
 Below an example of a *Scatter chart*.
 
