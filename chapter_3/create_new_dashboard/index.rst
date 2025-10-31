@@ -329,6 +329,7 @@ A stacked column column is similar to the stacked bar char but changes the orien
 
 
 **Line**
+
 The *Line* chart uses points connected by line segments from left to right to show how data changes.
 An example below.
 
