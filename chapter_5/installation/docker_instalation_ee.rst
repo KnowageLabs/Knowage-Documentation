@@ -204,7 +204,7 @@ This can be useful, for example, to resolve internal DNS names or to facilitate 
 Example:
 
 .. code-block:: bash
-   :caption: xml
+   :caption: docker-compose.yaml fragment
 
     extra_hosts:
 
@@ -223,7 +223,7 @@ Caution with network_mode parameter: "host" cannot install the Hazelcast contain
 Dedicated network example:
 
 .. code-block:: bash
-   :caption: xml
+   :caption: docker-compose.yaml fragment
 
     networks:
       knowage_net
