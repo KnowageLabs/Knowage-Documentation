@@ -280,7 +280,7 @@ An example below.
 
 .. figure:: media/image060.png
 
-Bar chart example
+   Bar chart example
 
 **Column**
 
@@ -388,7 +388,7 @@ Sunburst chart - defining attributes and measure
 
 
 
-The below image shows an example of a sunburst chart using the dataset previously described.
+The image below shows an example of a sunburst chart using the dataset previously described.
 
 .. figure:: media/image1101112.png
 
