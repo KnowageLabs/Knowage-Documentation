@@ -496,10 +496,11 @@ The second side of the image (part b) shows thanks to selection, that all iris w
 
     From left to right: (a) Parallel. (b) Parallel chart selection.
 
-    To create this chart two attributes and one measure are needed.
+The parallel chart needs one attribute and two measures otherwise you cannot save it. The example below shows the case.
 
 .. figure:: media/image070.png
-Parallel chart - measures and attributes
+   
+   Parallel chart - measures and attributes
 
 
 **Heatmap**
@@ -508,10 +509,12 @@ A *Heatmap* is a two-dimensional representation of data whose values are represe
 Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend trough two categories.
 
 .. figure:: media/image070_1.png
-Heatmap chart - measures and attributes
+
+   Heatmap chart - measures and attributes
 
 .. figure:: media/heatmap_chart.png
-Heatmap chart example
+   
+   Heatmap chart example
 
 
 **Radar**
