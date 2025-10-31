@@ -105,8 +105,7 @@ To encrypt the database password you need:
 .. code-block:: bash
    :caption: docker command
    
-    java -cp tomcat-password-encryption.jar -Dsymmetric_encryption_key=KEY_SECRET
-    en.eng.knowage.enterprise.tomcatpasswordencryption.helper.EncryptOnce DB_CLEAR_PASSWORD
+    java -cp tomcat-password-encryption.jar -Dsymmetric_encryption_key=KEY_SECRET it.eng.knowage.enterprise.tomcatpasswordencryption.helper.EncryptOnce DB_CLEAR_PASSWORD
 
 where KEY_SECRET corresponds to the value indicated in the **SENSIBLE_DATA_ENCRYPTION_SECRET** environment variable
 
