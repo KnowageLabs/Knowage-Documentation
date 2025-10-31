@@ -2335,3 +2335,12 @@ As a first option there is one in case of only one widget in a dashboard.
 .. figure:: media/responsive.png
 
    Responsive functionality
+
+ How migrate from the Cockpit to the Dashboard
+------------------------------------------------------------------------------------------------------------------------
+It is possible to migrate from the Cockpit functionality to the new dashboard simply by changing the engine type within the analytical document detail form.
+
+Once this change is made, the migration function will be executed upon first access, and the template will be adapted to the new formalism.
+
+There are a few points of attention regarding certain widgets that have been completely redesigned in terms of functionality and cannot be migrated.
+These will be removed from the new dashboard: the map widget and the crosstab widget (which has been replaced by the Pivot widget).
