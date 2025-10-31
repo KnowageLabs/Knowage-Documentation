@@ -21,7 +21,7 @@ To install Knowage EE via Docker, you need to clone the GitLab repository:
 .. code-block:: bash
    :caption: shell command
 
-    git clone https://production.eng.it/gitlab/KNOWAGE-LABS/knowage-ee-server-docker.git
+    git clone https://github.com/KnowageLabs/Knowage-Server-Docker-ee.git
 
 access the project directory:
 
