@@ -103,7 +103,7 @@ To encrypt the database password you need:
 2. run the following command (with java 17 or later): 
 
 .. code-block:: bash
-   :caption: docker command
+   :caption: Java command
    
     java -cp tomcat-password-encryption.jar -Dsymmetric_encryption_key=KEY_SECRET it.eng.knowage.enterprise.tomcatpasswordencryption.helper.EncryptOnce DB_CLEAR_PASSWORD
 
@@ -178,7 +178,7 @@ On the directories change the permissions with the following commands:
 Example:
 
 .. code-block:: bash
-   :caption: docker command
+   :caption: shell command
 
     chown -R knowage:knowage /portal_data/knowage_*
 
@@ -188,9 +188,12 @@ Example:
 
     vim ~/.config/containers/containers.conf and write 
 
-[containers]
+.. code-block:: bash
+   :caption: shell command
 
-userns="keep-id"
+      [containers]
+
+      userns="keep-id"
 
 Configuring additional hosts
 ------------------------------------------------------------------------------------------------------------------------
@@ -201,7 +204,7 @@ This can be useful, for example, to resolve internal DNS names or to facilitate 
 Example:
 
 .. code-block:: bash
-   :caption: docker command
+   :caption: xml
 
     extra_hosts:
 
@@ -220,7 +223,7 @@ Caution with network_mode parameter: "host" cannot install the Hazelcast contain
 Dedicated network example:
 
 .. code-block:: bash
-   :caption: docker command
+   :caption: xml
 
     networks:
       knowage_net
