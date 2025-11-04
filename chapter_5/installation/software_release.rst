@@ -3,8 +3,7 @@ Software release
 
 You can download Knowage through the following links:
 
-- Community Edition: <TODO>
-- Enterprise Edition: <TODO> (registration required)
+- Community Edition: https://github.com/KnowageLabs/Knowage-Server/releases
 
 A typical release contains three elements:
 
