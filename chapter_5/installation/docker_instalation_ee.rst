@@ -36,11 +36,9 @@ access the project directory:
 
 2. .env
 
-3. hazelcast-server.xml
+3. the “resources” folder
 
-4. the “resources” folder
-
-5. the “conf” folder
+4. the “conf” folder
 
 Configuration of Environment Variables
 ------------------------------------------------------------------------------------------------------------------------
@@ -82,11 +80,6 @@ Data base parameters:
 
 Parameters in the docker-compose.yml file
 ------------------------------------------------------------------------------------------------------------------------
-• **DB_DO_INITIALIZATION**: Defaults to true; Set to false to avoid initializing the database. This is useful when using an already initialized external database, see **Using External Databases** section.
-
-• **HAZELCAST_HOSTS**: Comma-separated Hazelcast hosts (e.g., "host1,host2,host3")
-
-• **HAZELCAST_PORT**: Hazelcast port (e.g., "5701")
 
 • **PUBLIC_ADDRESS**: IP or hostname visible from the outside (e.g. http://$PUBLIC_ADDRESS:8080/knowage)  
 
