@@ -2338,9 +2338,26 @@ As a first option there is one in case of only one widget in a dashboard.
 
 How migrate from the Cockpit to the Dashboard
 ------------------------------------------------------------------------------------------------------------------------
-It is possible to migrate from the Cockpit functionality to the new dashboard simply by changing the engine type within the analytical document detail form.
+Migrating from the **Cockpit** functionality to the new **Dashboard** is straightforward.  
+You can perform the migration by following those quick steps:
 
-Once this change is made, the migration function will be executed upon first access, and the template will be adapted to the new formalism.
+1. Open the **Analytical Document Detail** form.
+2. Change the **engine type** from *Cockpit* to *Dashboard*.
+3. Save the changes.
+4. Access the document.
 
-There are a few points of attention regarding certain widgets that have been completely redesigned in terms of functionality and cannot be migrated.
-These will be removed from the new dashboard: the map widget and the crosstab widget (which has been replaced by the Pivot widget).
+.. figure:: media/migration.png
+
+   Responsive functionality
+
+Once this change is applied, the migration process will automatically run at the first access.  
+During this process, the existing template will be adapted to the new dashboard format.
+
+.. warning::
+    **Important Notes**
+
+      Some widgets have been completely redesigned and **cannot be migrated**.  
+      These widgets will need to be made again from scratch in the new dashboard:
+
+      - **Map Widget**
+      - **Crosstab Widget** (replaced by the new **Pivot Widget**)
