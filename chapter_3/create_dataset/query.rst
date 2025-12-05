@@ -37,7 +37,24 @@ In the script below we use JavaScript to dynamically modify the ``FROM`` clause 
 
 In the above example we use the function *isValid* to test whether the parameter *year* contains a *null* value or not.
 
-The above SQL query refers to an example where no parameters have been used.
+Another example:
+
+.. code-block:: javascript
+         :caption:  Example of a script in a *Query* dataset
+         :linenos:
+
+            var title = "";
+            
+            if(isValid('par_title')){
+            title="and cap.VERSO_CPT||'.'||cap.COD_TITOLO||'-'||replace(cap.DESC_TITOLO,',',' ') in ($P{par_title})"; 
+            }
+            query=query.replace("_TITLE_",title);	 
+
+
+_TITLE_ is a placeholder inside the SQL query
+
+You can read the user attribute also using : var visibility = attributes.get('visibility');
+
 In KNOWAGE when creating a dataset of QUERY type it is also possible to handle parameters in queries.
 Below are shown the steps to associate parameters to a dataset and manage their values (coming i.e. from an analytical driver) inside the query.
 
@@ -52,5 +69,6 @@ After creating your parameters they can be handled in the query using the syntax
 Below an example of a query with the parameter formerly created.
 
 .. figure:: media/query_with_param.png
+
 
 Create parameters in a dataset.
