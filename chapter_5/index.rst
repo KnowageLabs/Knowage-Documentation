@@ -11,4 +11,5 @@ The present document illustrates how to install and configure the Knowage suite.
    installation/index.rst
    how_upgrade.rst
    sso/index.rst
+   mfa.rst
    server_settings.rst
