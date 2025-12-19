@@ -17,6 +17,7 @@ To use MFA, you need to install an authentication app on your smartphone that ge
 After opening the store on your device, search for the chosen app name and proceed with the installation.
 
 Once the app is installed:
+
 * Open it and select the Add account option.
 * Choose Scan QR code.
 * Point your smartphone camera at the QR code displayed on the screen (Figure 1).
@@ -32,6 +33,7 @@ For future logins, you will not need to repeat the initial configuration. A simp
    Figure 2
 
 To complete the login:
+
 * Open the previously installed and configured authentication app.
 * Find the OTP code generated for the Knowage account.
 * Enter the code in the indicated field and press SEND.
