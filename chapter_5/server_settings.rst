@@ -509,3 +509,27 @@ User can enable audit table tracing (database table name: **SBI_AUDIT**) setting
 
 The **KNOWAGE.AUDIT_DATA_RETENTION** property is used to set the retention period, in order to manage audit table cleanup.
 
+XSLX Export
+------------------------------------------------------------------------------------------------------------------------
+Within the **Cockpit** and the **Dashboard**, it is possible to choose whether to display the sheets that contain information about *analytical drivers* and *selections*.  
+This can be configured by setting the following options.
+
+Cockpit
+
+.. code-block:: xml
+        :linenos:
+        :caption: Configuration of the xls export
+
+	COCKPIT.EXPORT.SHOW_FILTER = true/false
+
+
+Dashboard
+
+.. code-block:: xml
+        :linenos:
+        :caption: Configuration of the xsl export
+
+	DASHBOARD.EXPORT.SHOW_DRIVERS_SHEET = true/false
+	DASHBOARD.EXPORT.SHOW_SELECTIONS_SHEET = true/false
+
+
