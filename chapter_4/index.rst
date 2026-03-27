@@ -15,6 +15,7 @@ Knowage management
    resource_manager.rst
    log_manager.rst
    widget_gallery.rst
+   documentation.rst
    
 .. Indices and tables
 .. ==================
