@@ -47,6 +47,7 @@ Example
    {
      "title": "My Documentation",
      "logo": true,
+     "dense": false,
      "content": [
        {
          "label": "Introduction",
@@ -88,8 +89,8 @@ Available fields
      - Optional. Text displayed at the top of the sidebar.
    * - ``logo``
      - Optional. Set to ``true`` to show the tenant logo, or provide a direct image URL (e.g. ``"https://example.com/logo.png"``). If omitted, no logo is shown.
-   * - ``maxLevel``
-     - Optional. Maximum nesting depth rendered in the sidebar menu. Accepted values: ``1``, ``2``, ``3``. Defaults to ``3``.
+   * - ``dense``
+     - Optional. Boolean. If ``true``, reduces the padding of menu items in the sidebar tree for a more compact look. Defaults to ``false``.
    * - ``content``
      - Required. The list of menu items (see below).
 
@@ -104,11 +105,24 @@ Available fields
    * - ``label``
      - The text displayed in the sidebar for this item.
    * - ``path``
-     - The path to the ``.md`` file to open, relative to the ``docs`` folder (e.g. ``/advanced/configuration.md``). **If omitted, the item is shown as a non-clickable section heading**, useful for grouping related pages.
+     - The path to the ``.md`` file to open, relative to the ``docs`` folder (e.g. ``/advanced/configuration.md``). If omitted, the item is not clickable.
    * - ``content``
-     - A list of child items. You can nest up to **3 levels** deep.
+     - A list of child items. Nesting is supported at multiple levels.
    * - ``roles``
      - Optional. A list of Knowage roles. If provided, the item (and all its children) will only be visible to users whose role matches one of the listed values. Other users will not see it at all.
+   * - ``header``
+     - Optional. Boolean. If ``true``, forces this item to use section header styling (same as top-level items) regardless of its nesting depth.
+
+Sidebar item appearance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Items are rendered differently depending on their level and configuration:
+
+- **Top-level items** (level 1) always use section header styling: they are displayed with a distinct colour, font family, and font size defined by the *Drawer Level 1* theme settings.
+- **Nested items** (level 2 and below) use the standard sidebar text style.
+- Any item at any level can be forced into section header styling by setting ``"header": true``.
+- Items **without** a ``path`` are not clickable (cursor is disabled, pointer events are suppressed). They can still serve as visual grouping labels at any nesting depth.
+- The currently open page is highlighted in the sidebar with a coloured left border.
 
 Writing pages
 ------------------------------------------------------------------------------------------------------------------------
@@ -133,7 +147,7 @@ Sidebar behaviour
 ------------------------------------------------------------------------------------------------------------------------
 
 - Clicking an item with a ``path`` opens the corresponding page.
-- Items **without** a ``path`` act as section headers: they are not clickable, but their children are.
+- Items **without** a ``path`` are not clickable but can act as visual grouping labels.
 - The currently open page is highlighted in the sidebar with a coloured left border.
 - On small screens, the sidebar is hidden by default and can be toggled with the **☰** button at the top left.
 
