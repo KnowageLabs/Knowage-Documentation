@@ -136,3 +136,48 @@ So, it's possible insert:
 .. figure:: media/resource_meta_4.png
 
    Metadata example
+
+
+
+   **External libraries download service**
+   
+   Knowage exposes a service that allows authenticated users to download files stored in the tenant-specific 
+  ``external-libraries`` folder under the configured ``resource_path``.
+   
+   The service resolves requested files in ``<resource_path>/<tenant>/external-libraries``. When running Knowage on 
+  Tomcat with the default configuration, this path typically corresponds to 
+  ``TOMCAT_HOME/resources/<tenant>/external-libraries``.
+   
+   The service is available through endpoint ``GET /api/2.0/resources/external-libraries`` and requires the 
+  ``libraryName`` query parameter. It is available to every authenticated user of the current tenant. The requested 
+  file is returned as an attachment with the proper content type.
+   
+   In case ``libraryName`` is missing or not valid, the service returns ``400 Bad Request``. In case the 
+  ``external-libraries`` folder does not exist, or the requested file is not available, the service returns ``404 Not 
+  Found``.
+   
+   .. note::
+   
+      The service accepts file names only. Path separators are not allowed. Files must be requested directly by name 
+  and must be stored in the root of the ``external-libraries`` folder.
+   
+   Example of request:
+   
+   .. code-block:: bash
+      :linenos:
+   
+      curl -X GET \
+           "http://localhost:8080/knowage/api/2.0/resources/external-libraries?libraryName=example.js" \
+           -H "Authorization: Bearer <JWT_TOKEN>" \
+           -o example.js
+   
+   Example of folder structure:
+   
+   .. code-block:: none
+      :linenos:
+   
+      TOMCAT_HOME/resources/
+         DEFAULT_TENANT/
+            external-libraries/
+               example.js
+               example.css
