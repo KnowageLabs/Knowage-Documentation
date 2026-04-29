@@ -137,8 +137,7 @@ So, it's possible insert:
 
    Metadata example
 
-
-      External libraries download service
+   External libraries download service
    -------------------------------------------------------------------------------------------------------------------
   -----
    
@@ -157,15 +156,14 @@ So, it's possible insert:
    - **Query parameter**: ``libraryName`` (mandatory)
    - **Access**: available to every authenticated user of the current tenant
    - **Response**: the requested file is returned as an attachment with the proper content type
-   - **Errors**:
-   
-     - ``400 Bad Request`` if ``libraryName`` is missing or not valid
-     - ``404 Not Found`` if the ``external-libraries`` folder does not exist or the requested file is not available
+   - **Bad Request (400)**: returned if ``libraryName`` is missing or not valid
+   - **Not Found (404)**: returned if the ``external-libraries`` folder does not exist or the requested file is not 
+  available
    
    .. note::
    
-      The service accepts file names only. Path separators are not allowed, therefore files must be requested directly
-   by name and must be stored in the root of the ``external-libraries`` folder.
+      The service accepts file names only. Path separators are not allowed. Files must be requested directly by name 
+  and must be stored in the root of the ``external-libraries`` folder.
    
    Request example
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -183,11 +181,11 @@ So, it's possible insert:
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~
    
-   .. code-block:: text
+   .. code-block:: none
       :linenos:
    
       TOMCAT_HOME/resources/
-      └── DEFAULT_TENANT/
-          └── external-libraries/
-              ├── example.js
-              └── example.css
+      DEFAULT_TENANT/
+         external-libraries/
+            example.js
+            example.css
