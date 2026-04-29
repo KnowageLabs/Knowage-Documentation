@@ -137,9 +137,7 @@ So, it's possible insert:
 
    Metadata example
 
-
-
-   **External libraries download service**
+ **External libraries download service**
    
    Knowage exposes a service that allows authenticated users to download files stored in the tenant-specific 
   ``external-libraries`` folder under the configured ``resource_path``.
