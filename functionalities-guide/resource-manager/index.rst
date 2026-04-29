@@ -139,27 +139,25 @@ So, it's possible insert:
 
 **External libraries download service**
 
-Knowage exposes a service that allows authenticated users to download files stored in the tenant-specific ``external-libraries`` folder under the configured ``resource_path``.
+Knowage provides a service that lets authenticated users download files stored in the tenant-specific ``external-libraries`` folder.
 
-The service resolves requested files in ``<resource_path>/<tenant>/external-libraries``. When running Knowage on Tomcat with the default configuration, this path typically corresponds to ``TOMCAT_HOME/resources/<tenant>/external-libraries``.
+This service can be useful, for example, when a custom chart needs to load an external library made available through Knowage resources.
 
-The service is available through endpoint ``GET /api/2.0/resources/external-libraries`` and requires the ``libraryName`` query parameter. It is available to every authenticated user of the current tenant. The requested file is returned as an attachment with the proper content type.
+The download URL is:
 
-In case ``libraryName`` is missing or not valid, the service returns ``400 Bad Request``. In case the ``external-libraries`` folder does not exist, or the requested file is not available, the service returns ``404 Not Found``.
+``/api/2.0/resources/external-libraries?libraryName=<file_name>``
+
+When running Knowage on Tomcat with the default configuration, files are searched in:
+
+``TOMCAT_HOME/resources/<tenant>/external-libraries``
+
+Only authenticated users of the current tenant can access this service.
 
 .. note::
 
-   The service accepts file names only. Path separators are not allowed. Files must be requested directly by name and must be stored in the root of the ``external-libraries`` folder.
+   The ``libraryName`` parameter must contain only the file name. Path separators are not allowed, therefore files must be stored directly in the root of the ``external-libraries`` folder.
 
-Example of request:
-
-.. code-block:: bash
-   :linenos:
-
-   curl -X GET \
-        "http://localhost:8080/knowage/api/2.0/resources/external-libraries?libraryName=example.js" \
-        -H "Authorization: Bearer <JWT_TOKEN>" \
-        -o example.js
+If the file name is missing or not valid, the service returns an error. The same happens if the ``external-libraries`` folder does not exist or the requested file is not available.
 
 Example of folder structure:
 
