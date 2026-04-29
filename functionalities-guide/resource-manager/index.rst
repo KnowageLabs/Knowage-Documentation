@@ -4,9 +4,9 @@ Resource Manager
 .. important::
          **Enterprise Edition only**
 
-         With the Knowage Community Edition the Resource Manager  will be able to manage just the **models** folder in order to define metadata for data mining analysis. With the Knowage Enterprise Edition,  will be able to manage all Knowage's installation resources.
+         With the Knowage Community Edition the Resource Manager  will be able to manage just the **models** folder in order to define metadata for data mining analysis. With the Knowage Enterprise Edition the Resource Manager will be able to manage all files within the Resources folder of the Knowage's installation.
 
-The **Resource Manager** functionality available under the **Tool** section of Knowage main menu, as shown in Figure below, allows you to manage all files within the Resources folder of the Knowage's installation. In next sections we will see in details how to use the Resource Manager feature.
+The **Resource Manager** functionality available under the **Tool** section of Knowage main menu, as shown in Figure below, allows you to manage all files within the Resources folder of the Knowage's installation.
 
 .. figure:: media/resource_mng_1.png
 
@@ -21,7 +21,7 @@ As default, the system shows files starting by the root directory:
 Resource Manager functionalities
 ------------------------------------------------------------------------------------------------------------------------
 
-The Resource Manager window diplays two sections: on the left the tree representing the existing system resources; on the right the details of the selected left-folder. On the right-top is available the current path:
+The Resource Manager window diplays two sections: on the left the tree representing the existing system resources; on the right the details of the selected left-folder. On the right-top is available the command toolbar.
 
 .. figure:: media/resource_mng_2_bis.png
 
@@ -138,44 +138,36 @@ So, it's possible insert:
    Metadata example
 
 **External libraries download service**
-   
-   Knowage exposes a service that allows authenticated users to download files stored in the tenant-specific 
-  ``external-libraries`` folder under the configured ``resource_path``.
-   
-   The service resolves requested files in ``<resource_path>/<tenant>/external-libraries``. When running Knowage on 
-  Tomcat with the default configuration, this path typically corresponds to 
-  ``TOMCAT_HOME/resources/<tenant>/external-libraries``.
-   
-   The service is available through endpoint ``GET /api/2.0/resources/external-libraries`` and requires the 
-  ``libraryName`` query parameter. It is available to every authenticated user of the current tenant. The requested 
-  file is returned as an attachment with the proper content type.
-   
-   In case ``libraryName`` is missing or not valid, the service returns ``400 Bad Request``. In case the 
-  ``external-libraries`` folder does not exist, or the requested file is not available, the service returns ``404 Not 
-  Found``.
-   
-   .. note::
-   
-      The service accepts file names only. Path separators are not allowed. Files must be requested directly by name 
-  and must be stored in the root of the ``external-libraries`` folder.
-   
-   Example of request:
-   
-   .. code-block:: bash
-      :linenos:
-   
-      curl -X GET \
-           "http://localhost:8080/knowage/api/2.0/resources/external-libraries?libraryName=example.js" \
-           -H "Authorization: Bearer <JWT_TOKEN>" \
-           -o example.js
-   
-   Example of folder structure:
-   
-   .. code-block:: none
-      :linenos:
-   
-      TOMCAT_HOME/resources/
-         DEFAULT_TENANT/
-            external-libraries/
-               example.js
-               example.css
+
+Knowage exposes a service that allows authenticated users to download files stored in the tenant-specific ``external-libraries`` folder under the configured ``resource_path``.
+
+The service resolves requested files in ``<resource_path>/<tenant>/external-libraries``. When running Knowage on Tomcat with the default configuration, this path typically corresponds to ``TOMCAT_HOME/resources/<tenant>/external-libraries``.
+
+The service is available through endpoint ``GET /api/2.0/resources/external-libraries`` and requires the ``libraryName`` query parameter. It is available to every authenticated user of the current tenant. The requested file is returned as an attachment with the proper content type.
+
+In case ``libraryName`` is missing or not valid, the service returns ``400 Bad Request``. In case the ``external-libraries`` folder does not exist, or the requested file is not available, the service returns ``404 Not Found``.
+
+.. note::
+
+   The service accepts file names only. Path separators are not allowed. Files must be requested directly by name and must be stored in the root of the ``external-libraries`` folder.
+
+Example of request:
+
+.. code-block:: bash
+   :linenos:
+
+   curl -X GET \
+        "http://localhost:8080/knowage/api/2.0/resources/external-libraries?libraryName=example.js" \
+        -H "Authorization: Bearer <JWT_TOKEN>" \
+        -o example.js
+
+Example of folder structure:
+
+.. code-block:: none
+   :linenos:
+
+   TOMCAT_HOME/resources/
+      DEFAULT_TENANT/
+         external-libraries/
+            example.js
+            example.css
