@@ -145,7 +145,7 @@ This service can be useful, for example, when a custom chart needs to load an ex
 
 The download URL is:
 
-``/api/2.0/resources/external-libraries?libraryName=<file_name>``
+``<host>/knowage-api/api/2.0/resources/external-libraries?libraryName=<file_name>``
 
 When running Knowage on Tomcat with the default configuration, files are searched in:
 
