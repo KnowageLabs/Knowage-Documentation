@@ -422,16 +422,9 @@ Password constraints settings
 
 User password constraints can be set configuring parameters below:
 
-* **changepwdmodule.len_min**: minimum number of character for the password;
-* **changepwdmodule.special_char**: set of allowed special characters;
-* **changepwdmodule.upper_char**: if active, the password must contain at least one of the uppercase characters set in the value;
-* **changepwdmodule.lower_char**: if active, the password must contain at least one of the lowercase characters set in the value;
-* **changepwdmodule.number**: if active, the password must contain at least one of the digit set in the value;
-* **changepwdmodule.alphabetical**: if active, the password must contain at least one alphabetical set in the value;
 * **changepwdmodule.change**: if true, new password must be different from the latest;
 * **changepwd.change_first**: if true, password must be changed at first login;
 * **changepwd.disactivation_time**: number of months before deactivation;
-* **changepwd.expired_time**: number of days for the expiration.
 
 .. figure:: media/image31.png
 
