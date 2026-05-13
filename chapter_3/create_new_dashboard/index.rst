@@ -1214,13 +1214,14 @@ Unlike the most of the widgets that have a *Data* section for data configuration
 set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
 
 
-The below image shows the *Layers* section of a map widget. here you can add Layesrs/Dataset to be used for the data visualization of the map.
+The below image shows the *Layers* section of a map widget to handle the Layers/Datasets to be used for the geographical information and data visualization of the map.
 
     .. figure:: media/image104_n.png
 
         Map widget - *Layers* section of a map widget.
 
-Clicking the Add Layer button allows the visualization of all the available datasets/layers. It is possible to show all of them or just one type by clicking the specific button.
+Clicking the Add Layer button allows the visualization of all the available datasets/layers. 
+The wizard allows the visualization of all of them or just one type by clicking the specific button.
 
 .. figure:: media/image104_n1.png
 
