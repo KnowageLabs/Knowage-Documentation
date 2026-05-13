@@ -1285,7 +1285,7 @@ Furtherly the figure below shows also the definition of the *Data Connection* as
 The goal is to show the *POPULATION* for each region when hovered over with the mouse. 
 To do this, you will need to enable a *Tooltip* by choosing the layer and property to display.
 
-.. figure:: media/image112_map.png
+.. figure:: media/image112_1.png
 
         Defining a tooltip
 
