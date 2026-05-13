@@ -1275,13 +1275,19 @@ The below example shows a map with markers.
 
         Data visualization types on a map
 
-Below an example of a map created by using a topojson file and a choroplet as the visualization type.
+Below an example of choroplet visualization of a map created by using a topojson file and a dataset.
+
+.. figure:: media/image112_3.png
+
+        Layers of a map with a dataset and topojson file
+
 The topojson file was previously created under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
+
 Furtherly the figure below shows also the definition of the *Data Connection* as *Join*. This is because a combination between a dataset and a topojoson file has been used as both of them have in common the column ID_1.
 
 .. figure:: media/image111.png
 
-        Example of map settings
+        Example of map with *Join* settings
 
 The goal is to show the *POPULATION* for each region when hovered over with the mouse. 
 To do this, you will need to enable a *Tooltip* by choosing the layer and property to display.
