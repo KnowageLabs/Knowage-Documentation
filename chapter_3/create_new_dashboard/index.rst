@@ -1276,8 +1276,8 @@ The below example shows a map with markers.
         Data visualization types on a map
 
 Below, we will see an example of a map created by using a topojson file and choroplet as the visualization type.
-The topojson file was initially used to create a layer under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
-Once added, it is enough to set the visualization criteria as shown in the figure below.
+The topojson file was previously created under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
+Furtherly the figure below shows also the definition of the *Data Connection* as *Join*.
 
 .. figure:: media/image111.png
 
@@ -1302,11 +1302,6 @@ Instead of a tooltip it can also be used a dialog box.
 
         Defining a dialog for a map
 
-It is also possible to use a combination made of a dataset and a topojson file, thus use two layers with an attribute used as a kind of join.
-
-.. figure:: media/set_map_04.png
-
-        Example of settings for a map using two layers
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
