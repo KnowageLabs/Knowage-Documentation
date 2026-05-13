@@ -1214,7 +1214,7 @@ Unlike the most of the widgets that have a *Data* section for data configuration
 set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
 
 
-The below image shows a map widget with two layers where each dataset is related to one layer.
+The below image shows the *Layers* section of a map widget. here you can add Layesrs/Dataset to be used for the data visualization of the map.
 
     .. figure:: media/image104_n.png
 
