@@ -1261,12 +1261,12 @@ By clicking the *Add Visualization* button you will see all the options as shown
 
         Data type visualization for layers
 
-When representing data as markers the options range from *Default, Icon and Image* markers. The below image shows an example where an icon has been chosen.
-The image highlights both the picker for choosing icons and the icon selected that in this case corresponds to the *anchor* icon.
+When representing data as markers the options range from *Default, Icon and Image* markers. 
+The below image shows all the available choices for markers.
 
 .. figure:: media/image110.png
 
-        Marker represented as icon
+        Markers representation
 
 Below an example of how a map can look like depending on how data is visualized.
 The below example shows a map with markers.
@@ -1275,7 +1275,7 @@ The below example shows a map with markers.
 
         Data visualization types on a map
 
-Below, we will see an example of a map created by using a topojson file and choroplet as the visualization type.
+Below, we will see an example of a map created by using a topojson file and a choroplet as the visualization type.
 The topojson file was previously created under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
 Furtherly the figure below shows also the definition of the *Data Connection* as *Join*.
 
