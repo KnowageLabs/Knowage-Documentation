@@ -1279,14 +1279,14 @@ Below, we will see an example of a map created by using a topojson file and chor
 The topojson file was initially used to create a layer under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
 Once added, it is enough to set the visualization criteria as shown in the figure below.
 
-.. figure:: media/set_map_01.png
+.. figure:: media/image111.png
 
         Example of map settings
 
 The goal is to show the unit sales for each region when hovered over with the mouse. To do this, you will need to enable a *Tooltip* by choosing 
 the layer and property to display.
 
-.. figure:: media/set_map_02.png
+.. figure:: media/image112.png
 
         Defining a tooltip
 
@@ -1294,7 +1294,7 @@ As a result of the former configuration you will see a map as shown below.
 
 .. figure:: media/set_map_03.png
 
-        Example of a map with tooltip
+        Example of a map with tooltips
 
 Instead of a tooltip it can also be used a dialog box.
 
