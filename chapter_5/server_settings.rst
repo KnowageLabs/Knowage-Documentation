@@ -442,55 +442,54 @@ Login security configurations can be set filling fields below:
 
    Advanced configuration - login security settings.
 
+Session timeout settings
+------------------------------------------------------------------------------------------------------------------------
 
- Session timeout settings
- ------------------------
+Knowage can automatically end a user session after a configurable period of
+inactivity and warn the user before doing so.
  
- Knowage can automatically end a user session after a configurable period of
- inactivity and warn the user before doing so.
+Session timeout configurations can be set by accessing the **Server Settings**
+section in the administrator interface and opening **Configuration Management**.
+Search for or create the following parameters:
  
- Session timeout configurations can be set by accessing the **Server Settings**
- section in the administrator interface and opening **Configuration Management**.
- Search for or create the following parameters:
- 
- * **KNOWAGE.SESSION_TIMEOUT**: duration of inactivity (in milliseconds) after
-   which the session is considered expired and the user is forcibly logged out.
-   Default: ``1800000`` (30 minutes).
- 
- * **KNOWAGE.SESSION_WARNING_ADVANCE**: how many milliseconds *before* the
-   session expires the warning notification is shown to the user.
-   Must be less than ``KNOWAGE.SESSION_TIMEOUT``.
-   Default: ``300000`` (5 minutes).
- 
- .. note::
- 
-    The session timer is based on the timestamp of the **last successful
-    response received from the server**, stored in the browser's
-    ``localStorage``. Closing and reopening the browser does **not** reset
-    the timer: if the elapsed time since the last interaction exceeds
-    ``KNOWAGE.SESSION_TIMEOUT``, the user is immediately redirected to the
-    login page with a *"Session expired"* message.
- 
- .. warning::
- 
-    To **disable** the automatic session timeout, set ``KNOWAGE.SESSION_TIMEOUT``
-    to ``0`` in Configuration Management. This prevents both the warning
-    notification and the forced logout from ever triggering.
+* **KNOWAGE.SESSION_TIMEOUT**: duration of inactivity (in milliseconds) after
+which the session is considered expired and the user is forcibly logged out.
+Default: ``1800000`` (30 minutes).
 
- 
- When the remaining time falls below ``KNOWAGE.SESSION_WARNING_ADVANCE``, a
- persistent warning banner appears at the top of the page.
- The user can click **Stay connected** to renew the session; otherwise, when
- the full timeout elapses, the application logs the user out automatically and
- redirects to the login page. After re-authenticating, the user is returned to
- the page they were on before the session expired.
- 
- **Example — session expires after 1 hour, warning shown 10 minutes before:**
- 
- .. code-block:: none
- 
-    KNOWAGE.SESSION_TIMEOUT        = 3600000   (1 hour in ms)
-    KNOWAGE.SESSION_WARNING_ADVANCE = 600000   (10 minutes in ms)
+* **KNOWAGE.SESSION_WARNING_ADVANCE**: how many milliseconds *before* the
+session expires the warning notification is shown to the user.
+Must be less than ``KNOWAGE.SESSION_TIMEOUT``.
+Default: ``300000`` (5 minutes).
+
+.. note::
+
+        The session timer is based on the timestamp of the **last successful
+        response received from the server**, stored in the browser's
+        ``localStorage``. Closing and reopening the browser does **not** reset
+        the timer: if the elapsed time since the last interaction exceeds
+        ``KNOWAGE.SESSION_TIMEOUT``, the user is immediately redirected to the
+        login page with a *"Session expired"* message.
+
+.. warning::
+
+        To **disable** the automatic session timeout, set ``KNOWAGE.SESSION_TIMEOUT``
+        to ``0`` in Configuration Management. This prevents both the warning
+        notification and the forced logout from ever triggering.
+
+
+When the remaining time falls below ``KNOWAGE.SESSION_WARNING_ADVANCE``, a
+persistent warning banner appears at the top of the page.
+The user can click **Stay connected** to renew the session; otherwise, when
+the full timeout elapses, the application logs the user out automatically and
+redirects to the login page. After re-authenticating, the user is returned to
+the page they were on before the session expired.
+
+**Example — session expires after 1 hour, warning shown 10 minutes before:**
+
+.. code-block:: none
+
+        KNOWAGE.SESSION_TIMEOUT        = 3600000   (1 hour in ms)
+        KNOWAGE.SESSION_WARNING_ADVANCE = 600000   (10 minutes in ms)
 
 
 Resource export folder cleaning settings
