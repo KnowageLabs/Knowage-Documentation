@@ -1220,7 +1220,7 @@ The below image shows the *Layers* section of a map widget to handle the Layers/
 
         Map widget - *Layers* section of a map widget.
 
-Clicking the Add Layer button allows the visualization of all the available datasets/layers. 
+The clicking of the *Add Layer* button allows the visualization of all the available datasets/layers. 
 The wizard allows the visualization of all of them or just one type by clicking the specific button.
 
 .. figure:: media/image104_n1.png
@@ -1236,7 +1236,7 @@ Currently, the following spatial attribute types are supported:
 
 .. figure:: media/image105_n.png
 
-        Layer metadata section
+        Setting metadata for *Spatial* attributes
 
 .. important::
          **Geographic coordinates format**
