@@ -1286,7 +1286,7 @@ Once added, it is enough to set the visualization criteria as shown in the figur
 The goal is to show the unit sales for each region when hovered over with the mouse. To do this, you will need to enable a *Tooltip* by choosing 
 the layer and property to display.
 
-.. figure:: media/image112.png
+.. figure:: media/image112_map.png
 
         Defining a tooltip
 
