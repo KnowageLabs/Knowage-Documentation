@@ -1218,7 +1218,13 @@ The below image shows the *Layers* section of a map widget. here you can add Lay
 
     .. figure:: media/image104_n.png
 
-        Map widget - choosing a dataset for a layer.
+        Map widget - *Layers* section of a map widget.
+
+Clicking the Add Layer button allows the visualization of all the available datasets/layers. It is possible to show all of them or just one type by clicking the specific button.
+
+.. figure:: media/image104_n1.png
+
+        Map widget - Choosing a dataset for a layer.
 
 In the *Layer* Metadata section, the user can set the spatial attribute of the dataset that will be used to display markers on the map. 
 Currently, the following spatial attribute types are supported:
