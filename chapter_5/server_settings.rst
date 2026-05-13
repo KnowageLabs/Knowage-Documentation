@@ -424,7 +424,7 @@ User password constraints can be set configuring parameters below:
 
 * **changepwdmodule.change**: if true, new password must be different from the latest;
 * **changepwd.change_first**: if true, password must be changed at first login;
-* **changepwd.disactivation_time**: number of months elapsed since the last loging before user deactivation;
+* **changepwd.disactivation_time**: number of months elapsed since the last login before password deactivation;
 * **changepwd.expired_time**: number of days for the password expiration.
 
 By default, all above configurations are disabled.
