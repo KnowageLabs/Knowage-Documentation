@@ -1261,7 +1261,7 @@ By clicking the *Add Visualization* button you will see all the options as shown
 
         Data type visualization for layers
 
-When representing data as markers the user can choose between *Icon, Image and Web Image* markers. The below image shows an example where an icon has been chosen.
+When representing data as markers the options range from *Default, Icon and Image* markers. The below image shows an example where an icon has been chosen.
 The image highlights both the picker for choosing icons and the icon selected that in this case corresponds to the *anchor* icon.
 
 .. figure:: media/image110.png
