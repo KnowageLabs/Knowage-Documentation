@@ -1245,13 +1245,21 @@ Currently, the following spatial attribute types are supported:
 .. figure:: media/image106_n.png
 
         Geographic coordinates
-For every layer, there are different ways to display data on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
 
-The *plus* icon to the left of the *trash* allows the addition of new information for further layers as shown below.
+A layer allows different ways to display the data on the map: markers, balloons, pies, clusters, heatmaps, choroplet and geography.
+
+The *Settings* section contains this functionality.
+
+.. figure:: media/image109_n.png
+
+        Add visualizations for layers
+
+By clicking the *Add Visualization* button you will see all the options as shown below.
+
 
 .. figure:: media/image109.png
 
-        Data visualization for layers
+        Data type visualization for layers
 
 When representing data as markers the user can choose between *Icon, Image and Web Image* markers. The below image shows an example where an icon has been chosen.
 The image highlights both the picker for choosing icons and the icon selected that in this case corresponds to the *anchor* icon.
