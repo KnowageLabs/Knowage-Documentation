@@ -1275,6 +1275,12 @@ The below example shows a map with markers.
 
         Data visualization types on a map
 
+In case a marker is visualized as Icon an example of map can be the following.
+
+.. figure:: media/image_map_icon_2.png
+
+        Map with markers as Icon
+
 Below an example of choroplet visualization of a map created by using a topojson file and a dataset.
 
 .. figure:: media/image112_3.png
