@@ -166,6 +166,14 @@ Knowage allows the administrator to perform a massive insertion of new users sim
 
 To access this feature, navigate to the User Management section and click on the **Bulk Upload** button located in the top-right toolbar.
 
+.. figure:: media/massiveUser01.png
+
+.. figure:: media/massiveUser02.png
+
+.. figure:: media/massiveUser03.png
+
+
+
 Structure and Requirements
 --------------------------
 
