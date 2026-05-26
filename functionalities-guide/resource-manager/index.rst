@@ -136,3 +136,37 @@ So, it's possible insert:
 .. figure:: media/resource_meta_4.png
 
    Metadata example
+
+
+**External libraries download service**
+
+Knowage provides a service that lets authenticated users download files stored in the tenant-specific ``external-libraries`` folder.
+
+This service can be useful, for example, when a custom chart needs to load an external library made available through Knowage resources.
+
+The download URL is:
+
+``<host>/knowage-api/api/2.0/resources/external-libraries?libraryName=<file_name>``
+
+When running Knowage on Tomcat with the default configuration, files are searched in:
+
+``TOMCAT_HOME/resources/<tenant>/external-libraries``
+
+Only authenticated users of the current tenant can access this service.
+
+.. note::
+
+   The ``libraryName`` parameter must contain only the file name. Path separators are not allowed, therefore files must be stored directly in the root of the ``external-libraries`` folder.
+
+If the file name is missing or not valid, the service returns an error. The same happens if the ``external-libraries`` folder does not exist or the requested file is not available.
+
+Example of folder structure:
+
+.. code-block:: none
+   :linenos:
+
+   TOMCAT_HOME/resources/
+      DEFAULT_TENANT/
+         external-libraries/
+            example.js
+            example.css
