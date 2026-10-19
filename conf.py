@@ -10,7 +10,7 @@
 
 # General information about the project.
 project = u'Knowage'
-copyright = u'2014-2024, Knowage Labs'
+copyright = u'2014-2026, Knowage Labs'
 author = u'Knowage Labs'
 
 extensions = [
