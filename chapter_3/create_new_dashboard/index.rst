@@ -1,118 +1,57 @@
-Create a New Dashboard
-========================================================================================================================
+Create a Dashboard
+==================
 
-The graphical interface for creating the new dashboard looks slightly different from the one used for the previous cockpit.
-New features have been added, such as new charts and new widgets
+A Dashboard combines widgets backed by one or more datasets. In Knowage 9.1,
+Dashboard and Cockpit are separate document types with separate editors. Use
+this guide for Dashboards and :doc:`/chapter_3/create_dashboard/index` for Cockpits.
 
-The below pictures respectively show the chart gallery with the availability of new charts (some of them are highlighted in yellow) and new widgets enriched with 
-the presence of the *Pivot* and *Map* widgets.
+Create your first Dashboard
+---------------------------
 
+1. Open **Workspace**, or **Documents Browser** if you manage published documents.
+2. Choose the creation action and select **Dashboard**.
+3. Add a dataset that your role can use. If it has parameters, map each one to
+   a static value or an analytical driver as required.
+4. Choose **Add widget**, select a widget type and configure its data.
+5. Set the appearance and interactions in **Settings**, then apply the widget
+   changes. Arrange the widget on a sheet.
+6. Save the Dashboard, completing the document details requested by the save
+   dialog. Reopen it to check the saved result.
 
-.. figure:: media/chart_gallery_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-dashboard-editor.png
+   :alt: Dashboard editor showing dataset management, widget gallery and save.
 
+   Dashboard creation and editing in Knowage 9.1.
 
-   Chart gallery example
+Widget editors provide **Data** and **Settings** according to their type. Use
+**Data** to choose a dataset, select columns, define aliases, aggregations,
+filters and ordering, and add calculated fields. **Settings** controls the
+widget's visualization, style, interactions, export and responsive options.
+Image and other widgets without dataset-backed content offer different controls.
 
-Given the wide range of graphs, a dedicated search function allows looking for the desired chart. 
-Simply enter the type of graph to draw and press the search icon.
+Apply changes in the editor, then save the Dashboard to retain them. Use preview
+to inspect the result while editing.
 
+Widget types and settings
+-------------------------
 
-.. figure:: media/image003_1.png
-
-   Widgets types
-
-
-   A dashboard document can be created:
-
-            -	by final users from the Workspace
-            -	by admin users from the document browser area
-
-To create a dashboard click the *Plus* icon available in the right top corner and select *Dashboard* from the menu as shown below.
-
-.. figure:: media/new_dashboard.png
-
-   Creating a dashboard from the menu
-
-The functionalities for inserting a dataset and a widget are immediately available in the sheet of the new dashboard. 
-Below the list of the available functionalities.
-
-
-
-   +----------------------------------+-----------------------+-----------------------+
-   |    Icon                          | Name                  | Function              |
-   +==================================+=======================+=======================+
-   | .. figure:: media/image004.png   | **Add new dataset**   | Opens the list of     |
-   |                                  |                       | datasets to choose    |
-   +----------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image005.png   | **Add new widget**    | Opens the widget      |
-   |                                  |                       | gallery from the sheet|
-   +----------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image006.png   | **Add new widget**    | Opens the widget      |
-   |                                  |                       | gallery from the bar  |
-   +----------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image007.png   | **Data set Mgmt**     | Opens the dataset mgmt|
-   |                                  |                       | window from the bar   |
-   +----------------------------------+-----------------------+-----------------------+
-   | .. figure:: media/image008.png   | **Save dashboard**    | Saves the dashboard   |
-   |                                  |                       |                       |
-   +----------------------------------+-----------------------+-----------------------+
-
-
-   The below image shows an example of dashboard.
-
-
-   .. figure:: media/dashboard.png
-
-
-
-
-
-Widgets Types
-------------------------------------------------------------------------------------------------------------------------
-As seen in the above table, the addition of a widget can be done either through the icon displayed from the sheet of a dashboard or 
-from the appropriate button appearing in the upper right bar. 
-When clicking a palette containing the entire range of available widgets will be shown. Simply click the desired one for popping up the widget editor.
-A widget's editor normally has two sections:
-
-   - *Data*, to associate datasets to the dashboard (this section is not available i.e. for the *Image* and *Map* widgets)
-   - *Settings*, containing a list of properties varying from one widget to another
-
-The below table shows an example of how the *Data* and the *Settings* sections appear for a *Text* widget. In case of i.e. an *Image* 
-widget, the *Settings* section will contain the *Gallery* property that does not belong to the *Text* widget.
-
-
-   +--------------------+------------------------------------------------------------------------------+
-   |  Section Name      | Description                                                                  |
-   +====================+==============================================================================+
-   | Data               | In this section the user can:                                                |
-   |                    |   - select the dataset to work with                                         |
-   |                    |   - select the columns to show (use the *Arrow* to insert all columns)       |
-   |                    |   - specify a *Sorting Column* and an *Ascending/Descending* order           |
-   |                    |   - change the aggregate function for measure columns                        |
-   |                    |   - add a calculated field by clicking the *Add Column* button               |
-   +--------------------+------------------------------------------------------------------------------+
-   | Settings           | To manage widget properties such as:                                         |
-   |                    |   - Configuration                                                            |
-   |                    |   - Editor                                                                   |
-   |                    |   - Style                                                                    |
-   |                    |   - Interactions                                                             |
-   |                    |   - Help                                                                     |
-   |                    |   - Responsive                                                               |
-   +--------------------+------------------------------------------------------------------------------+
+Choose **Add widget** to open the gallery, then select the widget to create.
+The editor shows the data and settings supported by that widget type. The
+following sections describe the individual widgets and their options.
 
 Below a brief description of the usefulness of some of the properties listed in the *Settings* section.
 
    - *Configuration*, to manage date format, annotations, the text message when no data is retrieved
    - *Visualization*, to pin columns, to set visibility conditions on columns, to show columns as text or icon, to show totals
-   - *Legend*, to show aliases for measures 
-   - *Tooltips*, to apply visualizazion styles to the hover text
+   - *Legend*, to show aliases for measures
+   - *Tooltips*, to apply visualization styles to the hover text
    - *Style*, to define visualization styles such as font size, font family, background
    - *X-axis*, to manage properties related to the X axis as title, position, rotation, etc
-   - *Y-axis*, to manage properties related to the Y axis as title, position, rotation, etc 
+   - *Y-axis*, to manage properties related to the Y axis as title, position, rotation, etc
    - *Colors*, to manage the palette of colors
-   - *Interactions*, to manage cross navigations, links, drill-downs, etc 
-   - *Series*, to manage format styles related to the values of the serie(s)  
-   - *Responsive*, to manage the wisualization of your widgets on different devices such as tablets, mobiles, small and large devices
+   - *Interactions*, to manage cross navigations, links, drill-downs, etc
+   - *Series*, to manage format styles related to the values of the serie(s)
+   - *Responsive*, to manage the visualization of your widgets on different devices such as tablets, mobiles, small and large devices
    - *Help*, to add additional explanation for a specific widget i.e. by means of an icon opening a pop up that shows some information
 
 .. important::
@@ -122,51 +61,50 @@ Below a brief description of the usefulness of some of the properties listed in 
 
 Below an example of *Help* applied on a widget.
 
-.. figure:: media/image117.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image117.png
 
 
 Text widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By clicking the **Text Widget** icon you can add text to your dashboard. The widget editor opens showing the two sections 
+By clicking the **Text Widget** icon you can add text to your dashboard. The widget editor opens showing the two sections
 formerly introduced.
 Using the *Data* section it is possible to associate dataset values to the text to show real time values at each execution.
 You can drag a single column into the *Selected Columns* area or just all of them by using the arrow next to the *Add Column* button.
 
-.. figure:: media/image009.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image009.png
 
    Text Widget Data Editor
 
-.. figure:: media/image010.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image010.png
 
    Text Widget Settings Editor
 
 The *Editor* property allows typing the desired text.
 From the *[] placeholder* menu the item *Columns Data* makes available the dataset column(s) previously selected as shown in the below image.
 
-.. figure:: media/image011.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image011.png
 
-  Inserting a dataset column in the text editor
+Inserting a dataset column in the text editor
 
 Image widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the **Image Widget** icon you can add an image to the dashboard. You can both pick up a previous image from the *Gallery* or
 upload a new one by clicking on the *Upload* button as show in the below image.
 
-.. figure:: media/image012.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image012.png
 
     Inserting an image
 
 The *Style* setting allows to handle the properties styles for the image such as *Title, Background, Borders, Padding and Shadows*.
 
-.. figure:: media/image013.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image013.png
 
     Image styles
 
 
 Chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-As previously mentioned the new dashboard comes with an enriched gallery of charts. 
-That means that in addition to those charts used for creating the old cockpit:
+The chart gallery includes the following chart families:
 
    - Bar
    - Line
@@ -182,7 +120,7 @@ That means that in addition to those charts used for creating the old cockpit:
    - Gauge
    - Bubble
 
-new ones are now available:
+Additional chart types include:
 
    - Activity Gauge
    - Dumbbell
@@ -197,66 +135,67 @@ new ones are now available:
 Below the general steps to be followed to insert a chart.
 After selecting the dataset and clicking the *Add widget* icon the chart gallery opens to pick up the desired chart to draw.
 Once a chart has been selected The *Data* section opens. Here it is possible to drag and drop your column(s) into:
-   - the *Dimension(s)* area, for measures
-   - the *Values* area, for attributes.
+
+   - the *Dimension(s)* area, for attributes and categories;
+   - the *Values* area, for measures and their aggregations.
 
 Afterwards the setting up continues with the properties contained in the *Settings* section. This section could be different from
 one widget to another.
 The image below refers to a *Funnel* chart where the definition of both measure(s) and attribute(s) is needed.
 
-.. figure:: media/image014.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image014.png
 
    Example of Dimensions and Values sections for a chart
 
 Not all charts need both information as in case of an *Activity Gauge* you only need to define the measure. See image below.
 
-.. figure:: media/image015.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image015.png
 
-   Example of Measures (Values section) 
+   Example of Measures (Values section)
 
 One important peculiarity to highlight is the possibility to change the type of chart once a selection has already been done.
-The drop down menu with your choice will still make available all the other charts as options to choose and in case the chart can be changed. 
+The drop down menu with your choice will still make available all the other charts as options to choose and in case the chart can be changed.
 See below picture.
 
-.. figure:: media/image016.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image016.png
 
    Example of how to change the type of a chart
 
 Once the chart has been inserted in the sheet of the dashboard, a three dots icon in the lower left part of the widget displays a menu with the list of all the possible actions to perform.
 See below image.
 
-.. figure:: media/image028.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image028.png
 
 Menu on a chart
 
-The chart can be resized just drugging the little corner in the lower right part of the chart.
+The chart can be resized just dragging the little corner in the lower right part of the chart.
 
-Another functionality really useful is the *preview* of the graph just using the magnifying glass 
-located at the upper right corner for each property of the *Settings* section. This means that saving the graph is not necessary to see how it 
+Another functionality really useful is the *preview* of the graph just using the magnifying glass
+located at the upper right corner for each property of the *Settings* section. This means that saving the graph is not necessary to see how it
 looks like as changes can be seen as they are applied.
 See below image.
 
-.. figure:: media/image031.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image031.png
 
 Preview functionality for a chart
 
-A chart can simply be moved in a dashboard just dragging it inside the whole sheet. 
+A chart can simply be moved in a dashboard just dragging it inside the whole sheet.
 This functionality is available for all widgets.
 See below image.
 
-.. figure:: media/image042.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image042.png
 
    Moving a widget along the dashboard
 
- When hoving the two vertical dotted lines a little hand appears to move the widget.  
+When hoving the two vertical dotted lines a little hand appears to move the widget.
 
 
 **Area**
 
-An area chart is based on the line chart and displays the area between axis and lines with colors. 
+An area chart is based on the line chart and displays the area between axis and lines with colors.
 Commonly used to compare two or more measures. Below an example of an *Area* chart.
 
-.. figure:: media/area_2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-area-2.png
 
    Example of an Area chart
 
@@ -266,7 +205,7 @@ Note that the measures are not summed along the Y-axis as happens with a *Stacke
 
 A stacked area chart extends the area chart by stacking areas on top of each other.
 
-.. figure:: media/stacked_area.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-stacked-area.png
 
    Example of a Stacked Area chart
 
@@ -278,7 +217,7 @@ The *Bar* chart allows a method of displaying data with categories represented b
 
 An example below.
 
-.. figure:: media/image060.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image060.png
 
    Bar chart example
 
@@ -287,13 +226,13 @@ An example below.
 The *Column* chart is like a *Bar* chart with vertical orientation.
 How to define measures and attributes is shown below
 
-.. figure:: media/image057.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image057.png
 
    Column chart - measures and attributes
 
 The above image shows the *Maximum number of records* property enabled and set to 3. In this case only three bars are shown.
 
-.. figure:: media/image058.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image058.png
 
    Column chart example
 
@@ -301,21 +240,21 @@ The above image shows the *Maximum number of records* property enabled and set t
 
 A stacked bar chart is used to break down and compare different categories as part of a whole represented by a bar.
 
-.. figure:: media/stacked_bar.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-stacked-bar.png
 
    An example of Stacked bar chart
 
-If you want to represent the percentage and not the value of the measurements, you need to set the *Stacking* property 
+If you want to represent the percentage and not the value of the measurements, you need to set the *Stacking* property
 to *Percent* as shown below.
 
-.. figure:: media/stacking.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-stacking.png
 
    Stacking property for a Stacked chart
 
 
 As shown below, after enabling the *Staking* property values along the Y-axis changes to *percent* values.
 
-.. figure:: media/stacking_2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-stacking-2.png
 
    Stacking values on a Stacked chart
 
@@ -323,7 +262,7 @@ As shown below, after enabling the *Staking* property values along the Y-axis ch
 
 A stacked column column is similar to the stacked bar char but changes the orientation of the bars to vertical.
 
-.. figure:: media/stacked_column.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-stacked-column.png
 
    An example of Stacked column chart
 
@@ -333,38 +272,38 @@ A stacked column column is similar to the stacked bar char but changes the orien
 The *Line* chart uses points connected by line segments from left to right to show how data changes.
 An example below.
 
-.. figure:: media/image059.png
-   
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image059.png
+
    Line chart example
 
 **Pie**
 
 A *Pie* chart helps organize and show data in a circular form as a percentage of a whole.
 
-.. figure:: media/image062.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image062.png
 
    A *Pie* chart example
 
 
 **Sunburst**
 
-The *sunburst* chart is a graph with a radial layout which depicts the hierarchical structure of data displaying a set of concentric rings. 
-The circle in the center represents the root node, with the hierarchy moving outward from the center. The slices in the external rings represent the 
-children of the slice in the inner circle which means they lie within the angular sweep of the inner circle. 
-The area of each slice corresponds to the value of the node. Even if sunburst charts are not efficient space-wise, 
+The *sunburst* chart is a graph with a radial layout which depicts the hierarchical structure of data displaying a set of concentric rings.
+The circle in the center represents the root node, with the hierarchy moving outward from the center. The slices in the external rings represent the
+children of the slice in the inner circle which means they lie within the angular sweep of the inner circle.
+The area of each slice corresponds to the value of the node. Even if sunburst charts are not efficient space-wise,
 they enable users to represent *hierarchies* in a more immediate and fascinating way.
 
-To create a sunburst chart select at least two attributes describing the hierarchy and just one measure representing the width of the 
+To create a sunburst chart select at least two attributes describing the hierarchy and just one measure representing the width of the
 slices. An example of dataset for the sunburst chart is shown below.
 
-.. figure:: media/image065.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image065.png
 
    Sunburst chart - defining attributes and measures
 
-.. _exampleofdatsetsunburst:
+.. _dashboard-exampleofdatasetsunburst:
 .. table:: Example of dataset for the sunburst chart.
    :widths: auto
-   
+
    +----------------------+----------------+------+
    |    CATEGORY          | SUBCATEGORY    | UNIT |
    +======================+================+======+
@@ -391,13 +330,13 @@ slices. An example of dataset for the sunburst chart is shown below.
 
 The image below shows an example of a sunburst chart using the dataset previously described.
 
-.. figure:: media/image1101112.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image1101112.png
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
 
 Another example of a Sunburst chart is shown by the following image.
 
-.. figure:: media/sunburst.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-sunburst.png
 
 **Wordcloud**
 
@@ -407,22 +346,22 @@ Size and colors of the words depend on a specified weight of the measure.
 To create the Workcloud chart exactly one attribute and one measure are needed.
 The below example highlights what happens if two attributes are dragged and dropped in the specific area. In this case an error is shown.
 
-.. figure:: media/image066.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image066.png
 
    Workcloud chart - attributes and measures
 
-.. figure:: media/image067.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image067.png
 
    Workcloud chart example
 
 **Chord**
- A *Chord* chart shows the relationship between two entities though your data. Data flows from one entity (start category) to a second entity (final category)
+A *Chord* chart shows the relationship between two entities though your data. Data flows from one entity (start category) to a second entity (final category)
 
- .. figure:: media/image068.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image068.png
 
    Chord chart - attributes and measures
- 
- .. figure:: media/image069.png
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image069.png
 
    Chord chart example
 
@@ -432,10 +371,10 @@ The *Parallel* chart is a way to visualize high-dimensional geometry and multiva
 
 To create a parallel chart select a dataset with at least one attribute and two columns with numerical values. You can find an interesting example of dataset in the next table where we display some of its rows.
 
-.. _exampleofdatsetparallel:
+.. _dashboard-exampleofdatasetparallel:
 .. table:: Example of a dataset for a parallel chart.
    :widths: auto
-   
+
    +--------+--------------+-------------+--------------+-------------+-----------------+
    |    ID  | sepal_length | sepal_width | petal_length | petal_width | class           |
    +========+==============+=============+==============+=============+=================+
@@ -487,20 +426,20 @@ To create a parallel chart select a dataset with at least one attribute and two 
    +--------+--------------+-------------+--------------+-------------+-----------------+
    |    108 |    7.3       |    2.9      |    6.3       |    1.8      | Iris-virginica  |
    +--------+--------------+-------------+--------------+-------------+-----------------+
-    
-In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, 
-it is possible to find out which class we are looking at. One side of the below image (part a) shows a parallel chart related to the previous dataset. 
+
+In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght,
+it is possible to find out which class we are looking at. One side of the below image (part a) shows a parallel chart related to the previous dataset.
 The second side of the image (part b) shows thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
 
 
-.. figure:: media/image11617.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image11617.png
 
     From left to right: (a) Parallel. (b) Parallel chart selection.
 
 The parallel chart needs one attribute and two measures otherwise you cannot save it. The example below shows the case.
 
-.. figure:: media/image070.png
-   
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image070.png
+
    Parallel chart - measures and attributes
 
 
@@ -509,12 +448,12 @@ The parallel chart needs one attribute and two measures otherwise you cannot sav
 A *Heatmap* is a two-dimensional representation of data whose values are represented by colors.
 Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend trough two categories.
 
-.. figure:: media/image070_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image070-1.png
 
    Heatmap chart - measures and attributes
 
-.. figure:: media/heatmap_chart.png
-   
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-heatmap-chart.png
+
    Heatmap chart example
 
 
@@ -525,26 +464,26 @@ All axes are joined in the center of the graph.
 
 To plot this graph at least one attribute and one measure are needed.
 
-.. figure:: media/image072_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image072-1.png
 
    Radar chart - defining attributes and measures
 
-.. figure:: media/image073_1.png
-   
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image073-1.png
+
    Radar chart example
 
 
 **Treemap**
 
 The *Treemap* is a graphical representation of hierarchical data displayed as nested rectangles.
-Each branch of the tree is given by a rectangle, which is tiled with smaller rectangles representing sub-branches. 
-The area of the rectangles is proportional to a measure specified by a numerical attribute. The treemap is usefull to display a 
+Each branch of the tree is given by a rectangle, which is tiled with smaller rectangles representing sub-branches.
+The area of the rectangles is proportional to a measure specified by a numerical attribute. The treemap is usefull to display a
 large amount of hierarchical data in a small space.
 By clicking the *Add widget* button pick up *Chart* and then the *Treemap* from the gallery.
-Once a dataset has been selected at least two attributes into the X-axis panel and one measure are needed. Press *Save* to apply the changes. 
+Once a dataset has been selected at least two attributes into the X-axis panel and one measure are needed. Press *Save* to apply the changes.
 The image below highlights the fact that one attribute is missing and the chart cannot be saved.
 
-.. figure:: media/image061.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image061.png
 
    Treemap chart - attributes and measures
 
@@ -552,7 +491,7 @@ The order of the attributes in the X-axis panel should reflect the order of the 
 
 The figure below shows an example of a Treemap chart
 
-.. figure:: media/image11415.PNG
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image11415.png
 
     From left to right: (a) Treemap. (b) Treemap sub-branches.
 
@@ -565,25 +504,26 @@ Bar, column, line, pie, radar and treemap charts allow the *drill-down* function
 The *Activity Gauge* uses circular-shaped bars to compare multiple categories against the target.
 After clicking the *Add widget* button or icon pick up *Chart* and then the *Activity Gauge* chart from the gallery.
 
-.. figure:: media/image017.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image017.png
 
    Activity Gauge example
 
 Below you can see how to set the aliases. From the drop down menu you can choose the column(s) previously selected as measures and rename them.
 
-.. figure:: media/image018.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image018.png
 
    Setting Alias example
- The below image shows how changes are applied after renaming the measures.
 
-.. figure:: media/image019.png
+The below image shows how changes are applied after renaming the measures.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image019.png
 
    Setting Series example
 
 If you want to set properties for the Tooltip just click Tooltip and set Bold and Backgroud color as shown in the below image
 
-.. figure:: media/image020.png
-   
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image020.png
+
 
    Setting Tooltip example
 
@@ -595,21 +535,21 @@ Some othe properties you can manage are: Bold, Font size and family, Borders, Ba
 The *Bubble* chart is useful in case of three series. The size of the bubble depends on the third dimension.
 After clicking the *Add widget* button pick up Chart and then the Bubble chart from the gallery.
 
-.. figure:: media/image021.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image021.png
 
    Bubble chart - dragging and dropping measures and attributes
 
 You can set some properties for the series. It is possible to define them for all series or just for one.
-As shown in the below image in the last case just press the *plus* icon and the drop down menu will show you the list of 
+As shown in the below image in the last case just press the *plus* icon and the drop down menu will show you the list of
 columns.
 
-.. figure:: media/image022.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image022.png
 
    Bubble chart - setting series
 
 An example of bubble chart is shown below, bubbles color has been set through the *Color* property inside Settings section.
 
-.. figure:: media/image023.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image023.png
 
    Bubble chart example
 
@@ -619,27 +559,27 @@ A *Dumbbell* chart uses circles and lines to show changes over time.
 After pressing the *Add Widget* button or icon pick up Chart and then the *Dumbell* chart from the gallery.
 To define the chart you need one attribute and two measures to define the series. See the below image.
 
-.. figure:: media/image024.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image024.png
 
    Dumbell chart example - defining measures and atributes
 
 Once inserted your attributes and measures you can manage the settings of the start of your *Series* as shown below.
 
-.. figure:: media/image025.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image025.png
 
    Dumbell chart - settings series
 
-.. figure:: media/image026.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image026.png
 
    Dumbell chart - renaming measures
 
-.. figure:: media/image027.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image027.png
 
    Dumbell chart example
 
 **Funnel**
 
-This kind of chart provides a visual representation of how data progresses through different stages of a process starting 
+This kind of chart provides a visual representation of how data progresses through different stages of a process starting
 from a broad head and ending in a narrow neck.
 By clicking the *Add widget* pick up Chart and then *Funnel* from the gallery.
 Once a dataset has been selected, click the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
@@ -647,7 +587,7 @@ Select *Funnel* as chart, choose just one measure and one attribute and then pre
 See below image.
 
 
-.. figure:: media/image029.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image029.png
 
 Funnel chart example
 
@@ -655,11 +595,11 @@ Funnel chart example
 
 A *Packed Bubble* is similar to a Bubble Chart where bubbles are tightly packed rather than spread over a grid of X and Y-Axis.
 Once a dataset has been selected, click the *Add Widget* icon of your sheet or on the equivalent icon of the menu bar.
-Select Chart and then *Funnel* as chart, choose just one measure and two attributes. The first attribute is used for grouping and the second one for labels. 
+Select Chart and then *Funnel* as chart, choose just one measure and two attributes. The first attribute is used for grouping and the second one for labels.
 Then press *Save* to get the graph visualized.
 See below image.
 
-.. figure:: media/image030.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image030.png
 
 Packed bubble chart example
 
@@ -670,20 +610,20 @@ Once a dataset has been selected, click the *Add Widget* icon of your sheet or t
 Select Chart and then *Pictorial* as chart, choose just one measure to define the Serie and one attribute for the category.
 See below image
 
- .. figure:: media/image032_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image032-1.png
 
     Pictorial chart example
 
 This kind of chart lets the upload of an SVG image that can transform the look and feel of your pictorial chart.
 See below image.
 
- .. figure:: media/image032_2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image032-2.png
 
     Pictorial chart with SVG example
 
 The following image shows where the SVG property can be found.
 
- .. figure:: media/image032_3.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image032-3.png
 
     SVG property
 
@@ -696,14 +636,14 @@ The gallery offers two kinds of charts: *Sankey* and *Sankey Inverted*. The last
 Once selected the dataset, you need to choose two attributes representing the *from* and the *to* categories of the flow and a measure.
 
 
- .. figure:: media/sankey.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-sankey.png
 
    Example of a *Sankey* chart
- 
+
 
 The *Sankey inverted* will look like as shown below:
 
- .. figure:: media/sankey_inverted.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-sankey-inverted.png
 
     Example of a *Sankey Inverted* chart
 
@@ -714,29 +654,29 @@ By clicking on the *Add widget* button press Chart and then *Scatter*.
 After selecting the dataset to define this chart you need to pick up two *numerical* values representing the measures on X and Y and the category (Grouping).
 See below image.
 
- .. figure:: media/image034.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image034.png
 
     Scatter chart - Defining series and categories
 
 Below an example of a *Scatter chart*.
 
- .. figure:: media/scatter.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-scatter.png
 
    An example of a *Scatter* chart
 
 
 **Scatter Jitter**
 
- This chart is useful when there are so many points piled up that data reading data turns out to be very tricky thus each point will be slightly 
- offset horizontally to reduce overlap and to allow reading.
+This chart is useful when there are so many points piled up that data reading data turns out to be very tricky thus each point will be slightly
+offset horizontally to reduce overlap and to allow reading.
 
- 
-.. figure:: media/image063.png
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image063.png
 
    Scatter jitter - Defining attributes and measures
 
 
-.. figure:: media/scatter_jitter.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-scatter-jitter.png
 
    Example of a Scatter jitter chart
 
@@ -747,27 +687,27 @@ graph with no corners but with rounded edges giving the impression of a flow.
 By clicking on the *Add widget* button press Chart and then *Streamgraph*. You need to choose one attribute for the X-axis, one attribute as category
 and one measure as shown below.
 
-.. figure:: media/image035.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image035.png
 
    Streamgraph chart - Defining series and categories
 
 
-.. figure:: media/image036.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image036.png
 
    Example of Streamgraph chart
 
 **Waterfall**
 
-A *Waterfall* chart can be useful to understand how data is affected by positive or negative values. It' s like a bar chart where in the middle of two normal bars 
+A *Waterfall* chart can be useful to understand how data is affected by positive or negative values. It' s like a bar chart where in the middle of two normal bars
 there are suspended bars as the beguinning of the bar is represented by the end of the previous bar.
 By clicking on the *Add widget* button press Chart and then *Waterfall*.
 Select yor dataset and then you will be asked to enter just one attribute as category and one measure as a serie as shown below.
 
-.. figure:: media/image037.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image037.png
 
    Waterfall - Defining measures and attributes
 
-.. figure:: media/image038.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image038.png
 
    Example of a Waterfall chart
 
@@ -778,17 +718,17 @@ After describing most of the graphs below we provide an overview of the main fea
 The below images shows an example of how to apply ordering for a given *category*.
 To apply a specific sorting criterion, simply click the appropriate icon, as shown in the image.
 
-.. figure:: media/ordering_asc.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-ordering-asc.png
 
    Ascending ordering example
 
-.. figure:: media/ordering_desc.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-ordering-desc.png
 
    Descending ordering example
 
 Please note that the ASC/DESC option on a category will automatically be disabled when you set a sort order for the measurements.
 
-.. figure:: media/ordering_measures.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-ordering-measures.png
 
    Setting ordering for measures
 
@@ -800,7 +740,7 @@ The *Data* sections also alllow to set filtering on a specific category/measure.
 
 To apply filtering you just need to click the *Gear* icon the the enable the Functionlaity as shown in the below image.
 
-.. figure:: media/filtering.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-filtering.png
 
    An example of filtering
 
@@ -810,24 +750,24 @@ After enabling filtering a menu will be available and you will be able to select
 
 This functionality allows to group two categories of a chart and show the values of a given measure for each group.
 
-.. figure:: media/grouping.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-grouping.png
 
    Enabling grouping
 
 In the above image the *Group by categories* option is shown. You need to enable it and save your settings.
 
-.. figure:: media/grouping2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-grouping2.png
 
    Categories grouped along the X-axis
 
 The Grouping functionality contains also the *Second Category* option. By enabling this option you need to select a specific series and the chart will show
 the values of that series for each value of the second category along the X-axis represented by the first category.
 
-.. figure:: media/grouping_3.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-grouping-3.png
 
    Second category option
 
-.. figure:: media/grouping_4.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-grouping-4.png
 
    A Chart showing values based on the second category
 
@@ -840,13 +780,13 @@ In addition there some other functionalities:
 The below image shows an example of a chart with grids defined for the Y-axis. There are two grids both highligted with dashed lines.
 Intervals are respectively set to 1500 (Minor Grid) and to 4000 (Major Grid).
 
-.. figure:: media/grid1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-grid1.png
 
    Grids on the Y-axis
 
 To set grids details just follow the path as shown below.
 
-.. figure:: media/grid2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-grid2.png
 
    Setting grids details on the Y-axis
 
@@ -856,7 +796,7 @@ To add some details to the values of your measures of a chart there is a specifi
 Here you have the chance to set prefix/suffix i.e.
 The suffix could be used to specify which currency that measure represent in case of costs or sales for example.
 
-.. figure:: media/series1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-series1.png
 
    Setting series details
 
@@ -872,13 +812,13 @@ This section allows you to write properties from the *Highcharts API*.
 As an example a property to write could be *plotOptions.column.borderRadius*.
 
 
-.. figure:: media/advanced1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-advanced1.png
 
    The Advanced section
 
 After saving the property the columns of the chart be more rounded.
 
-.. figure:: media/advanced2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-advanced2.png
 
    Example of a chart displayng changes after inserting a new API property
 
@@ -887,14 +827,14 @@ After saving the property the columns of the chart be more rounded.
 
 In case you had a category with date type you can enable the format to be displayed on the chart.
 
-.. figure:: media/dataformat1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-dataformat1.png
 
    Enabling the Date type option
 
 You need to enable the option, choose a specific format from the menu list and save.
 In case of a Line chart the result will look like as below.
 
-.. figure:: media/dateformat2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-dateformat2.png
 
    Date type option in the chart
 
@@ -905,13 +845,13 @@ If you want to customize the message when no data is retrieved you can do it jus
 For example if you want the message *No data to show* to be displayed at the left top and want it to appear in red as color go to
 *Settings>Configuration>No Data*.
 
-.. figure:: media/nodata1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-nodata1.png
 
    No data message section
 
 After inserting your message and set the related properties you will see the following
 
-.. figure:: media/nodata2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-nodata2.png
 
    Visualization of your message
 
@@ -922,38 +862,39 @@ Go to this sections in case you need to add additional colors to be represented 
 
 For example if you want that your column chart displays a green color with #7FFFD4 as hex code to be used for a specific measure.
 
-.. figure:: media/colors1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-colors1.png
 
    Inserting a new color
 
 After filling the hex code of your color click the plus icon to include it in the list of colors and drag it to the first place of the list.
 
-.. figure:: media/colors2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-colors2.png
 
    Dragging a new color
 
 As a result the chart will look like as shown below.
 
-.. figure:: media/colors3.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-colors3.png
 
    A new color in the chart
 
 Html widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements. 
+The HTML widget allows to add customized HTML and CSS code to implement very flexible and customized dynamic elements.
 This widget supports all HTML5 standard tags and CSS3 properties.
 By clicking the *Add widget* button or icon and then *HTML* you can insert the HTML widget.
 
-For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted 
+For security reasons no custom Javascript code can be added to html tags. Every tag considered dangerous will be deleted
 after saving the document.
 
 .. important::
 
-        A CSS property will be extended to all the classes in the cockpit with the same name; to apply the property 
+        A CSS property will be extended to all the classes in the cockpit with the same name; to apply the property
         only to the current widget use the id prefix shown in the info panel of the CSS editor
 
-.. figure:: media/image048.png
-HTML widget editor
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image048.png
+
+   HTML widget editor
 
 **Available Tags**
 
@@ -1060,8 +1001,8 @@ If you need to simulate a button behaviour use a div (or another allowed tag) an
 
 .. warning::
     **Whitelist**
-    
-    Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise these links will be removed by the system. 
+
+    Base paths to external resources (images, videos, anchors, CSS files and inline frames) must be declared within ``TOMCAT_HOME/resources/services-whitelist.xml`` XML file inside Knowage Server, otherwise these links will be removed by the system.
     This whitelist file contains safe and trusted websites, to restrict end users of providing unsafe links or unwanted web material. Knowage Server administrator can create or edit it (directly on the file system) to add trusted web sites. Here below you can see an example of ``services-whitelist.xml`` file; as you can see, its structure is quite easy: ``baseurl`` attributes refer to external services, ``relativepath`` must be used for Knowage Server internal resources instead:
 
 
@@ -1089,7 +1030,7 @@ You can active Pagination just switching on the sliding button and then specify 
 To handle each column settings just click on the setting icon before the trash. You will be able to set aliases, the aggregation function
 and filters on that column.
 
-.. figure:: media/image049.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image049.png
 
     Table widget editor
 
@@ -1097,53 +1038,53 @@ To manage styles and other functionalities for columns just move to the *Setting
 The below image shows how to pin colums in a table. Pinned columns are columns that are fixed to the left or to the right of the table.
 The *plus* icon will add a new line where the column to be pinned has to be picked up from the *Columns* drop down menu. The field *Pinned* has toset to *Left* or *Right*.
 
-  .. figure:: media/image098.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image098.png
 
     Pinning a column
 
-.. figure:: media/image099.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image099.png
 
     A pinned column example
 
- The below image shows how to apply *Conditional Styles* to a specific column of the table.
- If a given condition for a measure occurs it is possible to set properties as font size, font Family, background, etc.
- In case variables and parameters have been defined for the dashboard just make your choice from the *Value Type* menu to enter the related value.
+The below image shows how to apply *Conditional Styles* to a specific column of the table.
+If a given condition for a measure occurs it is possible to set properties as font size, font Family, background, etc.
+In case variables and parameters have been defined for the dashboard just make your choice from the *Value Type* menu to enter the related value.
 
- .. figure:: media/image050.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image050.png
 
    Table widget - conditional styles
 
 The value of a specific column can also be represented by using an *icon*.
 See below image.
 
- .. figure:: media/image100.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image100.png
 
 
    Table widget - choosing the icon to visualize
 
 However, it is important to have previously specified that column as being represented as an icon otherwise choices will not be applied.
 
- .. figure:: media/image101.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image101.png
 
 
    Table widget - set visualization type as icon
 
 
- .. figure:: media/image102.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image102.png
 
 
-   Table widget example with icons as values 
+   Table widget example with icons as values
 
 
 *Visibility* conditions can also be applied for a column. Just click the *Visualization* property as shown below.
 
- .. figure:: media/image051.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image051.png
 
    Table widget - visibility conditions
 
 The below example shows how ordering a column.
 
- .. figure:: media/image103.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image103.png
 
    Table widget - ordering a column
 
@@ -1152,16 +1093,16 @@ Pivot widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking the *Add widget* button or icon and then *Pivot* it is possible to add a *Pivot* widget to the dashboard.
 With this widget the user can decide wich field of a dataset could be represented as a *column* and wich one as a *row*.
-The below image shows an example of a *Pivot* widget. Changes to the layout can be made by handling the *Style* properties defined 
+The below image shows an example of a *Pivot* widget. Changes to the layout can be made by handling the *Style* properties defined
 in the *Settings* section of the widget.
 
- .. figure:: media/image083.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image083.png
 
    Pivot widget example
 
 After selecting the dataset, you can drag and drop fields to define columns, rows and measures of the pivot table.
 
-    .. figure:: media/image089.png
+    .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image089.png
 
    Pivot widget - defining colums, rows and measures
 
@@ -1170,34 +1111,34 @@ By clicking on the icon highlighted in the below image a *Field chooser* appears
 Here you can handle some properties as ordering just by clicking the arrow appearing on the right side of each field or you can simply exchange the attributes
 previosly selected to show in your pivot table.
 
-       .. figure:: media/image090.png
+       .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image090.png
 
    Pivot widget - Field chooser
 
 Filters on values can be applied just by clicking the funnel icon.
 
-       .. figure:: media/image091.png
+       .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image091.png
 
    Pivot widget - applying filters
 
-By default all fields are visualized as text. In case you need a specific measure to be represented i.e. as an icon you just need 
+By default all fields are visualized as text. In case you need a specific measure to be represented i.e. as an icon you just need
 to click the *plus icon*, select a measure column from the drop down menu and the *visualization* type.
 
-       .. figure:: media/image092.png
+       .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image092.png
 
    Pivot widget - displaying measures as text or icon
 
 
 Conditional styles can also be applied to a measure so that when resulting i.e. greater that a specific value the color can be a different one.
-For all those columns to be represented as an icon, it is important to handle this property to specify the range of values ​​for which the measure will appear as an icon. 
+For all those columns to be represented as an icon, it is important to handle this property to specify the range of values ​​for which the measure will appear as an icon.
 Outside the specified range(s) the measure will appear as text.
 
-       .. figure:: media/image093.png
+       .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image093.png
 
    Pivot widget - applying styles to fields
 
 
-       .. figure:: media/image094.png
+       .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image094.png
 
    Pivot widget after applying styles to fields
 
@@ -1206,35 +1147,35 @@ Map widget
 By clicking the *Add widget* button or icon and then *Map* it is possible to add a *Map* widget to the dashboard.
 The Map Widget is useful when a user needs to visualize data related to a geographic position. The widget supports multiple layers, one for every dataset added to widget and one data field for every layer.
 
-.. figure:: media/image055.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image055.png
 
     Map widget example.
 
-Unlike the most of the widgets that have a *Data* section for data configuration here we find the *Layer* section where the user can add and remove layers, 
+Unlike the most of the widgets that have a *Data* section for data configuration here we find the *Layer* section where the user can add and remove layers,
 set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
 
 
 The below image shows the *Layers* section of a map widget to handle the Layers/Datasets to be used for the geographical information and data visualization of the map.
 
-    .. figure:: media/image104_n.png
+    .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image104-n.png
 
         Map widget - *Layers* section of a map widget.
 
-The clicking of the *Add Layer* button allows the visualization of all the available datasets/layers. 
+The clicking of the *Add Layer* button allows the visualization of all the available datasets/layers.
 The wizard allows the visualization of all of them or just one type by clicking the specific button.
 
-.. figure:: media/image104_n1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image104-n1.png
 
         Map widget - Choosing a dataset for a layer.
 
-In the *Layer* Metadata section, the user can set the spatial attribute of the dataset that will be used to display markers on the map. 
+In the *Layer* Metadata section, the user can set the spatial attribute of the dataset that will be used to display markers on the map.
 Currently, the following spatial attribute types are supported:
 
 -  String format: where the value specify two decimal numbers representing latitude and longitude separated by a space;
 -  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
 -  WKT: where the value is a text string in `Well-known Text <https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry>`_ format;
 
-.. figure:: media/image105_n.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image105-n.png
 
         Setting metadata for *Spatial* attributes
 
@@ -1242,7 +1183,7 @@ Currently, the following spatial attribute types are supported:
          **Geographic coordinates format**
          For every type defined above the user has to specify the format of the geographic coordinate that is wether latitude comes first or vice versa.
 
-.. figure:: media/image106_n.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image106-n.png
 
         Geographic coordinates
 
@@ -1250,69 +1191,69 @@ A layer allows different ways to display the data on the map: markers, balloons,
 
 The *Settings* section contains this functionality.
 
-.. figure:: media/image109_n.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image109-n.png
 
         Add visualizations for layers
 
 By clicking the *Add Visualization* button you will see all the options as shown below.
 
 
-.. figure:: media/image109.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image109.png
 
         Data type visualization for layers
 
-When representing data as markers the options range from *Default, Icon and Image* markers. 
+When representing data as markers the options range from *Default, Icon and Image* markers.
 The below image shows all the available choices for markers.
 
-.. figure:: media/image110.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image110.png
 
         Markers representation
 
 Below an example of how a map can look like depending on how data is visualized.
 The below example shows a map with markers.
 
-.. figure:: media/markers_map.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-markers-map.png
 
         Data visualization types on a map
 
 In case a marker is visualized as Icon an example of map can be the following.
 
-.. figure:: media/image_map_icon_2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image-map-icon-2.png
 
         Map with markers as Icon
 
 Below another example of a map using a choroplet visualization and created by using two layers, a topojson file and a dataset.
 Bear in mind the the *Data Connection* section allows also the retrieving of a measure by using the same layer.
 
-.. figure:: media/image112_3.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image112-3.png
 
         Layers of a map with a dataset and topojson file
 
 The topojson file was previously created under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
 
-Furtherly the figure below shows also the definition of the *Data Connection* as *Join*. 
+Furtherly the figure below shows also the definition of the *Data Connection* as *Join*.
 This is because a combination between a dataset and a topojoson file has been used as both of them have in common the column ID_1.
 
-.. figure:: media/image111.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image111.png
 
         Example of map with *Join* settings
 
-The goal is to show the measure *POPULATION* for each region when hovered over with the mouse. 
+The goal is to show the measure *POPULATION* for each region when hovered over with the mouse.
 To do this, you will need to enable a *Tooltip* by choosing the layer and property to display.
 
-.. figure:: media/image112_map.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image112-map.png
 
         Defining a tooltip
 
 As a result of the former configuration you will see a map as shown below.
 
-.. figure:: media/image112_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image112-1.png
 
         Example of a map with tooltips
 
 Instead of a tooltip it can also be used a dialog box.
 
-.. figure:: media/dialog_map.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-dialog-map.png
 
         Defining a dialog for a map
 
@@ -1320,21 +1261,21 @@ Instead of a tooltip it can also be used a dialog box.
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking the *Add widget* button or icon and then *Active Selections* it is possible to add a *Active Selections* widget to the dashboard.
-This chart shows the list of current selections applied on a widget. An icon on the right upper corner of the dashboard will 
+This chart shows the list of current selections applied on a widget. An icon on the right upper corner of the dashboard will
 be visible and clickable to open the list. On each item of the list a *trash* icon is available for the deletion of that selection.
 
-.. figure:: media/image052.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image052.png
 
    Active selections widget
- 
- To get the result shown in the above image just go to the *Settings* and select the *Style* property
 
- .. figure:: media/image053.png
+To get the result shown in the above image just go to the *Settings* and select the *Style* property
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image053.png
 
    Active selections widget - Style property
 
- Be aware that a selection can be locked. In this case it will be not possible to delete that selection until unlocked. This can only be done by admin users.
- This forces the final user to run the dashboard with that selection that will not be removed as locked by the admin user.
+Be aware that a selection can be locked. In this case it will be not possible to delete that selection until unlocked. This can only be done by admin users.
+This forces the final user to run the dashboard with that selection that will not be removed as locked by the admin user.
 
 Selector widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1342,7 +1283,7 @@ By clicking on the *Add widget* button or icon and then *Selector* it is possibl
 The *Selector* widget allows a dataset filtering by means of a combobox, radio button or checkboxes.
 After choosing the column to use as a filter just move to the *Setting* section and then *Configuration*. See below image.
 
-.. figure:: media/image054.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image054.png
 
    Active selections widget
 
@@ -1358,7 +1299,7 @@ The Custom Chart allows the user to directly embed HTML, CSS and JS code using a
 
          Former versions of Knowage EE supported the inclusion of other libraries adding the CDN script tag in the html Editor by means of the
          kn-import tag:
-         
+
          .. code-block:: html
             :linenos:
 
@@ -1366,7 +1307,7 @@ The Custom Chart allows the user to directly embed HTML, CSS and JS code using a
 
          Now you can insert the library link from the *Libraries* section of the Editor panel as shown below.
 
-.. figure:: media/libraries.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-libraries.png
 
    Libraries section
 
@@ -1375,7 +1316,7 @@ This widget will only be available if the *Create custom chart widget* option is
 
 Trough the  **Editor** panel alloit is also possible to insert custom code for CSS and HTML.
 
-.. figure:: media/image079.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image079.png
 
    Custom chart editor
 
@@ -1385,7 +1326,7 @@ The HTML component allows to insert HTML tags in order to create a structure to 
 
 The JavaScript component is the code section, and allows to insert the custom chart code, custom Javascript code and the API usage.
 
-The keyword **datastore** allows using APIs. Datastore is an object that contains the curren data; 
+The keyword **datastore** allows using APIs. Datastore is an object that contains the curren data;
 Through a variety of methods it is possible to iterate over the results and get all values. See below:
 
 
@@ -1876,7 +1817,7 @@ Through a variety of methods it is possible to iterate over the results and get 
         variableCity: 'New York',
         variableNum: 100
     }
-	
+
 
 **profile**
 
@@ -1900,7 +1841,7 @@ Through a variety of methods it is possible to iterate over the results and get 
         customProfileAttribute: 'Test value',
         role: 'user'
     }
-	
+
 
 **selections**
 
@@ -1990,14 +1931,14 @@ Any enabling of cross-navigations or previews will have priority on the selectio
 Discovery widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking on the *Add widget* button or icon and then *Discovery* it is possible to add a *Discovery* widget to the dashboard.
-The Discovery widget is used to easily use and navigate into a SOLR dataset by using facets aggregation and by showing the results in a tabular representation . 
-It is possible to choose the fields that should be shown as the result. 
-The result to be visualized can also be configured to show a limited set of fields and facets. Facets are shown on the left side of the table and data 
+The Discovery widget is used to easily use and navigate into a SOLR dataset by using facets aggregation and by showing the results in a tabular representation .
+It is possible to choose the fields that should be shown as the result.
+The result to be visualized can also be configured to show a limited set of fields and facets. Facets are shown on the left side of the table and data
 can be filtered just clicking on a specific value inside one of them.
 The search bar can also be set up from the configuration settings.
 The below image shows an example of dicovery widget.
 
-.. figure:: media/image084.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image084.png
 
    Discovery widget example
 
@@ -2013,60 +1954,58 @@ Other properties to handle are:
 
    - *Facets max number*, this setting allows to choose the maximum number of facets visible for every field.
 
-.. figure:: media/image085.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image085.png
 
    Discovery widget - Facets
 
 A related table shows the selection(s) made on facets.
 
-.. figure:: media/image088.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image088.png
 
    Selected facets
 
 The below image shows how to enable the search bar by specifing on which fields to run the search and whether it is a static search or just run through an analytical driver.
 
-.. figure:: media/image086.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image086.png
 
    Discovery widget - search bar
 
-.. figure:: media/image087.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image087.png
 
    Discovery widget - Types of search
 
 Python widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By clicking the *Add widget* button or icon and then on *Python* it is possible to add a *Python* widget to the dashboard.
-The editor widget allows embedding a Python script. Before writing the code it is necessary to specify 
+The editor widget allows embedding a Python script. Before writing the code it is necessary to specify
 
-   1 - the type of the output produced by the script:
-         - Image or
-         - HTML
-   2 - the name of the file where to save the output of the script. 
-   
+1. Choose the output type: **Image** or **HTML**.
+2. Enter the name of the output file.
+
    See below image
 
-.. figure:: media/image111.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image111-2.png
 
    Python widget editor
 
 The below image shows an example of a *Python* script.
 
-   .. figure:: media/image112.png
+   .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image112.png
 
    Python script example
 
 Dataset columns and/or parameters can also be added to the script as shown below.
 
-   .. figure:: media/image113.png
+   .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image113.png
 
    Adding parameters or columns to a Python script
 
 Inside the Python scripts analytical drivers can be also accessed by using the usual placeholder syntax $P{}.
 
-Additionaly more environments where to run scripts can be created. The below image shows how to handle all the evironments previously defined. 
+Additionaly more environments where to run scripts can be created. The below image shows how to handle all the evironments previously defined.
 To support this kind of choice a list of available libraries is displayed for each selected environment.
 
-   .. figure:: media/image114.png
+   .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image114.png
 
    Python environments
 
@@ -2075,26 +2014,26 @@ Add a dataset to the dashboard
 ------------------------------------------------------------------------------------------------------------------------
 To add a dataset to the dashboard there are two options. You can click the two icons highlighted in the below image.
 
-   .. figure:: media/add_ds_1.png
+   .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-add-ds-1.png
 
    Adding a dataset
 
-By clicking on them you need to click the *Add Datset* button to display the list of all datsets available.
+By clicking on them you need to click the *Add Datset* button to display the list of all datasets available.
 
-   .. figure:: media/add_ds_2.png
+   .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-add-ds-2.png
 
    Selecting a dataset from a list
 
-The below image shows the datset that have been selected for the new dashboard.
+The below image shows the dataset that have been selected for the new dashboard.
 
-   .. figure:: media/add_ds_3.png
+   .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-add-ds-3.png
 
    List of dataset for a dashboard
 
 As you can see, the above list contains a dataset with parameters. In case you need to set up the value of the parameterjust click
 the name of the dataset and select the type of parameter.
 
-   .. figure:: media/add_ds_4.png
+   .. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-add-ds-4.png
 
    Dataset with parameter
 
@@ -2105,13 +2044,13 @@ Cross Navigation
 The cross navigation allows navigation from one document to another.
 You will find the cross navigation functionality in the *Settings* section of a widget. Just click on *Interactions* as shown below.
 
-.. figure:: media/image039.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image039.png
 
    Searching cross navigation
 
 Activate the functionality just switching on the slidind button and select the name of the cross navigation previously defined.
 
-.. figure:: media/image040.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image040.png
 
    Activating cross navigation
 
@@ -2132,66 +2071,66 @@ This functionality is also listed under the *Interactions* property of the *Sett
 
 The following example shows how drill-down works.
 
-The selected categories are four and called: ``product_family``, ``product_department``, ``product_category`` and ``product_subcategory``. 
+The selected categories are four and called: ``product_family``, ``product_department``, ``product_category`` and ``product_subcategory``.
 Once we open the document, we get as shown below:
 
-.. figure:: media/image127.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image127.png
 
     Drillable Bar Chart
 
 When selecting ``shelf_depth`` measure of the Food category one gets (see next figure):
 
-.. figure:: media/image128.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image128.png
 
     Drillable Bar Chart: first drill
 
 Once again, we can select ``Frozen food`` subcategory and drill to a second sub-level as shown below:
 
-.. figure:: media/image129.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image129.png
 
     Drillable Bar Chart: second drill
 
-And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to 
+And so on to the fourth subcategory. Selecting the “Back to: ...” icon available at the right corner of the graphic, the user can get back to
 the previous level. This efficient feature allows a deep insight of the analysis that leads to important conclusions.
 
 The below image shows where to enable the drill-down functionality.
 
-.. figure:: media/drill.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-drill.png
 
    Enabling the drill-down
 
 
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
-To manage the cache and frequency of your data you need to select the dataset form the list of the available ones 
+To manage the cache and frequency of your data you need to select the dataset form the list of the available ones
 and switching on the sliding button for the *Cache* option as shown in the below image.
 
-.. figure:: media/image046.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image046.png
 
    Managing cache and frequency
 
 You can also index columns.
 
-.. figure:: media/image047.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image047.png
 
    Managing indexes on columns
 
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
 Steps to add a calculated field:
- - select a dataset 
- - click on the *Add Columns* button as shown in the below image.
- - follow the instructions appearing in the pop up (assign a name, a function,..)
- - close the pop-up by clicking *Apply*. The button remains graid off until validation is done.
+- select a dataset
+- click on the *Add Columns* button as shown in the below image.
+- follow the instructions appearing in the pop up (assign a name, a function,..)
+- close the pop-up by clicking *Apply*. The button remains graid off until validation is done.
 
- .. figure:: media/image045.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image045.png
 
    Adding a calculated field
 
- Once the new field has been added you will see the new column appearing toghether with the ones of your dataset.
- By using the icon highlighted in the below image you can reopen the details pop-up.
+Once the new field has been added you will see the new column appearing toghether with the ones of your dataset.
+By using the icon highlighted in the below image you can reopen the details pop-up.
 
- .. figure:: media/image045.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image045-2.png
 
    Reopen details of a calculated field
 
@@ -2201,13 +2140,13 @@ Widget Theme and Title
 This is a functionality introduced on the new *Dashboard* available in the *Settings* section just clicking on *Style*.
 See below image.
 
-.. figure:: media/image041.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image041.png
 
    Widget Theme
 
 The below image shows an example of two different themes applied to the corresponding table widgets.
 
-.. figure:: media/image043.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image043.png
 
    Widget Theme example
 
@@ -2215,7 +2154,7 @@ The available themes have to be previously defined by an *admin user*.
 
 The *Style* section allows also to give a title to the chart defining its display properties.
 
-.. figure:: media/widget_title.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-widget-title.png
 
    Widget Title
 
@@ -2225,21 +2164,21 @@ Filters and ordering on fields
 The below two images shows how to enable the filtering functionality on a specific field of a dataset.
 From the *Data* section you need to click the gear icon and switch on the *Enable filter*.
 
-.. figure:: media/filtering_2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-filtering-2.png
 
    Activating filters - 1
 
 Afterwards you need to choose the *comparison operator* and specify a value as shown below.
 
-.. figure:: media/filtering_3.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-filtering-3.png
 
    Activating filters -2
 
 From the same editor it is also possible to set the ordering on a field as shown below.
 
-.. figure:: media/ordering_4.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-ordering-4.png
 
-  Ordering on a field
+Ordering on a field
 
 Ordering is available both on *categories* and *values* and are mutually exclusive as it is only possible to arrange an order
 eather for one or for the other. The order criterion established on a given category will be automatically disabled when clicking the arrow icon of a value.
@@ -2248,23 +2187,23 @@ Variables
 ------------------------------------------------------------------------------------------------------------------------
 To create variables just click on the three dots menu of the bar, select *General* and then *Variables* as shown below.
 
-.. figure:: media/image074.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image074.png
 
    Creating a variable - step 1
 
 Select *Variables* from the menu and click on the *Plus* icon
 
-.. figure:: media/image075.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image075.png
 
 Creating a variable - step 2
 
- Type in the variable name, the type and *Save*  
+Type in the variable name, the type and *Save*
 
- .. figure:: media/image076.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image076.png
 
    Creating a variable - step 3
 
- Types of variables:
+Types of variables:
 
    - Static: a static number or string
    - Dataset: the value of a selected dataset column
@@ -2279,31 +2218,31 @@ Associations
 ------------------------------------------------------------------------------------------------------------------------
 To create an association at least two datasets have to be selected.
 
- .. figure:: media/image080.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image080.png
 
    Defining an association -step 1
 
 Once the datasets have been selected, two attributes have to be choosen to establish the association.
 
- .. figure:: media/image081.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image081.png
 
    Defining an association -step 2
 
-The below image shows the associaton created between the fields of the two datasets. You need to save. 
+The below image shows the associaton created between the fields of the two datasets. You need to save.
 It is possible to delete the association just clicking on the trash icon appearing on the right side of the association name.
 
- .. figure:: media/image081.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image081-2.png
 
    Defining an association -step 3
 
 Add a Custom Header
 ------------------------------------------------------------------------------------------------------------------------
 In case of more sheets inside a dashboard there may be a need to have the same header for all sheets.
-By enabling the header it can be made available for all sheets just in one shot. 
+By enabling the header it can be made available for all sheets just in one shot.
 To create a *custom header* click the three dots item of the menu bar and select *Custom Header* as shown below.
 
 
-.. figure:: media/image077.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image077.png
 
    Custom Header
 
@@ -2313,17 +2252,17 @@ The image used for the header can be selected from the Gallery if available and 
 
 Multisheet
 ------------------------------------------------------------------------------------------------------------------------
-The dashboard engine allows to manage contents in multiple sheets. 
+The dashboard engine allows to manage contents in multiple sheets.
 Each sheet can contain different analysis with different datasets.
 Just click on the *Plus* icon and rename the new sheet.
 
-.. figure:: media/image078.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image078.png
 
    Multisheet functionality
 
 To move the widget from ine sheet to another just open the three dots menu in the left bottom side, select *Move Widget* and specify the name of the Sheet.
 
-.. figure:: media/move_widget.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-move-widget.png
 
    Multisheet functionality
 
@@ -2332,7 +2271,7 @@ Export dashboard
 The below image shows how to export the contents of a dashboard by using the *Export* functionality available in the menu.
 From the three dots, select *Export* and then one of the three options: PDF, XLSX, PNG.
 
-.. figure:: media/image107.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image107.png
 
    Export functionality
 
@@ -2345,7 +2284,7 @@ Dashboard Template
 
 The template of a dashboard is available editing the analytical document from the *Document browsers* and downloading it from the *History* tab.
 
-.. figure:: media/image115.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-image115.png
 
    Dashboard template
 
@@ -2356,32 +2295,130 @@ This functionality allows your new dashboard to be adapted to the various i.e. s
 The below image shows the set of options that can be enabled.
 As a first option there is one in case of only one widget in a dashboard.
 
-.. figure:: media/responsive.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-responsive.png
 
    Responsive functionality
 
-How migrate from the Cockpit to the Dashboard
-------------------------------------------------------------------------------------------------------------------------
-Migrating from the **Cockpit** functionality to the new **Dashboard** is straightforward.  
-You can perform the migration by following those quick steps:
+Migrate a Cockpit to a Dashboard
+--------------------------------
 
-1. Open the **Analytical Document Detail** form.
-2. Change the **engine type** from *Cockpit* to *Dashboard*.
-3. Save the changes.
-4. Access the document.
+Treat migration as creating a Dashboard replacement for an existing Cockpit.
+Keep the original document and its template available for comparison.
 
-.. figure:: media/migration.png
+1. Back up the Cockpit template and record its datasets, parameters,
+   associations, variables and interactions.
+2. Create a **Dashboard** document and add the required datasets.
+3. Recreate its widgets in the Dashboard editor, using the Cockpit settings as
+   the reference. Rebuild maps with the Map wizard and crosstabs with Pivot.
+4. Configure parameter mappings, associations, variables and cross-navigation,
+   then save the Dashboard.
+5. Compare the results under representative roles. Check filters, saved views,
+   layout and exports before publishing the replacement.
 
-   Responsive functionality
+Dashboard and Cockpit templates have different structures. Validate any
+converted template in the Dashboard editor before using it as the published
+replacement.
 
-Once this change is applied, the migration process will automatically run at the first access.  
-During this process, the existing template will be adapted to the new dashboard format.
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-migration.png
 
-.. warning::
-    **Important Notes**
+   Creating a Dashboard replacement for an existing Cockpit.
 
-      Some widgets have been completely redesigned and **cannot be migrated**.  
-      These widgets will need to be made again from scratch in the new dashboard:
+Features available in 9.1
+-------------------------
 
-      - **Map Widget**
-      - **Crosstab Widget** (replaced by the new **Pivot Widget**)
+The following options extend the widget configuration described above.
+
+Dynamic titles
+~~~~~~~~~~~~~~
+
+In the widget's **Settings** > **Style** > **Title**, enable the title and enter
+its text. Use the dynamic value action to insert an analytical driver or a
+Dashboard variable. The placeholders are ``$P{driver}`` and ``$V{variable}``.
+For example, ``Sales for $P{year} - $V{region}`` displays the current values.
+Check the title after changing the corresponding input and save the Dashboard.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-dynamic-title.png
+
+   A widget title containing a driver and a variable.
+
+Locking widget positions
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Authorized editors can choose **Lock all widgets** or **Unlock all widgets**
+from the Dashboard toolbar menu. This controls moving and resizing widgets;
+selection locks control data filters separately.
+
+Dynamic table columns
+~~~~~~~~~~~~~~~~~~~~~
+
+1. In a Table widget's **Data** section, choose **Add Dynamic Columns**.
+2. Select the dataset supplying the list of columns to display.
+3. Map its column-name field to the technical names in the widget's main
+   dataset. Match the names exactly, including case.
+4. Optionally map an order field to control display order. Otherwise the source
+   row order is used.
+5. Confirm, inspect the resulting columns and save the widget and Dashboard.
+
+For example, a source dataset returning ``JAN_SALES`` and ``FEB_SALES`` can
+choose these fields from a main dataset containing twelve monthly sales columns.
+Unmatched names are ignored; existing columns are skipped rather than duplicated.
+
+In **Settings** > **Visualization**, column visibility conditions can use a
+Dashboard variable. Select the target columns, variable, comparison and value;
+check both the displayed columns and summary settings. Table search can use
+column aliases, so readers can search the labels shown in the table.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-dynamic-columns.png
+
+   Mapping a column source and configuring variable-driven visibility.
+
+Pivot configuration
+~~~~~~~~~~~~~~~~~~~
+
+Choose row fields, column fields, measures and their aggregations in the Pivot
+editor. Configure summaries and totals for the intended layout. Where the
+selected Pivot editor offers measure-as-attribute behavior, use it to place
+measures as categories. Check the result with several measures and the required
+summary settings before saving.
+
+Map visualization wizard
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create a Map widget, add its data and open the layer visualization wizard.
+Choose a visualization type first, then configure its data connection. Bind
+coordinates or the geographic join fields to the matching dataset columns.
+Configure the relevant polygon or marker styles, colors, filters, aliases,
+legend and tooltip precision. Preview the map with several values, apply the
+configuration and save the Dashboard.
+
+The Map widget is distinct from a standalone GIS document. A migrated Cockpit
+map must be rebuilt in the Dashboard Map editor.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-map-wizard.png
+
+   Map wizard: visualization type and data connection.
+
+Dataset-specific active selections
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add an **Active selections** widget and choose whether it should display all
+Dashboard selections or selections for a specific dataset. Use this to place
+filter summaries next to the widgets they describe. Test selections across
+associated datasets and retain the intended locked filters.
+
+Export names and spreadsheet output
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In Dashboard general settings, open the menu and widget options and enter the
+**Dashboard export file name**. It accepts driver and variable placeholders;
+for example, ``Sales_$P{year}_$V{region}``.
+
+In a widget's export configuration, enable Excel export and set the **XLSX
+sheet name** when needed. Check the generated workbook after changing titles
+and variables. Chart spreadsheet exports support drill-down data; PDF table
+settings include portrait, landscape and custom dimensions. Export commands and
+formats depend on the widget type, edition and installed export services.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-export-options.png
+
+   Dashboard export filename and widget worksheet settings.

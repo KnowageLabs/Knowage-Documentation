@@ -1,13 +1,18 @@
 Create Advanced Data Analysis
 ========================================================================================================================
 
+Open **Modules** > **Catalogs** > **Functions Catalog** to maintain reusable
+functions. A configured Python service and the libraries used by the script
+are required. Preview the function with representative input before exposing
+its output in a document.
+
 Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making and business strategies. In particular, Knowage **Data Mining Engine** integrates Python scripting capabilities.
 
 Thanks to this functionality, it is possible to execute Python scripts in an interactive way and enrich traditional datasets with new information. This means that it allows users to perform statistical or data mining analysis on different Knowage datasets.
 
 The data scientists can thus integrate its own algorithm within Knowage and deliver their output to the end user, together with new advanced visualization options useful to discover meaningful insights hidden in the data.
 
-The Catalog Function features leverage on the Python Engine. To understand how to install and configure it, please refer to the `Installation Manual <https://knowage-suite.readthedocs.io/en/master/installation-guide/python-installation.html>`__
+The Catalog Function features leverage on the Python Engine. To understand how to install and configure it, please refer to the :doc:`Python installation </chapter_5/installation/python-installation>`
 
 Functions Catalog
 ------------------------------------------------------------------------------------------------------------------------
@@ -15,14 +20,14 @@ Functions Catalog
 In this section we will see how to explore and handle the **Functions** framework., while in *Use a function inside documents* we will see how to use functions.
 First click on the **Functions** menu under the **Catalogs** section from the Knowage main page as shown below.
 
-.. figure:: media/menu_catalogo.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-menu-catalogo.png
 
     Functions Catalog from Knowage menu.
 
 You will enter a page like the one shown in figure below.
 
 .. _functioncatalinterf:
-.. figure:: media/interfaccia_catalogo.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-interfaccia-catalogo.png
 
    Functions Catalog interface.
 
@@ -64,7 +69,7 @@ A preview of the function can be executed using the icon |image417| which opens 
 To create a new function an admin user must click on the “Plus” icon available at the top right corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.
 
 .. _creatingnewfunct:
-.. figure:: media/image404.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-image404.png
 
     Creating a new function.
 
@@ -78,13 +83,13 @@ The Input tab
 
 As shown in the following figure, the function admits two kinds of input: *columns* and *variables*.
 
-.. figure:: media/function_input_tab.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-function-input-tab.png
 
     Input tab.
 
 In the “Column” instance the function takes input columns that will be referenced inside the script. These columns are generic, the user must only specify their type and the name he later wants to use inside the script to access that specific column.
 
-.. figure:: media/function_input_tab_column.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-function-input-tab-column.png
 
     The dataset input of the function settings.
 
@@ -95,7 +100,7 @@ The Script tab
 
 The script tab is where an expert user defines the function through the usage of datamining languages (such as Python), as shown in Figure below.
 
-.. figure:: media/function_script_tab.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-function-script-tab.png
 
     The script tab.
 
@@ -116,7 +121,7 @@ To reference one specific column users must use the placeholder *${column_name}*
 
 The script will have to produce as output one or more *pandas.Series* variables and will store them inside the corresponding output placeholders. The following is an example of function template.
 
-.. figure:: media/catalog_function_example_script.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-catalog-function-example-script.png
 
     Function template example.
 
@@ -125,7 +130,7 @@ The Output tab
 
 Finally it is important to define what kind of outputs the function has produced, according to the script generated in the previous tab. Using the “Output“ tab shown below, you must specify:
 
-.. figure:: media/function_output_tab.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-function-output-tab.png
 
     Output tab.
 
@@ -138,54 +143,52 @@ Use a function inside documents
 
 Now that functions have been created, they must be used inside documents. In this section we will go through all the steps that allow users to execute a function with a specific dataset.
 This works both for the function preview and for the function used inside cockpits.
-Depending on the scenario, you will have two different dialogs. 
+Depending on the scenario, you will have two different dialogs.
 
 When you are previewing the output of a function, you need to select the dataset you want to use to perform the preview. Therefore on the left card you will be able to select a dataset among the available ones. If the dataset has parameters you will be asked to insert values.
 
-.. figure:: media/catalog_function_preview_interface.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-catalog-function-preview-interface.png
 
     Preview interface.
-	
+
 Instead, when you are creating a new widget that uses a function, you will need to click on the *Add function* link to access the configurator.
 
-.. figure:: media/catalog_function_usefunction_widget.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-catalog-function-usefunction-widget.png
 
     Use a function in a widget.
-	
+
 .. warning::
     **You cannot use more than one function in the same widget**
 
          If you try do so you will get an exception.
-		 
+
 .. note::
     **Functions are available only in some widgets**
-	
+
 		Table, crosstable, chart and custom chart.
-	
+
 If you are using a function inside a widget it means that you have already selected the dataset you want to use. Therefore on the left card you will be able to select a function among the available ones.
 
-.. figure:: media/catalog_function_widget_interface.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-catalog-function-widget-interface.png
 
     Catalog function interface in widgets.
-	
+
 From this point forward the rest of the configuration is identical for both widget and preview.
-The first thing that you have to do is to bind the input columns of the function with the columns 
+The first thing that you have to do is to bind the input columns of the function with the columns
 coming from the selected dataset.
-	
+
 The below image shows an example of a Logarithm function inside a document.
 Into the specific we are going to add a new column that will be the logarithm of a value of a specific column that already exists from the dataset.
 
-.. figure:: media/catalog_logarith_function.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-catalog-logarith-function.png
 
     Binding a dataset column to the function.
 
 You already have to specify the Python environment and afterwards click the *SAVE* button to add the new logarithm column.
 
 
-.. figure:: media/edit_logarith_function.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datamining-index-edit-logarith-function.png
 
     Edit the Logarithm function
 
 If you save the widget, the outcome shows the new column added to the widget.
-
-

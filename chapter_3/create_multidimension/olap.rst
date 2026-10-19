@@ -1,15 +1,20 @@
 OLAP cubes
 ########################################################################################################################
 
+Open a published OLAP document to browse the cube using the permissions and
+parameters assigned to your role. Administrators and authors configure the
+Mondrian schema and the OLAP document; readers use the pivot and its
+navigation controls to explore measures and dimensions.
+
 OLAP cubes enable users to analyse multidimensional data interactively from multiple perspectives.
 An OLAP consists of some basic analytical operations such as slice and dice, roll up, drill down and pivot.
 
 Steps for building an OLAP cube
 ------------------------------------------------------------------------------------------------------------------------
 
-Let's start by analyzing an OLAP document already created as shown below. 
+Let's start by analyzing an OLAP document already created as shown below.
 
-.. figure:: media/image135.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image135.png
 
       Exploring an existing OLAP document.
 
@@ -20,17 +25,17 @@ Filter panel
 
 Once the document is executed, the central area of the window contains the table whose measures are aggregated on dimensions. At the top of this area, panels are available to configure filters on attributes. We see in the following figure that the filter panel is made up of **Filter cards**. Here you can find the cube dimensions and their hierarchies as defined in the OLAP schema by the developer.
 
-.. figure:: media/image136.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image136.png
 
     The filter panel.
 
 Filter cards
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Filter cards can stay on the filter panel or be placed on the column axis. 
+Filter cards can stay on the filter panel or be placed on the column axis.
 You can move them from the filter panel to the axis or viceversa by dragging and dropping them from one place to the other.
 
-.. figure:: media/image137.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image137.png
 
     The filter card inside the filter panel.
 
@@ -50,7 +55,7 @@ Considering the next figure, we can see that a filter card is made up of:
 -  a filter icon (when a filter is selected the icon is red) (c)+(d).
 
 .. _featuresoffiltcard:
-.. figure:: media/image13839.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image13839.png
 
     Features of a filter card.
 
@@ -72,16 +77,16 @@ Referring to the following figure, the axes panel consists of the following item
 -  icon for hierarchy order (e).
 
 .. _axespanelfeat:
-.. figure:: media/image140.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image140.png
 
     Axes panel features.
 
 Pivot table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Pivot table is the central part of the OLAP page. In figure below is shown an example. 
+The Pivot table is the central part of the OLAP page. In figure below is shown an example.
 
-.. figure:: media/image141.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image141.png
 
     Pivot table.
 
@@ -105,7 +110,7 @@ Referring to next figure, Pivot table consists of:
 -  links for cross navigation (only if enabled and configured by the developer) (e).
 
 .. _pivottablefeat:
-.. figure:: media/image142a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image142a.png
 
     Pivot table features.
 
@@ -115,7 +120,7 @@ Side bar
 You can open the side bar by clicking on the icon positioned on the top right side of the page (see next figure). Side bar will be shown on the right side (see *Side bar* figure).
 
 .. _openthesidebar:
-.. figure:: media/image143.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image143.png
 
     Open the side bar.
 
@@ -126,7 +131,7 @@ Side bar is used to:
 -  call dialogs and functionalities that effect the pivot table.
 
 .. _sidebar:
-.. figure:: media/image144.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image144.png
 
     Side bar.
 
@@ -134,11 +139,11 @@ The side bar shows the **Settings**. This area let you customize the Olap layout
 
 -  drill options (a),
 -  OLAP functions (b),
--  table functions (c), 
+-  table functions (c),
 -  what if (if it is a what-if document).
 
 .. _sidebarmenu:
-.. figure:: media/image145a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image145a.png
 
     Side bar Menu.
 
@@ -150,7 +155,7 @@ We start introducing the interface and leave the description on how they works t
 -  drill through.
 
 .. _drilltypes:
-.. figure:: media/image146.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image146.png
 
     Drill types.
 
@@ -161,7 +166,7 @@ Meanwhile, referring to the following figure, the OLAP functions consist of:
 -  enable cross navigation (if enabled and configured by the developer) (c).
 
 .. _olapfunctions:
-.. figure:: media/image147a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image147a.png
 
     OLAP functions.
 
@@ -175,21 +180,21 @@ Referring to figure below, table functions consist of:
 -  save customized view (f).
 
 .. _tablefunctions1:
-.. figure:: media/image148a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image148a.png
 
     Table functions.
 
 Referring to next figure, if the document is a what-if the what if section consists of:
 
 -  lock/unlock model (a),
--  save as new version (b), 
+-  save as new version (b),
 -  undo (c),
 -  delete versions (d),
--  output wizard (e), 
+-  output wizard (e),
 -  select an algotithm (f).
 
 .. _tablefunctions2:
-.. figure:: media/image149a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image149a.png
 
     What if.
 
@@ -203,13 +208,13 @@ As we already told, the user can easily move a dimension from the filter bar to 
 
 Let us suppose we want to move a dimension from the filter panel to the columns axis. The steps are summarized in figure below
 
-.. figure:: media/image150.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image150.png
 
     Move a hierarchy to the columns axis.
 
 Vice versa, to move back the dimension from the columns axis to the filter panel the user must simply drag and drop the dimension from one place to the other as in the following figure.
 
-.. figure:: media/image151.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image151.png
 
     Move a dimension from the columns axis to the filter panel.
 
@@ -223,7 +228,7 @@ To swap axes the user should click on the icon |image151|. The user will get the
 .. |image151| image:: media/image152.png
    :width: 30
 
-.. figure:: media/image153.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image153.png
 
     Swap axes.
 
@@ -232,14 +237,14 @@ Selecting different hierarchies on dimension
 
 If an OLAP schema is defined, the user can choose different hierarchies of the same dimension. The icon for opening the dialog is positioned on the left of the filter card (if the dimension has more than one hierarchy). Select the hierarchies icon underlined below.
 
-.. figure:: media/image154.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image154.png
 
     Hierarchies icon.
 
 A pop up will be displayed. The following figure shows its characteristics. Here it is possible to change the hierachy through the combo-box and then save.
 
 .. _hierarchiesdialogpopup:
-.. figure:: media/image155.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image155.png
 
     Hierarchies dialog pop up.
 
@@ -247,19 +252,19 @@ After selecting the hierarchy and saving user’s choice, that hierarchy will be
 
 If the user re-opens the dialog window, he/she sees the selected hieararchies and has the chance to change it if needed to, as shown below.
 
-.. figure:: media/image1565758.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image1565758.png
 
     Changing the hierarchies.
 
 Below an example of the output in case the hierarchy *All Customers* is selected and in case the hierarchy *Customers by segment* is selected.
 
 .. _timehierarchieshowsdays:
-.. figure:: media/image159.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image159.png
 
      All Customers hierachy: the table shows customers by state.
 
 .. _timeweeklyhierarchyshowsweek:
-.. figure:: media/image160.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image160.png
 
     Customers by segment hierachy: the table shows customers by segment.
 
@@ -271,15 +276,15 @@ The slicing operation consists in the analysis of a subset of a multi-dimensiona
 The figure below shows the slicer options panel consisting of all those items selected and used in the pivot table.
 
 .. _dialogforslicerchoosing:
-.. figure:: media/image161_a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image161-a.png
 
     Choosing a slicer.
 
-To unlock the whole member tree and define a new slicing just click  the *Add* button. 
+To unlock the whole member tree and define a new slicing just click  the *Add* button.
 As you can see in the following figure, here it is possible to navigate the member tree, search for a specific value in the member tree, clear all the selections and apply a new one.
 
-.. _dialogforslicerchoosing:
-.. figure:: media/image161_b.png
+.. _dialogforslicerchoosing-result:
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image161-b.png
 
     Defining a new slicing.
 
@@ -287,19 +292,19 @@ In particular, it is possible to search for a member value in two ways:
 
 1. by browsing the member tree
 
-.. figure:: media/image162-1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image162-1.png
 
    Browsing the member tree.
 
 2. by typing the member’s name or part of it in the input field.
 
-.. figure:: media/image16364.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image16364.png
 
    Using the research box.
 
 Then check the values and click the *Apply* button to save the selection. These choices will affect the pivot table. See figure below.
 
-.. figure:: media/image165.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image165.png
 
    Results for slicing operation.
 
@@ -308,12 +313,12 @@ Filtering
 
 To filter dimension members in a pivot table, the user should click on the funnel icon located on the right side of dimension’s filter card placed in the filter area.
 
-The procedure to search a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog. 
-The pop up interface is the one shown below. 
-After selecting a member, you should click on the *Apply* button to filter the values in the pivot. The pivot table will then display the changes. 
+The procedure to search a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog.
+The pop up interface is the one shown below.
+After selecting a member, you should click on the *Apply* button to filter the values in the pivot. The pivot table will then display the changes.
 Otherwise click the *Cancel* button to discard changes.
 
-.. figure:: media/image166_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image166-1.png
 
     Filter dialog.
 
@@ -325,19 +330,19 @@ User can choose between different drill types by clicking on one of the three bu
 
 1. **Position**: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with child members of a member. See below.
 
-.. figure:: media/image168.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image168.png
 
      “Position” drill down.
 
 2. **Member**: if the user wants to perform drill operation not only on one member per time but on all members of the same name and level at the same time it is needed to select member drill type. See below.
 
-.. figure:: media/image169.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image169.png
 
     “Member” drill down.
 
 3. **Replace**: this option lets the user replace the parent member with his child member during drill down operation. To drill up the user should click on the arrow icon next to the dimension name on which to perform operation. See figure below.
 
-.. figure:: media/image170.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image170.png
 
     “Replace” drill down.
 
@@ -346,7 +351,7 @@ Drill through
 
 To perform drill through operation the user needs to click on the corresponding button in the side bar. Then clicking on the magnifying glass button in one of the pivot cell a dialog will open with results (this pop up could take some time to open).
 
-.. figure:: media/image171.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image171.png
 
     Drill thorugh option.
 
@@ -361,11 +366,11 @@ In particular, referring to the next figure, drill though dialog consists of:
 -   a clear all button.
 
 .. _drillthoroughwindow:
-.. figure:: media/image172a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image172a.png
 
     Drill thorugh window.
 
-Here you can choose the level of detail with which data will be displayed through the hierachy menu. 
+Here you can choose the level of detail with which data will be displayed through the hierachy menu.
 The steps to follow are:
 
 1. clicking on a hierarchy in hierarchy menu,
@@ -373,7 +378,7 @@ The steps to follow are:
 2. checking the checkbox of the level,
 
 .. _checkboxlevel:
-.. figure:: media/image172b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image172b.png
 
     Checkbox of the level.
 
@@ -384,7 +389,7 @@ You can also select the maximum rows to load by choosing one of the options in t
 Refreshing model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To refresh a loaded model just click on the *Refresh* button available in the side bar panel. 
+To refresh a loaded model just click on the *Refresh* button available in the side bar panel.
 This action will clear the cash, load the pivot table and the rest of the data again.
 
 
@@ -393,7 +398,7 @@ Showing MDX
 
 To show the current MDX query you should The specific *Show mdx query* button of the side bar. Figure below shows an example.
 
-.. figure:: media/image173.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image173.png
 
      Showing MDX query example.
 
@@ -402,11 +407,11 @@ Showing parent members
 
 If yoy want to see additional information about members shown in the pivot table (for example: member’s hierarchy, level or parent member) he should click on show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in the following two figures.
 
-.. figure:: media/image176.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image176.png
 
     Pivot table without the parent members mode.
 
-.. figure:: media/image177.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image177.png
 
     Pivot table after the parent members selection.
 
@@ -415,7 +420,7 @@ Hiding/showing spans
 
 To hide or show spans the user should click on show/hide spans button in the side bar. The result will be visible in pivot table as in figure below.
 
-.. figure:: media/image178.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image178.png
 
     Hide/show spans.
 
@@ -424,43 +429,43 @@ Showing properties
 
 In OLAP schema the XML member properties, if configured, is represented as part of pivot table where property values are placed in rows and columns. To get these values, the user needs to click on show      properties button in the side bar. Results will be shown in the pivot table;
 
-.. figure:: media/image179.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image179.png
 
     Show properties.
 
 Suppressing empty colunms/rows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To hide the empty rows and/or colums, if any, you can click the table function *Suppress empty rows/colums* button of the side bar panel. 
+To hide the empty rows and/or colums, if any, you can click the table function *Suppress empty rows/colums* button of the side bar panel.
 An example below.
 
-.. figure:: media/image181.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image181.png
 
     Suppressing empty colunms/rows.
 
 Sorting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To enable members' ordering you click the *Sorting settings* button of the side bar panel. The command for sorting will appear next to the member’s name in the pivot table, as shown below. 
+To enable members' ordering you click the *Sorting settings* button of the side bar panel. The command for sorting will appear next to the member’s name in the pivot table, as shown below.
 
-.. figure:: media/image18283.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image18283.png
 
     Member sorting.
 
-To sort members you have to click on the sorting command (two opposite arrows) available next to each member of the pivot table. Note that the sorting criteria is descending at first execution and it represented by a red down arrow. If the user clicks again on the sorting icon, criteria will change to ascending and the icon becomes an upper green arrow. To remove the sorting, the user just have to click on the icon again. 
+To sort members you have to click on the sorting command (two opposite arrows) available next to each member of the pivot table. Note that the sorting criteria is descending at first execution and it represented by a red down arrow. If the user clicks again on the sorting icon, criteria will change to ascending and the icon becomes an upper green arrow. To remove the sorting, the user just have to click on the icon again.
 
 .. |image179| image:: media/image184.png
    :width: 65
 
-To change the sorting mode you should click the sorting settings button of the side bar. 
-   
-.. figure:: media/image185a.png
+To change the sorting mode you should click the sorting settings button of the side bar.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image185a.png
 
     Sorting settings window.
 
 The available types of sorting are:
 
--  no sorting (it is the default); 
+-  no sorting (it is the default);
 -  basic, it is the standard ascending or descending order according to the column values where the ordering is done;
 -  breaking, it means that the hierarchy will be broken;
 -  count, only the top or last members will be shown in the pivot table; the user can change the number of members shown (by default first or last 10) using the number input field that appears clicking on this type of sorting.
@@ -491,7 +496,7 @@ A new OLAP document
 To create an OLAP analytical document the following steps are needed:
 
 - schema modelling;
-- catalogue configuration; 
+- catalogue configuration;
 - OLAP cube template building;
 - analytical document creation.
 
@@ -501,7 +506,7 @@ Schema modelling
 The very first step for a multi-dimensional analysis is to identify the essential information to describe the process/event under analysis and to consider how it is stored and organized in the database. On the basis of these two elements, a mapping process should be performed to create the multi-dimensional model.
 
 .. hint::
-     
+
      **From the relational to the multi-dimensional model**
 
         The logical structure of the database has an impact on the mapping approach to be adopted when creating the multidimensional             model, as well as on query performances.
@@ -511,90 +516,90 @@ If the structure of the relational schema complies with multi-dimensional logics
 .. code-block:: xml
    :linenos:
    :caption: Mondrian schema example
-    
-        <?xml version="1.0"?>                                   
-         <Schema name="FoodMart">     
-               <!-- Shared dimensions -->   
-               <Dimension name="Customers"> 
 
-                  <Hierarchy hasAll="true" allMemberName="All Customers"             
-                             primaryKey=" customer_id">  
+        <?xml version="1.0"?>
+         <Schema name="FoodMart">
+               <!-- Shared dimensions -->
+               <Dimension name="Customers">
 
-                      <Table name="customer"/>                                           
-                      <Level name="Country" column="country" uniqueMembers="true"/>      
-                      <Level name="State Province" column="state_province"               
-                             uniqueMembers="true"/>                                             
-                      <Level name="City" column="city" uniqueMembers="false"/>           
+                  <Hierarchy hasAll="true" allMemberName="All Customers"
+                             primaryKey=" customer_id">
 
-                  </Hierarchy> ...                                                   
+                      <Table name="customer"/>
+                      <Level name="Country" column="country" uniqueMembers="true"/>
+                      <Level name="State Province" column="state_province"
+                             uniqueMembers="true"/>
+                      <Level name="City" column="city" uniqueMembers="false"/>
 
-               </Dimension> ...                                                      
+                  </Hierarchy> ...
 
-               <!-- Cubes -->                                                        
-               <Cube name="Sales">                                                   
+               </Dimension> ...
 
-                  <Table name="sales_fact_1998"/>                                    
+               <!-- Cubes -->
+               <Cube name="Sales">
 
-                  <DimensionUsage name="Customers" source="Customers"                
-                                  foreignKey="customer_id" /> ...                                                             
+                  <Table name="sales_fact_1998"/>
 
-                  <!-- Private dimensions -->                                        
+                  <DimensionUsage name="Customers" source="Customers"
+                                  foreignKey="customer_id" /> ...
 
-                  <Dimension name="Promotion Media" foreignKey="promotion_id">       
+                  <!-- Private dimensions -->
 
-                      <Hierarchy hasAll="true" allMemberName="All Media"                 
-                                 primaryKey="promotion_id"> 
-                          <Table name="promotion"/>          
-                          <Level name="Media Type" column="media_type" uniqueMembers="true"/>   
-                      </Hierarchy>                                                       
+                  <Dimension name="Promotion Media" foreignKey="promotion_id">
 
-                  </Dimension> ...                                                   
+                      <Hierarchy hasAll="true" allMemberName="All Media"
+                                 primaryKey="promotion_id">
+                          <Table name="promotion"/>
+                          <Level name="Media Type" column="media_type" uniqueMembers="true"/>
+                      </Hierarchy>
 
-                  <!-- basic measures-->                                             
+                  </Dimension> ...
 
-                  <Measure name="Unit Sales" column="unit_sales" aggregator="sum"    
-                           formatString="#,###.00"/>                                                       
+                  <!-- basic measures-->
 
-                  <Measure name="Store Cost" column="store_cost" aggregator="sum"    
-                           formatString= "#,###.00"/>                                         
+                  <Measure name="Unit Sales" column="unit_sales" aggregator="sum"
+                           formatString="#,###.00"/>
 
-                  <Measure name="Store Sales" column="store_sales" aggregator="sum"  
-                           formatString="#,###.00"/>                                          
-                  ...                                                                
+                  <Measure name="Store Cost" column="store_cost" aggregator="sum"
+                           formatString= "#,###.00"/>
 
-                  <!-- derived measures-->                                           
+                  <Measure name="Store Sales" column="store_sales" aggregator="sum"
+                           formatString="#,###.00"/>
+                  ...
 
-                  <CalculatedMember name="Profit" dimension="Measures">              
-                      <Formula>        
-                           [Measures].[Store Sales] - [Measures].[Store Cost]  
-                      </Formula>                                                         
-                      <CalculatedMemberProperty name="format_string" value="$#,##0.00"/> 
-                  </CalculatedMember>                                                
+                  <!-- derived measures-->
 
-               </Cube> 
-            ...      
-        </Schema> 
+                  <CalculatedMember name="Profit" dimension="Measures">
+                      <Formula>
+                           [Measures].[Store Sales] - [Measures].[Store Cost]
+                      </Formula>
+                      <CalculatedMemberProperty name="format_string" value="$#,##0.00"/>
+                  </CalculatedMember>
+
+               </Cube>
+            ...
+        </Schema>
 
 Each mapping file contains one schema only, as well as multiple dimensions and cubes. Cubes include multiple dimensions and measures. Dimensions include multiple hierarchies and levels. Measures can be either primitive, i.e., bound to single columns of the fact table, or calculated, i.e., derived from calculation formulas that are defined in the schema. The schema also contains links between the elements of the OLAP model and the entities of the physical model: for example, <table> sets a link between a cube and its dimensions, while the attributes primaryKey and foreignKey reference integrity constraints of the star schema.
 
 .. note::
       **Mondrian**
-         
+
          For a detailed explanation of Mondrian schemas, please refer to the documentation available at the official project webpage: http://mondrian.pentaho.com/documentation.
-         
-         
+
+
 Engine catalogue configuration
 +++++++++++++++++++++++++++++++
 
-To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to **Catalogs > Mondrian schemas** in the Knowage menu, as shown below. 
+To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to **Catalogs > Mondrian schemas** in the Knowage menu, as shown below.
 
-.. figure:: media/image225.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image225.png
 
     Mondrian schemas menu item.
 
-Here you can find the list of already created mondrian schemas and by clicking the *Plus* icon you can define a new one uploading your XML schema file. A new window will open where you have to choose a **Name**, an optional **Description** and to upload your XML file, as you can see in figure below. 
+Here you can find the list of already created mondrian schemas and by clicking the *Plus* icon you can define a new one uploading your XML schema file. A new window will open where you have to choose a **Name**, an optional **Description** and to upload your XML file, as you can see in figure below.
 
-.. figure:: media/image226.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image226.png
 
     Creating a new mondrian schema.
 
@@ -609,39 +614,39 @@ Once the cube has been created, you need to build a template which maps the cube
 .. code-block:: xml
    :linenos:
    :caption: Mapping template example
-    
-     <?xml version="1.0" encoding="UTF-8"?> 
-     <olap>                                 
-        <!-- schema configuration -->       
-        <cube reference="FoodMart"/>       
 
-        <MDXMondrianQuery>                                    
-            SELECT {[Measures].[Unit Sales]} ON COLUMNS           
-            , {[Region].[All Regions]} ON ROWS                    
-            FROM [Sales]                                          
-            WHERE [Product].[All Products].[Drink]                
-        </MDXMondrianQuery>        
+     <?xml version="1.0" encoding="UTF-8"?>
+     <olap>
+        <!-- schema configuration -->
+        <cube reference="FoodMart"/>
 
-        <!-- query configuration -->        
-        <MDXquery>  
-            SELECT {[Measures].[Unit Sales]} ON COLUMNS           
-            , {[Region].[All Regions]} ON ROWS                    
-            FROM [Sales]                                          
-            WHERE [Product].[All Products].[${family}]            
-            <parameter name="family" as="family"/>                
-        </MDXquery>                                           
+        <MDXMondrianQuery>
+            SELECT {[Measures].[Unit Sales]} ON COLUMNS
+            , {[Region].[All Regions]} ON ROWS
+            FROM [Sales]
+            WHERE [Product].[All Products].[Drink]
+        </MDXMondrianQuery>
 
-        <!-- toolbar configuration -->                        
-        <TOOLBAR>                                             
-            <BUTTON_MDX visible="true" menu="false" />            
-            <BUTTON_FATHER_MEMBERS visible="true" menu="false"/>  
-            <BUTTON_HIDE_SPANS visible="true" menu="false"/>      
-            <BUTTON_SHOW_PROPERTIES visible="true" menu="false"/> 
-            <BUTTON_HIDE_EMPTY visible="true" menu="false" />     
-            <BUTTON_FLUSH_CACHE visible="true" menu="false" />         
-        </TOOLBAR>                                            
-                                      
-     </olap>                                                  
+        <!-- query configuration -->
+        <MDXquery>
+            SELECT {[Measures].[Unit Sales]} ON COLUMNS
+            , {[Region].[All Regions]} ON ROWS
+            FROM [Sales]
+            WHERE [Product].[All Products].[${family}]
+            <parameter name="family" as="family"/>
+        </MDXquery>
+
+        <!-- toolbar configuration -->
+        <TOOLBAR>
+            <BUTTON_MDX visible="true" menu="false" />
+            <BUTTON_FATHER_MEMBERS visible="true" menu="false"/>
+            <BUTTON_HIDE_SPANS visible="true" menu="false"/>
+            <BUTTON_SHOW_PROPERTIES visible="true" menu="false"/>
+            <BUTTON_HIDE_EMPTY visible="true" menu="false" />
+            <BUTTON_FLUSH_CACHE visible="true" menu="false" />
+        </TOOLBAR>
+
+     </olap>
 
 An explanation of different sections of Mapping template example follows.
 
@@ -653,7 +658,7 @@ An explanation of different sections of Mapping template example follows.
 .. code-block:: xml
    :linenos:
    :caption: Menu configurable options
-    
+
         <BUTTON_DRILL_THROUGH visible="true"/>
         <BUTTON_MDX visible="true"/>
         <BUTTON_FATHER_MEMBERS visible="true"/>
@@ -662,7 +667,7 @@ An explanation of different sections of Mapping template example follows.
         <BUTTON_SHOW_PROPERTIES visible="true"/>
         <BUTTON_HIDE_EMPTY visible="true"/>
         <BUTTON_FLUSH_CACHE visible="true"/>
-        <!-- toolbar configuration for what-if documents: --> 
+        <!-- toolbar configuration for what-if documents: -->
         <BUTTON_SAVE_NEW visible="true"/>
         <BUTTON_UNDO visible="true"/>
         <BUTTON_VERSION_MANAGER visible="true"/>
@@ -670,17 +675,17 @@ An explanation of different sections of Mapping template example follows.
         <BUTTON_SAVE_SUBOBJECT clicked="false" visible="true"/>
         <BUTTON_EDITABLE_EXCEL_EXPORT clicked="false" visible="true"/>
         <BUTTON_ALGORITHMS clicked="false" visible="true"/>
-  
+
 
 Creating the analytical document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have the template ready you can create the OLAP document on Knowage Server.
 
-To create a new OLAP document, click on the plus button in the **Document Broswer** area and then choose “Generic document”. Filling in the mandatory fields: select a Label and a Name, select **On-Line Analytical Processing** as Type and **OLAP Engine** as Engine, add the Data Source from which the data comes from and the State of the document. Finally, upload the XML template developed in the previous section and click on save. 
+To create a new OLAP document, click on the plus button in the **Document Broswer** area and then choose “Generic document”. Filling in the mandatory fields: select a Label and a Name, select **On-Line Analytical Processing** as Type and **OLAP Engine** as Engine, add the Data Source from which the data comes from and the State of the document. Finally, upload the XML template developed in the previous section and click on save.
 
 .. _olapdocserver:
-.. figure:: media/image195.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image195.png
 
     Creating an OLAP document.
 
@@ -689,43 +694,43 @@ You will see the document in the functionality (folder) you selected.
 OLAP Designer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage Server is also endowed of an efficient OLAP designer which avoid the user to edit manually the XML-based template that we discussed on in Development of an OLAP document. We will therefore describe here all features of this functionality. 
+Knowage Server is also endowed of an efficient OLAP designer which avoid the user to edit manually the XML-based template that we discussed on in Development of an OLAP document. We will therefore describe here all features of this functionality.
 
 The user needs to have a functioning Modrian schema to start the work with. As we have already seen in the previous sections, select **Mondrian Schemas** to check the available Mondrian schemas on server. It is mandatory that the chosen Mondrian schema has no parameters applied.
 
 .. warning::
       **Mondrian schema for OLAP designer**
-         
+
          If you want to use the designer the Mondrian schema must not be filtered thorough any parameter or profile attribute.
 
 The catalog with the list of all the *Mondrian Schemas* opens as shown below .
 
-.. figure:: media/image196.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image196.png
 
     Mondrian Schema Catalog.
 
-From the **Document Browser**, click on the *Plus* icon at the top right corner of the page and choose *Generic document*. 
-Fill in the mandatory information such as *Name* and *Label*, select *On-Line Analytical Processing* as Type of document and *OLAP Engine* as Engine. Add the data source and the state. 
+From the **Document Browser**, click on the *Plus* icon at the top right corner of the page and choose *Generic document*.
+Fill in the mandatory information such as *Name* and *Label*, select *On-Line Analytical Processing* as Type of document and *OLAP Engine* as Engine. Add the data source and the state.
 Remember *to save* before clicking the **Open Designer** link.
 
-At this point choose Mondrian as *Template*, the *Mondrian Schema* and finally the *cube*. See below. 
+At this point choose Mondrian as *Template*, the *Mondrian Schema* and finally the *cube*. See below.
 
 .. _olapcoreconfig:
-.. figure:: media/image198_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image198-1.png
 
     OLAP core configuration.
 
-Click the *Start* link. The image below shows the outcome. 
+Click the *Start* link. The image below shows the outcome.
 
 .. _definingolaptempl:
-.. figure:: media/image199.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image199.png
 
     Defining OLAP template.
 
-Aaccording to the requirements set which fields ar axis or filter cards. Please refer to the *Functionalities* section of this documention for the terminology.  
+Aaccording to the requirements set which fields ar axis or filter cards. Please refer to the *Functionalities* section of this documention for the terminology.
 
 .. _definingolaptempl2:
-.. figure:: media/image200.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image200.png
 
     Defining OLAP template.
 
@@ -734,31 +739,31 @@ The *Setting* panel contains:
     - Drilling functionalities as *Position, Member, Replace*
     - OLAP functions as *Preview, Button visibility*
 
-Please refer to the *Functionalities* chapter to recall the effects of the different drills: the one selected in the template will be the default used in the OLAP document. 
+Please refer to the *Functionalities* chapter to recall the effects of the different drills: the one selected in the template will be the default used in the OLAP document.
 
 To display the *MDX query* click the *Preview* button.
 
-.. figure:: media/image200_2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image200-2.png
 
     Preview in OLAP.
 
 To set the visibity on the buttons click the *Configure Button Visibility* as shown below.
 Through the buttons wizard you can decide which permissions are granted to the end-user.
 
-.. figure:: media/image200_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image200-1.png
 
     Visibility on buttons.
 
 The image below shows an example with another OLAP function: *Cross Navigation*.
 
-.. figure:: media/image200_3.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image200-3.png
 
     Enabling the cross navigation - 1
 
 As shown above, by clicking the icon highlighted in the image, you can enable a cross navigation previously configured by choosing the current olap document as source.
 and another document as target.
 
-.. figure:: media/image200_4.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image200-4.png
 
     Enabling the cross navigation - 2
 
@@ -779,49 +784,49 @@ To set the filter, which is based on the attribute (or attributes) in the user�
 .. code-block:: xml
    :linenos:
    :caption: Cube level profilation example.
-    
-        <?xml version="1.0"?>                                                 
-        <Schema name="FoodMartProfiled"> 
-        ....                                 
-         <Cube name="Sales_profiled"> <Table name="sales_fact_1998"/> 
-         ...      
-           <!-- profiled dimension -->                                        
-           <Dimension name="Product" foreignKey="product_id">                 
-            <Hierarchy hasAll="true" allMemberName="All Products" primaryKey="product_id">                                   
-                <View alias="Product">                                             
-                  <SQL dialect="generic">                                            
-                    SELECT pc.product_family as product_family, p.product_id as        
-                    product_id,                                                        
-                    p.product_name as product_name,                                    
-                    p.brand_name as brand_name, pc.product_subcategory as              
-                    product_subcategory, pc.product_category as product_category,      
-                    pc.product_department as product_department                        
-                    FROM product as p                                                  
-                    JOIN product_class as pc ON p.product_class_id = pc.               
-                    product_class_id                                                   
-                    WHERE and pc.product_family = '${family}' 
-                  </SQL>                   
-                </View>                                                            
 
-                <Level name="Product Family" column="product_family"               
-                       uniqueMembers="false" />                                                                 
-                <Level name="Product Department" column="product_department"       
-                       uniqueMembers="false"/>                                                          
-                <Level name="Product Category" column="product_category"           
-                      uniqueMembers=" false"/>                                           
-                <Level name="Product Subcategory" column="product_subcategory"     
-                       uniqueMembers="false"/>                                            
-                <Level name="Brand Name" column="brand_name"                       
-                       uniqueMembers="false"/>                                            
-                <Level name="Product Name" column="product_name"                   
-                       uniqueMembers="true"/>                                             
-            </Hierarchy>                                                       
-           </Dimension>                                                       
-         </Cube> 
-         ...                                       
-        </Schema> 
+        <?xml version="1.0"?>
+        <Schema name="FoodMartProfiled">
+        ....
+         <Cube name="Sales_profiled"> <Table name="sales_fact_1998"/>
+         ...
+           <!-- profiled dimension -->
+           <Dimension name="Product" foreignKey="product_id">
+            <Hierarchy hasAll="true" allMemberName="All Products" primaryKey="product_id">
+                <View alias="Product">
+                  <SQL dialect="generic">
+                    SELECT pc.product_family as product_family, p.product_id as
+                    product_id,
+                    p.product_name as product_name,
+                    p.brand_name as brand_name, pc.product_subcategory as
+                    product_subcategory, pc.product_category as product_category,
+                    pc.product_department as product_department
+                    FROM product as p
+                    JOIN product_class as pc ON p.product_class_id = pc.
+                    product_class_id
+                    WHERE and pc.product_family = '${family}'
+                  </SQL>
+                </View>
 
-In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax **pr.product_family = '${family}'**.                         
+                <Level name="Product Family" column="product_family"
+                       uniqueMembers="false" />
+                <Level name="Product Department" column="product_department"
+                       uniqueMembers="false"/>
+                <Level name="Product Category" column="product_category"
+                      uniqueMembers=" false"/>
+                <Level name="Product Subcategory" column="product_subcategory"
+                       uniqueMembers="false"/>
+                <Level name="Brand Name" column="brand_name"
+                       uniqueMembers="false"/>
+                <Level name="Product Name" column="product_name"
+                       uniqueMembers="true"/>
+            </Hierarchy>
+           </Dimension>
+         </Cube>
+         ...
+        </Schema>
+
+In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax **pr.product_family = '${family}'**.
 
 The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.
 
@@ -841,7 +846,7 @@ The cross navigation must be implemented at template level but also at analytica
 
 For OLAP documents it is possible to enable the cross navigation on members or on cells and we will give more details on these two cases in the following.
 
-Generally speaking, the user must modify the template file using the designer to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in *Cross Navigation* section of *Analytical document* chapter of this manual. 
+Generally speaking, the user must modify the template file using the designer to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in *Cross Navigation* section of *Analytical document* chapter of this manual.
 
 Cross navigation on members
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -853,7 +858,7 @@ To activate the cross navigation on a member means that the user can click on a 
 
 Figure below gives an example. Note that you can recognize that the cross navigation is activated when elements are shown blue highlighted and underlined.
 
-.. figure:: media/image212.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image212.png
 
     Cross navigation on member.
 
@@ -862,15 +867,15 @@ If you open the template file you will read instructions similar to the ones rep
 .. code-block:: xml
     :linenos:
     :caption: Syntax used to set cross navigation.
-    
-     <MDXquery> 
-       select {[Measures].[Unit Sales]} ON COLUMNS,               
-       {([Region].[All Regions], [Product].[All Products])} ON ROWS from     
-       [Sales_V]                                                             
-       <clickable name="family" type="From Member" uniqueName="[Product].[Product Family]" >                  
-          <clickParameter name="family" value="{0}"/>                           
-       </clickable>                                                          
-     </MDXquery>                                                           
+
+     <MDXquery>
+       select {[Measures].[Unit Sales]} ON COLUMNS,
+       {([Region].[All Regions], [Product].[All Products])} ON ROWS from
+       [Sales_V]
+       <clickable name="family" type="From Member" uniqueName="[Product].[Product Family]" >
+          <clickParameter name="family" value="{0}"/>
+       </clickable>
+     </MDXquery>
 
 Cross navigation from a cell of the pivot table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -895,24 +900,23 @@ This case is similar to the cross navigation on members except that in this case
         +-----------------------------------------------------------------+-----------------------------------------------------+
         |    [Product].[All Products].[Food].[Snacks].[Candy]             | Food                                                |
         +-----------------------------------------------------------------+-----------------------------------------------------+
- 
+
 
 Let us have a look at the template. Syntax used to set cross navigation shows how to use the cross navigation tag:
 
 .. code-block:: xml
     :linenos:
     :caption: Syntax used to set cross navigation.
-    
-        <CROSS_NAVIGATION>                                                    
-            <PARAMETERS>                                                       
-                <PARAMETER name="family" dimension="Product" hierarchy="[Product]" level="[Product].[Product Family]" /> 
+
+        <CROSS_NAVIGATION>
+            <PARAMETERS>
+                <PARAMETER name="family" dimension="Product" hierarchy="[Product]" level="[Product].[Product Family]" />
                 <PARAMETER name="year" dimension="Time" hierarchy="[Time]" level="[Time].[Year]" />
-            </PARAMETERS>                                                      
-        </CROSS_NAVIGATION>                                                   
+            </PARAMETERS>
+        </CROSS_NAVIGATION>
 
 In order to activate cross navigation on cells the user must click on the correponding button in the side bar, then a green arrow will be desplayed in each cells to show that cross navigation is enabled. User can click on that icon to start cross navigation from a cell.
 
-.. figure:: media/image227.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-multidimension-olap-image227.png
 
     Cross navigation on cells.
-

@@ -4,7 +4,7 @@ Analytical Driver
 An analytical driver (hereafter simply driver or AD) models a concept or a piece of data frequently used as a distinguishing criterion on the global data context. A driver highlights the concepts guiding the analysis, providing a unique representation of them and describing how they are shown and checked according to the end users’ roles. When connected to analytical documents, a driver produces an explicit or implicit parameter used to filter data.
 
 .. _parametrreportbehav:
-.. figure:: media/image39_c.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image39-c.png
 
     Parametric Report.
 
@@ -13,7 +13,7 @@ The Figure above represents a report with two parameters:
 - the Department, a mandatory field, displayed as a lookup and with possible values: Alcoholic Beverages, Baked Goods, Baking Goods and so on;
 - the Age Range, a mandatory field, displayed as list of values and with possible values 0-10, 10-20 and so on.
 
-All these aspects are regulated by the analytical driver behind each parameter. 
+All these aspects are regulated by the analytical driver behind each parameter.
 In particular, each driver provides many *use modes*, defining:
 
 - Who is involved in a specific use mode, in terms of a list of end user roles, considering that a role can be associated to a single use mode only.
@@ -22,7 +22,7 @@ In particular, each driver provides many *use modes*, defining:
 
 In other terms, each use mode refers to an initial visualization method and content (LOV), to one or more validation rules (check) and to one or more end user roles (roles). The logic of a driver is represented in Figure below.
 
-.. figure:: media/image40.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image40.png
 
     Analytical driver schema.
 
@@ -31,7 +31,7 @@ Let’s consider the following example. We need to represent the concept of “p
 - if the user is a call center operator or a user that provides internal support, he can manually write the product family he wants to select. This value will be formally verified (it must be a text) and checked on the product family registry.
 - if the user is a product brand director or an operative secretary, he can choose the value from a preloaded list of all the product   families belonging to his brand. For this reason, the value does not need any check.
 
-.. figure:: media/image41.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image41.png
 
     Analytical driver schema - Example.
 
@@ -47,7 +47,7 @@ Thanks to analytical drivers, a single document is able to cover the analytical 
 In the next paragraphs we explain how to create a new analytical driver together with its basic components.
 
 .. _overallprocess:
-.. figure:: media/image42.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image42.png
 
     Overall process.
 
@@ -58,23 +58,22 @@ Creating an analytical driver
 As explained at the beginning of this section, analytical drivers use information about users, their roles and profiles to filter data returned by their associated LOVs. Users, roles and profiles must have been already defined in the project context so that they are available to the driver.
 
 .. _analyticaldrivermanagbehav:
-.. figure:: media/image52.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image52.png
 
     Analytical Driver Management.
 
 To create a driver, select Behavioural Model > Analytical Drivers Management from the menu. Here, you will see the entire   list of available drivers. For each driver, the list shows unique label, description and type. To explore details the user must just   select one menu item from the list and they will appear in the half right side, as shown in the figure above. Otherwise to delete one analytical driver the user must use the *Trash* icon available at the end of each row of the list. Notice that you cannot delete a driver if a document is currently using it.
 
-.. |image48| image:: media/image44.png
-   :width: 30
+.. |image48| replace:: **Add**
 
-To create a new driver, click the *Plus* icon at the top right corner. The driver creation interface will open. At first execution only the upper part of the window is visible, as shown in the figure below. 
+To create a new driver, click the *Plus* icon at the top right corner. The driver creation interface will open. At first execution only the upper part of the window is visible, as shown in the figure below.
 The upper part is the **Detail** section, where you can set the label, name and description. Choose the type between Date, String or Number depending on the type of expected data. Select Functional or Temporal if the driver is used by an end user or a scheduler, respectively. A click on the save botton, enabled as soon as the form is filled in, will save the driver and let the section below appear.
 
 .. |image49| image:: media/image45.png
    :width: 30
 
 .. _drivercrationbehav:
-.. figure:: media/image53_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image53-b.png
 
     Creating a new Driver.
 
@@ -82,7 +81,7 @@ In the Analytical Driver Use Mode Details section, one or more LOVs are linked t
 
 To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Details” tab. Here the user must set label and name of that specific use mode, the kind of input among **LOV input**, **Manual input** and **Map input**, as shown in below.
 
-.. figure:: media/image54.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image54.png
 
     Details tab of an AD
 
@@ -97,15 +96,15 @@ The second kind of input expects the user to type manually the value. Otherwise 
 
 The user can also add default values (namely values that will be passed to the document at its first execution) using the dedicated area. Here it is possible to pick default values from another LOV or to pick the first or the latter value of the current LOV (if the LOV input type was selected).
 
-In case of Manual Input Date the user can specify a maximum value driven by a LOV:
+In case of Manual Input Date the user can specify minimum and maximum values driven by LOVs:
 
-.. figure:: media/image57.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image57.png
 
     Example of a Detail tab of an AD with a maximum value.
 
-During execution of a document, the date picker will be limited by that value:
+During execution of a document, the date picker respects the configured bounds:
 
-.. figure:: media/image58.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image58.png
 
     Date picker with a maximum value specified.
 
@@ -126,7 +125,7 @@ Therefore, since an admin user can decide to separate values according to the ot
 All the selections can be multi-valued, but note that this option has to be set directly on the document detail during analytical driver
 association.
 
-.. figure:: media/image57_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image57-b.png
 
     The Roles tab of an AD.
 
@@ -150,3 +149,23 @@ Once you have saved the LOV, just log out from Knowage and log in with a differe
 .. figure:: media/image56.png
 
     Behavioural Model Schema.
+
+Date limits and searchable values in 9.1
+----------------------------------------
+
+For a Date driver with manual input, edit its use mode and configure **Min
+value** and **Max value** as needed. Select the LOV providing each limit, save
+the use mode and verify it through a document using the same role. The LOV
+must return a date in the format expected by the driver, consistent with its
+default value. Configure the lower bound before the upper bound.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-9-1-driver-date-limits.png
+
+   Minimum and maximum LOVs on a Date driver's use mode.
+
+Tree drivers support search in their hierarchical values. Parameter dialogs
+allow successive searches while selecting multiple values. Enable multivalue
+input on the document parameter where appropriate. Verify defaults and
+correlations with the roles assigned to each use mode.
+
+See :doc:`/user-guide/document-execution` for the end-user workflow.

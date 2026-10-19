@@ -1,6 +1,11 @@
 Create an ETL Process
 ########################################################################################################################
 
+ETL execution requires a compatible Talend job and the optional
+``knowagetalendengine`` deployed in the installation. Configure its output and
+parameter handling, run the job manually and check its result before scheduling
+it. This guide applies to installations providing that engine.
+
 Knowage allow the upload of data from source systems according to a common ETL logic, as well as the monitoring of data flows continuously feeding the data warehouse. To this end, Knowage provides the ETL **Knowage Talend Engine**.
 
 KnowageTalendEngine
@@ -63,7 +68,7 @@ Once you have designed the ETL job, you should deploy it on Knowage Server. Firs
     +-----------------------------------+-----------------------------------+
     |    Password                       | Password of the user that will    |
     |                                   | perform the deploy                |
-    +-----------------------------------+-----------------------------------+ 
+    +-----------------------------------+-----------------------------------+
 
 Once you have set the connection, you can right click on a job and select **Deploy on Knowage**. This will produce the Java code implementing the ETL and make a copy of the corresponding jar file at ``\\resources\\talend\\RuntimeRepository\\java\\Talend`` project name of Knowage Server. It is possible to deploy multiple jobs at the same time. Exported code is consistent and self-standing. It may include libraries referenced by ETL operators and default values of job parameters, for each context defined in the job. On its side, Knowage manages Talend jobs from an internal repository at ``resources/talend/RuntimeRepository``, under the installation root folder.
 
@@ -77,12 +82,12 @@ As with any other Knowage document, you need to define a template for the ETL do
          :caption: ETL template.
 
           <etl>
-          	<job 	project="Foodmart" 
-			jobName="sales_by_month_country_product_familiy" 
-			context="Default"
-          		version="0.1"
-          		language="java"
-		/>
+                <job 	project="Foodmart"
+                        jobName="sales_by_month_country_product_familiy"
+                        context="Default"
+                        version="0.1"
+                        language="java"
+                />
           </etl>
 
 The tag job includes all the following configuration attributes:
@@ -100,7 +105,7 @@ Creating the analytical document
 
 Once we have created the template, we can create a new analytical document following the standard procedure. Use the plus button and choose "Generic Document". Proceed by filling in the necessary fields, uploading the XML template we have just created and selecting “ETL Process” as the type and “Talend engine” as the engine. Select then the corrisponding data source and the document state.
 
-.. figure:: media/doc_etl.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-etl-process-index-doc-etl.png
 
     Creating an ETL document.
 
@@ -112,7 +117,7 @@ Job execution
 A Talend job can be executed directly from the web interface of Knowage Server and of course from a Talend client.
 To execute the job on Knowage, click on the play button near the document in the document browser, like with any other analytical document. The execution page will show a message to inform that the process was started.
 
-.. figure:: media/doc_execution.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-etl-process-index-doc-execution.png
 
     ETL document execution interface.
 

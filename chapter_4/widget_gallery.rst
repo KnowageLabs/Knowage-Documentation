@@ -1,8 +1,13 @@
 Widget gallery
 ########################################################################################################################
 
-The **Widget Gallery** is a feature available since version 8.0 that allows users and editors to create a template and 
-share it in multiple dashboards. By creating a template and then using it within a dashboard, users will have the ability 
+Open **Modules** > **Catalogs** > **Gallery Management** to maintain reusable
+widget templates. Match a template's type to the Dashboard editor that will
+consume it, test its datasets and parameters, then save and reuse it from a
+compatible widget.
+
+The **Widget Gallery** is a feature available since version 8.0 that allows users and editors to create a template and
+share it in multiple dashboards. By creating a template and then using it within a dashboard, users will have the ability
 to create complex dashboard elements quite easily and quickly while maintaining a common basic template.
 
 
@@ -19,14 +24,14 @@ To open the *Gallery Management*, select **Gallery Management** from the *CATALO
 The first step consists in creating a new template or importing a template not available in the list.
 
 
-.. figure:: media/image2_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-4-widget-gallery-image2-8-1.png
 
     Gallery management example.
 
 The image below, shows the information to be filled in when adding a new template.
 
 
-.. figure:: media/newTemplate_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-4-widget-gallery-newtemplate-8-1.png
 
     Widget - new template.
 
@@ -50,7 +55,7 @@ Editors will look like different, depending on the type of widget:
 - **Chart**: HTML, CSS and JS editor
 - **Python**: Python code editor
 
-.. figure:: media/image1.png
+.. figure:: /_static/screenshots/9.1/chapter-4-widget-gallery-image1.png
 
     Selected widget template.
 
@@ -59,11 +64,11 @@ Use the *Save* icon to save the template.
 Dashboard gallery
 ------------------------------------------------------------------------------------------------------------------------
 
-When adding a widget in a dashboard, the wizard shows a *Gallery* tab, containing a first empty template and then a set of available templates showing their image, tags and eventually the description. 
+When adding a widget in a dashboard, the wizard shows a *Gallery* tab, containing a first empty template and then a set of available templates showing their image, tags and eventually the description.
 The empty template allows users to create a custom widget without starting from an already created template.
 The *Gallery* tab would not be available if any templates were not already formerly saved and therefore available to be used.
 
-.. figure:: media/image4_b.png
+.. figure:: /_static/screenshots/9.1/chapter-4-widget-gallery-image4-b.png
 
     New widget templates list.
 
@@ -71,6 +76,6 @@ The *Gallery* tab would not be available if any templates were not already forme
 Clicking on a given template, the code is automatically copied in the new widget template.
 The user just needs to make some changes some to the code to customize and create the desired widget.
 
-.. figure:: media/image5_b.png
+.. figure:: /_static/screenshots/9.1/chapter-4-widget-gallery-image5-b.png
 
     Selected template editor.

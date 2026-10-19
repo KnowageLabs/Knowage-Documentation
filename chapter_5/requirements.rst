@@ -1,303 +1,263 @@
 Requirements
-########################################################################################################################
+============
 
-Before going into details on Knowage installation, it is necessary to check if certain requirements are satisfied. We start to distinguish between the certified environments and the compatible ones. The first are those where check tests take place. The latter are those environments technically compatibles but where integration tests are not executed.
+This page describes deployment requirements for **Knowage 9.1.0**.
+The versioned application source and public Docker recipe were checked on
+**19 October 2026**. A version found in a recipe identifies its baseline; it
+does not certify every OS, database version or later component release.
+
+Core runtime
+------------
+
+.. list-table:: Core deployment components
+   :header-rows: 1
+   :widths: 20 25 55
+
+   * - Component
+     - Version or requirement
+     - Deployment notes
+   * - Java
+     - **JDK 17**
+     - The release compiles for Java 17. The Docker recipe uses Eclipse
+       Temurin 17. Use a maintained JDK 17 distribution.
+   * - Application server
+     - **Apache Tomcat 9.0.x**
+     - The public recipe pins **9.0.109**. Select a maintained 9.0.x patch
+       accepted for your deployment and validate it with the applications.
+   * - Metadata database
+     - MySQL/MariaDB, PostgreSQL or Oracle
+     - Vendor-specific creation and upgrade scripts are supplied.
+       Exact database versions must be qualified with those scripts.
+   * - SQL cache database
+     - A separate schema/database and JDBC resource
+     - Configure ``jdbc/ds_cache`` in addition to metadata resource
+       ``jdbc/knowage``. They may share a DBMS instance where appropriately sized.
+   * - Distributed cache
+     - Hazelcast **5.3** integration
+     - The Java dependency is **5.3.6**. The public Compose example starts a
+       separate Hazelcast 5.3 service. Preserve the topology and configuration
+       supplied with your deployment.
+   * - Client
+     - A supported web browser
+     - See :ref:`requirements-browsers` below.
+
+The Java applications use the ``javax.servlet`` API. Tomcat 10 and 11 use the
+Jakarta namespace and are not direct replacements for the Tomcat 9 deployment.
+Follow :doc:`installation/manual_installation` for the required shared
+libraries, JNDI resources and application packages.
 
 Operating systems
-------------------------------------------------------------------------------------------------------------------------
+-----------------
 
-The following Operating Systems (OS) are those ones which suit with Knowage platform.
+Use an OS supported by the selected JDK 17, Tomcat 9 and any native export or
+analytics services. For contractual support, confirm the **exact OS release
+and architecture** against the matrix supplied with your Knowage 9.1 distribution.
 
-.. table:: Certified environments
-   :widths: auto
+The public manual declares the following environments. These declarations are
+retained from the published documentation; this source review does not
+constitute a new certification test.
 
-   +---------------------------+-------------+
-   |    Certified Environments               |
-   +===========================+=============+
-   |    **Operating System**   | **Version** |
-   +---------------------------+-------------+
-   |    Oracle Linux           |   9, 10     |
-   +---------------------------+-------------+   
-   |    Windows Server         | 2022,2025   |
-   +---------------------------+-------------+
+.. list-table:: Published operating-system matrix
+   :header-rows: 1
+   :widths: 25 35 40
 
-.. table:: Compatible environments
-    :widths: auto
+   * - Published status
+     - Operating system
+     - Published versions
+   * - Certified
+     - Oracle Linux
+     - 9, 10
+   * - Certified
+     - Windows Server
+     - 2022, 2025
+   * - Compatible
+     - Red Hat Enterprise Linux
+     - 10
+   * - Compatible
+     - Ubuntu
+     - 22, 24, 25; exact point releases are not specified
 
-    +-----------------------------+-------------------+
-    |    Compatible Environments                      |
-    +=============================+===================+
-    |    **Operating System**     | **Version**       |
-    +-----------------------------+-------------------+
-    |    RHEL Red Hat Enterprise  | 10                |
-    +-----------------------------+-------------------+
-    |    Ubuntu                   | 22, 24, 25        |
-    +-----------------------------+-------------------+
+Here, *certified* denotes an environment declared as tested by the publisher;
+*compatible* denotes technical compatibility without the same integration-test
+claim. An OS family entry does not establish its vendor maintenance status.
+Confirm the exact Ubuntu release before provisioning.
 
-Disk usage
-------------------------------------------------------------------------------------------------------------------------
+CPU, memory and storage
+-----------------------
 
-The Knowage installation requires 2 GB of available space on file system. This space does not include the space relative to the data and the metadata storage.
+The public 9.1 release sources and Docker recipes do not specify a verified
+minimum CPU count or RAM allocation. Size the application, database, Hazelcast
+and optional services for the intended workload.
+
+The earlier **2 GB** disk figure describes an installation footprint and
+excludes data and metadata. It is not a complete production storage requirement.
+Provide capacity for deployed WARs and their expanded contents, shared
+resources, uploaded files, JDBC drivers, logs, temporary exports, SQL cache,
+database growth and backups.
+
+Validate sizing with representative concurrent users, dataset sizes, dashboard
+queries and scheduled exports. Set JVM heap and container limits consistently,
+leaving memory for the OS, native processes and other services sharing the host.
+Measure peak memory and temporary-disk use during exports and Data Preparation.
 
 Java environment
-------------------------------------------------------------------------------------------------------------------------
+----------------
 
-The enviroment in which Knowage will be installed must include a JDK 17 installation. Be sure that the JDK component is successfully installed and that the environment variable ``JAVA_HOME`` is properly configured. The steps to configure it depend on the OS.
-Knowage is compatible with Open JDK 17.
+Install a JDK 17 and set ``JAVA_HOME`` for the **account that runs Tomcat**.
+An interactive shell and an OS service may have different environments.
 
-Linux
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Define the ``JAVA_HOME`` variable inside the users’ file ``.bash_profile`` used in the installation process
-
-.. code-block:: shell
-        :caption: Instructions to set the JAVA_HOME variable for Linux environment.
-
-        export JAVA_HOME=<root path of the Java installation>
-        export JAVA_HOME=/usr/lib/jvm/jdk17....0_60/
-        export PATH=$JAVA_HOME/bin:$PATH
-
-Windows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Define the ``JAVA_HOME`` variable and ``PATH`` in the section "Environment variables" which can be reached from the "System".
-
-   .. figure:: media/image7.png
-
-      Setting the path for the JAVA_HOME variable for Windows
-
-Application server
-------------------------------------------------------------------------------------------------------------------------
-
-The following lists the supported application servers:
-
-.. table:: Supported application servers
-    :widths: auto
-
-    +---------------------+------------------------+-------------+
-    |    **Support type** | **Application Server** | **Version** |
-    +=====================+========================+=============+
-    |    Certified        | Apache Tomcat          | 9           |
-    +---------------------+------------------------+-------------+
-
-For each application server installation please refer to its official documentation.
-
-Tomcat 9.0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In the following we will refer to Tomcat installation folder as ``TOMCAT_HOME``.
-
-Tomcat on Linux
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-It is recommended to create a proper user for the execution of Tomcat. We state the main steps to follow for this purpose.
-
-- Create the Tomcat user.
-
-.. code-block:: shell
-
-        useradd -m tomcat
-        passwd <password for the tomcat user>
-
-- Install the Tomcat using the Tomcat user. Remeber to define the ``TOMCAT_HOME`` variable.
-
-.. code-block:: shell
-
-        export TOMCAT_HOME=<path of the installation Tomcat root folder >
-
-- Be sure that the Tomcat uses the JDK 17: usually the Tomcat settings are defined in the ``TOMCAT_HOME/bin/setenv.sh`` file, therefore if the ``TOMCAT_HOME/bin/setenv.sh`` file does not exit, the user must create it and insert it in the content as shown below. Note that ``CATALINA_PID`` contains the ID of the Tomcat process and it kills the process if needed.
-
-.. code-block:: sh
-
-        export CATALINA_PID=<root folder of the Tomcat installation>/logs/tomcat-knowage.pid
-        export JAVA_HOME=<root folder of the JDK 17 installation>
-
-- Modify the ``TOMCAT_HOME/bin/shutdown.sh`` file to force the shut down of the application in case of hanging:
-
-.. code-block:: sh
-
-        exec "$PRGDIR"/"$EXECUTABLE" stop -f "$@"
-
-Tomcat on Windows
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-It is recommended to install Tomcat as a service. Documentation is available at https://tomcat.apache.org/tomcat-9.0-doc/windows-service-howto.html.
-
-Database schema for metadata
-------------------------------------------------------------------------------------------------------------------------
-
-Knowage uses a schema to manage metadata, that is all those information required for its operation. These concern the configuration, the users and the analytical documents. It is possible to use the following DBMSs for the creation of this schema.
-
-.. table:: Exploitable DBMSs for the metadata schema creation
-    :widths: auto
-
-    +---------------------+---------------+------------------+
-    | **Support Type**    | **DBMS**      | **Version**      |
-    +=====================+===============+==================+
-    |    Certified        | Oracle        | 10, 11, 12, 19   |
-    +---------------------+---------------+------------------+
-    |    Certified        | MySql         | 5.7, 8.0         |
-    +---------------------+---------------+------------------+
-    |    Certified        | PostgreSQL    | 8.2, 9.1, 12.3   |
-    +---------------------+---------------+------------------+
-    |    Certified        | MariaDB       | 10.1, 10.2, 10.3 |
-    +---------------------+---------------+------------------+
-
-Therefore, a schema must be available. It can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *metadata DB* in the following. Observe that Knowage includes all the DDL for table creation.
-
-Database schema for data
-------------------------------------------------------------------------------------------------------------------------
-
-A schema for data must be also available. It can be queried through Knowage and can be reached through the JDBC protocol by the Knowage installation server; such a schema will be called *data DB* in the following.
-
-NodeJS requirements
-------------------------------------------------------------------------------------------------------------------------
-
-.. important::
-         **Enterprise Edition only**
-
-         NodeJS is required only for Enterprise Edition.
-
-Knowage includes some NodeJS scripts that need to be executed with NodeJS 16 or greater: see `NodeJS official documentation <https://nodejs.org/en/download/package-manager>`_ for the installation process.
-
-CentOS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In CentOS you need to erase older versions of NodeJS, if present:
+On Linux, configure Tomcat's ``bin/setenv.sh`` or the service environment,
+using the actual installation path:
 
 .. code-block:: bash
-        :caption: Command to erase older versions of NodeJS
 
-        yum erase -y nodejs
+   export JAVA_HOME="/path/to/jdk-17"
+   export PATH="$JAVA_HOME/bin:$PATH"
 
-Then you need to clear YUM cache and update all local packages:
+Verify the selected runtime:
 
-.. code-block:: sh
-        :caption: Cache clearing and system updating
+.. code-block:: console
 
-        yum clean all
-        yum update -y
+   java -version
+   javac -version
 
-Next you can install the official repository of NodeJS:
+Both commands must report version 17. Check Tomcat's startup log as well.
 
-.. code-block:: sh
-        :caption: Installation of the repository of NodeJS
+On Windows, configure ``JAVA_HOME`` and ``PATH``. If Tomcat runs as a Windows
+service, also check the Java runtime selected in the service configuration.
 
-        curl -sL https://rpm.nodesource.com/setup_14.x | bash -
+.. figure:: /_static/screenshots/9.1/chapter-5-requirements-image7.png
 
-.. important::
-         If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
+   Configuring JAVA_HOME on Windows; replace this placeholder with the target
+   environment screenshot.
 
-Finally you can install NodeJS:
+See the `Tomcat 9 Windows service documentation
+<https://tomcat.apache.org/tomcat-9.0-doc/windows-service-howto.html>`_.
 
-.. code-block:: sh
-        :caption: Installation of NodeJS
+Databases and JDBC
+------------------
 
-        yum install -y nodejs
+Prepare the metadata and SQL cache schemas before starting Knowage. The
+application account must be able to reach both JDBC resources. Install the
+drivers and configure Hibernate and Quartz for the chosen DBMS.
 
-Ubuntu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In Ubuntu you need to erase older versions of NodeJS, if present:
-
-.. code-block:: sh
-        :caption: Command to erase older versions of NodeJS
-
-        apt-get remove nodejs
-
-Then you need to clear APT cache and update all local packages:
-
-.. code-block:: sh
-        :caption: Cache clearing and system updating
-
-        apt-get update
-        apt-get upgrade -y
-
-Next you can install the official repository of NodeJS:
-
-.. code-block:: sh
-        :caption: Installation of the repository of NodeJS
-
-        curl -sL https://deb.nodesource.com/setup_14.x | bash -
+The public Docker recipe exposes ``MYSQL``, ``MARIADB``, ``POSTGRES`` and
+``ORACLE`` as metadata/cache database types. This establishes integrations,
+not a database-version certification matrix. A business data source is a
+separate connection: its drivers and SQL dialect do not establish support
+for using it as the metadata database.
 
 .. important::
-         If you are behind a corporate proxy, you would need to set ``http_proxy`` and/or ``https_proxy``.
 
-Finally you can install NodeJS:
+   The public Compose example still uses **MariaDB 10.3**, whose upstream
+   maintenance ended on **25 May 2023**. Do not use this example as the database
+   version recommendation for a new production deployment. Obtain the qualified
+   database version and JDBC driver combination for your 9.1 package.
 
-.. code-block:: sh
-        :caption: Installation of NodeJS
+Review creation and migration scripts against the exact target database.
+The tagged PostgreSQL scripts contain legacy ``WITHOUT OIDS`` syntax and
+the Oracle migration uses SQL ``BOOLEAN``. Their compatibility depends on
+the server version; do not infer it from a driver version.
+See :doc:`upgrade/how_upgrade_9_0_to_9_1` before upgrading.
 
-        apt-get install -y nodejs
+Optional services
+-----------------
 
-Chromium requirements
-------------------------------------------------------------------------------------------------------------------------
-.. important::
+Install these components for the features enabled in your edition and deployment.
 
-	**Enterprise Edition only**
+Python datasets, functions and widgets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Chromium is required only for Enterprise Edition.
+These features require a separate Knowage Python web service and the libraries
+used by the scripts. Use the service package associated with Knowage 9.1.0;
+its Python package version need not equal the platform version.
 
-Knowage provides a distribution of Chromium for its functionalities but some other dependencies are needed. In Linux distribution you need to install following Chromium dependencies:
+The tagged package declares ``Python >=3.7``, but that lower bound does not
+establish compatibility with every newer interpreter. Its dependency file still
+pins, among others, Flask 1.1.4 and pandas 1.3.5. The public Python base-image
+source uses Python 3.8; check the referenced built image separately for its
+actual interpreter and digest.
 
-.. code-block:: sh
-        :caption: Installation of Chromium dependencies
+Python 3.8 reached upstream end of life on **7 October 2024**. For a new
+deployment, obtain a service build with a maintained, qualified interpreter
+and matching dependencies. Do not independently replace the interpreter or
+upgrade all libraries and assume compatibility.
+See :doc:`installation/python-installation`.
 
+Enterprise export service: Node.js and Chromium
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        # For CentOS 8
-        dnf install -y libX11 libX11-xcb libXcomposite libXcursor libXdamage libXext libXi libXtst nss libXScrnSaver libXrandr alsa-lib atk at-spi2-atk pango gtk3 libgbm
+Some Enterprise export services require Node.js, a browser automation package
+and Chromium. Use the versions, browser binary and OS dependencies supplied
+with the **9.1 Enterprise export package**.
 
-        # For Debian/Ubuntu
-        apt-get install -y libgbm1 libxss1 libgtk-3-0 libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libuuid1 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 bash
+The public Java release and Docker recipe do not establish the exact supported
+Node.js/Chromium pair for that private package. The Node.js version in a
+frontend build workflow is not an export-service requirement.
 
-        # For RedHat 7
-        yum install -y pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc
+Verify the binaries as the export-service account, configure the export script
+path in Configuration Management and test the PDF/image formats used by users:
 
+.. code-block:: console
 
-Support to non-latin languages
-------------------------------------------------------------------------------------------------------------------------
+   node --version
+   npm --version
 
-Knowage does some of its job at server side and it could need support for non-latin languages. Some operating systems don't provides support to non-latin language by default: see the official documentation to enable the support to those languages.
+Install native browser libraries using the package list for the **actual host
+OS and Chromium build**. Earlier CentOS 8/Red Hat 7 commands and package names
+must not be reused as a universal installation recipe.
 
-For example, to install non-latin languages fonts you could use:
+Fonts and server-side rendering
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: sh
-        :caption: Installation of non-latin language fonts
+Install fonts covering the languages used in reports, charts and exports.
+Make them available to both Java and Chromium service accounts. Use explicit
+font package names from the host OS repositories and verify accented, CJK or
+other required scripts in an exported document.
 
-        # For CentOS 8
-        yum groupinstall fonts
+Data Preparation
+~~~~~~~~~~~~~~~~
 
-        # For Ubuntu
-        sudo apt-get install language-pack-ja
-        sudo apt-get install japan*
+Data Preparation requires the appropriate add-on and a Livy/Spark service
+with integration libraries matching the supplied Knowage package. The 9.1
+Java source pins ``livy-client-http 0.7.1-incubating``; this client dependency
+does not certify arbitrary Livy, Spark or Scala server versions.
 
-        sudo apt-get install language-pack-zh*
-        sudo apt-get install chinese*
+Confirm the complete integration tuple with your distribution and follow
+:doc:`installation/manual_installation` to configure and test the service.
 
-        sudo apt-get install language-pack-ko
-        sudo apt-get install korean*
-
-        etc...
-
+.. _requirements-browsers:
 
 Supported browsers
-------------------------------------------------------------------------------------------------------------------------
+------------------
 
-Knowage supports the newest and the second to last version of these browsers:
+The published browser policy covers the latest and preceding stable releases
+of Google Chrome, Mozilla Firefox and Microsoft Edge. Validate the browsers
+used by your organization with your documents and enabled features. Internet
+Explorer is unsupported.
 
-- `Google Chrome <https://www.google.com/intl/en_en/chrome/>`_
-- `Firefox <https://www.mozilla.org/en-US/firefox/new/>`_
-- `Microsoft Edge <https://www.microsoft.com/en-us/edge?icid=SSM_AS_Promo_Other_Edge>`_
+Docker deployments
+------------------
 
-.. important::
-         **Internet Explorer**
+With containers, Java and Tomcat belong in the application image; they do not
+need to be installed separately on the host. Provide the container engine,
+persistent volumes and network access required by the supplied Compose files.
+Native dependencies for optional services belong in their images.
 
-         Internet Explorer is no longer supported by Microsoft and it is also vulnerable. Please, use one of the supported browser listed above.
+The public Compose example uses ``9.1-SNAPSHOT`` application tags. Select
+the approved **9.1.0 release image/digest** before deploying the release.
+See :doc:`installation/knowage-ce-installer`.
 
-Data Preparation requirements
-------------------------------------------------------------------------------------------------------------------------
+Versioned references
+---------------------
 
-In order to use data preparation functionality, user should have Apache Livy and Apache Spark installed.
-Please check Livy and Spark official documentation for more info (https://livy.apache.org/, https://spark.apache.org/) and manual installation paragraph for technical details.
-
-This functionality is available as an add-on plugin for Smart Intelligence license.
+* `Knowage 9.1.0 release <https://github.com/KnowageLabs/Knowage-Server/releases/tag/v9.1.0>`_.
+* `Java build properties <https://github.com/KnowageLabs/Knowage-Server/blob/47d06115a965f8440527b77a9e41d990e77aa078/knowage-ce-parent/pom.xml>`_.
+* `Hazelcast dependency <https://github.com/KnowageLabs/Knowage-Server/blob/47d06115a965f8440527b77a9e41d990e77aa078/knowageutils/pom.xml>`_.
+* `Public Docker recipe <https://github.com/KnowageLabs/Knowage-Server-Docker/tree/26f22a44bc50e4a7bd19a71438227d7fb329acd7/Knowage-Server-Docker>`_.
+* `Python package and dependencies <https://github.com/KnowageLabs/Knowage-Server/tree/47d06115a965f8440527b77a9e41d990e77aa078/Knowage-Python>`_.
+* `Python base-image source <https://github.com/KnowageLabs/Knowage-Python-Docker-Base/blob/221d2001804d1f6c105a3452cf6b1221bcb6c02c/Dockerfile>`_.
+* `Published OS and browser declarations <https://github.com/KnowageLabs/Knowage-Documentation/blob/7a5096c8eb03360d31b2ac277f90fe93fd712119/chapter_5/requirements.rst>`_.
+* `Apache Tomcat version matrix <https://tomcat.apache.org/whichversion.html>`_,
+  `MariaDB maintenance policy <https://mariadb.org/about/#maintenance-policy>`_
+  and `Python lifecycle <https://devguide.python.org/versions/>`_.

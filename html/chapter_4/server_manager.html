@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Server manager &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Import/Export" href="import_export.html" />
+    <link rel="prev" title="Scheduler" href="schedule.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Manage Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add_datasource.html">Add new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedule.html">Scheduler</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Server manager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tenants">Tenants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#templates">Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#themes">Themes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dashboard-themes">Dashboard Themes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#licenses">Licenses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="import_export.html">Import/Export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timespan.html">Time Span</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_manager.html">Log Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widget_gallery.html">Widget gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="home_management.html">Home page management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_management.html">AI management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Manage Knowage</a></li>
+      <li class="breadcrumb-item active">Server manager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapter_4/server_manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="server-manager">
+<h1>Server manager<a class="headerlink" href="#server-manager" title="Link to this heading"></a></h1>
+<p>Use the authorized <strong>Server Manager</strong> modules to maintain tenants, themes,
+events and template pruning. Check each change with the affected tenant and
+role. Configure role-specific starting pages in <a class="reference internal" href="home_management.html"><span class="doc">Home page management</span></a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Enterprise Edition only</strong></p>
+<p>Server Manager functionalities are only available with Knowage Enterprise Edition</p>
+</div>
+<p>All the management functionalities can be found under <strong>Server Manager</strong> of the Knowage main menu.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/chapter-4-server-manager-image60-8-1.png" src="../_images/chapter-4-server-manager-image60-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 636 </span><span class="caption-text">Server Manager Functionalities</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="tenants">
+<h2>Tenants<a class="headerlink" href="#tenants" title="Link to this heading"></a></h2>
+<p>This feature allows you to create or manage tenants.
+A single Knowage instance can have one or more tenants. In case of a multi-tenant environment, each tenant owns and manages its own users, documents, configuration and parameters, which are completely independent from those owned by other tenants.
+The <em>Tenants</em> functionality is only available by having the appropriate license and users must have the superadmin role.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/chapter-4-server-manager-image61-8-1.png" src="../_images/chapter-4-server-manager-image61-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 637 </span><span class="caption-text">Tenants Management window.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The left side of the image above, presents the list of existing tenants with the availability of a <strong>Search</strong> box, to help users to browse throug the existing tenants. The <em>Plus</em> icon can be used to create a new tenant.</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/chapter-4-server-manager-image6465-8-1.png" src="../_images/chapter-4-server-manager-image6465-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 638 </span><span class="caption-text">Datasources tab.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In a <em>single-tenant</em> environment the <em>admin</em> role matches with the <em>superadmin</em>. In a <em>multi-tenants</em> environment only <em>one</em> user has the <em>superadmin</em> role for each tenant, while there can be more than one user with the <em>admin</em> role.
+Furthermore, the superadmin is the only one who can set up JNDI datasources and access the cache configuration.</p>
+</section>
+<section id="templates">
+<h2>Templates<a class="headerlink" href="#templates" title="Link to this heading"></a></h2>
+<p>Each Knowage document is associated to a <em>template</em>. The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage Studio designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.</p>
+<p>The <strong>Templates</strong> functionality allows the deletion of all those templates that have been created before a specific date. This kind of operation allows the administrator to clean the environment and save some space in the Knowage metadata database once a <em>document life cycle</em> is completed.</p>
+<p>After inserting a date by clicking on the <em>calendar</em> icon, click on the <em>funnel</em> icon and select the documents of your interest. The <em>Delete</em> button deletes the templates (of the selected documents), uploaded before the specified date. If all the templates of a document come first of the specified date, the last template uploaded will be kept, so that no document is accidentally deleted.
+See figure below.</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/chapter-4-server-manager-image66-8-1.png" src="../_images/chapter-4-server-manager-image66-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 639 </span><span class="caption-text">Deleting templates</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="themes">
+<h2>Themes<a class="headerlink" href="#themes" title="Link to this heading"></a></h2>
+<p>This functionality allows the creation/management of themes to be used in the css style of your documents.</p>
+<figure class="align-default" id="id5">
+<img alt="../_images/chapter-4-server-manager-themes-8-1.png" src="../_images/chapter-4-server-manager-themes-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 640 </span><span class="caption-text">Themes</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="dashboard-themes">
+<h2>Dashboard Themes<a class="headerlink" href="#dashboard-themes" title="Link to this heading"></a></h2>
+<p>This functionality allows to define themes that can be inherited by one or more widgets of a dashboard.
+Into the specific, when defining a new theme for each type of widget you can set properties such as <em>Title, Borders, Padding, Shadows and Background</em>
+in relation to that theme.</p>
+<figure class="align-default" id="id6">
+<img alt="../_images/chapter-4-server-manager-dash-themes.png" src="../_images/chapter-4-server-manager-dash-themes.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 641 </span><span class="caption-text">Dashboard themes</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Themes can be downloaded and imported on a new installation.</p>
+</section>
+<section id="licenses">
+<h2>Licenses<a class="headerlink" href="#licenses" title="Link to this heading"></a></h2>
+<p>This feature allows the management of Knowage licenses by adding, updating or removing a license.</p>
+<figure class="align-default" id="id7">
+<img alt="../_images/chapter-4-server-manager-licenses.png" src="../_images/chapter-4-server-manager-licenses.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 642 </span><span class="caption-text">Licenses</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="events">
+<h2>Events<a class="headerlink" href="#events" title="Link to this heading"></a></h2>
+<p>This feature allows to search through all the events (i.e. the scheduling of a report) existing on the Knowage server, specifying a range of dates and the <em>type</em> of event.
+Types of events are:</p>
+<ul class="simple">
+<li><p>Scheduler</p></li>
+<li><p>ETL</p></li>
+<li><p>CommonJ</p></li>
+<li><p>Data_Mining</p></li>
+</ul>
+<p>See below image.</p>
+<figure class="align-default" id="id8">
+<img alt="../_images/chapter-4-server-manager-events-8-1.png" src="../_images/chapter-4-server-manager-events-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 643 </span><span class="caption-text">Events</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="schedule.html" class="btn btn-neutral float-left" title="Scheduler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="import_export.html" class="btn btn-neutral float-right" title="Import/Export" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

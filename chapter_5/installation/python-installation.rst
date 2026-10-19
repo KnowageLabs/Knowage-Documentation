@@ -1,7 +1,12 @@
 Python Engine
 ========================================================================================================================
 
-These functionalities use a Python standalone webservice, which allows to submit widgets and datasets scripts and get result from a Python environment already installed on the machine where the webservice runs. For this reason, Python environments need to be installed and configured on the same machine of Knowage server or even on a remote one, and the Python webservice has to be running **inside that same environment**. 
+Use the Python package corresponding to **9.1.0** and configure its service
+URL and authentication consistently with the Java applications. Test a Python
+dataset, function and widget as applicable after installing the required
+libraries in the selected environments.
+
+These functionalities use a Python standalone webservice, which allows to submit widgets and datasets scripts and get result from a Python environment already installed on the machine where the webservice runs. For this reason, Python environments need to be installed and configured on the same machine of Knowage server or even on a remote one, and the Python webservice has to be running **inside that same environment**.
 This implies that, in order to use this functionalities, you have to install Python properly (depending on the OS) on the same machine where the service will be running. You can find all information about Python installation at https://www.python.org. The official supported version is Python >=3.8.
 
 Install knowage-python webservice
@@ -12,7 +17,7 @@ The knowage-python package contains the source code of the webservice that has t
 .. code-block:: bash
 
     pip install knowage-python=={knowage_version_number}
-	
+
 or simply you can find it in the Knowage-Server GitHub repository under the Knowage-Python folder.
 
 If you downloaded knowage-python via pip, use "pip show knowage-python" to find the pip package installation location. Then copy the source file from this folder to your own custom folder such as ``/opt/knowagepython``.
@@ -60,8 +65,8 @@ First you need to create a configuration file called ``gunicorn.conf.py`` and pl
     user = <user>
     group = <group>
     loglevel = 'info'
-    accesslog = '/var/log/gunicorn-access.log' 
-    errorlog = '/var/log/gunicorn-error.log' 
+    accesslog = '/var/log/gunicorn-access.log'
+    errorlog = '/var/log/gunicorn-error.log'
     access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
 
 Then to start the service run the following command inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder.
@@ -85,9 +90,9 @@ Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the
     import multiprocessing
     from waitress import serve
     import importlib
-    
+
     knowage = importlib.import_module("knowage-python")
-    
+
     serve(knowage.application,
     	channel_timeout=30,
     	host='0.0.0.0',
@@ -105,12 +110,12 @@ Then run:
 Configure Knowage to enable Python/R functionalities
 ------------------------------------------------------------------------------------------------------------------------
 
-From the Knowage interface you can now enable the Python/R functionalities. 
+From the Knowage interface you can now enable the Python/R functionalities.
 
 Go to the ``Roles management`` section, in the *Authorizations* tab under *Widgets* check the ``Edit Python Scripts`` option.
 Now you will be able to see the Python and R Dataset and Widget among the list of available ones.
 
-Go to the ``Configuration management`` section, and create new variables of category ``PYTHON_CONFIGURATION`` and ``R_CONFIGURATION``. 
-For the label you can use ``python.default.environment.url``. 
+Go to the ``Configuration management`` section, and create new variables of category ``PYTHON_CONFIGURATION`` and ``R_CONFIGURATION``.
+For the label you can use ``python.default.environment.url``.
 The value of this variables will specify the addresses of the Python and R webservices (es. ``python.webservice.address.com/domain``).
 Now you will be able to see the addresses of the so configured environments when creating a Dataset or a Widget.

@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytical documents &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Repository Management" href="repository_management.html" />
+    <link rel="prev" title="Creating a validation rule" href="check.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data security and access management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="behavioural_model.html">Behavioural Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="role_user.html">User profile and roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="driver.html">Analytical Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lov.html">List Of Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="check.html">Creating a validation rule</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Analytical documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-concepts">Main concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#register-an-analytical-document">Register an analytical document</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visibility-rules">Visibility rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#association-with-analytical-drivers">Association with analytical drivers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cross-navigation">Cross Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="repository_management.html">Repository Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="menu.html">Menu management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bm_lineage.html">Behavioural Model Lineage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Data security and access management</a></li>
+      <li class="breadcrumb-item active">Analytical documents</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/security_management/document.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="analytical-documents">
+<h1>Analytical documents<a class="headerlink" href="#analytical-documents" title="Link to this heading"></a></h1>
+<p>In 9.1 a <strong>Dashboard</strong> and a <strong>Cockpit</strong> are distinct document types. Match the
+document type with its engine when creating or importing a document. Use
+<a class="reference internal" href="../../user-guide/document-execution.html"><span class="doc">Running and exploring documents</span></a> for parameters, saved views and exports.</p>
+<p>The <em>analytical model</em> is the core of Knowage Server and covers the whole range of analytical needs, providing many solutions for each analytical area, like reports, cockpits, OLAP documents, KPIs and so on.</p>
+<p>The main element of the analytical model is the so called <em>analytical document</em>, a word used to group under a common concept all different types of documents that can be developed with Knowage (report, cockpit, etc.) when performing a BI analysis.</p>
+<p>In this chapter we describe step by step how to create a new analytical document. There exist many different document types, each with its own peculiarities. Here we provide a generic overview on common features, will focus on available types peculiarities in each dedicated part.</p>
+<section id="main-concepts">
+<h2>Main concepts<a class="headerlink" href="#main-concepts" title="Link to this heading"></a></h2>
+<p>The creation and management of analytical documents in Knowage involves different elements:</p>
+<dl class="simple">
+<dt>Template</dt><dd><p>The template defines the standard layout of a document, including specific information on its appearance and the way contents should be displayed. Templates can be encoded by hand or using Knowage designers, when available. For each analytical document the history of templates is maintained. Old templates can be restored if needed. A new version is saved at each deployment, either manual or from Knowage Studio.</p>
+</dd>
+<dt>Dataset</dt><dd><p>Each document is associated to one or more datasets. The dataset provides actual data that will be represented according to the defined template. That is to say, the dataset provides the actual content of the analysis and the template is in charge of giving it a meaningful structure.</p>
+</dd>
+<dt>Data source</dt><dd><p>In order to retrieve data via the dataset, a source of information must be defined. Depending on the type of document, the data source may be associated to the document either directly or implicitly (via the dataset).</p>
+</dd>
+<dt>Parameters</dt><dd><p>Parameters allow the connection between the document and analytical drivers associated to it. In other words, at document execution time, each driver generates a value that is assigned to the corresponding parameter.</p>
+</dd>
+</dl>
+<p>These elements are then combined inside each document engine, in order to produce different analytical documents. This process generates an HTML output, which can be accessed and navigated using a web browser. Other output formats are supported, including XLS, CSV, PDF, XML.</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/image57bis.png" src="../../_images/image57bis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Components of Knowage analytical document.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="document-types">
+<h3>Document types<a class="headerlink" href="#document-types" title="Link to this heading"></a></h3>
+<p>Regardless of their type, all analytical documents interact with some generic components (such as cross-services) and with the specific engine that generate them (e.g. Report engine, OLAP engine). Therefore, all analytical documents are managed in the same way in terms of:</p>
+<ul class="simple">
+<li><p>document storage and versioning;</p></li>
+<li><p>document life cycle, based on a specific approval process including different status (development, test, released, suspended);</p></li>
+<li><p>multiple positioning on the repository and indirectly first visibility level;</p></li>
+<li><p>rules to restrict document visibility to some end user profiles;</p></li>
+<li><p>management of analytical drivers;</p></li>
+<li><p>multi-format export logic;</p></li>
+<li><p>attribution of business metadata;</p></li>
+<li><p>scheduled execution;</p></li>
+<li><p>collection of auditing and monitoring data;</p></li>
+<li><p>adding end user notes;</p></li>
+<li><p>adding bookmarks;</p></li>
+<li><p>end user evaluation;</p></li>
+<li><p>sending the document by email;</p></li>
+<li><p>on-line or off-line (scheduled) execution.</p></li>
+</ul>
+<p>This means that the above mentioned features are also inherited by every new engine that is developed or integrated into Knowage.</p>
+<p>In the next sections we describe in detail how to create and manage analytical documents in Knowage.</p>
+</section>
+</section>
+<section id="register-an-analytical-document">
+<h2>Register an analytical document<a class="headerlink" href="#register-an-analytical-document" title="Link to this heading"></a></h2>
+<p>There are two different ways to create a new document on Knowage Server. The first option involves Knowage Studio: within it you can simply click on <strong>Deploy</strong> and the document window will open with pre-filled options. Please note that Knowage Studio can be used to create Birt document only.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Deploy a document from Knowage Studio</strong></p>
+<p>Knowage Studio is the tool that allows to design and upload documents onto Knowage Server. Please refer to the dedicated section for full details and examples.</p>
+</div>
+<p>The second option is to manually create the document on the Server. This is the most general way since the Studio designer is not yet available for all documents types.</p>
+<section id="analytical-documents-on-server">
+<h3>Analytical documents on Server<a class="headerlink" href="#analytical-documents-on-server" title="Link to this heading"></a></h3>
+<p>First of all click on <strong>Documents Browser</strong> from the BI functionalities menu, as shown below.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/chapter-3-security-management-document-image58bis.png" src="../../_images/chapter-3-security-management-document-image58bis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Documents Browser functionality.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>By default the page is divided into two parts, as shown in figure below: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-security-management-document-image59.png" src="../../_images/chapter-3-security-management-document-image59.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Documents Development section.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-security-management-document-image61.png" src="../../_images/chapter-3-security-management-document-image61.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Side panel.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>At the top of this side panel you find four button:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../_images/image62.png"><img alt="image60" src="../../_images/image62.png" style="width: 30px;" /></a> execute the document;</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../_images/image63.png"><img alt="image61" src="../../_images/image63.png" style="width: 30px;" /></a> access document details;</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../_images/image64.png"><img alt="image62" src="../../_images/image64.png" style="width: 30px;" /></a> clone the item;</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../_images/image65.png"><img alt="image63" src="../../_images/image65.png" style="width: 30px;" /></a> delete the document.</p></li>
+</ul>
+<p>The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can see the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders.</p>
+<figure class="align-default" id="id5">
+<span id="detailpanelofknowanalydoc"></span><img alt="../../_images/chapter-3-security-management-document-image66.png" src="../../_images/chapter-3-security-management-document-image66.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Detail panel of an Analytical document.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In order to create a new document you need to click on the creation action in the toolbar of the <strong>Document Development</strong> page. Choose <strong>Dashboard</strong>, <strong>Cockpit</strong> or <strong>Generic Document</strong> from the available creation actions. Please note that not all of them are available in all Knowage products.</p>
+<p>To create a new generic document click the above-mentioned button and select <strong>Generic Document</strong>. You will be shown a window like the one in figure above but with empty fields, in order to allow you to define the document details.</p>
+<p>First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see figure below).</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/chapter-3-security-management-document-image67.png" src="../../_images/chapter-3-security-management-document-image67.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Select Type and Engine for a new document.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Now you have to select the datasource that will feed your document with data.</p>
+<figure class="align-default" id="id7">
+<img alt="../../_images/chapter-3-security-management-document-image68.png" src="../../_images/chapter-3-security-management-document-image68.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Selecting a datasource for the document.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You can select the data source from the drop down menu. And select the dataset from the pop-up window and click save.</p>
+<p>Note that some types of document do not require the definition of a dataset at this point because they use embedded datasets.</p>
+<p>It is advisable to regularly save the document in this process, by clicking the related button save at the top right corner of the window.</p>
+<section id="document-lifecycle">
+<h4>Document lifecycle<a class="headerlink" href="#document-lifecycle" title="Link to this heading"></a></h4>
+<p>The next step is to choose the status of the document using the <strong>State</strong> drop down menu. At any time in fact, each document is   associated to a state, which will typically change over time following the development of the project. Those states are:</p>
+<ul class="simple">
+<li><p>development;</p></li>
+<li><p>test;</p></li>
+<li><p>released;</p></li>
+<li><p>suspended.</p></li>
+</ul>
+<p>Upon creation, the document is by default in development state. Any time you upload a new template or make changes to the document, it is recommended that the state is updated so as to reflect its actual development state.</p>
+<p>The main reason for this is that the state of the document has an impact on its accessibility. As discussed in the behavioural model,  Knowage defines role types (administrator, developer, tester, user). States are compatible with the corresponding role type. Administrators can change the state of documents at any time. Developers can not access only the documents with test state. Testers   can not see documents in development or suspended state. Users can execute only documents in released state. Note that a tester may   change the state of a document from test back to development.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Enterprise Edition only</strong></p>
+<p>In KnowageER you may also decide to temporary “lock” a document while he is working with it: it is enough to set the <strong>Lock by user</strong> item. This prevent other developers from modifying the same document you are working on.</p>
+</div>
+</section>
+<section id="template-versioning">
+<h4>Template Versioning<a class="headerlink" href="#template-versioning" title="Link to this heading"></a></h4>
+<p>When you register a document on the Server, you need to associate a template to it. Click on  tab <strong>History</strong> and then on button <strong>Add</strong> to choose a template from your local file system and upload it.</p>
+<figure class="align-default" id="id8">
+<span id="templateversionforanalydoc"></span><img alt="../../_images/chapter-3-security-management-document-image69.png" src="../../_images/chapter-3-security-management-document-image69.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Template versioning for analytical documents.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.</p>
+<p>Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab <strong>History</strong>. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button <strong>Add</strong> to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.</p>
+<figure class="align-default">
+<img alt="../../_images/chapter-3-security-management-document-image70.png" src="../../_images/chapter-3-security-management-document-image70.png" />
+</figure>
+</section>
+<section id="document-visibility">
+<h4>Document Visibility<a class="headerlink" href="#document-visibility" title="Link to this heading"></a></h4>
+<p>After having defined all details, you need to choose where the analytical document shall be saved in the functionality tree. This   choice has an impact on the visibility of the document. Since folders in the functionality tree are subject to different access policies, which can be set when creating the node, then each document saved in that folder will inherit permissions accordingly.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Repository structure and rights</strong></p>
+<blockquote>
+<div><p>The <strong>Functionalities tree</strong> is Knowage document repository. It is managed by administrator, who is in charge to profile user visibility too.</p>
+</div></blockquote>
+</div>
+<p>Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). On the right, you can choose where you wish to save the document by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.</p>
+<figure class="align-default" id="id9">
+<span id="functionaltreedocsav"></span><img alt="../../_images/chapter-3-security-management-document-image66bis.png" src="../../_images/chapter-3-security-management-document-image66bis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Functionality Tree, document saving settings.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="visibility-rules">
+<h2>Visibility rules<a class="headerlink" href="#visibility-rules" title="Link to this heading"></a></h2>
+<p>In addition to the standard mechanism supported by the functionalities tree, it is possible to further customize access to a document based on user profile attributes. This allows administrators to rule access to documents at a very fine-grained level, beyond simple repository-based policies.</p>
+<p>This can be done by editing conditions in the <strong>Visibility restrictions</strong> section on the right side of <strong>Information</strong> panel. To add a new condition pick a profile attribute from the drop down menu and assign it a value. This will add a new condition that must be verified to allow a user to access the document. In the same way you can add further conditions, and possibly remove all of them by clicking on the eraser.</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/chapter-3-security-management-document-image73.png" src="../../_images/chapter-3-security-management-document-image73.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Visibility restrictions.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="association-with-analytical-drivers">
+<h2>Association with analytical drivers<a class="headerlink" href="#association-with-analytical-drivers" title="Link to this heading"></a></h2>
+<p>We have already discussed the role of analytical drivers and how they are connected to analytical documents via parameters. In this section we will show how to practically define this association.</p>
+<p>We assume that the document template and datasets are correctly set in terms of parameter definition. In particular, they should have   been correctly referenced with their URL.</p>
+<p>To add a new parameter, you can click on the tab <strong>Drivers</strong> and then on a <strong>Add</strong> button, see the next figure.</p>
+<figure class="align-default" id="id11">
+<img alt="../../_images/chapter-3-security-management-document-image74.png" src="../../_images/chapter-3-security-management-document-image74.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Association with analytical driver panel - 1.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Choose a name for the title of driver. Then choose analytical driver from drop-down menu that you wish to associate to the document.</p>
+<p>Once you have selected the driver, you should write the <strong>exact URL</strong> of the corresponding parameter. Then set the different features   associated to the driver: you can set its visibility and decide if it is required and multivalue. By default the parameter is visible, not mandatory and not multivalue.</p>
+<p>If you want the document not to be visible to end users, untick the <strong>Visible</strong> checkbox. Note that the parameter will still exist and   receive values from the associated driver. However, this will be hidden and the end user will not be able to choose any value for this   parameter.</p>
+<p>If you want to set it as a required parameter just click on <strong>true</strong>. In this case, no default value is set. The end user will be   asked to choose the value of the parameter before opening the document.</p>
+<p>Similarly to set a parameter as multivalue click on <strong>true</strong>, in this way the user can perform multiple selections on among its values.</p>
+<p>After you have completed the definition of a parameter you can save it by clicking on main <strong>Save</strong> button in the upper right corner. To add further parameters, click on the <strong>Add</strong> button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.</p>
+<figure class="align-default" id="id12">
+<img alt="../../_images/chapter-3-security-management-document-image75.png" src="../../_images/chapter-3-security-management-document-image75.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Association with analytical driver panel - 2.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the following we will see some special operations that can be performed on drivers associated to a document.</p>
+<section id="correlation-between-parameters">
+<h3>Correlation between parameters<a class="headerlink" href="#correlation-between-parameters" title="Link to this heading"></a></h3>
+<p>In the context of a document, two different parameters may be connected to each other: this means that the possible values of a   parameter are limited by the value(s) of another parameter.</p>
+<p>This feature can be useful when two (or more) parameters are logically related. For example, suppose to have a parameter for all the possible countries and another one for all the possible cities. If the user selects a region, it is meaningless to show him all cities: he should only be enabled to choose among the cities in the selected region.</p>
+<p>In general, to configure a correlation within a document you should make sure that the LOV associated with the parent parameter and the  one associated to the child parameter share at least one column. This column defines which value from the parent parameter will be applied to the child, in order to constrain the results.</p>
+<figure class="align-default" id="id13">
+<img alt="../../_images/chapter-3-security-management-document-image79.png" src="../../_images/chapter-3-security-management-document-image79.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Creating a correlation.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To set the correlation, select child parameter which will show you the details of that particular driver and then click on the <strong>Add condition</strong> button to open pop-up window for defining data correlation.</p>
+<figure class="align-default" id="id14">
+<img alt="../../_images/chapter-3-security-management-document-image80.png" src="../../_images/chapter-3-security-management-document-image80.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Adding data correlation.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here you need to define:</p>
+<ul class="simple">
+<li><p>the parent parameter;</p></li>
+<li><p>the type of logical operator, in order to compare values of the parent parameter with values of the child parameter;</p></li>
+<li><p>the column, generated by the child parameter, whose value will be compared with the value of the same column in the parent   parameter.</p></li>
+</ul>
+<p>If a parameter depends on multiple parent parameters, you can define multiple correlations.</p>
+<p>Once defined the correlation, the child parameters will display the labels during the runtime in italics.</p>
+</section>
+<section id="correlation-through-lov-and-drivers">
+<h3>Correlation through LOV and drivers<a class="headerlink" href="#correlation-through-lov-and-drivers" title="Link to this heading"></a></h3>
+<p>In previous sections we saw how to set correlation through the GUI available in the document detail panel, but there is also the   possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously   configured a driver that runs values that can be used in the “where” clause of a SQL query. Then the user must set a query-type LOV using the syntax</p>
+<p>We stress that the <code class="docutils literal notranslate"><span class="pre">AD_name</span></code> is the name of the driver the administrator is trying to reach. Syntax for setting correlation through LOV configuration is:</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-number">Listing 5 </span><span class="caption-text">Syntax for setting correlation through LOV configuration</span><a class="headerlink" href="#id15" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nv">$P</span><span class="o">{</span>AD_name<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<figure class="align-default" id="id16">
+<img alt="../../_images/chapter-3-security-management-document-image82-b.png" src="../../_images/chapter-3-security-management-document-image82-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Correlation passing driver values to LOV query .</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As a result, at document execution, as soon as the user pick up a value from the “free” parameter, the other one is filtered and will   show only the value related to the previous selection, as shown in Figure below.</p>
+<figure class="align-default" id="id17">
+<img alt="../../_images/chapter-3-security-management-document-image83.png" src="../../_images/chapter-3-security-management-document-image83.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Filtering with correlation.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="controlled-visibility">
+<h3>Controlled visibility<a class="headerlink" href="#controlled-visibility" title="Link to this heading"></a></h3>
+<p>Another type of relation between parameters is supported by Knowage. It is possible to define values of a parent parameter that force hiding or showing of a child parameter in the parameters mask. Note that in the first case, the child parameter is hidden by default, while in the second case the parameter is shown by default.</p>
+<p>To set a visibility expression, click on the <strong>Add condition</strong> button on the <strong>Driver visibility conditions</strong> card.</p>
+<figure class="align-default" id="id18">
+<img alt="../../_images/chapter-3-security-management-document-image72.png" src="../../_images/chapter-3-security-management-document-image72.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Adding visual correlation</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.</p>
+<figure class="align-default" id="id19">
+<img alt="../../_images/chapter-3-security-management-document-image84-b.png" src="../../_images/chapter-3-security-management-document-image84-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Visibility expressions.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="cross-navigation">
+<h2>Cross Navigation<a class="headerlink" href="#cross-navigation" title="Link to this heading"></a></h2>
+<p>A powerful feature of Knowage is the cross-navigation that is the ability to navigate documents in a browser-like fashion following logical data flows. Although crossnavigation is uniformly provided on all documents executed in Knowage Server, each type of document has its own modality to set the link pointing to another document.</p>
+<p>Notice that the pointer can reference any Knowage document, regardless of the source document. For example, a BIRT report can point to a chart, a console, a geo or any other analytical document.</p>
+<p>In Knowage there are two main typologies of cross navigation: <em>internal</em> and <em>external</em>.</p>
+<p><em>Internal cross navigation</em> updates one or more areas of a document by clicking on a series, a text, an image or in general on a   selected element of the document.</p>
+<p><em>External cross navigation</em> opens another document by clicking on an element of the main document, allowing in this way the definition of a <em>navigation path</em> throughout analytical documents (usually, from very general and aggregated information down to the more detailed and specific information)). Indeed, you can add cross navigation also to a document reached by cross navigation. This can be helpful to go deeper into an analysis, since each cross navigation step could be a deeper visualization of the data displayed in the starting document.</p>
+<p>It is obviously possible to associate more than one cross navigation to a single document. It means that by clicking on different elements of the same document the user can be directed to different documents.</p>
+<p>In this chapter we will examine in depth how to set output/input parameters on documents and, consequently, how to activate the cross navigation.</p>
+<p>The first step is to define the parameters of the target document. These do not necessarily coincide with all the filters applied to the
+document. Please refer to Chapter of Behavioural model for more detail on how to manage parameters and their association to documents.</p>
+<p>Therefore it is required to state which parameters among the ones associated to the target document are going to be involved in the   navigation. Parameters coming out from the source document are said <strong>output parameters</strong> while the ones that receive values through the association (with the source document) are said <strong>input parameters</strong>. By the way, when declaring the parameters they will be called equally <strong>output parameters</strong> at first, since there is no criterion to distinguish output from input before the navigation is configured.</p>
+<p>The definition of the output parameters is performed using the <strong>Manage outputparameters</strong> button but it differs   from document to document, according to its type. We will describe these differences in detail in each dedicated chapter, here we   explain the common steps.</p>
+<section id="adding-output-parameters">
+<h3>Adding output parameters<a class="headerlink" href="#adding-output-parameters" title="Link to this heading"></a></h3>
+<p>Knowage allows the definition of output parameters. From the Document Browser select a document and enter the <strong>Document details</strong>.
+Then click on <strong>Output parameters</strong> tab and then on the button <strong>Add</strong> to add the output parameter(s) to be passed to other analytical documents..</p>
+<p>The figure below shows an example of a parameter with a DATE type.
+The default value is related to the location defined in   (<strong>Menu</strong> &gt; <strong>Languages</strong>).</p>
+<figure class="align-default" id="id20">
+<span id="settinganotuparam"></span><img alt="../../_images/chapter-3-security-management-document-image85.png" src="../../_images/chapter-3-security-management-document-image85.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Setting an output parameter.</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="cross-navigation-definition">
+<h3>Cross navigation definition<a class="headerlink" href="#cross-navigation-definition" title="Link to this heading"></a></h3>
+<p>Finally you need to select the <strong>Cross Navigation Definition</strong> item from the menu to configure the cross navigation.</p>
+<figure class="align-default" id="id21">
+<img alt="../../_images/chapter-3-security-management-document-cross-03.png" src="../../_images/chapter-3-security-management-document-cross-03.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Cross navigation functionality.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The figure below shows the cross navigation definition window.</p>
+<figure class="align-default" id="id22">
+<img alt="../../_images/chapter-3-security-management-document-cross-00.png" src="../../_images/chapter-3-security-management-document-cross-00.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Cross navigation GUI.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>It is required to give a name to the navigation; then select the document from which to start the navigation and the target document. The selecting of a document will cause the loading of input/output parameters related to the starting document in the left column and of the possible input parameters of the target document in the right column.</p>
+<p>It is possible to configure the associations between input/output parameters by simply dragging and dropping a parameter from the left column on another of the right column.</p>
+<figure class="align-default" id="id23">
+<img alt="../../_images/chapter-3-security-management-document-cross-02.png" src="../../_images/chapter-3-security-management-document-cross-02.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Setting the cross navigation.</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once set, the association is highlighted as in Figure below.</p>
+<figure class="align-default" id="id24">
+<img alt="../../_images/chapter-3-security-management-document-image89.png" src="../../_images/chapter-3-security-management-document-image89.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Association between parameters.</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To assign fixed values to target parameters it is necessary to edit first the box labelled <strong>Fixed value parameter</strong> and click on the <strong>plus</strong> icon. Then the value can be associated as fixed value of the one or more target parameters. Remember to click on the <strong>Ok</strong> button to save the cross navigation just set.</p>
+<p>It is possible to define multiple cross navigation starting by the same document. In this case the system will show a popup window to choose the one that you want execute.
+It is possible set a specific description for each cross navigation so that will be easy to recognize the right navigation definition to use. In the same way it is possible set the text of the bread crumb and personalize it.
+For both attributes it is possible to show parameters (of input or output type) values through the syntax $P{parameter_name}. Just parameters of source documents are available.</p>
+<figure class="align-default" id="id25">
+<img alt="../../_images/chapter-3-security-management-document-cross-05.png" src="../../_images/chapter-3-security-management-document-cross-05.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Example of parametric description and breadcrumb text</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id26">
+<img alt="../../_images/chapter-3-security-management-document-image91.png" src="../../_images/chapter-3-security-management-document-image91.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Example of popup selection for more cross navigation definition (with params)</span><a class="headerlink" href="#id26" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Please bear in mind that for breadcrumbs as the case below, you need to set the <em>modality</em> to <em>Normal</em>.</p>
+<figure class="align-default" id="id27">
+<img alt="../../_images/chapter-3-security-management-document-cross-06.png" src="../../_images/chapter-3-security-management-document-cross-06.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Example of breadcrumbs with params</span><a class="headerlink" href="#id27" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="check.html" class="btn btn-neutral float-left" title="Creating a validation rule" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="repository_management.html" class="btn btn-neutral float-right" title="Repository Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -12,7 +12,7 @@ The material will be divided in two main sections. The first is dedicated to bui
 My first Query By Example
 ------------------------------------------------------------------------------------------------------------------------
 
-**QbE** allows you to query (a subset of) a database through a high-level representation of the entities and relations. 
+**QbE** allows you to query (a subset of) a database through a high-level representation of the entities and relations.
 Qbe main features are:
 
 -  rich end user GUI;
@@ -37,7 +37,7 @@ To open the QbE editor, access the **Models** section, available in the end user
 
 In this paragraph we show how to build a simple query with the QbE editor.
 
-.. figure:: media/qbeDesigner.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-qbedesigner.png
 
     QbE editor.
 
@@ -58,19 +58,19 @@ Each single entity contains a title, a list of attributes or measures and relati
 - **attribute**: refers to fields that can be associated to a category (e.g. PRODUCT ID);
 - **relation**: refers to relationships or connections between two entities (e.g. relationship between the sales and the product dimension).
 
-.. figure:: media/image300_bis.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-image300-bis.png
 
 	Entity relations.
 
 There are two available views: Smart and Advanced. When the QbE is opened, by default the user will see the Smart view. To add a field of a specific entity to the query,just click on it and no other user interaction will be necessary to display the results.
 
-.. figure:: media/smart_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-smart-8-1.png
 
 	Smart view.
 
 The user can display the Advanced view by switching off the Smart view option displayed on the top right corner. The user can continue adding fields to the query but without seeing result. A specific icon has to be clicked to run the query.
 
-.. figure:: media/advanceView_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-advanceview-8-1.png
 
 	Advanced view
 
@@ -82,7 +82,7 @@ In any case, the Smart view, shows a table structure where each column of the ta
 - a **deleting** icon
 - a **filter** icon
 
-.. figure:: media/image212_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-image212-8-1.png
 
     Smart view functionalities.
 
@@ -97,21 +97,21 @@ The Advanced view shows a set of rows where any row contains the **Entity name**
 - **In use**: indicate whether a column shall be used in the select clause of the query or not
 - **Filter**: to add a filter criteria;
 
-.. figure:: media/image213_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-image213-8-1.png
 
     Advanced view functionalities.
 
 The image below shows how to change the alias for a specific field from the Advanced view. Just click on the cell containing the alias name to be able to edit it.
 
 
-.. figure:: media/aliasChange_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-aliaschange-8-1.png
 
 	Change alias example.
 
 To change the alias of a field in the Smart view, just click on the **gear** icon and select *Rename Alias*
 Pay attention to grouping options: if you want to define an aggregation function on a field (like, for instance, the **COUNT** of the sold items), you shall tick the Group checkbox for all the other fields added in the query editor, without an aggregation function defined, otherwise you will get an SQL exception. The possible grouping functions are shown in the following figure.
 
-.. figure:: media/image214.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-image214.png
 
     Aggregation functions.
 
@@ -157,7 +157,7 @@ The below table summarizes some of the toolbar functionalities.
       |                                   | Advanced view                     |
       +-----------------------------------+-----------------------------------+
       |    **Three dots field menu**      | Contains functionalities like     |
-      |                                   |Delete, Filters, Havings (only for |
+      |                                   | Delete, Filters, Havings (only for|
       |                                   | the Advanced view                 |
       +-----------------------------------+-----------------------------------+
 
@@ -175,14 +175,14 @@ To build a calculated field, you shall define a:
 
 The image below shows how to open the wizard to add a calculated field.
 
-.. figure:: media/calculatedField_8.1_a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-calculatedfield-8-1-a.png
 
     Calculated field wizard.
 
 
 The image below shows the wizard.
 
-.. figure:: media/calculatedField_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-calculatedfield-8-1.png
 
     Calculated field wizard.
 
@@ -195,11 +195,11 @@ Filters are expressions of type:
 
                                       **Left operand + Operator + Right operand.**
 
-How to add a filter:                                                                                                                                                                                                                  
-- in the Smart view, clicking on **Funnel icon**                                                                                                                                   
+How to add a filter:
+- in the Smart view, clicking on **Funnel icon**
 - in the Advanced view, selecting **Filters** from the *three dots* field menu
 
-.. figure:: media/add_filter.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-add-filter.png
 
    Add filter from the Advanced view.
 
@@ -208,7 +208,7 @@ In both cases a pop up opens and click on the **+** icon to add your filter.
 
 To remove the filter just click on the **erase** icon as shownbelow.
 
-.. figure:: media/addDeleteFilter.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-adddeletefilter.png
 
  Removing a filter.
 
@@ -219,18 +219,18 @@ The Filter panel contains the following components:
 
 Above, an example of filter with *Target type* set to **Manual set value**: the **Target** will contain the value to be used as the right operand.
 
-.. figure:: media/manualTarget.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-manualtarget.png
 
 	Set a Manual Value for the *Target type*
 
 **Manual set value** can be also used choosing **Between**, **Not between** as *Condition*. In this case, a Low and High Limit is needed for *Target* values.
-When the user chooses **Value of the field** as *Target type*, a lookup function is automatically activated on the field values, to facilitate the selection of values to be used as the right operand. 
-To use a range of values as a right operand, the *Condition* should be to **In** or **Not in**. 
+When the user chooses **Value of the field** as *Target type*, a lookup function is automatically activated on the field values, to facilitate the selection of values to be used as the right operand.
+To use a range of values as a right operand, the *Condition* should be to **In** or **Not in**.
 
 
 The option **Another entity** allows the selection of a field from another entity, to be used as a right operand.
 
-.. figure:: media/anotherEntity.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-anotherentity.png
 
 **Subquery** and **Parameter** will be treated in detail later.
 
@@ -283,13 +283,13 @@ The following table summarizes the possible types of filters in the QbE. The use
 When filtering a date attribute or a time attribute it is possible to apply a timespan to ease the insertion of values as shown in the images below.
 We recall that is it possible to configure a new timespan using the dedicated Knowage functionality that we described in the administrator guide.
 
-.. figure:: media/imageTS005.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-imagets005.png
 
 	Filtering date attribute: use a timespan.
 
-After selecting a timespan, click on Save to apply it. 
+After selecting a timespan, click on Save to apply it.
 
-.. figure:: media/imageTS006.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-imagets006.png
 
 	Filtering date attribute: apply a timespan.
 
@@ -302,19 +302,19 @@ The QBE editor allows you to preview the results of your query.
 The QbE editor can be opened directly from the left side menu **My Data** > **Models**.
 
 The Smart functionality of the QbE automatically shows the preview of you query.
-The Advanced functionality of a QbE view contains a *Play* icon located in the top right corner of the panel that opens a window with the results of the query. 
+The Advanced functionality of a QbE view contains a *Play* icon located in the top right corner of the panel that opens a window with the results of the query.
 
-.. figure:: media/preview_1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-preview-1.png
 
 	Open the Preview wizard.
 
 Just close the window to go back to the **Designer**.
 
-.. figure:: media/preview_2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-preview-2.png
 
 	Preview wizard.
 
-After running the QbE you can also save your query as a new dataset by clicking on the **Save** icon located in the top right corner of the page; the dataset would be reachable later from **My Data**> **Dataset**. 
+After running the QbE you can also save your query as a new dataset by clicking on the **Save** icon located in the top right corner of the page; the dataset would be reachable later from **My Data**> **Dataset**.
 Please note that this operation saves the *definition* of your query and not the snapshot of the query result. This means that every time you re-execute the saved dataset, a query on the database is performed to recover the updated data.
 
 When saving your query as dataset, a pop up opens asking you to fill in some information, split in three tabs:
@@ -323,7 +323,7 @@ When saving your query as dataset, a pop up opens asking you to fill in some inf
 -  **Persistence**, you can persist your dataset, i.e., to write it on the default database. Making a dataset persistent may be useful in case dataset calculation takes a considerable amount of time. Instead of recalculating the dataset each time the documents using it are executed, the dataset is calculated once and then retrieved from a table to improve performance. You can also decide to schedule the persistence operation: this means that the data stored will be updated according to the frequency defined in the **scheduling** options.
 -  **Metadata**, contains the metadata associated to the fields involved in your query.
 
-.. figure:: media/saveQbeDS_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-saveqbeds-8-1.png
 
 	Saving the qbe dataset.
 
@@ -348,20 +348,20 @@ In a BM with geographical dimensions enabled (by a technical user), the dimensio
 .. |earthIcon| image:: media/earthIcon.png
    :width: 30
 
-.. figure:: media/image218_a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-image218-a.png
 
     QbE spatial dimensions.
 
 Also for a geographical dimension is possible to add fields to the query, including *Calculated* fields. This functionality is the same as shown before, as the three dots menu of the Advanced view contains the **Calculated field** option. Note that a wizard opens: you can use this editor to insert a new field obtained through a finite sequence of operation on the selected fields. In this case, the wizard offers a set of spatial functions that can be used in your formula.
 
 .. _calculfldwizardspt:
-.. figure:: media/image219_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-image219-8-1.png
 
     Calculated field wizard with spatial filters.
 
 Remember to select *SPATIAL* from the Category menu list to see all the spatial functions. Drag and drop the fields and your function(s) to the text editor and refer to the Oracle function description for a proper use.
 
-.. figure:: media/spatialFunctions_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-spatialfunctions-8-1.png
 
     Spatial functions.
 
@@ -378,7 +378,7 @@ Time functions are only available for the Enterprise Edition with the right lice
 
 In addition to calculated fields, it is possible to filter on spatial fields using specific geometric operators
 
-.. figure:: media/image223.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-image223.png
 
     Spatial filters.
 
@@ -388,13 +388,12 @@ Subqueries
 
 
 The **QbE Engine** also supports the definition and usage of SQL subqueries to use within a filter in
- association to the **In/Not in** operator, as shown in the figure below. To create a subquery, click the *Plus* icon, on the right of **Derived entities**. 
-.
+association to the **In/Not in** operator, as shown in the figure below. To create a subquery, click the *Plus* icon, on the right of **Derived entities**.
 
 .. |addSubqueries| image:: media/addSubquery.png
    :width: 30
 
-.. figure:: media/subqueries_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-subqueries-8-1.png
 
 	QbE subquery view.
 
@@ -402,7 +401,7 @@ You can easily add fields and return to the main query clicking on the **MAIN** 
 
 To use the subquery inside the main query, simply choose **Subquery** from *Target type* and set the *Condition* to (**IN** or **NOT IN**).
 
-.. figure:: media/image281.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-image281.png
 
     QbE query: Use of a subquery in a filter.
 
@@ -416,16 +415,32 @@ The **QbE Engine** also supports the definition and usage of parameters that can
 .. |parameter| image:: media/parameter.png
    :width: 30
 
-.. figure:: media/parameter_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-parameter-8-1.png
 
 	QbE parameters view.
 
-    .. figure:: media/filterParam_8.1.1_2.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-filterparam-8-1-1-2.png
 
 	Defining a new parameter in a QbE.
 
 To use the parameter inside the main query, simply choose **Parameter** from Target type and choose parameter name from the **Target** list.
 
-.. figure:: media/filterParam_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-filterparam-8-1.png
 
 	QbE query: use of a parameter in a filter.
+
+Entity and column tooltips
+--------------------------
+
+Hover over an entity or a column to read the descriptions supplied by the
+business model author. Knowage 9.1 supports formatted tooltips, making business
+meaning and usage guidance available directly in the QBE editor. These
+descriptions complement the field aliases and relationships in the model.
+
+After editing filters, calculated fields or subqueries, run the preview and
+check aggregations and relationships. Save the query as a dataset when it is
+ready for use in a Dashboard or another analytical document.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-qbe-9-1-qbe-tooltips.png
+
+   Formatted entity and column descriptions in the QBE editor.

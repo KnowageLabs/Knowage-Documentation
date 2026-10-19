@@ -1,6 +1,9 @@
 How to upgrade KNOWAGE 8.0 to 8.1
 ########################################################################################################################
 
+This is an earlier-version migration step. After completing the required
+steps up to 9.0, continue with :doc:`how_upgrade_9_0_to_9_1` for the current release.
+
 This section describes the main steps to manually update an existing Knowage installation.
 
 Pay attention to the fact that Knowage versions' names adhere to the Semantic Versioning 2.0.0.
@@ -57,11 +60,11 @@ To upgrade Knowage installation follow these steps:
 .. code-block:: bash
 
   export JAVA_OPTS="$JAVA_OPTS -Dsymmetric_encryption_key=<any random string>"
-  
+
 .. code-block:: bash
 
    set JAVA_OPTS=%JAVA_OPTS% -Dsymmetric_encryption_key=<any random string>
 
-- In case you defined contexts with relevant files inside ``TOMCAT_HOME/conf/Catalina/localhost`` 
+- In case you defined contexts with relevant files inside ``TOMCAT_HOME/conf/Catalina/localhost``
 
 - Quartz configuration file for cluster configuration ( in case of any cluster only ):  by default it is not enabled on released packages therefore you need to restore it in case you have a clustered installation: add these lines in ``TOMCAT_HOME/webapps/knowage/WEB-INF/classes/quartz.properties`` (or restore them from the backup copy):

@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resource manager &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Log Manager" href="log_manager.html" />
+    <link rel="prev" title="Glossary" href="Glossary.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Manage Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add_datasource.html">Add new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedule.html">Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_manager.html">Server manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_export.html">Import/Export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timespan.html">Time Span</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Resource manager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resource-manager-functionalities">Resource Manager functionalities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="log_manager.html">Log Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widget_gallery.html">Widget gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="home_management.html">Home page management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_management.html">AI management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Manage Knowage</a></li>
+      <li class="breadcrumb-item active">Resource manager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapter_4/resource_manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="resource-manager">
+<h1>Resource manager<a class="headerlink" href="#resource-manager" title="Link to this heading"></a></h1>
+<p>Open <strong>Modules</strong> &gt; <strong>Tools</strong> &gt; <strong>Resource Management</strong> to browse and maintain
+the resources exposed by the installation. Upload or replace the intended
+file, then verify the documents that use it. Check the target tenant and
+resource location before removing shared content.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Enterprise Edition only</strong></p>
+<p>The Knowage Community Edition only allows the management of the <em>models</em> folder, in order to define metadata for data mining analysis. The Knowage Enterprise Edition allows the management of all the Knowage installation resources.</p>
+</div>
+<p>The <strong>Resource Manager</strong> functionality available under the <strong>TOOLS</strong> section of the Knowage main menu, allows the management of all files within the <em>Resources</em> folder of the Knowage installation.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-1-8-1.png" src="../_images/chapter-4-resource-manager-resource-mng-1-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 691 </span><span class="caption-text">Resource Manager from menu.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>By default, the system shows the files starting from the root directory:</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-2.png" src="../_images/chapter-4-resource-manager-resource-mng-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 692 </span><span class="caption-text">Resource Manager starting view.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="resource-manager-functionalities">
+<h2>Resource Manager functionalities<a class="headerlink" href="#resource-manager-functionalities" title="Link to this heading"></a></h2>
+<p>The Resource Manager window diplays two sections: on the left the tree structure representing the existing resource system; on the right the details of the selected folder.</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-2-bis.png" src="../_images/chapter-4-resource-manager-resource-mng-2-bis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 693 </span><span class="caption-text">Resource Manager detail view.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Tree functionalities</strong></p>
+<p>The tree shows exactly the phisical structure of the file system from the <strong>resources</strong> folder.
+The top bar contains two funcionalities: <strong>Refresh tree</strong> and <strong>Create new folder</strong>:</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-0.png" src="../_images/chapter-4-resource-manager-resource-mng-0.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 694 </span><span class="caption-text">Tree view.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id5">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-0-bis.png" src="../_images/chapter-4-resource-manager-resource-mng-0-bis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 695 </span><span class="caption-text">How to create a new folder.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-0-ter.png" src="../_images/chapter-4-resource-manager-resource-mng-0-ter.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 696 </span><span class="caption-text">New folder.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The new folder will be created under the selected folder of the tree ( in this case, ‘KNOWAGE-5058’).</p>
+<p>By clicking on the <em>Download</em> icon of a specific folder, you can download all files contained:</p>
+<figure class="align-default" id="id7">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-tree-1.png" src="../_images/chapter-4-resource-manager-resource-mng-tree-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 697 </span><span class="caption-text">Download functionality.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A zip file with the contents of the selected folder will be produced as a result of the download process.</p>
+<p>By clicking the <em>Delete</em> icon of a specific folder, the folder can be fisically removed from the Knowage server after a confirmation message.
+Please remember that the deletion of a folder is an irrecoverable operation.</p>
+<figure class="align-default" id="id8">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-tree-2.png" src="../_images/chapter-4-resource-manager-resource-mng-tree-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 698 </span><span class="caption-text">Delete functionality.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Detail panel</strong></p>
+<p>When a folder is selected, the right panel shows the properties <em>Name</em>, <em>Size</em> and <em>Last Modified Date</em> of all contained files.</p>
+<figure class="align-default" id="id9">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-6.png" src="../_images/chapter-4-resource-manager-resource-mng-6.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 699 </span><span class="caption-text">Detail view.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>All items are selectable for downloading or removal trough specific icons of the toolbar.</p>
+<p>An <strong>Upload</strong> functionality is also available through a dedicated icon.</p>
+<figure class="align-default" id="id10">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-5-bis.png" src="../_images/chapter-4-resource-manager-resource-mng-5-bis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 700 </span><span class="caption-text">Uploading a file</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In case of a zipped file want to be uploaded, it is possible to keep the file zipped.</p>
+<p>It is also possible to unzip the file to upload by enabling the <em>Extract Files</em> option as shown in the above image.</p>
+<p><strong>Model Metadata Definition</strong></p>
+<p>As already told at the beginning, <strong>models</strong> is the unique folder managed by both the Community and the Enterprise Edition. It contains all the data-mining models usable by the Knowage Function Catalog.</p>
+<p>For each model it is possible to define its metadata, download and/or delete the model using directly the tree options:</p>
+<figure class="align-default" id="id11">
+<img alt="../_images/chapter-4-resource-manager-resource-mng-8-b.png" src="../_images/chapter-4-resource-manager-resource-mng-8-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 701 </span><span class="caption-text">Models folder options</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><em>Metadata management</em></p>
+<p>The <strong>Metadata</strong> option opens a GUI where the user can define the metadata information for the model, into the specific see image below:</p>
+<figure class="align-default" id="id12">
+<img alt="../_images/chapter-4-resource-manager-resource-meta-4-b.png" src="../_images/chapter-4-resource-manager-resource-meta-4-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 702 </span><span class="caption-text">Metadata example</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Glossary.html" class="btn btn-neutral float-left" title="Glossary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="log_manager.html" class="btn btn-neutral float-right" title="Log Manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

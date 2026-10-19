@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Advanced Data Analysis &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Create Multi dimensional analisys" href="../create_multidimension/index.html" />
+    <link rel="prev" title="Create a new Registry" href="../create_registry/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Create Advanced Data Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions-catalog">Functions Catalog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-general-tab">The General tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-input-tab">The Input tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-script-tab">The Script tab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-output-tab">The Output tab</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#use-a-function-inside-documents">Use a function inside documents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+      <li class="breadcrumb-item active">Create Advanced Data Analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/create_datamining/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-advanced-data-analysis">
+<h1>Create Advanced Data Analysis<a class="headerlink" href="#create-advanced-data-analysis" title="Link to this heading"></a></h1>
+<p>Open <strong>Modules</strong> &gt; <strong>Catalogs</strong> &gt; <strong>Functions Catalog</strong> to maintain reusable
+functions. A configured Python service and the libraries used by the script
+are required. Preview the function with representative input before exposing
+its output in a document.</p>
+<p>Knowage supports advanced data analysis allowing you to extract knowledge from large volumes of data, to improve your decision-making and business strategies. In particular, Knowage <strong>Data Mining Engine</strong> integrates Python scripting capabilities.</p>
+<p>Thanks to this functionality, it is possible to execute Python scripts in an interactive way and enrich traditional datasets with new information. This means that it allows users to perform statistical or data mining analysis on different Knowage datasets.</p>
+<p>The data scientists can thus integrate its own algorithm within Knowage and deliver their output to the end user, together with new advanced visualization options useful to discover meaningful insights hidden in the data.</p>
+<p>The Catalog Function features leverage on the Python Engine. To understand how to install and configure it, please refer to the <a class="reference internal" href="../../chapter_5/installation/python-installation.html"><span class="doc">Python installation</span></a></p>
+<section id="functions-catalog">
+<h2>Functions Catalog<a class="headerlink" href="#functions-catalog" title="Link to this heading"></a></h2>
+<p>In this section we will see how to explore and handle the <strong>Functions</strong> framework., while in <em>Use a function inside documents</em> we will see how to use functions.
+First click on the <strong>Functions</strong> menu under the <strong>Catalogs</strong> section from the Knowage main page as shown below.</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/chapter-3-create-datamining-index-menu-catalogo.png" src="../../_images/chapter-3-create-datamining-index-menu-catalogo.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 470 </span><span class="caption-text">Functions Catalog from Knowage menu.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You will enter a page like the one shown in figure below.</p>
+<figure class="align-default" id="id2">
+<span id="functioncatalinterf"></span><img alt="../../_images/chapter-3-create-datamining-index-interfaccia-catalogo.png" src="../../_images/chapter-3-create-datamining-index-interfaccia-catalogo.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 471 </span><span class="caption-text">Functions Catalog interface.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The actions that a user can perform depend on the user’s role. However, independently from the user’s role, in the interface all functions are shown by default. Referring to the figure above, the page is composed by:</p>
+<ul class="simple">
+<li><p><strong>categories</strong>: these are set by an administrator user and are used to classify the functions accordingly to their definition and goals. Moreover they help in browsing the functions; only the admin user can add and/or modify categories.</p></li>
+<li><p><strong>search</strong>: to easily search for a specific functions in the list;</p></li>
+<li><p><strong>list of functions</strong> (if there are any): these are visible and explorable by any kind of user. Anyway only an admin user can add and/or modify them.</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><strong>Add or modify the categories</strong></p>
+<blockquote>
+<div><p>The admin can add a new category using the Domain management available on Knowage Server under the Server Settings section. To know more about this section, please refer to Section “Server settings” under the Installation and configuration section.</p>
+</div></blockquote>
+</div>
+<p>The categories for functions depends on an admin user. Taking <em>Functions Catalog interface</em> figure as an example, we have:</p>
+<ol class="arabic simple">
+<li><p><strong>Text Analysis</strong>: makes sense of unstructured text,</p></li>
+<li><p><strong>Machine Learning</strong>: teachs your app to teach itself,</p></li>
+<li><p><strong>Computer Vision</strong>: identifies objects in images,</p></li>
+<li><p><strong>Utilities</strong>: ready to use microservices,</p></li>
+<li><p><strong>All</strong>: visualizes all your functions; this is the only category that cannot be changed or removed.</p></li>
+</ol>
+<p>It is possible to search for a specific function in two ways: using the categories and clicking on one of them in order to filter the functions list or using the search box on the top of th list.</p>
+<p>A preview of the function can be executed using the icon <a class="reference internal" href="../../_images/image401.png"><img alt="image417" src="../../_images/image401.png" style="width: 30px;" /></a> which opens a dialog, here you can select and configure a dataset among the available ones in order to test the function. Use the icon <a class="reference internal" href="../../_images/image403.png"><img alt="image4172" src="../../_images/image403.png" style="width: 30px;" /></a> for deleting the function. Functions cannot be deleted if they are used inside one or more documents.</p>
+<p>To create a new function an admin user must click on the “Plus” icon available at the top right corner of the page. The action opens the interface shown below. Here you have four tabs that we describe shortly in the following subsections.</p>
+<figure class="align-default" id="id3">
+<span id="creatingnewfunct"></span><img alt="../../_images/chapter-3-create-datamining-index-image404.png" src="../../_images/chapter-3-create-datamining-index-image404.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 472 </span><span class="caption-text">Creating a new function.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="the-general-tab">
+<h3>The General tab<a class="headerlink" href="#the-general-tab" title="Link to this heading"></a></h3>
+<p>In this tab the user gives the general information about the function as the figure above shows. The admin user must type: the <em>name</em> of the function, the <em>label</em> with which it is identified uniquely (remember to use only numbers or letters and do not leave spaces between them) and the <em>type</em> that is the function category. The <em>keywords</em> are tags that can be assigned to a function, searching for a specific tag in the search box will retrive all the functions that have that tag. In order to add a new keyword you have to write the desired text and then press the submit button on the pc keyboard. The <em>Description</em> is where the user can insert a long text or images to be shown when the function is being configured inside documents. In the <em>Benchmarks</em> field users can insert information about the function performances.</p>
+</section>
+<section id="the-input-tab">
+<h3>The Input tab<a class="headerlink" href="#the-input-tab" title="Link to this heading"></a></h3>
+<p>As shown in the following figure, the function admits two kinds of input: <em>columns</em> and <em>variables</em>.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-create-datamining-index-function-input-tab.png" src="../../_images/chapter-3-create-datamining-index-function-input-tab.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 473 </span><span class="caption-text">Input tab.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the “Column” instance the function takes input columns that will be referenced inside the script. These columns are generic, the user must only specify their type and the name he later wants to use inside the script to access that specific column.</p>
+<figure class="align-default" id="id5">
+<img alt="../../_images/chapter-3-create-datamining-index-function-input-tab-column.png" src="../../_images/chapter-3-create-datamining-index-function-input-tab-column.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 474 </span><span class="caption-text">The dataset input of the function settings.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the “Variable” case, the user must insert one or more variables and match them with values using the dedicated area.</p>
+</section>
+<section id="the-script-tab">
+<h3>The Script tab<a class="headerlink" href="#the-script-tab" title="Link to this heading"></a></h3>
+<p>The script tab is where an expert user defines the function through the usage of datamining languages (such as Python), as shown in Figure below.</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/chapter-3-create-datamining-index-function-script-tab.png" src="../../_images/chapter-3-create-datamining-index-function-script-tab.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 475 </span><span class="caption-text">The script tab.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Inside the script users will have at their disposal a read-only <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html">pandas.Series</a> variable for each column defined in the input tab.
+To reference one specific column users must use the placeholder <em>${column_name}</em>. Input variables will be accessible with the same syntax.</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-number">Listing 26 </span><span class="caption-text">Code syntax to recall inputs</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">  </span><span class="si">${</span><span class="nv">column_name</span><span class="si">}</span>
+<span class="linenos">2</span><span class="w">          </span><span class="si">${</span><span class="nv">variable_name</span><span class="si">}</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Input variables are read only</strong></p>
+<blockquote>
+<div><p>If you want to manipulate them you should first make a local copy and work on it.</p>
+</div></blockquote>
+</div>
+<p>The script will have to produce as output one or more <em>pandas.Series</em> variables and will store them inside the corresponding output placeholders. The following is an example of function template.</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/chapter-3-create-datamining-index-catalog-function-example-script.png" src="../../_images/chapter-3-create-datamining-index-catalog-function-example-script.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 476 </span><span class="caption-text">Function template example.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-output-tab">
+<h3>The Output tab<a class="headerlink" href="#the-output-tab" title="Link to this heading"></a></h3>
+<p>Finally it is important to define what kind of outputs the function has produced, according to the script generated in the previous tab. Using the “Output“ tab shown below, you must specify:</p>
+<figure class="align-default" id="id9">
+<img alt="../../_images/chapter-3-create-datamining-index-function-output-tab.png" src="../../_images/chapter-3-create-datamining-index-function-output-tab.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 477 </span><span class="caption-text">Output tab.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Field Type</strong>: it can be <em>ATTRIBUTE</em> or <em>MEASURE</em>, and defines how the column will behave inside documents;</p></li>
+<li><p><strong>Type</strong>: it depends on the selected Field Type, it can be <em>String</em>, <em>Number (float)</em> or <em>Date</em>;</p></li>
+</ul>
+</section>
+</section>
+<section id="use-a-function-inside-documents">
+<h2>Use a function inside documents<a class="headerlink" href="#use-a-function-inside-documents" title="Link to this heading"></a></h2>
+<p>Now that functions have been created, they must be used inside documents. In this section we will go through all the steps that allow users to execute a function with a specific dataset.
+This works both for the function preview and for the function used inside cockpits.
+Depending on the scenario, you will have two different dialogs.</p>
+<p>When you are previewing the output of a function, you need to select the dataset you want to use to perform the preview. Therefore on the left card you will be able to select a dataset among the available ones. If the dataset has parameters you will be asked to insert values.</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/chapter-3-create-datamining-index-catalog-function-preview-interface.png" src="../../_images/chapter-3-create-datamining-index-catalog-function-preview-interface.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 478 </span><span class="caption-text">Preview interface.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Instead, when you are creating a new widget that uses a function, you will need to click on the <em>Add function</em> link to access the configurator.</p>
+<figure class="align-default" id="id11">
+<img alt="../../_images/chapter-3-create-datamining-index-catalog-function-usefunction-widget.png" src="../../_images/chapter-3-create-datamining-index-catalog-function-usefunction-widget.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 479 </span><span class="caption-text">Use a function in a widget.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>You cannot use more than one function in the same widget</strong></p>
+<blockquote>
+<div><p>If you try do so you will get an exception.</p>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Functions are available only in some widgets</strong></p>
+<blockquote>
+<div><p>Table, crosstable, chart and custom chart.</p>
+</div></blockquote>
+</div>
+<p>If you are using a function inside a widget it means that you have already selected the dataset you want to use. Therefore on the left card you will be able to select a function among the available ones.</p>
+<figure class="align-default" id="id12">
+<img alt="../../_images/chapter-3-create-datamining-index-catalog-function-widget-interface.png" src="../../_images/chapter-3-create-datamining-index-catalog-function-widget-interface.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 480 </span><span class="caption-text">Catalog function interface in widgets.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>From this point forward the rest of the configuration is identical for both widget and preview.
+The first thing that you have to do is to bind the input columns of the function with the columns
+coming from the selected dataset.</p>
+<p>The below image shows an example of a Logarithm function inside a document.
+Into the specific we are going to add a new column that will be the logarithm of a value of a specific column that already exists from the dataset.</p>
+<figure class="align-default" id="id13">
+<img alt="../../_images/chapter-3-create-datamining-index-catalog-logarith-function.png" src="../../_images/chapter-3-create-datamining-index-catalog-logarith-function.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 481 </span><span class="caption-text">Binding a dataset column to the function.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You already have to specify the Python environment and afterwards click the <em>SAVE</em> button to add the new logarithm column.</p>
+<figure class="align-default" id="id14">
+<img alt="../../_images/chapter-3-create-datamining-index-edit-logarith-function.png" src="../../_images/chapter-3-create-datamining-index-edit-logarith-function.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 482 </span><span class="caption-text">Edit the Logarithm function</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you save the widget, the outcome shows the new column added to the widget.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../create_registry/index.html" class="btn btn-neutral float-left" title="Create a new Registry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../create_multidimension/index.html" class="btn btn-neutral float-right" title="Create Multi dimensional analisys" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

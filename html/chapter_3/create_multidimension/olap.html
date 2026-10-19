@@ -1,0 +1,1079 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OLAP cubes &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Create a Dossier" href="../create_dossier/index.html" />
+    <link rel="prev" title="Create Multi dimensional analisys" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Create Multi dimensional analisys</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">OLAP cubes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#steps-for-building-an-olap-cube">Steps for building an OLAP cube</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functionalities">Functionalities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-an-olap-document">Creating an OLAP document</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Create Multi dimensional analisys</a></li>
+      <li class="breadcrumb-item active">OLAP cubes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/create_multidimension/olap.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="olap-cubes">
+<h1>OLAP cubes<a class="headerlink" href="#olap-cubes" title="Link to this heading"></a></h1>
+<p>Open a published OLAP document to browse the cube using the permissions and
+parameters assigned to your role. Administrators and authors configure the
+Mondrian schema and the OLAP document; readers use the pivot and its
+navigation controls to explore measures and dimensions.</p>
+<p>OLAP cubes enable users to analyse multidimensional data interactively from multiple perspectives.
+An OLAP consists of some basic analytical operations such as slice and dice, roll up, drill down and pivot.</p>
+<section id="steps-for-building-an-olap-cube">
+<h2>Steps for building an OLAP cube<a class="headerlink" href="#steps-for-building-an-olap-cube" title="Link to this heading"></a></h2>
+<p>Let’s start by analyzing an OLAP document already created as shown below.</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image135.png" src="../../_images/chapter-3-create-multidimension-olap-image135.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 483 </span><span class="caption-text">Exploring an existing OLAP document.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the following we will describe the main components of the OLAP page.</p>
+<section id="filter-panel">
+<h3>Filter panel<a class="headerlink" href="#filter-panel" title="Link to this heading"></a></h3>
+<p>Once the document is executed, the central area of the window contains the table whose measures are aggregated on dimensions. At the top of this area, panels are available to configure filters on attributes. We see in the following figure that the filter panel is made up of <strong>Filter cards</strong>. Here you can find the cube dimensions and their hierarchies as defined in the OLAP schema by the developer.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image136.png" src="../../_images/chapter-3-create-multidimension-olap-image136.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 484 </span><span class="caption-text">The filter panel.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="filter-cards">
+<h3>Filter cards<a class="headerlink" href="#filter-cards" title="Link to this heading"></a></h3>
+<p>Filter cards can stay on the filter panel or be placed on the column axis.
+You can move them from the filter panel to the axis or viceversa by dragging and dropping them from one place to the other.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image137.png" src="../../_images/chapter-3-create-multidimension-olap-image137.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 485 </span><span class="caption-text">The filter card inside the filter panel.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Filter cards are used to:</p>
+<ul class="simple">
+<li><p>inform the user about available dimensions defined in the OLAP schema,</p></li>
+<li><p>inform the user about dimension’s name,</p></li>
+<li><p>perfom slices,</p></li>
+<li><p>add the dimensions to the cube visualization,</p></li>
+<li><p>place hierarchies in different axes,</p></li>
+<li><p>filter visible members.</p></li>
+</ul>
+<p>Considering the next figure, we can see that a filter card is made up of:</p>
+<ul class="simple">
+<li><p>an icon for opening the hierachy selection dialog (a),</p></li>
+<li><p>the dimension name (b),</p></li>
+<li><p>a filter icon (when a filter is selected the icon is red) (c)+(d).</p></li>
+</ul>
+<figure class="align-default" id="id4">
+<span id="featuresoffiltcard"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image13839.png" src="../../_images/chapter-3-create-multidimension-olap-image13839.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 486 </span><span class="caption-text">Features of a filter card.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="axes-panel">
+<h3>Axes panel<a class="headerlink" href="#axes-panel" title="Link to this heading"></a></h3>
+<p>In the panel axes you can:</p>
+<ul class="simple">
+<li><p>drag and drop one or more dimensions,</p></li>
+<li><p>organize the dimensions visualization,</p></li>
+<li><p>swap axes.</p></li>
+</ul>
+<p>Referring to the following figure, the axes panel consists of the following items:</p>
+<ul class="simple">
+<li><p>columns axis (a),</p></li>
+<li><p>row axis (b),</p></li>
+<li><p>filter cards (c),</p></li>
+<li><p>icon for swap axes (d),</p></li>
+<li><p>icon for hierarchy order (e).</p></li>
+</ul>
+<figure class="align-default" id="id5">
+<span id="axespanelfeat"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image140.png" src="../../_images/chapter-3-create-multidimension-olap-image140.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 487 </span><span class="caption-text">Axes panel features.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pivot-table">
+<h3>Pivot table<a class="headerlink" href="#pivot-table" title="Link to this heading"></a></h3>
+<p>The Pivot table is the central part of the OLAP page. In figure below is shown an example.</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image141.png" src="../../_images/chapter-3-create-multidimension-olap-image141.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 488 </span><span class="caption-text">Pivot table.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Pivot table is used to:</p>
+<ul class="simple">
+<li><p>show data based on MDX query sent from the interface,</p></li>
+<li><p>drill down/up hierarchies’ dimensions,</p></li>
+<li><p>drill through,</p></li>
+<li><p>show properties of a particular member,</p></li>
+<li><p>sort data,</p></li>
+<li><p>show calculated fields,</p></li>
+<li><p>perform cross navigation to other documents.</p></li>
+</ul>
+<p>Referring to next figure, Pivot table consists of:</p>
+<ul class="simple">
+<li><p>dimensions involved in the analysis (a),</p></li>
+<li><p>cells with data (b),</p></li>
+<li><p>icons for drill down and drill up (c),</p></li>
+<li><p>icons for sorting (only if enabled by the developer) (d),</p></li>
+<li><p>links for cross navigation (only if enabled and configured by the developer) (e).</p></li>
+</ul>
+<figure class="align-default" id="id7">
+<span id="pivottablefeat"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image142a.png" src="../../_images/chapter-3-create-multidimension-olap-image142a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 489 </span><span class="caption-text">Pivot table features.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="side-bar">
+<h3>Side bar<a class="headerlink" href="#side-bar" title="Link to this heading"></a></h3>
+<p>You can open the side bar by clicking on the icon positioned on the top right side of the page (see next figure). Side bar will be shown on the right side (see <em>Side bar</em> figure).</p>
+<figure class="align-default" id="id8">
+<span id="openthesidebar"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image143.png" src="../../_images/chapter-3-create-multidimension-olap-image143.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 490 </span><span class="caption-text">Open the side bar.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Side bar is used to:</p>
+<ul class="simple">
+<li><p>choose between different data representations,</p></li>
+<li><p>choose between different drill types,</p></li>
+<li><p>call dialogs and functionalities that effect the pivot table.</p></li>
+</ul>
+<figure class="align-default" id="id9">
+<span id="sidebar"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image144.png" src="../../_images/chapter-3-create-multidimension-olap-image144.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 491 </span><span class="caption-text">Side bar.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The side bar shows the <strong>Settings</strong>. This area let you customize the Olap layout. As highlighted in the figure below, the Menu is divided in three subsections:</p>
+<ul class="simple">
+<li><p>drill options (a),</p></li>
+<li><p>OLAP functions (b),</p></li>
+<li><p>table functions (c),</p></li>
+<li><p>what if (if it is a what-if document).</p></li>
+</ul>
+<figure class="align-default" id="id10">
+<span id="sidebarmenu"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image145a.png" src="../../_images/chapter-3-create-multidimension-olap-image145a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 492 </span><span class="caption-text">Side bar Menu.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>We start introducing the interface and leave the description on how they works to the next <em>Functionalities</em> paragraph. In particular, referring to next figure, drill types consists of:</p>
+<ul class="simple">
+<li><p>position,</p></li>
+<li><p>member,</p></li>
+<li><p>replace,</p></li>
+<li><p>drill through.</p></li>
+</ul>
+<figure class="align-default" id="id11">
+<span id="drilltypes"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image146.png" src="../../_images/chapter-3-create-multidimension-olap-image146.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 493 </span><span class="caption-text">Drill types.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Meanwhile, referring to the following figure, the OLAP functions consist of:</p>
+<ul class="simple">
+<li><p>show MDX Query (a),</p></li>
+<li><p>reload model (b),</p></li>
+<li><p>enable cross navigation (if enabled and configured by the developer) (c).</p></li>
+</ul>
+<figure class="align-default" id="id12">
+<span id="olapfunctions"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image147a.png" src="../../_images/chapter-3-create-multidimension-olap-image147a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 494 </span><span class="caption-text">OLAP functions.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Referring to figure below, table functions consist of:</p>
+<ul class="simple">
+<li><p>show parent members (a),</p></li>
+<li><p>hide spans (b),</p></li>
+<li><p>sorting settings (c),</p></li>
+<li><p>show properties (d),</p></li>
+<li><p>suppress empty rows/columns (e),</p></li>
+<li><p>save customized view (f).</p></li>
+</ul>
+<figure class="align-default" id="id13">
+<span id="tablefunctions1"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image148a.png" src="../../_images/chapter-3-create-multidimension-olap-image148a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 495 </span><span class="caption-text">Table functions.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Referring to next figure, if the document is a what-if the what if section consists of:</p>
+<ul class="simple">
+<li><p>lock/unlock model (a),</p></li>
+<li><p>save as new version (b),</p></li>
+<li><p>undo (c),</p></li>
+<li><p>delete versions (d),</p></li>
+<li><p>output wizard (e),</p></li>
+<li><p>select an algotithm (f).</p></li>
+</ul>
+<figure class="align-default" id="id14">
+<span id="tablefunctions2"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image149a.png" src="../../_images/chapter-3-create-multidimension-olap-image149a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 496 </span><span class="caption-text">What if.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="functionalities">
+<h2>Functionalities<a class="headerlink" href="#functionalities" title="Link to this heading"></a></h2>
+<section id="placing-hierarchies-on-axes">
+<h3>Placing hierarchies on axes<a class="headerlink" href="#placing-hierarchies-on-axes" title="Link to this heading"></a></h3>
+<p>As we already told, the user can easily move a dimension from the filter bar to the axis or viceversa dragging and dropping it to the desired place.</p>
+<p>Let us suppose we want to move a dimension from the filter panel to the columns axis. The steps are summarized in figure below</p>
+<figure class="align-default" id="id15">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image150.png" src="../../_images/chapter-3-create-multidimension-olap-image150.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 497 </span><span class="caption-text">Move a hierarchy to the columns axis.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Vice versa, to move back the dimension from the columns axis to the filter panel the user must simply drag and drop the dimension from one place to the other as in the following figure.</p>
+<figure class="align-default" id="id16">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image151.png" src="../../_images/chapter-3-create-multidimension-olap-image151.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 498 </span><span class="caption-text">Move a dimension from the columns axis to the filter panel.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Similarly, a dimension can be moved from the filter panel to the rows axis simply dragging and dropping it from one place to the other.</p>
+</section>
+<section id="swaping-axes">
+<h3>Swaping axes<a class="headerlink" href="#swaping-axes" title="Link to this heading"></a></h3>
+<p>To swap axes the user should click on the icon <a class="reference internal" href="../../_images/image152.png"><img alt="image151" src="../../_images/image152.png" style="width: 30px;" /></a>. The user will get the outcome showed in figure below.</p>
+<figure class="align-default" id="id17">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image153.png" src="../../_images/chapter-3-create-multidimension-olap-image153.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 499 </span><span class="caption-text">Swap axes.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="selecting-different-hierarchies-on-dimension">
+<h3>Selecting different hierarchies on dimension<a class="headerlink" href="#selecting-different-hierarchies-on-dimension" title="Link to this heading"></a></h3>
+<p>If an OLAP schema is defined, the user can choose different hierarchies of the same dimension. The icon for opening the dialog is positioned on the left of the filter card (if the dimension has more than one hierarchy). Select the hierarchies icon underlined below.</p>
+<figure class="align-default" id="id18">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image154.png" src="../../_images/chapter-3-create-multidimension-olap-image154.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 500 </span><span class="caption-text">Hierarchies icon.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A pop up will be displayed. The following figure shows its characteristics. Here it is possible to change the hierachy through the combo-box and then save.</p>
+<figure class="align-default" id="id19">
+<span id="hierarchiesdialogpopup"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image155.png" src="../../_images/chapter-3-create-multidimension-olap-image155.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 501 </span><span class="caption-text">Hierarchies dialog pop up.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After selecting the hierarchy and saving user’s choice, that hierarchy will be used by the pivot table.</p>
+<p>If the user re-opens the dialog window, he/she sees the selected hieararchies and has the chance to change it if needed to, as shown below.</p>
+<figure class="align-default" id="id20">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image1565758.png" src="../../_images/chapter-3-create-multidimension-olap-image1565758.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 502 </span><span class="caption-text">Changing the hierarchies.</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Below an example of the output in case the hierarchy <em>All Customers</em> is selected and in case the hierarchy <em>Customers by segment</em> is selected.</p>
+<figure class="align-default" id="id21">
+<span id="timehierarchieshowsdays"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image159.png" src="../../_images/chapter-3-create-multidimension-olap-image159.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 503 </span><span class="caption-text">All Customers hierachy: the table shows customers by state.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id22">
+<span id="timeweeklyhierarchyshowsweek"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image160.png" src="../../_images/chapter-3-create-multidimension-olap-image160.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 504 </span><span class="caption-text">Customers by segment hierachy: the table shows customers by segment.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="slicing">
+<h3>Slicing<a class="headerlink" href="#slicing" title="Link to this heading"></a></h3>
+<p>The slicing operation consists in the analysis of a subset of a multi-dimensional array corresponding to a single value for one or more members of the dimensions. In order to perform this operation you need to drag and drop the dimension of interest in the axis panel.  Then clicking on the filter icon choose the new single focus and apply it. Once concluded these steps the cube will show only the selected level of the dimension, while the others have been sliced out.</p>
+<p>The figure below shows the slicer options panel consisting of all those items selected and used in the pivot table.</p>
+<figure class="align-default" id="id23">
+<span id="dialogforslicerchoosing"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image161-a.png" src="../../_images/chapter-3-create-multidimension-olap-image161-a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 505 </span><span class="caption-text">Choosing a slicer.</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To unlock the whole member tree and define a new slicing just click  the <em>Add</em> button.
+As you can see in the following figure, here it is possible to navigate the member tree, search for a specific value in the member tree, clear all the selections and apply a new one.</p>
+<figure class="align-default" id="id24">
+<span id="dialogforslicerchoosing-result"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image161-b.png" src="../../_images/chapter-3-create-multidimension-olap-image161-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 506 </span><span class="caption-text">Defining a new slicing.</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In particular, it is possible to search for a member value in two ways:</p>
+<ol class="arabic simple">
+<li><p>by browsing the member tree</p></li>
+</ol>
+<figure class="align-default" id="id25">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image162-1.png" src="../../_images/chapter-3-create-multidimension-olap-image162-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 507 </span><span class="caption-text">Browsing the member tree.</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>by typing the member’s name or part of it in the input field.</p></li>
+</ol>
+<figure class="align-default" id="id26">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image16364.png" src="../../_images/chapter-3-create-multidimension-olap-image16364.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 508 </span><span class="caption-text">Using the research box.</span><a class="headerlink" href="#id26" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Then check the values and click the <em>Apply</em> button to save the selection. These choices will affect the pivot table. See figure below.</p>
+<figure class="align-default" id="id27">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image165.png" src="../../_images/chapter-3-create-multidimension-olap-image165.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 509 </span><span class="caption-text">Results for slicing operation.</span><a class="headerlink" href="#id27" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="filtering">
+<h3>Filtering<a class="headerlink" href="#filtering" title="Link to this heading"></a></h3>
+<p>To filter dimension members in a pivot table, the user should click on the funnel icon located on the right side of dimension’s filter card placed in the filter area.</p>
+<p>The procedure to search a member using the filter dialog has no meaningful differences with the one described for the slicer chooser dialog.
+The pop up interface is the one shown below.
+After selecting a member, you should click on the <em>Apply</em> button to filter the values in the pivot. The pivot table will then display the changes.
+Otherwise click the <em>Cancel</em> button to discard changes.</p>
+<figure class="align-default" id="id28">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image166-1.png" src="../../_images/chapter-3-create-multidimension-olap-image166-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 510 </span><span class="caption-text">Filter dialog.</span><a class="headerlink" href="#id28" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="drill-down-and-drill-up">
+<h3>Drill down and drill up<a class="headerlink" href="#drill-down-and-drill-up" title="Link to this heading"></a></h3>
+<p>User can choose between different drill types by clicking on one of the three buttons in the “Drill On Dimensions” section of the side bar. There are three drill types. In the following we give some details on them.</p>
+<ol class="arabic simple">
+<li><p><strong>Position</strong>: this is the default drill type. Clicking on a drill down/drill up command will expand/collapse a pivot table with child members of a member. See below.</p></li>
+</ol>
+<figure class="align-default" id="id29">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image168.png" src="../../_images/chapter-3-create-multidimension-olap-image168.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 511 </span><span class="caption-text">“Position” drill down.</span><a class="headerlink" href="#id29" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p><strong>Member</strong>: if the user wants to perform drill operation not only on one member per time but on all members of the same name and level at the same time it is needed to select member drill type. See below.</p></li>
+</ol>
+<figure class="align-default" id="id30">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image169.png" src="../../_images/chapter-3-create-multidimension-olap-image169.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 512 </span><span class="caption-text">“Member” drill down.</span><a class="headerlink" href="#id30" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p><strong>Replace</strong>: this option lets the user replace the parent member with his child member during drill down operation. To drill up the user should click on the arrow icon next to the dimension name on which to perform operation. See figure below.</p></li>
+</ol>
+<figure class="align-default" id="id31">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image170.png" src="../../_images/chapter-3-create-multidimension-olap-image170.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 513 </span><span class="caption-text">“Replace” drill down.</span><a class="headerlink" href="#id31" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="drill-through">
+<h3>Drill through<a class="headerlink" href="#drill-through" title="Link to this heading"></a></h3>
+<p>To perform drill through operation the user needs to click on the corresponding button in the side bar. Then clicking on the magnifying glass button in one of the pivot cell a dialog will open with results (this pop up could take some time to open).</p>
+<figure class="align-default" id="id32">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image171.png" src="../../_images/chapter-3-create-multidimension-olap-image171.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 514 </span><span class="caption-text">Drill thorugh option.</span><a class="headerlink" href="#id32" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In particular, referring to the next figure, drill though dialog consists of:</p>
+<ul class="simple">
+<li><p>a hierarchy menu,</p></li>
+<li><p>a table of values,</p></li>
+<li><p>a maximum rows drop down list,</p></li>
+<li><p>an apply button,</p></li>
+<li><p>an export button,</p></li>
+<li><p>a cancel button,</p></li>
+<li><p>a clear all button.</p></li>
+</ul>
+<figure class="align-default" id="id33">
+<span id="drillthoroughwindow"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image172a.png" src="../../_images/chapter-3-create-multidimension-olap-image172a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 515 </span><span class="caption-text">Drill thorugh window.</span><a class="headerlink" href="#id33" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here you can choose the level of detail with which data will be displayed through the hierachy menu.
+The steps to follow are:</p>
+<ol class="arabic simple">
+<li><p>clicking on a hierarchy in hierarchy menu,</p></li>
+<li><p>checking the checkbox of the level,</p></li>
+</ol>
+<figure class="align-default" id="id34">
+<span id="checkboxlevel"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image172b.png" src="../../_images/chapter-3-create-multidimension-olap-image172b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 516 </span><span class="caption-text">Checkbox of the level.</span><a class="headerlink" href="#id34" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>clicking on the “Apply” button.</p></li>
+</ol>
+<p>You can also select the maximum rows to load by choosing one of the options in the drop down list. Finally, loaded data can be exported in csv format by clicking on the “Export” button.</p>
+</section>
+<section id="refreshing-model">
+<h3>Refreshing model<a class="headerlink" href="#refreshing-model" title="Link to this heading"></a></h3>
+<p>To refresh a loaded model just click on the <em>Refresh</em> button available in the side bar panel.
+This action will clear the cash, load the pivot table and the rest of the data again.</p>
+</section>
+<section id="showing-mdx">
+<h3>Showing MDX<a class="headerlink" href="#showing-mdx" title="Link to this heading"></a></h3>
+<p>To show the current MDX query you should The specific <em>Show mdx query</em> button of the side bar. Figure below shows an example.</p>
+<figure class="align-default" id="id35">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image173.png" src="../../_images/chapter-3-create-multidimension-olap-image173.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 517 </span><span class="caption-text">Showing MDX query example.</span><a class="headerlink" href="#id35" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="showing-parent-members">
+<h3>Showing parent members<a class="headerlink" href="#showing-parent-members" title="Link to this heading"></a></h3>
+<p>If yoy want to see additional information about members shown in the pivot table (for example: member’s hierarchy, level or parent member) he should click on show parent members button in the side bar panel. The result will be visible in the pivot table. An example is shown in the following two figures.</p>
+<figure class="align-default" id="id36">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image176.png" src="../../_images/chapter-3-create-multidimension-olap-image176.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 518 </span><span class="caption-text">Pivot table without the parent members mode.</span><a class="headerlink" href="#id36" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id37">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image177.png" src="../../_images/chapter-3-create-multidimension-olap-image177.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 519 </span><span class="caption-text">Pivot table after the parent members selection.</span><a class="headerlink" href="#id37" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="hiding-showing-spans">
+<h3>Hiding/showing spans<a class="headerlink" href="#hiding-showing-spans" title="Link to this heading"></a></h3>
+<p>To hide or show spans the user should click on show/hide spans button in the side bar. The result will be visible in pivot table as in figure below.</p>
+<figure class="align-default" id="id38">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image178.png" src="../../_images/chapter-3-create-multidimension-olap-image178.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 520 </span><span class="caption-text">Hide/show spans.</span><a class="headerlink" href="#id38" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="showing-properties">
+<h3>Showing properties<a class="headerlink" href="#showing-properties" title="Link to this heading"></a></h3>
+<p>In OLAP schema the XML member properties, if configured, is represented as part of pivot table where property values are placed in rows and columns. To get these values, the user needs to click on show      properties button in the side bar. Results will be shown in the pivot table;</p>
+<figure class="align-default" id="id39">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image179.png" src="../../_images/chapter-3-create-multidimension-olap-image179.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 521 </span><span class="caption-text">Show properties.</span><a class="headerlink" href="#id39" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="suppressing-empty-colunms-rows">
+<h3>Suppressing empty colunms/rows<a class="headerlink" href="#suppressing-empty-colunms-rows" title="Link to this heading"></a></h3>
+<p>To hide the empty rows and/or colums, if any, you can click the table function <em>Suppress empty rows/colums</em> button of the side bar panel.
+An example below.</p>
+<figure class="align-default" id="id40">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image181.png" src="../../_images/chapter-3-create-multidimension-olap-image181.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 522 </span><span class="caption-text">Suppressing empty colunms/rows.</span><a class="headerlink" href="#id40" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="sorting">
+<h3>Sorting<a class="headerlink" href="#sorting" title="Link to this heading"></a></h3>
+<p>To enable members’ ordering you click the <em>Sorting settings</em> button of the side bar panel. The command for sorting will appear next to the member’s name in the pivot table, as shown below.</p>
+<figure class="align-default" id="id41">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image18283.png" src="../../_images/chapter-3-create-multidimension-olap-image18283.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 523 </span><span class="caption-text">Member sorting.</span><a class="headerlink" href="#id41" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To sort members you have to click on the sorting command (two opposite arrows) available next to each member of the pivot table. Note that the sorting criteria is descending at first execution and it represented by a red down arrow. If the user clicks again on the sorting icon, criteria will change to ascending and the icon becomes an upper green arrow. To remove the sorting, the user just have to click on the icon again.</p>
+<p>To change the sorting mode you should click the sorting settings button of the side bar.</p>
+<figure class="align-default" id="id42">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image185a.png" src="../../_images/chapter-3-create-multidimension-olap-image185a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 524 </span><span class="caption-text">Sorting settings window.</span><a class="headerlink" href="#id42" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The available types of sorting are:</p>
+<ul class="simple">
+<li><p>no sorting (it is the default);</p></li>
+<li><p>basic, it is the standard ascending or descending order according to the column values where the ordering is done;</p></li>
+<li><p>breaking, it means that the hierarchy will be broken;</p></li>
+<li><p>count, only the top or last members will be shown in the pivot table; the user can change the number of members shown (by default first or last 10) using the number input field that appears clicking on this type of sorting.</p></li>
+</ul>
+</section>
+</section>
+<section id="creating-an-olap-document">
+<h2>Creating an OLAP document<a class="headerlink" href="#creating-an-olap-document" title="Link to this heading"></a></h2>
+<p>Multidimensional analysis allows the hierarchical inquiry of numerical measures over predefined dimensions. In Cockpit we explained how the user can monitor data on different detail levels and from different perspectives. Here we want to go into details of how a technical user can create an OLAP document. We recall that the main characteristics of OLAP documents are:</p>
+<ul class="simple">
+<li><p>the need for a specific data structure (logical or physical);</p></li>
+<li><p>analysis based on dimensions, hierarchies and measures;</p></li>
+<li><p>interactive analysis;</p></li>
+<li><p>freedom to re-orient analysis;</p></li>
+<li><p>different levels of data analysis, through synthetic and detailed views;</p></li>
+<li><p>drill-down, slice and dice, drill-through operations.</p></li>
+</ul>
+<p>Below the steps to develop an OLAP document.</p>
+<section id="about-the-engine">
+<h3>About the engine<a class="headerlink" href="#about-the-engine" title="Link to this heading"></a></h3>
+<p>Knowage performs OLAP documents by relying on the <strong>OLAP engine</strong>. This engine integrates Mondrian OLAP server and two different cube navigation clients to provide multi-dimensional analysis. In general, Mondrian is a Relational Online Analytical Processing (ROLAP) tool that provides the back-end support for the engine. OLAP structures, such as cubes, dimensions and attributes, are mapped directly onto tables and columns of the data warehouse. This way, Mondrian builds an OLAP cube in cache that can be accessed by client applications. The Knowage OLAP engine provides the front-end tool to interact with Mondrian servers and shows the results via the typical OLAP functionalities, like drill down, slicing and dicing on a multi-dimensional table. Furthermore, it can also interact with XMLA servers. This frontend translates user’s navigation actions into MDX queries on the multi-dimensional cube, and show query results on the table he is navigating.</p>
+</section>
+<section id="a-new-olap-document">
+<h3>A new OLAP document<a class="headerlink" href="#a-new-olap-document" title="Link to this heading"></a></h3>
+<p>To create an OLAP analytical document the following steps are needed:</p>
+<ul class="simple">
+<li><p>schema modelling;</p></li>
+<li><p>catalogue configuration;</p></li>
+<li><p>OLAP cube template building;</p></li>
+<li><p>analytical document creation.</p></li>
+</ul>
+<section id="schema-modelling">
+<h4>Schema modelling<a class="headerlink" href="#schema-modelling" title="Link to this heading"></a></h4>
+<p>The very first step for a multi-dimensional analysis is to identify the essential information to describe the process/event under analysis and to consider how it is stored and organized in the database. On the basis of these two elements, a mapping process should be performed to create the multi-dimensional model.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><strong>From the relational to the multi-dimensional model</strong></p>
+<blockquote>
+<div><p>The logical structure of the database has an impact on the mapping approach to be adopted when creating the multidimensional             model, as well as on query performances.</p>
+</div></blockquote>
+</div>
+<p>If the structure of the relational schema complies with multi-dimensional logics, it will be easier to map the entities of the physical model onto the metadata used in Mondrian schemas. Otherwise, if the structure is highly normalized and scarcely dimensional, the mapping process will probably require to force and approximate the model to obtain a multi-dimensional model. As said above, Mondrian is a ROLAP tool. As such, it maps OLAP structures, such as cubes, dimensions and attributes directly on tables and columns of a relational data base via XMLbased files, called Mondrian schemas. Mondrian schemas are treated by Knowage as resources and organized into catalogues. Hereafter, an example of Mondrian schema:</p>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-number">Listing 27 </span><span class="caption-text">Mondrian schema example</span><a class="headerlink" href="#id43" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w">     </span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="linenos"> 2</span><span class="w">      </span><span class="nt">&lt;Schema</span><span class="w"> </span><span class="na">name=</span><span class="s">"FoodMart"</span><span class="nt">&gt;</span>
+<span class="linenos"> 3</span><span class="w">            </span><span class="cm">&lt;!-- Shared dimensions --&gt;</span>
+<span class="linenos"> 4</span><span class="w">            </span><span class="nt">&lt;Dimension</span><span class="w"> </span><span class="na">name=</span><span class="s">"Customers"</span><span class="nt">&gt;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">               </span><span class="nt">&lt;Hierarchy</span><span class="w"> </span><span class="na">hasAll=</span><span class="s">"true"</span><span class="w"> </span><span class="na">allMemberName=</span><span class="s">"All Customers"</span>
+<span class="linenos"> 7</span><span class="w">                          </span><span class="na">primaryKey=</span><span class="s">" customer_id"</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">                   </span><span class="nt">&lt;Table</span><span class="w"> </span><span class="na">name=</span><span class="s">"customer"</span><span class="nt">/&gt;</span>
+<span class="linenos">10</span><span class="w">                   </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"Country"</span><span class="w"> </span><span class="na">column=</span><span class="s">"country"</span><span class="w"> </span><span class="na">uniqueMembers=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">11</span><span class="w">                   </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"State Province"</span><span class="w"> </span><span class="na">column=</span><span class="s">"state_province"</span>
+<span class="linenos">12</span><span class="w">                          </span><span class="na">uniqueMembers=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">13</span><span class="w">                   </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"City"</span><span class="w"> </span><span class="na">column=</span><span class="s">"city"</span><span class="w"> </span><span class="na">uniqueMembers=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">               </span><span class="nt">&lt;/Hierarchy&gt;</span><span class="w"> </span>...
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">            </span><span class="nt">&lt;/Dimension&gt;</span><span class="w"> </span>...
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">            </span><span class="cm">&lt;!-- Cubes --&gt;</span>
+<span class="linenos">20</span><span class="w">            </span><span class="nt">&lt;Cube</span><span class="w"> </span><span class="na">name=</span><span class="s">"Sales"</span><span class="nt">&gt;</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">               </span><span class="nt">&lt;Table</span><span class="w"> </span><span class="na">name=</span><span class="s">"sales_fact_1998"</span><span class="nt">/&gt;</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">               </span><span class="nt">&lt;DimensionUsage</span><span class="w"> </span><span class="na">name=</span><span class="s">"Customers"</span><span class="w"> </span><span class="na">source=</span><span class="s">"Customers"</span>
+<span class="linenos">25</span><span class="w">                               </span><span class="na">foreignKey=</span><span class="s">"customer_id"</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w"> </span>...
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="w">               </span><span class="cm">&lt;!-- Private dimensions --&gt;</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="w">               </span><span class="nt">&lt;Dimension</span><span class="w"> </span><span class="na">name=</span><span class="s">"Promotion Media"</span><span class="w"> </span><span class="na">foreignKey=</span><span class="s">"promotion_id"</span><span class="nt">&gt;</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="w">                   </span><span class="nt">&lt;Hierarchy</span><span class="w"> </span><span class="na">hasAll=</span><span class="s">"true"</span><span class="w"> </span><span class="na">allMemberName=</span><span class="s">"All Media"</span>
+<span class="linenos">32</span><span class="w">                              </span><span class="na">primaryKey=</span><span class="s">"promotion_id"</span><span class="nt">&gt;</span>
+<span class="linenos">33</span><span class="w">                       </span><span class="nt">&lt;Table</span><span class="w"> </span><span class="na">name=</span><span class="s">"promotion"</span><span class="nt">/&gt;</span>
+<span class="linenos">34</span><span class="w">                       </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"Media Type"</span><span class="w"> </span><span class="na">column=</span><span class="s">"media_type"</span><span class="w"> </span><span class="na">uniqueMembers=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">35</span><span class="w">                   </span><span class="nt">&lt;/Hierarchy&gt;</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="w">               </span><span class="nt">&lt;/Dimension&gt;</span><span class="w"> </span>...
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="w">               </span><span class="cm">&lt;!-- basic measures--&gt;</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="w">               </span><span class="nt">&lt;Measure</span><span class="w"> </span><span class="na">name=</span><span class="s">"Unit Sales"</span><span class="w"> </span><span class="na">column=</span><span class="s">"unit_sales"</span><span class="w"> </span><span class="na">aggregator=</span><span class="s">"sum"</span>
+<span class="linenos">42</span><span class="w">                        </span><span class="na">formatString=</span><span class="s">"#,###.00"</span><span class="nt">/&gt;</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span><span class="w">               </span><span class="nt">&lt;Measure</span><span class="w"> </span><span class="na">name=</span><span class="s">"Store Cost"</span><span class="w"> </span><span class="na">column=</span><span class="s">"store_cost"</span><span class="w"> </span><span class="na">aggregator=</span><span class="s">"sum"</span>
+<span class="linenos">45</span><span class="w">                        </span><span class="na">formatString=</span><span class="w"> </span><span class="s">"#,###.00"</span><span class="nt">/&gt;</span>
+<span class="linenos">46</span>
+<span class="linenos">47</span><span class="w">               </span><span class="nt">&lt;Measure</span><span class="w"> </span><span class="na">name=</span><span class="s">"Store Sales"</span><span class="w"> </span><span class="na">column=</span><span class="s">"store_sales"</span><span class="w"> </span><span class="na">aggregator=</span><span class="s">"sum"</span>
+<span class="linenos">48</span><span class="w">                        </span><span class="na">formatString=</span><span class="s">"#,###.00"</span><span class="nt">/&gt;</span>
+<span class="linenos">49</span><span class="w">               </span>...
+<span class="linenos">50</span>
+<span class="linenos">51</span><span class="w">               </span><span class="cm">&lt;!-- derived measures--&gt;</span>
+<span class="linenos">52</span>
+<span class="linenos">53</span><span class="w">               </span><span class="nt">&lt;CalculatedMember</span><span class="w"> </span><span class="na">name=</span><span class="s">"Profit"</span><span class="w"> </span><span class="na">dimension=</span><span class="s">"Measures"</span><span class="nt">&gt;</span>
+<span class="linenos">54</span><span class="w">                   </span><span class="nt">&lt;Formula&gt;</span>
+<span class="linenos">55</span><span class="w">                        </span>[Measures].[Store<span class="w"> </span>Sales]<span class="w"> </span>-<span class="w"> </span>[Measures].[Store<span class="w"> </span>Cost]
+<span class="linenos">56</span><span class="w">                   </span><span class="nt">&lt;/Formula&gt;</span>
+<span class="linenos">57</span><span class="w">                   </span><span class="nt">&lt;CalculatedMemberProperty</span><span class="w"> </span><span class="na">name=</span><span class="s">"format_string"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$#,##0.00"</span><span class="nt">/&gt;</span>
+<span class="linenos">58</span><span class="w">               </span><span class="nt">&lt;/CalculatedMember&gt;</span>
+<span class="linenos">59</span>
+<span class="linenos">60</span><span class="w">            </span><span class="nt">&lt;/Cube&gt;</span>
+<span class="linenos">61</span><span class="w">         </span>...
+<span class="linenos">62</span><span class="w">     </span><span class="nt">&lt;/Schema&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Each mapping file contains one schema only, as well as multiple dimensions and cubes. Cubes include multiple dimensions and measures. Dimensions include multiple hierarchies and levels. Measures can be either primitive, i.e., bound to single columns of the fact table, or calculated, i.e., derived from calculation formulas that are defined in the schema. The schema also contains links between the elements of the OLAP model and the entities of the physical model: for example, &lt;table&gt; sets a link between a cube and its dimensions, while the attributes primaryKey and foreignKey reference integrity constraints of the star schema.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Mondrian</strong></p>
+<blockquote>
+<div><p>For a detailed explanation of Mondrian schemas, please refer to the documentation available at the official project webpage: <a class="reference external" href="http://mondrian.pentaho.com/documentation">http://mondrian.pentaho.com/documentation</a>.</p>
+</div></blockquote>
+</div>
+<section id="engine-catalogue-configuration">
+<h5>Engine catalogue configuration<a class="headerlink" href="#engine-catalogue-configuration" title="Link to this heading"></a></h5>
+<p>To reference an OLAP cube, first insert the corresponding Mondrian schema into the catalogue of schemas managed by the engine. In order to do this, go to <strong>Catalogs &gt; Mondrian schemas</strong> in the Knowage menu, as shown below.</p>
+<figure class="align-default" id="id44">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image225.png" src="../../_images/chapter-3-create-multidimension-olap-image225.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 525 </span><span class="caption-text">Mondrian schemas menu item.</span><a class="headerlink" href="#id44" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here you can find the list of already created mondrian schemas and by clicking the <em>Plus</em> icon you can define a new one uploading your XML schema file. A new window will open where you have to choose a <strong>Name</strong>, an optional <strong>Description</strong> and to upload your XML file, as you can see in figure below.</p>
+<figure class="align-default" id="id45">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image226.png" src="../../_images/chapter-3-create-multidimension-olap-image226.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 526 </span><span class="caption-text">Creating a new mondrian schema.</span><a class="headerlink" href="#id45" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>When creating a new OLAP template, you will choose among the available cubes defined in the registered schemas.</p>
+</section>
+</section>
+<section id="olap-template-building">
+<h4>OLAP template building<a class="headerlink" href="#olap-template-building" title="Link to this heading"></a></h4>
+<p>Once the cube has been created, you need to build a template which maps the cube to the analytical document. To accomplish this goal the user can manually edit the template or use the guided Knowage designer (look at the “OLAP Designer” section for this functionality). The template is an XML file telling Knowage OLAP engine how to navigate the OLAP cube and has a structure like the one represented in next code:</p>
+<div class="literal-block-wrapper docutils container" id="id46">
+<span id="mappingtemplateexample"></span><div class="code-block-caption"><span class="caption-number">Listing 28 </span><span class="caption-text">Mapping template example</span><a class="headerlink" href="#id46" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w">  </span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="nt">&lt;olap&gt;</span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="cm">&lt;!-- schema configuration --&gt;</span>
+<span class="linenos"> 4</span><span class="w">     </span><span class="nt">&lt;cube</span><span class="w"> </span><span class="na">reference=</span><span class="s">"FoodMart"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">     </span><span class="nt">&lt;MDXMondrianQuery&gt;</span>
+<span class="linenos"> 7</span><span class="w">         </span>SELECT<span class="w"> </span>{[Measures].[Unit<span class="w"> </span>Sales]}<span class="w"> </span>ON<span class="w"> </span>COLUMNS
+<span class="linenos"> 8</span><span class="w">         </span>,<span class="w"> </span>{[Region].[All<span class="w"> </span>Regions]}<span class="w"> </span>ON<span class="w"> </span>ROWS
+<span class="linenos"> 9</span><span class="w">         </span>FROM<span class="w"> </span>[Sales]
+<span class="linenos">10</span><span class="w">         </span>WHERE<span class="w"> </span>[Product].[All<span class="w"> </span>Products].[Drink]
+<span class="linenos">11</span><span class="w">     </span><span class="nt">&lt;/MDXMondrianQuery&gt;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">     </span><span class="cm">&lt;!-- query configuration --&gt;</span>
+<span class="linenos">14</span><span class="w">     </span><span class="nt">&lt;MDXquery&gt;</span>
+<span class="linenos">15</span><span class="w">         </span>SELECT<span class="w"> </span>{[Measures].[Unit<span class="w"> </span>Sales]}<span class="w"> </span>ON<span class="w"> </span>COLUMNS
+<span class="linenos">16</span><span class="w">         </span>,<span class="w"> </span>{[Region].[All<span class="w"> </span>Regions]}<span class="w"> </span>ON<span class="w"> </span>ROWS
+<span class="linenos">17</span><span class="w">         </span>FROM<span class="w"> </span>[Sales]
+<span class="linenos">18</span><span class="w">         </span>WHERE<span class="w"> </span>[Product].[All<span class="w"> </span>Products].[${family}]
+<span class="linenos">19</span><span class="w">         </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">"family"</span><span class="w"> </span><span class="na">as=</span><span class="s">"family"</span><span class="nt">/&gt;</span>
+<span class="linenos">20</span><span class="w">     </span><span class="nt">&lt;/MDXquery&gt;</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">     </span><span class="cm">&lt;!-- toolbar configuration --&gt;</span>
+<span class="linenos">23</span><span class="w">     </span><span class="nt">&lt;TOOLBAR&gt;</span>
+<span class="linenos">24</span><span class="w">         </span><span class="nt">&lt;BUTTON_MDX</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="w"> </span><span class="na">menu=</span><span class="s">"false"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">25</span><span class="w">         </span><span class="nt">&lt;BUTTON_FATHER_MEMBERS</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="w"> </span><span class="na">menu=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="linenos">26</span><span class="w">         </span><span class="nt">&lt;BUTTON_HIDE_SPANS</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="w"> </span><span class="na">menu=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="linenos">27</span><span class="w">         </span><span class="nt">&lt;BUTTON_SHOW_PROPERTIES</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="w"> </span><span class="na">menu=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="linenos">28</span><span class="w">         </span><span class="nt">&lt;BUTTON_HIDE_EMPTY</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="w"> </span><span class="na">menu=</span><span class="s">"false"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">29</span><span class="w">         </span><span class="nt">&lt;BUTTON_FLUSH_CACHE</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="w"> </span><span class="na">menu=</span><span class="s">"false"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">30</span><span class="w">     </span><span class="nt">&lt;/TOOLBAR&gt;</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">  </span><span class="nt">&lt;/olap&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>An explanation of different sections of Mapping template example follows.</p>
+<ul class="simple">
+<li><p>The CUBE section sets the Mondrian schema. It should reference the exact name of the schema, as registered in the catalogue on the Server.</p></li>
+<li><p>The MDXMondrianQuery section contains the original MDX query defining the starting view (columns and rows) of the OLAP document.</p></li>
+<li><p>The MDX section contains a variation of the original MDX query, as used by the Knowage Engine. This version includes parameters (if any). The name of the parameter will allow Knowage to link the analytical driver associated to the document via the parameter (on the Server).</p></li>
+<li><p>The TOOLBAR section is used to configure visibility options for the side bar in the OLAP document. The exact meaning and functionalities of each toolbar button has been explained in “Functionalities” section. A more complete list of the available options is shown in Menu configurable options in the Knowage designer.</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-number">Listing 29 </span><span class="caption-text">Menu configurable options</span><a class="headerlink" href="#id47" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w">     </span><span class="nt">&lt;BUTTON_DRILL_THROUGH</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="nt">&lt;BUTTON_MDX</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="nt">&lt;BUTTON_FATHER_MEMBERS</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 4</span><span class="w">     </span><span class="nt">&lt;BUTTON_HIDE_SPANS</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 5</span><span class="w">     </span><span class="nt">&lt;BUTTON_SORTING_SETTINGS</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 6</span><span class="w">     </span><span class="nt">&lt;BUTTON_SHOW_PROPERTIES</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 7</span><span class="w">     </span><span class="nt">&lt;BUTTON_HIDE_EMPTY</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 8</span><span class="w">     </span><span class="nt">&lt;BUTTON_FLUSH_CACHE</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 9</span><span class="w">     </span><span class="cm">&lt;!-- toolbar configuration for what-if documents: --&gt;</span>
+<span class="linenos">10</span><span class="w">     </span><span class="nt">&lt;BUTTON_SAVE_NEW</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">11</span><span class="w">     </span><span class="nt">&lt;BUTTON_UNDO</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">12</span><span class="w">     </span><span class="nt">&lt;BUTTON_VERSION_MANAGER</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">13</span><span class="w">     </span><span class="nt">&lt;BUTTON_EXPORT_OUTPUT</span><span class="w"> </span><span class="na">visible=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="linenos">14</span><span class="w">     </span><span class="nt">&lt;BUTTON_SAVE_SUBOBJECT</span><span class="w"> </span><span class="na">clicked=</span><span class="s">"false"</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">15</span><span class="w">     </span><span class="nt">&lt;BUTTON_EDITABLE_EXCEL_EXPORT</span><span class="w"> </span><span class="na">clicked=</span><span class="s">"false"</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">16</span><span class="w">     </span><span class="nt">&lt;BUTTON_ALGORITHMS</span><span class="w"> </span><span class="na">clicked=</span><span class="s">"false"</span><span class="w"> </span><span class="na">visible=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="creating-the-analytical-document">
+<h4>Creating the analytical document<a class="headerlink" href="#creating-the-analytical-document" title="Link to this heading"></a></h4>
+<p>Once you have the template ready you can create the OLAP document on Knowage Server.</p>
+<p>To create a new OLAP document, click on the plus button in the <strong>Document Broswer</strong> area and then choose “Generic document”. Filling in the mandatory fields: select a Label and a Name, select <strong>On-Line Analytical Processing</strong> as Type and <strong>OLAP Engine</strong> as Engine, add the Data Source from which the data comes from and the State of the document. Finally, upload the XML template developed in the previous section and click on save.</p>
+<figure class="align-default" id="id48">
+<span id="olapdocserver"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image195.png" src="../../_images/chapter-3-create-multidimension-olap-image195.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 527 </span><span class="caption-text">Creating an OLAP document.</span><a class="headerlink" href="#id48" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You will see the document in the functionality (folder) you selected.</p>
+</section>
+</section>
+<section id="olap-designer">
+<h3>OLAP Designer<a class="headerlink" href="#olap-designer" title="Link to this heading"></a></h3>
+<p>Knowage Server is also endowed of an efficient OLAP designer which avoid the user to edit manually the XML-based template that we discussed on in Development of an OLAP document. We will therefore describe here all features of this functionality.</p>
+<p>The user needs to have a functioning Modrian schema to start the work with. As we have already seen in the previous sections, select <strong>Mondrian Schemas</strong> to check the available Mondrian schemas on server. It is mandatory that the chosen Mondrian schema has no parameters applied.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Mondrian schema for OLAP designer</strong></p>
+<blockquote>
+<div><p>If you want to use the designer the Mondrian schema must not be filtered thorough any parameter or profile attribute.</p>
+</div></blockquote>
+</div>
+<p>The catalog with the list of all the <em>Mondrian Schemas</em> opens as shown below .</p>
+<figure class="align-default" id="id49">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image196.png" src="../../_images/chapter-3-create-multidimension-olap-image196.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 528 </span><span class="caption-text">Mondrian Schema Catalog.</span><a class="headerlink" href="#id49" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>From the <strong>Document Browser</strong>, click on the <em>Plus</em> icon at the top right corner of the page and choose <em>Generic document</em>.
+Fill in the mandatory information such as <em>Name</em> and <em>Label</em>, select <em>On-Line Analytical Processing</em> as Type of document and <em>OLAP Engine</em> as Engine. Add the data source and the state.
+Remember <em>to save</em> before clicking the <strong>Open Designer</strong> link.</p>
+<p>At this point choose Mondrian as <em>Template</em>, the <em>Mondrian Schema</em> and finally the <em>cube</em>. See below.</p>
+<figure class="align-default" id="id50">
+<span id="olapcoreconfig"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image198-1.png" src="../../_images/chapter-3-create-multidimension-olap-image198-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 529 </span><span class="caption-text">OLAP core configuration.</span><a class="headerlink" href="#id50" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Click the <em>Start</em> link. The image below shows the outcome.</p>
+<figure class="align-default" id="id51">
+<span id="definingolaptempl"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image199.png" src="../../_images/chapter-3-create-multidimension-olap-image199.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 530 </span><span class="caption-text">Defining OLAP template.</span><a class="headerlink" href="#id51" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Aaccording to the requirements set which fields ar axis or filter cards. Please refer to the <em>Functionalities</em> section of this documention for the terminology.</p>
+<figure class="align-default" id="id52">
+<span id="definingolaptempl2"></span><img alt="../../_images/chapter-3-create-multidimension-olap-image200.png" src="../../_images/chapter-3-create-multidimension-olap-image200.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 531 </span><span class="caption-text">Defining OLAP template.</span><a class="headerlink" href="#id52" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <em>Setting</em> panel contains:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Drilling functionalities as <em>Position, Member, Replace</em></p></li>
+<li><p>OLAP functions as <em>Preview, Button visibility</em></p></li>
+</ul>
+</div></blockquote>
+<p>Please refer to the <em>Functionalities</em> chapter to recall the effects of the different drills: the one selected in the template will be the default used in the OLAP document.</p>
+<p>To display the <em>MDX query</em> click the <em>Preview</em> button.</p>
+<figure class="align-default" id="id53">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image200-2.png" src="../../_images/chapter-3-create-multidimension-olap-image200-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 532 </span><span class="caption-text">Preview in OLAP.</span><a class="headerlink" href="#id53" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To set the visibity on the buttons click the <em>Configure Button Visibility</em> as shown below.
+Through the buttons wizard you can decide which permissions are granted to the end-user.</p>
+<figure class="align-default" id="id54">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image200-1.png" src="../../_images/chapter-3-create-multidimension-olap-image200-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 533 </span><span class="caption-text">Visibility on buttons.</span><a class="headerlink" href="#id54" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The image below shows an example with another OLAP function: <em>Cross Navigation</em>.</p>
+<figure class="align-default" id="id55">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image200-3.png" src="../../_images/chapter-3-create-multidimension-olap-image200-3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 534 </span><span class="caption-text">Enabling the cross navigation - 1</span><a class="headerlink" href="#id55" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As shown above, by clicking the icon highlighted in the image, you can enable a cross navigation previously configured by choosing the current olap document as source.
+and another document as target.</p>
+<figure class="align-default" id="id56">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image200-4.png" src="../../_images/chapter-3-create-multidimension-olap-image200-4.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 535 </span><span class="caption-text">Enabling the cross navigation - 2</span><a class="headerlink" href="#id56" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once the configuration is completed click the <em>Save Template*</em> button and then the <em>Close designer</em> button to exit and return to the Document browser.</p>
+<section id="profiled-access">
+<h4>Profiled access<a class="headerlink" href="#profiled-access" title="Link to this heading"></a></h4>
+<p>As for any other analytical document, Knowage provides filtered access to data through the behavioural model. The behavioural model is a very important concept in Knowage. For a full understanding of its meaning and functionalities, please refer to <em>Data security and access management</em> section.</p>
+<p>Knowage offers the possibility to regulate data visibility based on user profiles. Data visibility can be profiled at the level of the OLAP cube, namely the cube itself is filtered and all queries over that cube share the same data visibility criteria.</p>
+<p>To set the filter, which is based on the attribute (or attributes) in the user’s profile, the tecnical user has to type the Mondrian schema. We report Cube level profilation example as a reference guide. Note that data profiling is performed on the cube directly since the filter acts on the data retrieval logics of the Mondrian Server. So the user can only see the data that have been got back by the server according to the filter.</p>
+<div class="literal-block-wrapper docutils container" id="id57">
+<div class="code-block-caption"><span class="caption-number">Listing 30 </span><span class="caption-text">Cube level profilation example.</span><a class="headerlink" href="#id57" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w">     </span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="nt">&lt;Schema</span><span class="w"> </span><span class="na">name=</span><span class="s">"FoodMartProfiled"</span><span class="nt">&gt;</span>
+<span class="linenos"> 3</span><span class="w">     </span>....
+<span class="linenos"> 4</span><span class="w">      </span><span class="nt">&lt;Cube</span><span class="w"> </span><span class="na">name=</span><span class="s">"Sales_profiled"</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;Table</span><span class="w"> </span><span class="na">name=</span><span class="s">"sales_fact_1998"</span><span class="nt">/&gt;</span>
+<span class="linenos"> 5</span><span class="w">      </span>...
+<span class="linenos"> 6</span><span class="w">        </span><span class="cm">&lt;!-- profiled dimension --&gt;</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="nt">&lt;Dimension</span><span class="w"> </span><span class="na">name=</span><span class="s">"Product"</span><span class="w"> </span><span class="na">foreignKey=</span><span class="s">"product_id"</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="nt">&lt;Hierarchy</span><span class="w"> </span><span class="na">hasAll=</span><span class="s">"true"</span><span class="w"> </span><span class="na">allMemberName=</span><span class="s">"All Products"</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">"product_id"</span><span class="nt">&gt;</span>
+<span class="linenos"> 9</span><span class="w">             </span><span class="nt">&lt;View</span><span class="w"> </span><span class="na">alias=</span><span class="s">"Product"</span><span class="nt">&gt;</span>
+<span class="linenos">10</span><span class="w">               </span><span class="nt">&lt;SQL</span><span class="w"> </span><span class="na">dialect=</span><span class="s">"generic"</span><span class="nt">&gt;</span>
+<span class="linenos">11</span><span class="w">                 </span>SELECT<span class="w"> </span>pc.product_family<span class="w"> </span>as<span class="w"> </span>product_family,<span class="w"> </span>p.product_id<span class="w"> </span>as
+<span class="linenos">12</span><span class="w">                 </span>product_id,
+<span class="linenos">13</span><span class="w">                 </span>p.product_name<span class="w"> </span>as<span class="w"> </span>product_name,
+<span class="linenos">14</span><span class="w">                 </span>p.brand_name<span class="w"> </span>as<span class="w"> </span>brand_name,<span class="w"> </span>pc.product_subcategory<span class="w"> </span>as
+<span class="linenos">15</span><span class="w">                 </span>product_subcategory,<span class="w"> </span>pc.product_category<span class="w"> </span>as<span class="w"> </span>product_category,
+<span class="linenos">16</span><span class="w">                 </span>pc.product_department<span class="w"> </span>as<span class="w"> </span>product_department
+<span class="linenos">17</span><span class="w">                 </span>FROM<span class="w"> </span>product<span class="w"> </span>as<span class="w"> </span>p
+<span class="linenos">18</span><span class="w">                 </span>JOIN<span class="w"> </span>product_class<span class="w"> </span>as<span class="w"> </span>pc<span class="w"> </span>ON<span class="w"> </span>p.product_class_id<span class="w"> </span>=<span class="w"> </span>pc.
+<span class="linenos">19</span><span class="w">                 </span>product_class_id
+<span class="linenos">20</span><span class="w">                 </span>WHERE<span class="w"> </span>and<span class="w"> </span>pc.product_family<span class="w"> </span>=<span class="w"> </span>'${family}'
+<span class="linenos">21</span><span class="w">               </span><span class="nt">&lt;/SQL&gt;</span>
+<span class="linenos">22</span><span class="w">             </span><span class="nt">&lt;/View&gt;</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">             </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"Product Family"</span><span class="w"> </span><span class="na">column=</span><span class="s">"product_family"</span>
+<span class="linenos">25</span><span class="w">                    </span><span class="na">uniqueMembers=</span><span class="s">"false"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">26</span><span class="w">             </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"Product Department"</span><span class="w"> </span><span class="na">column=</span><span class="s">"product_department"</span>
+<span class="linenos">27</span><span class="w">                    </span><span class="na">uniqueMembers=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="linenos">28</span><span class="w">             </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"Product Category"</span><span class="w"> </span><span class="na">column=</span><span class="s">"product_category"</span>
+<span class="linenos">29</span><span class="w">                   </span><span class="na">uniqueMembers=</span><span class="s">" false"</span><span class="nt">/&gt;</span>
+<span class="linenos">30</span><span class="w">             </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"Product Subcategory"</span><span class="w"> </span><span class="na">column=</span><span class="s">"product_subcategory"</span>
+<span class="linenos">31</span><span class="w">                    </span><span class="na">uniqueMembers=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="linenos">32</span><span class="w">             </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"Brand Name"</span><span class="w"> </span><span class="na">column=</span><span class="s">"brand_name"</span>
+<span class="linenos">33</span><span class="w">                    </span><span class="na">uniqueMembers=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="linenos">34</span><span class="w">             </span><span class="nt">&lt;Level</span><span class="w"> </span><span class="na">name=</span><span class="s">"Product Name"</span><span class="w"> </span><span class="na">column=</span><span class="s">"product_name"</span>
+<span class="linenos">35</span><span class="w">                    </span><span class="na">uniqueMembers=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="linenos">36</span><span class="w">         </span><span class="nt">&lt;/Hierarchy&gt;</span>
+<span class="linenos">37</span><span class="w">        </span><span class="nt">&lt;/Dimension&gt;</span>
+<span class="linenos">38</span><span class="w">      </span><span class="nt">&lt;/Cube&gt;</span>
+<span class="linenos">39</span><span class="w">      </span>...
+<span class="linenos">40</span><span class="w">     </span><span class="nt">&lt;/Schema&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>In the above example, the filter is implemented within the SQL query that defines the dimension using the usual syntax <strong>pr.product_family = ‘${family}’</strong>.</p>
+<p>The value of the “family” user profile attribute will replace the ${family} placeholder in the dimension definition.</p>
+<p>You can filter more than one dimensions/cubes and use more profile attributes. The engine substitutes into the query the exact value of the attribute; in case of a multi value attribute to insert in an SQL-IN clause you will have to give the attribute a value like ’value1’, ’value2’ and insert into the query a condition like <strong>and pc.product_family IN (${family})</strong>.</p>
+<p>Once the OLAP document has been created using the template designer the user can insert parameters to profile the document. To set parameters the user has to download the Mondrian schema and edit it; modify the dimension(s) (that will update according to the value parameter(s)) inserting an SQL query which presents the parametric filtering clause.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><strong>Filter through the interface</strong></p>
+<blockquote>
+<div><p>Note that for the OLAP instance, it has not proper sense to talk about “general” parameters. In this case we only deal with profile attributes while all the filtering issue is performed through the interface, using the filter panel.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="cross-navigation">
+<h3>Cross Navigation<a class="headerlink" href="#cross-navigation" title="Link to this heading"></a></h3>
+<p>The cross navigation must be implemented at template level but also at analytical document level. The latter has been already wildly described in <em>Cross Navigation</em> section. In the following we will see the first case. Observe that both procedures are mandatory.</p>
+<p>For OLAP documents it is possible to enable the cross navigation on members or on cells and we will give more details on these two cases in the following.</p>
+<p>Generally speaking, the user must modify the template file using the designer to configure the cross navigation in order to declaire the output parameters of the document. We remember that the output parameters definition is discussed in <em>Cross Navigation</em> section of <em>Analytical document</em> chapter of this manual.</p>
+<section id="cross-navigation-on-members">
+<h4>Cross navigation on members<a class="headerlink" href="#cross-navigation-on-members" title="Link to this heading"></a></h4>
+<p>To activate the cross navigation on a member means that the user can click on a member of a dimension to send its value and visualize a target document. The first type of navigation can be set by directly editing the OLAP query template or by using the Knowage designer, as described in previous <em>OLAP designer</em> section. In the first case you need to add a section called “clickable” inside the MDX query tag. In particular:</p>
+<ul class="simple">
+<li><p>the attribute value is equal to the hierarchy level containing the member(s) that shall be clickable;</p></li>
+<li><p>the element represents the parameter that will be passed to the destination document. The name attribute is the URL of the parameter that will be passed to the target document. The value 0 represents the currently selected member, as a convention: this value will be assigned to the parameter whose URL is null.</p></li>
+</ul>
+<p>Figure below gives an example. Note that you can recognize that the cross navigation is activated when elements are shown blue highlighted and underlined.</p>
+<figure class="align-default" id="id58">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image212.png" src="../../_images/chapter-3-create-multidimension-olap-image212.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 536 </span><span class="caption-text">Cross navigation on member.</span><a class="headerlink" href="#id58" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you open the template file you will read instructions similar to the ones reported in Syntax used to set cross navigation.</p>
+<div class="literal-block-wrapper docutils container" id="id59">
+<div class="code-block-caption"><span class="caption-number">Listing 31 </span><span class="caption-text">Syntax used to set cross navigation.</span><a class="headerlink" href="#id59" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nt">&lt;MDXquery&gt;</span>
+<span class="linenos">2</span><span class="w">   </span>select<span class="w"> </span>{[Measures].[Unit<span class="w"> </span>Sales]}<span class="w"> </span>ON<span class="w"> </span>COLUMNS,
+<span class="linenos">3</span><span class="w">   </span>{([Region].[All<span class="w"> </span>Regions],<span class="w"> </span>[Product].[All<span class="w"> </span>Products])}<span class="w"> </span>ON<span class="w"> </span>ROWS<span class="w"> </span>from
+<span class="linenos">4</span><span class="w">   </span>[Sales_V]
+<span class="linenos">5</span><span class="w">   </span><span class="nt">&lt;clickable</span><span class="w"> </span><span class="na">name=</span><span class="s">"family"</span><span class="w"> </span><span class="na">type=</span><span class="s">"From Member"</span><span class="w"> </span><span class="na">uniqueName=</span><span class="s">"[Product].[Product Family]"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="linenos">6</span><span class="w">      </span><span class="nt">&lt;clickParameter</span><span class="w"> </span><span class="na">name=</span><span class="s">"family"</span><span class="w"> </span><span class="na">value=</span><span class="s">"{0}"</span><span class="nt">/&gt;</span>
+<span class="linenos">7</span><span class="w">   </span><span class="nt">&lt;/clickable&gt;</span>
+<span class="linenos">8</span><span class="w"> </span><span class="nt">&lt;/MDXquery&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="cross-navigation-from-a-cell-of-the-pivot-table">
+<h4>Cross navigation from a cell of the pivot table<a class="headerlink" href="#cross-navigation-from-a-cell-of-the-pivot-table" title="Link to this heading"></a></h4>
+<p>This case is similar to the cross navigation on members except that in this case values of all dimensions can be passed to the target document. In other words, the whole dimensional context of a cell can be passed. Now let us suppose the user wishes to click on a cell and pass to the target document the value of the level family of product dimension and year of time dimension. It should creates two parameters: one for family where dimension is product, hierarchy is product, level is product family and one for year parameter where dimension in type, hierarchy is time and level is year. Let see what happens when user clicks on a cell. Depending on the selected cell, the analytical driver family of the target document will have a different value: it will be the name of the context member (of the selected cell) of the “Product” dimension, i.e. the [Product] hierarchy, at [Product].[ProductFamily] level. Look at the following Table for some examples:</p>
+<table class="docutils align-default" id="id60">
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Context member on product dimension</span><a class="headerlink" href="#id60" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Context member on Product dimension</p></th>
+<th class="head"><p>“Family” analytical driver value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Product].[All Products]</p></td>
+<td><p>[no value: it will be prompted to  the user]</p></td>
+</tr>
+<tr class="row-odd"><td><p>[Product].[All Products].[Food]</p></td>
+<td><p>Food</p></td>
+</tr>
+<tr class="row-even"><td><p>[Product].[All Products].[Drink]</p></td>
+<td><p>Drink</p></td>
+</tr>
+<tr class="row-odd"><td><p>[Product].[All Products].[Non-Consumable]</p></td>
+<td><p>Non-Consumable</p></td>
+</tr>
+<tr class="row-even"><td><p>[Product].[All Products].[Food].[Snacks]</p></td>
+<td><p>Food</p></td>
+</tr>
+<tr class="row-odd"><td><p>[Product].[All Products].[Food].[Snacks].[Candy]</p></td>
+<td><p>Food</p></td>
+</tr>
+</tbody>
+</table>
+<p>Let us have a look at the template. Syntax used to set cross navigation shows how to use the cross navigation tag:</p>
+<div class="literal-block-wrapper docutils container" id="id61">
+<div class="code-block-caption"><span class="caption-number">Listing 32 </span><span class="caption-text">Syntax used to set cross navigation.</span><a class="headerlink" href="#id61" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">    </span><span class="nt">&lt;CROSS_NAVIGATION&gt;</span>
+<span class="linenos">2</span><span class="w">        </span><span class="nt">&lt;PARAMETERS&gt;</span>
+<span class="linenos">3</span><span class="w">            </span><span class="nt">&lt;PARAMETER</span><span class="w"> </span><span class="na">name=</span><span class="s">"family"</span><span class="w"> </span><span class="na">dimension=</span><span class="s">"Product"</span><span class="w"> </span><span class="na">hierarchy=</span><span class="s">"[Product]"</span><span class="w"> </span><span class="na">level=</span><span class="s">"[Product].[Product Family]"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">4</span><span class="w">            </span><span class="nt">&lt;PARAMETER</span><span class="w"> </span><span class="na">name=</span><span class="s">"year"</span><span class="w"> </span><span class="na">dimension=</span><span class="s">"Time"</span><span class="w"> </span><span class="na">hierarchy=</span><span class="s">"[Time]"</span><span class="w"> </span><span class="na">level=</span><span class="s">"[Time].[Year]"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">5</span><span class="w">        </span><span class="nt">&lt;/PARAMETERS&gt;</span>
+<span class="linenos">6</span><span class="w">    </span><span class="nt">&lt;/CROSS_NAVIGATION&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>In order to activate cross navigation on cells the user must click on the correponding button in the side bar, then a green arrow will be desplayed in each cells to show that cross navigation is enabled. User can click on that icon to start cross navigation from a cell.</p>
+<figure class="align-default" id="id62">
+<img alt="../../_images/chapter-3-create-multidimension-olap-image227.png" src="../../_images/chapter-3-create-multidimension-olap-image227.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 537 </span><span class="caption-text">Cross navigation on cells.</span><a class="headerlink" href="#id62" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Create Multi dimensional analisys" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../create_dossier/index.html" class="btn btn-neutral float-right" title="Create a Dossier" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

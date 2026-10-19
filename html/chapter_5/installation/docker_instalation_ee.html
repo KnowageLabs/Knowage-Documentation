@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KNOWAGE Enterprise Installation using Docker &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Manual installation" href="manual_installation.html" />
+    <link rel="prev" title="Community Edition with Docker or Podman" href="knowage-ce-installer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Install and configure Knowage 9.1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">KNOWAGE Installation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="software_release.html">Get the Knowage 9.1 packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="knowage-ce-installer.html">Community Edition with Docker or Podman</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">KNOWAGE Enterprise Installation using Docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repository-cloning">Repository cloning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-of-environment-variables">Configuration of Environment Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters-in-the-docker-compose-yml-file">Parameters in the docker-compose.yml file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#db-password-encryption">DB password encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation-of-database-schemas">Installation of Database Schemas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-jndi-resources">Adding JNDI Resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#note-on-paths-and-mounted-volumes">Note on paths and mounted volumes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuring-additional-hosts">Configuring additional hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#container-network-setup">Container network setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launching-knowage-services">Launching Knowage Services</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#components-installed">Components Installed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="manual_installation.html">Manual installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python-installation.html">Python Engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tomcat_password_encryption.html">Encrypted Passwords for Tomcat DataSources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../how_upgrade.html">How to upgrade KNOWAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sso/index.html">How to configure the KNOWAGE Single Sign On</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mfa.html">Multi Factor Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server_settings.html">Server settings</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Install and configure Knowage 9.1</a></li>
+          <li class="breadcrumb-item"><a href="index.html">KNOWAGE Installation</a></li>
+      <li class="breadcrumb-item active">KNOWAGE Enterprise Installation using Docker</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_5/installation/docker_instalation_ee.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="knowage-enterprise-installation-using-docker">
+<h1>KNOWAGE Enterprise Installation using Docker<a class="headerlink" href="#knowage-enterprise-installation-using-docker" title="Link to this heading"></a></h1>
+<p>Use the authorized <strong>9.1.0 Enterprise</strong> distribution and its supplied Compose
+configuration. Its private image names and export components are specific to
+your distribution. Pin the application images to the intended release and
+upgrade an existing metadata schema with <a class="reference internal" href="../how_upgrade.html"><span class="doc">How to upgrade KNOWAGE</span></a>.</p>
+<p>In this chapter, we will describe how to install the Enterprise version of KNOWAGE using Docker.
+Please note that access to the repository is granted through authorization.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Some preliminary operations are required:</p>
+<p>Installation on the host machine of Docker/Podman.</p>
+<p>Internet access from the host machine is required at the time of installation (for OS updates and Knowage image updates).</p>
+<p>If internet access is not available, it will be necessary to manually transfer to the host machine both the “knowage-ee-server-docker” folders mentioned in paragraph ‘Repository cloning’ and manually copy the Knowage images.</p>
+</section>
+<section id="repository-cloning">
+<h2>Repository cloning<a class="headerlink" href="#repository-cloning" title="Link to this heading"></a></h2>
+<p>To install Knowage EE via Docker, you need to clone the authorized Enterprise Docker repository:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 38 </span><span class="caption-text">shell command</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/KnowageLabs/Knowage-Server-Docker-ee.git
+</pre></div>
+</div>
+</div>
+<p>access the project directory:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 39 </span><span class="caption-text">shell command</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Knowage-Server-Docker-ee
+</pre></div>
+</div>
+</div>
+<p><strong>N.B.</strong> in the absence of an internet connection, the following files and folders must be copied to the host machine in the knowage-ee-server-docker folder</p>
+<ol class="arabic simple">
+<li><p>docker-compose.yaml</p></li>
+<li><p>.env</p></li>
+<li><p>the “resources” folder</p></li>
+<li><p>the “conf” folder</p></li>
+</ol>
+</section>
+<section id="configuration-of-environment-variables">
+<h2>Configuration of Environment Variables<a class="headerlink" href="#configuration-of-environment-variables" title="Link to this heading"></a></h2>
+<p>Knowage requires several variables to be configured to launch correctly.</p>
+<p>These can be defined in the <code class="docutils literal notranslate"><span class="pre">.env</span></code> file present in the project directory.
+KNOWAGE need to use 2 DB schema, one for the metadata and una for the temporary cache.</p>
+<p>Data base parameters:</p>
+<ul class="simple">
+<li><p><strong>DB_HOST</strong>: database host</p></li>
+<li><p><strong>DB_PORT</strong>: database port</p></li>
+<li><p><strong>DB_DB</strong>: database name</p></li>
+<li><p><strong>DB_USER</strong>: database user</p></li>
+<li><p><strong>DB_PASS</strong>: user password</p></li>
+<li><p><strong>CACHE_DB_HOST</strong>: cache database host</p></li>
+<li><p><strong>CACHE_DB_PORT</strong>: cache database port</p></li>
+<li><p><strong>CACHE_DB_DB</strong>: name of the cache database</p></li>
+<li><p><strong>CACHE_DB_USER</strong>: cache database user</p></li>
+<li><p><strong>CACHE_DB_PASS</strong>: cache user password</p></li>
+<li><p><strong>HMAC_KEY</strong>: HMAC key to configure in Tomcat, it is important to configure it carefully, avoiding the use of trivial or predictable strings, as this setup is used to generate the token.</p></li>
+<li><p><strong>PASSWORD_ENCRYPTION_SECRET</strong>: key for password encryption. Key used to securely store user passwords</p></li>
+<li><p><strong>SENSIBLE_DATA_ENCRYPTION_SECRET</strong>: key for encrypting sensitive data. It is used for data decryption functionalities.</p></li>
+</ul>
+</section>
+<section id="parameters-in-the-docker-compose-yml-file">
+<h2>Parameters in the docker-compose.yml file<a class="headerlink" href="#parameters-in-the-docker-compose-yml-file" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>PUBLIC_ADDRESS</strong>: IP or hostname visible from the outside (e.g. <a class="reference external" href="http://$PUBLIC_ADDRESS:8080/knowage">http://$PUBLIC_ADDRESS:8080/knowage</a>)</p></li>
+<li><p><strong>DB_TYPE</strong>: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)</p></li>
+<li><p><strong>CACHE_DB_TYPE</strong>: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)</p></li>
+</ul>
+</section>
+<section id="db-password-encryption">
+<h2>DB password encryption<a class="headerlink" href="#db-password-encryption" title="Link to this heading"></a></h2>
+<p>To encrypt the database password you need:</p>
+<ol class="arabic simple">
+<li><p>download the <strong>tomcat-password-encryption.jar</strong> jar in the “knowage-enterprise” directory from <a class="reference external" href="https://github.com/KnowageLabs/Knowage-Server-ee">https://github.com/KnowageLabs/Knowage-Server-ee</a></p></li>
+<li><p>run the following command (with java 17 or later):</p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 40 </span><span class="caption-text">Java command</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>java<span class="w"> </span>-cp<span class="w"> </span>tomcat-password-encryption.jar<span class="w"> </span>-Dsymmetric_encryption_key<span class="o">=</span>KEY_SECRET<span class="w"> </span>it.eng.knowage.enterprise.tomcatpasswordencryption.helper.EncryptOnce<span class="w"> </span>DB_CLEAR_PASSWORD
+</pre></div>
+</div>
+</div>
+<p>where KEY_SECRET corresponds to the value indicated in the <strong>SENSIBLE_DATA_ENCRYPTION_SECRET</strong> environment variable</p>
+<p>where DB_CLEAR_PASSWORD is the plaintext password of the database</p>
+<ol class="arabic simple" start="3">
+<li><p>replace the values ​​obtained in correspondence with the DB_PASS_ENCRYPTED and CACHE_DB_PASS_ENCRYPTED environment variables respectively</p></li>
+</ol>
+</section>
+<section id="installation-of-database-schemas">
+<h2>Installation of Database Schemas<a class="headerlink" href="#installation-of-database-schemas" title="Link to this heading"></a></h2>
+<p>It is necessary to manually install the <strong>knowage</strong> and <strong>knowage_cache</strong> schemes on the customer database, executing the related  <a class="reference external" href="https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowagedatabasescripts">DDLs</a>.</p>
+<p>Make sure to update the parameters in the <code class="docutils literal notranslate"><span class="pre">.env</span></code> file with the correct data for DB access.</p>
+<p>Check the connectivity between the host machine where Knowage will be installed and the DB.</p>
+</section>
+<section id="adding-jndi-resources">
+<h2>Adding JNDI Resources<a class="headerlink" href="#adding-jndi-resources" title="Link to this heading"></a></h2>
+<p>To add new JNDI resources, edit the following files:</p>
+<ul class="simple">
+<li><p>conf/context.xml.d/extContext</p></li>
+<li><p>conf/server.xml.d/extGlobalResources</p></li>
+</ul>
+<p>Example of ResourceLink in extContext:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nt">&lt;ResourceLink</span><span class="w"> </span><span class="na">global=</span><span class="s">"jdbc/foodmart"</span><span class="w"> </span><span class="na">name=</span><span class="s">"jdbc/foodmart"</span><span class="w"> </span><span class="na">type=</span><span class="s">"javax.sql.DataSource"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Example of Resource in extGlobalResources:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="nt">&lt;Resource</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="na">auth=</span><span class="s">"Container"</span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="na">driverClassName=</span><span class="s">"com.mysql.jdbc.Driver"</span>
+<span class="linenos"> 4</span><span class="w">     </span><span class="na">logAbandoned=</span><span class="s">"true"</span>
+<span class="linenos"> 5</span><span class="w">     </span><span class="na">maxTotal=</span><span class="s">"20"</span>
+<span class="linenos"> 6</span><span class="w">     </span><span class="na">maxIdle=</span><span class="s">"4"</span>
+<span class="linenos"> 7</span><span class="w">     </span><span class="na">maxWait=</span><span class="s">"300"</span>
+<span class="linenos"> 8</span><span class="w">     </span><span class="na">minEvictableIdleTimeMillis=</span><span class="s">"60000"</span>
+<span class="linenos"> 9</span><span class="w">     </span><span class="na">name=</span><span class="s">"jdbc/foodmart"</span>
+<span class="linenos">10</span><span class="w">     </span><span class="na">password=</span><span class="s">"foodmart"</span>
+<span class="linenos">11</span><span class="w">     </span><span class="na">removeAbandoned=</span><span class="s">"true"</span>
+<span class="linenos">12</span><span class="w">     </span><span class="na">removeAbandonedTimeout=</span><span class="s">"3600"</span>
+<span class="linenos">13</span><span class="w">     </span><span class="na">testOnReturn=</span><span class="s">"true"</span>
+<span class="linenos">14</span><span class="w">     </span><span class="na">testWhileIdle=</span><span class="s">"true"</span>
+<span class="linenos">15</span><span class="w">     </span><span class="na">timeBetweenEvictionRunsMillis=</span><span class="s">"10000"</span>
+<span class="linenos">16</span><span class="w">     </span><span class="na">type=</span><span class="s">"javax.sql.DataSource"</span>
+<span class="linenos">17</span><span class="w">     </span><span class="na">url=</span><span class="s">"jdbc:mysql://foodmart:3306/foodmart"</span>
+<span class="linenos">18</span><span class="w">     </span><span class="na">username=</span><span class="s">"foodmart"</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>Mounting volumes in <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> in the volumes section of the knowage service:</p>
+<ul class="simple">
+<li><p>./conf/confServerFoodmart:/home/knowage/apache-tomcat/conf/server.xml.d</p></li>
+<li><p>./conf/context.xml.d:/home/knowage/apache-tomcat/conf/context.xml.d</p></li>
+</ul>
+</section>
+<section id="note-on-paths-and-mounted-volumes">
+<h2>Note on paths and mounted volumes<a class="headerlink" href="#note-on-paths-and-mounted-volumes" title="Link to this heading"></a></h2>
+<p>The paths and directories specified in the <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file volumes (e.g. ./resources, ./conf/server.xml.d, etc.) must be adapted according to the structure and needs of the host machine on which Knowage is running.</p>
+<p>Make sure the directories exist and contain the necessary files before starting the containers.
+Otherwise, the service may not start correctly or work as expected.</p>
+<p>On the directories change the permissions with the following commands:</p>
+<p>Example:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 41 </span><span class="caption-text">shell command</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>knowage:knowage<span class="w"> </span>/portal_data/knowage_*
+
+<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">750</span><span class="w"> </span>/portal_data/knowage_*
+
+<span class="w"> </span>Create<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>command:
+
+<span class="w"> </span>vim<span class="w"> </span>~/.config/containers/containers.conf<span class="w"> </span>and<span class="w"> </span>write
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 42 </span><span class="caption-text">shell command</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="o">[</span>containers<span class="o">]</span>
+
+<span class="w">   </span><span class="nv">userns</span><span class="o">=</span><span class="s2">"keep-id"</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="configuring-additional-hosts">
+<h2>Configuring additional hosts<a class="headerlink" href="#configuring-additional-hosts" title="Link to this heading"></a></h2>
+<p>You can add the extra_hosts parameter within the service definition in the <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file to map custom hostnames to specific IP addresses.</p>
+<p>This can be useful, for example, to resolve internal DNS names or to facilitate communication with external services not managed by Docker.</p>
+<p>Example:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Listing 43 </span><span class="caption-text">docker-compose.yaml fragment</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>extra_hosts:
+
+<span class="w">   </span>-<span class="w"> </span><span class="s2">"hostname:192.168.1.100"</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="container-network-setup">
+<h2>Container network setup<a class="headerlink" href="#container-network-setup" title="Link to this heading"></a></h2>
+<p>In the <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file, the network_mode: “host” parameter is used to make containers share the host’s network.</p>
+<p>However, this configuration is not always the most suitable, especially in multi-container or production environments, where it is preferable to isolate services.</p>
+<p>Alternatively, you can define a dedicated Docker network and assign it to containers, improving the security and flexibility of communication between services.</p>
+<p>Caution with network_mode parameter: “host” cannot install the Hazelcast container for clustering</p>
+<p>Dedicated network example:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-number">Listing 44 </span><span class="caption-text">docker-compose.yaml fragment</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>networks:
+<span class="w">   </span>knowage_net
+
+<span class="w"> </span>services:
+<span class="w">   </span>know-how:
+<span class="w">     </span>networks:
+<span class="w">       </span>-<span class="w"> </span>knowage_net
+<span class="w">   </span>hazelcast:
+<span class="w">     </span>networks:
+<span class="w">       </span>-<span class="w"> </span>knowage_net
+</pre></div>
+</div>
+</div>
+</section>
+<section id="launching-knowage-services">
+<h2>Launching Knowage Services<a class="headerlink" href="#launching-knowage-services" title="Link to this heading"></a></h2>
+<p>Go to the knowage-ee-server-docker directory and authenticate in the private repository:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-number">Listing 45 </span><span class="caption-text">docker command</span><a class="headerlink" href="#id8" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>podman<span class="w"> </span>login<span class="w"> </span>knowage.azurecr.io
+</pre></div>
+</div>
+</div>
+<p>After login, start the services:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-number">Listing 46 </span><span class="caption-text">docker command</span><a class="headerlink" href="#id9" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>podman<span class="w"> </span>composed<span class="w"> </span>up<span class="w"> </span>–d
+</pre></div>
+</div>
+</div>
+</section>
+<section id="components-installed">
+<h2>Components Installed<a class="headerlink" href="#components-installed" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Knowage Tomcat with all packages</p></li>
+<li><p>Hazelcast for clustering</p></li>
+<li><p>KnowagePython for integration with Python</p></li>
+</ul>
+<p>Access the web interface: <a class="reference external" href="http://localhost:8080/knowage-vue/">http://localhost:8080/knowage-vue/</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="knowage-ce-installer.html" class="btn btn-neutral float-left" title="Community Edition with Docker or Podman" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="manual_installation.html" class="btn btn-neutral float-right" title="Manual installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

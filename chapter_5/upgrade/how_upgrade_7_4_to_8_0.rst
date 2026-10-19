@@ -1,6 +1,9 @@
 How to upgrade KNOWAGE 7.4 to 8.0
 ########################################################################################################################
 
+This is an earlier-version migration step. After completing the required
+steps up to 9.0, continue with :doc:`how_upgrade_9_0_to_9_1` for the current release.
+
 This section describes the main steps to manually update an existing Knowage installation.
 
 Pay attention to the fact that Knowage versions' names adhere to the Semantic Versioning 2.0.0.
@@ -53,7 +56,7 @@ To upgrade Knowage installation follow these steps:
 
 -  copy and paste all the new ``knowage*.war`` packages within ``TOMCAT_HOME/webapps`` directory;
 
-- In case you defined contexts with relevant files inside ``TOMCAT_HOME/conf/Catalina/localhost`` 
+- In case you defined contexts with relevant files inside ``TOMCAT_HOME/conf/Catalina/localhost``
 
 - Quartz configuration file for cluster configuration ( in case of any cluster only ):  by default it is not enabled on released packages therefore you need to restore it in case you have a clustered installation: add these lines in ``TOMCAT_HOME/webapps/knowage/WEB-INF/classes/quartz.properties`` (or restore them from the backup copy):
 
@@ -63,5 +66,3 @@ To upgrade Knowage installation follow these steps:
     org.quartz.jobStore.clusterCheckinInterval = 20000
     org.quartz.scheduler.instanceId = AUTO
     org.quartz.scheduler.instanceName = RHECMClusteredSchedule
-
-

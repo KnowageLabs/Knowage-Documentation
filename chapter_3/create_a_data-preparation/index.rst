@@ -1,6 +1,11 @@
 How to create a Data Preparation
 ========================================================================================================================
 
+Data Preparation requires the optional Livy/Spark integration and a data
+source enabled for prepared data. Apply transformations to a preview, review
+the resulting schema and save the output as a dataset. See
+:doc:`/chapter_5/installation/manual_installation` for deployment prerequisites.
+
 What is Data Preparation for?
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -14,7 +19,7 @@ Preparing a dataset
 The first step is selecting a dataset to work on.
 You can do it selecting the desired dataset into your workspace section:
 
-.. figure:: media/image1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image1.png
 
     The Data Preparation entry.
 
@@ -24,13 +29,13 @@ Once the dataset has been selected click the *OPen Data Preparation* option from
 
 The option *Opening the data preparation* triggers a process that will create the *avro* file (for more information see the dedicated section). This process consists of five steps
 
-.. figure:: media/image4_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image4-b.png
 
     Data preparation process
 
 After completing the last step, the interface shows the structure of the dataset with the associated information.
 
-.. figure:: media/image4_c.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image4-c.png
 
     Data preparation wizard
 
@@ -38,7 +43,7 @@ As highlighted above, the wizard contains the *transformation* functionalities a
 
 The second way consists in clicking the *Plus* button on the top right of the section in order to select the dataset.
 
-.. figure:: media/image3_dp.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image3-dp.png
 
     Creating a data preparation - 2.
 
@@ -49,7 +54,7 @@ Note that this process starts only the firts time the dataset is prepared and sa
 In case of an already existing dataset you could be able to open it always by clicking the *Open in Data Preparation* from *Data Preparation*
 and this time the final wizard with the data of the dataset is displayed.
 
-.. figure:: media/image3.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image3.png
 
     Opening an existing prepared dataset
 
@@ -62,7 +67,7 @@ You can apply transformations to the source dataset just picking the transformat
 
 In the main toolbar menu, there is a set of main transformations (most of them can be applied on many columns in the same time):
 
-.. figure:: media/image33.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image33.png
 
     Transformations toolbar icons.
 
@@ -83,31 +88,31 @@ The available functions are a subset of the Spark SQL language functions.
 For more info see https://spark.apache.org/docs/2.4.8/api/sql/index.html.
 
 
-.. figure:: media/image9.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image9.png
 
     Available functions
 
 **Merge columns**: to add a new column by merging two selected columns through a separator.
 
-.. figure:: media/image10.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image10.png
 
     Merge columns dialog.
 
 **Split columns**: to create two new columns by splitting a selected column through a specific condition (ie a character).
 
-.. figure:: media/image11.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image11.png
 
     Split columns dialog.
 
 **Filter**: to filter a selected column by special conditions.
 
-.. figure:: media/image12.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image12.png
 
     Applying filters
 
 The image below shows how to remove a filter.
 
-.. figure:: media/removef.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-removef.png
 
     Removing filters
 
@@ -115,25 +120,25 @@ As you can see the transformation applied by a filter is highlighted. In this ex
 
 **Padding**: to add characters on left or right side of a selected column.
 
-.. figure:: media/image13.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image13.png
 
     Padding dialog example.
 
 **Remove duplicates**: Removes duplicated values from a selected column.
 
-.. figure:: media/image14.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image14.png
 
     Remove duplicates dialog example.
 
 **Remove null**: Removes null values from a selected column.
 
-.. figure:: media/image15.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image15.png
 
     Remove null dialog example.
 
 **Replace**: Replace selected values from specific columns. Old char is the old value to be replaced.
 
-.. figure:: media/image16.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image16.png
 
     Replace dialog example.
 
@@ -141,13 +146,13 @@ From the three dots menu of a specific column two more transformations are avail
 
 **Drop column**: Removes a specific column from table.
 
-.. figure:: media/image18.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image18.png
 
     Drop columns dialog warning.
 
 **Trim column**: Removes white spaces from column.
 
-.. figure:: media/image19.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image19.png
 
     Trim column dialog example.
 
@@ -175,39 +180,39 @@ This file is read and then it will be used as data source for data transformatio
 Saving and Using a prepared dataset
 ------------------------------------------------------------------------------------------------------------------------
 
-After applying all the trasformation to the original dataset you can save it. 
+After applying all the trasformation to the original dataset you can save it.
 The image below shows an example with a daily schedulation.
 
-.. figure:: media/image26.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image26.png
 
     Saving the prepared dataset.
 
 After saving, the prepared dataset will be available in the list of all the prepared datasets.
 
-.. figure:: media/image29_a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image29-a.png
 
     New prepared dataset.
 
 You can use the preview functionality to display all the contents.
 
-.. figure:: media/image29.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image29.png
 
     Preview functionality.
 
 You can monitor the process by clicking on *Monitoring* from the three dots menu.
 
-.. figure:: media/image30.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image30.png
 
     Monitoring menu entry.
 
 The Schedulation details are visualized from a pop-up. You can change them and save in case.
 
-.. figure:: media/image31.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image31.png
 
     Schedulations and monitoring panel example.
 
 It is possible to see the prepared dataset into the *Dataset Management* section. In our example if you look for dataset ds__9056592 you should find it.
 
-.. figure:: media/image32.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-a-data-preparation-index-image32.png
 
     Dataset Management panel.

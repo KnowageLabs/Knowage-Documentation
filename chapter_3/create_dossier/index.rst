@@ -1,6 +1,11 @@
 Create a Dossier
 ########################################################################################################################
 
+A Dossier assembles analytical content using a presentation or document
+template. Start with documents your role can execute, configure their
+parameters and generate a preview before distributing the result. Availability
+depends on the Dossier components installed in your edition.
+
 A dossier document allows you to obtain a file processed starting from an input template. A typical example of using this feature is the creation of a file with variable content updated at each run. To do this, you need to create a dossier document with a well-configured XML template.
 
 .. important::
@@ -140,13 +145,13 @@ My first dossier
 
 You can create a dossier document by using the plus button and choosing "Generic Document". Proceed by filling in the necessary fields, selecting "Collaboration" as the type and "Dossier engine" as the engine and then choosing the XML template. If the documents to be executed have one or more analytical drivers, these drivers must be added to the dossier document from the DRIVER tab.
 
-.. figure:: media/image000.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image000.png
 
     Dossier document creation interface.
 
 After saving the document, you can access the dossier activity page by clicking the play button.
 
-.. figure:: media/image001.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image001.png
 
     Dossier activity interface.
 
@@ -174,13 +179,13 @@ Starting from a saved document
 ------------------------------------------------------------------------------------------------------------------------
 Click the *Open Designer* link inside the dossier document.
 
-.. figure:: media/image004.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image004.png
 
    Document Designer.
 
 The following wizard page appears requesting the document template (docx or pptx format) and the image prefix.
 
-.. figure:: media/image005.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image005.png
 
     Dossier Wizard
 
@@ -189,16 +194,16 @@ The Uploadable/Downloadable features can be enabled in order to allow the downlo
 
 By clicking on *NEXT* the new popup will show the list of image placeholders found inside the document template.
 
-.. figure:: media/image005_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image005-b.png
 
     Image placeholders
 
 By clicking the *Plus* button it is possible to link a source document to the image placeholder.
 
 
-.. figure:: media/image005_c.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image005-c.png
 
-    Linking documents to placeholders 
+    Linking documents to placeholders
 
 After selecting the document you need to select the parameters (drivers or views) to be linked to the placeholder.
 In the example above there is one driver *Family*. The wizard allows to specify how the parameter of the driver should be feed by
@@ -207,20 +212,20 @@ We kindly suggest to use "Inherit" for simplifying configuration assets.
 
 On the other hand by clicking the *Plus* icon the image placeholders can be linked also to *Views*.
 
-.. figure:: media/image011_a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image011-a.png
 
     Linking to Views.
 
 To rollback and reset changes, just click the "Reset placeholder" icon on the image placeholders panel.
 
-.. figure:: media/image005_d.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image005-d.png
 
     Reset placeholder functionality.
 
 As a last step remains clicking *SAVE* or *Save and Run*. By saving the xml template should be updated and visible on the *History* tab.
 
 
-.. figure:: media/image013.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image013.png
 
     Xml template.
 
@@ -229,9 +234,8 @@ Starting from the workspace
 
 Another way to run the Dossier Wizard is starting from *my Workspace*. Select *My Analysis* for starting a new Dossier document with Dossier Wizard.
 
-.. figure:: media/image014.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dossier-index-image014.png
 
     Creating a Dossier from My Analysis
 
 *Note*: End users can create dossier documents using views only as drivers are not allowed to use for them.
-

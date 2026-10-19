@@ -70,7 +70,7 @@ As for profiles, users' roles are loaded when they log in into Knowage. Roles ar
 
 Alternatively, from the Knowage Administrator menu *PROFILE MANAGEMENT > Users* it is possible to select a default role that will be kept valid until logging out.
 
-.. figure:: media/image28_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image28-b.png
 
    User's roles in Knowage.
 
@@ -111,7 +111,7 @@ In addition to the profile attributes created by administrator, by default Knowa
 The image below shows a new *Profile attribute* named *Country* whose value has been manually entered. An alternative option is to feed attribute values by means of a Lov: one or more of its values will be asigned by the user. Multivalue option in this case is not enabled, so only one value is inserted.
 
 
-.. figure:: media/image29_bis.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image29-bis.png
 
    Profile attributes Management.
 
@@ -121,18 +121,18 @@ Once the attributes are defined, the model administrator can define roles, using
       **Role Management**:
          The behavioural model should be built taking into account the specificity of each organization and the needs of the BI project.    Therefore, it is a good practice to define specific roles for the BI project and avoid using Knowage technical roles only.
 
-The right panel contains the following tabs. 
-The **Detail** tab allows the administrator to define role name and role type (mandatory). 
-The role type regulates the visibility of that role based on the types already described. 
+The right panel contains the following tabs.
+The **Detail** tab allows the administrator to define role name and role type (mandatory).
+The role type regulates the visibility of that role based on the types already described.
 A code and a description can be added as shown below.
 
-.. figure:: media/image3031_a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image3031-a.png
 
    Details tab in Roles Management.
 
 The **Authorizations** tab allows you to assign permissions to each role. Rights are predefined and grouped into categories, as shown above.
 
-.. figure:: media/image3031_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image3031-b.png
 
    Authorization tab in Roles Management.
 
@@ -142,17 +142,17 @@ The **Business Models** tab is only available for modules KnowageBD and KnowageS
 
 There is a last tab **Usage** that represents a summary tab of the usage of that role inside Knowage.
 
-.. figure:: media/image3031_c.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image3031-c.png
 
    Usage tab in Roles Management.
-------------------------------------------------------------------------------------------------------------------------
+
 User Management
 ------------------------------------------------------------------------------------------------------------------------
 
 
 The **Users Management** section includes a left panel that allows the administrator to create and delete users, and a right panel that allows the management of user details, roles and attributes.
 
-.. figure:: media/image32_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image32-8-1.png
 
    Users Management.
 
@@ -160,53 +160,53 @@ The **Users Management** section includes a left panel that allows the administr
 .. _bulk_user_insertion:
 
 Bulk User Insertion
-===================
+~~~~~~~~~~~~~~~~~~~
 
-Knowage allows the administrator to perform a massive insertion of new users simultaneously by uploading a structured file. The supported file formats are **CSV** (using a semicolon ``;`` as separator), **XLS**, and **XLSX**.
+Knowage allows the administrator to perform a massive insertion of new users simultaneously by uploading a structured file. The supported file formats are **CSV** (UTF-8 with a semicolon ``;`` separator) and **XLSX**. Use XLSX for Excel imports; the upload chooser also lists the legacy XLS extension.
 
-To access this feature, navigate to the User Management section and click on the **Bulk Upload** button located in the top-right toolbar.
+To access this feature, navigate to the User Management section and click on the **Import** action in the Users Management toolbar.
 
-.. figure:: media/massiveUser01.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-massiveuser01.png
 
-.. figure:: media/massiveUser02.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-massiveuser02.png
 
-.. figure:: media/massiveUser03.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-massiveuser03.png
 
 
 
 Structure and Requirements
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
    **No header row** must be included in the file. Data rows must start from the very first line.
 
-Each row represents a single user to be created. The columns must follow this precise sequential order:
+Keep at least the first three columns in every row, using blank values for optional cells. Each row represents a single user to be created. The columns must follow this precise sequential order:
 
 1. **User ID** (Mandatory): The unique identifier for the user login.
-2. **Password** (Mandatory): The temporary or default password assigned to the user. If left blank, the system configuration default password will be applied.
+2. **Password**: the initial password. A blank value uses the configured default password when available; explicit passwords must satisfy the password policy.
 3. **Full Name** (Optional): The first and last name of the user.
 4. **Roles / Profiles** (Optional): The technical or business roles to be assigned to the user (e.g., ``admin``, ``user``).
-   
+
    *Multiple Roles:* It is possible to specify more than one role for a single user. In this case, additional roles must occupy the subsequent columns (e.g., column 5, column 6, etc.), shifting the position of the attributes.
 
-5. **Attributes** (Optional): Custom user profile attributes required by the analytical documents.
-   
+5. **Attributes** (Optional): Custom user profile attributes required by the analytical documents. Supply each relevant attribute explicitly in every row, including empty values, and check the imported profiles.
+
    * *Format:* Attributes must be provided as a key-value pair separated by a colon ``:``, using the syntax ``label:value`` (e.g., ``email:m.rossi@eng.it`` or ``birth_date:09061976``).
    * *Multiple Attributes:* Multiple attributes can be defined sequentially after the roles section.
 
 Examples
---------
+^^^^^^^^
 
 **CSV Format Example (with semicolon separator):**
 
-.. code-block:: csv
+.. code-block:: text
 
    mrossi;Marz0_2026;Mario Rossi;admin;birth_date:09061976;email:m.rossi@eng.it
    jsmith;Secret_2026;John Smith;user;dev;email:j.smith@eng.it
 
 **Excel Format Example:**
 
-.. list-table:: 
+.. list-table::
    :widths: 15 15 20 10 20 20
    :header-rows: 0
 
@@ -224,9 +224,9 @@ Examples
      - email:j.smith@eng.it
 
 Upload Execution and Output Report
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the file is selected and uploaded, the system processes each record sequentially and returns an execution report in JSON format. This output provides immediate feedback regarding the operation outcome for every single user.
+Once the file is selected and uploaded, the system processes each record sequentially and shows successful users and errors separately. The underlying service returns a per-user JSON report, illustrated below.
 
 Each item in the response contains:
 
@@ -256,19 +256,19 @@ Each item in the response contains:
 
 
 User unlock
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~
 
-If a user reaches the maximum number of failed login attempts (editable in advanced configurations), that user will be blocked by Knowage and access will be denied. 
-By accessing Knowage with management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it by using the "unlock user" button. 
+If a user reaches the maximum number of failed login attempts (editable in advanced configurations), that user will be blocked by Knowage and access will be denied.
+By accessing Knowage with management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it by using the "unlock user" button.
 After that, the user will be able to log in using the latest set of credentials.
 
-.. figure:: media/image115_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image115-b.png
 
     Users Management - Roles settings example
 
 
 Roles settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
 Clicking on the ROLES tab you have to select one o more roles to associate with the user.
 After that, if more than one role is associated to the user, you can choose the default role by selecting it from the combo box on the top of the page.
@@ -277,7 +277,7 @@ After that, if more than one role is associated to the user, you can choose the 
 Default role is optional: if you don't select a default role, at login time all the available roles for the user will be loaded. If you select a role, at login time
 it will be the session role selected.
 
-.. figure:: media/image100_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image100-b.png
 
     Users Management - Roles tab
 
@@ -286,6 +286,22 @@ In the example above, for the user "*Dte user*" whose role is just *user*.
 You can also assign an attribute profile to a user. In this case it is enough to valorize the attribute that you want to assign.
 The below image, shows an example. The attribute *par_family* that has been formerly created as a *Profile attribute*.
 
-.. figure:: media/attributes.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-attributes.png
 
     Users Management - Attributes tab
+
+Bulk maintenance
+----------------
+
+Users Management supports selecting several users for bulk actions. Review
+the selected identities before applying role or profile-attribute changes;
+inspect the per-user result report afterwards. Imported roles and profile
+attributes should already be defined in the target tenant.
+
+For automatic provisioning or user lifecycle operations, use the deployment's
+configured identity provider or authorized integration. These processes are
+separate from the file import used to create users.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-9-1-users-bulk-actions.png
+
+   User selection, bulk maintenance and per-user results.

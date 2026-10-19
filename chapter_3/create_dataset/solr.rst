@@ -1,9 +1,14 @@
 SolR Data Set
 ########################################################################################################################
 
+Create a **Solr** dataset and configure the Solr server, collection/core,
+query and returned fields. Preview the results and verify the types used for
+numeric values before saving. Use this type with the Discovery widget when
+you need facet-based exploration.
+
 A dataset of type Solr, see the following figure, reads data from the popular Search Engine Solr. To define a **Solr Dataset** select the Solr type and fill in the required settings.
 
-.. figure:: media/image41.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-solr-image41.png
 
     Solr Dataset configuration.
 
@@ -18,7 +23,7 @@ In the Solr universe, documents are composed of fields (these fields can be put 
 
 **Request header**, if there is the need, it is possible to customize the request header of the post http request, adding optional parameters.
 
-.. figure:: media/image43.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-solr-image43.png
 
   Solr Dataset, Optional fields for filtering parameters.
 

@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi Factor Authentication &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Server settings" href="server_settings.html" />
+    <link rel="prev" title="Google SSO" href="sso/google.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Install and configure Knowage 9.1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html">KNOWAGE Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_upgrade.html">How to upgrade KNOWAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso/index.html">How to configure the KNOWAGE Single Sign On</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Multi Factor Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_settings.html">Server settings</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Install and configure Knowage 9.1</a></li>
+      <li class="breadcrumb-item active">Multi Factor Authentication</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapter_5/mfa.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multi-factor-authentication">
+<h1>Multi Factor Authentication<a class="headerlink" href="#multi-factor-authentication" title="Link to this heading"></a></h1>
+<p>When MFA is enabled for your account, the enrollment screen appears after the initial credential check. This step is necessary to increase account security.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/chapter-5-mfa-mfa-1.png" src="../_images/chapter-5-mfa-mfa-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 718 </span><span class="caption-text">Figure 1</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To use MFA, you need to install an authentication app on your smartphone that generates temporary codes (OTP). You can choose one of the following free applications:</p>
+<ul class="simple">
+<li><p>FreeOTP</p></li>
+<li><p>Microsoft Authenticator</p></li>
+<li><p>Google Authenticator</p></li>
+</ul>
+<p>After opening the store on your device, search for the chosen app name and proceed with the installation.</p>
+<p>Once the app is installed:</p>
+<ul class="simple">
+<li><p>Open it and select the Add account option.</p></li>
+<li><p>Choose Scan QR code.</p></li>
+<li><p>Point your smartphone camera at the QR code displayed on the screen (Figure 1).</p></li>
+</ul>
+<p>If you cannot scan the QR code (for example, if the camera is unavailable), use the setup key shown below the QR code. In the app, select the option to enter the key manually and copy the code exactly as it appears.</p>
+<p>After linking the app, it will start generating temporary codes (OTP). Enter the code displayed in the “One-Time Code” field and confirm. The code changes every 30 seconds, so make sure to enter it quickly.</p>
+<p>For future logins, you will not need to repeat the initial configuration. A simplified screen will appear (Figure 2) with a single field for the One-Time Code.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/chapter-5-mfa-mfa-2.png" src="../_images/chapter-5-mfa-mfa-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 719 </span><span class="caption-text">Figure 2</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To complete the login:</p>
+<ul class="simple">
+<li><p>Open the previously installed and configured authentication app.</p></li>
+<li><p>Find the OTP code generated for the Knowage account.</p></li>
+<li><p>Enter the code in the indicated field and press SEND.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sso/google.html" class="btn btn-neutral float-left" title="Google SSO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="server_settings.html" class="btn btn-neutral float-right" title="Server settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

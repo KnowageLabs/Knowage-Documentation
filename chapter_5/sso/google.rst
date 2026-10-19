@@ -1,6 +1,10 @@
 Google SSO
 ########################################################################################################################
 
+Configure the Google identity integration with the redirect URI registered
+for the public Knowage address. Apply the provider settings to the deployed
+9.1 applications, then verify sign-in and account mapping.
+
 Knowage provides integration with Google Sign-In for authentication purposes, i.e. users can login into Knowage using their Google accounts.
 
 **Remark.** Google Sign-In is exploited only for authentication, not for authorization. The authorization part (that consists of defining roles and profile attributes for users) is still in charge of Knowage: this means that, before an user can enter into Knowage with his Google account, the admin user has to define that user inside the regular Knowage users catalogue, keeping in mind that the user id must match the email of his Google account (the provided password will not be considered when user will log in). In case the user is not defined inside Knowage users list, the authentication will fail.
@@ -38,13 +42,13 @@ instead, in a Windows environment using Apache Tomcat, edit TOMCAT_HOME/bin/sete
 
 When users will connect into Knowage, the login page will display the Google Sing-In button:
 
-.. figure:: media/image33.png
+.. figure:: /_static/screenshots/9.1/chapter-5-sso-google-image33.png
 
    Advanced configuration - Google Sing-In button.
 
 When clicking on that button, Google Sing-In authentication applies; if successful, users will be redirected into their home page inside Knowage.
 In case the account is not recognized by Knowage (i.e. the provided email address does not match any existing Knowage user id), he will get an error message:
 
-.. figure:: media/image34.png
+.. figure:: /_static/screenshots/9.1/chapter-5-sso-google-image34.png
 
    Advanced configuration - Authentication error.

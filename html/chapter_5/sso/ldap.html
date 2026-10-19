@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LDAP &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Google SSO" href="google.html" />
+    <link rel="prev" title="Azure SSO" href="azure.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Install and configure Knowage 9.1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">KNOWAGE Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_upgrade.html">How to upgrade KNOWAGE</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">How to configure the KNOWAGE Single Sign On</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cas.html">CAS SSO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.html">Azure SSO</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LDAP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#authentication">Authentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#authentication-authorization">Authentication + authorization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="google.html">Google SSO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mfa.html">Multi Factor Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server_settings.html">Server settings</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Install and configure Knowage 9.1</a></li>
+          <li class="breadcrumb-item"><a href="index.html">How to configure the KNOWAGE Single Sign On</a></li>
+      <li class="breadcrumb-item active">LDAP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_5/sso/ldap.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ldap">
+<h1>LDAP<a class="headerlink" href="#ldap" title="Link to this heading"></a></h1>
+<p>Configure the LDAP provider and its connection properties for the target
+directory. Verify user lookup, authentication and role/profile mapping with
+a representative account before enabling it for the wider installation.</p>
+<section id="authentication">
+<h2>Authentication<a class="headerlink" href="#authentication" title="Link to this heading"></a></h2>
+<p>Knowage provides integration with a LDAP server for authentication purposes.</p>
+<p><strong>Remark.</strong> Be sure that the Knowage users have been taken under LDAP census. The LDAP security connectors check the user that is accessing Knowage, but the user must be already defined as a Knowage user. Therefore, the users must coexist in both authentication systems (LDAP and Knowage).</p>
+<p>Knowage ships with three LDAP security connectors:</p>
+<ul class="simple">
+<li><p><strong>LdapSecurityServiceSupplier</strong>: a pure LDAP connector that authenticates every user using an LDAP server,</p></li>
+<li><p><strong>ProfiledLdapSecurityServiceSupplier</strong>: a mixed LDAP/internal connector that authenticates users using an LDAP server or the internal Knowage authentication system according to their profile information. More precisely, the choice of the system to be exploited is based on the <strong>auth_mode</strong> profile attribute: if the user profile attribute <strong>auth_mode</strong> is defined and its value equals to <code class="docutils literal notranslate"><span class="pre">internal</span></code> for the user, then Knowage will use its internal authentication mechanism, otherwise it will try an LDAP authentication,</p></li>
+<li><p><strong>FullLdapSecurityServiceSupplier</strong>: this connector performs both authentication and authorization against LDAP, and is the only connector that does not require users to be present both on LDAP and Knowage. There is an apposite section dedicated to this connector at the bottom of the page.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The only way to maintain access to Knowage for <strong>users not mapped onto LDAP</strong> is to:</p>
+<ul class="simple">
+<li><p>define the user profile attribute <strong>auth_mode</strong>,</p></li>
+<li><p>set <strong>auth_mode</strong> = <code class="docutils literal notranslate"><span class="pre">internal</span></code> for every user not mapped onto LDAP,</p></li>
+<li><p>use the connector <strong>ProfiledLdapSecurityServiceSupplier</strong> (see below).</p></li>
+</ul>
+</div>
+<p>In order to setup any LDAP security connector, you need to define a .properties file that includes the LDAP configuration:</p>
+<ul class="simple">
+<li><p><strong>INITIAL_CONTEXT_FACTORY</strong>: initial context factory Java class,</p></li>
+<li><p><strong>PROVIDER_URL</strong>: LDAP server IP,</p></li>
+<li><p><strong>SECURITY_AUTHENTICATION</strong>: authentication type,</p></li>
+<li><p><strong>DN_PREFIX</strong>: prefix that will be prepended to the user name to create the DN (distinguished name) of logging user,</p></li>
+<li><p><strong>DN_POSTFIX</strong>: postfix that will be appended to the user name to create the DN (distinguished name) of logging user;</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The final concatenation <strong>DN_PREFIX + &lt;Knowage user ID&gt; + DN_POSTFIX</strong> must be equal to the <strong>DN (distinguished name)</strong> of the user as defined in LDAP server. Please check DN examples at <a class="reference external" href="https://ldapwiki.com/wiki/DN%20Syntax">https://ldapwiki.com/wiki/DN%20Syntax</a> .</p>
+</div>
+<p>Then define a custom JVM property <code class="docutils literal notranslate"><span class="pre">ldap.config</span></code>, setting its value to the path of LDAP properties file.</p>
+<p>In a Unix-like environment using Apache Tomcat you can add a custom JVM property to variable <code class="docutils literal notranslate"><span class="pre">JAVA_OPTS</span></code> in a <code class="docutils literal notranslate"><span class="pre">setenv.sh</span></code> file under <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">JAVA_OPTS</span><span class="si">}</span><span class="s2"> -Dldap.config=/opt/tomcat/conf/ldap.properties"</span>
+</pre></div>
+</div>
+<p>In a Windows environment using Apache Tomcat you can add a custom JVM property to variable <code class="docutils literal notranslate"><span class="pre">JAVA_OPTS</span></code> in a <code class="docutils literal notranslate"><span class="pre">setenv.bat</span></code> file under <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">set</span><span class="w"> </span><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">"%JAVA_OPTS% -Dldap.config=C:/Tomcat/conf/ldap.properties"</span>
+</pre></div>
+</div>
+<p>Below there is an example of the ldap.properties file configuration for both LDAP connectors:</p>
+<div class="highlight-properties notranslate"><div class="highlight"><pre><span></span><span class="na">INITIAL_CONTEXT_FACTORY</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">com.sun.jndi.ldap.LdapCtxFactory</span>
+<span class="na">PROVIDER_URL</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">ldaps://&lt;LDAP server address&gt;:389</span>
+<span class="na">SECURITY_AUTHENTICATION</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">simple</span>
+<span class="na">DN_PREFIX</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="s">CN=</span>
+<span class="na">DN_POSTFIX</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="s">,ou=IT staff,o="Example, Inc",c=US</span>
+<span class="na">SEARCH_USER_BEFORE</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">false</span>
+<span class="na">SEARCH_USER_BEFORE_USER</span><span class="w">   </span><span class="o">=</span>
+<span class="na">SEARCH_USER_BEFORE_PSW</span><span class="w">    </span><span class="o">=</span>
+<span class="na">SEARCH_USER_BEFORE_FILTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">(&amp;((objectclass=person))(uid=%s))</span>
+
+<span class="na">ldap2.INITIAL_CONTEXT_FACTORY</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">com.sun.jndi.ldap.LdapCtxFactory</span>
+<span class="na">ldap2.PROVIDER_URL</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s">ldaps://&lt;LDAP 2 server address&gt;:389</span>
+<span class="na">ldap2.SECURITY_AUTHENTICATION</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">simple</span>
+<span class="na">ldap2.DN_PREFIX</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="s">CN=</span>
+<span class="na">ldap2.DN_POSTFIX</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="s">,ou=IT staff,o="Example, Inc",c=US</span>
+<span class="na">ldap2.SEARCH_USER_BEFORE</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">true</span>
+<span class="na">ldap2.SEARCH_USER_BEFORE_USER</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">user_before_username</span>
+<span class="na">ldap2.SEARCH_USER_BEFORE_PSW</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">user_before_password</span>
+<span class="na">ldap2.SEARCH_USER_BEFORE_FILTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">(&amp;((objectclass=account))(uid=%s))</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Using the example above, you can configure:</dt><dd><ul class="simple">
+<li><p><em>auth_mode = internal</em>: if you want to log in using the Knowage metadata database instead of contacting an LDAP server</p></li>
+<li><p><em>empty auth_mode value</em>: if you want to login using the first configuration of the properties file (the one without any prefix)</p></li>
+<li><p><em>auth_mode = ldap2</em>: if you want to log in by contacting the LDAP server using the configuration with “ldap2.” prefix</p></li>
+</ul>
+</dd>
+</dl>
+<p>In case you want the users to authenticate using their complete distinguish name, set <code class="docutils literal notranslate"><span class="pre">SEARCH_USER_BEFORE</span></code> key to be <em>false</em>.
+In case you want instead the users to authenticate using an LDAP property such as <code class="docutils literal notranslate"><span class="pre">uid</span></code>, then set <code class="docutils literal notranslate"><span class="pre">SEARCH_USER_BEFORE</span></code> key to be <em>true</em>; you need also to specify the <code class="docutils literal notranslate"><span class="pre">SEARCH_USER_BEFORE_FILTER</span></code> filter that Knowage will exploit in order to retrieve the user’s information on the LDAP server. <strong>Pay attention that %s placeholder must be present</strong>: it will be replaced by Knowage with the actual username provided by the user when logging in.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">SEARCH_USER_BEFORE_USER</span></code> and <code class="docutils literal notranslate"><span class="pre">SEARCH_USER_BEFORE_PSW</span></code> keys are credentials to authenticate to LDAP server; if the first one is set, the second one will be considered also. <em>These parameters are used only if anonymous bind is not allowed for LDAP server. For this reason they are optional and can be empty.</em></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Restart your application server in order to load the custom JVM property.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>After enabling the search functionality you may encounter the following exception: javax.naming.PartialResultException: Unprocessed Continuation Reference(s). To solve this just change LDAP port from 389 to 3268 (credits: <a class="reference external" href="https://stackoverflow.com/questions/16412236/how-to-resolve-javax-naming-partialresultexception">https://stackoverflow.com/questions/16412236/how-to-resolve-javax-naming-partialresultexception</a> )</p>
+</div>
+<p>The final step is to set the LDAP security connector as follow:</p>
+<ul class="simple">
+<li><p>access Knowage as administrator,</p></li>
+<li><p>browse to <strong>Configuration Management</strong> via the main menu,</p></li>
+<li><p>set the value of config <strong>SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className</strong> to <code class="docutils literal notranslate"><span class="pre">it.eng.spagobi.security.LdapSecurityServiceSupplier</span></code> <strong>or</strong> <code class="docutils literal notranslate"><span class="pre">it.eng.spagobi.security.ProfiledLdapSecurityServiceSupplier</span></code>,</p></li>
+<li><p>save,</p></li>
+<li><p>log out of Knowage.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To recover the default authentication mechanism please revert manually the config <strong>SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className</strong> to its default value <code class="docutils literal notranslate"><span class="pre">it.eng.spagobi.security.InternalSecurityServiceSupplierImpl</span></code> using a database client.</p>
+</div>
+<p>Knowage is now ready to authenticate the users via LDAP credentials.</p>
+</section>
+<section id="authentication-authorization">
+<h2>Authentication + authorization<a class="headerlink" href="#authentication-authorization" title="Link to this heading"></a></h2>
+<p>A third LDAP connector is available, which does not need users to be present in Knowage metadata (but only on LDAP system). This connector allows you to build the UserProfile object based on the information contained in the LDAP system. Only if the user is not found in the LDAP system, the Knowage metadata will be used (this scenario is useful for technical users that are not registered inside the LDAP).</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Whenever a user logs into Knowage, the connector will always first query the LDAP system in order to authenticate the user and build the profile object. Only if this operation fails (it means that the user is not present in the LDAP system) Knowage will use its internal metadata to authenticate the user.</p>
+</div>
+<p>As for the above connectors, you must follow some steps in order to setup this connector. First you need to define a <code class="docutils literal notranslate"><span class="pre">.properties</span></code> file that includes the following configurations:</p>
+<ul class="simple">
+<li><p><strong>INITIAL_CONTEXT_FACTORY</strong>: initial context factory Java class,</p></li>
+<li><p><strong>PROVIDER_URL</strong>: LDAP server IP,</p></li>
+<li><p><strong>SECURITY_AUTHENTICATION</strong>: authentication type,</p></li>
+<li><p><strong>DN_PREFIX</strong>: prefix that will be prepended to the user name to create the DN (distinguished name) of logging user,</p></li>
+<li><p><strong>DN_POSTFIX</strong>: postfix that will be appended to the user name to create the DN (distinguished name) of logging user,</p></li>
+<li><p><strong>AUTHENTICATION_FILTER</strong>: LDAP filter that will be checked before allowing permission to users,</p></li>
+<li><p><strong>USER_ROLES_ATTRIBUTE_NAME</strong>: LDAP attribute that contains the full string with user roles,</p></li>
+<li><p><strong>USER_ROLES_ATTRIBUTE_FIELD</strong>: prefix that anticipates each Knowage role inside the full string,</p></li>
+<li><p><strong>SUPERADMIN_ATTRIBUTE</strong>: role that grants superadmin permissions;</p></li>
+</ul>
+<p>Suppose that the structure of a user, inside LDAP, is as follows:</p>
+<div class="highlight-properties notranslate"><div class="highlight"><pre><span></span><span class="na">cn</span><span class="w">         </span><span class="o">:</span><span class="w"> </span><span class="s">John</span>
+<span class="na">sn</span><span class="w">         </span><span class="o">:</span><span class="w"> </span><span class="s">Doe</span>
+<span class="na">mail</span><span class="w">       </span><span class="o">:</span><span class="w"> </span><span class="s">john.doe@yourorganization.com</span>
+<span class="na">enabled</span><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="s">true</span>
+<span class="na">deprecated</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">false</span>
+<span class="na">isMemberOf</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">cn=ADMIN,ou=unit1,dc=yourorganization,dc=com</span>
+<span class="na">isMemberOf</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">cn=DEVELOPER,ou=unit1,dc=yourorganization,dc=com</span>
+<span class="na">isMemberOf</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">cn=USER,ou=unit1,dc=yourorganization,dc=com</span>
+</pre></div>
+</div>
+<p>We want the authentication to succeed only if <code class="docutils literal notranslate"><span class="pre">enabled=true</span></code> and <code class="docutils literal notranslate"><span class="pre">deprecated=false</span></code>. Furthermore, we want to build profile object by using all the <code class="docutils literal notranslate"><span class="pre">isMemberOf</span></code> attributes, and using the Knowage roles specified under the <code class="docutils literal notranslate"><span class="pre">cn</span></code> properties.</p>
+<p>Below there is an example of the ldap.properties file configuration that satisfies the above requirements:</p>
+<div class="highlight-properties notranslate"><div class="highlight"><pre><span></span><span class="na">INITIAL_CONTEXT_FACTORY</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">com.sun.jndi.ldap.LdapCtxFactory</span>
+<span class="na">PROVIDER_URL</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s">ldaps://&lt;LDAP server address&gt;:389</span>
+<span class="na">SECURITY_AUTHENTICATION</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">simple</span>
+<span class="na">DN_PREFIX</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s">CN=</span>
+<span class="na">DN_POSTFIX</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="s">,ou=IT staff,o="Example, Inc",c=US</span>
+<span class="na">AUTHENTICATION_FILTER</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">(&amp;(enabled=true)(!(deprecated=true)))</span>
+<span class="na">USER_ROLES_ATTRIBUTE_NAME</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">isMemberOf</span>
+<span class="na">USER_ROLES_ATTRIBUTE_FIELD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">cn</span>
+<span class="na">SUPERADMIN_ATTRIBUTE</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">ADMIN</span>
+</pre></div>
+</div>
+<p>Then you need to define a custom JVM property <code class="docutils literal notranslate"><span class="pre">ldap.config</span></code>, setting its value to the path of LDAP properties file.</p>
+<p>In a Unix-like environment using Apache Tomcat you can add a custom JVM property to variable <code class="docutils literal notranslate"><span class="pre">JAVA_OPTS</span></code> in a <code class="docutils literal notranslate"><span class="pre">setenv.sh</span></code> file under <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">JAVA_OPTS</span><span class="si">}</span><span class="s2"> -Dldap.config=/opt/tomcat/conf/ldap.properties"</span>
+</pre></div>
+</div>
+<p>In a Windows environment using Apache Tomcat you can add a custom JVM property to variable <code class="docutils literal notranslate"><span class="pre">JAVA_OPTS</span></code> in a <code class="docutils literal notranslate"><span class="pre">setenv.bat</span></code> file under <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">set</span><span class="w"> </span><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">"%JAVA_OPTS% -Dldap.config=C:/Tomcat/conf/ldap.properties"</span>
+</pre></div>
+</div>
+<p>The final step is to set the LDAP security connector as follow:</p>
+<ul class="simple">
+<li><p>access Knowage as administrator,</p></li>
+<li><p>browse to <strong>Configuration Management</strong> via the main menu,</p></li>
+<li><p>set the value of config <strong>SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className</strong> to <code class="docutils literal notranslate"><span class="pre">it.eng.spagobi.security.FullLdapSecurityServiceSupplier</span></code>,</p></li>
+<li><p>save,</p></li>
+<li><p>log out of Knowage.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To recover the default authentication mechanism please revert manually the config <strong>SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className</strong> to its default value <code class="docutils literal notranslate"><span class="pre">it.eng.spagobi.security.InternalSecurityServiceSupplierImpl</span></code> using a database client.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="azure.html" class="btn btn-neutral float-left" title="Azure SSO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="google.html" class="btn btn-neutral float-right" title="Google SSO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

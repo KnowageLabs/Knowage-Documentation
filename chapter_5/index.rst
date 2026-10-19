@@ -1,12 +1,14 @@
-Installation and configuration
-########################################################################################################################
+Install and configure Knowage 9.1
+=================================
 
-The present document illustrates how to install and configure the Knowage suite. There will be described the essential steps to succeed with the standard installation on certified environments, which includes the optional use of CAS as a SSO solution and the use of HTTPS protocol.
+Choose a 9.1 installation package, prepare its runtime and database, then
+configure authentication and the required optional services. Existing
+installations should follow the upgrade path for their current schema.
 
 .. toctree::
    :caption: Table of Contents
 
-   
+
    requirements.rst
    installation/index.rst
    how_upgrade.rst

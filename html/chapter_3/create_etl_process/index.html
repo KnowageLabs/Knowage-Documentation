@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create an ETL Process &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How use Localization Management" href="../localization/index.html" />
+    <link rel="prev" title="Creating an Alert" href="../create_performance_indicator/alert.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Create an ETL Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#knowagetalendengine">KnowageTalendEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#job-design">Job design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#job-deploy">Job deploy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#template-building">Template building</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-analytical-document">Creating the analytical document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#job-execution">Job execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#job-scheduling">Job scheduling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+      <li class="breadcrumb-item active">Create an ETL Process</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/create_etl_process/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-an-etl-process">
+<h1>Create an ETL Process<a class="headerlink" href="#create-an-etl-process" title="Link to this heading"></a></h1>
+<p>ETL execution requires a compatible Talend job and the optional
+<code class="docutils literal notranslate"><span class="pre">knowagetalendengine</span></code> deployed in the installation. Configure its output and
+parameter handling, run the job manually and check its result before scheduling
+it. This guide applies to installations providing that engine.</p>
+<p>Knowage allow the upload of data from source systems according to a common ETL logic, as well as the monitoring of data flows continuously feeding the data warehouse. To this end, Knowage provides the ETL <strong>Knowage Talend Engine</strong>.</p>
+<section id="knowagetalendengine">
+<h2>KnowageTalendEngine<a class="headerlink" href="#knowagetalendengine" title="Link to this heading"></a></h2>
+<p>Knowage Talend Engine integrates the open source tool Talend Open Studio (TOS). Talend Open Studio (TOS) is a graphical designer for defining ETL flows. Each designed flow produces a self-alone Java or Perl package. TOS is based on Eclipse and offers a complete environment including test, debug and support for documentation.</p>
+<p>The integration between Talend and Knowage is twofold. TOS includes Knowage as a possible execution target for its job, while Knowage implements the standard context interface for communicating with Talend. Jobs can be directly executed from Knowage web interface or possibly scheduled.</p>
+<p>Furthermore, the analytical model for monitoring ETL flows can be successfully applied to the analysis of audit and monitoring data generated by a running job. Note that this is not a standard functionality of Knowage suite, but it can be easily realized within a project with Knowage. To create an ETL document, you should perform the following steps:</p>
+<ul class="simple">
+<li><p>Job design (on Talend);</p></li>
+<li><p>Job deploy;</p></li>
+<li><p>Template building;</p></li>
+<li><p>Analytical document building;</p></li>
+<li><p>Job execution.</p></li>
+</ul>
+<p>In the remainder of the section, we discuss in detail all steps by providing examples.</p>
+</section>
+<section id="job-design">
+<h2>Job design<a class="headerlink" href="#job-design" title="Link to this heading"></a></h2>
+<p>The job is designed directly using Talend.</p>
+<p>Designing an ETL job requires to select the proper components from Talend tool palette and connect them to obtain the logic of the ETL flow. Talend will map to appropriate metadata both the structure of any RDBMS and the structure of any possible flow (e.g., TXT, XLS, XML) acting as input or output in the designed ETL.</p>
+<p>To design the ETL, several tools are available: from interaction with most RDBMS engines (both proprietary and open source) to support for different file formats; from logging and auditing features to support for several communication and transport protocols (FTP, POP, code, mail); from ETL process control management to data transformation functionalities.</p>
+<p>Talend also supports data quality management. Furthermore, it enables the execution of external processes and can interact with other applications, e.g., open source CRM applications, OLAP and reporting tools.</p>
+<p>The tMap tool allows the association of sources to targets according to defined rules. The main input is the source table in the data warehouse, while secondary (or lookup) inputs are dimensions to be linked to data. The output (target) is the data structure used for aggregation.</p>
+<p>It is also possible to design parametric ETL jobs. We will see how to manage them in the next steps.</p>
+</section>
+<section id="job-deploy">
+<h2>Job deploy<a class="headerlink" href="#job-deploy" title="Link to this heading"></a></h2>
+<p>Once you have designed the ETL job, you should deploy it on Knowage Server. First of all, configure connections properties to Knowage Server. Select <strong>Preferences</strong> &gt; <strong>Talend</strong> &gt; <strong>Import/export</strong> from within Talend. Then set connection options as described below.</p>
+<span id="connectionsettings"></span><table class="docutils align-default" id="id1">
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Connection Settings.</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Engine name</p></td>
+<td><p>KnowageTalendEngine</p></td>
+</tr>
+<tr class="row-odd"><td><p>Short description</p></td>
+<td><p>Logical name that will be used by
+Talend</p></td>
+</tr>
+<tr class="row-even"><td><p>Host</p></td>
+<td><p>Host name or IP address of the
+connection URL to Knowage</p></td>
+</tr>
+<tr class="row-odd"><td><p>Port</p></td>
+<td><p>Port of the connection URL to
+Knowage</p></td>
+</tr>
+<tr class="row-even"><td><p>Host</p></td>
+<td><p>Host name or IP address of the
+connection URL to Knowage</p></td>
+</tr>
+<tr class="row-odd"><td><p>Password</p></td>
+<td><p>Password of the user that will
+perform the deploy</p></td>
+</tr>
+</tbody>
+</table>
+<p>Once you have set the connection, you can right click on a job and select <strong>Deploy on Knowage</strong>. This will produce the Java code implementing the ETL and make a copy of the corresponding jar file at <code class="docutils literal notranslate"><span class="pre">\\resources\\talend\\RuntimeRepository\\java\\Talend</span></code> project name of Knowage Server. It is possible to deploy multiple jobs at the same time. Exported code is consistent and self-standing. It may include libraries referenced by ETL operators and default values of job parameters, for each context defined in the job. On its side, Knowage manages Talend jobs from an internal repository at <code class="docutils literal notranslate"><span class="pre">resources/talend/RuntimeRepository</span></code>, under the installation root folder.</p>
+</section>
+<section id="template-building">
+<h2>Template building<a class="headerlink" href="#template-building" title="Link to this heading"></a></h2>
+<p>As with any other Knowage document, you need to define a template for the ETL document that you wish to create. The ETL template has a very simple structure, as shown in the example below:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 35 </span><span class="caption-text">ETL template.</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nt">&lt;etl&gt;</span>
+<span class="linenos">2</span><span class="w">       </span><span class="nt">&lt;job</span><span class="w">    </span><span class="na">project=</span><span class="s">"Foodmart"</span>
+<span class="linenos">3</span><span class="w">               </span><span class="na">jobName=</span><span class="s">"sales_by_month_country_product_familiy"</span>
+<span class="linenos">4</span><span class="w">               </span><span class="na">context=</span><span class="s">"Default"</span>
+<span class="linenos">5</span><span class="w">               </span><span class="na">version=</span><span class="s">"0.1"</span>
+<span class="linenos">6</span><span class="w">               </span><span class="na">language=</span><span class="s">"java"</span>
+<span class="linenos">7</span><span class="w">       </span><span class="nt">/&gt;</span>
+<span class="linenos">8</span><span class="w"> </span><span class="nt">&lt;/etl&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>The tag job includes all the following configuration attributes:</p>
+<ul class="simple">
+<li><p>project is the name of the Talend project.</p></li>
+<li><p>jobName is the label assigned to the job in Talends repository.</p></li>
+<li><p>context is the name of the context grouping all job parameters. Typically it is the standard context, denoted with the name <strong>Default</strong>.</p></li>
+<li><p>version is the job version.</p></li>
+<li><p>language is the chosen language for code generation. The two possible options are: Java and Perl.</p></li>
+</ul>
+<p>Values in the template must be consistent with those defined in Talend, in order to ensure the proper execution of the ETL document on Knowage Server.</p>
+</section>
+<section id="creating-the-analytical-document">
+<h2>Creating the analytical document<a class="headerlink" href="#creating-the-analytical-document" title="Link to this heading"></a></h2>
+<p>Once we have created the template, we can create a new analytical document following the standard procedure. Use the plus button and choose “Generic Document”. Proceed by filling in the necessary fields, uploading the XML template we have just created and selecting “ETL Process” as the type and “Talend engine” as the engine. Select then the corrisponding data source and the document state.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-create-etl-process-index-doc-etl.png" src="../../_images/chapter-3-create-etl-process-index-doc-etl.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 588 </span><span class="caption-text">Creating an ETL document.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If the job has parameters, they should be associated to the corresponding analytical drivers, as usually. In other words, you have to create an analytical driver for each context variable defined in the Talend job.</p>
+</section>
+<section id="job-execution">
+<h2>Job execution<a class="headerlink" href="#job-execution" title="Link to this heading"></a></h2>
+<p>A Talend job can be executed directly from the web interface of Knowage Server and of course from a Talend client.
+To execute the job on Knowage, click on the play button near the document in the document browser, like with any other analytical document. The execution page will show a message to inform that the process was started.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-create-etl-process-index-doc-execution.png" src="../../_images/chapter-3-create-etl-process-index-doc-execution.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 589 </span><span class="caption-text">ETL document execution interface.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="job-scheduling">
+<h2>Job scheduling<a class="headerlink" href="#job-scheduling" title="Link to this heading"></a></h2>
+<p>Most often it is useful to schedule the execution of ETL jobs instead of directly running them. You can rely on Knowage scheduling functionality to plan the execution of Talend jobs.
+While defining a scheduled execution, you can set a notification option which will send an email to a set of recipients or a mailing list once the job has completed its execution. To enable this option, check the flag <strong>Send Mail</strong>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../create_performance_indicator/alert.html" class="btn btn-neutral float-left" title="Creating an Alert" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../localization/index.html" class="btn btn-neutral float-right" title="How use Localization Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

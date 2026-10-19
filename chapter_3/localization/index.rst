@@ -1,6 +1,10 @@
 How use Localization Management
 ########################################################################################################################
 
+Open **Modules** > **Internationalization** to maintain user-defined labels.
+Check labels in the target locale and with the intended tenant. These labels
+complement the interface translations supplied with Knowage.
+
 Knowage allows to change the *localization* in order to use different languages. We can distinguish two main categories:
 
 -  **System labels**: the labels of the Knowage Graphical User Interface
@@ -9,7 +13,7 @@ Knowage allows to change the *localization* in order to use different languages.
 The user can change the language to use in Knowage by doing the following:
 
 
-.. figure:: media/image000_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-localization-index-image000-8-1.png
 
     Setting the language in Knowage.
 
@@ -29,7 +33,7 @@ The currently supported languages for system labels are:
 
 
 
-.. figure:: media/image004_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-localization-index-image004-8-1.png
 
     Change default language.
 
@@ -68,7 +72,7 @@ The name of the properties file is *messages_* plus the current locale, e.g. for
 
 
 
-.. figure:: media/image001_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-localization-index-image001-8-1.png
 
     BIRT Property Editor - Resources
 
@@ -81,7 +85,6 @@ To localize a message in a field within a report template, the user needs to def
 
 
 
-.. figure:: media/image002_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-3-localization-index-image002-8-1.png
 
     BIRT Property Editor - Localization
-

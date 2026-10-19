@@ -1,6 +1,12 @@
 Create a new Data Source
 ########################################################################################################################
 
+This chapter covers connector-specific configuration for relational, cloud,
+Big Data and NoSQL sources. Register connections in **Modules** > **Data
+Providers** > **Data Source** as described in :doc:`/chapter_4/add_datasource`.
+Connector availability depends on the installed JDBC driver and its supported
+database version.
+
 In order to connect to your data, you have to define a new data source connection.
 
 Knowage manages two types of data source connections:
@@ -18,11 +24,11 @@ To add a new connection, first add the relative JDBC driver to the folder ``TOMC
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
-.. figure:: media/image25.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datasource-index-image25.png
 
      Add a new data source
 
-.. figure:: media/image26.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datasource-index-image26.png
 
      Data source details.
 
@@ -116,7 +122,7 @@ Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you t
 
 For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure below.
 
-.. figure:: media/image27.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-datasource-index-image27.png
 
    Libraries to include in the apache driver.
 
@@ -215,7 +221,7 @@ Unless you are using Spark SQL to read from Cassandra, the definition of a busin
 Google Big Query
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
+Knowage supports Google Big Query datasources via Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`__.
 
 For example, to create a JDBC connection to a Google Big Query dataset using a service account you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
 
@@ -230,7 +236,7 @@ For example, to create a JDBC connection to a Google Big Query dataset using a s
 Google Cloud Spanner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage supports Google Cloud Spanner datasources via the official open source JDBC driver: see `official documentation <https://cloud.google.com/spanner/docs/use-oss-jdbc>`_.
+Knowage supports Google Cloud Spanner datasources via the official open source JDBC driver: see `official documentation <https://cloud.google.com/spanner/docs/use-oss-jdbc>`__.
 
 For example, to create a JDBC connection to a Google Cloud Spanner dataset using a service account you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
 
@@ -257,7 +263,7 @@ To create a JDBC connection to an Amazon RedShift dataset using a RedShift-only 
 Azure Synapse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage supports connections to Azure Synapse datasources via SQL Server JDBC Driver (`official documentation <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/connection-strings>`_).
+Knowage supports connections to Azure Synapse datasources via SQL Server JDBC Driver (`official documentation <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/connection-strings>`__).
 
 The following example shows how to create a JDBC connection to an Azure Synapse dataset, by adding the following configuration to ``TOMCAT_HOME/conf/server.xml``:
 
@@ -265,6 +271,5 @@ The following example shows how to create a JDBC connection to an Azure Synapse 
 
  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" logAbandoned="true" maxIdle="4" maxTotal="50" maxWait="-1"
 	 minEvictableIdleTimeMillis="60000" removeAbandoned="true" removeAbandonedTimeout="3600" testOnReturn="true" testWhileIdle="true"
-	 timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource" name="jdbc/synapse" username="<user>" password="<password>" 
+	 timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource" name="jdbc/synapse" username="<user>" password="<password>"
 	 url="jdbc:sqlserver://your-synapse-instance.sql.azuresynapse.net:1433;database=<database>" validationQuery="select 1"/>
-

@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure SSO &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="LDAP" href="ldap.html" />
+    <link rel="prev" title="CAS SSO" href="cas.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Install and configure Knowage 9.1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">KNOWAGE Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_upgrade.html">How to upgrade KNOWAGE</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">How to configure the KNOWAGE Single Sign On</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cas.html">CAS SSO</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Azure SSO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ldap.html">LDAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="google.html">Google SSO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mfa.html">Multi Factor Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server_settings.html">Server settings</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Install and configure Knowage 9.1</a></li>
+          <li class="breadcrumb-item"><a href="index.html">How to configure the KNOWAGE Single Sign On</a></li>
+      <li class="breadcrumb-item active">Azure SSO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_5/sso/azure.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="azure-sso">
+<h1>Azure SSO<a class="headerlink" href="#azure-sso" title="Link to this heading"></a></h1>
+<p>Configure the Azure identity integration with the application’s registered
+redirect URI and the 9.1 deployment’s public address. Preserve provider
+credentials outside published documentation and validate user and role mapping
+after sign-in.</p>
+<p>Knowage provides integration with Azure Sign-In for authentication purposes, i.e. users can login into Knowage using their Azure accounts.</p>
+<p><strong>Remark.</strong> Azure Sign-In is exploited only for authentication, not for authorization. The authorization part (that consists of defining roles and profile attributes for users) is still in charge of Knowage: this means that, before an user can enter into Knowage with his Azure account, the admin user has to define that user inside the regular Knowage users catalogue, keeping in mind that the user id must match the email of his Azure account (the provided password will not be considered when user will log in). In case the user is not defined inside Knowage users list, the authentication will fail.</p>
+<p>In order to enable Azure Sign-In authentication, please follow these steps:</p>
+<ul class="simple">
+<li><p>start Knowage with default configuration;</p></li>
+<li><p>enter Knowage as admin and define users who will be allowed to enter Knowage (use their email address as user id);</p></li>
+<li><p>browse to <strong>Configuration management</strong> via the main menu;</p></li>
+<li><p>set the value of configuration parameter <strong>SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className</strong> to <code class="docutils literal notranslate"><span class="pre">it.eng.spagobi.security.azure.AzureSecurityServiceSupplier</span></code>, then save;</p></li>
+<li><p>stop Knowage application;</p></li>
+<li><p>follow Azure Sign-In documentation in order to configure your Knowage application and to get information about tenant ID and client ID;</p></li>
+<li><p>create a text file wherever you want and paste the tenant ID and the client ID inside it, for example: create file TOMCAT_HOME/conf/azure.signin.config.properties with this content:</p></li>
+</ul>
+<div class="highlight-properties notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="na">enabled</span><span class="o">=</span><span class="s">true</span>
+<span class="linenos">2</span><span class="na">client_id</span><span class="o">=</span><span class="s">&lt;your client ID&gt;</span>
+<span class="linenos">3</span><span class="na">tenant_id</span><span class="o">=</span><span class="s">&lt;your tenant ID&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>add the <code class="docutils literal notranslate"><span class="pre">azure.signin.config</span></code> Java System property that specifies the location of this properties file: in a Unix-like environment, edit TOMCAT_HOME/bin/setenv.sh and add</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">JAVA_OPTS</span><span class="si">}</span><span class="s2"> -Dazure.signin.config=&lt;your Tomcat home folder&gt;/conf/azure.signin.config.properties"</span>
+</pre></div>
+</div>
+<p>instead, in a Windows environment using Apache Tomcat, edit TOMCAT_HOME/bin/setenv.bat:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">set</span><span class="w"> </span><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">"%JAVA_OPTS% -Dazure.signin.config=&lt;your Tomcat home folder&gt;/conf/azure.signin.config.properties"</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>start Knowage application.</p></li>
+</ul>
+<p>When users will connect into Knowage, the login page will display the Azure Sing-In button:</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/chapter-5-sso-azure-azure-signin.png" src="../../_images/chapter-5-sso-azure-azure-signin.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 712 </span><span class="caption-text">Advanced configuration - Azure Sing-In button.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>When clicking on that button, Azure Sing-In authentication applies; if successful, users will be redirected into their home page inside Knowage.
+In case the account is not recognized by Knowage (i.e. the provided email address does not match any existing Knowage user id), he will get an error message.</p>
+<p>Inside the Azure portal, after you have successfully registered our app, you will have to configure a new Single-page application, and enter “<a class="reference external" href="https:/">https:/</a>/&lt;your-host-name&gt;/knowage/servlet/AdapterHTTP” as Redirect URI.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/chapter-5-sso-azure-azure-redirect-uri.png" src="../../_images/chapter-5-sso-azure-azure-redirect-uri.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 713 </span><span class="caption-text">Azure portal configuration - Redirect URI.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The authorization endpoint must be able to issue ID tokens, so make sure that the corresponding checkbox is flagged.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-5-sso-azure-azure-idtoken-checkbox.png" src="../../_images/chapter-5-sso-azure-azure-idtoken-checkbox.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 714 </span><span class="caption-text">Azure portal configuration - ID token checkbox.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Directly from the application manifest.json file, you need to set “accessTokenAcceptedVersion”: 2 in order to use the v2.0 endpoints.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-5-sso-azure-manifest.png" src="../../_images/chapter-5-sso-azure-manifest.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 715 </span><span class="caption-text">Azure portal configuration - manifest.json file.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cas.html" class="btn btn-neutral float-left" title="CAS SSO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ldap.html" class="btn btn-neutral float-right" title="LDAP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

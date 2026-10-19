@@ -1,6 +1,11 @@
 Add new Data Source
 ########################################################################################################################
 
+Open **Modules** > **Data Providers** > **Data Source** to maintain
+connections. Configure and test the JDBC connection or JNDI name, select its
+intended usage and save. Test it through a dataset before publishing analyses
+that depend on the source.
+
 To let all the BI tools work properly, you need to configure DB connection. There are two different options available for the configuration, **JNDI** (recommended) and **JDBC**.
 
 Connect to your data
@@ -21,20 +26,20 @@ Knowage manages two types of data source connections:
 
 To add a new connection, first add the relative JDBC driver to the folder ``TOMCAT_HOME/lib`` and restart Knowage. Then, log in as administrator (user: *biadmin*, password: *biadmin* are the default credentials) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
-.. figure:: media/ds.png
+.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-ds.png
 
      Data source management
 
 By clicking the **Add** button on the top right corner of the left panel, an empty panel will be displayed on the right.
 
 
-.. figure:: media/image25_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-image25-8-1.png
 
      Add a new data source
 
 Below how the panel looks like and information needed to create a datasource:
 
-.. figure:: media/image26_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-image26-8-1.png
 
      Data source details - JDBC.
 
@@ -95,7 +100,7 @@ Below how the panel looks like and information needed to create a datasource:
          - **JNDI Name**, depends on the application server. For instance, in case of Tomcat 7, the format ``java:comp/env/jdbc/<resource_name>`` is used. If the data source is multischema, then the format is ``java:comp/env/jdbc/<prefix>``.
 
 
-.. figure:: media/image_JNDI_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-image-jndi-8-1.png
 
      Data source details - JNDI.
 
@@ -124,7 +129,7 @@ Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you t
 
 For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure below.
 
-.. figure:: media/image27.png
+.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-image27.png
 
    Libraries to include in the apache driver.
 
@@ -223,7 +228,7 @@ Unless you are using Spark SQL to read from Cassandra, the definition of a busin
 Google Big Query
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage supports Google Big Query datasources trough Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`_.
+Knowage supports Google Big Query datasources trough Simba JDBC Driver: see `official documentation <https://cloud.google.com/bigquery/providers/simba-drivers>`__.
 
 For example, to create a JDBC connection to a Google Big Query dataset using a service account, you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
 
@@ -238,7 +243,7 @@ For example, to create a JDBC connection to a Google Big Query dataset using a s
 Google Cloud Spanner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage supports Google Cloud Spanner datasources via the official open source JDBC driver: see `official documentation <https://cloud.google.com/spanner/docs/use-oss-jdbc>`_.
+Knowage supports Google Cloud Spanner datasources via the official open source JDBC driver: see `official documentation <https://cloud.google.com/spanner/docs/use-oss-jdbc>`__.
 
 For example, to create a JDBC connection to a Google Cloud Spanner dataset using a service account, you can add the following configurtaion to ``TOMCAT_HOME/conf/server.xml``:
 
@@ -265,7 +270,7 @@ To create a JDBC connection to an Amazon RedShift dataset using a RedShift-only 
 Azure Synapse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage supports connections to Azure Synapse datasources via SQL Server JDBC Driver (`official documentation <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/connection-strings>`_).
+Knowage supports connections to Azure Synapse datasources via SQL Server JDBC Driver (`official documentation <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/connection-strings>`__).
 
 The following example shows how to create a JDBC connection to an Azure Synapse dataset, by adding the following configuration to ``TOMCAT_HOME/conf/server.xml``:
 
@@ -273,6 +278,5 @@ The following example shows how to create a JDBC connection to an Azure Synapse 
 
  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" logAbandoned="true" maxIdle="4" maxTotal="50" maxWait="-1"
 	 minEvictableIdleTimeMillis="60000" removeAbandoned="true" removeAbandonedTimeout="3600" testOnReturn="true" testWhileIdle="true"
-	 timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource" name="jdbc/synapse" username="<user>" password="<password>" 
+	 timeBetweenEvictionRunsMillis="10000" type="javax.sql.DataSource" name="jdbc/synapse" username="<user>" password="<password>"
 	 url="jdbc:sqlserver://your-synapse-instance.sql.azuresynapse.net:1433;database=<database>" validationQuery="select 1"/>
-

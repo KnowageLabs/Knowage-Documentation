@@ -1,35 +1,34 @@
-Software release
-########################################################################################################################
+Get the Knowage 9.1 packages
+============================
 
-You can download Knowage through the following links:
+Download Community Edition archives from the
+`v9.1.0 release <https://github.com/KnowageLabs/Knowage-Server/releases/tag/v9.1.0>`_.
+Enterprise Edition customers obtain the corresponding packages and licensed
+components through their distribution channel.
 
-- Community Edition: https://github.com/KnowageLabs/Knowage-Server/releases
+Use one release consistently across the applications and engines. The 9.1.0
+assets include the main applications ``knowage.war``, ``knowage-api.war`` and
+``knowage-vue.war``, together with the available BIRT, Jasper, Cockpit, KPI,
+Meta and QBE engine archives. Deploy the engines required by your solution.
 
-A typical release contains 2 elements:
+Database scripts are in the
+`tagged source tree <https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowagedatabasescripts>`_.
+Choose the MySQL/MariaDB, PostgreSQL or Oracle directory matching your metadata
+database. Use creation scripts for a new schema and upgrade scripts for an
+existing schema. Check database-version compatibility before execution.
 
-- Web Application Archives (WARs) 
-- DDL scripts (to populate the schema used by Knowage for its metadata) you canfine it in https://github.com/KnowageLabs/Knowage-Server/tree/knowage-server-9.0/knowagedatabasescripts
+For an existing installation, follow
+:doc:`/chapter_5/upgrade/how_upgrade_9_0_to_9_1`.
 
-      .. table:: Supported databases for DDL scripts
-          :widths: auto
+License hardware identification
+-------------------------------
 
-          +------------------------------------+
-          |   **Supported databases**          |
-          +====================================+
-          |   MySQL / MariaDB                  |
-          +------------------------------------+
-          |   Oracle                           |
-          +------------------------------------+
-          |   Postgres                         |
-          +------------------------------------+
+For an Enterprise deployment requiring a stable MAC-based license identifier,
+the deployment may use this JVM property in ``setenv.sh``:
 
-Optional: using MAC address for license
-------------------------------------------------------------------------------------------------------------------------
+.. code-block:: bash
 
-If you're using a VM on AWS cloud and you want to use Knowage EE with license, you should be sure that hardware id doesn't change every start and stop.
-To avoid this behaviour you can choose for using MAC address instead of default hardware id calculation.
-You just have to add this optional row in "setenv.sh" file:
+   export JAVA_OPTS="$JAVA_OPTS -Dmac.address.licensing=true"
 
-   .. code-block:: bash
-
-   	export JAVA_OPTS="$JAVA_OPTS -Dmac.address.licensing=true"
+Agree the license identifier with your distribution channel before changing
+an existing licensed installation.

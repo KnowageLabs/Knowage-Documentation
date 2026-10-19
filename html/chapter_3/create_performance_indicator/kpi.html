@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a KPI &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Creating a Scorecard" href="scorecard.html" />
+    <link rel="prev" title="Create Performance Analisys" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Create Performance Analisys</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Create a KPI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kpi-development">KPI development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-kpi-document">Creating a KPI document</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scorecard.html">Creating a Scorecard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alert.html">Creating an Alert</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Create Performance Analisys</a></li>
+      <li class="breadcrumb-item active">Create a KPI</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/create_performance_indicator/kpi.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-a-kpi">
+<h1>Create a KPI<a class="headerlink" href="#create-a-kpi" title="Link to this heading"></a></h1>
+<p>Open <strong>Modules</strong> &gt; <strong>KPI Model</strong> to maintain measures, KPI definitions and
+targets. Validate the source query and thresholds, then execute the KPI
+document and check its values for the intended period and roles.</p>
+<p>KPI stands for Key Performance Indicator. It denotes a set of metrics, usually derived from simple measures, allowing managers to take a snapshot on the key aspects of their business. The main features of KPIs are listed below:</p>
+<ul class="simple">
+<li><p>summary indicators,</p></li>
+<li><p>complex calculations,</p></li>
+<li><p>thresholds supporting results evaluation,</p></li>
+<li><p>reference target goals,</p></li>
+<li><p>easy to use but requiring more specific skills to design it,</p></li>
+<li><p>association with alarms,</p></li>
+<li><p>not necessarily used for real-time analysis,</p></li>
+<li><p>may refer to a specific time frame.</p></li>
+</ul>
+<p>For these reasons, KPIs are always defined by expert analysts and then used to analyze performances through synthetic views that select and outline only meaningful information.</p>
+<p>Knowage allows the configuration of a KPI document thanks to a specific <strong>KPI engine</strong>. The critical value (or values) can be computed and visualized through the functionalities available in the <em>KPI model</em> section of Knowage menu area.</p>
+<section id="kpi-development">
+<h2>KPI development<a class="headerlink" href="#kpi-development" title="Link to this heading"></a></h2>
+<p>We briefly sum up here the contents that we will cover in the following sections in order to have a general overview of the KPI implemetation.</p>
+<ul class="simple">
+<li><p><strong>Measure definition</strong>: it is necessary to define first the measures and attributes, eventually with parameters, to compute the critical value of interest.</p></li>
+<li><p><strong>KPI definition</strong>: here you compute the requested value through a formula using the measures and attributes set in previuos step and  configure thresholds.</p></li>
+<li><p><strong>Target</strong>: it is possible to monitor the value of one or more KPIs comparing it to an additional fixed value.</p></li>
+<li><p><strong>Schedulation</strong>: you can schedule the execution of one or more KPIs, eventually filtered by conditions.</p></li>
+<li><p><strong>Document creation</strong>: finally, you develop the KPI document.</p></li>
+</ul>
+<p>Therefore, we go into further details.</p>
+<p><strong>Measure definition.</strong> The first step is to create a new measure or rule. Select <strong>Measure/Rule</strong> from the contextual menu of the main page, as shown below.</p>
+<figure class="align-default" id="id1">
+<span id="measureruledefmenu"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image121.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image121.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 548 </span><span class="caption-text">Measure/Rule menu item.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Click the <em>Plus</em> icon to set a new measure/rule. A query editor page opens. Note that after the selection of a the data source bypressing simultaneously the CTRL key and the space bar opens a contextual menu containing the available datasource columns and the database keywords. Refer to the following figure to have an example.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image122.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image122.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 549 </span><span class="caption-text">Editing the query when defining a KPI.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Each rule is based on a query to which you can add placeholders. A placeholder represents a filter that you can add to your rule and that can be useful for profiling tasks. It is possible to assign value to a placeholder while configuring the schedulation of the KPI (this procedure will be further examined in “Document creation” paragraph). The syntax to use in queries for setting a placeholder is <a class="reference external" href="mailto:columnName=&#37;&#52;&#48;placeholderName">columnName=<span>&#64;</span>placeholderName</a>, as the example in figure below shows.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image123.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image123.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 550 </span><span class="caption-text">Setting placeholder in query definition.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Generally the rule of a query can return one or more measures and possibly an attribute as the example above also shows.</p>
+<p>The <strong>Preview</strong> button allows you to check the query execution and have a look on a part of the result set.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image124-b.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image124-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 551 </span><span class="caption-text">Preview functionality.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A typology (measure, attribute and temporal attribute) and a category can be assigned to each fields returned by the query using the <strong>Metadata</strong> tab as highlighted in the next figure. The typology is required to associate a type to each field returned by the query. In particular, if the field is a temporal one, it is mandatory to specify to which level you want it to be considered, that is if it corresponds to a day, a month, a year, a century or a millennium. For measures and attribute it is possible to assign also a category to easily look them up in a second moment.</p>
+<figure class="align-default" id="id5">
+<span id="metadatasettings"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image125.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image125.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 552 </span><span class="caption-text">Metadata settings.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>We say in advance that, it is important to distinguish these metedata categories from the required field “Category” that occurs while saving the KPI definition.</p>
+<p>In fact, the category assigned when saving the KPI definition will be added (if it doesn’t exist) in the “KPI categories“ list, used to profile KPIs on roles (see Figure below).</p>
+<figure class="align-default" id="id6">
+<span id="kpicategory"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image126.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image126.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 553 </span><span class="caption-text">KPI category.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Do not confuse metadata category with the KPI category</strong></p>
+<blockquote>
+<div><p>The category defined in the metadata tab of the “Measure definition” functionally are not the same categories selected in the tab area of the “Roles management” functionality (see the figure above). The first are used to classify the metadata while the second are needed for the profiling issue.</p>
+</div></blockquote>
+</div>
+<p>As we told, a proper categorization exists for the aggregations of type temporal. In fact, when associating “temporal attribute” as metadata typology, the technical user must indicate the temporal level of the data in the category section: day, month, year or others. You can see an example in the following figure. Note that the field set as temporal type must contains numbers (therefore string types are not allowed). For example, if one wants to set a field as “month”, such a field must contain {01,02,03,…,12} that will be considered as {January, February, March,…,December}.</p>
+<figure class="align-default" id="id7">
+<span id="hierarchyleveltempattrib"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image127.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image127.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 554 </span><span class="caption-text">Level for temporal attributes.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Let’s now examine extra features available on the right top corner. There you can find the following tab:</p>
+<ul class="simple">
+<li><p><strong>Alias</strong>: you can see the aliases defined in other rules; note that only the aliases of those colums saved as attribute are stored and shown.</p></li>
+</ul>
+<p>This is useful in order to avoid aliases already in use when defining a new rule. Indeed an alias can not be saved twice even if contained in different rules.</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image128.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image128.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 555 </span><span class="caption-text">Checking aliases.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Placeholder</strong>: here you can check the existing placeholders. These are set in the query you’re editing or in other ones.</p></li>
+</ul>
+<figure class="align-default" id="id9">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image42930.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image42930.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 556 </span><span class="caption-text">Setting placeholders in a query.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Save</strong>: to save the query and other settings just configured.</p></li>
+<li><p><strong>Close</strong>: to exit the rule configuration window.</p></li>
+</ul>
+<p><strong>KPI definition.</strong> Select the <strong>KPI</strong> item from the contextual menu of the main page of Knowage, as shown in figure below. Click on the “Plus” icon to configure a new KPI.</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image131.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image131.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 557 </span><span class="caption-text">Configuring a new KPI.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The window opens a first tag, entitled <strong>Formula</strong> (see figure below), where to type in the formula to enable calculations.
+Press CTRL key and space bar simultaneously to access all measures defined throug the definition of the rules. In case of <em>No Suggestions</em> you will need to type in the name manually.</p>
+<p>Once typed in the name of the measure(s), you need to choose the aggregation function to apply to just by clicking on the name. See figure below.</p>
+<figure class="align-default" id="id11">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image135.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image135.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 558 </span><span class="caption-text">Available functions.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id12">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image136.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image136.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 559 </span><span class="caption-text">Example of a KPI formula.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After completing the insertion of the formula move to the next tab <em>Cardinality</em></p>
+<p>The <em>Cardinality</em> tab allows to define the granularity level (namely the grouping level) for the attributes of the defined measures.</p>
+<p>Referring to the example below, selecting (with a check) all the measures for the attribute product_name the KPI measures are computed for each value of the product_name; otherwise no grouping will be done.</p>
+<figure class="align-default" id="id13">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image137-b.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image137-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 560 </span><span class="caption-text">Cardinality settings example.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Limit values can be set using the Threshold tab (Figure below). It is mandatory to set at least one threshold otherwise the KPI cannot be saved. You can choose a threshold already defined clicking on “Threshold” list or create a new one.</p>
+<figure class="align-default" id="id14">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image138-b.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image138-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 561 </span><span class="caption-text">Setting thresholds.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To insert a new threshold it is mandatory to insert a name and assign a type, while the description is optional. Clicking on <strong>Add new threshold item</strong> a new item appears. It is necessary to define the <strong>Label</strong>, <strong>Minimum</strong> and <strong>Maximum</strong> values. It is possible to choose whether to include the minimum and maximum values in the value slot or not. The <strong>Severity</strong> is used to link colors to their meaning and make the thresholds readable by other technical users. Note that the color can be defined through the RGB code, the hexadecimal code or choosing it from the panel.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>“Standard” colors for thresholds</strong></p>
+<blockquote>
+<div><dl class="simple">
+<dt>Below are represented the <strong>standard colors</strong> for thresholds (in terms of hexadecimals):</dt><dd><ul class="simple">
+<li><p>green: #00FF00,</p></li>
+<li><p>yellow: #FFF000,</p></li>
+<li><p>red: #FF0000.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<p>After completing all the mandatory information the KPI definition can be saved by clicking the <em>Save</em> icon, available at the right top corner of the page.
+After saving the <em>Add KPI associations</em> wizard opens, as shown below. Here, it is mandatory to set the KPI category so that only users whose roles have the permissions to this specific category can access the KPI. Remember that it is possible to assign permissions over KPI when defining roles using the “Roles management” functionality. Furthermore, the user can check or uncheck the <strong>Enable Versioning</strong> button if he/she wishes to keep track of the rules/measures/targets that generate the KPI response at each KPI execution.</p>
+<figure class="align-default" id="id15">
+<span id="savekpidefcategory"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image139-b.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image139-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 562 </span><span class="caption-text">Save the KPI definition and set category.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Target.</strong> This step is not mandatory. Enter the <strong>Target</strong> menu item as shown below.</p>
+<figure class="align-default" id="id16">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image140.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image140.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 563 </span><span class="caption-text">Target Definition menu item.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>By clicking the <em>Plus</em> icon a new target can be added.</p>
+<dl class="simple">
+<dt>The define a new target you need to type in a name, a validity start date/end date and the association to at least one target.</dt><dd><p>The association with a target can be done by clicking the item <strong>Add KPI association</strong> and selecting the KPI of interest. Once the association is set, the “Value” box gets editable and you can insert the value you wish to send to the selected KPI. An example is given in figure below.</p>
+</dd>
+</dl>
+<figure class="align-default" id="id17">
+<span id="kpitargetassoc"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image142.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image142.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 564 </span><span class="caption-text">KPI target association.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the KPI visualization phase, a red bold thick will be displayed on the indicated value (see next figure).</p>
+<figure class="align-default" id="id18">
+<span id="targetmarkkpiscale"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image143.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image143.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 565 </span><span class="caption-text">Target mark in KPI scale of values.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Schedulation.</strong> Once the KPI has been defined, there is the need to schedule it before proceeding with the creation of an analytical document. For this purpose, click on the <strong>KPI Scheduler</strong> from the contextual menu that you can see below.</p>
+<figure class="align-default" id="id19">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image144.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image144.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 566 </span><span class="caption-text">KPI Scheduler menu item.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Click the <em>Plus</em> icon to create a new scheduling.</p>
+<ul class="simple">
+<li><p><strong>KPI</strong>: it is possible to associate one or more KPI with a scheduling by clicking the “Add KPI Association”.</p></li>
+</ul>
+<figure class="align-default" id="id20">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image145.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image145.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 567 </span><span class="caption-text">KPI tab window.</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Filters</strong>: here you assign values to the filters (if configured) associated to the corresponding rule. Note that it is possibile to assign values to the filters through a LOV, a fixed list of values or a temporal function. In case the LOV option is chosen, remember that the LOV must return one unique value. This choice can be useful for profiling tasks.</p></li>
+</ul>
+<figure class="align-default" id="id21">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image146.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image146.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 568 </span><span class="caption-text">Filters options.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Frequency</strong>: here is the place where the schedulation time interval (start and end date) can be set together with its frequency.</p></li>
+</ul>
+<figure class="align-default" id="id22">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image147.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image147.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 569 </span><span class="caption-text">Frequency tab window.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Execute</strong>: here you can select the execution type. The available options distinguish between the storing and the removal of old logged data. In fact, selecting <strong>Insert and update</strong> the scheduler compute the current (accordingly to the frequency choice) KPI values and store them in proper tables without deleting the old measurements and all error log text files are available right beneath. While selecting <strong>Delete and insert</strong> the previous data are deleted.</p></li>
+</ul>
+<figure class="align-default" id="id23">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image148.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image148.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 570 </span><span class="caption-text">Execute tab window.</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once the information of the new scheduling has been completed click the <em>Save</em> icon and assign a name.</p>
+<figure class="align-default" id="id24">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image150.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image150.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 571 </span><span class="caption-text">Saving of a KPI Scheduling</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="creating-a-kpi-document">
+<h2>Creating a KPI document<a class="headerlink" href="#creating-a-kpi-document" title="Link to this heading"></a></h2>
+<p>After the schedulation has been set it is possible to visualize the results.
+At this point you need to create a new generic document of type KPI that uses the KPI engine (see figure below).
+Type in the mandatory information and save by clicking the specific icon at the top right corner.</p>
+<figure class="align-default" id="id25">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image151.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image151.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 572 </span><span class="caption-text">Overview of the KPI case.</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After saving the document click on <strong>Open designer</strong> link to develop the template. Here you can choose between KPI and Scorecard (refer to Scorecard Chapter for details on the Scorecard option). In the KPI case it is possible to choose between the two following type of document.</p>
+<ul class="simple">
+<li><p><strong>List</strong>: with this option it is possible to add several KPI that will be shown in the same page with a default visualization.</p></li>
+<li><p><strong>Widget</strong>: with this option it is always possible to add several KPI that will be shown in the same page but in this case you will also be asked to select its visualization: Speedometer or KPI Card; then you have to add the minimum value and the maximum value that the KPI can assume and if you want to add a prefix or a suffix (for example the unit of measure of the value) to the showed value.</p></li>
+</ul>
+<p>Then you must add the KPI association using the KPI List area of the interface. As you can see in figure below you can select the KPI after clicking on the <strong>ADD KPI ASSOCIATION</strong> link. The latter opens a wizard that allows to select one or more KPIs. Once chosen, you need to specify all empty fields of the form, like “View as”. minimum and maximum value for the range and so on (refer to figure below). Note that the “View as” field is were you can decide if the widget will be a Speedometer or a KPI Card.</p>
+<figure class="align-default" id="id26">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image152.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image152.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 573 </span><span class="caption-text">Setting the KPI associations using the dedicated area.</span><a class="headerlink" href="#id26" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Moreover, you can set the other properties of the KPI document using the <strong>Options</strong> and the <strong>Style</strong> areas at the bottom of the page.</p>
+<p>In particular, it is possible to select the time granularity used by the KPI engine to improve the performances. For this purpose, in the “Options” area (following figure) the user is invited to indicate the level of aggregation choosing among “day”, “week”, “month”, “quarter”, “year”.</p>
+<figure class="align-default" id="id27">
+<img alt="../../_images/chapter-3-create-performance-indicator-kpi-image154-b.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image154-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 574 </span><span class="caption-text">Choosing the time granularity.</span><a class="headerlink" href="#id27" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Finally in the “Style” area the user can customize the size of the widget, the font, the color and size of texts.</p>
+<p>Then save and run the document.</p>
+<p>In case the document contains KPIs involving grouping functions upon some attributes, it is possible to filter the data returned on those attributes.
+To easily retrieve the attributes on which measures are grouped, it is sufficient to check the fields listed in the <em>Cardinality</em> tab of the KPI definition.</p>
+<p>Then to use them to filter the document, first add the proper analytical drivers. Refer to <strong>Analytical Document</strong> section to get more information about how to associate an analytical driver to a document (and therefore to a KPI document). It is mandatory that the URL of the analytical driver <em>must</em> coincide with the <em>attribute aliases</em> on which you have defined the grouping.</p>
+<p>In the following figures you can find examples on two types of KPIs you can design: a Speedometer and a KPI Card.</p>
+<figure class="align-default" id="id28">
+<span id="kpispeedometer"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image158.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image158.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 575 </span><span class="caption-text">KPI Speedometer.</span><a class="headerlink" href="#id28" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id29">
+<span id="kpicard"></span><img alt="../../_images/chapter-3-create-performance-indicator-kpi-image159.png" src="../../_images/chapter-3-create-performance-indicator-kpi-image159.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 576 </span><span class="caption-text">KPI Card.</span><a class="headerlink" href="#id29" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Create Performance Analisys" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scorecard.html" class="btn btn-neutral float-right" title="Creating a Scorecard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

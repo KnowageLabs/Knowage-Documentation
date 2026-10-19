@@ -20,23 +20,7 @@ For Tomcat: the configuration of the pool of thread is available inside the TOMC
             type="commonj.work.WorkManager"/>
 
 
-For JBoss: the configuration of the pool of thread is available inside the JBOSS_HOME/ standalone/configuration/s Refer to Code below.
-
-.. code-block:: xml
-        :linenos:
-        :caption: Configuration of the pool of thread for JBoss.
-
-        <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"
-          class="de.myfoo.commonj.work.MyFooWorkManagerFactory">
-          <environment>
-          <property name="maxThreads" value="5"/>
-          <property name="minThreads" value="1"/>
-          <property name="queueLength" value="10"/>
-          <property name="maxDaemons" value="10"/>
-          </environment>
-        </object-factory>
-
-In both cases, the meaning of the configuration parameters is the following:
+The configuration parameters have the following meanings:
 
 * minThreads: the minimum number of threads in the thread pool. Default: 2;
 * maxThreads: the maximum number of threads in the thread pool. Default: 10;
@@ -124,7 +108,7 @@ Knowage uses the component Log4J to create the log applications. Each web applic
                                 <TimeBasedTriggeringPolicy />
                         </Policies>
                         <DirectWriteRolloverStrategy/>
-                </RollingFile>	
+                </RollingFile>
                 <RollingFile
                                 name="KNOWAGE_CORE"
                                 append="true"
@@ -138,7 +122,7 @@ Knowage uses the component Log4J to create the log applications. Each web applic
                                 <TimeBasedTriggeringPolicy />
                         </Policies>
                         <DirectWriteRolloverStrategy/>
-                </RollingFile>	
+                </RollingFile>
                 <RollingFile
                                 name="KNOWAGE_RESOURCE_EXPORT_FOLDER_CLEANING_MANAGER"
                                 append="true"
@@ -152,7 +136,7 @@ Knowage uses the component Log4J to create the log applications. Each web applic
                                 <TimeBasedTriggeringPolicy />
                         </Policies>
                         <DirectWriteRolloverStrategy/>
-                </RollingFile>	
+                </RollingFile>
                 <RollingFile
                                 name="KNOWAGE_SERVER_MANAGER"
                                 append="true"
@@ -314,7 +298,7 @@ Knowage uses the component Log4J to create the log applications. Each web applic
 			<AppenderRef ref="KNOWAGE_CORE" />
 		</Root>
 	</Loggers>
-</Configuration>
+        </Configuration>
 
 
 If the user wishes to enable the tracing of the information to **DEBUG** level it is enough to modify the following line
@@ -345,7 +329,7 @@ Selecting the category MAIL the user gets the list of parameters to configure fo
 * user, used directly by the user when he intends to send a report by mail;
 * kpi_alarm, used by the alarm component to send mails.
 
-.. figure:: media/image28.png
+.. figure:: /_static/screenshots/9.1/chapter-5-server-settings-image28.png
 
    Mail server configuration.
 
@@ -376,7 +360,7 @@ Date format
 
 Knowage allows the user to visualize the date time in a format that depends on the selected language. To change the visualization of such formats, the user must enter Knowage as administrator and access the "Server Settings“ section and, consequently, the ”Configuration management“. Then finally select ”\ **DATE-FORMAT**\ “.
 
-.. figure:: media/image29.png
+.. figure:: /_static/screenshots/9.1/chapter-5-server-settings-image29.png
 
    Date format configuration.
 
@@ -399,23 +383,19 @@ Knowage manages the multi-language. The list of all languages is manageable from
 
 * **SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default**: the default value is [en,US].
 
-Adding new languages
-------------------------------------------------------------------------------------------------------------------------
+Adding languages
+----------------
 
-To add more languages to the list (if not provided) a few steps are required:
+Configure the supported locale list and its default in **Configuration
+Management**, then add the corresponding language domain entry where required.
+For user-defined business labels, use :doc:`/chapter_3/localization/index`.
 
-* Inside the "Configuration Management" add the language as required in previous chapter. If you don't know the languages and country code you can get them from this `language code table <http://www.lingoes.net/en/translator/langcode.htm>`_
-* Inside the "Domain Management" add the language as language ISO code as in the following image.
-
-.. figure:: media/image35.png
-
-    domain management example.
-
-* Add inside the project folder Knowage-Server/knowage/src/main/webapp/js/lib/angular-localization/ the desired locale file from the `angular locales <https://github.com/angular/angular.js/tree/master/src/ngLocale>`_ and rename it with the lang code from `language code table <http://www.lingoes.net/en/translator/langcode.htm>`_
-* Add inside the project folder Knowage-Server/knowage/src/main/webapp/js/src/messages/ the translations file. The name should be messages_country_LANGUAGE.properties. Ie: messages_country_sw_se.properties.
-
-Warning: use the last step only if no zanata translations are available. Using Zanata should be the primary translations source.
-
+Interface translations for the Vue application are maintained in the frontend
+source under ``src/i18n/<locale>/``. Changes to these messages require the
+matching frontend build and deployment. Backend and engine messages use their
+packaged localization resources. Coordinate a complete locale with the
+maintainers and validate sign-in, parameters, dates, numbers and exports in that
+locale.
 
 Password constraints settings
 ------------------------------------------------------------------------------------------------------------------------
@@ -438,7 +418,7 @@ Login security configurations can be set filling fields below:
 * **internal.security.login.checkForMaxFailedLoginAttempts**: if active and set to true, users will only be able to access Knowage if they have not reached the maximum number of failed login attempts;
 * **internal.security.login.maxFailedLoginAttempts**: the maximum number of failed login attempts.
 
-.. figure:: media/image32.png
+.. figure:: /_static/screenshots/9.1/chapter-5-server-settings-image32.png
 
    Advanced configuration - login security settings.
 
@@ -447,19 +427,19 @@ Session timeout settings
 
 Knowage can automatically end a user session after a configurable period of
 inactivity and warn the user before doing so.
- 
+
 Session timeout configurations can be set by accessing the **Server Settings**
 section in the administrator interface and opening **Configuration Management**.
 Search for or create the following parameters:
- 
+
 * **KNOWAGE.SESSION_TIMEOUT**: duration of inactivity (in milliseconds) after
-which the session is considered expired and the user is forcibly logged out.
-Default: ``1800000`` (30 minutes).
+  which the session is considered expired and the user is forcibly logged out.
+  Default: ``1800000`` (30 minutes).
 
 * **KNOWAGE.SESSION_WARNING_ADVANCE**: how many milliseconds *before* the
-session expires the warning notification is shown to the user.
-Must be less than ``KNOWAGE.SESSION_TIMEOUT``.
-Default: ``300000`` (5 minutes).
+  session expires the warning notification is shown to the user.
+  Must be less than ``KNOWAGE.SESSION_TIMEOUT``.
+  Default: ``300000`` (5 minutes).
 
 .. note::
 
@@ -542,15 +522,15 @@ Audit Table Management
 The audit table tracks documents changes and other operations made to knowage data at the database level.
 User can enable audit table tracing (database table name: **SBI_AUDIT**) setting the **KNOWAGE.AUDIT_ENABLED** property to **true** inside **Configuration Management** panel:
 
-.. figure:: media/image36.png
-   
+.. figure:: /_static/screenshots/9.1/chapter-5-server-settings-image36.png
+
     Enabling audit table tracing.
 
 The **KNOWAGE.AUDIT_DATA_RETENTION** property is used to set the retention period, in order to manage audit table cleanup.
 
 XSLX Export
 ------------------------------------------------------------------------------------------------------------------------
-Within the **Cockpit** and the **Dashboard**, it is possible to choose whether to display the sheets that contain information about *analytical drivers* and *selections*.  
+Within the **Cockpit** and the **Dashboard**, it is possible to choose whether to display the sheets that contain information about *analytical drivers* and *selections*.
 This can be configured by setting the following options.
 
 Cockpit
@@ -570,5 +550,3 @@ Dashboard
 
 	DASHBOARD.EXPORT.SHOW_DRIVERS_SHEET = true/false
 	DASHBOARD.EXPORT.SHOW_SELECTIONS_SHEET = true/false
-
-

@@ -1,6 +1,10 @@
 LDAP
 ########################################################################################################################
 
+Configure the LDAP provider and its connection properties for the target
+directory. Verify user lookup, authentication and role/profile mapping with
+a representative account before enabling it for the wider installation.
+
 Authentication
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -85,7 +89,7 @@ The ``SEARCH_USER_BEFORE_USER`` and ``SEARCH_USER_BEFORE_PSW`` keys are credenti
 
 .. important::
     Restart your application server in order to load the custom JVM property.
-	
+
 .. warning::
         After enabling the search functionality you may encounter the following exception: javax.naming.PartialResultException: Unprocessed Continuation Reference(s). To solve this just change LDAP port from 389 to 3268 (credits: https://stackoverflow.com/questions/16412236/how-to-resolve-javax-naming-partialresultexception )
 
@@ -111,7 +115,7 @@ A third LDAP connector is available, which does not need users to be present in 
 
 .. important::
          Whenever a user logs into Knowage, the connector will always first query the LDAP system in order to authenticate the user and build the profile object. Only if this operation fails (it means that the user is not present in the LDAP system) Knowage will use its internal metadata to authenticate the user.
-		 
+
 As for the above connectors, you must follow some steps in order to setup this connector. First you need to define a ``.properties`` file that includes the following configurations:
 
 * **INITIAL_CONTEXT_FACTORY**: initial context factory Java class,
@@ -136,7 +140,7 @@ Suppose that the structure of a user, inside LDAP, is as follows:
   isMemberOf : cn=ADMIN,ou=unit1,dc=yourorganization,dc=com
   isMemberOf : cn=DEVELOPER,ou=unit1,dc=yourorganization,dc=com
   isMemberOf : cn=USER,ou=unit1,dc=yourorganization,dc=com
-  
+
 We want the authentication to succeed only if ``enabled=true`` and ``deprecated=false``. Furthermore, we want to build profile object by using all the ``isMemberOf`` attributes, and using the Knowage roles specified under the ``cn`` properties.
 
 
@@ -181,4 +185,3 @@ The final step is to set the LDAP security connector as follow:
 
 .. warning::
         To recover the default authentication mechanism please revert manually the config **SPAGOBI.SECURITY.USER-PROFILE-FACTORY-CLASS.className** to its default value ``it.eng.spagobi.security.InternalSecurityServiceSupplierImpl`` using a database client.
-

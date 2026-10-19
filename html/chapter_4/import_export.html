@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Import/Export &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Time Span" href="timespan.html" />
+    <link rel="prev" title="Server manager" href="server_manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Manage Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add_datasource.html">Add new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedule.html">Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_manager.html">Server manager</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Import/Export</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#artifacts">Artifacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documents">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#menu">Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#users">Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#catalogs">Catalogs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kpis">KPIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analytical-drivers">Analytical Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glossary">Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="timespan.html">Time Span</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_manager.html">Log Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widget_gallery.html">Widget gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="home_management.html">Home page management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_management.html">AI management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Manage Knowage</a></li>
+      <li class="breadcrumb-item active">Import/Export</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapter_4/import_export.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="import-export">
+<h1>Import/Export<a class="headerlink" href="#import-export" title="Link to this heading"></a></h1>
+<p>Open <strong>Modules</strong> &gt; <strong>Import/Export</strong> to move the supported objects between
+installations or tenants. Export a backup of target objects before importing
+replacements. During document import, map each engine to its matching type:
+Dashboard and Cockpit remain distinct in 9.1.</p>
+<p>This functionality allows to import/export items belonging to <em>Gallery</em>, <em>Documents</em>, <em>Menu</em>, <em>Users</em>, <em>KPIs</em> and <em>Catalogs</em>.
+After exporting, the user can import the information previously extracted into a different Knowage installation or tenant.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/chapter-4-import-export-import-export.png" src="../_images/chapter-4-import-export-import-export.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 644 </span><span class="caption-text">Import/Export menu</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="artifacts">
+<h2>Artifacts<a class="headerlink" href="#artifacts" title="Link to this heading"></a></h2>
+<p><strong>Export</strong></p>
+<p>It is possible to export widgets and functions to a zip file to use afterwards as a <em>source</em> to be imported to a different environment.
+As shown below, select the items of your interest and click on <em>EXPORT</em>.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/chapter-4-import-export-impexp-gallery1.png" src="../_images/chapter-4-import-export-impexp-gallery1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 645 </span><span class="caption-text">Artifacts Export</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="../_images/chapter-4-import-export-impexp-gallery2.png" src="../_images/chapter-4-import-export-impexp-gallery2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 646 </span><span class="caption-text">Artifacts Export - Items selection</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After the selection, give a name to the file and confirm with <em>Export</em> button.</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/chapter-4-import-export-impexp-gallery3.png" src="../_images/chapter-4-import-export-impexp-gallery3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 647 </span><span class="caption-text">Artifacts Export - setting name for zip file</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Import</strong></p>
+<p>You can import the zip file formerly exported just clicking on <em>IMPORT</em> and then clicking the <em>CHOOSE</em> button to select the file. See below image:
+You can also drag the file.</p>
+<figure class="align-default" id="id5">
+<img alt="../_images/chapter-4-import-export-impexp-gallery4.png" src="../_images/chapter-4-import-export-impexp-gallery4.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 648 </span><span class="caption-text">Artifacts Import - Export file selection #1</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After selecting the file to import the <em>NEXT</em> button will became available.</p>
+<figure class="align-default" id="id6">
+<img alt="../_images/chapter-4-import-export-impexp-gallery5.png" src="../_images/chapter-4-import-export-impexp-gallery5.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 649 </span><span class="caption-text">Artifacts Import - Export file selection #2</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Clicking on <em>NEXT</em>, it is possible to see and select the items to be imported..</p>
+<figure class="align-default" id="id7">
+<img alt="../_images/chapter-4-import-export-impexp-gallery6.png" src="../_images/chapter-4-import-export-impexp-gallery6.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 650 </span><span class="caption-text">Artifacts Import - items selection</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Click on the <em>IMPORT</em> button to make selected widgets and functions available in the new environment.</p>
+</section>
+<section id="documents">
+<h2>Documents<a class="headerlink" href="#documents" title="Link to this heading"></a></h2>
+<p>This feature allows to download a zip file of the whole or a part of the documents existing in your Knowage installation.</p>
+<p>Below, you can see how the export editor looks like.</p>
+<figure class="align-default" id="id8">
+<img alt="../_images/chapter-4-import-export-image67.png" src="../_images/chapter-4-import-export-image67.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 651 </span><span class="caption-text">Document Export</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Fill in the name of your export and select which documents to export. You can browse through folders by clicking on the relative icon. Check the items to include in the file.
+The export icon changes colour from grey to pink.
+After clicking the <em>Export</em> button you can decide whether to include or not the following options:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Export the document only in the selected functionality</strong></dt><dd><p>By checking this property, the export will include documents only if they are inside a selected functionality.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Related documents</strong></dt><dd><p>By checking this property, the export will include all those documents linked through the cross navigation to the selected documents.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<figure class="align-default" id="id9">
+<img alt="../_images/chapter-4-import-export-image67-b.png" src="../_images/chapter-4-import-export-image67-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 652 </span><span class="caption-text">Document Export options</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To import documents click on the <em>IMPORT</em> link, choose or drag your file and click the <em>NEXT</em> button.</p>
+<figure class="align-default" id="id10">
+<img alt="../_images/chapter-4-import-export-image68.png" src="../_images/chapter-4-import-export-image68.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 653 </span><span class="caption-text">Document Import</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You will be asked to map <em>Roles</em>, <em>Engines</em>, <em>Datasources</em> and <em>Metadata</em> from <em>Source</em> to <em>Target</em>.
+After compliting all the steps to Metadata, you can start the import.</p>
+<figure class="align-default" id="id11">
+<img alt="../_images/chapter-4-import-export-image110.png" src="../_images/chapter-4-import-export-image110.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 654 </span><span class="caption-text">Document Import Wizard</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If a role does not match any of the existing ones, the role will be created.
+<strong>Please bear in mind that all the target metadata with the same label i.e. documents, lovs, drivers will be overwritten when importing</strong>.</p>
+</section>
+<section id="menu">
+<h2>Menu<a class="headerlink" href="#menu" title="Link to this heading"></a></h2>
+<p>This feature lets you import/export the menu structure. The image below refers to the export funtionality.</p>
+<figure class="align-default" id="id12">
+<img alt="../_images/chapter-4-import-export-image71.png" src="../_images/chapter-4-import-export-image71.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 655 </span><span class="caption-text">Menu Export</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Fill in the name of the file to export and click the download icon.</p>
+<p>To upload the zip file generated with the above process, in another installation, just click on <strong>Menu</strong> of the <strong>Import\Export</strong> item, switch to the <strong>IMPORT</strong> tab and click on <em>Browse</em> to search the zip file.</p>
+<figure class="align-default" id="id13">
+<img alt="../_images/chapter-4-import-export-image72.png" src="../_images/chapter-4-import-export-image72.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 656 </span><span class="caption-text">Menu Import</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After clicking on <em>NEXT</em>, you will be asked to map roles from <em>Source</em> to <em>Target</em>. If a role does not match map any of the existing ones in the target environment, it will be created.</p>
+<figure class="align-default" id="id14">
+<img alt="../_images/chapter-4-import-export-image111-b.png" src="../_images/chapter-4-import-export-image111-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 657 </span><span class="caption-text">Menu Import Wizard</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You can click on <em>START IMPORT</em>.</p>
+</section>
+<section id="users">
+<h2>Users<a class="headerlink" href="#users" title="Link to this heading"></a></h2>
+<p>This functionality allows to export/import users from one installation/tenant to another.See the image below.</p>
+<figure class="align-default" id="id15">
+<img alt="../_images/chapter-4-import-export-image73.png" src="../_images/chapter-4-import-export-image73.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 658 </span><span class="caption-text">Exporting Users</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To generate the zip file, fill in the name of your file and select the users to include. You can also include the personal folder of the users just checking the option <strong>Export Personal folder</strong>.</p>
+<p>To import your zip file, log in and select <strong>Users</strong>  from <strong>Import\Export</strong>. Switch to the <strong>Import</strong> tab and click on <em>Browse</em> . Choose the file and click on the import icon. The list of users contained in your file are uploaded. Make your selection and click on the arrow to move them to the other side.
+Now click on the <em>Start import</em> button and your users will be created. See figure below.</p>
+<figure class="align-default" id="id16">
+<img alt="../_images/chapter-4-import-export-image74.png" src="../_images/chapter-4-import-export-image74.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 659 </span><span class="caption-text">Importing Users</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>All users involved in the import procedure will have the password changed with the value set in <em>Advanced configuration</em>.</p>
+</div>
+</section>
+<section id="catalogs">
+<h2>Catalogs<a class="headerlink" href="#catalogs" title="Link to this heading"></a></h2>
+<p>This functionality allows to Export/Import the following elements:</p>
+<ul class="simple">
+<li><p>Datasets,</p></li>
+<li><p>Business models,</p></li>
+<li><p>Mondrian catalogs,</p></li>
+<li><p>Layers</p></li>
+</ul>
+<p>The details are shown in the below figure.</p>
+<figure class="align-default" id="id17">
+<img alt="../_images/chapter-4-import-export-image75-8-1.png" src="../_images/chapter-4-import-export-image75-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 660 </span><span class="caption-text">Exporting Catalogs</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To generate the zip file, mark the items to include and fill in the export name. Save the export file in your local system.</p>
+<p>To import a zip file, log in to the source tenant, select <strong>Catalogs</strong> from the <em>Import/Export</em> menu and switch to the <em>Import</em> tab. Click on <em>Browse</em> and choose the file previously created through the exportation. Uploading the file, the list of available catalogs are displayed. Choose the ones to be imported, decide if you want to override them or just add the missing ones and then click on <em>Start import</em>. Your catalogs will be created in this environment.</p>
+<figure class="align-default" id="id18">
+<img alt="../_images/chapter-4-import-export-image76.png" src="../_images/chapter-4-import-export-image76.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 661 </span><span class="caption-text">Importing Catalogs</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="kpis">
+<h2>KPIs<a class="headerlink" href="#kpis" title="Link to this heading"></a></h2>
+<p>In this section we describe how to manage the import/export of KPIs between two tenants.</p>
+<p>The user must enter Knowage as administrator of the source tenant and click on <strong>KPIs</strong> from the <em>Import/Export</em> menu panel.</p>
+<p>The page contains the <em>Export</em> and the <em>Import</em> tab, where the user can select the KPIs for the export/import respectively.</p>
+<figure class="align-default" id="id19">
+<img alt="../_images/chapter-4-import-export-image78.png" src="../_images/chapter-4-import-export-image78.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 662 </span><span class="caption-text">KPIs Import window</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Let’s start from the export feature. The user at first selects the KPIs to be exported and in addition can include:</p>
+<ul class="simple">
+<li><p>targets,</p></li>
+<li><p>the scorecards related to the selected KPIs,</p></li>
+<li><p>schedulations.</p></li>
+</ul>
+<p>Click on the download icon to get the zip file.</p>
+<p>Once the zip file is downloaded, the user has to switch to the tenant used for the import and as admin enter the Import/Export KPIs functionality and move to the Import tab.</p>
+<p>The user must therefore browse the personal folder to catch the zip file and click on the red upload button, as shown below.</p>
+<figure class="align-default" id="id20">
+<img alt="../_images/chapter-4-import-export-image823.png" src="../_images/chapter-4-import-export-image823.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 663 </span><span class="caption-text">Import tab</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Referring to the following image, the user has to specify if:</p>
+<ul class="simple">
+<li><p>overwriting the existing KPIs and their related formulas</p></li>
+<li><p>importing targets,</p></li>
+<li><p>importing scorecards,</p></li>
+<li><p>importing schedulations.</p></li>
+</ul>
+<figure class="align-default" id="id21">
+<img alt="../_images/chapter-4-import-export-image83.png" src="../_images/chapter-4-import-export-image83.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 664 </span><span class="caption-text">Import KPIs settings</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once the import is started, the GUI leads the user to finalize the import procedure.</p>
+</section>
+<section id="analytical-drivers">
+<h2>Analytical Drivers<a class="headerlink" href="#analytical-drivers" title="Link to this heading"></a></h2>
+<p>This option allows to import/export the analytical drivers and their related LOVs.</p>
+<figure class="align-default" id="id22">
+<img alt="../_images/chapter-4-import-export-image86.png" src="../_images/chapter-4-import-export-image86.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 665 </span><span class="caption-text">Import/Export of analytical drivers</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As shown in figure above, the window contains the Export and the Import tab. Use the Export tab to download the zip file to be used in the import process.</p>
+<p>Afterwards:</p>
+<ul class="simple">
+<li><p>log in as administrator to the source tentant,</p></li>
+<li><p>assign a name to the export,</p></li>
+<li><p>select the analytical drivers of your interest and</p></li>
+<li><p>click the download icon, available at the top right corner of the page to get the zip file.</p></li>
+</ul>
+<p>It is possible to narrow the search of the analytical drivers by filtering on their creation date.</p>
+<p>Switch to the target tenant and log in as administrator. Use the Import tab to upload the zipped folder and finalize the import.</p>
+<p>Use the GUI to upload the zip file and specify if overwriting the existing analytical drivers or just adding the missing ones. Then click on <em>NEXT</em> and continue by mapping roles between the source and the target tenants.</p>
+<figure class="align-default" id="id23">
+<img alt="../_images/chapter-4-import-export-image87.png" src="../_images/chapter-4-import-export-image87.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 666 </span><span class="caption-text">Import of analytical drivers</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The process ends with a message containing the information about the import.</p>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Link to this heading"></a></h2>
+<p>The export/import of glossary allows the user to align glossaries among tenants.</p>
+<figure class="align-default" id="id24">
+<img alt="../_images/chapter-4-import-export-image90.png" src="../_images/chapter-4-import-export-image90.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 667 </span><span class="caption-text">Export/Import glossaries window</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the <em>Export</em> tab, the user is asked to select the glossaries to export and type a name that will be assigned to the zip file.
+The searching functionality can be used for the selection of the glossaries. Use the download icon to get the zip file.</p>
+<p>By connecting with admin privileges to a target tenant, the user selects the <em>Import</em> tab from the Export/Import main window.
+once selected the zip file through the browsing button just click the uploading icon.</p>
+<figure class="align-default" id="id25">
+<img alt="../_images/chapter-4-import-export-image91.png" src="../_images/chapter-4-import-export-image91.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 668 </span><span class="caption-text">Importing glossaries</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Arrows are used to indicate the glossaries to consider for the import.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="server_manager.html" class="btn btn-neutral float-left" title="Server manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="timespan.html" class="btn btn-neutral float-right" title="Time Span" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to create a Data Preparation &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Manage Knowage" href="../../chapter_4/index.html" />
+    <link rel="prev" title="How use Localization Management" href="../localization/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to create a Data Preparation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-data-preparation-for">What is Data Preparation for?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-a-dataset">Preparing a dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-preparation-transformations">Data Preparation Transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-preparation-technical-details">Data Preparation technical details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-and-using-a-prepared-dataset">Saving and Using a prepared dataset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+      <li class="breadcrumb-item active">How to create a Data Preparation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/create_a_data-preparation/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-create-a-data-preparation">
+<h1>How to create a Data Preparation<a class="headerlink" href="#how-to-create-a-data-preparation" title="Link to this heading"></a></h1>
+<p>Data Preparation requires the optional Livy/Spark integration and a data
+source enabled for prepared data. Apply transformations to a preview, review
+the resulting schema and save the output as a dataset. See
+<a class="reference internal" href="../../chapter_5/installation/manual_installation.html"><span class="doc">Manual installation</span></a> for deployment prerequisites.</p>
+<section id="what-is-data-preparation-for">
+<h2>What is Data Preparation for?<a class="headerlink" href="#what-is-data-preparation-for" title="Link to this heading"></a></h2>
+<p>The <strong>Data Preparation</strong> is a functionality available since version 8.1 that allows the users to create a prepared dataset, starting from an existing one.
+In this way users can apply transformations to a dataset to be used inside a dashboard or simply using it as another different dataset.
+Users have the capability of creating complex and specific datasets quite easily and quickly, in order to use them for any purpose.</p>
+</section>
+<section id="preparing-a-dataset">
+<h2>Preparing a dataset<a class="headerlink" href="#preparing-a-dataset" title="Link to this heading"></a></h2>
+<p>The first step is selecting a dataset to work on.
+You can do it selecting the desired dataset into your workspace section:</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image1.png" src="../../_images/chapter-3-create-a-data-preparation-index-image1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 594 </span><span class="caption-text">The Data Preparation entry.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>There are two ways to prepare and start a data preparation process.
+The first one is starting from <em>MyData</em> section and then selecting/searching the desired dataset.
+Once the dataset has been selected click the <em>OPen Data Preparation</em> option from the three dots menu as shown below.</p>
+<p>The option <em>Opening the data preparation</em> triggers a process that will create the <em>avro</em> file (for more information see the dedicated section). This process consists of five steps</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image4-b.png" src="../../_images/chapter-3-create-a-data-preparation-index-image4-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 595 </span><span class="caption-text">Data preparation process</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After completing the last step, the interface shows the structure of the dataset with the associated information.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image4-c.png" src="../../_images/chapter-3-create-a-data-preparation-index-image4-c.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 596 </span><span class="caption-text">Data preparation wizard</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As highlighted above, the wizard contains the <em>transformation</em> functionalities allowing to work on the data preparation.</p>
+<p>The second way consists in clicking the <em>Plus</em> button on the top right of the section in order to select the dataset.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image3-dp.png" src="../../_images/chapter-3-create-a-data-preparation-index-image3-dp.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 597 </span><span class="caption-text">Creating a data preparation - 2.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After clicking <em>Open</em> the data preparation process starts as depicted above in the first option to create the prepared dataset.
+Also in this second case the <em>avro</em> file will be created.
+Note that this process starts only the firts time the dataset is prepared and saved.</p>
+<p>In case of an already existing dataset you could be able to open it always by clicking the <em>Open in Data Preparation</em> from <em>Data Preparation</em>
+and this time the final wizard with the data of the dataset is displayed.</p>
+<figure class="align-default" id="id5">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image3.png" src="../../_images/chapter-3-create-a-data-preparation-index-image3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 598 </span><span class="caption-text">Opening an existing prepared dataset</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="data-preparation-transformations">
+<h2>Data Preparation Transformations<a class="headerlink" href="#data-preparation-transformations" title="Link to this heading"></a></h2>
+<p>You can apply transformations to the source dataset just picking the transformation action, step by step, until you reach the desired result.</p>
+<p>In the main toolbar menu, there is a set of main transformations (most of them can be applied on many columns in the same time):</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image33.png" src="../../_images/chapter-3-create-a-data-preparation-index-image33.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 599 </span><span class="caption-text">Transformations toolbar icons.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Add column</strong>: Adds a new column as a calculated field.</p></li>
+<li><p><strong>Merge columns</strong>: Adds a new column merging two selected ones.</p></li>
+<li><p><strong>Split columns</strong>: Adds two columns splitting a selected one.</p></li>
+<li><p><strong>Filter</strong>: Filters a selected column by math conditions (more info later on).</p></li>
+<li><p><strong>Padding</strong>: Adds characters on left or right side of a selected column.</p></li>
+<li><p><strong>Remove duplicates</strong>: Removes duplicates from selected columns.</p></li>
+<li><p><strong>Remove null</strong>: Removes null values from selected columns.</p></li>
+<li><p><strong>Replace</strong>: Replace selected values from specific columns.</p></li>
+<li><p><strong>Trim</strong>: Removes white spaces from specific columns. (Available for single column only)</p></li>
+<li><p><strong>Drop</strong>: Remove a specific columns. (Available for single column only)</p></li>
+</ul>
+<p>The <strong>Add column</strong> transformation allow user to add a <strong>calculated field</strong> of type numeric, string or temporal.
+These functions are a subset of Spark SQL language functions and are used for calculations or handling with data.
+The available functions are a subset of the Spark SQL language functions.
+For more info see <a class="reference external" href="https://spark.apache.org/docs/2.4.8/api/sql/index.html">https://spark.apache.org/docs/2.4.8/api/sql/index.html</a>.</p>
+<figure class="align-default" id="id7">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image9.png" src="../../_images/chapter-3-create-a-data-preparation-index-image9.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 600 </span><span class="caption-text">Available functions</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Merge columns</strong>: to add a new column by merging two selected columns through a separator.</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image10.png" src="../../_images/chapter-3-create-a-data-preparation-index-image10.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 601 </span><span class="caption-text">Merge columns dialog.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Split columns</strong>: to create two new columns by splitting a selected column through a specific condition (ie a character).</p>
+<figure class="align-default" id="id9">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image11.png" src="../../_images/chapter-3-create-a-data-preparation-index-image11.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 602 </span><span class="caption-text">Split columns dialog.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Filter</strong>: to filter a selected column by special conditions.</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image12.png" src="../../_images/chapter-3-create-a-data-preparation-index-image12.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 603 </span><span class="caption-text">Applying filters</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The image below shows how to remove a filter.</p>
+<figure class="align-default" id="id11">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-removef.png" src="../../_images/chapter-3-create-a-data-preparation-index-removef.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 604 </span><span class="caption-text">Removing filters</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As you can see the transformation applied by a filter is highlighted. In this example we only have one trasnformation related to the filter.</p>
+<p><strong>Padding</strong>: to add characters on left or right side of a selected column.</p>
+<figure class="align-default" id="id12">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image13.png" src="../../_images/chapter-3-create-a-data-preparation-index-image13.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 605 </span><span class="caption-text">Padding dialog example.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Remove duplicates</strong>: Removes duplicated values from a selected column.</p>
+<figure class="align-default" id="id13">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image14.png" src="../../_images/chapter-3-create-a-data-preparation-index-image14.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 606 </span><span class="caption-text">Remove duplicates dialog example.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Remove null</strong>: Removes null values from a selected column.</p>
+<figure class="align-default" id="id14">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image15.png" src="../../_images/chapter-3-create-a-data-preparation-index-image15.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 607 </span><span class="caption-text">Remove null dialog example.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Replace</strong>: Replace selected values from specific columns. Old char is the old value to be replaced.</p>
+<figure class="align-default" id="id15">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image16.png" src="../../_images/chapter-3-create-a-data-preparation-index-image16.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 608 </span><span class="caption-text">Replace dialog example.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>From the three dots menu of a specific column two more transformations are available: <strong>TRIM</strong> and <strong>DROP</strong> transformations.</p>
+<p><strong>Drop column</strong>: Removes a specific column from table.</p>
+<figure class="align-default" id="id16">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image18.png" src="../../_images/chapter-3-create-a-data-preparation-index-image18.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 609 </span><span class="caption-text">Drop columns dialog warning.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Trim column</strong>: Removes white spaces from column.</p>
+<figure class="align-default" id="id17">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image19.png" src="../../_images/chapter-3-create-a-data-preparation-index-image19.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 610 </span><span class="caption-text">Trim column dialog example.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="data-preparation-technical-details">
+<h2>Data Preparation technical details<a class="headerlink" href="#data-preparation-technical-details" title="Link to this heading"></a></h2>
+<p><strong>What is an AVRO file?</strong></p>
+<p>Avro is a data serialization system.</p>
+<p>Avro is a data serialization framework developed within Apache’s Hadoop project. It uses JSON for defining data types and protocols, and serializes data in a compact binary format.</p>
+<p>Avro relies on schemas. When Avro data is read, the schema used when writing it is always present. This permits each datum to be written with no per-value overheads, making serialization both fast and small. This also facilitates use with dynamic, scripting languages, since data, together with its schema, is fully self-describing.</p>
+<p>When Avro data is stored in a file, its schema is stored with it, so that files may be processed later by any program. If the program reading the data expects a different schema this can be easily resolved, since both schemas are present.</p>
+<p>Please refer to official documentation for more info: <a class="reference external" href="https://avro.apache.org/">https://avro.apache.org/</a></p>
+<p>Avro is used for store Knowage datasets data and schema (with columns metadata) in order to use them as input source for Data Preparation process.</p>
+<p>When user open a dataset for data preparation for the first time, ad avro file is created.
+This file is read and then it will be used as data source for data transformations that will be sent to Livy-Spark.</p>
+</section>
+<section id="saving-and-using-a-prepared-dataset">
+<h2>Saving and Using a prepared dataset<a class="headerlink" href="#saving-and-using-a-prepared-dataset" title="Link to this heading"></a></h2>
+<p>After applying all the trasformation to the original dataset you can save it.
+The image below shows an example with a daily schedulation.</p>
+<figure class="align-default" id="id18">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image26.png" src="../../_images/chapter-3-create-a-data-preparation-index-image26.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 611 </span><span class="caption-text">Saving the prepared dataset.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After saving, the prepared dataset will be available in the list of all the prepared datasets.</p>
+<figure class="align-default" id="id19">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image29-a.png" src="../../_images/chapter-3-create-a-data-preparation-index-image29-a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 612 </span><span class="caption-text">New prepared dataset.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You can use the preview functionality to display all the contents.</p>
+<figure class="align-default" id="id20">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image29.png" src="../../_images/chapter-3-create-a-data-preparation-index-image29.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 613 </span><span class="caption-text">Preview functionality.</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You can monitor the process by clicking on <em>Monitoring</em> from the three dots menu.</p>
+<figure class="align-default" id="id21">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image30.png" src="../../_images/chapter-3-create-a-data-preparation-index-image30.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 614 </span><span class="caption-text">Monitoring menu entry.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Schedulation details are visualized from a pop-up. You can change them and save in case.</p>
+<figure class="align-default" id="id22">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image31.png" src="../../_images/chapter-3-create-a-data-preparation-index-image31.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 615 </span><span class="caption-text">Schedulations and monitoring panel example.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>It is possible to see the prepared dataset into the <em>Dataset Management</em> section. In our example if you look for dataset ds__9056592 you should find it.</p>
+<figure class="align-default" id="id23">
+<img alt="../../_images/chapter-3-create-a-data-preparation-index-image32.png" src="../../_images/chapter-3-create-a-data-preparation-index-image32.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 616 </span><span class="caption-text">Dataset Management panel.</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../localization/index.html" class="btn btn-neutral float-left" title="How use Localization Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../chapter_4/index.html" class="btn btn-neutral float-right" title="Manage Knowage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

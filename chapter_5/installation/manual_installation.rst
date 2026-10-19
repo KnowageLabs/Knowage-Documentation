@@ -1,264 +1,117 @@
 Manual installation
-########################################################################################################################
+===================
 
-Metadata database initialization
-------------------------------------------------------------------------------------------------------------------------
+Prepare JDK 17, Tomcat 9, a metadata database and a cache database as described
+in :doc:`/chapter_5/requirements`. Obtain all application packages from the
+same 9.1.0 distribution; see :doc:`software_release`.
 
-Knowage requires a database schema to store its own metadata (definition of analyses, datasets and so on). For initializing such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following SQL files:
+Metadata initialization
+-----------------------
 
-.. code-block:: bash
-   :caption: Scripts for metadata schema
+Create an empty schema and run the creation and Quartz scripts matching its
+DBMS from the v9.1.0 source tree. Inspect the supplied scripts and their
+execution order before running them. Assign the application database account
+the privileges required by those scripts and the application's runtime work.
 
-        XXX_create.sql
-        XXX_create_quartz_schema.sql
+For an existing schema, use :doc:`/chapter_5/how_upgrade` instead of initialization.
 
-where XXX represents the DBMS type (as instance ORA stands for Oracle). The corresponding SQL files for deleting tables are also provided.
+Tomcat and JNDI resources
+-------------------------
 
 .. include:: ka_inst_man_tomcat.rst
 
-Datasource link within the applications
-------------------------------------------------------------------------------------------------------------------------
+Deploy the applications
+-----------------------
 
-You would set up ResourceLink for JNDI datasource. To do so, you have to configure each ``knowage*/META-INF/context.xml`` and set the ResourceLink for each JNDI data source previously created. Inside the released packages two links are already defined:
+With Tomcat stopped, place ``knowage.war``, ``knowage-api.war``,
+``knowage-vue.war`` and the required engine WARs in ``TOMCAT_HOME/webapps``.
+Configure the JNDI resources and links required by each deployed application.
+Use its packaged ``META-INF/context.xml`` as the reference.
 
-- one for the ``jdbc/knowage`` resource, which the user must keep
-- the other for the ``jdbc/foodmart``, which should be renamed with ``jdbc/dwh``.
-
-.. code-block:: xml
-   :linenos:
-
-    <Context docBase="knowage-ee" path="/knowage" reloadable="true">
-        <ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
-        <ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource"/>
-        <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache" type="javax.sql.DataSource"/>
-        <ResourceLink global="resource_path" name="resource_path" type="java.lang.String" />
-        <ResourceLink global="sso_class" name="sso_class" type="java.lang.String" />
-        <ResourceLink name="hmacKey" global="hmacKey" type="java.lang.String"/>
-        <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
-        <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
-        <ResourceLink global="password_encryption_secret" name="password_encryption_secret" type="java.lang.String"/>
-    </Context>
-
-Due to security reasons, configuration file containing some content to be used for encrypting must be created in Knowage environment. File must not be empty, but there's no minimum length. File can be put everywhere; path and name must be properly configured for each ``knowage*/META-INF/context.xml`` as shown below.
-
-.. important::
-         **Context update**
-
-         The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
-
-
-Configuration of the metadata db dialect
-------------------------------------------------------------------------------------------------------------------------
-
-.. important::
-         **This step is not mandatory anymore**
-
-         Knowage is now able to autonomously determine following configuration. That said, the following is not mandatory anymore however a user can force it to specific value.
-
-Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. We list all the possible dialects that can be used:
+For example, the metadata and cache links use the following names:
 
 .. code-block:: xml
-   :linenos:
 
- 	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
- 	<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
- 	<property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
+   <ResourceLink global="jdbc/knowage" name="jdbc/knowage"
+                 type="javax.sql.DataSource" />
+   <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache"
+                 type="javax.sql.DataSource" />
+   <ResourceLink global="resource_path" name="resource_path"
+                 type="java.lang.String" />
+   <ResourceLink global="hmacKey" name="hmacKey"
+                 type="java.lang.String" />
+   <ResourceLink global="service_url" name="service_url"
+                 type="java.lang.String" />
 
-You have to configure these following Hibernate configuration files and set the chosen dialect:
+Link your business data sources separately. Configure a persistent resources
+directory, accessible to the Tomcat user, and keep authentication and service
+URL settings consistent across the applications. Preserve the password
+secrets and encryption keys across restarts and upgrades.
 
-.. code-block:: xml
-   :linenos:
+Where JDBC password encryption uses ``symmetric_encryption_key``, set the JVM
+property in Tomcat's environment file:
 
-	knowagekpiengine/WEB-INF/classes/hibernate.cfg.xml
-	knowagegeoreportengine/WEB-INF/classes/hibernate.cfg.xml
-	knowage/WEB-INF/classes/hsql/hibernate.cfg.xml
-	knowage/WEB-INF/classes/hibernate.cfg.xml
-	knowagesvgviewerengine/WEB-INF/classes/hibernate.cfg.xml
-	knowagemeta/WEB-INF/classes/hibernate.cfg.xml
-	knowagecockpitengine/WEB-INF/classes/hibernate.cfg.xml
-	knowagedataminingengine/WEB-INF/classes/hibernate.cfg.xml
+.. code-block:: bash
 
+   export JAVA_OPTS="$JAVA_OPTS -Dsymmetric_encryption_key=<deployment-specific-key>"
 
-.. important::
-         **Context update**
+Use the Windows equivalent in ``setenv.bat`` for a Windows deployment.
 
-         The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
+Hibernate and Quartz
+--------------------
 
-Modification of the Quartz configuration
-------------------------------------------------------------------------------------------------------------------------
+Keep the defaults shipped with 9.1 unless the deployment requires an override.
+Review the Hibernate and Quartz configuration for the DBMS in use. Quartz
+settings are in ``knowage/WEB-INF/classes/quartz.properties`` after deployment.
 
-.. important::
-         **This step is not mandatory anymore**
+For a cluster, configure the nodes consistently and assign unique automatic
+instance identifiers, for example:
 
-         Knowage is now able to autonomously determine following configuration. That said, the following is not mandatory anymore however a user can force it to specific value.
+.. code-block:: properties
 
-The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It is essential to enhance in this file the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Following the possible values:
+   org.quartz.jobStore.isClustered = true
+   org.quartz.jobStore.clusterCheckinInterval = 20000
+   org.quartz.scheduler.instanceId = AUTO
+   org.quartz.scheduler.instanceName = KnowageClusteredSchedule
 
-.. code-block:: xml
-   :linenos:
-
-	 # Hsqldb delegate class
-	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate
-	 # Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
-	 # Postgres delegate class
-	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
-	 # Oracle delegate class
-	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
-
-Clustering
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the ``knowage/WEB-INF/classes/quartz.properties`` file of every involved machines:
-
-.. code-block:: xml
-   :linenos:
-
-	 org.quartz.jobStore.isClustered = true
-	 org.quartz.jobStore.clusterCheckinInterval = 20000
-	 org.quartz.scheduler.instanceId = AUTO
-	 org.quartz.scheduler.instanceName = RHECMClusteredSchedule
+Coordinate cluster settings with the shared metadata database and cache.
 
 Logging
-------------------------------------------------------------------------------------------------------------------------
+-------
 
-It is necessary to set up a folder where Knowage and its analytical engines can store their respective log files. From now on, we will call ``LOG_DIR`` such folder and ``LOG_DIR_PATH`` the path that leads to it. This path is configured in file ``log4j.properties`` located inside the ``\WEB-INF\classes\`` available in each web application.
-Shortly, to configure the Knowage log folder the user must execute the following steps:
+The 9.1 applications use Log4j 2 configuration in
+``WEB-INF/classes/log4j2.xml``. Configure its appenders and log paths for the
+deployment. The main application's supplied configuration writes tenant-specific
+logs under ``${sys:catalina.base}/logs``. Ensure the Tomcat account can write to
+the configured locations and configure retention for operational logs.
 
-- create the ``LOG_DIR`` folder on all cluster nodes on which it is intended to deploy Knowage Server and/or one of its analytical engines. The ``LOG_DIR_PATH`` string must be the same for every node;
+See :doc:`/chapter_5/server_settings` and :doc:`/chapter_4/log_manager`.
 
-- **[LINUX]** verify that Knowage has write permissions on this folder; set the property ``log4j.appender.knowage.File`` inside the ``WEB-INF/classes/log4j.properties`` to ``LOG_DIR_PATH/knowage.log``;
+Optional export and Python services
+-----------------------------------
 
-- set the property ``log4j.appender.knowageXXXXXEngine.File`` inside the ``WEB-INF/classes/log4j.properties`` file of each engine to ``LOG_DIR_PATH/knwoageXXXXXEngine.log``;
-- only for the Birt Engine, to set the property ``logDirectory`` inside the ``WEB-INF/classes/BirtLogConfig.properties`` file of the knowagebirtreportengine application to ``LOG_DIR_PATH``.
+Install the export service distributed for your edition and configure its
+Node.js/Chromium runtime and script paths. Test the formats required by your
+users. For Python datasets, functions and widgets, follow
+:doc:`python-installation` and use the matching 9.1 package.
 
-Enable Java Security Manager
-------------------------------------------------------------------------------------------------------------------------
+Optional Data Preparation
+-------------------------
 
-In Knowage, a user can create datasets, LOVs, etc.. with script languages like JavaScript. That introduces a security concern where a malicious user can execute code that can break the entire system. Java allows a system administrator to enable a `Security Manager <https://docs.oracle.com/javase/tutorial/essential/environment/security.html>`_ and to create a sandbox to limit privileges around the code that execute the script.
+Data Preparation requires a configured Livy/Spark service and the corresponding
+Knowage integration libraries. Keep their versions aligned with the supplied
+integration package. Configure ``KNOWAGE.DATAPREP.LIVY_URL`` and the resources
+path, then select a data source with **Use for data preparation** to store the
+prepared data. Test a transformation and save a prepared dataset before exposing
+the feature to authors.
 
-The Security Manager can be enabled with the following steps:
+.. figure:: /_static/screenshots/9.1/chapter-5-installation-manual-installation-9-1-data-preparation-source.png
 
-- Write a Security Policy for the Security Manager;
+   Selecting the data source used for prepared dataset output.
 
-- Enable the Security Manager in the JVM.
+Start and verify
+----------------
 
-The Security Policy is a text file read by a Security Manager that specifies all the privileges that a JVM can give to Java code: Tomcat has already a default policy in the file ``TOMCAT_HOME/conf/catalina.policy`` but is too much strict for Knowage code that needs to write multiple logs, make network connection and execute external applications. Knowage is already secured and can use a more relaxed policy like:
-
-.. code-block:: xml
-        :caption: Complete path of the script
-
-        grant {
-                permission java.security.AllPermission;
-        };
-
-This policy can be saved to ``TOMCAT_HOME/conf/knowage-default.policy``.
-
-To enable the Security Manager a system administrator have to add some options to the Java JVM:
-
-**[LINUX]** Insert at the end of the ``TOMCAT_HOME/bin/setenv.sh`` file this command:
-
-.. code-block:: bash
-	:linenos:
-
-        export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy -Dsymmetric_encryption_key=<generic_random_string>"
-
-The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
-
-
-**[WIN]** Insert at the end of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
-
-.. code-block:: bash
-	:linenos:
-
-        set JAVA_OPTS= %JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy -Dsymmetric_encryption_key=<generic_ASCII_string>
-
-The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
-
-.. warning::
-
-  If you are using Oracle provided Java, this configuration may lead to the error *"Illegal key size or default parameters"*. This is a problem with limited Java security policies. See https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AppC for more information.
-
--  Make sure you have set the ``hazelcast.ignoreXxeProtectionFailures`` system property in file ``TOMCAT_HOME/bin/setenv.sh`` or ``TOMCAT_HOME/bin/setenv.bat``;
-
-.. code-block:: bash
-
-  export JAVA_OPTS="$JAVA_OPTS  -Dhazelcast.ignoreXxeProtectionFailures=true"
-  
-.. code-block:: bash
-
-   set JAVA_OPTS=%JAVA_OPTS%  -Dhazelcast.ignoreXxeProtectionFailures=true
-
-
-Installation of Chromium Cockpit Export script
-------------------------------------------------------------------------------------------------------------------------
-.. important::
-         **Enterprise Edition only**
-
-         Chromium Cockpit Export script is only available for Enterprise Edition.
-
-Extract archive ``knowage-cockpit-export-installation.zip`` to ``/opt/knowage``:
-
-.. code-block:: bash
-        :caption: Complete path of the script
-
-        /opt/knowage/cockpit-export/cockpit-export.js
-
-For alternatives path you have to fix ``internal.nodejs.chromium.export.path`` in Knowage Configuration Management.
-
-Configuring environment for Data Preparation
-------------------------------------------------------------------------------------------------------------------------
-
-User should have Apache Livy and Apache Spark installed.
-
-This feature is tested on Apache Livy 0.71 and Apache Spark 2.4.8 with Scala 2_11 version.
-
-Please refer to https://livy.apache.org/ for more details:
-
-To run the Livy server, you will also need an Apache Spark installation.
-You can get Spark releases at https://spark.apache.org/downloads.html.
-Livy requires at least Spark 1.6 and supports both Scala 2.10 and 2.11 builds of Spark. To run Livy with local sessions, first export these variables:
-
-export SPARK_HOME=/usr/lib/spark
-
-Then start the server with:
-
-./bin/livy-server start
-
-Livy uses the Spark configuration under SPARK_HOME by default. You can override the Spark configuration by setting the SPARK_CONF_DIR environment variable before starting Livy.
-
-Please check Livy and Spark official documentation for more info.
-
-After that it is mandatory to set this variable on Tomcat Server: **KNOWAGE_RESOURCE_PATH**
-This variable should point to the Tomcat server's resource folder.
-
-Our advice, if you are on Linux environment, is to create a service for Tomcat Server and then let the variable setting available for the system, for example: KNOWAGE_RESOURCE_PATH = /home/knowage/knowage8_1/apache-tomcat-9/resources
-
-After that, you should fill this property inside Knowage Configuration:  **KNOWAGE.DATAPREP.LIVY_URL** with the right url of Livy server.
-
-You will also need to configure a datasource as "Used for data preparation", it means that the selected datasource will be used for saving prepared dataset data.
-
-Selecting a **DATA PREPARATION DATASOURCE**:
-
-It is really important to set a datasource for the prepared dataset ingestion output.
-This one will be the location of the result prepared data.
-You can do that checking the "Use for data preparation" checkbox using an administration role for Knowage.
-
-.. figure:: media/image37.png
-
-    Datasource management section.
-
-In order to allow Spark transformations working, you should provide those libraries on Spark  /jars  installation folder:
-
-- json-20210307.jar
-
-- livy-api-0.7.1-incubating.jar
-
-- livy-client-http-0.7.1-incubating.jar
-
-- spark-avro_2.11-2.4.8.jar
-
-And:
-
-- knowage-spark-[**CURRENT VERSION OF KNOWAGE**].jar
-
-This library can be found inside knowage deployed projects jars folder.
+Start Tomcat, inspect the logs, sign in and test a dataset and a document with
+an end-user role. Verify external authentication, parameter entry, exports and
+a scheduled execution for the components enabled in your installation.

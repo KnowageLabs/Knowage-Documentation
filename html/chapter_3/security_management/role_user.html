@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User profile and roles &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Analytical Driver" href="driver.html" />
+    <link rel="prev" title="Behavioural Model" href="behavioural_model.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data security and access management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="behavioural_model.html">Behavioural Model</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">User profile and roles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#user-management">User Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bulk-maintenance">Bulk maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="driver.html">Analytical Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lov.html">List Of Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="check.html">Creating a validation rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="document.html">Analytical documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="repository_management.html">Repository Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="menu.html">Menu management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bm_lineage.html">Behavioural Model Lineage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Data security and access management</a></li>
+      <li class="breadcrumb-item active">User profile and roles</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/security_management/role_user.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-profile-and-roles">
+<h1>User profile and roles<a class="headerlink" href="#user-profile-and-roles" title="Link to this heading"></a></h1>
+<p>Knowage users are defined by:</p>
+<ul class="simple">
+<li><p>identities,</p></li>
+<li><p>roles,</p></li>
+<li><p>profiles.</p></li>
+</ul>
+<p>The <em>identity</em> of a user consists of a set of data used to identify that user, i.e., a username and a password, as well as a human readable full name.</p>
+<p>The <em>profile</em> of a user consists of a set of properties called attributes, describing general information about the user, e.g., age and gender, but also domain-specific properties, such as the organizational unit to which he belongs. Some attributes, such as name and email, are defined by default in Knowage. Others can be added by the model administrator, as explained in the following sections.</p>
+<p>The <em>role</em> of a user represents a categorization of a group of users. These roles may correspond to specific positions in the company, e.g., “general manager” or a “sales director”, or to a position with respect to the BI project, e.g., “data administrator” and “BI developer”. Different users may have the same role, as well as the same user may have multiple roles.</p>
+<p>You will not have grants to create new roles or users, but you are asked to match them during document profilation phases. In the following we are going to describe the elements needed for adding parameters. This elements involves profilation too. To conclude we will see how to manage accessibility while creating a document.</p>
+<span id="knowageroletype"></span><table class="docutils align-default" id="id2">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Knowage Role Types.</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Role Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Standard User</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ADMIN</p></td>
+<td><p>General
+administrator.</p>
+<p>Manages all Knowage
+functionalities.</p>
+</td>
+<td><p>biadmin</p></td>
+</tr>
+<tr class="row-odd"><td><p>MODEL_ADMIN</p></td>
+<td><p>Model administrator.</p>
+<p>Manages the
+Behavioural Model and
+its associated
+functionalities.</p>
+</td>
+<td><p>bimodel</p></td>
+</tr>
+<tr class="row-even"><td><p>DEV_ROLE</p></td>
+<td><p>Developer.</p>
+<p>Creates and modifies
+datasets and
+documents.</p>
+</td>
+<td><p>bidev</p></td>
+</tr>
+<tr class="row-odd"><td><p>TEST_ROLE</p></td>
+<td><p>Test user.</p>
+<p>Tests analytical
+documents.</p>
+</td>
+<td><p>bitest</p></td>
+</tr>
+<tr class="row-even"><td><p>USER</p></td>
+<td><p>End user.</p>
+<p>Executes documents
+visible to him and
+creates ad-hoc
+reporting analysis.</p>
+</td>
+<td><p>biuser</p></td>
+</tr>
+</tbody>
+</table>
+<p>Knowage allows you to create several roles, according to your project needs. However, all roles must belong to a specific <em>role type</em>. A role type is a higher-level categorization used by Knowage, in order to map roles for the different features of the suite.</p>
+<p>Pre-defined roles are summarized in the Table 5.1. The first four roles are technical roles, while the last one, the user, is the actual end user. Each role type has a default user associated to it. Other users can be created and associated to a role type.</p>
+<p>Users’ profiles are automatically loaded when logging in into Knowage. The full name is visible by clicking on the info button at the bottom left corner of the page.</p>
+<p>Authentication can be handled internally by Knowage or delegated to an external Single Sign On (SSO) system.</p>
+<blockquote>
+<div><div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<dl class="simple">
+<dt><strong>Authentication Management</strong>:</dt><dd><p>The choice of handling authentication internally or delegating it to an external SSO system typically depends on the presence of an authentication system already in place. If this is the case, Knowage can seamlessly integrate with the existing authentication infrastructure.</p>
+</dd>
+</dl>
+</div>
+</div></blockquote>
+<p>As for profiles, users’ roles are loaded when they log in into Knowage. Roles are managed internally. In case of multiple roles, they will be asked to choose one.</p>
+<p>Alternatively, from the Knowage Administrator menu <em>PROFILE MANAGEMENT &gt; Users</em> it is possible to select a default role that will be kept valid until logging out.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-security-management-role-user-image28-b.png" src="../../_images/chapter-3-security-management-role-user-image28-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">User’s roles in Knowage.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Steps to follow in the definition of a behavioural model:</p>
+<ul class="simple">
+<li><p>Create profile attributes;</p></li>
+<li><p>Create roles;</p></li>
+<li><p>Create users and associate profile attribute values and roles to them.</p></li>
+</ul>
+<p>As shown before, Knowage supports the management of user’s profiles and roles through the <strong>Profile Management</strong> menu section. This menu is only visible to Knowage administrators and model administrators, since users and roles management is a critical operation that requires an appropriate level of responsibility.</p>
+<p>The <strong>Profile Management</strong> menu section contains three sub-menu items:</p>
+<ul class="simple">
+<li><p><strong>Profile Attributes</strong>: to define new profile attributes and manage the existing ones.</p></li>
+<li><p><strong>Roles</strong>: to create new roles and manage permissions for each role.</p></li>
+<li><p><strong>Users</strong>: to create users, manage their identities, assign values to their profile attributes and associate them with roles.</p></li>
+</ul>
+<p>In the following, we show how the model administrator can define user profiles and roles using these functionalities. Remember that Knowage profile management can also be integrated with external profiling systems.</p>
+<p>Clicking on <strong>Profile Attributes</strong>, the list of currently defined attributes is shown. To add a new attribute, click on the <strong>Plus icon</strong>: a new row is added to the list, where you can insert the Name, the Description and the Data type. To delete an attribute, select the corresponding row and click on the <strong>Delete</strong> icon.</p>
+<p>Attributes defined in this section will be available to all user profiles. It is not mandatory to assign a value to each attribute for each user, since profile attributes without values will not be considered in the definition of the user profile.</p>
+<p>In addition to the profile attributes created by administrator, by default Knowage provides the following profile attributes:</p>
+<ul class="simple">
+<li><p><strong>user_id</strong>: set with the user unique identifier;</p></li>
+<li><p><strong>user_roles</strong>: set with user roles selected from the ROLES tab in Users Management menu;</p></li>
+<li><p><strong>TENANT_ID</strong>: set with the tenant unique identifier;</p></li>
+<li><p><strong>user_session_roles</strong>: set like <em>user_roles</em> attribute, if no default role is set. Set with default role selected, otherwise.</p></li>
+<li><p><strong>language</strong>: set with the language selected by the user</p></li>
+</ul>
+<p>The image below shows a new <em>Profile attribute</em> named <em>Country</em> whose value has been manually entered. An alternative option is to feed attribute values by means of a Lov: one or more of its values will be asigned by the user. Multivalue option in this case is not enabled, so only one value is inserted.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-security-management-role-user-image29-bis.png" src="../../_images/chapter-3-security-management-role-user-image29-bis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Profile attributes Management.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once the attributes are defined, the model administrator can define roles, using the <strong>Roles</strong> functionality. The role management tool is two-sided: on the left you can see the list of already defined roles. At the beginning of a project, only default roles are visible. To add a new role, click the <strong>Plus</strong> icon and move to the right panel. To delete a role, simply click on the <strong>Delete</strong> icon available for that role once saved.</p>
+<blockquote>
+<div><div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<dl class="simple">
+<dt><strong>Role Management</strong>:</dt><dd><p>The behavioural model should be built taking into account the specificity of each organization and the needs of the BI project.    Therefore, it is a good practice to define specific roles for the BI project and avoid using Knowage technical roles only.</p>
+</dd>
+</dl>
+</div>
+</div></blockquote>
+<p>The right panel contains the following tabs.
+The <strong>Detail</strong> tab allows the administrator to define role name and role type (mandatory).
+The role type regulates the visibility of that role based on the types already described.
+A code and a description can be added as shown below.</p>
+<figure class="align-default" id="id5">
+<img alt="../../_images/chapter-3-security-management-role-user-image3031-a.png" src="../../_images/chapter-3-security-management-role-user-image3031-a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Details tab in Roles Management.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <strong>Authorizations</strong> tab allows you to assign permissions to each role. Rights are predefined and grouped into categories, as shown above.</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/chapter-3-security-management-role-user-image3031-b.png" src="../../_images/chapter-3-security-management-role-user-image3031-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Authorization tab in Roles Management.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <strong>Business Models</strong>, <strong>Data sets</strong> and <strong>KPI Categories</strong> tabs are intended to assign specific categories to each role, in a way that each user can only see the business models, datasets or KPI that belong to the categories associated with his role.</p>
+<p>The <strong>Business Models</strong> tab is only available for modules KnowageBD and KnowageSI, while the <strong>KPI Categories</strong> tab is only available for KnowagePM. More details on business models and KPIs can be found in the corresponding chapters.</p>
+<p>There is a last tab <strong>Usage</strong> that represents a summary tab of the usage of that role inside Knowage.</p>
+<figure class="align-default" id="id7">
+<img alt="../../_images/chapter-3-security-management-role-user-image3031-c.png" src="../../_images/chapter-3-security-management-role-user-image3031-c.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Usage tab in Roles Management.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="user-management">
+<h2>User Management<a class="headerlink" href="#user-management" title="Link to this heading"></a></h2>
+<p>The <strong>Users Management</strong> section includes a left panel that allows the administrator to create and delete users, and a right panel that allows the management of user details, roles and attributes.</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/chapter-3-security-management-role-user-image32-8-1.png" src="../../_images/chapter-3-security-management-role-user-image32-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Users Management.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="bulk-user-insertion">
+<span id="id1"></span><h3>Bulk User Insertion<a class="headerlink" href="#bulk-user-insertion" title="Link to this heading"></a></h3>
+<p>Knowage allows the administrator to perform a massive insertion of new users simultaneously by uploading a structured file. The supported file formats are <strong>CSV</strong> (UTF-8 with a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code> separator) and <strong>XLSX</strong>. Use XLSX for Excel imports; the upload chooser also lists the legacy XLS extension.</p>
+<p>To access this feature, navigate to the User Management section and click on the <strong>Import</strong> action in the Users Management toolbar.</p>
+<figure class="align-default">
+<img alt="../../_images/chapter-3-security-management-role-user-massiveuser01.png" src="../../_images/chapter-3-security-management-role-user-massiveuser01.png" />
+</figure>
+<figure class="align-default">
+<img alt="../../_images/chapter-3-security-management-role-user-massiveuser02.png" src="../../_images/chapter-3-security-management-role-user-massiveuser02.png" />
+</figure>
+<figure class="align-default">
+<img alt="../../_images/chapter-3-security-management-role-user-massiveuser03.png" src="../../_images/chapter-3-security-management-role-user-massiveuser03.png" />
+</figure>
+<section id="structure-and-requirements">
+<h4>Structure and Requirements<a class="headerlink" href="#structure-and-requirements" title="Link to this heading"></a></h4>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>No header row</strong> must be included in the file. Data rows must start from the very first line.</p>
+</div>
+<p>Keep at least the first three columns in every row, using blank values for optional cells. Each row represents a single user to be created. The columns must follow this precise sequential order:</p>
+<ol class="arabic">
+<li><p><strong>User ID</strong> (Mandatory): The unique identifier for the user login.</p></li>
+<li><p><strong>Password</strong>: the initial password. A blank value uses the configured default password when available; explicit passwords must satisfy the password policy.</p></li>
+<li><p><strong>Full Name</strong> (Optional): The first and last name of the user.</p></li>
+<li><p><strong>Roles / Profiles</strong> (Optional): The technical or business roles to be assigned to the user (e.g., <code class="docutils literal notranslate"><span class="pre">admin</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>).</p>
+<p><em>Multiple Roles:</em> It is possible to specify more than one role for a single user. In this case, additional roles must occupy the subsequent columns (e.g., column 5, column 6, etc.), shifting the position of the attributes.</p>
+</li>
+<li><p><strong>Attributes</strong> (Optional): Custom user profile attributes required by the analytical documents. Supply each relevant attribute explicitly in every row, including empty values, and check the imported profiles.</p>
+<ul class="simple">
+<li><p><em>Format:</em> Attributes must be provided as a key-value pair separated by a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>, using the syntax <code class="docutils literal notranslate"><span class="pre">label:value</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">email:m.rossi&#64;eng.it</span></code> or <code class="docutils literal notranslate"><span class="pre">birth_date:09061976</span></code>).</p></li>
+<li><p><em>Multiple Attributes:</em> Multiple attributes can be defined sequentially after the roles section.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h4>
+<p><strong>CSV Format Example (with semicolon separator):</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mrossi;Marz0_2026;Mario Rossi;admin;birth_date:09061976;email:m.rossi@eng.it
+jsmith;Secret_2026;John Smith;user;dev;email:j.smith@eng.it
+</pre></div>
+</div>
+<p><strong>Excel Format Example:</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 15.0%" />
+<col style="width: 20.0%" />
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>mrossi</p></td>
+<td><p>Marz0_2026</p></td>
+<td><p>Mario Rossi</p></td>
+<td><p>admin</p></td>
+<td><p>birth_date:09061976</p></td>
+<td><p>email:m.rossi&#64;eng.it</p></td>
+</tr>
+<tr class="row-even"><td><p>jsmith</p></td>
+<td><p>Secret_2026</p></td>
+<td><p>John Smith</p></td>
+<td><p>user</p></td>
+<td><p>dev</p></td>
+<td><p>email:j.smith&#64;eng.it</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="upload-execution-and-output-report">
+<h4>Upload Execution and Output Report<a class="headerlink" href="#upload-execution-and-output-report" title="Link to this heading"></a></h4>
+<p>Once the file is selected and uploaded, the system processes each record sequentially and shows successful users and errors separately. The underlying service returns a per-user JSON report, illustrated below.</p>
+<p>Each item in the response contains:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">userId</span></code>: The identifier of the processed user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">success</span></code>: A boolean value (<code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>) stating whether the user creation succeeded.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createdUserId</span></code>: The numeric ID generated by the database (populated only in case of success).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code>: A descriptive message confirming the operation or explaining the specific validation error (e.g., password criteria failure, missing mandatory field, or database constraints).</p></li>
+</ul>
+<p><strong>Response Example:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mrossi"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"createdUserId"</span><span class="p">:</span><span class="w"> </span><span class="mi">10521</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User processed successfully"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jsmith"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"createdUserId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Password is not valid"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="user-unlock">
+<h3>User unlock<a class="headerlink" href="#user-unlock" title="Link to this heading"></a></h3>
+<p>If a user reaches the maximum number of failed login attempts (editable in advanced configurations), that user will be blocked by Knowage and access will be denied.
+By accessing Knowage with management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it by using the “unlock user” button.
+After that, the user will be able to log in using the latest set of credentials.</p>
+<figure class="align-default" id="id9">
+<img alt="../../_images/chapter-3-security-management-role-user-image115-b.png" src="../../_images/chapter-3-security-management-role-user-image115-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Users Management - Roles settings example</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="roles-settings">
+<h3>Roles settings<a class="headerlink" href="#roles-settings" title="Link to this heading"></a></h3>
+<p>Clicking on the ROLES tab you have to select one o more roles to associate with the user.
+After that, if more than one role is associated to the user, you can choose the default role by selecting it from the combo box on the top of the page.</p>
+<p>Default role is optional: if you don’t select a default role, at login time all the available roles for the user will be loaded. If you select a role, at login time
+it will be the session role selected.</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/chapter-3-security-management-role-user-image100-b.png" src="../../_images/chapter-3-security-management-role-user-image100-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Users Management - Roles tab</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the example above, for the user “<em>Dte user</em>” whose role is just <em>user</em>.</p>
+<p>You can also assign an attribute profile to a user. In this case it is enough to valorize the attribute that you want to assign.
+The below image, shows an example. The attribute <em>par_family</em> that has been formerly created as a <em>Profile attribute</em>.</p>
+<figure class="align-default" id="id11">
+<img alt="../../_images/chapter-3-security-management-role-user-attributes.png" src="../../_images/chapter-3-security-management-role-user-attributes.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Users Management - Attributes tab</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="bulk-maintenance">
+<h2>Bulk maintenance<a class="headerlink" href="#bulk-maintenance" title="Link to this heading"></a></h2>
+<p>Users Management supports selecting several users for bulk actions. Review
+the selected identities before applying role or profile-attribute changes;
+inspect the per-user result report afterwards. Imported roles and profile
+attributes should already be defined in the target tenant.</p>
+<p>For automatic provisioning or user lifecycle operations, use the deployment’s
+configured identity provider or authorized integration. These processes are
+separate from the file import used to create users.</p>
+<figure class="align-default" id="id12">
+<img alt="../../_images/chapter-3-security-management-role-user-9-1-users-bulk-actions.png" src="../../_images/chapter-3-security-management-role-user-9-1-users-bulk-actions.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">User selection, bulk maintenance and per-user results.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="behavioural_model.html" class="btn btn-neutral float-left" title="Behavioural Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="driver.html" class="btn btn-neutral float-right" title="Analytical Driver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to build a Metamodel &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How to build a QBE" href="qbe.html" />
+    <link rel="prev" title="Create Free Inquiry" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Create Free Inquiry</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">How to build a Metamodel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-metamodel">Creating a Metamodel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#association-with-analytical-drivers">Association with analytical drivers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qbe.html">How to build a QBE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Create Free Inquiry</a></li>
+      <li class="breadcrumb-item active">How to build a Metamodel</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/create_qbe/meta.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-build-a-metamodel">
+<h1>How to build a Metamodel<a class="headerlink" href="#how-to-build-a-metamodel" title="Link to this heading"></a></h1>
+<p>Open <strong>Modules</strong> &gt; <strong>Catalogs</strong> &gt; <strong>Business Model Catalogue</strong> to create or
+maintain a model. Start with an available data source, define the exposed
+entities and relationships, then publish and test the model in QBE with the
+intended user roles.</p>
+<p>In this chapter we go into details of how to build your own metamodel. Knowage allows to develop and manage metadata through the use of a web interface that is called <strong>Meta Web</strong>. We recall that dealing with metadata means to manage data that describe the structure of a relational model, namely to deal with the relationship between tables, table columns, keys and so on.</p>
+<p>The Meta Web allows the user to access these information through the usage of a graphic interface and to easily combine, redefine and query them on an abstract model, guaranteeing the safety of the source model. In addition, we stress that the users can perform queries over data without the usage of a data query language.</p>
+<section id="creating-a-metamodel">
+<h2>Creating a Metamodel<a class="headerlink" href="#creating-a-metamodel" title="Link to this heading"></a></h2>
+<p>Using the Meta Web application, it is possible to reverse the content of a database and manipulate this information creating a new model that can fit the user’s needs. In this section will we see what are the steps needed in order to create a metamodel and query it with the QBE.</p>
+<p>To create a Metamodel enter the <strong>Business Model Catalogue</strong> and add a new model clicking on the “Plus” icon. Referring to next figure, you will be prompted to enter the following fields:</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/chapter-3-create-qbe-meta-bm-kn.png" src="../../_images/chapter-3-create-qbe-meta-bm-kn.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 411 </span><span class="caption-text">Business Model functionality.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><em>Name</em> (mandatory): Name of the model (cannot be changed after the save).</p></li>
+<li><p><em>Description</em>: A longer description of your model.</p></li>
+<li><p><em>Category</em> (mandatory): Select, from the ones available, a category that the model belongs to.</p></li>
+<li><p><em>Data Source</em> (mandatory): select the datasource that will be used to create your model (so the one that contains the tables that you need).</p></li>
+</ul>
+<figure class="align-default" id="id2">
+<span id="settingthemodelinfo"></span><img alt="../../_images/chapter-3-create-qbe-meta-image299.png" src="../../_images/chapter-3-create-qbe-meta-image299.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 412 </span><span class="caption-text">Setting the metamodel basic information.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After you have compiled these information, you can use the browse button to upload a model developed through an external (and specific) tool or you can click on “Save” on the top right corner of the screen and use the Meta Web engine to build it through Knowage interface. Now click on the switch <strong>Enable Meta Web</strong> that will show up a button <strong>Meta Web</strong>, click on that and you are ready to design the model.</p>
+</section>
+<section id="association-with-analytical-drivers">
+<h2>Association with analytical drivers<a class="headerlink" href="#association-with-analytical-drivers" title="Link to this heading"></a></h2>
+<p>With this feature in Meta web is possible to create filters using associations with analytical drivers. In this section we will show how to practically define this kind of association.</p>
+<p>To add a new parameter, you can click on the tab <strong>Drivers</strong> and then on a <strong>Add</strong> button, see the next figure.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-create-qbe-meta-image299a.png" src="../../_images/chapter-3-create-qbe-meta-image299a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 413 </span><span class="caption-text">Association with analytical driver panel - 1.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Choose a name for the title of the driver. Then choose an analytical driver from drop-down menu that you wish to associate to the meta model.</p>
+<p>Once you have selected the driver, you should write the <strong>exact URL</strong> of the corresponding parameter. Then set if the driver is multivalue or not. By default, drivers are set to be mandatory so you don’t have the option to change that like you have for analytical documents.</p>
+<p>After you have completed the definition of a parameter you can save it by clicking on main <strong>Save</strong> button in the upper right corner. To add further parameters, click on the <strong>Add</strong> button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-create-qbe-meta-image299b.png" src="../../_images/chapter-3-create-qbe-meta-image299b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 414 </span><span class="caption-text">Association with analytical driver panel - 2.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In the following chapter we will see some special operations that can be performed on drivers associated to a meta model.</p>
+<section id="correlation-between-parameters">
+<h3>Correlation between parameters<a class="headerlink" href="#correlation-between-parameters" title="Link to this heading"></a></h3>
+<p>In the context of a meta model, two different parameters may be connected to each other: this means that the possible values of a   parameter are limited by the value(s) of another parameter.</p>
+<p>This feature can be useful when two (or more) parameters are logically related. For example, suppose to have a parameter for all the possible countries and another one for all the possible cities. If the user selects a country, it is meaningless to show him all cities: he should only be enabled to choose among the cities in the selected country.</p>
+<p>To set the correlation, select the child parameter which will show you the details of that particular driver and then click on the <strong>Add condition</strong> button to open a pop-up window for defining a data correlation.</p>
+<p>In general, to configure a correlation within a meta model you should make sure that the LOV associated with the parent parameter and the  one associated to the child parameter share at least one column. This column defines which value from the parent parameter will be applied to the child, in order to constrain the results.</p>
+<figure class="align-default" id="id5">
+<img alt="../../_images/chapter-3-create-qbe-meta-image299d.png" src="../../_images/chapter-3-create-qbe-meta-image299d.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 415 </span><span class="caption-text">Definition of the correlation.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here you need to define:</p>
+<ul class="simple">
+<li><p>the parent parameter’s AD;</p></li>
+<li><p>the type of filter operator, in order to compare values of the parent parameter with values of the child parameter;</p></li>
+<li><p>the logical operator to chain this correlation condition with other possibile correlation (if any)</p></li>
+<li><p>(for each AD modality) the column, generated by the current parameter’s LOV, whose value will be compared with the value of the same column in the parent parameter.</p></li>
+</ul>
+<p>If a parameter depends on multiple parent parameters, you can define multiple correlations.</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/chapter-3-create-qbe-meta-image299e.png" src="../../_images/chapter-3-create-qbe-meta-image299e.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 416 </span><span class="caption-text">Multiple correlations.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once the correlation is defined, the child parameters will have the labels displayed in italic during the execution (with QBE).</p>
+</section>
+<section id="correlation-through-lov-and-drivers">
+<h3>Correlation through LOV and drivers<a class="headerlink" href="#correlation-through-lov-and-drivers" title="Link to this heading"></a></h3>
+<p>In previous sections we saw how to set correlation through the GUI available in meta model panel, but there is also the possibility to get the same result using the link between LOV and analytical drivers. More in depth, the user must have previously configured a driver that runs values that can be used in the “where” clause of a SQL query. Then the user must set a query-type LOV using the syntax:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text">Syntax for setting correlation through LOV configuration</span><a class="headerlink" href="#id7" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="nv">$P</span><span class="o">{</span>AD_name<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<p>We stress that the <code class="docutils literal notranslate"><span class="pre">AD_name</span></code> is the name of the driver the administrator is trying to reach.</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/chapter-3-create-qbe-meta-image82-a.png" src="../../_images/chapter-3-create-qbe-meta-image82-a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 417 </span><span class="caption-text">Correlation passing driver values to LOV query .</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As a result, when opening meta model, as soon as the user pick up a value from the “free” parameter, the other one is filtered and it will show only the value related to the previous selection, as shown in Figure below.</p>
+<figure class="align-default" id="id9">
+<img alt="../../_images/chapter-3-create-qbe-meta-image83-a.png" src="../../_images/chapter-3-create-qbe-meta-image83-a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 418 </span><span class="caption-text">Filtering with correlation.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="creating-an-empty-model">
+<h3>Creating an empty model<a class="headerlink" href="#creating-an-empty-model" title="Link to this heading"></a></h3>
+<p>The first time you enter the Meta Web, the interface will show you the available tables extracted from the selected data source.</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/chapter-3-create-qbe-meta-metaweb-8-1.png" src="../../_images/chapter-3-create-qbe-meta-metaweb-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 419 </span><span class="caption-text">Metaweb interface.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>For each table you can decide if you want to include it in your metamodel. More in detail a metamodel is divided in two model:</p>
+<ul class="simple">
+<li><p><strong>Physical Model</strong>: it represents a “snapshot” of the database at the moment of the creation of you metamodel. The physical model contains a list of tables and information like columns and foreign keys retrieved from the database. The Physical Model cannot be modified but could be updated to reflect changes made on the database after the creation.</p></li>
+<li><p><strong>Business Model</strong>: it is based on the physical model but let the user recombine some of his information. For example is possible to create a Business Class that contains only some of the columns of a Physical Table and create new relationships between Business Classes that are not defined on the physical database.</p></li>
+</ul>
+<p>If you choose to include a table only in the physical model is always possible to create a corresponding business class later during the editing. When you have finished to select the tables you can proceed to the editing clicking on the <strong>Continue</strong> button.</p>
+</section>
+<section id="editing-the-metamodel">
+<h3>Editing the metamodel<a class="headerlink" href="#editing-the-metamodel" title="Link to this heading"></a></h3>
+<p>The Meta Web Editor is divided in two main tabs <strong>Business Model</strong> and <strong>Physical Model</strong> corresponding to the related models. Clicking on one of this tab will change the view showing the elements of the specific model.</p>
+<p>The “Physical Model” tab contains the tables that the user has checked earlier. On the left side of the interface you will see a tree like structure with the list of tables imported in the Physical Model (see figure below).</p>
+<figure class="align-default" id="id11">
+<img alt="../../_images/chapter-3-create-qbe-meta-image301.png" src="../../_images/chapter-3-create-qbe-meta-image301.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 420 </span><span class="caption-text">Physical Model Tab.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Use the specific link to update the Physical Model at any time. Referring to the figure below, selecting the “Update Physical Model” option the user can refresh the model metadata.</p>
+<figure class="align-default" id="id12">
+<span id="updtphisicalmdl1"></span><img alt="../../_images/chapter-3-create-qbe-meta-image302a.png" src="../../_images/chapter-3-create-qbe-meta-image302a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 421 </span><span class="caption-text">Update the physical model.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As shown below, the interface indicates if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.</p>
+<figure class="align-default" id="id13">
+<span id="updtphisicalmdl2"></span><img alt="../../_images/chapter-3-create-qbe-meta-image30607.png" src="../../_images/chapter-3-create-qbe-meta-image30607.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 422 </span><span class="caption-text">Update the physical model.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Each table of Physical Model brings the information read from data base. Selecting each table, the interface shows on the right the list of its properties (<strong>Property List</strong> tab) and its foreign keys (<strong>Foreign Keys</strong> tab). Clicking on the icon on the left of each Physical Table, it is possible to expand the corresponding node. Highlight each column name to see (on the right side of the screen) a list of properties, like data type or length.</p>
+<p>As shown below, the Business Model tab allows the user to custom the model in terms of column name, type, visibility, format, etc.</p>
+<figure class="align-default" id="id14">
+<img alt="../../_images/chapter-3-create-qbe-meta-image308.png" src="../../_images/chapter-3-create-qbe-meta-image308.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 423 </span><span class="caption-text">Business Model Tab.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In this view, you see all the Business Classes created at the first initialization.
+The Business Classes are represented in a tree structure on the left side of the page.
+Clicking on them, generic information are reported in the six tabs available on the right side of the page. See below.</p>
+<p>You can change the order of the business classes just by using the drag and drop functionality.</p>
+<p>By means of the <strong>Property List</strong> tab, the user can customize the business class name, type a description and see the corresponding physical table name. Here the user can also choose to hide the business class setting its visibility to false. Furthermore, when specifying the business class type, the user activates some peculiar functions that can be used in the QbE interface we described in Section 9.1. For instance, selecting the geographic dimension, the user will be able to apply the spatial functions to the dimension fields available in the QbE interface.</p>
+<p>The <strong>Attributes</strong> tab lets the user to define which columns to be used as primary keys and which are effectively functional for the Business Class (not to be confused with the visibility condition). Note that, for instance, it is not possible to disable the “In Use” option when the field has already been set as foreign key.</p>
+<p>The <strong>Calculated field</strong> tab is used to configure computed measures or attributes.
+Click on the dedicated button, as shown below, to create a new field. Use the list of functions to retrieve right function syntax and the list of fields on the left to correctly type the fields name.</p>
+<figure class="align-default" id="id15">
+<img alt="../../_images/chapter-3-create-qbe-meta-image310.png" src="../../_images/chapter-3-create-qbe-meta-image310.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 424 </span><span class="caption-text">Add calculated fields.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <strong>Inbound</strong> and <strong>Outbound</strong> tabs are described in the following section.</p>
+</section>
+<section id="create-a-new-relationship">
+<h3>Create a new relationship<a class="headerlink" href="#create-a-new-relationship" title="Link to this heading"></a></h3>
+<p>In the Business Model is possible to define new relationships between Business Classes that are not inherited from the physical foreign keys. The Business Relationships are divided in two types:</p>
+<ul class="simple">
+<li><p><strong>Inbound</strong>: relationships that have the selected Business Class as a target (so they are entering);</p></li>
+<li><p><strong>Outbound</strong>: relationships that have the selected Business Class as a source (so the starts from).</p></li>
+</ul>
+<p>The two relationships differ then for the direction of the bounds between tables that they establish.</p>
+<p>To create a new relationship, just select the tab “Inbound” or “Outbound” after selecting one Business Class. Then click on the button “Add” and you will see a dialog.</p>
+<figure class="align-default" id="id16">
+<img alt="../../_images/chapter-3-create-qbe-meta-image311.png" src="../../_images/chapter-3-create-qbe-meta-image311.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 425 </span><span class="caption-text">Setting the outbound relationship.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In Figure above the outbound relationship is shown. Here you have to:</p>
+<ul class="simple">
+<li><p>enter the business relationship name,</p></li>
+<li><p>select the cardinality of the relationship (1 to N is suggested),</p></li>
+<li><p>select the Source and Target Business Classes,</p></li>
+<li><p>drag and drop an attribute from the source Business Class to another attribute in the target Business Class. This will create a link between the two attributes.</p></li>
+</ul>
+<p>When all these steps are accomplished, click <em>Create</em> to save the new relationship.</p>
+<p>From the example you see that the cardinality of the outbound relationship can be of two types:</p>
+<ul class="simple">
+<li><p>1 to N,</p></li>
+<li><p>1 to N*.</p></li>
+</ul>
+<p>Use the second type of cardinality when the type of cardinality can be optional.</p>
+<p>As well, the cardinality of the inbound relationship can be of two types:</p>
+<ul class="simple">
+<li><p>N to 1,</p></li>
+<li><p>N* to 1.</p></li>
+</ul>
+<p>Use the second type of cardinality when the type of cardinality can be optional.</p>
+</section>
+<section id="sql-filter">
+<h3>SQL Filter<a class="headerlink" href="#sql-filter" title="Link to this heading"></a></h3>
+<p>There is a new feature that is added in meta web. It is SQL Filter which we can define in Filter tab in meta web as you can see in the figure below. SQL Filter is used for applying already defined drivers in query.</p>
+<figure class="align-default">
+<img alt="../../_images/chapter-3-create-qbe-meta-image1-sql.png" src="../../_images/chapter-3-create-qbe-meta-image1-sql.png" />
+</figure>
+<p>SQL filter is expression that is added in the end of query as part of where clause. The right syntax for sql filter is:
+column_name = $P{name_of_the_driver}. For example: city = $P{city}. If you want to add more than one filter, you can relate them with an operator (AND, OR…) as you can see in an example in figure below.</p>
+<figure class="align-default">
+<img alt="../../_images/chapter-3-create-qbe-meta-image2-sql.png" src="../../_images/chapter-3-create-qbe-meta-image2-sql.png" />
+</figure>
+<p>If you want to add filter for multivalue driver the right syntax is this: column_name IN ($P{name_of_the_driver}). For example:
+city IN ($P{city}).</p>
+</section>
+<section id="create-a-new-business-class">
+<h3>Create a new business class<a class="headerlink" href="#create-a-new-business-class" title="Link to this heading"></a></h3>
+<p>In the “Business Model” tab, the <em>Plus</em> icon allows to add new Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).</p>
+<figure class="align-default" id="id17">
+<img alt="../../_images/chapter-3-create-qbe-meta-image31213.png" src="../../_images/chapter-3-create-qbe-meta-image31213.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 426 </span><span class="caption-text">Creating a new business class.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>When clicking on the icon, as shown in Figure above, and selecting “New Business Class”, a new dialog asks to the users to:</p>
+<ul class="simple">
+<li><p>select a Physical Table from the available ones;</p></li>
+<li><p>insert a description for this new business class;</p></li>
+<li><p>select one or more columns.</p></li>
+</ul>
+<p>Then click on save to add the business class.</p>
+</section>
+<section id="table-property-list">
+<h3>Table property list<a class="headerlink" href="#table-property-list" title="Link to this heading"></a></h3>
+<p>Scrolling the <em>Property list</em> tab, you can find the <em>Type</em> menu item. The related combobox contains the types to be associated with the tables of your model.</p>
+<figure class="align-default" id="id18">
+<img alt="../../_images/chapter-3-create-qbe-meta-image31819.png" src="../../_images/chapter-3-create-qbe-meta-image31819.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 427 </span><span class="caption-text">Table property list.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="column-property-list">
+<h3>Column property list<a class="headerlink" href="#column-property-list" title="Link to this heading"></a></h3>
+<p>Below the Property tab of a Business Class</p>
+<figure class="align-default" id="id19">
+<img alt="../../_images/chapter-3-create-qbe-meta-image31819-b.png" src="../../_images/chapter-3-create-qbe-meta-image31819-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 428 </span><span class="caption-text">Column property list.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Click the modify icon to display all the details related to a specific attribute.</p>
+<figure class="align-default" id="id20">
+<span id="clmnproprtylist"></span><img alt="../../_images/chapter-3-create-qbe-meta-image322-8-1.png" src="../../_images/chapter-3-create-qbe-meta-image322-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 429 </span><span class="caption-text">Attribute details.</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <strong>Structural</strong> area covers an important role for the field properties. Here the user can set:</p>
+<ul class="simple">
+<li><p><strong>Visibility</strong> over the field by handling the contents of the field <strong>Roles enabled</strong>,</p></li>
+<li><p><strong>Type</strong>, among measure, attribute, calendar, temporal_id, the_date and hour_id,</p></li>
+<li><p><strong>Aggregation type</strong> for measure field type,</p></li>
+<li><p><strong>Format string</strong>, to custom the format of the string for measure field type,</p></li>
+<li><p><strong>Profile attribute</strong>, to filter the field (and then the table records) by the user profile attributes (note that the combobox lists the available profile attributes),</p></li>
+<li><p><strong>Profile attribute filter type</strong>, to define the filter operator among “equals to”, “in”, “like”,</p></li>
+<li><p><strong>Data type</strong>, to indicate the field data type.</p></li>
+</ul>
+<p>In the <strong>Behavioural Model</strong> area, the user can assign the field’s visibility permission to specific roles.</p>
+<p>In the <strong>Physical</strong> area, recalls the physical table and field name from which the field have been take.</p>
+<blockquote>
+<div><p>Add new column into business class</p>
+</div></blockquote>
+<p>If you did not choose all the columns from physical table when you were creating new business class, you can do it easily.
+Click on the business class where you want to add a new column to open the pop up to select the missing columns.</p>
+<figure class="align-default" id="id21">
+<img alt="../../_images/chapter-3-create-qbe-meta-addnewbusinesscolumn.png" src="../../_images/chapter-3-create-qbe-meta-addnewbusinesscolumn.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 430 </span><span class="caption-text">Selecting columns</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you want to remove columns from a business class just click the <em>Trash</em> icon.
+.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-deletebusinesscolumn.png</p>
+<blockquote>
+<div><p>Deleting a column</p>
+</div></blockquote>
+<p>To change the order of the columns, you can do it just by using the drag and drop functionality.</p>
+</section>
+<section id="generate-the-datamart">
+<h3>Generate the datamart<a class="headerlink" href="#generate-the-datamart" title="Link to this heading"></a></h3>
+<p>After the editing of the metamodel, click the <em>Save</em> icon on the Meta Web toolbar on the upper right corner. Now you have a metamodel that can be compiled and used to generate a datamart. Now if you go back to the Business Model catalog you will see that near the “Meta Web” button there is a “Generate” button. Clicking on it, a dialog will open:</p>
+<figure class="align-default" id="id22">
+<img alt="../../_images/chapter-3-create-qbe-meta-image323.png" src="../../_images/chapter-3-create-qbe-meta-image323.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 431 </span><span class="caption-text">Generate datamart dialog.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advanced options” (see figure below) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to build the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the <strong>Generate for registry</strong> box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The <strong>Include source code</strong> produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.</p>
+<figure class="align-default" id="id23">
+<span id="generdatamdialogadv"></span><img alt="../../_images/chapter-3-create-qbe-meta-image324.png" src="../../_images/chapter-3-create-qbe-meta-image324.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 432 </span><span class="caption-text">Generate datamart dialog: advanced options.</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>When the datamart is generated it will be possible to query the metamodel accessing it in the Workspace interface.</p>
+</section>
+<section id="additional-functions-for-business-model">
+<h3>Additional functions for business model<a class="headerlink" href="#additional-functions-for-business-model" title="Link to this heading"></a></h3>
+<p>In this section, we briefly describe the generic available options for business model development. Referring to figure below, the user first finds the <strong>Lock Model</strong>: if enabled, only the user who developed the model can modify it.</p>
+<figure class="align-default" id="id24">
+<img alt="../../_images/chapter-3-create-qbe-meta-image325.png" src="../../_images/chapter-3-create-qbe-meta-image325.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 433 </span><span class="caption-text">Locking a Business Model.</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the <strong>Metadata</strong> section. Clicking the <strong>Import metadata</strong> button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context).</p>
+<figure class="align-default" id="id25">
+<img alt="../../_images/chapter-3-create-qbe-meta-image326.png" src="../../_images/chapter-3-create-qbe-meta-image326.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 434 </span><span class="caption-text">Importing metadata.</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Finally the <strong>Saved versions</strong> section the user keeps trace of model changes over time. Furthermore it is possible to restore old versions by checking the active column. Selecting the “three-dots” icon the user can download the jar file or the model itself or delete the version.
+Figure below shows an example.</p>
+<figure class="align-default" id="id26">
+<img alt="../../_images/chapter-3-create-qbe-meta-image327.png" src="../../_images/chapter-3-create-qbe-meta-image327.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 435 </span><span class="caption-text">Saved version functionalities.</span><a class="headerlink" href="#id26" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Create Free Inquiry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qbe.html" class="btn btn-neutral float-right" title="How to build a QBE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

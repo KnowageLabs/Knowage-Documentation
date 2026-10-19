@@ -1,15 +1,19 @@
-QBE Data Set
-########################################################################################################################
+QBE datasets
+============
 
-.. important::
-     **Enterprise Edition**
+A QBE dataset stores a query built over a published business model. QBE
+availability depends on the installed engine and edition.
 
-     If you purchased Knowage EE, this feature is available only in KnowageBD and KnowageSI
+1. Create a dataset of type **QBE**.
+2. Select the data source and datamart/business model.
+3. Open the QBE editor, select the fields and configure filters, aggregation
+   and ordering.
+4. Preview the query result and save the query back to the dataset editor.
+5. Review the generated query and column metadata, then save the dataset.
 
-The QbE dataset type option allows the definition of dataset results based on a query defined over a metamodel. To define a QbE dataset you need to select the Data Source and Datamart that you want to use. Once chosen your datamart you can click the lookup button of the Open QbE field and a pop up window will appear showing a QbE interface where you can define your query. Once saved, you can check the generated query thanks to the View QbE Query.
+See :doc:`/chapter_3/create_qbe/qbe` for the query editor and
+:doc:`/chapter_3/create_qbe/meta` for business-model authoring.
 
-All these features are exhibited below.
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-qbe-9-1-qbe-dataset.png
 
-.. figure:: media/image32.png
-
-    QbE Dataset.
+   Business model selection and QBE query for a dataset.

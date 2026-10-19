@@ -11,9 +11,9 @@ A *List Of Value* (LOV), is a collection of data organized in attribute-value fa
     {522, Tell Tale Walnuts, Food};
     {844, Very Good Soda, Drink};
 
-There may be multiple attributes in a LOV, but only one of them is the core value that is actually used in the analytical driver. Other  values have a descriptive function: they can be used to provide a human readable description of the LOV, as well as to store information used, for example, to correlate analytical drivers. In our example, the core value is the customer’s id, while the others are additional data describing the customer. 
+There may be multiple attributes in a LOV, but only one of them is the core value that is actually used in the analytical driver. Other  values have a descriptive function: they can be used to provide a human readable description of the LOV, as well as to store information used, for example, to correlate analytical drivers. In our example, the core value is the customer’s id, while the others are additional data describing the customer.
 
-.. figure:: media/image46_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image46-b.png
 
     LOVs functionality from Knowage menu.
 
@@ -26,38 +26,37 @@ Knowage allows to create different types of LOV:
 - **Dataset**: Dataset already defined in Knowage Server that is used to retrieve values. Note that the dataset must not contain parameters, while profile attributes are allowed.
 
 .. _lovlistbehav:
-.. figure:: media/image46_a.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image46-a.png
 
     List of LOVs.
 
-To create and manage LOVs, select **Behavioural Model** > **Lovs Management** from the administration menu. The entire list of available   LOVs appears, as shown in figure above. 
+To create and manage LOVs, select **Behavioural Model** > **Lovs Management** from the administration menu. The entire list of available   LOVs appears, as shown in figure above.
 For each LOV, the list shows the label, description and type; to see the details of a LOV the user  must simply select it and they will appear in the right half of the page. On the contrary, to delete one dataset click on the *Trash* icon available at the end of the row. Notice that you cannot delete a LOV if a driver is currently using it.
 
-.. |image37| image:: media/image44.png
-   :width: 30
+.. |image37| replace:: **Add**
 
-To create a new LOV, click the * Plus* icon at the top right corner of the page. 
+To create a new LOV, click the * Plus* icon at the top right corner of the page.
 The LOV creation interface will open, where you   can set label, name and description, choose the LOV type and define its values accordingly.
 
 .. |image38| image:: media/image45.png
    :width: 30
 
-.. figure:: media/image46.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image46.png
 
     Creating a LOV.
 
 Once completed the form, click on **Preview** icon to see the results of your query and then on the **Test** icon.
-Notice that you cannot save the LOV without testing  it, since this allows to detect errors before the LOV is actually used in a driver and associated to a document. 
-By testing the LOV, you will be able to define which column is the actual value of the LOV, i.e. which value will be passed to the analytical driver using this LOV. 
+Notice that you cannot save the LOV without testing  it, since this allows to detect errors before the LOV is actually used in a driver and associated to a document.
+By testing the LOV, you will be able to define which column is the actual value of the LOV, i.e. which value will be passed to the analytical driver using this LOV.
 Only *one* column can be the value attribute and only *one* column can be chosen as Descriptive attribute, while the others can be visible. The two figures below exhibit an example. Columns that are not visible can be used for correlating drivers.
 
 .. _previewandteslov1:
-.. figure:: media/preview.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-preview.png
 
     LOV - Preview functionality.
 
 .. _previewandteslov2:
-.. figure:: media/image48.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image48.png
 
     LOV - Test functionality
 
@@ -69,7 +68,7 @@ Only *one* column can be the value attribute and only *one* column can be chosen
 We stress that the visibility of specific fields serve to improved human readability when applying filters to documents handled by third users. Moreover it is possible to choose (refer to next figure) between **simple**, **tree** and **tree with selectable internal nodes** typology of LOV. The last two are hierarchical and let the user visualize the parameters together with their logical tree structure.
 
 .. _hierarchicallvdef:
-.. figure:: media/image49.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image49.png
 
     Hierarchical LOV definition.
 
@@ -105,7 +104,7 @@ In particular, all query except the ``List of fixed values`` type can be paramet
 
            SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
            FROM PRODUCT
-           WHERE C.PRODUCT_FAMILY = '${pr_family}'
+           WHERE PRODUCT_FAMILY = '${pr_family}'
 
 Then, at LOV execution time, for the user food manager the query becomes as shown in Runtime placeholder substitute and hence the corresponding LOV will return only the brand names related to the Food product family.
 
@@ -115,7 +114,7 @@ Then, at LOV execution time, for the user food manager the query becomes as show
 
           SELECT DISTINCT PRODUCT_FAMILY, BRAND_NAME
           FROM PRODUCT
-          WHERE C.PRODUCT_FAMILY = 'Food'
+          WHERE PRODUCT_FAMILY = 'Food'
 
 This means that if you are the food manager and your user has the profile attribute ``pr_family=Food``, then you will see only the brand related to the food family as a result of this LOV; while if you are the drink manager and your user has consequently the profile   attribute pr_family=Drink, you will see only the brand related to drink family products.
 
@@ -130,7 +129,19 @@ This means that if you are the food manager and your user has the profile attrib
 
 Note that an information icon and a profile attribute icon are available to guide the user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
 
-.. figure:: media/image50.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image50.png
 
     Assistance in retrieving syntax and profile attributes.
 
+Cloning a LOV
+-------------
+
+Open **Modules** > **Behavioural Model** > **LOVs Management** and use **Clone**
+on the LOV to reuse. Give the copy a unique label, review its data source,
+query or values, and test the returned columns. Choose its value and description
+columns, save it, then associate the copy with the intended driver use mode.
+Existing drivers continue to refer to the original LOV until you change them.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-9-1-lov-clone.png
+
+   Cloning and testing a list of values.

@@ -1,6 +1,11 @@
 REST Data Set
 ########################################################################################################################
 
+Create a **REST** dataset and define the endpoint, HTTP method, request headers
+and body. Configure the JSONPath mapping and pagination required by the remote
+service, preview a response and check the resulting metadata before saving.
+The service must be reachable from the Knowage server.
+
 The REST dataset enables Knowage to retrieve data from external REST services. The developer of the dataset is free to define the body, method, headers and parameters of the request; then he has to specify how to read data from the service response using JSON Path expressions (at the moment no other ways to read data is available, therefore the REST service is presumed to return data in JSON format).
 
 Let’s make as example in order to understand how it works. Suppose an external REST service providing data from sensors, we want to retrieve values from prosumers electricity meters, a prosumer being a producer/consumer of electricity, and that the request body should be something like:
@@ -114,7 +119,7 @@ In this example we have two **Context Elements** with the following attributes:
 
 Let’s see how to define a Knowage dataset:
 
-.. figure:: media/image34.png
+.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-rest-image34.png
 
     REST dataset interface.
 

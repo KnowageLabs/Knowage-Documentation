@@ -1,11 +1,16 @@
 Import/Export
 ------------------------------------------------------------------------------------------------------------------------
 
+Open **Modules** > **Import/Export** to move the supported objects between
+installations or tenants. Export a backup of target objects before importing
+replacements. During document import, map each engine to its matching type:
+Dashboard and Cockpit remain distinct in 9.1.
+
 This functionality allows to import/export items belonging to *Gallery*, *Documents*, *Menu*, *Users*, *KPIs* and *Catalogs*.
 After exporting, the user can import the information previously extracted into a different Knowage installation or tenant.
 
 
-.. figure:: media/import_export.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-import-export.png
 
    Import/Export menu
 
@@ -19,18 +24,18 @@ Artifacts
 It is possible to export widgets and functions to a zip file to use afterwards as a *source* to be imported to a different environment.
 As shown below, select the items of your interest and click on *EXPORT*.
 
-.. figure:: media/impexp_gallery1.png
-    
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-impexp-gallery1.png
+
     Artifacts Export
 
-.. figure:: media/impexp_gallery2.png
-    
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-impexp-gallery2.png
+
     Artifacts Export - Items selection
 
 After the selection, give a name to the file and confirm with *Export* button.
 
-.. figure:: media/impexp_gallery3.png
-    
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-impexp-gallery3.png
+
     Artifacts Export - setting name for zip file
 
 **Import**
@@ -38,39 +43,39 @@ After the selection, give a name to the file and confirm with *Export* button.
 You can import the zip file formerly exported just clicking on *IMPORT* and then clicking the *CHOOSE* button to select the file. See below image:
 You can also drag the file.
 
-.. figure:: media/impexp_gallery4.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-impexp-gallery4.png
 
     Artifacts Import - Export file selection #1
 
- After selecting the file to import the *NEXT* button will became available.
+After selecting the file to import the *NEXT* button will became available.
 
-.. figure:: media/impexp_gallery5.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-impexp-gallery5.png
 
     Artifacts Import - Export file selection #2
 
 Clicking on *NEXT*, it is possible to see and select the items to be imported..
 
-.. figure:: media/impexp_gallery6.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-impexp-gallery6.png
 
     Artifacts Import - items selection
 
-  
+
 Click on the *IMPORT* button to make selected widgets and functions available in the new environment.
 
 
 Documents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This feature allows to download a zip file of the whole or a part of the documents existing in your Knowage installation. 
+This feature allows to download a zip file of the whole or a part of the documents existing in your Knowage installation.
 
 Below, you can see how the export editor looks like.
 
-.. figure:: media/image67.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image67.png
 
     Document Export
 
 Fill in the name of your export and select which documents to export. You can browse through folders by clicking on the relative icon. Check the items to include in the file.
-The export icon changes colour from grey to pink. 
+The export icon changes colour from grey to pink.
 After clicking the *Export* button you can decide whether to include or not the following options:
 
 - **Export the document only in the selected functionality**
@@ -78,24 +83,24 @@ After clicking the *Export* button you can decide whether to include or not the 
 - **Related documents**
    By checking this property, the export will include all those documents linked through the cross navigation to the selected documents.
 
-.. figure:: media/image67_b.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image67-b.png
 
     Document Export options
 
 To import documents click on the *IMPORT* link, choose or drag your file and click the *NEXT* button.
 
-.. figure:: media/image68.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image68.png
 
     Document Import
 
 You will be asked to map *Roles*, *Engines*, *Datasources* and *Metadata* from *Source* to *Target*.
 After compliting all the steps to Metadata, you can start the import.
 
-.. figure:: media/image110.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image110.png
 
    Document Import Wizard
 
-If a role does not match any of the existing ones, the role will be created. 
+If a role does not match any of the existing ones, the role will be created.
 **Please bear in mind that all the target metadata with the same label i.e. documents, lovs, drivers will be overwritten when importing**.
 
 
@@ -104,7 +109,7 @@ Menu
 
 This feature lets you import/export the menu structure. The image below refers to the export funtionality.
 
-.. figure:: media/image71.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image71.png
 
     Menu Export
 
@@ -112,14 +117,14 @@ Fill in the name of the file to export and click the download icon.
 
 To upload the zip file generated with the above process, in another installation, just click on **Menu** of the **Import\\Export** item, switch to the **IMPORT** tab and click on *Browse* to search the zip file.
 
-.. figure:: media/image72.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image72.png
 
     Menu Import
 
 
 After clicking on *NEXT*, you will be asked to map roles from *Source* to *Target*. If a role does not match map any of the existing ones in the target environment, it will be created.
 
-.. figure:: media/image111_b.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image111-b.png
 
    Menu Import Wizard
 
@@ -130,16 +135,16 @@ Users
 
 This functionality allows to export/import users from one installation/tenant to another.See the image below.
 
-.. figure:: media/image73.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image73.png
 
     Exporting Users
 
 To generate the zip file, fill in the name of your file and select the users to include. You can also include the personal folder of the users just checking the option **Export Personal folder**.
 
-To import your zip file, log in and select **Users**  from **Import\\Export**. Switch to the **Import** tab and click on *Browse* . Choose the file and click on the import icon. The list of users contained in your file are uploaded. Make your selection and click on the arrow to move them to the other side. 
+To import your zip file, log in and select **Users**  from **Import\\Export**. Switch to the **Import** tab and click on *Browse* . Choose the file and click on the import icon. The list of users contained in your file are uploaded. Make your selection and click on the arrow to move them to the other side.
 Now click on the *Start import* button and your users will be created. See figure below.
 
-.. figure:: media/image74.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image74.png
 
     Importing Users
 
@@ -159,15 +164,15 @@ This functionality allows to Export/Import the following elements:
 
 The details are shown in the below figure.
 
-.. figure:: media/image75_8.1.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image75-8-1.png
 
     Exporting Catalogs
 
-To generate the zip file, mark the items to include and fill in the export name. Save the export file in your local system. 
+To generate the zip file, mark the items to include and fill in the export name. Save the export file in your local system.
 
 To import a zip file, log in to the source tenant, select **Catalogs** from the *Import/Export* menu and switch to the *Import* tab. Click on *Browse* and choose the file previously created through the exportation. Uploading the file, the list of available catalogs are displayed. Choose the ones to be imported, decide if you want to override them or just add the missing ones and then click on *Start import*. Your catalogs will be created in this environment.
 
-.. figure:: media/image76.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image76.png
 
     Importing Catalogs
 
@@ -180,7 +185,7 @@ The user must enter Knowage as administrator of the source tenant and click on *
 
 The page contains the *Export* and the *Import* tab, where the user can select the KPIs for the export/import respectively.
 
-.. figure:: media/image78.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image78.png
 
     KPIs Import window
 
@@ -196,7 +201,7 @@ Once the zip file is downloaded, the user has to switch to the tenant used for t
 
 The user must therefore browse the personal folder to catch the zip file and click on the red upload button, as shown below.
 
-.. figure:: media/image823.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image823.png
 
     Import tab
 
@@ -207,11 +212,11 @@ Referring to the following image, the user has to specify if:
 -  importing scorecards,
 -  importing schedulations.
 
-.. figure:: media/image83.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image83.png
 
     Import KPIs settings
 
-Once the import is started, the GUI leads the user to finalize the import procedure. 
+Once the import is started, the GUI leads the user to finalize the import procedure.
 
 
 Analytical Drivers
@@ -219,7 +224,7 @@ Analytical Drivers
 
 This option allows to import/export the analytical drivers and their related LOVs.
 
-.. figure:: media/image86.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image86.png
 
     Import/Export of analytical drivers
 
@@ -228,9 +233,9 @@ As shown in figure above, the window contains the Export and the Import tab. Use
 Afterwards:
 
 - log in as administrator to the source tentant,
-- assign a name to the export, 
-- select the analytical drivers of your interest and 
-- click the download icon, available at the top right corner of the page to get the zip file. 
+- assign a name to the export,
+- select the analytical drivers of your interest and
+- click the download icon, available at the top right corner of the page to get the zip file.
 
 It is possible to narrow the search of the analytical drivers by filtering on their creation date.
 
@@ -238,7 +243,7 @@ Switch to the target tenant and log in as administrator. Use the Import tab to u
 
 Use the GUI to upload the zip file and specify if overwriting the existing analytical drivers or just adding the missing ones. Then click on *NEXT* and continue by mapping roles between the source and the target tenants.
 
-.. figure:: media/image87.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image87.png
 
     Import of analytical drivers
 
@@ -249,7 +254,7 @@ Glossary
 
 The export/import of glossary allows the user to align glossaries among tenants.
 
-.. figure:: media/image90.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image90.png
 
     Export/Import glossaries window
 
@@ -259,7 +264,7 @@ The searching functionality can be used for the selection of the glossaries. Use
 By connecting with admin privileges to a target tenant, the user selects the *Import* tab from the Export/Import main window.
 once selected the zip file through the browsing button just click the uploading icon.
 
-.. figure:: media/image91.png
+.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image91.png
 
     Importing glossaries
 

@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasper reporting &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Create Free Inquiry" href="../create_qbe/index.html" />
+    <link rel="prev" title="Create a Birt report" href="birt.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Create Report</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="birt.html">Create a Birt report</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Jasper reporting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#document-definition">Document definition*</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Create Report</a></li>
+      <li class="breadcrumb-item active">Jasper reporting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/create_report/jasper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jasper-reporting">
+<h1>Jasper reporting<a class="headerlink" href="#jasper-reporting" title="Link to this heading"></a></h1>
+<p>Upload a compatible Jasper report template to a document configured with
+the Jasper engine. Map the report parameters, select the data source and test
+the required output formats. Engine availability depends on your deployment.</p>
+<p>Jasper is a stand-alone reporting tool developed by the Jaspersoft Community. An example of Jasper report is represented in the next figure. Jasper Report Engine manages Jasper report templates inside Knowage Server. A report template for Jasper is a text file with .jrxml extension that can be manually modified by very expert users by editing XML code. Otherwise, <em>iReport</em>, a graphical template designer, is provided for all developers who want to easily design a report for this engine.</p>
+<figure class="align-default" id="id1">
+<span id="exjasperreprt"></span><img alt="../../_images/chapter-3-create-report-jasper-image342b.png" src="../../_images/chapter-3-create-report-jasper-image342b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 406 </span><span class="caption-text">Example of a Jasper report.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Plese note that this engine is available only in KnowageER.</p>
+<section id="document-definition">
+<h2>Document definition*<a class="headerlink" href="#document-definition" title="Link to this heading"></a></h2>
+<p>Unlike the BIRT designer, iReport is not integrated in Eclipse. Therefore, before starting developing the report, you must download it from the website <a class="reference external" href="http://community.jaspersoft.com/project/ireport-designer/releases">http://community.jaspersoft.com/project/ireport-designer/releases</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>iReport download</strong></p>
+<blockquote>
+<div><p>Download the iReport designer at <a class="reference external" href="http://community.jaspersoft.com/project/ireport-designer/releases">http://community.jaspersoft.com/project/ireport-designer/releases</a>. Knowage support any kind of version.</p>
+</div></blockquote>
+</div>
+<p>Then you will have to set the path to the iReport designer in Knowage Studio. Open Window &gt; Preferences &gt; iReport Editor Configuration and set the correct path to the ireport.exe file.</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/chapter-3-create-report-jasper-image343.png" src="../../_images/chapter-3-create-report-jasper-image343.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 407 </span><span class="caption-text">iReport Configuration in Knowage Studio.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Similarly to the case of a BIRT report, the design and deployment of a Jasper report with Knowage Studio consists of the following steps:</p>
+<ul class="simple">
+<li><p>create the empty document,</p></li>
+<li><p>switch to the report designer perspective,</p></li>
+<li><p>create the data source,</p></li>
+<li><p>create the dataset,</p></li>
+<li><p>design the report via the graphical interface,</p></li>
+<li><p>deploy the report on the server.</p></li>
+</ul>
+<p>To create a new Jasper report, right-click on the <strong>Business Analysis</strong> folder and select <strong>Report</strong> &gt; <strong>Report with Jasper</strong>. This will open an editor where you can choose a name for your document. The new document will be created under the Business Analysis folder.</p>
+<p>Double click on the report to open the editor: the iReport editor will be launched inside Knowage Studio. Now you are ready to start to develop your report.</p>
+<p>The next steps consist in the creation of a datasource and of a dataset. As described in section “Dataset definition”, Knowage Studio allows the development of analytical documents using either internal or external datasets. In this example we will show how to create a report with an internal dataset.</p>
+<p>Click on the small icon <a class="reference internal" href="../../_images/image3441.png"><img alt="image348" src="../../_images/image3441.png" style="width: 30px;" /></a> of the menu bar. The data source creation editor will open.</p>
+<p>Select a JDBC data source, set the appropriate parameters and give the data source a name. Figure below shows the wizards that present in this procedure.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-create-report-jasper-image345.png" src="../../_images/chapter-3-create-report-jasper-image345.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 408 </span><span class="caption-text">Creation of a JDBC data source in a Jasper report.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once you have defined the data source, create your dataset. Note that Jasper only allows one main dataset. By the way, secondary datasets can be added if needed. Right-click on the report item and select <strong>Add dataset</strong>. The dataset editor will guide you through the dataset definition. You can either manually edit the SQL query or use the design query tool provided by iReport.</p>
+<p>The tree located in the left part of the window shows the elements of the report. On the right, the <strong>Palette</strong> shows all graphical elements you can add. You can choose to see your report within the <strong>Designer</strong>, to inspect the <strong>XML</strong> code or to look at the <strong>Preview</strong> of your report. If you click on the <a class="reference internal" href="../../_images/image3461.png"><img alt="image350" src="../../_images/image3461.png" style="width: 30px;" /></a> icon you can edit and preview your query. As you can see, the iReport designer allows the creation of complex reports, with different graphical elements such as cross tabs, charts, images and different text areas. We see now shortly how to design a very simple report, i.e. a report containing a table showing data from the defined dataset.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-create-report-jasper-image347.png" src="../../_images/chapter-3-create-report-jasper-image347.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 409 </span><span class="caption-text">Data Set definition.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To create a table, click on the element in the Palette and use the wizard. Figure below exhibits the Jasper editor interface.</p>
+<figure class="align-default" id="id5">
+<img alt="../../_images/chapter-3-create-report-jasper-image348.png" src="../../_images/chapter-3-create-report-jasper-image348.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 410 </span><span class="caption-text">iReport graphical editor.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To insert dataset columns into the report, use the syntax showed in following syntax to insert dataset columns.</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Listing 18 </span><span class="caption-text">Syntax to insert dataset columns.</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">     </span><span class="nv">$F</span><span class="o">{</span>name_of_dataset_column<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<p>Once the document has been developed, technical users can use Knowage Studio deployment service to easily register the report with its template on Knowage Server. Alternatively, any valid Jasper template (developed with or without Knowage Studio) can be directly uploaded to Knowage Server using the web interface for the document management.</p>
+<p>This section does not provide any further detail about graphical development since it focuses on specific aspects of Knowage Jasper Report Engine. All Jasper standard functionalities work with Jasper Report Engine. For a full overview of Jasper reporting tool and a detailed developer guide, please refer to the official documentation at <a class="reference external" href="http://community.jaspersoft.com/">http://community.jaspersoft.com/</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="birt.html" class="btn btn-neutral float-left" title="Create a Birt report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../create_qbe/index.html" class="btn btn-neutral float-right" title="Create Free Inquiry" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

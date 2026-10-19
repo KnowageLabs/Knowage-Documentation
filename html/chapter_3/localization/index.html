@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How use Localization Management &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How to create a Data Preparation" href="../create_a_data-preparation/index.html" />
+    <link rel="prev" title="Create an ETL Process" href="../create_etl_process/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datasource/index.html">Create a new Data Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How use Localization Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-labels">System labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-labels">User labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#birt-labels">BIRT labels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+      <li class="breadcrumb-item active">How use Localization Management</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/localization/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-use-localization-management">
+<h1>How use Localization Management<a class="headerlink" href="#how-use-localization-management" title="Link to this heading"></a></h1>
+<p>Open <strong>Modules</strong> &gt; <strong>Internationalization</strong> to maintain user-defined labels.
+Check labels in the target locale and with the intended tenant. These labels
+complement the interface translations supplied with Knowage.</p>
+<p>Knowage allows to change the <em>localization</em> in order to use different languages. We can distinguish two main categories:</p>
+<ul class="simple">
+<li><p><strong>System labels</strong>: the labels of the Knowage Graphical User Interface</p></li>
+<li><p><strong>User labels</strong>: labels created by the user in documents or objects created</p></li>
+</ul>
+<p>The user can change the language to use in Knowage by doing the following:</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/chapter-3-localization-index-image000-8-1.png" src="../../_images/chapter-3-localization-index-image000-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 590 </span><span class="caption-text">Setting the language in Knowage.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="system-labels">
+<h2>System labels<a class="headerlink" href="#system-labels" title="Link to this heading"></a></h2>
+<p>It is also possible to change the default language to use the first time the user logs in; to do this the admin needs to:</p>
+<ul class="simple">
+<li><p>Open the menu and select under Server Settings, Configuration Management</p></li>
+<li><p>Change the property SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default and insert the locale under the column <em>valueCheck</em> using the format languageCode, nationalVariety (e.g.: en,US)</p></li>
+</ul>
+<p>The currently supported languages for system labels are:
+-  Italian
+-  English
+-  French
+-  Spanish</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/chapter-3-localization-index-image004-8-1.png" src="../../_images/chapter-3-localization-index-image004-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 591 </span><span class="caption-text">Change default language.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>It is also possible to translate objects created by the user like:</p>
+<ul class="simple">
+<li><p>Analytical Driver name shown in the Parameter Panel</p></li>
+<li><p>Name and description of an analytical document</p></li>
+<li><p>Name of a menu entry</p></li>
+<li><p>Name of a dataset shown in the Workspace</p></li>
+<li><p>Name of a business model shown in the Workspace</p></li>
+<li><p>Name of a federation shown in the Workspace</p></li>
+<li><p>Name of a functionality (folder) in the document browser</p></li>
+<li><p>Name of a cross navigation when requested to a final user</p></li>
+<li><p>Inside a dashboard: Title of columns in a table widget and crosstab, title, subtitle, no data message, axis and legend title in the charts</p></li>
+</ul>
+</section>
+<section id="user-labels">
+<h2>User labels<a class="headerlink" href="#user-labels" title="Link to this heading"></a></h2>
+<p>To set <em>User labels</em>:</p>
+<ul class="simple">
+<li><p>Check the available languages under the Domains configuration in the Admin menu (see the entry with domain code LANG). The ValueCd must have the ISO code of the language (three letters).</p></li>
+<li><dl class="simple">
+<dt>Inside the knowage metadata database the table SBI_I18N_MESSAGES contains the labels translations.</dt><dd><ul>
+<li><p>LANGUAGE_CD: must be the ID of the language from the SBI_DOMAINS table</p></li>
+<li><p>LABEL: is the label name to be used as placeholder, must begin with i18n</p></li>
+<li><p>MESSAGE: contains the translated string in that particular language that corresponds to that label</p></li>
+<li><p>ORGANIZATION: the tenant name</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="birt-labels">
+<h2>BIRT labels<a class="headerlink" href="#birt-labels" title="Link to this heading"></a></h2>
+<p>Select the report and set the resource file bundle name in the resources tab of the Property Editor; the default message bundle is <em>messages</em>.
+The name of the properties file is <em>messages_</em> plus the current locale, e.g. for English USA language: <em>messages_en_US.properties</em></p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/chapter-3-localization-index-image001-8-1.png" src="../../_images/chapter-3-localization-index-image001-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 592 </span><span class="caption-text">BIRT Property Editor - Resources</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The messages file has a syntax like this for each label, <em>message_code = internationalised message</em>
+For example: title_code = title of the document</p>
+<p>To localize a message in a field within a report template, the user needs to define the code filling the Text key field by clicking on the Localization voice under the field properties tab.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-localization-index-image002-8-1.png" src="../../_images/chapter-3-localization-index-image002-8-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 593 </span><span class="caption-text">BIRT Property Editor - Localization</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../create_etl_process/index.html" class="btn btn-neutral float-left" title="Create an ETL Process" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../create_a_data-preparation/index.html" class="btn btn-neutral float-right" title="How to create a Data Preparation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

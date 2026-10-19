@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a new Data Source &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Create and manage datasets" href="../create_dataset/index.html" />
+    <link rel="prev" title="Behavioural Model Lineage" href="../security_management/bm_lineage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Build analyses with Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../security_management/index.html">Data security and access management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Create a new Data Source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#big-data-and-nosql">Big Data and NoSQL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hive">Hive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spark-sql">Spark SQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#impala">Impala</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mongodb">MongoDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cassandra">Cassandra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#google-big-query">Google Big Query</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#google-cloud-spanner">Google Cloud Spanner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#amazon-redshift">Amazon RedShift</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#azure-synapse">Azure Synapse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dataset/index.html">Create and manage datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_new_dashboard/index.html">Create a Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dashboard/index.html">Create and maintain a Cockpit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_report/index.html">Create Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_qbe/index.html">Create Free Inquiry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_registry/index.html">Create a new Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_datamining/index.html">Create Advanced Data Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_multidimension/index.html">Create Multi dimensional analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dossier/index.html">Create a Dossier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_performance_indicator/index.html">Create Performance Analisys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_etl_process/index.html">Create an ETL Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization/index.html">How use Localization Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_a_data-preparation/index.html">How to create a Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Build analyses with Knowage</a></li>
+      <li class="breadcrumb-item active">Create a new Data Source</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapter_3/create_datasource/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-a-new-data-source">
+<h1>Create a new Data Source<a class="headerlink" href="#create-a-new-data-source" title="Link to this heading"></a></h1>
+<p>This chapter covers connector-specific configuration for relational, cloud,
+Big Data and NoSQL sources. Register connections in <strong>Modules</strong> &gt; <strong>Data
+Providers</strong> &gt; <strong>Data Source</strong> as described in <a class="reference internal" href="../../chapter_4/add_datasource.html"><span class="doc">Add new Data Source</span></a>.
+Connector availability depends on the installed JDBC driver and its supported
+database version.</p>
+<p>In order to connect to your data, you have to define a new data source connection.</p>
+<p>Knowage manages two types of data source connections:</p>
+<ul class="simple">
+<li><p>connections retrieved as JNDI resources, which are managed by the application server on which Knowage is working. This allows the application server to optimize data access (e.g. by defining connection pools) and thus are the preferred ones. Here you can find information how create connection pool in Tomcat : <a class="reference external" href="https://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html">https://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html</a></p></li>
+<li><p>direct JDBC connections, which are directly managed by Knowage;</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>How to create connection JNDI on Tomcat</strong></p>
+<ul class="simple">
+<li><p>Create connection pool on <code class="docutils literal notranslate"><span class="pre">TOMCAT_HOME/conf/server.xml</span></code></p></li>
+<li><p>Add ResourceLink on context.xml</p></li>
+</ul>
+</div>
+<p>To add a new connection, first add the relative JDBC driver to the folder <code class="docutils literal notranslate"><span class="pre">TOMCAT_HOME/lib</span></code> and restart Knowage. Then, login as administrator (user: <em>biadmin</em>, password: <em>biadmin</em> are the default credential) and select the <strong>Data source</strong> item from the <strong>Data provider</strong> panel in the administrator menu.</p>
+<p>By clicking the <strong>Add</strong> button on the top right corner of the left panel, an empty form will be displayed on the right.</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/chapter-3-create-datasource-index-image25.png" src="../../_images/chapter-3-create-datasource-index-image25.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Add a new data source</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="../../_images/chapter-3-create-datasource-index-image26.png" src="../../_images/chapter-3-create-datasource-index-image26.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 82 </span><span class="caption-text">Data source details.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The detail page of each data source (on the right side as shown in the figures above) includes the following properties:</p>
+<dl>
+<dt>Label</dt><dd><p>Mandatory identifier of the data source.</p>
+</dd>
+<dt>Description</dt><dd><p>Description of the data source.</p>
+</dd>
+<dt>Dialect</dt><dd><p>The dialect used to access the database. Supported dialects are:</p>
+<blockquote>
+<div><table class="docutils align-default" id="id3">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Certified Data Sources</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Certified Data Sources</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Oracle</p></td>
+<td><p>11, 12</p></td>
+</tr>
+<tr class="row-odd"><td><p>MySQL</p></td>
+<td><p>5.7, 8</p></td>
+</tr>
+<tr class="row-even"><td><p>PostgreSQL</p></td>
+<td><p>8.2, 9.1, 12.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maria DB</p></td>
+<td><p>10.1, 10.2, 10.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Teradata</p></td>
+<td><p>15.10.0.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vertica</p></td>
+<td><p>9.0.1-0</p></td>
+</tr>
+<tr class="row-even"><td><p>Apache Hive 1</p></td>
+<td><p>1.1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Apache Hive 2</p></td>
+<td><p>2.3.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Apache Impala</p></td>
+<td><p>2.6.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Apache Spark SQL</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Apache Cassandra</p></td>
+<td><p>2.1.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mongo DB</p></td>
+<td><p>3.2.9</p></td>
+</tr>
+<tr class="row-even"><td><p>Orient DB</p></td>
+<td><p>3.0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Google Big Query</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>Amazon RedShift</p></td>
+<td><p>(JDBC driver v1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Azure Synapse</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd>
+<dt>Read Only</dt><dd><p>Available options are: <em>Read Only</em> and <em>Read-and-write</em>. In case the data source is defined as read-and-write, it can be used by Knowage to write temporary tables.</p>
+</dd>
+<dt>Write</dt><dd><p>Default If a data source is set as <em>Write Default</em> then it is used by Knowage for writing temporary tables also coming from other <em>Read Only</em> data sources. Note that each Knowage installation can have only one <em>Write Default</em> data source.</p>
+</dd>
+<dt>Type</dt><dd><p>The available options are</p>
+<blockquote>
+<div><ul>
+<li><p>If you want to define a direct <strong>JDBC</strong> connection, then you have to also set the following fields:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>URL</strong> Database URL. An example for MySQL databases is <code class="docutils literal notranslate"><span class="pre">jdbc:mysql://localhost:3306/foodmart_key</span></code></p></li>
+<li><p><strong>User</strong> Database username.</p></li>
+<li><p><strong>Password</strong> Database password.</p></li>
+<li><p><strong>Driver</strong> Driver class name. An example for MySQL databases is <code class="docutils literal notranslate"><span class="pre">com.mysql.jdbc.Driver</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>If instead you want to define a <strong>JNDI</strong> connection, fill in the following fields:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Multischema</strong> Available options are <em>Yes</em> or <em>No</em>. If <em>Yes</em>, the JNDI resource full name is calculated at runtime by appending a user’s profile attribute (specified in the <em>Multischema attribute</em> field) to the JNDI base name defined in the server.xml, we suppose it has been told at the end of installation or during server configuration.</p></li>
+<li><p><strong>Schema attribute</strong> The name of the profile attribute that determines the schema name.</p></li>
+<li><p><strong>JNDI NAME</strong> It depends on the application server. For instance, for Tomcat 7 it has the format <code class="docutils literal notranslate"><span class="pre">java:comp/env/jdbc/&lt;resource_name&gt;</span></code>. If the data source is multischema, then the string is <code class="docutils literal notranslate"><span class="pre">java:comp/env/jdbc/&lt;prefix&gt;</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+<p>Once you have filled the form, you can test the new data source by clicking on the <em>Test</em> button at the top right corner of the page and then save it.</p>
+<p>Now you are connected to your data and you can start a new Business Intelligence project with Knowage!</p>
+<section id="big-data-and-nosql">
+<h2>Big Data and NoSQL<a class="headerlink" href="#big-data-and-nosql" title="Link to this heading"></a></h2>
+<p>In this section we describe how you can connect Knowage to different Big Data data sources.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Enterprise Edition only</strong></p>
+<p>Please note that these connections are available for products KnowageBD and KnowagePM only.</p>
+</div>
+<section id="hive">
+<h3>Hive<a class="headerlink" href="#hive" title="Link to this heading"></a></h3>
+<p>Apache Hive is a data warehouse infrastructure built on top of Hadoop for providing data summarization, query, and analysis. Apache Hive supports analysis of large datasets stored in Hadoop’s HDFS and compatible file systems such as Amazon S3 filesystem. It provides an   SQL-like language called HiveQL with schema on read and transparently converts queries to map/reduce, Apache Tez and Spark. All three execution engines can run in Hadoop YARN.</p>
+<p>Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you to use or the Apache one or the one specific of your distribution. In general the JDBC driver for Hive is composed by different .jars, and so you should deploy the JDBC driver with all dependencies in your application server. If you are creating a model you should create a new <em>Data Source Connection</em> and import the JDBC driver and all the dependencies.</p>
+<p>For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure below.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/chapter-3-create-datasource-index-image27.png" src="../../_images/chapter-3-create-datasource-index-image27.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 83 </span><span class="caption-text">Libraries to include in the apache driver.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you forget to add one or more libraries, you will likely get a <code class="docutils literal notranslate"><span class="pre">NoClassDefFoundError</span></code> or <code class="docutils literal notranslate"><span class="pre">ClassNofFoundException</span></code>.</p>
+<p>The parameters for the Hive connection are:</p>
+<ul class="simple">
+<li><p><strong>Dialect:</strong> Hive QL;</p></li>
+<li><p><strong>Driver Class:</strong> <code class="docutils literal notranslate"><span class="pre">org.apache.hive.jdbc.HiveDriver</span></code> (if you are not using some specific driver of some distribution. In this case search in the documentation of the distribution);</p></li>
+<li><p><strong>Connection URL:</strong> <code class="docutils literal notranslate"><span class="pre">jdbc:\hive2:\//&lt;host1&gt;:&lt;port1&gt;,&lt;host2&gt;:&lt;port2&gt;/dbName;sess\\_var_list?hive_conf_list#hive_var_list</span></code>.</p></li>
+</ul>
+<p>Here <code class="docutils literal notranslate"><span class="pre">&lt;host1&gt;:&lt;port1&gt;,&lt;host2&gt;:&lt;port2&gt;</span></code> is a server instance or a comma separated list of server instances to connect to (if dynamic service discovery is enabled). If empty, the embedded server will be used.</p>
+<p>A simple example of connection URL is <code class="docutils literal notranslate"><span class="pre">jdbc:\hive2://192.168.0.125:10000</span></code>.</p>
+</section>
+<section id="spark-sql">
+<h3>Spark SQL<a class="headerlink" href="#spark-sql" title="Link to this heading"></a></h3>
+<p>Spark SQL reuses the Hive front end and metastore, giving you full compatibility with existing Hive data, queries and UDFs. Simply install it alongside Hive. For the installation of Spark we suggest you to look at the spark website <a class="reference external" href="http://spark.apache.org/">http://spark.apache.org/.</a> To create a connection to the Spark SQL Apache Thrift server you should use the same JDBC driver of Hive.</p>
+<ul class="simple">
+<li><p><strong>Driver Class:</strong> <code class="docutils literal notranslate"><span class="pre">org.apache.hive.jdbc.HiveDriver</span></code> (if you are not using some specific driver of some distro. In this case search in the documentation of the distro);</p></li>
+<li><p><strong>Connection URL:</strong> <code class="docutils literal notranslate"><span class="pre">jdbc:\hive2://&lt;host1&gt;:&lt;port1&gt;,&lt;host2&gt;:&lt;port2&gt;/dbName;sess\\_var_list?hive_conf_list#hive_var_list</span></code>.</p></li>
+</ul>
+<p>Look at the Hive section for the details about parameters. The port in this case is not the port of Hive but the one of Spark SQL thrift server (usually <code class="docutils literal notranslate"><span class="pre">10001</span></code>).</p>
+</section>
+<section id="impala">
+<h3>Impala<a class="headerlink" href="#impala" title="Link to this heading"></a></h3>
+<p>Impala (currently an Apache Incubator project) is the open source, analytic MPP database for Apache Hadoop. To create a connection to Impala you should download the jdbc driver from the Cloudera web site and deploy it, with all dependencies, on the application server. The definition of the URL can be different between versions of the driver, please check on the Cloudera web site.</p>
+<p>Example parameters for Impala connection are:</p>
+<ul class="simple">
+<li><p><strong>Dialect:</strong> Hive SQL;</p></li>
+<li><p><strong>Driver Class:</strong> <code class="docutils literal notranslate"><span class="pre">com.cloudera.impala.jdbc4.Driver</span></code>;</p></li>
+<li><p><strong>Connection URL:</strong> <code class="docutils literal notranslate"><span class="pre">jdbc:\impala://dn03:21050/default</span></code>.</p></li>
+</ul>
+</section>
+<section id="mongodb">
+<h3>MongoDB<a class="headerlink" href="#mongodb" title="Link to this heading"></a></h3>
+<p>MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling. MongoDB obviates the need for an Object Relational Mapping (ORM) to facilitate development.</p>
+<p>MongoDB is different from the other dbs Knowage can handle, because it doesn’t provide a JDBC driver, but a Java connector. The MongoDB Java driver (at this moment version 3.5.0 is included) is already included inside Knowage so isn’t required to download and add it to the application server.</p>
+<p>Example parameters for the connection are:</p>
+<ul class="simple">
+<li><p><strong>Dialect:</strong> MongoDB;</p></li>
+<li><p><strong>Driver Class:</strong> mongo;</p></li>
+<li><p><strong>Connection URL:</strong> mongodb://localhost:27017/foodmart(please don’t include user and password in this URL).</p></li>
+</ul>
+<p>Also please pay attention that the user must have the correct privileges to access the specified database. So for example on MongoDB you can create a user with this command on the Mongo shell:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">User creation.</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">   </span><span class="nx">db</span><span class="p">.</span><span class="nx">createUser</span><span class="p">(</span>
+<span class="linenos">2</span><span class="w">     </span><span class="p">{</span>
+<span class="linenos">3</span><span class="w">       </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span>
+<span class="linenos">4</span><span class="w">       </span><span class="nx">pwd</span><span class="o">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span>
+<span class="linenos">5</span><span class="w">       </span><span class="nx">roles</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">"readWrite"</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">"foodmart"</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="p">]</span>
+<span class="linenos">6</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">7</span><span class="w">   </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Then you must create a role that is able to run functions (this is the way used by Knowage to run the code wrote in the MongoDB’s dataset definition) and assign it to the user:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Listing 7 </span><span class="caption-text">Role assignment .</span><a class="headerlink" href="#id6" title="Link to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">  </span><span class="nx">use</span><span class="w"> </span><span class="nx">admin</span>
+<span class="linenos">2</span><span class="w">  </span><span class="nx">db</span><span class="p">.</span><span class="nx">createRole</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">"executeFunctions"</span><span class="p">,</span><span class="w"> </span><span class="nx">privileges</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">resource</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">anyResource</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"anyAction"</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="nx">roles</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
+<span class="linenos">3</span><span class="w">  </span><span class="nx">use</span><span class="w"> </span><span class="nx">foodmart</span>
+<span class="linenos">4</span><span class="w">  </span><span class="nx">db</span><span class="p">.</span><span class="nx">grantRolesToUser</span><span class="p">(</span><span class="s2">"user"</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">"executeFunctions"</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<p>See also this useful links:
+- (<a class="reference external" href="https://docs.mongodb.com/manual/tutorial/enable-authentication/">https://docs.mongodb.com/manual/tutorial/enable-authentication/)</a>
+- (<a class="reference external" href="https://www.claudiokuenzler.com/blog/555/allow-mongodb-user-execute-command-eval-mongodb-3.x#.W59wiaYzaUl">https://www.claudiokuenzler.com/blog/555/allow-mongodb-user-execute-command-eval-mongodb-3.x#.W59wiaYzaUl)</a></p>
+</section>
+<section id="cassandra">
+<h3>Cassandra<a class="headerlink" href="#cassandra" title="Link to this heading"></a></h3>
+<p>Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple datacenters, with asynchronous masterless replication allowing low latency operations for all clients.</p>
+<p>There are different ways to connect Knowage to Cassandra.</p>
+<p>If you are using DataStax Enterprise you can use Spark SQL connector and query Cassandra using pseudo standard SQL (<a class="reference external" href="https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md">https://github.com/datastax/spark-cassandra-connector/blob/master/doc/2_loading.md)</a></p>
+<p>Another solution is to download the JDBC Driver suitable for your Cassandra distribution and query Cassandra using the CQL language. You must deploy the JDBC driver with all dependencies in your application server (copy them into <code class="docutils literal notranslate"><span class="pre">TOMCAT_HOME/lib</span></code> folder and restart).</p>
+<p>Refer to the JDBC driver documentation in order to see how to configure the JDBC connection parameters.</p>
+<p>Unless you are using Spark SQL to read from Cassandra, the definition of a business model over Cassandra data using Knowage Meta will be available in the next releases.</p>
+</section>
+<section id="google-big-query">
+<h3>Google Big Query<a class="headerlink" href="#google-big-query" title="Link to this heading"></a></h3>
+<p>Knowage supports Google Big Query datasources via Simba JDBC Driver: see <a class="reference external" href="https://cloud.google.com/bigquery/providers/simba-drivers">official documentation</a>.</p>
+<p>For example, to create a JDBC connection to a Google Big Query dataset using a service account you can add the following configurtaion to <code class="docutils literal notranslate"><span class="pre">TOMCAT_HOME/conf/server.xml</span></code>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Resource</span><span class="w"> </span><span class="na">auth=</span><span class="s">"Container"</span><span class="w"> </span><span class="na">driverClassName=</span><span class="s">"com.simba.googlebigquery.jdbc42.Driver"</span><span class="w"> </span><span class="na">logAbandoned=</span><span class="s">"true"</span><span class="w"> </span><span class="na">maxActive=</span><span class="s">"20"</span><span class="w"> </span><span class="na">maxIdle=</span><span class="s">"4"</span>
+<span class="w">    </span><span class="na">maxWait=</span><span class="s">"300"</span><span class="w"> </span><span class="na">minEvictableIdleTimeMillis=</span><span class="s">"60000"</span><span class="w"> </span><span class="na">name=</span><span class="s">"jdbc/my-bigquery-ds"</span><span class="w"> </span><span class="na">removeAbandoned=</span><span class="s">"true"</span><span class="w"> </span><span class="na">removeAbandonedTimeout=</span><span class="s">"3600"</span>
+<span class="w">    </span><span class="na">testOnReturn=</span><span class="s">"true"</span><span class="w"> </span><span class="na">testWhileIdle=</span><span class="s">"true"</span><span class="w"> </span><span class="na">timeBetweenEvictionRunsMillis=</span><span class="s">"10000"</span><span class="w"> </span><span class="na">type=</span><span class="s">"javax.sql.DataSource"</span>
+<span class="w">    </span><span class="na">url=</span><span class="s">"jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=&lt;&lt;project-id&gt;&gt;;OAuthType=0;OAuthServiceAcctEmail=&lt;&lt;service-account-email&gt;&gt;;OAuthPvtKeyPath=&lt;&lt;json-key&gt;&gt;;DefaultDataset=&lt;&lt;default-dataset&gt;&gt;;FilterTablesOnDefaultDataset=1;"</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="google-cloud-spanner">
+<h3>Google Cloud Spanner<a class="headerlink" href="#google-cloud-spanner" title="Link to this heading"></a></h3>
+<p>Knowage supports Google Cloud Spanner datasources via the official open source JDBC driver: see <a class="reference external" href="https://cloud.google.com/spanner/docs/use-oss-jdbc">official documentation</a>.</p>
+<p>For example, to create a JDBC connection to a Google Cloud Spanner dataset using a service account you can add the following configurtaion to <code class="docutils literal notranslate"><span class="pre">TOMCAT_HOME/conf/server.xml</span></code>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Resource</span><span class="w"> </span><span class="na">auth=</span><span class="s">"Container"</span><span class="w"> </span><span class="na">driverClassName=</span><span class="s">"com.google.cloud.spanner.jdbc.JdbcDriver"</span><span class="w"> </span><span class="na">logAbandoned=</span><span class="s">"true"</span><span class="w"> </span><span class="na">maxActive=</span><span class="s">"20"</span><span class="w"> </span><span class="na">maxIdle=</span><span class="s">"4"</span>
+<span class="w">    </span><span class="na">maxWait=</span><span class="s">"300"</span><span class="w"> </span><span class="na">minEvictableIdleTimeMillis=</span><span class="s">"60000"</span><span class="w"> </span><span class="na">name=</span><span class="s">"jdbc/my-spanner-ds"</span><span class="w"> </span><span class="na">removeAbandoned=</span><span class="s">"true"</span><span class="w"> </span><span class="na">removeAbandonedTimeout=</span><span class="s">"3600"</span>
+<span class="w">    </span><span class="na">testOnReturn=</span><span class="s">"true"</span><span class="w"> </span><span class="na">testWhileIdle=</span><span class="s">"true"</span><span class="w"> </span><span class="na">timeBetweenEvictionRunsMillis=</span><span class="s">"10000"</span><span class="w"> </span><span class="na">type=</span><span class="s">"javax.sql.DataSource"</span>
+<span class="w">    </span><span class="na">url=</span><span class="s">"jdbc:cloudspanner:/projects/&lt;&lt;project-id&gt;&gt;/instances/&lt;&lt;instance-name&gt;&gt;/databases/&lt;&lt;db-name&gt;&gt;;credentials=${catalina.home}/conf/google-cloud-spanner-auth-key.json"</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="amazon-redshift">
+<h3>Amazon RedShift<a class="headerlink" href="#amazon-redshift" title="Link to this heading"></a></h3>
+<p>Knowage supports Amazon RedShift datasources via Official v1 JDBC Driver: see <a class="reference external" href="https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html">official reference</a>.
+According to documentation using JDBC drivers v1 a RedShift connection configuration can be done exactly like a PostgreSQL configuration.
+You can test it creating an example db like this one:  <a class="reference external" href="https://docs.aws.amazon.com/redshift/latest/dg/c_sampledb.html">official sample testing db</a>.
+To create a JDBC connection to an Amazon RedShift dataset using a RedShift-only connection you can add the following configuration to <code class="docutils literal notranslate"><span class="pre">TOMCAT_HOME/conf/server.xml</span></code>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Resource</span><span class="w"> </span><span class="na">auth=</span><span class="s">"Container"</span><span class="w"> </span><span class="na">driverClassName=</span><span class="s">"com.amazon.redshift.jdbc.Driver"</span><span class="w"> </span><span class="na">logAbandoned=</span><span class="s">"true"</span><span class="w"> </span><span class="na">maxActive=</span><span class="s">"10"</span><span class="w"> </span><span class="na">maxIdle=</span><span class="s">"1"</span><span class="w"> </span><span class="na">minEvictableIdleTimeMillis=</span><span class="s">"60000"</span><span class="w"> </span><span class="na">name=</span><span class="s">"jdbc/redshift"</span><span class="w"> </span><span class="na">password=</span><span class="s">"password"</span><span class="w"> </span><span class="na">removeAbandoned=</span><span class="s">"true"</span><span class="w"> </span><span class="na">removeAbandonedTimeout=</span><span class="s">"3600"</span><span class="w"> </span><span class="na">testOnReturn=</span><span class="s">"true"</span><span class="w"> </span><span class="na">testWhileIdle=</span><span class="s">"true"</span><span class="w"> </span><span class="na">timeBetweenEvictionRunsMillis=</span><span class="s">"10000"</span><span class="w"> </span><span class="na">type=</span><span class="s">"javax.sql.DataSource"</span><span class="w"> </span><span class="na">url=</span><span class="s">"jdbc:redshift://examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com:5439/dev"</span><span class="w"> </span><span class="na">username=</span><span class="s">"user"</span><span class="w"> </span><span class="na">validationQuery=</span><span class="s">"SELECT 1"</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="azure-synapse">
+<h3>Azure Synapse<a class="headerlink" href="#azure-synapse" title="Link to this heading"></a></h3>
+<p>Knowage supports connections to Azure Synapse datasources via SQL Server JDBC Driver (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/connection-strings">official documentation</a>).</p>
+<p>The following example shows how to create a JDBC connection to an Azure Synapse dataset, by adding the following configuration to <code class="docutils literal notranslate"><span class="pre">TOMCAT_HOME/conf/server.xml</span></code>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Resource</span><span class="w"> </span><span class="na">auth=</span><span class="s">"Container"</span><span class="w"> </span><span class="na">driverClassName=</span><span class="s">"com.microsoft.sqlserver.jdbc.SQLServerDriver"</span><span class="w"> </span><span class="na">logAbandoned=</span><span class="s">"true"</span><span class="w"> </span><span class="na">maxIdle=</span><span class="s">"4"</span><span class="w"> </span><span class="na">maxTotal=</span><span class="s">"50"</span><span class="w"> </span><span class="na">maxWait=</span><span class="s">"-1"</span>
+<span class="w">        </span><span class="na">minEvictableIdleTimeMillis=</span><span class="s">"60000"</span><span class="w"> </span><span class="na">removeAbandoned=</span><span class="s">"true"</span><span class="w"> </span><span class="na">removeAbandonedTimeout=</span><span class="s">"3600"</span><span class="w"> </span><span class="na">testOnReturn=</span><span class="s">"true"</span><span class="w"> </span><span class="na">testWhileIdle=</span><span class="s">"true"</span>
+<span class="w">        </span><span class="na">timeBetweenEvictionRunsMillis=</span><span class="s">"10000"</span><span class="w"> </span><span class="na">type=</span><span class="s">"javax.sql.DataSource"</span><span class="w"> </span><span class="na">name=</span><span class="s">"jdbc/synapse"</span><span class="w"> </span><span class="na">username=</span><span class="s">"&lt;user&gt;"</span><span class="w"> </span><span class="na">password=</span><span class="s">"&lt;password&gt;"</span>
+<span class="w">        </span><span class="na">url=</span><span class="s">"jdbc:sqlserver://your-synapse-instance.sql.azuresynapse.net:1433;database=&lt;database&gt;"</span><span class="w"> </span><span class="na">validationQuery=</span><span class="s">"select 1"</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../security_management/bm_lineage.html" class="btn btn-neutral float-left" title="Behavioural Model Lineage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../create_dataset/index.html" class="btn btn-neutral float-right" title="Create and manage datasets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -8,7 +8,7 @@ Knowage allows the definition of a menu for the end user. This menu will be disp
 
 It's sufficient to click on the “Plus” of the Menu Configuration page to add a new folder to the **Menu Tree**. When selecting one node of the tree and clicking on the “Plus” icon, the user can add a new folder as a child of the former one.
 
-.. figure:: media/image35.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-image35.png
 
    Menu tree actions.
 
@@ -29,7 +29,7 @@ Setting menu icon
 
 Creating a menu, you can choose an icon to be shown in the main menu. **This feature is available only for first level menu**.
 
-.. figure:: media/image106.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-image106.png
 
    Menu choose icon feature
 
@@ -40,25 +40,25 @@ To associate an icon to the menu, select the name of your menu and click the *CH
 
 Dialog shown in figure below allows you to select an icon or click on "Browse..." to choose the image on your pc and upload it. After choose is completed, click on "*CHOOSE*" button to apply the changes. If no errors occurred, you'll come back to menu configuration and see the icon you choose. If you want to filter predefined icons, you can start writing in the text field on the top of the dialog.
 
-.. figure:: media/image107.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-image107.png
 
    Menu choose icon dialog
 
 If you decide to choose a predefined icon, select it click on "CHOOSE" to apply the changes.
 
-.. figure:: media/image108.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-image108.png
 
    Menu choose selected icon
 
-If you decide to upload a new image, click on "*Browse...*" and select your file. After that, the icon will be displayed as in the image below. 
+If you decide to upload a new image, click on "*Browse...*" and select your file. After that, the icon will be displayed as in the image below.
 
-.. figure:: media/image109.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-image109.png
 
    Selecting a new file as icon
 
 In case you need to delete an icon, the image below shows how to do it.
 
-.. figure:: media/delete_icon.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-delete-icon.png
 
    Removing an icon from a menu item
 
@@ -66,7 +66,7 @@ Once the name and icon of a menu item have been choosen, we need to associate it
 
 There are four types of items to associate with a menu: empty, document, static page and functionality.
 
-.. figure:: media/image3637.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-image3637.png
 
    **Empty** (left) and **document** (right) content type.
 
@@ -79,7 +79,22 @@ The **static page** content type shows a static HTML page. In this case, the adm
 
 Finally, the **external application** content type, see Figure below, runs a URL address.
 
-.. figure:: media/image39bis.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-image39bis.png
 
    External application content type.
 
+External links and visibility in 9.1
+------------------------------------
+
+Open **Modules** > **Profile Management** > **Menu Configuration** to maintain
+the menu tree. Select a node, configure its content and eligible roles, then
+save. For an external application, specify the URL and the supported opening
+target. Test the entry with a representative end-user role.
+
+Menu visibility follows the configured roles. Document and data permissions
+are evaluated separately when the destination opens. To set the starting page
+for a role, use :doc:`/chapter_4/home_management`.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-menu-9-1-menu-visibility.png
+
+   Menu content, link target and role visibility settings.

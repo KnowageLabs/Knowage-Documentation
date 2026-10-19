@@ -1,10 +1,12 @@
-Knowage management
-########################################################################################################################
+Manage Knowage
+==============
 
+These guides describe administrative operations. Open the relevant module
+from **Modules** using an authorized role.
 
 .. toctree::
    :caption: Table of Contents
-      
+
    add_datasource.rst
    schedule.rst
    server_manager.rst
@@ -16,7 +18,9 @@ Knowage management
    log_manager.rst
    widget_gallery.rst
    documentation.rst
-   
+   home_management.rst
+   ai_management.rst
+
 .. Indices and tables
 .. ==================
 

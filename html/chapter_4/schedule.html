@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scheduler &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Server manager" href="server_manager.html" />
+    <link rel="prev" title="Add new Data Source" href="add_datasource.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Manage Knowage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add_datasource.html">Add new Data Source</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Scheduler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-an-activity">Create an Activity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#save-as-snapshot">Save as snapshot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-as-file">Save as file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-as-document">Save as document</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#send-mail">Send mail</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#schedulation-panel">Schedulation panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scheduler-monitor">Scheduler Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scheduled-output-formats-in-9-1">Scheduled output formats in 9.1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="server_manager.html">Server manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_export.html">Import/Export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timespan.html">Time Span</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_manager.html">Log Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widget_gallery.html">Widget gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="home_management.html">Home page management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_management.html">AI management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_5/index.html">Install and configure Knowage 9.1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Manage Knowage</a></li>
+      <li class="breadcrumb-item active">Scheduler</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapter_4/schedule.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="scheduler">
+<h1>Scheduler<a class="headerlink" href="#scheduler" title="Link to this heading"></a></h1>
+<p>Knowage scheduler allows to schedule the execution of one or more analytical documents published on the Server. Documents executed by the scheduler can then be distributed along different dispatching channels. In the following we describe how to create an activity, schedule it and dispatch the results.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/chapter-4-schedule-scheduler.png" src="../_images/chapter-4-schedule-scheduler.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 622 </span><span class="caption-text">Scheduler from menu</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="create-an-activity">
+<h2>Create an Activity<a class="headerlink" href="#create-an-activity" title="Link to this heading"></a></h2>
+<p>In order to define a new scheduled activity the administrator must specify which documents compose the activity and how to execute them. The list of all scheduled activities can be seen selecting <strong>Tools</strong> &gt; <strong>Scheduler</strong>. To create a new activity click the “Plus” icon at the top of the page in the left area. The below image shows the main scheduler page and the new activity GUI.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/chapter-4-schedule-image4041-new.png" src="../_images/chapter-4-schedule-image4041-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 623 </span><span class="caption-text">Left: scheduler main page. Right: New activity GUI</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After ginving a name and a description to the new activity select the documents that compose it by clicking <em>Add</em>. A pop-up will open to select all your documents, see Figure below.</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/chapter-4-schedule-image42-new.png" src="../_images/chapter-4-schedule-image42-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 624 </span><span class="caption-text">Adding a document to an activity.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The new activity can contain documents with or without parameters. The below image shows an activity with documents with and without parameters.
+In case of parameters an icon will signal the need to specify them by using the pencil icon.</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/chapter-4-schedule-image42-b.png" src="../_images/chapter-4-schedule-image42-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 625 </span><span class="caption-text">Adding a documents with and without parameters.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In case of parameters you need to specify how the scheduler will handle the analytical drivers of each selected document having parameters.</p>
+<figure class="align-default" id="id5">
+<span id="manageparameters"></span><img alt="../_images/chapter-4-schedule-image43-new.png" src="../_images/chapter-4-schedule-image43-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 626 </span><span class="caption-text">Manage parameters.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>There are two possibilities:</p>
+<ul class="simple">
+<li><p>selecting a value from those available for the specific analytical driver at definition time;</p></li>
+<li><p>executing the report one time for each possible values of the analytical driver.</p></li>
+</ul>
+<p>A scheduled activity can be composed by more than one report. Once all desired documents have been added and the management configuration of their parameters has been set up, save the activity by clicking on the save (disk) icon. The new activity is shown in the list and can be modified or deleted using intended specifically icons.</p>
+<p>You can manage your activity at any time just clicking on the name of the scheduling item (left side of the window) and all its features will be displayed aside (right half part of the window).</p>
+<p>To see and modify the list of the schedules associated to an activity, click the <em>ADD</em> option of the “Timing &amp; Output” panel. Similarly, click on the same option to associate schedules
+to the newly created activities. The below image shows the <em>Timing &amp; Output</em> panel.</p>
+<figure class="align-default" id="id6">
+<img alt="../_images/chapter-4-schedule-image45-new.png" src="../_images/chapter-4-schedule-image45-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 627 </span><span class="caption-text">Timing &amp; Output panel.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>It is composed by two areas: <strong>Timing</strong> and <strong>Output</strong>.
+The Timing tab let you set all properties of you schedulation. Indeed here you decide its description and timing.
+A schedulation can be made in a chosen date and time if you choose <strong>Single Execution</strong> as type.
+Otherwise it can be realized for fixed periods or start on a fixed event.</p>
+<p>You can decide it, by choosing the schedulation type.</p>
+<p>Available schedulation type are:</p>
+<ul class="simple">
+<li><p>Single Execution;</p></li>
+<li><p>Periodic Execution;</p></li>
+<li><p>Event Execution.</p></li>
+</ul>
+<p>A <strong>Single Execution</strong> is a fixed execution for a date and a time which happens only once. A <strong>Periodic Execution</strong> repeats your schedulation periodically according to your settings. The <strong>Event Execution</strong> starts the scheduling when an event happens.</p>
+<p>You can choose among these event types:</p>
+<ul class="simple">
+<li><p>REST WS service,</p></li>
+<li><p>Context Broker message,</p></li>
+<li><p>Dataset.</p></li>
+</ul>
+<p>If you choose <strong>Dataset</strong>, you have to select a right structured dataset. It has to give as results only true or false. Then set the frequency in seconds. This is the frequency the dataset will be verified. For example if you set it on 10 seconds it means that each 10 seconds the dataset is executed. If the result of its execution is true, the schedulation is trigged otherwise it isn’t.</p>
+<p>Once you are done, switch to the <strong>Output</strong> tab.</p>
+<figure class="align-default" id="id7">
+<img alt="../_images/chapter-4-schedule-image46-new.png" src="../_images/chapter-4-schedule-image46-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 628 </span><span class="caption-text">Output panel.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here you can find the dispatch configurations, that can be different for all the documents that compose the scheduled activity. All documents that compose the activity have their own dispatch configuration and the same document can be distributed along multiple dispatch channels. You can switch among the documents included in your activity by clicking on their name in the upper toolbar. There are many different possible dispatch channels that can be used to distribute the results of the execution of a scheduled activity:</p>
+<ul class="simple">
+<li><p>Save as snapshot,</p></li>
+<li><p>Save as file,</p></li>
+<li><p>Save as document,</p></li>
+<li><p>Send mail</p></li>
+</ul>
+<p>In the following sections we explain them in detail.</p>
+<p>As shown in the image of the Output panel, there is a new option for the <em>Output type</em> that allows to choose the type of the document to be produced as a result of the process: the formats supported by the selected engine, including PDF, XLSX and HTML where enabled.</p>
+<section id="save-as-snapshot">
+<h3>Save as snapshot<a class="headerlink" href="#save-as-snapshot" title="Link to this heading"></a></h3>
+<p>The executed document can be saved as snapshots in cyclic buffers of configurable size. For example, it is possible to store in the buffer the last 12 snapshots (the <strong>History Length</strong> field) of one report, scheduled to be executed one per month, in order to have a one-year long history.</p>
+<p>The list of all snapshots contained in the buffer can be accessed from the <strong>Show scheduled executions</strong> contained in the <strong>Shortcuts</strong> menu. You can find it in the document toolbar at the top right corner. Each snapshot can be opened or deleted from this panel. These steps are shown in the following figure. A snapshot contains data queried from the database at the moment of its execution performed by the scheduler.</p>
+<figure class="align-default" id="id8">
+<img alt="../_images/chapter-4-schedule-image47-b.png" src="../_images/chapter-4-schedule-image47-b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 629 </span><span class="caption-text">Steps to open saved snapshots</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="save-as-file">
+<h3>Save as file<a class="headerlink" href="#save-as-file" title="Link to this heading"></a></h3>
+<p>The executed document can be saved as file on the filesystem in the path /knowage-&lt;version&gt; /resources (if no destination folder is specified). Otherwise, you can create the relative path of this subfolder by writing your subfolder name. For instance, if you write “MyFirstScheduler” as file name and “Schedulation” as destination folder, after the schedulation execution a subfolder Schedulation containing the file “MyFirstScheduler” is created in /knowage-&lt;version&gt; /resources. If the subfolder Schedulation already exist your file is added to this subfolder. You can have a look at the form in Figure below.</p>
+<figure class="align-default" id="id9">
+<img alt="../_images/chapter-4-schedule-image51-new.png" src="../_images/chapter-4-schedule-image51-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 630 </span><span class="caption-text">Save as File Option.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you prefer to generate a .zip file containing the scheduled documents, you can check the dedicated option.</p>
+</section>
+<section id="save-as-document">
+<h3>Save as document<a class="headerlink" href="#save-as-document" title="Link to this heading"></a></h3>
+<p>The executed document can be saved as an <strong>Ad hoc reporting</strong> document in the Knowage functionality tree. The document execution will be saved in the specified folder and will be visible to all yous that can access that particular folder.</p>
+<p>For those documents whose execution is iterated over a parameter value, it is also possible to use the value of the parameter to decide to which folder the document shall be dispatched. To do so, define a mapping dataset composed of two columns:</p>
+<ul class="simple">
+<li><p>the first containing a specific parameter value;</p></li>
+<li><p>the second containing the label of the folder where the document shall be dispatched when the document is executed with the corresponding parameter value.</p></li>
+</ul>
+<p>Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. Like in the previous case, the scheduler will execute the report one time for each possible value of the parameter. This time, however, execution results will be dispatched in different folders, according to the mapping defined in the dataset.</p>
+</section>
+<section id="send-mail">
+<h3>Send mail<a class="headerlink" href="#send-mail" title="Link to this heading"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Enterprise Edition only</strong></p>
+<p>This feature is available only with KnowageER and KnowageSI, submodules of Knowage Enterprise Edition</p>
+</div>
+<p>The executed document can be sent to one or more mail recipients. The list of mail addresses to be used to forward the executed document can be defined in three different ways:</p>
+<ul class="simple">
+<li><p>statically;</p></li>
+<li><p>dynamically, using a mapping dataset;</p></li>
+<li><p>dynamically, using a script.</p></li>
+</ul>
+<p>In Figure below you can have a look at the mail form. In the following we will focus on each typology, clicking on the info icon you get detailed information.</p>
+<figure class="align-default" id="id10">
+<img alt="../_images/chapter-4-schedule-image52-new.png" src="../_images/chapter-4-schedule-image52-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 631 </span><span class="caption-text">Sending mail form.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="static-list">
+<h4>Static list<a class="headerlink" href="#static-list" title="Link to this heading"></a></h4>
+<p>If you want to choose a static list, check the option <strong>Fixed list of recipients</strong> and fill the configuration property <strong>Mail to</strong> with the list of desired mail addresses separated by a comma. An mail for each executed document will be sent to all the mail addresses contained in the list.</p>
+</section>
+<section id="dynamic-list-with-mapping-dataset">
+<h4>Dynamic list with mapping dataset<a class="headerlink" href="#dynamic-list-with-mapping-dataset" title="Link to this heading"></a></h4>
+<p>In this case, you have to define a two-column dataset:</p>
+<ul>
+<li><p>the first containing a specific parameter value;</p></li>
+<li><p>the second containing each mail address the executed document should be dispatched to.</p>
+<p>You can see an example of dataset in the following Figure.</p>
+</li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/chapter-4-schedule-image54.png" src="../_images/chapter-4-schedule-image54.png" />
+</figure>
+<p>Example of mapping dataset for dynamic distribution list</p>
+<p>Basically, when the parameter has a given value, the document will be sent to the corresponding email address. Once you have defined the mapping dataset, you can use it in the configuration settings of the document dispatcher. With this configuration, the scheduler will execute the report one time for each possible value of the parameter <strong>Position</strong>, then dispatching the results to different recipients. Specifically, all execution results passing a value of the <strong>Position</strong> parameter to the report starting with VP will be sent to <code class="docutils literal notranslate"><span class="pre">name1surname1&#64;gmail.com</span></code>, the ones starting with HQ will sent to <code class="docutils literal notranslate"><span class="pre">name2surname2&#64;gmail.com</span></code> and the ones starting with President will be sent to <code class="docutils literal notranslate"><span class="pre">namesurname&#64;gmail.com</span></code>.</p>
+</section>
+<section id="dynamic-list-with-script">
+<h4>Dynamic List with script<a class="headerlink" href="#dynamic-list-with-script" title="Link to this heading"></a></h4>
+<p>Check the option <strong>Use an expression</strong> and assign a value to the configuration property <strong>Expression</strong> with a parameter-dependent expression like the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nv">$P</span><span class="o">{</span>dealer<span class="o">}</span>@eng.it
+</pre></div>
+</div>
+<p>Here dealer is a document parameter label (<code class="docutils literal notranslate"><span class="pre">$P{dealer}</span></code> will be replaced by the parameter value of the scheduled execution).</p>
+</section>
+</section>
+</section>
+<section id="schedulation-panel">
+<h2>Schedulation panel<a class="headerlink" href="#schedulation-panel" title="Link to this heading"></a></h2>
+<p>To conclude our overview on the scheduler features, save your settings and go back to the main scheduler page.</p>
+<p>Here you can select one of the available scheduled activities to explore details.</p>
+<figure class="align-default" id="id11">
+<img alt="../_images/chapter-4-schedule-image55a-new.png" src="../_images/chapter-4-schedule-image55a-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 632 </span><span class="caption-text">Details of a scheduled activity in Timing &amp; Output panel.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here you find the following information:</p>
+<ul class="simple">
+<li><p><strong>Schedulation informations</strong>, gives some extra information about your schedulation concerning sending emails</p></li>
+<li><p><strong>Schedulation detail</strong>, opens the scheduling configuration and let you change them.</p></li>
+<li><p><strong>Execute now</strong>, by clicking it you immediately start the execution of your schedulation.</p></li>
+<li><p><strong>Pause schedulation</strong>, it lets you pause your schedulation.</p></li>
+<li><p><strong>Resume schedulation</strong>, it appears after having paused a schedulation, it enables you to resume it.</p></li>
+</ul>
+<p>In case, use the recycle bin icon to delete the scheduling.</p>
+</section>
+<section id="scheduler-monitor">
+<h2>Scheduler Monitor<a class="headerlink" href="#scheduler-monitor" title="Link to this heading"></a></h2>
+<p>You can monitor the whole scheduling agenda by entering the <strong>Scheduler Monitor</strong> item from the Knowage Menu.</p>
+<figure class="align-default" id="id12">
+<img alt="../_images/chapter-4-schedule-scheduler-m.png" src="../_images/chapter-4-schedule-scheduler-m.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 633 </span><span class="caption-text">Details of a scheduled activity in Timing &amp; Output panel.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.</p>
+<figure class="align-default" id="id13">
+<img alt="../_images/chapter-4-schedule-image59-new.png" src="../_images/chapter-4-schedule-image59-new.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 634 </span><span class="caption-text">Schedulation Agenda</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="scheduled-output-formats-in-9-1">
+<h2>Scheduled output formats in 9.1<a class="headerlink" href="#scheduled-output-formats-in-9-1" title="Link to this heading"></a></h2>
+<p>The 9.1 scheduler supports combined outputs through the relevant engine and
+integration. In the standard scheduling dialog, select the <strong>Output type</strong>
+offered for the document. The 9.1.0 dialog provides a single format selection;
+a spreadsheet output can be labelled <strong>XLS</strong> by its engine.</p>
+<ol class="arabic simple">
+<li><p>Open the activity and its <strong>Timing &amp; Output</strong> configuration.</p></li>
+<li><p>Select a document in <strong>Output</strong>, choose an available format and configure
+the required dispatch channels.</p></li>
+<li><p>Complete filenames, destinations and channel-specific settings, then save.</p></li>
+<li><p>Use <strong>Execute now</strong> and inspect each output before relying on the recurring
+schedule.</p></li>
+</ol>
+<p>To produce several formats through this dialog, create a Timing &amp; Output entry
+for each offered format and keep their timing consistent. For a single combined
+PDF, XLSX and HTML execution, have the administrator configure the supported
+integration. Availability depends on the engine, edition and dispatch channel.</p>
+<figure class="align-default" id="id14">
+<img alt="../_images/chapter-4-schedule-9-1-scheduler-formats.png" src="../_images/chapter-4-schedule-9-1-scheduler-formats.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 635 </span><span class="caption-text">Scheduled output format and dispatch configuration.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="add_datasource.html" class="btn btn-neutral float-left" title="Add new Data Source" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="server_manager.html" class="btn btn-neutral float-right" title="Server manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

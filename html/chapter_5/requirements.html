@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Requirements &mdash; Knowage 9.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/documentation.css?v=23a75711" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7ac69e55"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="KNOWAGE Installation" href="installation/index.html" />
+    <link rel="prev" title="Install and configure Knowage 9.1" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Knowage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Knowage 9.1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release-notes/9.1.html">What’s new in Knowage 9.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_3/index.html">Build analyses with Knowage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_4/index.html">Manage Knowage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Install and configure Knowage 9.1</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-runtime">Core runtime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operating-systems">Operating systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cpu-memory-and-storage">CPU, memory and storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#java-environment">Java environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#databases-and-jdbc">Databases and JDBC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional-services">Optional services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python-datasets-functions-and-widgets">Python datasets, functions and widgets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enterprise-export-service-node-js-and-chromium">Enterprise export service: Node.js and Chromium</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fonts-and-server-side-rendering">Fonts and server-side rendering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-preparation">Data Preparation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#supported-browsers">Supported browsers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docker-deployments">Docker deployments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#versioned-references">Versioned references</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html">KNOWAGE Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_upgrade.html">How to upgrade KNOWAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso/index.html">How to configure the KNOWAGE Single Sign On</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mfa.html">Multi Factor Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_settings.html">Server settings</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Knowage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Install and configure Knowage 9.1</a></li>
+      <li class="breadcrumb-item active">Requirements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapter_5/requirements.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="requirements">
+<h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h1>
+<p>This page describes deployment requirements for <strong>Knowage 9.1.0</strong>.
+The versioned application source and public Docker recipe were checked on
+<strong>19 October 2026</strong>. A version found in a recipe identifies its baseline; it
+does not certify every OS, database version or later component release.</p>
+<section id="core-runtime">
+<h2>Core runtime<a class="headerlink" href="#core-runtime" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">Core deployment components</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 25.0%" />
+<col style="width: 55.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Version or requirement</p></th>
+<th class="head"><p>Deployment notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Java</p></td>
+<td><p><strong>JDK 17</strong></p></td>
+<td><p>The release compiles for Java 17. The Docker recipe uses Eclipse
+Temurin 17. Use a maintained JDK 17 distribution.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Application server</p></td>
+<td><p><strong>Apache Tomcat 9.0.x</strong></p></td>
+<td><p>The public recipe pins <strong>9.0.109</strong>. Select a maintained 9.0.x patch
+accepted for your deployment and validate it with the applications.</p></td>
+</tr>
+<tr class="row-even"><td><p>Metadata database</p></td>
+<td><p>MySQL/MariaDB, PostgreSQL or Oracle</p></td>
+<td><p>Vendor-specific creation and upgrade scripts are supplied.
+Exact database versions must be qualified with those scripts.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SQL cache database</p></td>
+<td><p>A separate schema/database and JDBC resource</p></td>
+<td><p>Configure <code class="docutils literal notranslate"><span class="pre">jdbc/ds_cache</span></code> in addition to metadata resource
+<code class="docutils literal notranslate"><span class="pre">jdbc/knowage</span></code>. They may share a DBMS instance where appropriately sized.</p></td>
+</tr>
+<tr class="row-even"><td><p>Distributed cache</p></td>
+<td><p>Hazelcast <strong>5.3</strong> integration</p></td>
+<td><p>The Java dependency is <strong>5.3.6</strong>. The public Compose example starts a
+separate Hazelcast 5.3 service. Preserve the topology and configuration
+supplied with your deployment.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Client</p></td>
+<td><p>A supported web browser</p></td>
+<td><p>See <a class="reference internal" href="#requirements-browsers"><span class="std std-ref">Supported browsers</span></a> below.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The Java applications use the <code class="docutils literal notranslate"><span class="pre">javax.servlet</span></code> API. Tomcat 10 and 11 use the
+Jakarta namespace and are not direct replacements for the Tomcat 9 deployment.
+Follow <a class="reference internal" href="installation/manual_installation.html"><span class="doc">Manual installation</span></a> for the required shared
+libraries, JNDI resources and application packages.</p>
+</section>
+<section id="operating-systems">
+<h2>Operating systems<a class="headerlink" href="#operating-systems" title="Link to this heading"></a></h2>
+<p>Use an OS supported by the selected JDK 17, Tomcat 9 and any native export or
+analytics services. For contractual support, confirm the <strong>exact OS release
+and architecture</strong> against the matrix supplied with your Knowage 9.1 distribution.</p>
+<p>The public manual declares the following environments. These declarations are
+retained from the published documentation; this source review does not
+constitute a new certification test.</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">Published operating-system matrix</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 35.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Published status</p></th>
+<th class="head"><p>Operating system</p></th>
+<th class="head"><p>Published versions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Certified</p></td>
+<td><p>Oracle Linux</p></td>
+<td><p>9, 10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Certified</p></td>
+<td><p>Windows Server</p></td>
+<td><p>2022, 2025</p></td>
+</tr>
+<tr class="row-even"><td><p>Compatible</p></td>
+<td><p>Red Hat Enterprise Linux</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Compatible</p></td>
+<td><p>Ubuntu</p></td>
+<td><p>22, 24, 25; exact point releases are not specified</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here, <em>certified</em> denotes an environment declared as tested by the publisher;
+<em>compatible</em> denotes technical compatibility without the same integration-test
+claim. An OS family entry does not establish its vendor maintenance status.
+Confirm the exact Ubuntu release before provisioning.</p>
+</section>
+<section id="cpu-memory-and-storage">
+<h2>CPU, memory and storage<a class="headerlink" href="#cpu-memory-and-storage" title="Link to this heading"></a></h2>
+<p>The public 9.1 release sources and Docker recipes do not specify a verified
+minimum CPU count or RAM allocation. Size the application, database, Hazelcast
+and optional services for the intended workload.</p>
+<p>The earlier <strong>2 GB</strong> disk figure describes an installation footprint and
+excludes data and metadata. It is not a complete production storage requirement.
+Provide capacity for deployed WARs and their expanded contents, shared
+resources, uploaded files, JDBC drivers, logs, temporary exports, SQL cache,
+database growth and backups.</p>
+<p>Validate sizing with representative concurrent users, dataset sizes, dashboard
+queries and scheduled exports. Set JVM heap and container limits consistently,
+leaving memory for the OS, native processes and other services sharing the host.
+Measure peak memory and temporary-disk use during exports and Data Preparation.</p>
+</section>
+<section id="java-environment">
+<h2>Java environment<a class="headerlink" href="#java-environment" title="Link to this heading"></a></h2>
+<p>Install a JDK 17 and set <code class="docutils literal notranslate"><span class="pre">JAVA_HOME</span></code> for the <strong>account that runs Tomcat</strong>.
+An interactive shell and an OS service may have different environments.</p>
+<p>On Linux, configure Tomcat’s <code class="docutils literal notranslate"><span class="pre">bin/setenv.sh</span></code> or the service environment,
+using the actual installation path:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">"/path/to/jdk-17"</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$JAVA_HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+</pre></div>
+</div>
+<p>Verify the selected runtime:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">java -version</span>
+<span class="go">javac -version</span>
+</pre></div>
+</div>
+<p>Both commands must report version 17. Check Tomcat’s startup log as well.</p>
+<p>On Windows, configure <code class="docutils literal notranslate"><span class="pre">JAVA_HOME</span></code> and <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. If Tomcat runs as a Windows
+service, also check the Java runtime selected in the service configuration.</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/chapter-5-requirements-image7.png" src="../_images/chapter-5-requirements-image7.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 710 </span><span class="caption-text">Configuring JAVA_HOME on Windows; replace this placeholder with the target
+environment screenshot.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>See the <a class="reference external" href="https://tomcat.apache.org/tomcat-9.0-doc/windows-service-howto.html">Tomcat 9 Windows service documentation</a>.</p>
+</section>
+<section id="databases-and-jdbc">
+<h2>Databases and JDBC<a class="headerlink" href="#databases-and-jdbc" title="Link to this heading"></a></h2>
+<p>Prepare the metadata and SQL cache schemas before starting Knowage. The
+application account must be able to reach both JDBC resources. Install the
+drivers and configure Hibernate and Quartz for the chosen DBMS.</p>
+<p>The public Docker recipe exposes <code class="docutils literal notranslate"><span class="pre">MYSQL</span></code>, <code class="docutils literal notranslate"><span class="pre">MARIADB</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ORACLE</span></code> as metadata/cache database types. This establishes integrations,
+not a database-version certification matrix. A business data source is a
+separate connection: its drivers and SQL dialect do not establish support
+for using it as the metadata database.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The public Compose example still uses <strong>MariaDB 10.3</strong>, whose upstream
+maintenance ended on <strong>25 May 2023</strong>. Do not use this example as the database
+version recommendation for a new production deployment. Obtain the qualified
+database version and JDBC driver combination for your 9.1 package.</p>
+</div>
+<p>Review creation and migration scripts against the exact target database.
+The tagged PostgreSQL scripts contain legacy <code class="docutils literal notranslate"><span class="pre">WITHOUT</span> <span class="pre">OIDS</span></code> syntax and
+the Oracle migration uses SQL <code class="docutils literal notranslate"><span class="pre">BOOLEAN</span></code>. Their compatibility depends on
+the server version; do not infer it from a driver version.
+See <a class="reference internal" href="upgrade/how_upgrade_9_0_to_9_1.html"><span class="doc">Upgrade Knowage 9.0 to 9.1</span></a> before upgrading.</p>
+</section>
+<section id="optional-services">
+<h2>Optional services<a class="headerlink" href="#optional-services" title="Link to this heading"></a></h2>
+<p>Install these components for the features enabled in your edition and deployment.</p>
+<section id="python-datasets-functions-and-widgets">
+<h3>Python datasets, functions and widgets<a class="headerlink" href="#python-datasets-functions-and-widgets" title="Link to this heading"></a></h3>
+<p>These features require a separate Knowage Python web service and the libraries
+used by the scripts. Use the service package associated with Knowage 9.1.0;
+its Python package version need not equal the platform version.</p>
+<p>The tagged package declares <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">&gt;=3.7</span></code>, but that lower bound does not
+establish compatibility with every newer interpreter. Its dependency file still
+pins, among others, Flask 1.1.4 and pandas 1.3.5. The public Python base-image
+source uses Python 3.8; check the referenced built image separately for its
+actual interpreter and digest.</p>
+<p>Python 3.8 reached upstream end of life on <strong>7 October 2024</strong>. For a new
+deployment, obtain a service build with a maintained, qualified interpreter
+and matching dependencies. Do not independently replace the interpreter or
+upgrade all libraries and assume compatibility.
+See <a class="reference internal" href="installation/python-installation.html"><span class="doc">Python Engine</span></a>.</p>
+</section>
+<section id="enterprise-export-service-node-js-and-chromium">
+<h3>Enterprise export service: Node.js and Chromium<a class="headerlink" href="#enterprise-export-service-node-js-and-chromium" title="Link to this heading"></a></h3>
+<p>Some Enterprise export services require Node.js, a browser automation package
+and Chromium. Use the versions, browser binary and OS dependencies supplied
+with the <strong>9.1 Enterprise export package</strong>.</p>
+<p>The public Java release and Docker recipe do not establish the exact supported
+Node.js/Chromium pair for that private package. The Node.js version in a
+frontend build workflow is not an export-service requirement.</p>
+<p>Verify the binaries as the export-service account, configure the export script
+path in Configuration Management and test the PDF/image formats used by users:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">node --version</span>
+<span class="go">npm --version</span>
+</pre></div>
+</div>
+<p>Install native browser libraries using the package list for the <strong>actual host
+OS and Chromium build</strong>. Earlier CentOS 8/Red Hat 7 commands and package names
+must not be reused as a universal installation recipe.</p>
+</section>
+<section id="fonts-and-server-side-rendering">
+<h3>Fonts and server-side rendering<a class="headerlink" href="#fonts-and-server-side-rendering" title="Link to this heading"></a></h3>
+<p>Install fonts covering the languages used in reports, charts and exports.
+Make them available to both Java and Chromium service accounts. Use explicit
+font package names from the host OS repositories and verify accented, CJK or
+other required scripts in an exported document.</p>
+</section>
+<section id="data-preparation">
+<h3>Data Preparation<a class="headerlink" href="#data-preparation" title="Link to this heading"></a></h3>
+<p>Data Preparation requires the appropriate add-on and a Livy/Spark service
+with integration libraries matching the supplied Knowage package. The 9.1
+Java source pins <code class="docutils literal notranslate"><span class="pre">livy-client-http</span> <span class="pre">0.7.1-incubating</span></code>; this client dependency
+does not certify arbitrary Livy, Spark or Scala server versions.</p>
+<p>Confirm the complete integration tuple with your distribution and follow
+<a class="reference internal" href="installation/manual_installation.html"><span class="doc">Manual installation</span></a> to configure and test the service.</p>
+</section>
+</section>
+<section id="supported-browsers">
+<span id="requirements-browsers"></span><h2>Supported browsers<a class="headerlink" href="#supported-browsers" title="Link to this heading"></a></h2>
+<p>The published browser policy covers the latest and preceding stable releases
+of Google Chrome, Mozilla Firefox and Microsoft Edge. Validate the browsers
+used by your organization with your documents and enabled features. Internet
+Explorer is unsupported.</p>
+</section>
+<section id="docker-deployments">
+<h2>Docker deployments<a class="headerlink" href="#docker-deployments" title="Link to this heading"></a></h2>
+<p>With containers, Java and Tomcat belong in the application image; they do not
+need to be installed separately on the host. Provide the container engine,
+persistent volumes and network access required by the supplied Compose files.
+Native dependencies for optional services belong in their images.</p>
+<p>The public Compose example uses <code class="docutils literal notranslate"><span class="pre">9.1-SNAPSHOT</span></code> application tags. Select
+the approved <strong>9.1.0 release image/digest</strong> before deploying the release.
+See <a class="reference internal" href="installation/knowage-ce-installer.html"><span class="doc">Community Edition with Docker or Podman</span></a>.</p>
+</section>
+<section id="versioned-references">
+<h2>Versioned references<a class="headerlink" href="#versioned-references" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/KnowageLabs/Knowage-Server/releases/tag/v9.1.0">Knowage 9.1.0 release</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/KnowageLabs/Knowage-Server/blob/47d06115a965f8440527b77a9e41d990e77aa078/knowage-ce-parent/pom.xml">Java build properties</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/KnowageLabs/Knowage-Server/blob/47d06115a965f8440527b77a9e41d990e77aa078/knowageutils/pom.xml">Hazelcast dependency</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/KnowageLabs/Knowage-Server-Docker/tree/26f22a44bc50e4a7bd19a71438227d7fb329acd7/Knowage-Server-Docker">Public Docker recipe</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/KnowageLabs/Knowage-Server/tree/47d06115a965f8440527b77a9e41d990e77aa078/Knowage-Python">Python package and dependencies</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/KnowageLabs/Knowage-Python-Docker-Base/blob/221d2001804d1f6c105a3452cf6b1221bcb6c02c/Dockerfile">Python base-image source</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/KnowageLabs/Knowage-Documentation/blob/7a5096c8eb03360d31b2ac277f90fe93fd712119/chapter_5/requirements.rst">Published OS and browser declarations</a>.</p></li>
+<li><p><a class="reference external" href="https://tomcat.apache.org/whichversion.html">Apache Tomcat version matrix</a>,
+<a class="reference external" href="https://mariadb.org/about/#maintenance-policy">MariaDB maintenance policy</a>
+and <a class="reference external" href="https://devguide.python.org/versions/">Python lifecycle</a>.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Install and configure Knowage 9.1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation/index.html" class="btn btn-neutral float-right" title="KNOWAGE Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2026, Knowage Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

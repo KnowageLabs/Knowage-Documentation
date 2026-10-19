@@ -1,6 +1,11 @@
 KNOWAGE Enterprise Installation using Docker
 ########################################################################################################################
 
+Use the authorized **9.1.0 Enterprise** distribution and its supplied Compose
+configuration. Its private image names and export components are specific to
+your distribution. Pin the application images to the intended release and
+upgrade an existing metadata schema with :doc:`/chapter_5/how_upgrade`.
+
 In this chapter, we will describe how to install the Enterprise version of KNOWAGE using Docker.
 Please note that access to the repository is granted through authorization.
 
@@ -16,7 +21,7 @@ If internet access is not available, it will be necessary to manually transfer t
 
 Repository cloning
 ------------------------------------------------------------------------------------------------------------------------
-To install Knowage EE via Docker, you need to clone the GitLab repository:
+To install Knowage EE via Docker, you need to clone the authorized Enterprise Docker repository:
 
 .. code-block:: bash
    :caption: shell command
@@ -27,8 +32,8 @@ access the project directory:
 
 .. code-block:: bash
    :caption: shell command
-   
-    cd knowage-ee-server-docker
+
+    cd Knowage-Server-Docker-ee
 
 **N.B.** in the absence of an internet connection, the following files and folders must be copied to the host machine in the knowage-ee-server-docker folder
 
@@ -42,7 +47,7 @@ access the project directory:
 
 Configuration of Environment Variables
 ------------------------------------------------------------------------------------------------------------------------
-Knowage requires several variables to be configured to launch correctly. 
+Knowage requires several variables to be configured to launch correctly.
 
 These can be defined in the ``.env`` file present in the project directory.
 KNOWAGE need to use 2 DB schema, one for the metadata and una for the temporary cache.
@@ -81,7 +86,7 @@ Data base parameters:
 Parameters in the docker-compose.yml file
 ------------------------------------------------------------------------------------------------------------------------
 
-• **PUBLIC_ADDRESS**: IP or hostname visible from the outside (e.g. http://$PUBLIC_ADDRESS:8080/knowage)  
+• **PUBLIC_ADDRESS**: IP or hostname visible from the outside (e.g. http://$PUBLIC_ADDRESS:8080/knowage)
 
 • **DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
 
@@ -93,11 +98,11 @@ To encrypt the database password you need:
 
 1. download the **tomcat-password-encryption.jar** jar in the “knowage-enterprise” directory from https://github.com/KnowageLabs/Knowage-Server-ee
 
-2. run the following command (with java 17 or later): 
+2. run the following command (with java 17 or later):
 
 .. code-block:: bash
    :caption: Java command
-   
+
     java -cp tomcat-password-encryption.jar -Dsymmetric_encryption_key=KEY_SECRET it.eng.knowage.enterprise.tomcatpasswordencryption.helper.EncryptOnce DB_CLEAR_PASSWORD
 
 where KEY_SECRET corresponds to the value indicated in the **SENSIBLE_DATA_ENCRYPTION_SECRET** environment variable
@@ -108,7 +113,7 @@ where DB_CLEAR_PASSWORD is the plaintext password of the database
 
 Installation of Database Schemas
 ------------------------------------------------------------------------------------------------------------------------
-It is necessary to manually install the **knowage** and **knowage_cache** schemes on the customer database, executing the related  `DDLs <https://github.com/KnowageLabs/Knowage-Server/tree/knowage-server-9.0/knowagedatabasescripts>`_.
+It is necessary to manually install the **knowage** and **knowage_cache** schemes on the customer database, executing the related  `DDLs <https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowagedatabasescripts>`_.
 
 Make sure to update the parameters in the ``.env`` file with the correct data for DB access.
 
@@ -163,10 +168,10 @@ Note on paths and mounted volumes
 ------------------------------------------------------------------------------------------------------------------------
 The paths and directories specified in the ``docker-compose.yml`` file volumes (e.g. ./resources, ./conf/server.xml.d, etc.) must be adapted according to the structure and needs of the host machine on which Knowage is running.
 
-Make sure the directories exist and contain the necessary files before starting the containers. 
+Make sure the directories exist and contain the necessary files before starting the containers.
 Otherwise, the service may not start correctly or work as expected.
 
-On the directories change the permissions with the following commands: 
+On the directories change the permissions with the following commands:
 
 Example:
 
@@ -177,9 +182,9 @@ Example:
 
     chmod -R 750 /portal_data/knowage_*
 
-    Create the following file with the command: 
+    Create the following file with the command:
 
-    vim ~/.config/containers/containers.conf and write 
+    vim ~/.config/containers/containers.conf and write
 
 .. code-block:: bash
    :caption: shell command
@@ -255,7 +260,3 @@ Components Installed
 
 
 Access the web interface: http://localhost:8080/knowage-vue/
-
-
-
-

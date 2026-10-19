@@ -1,5 +1,9 @@
-Analitycal Document
+Analytical documents
 ########################################################################################################################
+
+In 9.1 a **Dashboard** and a **Cockpit** are distinct document types. Match the
+document type with its engine when creating or importing a document. Use
+:doc:`/user-guide/document-execution` for parameters, saved views and exports.
 
 The *analytical model* is the core of Knowage Server and covers the whole range of analytical needs, providing many solutions for each analytical area, like reports, cockpits, OLAP documents, KPIs and so on.
 
@@ -68,19 +72,19 @@ Analytical documents on Server
 
 First of all click on **Documents Browser** from the BI functionalities menu, as shown below.
 
-.. figure:: media/image58bis.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image58bis.png
 
     Documents Browser functionality.
 
 By default the page is divided into two parts, as shown in figure below: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
 
-.. figure:: media/image59.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image59.png
 
     Documents Development section.
 
 Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date.
 
-.. figure:: media/image61.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image61.png
 
     Side panel.
 
@@ -109,23 +113,23 @@ At the top of this side panel you find four button:
 The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can see the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders.
 
 .. _detailpanelofknowanalydoc:
-.. figure:: media/image66.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image66.png
 
     Detail panel of an Analytical document.
 
-In order to create a new document you need to click on the red plus button in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
+In order to create a new document you need to click on the creation action in the toolbar of the **Document Development** page. Choose **Dashboard**, **Cockpit** or **Generic Document** from the available creation actions. Please note that not all of them are available in all Knowage products.
 
 To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in figure above but with empty fields, in order to allow you to define the document details.
 
 First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see figure below).
 
-.. figure:: media/image67.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image67.png
 
     Select Type and Engine for a new document.
 
 Now you have to select the datasource that will feed your document with data.
 
-.. figure:: media/image68.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image68.png
 
     Selecting a datasource for the document.
 
@@ -160,17 +164,17 @@ Template Versioning
 When you register a document on the Server, you need to associate a template to it. Click on  tab **History** and then on button **Add** to choose a template from your local file system and upload it.
 
 .. _templateversionforanalydoc:
-.. figure:: media/image69.png
-    
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image69.png
+
     Template versioning for analytical documents.
-Y
-ou may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
+
+You may have edited the template by hand or using the Studio designer. Clearly you will not have to upload the template if you are using the automatic deploy from the Studio.
 
 Knowage Server supports versioning of uploaded templates, as shown below. To view them, click on tab **History**. All templates are saved with their date and name, and can be easily uploaded or deleted. To upload a template, click on button **Add** to choose a template from your local file system and upload it: the new template will be uploaded. Using the same list you can download or delete a template.
 
-.. figure:: media/image70.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image70.png
 
-    
+
 
 Document Visibility
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -185,7 +189,7 @@ After having defined all details, you need to choose where the analytical docume
 Note that the same document can be saved in different points of the functionality tree. This allows the administrator to make the   document accessible to multiple roles based on visibility rules defined for the containing folder(s). On the right, you can choose where you wish to save the document by ticking the corresponding folder in the  tree. If you wish to save it at multiple locations, tick all of them before saving. Each user having access to the containing folder will see the document.
 
 .. _functionaltreedocsav:
-.. figure:: media/image66bis.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image66bis.png
 
     Functionality Tree, document saving settings.
 
@@ -196,7 +200,7 @@ In addition to the standard mechanism supported by the functionalities tree, it 
 
 This can be done by editing conditions in the **Visibility restrictions** section on the right side of **Information** panel. To add a new condition pick a profile attribute from the drop down menu and assign it a value. This will add a new condition that must be verified to allow a user to access the document. In the same way you can add further conditions, and possibly remove all of them by clicking on the eraser.
 
-.. figure:: media/image73.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image73.png
 
     Visibility restrictions.
 
@@ -209,7 +213,7 @@ We assume that the document template and datasets are correctly set in terms of 
 
 To add a new parameter, you can click on the tab **Drivers** and then on a **Add** button, see the next figure.
 
-.. figure:: media/image74.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image74.png
 
     Association with analytical driver panel - 1.
 
@@ -225,7 +229,7 @@ Similarly to set a parameter as multivalue click on **true**, in this way the us
 
 After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.
 
-.. figure:: media/image75.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image75.png
 
     Association with analytical driver panel - 2.
 
@@ -241,13 +245,13 @@ This feature can be useful when two (or more) parameters are logically related. 
 
 In general, to configure a correlation within a document you should make sure that the LOV associated with the parent parameter and the  one associated to the child parameter share at least one column. This column defines which value from the parent parameter will be applied to the child, in order to constrain the results.
 
-.. figure:: media/image79.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image79.png
 
     Creating a correlation.
 
 To set the correlation, select child parameter which will show you the details of that particular driver and then click on the **Add condition** button to open pop-up window for defining data correlation.
 
-.. figure:: media/image80.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image80.png
 
     Adding data correlation.
 
@@ -276,13 +280,13 @@ We stress that the ``AD_name`` is the name of the driver the administrator is tr
 
    $P{AD_name}
 
-.. figure:: media/image82_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image82-b.png
 
     Correlation passing driver values to LOV query .
 
 As a result, at document execution, as soon as the user pick up a value from the "free" parameter, the other one is filtered and will   show only the value related to the previous selection, as shown in Figure below.
 
-.. figure:: media/image83.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image83.png
 
     Filtering with correlation.
 
@@ -293,13 +297,13 @@ Another type of relation between parameters is supported by Knowage. It is possi
 
 To set a visibility expression, click on the **Add condition** button on the **Driver visibility conditions** card.
 
-.. figure:: media/image72.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image72.png
 
     Adding visual correlation
 
 In the graphical editor you can define visibility rules similarly to   correlation ones, as shown in figure below.
 
-.. figure:: media/image84_b.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image84-b.png
 
     Visibility expressions.
 
@@ -330,14 +334,14 @@ The definition of the output parameters is performed using the **Manage outputpa
 Adding output parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowage allows the definition of output parameters. From the Document Browser select a document and enter the **Document details**. 
+Knowage allows the definition of output parameters. From the Document Browser select a document and enter the **Document details**.
 Then click on **Output parameters** tab and then on the button **Add** to add the output parameter(s) to be passed to other analytical documents..
 
-The figure below shows an example of a parameter with a DATE type. 
+The figure below shows an example of a parameter with a DATE type.
 The default value is related to the location defined in   (**Menu** > **Languages**).
 
 .. _settinganotuparam:
-.. figure:: media/image85.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image85.png
 
     Setting an output parameter.
 
@@ -346,13 +350,13 @@ Cross navigation definition
 
 Finally you need to select the **Cross Navigation Definition** item from the menu to configure the cross navigation.
 
-.. figure:: media/cross_03.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-cross-03.png
 
     Cross navigation functionality.
 
 The figure below shows the cross navigation definition window.
 
-.. figure:: media/cross_00.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-cross-00.png
 
     Cross navigation GUI.
 
@@ -360,14 +364,14 @@ It is required to give a name to the navigation; then select the document from w
 
 It is possible to configure the associations between input/output parameters by simply dragging and dropping a parameter from the left column on another of the right column.
 
-.. figure:: media/cross_02.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-cross-02.png
 
     Setting the cross navigation.
 
 
 Once set, the association is highlighted as in Figure below.
 
-.. figure:: media/image89.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image89.png
 
     Association between parameters.
 
@@ -377,16 +381,16 @@ It is possible to define multiple cross navigation starting by the same document
 It is possible set a specific description for each cross navigation so that will be easy to recognize the right navigation definition to use. In the same way it is possible set the text of the bread crumb and personalize it.
 For both attributes it is possible to show parameters (of input or output type) values through the syntax $P{parameter_name}. Just parameters of source documents are available.
 
-.. figure:: media/cross_05.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-cross-05.png
 
    Example of parametric description and breadcrumb text
 
-.. figure:: media/image91.png
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-image91.png
 
    Example of popup selection for more cross navigation definition (with params)
-  
-  Please bear in mind that for breadcrumbs as the case below, you need to set the *modality* to *Normal*.
 
-.. figure:: media/cross_06.png
+Please bear in mind that for breadcrumbs as the case below, you need to set the *modality* to *Normal*.
+
+.. figure:: /_static/screenshots/9.1/chapter-3-security-management-document-cross-06.png
 
    Example of breadcrumbs with params
