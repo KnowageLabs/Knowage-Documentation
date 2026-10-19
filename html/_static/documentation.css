@@ -1,4 +1,0 @@
-/* Keep screenshots and technical examples readable in the RTD theme. */
-.rst-content .figure img { max-width: 100%; height: auto; }
-.rst-content .figure .caption { overflow-wrap: anywhere; }
-.rst-content pre { tab-size: 4; }

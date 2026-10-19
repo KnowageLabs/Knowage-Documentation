@@ -11,4 +11,4 @@ Your administrator controls which documents and actions are available to you.
    user-interface
    document-execution
    user-registration
-   ai-assistant
+   AI assistant (Enterprise Edition) <ai-assistant>

@@ -98,7 +98,7 @@ database growth and backups.
 Validate sizing with representative concurrent users, dataset sizes, dashboard
 queries and scheduled exports. Set JVM heap and container limits consistently,
 leaving memory for the OS, native processes and other services sharing the host.
-Measure peak memory and temporary-disk use during exports and Data Preparation.
+Measure peak memory and temporary-disk use during data processing and exports.
 
 Java environment
 ----------------
@@ -214,17 +214,6 @@ Install fonts covering the languages used in reports, charts and exports.
 Make them available to both Java and Chromium service accounts. Use explicit
 font package names from the host OS repositories and verify accented, CJK or
 other required scripts in an exported document.
-
-Data Preparation
-~~~~~~~~~~~~~~~~
-
-Data Preparation requires the appropriate add-on and a Livy/Spark service
-with integration libraries matching the supplied Knowage package. The 9.1
-Java source pins ``livy-client-http 0.7.1-incubating``; this client dependency
-does not certify arbitrary Livy, Spark or Scala server versions.
-
-Confirm the complete integration tuple with your distribution and follow
-:doc:`installation/manual_installation` to configure and test the service.
 
 .. _requirements-browsers:
 

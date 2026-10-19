@@ -95,20 +95,6 @@ Node.js/Chromium runtime and script paths. Test the formats required by your
 users. For Python datasets, functions and widgets, follow
 :doc:`python-installation` and use the matching 9.1 package.
 
-Optional Data Preparation
--------------------------
-
-Data Preparation requires a configured Livy/Spark service and the corresponding
-Knowage integration libraries. Keep their versions aligned with the supplied
-integration package. Configure ``KNOWAGE.DATAPREP.LIVY_URL`` and the resources
-path, then select a data source with **Use for data preparation** to store the
-prepared data. Test a transformation and save a prepared dataset before exposing
-the feature to authors.
-
-.. figure:: /_static/screenshots/9.1/chapter-5-installation-manual-installation-9-1-data-preparation-source.png
-
-   Selecting the data source used for prepared dataset output.
-
 Start and verify
 ----------------
 

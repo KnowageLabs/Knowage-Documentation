@@ -13,13 +13,12 @@ from **Modules** using an authorized role.
    import_export.rst
    timespan.rst
    news.rst
-   Glossary.rst
    resource_manager.rst
    log_manager.rst
    widget_gallery.rst
    documentation.rst
    home_management.rst
-   ai_management.rst
+   AI management (Enterprise Edition) <ai_management>
 
 .. Indices and tables
 .. ==================

@@ -8,8 +8,9 @@ components through their distribution channel.
 
 Use one release consistently across the applications and engines. The 9.1.0
 assets include the main applications ``knowage.war``, ``knowage-api.war`` and
-``knowage-vue.war``, together with the available BIRT, Jasper, Cockpit, KPI,
-Meta and QBE engine archives. Deploy the engines required by your solution.
+``knowage-vue.war`` and additional engine archives. Deploy the engines required
+by the documents covered in this manual. AI services and other components marked
+**Enterprise Edition (EE)** require the corresponding licensed distribution.
 
 Database scripts are in the
 `tagged source tree <https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowagedatabasescripts>`_.

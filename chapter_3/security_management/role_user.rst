@@ -136,9 +136,11 @@ The **Authorizations** tab allows you to assign permissions to each role. Rights
 
    Authorization tab in Roles Management.
 
-The **Business Models**, **Data sets** and **KPI Categories** tabs are intended to assign specific categories to each role, in a way that each user can only see the business models, datasets or KPI that belong to the categories associated with his role.
-
-The **Business Models** tab is only available for modules KnowageBD and KnowageSI, while the **KPI Categories** tab is only available for KnowagePM. More details on business models and KPIs can be found in the corresponding chapters.
+Use the **Business Models** and **Data sets** tabs to assign categories to each
+role. Users can access the business models and datasets belonging to the
+categories associated with their roles. The tabs available depend on the
+installed components. See :doc:`/chapter_3/create_qbe/index` and
+:doc:`/chapter_3/create_dataset/index` for the corresponding authoring guides.
 
 There is a last tab **Usage** that represents a summary tab of the usage of that role inside Knowage.
 

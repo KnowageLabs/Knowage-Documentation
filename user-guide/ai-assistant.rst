@@ -1,8 +1,12 @@
 AI assistant
 ============
 
-The AI assistant is available in Enterprise Edition when the AI service is
-configured and your account has permission to use it. Open the assistant from the main menu.
+.. important:: Enterprise Edition (EE) only
+
+   The AI assistant is reserved for **Knowage Enterprise Edition (EE)**.
+   It requires an EE license, a configured AI service and permission to use it.
+
+Open the assistant from the main menu with an authorized account.
 
 1. Choose one of the business models available in the model selector.
 2. Wait for the session to connect, then enter a question about that model.

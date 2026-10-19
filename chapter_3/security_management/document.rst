@@ -5,7 +5,7 @@ In 9.1 a **Dashboard** and a **Cockpit** are distinct document types. Match the
 document type with its engine when creating or importing a document. Use
 :doc:`/user-guide/document-execution` for parameters, saved views and exports.
 
-The *analytical model* is the core of Knowage Server and covers the whole range of analytical needs, providing many solutions for each analytical area, like reports, cockpits, OLAP documents, KPIs and so on.
+The *analytical model* is the core of Knowage Server and covers the whole range of analytical needs, providing many solutions for each analytical area, such as reports, dashboards, cockpits and OLAP documents.
 
 The main element of the analytical model is the so called *analytical document*, a word used to group under a common concept all different types of documents that can be developed with Knowage (report, cockpit, etc.) when performing a BI analysis.
 

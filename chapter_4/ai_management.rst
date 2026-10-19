@@ -1,8 +1,12 @@
 AI management
 =============
 
-Open **AI Management** from the authorized modules when the AI integration is
-enabled in Enterprise Edition. The integration requires a configured
+.. important:: Enterprise Edition (EE) only
+
+   AI Management is reserved for **Knowage Enterprise Edition (EE)**.
+   It requires an EE license, the configured AI integration and an authorized role.
+
+Open **AI Management** from the authorized modules. The integration requires a configured
 ``KNOWAGE.AI.URL`` and the ``EngGPTIntegration`` functionality on the role.
 The engine overview shows the configured service, reachability and
 synchronization state.

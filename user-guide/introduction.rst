@@ -26,7 +26,7 @@ Documents, datasets and permissions
 -----------------------------------
 
 An **analytical document** is a saved analysis, such as a Dashboard, Cockpit,
-report, QBE query or KPI document. A **dataset** supplies the data used by an
+report or QBE query. A **dataset** supplies the data used by an
 analysis. A **data source** connects Knowage to the underlying system.
 
 Document parameters are selected before execution. Dashboard selections filter

@@ -6,7 +6,7 @@ installations or tenants. Export a backup of target objects before importing
 replacements. During document import, map each engine to its matching type:
 Dashboard and Cockpit remain distinct in 9.1.
 
-This functionality allows to import/export items belonging to *Gallery*, *Documents*, *Menu*, *Users*, *KPIs* and *Catalogs*.
+This functionality allows to import/export items belonging to *Gallery*, *Documents*, *Menu*, *Users* and *Catalogs*.
 After exporting, the user can import the information previously extracted into a different Knowage installation or tenant.
 
 
@@ -176,49 +176,6 @@ To import a zip file, log in to the source tenant, select **Catalogs** from the 
 
     Importing Catalogs
 
-KPIs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In this section we describe how to manage the import/export of KPIs between two tenants.
-
-The user must enter Knowage as administrator of the source tenant and click on **KPIs** from the *Import/Export* menu panel.
-
-The page contains the *Export* and the *Import* tab, where the user can select the KPIs for the export/import respectively.
-
-.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image78.png
-
-    KPIs Import window
-
-Let’s start from the export feature. The user at first selects the KPIs to be exported and in addition can include:
-
-- targets,
-- the scorecards related to the selected KPIs,
-- schedulations.
-
-Click on the download icon to get the zip file.
-
-Once the zip file is downloaded, the user has to switch to the tenant used for the import and as admin enter the Import/Export KPIs functionality and move to the Import tab.
-
-The user must therefore browse the personal folder to catch the zip file and click on the red upload button, as shown below.
-
-.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image823.png
-
-    Import tab
-
-Referring to the following image, the user has to specify if:
-
--  overwriting the existing KPIs and their related formulas
--  importing targets,
--  importing scorecards,
--  importing schedulations.
-
-.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image83.png
-
-    Import KPIs settings
-
-Once the import is started, the GUI leads the user to finalize the import procedure.
-
-
 Analytical Drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -248,24 +205,3 @@ Use the GUI to upload the zip file and specify if overwriting the existing analy
     Import of analytical drivers
 
 The process ends with a message containing the information about the import.
-
-Glossary
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The export/import of glossary allows the user to align glossaries among tenants.
-
-.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image90.png
-
-    Export/Import glossaries window
-
-In the *Export* tab, the user is asked to select the glossaries to export and type a name that will be assigned to the zip file.
-The searching functionality can be used for the selection of the glossaries. Use the download icon to get the zip file.
-
-By connecting with admin privileges to a target tenant, the user selects the *Import* tab from the Export/Import main window.
-once selected the zip file through the browsing button just click the uploading icon.
-
-.. figure:: /_static/screenshots/9.1/chapter-4-import-export-image91.png
-
-    Importing glossaries
-
-Arrows are used to indicate the glossaries to consider for the import.

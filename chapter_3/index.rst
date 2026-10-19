@@ -19,10 +19,8 @@ the result to the intended readers.
    create_datamining/index.rst
    create_multidimension/index.rst
    create_dossier/index.rst
-   create_performance_indicator/index.rst
    create_etl_process/index.rst
    localization/index.rst
-   create_a_data-preparation/index.rst
 
 .. Indices and tables
 .. ==================
