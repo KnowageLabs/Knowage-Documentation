@@ -13,7 +13,7 @@ A *List Of Value* (LOV), is a collection of data organized in attribute-value fa
 
 There may be multiple attributes in a LOV, but only one of them is the core value that is actually used in the analytical driver. Other  values have a descriptive function: they can be used to provide a human readable description of the LOV, as well as to store information used, for example, to correlate analytical drivers. In our example, the core value is the customer’s id, while the others are additional data describing the customer.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image46-b.png
+.. figure:: media/image46_b.png
 
     LOVs functionality from Knowage menu.
 
@@ -26,7 +26,7 @@ Knowage allows to create different types of LOV:
 - **Dataset**: Dataset already defined in Knowage Server that is used to retrieve values. Note that the dataset must not contain parameters, while profile attributes are allowed.
 
 .. _lovlistbehav:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image46-a.png
+.. figure:: media/image46_a.png
 
     List of LOVs.
 
@@ -41,7 +41,7 @@ The LOV creation interface will open, where you   can set label, name and descri
 .. |image38| image:: media/image45.png
    :width: 30
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image46.png
+.. figure:: media/image46.png
 
     Creating a LOV.
 
@@ -51,12 +51,12 @@ By testing the LOV, you will be able to define which column is the actual value 
 Only *one* column can be the value attribute and only *one* column can be chosen as Descriptive attribute, while the others can be visible. The two figures below exhibit an example. Columns that are not visible can be used for correlating drivers.
 
 .. _previewandteslov1:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-preview.png
+.. figure:: media/preview.png
 
     LOV - Preview functionality.
 
 .. _previewandteslov2:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image48.png
+.. figure:: media/image48.png
 
     LOV - Test functionality
 
@@ -68,7 +68,7 @@ Only *one* column can be the value attribute and only *one* column can be chosen
 We stress that the visibility of specific fields serve to improved human readability when applying filters to documents handled by third users. Moreover it is possible to choose (refer to next figure) between **simple**, **tree** and **tree with selectable internal nodes** typology of LOV. The last two are hierarchical and let the user visualize the parameters together with their logical tree structure.
 
 .. _hierarchicallvdef:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image49.png
+.. figure:: media/image49.png
 
     Hierarchical LOV definition.
 
@@ -129,14 +129,14 @@ This means that if you are the food manager and your user has the profile attrib
 
 Note that an information icon and a profile attribute icon are available to guide the user in writing the code properly, using the   syntax correctly and typing the right profile attribute name.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-image50.png
+.. figure:: media/image50.png
 
     Assistance in retrieving syntax and profile attributes.
 
 Cloning a LOV
 -------------
 
-Open **Modules** > **Behavioural Model** > **LOVs Management** and use **Clone**
+Open **LOVs Management** and use **Clone**
 on the LOV to reuse. Give the copy a unique label, review its data source,
 query or values, and test the returned columns. Choose its value and description
 columns, save it, then associate the copy with the intended driver use mode.

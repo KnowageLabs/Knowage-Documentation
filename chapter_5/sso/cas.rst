@@ -1,10 +1,6 @@
 CAS SSO
 ########################################################################################################################
 
-This guide covers the CAS integration for the current Tomcat deployment.
-Match the CAS server and client configuration to the distribution's supported
-versions and validate the public service URLs for every participating engine.
-
 CAS is an application that implements a Single-Sign-On (SSO) mechanism. It is a good practise in production environments to install it and configure it so to have secure access to the Knowage server applications. CAS expects the use of the HTTPS protocol.
 
 Deploy of the CAS application
@@ -15,12 +11,13 @@ Carry out the following steps:
 * shut down the server if running,
 * deploy CAS application,
 * for Tomcat: unzip the ``cas.war`` file inside the ``TOMCAT_HOME/webapps/cas``
+* for JBoss: copy the ``cas.war`` file inside the ``JBOSS_HOME/standalone/deployments``
 * edit ``/cas/WEB-INF/classes/cas_spagobi.properties`` inserting the connection parameters for the metadata database of Knowage,as following
 
-        .. _conneparamknow:
-        .. code-block:: properties
-           :linenos:
-           :caption: Connection parameters for Knowage metadata db.
+	.. _conneparamknow:
+	.. code-block:: properties
+	   :linenos:
+	   :caption: Connection parameters for Knowage metadata db.
 
                         spagobi.datasource.driver=<driver JDBC>
                         spagobi.datasource.url=<URL JDBC>
@@ -125,10 +122,11 @@ Then set the ``sso_class`` environment variable as below:
 This variable is located:
 
 * Tomcat: in the ``TOMCAT_HOME/conf/server.xml``
-
+* JBoss: in the ``JBOSS_HOME/ standalone/configuration/standalone.xml``
+ 
 Edit all ``knowage\WEB-INF\web.xml`` to activate CAS filters.
 
-.. code-block:: xml
+.. code-block:: text
    :linenos:
    :caption: Setting the CAS filters for sso_class variable.
 
@@ -137,11 +135,11 @@ Edit all ``knowage\WEB-INF\web.xml`` to activate CAS filters.
           <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
           <init-param>
            <param-name>casServerLoginUrl</param-name>
-            <param-value>https://cas.example.org/cas/login</param-value>
+            <param-value>https://<nome del server CAS>/cas/login</param-value>
           </init-param>
           <init-param>
            <param-name>serverName</param-name>
-            <param-value>https://analytics.example.org</param-value>
+            <param-value><dominio di knowage, incluso il protocollo e la porta, se non standard></param-value>
           </init-param>
         </filter>
 
@@ -150,28 +148,29 @@ Edit all ``knowage\WEB-INF\web.xml`` to activate CAS filters.
           <filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>
           <init-param>
             <param-name>casServerUrlPrefix</param-name>
-            <param-value>https://cas.example.org/cas/</param-value>
+            <param-value>https://<nome del server CAS>/cas/</param-value>
             </init-param>
           <init-param>
             <param-name>serverName</param-name>
-            <param-value>https://analytics.example.org</param-value>
+            <param-value><dominio di Knowage Server, incluso il protocollo e la porta, se non standard></param-value>
           </init-param>
           <init-param>
             <param-name>proxyReceptorUrl</param-name>
             <param-value>/proxyCallback</param-value>
           </init-param>
-
-        <!-- Add this parameter to participating engine web applications: -->
-
+        
+        [Nelle web application knowageXXXengine presente anche questo parametro:
+        
           <init-param> <param-name>proxyCallbackUrl</param-name>
-            <param-value>https://analytics.example.org/knowageENGINE/proxyCallback</param-value>
+            <param-value><dominio di knowage Server, incluso il protocollo e la porta, se  non standard>/<knowageXXXengine>/proxyCallback</param-value>
           </init-param>
-
+        ]
+        
         </filter>
 
         <filter>
           <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
-          <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+          <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFtilter</filter-class>
         </filter>
 
         <filter-mapping>
@@ -187,11 +186,12 @@ Edit all ``knowage\WEB-INF\web.xml`` to activate CAS filters.
           <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
           <url-pattern>/servlet/*</url-pattern>
         </filter-mapping>
-
-        <!-- Add this mapping to participating engine web applications: -->
+        
+        [Nelle web application knowageXXXengine presente anche questo mapping:
         <filter-mapping>
           <filter-name>CAS Validation Filter</filter-name>
           <url-pattern>/proxyCallback</url-pattern>
         </filter-mapping>
+        ]
 
 All ``web.xml`` files have CAS filters already configured, but they are commented. The user must uncomment them, looking for the strings ``START-CAS``, ``END-CAS`` and adjust the URL as the code abow reports.

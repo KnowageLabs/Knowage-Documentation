@@ -16,7 +16,8 @@ You must add required libraries into ``TOMCAT_HOME/lib`` folder:
 .. important::
          **Enterprise Edition only**
 
-         To enable the Import/Export capability, please also add the JDBC connector for `HyperSQLDB <https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/hsqldb/hsqldb/1.8.0.2/hsqldb-1.8.0.2.jar>`_ , taking care of using version 1.8.0.2 .
+         To enable the Import/Export capability, please also add the JDBC connector for HyperSQLDB supplied with your distribution. The public 9.1 Docker recipe
+         includes version 1.8.0.10; preserve the version qualified for your EE package.
 
 
 File system resources

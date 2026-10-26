@@ -1,12 +1,6 @@
 Create a new Data Source
 ########################################################################################################################
 
-This chapter covers connector-specific configuration for relational, cloud,
-Big Data and NoSQL sources. Register connections in **Modules** > **Data
-Providers** > **Data Source** as described in :doc:`/chapter_4/add_datasource`.
-Connector availability depends on the installed JDBC driver and its supported
-database version.
-
 In order to connect to your data, you have to define a new data source connection.
 
 Knowage manages two types of data source connections:
@@ -24,11 +18,11 @@ To add a new connection, first add the relative JDBC driver to the folder ``TOMC
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-datasource-index-image25.png
+.. figure:: media/image25.png
 
      Add a new data source
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-datasource-index-image26.png
+.. figure:: media/image26.png
 
      Data source details.
 
@@ -122,7 +116,7 @@ Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you t
 
 For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-datasource-index-image27.png
+.. figure:: media/image27.png
 
    Libraries to include in the apache driver.
 

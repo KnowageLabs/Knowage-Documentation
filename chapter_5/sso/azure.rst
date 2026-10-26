@@ -1,11 +1,6 @@
 Azure SSO
 ########################################################################################################################
 
-Configure the Azure identity integration with the application's registered
-redirect URI and the 9.1 deployment's public address. Preserve provider
-credentials outside published documentation and validate user and role mapping
-after sign-in.
-
 Knowage provides integration with Azure Sign-In for authentication purposes, i.e. users can login into Knowage using their Azure accounts.
 
 **Remark.** Azure Sign-In is exploited only for authentication, not for authorization. The authorization part (that consists of defining roles and profile attributes for users) is still in charge of Knowage: this means that, before an user can enter into Knowage with his Azure account, the admin user has to define that user inside the regular Knowage users catalogue, keeping in mind that the user id must match the email of his Azure account (the provided password will not be considered when user will log in). In case the user is not defined inside Knowage users list, the authentication will fail.
@@ -45,27 +40,27 @@ instead, in a Windows environment using Apache Tomcat, edit TOMCAT_HOME/bin/sete
 
 When users will connect into Knowage, the login page will display the Azure Sing-In button:
 
-.. figure:: /_static/screenshots/9.1/chapter-5-sso-azure-azure-signin.png
+.. figure:: media/azure_signin.jpg
 
    Advanced configuration - Azure Sing-In button.
 
 When clicking on that button, Azure Sing-In authentication applies; if successful, users will be redirected into their home page inside Knowage.
 In case the account is not recognized by Knowage (i.e. the provided email address does not match any existing Knowage user id), he will get an error message.
-
+   
 Inside the Azure portal, after you have successfully registered our app, you will have to configure a new Single-page application, and enter "https://<your-host-name>/knowage/servlet/AdapterHTTP" as Redirect URI.
 
-.. figure:: /_static/screenshots/9.1/chapter-5-sso-azure-azure-redirect-uri.png
+.. figure:: media/azure_redirect_uri.jpg
 
    Azure portal configuration - Redirect URI.
-
+   
 The authorization endpoint must be able to issue ID tokens, so make sure that the corresponding checkbox is flagged.
 
-.. figure:: /_static/screenshots/9.1/chapter-5-sso-azure-azure-idtoken-checkbox.png
+.. figure:: media/azure_idtoken_checkbox.jpg
 
    Azure portal configuration - ID token checkbox.
-
+   
 Directly from the application manifest.json file, you need to set "accessTokenAcceptedVersion": 2 in order to use the v2.0 endpoints.
 
-.. figure:: /_static/screenshots/9.1/chapter-5-sso-azure-manifest.png
+.. figure:: media/manifest.jpg
 
    Azure portal configuration - manifest.json file.

@@ -1,39 +1,28 @@
-Dataset metadata and advanced options
-=====================================
+Metadata & advanced
+########################################################################################################################
 
-Review the metadata after defining and previewing the dataset. Each column's
-data type and semantic role affect filtering, aggregation and visualization.
 
-.. list-table:: Metadata to review
-   :header-rows: 1
-   :widths: 30 70
+Dataset Metadata Analysis
+------------------------------------------------------------------------------------------------------------------------
 
-   * - Field
-     - Use
-   * - Data type
-     - Match the returned values, especially dates and numeric measures.
-   * - Attribute / Measure
-     - Use attributes for categories and measures for quantitative analysis.
-   * - Description
-     - Explain the column's meaning for authors and readers.
-   * - Personal data / Encrypted / Represents a subject
-     - Describe the data for the installation's privacy and encryption features.
+Once the steps for defining the dataset have been completed, it is possible to analyze the returned information. In the **Metadata** tab, for each column the following details are shown:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-advanced-9-1-dataset-metadata.png
 
-   Dataset metadata and semantic roles.
 
-Persistence and cache
----------------------
+- **Data Type**: the type of the returned data  
+- **Role**: `Attribute` / `Measure`  
+- **Description**: a custom description can be added  
+- **Personal Data**: whether the data content is of a personal nature  
+- **Encrypted**: whether the data content is encrypted  
+- **Represents a Subject**: whether the data content represents a subject  
 
-The **Advanced** options allow eligible non-parametric datasets to persist
-results for reuse. The installation must have an appropriate persistence/cache
-data source and the required database privileges. Review refresh behavior
-against the expected freshness of the source data.
+.. figure:: media/ds_file_upload_03.png
 
-Dashboard dataset cache and refresh settings are configured separately in the
-Dashboard. See :doc:`/chapter_3/create_new_dashboard/index` and
-:doc:`/chapter_5/server_settings`.
+These last pieces of information are mainly used to support encryption functionalities.
 
-Before publishing, preview representative rows and verify column aliases,
-aggregations, visibility and any privacy settings under the consuming roles.
+---
+
+Advanced Tab Options
+------------------------------------------------------------------------------------------------------------------------
+
+In the **Advanced** tab, it is possible to persist the dataset information in cache, but **only for non-parametric datasets**.

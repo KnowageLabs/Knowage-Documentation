@@ -1,9 +1,6 @@
-Build analyses with Knowage
-===========================
+How to use Knowage
+########################################################################################################################
 
-Start with a data source and a dataset, then create a Dashboard or another
-analytical document. Configure roles, folders and analytical drivers to publish
-the result to the intended readers.
 
 .. toctree::
    :caption: Table of Contents
@@ -11,8 +8,8 @@ the result to the intended readers.
    security_management/index.rst
    create_datasource/index.rst
    create_dataset/index.rst
-   create_new_dashboard/index.rst
    create_dashboard/index.rst
+   create_new_dashboard/index.rst
    create_report/index.rst
    create_qbe/index.rst
    create_registry/index.rst

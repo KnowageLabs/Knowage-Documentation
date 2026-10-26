@@ -38,7 +38,8 @@ each has its own editor and template handling.
    * - Exports and scheduling
      - Custom export filenames and worksheet names, improved table PDF output,
        XLSX export of drill-down charts and combined scheduled PDF, XLSX and
-       HTML outputs. See :doc:`/chapter_4/schedule`.
+       HTML outputs. The standard dialog selects one output format at a time;
+       see :doc:`/chapter_4/schedule` for the available controls.
    * - Administration
      - Bulk import of profiled users, user lifecycle improvements and extended
        role, menu, external-link and portal settings. See

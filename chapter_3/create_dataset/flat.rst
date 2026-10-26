@@ -1,18 +1,15 @@
-Flat datasets
-=============
+Flat Data Set
+########################################################################################################################
 
-A Flat dataset reads a table through a configured data source, without requiring
-a handwritten SQL query.
+A flat dataset allows the retrieval of an entire table from a data source. In other words, it replaces a dummy query like ``select * from sales`` by automatically retrieving all rows in a table. To create a flat dataset, simply enter the table and the data source name. The below example
+refers to the table *inventory* to retrieve the whole data.
 
-1. Create a dataset of type **Flat**.
-2. Choose its data source and enter or select the table to read.
-3. Preview the data using the account configured for that data source.
-4. Review column metadata and attribute/measure roles, then save.
+.. figure:: media/image33.png
 
-The data source's database account determines which tables can be read. A
-large table can return many rows; use a Query dataset when you need explicit
-filtering or aggregation at source.
+    Flat Dataset.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-flat-9-1-flat-dataset.png
+Once the dataset have been saved the user can manage the metadata (measures and attributes) as shown in the below image.
 
-   Flat dataset source, table and metadata.
+.. figure:: media/ds_flat_metadata.png
+
+    Metadata - Flat Dataset.

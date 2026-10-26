@@ -4,7 +4,7 @@ Analytical Driver
 An analytical driver (hereafter simply driver or AD) models a concept or a piece of data frequently used as a distinguishing criterion on the global data context. A driver highlights the concepts guiding the analysis, providing a unique representation of them and describing how they are shown and checked according to the end users’ roles. When connected to analytical documents, a driver produces an explicit or implicit parameter used to filter data.
 
 .. _parametrreportbehav:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image39-c.png
+.. figure:: media/image39_c.png
 
     Parametric Report.
 
@@ -22,7 +22,7 @@ In particular, each driver provides many *use modes*, defining:
 
 In other terms, each use mode refers to an initial visualization method and content (LOV), to one or more validation rules (check) and to one or more end user roles (roles). The logic of a driver is represented in Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image40.png
+.. figure:: media/image40.png
 
     Analytical driver schema.
 
@@ -31,7 +31,7 @@ Let’s consider the following example. We need to represent the concept of “p
 - if the user is a call center operator or a user that provides internal support, he can manually write the product family he wants to select. This value will be formally verified (it must be a text) and checked on the product family registry.
 - if the user is a product brand director or an operative secretary, he can choose the value from a preloaded list of all the product   families belonging to his brand. For this reason, the value does not need any check.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image41.png
+.. figure:: media/image41.png
 
     Analytical driver schema - Example.
 
@@ -47,7 +47,7 @@ Thanks to analytical drivers, a single document is able to cover the analytical 
 In the next paragraphs we explain how to create a new analytical driver together with its basic components.
 
 .. _overallprocess:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image42.png
+.. figure:: media/image42.png
 
     Overall process.
 
@@ -58,7 +58,7 @@ Creating an analytical driver
 As explained at the beginning of this section, analytical drivers use information about users, their roles and profiles to filter data returned by their associated LOVs. Users, roles and profiles must have been already defined in the project context so that they are available to the driver.
 
 .. _analyticaldrivermanagbehav:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image52.png
+.. figure:: media/image52.png
 
     Analytical Driver Management.
 
@@ -73,7 +73,7 @@ The upper part is the **Detail** section, where you can set the label, name and 
    :width: 30
 
 .. _drivercrationbehav:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image53-b.png
+.. figure:: media/image53_b.png
 
     Creating a new Driver.
 
@@ -81,7 +81,7 @@ In the Analytical Driver Use Mode Details section, one or more LOVs are linked t
 
 To associate LOVs to the driver, switch to the “Analytical Driver Use Mode Details” tab. Here the user must set label and name of that specific use mode, the kind of input among **LOV input**, **Manual input** and **Map input**, as shown in below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image54.png
+.. figure:: media/image54.png
 
     Details tab of an AD
 
@@ -98,13 +98,13 @@ The user can also add default values (namely values that will be passed to the d
 
 In case of Manual Input Date the user can specify minimum and maximum values driven by LOVs:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image57.png
+.. figure:: media/image57.png
 
     Example of a Detail tab of an AD with a maximum value.
 
 During execution of a document, the date picker respects the configured bounds:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image58.png
+.. figure:: media/image58.png
 
     Date picker with a maximum value specified.
 
@@ -125,7 +125,7 @@ Therefore, since an admin user can decide to separate values according to the ot
 All the selections can be multi-valued, but note that this option has to be set directly on the document detail during analytical driver
 association.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-image57-b.png
+.. figure:: media/image57_b.png
 
     The Roles tab of an AD.
 
@@ -157,7 +157,7 @@ For a Date driver with manual input, edit its use mode and configure **Min
 value** and **Max value** as needed. Select the LOV providing each limit, save
 the use mode and verify it through a document using the same role. The LOV
 must return a date in the format expected by the driver, consistent with its
-default value. Configure the lower bound before the upper bound.
+default value.
 
 .. figure:: /_static/screenshots/9.1/chapter-3-security-management-driver-9-1-driver-date-limits.png
 

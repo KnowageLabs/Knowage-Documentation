@@ -1,14 +1,10 @@
 Jasper reporting
 ########################################################################################################################
 
-Upload a compatible Jasper report template to a document configured with
-the Jasper engine. Map the report parameters, select the data source and test
-the required output formats. Engine availability depends on your deployment.
-
 Jasper is a stand-alone reporting tool developed by the Jaspersoft Community. An example of Jasper report is represented in the next figure. Jasper Report Engine manages Jasper report templates inside Knowage Server. A report template for Jasper is a text file with .jrxml extension that can be manually modified by very expert users by editing XML code. Otherwise, *iReport*, a graphical template designer, is provided for all developers who want to easily design a report for this engine.
 
 .. _exjasperreprt:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-jasper-image342b.png
+.. figure:: media/image342b.png
 
     Example of a Jasper report.
 
@@ -18,15 +14,15 @@ Document definition\*
 ------------------------------------------------------------------------------------------------------------------------
 
 Unlike the BIRT designer, iReport is not integrated in Eclipse. Therefore, before starting developing the report, you must download it from the website http://community.jaspersoft.com/project/ireport-designer/releases.
-
+   
 .. note::
       **iReport download**
-
+         
          Download the iReport designer at http://community.jaspersoft.com/project/ireport-designer/releases. Knowage support any kind of version.
 
 Then you will have to set the path to the iReport designer in Knowage Studio. Open Window > Preferences > iReport Editor Configuration and set the correct path to the ireport.exe file.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-jasper-image343.png
+.. figure:: media/image343.png
 
     iReport Configuration in Knowage Studio.
 
@@ -52,7 +48,7 @@ Click on the small icon |image348| of the menu bar. The data source creation edi
 
 Select a JDBC data source, set the appropriate parameters and give the data source a name. Figure below shows the wizards that present in this procedure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-jasper-image345.png
+.. figure:: media/image345.png
 
     Creation of a JDBC data source in a Jasper report.
 
@@ -63,13 +59,13 @@ The tree located in the left part of the window shows the elements of the report
 .. |image350| image:: media/image346.png
    :width: 30
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-jasper-image347.png
+.. figure:: media/image347.png
 
     Data Set definition.
 
-To create a table, click on the element in the Palette and use the wizard. Figure below exhibits the Jasper editor interface.
-
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-jasper-image348.png
+To create a table, click on the element in the Palette and use the wizard. Figure below exhibits the Jasper editor interface. 
+   
+.. figure:: media/image348.png
 
     iReport graphical editor.
 
@@ -78,10 +74,11 @@ To insert dataset columns into the report, use the syntax showed in following sy
 .. code-block:: bash
         :linenos:
         :caption: Syntax to insert dataset columns.
-
+        
              $F{name_of_dataset_column}
 
 
 Once the document has been developed, technical users can use Knowage Studio deployment service to easily register the report with its template on Knowage Server. Alternatively, any valid Jasper template (developed with or without Knowage Studio) can be directly uploaded to Knowage Server using the web interface for the document management.
 
 This section does not provide any further detail about graphical development since it focuses on specific aspects of Knowage Jasper Report Engine. All Jasper standard functionalities work with Jasper Report Engine. For a full overview of Jasper reporting tool and a detailed developer guide, please refer to the official documentation at http://community.jaspersoft.com/.
+

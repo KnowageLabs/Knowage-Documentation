@@ -20,7 +20,23 @@ For Tomcat: the configuration of the pool of thread is available inside the TOMC
             type="commonj.work.WorkManager"/>
 
 
-The configuration parameters have the following meanings:
+For JBoss: the configuration of the pool of thread is available inside the JBOSS_HOME/ standalone/configuration/s Refer to Code below.
+
+.. code-block:: xml
+        :linenos:
+        :caption: Configuration of the pool of thread for JBoss.
+
+        <object-factory name="java:global/SpagoWorkManager" module="de.myfoo.commonj"
+          class="de.myfoo.commonj.work.MyFooWorkManagerFactory">
+          <environment>
+          <property name="maxThreads" value="5"/>
+          <property name="minThreads" value="1"/>
+          <property name="queueLength" value="10"/>
+          <property name="maxDaemons" value="10"/>
+          </environment>
+        </object-factory>
+
+In both cases, the meaning of the configuration parameters is the following:
 
 * minThreads: the minimum number of threads in the thread pool. Default: 2;
 * maxThreads: the maximum number of threads in the thread pool. Default: 10;
@@ -301,21 +317,18 @@ Knowage uses the component Log4J to create the log applications. Each web applic
         </Configuration>
 
 
-If the user wishes to enable the tracing of the information to **DEBUG** level it is enough to modify the following line
+To enable DEBUG logging for the Knowage package, change its logger level in
+``WEB-INF/classes/log4j2.xml``, preserving the appender configuration:
 
-.. code-block:: bash
-        :linenos:
+.. code-block:: xml
 
-         log4j.logger.it.eng.spagobi=ERROR, SpagoBI, CONSOLE
+   <Logger name="it.eng.spagobi" level="debug" additivity="false">
+       <AppenderRef ref="KNOWAGE_CORE" />
+   </Logger>
 
-in
-
-.. code-block:: bash
-        :linenos:
-
-        log4j.logger.it.eng.spagobi=DEBUG, SpagoBI, CONSOLE
-
-For further details we refer to the official Log4J documents.
+Use the appender name defined in the application's file. Return the logger to
+the normal level after troubleshooting. See the official Log4j 2 documentation
+for the complete configuration syntax.
 
 Mail server
 ------------------------------------------------------------------------------------------------------------------------
@@ -327,9 +340,8 @@ Selecting the category MAIL the user gets the list of parameters to configure fo
 * trustedStore;
 * scheduler, used by the scheduler to send a report by mail;
 * user, used directly by the user when he intends to send a report by mail;
-* kpi_alarm, used by the alarm component to send mails.
 
-.. figure:: /_static/screenshots/9.1/chapter-5-server-settings-image28.png
+.. figure:: media/image28.png
 
    Mail server configuration.
 
@@ -360,7 +372,7 @@ Date format
 
 Knowage allows the user to visualize the date time in a format that depends on the selected language. To change the visualization of such formats, the user must enter Knowage as administrator and access the "Server Settings“ section and, consequently, the ”Configuration management“. Then finally select ”\ **DATE-FORMAT**\ “.
 
-.. figure:: /_static/screenshots/9.1/chapter-5-server-settings-image29.png
+.. figure:: media/image29.png
 
    Date format configuration.
 
@@ -418,7 +430,7 @@ Login security configurations can be set filling fields below:
 * **internal.security.login.checkForMaxFailedLoginAttempts**: if active and set to true, users will only be able to access Knowage if they have not reached the maximum number of failed login attempts;
 * **internal.security.login.maxFailedLoginAttempts**: the maximum number of failed login attempts.
 
-.. figure:: /_static/screenshots/9.1/chapter-5-server-settings-image32.png
+.. figure:: media/image32.png
 
    Advanced configuration - login security settings.
 
@@ -522,7 +534,7 @@ Audit Table Management
 The audit table tracks documents changes and other operations made to knowage data at the database level.
 User can enable audit table tracing (database table name: **SBI_AUDIT**) setting the **KNOWAGE.AUDIT_ENABLED** property to **true** inside **Configuration Management** panel:
 
-.. figure:: /_static/screenshots/9.1/chapter-5-server-settings-image36.png
+.. figure:: media/image36.png
 
     Enabling audit table tracing.
 

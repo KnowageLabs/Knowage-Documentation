@@ -1,11 +1,6 @@
 How to build a Metamodel
 ########################################################################################################################
 
-Open **Modules** > **Catalogs** > **Business Model Catalogue** to create or
-maintain a model. Start with an available data source, define the exposed
-entities and relationships, then publish and test the model in QBE with the
-intended user roles.
-
 In this chapter we go into details of how to build your own metamodel. Knowage allows to develop and manage metadata through the use of a web interface that is called **Meta Web**. We recall that dealing with metadata means to manage data that describe the structure of a relational model, namely to deal with the relationship between tables, table columns, keys and so on.
 
 The Meta Web allows the user to access these information through the usage of a graphic interface and to easily combine, redefine and query them on an abstract model, guaranteeing the safety of the source model. In addition, we stress that the users can perform queries over data without the usage of a data query language.
@@ -17,7 +12,7 @@ Using the Meta Web application, it is possible to reverse the content of a datab
 
 To create a Metamodel enter the **Business Model Catalogue** and add a new model clicking on the “Plus” icon. Referring to next figure, you will be prompted to enter the following fields:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-bm-kn.png
+.. figure:: media/bm_KN.png
 
     Business Model functionality.
 
@@ -27,7 +22,7 @@ To create a Metamodel enter the **Business Model Catalogue** and add a new model
 -  *Data Source* (mandatory): select the datasource that will be used to create your model (so the one that contains the tables that you need).
 
 .. _settingthemodelinfo:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image299.png
+.. figure:: media/image299.png
 
     Setting the metamodel basic information.
 
@@ -40,7 +35,7 @@ With this feature in Meta web is possible to create filters using associations w
 
 To add a new parameter, you can click on the tab **Drivers** and then on a **Add** button, see the next figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image299a.png
+.. figure:: media/image299a.png
 
     Association with analytical driver panel - 1.
 
@@ -50,7 +45,7 @@ Once you have selected the driver, you should write the **exact URL** of the cor
 
 After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image299b.png
+.. figure:: media/image299b.png
 
     Association with analytical driver panel - 2.
 
@@ -67,7 +62,7 @@ To set the correlation, select the child parameter which will show you the detai
 
 In general, to configure a correlation within a meta model you should make sure that the LOV associated with the parent parameter and the  one associated to the child parameter share at least one column. This column defines which value from the parent parameter will be applied to the child, in order to constrain the results.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image299d.png
+.. figure:: media/image299d.png
 
     Definition of the correlation.
 
@@ -84,7 +79,7 @@ Here you need to define:
 
 If a parameter depends on multiple parent parameters, you can define multiple correlations.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image299e.png
+.. figure:: media/image299e.png
 
     Multiple correlations.
 
@@ -101,15 +96,15 @@ In previous sections we saw how to set correlation through the GUI available in 
 
    $P{AD_name}
 
-We stress that the ``AD_name`` is the name of the driver the administrator is trying to reach.
+We stress that the ``AD_name`` is the name of the driver the administrator is trying to reach. 
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image82-a.png
+.. figure:: media/image82_a.png
 
     Correlation passing driver values to LOV query .
 
 As a result, when opening meta model, as soon as the user pick up a value from the "free" parameter, the other one is filtered and it will show only the value related to the previous selection, as shown in Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image83-a.png
+.. figure:: media/image83_a.png
 
     Filtering with correlation.
 
@@ -118,7 +113,7 @@ Creating an empty model
 
 The first time you enter the Meta Web, the interface will show you the available tables extracted from the selected data source.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-metaweb-8-1.png
+.. figure:: media/metaweb_8.1.png
 
     Metaweb interface.
 
@@ -137,21 +132,21 @@ The Meta Web Editor is divided in two main tabs **Business Model** and **Physica
 
 The “Physical Model” tab contains the tables that the user has checked earlier. On the left side of the interface you will see a tree like structure with the list of tables imported in the Physical Model (see figure below).
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image301.png
+.. figure:: media/image301.png
 
     Physical Model Tab.
 
 Use the specific link to update the Physical Model at any time. Referring to the figure below, selecting the “Update Physical Model” option the user can refresh the model metadata.
 
 .. _updtphisicalmdl1:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image302a.png
+.. figure:: media/image302a.png
 
     Update the physical model.
 
 As shown below, the interface indicates if tables have been added or deleted to the datasource and lets the user to add tables to the Physical Model.
 
 .. _updtphisicalmdl2:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image30607.png
+.. figure:: media/image30607.png
 
     Update the physical model.
 
@@ -159,12 +154,12 @@ Each table of Physical Model brings the information read from data base. Selecti
 
 As shown below, the Business Model tab allows the user to custom the model in terms of column name, type, visibility, format, etc.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image308.png
+.. figure:: media/image308.png
 
     Business Model Tab.
 
-In this view, you see all the Business Classes created at the first initialization.
-The Business Classes are represented in a tree structure on the left side of the page.
+In this view, you see all the Business Classes created at the first initialization. 
+The Business Classes are represented in a tree structure on the left side of the page. 
 Clicking on them, generic information are reported in the six tabs available on the right side of the page. See below.
 
 You can change the order of the business classes just by using the drag and drop functionality.
@@ -173,10 +168,10 @@ By means of the **Property List** tab, the user can customize the business class
 
 The **Attributes** tab lets the user to define which columns to be used as primary keys and which are effectively functional for the Business Class (not to be confused with the visibility condition). Note that, for instance, it is not possible to disable the “In Use” option when the field has already been set as foreign key.
 
-The **Calculated field** tab is used to configure computed measures or attributes.
+The **Calculated field** tab is used to configure computed measures or attributes. 
 Click on the dedicated button, as shown below, to create a new field. Use the list of functions to retrieve right function syntax and the list of fields on the left to correctly type the fields name.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image310.png
+.. figure:: media/image310.png
 
     Add calculated fields.
 
@@ -194,7 +189,7 @@ The two relationships differ then for the direction of the bounds between tables
 
 To create a new relationship, just select the tab “Inbound” or “Outbound” after selecting one Business Class. Then click on the button “Add” and you will see a dialog.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image311.png
+.. figure:: media/image311.png
 
    Setting the outbound relationship.
 
@@ -226,12 +221,12 @@ SQL Filter
 
 There is a new feature that is added in meta web. It is SQL Filter which we can define in Filter tab in meta web as you can see in the figure below. SQL Filter is used for applying already defined drivers in query.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image1-sql.png
+.. figure:: media/image1_sql.png
 
 SQL filter is expression that is added in the end of query as part of where clause. The right syntax for sql filter is:
 column_name = $P{name_of_the_driver}. For example: city = $P{city}. If you want to add more than one filter, you can relate them with an operator (AND, OR...) as you can see in an example in figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image2-sql.png
+.. figure:: media/image2_sql.png
 
 If you want to add filter for multivalue driver the right syntax is this: column_name IN ($P{name_of_the_driver}). For example:
 city IN ($P{city}).
@@ -242,7 +237,7 @@ Create a new business class
 
 In the “Business Model” tab, the *Plus* icon allows to add new Business Classes (from the tables of the Physical Model) or a Business View (a combination of more tables with a predefined join path).
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image31213.png
+.. figure:: media/image31213.png
 
 
     Creating a new business class.
@@ -260,7 +255,7 @@ Table property list
 
 Scrolling the *Property list* tab, you can find the *Type* menu item. The related combobox contains the types to be associated with the tables of your model.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image31819.png
+.. figure:: media/image31819.png
 
     Table property list.
 
@@ -270,7 +265,7 @@ Column property list
 
 Below the Property tab of a Business Class
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image31819-b.png
+.. figure:: media/image31819_b.png
 
    Column property list.
 
@@ -278,7 +273,7 @@ Below the Property tab of a Business Class
 Click the modify icon to display all the details related to a specific attribute.
 
 .. _clmnproprtylist:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image322-8-1.png
+.. figure:: media/image322_8.1.png
 
    Attribute details.
 
@@ -301,12 +296,12 @@ In the **Physical** area, recalls the physical table and field name from which t
 If you did not choose all the columns from physical table when you were creating new business class, you can do it easily.
 Click on the business class where you want to add a new column to open the pop up to select the missing columns.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-addnewbusinesscolumn.png
+.. figure:: media/addNewBusinessColumn.png
 
 	Selecting columns
 
 If you want to remove columns from a business class just click the *Trash* icon.
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-deletebusinesscolumn.png
+.. figure:: media/deleteBusinessColumn.png
 
 	Deleting a column
 
@@ -318,14 +313,14 @@ Generate the datamart
 
 After the editing of the metamodel, click the *Save* icon on the Meta Web toolbar on the upper right corner. Now you have a metamodel that can be compiled and used to generate a datamart. Now if you go back to the Business Model catalog you will see that near the “Meta Web” button there is a “Generate” button. Clicking on it, a dialog will open:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image323.png
+.. figure:: media/image323.png
 
     Generate datamart dialog.
 
 If you just press “Create” the generation of the datamart begins otherwise clicking on the switch “Show Advanced options” (see figure below) the user can modify model name, change the schema or the catalogue of the database used to query the metamodel. This option is useful when the user wishes to build the model on a source schema and produce the datamart on a different one. Furthermore, the user can check the **Generate for registry** box. In this instance, the generated datamart will be used as a registry (but will not be exploited as a QbE). The **Include source code** produces a “file.jar” containing both the compiled code (.class) and the source files (.java), useful for the debagging process.
 
 .. _generdatamdialogadv:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image324.png
+.. figure:: media/image324.png
 
     Generate datamart dialog: advanced options.
 
@@ -336,19 +331,19 @@ Additional functions for business model
 
 In this section, we briefly describe the generic available options for business model development. Referring to figure below, the user first finds the **Lock Model**: if enabled, only the user who developed the model can modify it.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image325.png
+.. figure:: media/image325.png
 
     Locking a Business Model.
 
 Once the model has been saved, some more options are enabled. In fact, the user can make advantage of the **Metadata** section. Clicking the **Import metadata** button, the metadata information related to the business classes (their composition, properties, etc.) are stored into the (metadata) Knowage database. Those information can then be visualized via specific document (developed for the data lineage context).
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image326.png
+.. figure:: media/image326.png
 
     Importing metadata.
 
 Finally the **Saved versions** section the user keeps trace of model changes over time. Furthermore it is possible to restore old versions by checking the active column. Selecting the “three-dots” icon the user can download the jar file or the model itself or delete the version.
 Figure below shows an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-qbe-meta-image327.png
+.. figure:: media/image327.png
 
     Saved version functionalities.

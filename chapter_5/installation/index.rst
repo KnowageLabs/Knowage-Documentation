@@ -7,16 +7,16 @@ The present document illustrates how to install and configure the Knowage suite.
    :hidden:
    :caption: Table of Contents
    :maxdepth: 10
-
+   
    software_release.rst
    knowage-ce-installer.rst
    docker_instalation_ee.rst
    manual_installation.rst
    python-installation.rst
    tomcat_password_encryption.rst
+   
 
-
-
+   
 .. Indices and tables
 .. ==================
 

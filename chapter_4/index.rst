@@ -1,8 +1,6 @@
-Manage Knowage
-==============
+Knowage management
+########################################################################################################################
 
-These guides describe administrative operations. Open the relevant module
-from **Modules** using an authorized role.
 
 .. toctree::
    :caption: Table of Contents
@@ -18,8 +16,8 @@ from **Modules** using an authorized role.
    widget_gallery.rst
    documentation.rst
    home_management.rst
-   AI management (Enterprise Edition) <ai_management>
-
+   ai_management.rst
+   
 .. Indices and tables
 .. ==================
 

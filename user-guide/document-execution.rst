@@ -1,31 +1,109 @@
-Running and exploring documents
-===============================
+Document Execution
+========================================================================================================================
 
-Open a document from **Documents Browser**, **Workspace** or a configured menu.
-Knowage loads it with the engine assigned by its author. A Dashboard and a
-Cockpit have separate execution and authoring flows in 9.1.
+In this chapter we describe all the features related to Knowage analytical documents, such as parameters management, printing, exporting and so on.
 
-Parameters
-----------
+First of all, notice that once you execute a document from the document browser or from the menu, it is visualized full screen. In the first case, you can return to the document browser by clicking on the folder icon located at the top left.
 
-1. Open the parameter panel when the document requires input.
-2. Fill in required parameters, marked with an asterisk. Select list values or
-   enter a value according to the control provided.
-3. For a list or tree parameter, use search to find the required values. The
-   parameter dialog supports successive searches while selecting values.
-4. Choose **Execute** to apply the parameter set and load the analysis.
+.. figure:: media/image25.png
 
-Date controls respect the minimum and maximum values configured by the author.
-For dependent parameters, select the controlling value first, then check the
-available values of the dependent parameter.
+    Back to Document Browser
 
-Use **Reset** to clear the entered parameter values. When defaults and optional
-parameters allow it, the document may execute immediately on opening.
+Parameters management
+------------------------------------------------------------------------------------------------------------------------
+
+Knowage documents may have associated parameters. If any, you will be asked to select the chosen parameter’s values in a collapsible panel located at the top or on the right side of the page. If this is the case, choose the parameters values and then click the **Execute** button to run the document. In case there are only optional parameters or default values are already defined, the document is directly executed after the first click on its relative icon.
 
 .. figure:: /_static/screenshots/9.1/user-guide-document-execution-9-1-parameters.png
-   :alt: Parameter panel showing a required value, searchable tree and date limits.
 
-   Selecting parameters before executing a document.
+   Parameters panel
+
+Mandatory parameters are marked with an asterisk. Date controls respect the
+minimum and maximum limits configured by the author. List and tree parameters
+support search, including successive searches while selecting multiple values.
+
+It is possible to show or hide the parameter panel by clicking on the filter button located in the document toolbar. With the **Reset** button at the top of the panel you can clear the form.
+
+Furthermore, the parameter configuration can be saved for future use. This is particularly useful when the document includes several customized parameters. This feature is accessible from the toolbar located at the top right corner of the parameters panel.
+
+- **Reset** inserted values for parameters;
+- **Open saved** a window listing the **saved parameters**, so that you can select or modify them;
+- **Save** the parameters. Here you can choose between two options: **Public** means visible to all the other users that share your role while **Private** means visible only to you.
+
+Document Toolbar
+------------------------------------------------------------------------------------------------------------------------
+
+The toolbar menu shows the actions available for the current document and role.
+Use the labelled commands to refresh the analysis, open its parameters, manage
+views, export, open full screen or return to the browsing area.
+
+Where enabled, **Info** contains metadata, notes and rating. **Shortcuts** can
+provide scheduled executions and commands to add the document to Workspace,
+copy a link or obtain HTML embedding code.
+
+.. _documenttoolbar:
+.. _toolbarcontexmenu:
+.. figure:: /_static/screenshots/9.1/user-guide-document-execution-9-1-document-toolbar.png
+
+   Document toolbar in Knowage 9.1.
+
+
+Exporters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Each Knowage document can be exported into several formats, depending on the options offered by the engine.
+
+Clicking **Export** in the document toolbar you will see the available formats for the current document. Select one and check the exported document.
+
+Business and structural metadata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Knowage allows the definition of business metadata to describe an object, in our case a document. Business metadata, unlike technical metadata used in Knowage Meta to build the metamodel, are business information associated to the document intended to help users to understand, access and classify it. As such, they have been mainly conceived for the end user understanding.
+
+There are three types of business metadata, some of them are editable while others can only be read. In particular, general metadata are read-only, while short and long text metadata are editable. General metadata contain basic information about the document, which cannot be altered because they are related to the structure of the document (e.g., type, engine, label). They provide useful and synthetic information on the document. Short and long text metadata should be used to add relevant business information: all the allowed users will see this information, which will help them understand the purpose and context of that document.
+
+In general, metadata should be edited by users with adequate expertise and authority to do so. Therefore, it is possible for the administrator to assign the right to edit and save metadata only to some users. The right is not specific to a profile, but it is part of the authorizations that can be granted to any role. This applies to bookmarks as well.
+
+Metadata can be accessed from **Info** in the document toolbar menu, where enabled for your role.
+
+.. figure:: media/image33.png
+
+   View document metadata
+
+As stated before, in order to see and/or edit metadata the user roles need some grants. Knowage administrator manages this authorizations. If you have editing metadata authorization, you will be able to see to change them. If you want to edit short metadata just click in the value area and write what you prefer. If you want to edit long metadata just click in the value area and an HTML editor will appear.
+
+When you are satisfied with what you wrote just click on the **SAVE** button. We provide the following example.
+
+.. figure:: media/image3435.png
+
+   Left: General and short metadata, Right: editing long metadata
+
+Notes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Knowage offers a simple collaborative tool to share notes and comments on documents, allowing users to share information and receive feedback. This may be useful, for example, to limit the number of exchanged e-mails: notes can be stored online and are accessible to all users sharing the same access rights. Each user can add a single note to a single document.
+
+Click on **Info** > **Notes** in the document toolbar menu. In this way a text editor opens where you can type your comment. Make it private or public (i.e., accessible to users with the same rights as you) by selecting the preference in the appropriate box. Click **Save** to confirm. All public comments from all users, as well as your private notes, will be shown the next time you open this window. If you want to edit or delete a note, click on the Rate document corresponding symbols in the **Note list** tab. You can also export the note in PDF or RTF format.
+
+Rate document
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The aim of this functionality is to acquire explicit quality data that can be further used. Specifically, it allows the administrator to identify anomalies about the use of an analytical document by end users. Rating a document means assigning it a value from the end user perspective. This brings additional information with respect to traditional audit and monitoring data, which can track the number of executions but cannot interpret users motivations and feelings.
+
+.. figure:: media/image36.png
+
+   Rating a document
+
+To rate documents, open **Info** and the document rating action in the toolbar menu. Choose the document ranking in the pop-up window and click **Save**. The administrator can exploit the result of votes, in order to evaluate and improve the quality of the document.
+
+.. figure:: media/image38.png
+
+   Share notes and comments
+
+Scheduled Execution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The administrator has the possibility to set schedulation for documents. These schedulations can be accessed by **Shortcuts** > **Show scheduled executions**, where enabled.
 
 Saved views
 -----------
@@ -62,38 +140,3 @@ or for a specified dataset.
 
 For details, see :doc:`/chapter_3/create_new_dashboard/index`.
 
-Document toolbar
-----------------
-
-The toolbar menu shows the actions available for the current document and role.
-Use the labelled commands to refresh the analysis, open its parameters, manage
-views, export, open full screen or return to the browsing area.
-
-Where enabled, **Info** contains metadata, notes and rating. **Shortcuts** can
-provide scheduled executions and commands to add the document to Workspace,
-copy a link or obtain HTML embedding code.
-
-.. figure:: /_static/screenshots/9.1/user-guide-document-execution-9-1-document-toolbar.png
-   :alt: Document toolbar menu with Views, Export, Info and Shortcuts.
-
-   Document actions depend on the engine, edition and permissions.
-
-Exporting results
------------------
-
-1. Apply the desired parameters and selections.
-2. Open **Export** from the document toolbar, or the export command on a widget.
-3. Choose one of the formats offered by that engine.
-4. Retrieve the generated file; for asynchronous exports, check **Downloads**.
-
-Dashboard authors can configure the export filename and XLSX worksheet names.
-Table PDF exports and drill-down chart spreadsheet exports have additional
-options. Available formats depend on the engine and export services installed.
-
-Scheduled executions
---------------------
-
-If your administrator has scheduled a document and enabled access to its
-snapshots, open **Shortcuts** > **Show scheduled executions**. A snapshot shows
-the data captured at its execution time. The :doc:`scheduler guide
-</chapter_4/schedule>` explains how authorized users configure schedules.

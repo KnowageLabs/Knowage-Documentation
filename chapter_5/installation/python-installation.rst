@@ -1,28 +1,45 @@
 Python Engine
 ========================================================================================================================
 
-Use the Python package corresponding to **9.1.0** and configure its service
-URL and authentication consistently with the Java applications. Test a Python
-dataset, function and widget as applicable after installing the required
-libraries in the selected environments.
-
 These functionalities use a Python standalone webservice, which allows to submit widgets and datasets scripts and get result from a Python environment already installed on the machine where the webservice runs. For this reason, Python environments need to be installed and configured on the same machine of Knowage server or even on a remote one, and the Python webservice has to be running **inside that same environment**.
-This implies that, in order to use this functionalities, you have to install Python properly (depending on the OS) on the same machine where the service will be running. You can find all information about Python installation at https://www.python.org. The official supported version is Python >=3.8.
+Install the interpreter and dependency set qualified for the service package.
+The tagged package metadata declares ``Python >=3.7``, but this is not a
+compatibility guarantee for all later Python releases. Its dependency file
+pins Flask 1.1.4 and pandas 1.3.5. Use the interpreter and dependencies
+qualified for the service package supplied with your deployment.
+See :doc:`/chapter_5/requirements` for the verified baseline and its limits.
 
 Install knowage-python webservice
 ------------------------------------------------------------------------------------------------------------------------
 
-The knowage-python package contains the source code of the webservice that has to be installed and run on the server. You can download it via ``pip`` with the command:
+Obtain the service archive or image associated with your **9.1.0**
+distribution. Do not assume the PyPI package version is ``9.1.0``: the
+tagged source's ``setup.py`` declares package version ``1.1``.
+Use an explicitly approved artifact rather than installing the latest
+unversioned package.
 
-.. code-block:: bash
+For a source deployment, the release source is under
+``Knowage-Python/`` in the
+`v9.1.0 tree <https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/Knowage-Python>`_.
+In the qualified isolated Python environment, install the supplied dependency
+file and check the resulting environment:
 
-    pip install knowage-python=={knowage_version_number}
+.. code-block:: console
 
-or simply you can find it in the Knowage-Server GitHub repository under the Knowage-Python folder.
+   python -m pip install -r /path/to/Knowage-Python/requirements.txt
+   python -m pip check
 
-If you downloaded knowage-python via pip, use "pip show knowage-python" to find the pip package installation location. Then copy the source file from this folder to your own custom folder such as ``/opt/knowagepython``.
+Retain the dependency versions supplied with the package. Install additional
+script libraries and the production WSGI server from the deployment's
+qualified dependency manifest.
 
-You will now have to create a file called ``hmackey`` that contains the value of the HMACkey in plaintext, and place it inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder. It must be the same value specified in ``TOMCAT_HOME/conf/server.xml`` file.
+For the tagged ``src/`` service layout used below, run the service with
+``<KNOWAGE_PYTHON_HOME>/src`` as its working directory.
+``app.utilities.configs.HMACKEY_FILE`` defaults to the relative path
+``hmackey``. Place that file in this working directory, readable by the
+service account, and set it to the same HMAC key used by the Java applications.
+A packaged service with a different layout may provide its own configuration;
+follow that package's instructions.
 
 Run knowage-python webservice
 ------------------------------------------------------------------------------------------------------------------------
@@ -36,16 +53,9 @@ If you are working on a Linux environment, take a look at `Gunicorn <https://gun
 
 **The entry point for the application is <KNOWAGE_PYTHON_HOME>/src/knowage-python.py and the default port is 5000.**
 
-To install GUNICORN you can use:
-
-.. code-block:: bash
-
-	pip3 install gunicorn greenlet eventlet gevent wheel
-	pip3 install gunicorn eventlet gevent gthread setproctitle
-	pip3 install flask flask_cors bokeh pandas
-	pip3 install matplotlib
-	pip3 install PyJWT
-	pip3 install pandas
+Use the Gunicorn version and worker dependencies supplied with your qualified
+service build. The following configuration illustrates service startup; size
+the worker count and timeouts for the scripts you actually run.
 
 .. important::
      **Webservice permissions**
@@ -62,26 +72,24 @@ First you need to create a configuration file called ``gunicorn.conf.py`` and pl
     workers = multiprocessing.cpu_count() * 2 + 1
     timeout = 30
     keepalive = 2
-    user = <user>
-    group = <group>
+    # Run as the dedicated service account; set user/group if required.
     loglevel = 'info'
-    accesslog = '/var/log/gunicorn-access.log'
-    errorlog = '/var/log/gunicorn-error.log'
+    accesslog = '-'
+    errorlog = '-'
     access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
 
-Then to start the service run the following command inside the ``<KNOWAGE_PYTHON_HOME>/src/app`` folder.
+Then start the service from ``<KNOWAGE_PYTHON_HOME>/src``, with the qualified Python environment active.
 
 .. code-block:: bash
 
-    /usr/local/bin/gunicorn -c file:gunicorn.conf.py knowage-python
-    /usr/local/bin/gunicorn --certfile cert.pem -c file:gunicorn.conf.py knowage-python
+    gunicorn -c file:gunicorn.conf.py knowage-python:application
 
 You can now create a service to start/stop Gunicorn: see your operating system documentation for that.
 
 On Windows with Waitress
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are working on a Windows environment, take a look at `Waitress <https://docs.pylonsproject.org/projects/waitress>`_.
+Use the Waitress version supplied with the qualified Windows service build. See `Waitress <https://docs.pylonsproject.org/projects/waitress>`_.
 
 Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the following content:
 
@@ -100,7 +108,7 @@ Create a ``waitress_server.py`` in ``<KNOWAGE_PYTHON_HOME>/src`` folder with the
     	threads=multiprocessing.cpu_count() * 2 + 1
     )
 
-Then run:
+Run from ``<KNOWAGE_PYTHON_HOME>/src``, with the qualified environment active:
 
 .. code-block:: shell
 

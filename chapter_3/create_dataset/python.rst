@@ -1,27 +1,15 @@
-Python datasets
-===============
+Python Data Set
+########################################################################################################################
 
-A Python dataset runs a script that produces a pandas DataFrame. The configured
-Python service and environment must be available; see
-:doc:`/chapter_5/installation/python-installation`.
+The Python dataset enables users to create a dataset by writing a Python script that directly retrieves data.
+The developer of the dataset is free to write code which has to produce a **dataframe** variable as output (for Python scripts we refer to pandas dataframes). This variable will contain data that Knowage will later convert into its own format.
 
-1. Create a dataset of type **Python**.
-2. Choose an available **Python environment**.
-3. Write the script and set **Dataframe variable name** to the variable holding
-   the result.
-4. Declare any parameters and use ``$P{parameter_name}`` where required.
-5. Preview the dataset, check its column metadata and save.
+.. figure:: media/python.png
 
-For example, with pandas available in the chosen environment:
+    Python dataset interface.
 
-.. code-block:: python
+As shown in the picture in the field **Dataframe variable name** the developer has to specify the name of the variable in which the final output of the script is stored in the form of a dataframe.
 
-   import pandas as pd
-   result = pd.DataFrame({"region": ["North", "South"], "sales": [120, 95]})
+In the field **Python environment** the user can select a working environment among the available ones defined in the **Configuration Management** section.
 
-Set **Dataframe variable name** to ``result``. The script output becomes the
-data available to the analytical document.
-
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-python-9-1-python-dataset.png
-
-   Python environment, script and DataFrame output variable.
+Inside the scripts it is possible to use parameters by the usual syntax *$P{}*.

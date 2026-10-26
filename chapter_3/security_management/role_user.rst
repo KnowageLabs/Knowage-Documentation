@@ -70,7 +70,7 @@ As for profiles, users' roles are loaded when they log in into Knowage. Roles ar
 
 Alternatively, from the Knowage Administrator menu *PROFILE MANAGEMENT > Users* it is possible to select a default role that will be kept valid until logging out.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image28-b.png
+.. figure:: media/image28_b.png
 
    User's roles in Knowage.
 
@@ -111,7 +111,7 @@ In addition to the profile attributes created by administrator, by default Knowa
 The image below shows a new *Profile attribute* named *Country* whose value has been manually entered. An alternative option is to feed attribute values by means of a Lov: one or more of its values will be asigned by the user. Multivalue option in this case is not enabled, so only one value is inserted.
 
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image29-bis.png
+.. figure:: media/image29_bis.png
 
    Profile attributes Management.
 
@@ -126,13 +126,13 @@ The **Detail** tab allows the administrator to define role name and role type (m
 The role type regulates the visibility of that role based on the types already described.
 A code and a description can be added as shown below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image3031-a.png
+.. figure:: media/image3031_a.png
 
    Details tab in Roles Management.
 
 The **Authorizations** tab allows you to assign permissions to each role. Rights are predefined and grouped into categories, as shown above.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image3031-b.png
+.. figure:: media/image3031_b.png
 
    Authorization tab in Roles Management.
 
@@ -144,7 +144,7 @@ installed components. See :doc:`/chapter_3/create_qbe/index` and
 
 There is a last tab **Usage** that represents a summary tab of the usage of that role inside Knowage.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image3031-c.png
+.. figure:: media/image3031_c.png
 
    Usage tab in Roles Management.
 
@@ -154,7 +154,7 @@ User Management
 
 The **Users Management** section includes a left panel that allows the administrator to create and delete users, and a right panel that allows the management of user details, roles and attributes.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image32-8-1.png
+.. figure:: media/image32_8.1.png
 
    Users Management.
 
@@ -168,11 +168,11 @@ Knowage allows the administrator to perform a massive insertion of new users sim
 
 To access this feature, navigate to the User Management section and click on the **Import** action in the Users Management toolbar.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-massiveuser01.png
+.. figure:: media/massiveUser01.png
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-massiveuser02.png
+.. figure:: media/massiveUser02.png
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-massiveuser03.png
+.. figure:: media/massiveUser03.png
 
 
 
@@ -264,7 +264,7 @@ If a user reaches the maximum number of failed login attempts (editable in advan
 By accessing Knowage with management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it by using the "unlock user" button.
 After that, the user will be able to log in using the latest set of credentials.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image115-b.png
+.. figure:: media/image115_b.png
 
     Users Management - Roles settings example
 
@@ -279,7 +279,7 @@ After that, if more than one role is associated to the user, you can choose the 
 Default role is optional: if you don't select a default role, at login time all the available roles for the user will be loaded. If you select a role, at login time
 it will be the session role selected.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-image100-b.png
+.. figure:: media/image100_b.png
 
     Users Management - Roles tab
 
@@ -288,7 +288,7 @@ In the example above, for the user "*Dte user*" whose role is just *user*.
 You can also assign an attribute profile to a user. In this case it is enough to valorize the attribute that you want to assign.
 The below image, shows an example. The attribute *par_family* that has been formerly created as a *Profile attribute*.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-attributes.png
+.. figure:: media/attributes.png
 
     Users Management - Attributes tab
 
@@ -299,10 +299,6 @@ Users Management supports selecting several users for bulk actions. Review
 the selected identities before applying role or profile-attribute changes;
 inspect the per-user result report afterwards. Imported roles and profile
 attributes should already be defined in the target tenant.
-
-For automatic provisioning or user lifecycle operations, use the deployment's
-configured identity provider or authorized integration. These processes are
-separate from the file import used to create users.
 
 .. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-9-1-users-bulk-actions.png
 

@@ -1,24 +1,30 @@
-File datasets
-=============
+File Data Set
+########################################################################################################################
 
-A File dataset reads a tabular CSV or Excel file.
+A dataset of type File, see the following figure, reads data from an XLS or CSV file. To define a **File Dataset** select the File type, then upload the file by browsing in your personal folders and set the proper options for parsing it.
 
-1. Create a dataset of type **File** and upload the source file.
-2. Check the parsing options, including the delimiter, quotation character and
-   date format where applicable.
-3. Preview the parsed rows. Check column names, dates, decimal values and
-   non-ASCII characters before continuing.
-4. Review each column in **Metadata**, choosing its data type and
-   **Attribute** or **Measure** role.
-5. Save and reopen the dataset to verify the result.
+.. figure:: media/image30.png
 
-When replacing a file used by existing analyses, preserve the expected column
-names and types or update the dependent documents accordingly.
+   Creating a File Dataset.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-file-9-1-file-upload.png
 
-   File upload, parsing options and preview.
+As shown abowe by clicking on the upward arrow you can choose the file to upload.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dataset-file-9-1-file-metadata.png
+.. figure:: media/ds_file_upload.png
 
-   Column metadata for a File dataset.
+    Uploading a File for a Dataset.
+
+After choosing the file, the data of the file is automatically processed showing some rilevant information such as the delimiter character, 
+the quotation character, the date format, etc.
+The preview of some data is also shown. Anyway the whole content of the file can be visualized using the preview functionality available in the upper
+right part of the wizard.
+
+.. figure:: media/ds_file_upload_02.png
+
+    Retrieved information when uploading files for a File Dataset.
+
+Once you have uploaded the file, you can check and define the metadata (measures or attributes) of each column.
+
+.. figure:: media/ds_file_upload_03.png
+
+    Attributes and measures for a File Dataset.

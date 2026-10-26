@@ -1,103 +1,205 @@
 Manual installation
-===================
+########################################################################################################################
 
-Prepare JDK 17, Tomcat 9, a metadata database and a cache database as described
-in :doc:`/chapter_5/requirements`. Obtain all application packages from the
-same 9.1.0 distribution; see :doc:`software_release`.
+Metadata database initialization
+------------------------------------------------------------------------------------------------------------------------
 
-Metadata initialization
------------------------
+Knowage requires a database schema to store its own metadata (definition of analyses, datasets and so on). For initializing such a schema, the user must execute the creation scripts provided for the DBMS in use. The package which includes the DDL will contain the following SQL files:
 
-Create an empty schema and run the creation and Quartz scripts matching its
-DBMS from the v9.1.0 source tree. Inspect the supplied scripts and their
-execution order before running them. Assign the application database account
-the privileges required by those scripts and the application's runtime work.
+.. code-block:: bash
+   :caption: Scripts for metadata schema
 
-For an existing schema, use :doc:`/chapter_5/how_upgrade` instead of initialization.
+        XXX_create.sql
+        XXX_create_quartz_schema.sql
 
-Tomcat and JNDI resources
--------------------------
+where XXX represents the DBMS type (as instance ORA stands for Oracle). The corresponding SQL files for deleting tables are also provided.
 
 .. include:: ka_inst_man_tomcat.rst
 
-Deploy the applications
------------------------
+Datasource link within the applications
+------------------------------------------------------------------------------------------------------------------------
 
-With Tomcat stopped, place ``knowage.war``, ``knowage-api.war``,
-``knowage-vue.war`` and the required engine WARs in ``TOMCAT_HOME/webapps``.
-Configure the JNDI resources and links required by each deployed application.
-Use its packaged ``META-INF/context.xml`` as the reference.
+You would set up ResourceLink for JNDI datasource. To do so, you have to configure each ``knowage*/META-INF/context.xml`` and set the ResourceLink for each JNDI data source previously created. Inside the released packages two links are already defined:
 
-For example, the metadata and cache links use the following names:
+- one for the ``jdbc/knowage`` resource, which the user must keep
+- the other for the ``jdbc/foodmart``, which should be renamed with ``jdbc/dwh``.
 
 .. code-block:: xml
+   :linenos:
 
-   <ResourceLink global="jdbc/knowage" name="jdbc/knowage"
-                 type="javax.sql.DataSource" />
-   <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache"
-                 type="javax.sql.DataSource" />
-   <ResourceLink global="resource_path" name="resource_path"
-                 type="java.lang.String" />
-   <ResourceLink global="hmacKey" name="hmacKey"
-                 type="java.lang.String" />
-   <ResourceLink global="service_url" name="service_url"
-                 type="java.lang.String" />
+    <Context docBase="knowage-ee" path="/knowage" reloadable="true">
+        <ResourceLink global="jdbc/dwh" name="jdbc/dwh" type="javax.sql.DataSource"/>
+        <ResourceLink global="jdbc/knowage" name="jdbc/knowage" type="javax.sql.DataSource"/>
+        <ResourceLink global="jdbc/ds_cache" name="jdbc/ds_cache" type="javax.sql.DataSource"/>
+        <ResourceLink global="resource_path" name="resource_path" type="java.lang.String" />
+        <ResourceLink global="sso_class" name="sso_class" type="java.lang.String" />
+        <ResourceLink name="hmacKey" global="hmacKey" type="java.lang.String"/>
+        <ResourceLink global="service_url" name="service_url" type="java.lang.String"/>
+        <ResourceLink global="wm/SpagoWorkManager" name="wm/SpagoWorkManager" type="commonj.work.WorkManager" />
+        <ResourceLink global="password_encryption_secret" name="password_encryption_secret" type="java.lang.String"/>
+    </Context>
 
-Link your business data sources separately. Configure a persistent resources
-directory, accessible to the Tomcat user, and keep authentication and service
-URL settings consistent across the applications. Preserve the password
-secrets and encryption keys across restarts and upgrades.
+Due to security reasons, configuration file containing some content to be used for encrypting must be created in Knowage environment. File must not be empty, but there's no minimum length. File can be put everywhere; path and name must be properly configured for each ``knowage*/META-INF/context.xml`` as shown below.
 
-Where JDBC password encryption uses ``symmetric_encryption_key``, set the JVM
-property in Tomcat's environment file:
+.. important::
+         **Context update**
+
+         The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
+
+
+Configuration of the metadata db dialect
+------------------------------------------------------------------------------------------------------------------------
+
+.. important::
+         **This step is not mandatory anymore**
+
+         Knowage is now able to autonomously determine following configuration. That said, the following is not mandatory anymore however a user can force it to specific value.
+
+Verify that the right dialect has been set inside ``hibernate.cfg.xml`` files. We list all the possible dialects that can be used:
+
+.. code-block:: xml
+   :linenos:
+
+ 	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>,
+ 	<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+ 	<property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
+
+You have to configure these following Hibernate configuration files and set the chosen dialect:
+
+.. code-block:: xml
+   :linenos:
+
+		knowage/WEB-INF/classes/hsql/hibernate.cfg.xml
+	knowage/WEB-INF/classes/hibernate.cfg.xml
+	knowagemeta/WEB-INF/classes/hibernate.cfg.xml
+	knowagecockpitengine/WEB-INF/classes/hibernate.cfg.xml
+
+
+.. important::
+         **Context update**
+
+         The modification of these files will be effective as soon as the web application is reloaded or the application server is restarted.
+
+Modification of the Quartz configuration
+------------------------------------------------------------------------------------------------------------------------
+
+.. important::
+         **This step is not mandatory anymore**
+
+         Knowage is now able to autonomously determine following configuration. That said, the following is not mandatory anymore however a user can force it to specific value.
+
+The scheduler is configured in ``knowage/WEB-INF/classes/quartz.properties``. It is essential to enhance in this file the property ``org.quartz.jobStore.driverDelegateClass`` with the right value, according to the metadata database in use. Following the possible values:
+
+.. code-block:: xml
+   :linenos:
+
+	 # Hsqldb delegate class
+	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.HSQLDBDelegate
+	 # Mysql delegate class org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+	 # Postgres delegate class
+	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+	 # Oracle delegate class
+	 #org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
+
+Clustering
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When Knowage is installed in cluster with several nodes, it is necessary to activate the Cluster modality, adding these parameters to the ``knowage/WEB-INF/classes/quartz.properties`` file of every involved machines:
+
+.. code-block:: xml
+   :linenos:
+
+	 org.quartz.jobStore.isClustered = true
+	 org.quartz.jobStore.clusterCheckinInterval = 20000
+	 org.quartz.scheduler.instanceId = AUTO
+	 org.quartz.scheduler.instanceName = RHECMClusteredSchedule
+
+Logging
+------------------------------------------------------------------------------------------------------------------------
+
+It is necessary to set up a folder where Knowage and its analytical engines
+can store their respective log files. From now on, we will call `LOG_DIR`
+such folder and `LOG_DIR_PATH` the path that leads to it.
+
+- Create the folder on every node and grant the Tomcat account write access.
+- Configure the file appenders in each application's
+  ``WEB-INF/classes/log4j2.xml``. The tagged core configuration writes under
+  ``${sys:catalina.base}/logs``. Update the relevant ``fileName`` and
+  ``filePattern`` settings consistently if using another directory.
+- For the BIRT engine, also review ``WEB-INF/classes/BirtLogConfig.properties``
+  and its ``logDirectory`` setting when supplied with the package.
+
+See :doc:`/chapter_5/server_settings` for logger levels and an XML example.
+
+Enable Java Security Manager
+------------------------------------------------------------------------------------------------------------------------
+
+In Knowage, a user can create datasets, LOVs, etc.. with script languages like JavaScript. That introduces a security concern where a malicious user can execute code that can break the entire system. Java allows a system administrator to enable a `Security Manager <https://docs.oracle.com/javase/tutorial/essential/environment/security.html>`_ and to create a sandbox to limit privileges around the code that execute the script.
+
+The Security Manager can be enabled with the following steps:
+
+- Write a Security Policy for the Security Manager;
+
+- Enable the Security Manager in the JVM.
+
+The Security Policy is a text file read by a Security Manager that specifies all the privileges that a JVM can give to Java code: Tomcat has already a default policy in the file ``TOMCAT_HOME/conf/catalina.policy`` but is too much strict for Knowage code that needs to write multiple logs, make network connection and execute external applications. The deployment can use the following permissive policy for the application
+code. This grants all JVM permissions; it is not, by itself, a sandbox for
+untrusted scripts:
+
+.. code-block:: xml
+        :caption: Complete path of the script
+
+        grant {
+                permission java.security.AllPermission;
+        };
+
+This policy can be saved to ``TOMCAT_HOME/conf/knowage-default.policy``.
+
+To enable the Security Manager a system administrator have to add some options to the Java JVM:
+
+**[LINUX]** Insert at the end of the ``TOMCAT_HOME/bin/setenv.sh`` file this command:
+
+.. code-block:: bash
+	:linenos:
+
+        export JAVA_OPTS="$JAVA_OPTS -Djava.security.manager -Djava.security.policy=$CATALINA_HOME/conf/knowage-default.policy -Dsymmetric_encryption_key=<generic_random_string>"
+
+The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
+
+
+**[WIN]** Insert at the end of the ``TOMCAT_HOME/bin/setenv.bat`` file this command:
+
+.. code-block:: bash
+	:linenos:
+
+        set JAVA_OPTS=%JAVA_OPTS% -Djava.security.manager -Djava.security.policy=%CATALINA_HOME%\conf\knowage-default.policy -Dsymmetric_encryption_key=<generic_ASCII_string>
+
+The symmetric_encryption_key is required to encrypt/decrypt the JDBC data source password. Its value must be a generic ASCII string with at least one character.
+
+
+-  Make sure you have set the ``hazelcast.ignoreXxeProtectionFailures`` system property in file ``TOMCAT_HOME/bin/setenv.sh`` or ``TOMCAT_HOME/bin/setenv.bat``;
 
 .. code-block:: bash
 
-   export JAVA_OPTS="$JAVA_OPTS -Dsymmetric_encryption_key=<deployment-specific-key>"
+  export JAVA_OPTS="$JAVA_OPTS  -Dhazelcast.ignoreXxeProtectionFailures=true"
+  
+.. code-block:: bash
 
-Use the Windows equivalent in ``setenv.bat`` for a Windows deployment.
+   set JAVA_OPTS=%JAVA_OPTS%  -Dhazelcast.ignoreXxeProtectionFailures=true
 
-Hibernate and Quartz
---------------------
 
-Keep the defaults shipped with 9.1 unless the deployment requires an override.
-Review the Hibernate and Quartz configuration for the DBMS in use. Quartz
-settings are in ``knowage/WEB-INF/classes/quartz.properties`` after deployment.
+Installation of Chromium Cockpit Export script
+------------------------------------------------------------------------------------------------------------------------
+.. important::
+         **Enterprise Edition only**
 
-For a cluster, configure the nodes consistently and assign unique automatic
-instance identifiers, for example:
+         Chromium Cockpit Export script is only available for Enterprise Edition.
 
-.. code-block:: properties
+Extract archive ``knowage-cockpit-export-installation.zip`` to ``/opt/knowage``:
 
-   org.quartz.jobStore.isClustered = true
-   org.quartz.jobStore.clusterCheckinInterval = 20000
-   org.quartz.scheduler.instanceId = AUTO
-   org.quartz.scheduler.instanceName = KnowageClusteredSchedule
+.. code-block:: bash
+        :caption: Complete path of the script
 
-Coordinate cluster settings with the shared metadata database and cache.
+        /opt/knowage/cockpit-export/cockpit-export.js
 
-Logging
--------
-
-The 9.1 applications use Log4j 2 configuration in
-``WEB-INF/classes/log4j2.xml``. Configure its appenders and log paths for the
-deployment. The main application's supplied configuration writes tenant-specific
-logs under ``${sys:catalina.base}/logs``. Ensure the Tomcat account can write to
-the configured locations and configure retention for operational logs.
-
-See :doc:`/chapter_5/server_settings` and :doc:`/chapter_4/log_manager`.
-
-Optional export and Python services
------------------------------------
-
-Install the export service distributed for your edition and configure its
-Node.js/Chromium runtime and script paths. Test the formats required by your
-users. For Python datasets, functions and widgets, follow
-:doc:`python-installation` and use the matching 9.1 package.
-
-Start and verify
-----------------
-
-Start Tomcat, inspect the logs, sign in and test a dataset and a document with
-an end-user role. Verify external authentication, parameter entry, exports and
-a scheduled execution for the components enabled in your installation.
+For alternatives path you have to fix ``internal.nodejs.chromium.export.path`` in Knowage Configuration Management.

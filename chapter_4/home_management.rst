@@ -17,7 +17,8 @@ the menu-item picker. Preview the template for the intended role. A document
 home requires access to the selected document; choosing it as the starting
 page preserves the document's permission checks.
 
-Use **Reset to default** to return to the default configuration.
+For a role-specific entry, use **Reset to default** to remove the override
+and return to the default configuration.
 
 .. figure:: /_static/screenshots/9.1/chapter-4-home-management-9-1-home-management.png
 

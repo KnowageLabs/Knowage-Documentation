@@ -1,101 +1,92 @@
-# Knowage 9.1 documentation review
+# Conservative review of the Knowage 9.1 documentation
 
-Target: **9.1.0**, released 2 October 2026. Review prepared 19 October 2026.
+Review date: 26 October 2026. Target: **9.1.0**.
 
-## Source baseline
+## Baselines and scope
 
-- Documentation repository base: `7a5096c8eb03360d31b2ac277f90fe93fd712119`.
-- Backend release: `47d06115a965f8440527b77a9e41d990e77aa078` (`v9.1.0`).
-- Frontend: `cbd1086dd2fee140fc96b26b207434d9eefb954a`, the exact submodule
-  referenced by that backend tag. The development branch was not used as the
-  release definition.
+- Original documentation: `d73d7265a051e7ded9a8dc0721008ca0fdc86edd`.
+  Compared with the previous base (`7a5096c8eb03360d31b2ac277f90fe93fd712119`),
+  the only upstream change is the copyright year. The current 2026 value is retained.
+- Backend: `47d06115a965f8440527b77a9e41d990e77aa078`, tag `v9.1.0`.
+- Frontend: `cbd1086dd2fee140fc96b26b207434d9eefb954a`, the submodule revision
+  referenced by that backend tag.
 - Docker recipe: `26f22a44bc50e4a7bd19a71438227d7fb329acd7`.
-- Primary release reference: [official release](https://github.com/KnowageLabs/Knowage-Server/releases/tag/v9.1.0).
 
-## Scope delivered
+The review compares the prior delivery with the original manual and the tagged
+implementation. It restores original prose and illustrations where no
+functional change justifies a rewrite. Existing version numbers in historical
+upgrade instructions are retained. The documentation itself remains version 9.1.
 
-The current manual contains **78 navigable source pages** plus the included
-Tomcat configuration source. Page coverage is listed in `coverage-9.1.csv`.
-Existing detailed technical examples were retained where the update did not
-require replacement; this is not a wholesale rewrite of every paragraph.
+The previous delivery had shortened useful explanations and replaced almost
+every screenshot. That approach has been reversed. The page-by-page actions
+are recorded in `coverage-9.1.csv`. An unchanged page is retained documentation,
+not a claim that the entire feature has been retested in a running 9.1 system.
 
-The revision updates navigation, restores an accessible end-user guide and
-adds release notes, AI assistant/management, home-page management and the
-9.0 → 9.1 migration. It updates Dashboard/Cockpit separation, authoring,
-dynamic titles/columns, map configuration, parameters/LOVs, QBE, users,
-exports and scheduling. Installation packages and scripts point to the
-release tag. Obsolete Angular localization and Log4j 1 instructions in active
-pages were replaced with the current Vue and Log4j 2 configuration.
+## Corrections to the previous delivery
 
-There are **695 named PNG screenshot placeholders** with an inventory and
-replacement instructions. Small action glyphs and two conceptual diagrams
-were retained. The PNGs are intentional placeholders, not captured 9.1 screens.
+1. **Cockpit conversion:** the prior rewrite incorrectly required creating a
+   replacement Dashboard and rebuilding all widgets. The tagged controller
+   invokes `formatModel` for legacy templates. The compatibility helper has
+   conversion paths for Map and Crosstab/Pivot as well. The original engine-change
+   procedure is restored, with backup and validation of a copy. It does not
+   promise that every custom setting survives conversion.
+2. **Scheduling:** removed the undocumented instructions for configuring a
+   combined-output integration or several entries as a verified workaround.
+   The standard dialog exposes one output format per selection. The backend
+   parses comma-separated formats, but that does not establish a public GUI
+   procedure. The release capability and the dialog are described separately.
+3. **User guide:** restored the behavioural-model explanation, role types,
+   workspace descriptions, metadata, notes and document rating. Changes are
+   limited to navigation, account fields, toolbar groups, parameter search/date
+   bounds and saved views. The 9.1 account dialog edits passwords; it no longer
+   has the old name/surname/email fields.
+4. **Requirements and installation:** retained the old structure and useful
+   JNDI, database dialect, Quartz and deployment instructions. Corrected Java
+   environment examples, the nested Docker working directory, release/schema
+   references, invalid Compose fragments, Log4j 2 configuration and Python
+   package/working-directory assumptions. The Java 17 Security Manager section
+   is retained with an explicit description of the permissive policy.
+5. **Screenshots:** restored original image files at their original paths.
+   Placeholders remain for targeted changes and one image absent from the
+   original repository. Existing QBE and OLAP filename errors were corrected.
+6. **Scope and editions:** Glossary, Data Preparation and Performance Indicator
+   chapters and their active navigation/references remain removed. AI Management
+   and the AI assistant are explicitly labelled Enterprise Edition only.
 
-Historical manuals, duplicate copies and unused skeletons remain in the Git
-repository and are excluded from the 9.1 build and its search index. Earlier
-upgrade steps remain navigable for sequential migrations.
+## Targeted 9.1 additions retained
 
-## Source details requiring release-owner attention
+- Dashboard dynamic titles and columns, position locks, column visibility,
+  pivot options, map wizard, dataset-specific selections and export naming.
+- LOV cloning, date-driver limits, parameter search and formatted QBE tooltips.
+- Bulk-user actions and corrected CSV/XLSX import requirements.
+- AI Management, AI assistant, home-page management and 9.0-to-9.1 upgrade pages.
+- Current language-resource paths for the Vue frontend.
 
-| Finding | Evidence | Documentation handling |
-| --- | --- | --- |
-| PostgreSQL migration contains `WITHOUT OIDS`; Oracle migration declares SQL `BOOLEAN`. | [Tagged database scripts](https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowagedatabasescripts/) | Added an explicit database-version compatibility check before production execution. The scripts themselves were not changed. |
-| Public Compose uses `9.1-SNAPSHOT`, not an immutable release identifier; the project is in a nested directory and maps port 18080. | [Docker recipe](https://github.com/KnowageLabs/Knowage-Server-Docker/tree/26f22a44bc50e4a7bd19a71438227d7fb329acd7/Knowage-Server-Docker) | Corrected the working directory and port. Require the approved release image/digest or use released WAR packages. |
-| Scheduler backend supports comma-separated output formats, while the tagged standard dialog has a single PDF/XLS selector. | [Output dialog descriptor](https://github.com/KnowageLabs/Knowage-Server-Frontend/tree/cbd1086dd2fee140fc96b26b207434d9eefb954a/src/modules/managers/scheduler/SchedulerTimingOutputTable/SchedulerTimingOutputDetailDialog/tabs/SchedulerTimingOutputOutputTab/SchedulerTimingOutputOutputTabDescriptor.json), [scheduler job](https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowage-core/src/main/java/it/eng/spagobi/tools/scheduler/jobs/XExecuteBIDocumentJob.java) | Describe multiple Timing & Output entries for the standard GUI and combined output through the supported integration. Do not invent a multi-format GUI selector. |
-| Upload chooser offers XLS, but the Excel import parser instantiates `XSSFWorkbook`. | [UserDataParsing](https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowage-core/src/main/java/it/eng/spagobi/commons/utilities/UserDataParsing.java) | Recommend UTF-8 CSV or XLSX. |
-| CSV import reads the third cell and maintains an attribute map across rows. | Same parser | Require the first three columns and explicit relevant attribute values on each row; ask maintainers to check missing-cell and attribute carry-over behavior. |
-| Previous documentation promised migration by changing only the Cockpit engine. | Previous manual; separate document types/editors in 9.1 | Provide a reproducible Dashboard replacement workflow and validation of any converted template, rather than promising automatic conversion. |
+## Verification and limits
 
-## Requirements verification follow-up
+The Sphinx build runs with nitpicky mode and warnings treated as errors.
+`tools/check_docs.py` checks generated local links, anchors, screenshot
+inventory and unused placeholder PNGs. The final counts are in `VALIDATION.txt`.
+The original content is preserved except for the changes listed in the coverage
+file and the minimal markup repairs needed for the strict build.
 
-The runtime requirements and Python installation pages were checked against the
-release POMs and versioned Docker recipes. JDK 17, Tomcat 9.0.x and the Hazelcast
-5.3.6 Java dependency are confirmed. MariaDB 10.3 and the Python 3.8 base source
-are identified as legacy examples, not maintained production recommendations.
-Exact database/driver certification, Enterprise export runtimes and hardware
-sizing remain to be qualified. Published OS/browser
-declarations are retained with attribution. Detailed evidence and the conflicting
-Java 8 CI setting are recorded in [REQUIREMENTS-9.1.md](REQUIREMENTS-9.1.md).
+No live Knowage installation, database upgrade, private EE package or export
+service was exercised. Confirm the exact OS/database/JDBC certification and
+EE service versions with the distribution owner. Migration fidelity, GUI
+captures and end-to-end procedures still require testing on the target instance.
 
-## Chapter removal and edition labels
+## Reproducible source references
 
-At the documentation owner's request, the current manual excludes the glossary,
-Data Preparation and Performance Indicator chapters, including the KPI,
-scorecard and alert subpages. Navigation, object import/export, role guidance,
-installation and requirement references were cleaned accordingly. This is a
-documentation scope change, not a claim that release binaries were removed.
-
-The current manual has 78 navigable pages. The 82 captures belonging to removed
-content were deleted, leaving 695 capture placeholders with unchanged IDs.
-AI Management and the AI assistant are explicitly marked as Enterprise Edition
-features on their pages, in navigation, at the manual entry point and in the
-release overview. Existing edition-specific notices in other pages remain.
-
-## Validation
-
-- Sphinx **8.2.3**, Read the Docs theme **3.0.2**, Python **3.12**.
-- Full HTML build with `-E -n -W --keep-going`: zero warnings/errors.
-- Local HTML checks: **80 HTML files**, **5,576 references**, including files,
-  images and fragment anchors. Screenshot inventory and PNG signatures checked.
-- A GitHub Actions workflow and `make check` reproduce these checks.
-- The incremental handoff is checked by applying only the changed files,
-  complete replacement static folder and stated deletions to the preceding
-  9.1 source bundle, then comparing the resulting source files.
-
-No running Knowage installation or authenticated Enterprise distribution was
-available for an end-to-end walkthrough. Browser visual QA could not run
-because the environment lacked a browser executable and its download failed;
-HTML structure and assets were checked directly. External links were not all
-subjected to a live availability check. These limits are separate from the
-successful Sphinx and local-reference checks.
-
-## Publication handoff
-
-Apply the changed source files over the preceding 9.1 revision and replace
-the complete static directory. Delete the two chapter directories and glossary
-source listed in the incremental handoff instructions. Build into a clean HTML
-directory so removed pages cannot remain as stale output. Complete the actual
-GUI captures and review workflows with representative roles and tenants.
-Resolve the release-owner items above, then merge to the intended documentation
-branch and activate that branch/version in Read the Docs. No remote branch,
-pull request, release or Read the Docs publication was created by this update.
+- [Release](https://github.com/KnowageLabs/Knowage-Server/releases/tag/v9.1.0).
+- [Original manual](https://github.com/KnowageLabs/Knowage-Documentation/tree/d73d7265a051e7ded9a8dc0721008ca0fdc86edd).
+- [Dashboard controller](https://github.com/KnowageLabs/Knowage-Server-Frontend/blob/cbd1086dd2fee140fc96b26b207434d9eefb954a/src/modules/documentExecution/dashboard/DashboardController.vue).
+- [Legacy template conversion](https://github.com/KnowageLabs/Knowage-Server-Frontend/blob/cbd1086dd2fee140fc96b26b207434d9eefb954a/src/modules/documentExecution/dashboard/helpers/DashboardBackwardCompatibilityHelper.ts).
+- [Widget editor](https://github.com/KnowageLabs/Knowage-Server-Frontend/tree/cbd1086dd2fee140fc96b26b207434d9eefb954a/src/modules/documentExecution/dashboard/widget/WidgetEditor).
+- [Document toolbar](https://github.com/KnowageLabs/Knowage-Server-Frontend/blob/cbd1086dd2fee140fc96b26b207434d9eefb954a/src/modules/documentExecution/main/DocumentExecutionHelpers.ts).
+- [Account dialog](https://github.com/KnowageLabs/Knowage-Server-Frontend/blob/cbd1086dd2fee140fc96b26b207434d9eefb954a/src/modules/mainMenu/dialogs/AccountDialog.vue).
+- [User import parser](https://github.com/KnowageLabs/Knowage-Server/blob/v9.1.0/knowage-core/src/main/java/it/eng/spagobi/commons/utilities/UserDataParsing.java).
+- [Management modules](https://github.com/KnowageLabs/Knowage-Server-Frontend/tree/cbd1086dd2fee140fc96b26b207434d9eefb954a/src/modules/managers).
+- [Scheduler job](https://github.com/KnowageLabs/Knowage-Server/blob/v9.1.0/knowage-core/src/main/java/it/eng/spagobi/tools/scheduler/jobs/XExecuteBIDocumentJob.java).
+- [Database scripts](https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowagedatabasescripts).
+- [Core configuration](https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowage/src/main/resources).
+- [Docker recipe](https://github.com/KnowageLabs/Knowage-Server-Docker/tree/26f22a44bc50e4a7bd19a71438227d7fb329acd7/Knowage-Server-Docker).

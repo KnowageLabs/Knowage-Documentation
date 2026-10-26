@@ -1,10 +1,6 @@
 Behavioural Model
 ########################################################################################################################
 
-Configure security in **Modules** through **Profile Management** and
-**Behavioural Model**. Roles grant access to functions and folders; profile
-attributes and driver use modes personalize the data presented to users.
-Validate the result with a representative account in each intended tenant.
 
 An important topic related to the visibility on documents and data according to the roles and profiles of the end users, is the **Behavioural Model**.
 The behavioural model is based on four main concepts:
@@ -22,6 +18,6 @@ and mainly answers the following questions:
 
 The picture below shows the functionalities for the *Profile Management* and the *Behavioural Model* in Knowage.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-behavioural-model-menu-profile-mng.png
+.. figure:: media/menu_profile_mng.png
 
    Profile Management and Behavioural Model in Knowage

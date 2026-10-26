@@ -1,11 +1,6 @@
 Documentation
 ########################################################################################################################
 
-This module manages documentation associated with analytical content.
-Availability depends on the edition and permissions. For the platform manual,
-use :doc:`/index`; for document metadata and end-user actions, see
-:doc:`/user-guide/document-execution`.
-
 The **Documentation** section allows you to publish and browse internal Markdown-based documentation directly inside Knowage, without leaving the application. It is accessible at ``/docs`` and shows a sidebar menu on the left and the document content on the right.
 
 How to access it

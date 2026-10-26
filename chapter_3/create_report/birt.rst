@@ -1,10 +1,6 @@
 Create a Birt report
 ########################################################################################################################
 
-Build the BIRT template with the compatible report designer, then publish it
-to a document using the BIRT engine. Test parameter mappings and each required
-output format with an end-user role before releasing the document.
-
 Reports represent the most popular type of business analysis. Indeed, they allow the visualization of data in a structured way and accordingly to predefined formats. The main characteristics of a report are:
 
 -  combination of numerical data (tables, lists, cross tables), charts and images;
@@ -19,7 +15,7 @@ For these reasons reports usually have a pervasive level of usage: they are used
 
 BIRT, acronim for **Business Intelligence and Reporting Tools**, is an open source technology platform used to create data visualizations and reports. In Figure below you can see an example of BIRT report.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image327.png
+.. figure:: media/image327.png
 
     Example of a BIRT report.
 
@@ -38,19 +34,19 @@ After that you can use the designer to create a new report.
 
 1) create a new **Report Project**
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-birt1.png
+.. figure:: media/birt1.png
 
     Create a new Report Project.
 
 2) create a new **Report**
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-birt4.png
+.. figure:: media/birt4.png
 
     Create a new Report.
 
 3) Configure che data source, create the data set and design the report
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-birt5.png
+.. figure:: media/birt5.png
 
     Design the report
 
@@ -60,10 +56,10 @@ Once the document is designed, it is stored as a local file, marked out with an 
 
 -  **.rptdesign:** document template for reports that use the BIRT engine.
 
-4) Deploy on KNOWAGE server:
+4) Deploy on KNOWAGE server: 
 using the KNOWAGE document browser you can install the report in the Server and test it.
 
-In this specific example, we will show how to create a report with an internal dataset.
+In this specific example, we will show how to create a report with an internal dataset. 
 First of all, in case of an internal dataset, define a **JDBC Data Source**.
 
 Right click on the **Data Source** item and select the corresponding data source. A pop up editor will open, prompting you the connection settings:
@@ -74,28 +70,28 @@ Right click on the **Data Source** item and select the corresponding data source
 
 Note that these configuration parameters will be used by the birt designer to connect to the database and let the report to be executed locally. Make sure that the database set in the Knowage server share the same *schema* of that defined in the designer.
 
-Since you are setting a local reference to a database inside the report, you need to add an additional information to enable Knowage Server to correctly execute the report by connecting to the data source referenced within the server and not inside the report.
+Since you are setting a local reference to a database inside the report, you need to add an additional information to enable Knowage Server to correctly execute the report by connecting to the data source referenced within the server and not inside the report. 
 Basically, you need to tell the server to override the data source configuration of the report. Therefore, add a parameter to the report, called **connectionName**, by right-clicking on the "Report Parameters" menu item and selecting "New Parameter". Fill in the form as suggested below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image333.png
+.. figure:: media/image333.png
 
     Adding connectionName Parameter.
 
 Then go to **Property Binding** in the Data Source editor and set the property JNDI URL to the value of the connectionName parameter, as shown below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image334.png
+.. figure:: media/image334.png
 
-    Setting the connectionName parameter in the Data Source editor
+    Setting the connectionName parameter in the Data Source editor 
 
 .. warning::
-
+   
     **JNDI URL**
 
       Do not forget to define the connectionName parameter in your BIRT report and set the JNDI URL accordingly. Without these                 settings your BIRT report may be unable to access data once it is deployed on the server. In addition, if database and connection       properties change, you need to change the connection properties only in Knowage server.
-
+   
 Once the data source has been configured, you can proceed with the creation of a dataset. Therefore, right-click on the **Data Set** item and select **New Data Set**. In the next window, select the data source, the type of query and give a name to the dataset, as exhibited below. The scope of this name is limited to your report, because we are defining an internal dataset.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image335.png
+.. figure:: media/image335.png
 
     Dataset definition.
 
@@ -109,11 +105,11 @@ While developing a report, it is particularly useful to test it regularly. To th
 
 .. _datasetedtwithprw:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image336.png
+.. figure:: media/image336.png
 
     Dataset editor, with preview.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image337.png
+.. figure:: media/image337.png
 
     BIRT Property Editor.
 
@@ -121,14 +117,14 @@ Once your report is done, you can deploy it on Knowage Server.
 
 .. note::
      **Deploy on Knowage Server**
-
+         
          To deploy the report you have to create a new *Generic document* and then upload the template file directly in the document detail page.
 
 The BIRT report designer allows the creation of complex reports, with different graphical elements such as cross tabs, charts, images and different text areas. In this section we do not provide any details on graphical development but we focus on specific aspects of Knowage BIRT Report Engine.
 
 .. note::
      **BIRT Designer**
-
+         
          For a detailed explanation of report design, please refer to BIRT documentation at https://www.eclipse.org/birt/.
 
 Adding parameters to reports
@@ -139,28 +135,28 @@ Most times reports show data analysis that depend on variable parameters, such a
 To use these parameters, you first need to add them to your report. Right-click on **Report Parameters** in the tree panel and select **New Parameter**. Here you can set the data type and choose a name for your parameter.
 
 .. warning::
-
+   
     **Parameters URL**
 
       Be careful when assigning a name to a parameter inside a report. This name must correspond to the parameters URL when you deploy the document on Knowage Server.
 
 Once you have defined all parameters, open the (or create a new) dataset. Parameters are identified by a question mark **?** . For each **?** that you insert in your query, you must set the corresponding link in the **Parameters** tab: this will allow parameters substitution at report execution time.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image338.png
+.. figure:: media/image338.png
 
     Creation of a new parameter in a BIRT report.
 
 Note that you must set a link for each question mark as shown below, even if the same parameter occurs multiple times in the same query.
 
 .. _insrtprmintodtsetdef:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image339.png
+.. figure:: media/image339.png
 
     Insert parameters into the dataset definition.
-
-.. warning::
-
+    
+.. warning:: 
+       
      **Transfer reports from Birt designer to Server and vice versa**
-
+       
        Any valid BIRT template  can be directly uploaded in Knowage Server using the web interface for document management.
 
 Parameters can also be used within some graphical elements, such as dynamic text, with the following syntax:
@@ -168,7 +164,7 @@ Parameters can also be used within some graphical elements, such as dynamic text
 .. code-block:: javascript
         :linenos:
         :caption: Parameters syntax
-
+   
             params[name_of_parameter].value
 
 
@@ -179,10 +175,10 @@ A powerful feature of Knowage analytical documents is cross-navigation, i.e., th
 
 Notice that the cross navigation can reference any Knowage document, regardless of the type of the source document. For example, a BIRT report can point to another BIRT report, to a dashboard, a geo or any other analytical document.
 
-It is obviously possible to associate more than one cross navigation to a single document.
+It is obviously possible to associate more than one cross navigation to a single document. 
 It means that by clicking on different elements of the same document the user can be directed to different documents.
 
-To allow the cross-navigation in a BIRT report, you need to add a hyperlink to the element you want to be clickable using the **Properties** tab of the designer.
+To allow the cross-navigation in a BIRT report, you need to add a hyperlink to the element you want to be clickable using the **Properties** tab of the designer. 
 Most report elements can host a hyperlink. For example, let us add a hyperlink to a cell in the table.
 
 Click on the table cell and select the **Hyperlink** item in the **Properties** tab. By clicking on Edit, the hyperlink editor will open and show three input fields:
@@ -191,7 +187,7 @@ Click on the table cell and select the **Hyperlink** item in the **Properties** 
 -  **Target:** select Self,
 -  **Tool Tip.** write the text you wish to appear on the link, as showed in the following Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image340.png
+.. figure:: media/image340.png
 
     Hyperlink editor.
 
@@ -203,27 +199,27 @@ In Cross Navigation syntax we give an idea of how the syntax should be like:
 .. code-block:: javascript
       :linenos:
       :caption: Cross Navigation syntax.
-
-       "javascript:parent.execExternalCrossNavigation("+
-       "{OUT_PAR:'"+params["par_period"].value+"'"+
-       ",OUT_STRING:'"+string_text+"'"+
-       ",OUT_NUM:"+numberX+
-       ",OUT_ManualSTRING:'foo'"+
-       ",OUT_ARRAY:['A','B','5']}"+
-       ",null,"+
-       "'Cross_Navigation_Name');"
+   
+       "javascript:parent.execExternalCrossNavigation("+         
+       "{OUT_PAR:'"+params["par_period"].value+"'"+               
+       ",OUT_STRING:'"+string_text+"'"+ 
+       ",OUT_NUM:"+numberX+     
+       ",OUT_ManualSTRING:'foo'"+    
+       ",OUT_ARRAY:['A','B','5']}"+ 
+       ",null,"+       
+       "'Cross_Navigation_Name');"       
 
 .. warning::
-
+    
     **Type the right cross navigation name**
 
-       It is important to underline that the ``"Cross_Navigation_Name"`` of Cross Navigation syntax is the cross navigation name                    related to the document and set using the "Cross Navigation Definition" feature we described in *Analytical Document* Chapter, *Cross Navigation* Section.
-
+       It is important to underline that the ``"Cross_Navigation_Name"`` of Cross Navigation syntax is the cross navigation name                    related to the document and set using the "Cross Navigation Definition" feature we described in *Analytical Document* Chapter, *Cross Navigation* Section. 
+       
 It will be necessary to type the right cross navigation name related to the document as defined using the "Cross Navigation definition" feature of Knowage      server and to define those parameters (OUT_PAR, OUT_STRING, etc.) as output parameters in the deployed document on the Server            (see *Analytical Document* Chapter, *Cross Navigation* Section).
 
 Note that the syntax of the string is fixed, while you need to assign values to the parameters that will be passed to the destination document. The JavaScript editor helps you to insert dataset column bindings, as shown in Figure below, and report parameters automatically.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-report-birt-image342.png
+.. figure:: media/image342.png
 
      Column bindings.
 
@@ -231,29 +227,30 @@ To manage multi-value parameters is enough to list all values between brackets s
 
 .. code-block:: javascript
    :linenos:
-
-    OUT_SeveralNames:['Michael','Paul','Sophia']
+   
+    OUT_SeveralNames:['Michael','Paul','Sophia'] 
 
 or
 
 .. code-block:: javascript
    :linenos:
-
+   
     OUT_SeveralValues:[5,9,31938]
 
 
 Finally, it is possible to set a sort of "multi"-cross navigation if for example the source document is related to more than one document through the Cross Navigation Definition. Let suppose that the source document is linked to a target document with the navigation called *"CrossNav1"* and simultaneously the source document is linked to a second target document with the navigation called "*CrossNav2"*. If in the JavaScript function of *Cross Navigation syntax* code the "Cross_Navigation_Name" is left empty, as in the code below, when the user clicks on the object for which the navigation has been enabled a pop up opens asking to the user to choose between the *"CrossNav1"* navigation or the *"CrossNav2"* one. This procedure allows the user to have more than one possible navigation starting from the same object.
-
+   
 .. _crossnavsyntax2:
 .. code-block:: javascript
    :linenos:
    :caption: Cross Navigation syntax
-
-       "javascript:parent.execExternalCrossNavigation("+
-       "{OUT_PAR:'"+params["par_period"].value+"'"+
-       ",OUT_STRING:'"+string_text+"'"+
-       ",OUT_NUM:"+numberX+
-       ",OUT_ManualSTRING:'foo'"+
-       ",OUT_ARRAY:['A','B','5']}"+
-       ",null,"+
+   
+       "javascript:parent.execExternalCrossNavigation("+                       
+       "{OUT_PAR:'"+params["par_period"].value+"'"+                             
+       ",OUT_STRING:'"+string_text+"'"+  
+       ",OUT_NUM:"+numberX+ 
+       ",OUT_ManualSTRING:'foo'"+ 
+       ",OUT_ARRAY:['A','B','5']}"+    
+       ",null,"+    
        "'');"
+ 

@@ -91,7 +91,8 @@ Validate the result
 
 Cockpit migration is separate from upgrading the platform. Follow
 :doc:`/chapter_3/create_new_dashboard/index` when converting a copy to a
-Dashboard. Rebuild the map and crosstab widgets as described there.
+Dashboard. Check the converted widgets and adjust any settings that are not
+preserved.
 
 Rollback
 --------

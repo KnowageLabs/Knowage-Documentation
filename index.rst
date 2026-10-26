@@ -1,43 +1,34 @@
-Knowage 9.1 documentation
-=========================
+Welcome to Knowage's official documentation
+______________________________________________
 
-Knowage is an open source analytics and business intelligence suite. Use it to
-explore datasets, build interactive dashboards, run analytical documents and
-share the results with your organization.
+Knowage is the professional open source suite for modern business analytics over traditional sources and big data systems. Knowage is the new brand for SpagoBI project: this new brand marks the value of the well-known open source business intelligence suite after significant functional and technological transformations and a new offering model. 
+The suite is composed of several modules, each one conceived for a specific analytical domain. They can be used individually as complete solution for a certain task, or combined with one another to ensure full coverage of user’ requirements. 
 
-This manual describes **Knowage 9.1.0**. Features and menu entries depend on your
-edition, installed engines and the permissions assigned to your active roles.
-The instructions use the English interface labels.
+This manual targets **Knowage 9.1.0**. The existing instructions and illustrations
+are retained where the documented functionality is unchanged; the release
+notes identify the additions for 9.1.
 
-.. important:: Enterprise Edition features
+.. important:: Enterprise Edition (EE) features
 
-   This manual covers Community Edition (CE) and Enterprise Edition (EE).
-   Features marked **Enterprise Edition (EE)** require an EE license, the
-   corresponding installed services and the appropriate role permissions.
-   :doc:`AI management <chapter_4/ai_management>` and the
-   :doc:`AI assistant <user-guide/ai-assistant>` are reserved for **EE**.
-
-Start here
-----------
-
-* **Use Knowage:** sign in, find a document, select parameters and explore data
-  in the :doc:`user guide <user-guide/index>`.
-* **Build analyses:** create datasets, dashboards and other documents in
-  :doc:`chapter_3/index`.
-* **Manage the platform:** configure data sources, schedules and shared resources
-  in :doc:`chapter_4/index`.
-* **Install or upgrade:** follow :doc:`chapter_5/index`, including the
-  :doc:`9.0 to 9.1 upgrade <chapter_5/upgrade/how_upgrade_9_0_to_9_1>`.
-
-See :doc:`release-notes/9.1` for the changes in this release.
+   Features marked **Enterprise Edition (EE)** require that edition and the
+   corresponding enabled services and permissions. In particular,
+   :doc:`AI management </chapter_4/ai_management>` and the
+   :doc:`AI assistant </user-guide/ai-assistant>` are reserved for EE.
 
 .. toctree::
    :hidden:
-   :caption: Knowage 9.1
-   :maxdepth: 3
+   :caption: Table of Contents
+   :maxdepth: 10
+   
+   release-notes/9.1.rst
+   user-guide/index.rst
+   chapter_3/index.rst
+   chapter_4/index.rst
+   chapter_5/index.rst
 
-   release-notes/9.1
-   user-guide/index
-   chapter_3/index
-   chapter_4/index
-   chapter_5/index
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`

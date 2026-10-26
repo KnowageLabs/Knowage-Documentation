@@ -1,14 +1,12 @@
-User guide
-==========
-
-Learn how to access Knowage 9.1, find your analyses and work with their data.
-Your administrator controls which documents and actions are available to you.
+User Guide
+########################################################################################################################
 
 .. toctree::
-   :maxdepth: 2
+   :caption: Table of Contents
 
-   introduction
-   user-interface
-   document-execution
-   user-registration
-   AI assistant (Enterprise Edition) <ai-assistant>
+   introduction.rst
+   user-interface.rst
+   document-execution.rst
+   user-registration.rst
+   ai-assistant.rst
+

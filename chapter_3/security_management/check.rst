@@ -1,20 +1,15 @@
 Creating a validation rule
 ########################################################################################################################
 
-Open **Modules** > **Behavioural Model** > **Constraints Management** to
-maintain parameter validation rules. After saving a rule, associate it with the
-required analytical-driver use mode and test accepted and rejected values
-through the consuming document.
-
 Knowage supports the validation of the document’s input parameters via validation rules. Validation rules can be defined in  **Behavioural model** > **Constraints Management**.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-check-constraints.png
+.. figure:: media/constraints.png
 
     Contraints functionality.
 
 A validation rule checks parameter values as given by LOVs to verify that they comply with the defined constraints.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-check-image51-b.png
+.. figure:: media/image51_b.png
 
     Contraints Management Panel.
 
@@ -37,3 +32,4 @@ If the administrator needs to create additional validation rules, he can click o
 - **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
 - **Range**: to set a range the parameters value has to satisfy;
 - **Decimal**: to set a maximal decimal places for the parameters.
+

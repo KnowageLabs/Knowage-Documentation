@@ -6,7 +6,7 @@ Data security and access management
    :hidden:
    :caption: Table of Contents
    :maxdepth: 10
-
+   
    behavioural_model.rst
    role_user.rst
    driver.rst
@@ -16,7 +16,7 @@ Data security and access management
    repository_management.rst
    menu.rst
    bm_lineage.rst
-
+   
 .. Indices and tables
 .. ==================
 

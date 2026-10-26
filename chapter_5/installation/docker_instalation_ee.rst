@@ -1,13 +1,11 @@
 KNOWAGE Enterprise Installation using Docker
 ########################################################################################################################
 
-Use the authorized **9.1.0 Enterprise** distribution and its supplied Compose
-configuration. Its private image names and export components are specific to
-your distribution. Pin the application images to the intended release and
-upgrade an existing metadata schema with :doc:`/chapter_5/how_upgrade`.
-
 In this chapter, we will describe how to install the Enterprise version of KNOWAGE using Docker.
 Please note that access to the repository is granted through authorization.
+Use the authorized **9.1.0 EE** package and its Compose files. The private image
+references and export components must match that distribution. For an existing
+installation, also follow :doc:`/chapter_5/upgrade/how_upgrade_9_0_to_9_1`.
 
 Prerequisites
 ------------------------------------------------------------------------------------------------------------------------
@@ -21,7 +19,8 @@ If internet access is not available, it will be necessary to manually transfer t
 
 Repository cloning
 ------------------------------------------------------------------------------------------------------------------------
-To install Knowage EE via Docker, you need to clone the authorized Enterprise Docker repository:
+To install Knowage EE via Docker, clone the Enterprise repository for which
+you have been granted access:
 
 .. code-block:: bash
    :caption: shell command
@@ -32,7 +31,7 @@ access the project directory:
 
 .. code-block:: bash
    :caption: shell command
-
+   
     cd Knowage-Server-Docker-ee
 
 **N.B.** in the absence of an internet connection, the following files and folders must be copied to the host machine in the knowage-ee-server-docker folder

@@ -1,14 +1,12 @@
-Create and maintain a Cockpit
+Create a New Cockpit (old)
 ========================================================================================================================
 
-This chapter describes **Cockpit** documents. Knowage 9.1 retains the Cockpit
-engine and separates it from Dashboard. Keep this editor for existing Cockpits;
-for a new Dashboard use :doc:`/chapter_3/create_new_dashboard/index`. The widget
-settings in the two editors can differ. Migration is an explicit authoring task.
+This chapter describes **Cockpit** documents. For the separate Dashboard
+editor and Cockpit conversion procedure, see :doc:`/chapter_3/create_new_dashboard/index`.
 
 Knowage allow end users to *self-build interactive cockpits* through an intuitive and interactive interface, with a few clicks and simple drag and drop. This allows you to compose your analytical documents with multiple widgets and define associations among them, so that clicking on one widget data are automatically updated in other widgets.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image135.png
+.. figure:: media/image135.png
 
     Cockpit document example.
 
@@ -80,7 +78,7 @@ Let us see how to build a cockpit and how the interface is displayed within the 
 
 By clicking the button **Add Widget** you can add a widget containing a **Text**, an **Image**, a **Chart**, an **HTML**, a **Table**, a **Cross table**, a **Document**, a **Map**, the **Active selections** or the **Selector** to your cockpit, as shown below. **Python**, **R**, **Discovery** and **Custom charts** are available according to the license installed.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image143-bis.png
+.. figure:: media/image143_bis.png
 
         Widget Type.
 
@@ -93,7 +91,7 @@ By clicking the button Text Widget you can add text to your cockpit. As shown in
 the **Style**, the **Dataset** and the **Filters** tab.
 
 .. _texteditwidgetconf:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image144.png
+.. figure:: media/image144.png
 
      Text editor of text widget configuration.
 
@@ -102,13 +100,13 @@ read it real time at each execution. Move to the dataset tab to add a dataset to
 columns on the right side, as well as a set of functions to eventually apply to the fields. We summed up main steps in the Figure below. To add a function to a measure
 first select the desired function and then the field of numeric type.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image1454647.png
+.. figure:: media/image1454647.png
 
     Editing a dynamic text.
 
 It's also possible to add variables values if at least one of them is defined. During the execution of the widget the value will be displayed based on the current variable value.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image144b.png
+.. figure:: media/image144b.png
 
     Variables in text widget.
 
@@ -123,7 +121,7 @@ three sections.
 
 On the **Gallery** tab you can upload an image, delete it or select one from the gallery. Refer to the following figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image148.png
+.. figure:: media/image148.png
 
     Gallery tab of Image Widget Configuration.
 
@@ -131,7 +129,7 @@ On the **Style** tab you can configure the style of your image widget with the d
 
 On the **Cross** tab you can define navigation to another document, as shown in figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image149.png
+.. figure:: media/image149.png
 
     Cross tab of Image Widget Configuration.
 
@@ -145,7 +143,7 @@ This last flag is optional. If you select a cross navigation definition, when yo
 If the cross navigation definition is not defined, then when you launch the image widget cross navigation will be shown a pop up (refer to figure below) with the list of cross navigation definition that exist for this cockpit.
 
 .. _crossnavmultchoice:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image150.png
+.. figure:: media/image150.png
 
     Cross navigation multiple choices.
 
@@ -166,13 +164,13 @@ As shown in next figure, it is mandatory to enable the cross navigation feature 
 The cross navigation name can be left empty. In case multiple cross navigation definitions have been configured for the document, a pop up will be displayed, letting the user to choose which destination to reach (exactly as we saw earlier for Image widget in the last figure of that paragraph).
 
 .. _crossnavchartwidget:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image151.png
+.. figure:: media/image151.png
 
     Cross navigation for chart widget.
 
 In addition, if the navigation expects other parameters to be passed, use the bottom part of the page to add the additional parameters. Figurebelow shows an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image152.png
+.. figure:: media/image152.png
 
     Add all output parameters involved in the cross navigation.
 
@@ -180,15 +178,15 @@ It is also possible using Solr datasets and calculated fields with charts.
 
 Dataset fields editing and configuration is possible using the first tab inside widget edit mode, in this way, for example, users can modify aggregations for measures:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image152b.png
+.. figure:: media/image152b.png
 
 In this way it is possible adding new calculated fields on chart by clicking on "Add Calculated field", the standard calculated field editing mode will appear.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image152c.png
+.. figure:: media/image152c.png
 
 Adding new calculated fields is easy as using other measure fields, using Chart Engine Designer structure tab:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image152d.png
+.. figure:: media/image152d.png
 
 As said before charts are the most adopted method in presenting BI data since they allow an immediate perception of
 a phenomenon and are easily understandable. Thatis why it is worth having an overview through them when creating a dashboard that includes a chart widget.
@@ -218,7 +216,7 @@ Once you enter the Knowage environment as a final user, enter the **Analysis** a
 
 Once opened, the cockpit interface is an empty page with a toolbar containing different options, the second of which is the **Add chart** feature.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image90.png
+.. figure:: media/charts/image90.png
 
     Add a chart to a cockpit.
 
@@ -229,20 +227,20 @@ Once opened, the cockpit interface is an empty page with a toolbar containing di
 
 Clicking on the **Add Chart** icon, you will be asked to choose among some available widgets. Pick out the **Chart** one and let’s now go into details on how to build a chart from scratch. The designer editor is divided into four principal tabs: **Dataset**, **Chart Engine Designer**, **Style**, **Cross** and **Filters**. As soon as the user clicks on the “Add Chart” button, he/she enters the “Dataset” tab editor. Here the user must select, using the “little plus” icon placed just aside the combobox line, one dataset. Then the user must switch to the “Chart Engine Designer” tab and choose a chart type among the available ones, as shown in figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image91.png
+.. figure:: media/charts/image91.png
 
     Chart editor.
 
 After choosing the appropriate chart type you must go into the **Structure** page. Here it is possible to select the measures and the attributes chosen for the chart.
 
 .. _chartstructure:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image92.png
+.. figure:: media/charts/image92.png
 
      Chart structure.
 
 Clicking on the **Configuration** page you will found eight different blocks as you can see in figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image93.png
+.. figure:: media/charts/image93.png
 
      Chart configuration.
 
@@ -261,7 +259,7 @@ These eight blocks are common to all chart types; anyway, there could be some ad
 
 The **Advanced** tab contains extra features, usually exploited by an expert user. Here the user can see all settable properties associated to the chart: it reflects the property tabs that an expert user should manually edit to generate a json template.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image94.png
+.. figure:: media/charts/image94.png
 
     Chart Advanced Features.
 
@@ -283,15 +281,15 @@ The “Structure” tab of the designer is the core of the Chart development. He
 
 In this section it’s possible to customize the labels of the axis, titleand grid style clicking on different buttons. With the arrow button, on the top of the Y-axis and X-axis, it’s possible to choose the axis configuration detail, the axis title configuration, the major and minor grid configuration (just for Y-axis) and ordering column (just for X-axis). With the pencil button opens a window on the right with the series configuration details where it’s possible to choose the aggregation way, the order type of the series, if the data will be shown e so on. Finally, with the strip cartoon button you can choose the features of the tooltip (font color, text alignment, ecc). If the chart in place does not allow the customization of the axes the specific button will be disabled or not visible. The Figure below will show in detail the three buttons above explained:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-9597.png
+.. figure:: media/charts/9597.png
 
     From left to right: (a) Generic configuration axis (the specific arrow). (b) Generic configuration axis.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image97.png
+.. figure:: media/charts/image97.png
 
     Series style configuration.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image98.png
+.. figure:: media/charts/image98.png
 
     Series tooltip details.
 
@@ -300,19 +298,19 @@ The **Configuration** section contains options to define the generic style of th
 
 Note that for the color palette details you can use one already in the list or you can choose any color inserting the hex color code with the hashtag symbol. This is a very useful feature to customize the output.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image99.png
+.. figure:: media/charts/image99.png
 
     Color box editing.
 
 In particular, in the 6.3 version, it has been introduced a new configuration option: the Custom Color.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image200.png
+.. figure:: media/charts/image200.png
 
     Custom Colors details.
 
 With this new option it is possible to assign a specific color to a particular category and/or serie or to a particular value of a category and/or serie. Look at the following figure for an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image201.png
+.. figure:: media/charts/image201.png
 
     Custom Colors example.
 
@@ -322,7 +320,7 @@ Indeed, the options available in this tab change according to the chart selected
 
 The **Advanced** tab contains some advanced options to more customize the chart. Here it is possible, for example, to set the tooltip options, the widget dimensions, if the chart is stacking or not, the grouping type.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image140.png
+.. figure:: media/charts/image140.png
 
     Advanced tab.
 
@@ -330,7 +328,7 @@ Down here are listed some of the most useful and new options.
 
 The **dataLabels** option can be found under the path VALUES -> SERIE -> 0 or another serie -> dataLabels. The option is available only for measures. Here it is possible to set the labels style such as the color, font family or font weight.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image141.png
+.. figure:: media/charts/image141.png
 
     dataLabels option.
 
@@ -338,13 +336,13 @@ The **TOOLTIP** option allows to set the width and the radius of hte tooltip's b
 
 The **plotBands** and **plotLines** options can be found under the path AXES_LIST -> AXIS -> 0 or another serie. With these options is possible to plot respectively bands and lines on the chart with fixed values and to set their style, like the line width and the line type or the band color.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image142.png
+.. figure:: media/charts/image142.png
 
     plotBands option.
 
 The **min** and **max** options are under the path AXES_LIST -> AXIS -> 0 or another serie. They are available only for series and allow to set the maximum and minimum axis value for the selected sere's axis.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image143.png
+.. figure:: media/charts/image143.png
 
     min and max options.
 
@@ -362,13 +360,13 @@ Some charts are endowed with datetime and grouping functions. In particular, it 
 
 The user can reach those functions just clicking on the “little arrow” located at the right end of category bar.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image100.png
+.. figure:: media/charts/image100.png
 
     Datetime and grouping function.
 
 The grouping functions can be implemented only through specific categories and series configurations. As shown in figure below, the grouping function cannot be applied with just one attribute as category. To allow the function to be applied, the user must define two attributes as category fields.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image101.png
+.. figure:: media/charts/image101.png
 
      Error alarm when enabling the grouping function.
 
@@ -376,19 +374,19 @@ As well, the user can use the splitting functions to divide one series over the 
 
 To split the first series over the second one, remember that it is necessary to choose only one attribute as category field and two measures as series values. The following figure shows an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image102.png
+.. figure:: media/charts/image102.png
 
     Split over second series.
 
 Meanwhile to split a measure over second category it is mandatory to choose exactly two attributes as category field and only one measure as series value, as shown in figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image103.png
+.. figure:: media/charts/image103.png
 
     Split over second category.
 
 Futhermore, in the occurance the chart uses one datetime attribute as category field, the user can improve visualization applying the datetime function to custom date format.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image104.png
+.. figure:: media/charts/image104.png
 
     Datetime function usage.
 
@@ -401,7 +399,7 @@ For pie chart inside **Advanced** section you can set configuration for your too
 
 A scatter chart is a graphical representation of scattering phenomenon of data. It is useful when the user wants to underlight the density of data upon certain spots to the detriment of readability of single points. If you select a scatter chart in the **Configuration** section you will have Ticks and Lables Details instead of Advanced Series Configuration. Be carefull to fill in the **Scatter configuration** with the **Zoom type**, as showed below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image105.png
+.. figure:: media/charts/image105.png
 
     Scatter Chart, ticks and labels details.
 
@@ -442,7 +440,7 @@ example of dataset for the sunburst chart is showed in Table below.
 
 Once you selected the dataset and the type of chart, choose at least two attributes in the X-axis panel and a measure in the Y-axis panel as showed in the following figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image106.png
+.. figure:: media/charts/image106.png
 
      Sunburst configuration.
 
@@ -450,13 +448,13 @@ Then click on **Configuration**. As you can see the features are not exactly the
 
 Using the **Generic** button you can set the **opacity** on mouse movement and choose how to display the measure values: absolute, percentage or both. These two features allow the visualization of data just moving the mouse over the slice: the slice is highlighted and values are shown in the center of the ring while the root-node path for the node selected is displayed on the left bottom corner of the page. Opacity and Breadcrumb configuration are available only on Comunity Edition. The tooltip is a mandatory field since it shows the value of the selected slice. Therefore be sure to have filled it before saving by using the **Explanation detail** panel. On Comunity Edition you have option custom the root-node path, clicking on the **Sequence** icon and choose position, label tail size and text style. **Sequence** option is not available on Enterprise edition, it is deprecated. Figure below sums up the three features.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image1070809.png
+.. figure:: media/charts/image1070809.png
 
     Generic, Sequence and Explanation configuration
 
 In Figure below you find the sunburst obtained with data of :numref:`exampleofdatsetsunburst`.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image1101112.png
+.. figure:: media/charts/image1101112.png
 
     From left to right: (a) Sunburst. (b) Sunburst category.(c) Sunburst subcategory.
 
@@ -470,7 +468,7 @@ The dataset to create a wordcloud should have at least a column with attributes 
 
 Switch to the **Configuration** section to set the generic configuration of the chart and to custom fields of the **Word settings datails**. Here the use can decide if to resize the words accordingly to the measure retrieved in the dataset (**Series** option) or accordingly to the frequency of the attributes in the dataset (**Occurrences** option). Moreover it is possible to set the maximum number of words that you want to display, the padding between the words, the word layout and whether or not you want to prevent overlap of the words as showed in Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image113.png
+.. figure:: media/charts/image113.png
 
      Wordcloud chart specific configuration.
 
@@ -487,7 +485,7 @@ Finally you can set generic configurations and colors palette in the **Configura
 
 In Figure below we show the Treemap resulting with data of our example
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image11415.png
+.. figure:: media/charts/image11415.PNG
 
     From left to right: (a) Treemap. (b) Treemap sub-branches.
 
@@ -556,7 +554,7 @@ To create a parallel chart select a dataset with at least one attribute and two 
 In this example three different classes of iris are studied. Combining the values of some sepal and petal width or lenght, we are able to find out which class we are looking at. In Figure below (a part) you can find the parallel chart made with the suggested dataset. While in next figure (b part) it is easy to see, thanks to selection, that all iris with petal length between 2,5 and 5.2 cm and petal width 0,9 and 1,5 cm belong to the iris-versicolor class.
 
 .. _fromleftparallrighetchart:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image11617.png
+.. figure:: media/charts/image11617.png
 
     From left to right: (a) Parallel. (b) Parallel chart selection.
 
@@ -568,33 +566,33 @@ On the **Configuration** tab you can set the generic configuration for the chart
 
 Heatmap chart uses a chromatic Cartesian coordinate system to represent a measure trend. Each point of the Cartesian system is identified by a couple of attributes. Note that one attribute must be a datetime one. Meanwhile, each couple corresponds to a measure that serves to highlight the spot with a certain color according to the chosen gradient. Figure below gives an example of how an heatmap chart looks like inside Knowage.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image118.png
+.. figure:: media/charts/image118.png
 
     Heatmap example.
 
 Before configuring a heatmap chart, be sure that your dataset returns at least two attributes, one of which **must** be a datetime one, and (at least) one measure. Once entered the chart designer, choose the “Heatmap” type and move to the “Structure” tab. Use the datetime attribute and an other attribute as category fields and one measure as series fields. Figure below shows an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image119.png
+.. figure:: media/charts/image119.png
 
     Configuring the attributes and the series for the heatmap chart.
 
 Note that for series axis it is possible to specify the values’ range by assigning a minimun and the maximum value, as shown in figure below. Otherwise, the engine will automatically link the axis scale to dataset results set.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image12021.png
+.. figure:: media/charts/image12021.png
 
     Configure min and max values for series.
 
 The next step is to move to **Configuration** tab and select the **Color palette** icon. Here (figure below) the user has to define the chromatic scale which will be associated to the measure values. The panel will demand the user to insert the first, the last color and the number of bands that will constitute the color scale.
 
 .. _addgradientpanel:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image122.png
+.. figure:: media/charts/image122.png
 
     Add gradient panel.
 
 The engine will create a progressive color scale as shown in the left image of figure below. To custom the scale the user can use the Preset colors and use the arrow to move up and down Heatmap chart the added color or the user can increase the number of steps and then
 some intermediate color to leave more contrast between them.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image12324.png
+.. figure:: media/charts/image12324.PNG
 
     Custom color scale.
 
@@ -659,7 +657,7 @@ An example of dataset for the chord chart is represented in Table below:
 
 Once you have selected the dataset open the designer and select chord chart type. Then choose the two entities in the X-axis panel and the value in the Y-axis panel as showed in figure below. Now you are ready to customize the chart setting the generic configuration and the palette on **Configuration**.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image12526.png
+.. figure:: media/charts/image12526.png
 
     Chord configuration.
 
@@ -676,19 +674,19 @@ When you finished to set all the mandatory and optional parameters and configura
 
 A bubble chart requires three dimensions of data; the x-value and y-value to position the bubble along the value axes and a third value for its volume, z-value. It is a generalization of the scatter plot, replacing the dots with bubbles.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-bubble-chart.png
+.. figure:: media/charts/bubble_chart.png
 
     Bubble chart.
 
 
 Inside X,Y,Z containers, user can put only **measure values**. Inside Categories container user can put **attributes** that he wants to see in the **tooltip**.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-bubble-chart-conf.png
+.. figure:: media/charts/bubble_chart_conf.png
 
     Bubble configuration.
 
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-bubble-tooltip.png
+.. figure:: media/charts/bubble_tooltip.png
 
     Bubble tooltip.
 
@@ -696,19 +694,19 @@ Inside X,Y,Z containers, user can put only **measure values**. Inside Categories
 
 Inside **Advanced tab**, user can find configuration for **plotband** and **plotline** of xaxis and yaxis.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-bubble-plotband-and-line.png
+.. figure:: media/charts/bubble_plotband_and_line.png
 
     Bubble plotband and plotline configuration.
 
 
 User also has option for **splitting serie** by one of two categories. Split option has limit on **maximum** two categories. User can set which category will be used for coloring bubbles. And also can show/hide values that are inside bubbles.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-bubble-split-conf.png
+.. figure:: media/charts/bubble_split_conf.png
 
     Bubble split configuration.
 
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-bubble-split.png
+.. figure:: media/charts/bubble_split.png
 
     Bubble split examples.
 
@@ -726,19 +724,19 @@ The chart that enables the drill down are:
 
 To give an idea of the outcome, we take as instance the Bar Chart drill down. In the following example, the selected categories are four and called: ``product_family``, ``product_department``, ``product_category`` and ``product_subcategory``. Once we open the document, we get as shown below:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image127.png
+.. figure:: media/charts/image127.png
 
     Drillable Bar Chart
 
 When selecting ``shelf_depth`` measure of the Food category one gets (see next figure):
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image128.png
+.. figure:: media/charts/image128.png
 
     Drillable Bar Chart: first drill
 
 Once again, we can select ``Frozen food`` subcategory and drill to a second sub-level as below:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image129.png
+.. figure:: media/charts/image129.png
 
     Drillable Bar Chart: second drill
 
@@ -752,7 +750,7 @@ The **Widget table configuration** opens and it guides you through the steps to 
 .. |image156| image:: media/image153.png
    :width: 20
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image154.png
+.. figure:: media/image154.png
 
     Table configuration window.
 
@@ -760,20 +758,20 @@ In fact, the column area is divided into two parts: on the upper part there are 
 
 When a dataset is added to a table widget, all of its columns are listed below. If the user doesn’t wish to show some of them, he can use the delete button available at the end of each column row, as shown below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image155.png
+.. figure:: media/image155.png
 
     Delete a column.
 
 In case of accidental cancellation or new table requirements, it is possible to re-add columns. In order to add a new column you have to
 click on the **Add Column** icon on the top right of the second box. Once opened you can select one or more columns. When you have finished selecting the desired columns you can click on save button and your new columns will appear in the field list. Refer to Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image156.png
+.. figure:: media/image156.png
 
     Add a new column.
 
 **Manage Columns Groups** will open a menu to add or remove columns groups and to set their style. A column group is a container for more than one column that will show a common header between them.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image156b.png
+.. figure:: media/image156b.png
 
     Example column group.
 
@@ -783,17 +781,17 @@ If you prefer you can create or modify the expression manually directly in the e
 When you are satisfied with your expression you can click on validate to check your formula sintax or save button and your calculated field appears in the field list.
 We provide an example in the following figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image157.png
+.. figure:: media/image157.png
 
     Add a calculated field.
 
 If Dataset is of type Solr, the columns displayed on the right panel are dataset columns fields and the calculated field formula elaboration is calculated on the fly.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image158b.png
+.. figure:: media/image158b.png
 
 If variables are set for the present cockpit, the variable menu button will appear, making it possible to add variable values in the calculated field expression.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image157c.png
+.. figure:: media/image157c.png
 
     Variables menu
 
@@ -802,7 +800,7 @@ In the bottom section of the window, you can see the table fields (with their ag
 them up or down, insert a column alias and customize it by adding font and style configurations using the brush shaped icon, as you can see from figure below.
 Here you can find configuration features to adjust the column size, max cell characters, hide column or column header options, and the row spanning toggler.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image157d.png
+.. figure:: media/image157d.png
 
     Columns Settings
 
@@ -817,7 +815,7 @@ If the column is a measure, more functionalities will become available:
 
 
 .. _columnsettings:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image158.png
+.. figure:: media/image158.png
 
     Column settings.
 
@@ -828,7 +826,7 @@ If a column group has been set another option will become available in order to 
 
 For all the columns, if at least one variable is set, the variables settings box will appear. Depending on the variable usage it will be possible to set a dynamic header or to hide the column conditionally.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image158c.png
+.. figure:: media/image158c.png
 
     Variable settings box.
 
@@ -840,7 +838,7 @@ Clicking on the plus button you can add one or more conditions. The possible act
 
 Multiple conditions can be set, but a condition fullfilling the "=" will have higher priority.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image158d.png
+.. figure:: media/image158d.png
 
     Variable action set.
 
@@ -849,62 +847,62 @@ The **Style** tab is where you can customize the table by using the different op
 
 - In the **Header Style** section you can find different options for styling the table header. Refer to Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image162.png
+.. figure:: media/image162.png
 
     Header style section of the Style tab.
 
 - In the **Rows** section you can set the generic style for all the rows (such as alternate color background) or specify different styles according to specific conditions on values. While the multiselectable option allows you to select multiple values and pass them to other cockpit widgets or other external documents. Refer to figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image160.png
+.. figure:: media/image160.png
 
     Rows section of the Style tab.
 
 - In the **Summary** section you can customize the appearance of the total of columns using font and style configurations. Refer to Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image159.png
+.. figure:: media/image159.png
 
     Summary section of the Style tab.
 
 - In the **Titles** section you can add the titles to the widget and modify the font size and weight. In this section you can also change the height of the widget title. Refer to Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image163.png
+.. figure:: media/image163.png
 
     Titles section of the Style tab.
 
 - In the **Borders** section you can add a border to the widget and customize it by using the colors, thickness and style. Refer to the following figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image164.png
+.. figure:: media/image164.png
 
     Borders section of the Style tab.
 
 - In the **Padding** section you can add a padding inside the widget area, specifying a value for top, bottom, left and right zones. Refer to the following figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image164b.png
+.. figure:: media/image164b.png
 
     Padding section of the Style tab.
 
 - In the **Other Options** section you can add the shadows in the widget, you can set the background color of the widget and it is possible to disable or enable the screenshot option or the Excel export (when available) for that particular widget. Refer to the following figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image165.png
+.. figure:: media/image165.png
 
     Other Options section of the Style tab.
 
 - In the **Export PDF** section you can enable the export of the widget in PDF format and also specify the orientation and size. Refer to the following figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image165b.png
+.. figure:: media/image165b.png
 
    Export PDF section of the Style tab.
 
 Once the table style settings have been implemented you can switch to the next tab. The **“Cross”** tab is where the navigation to other documents is defined. It is visible to final users but yet only configurable by a technical user (like an administrator). In this tab is possible to select between three different type of interactions: cross navigation to another document, open a preview popup of a dataset content or link to an external URL.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image165c.png
+.. figure:: media/image165c.png
 
    Cross tab with preview of a dataset enabled.
 
 Finally, the **“Filters”** tab is where you can filter the table results by adding a limit to the rows or a conditions in the columns. the following figure shows an example of how to set the limit rows or a conditions on dataset columns.
 
 .. _filterstabwidgetconf:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image168.png
+.. figure:: media/image168.png
 
     Filters tab of the table widget configuration.
 
@@ -916,26 +914,26 @@ Cross Table widget
 
 Similar configurations are available also for the Cross Table widget. In this data visualization option, you still have the tabs: **Dataset** tab, **Configuration** tab, the **Style** tab and the **Filters** tab as you can see below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image169.png
+.. figure:: media/image169.png
 
     Dataset section of the crosstab widget configuration.
 
 Using the “Dataset” tab the user can add the dataset to take values from. Consequently, it is necessary to select the fields you wish to appear as columns, those as row and measures to be exhibited in the pivot table. See figure below. Remember to set column and row fields as attributes, while measure fields as numbers.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image170.png
+.. figure:: media/image170.png
 
     Selecting columns, rows and measures of the crosstab.
 
 There is also the possibility to add calculated fields as measures clicking on the "Add calculated field button".
 The calculated field will work exactly as in the table widget. After creating a calculated field there will be the possibility to edit, remove it or set the properties for it's column clicking on the new measure buttons.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image170b.png
+.. figure:: media/image170b.png
 
     Calculated field detail.
 
 Once the columns, rows and measures have been selected the style of each column can be set by clicking on the cog settings icon. A popup will open with different options for the selected columnn. See figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image210.png
+.. figure:: media/image210.png
 
     Column style popup.
 
@@ -943,13 +941,13 @@ It is possible to sort the crosstab according to the values of the selected colu
 
 In case the selected column is of type measure, there is a dialog to configure the behaviour of that field:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image490.png
+.. figure:: media/image490.png
 
     Measure configuration dialog.
 
 A particular option for a measure is **Exclude from Total and SubTotal**: that checkbox excludes the measure from the sums of Total and SubTotal fields makin the relatives table cells empty.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image211.png
+.. figure:: media/image211.png
 
     Measure threshold setting.
 
@@ -957,14 +955,14 @@ As figure above shows, you can also manage threshold. For measures only, it is p
 To do so add a new threshold, set a condition for it to appear, and choose the icon from the list or select the color that will be changed to the cell.
 It is possible to add more or to remove thresholds using the add or delete button.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image211c.png
+.. figure:: media/image211c.png
 
     Variables header value.
 
 If one or more variables are set, in column and measure settings another field will appear. It is possible to set the header name to be dynamic using one of the variables set.
 If one of the variables are selected in the combo as in example, the header name will be changed depending on the current variable value.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image211b.png
+.. figure:: media/image211b.png
 
     Column style.
 
@@ -975,7 +973,7 @@ Once the dataset has been properly configured, you can proceed to the “Configu
 
 The latter is made up of three sections: **General**, **On rows** and **On columns**, as Figure below shows.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image171.png
+.. figure:: media/image171.png
 
     Configuration tab interface.
 
@@ -987,13 +985,13 @@ In the **“General”** section you can set the following features:
 
 Thanks to the **“On rows”** feature, you can easily compute totals or subtotals on rows. Figure below exhibit an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image172.png
+.. figure:: media/image172.png
 
     Computing totals and/or subtotals on rows.
 
 Otherwise, thanks to the **“On columns”** feature, you can easily compute totals or subtotals on columns. Figure below exhibit an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image173.png
+.. figure:: media/image173.png
 
     Computing totals and/or subtotals on columns.
 
@@ -1001,7 +999,7 @@ Selecting the **"Hide rows on just null values"** will hide all the rows with ju
 
 The "Fix attribute's columns" will pin to the left the columns containing the attributes, so side scrolling will be available without losing those columns.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image173b.png
+.. figure:: media/image173b.png
 
     Pinned columns example.
 
@@ -1010,7 +1008,7 @@ In the widget menu you will also find the expand all/collapse all buttons, in or
 
 Be aware that to use this functionality columns subtotal should be selected. If not the functionality check will enable it automatically.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image173c.png
+.. figure:: media/image173c.png
 
     Expand/collapse example.
 
@@ -1018,67 +1016,67 @@ Switching to the **“Style”** tab you can find the general style settings ava
 
 - **Crosstab General Options**  where the rows' height, the general font and font size can be set; in particular, the layout combo determines how the columns resize themselves in respect of the contained value;
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image174.png
+.. figure:: media/image174.png
 
     General style options for crosstab.
 
 - **Crosstab Headers Font Options** where you can configure the header style settings as color, background, font, etc.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image175.png
+.. figure:: media/image175.png
 
     Crosstab Headers Font Options for crosstab.
 
 - **Measures Font Options** where you can configure several style options for measures, such as color, background, font size, etc.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image176.png
+.. figure:: media/image176.png
 
     Measures Font Options for crosstab.
 
 - Using the **Grid** section you can mark (or not) grid borders, decide for border style, thickness and color. You can also alternate row indicating different colors.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image177.png
+.. figure:: media/image177.png
 
     Grid Options for crosstab.
 
 -  In the **Measures Headers** section you can configure different style option for measure headers, such as color, background, font size, etc.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image178.png
+.. figure:: media/image178.png
 
     Measures Headers Option for crosstab.
 
 - In the **Total** section you can set color and background of totals (if any).
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image179.png
+.. figure:: media/image179.png
 
     Color settings for Totals.
 
 - In the **Subtotal** section you can set color and background of subtotals (if any).
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image180.png
+.. figure:: media/image180.png
 
     Color settings for Subtotals.
 
 - In the **Titles** section you can add titles to widget and customize them using different styles.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image181.png
+.. figure:: media/image181.png
 
     Title settings.
 
 - In the **Borders** section you can add borders to widgets and customize them using different styles.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image182.png
+.. figure:: media/image182.png
 
     Border settings.
 
 - In the **Other Options** section you can add a shadow to widget layout and indicate its measure, color the widget background at convenience and it is possible to disable or enable the screenshot option or the Excel export for that particular widget.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image183.png
+.. figure:: media/image183.png
 
     Other Options for crosstab.
 
 Opening the **Cross** tab is possible to set a cross navigation to another document or an external link. In addition to other cross-navigations, for cross table widget it is possible to set as a dynamic value the name of the selected measure column or the selected category. The choice is available from the combobox.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image498.png
+.. figure:: media/image498.png
 
     Cross navigation for cross table widget.
 
@@ -1093,7 +1091,7 @@ Use the Data configuration button to add a document source to the cockpit. Click
 
 The Document Widget configuration is divided into two parts: **Custom** tab and **Style** tab as you can see from Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image185.png
+.. figure:: media/image185.png
 
     Custom tab of the Document widget.
 
@@ -1104,13 +1102,13 @@ Active Selections widget
 
 To enable the Active Selections widget, which means the possibility to have all the currently applied selections listed and accessible on a widget, the user must open the **“Active Selections”** feature through the **“Add widget”** functionality and configure the demanded options. Figure below shows the **“Active Selections widget configuration”** interface.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image186.png
+.. figure:: media/image186.png
 
     Active Selections widget configuration.
 
 The Active Selections will display the elements selected by the user. Figure below shows an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image187.png
+.. figure:: media/image187.png
 
     Active Selections widget outlook.
 
@@ -1121,7 +1119,7 @@ Selector Widget
 
 The **Selector Widget** is a way to include a dataset filter, directly inside the cockpit, that can be displayed like a combobox, radio button or checkboxes.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image188.png
+.. figure:: media/image188.png
 
     Selector widget outlook.
 
@@ -1129,25 +1127,25 @@ In detail, use the **Columns** tab to select the dataset and the dataset column 
 
 In the case of the selector of type list "grid" it is also possible to set the grid columns width.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image304.png
+.. figure:: media/image304.png
 
     Grid columns width.
 
 Move to the **Style** tab to set the widget style in terms of: label, titles, borders, shadows and background color. Figure below shows a customization example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image189.png
+.. figure:: media/image189.png
 
     Selector widget configuration.
 
 Finally use the **Filters** tab to handle pagination or filter on a dataset column.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image190.png
+.. figure:: media/image190.png
 
     Selector filters.
 
 The Selector widget works effectively as a ready-to-use filter panel.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image191.png
+.. figure:: media/image191.png
 
     Selector widget execution example.
 
@@ -1167,7 +1165,7 @@ In the editor tab is possible to add the code that will be shown in the widget. 
 
         A CSS property will be extended to all the classes in the cockpit with the same name, to apply the property only to the current widget use the id prefix shown in the info panel of the CSS editor
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image208.png
+.. figure:: media/image208.png
 
     HTML widget editor
 
@@ -1176,7 +1174,7 @@ In the right side of the editor is possible to explore the available tags that c
 The **Dataset** tab allows the user to select a dataset to make the Widget dynamic and to bind it to dataset data.
 After choosing a dataset the list of available columns will be shown. Those names will be useful inside the dynamic tags. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image209.png
+.. figure:: media/image209.png
 
     Dataset selection
 
@@ -1320,13 +1318,13 @@ Map Widget
 
 The Map Widget is useful when a user needs to visualize data related to a geographic position. The widget supports multiple layers, one for every dataset added to widget configuration, and one data field for every layer: the user can switch on-the-fly between all data available on the layer.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image475.png
+.. figure:: media/image475.png
 
     Map widget.
 
 In Map Widget configuration a user can add and remove layers, set the format of the spatial attribute to use and specify the attributes to display on map and on the detail popup:
 
-    .. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image476.png
+    .. figure:: media/image476.png
 
         Map widget configuration.
 
@@ -1363,91 +1361,91 @@ The 3-dots-menu on the right of each column of the dataset contains additional f
 
 The threshold menu open a dialog where the user can customize marker color by value range: that's very useful when a user wants to immediately identify a marker by it's value.
 
-    .. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image482.png
+    .. figure:: media/image482.png
 
         Threshold dialog.
 
 For all the attributes that are filters, a user could select the relative value from the control panel:
 
-    .. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image499.png
+    .. figure:: media/image499.png
 
         Filter selection.
 
 As said, Map widget supports calculated fields, a way for a user to calculate additional data to show on map or to display into popup detail:
 
-   .. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image503.png
+   .. figure:: media/image503.png
 
        Add calculated field button in layer's metadata.
 
 From the calculated field's dialog a user can combine measures and operations to add more data to the layer. The user can use a SQL-like syntax to create a statement that describe the new calculated field:
 
-  .. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image504.png
+  .. figure:: media/image504.png
 
       Calculated Field's dialog.
 
 The newly calculated field added by the user is shown as a measure in layer's dataset: from the 3-dots menu on the right of the field a user can update or delete the calculated field.
 
-  .. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image505.png
+  .. figure:: media/image505.png
 
       The 3-dots menu on calculated field.
 
 For every layer, a user can specify the way the data will be displayed on map: the user can choose between a markers, cluster, heatmaps and choroplet.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image477.png
+.. figure:: media/image477.png
 
     Style configuration for every layer.
 
 For marker there are multiple choices between a user can select. The first one is the standard marker, where a user can select only the marker color:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image483.png
+.. figure:: media/image483.png
 
     Standard marker configuration.
 
 The second possibility is to use a custom color and custom scale with a custom marker, for example and icon available in Font Awesome catalog:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image484.png
+.. figure:: media/image484.png
 
     Custom marker configuration.
 
 A user can also use an image from Knowage media as a marker:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image485.png
+.. figure:: media/image485.png
 
     Marker from Knowage images.
 
 Finally a user can use an image from external URL as a marker:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image486.png
+.. figure:: media/image486.png
 
     Marker from Knowage images.
 
 Cluster visualization renders circles of different size where every circle aggregating positions by relative values. A user can zoom in to disaggregate the cluster until he see the single data. For this type of visualization, a user can set size and color of the circle and the size and the color of the font used to display the aggregated value:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image487.png
+.. figure:: media/image487.png
 
     Cluster configuration.
 
 When heatmap is selected, a user can display values by areas colored by a color range from green to red where the values are respectively lower and higher. Setting the radius and the blur, a user can specify the scale of the areas and the scale of the blur around it:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image488.png
+.. figure:: media/image488.png
 
     Heatmap configuration.
 
 The choroplet visualization allows a user to precisely associate values to areas, very useful when spatial attribute specify a geometry instead of a single point. The classes method specify the subdivision algorithm and the classes number specify how many subdivision to make; the colors specify the start and the end of the range color that will follow the same range of the values:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image489.png
+.. figure:: media/image489.png
 
     Choroplet configuration.
 
 Discovery Widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image480.png
+.. figure:: media/image480.png
 
 The Discovery Widget is used to easily use and navigate into a Solr Dataset using facets aggregation and a table results.
 In order to make searches, aggregations using facets and so on, after selecting the Solr dataset it is possible to choose the fields that should be shown as the result.
 The table result can also be configured to show a limited set of fields, as you can see in the widget configuration:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image481.png
+.. figure:: media/image481.png
 
 **Settings**
 
@@ -1460,37 +1458,37 @@ The settings tab contains the management of the 3 elements that compose a direct
         - *facets max number*, this setting allows to choose the maximum number of facets visible for every field.
     - Text search: if enabled a searchbar will appear at the top of the widget. It is possible to set a default search for widget initialization.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image481b.png
+.. figure:: media/image481b.png
 
 **Important** The options "show column" and "show facets" are only frontend side. They don't affect the real backend Solr query, discovery widget will search for every field even though they are frontend omitted.
 
 **Facets column ordering**
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image491.png
+.. figure:: media/image491.png
 
 It is possible to change the facets column ordering, for example if there is the need to move up a field.
 
 
 As shown in this example, "aggregazione" should be shown upper, just go to the edit widget section:
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image492.png
+.. figure:: media/image492.png
 
 And change the columns order dragging the field to the right position.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image491b.png
+.. figure:: media/image491b.png
 
 **Changing Date Format for discovery table date columns**
 
 It is also possibile to change the format used to show date columns inside discovery table:
 In order to do that, click on style for date columns fields in edit mode
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image493.png
+.. figure:: media/image493.png
 
 And change the "date format" property
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image494.png
+.. figure:: media/image494.png
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image495.png
+.. figure:: media/image495.png
 
 Python/R Widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1499,7 +1497,7 @@ The Python/R widgets allow to directly embed Python or R scripts inside the cock
 
 In the editor tab it is possible to add the script that will be sent to the execution engine.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-pythoneditor.png
+.. figure:: media/PythonEditor.png
 
 
 Before writing the code it is necessary to specify the **type** of the output produced by the script.
@@ -1514,7 +1512,7 @@ The Dataset tab allows the user to select a dataset that will be accessible dire
 After choosing a dataset the list of available columns will be shown. Here it is also possible to order the dataset according to a column and to select the ordering type (ascending or descending).
 
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-datasettab.png
+.. figure:: media/DatasetTab.png
 
     Dataset selection
 
@@ -1524,7 +1522,7 @@ This variable will have the same name of the dataset label.
 The Environment tab allows the user to choose among a list of available Python/R evironments previously defined inside the **Configuration Management**.
 To support this kind of choice a list of available libraries is displayed for each selected environment.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-environmenttab.png
+.. figure:: media/EnvironmentTab.png
 
     Environment selection
 
@@ -1535,7 +1533,7 @@ Inside Python and R scripts it is possible to access analytical drivers by the u
 
 Custom Chart Widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image500.png
+.. figure:: media/image500.png
 
 The Custom Chart allows the user to directly embed html, css and js code using a supported external chart library and integrating with Knowage data and interactions using custom API.
 
@@ -1560,11 +1558,11 @@ The **dataset tab** allows to select a specific dataset to use as a refferral fo
 In the table will be possible to change column alias, the column aggregation for measures and delete columns interacting with the selected column line.
 Clicking on *add column* or *add calculated field* buttons on top a popup will appear allowing to choose one of the dataset column to add or to insert the calculated field formula.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image501.png
+.. figure:: media/image501.png
 
 The **Editor tab** allows to insert custom code and it's splitted into three components: CSS, HTML, JavaScript.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image502.png
+.. figure:: media/image502.png
 
 The CSS component allows to insert css classes that will be used by the HTML code of the widget. It's also possible to use `@import` command if the referred url is inside the whitelist.
 
@@ -2195,7 +2193,7 @@ The interactions are mutually exclusive, so just one type can be chosen for ever
 
 The cross-navigation gives the possibility to connect two documents clicking on a widget as a starting point, opening the second one as arrival and showing the breadcrumbs on top.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image212.png
+.. figure:: media/image212.png
 
     Table widget cross-navigation configuration.
 
@@ -2215,7 +2213,7 @@ you will be able to choose between them. If you leave this field blank the user 
 
 **Preview**
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image214.png
+.. figure:: media/image214.png
 
     Table widget preview configuration.
 
@@ -2224,17 +2222,17 @@ First of all you will need to enable the navigation using the switch button.
 After that, you will need to choose an interaction type and a target dataset.
 The selected dataset will be opened in a popup window but, if you check the "Direct download" property, you will be able to get the dataset content directly in the *download list* functionality.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image216.png
+.. figure:: media/image216.png
 
     Preview example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image216b.png
+.. figure:: media/image216b.png
 
     Download list functionality icon.
 
 **Cross and Preview Parameters**
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image213.png
+.. figure:: media/image213.png
 
     Parameters example.
 
@@ -2257,7 +2255,7 @@ Then you will be able to create one or more link navigations.
 You will need to choose an interaction type and a base url. The base url will be the url opened by the user click.
 You can also decide the type of link between the opening of a new page or the document replace opening in the same page.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image215.png
+.. figure:: media/image215.png
 
     Link configuration with JSON parameter example.
 
@@ -2282,7 +2280,7 @@ Iframe messages are a new interaction type that allows the cockpit widgets to se
 
 First of all you need to select the interaction type, as for the other cross-navigations, then you will have to set the message you want to provide the container with. The only accepted format is JSON, but you can use placeholders like *$P{parameter}* or *$V{variable}* to pass dynamic data.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image508.png
+.. figure:: media/image508.png
 
     Table widget iframe message configuration.
 
@@ -2306,7 +2304,7 @@ Widget properties
 
 Once one or more (above mentioned) widgets have been implemented, the technical user has some more options exploring the icon available at the left bottom corner of the widget itself, as Figure below highlights.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image192.png
+.. figure:: media/image192.png
 
     Widget properties.
 
@@ -2334,13 +2332,13 @@ When executing the cockpit in visualization mode, the user has also some more op
 
 Chart widget are endowed with an additional option that allows the user to change the chart type, as you can see in Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image195.png
+.. figure:: media/image195.png
 
     Change chart type button.
 
 In this case, the available chart types are: parallel, scatter, wordcloud, line, radar, bar and pie. These charts depends on the original chart type, not all can be available at the same time.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image196.png
+.. figure:: media/image196.png
 
     Available chart types.
 
@@ -2351,7 +2349,7 @@ General configuration
 
 This option allows the user to manage all cockpit general settings that we are going to describe through images of the interface. Clicking on the **General configuration** button the window in figure below opens. This contains the **General Settings** tab, the **Widget Style** tab and the **CSS Editor** tab.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image197.png
+.. figure:: media/image197.png
 
     General configuration window.
 
@@ -2359,13 +2357,13 @@ Editing the fields of the first tab, **General Settings**, you can add or change
 
 The second tab, **Widget Style**, (Figure below) allows to configure a default style for the widgets, like borders, shadows, titles and background color.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image198.png
+.. figure:: media/image198.png
 
     Widget style tab.
 
 The third tab allows to specify CSS properties for the whole cockpit and widgets. Here is also possible to override common CSS properties of the widgets. The editor will highlight possible syntax errors.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image497.png
+.. figure:: media/image497.png
 
     Css editor tab.
 
@@ -2375,7 +2373,7 @@ Data configuration
 This feature manages the data storage and usage. In fact, here there is the possibility to save data in cache, create associations between datasets, create indexes on cached data, schedule the (data) refresh frequency and so on. Referring to the figure below, the feature is implemented through several tabs: the **Source** tab, the **Associations** tab, the **indexes**, the **Frequency** and the **Template** tab.
 
 .. _dataconfigwindow:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image199-b.png
+.. figure:: media/image199_b.png
 
     Data configuration window.
 
@@ -2389,7 +2387,7 @@ Parametric sources management
 
 If the user is adding a parametric dataset the window will exhibit them in an expandable box right below. It is also mandatory to give default values or to associate proper drivers to the document to secure its correct execution. By the way, a final user has no access to parametric dataset and he/she cannot handle analytical drivers, therefore **parametric sources can be managed only by an admin user**. We stress that the user must also type the driver name in the field box as highlighted in Figure below. You can type it manually or use the look up just aside the parameter line.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image200-2.png
+.. figure:: media/image200.png
 
     Dataset management.
 
@@ -2403,19 +2401,19 @@ If your goal is to show data from a single dataset, it is not necessary to defin
 The following figure shows the association between two datasets. In this case the user must detect one field from the first dataset, the same field (in terms of values) in the other one. The relation will appear right below. Click on the save button to confirm the association. If the associations rely on multiple columns the user must add them one by one.
 
 .. _assocbetweendatacolum:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image201-2.png
+.. figure:: media/image201.png
 
     Associations between dataset columns.
 
 The same procedure can be done in the case of dataset columns and dataset parameters, as shown below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image202.png
+.. figure:: media/image202.png
 
     Associations between dataset column and dataset parameter.
 
 Another example is supplied in Figure below. Here the association is performed between a dataset column and document parameter.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image203.png
+.. figure:: media/image203.png
 
     Associations between dataset column and document parameter.
 
@@ -2427,13 +2425,13 @@ To correctly set up meaningful associations, the user must have knowledge of ext
 
 In the "Data cockpit settings" seen in the previous section, we fnd the "Auto Detect" button that redirects the user to the auto dectect page. The button is at the right top corner of the association list area.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image507.png
+.. figure:: media/image507.png
 
     Auto Detect button.
 
 Here the user can decide a minimum percentage of match that Knowage will use to compute and return matching columns. For instance a 20% of similarity means that the values contained by two or more columns of different datasets are the same at least for the 20% of them. Following the example shown in Figure below, we can read that between the three dataset, only two of them have possible associations. The user can use a 100% similarity match using the "produt_family" field, which means that the two columns contained in two different dataset return exactly the same list of distinct values. Or the user can set an association with a 75.23% similarity using "the_date" field which means that some values of one column are not contained in the other column. The minimum length allows the user to specify the lowest number of datasets to be joined.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image506.png
+.. figure:: media/image506.png
 
     Auto Detect page.
 
@@ -2448,7 +2446,7 @@ If you want to create an index on a column you have to choose that column by cli
 section of the page. If you want to confirm your choose, click on the save icon. If you want to cancel it, click on the cross icon. After saving
 a index you'll see in the list surrounded by a continuous border.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image305.png
+.. figure:: media/image305.png
 
     Indexes settings example
 
@@ -2461,7 +2459,7 @@ Frequency
 The Frequency tab defines a schedulation over dataset involved in the associations. An example is supplied in the next figure. This means that associations are activated automatically and data are reloaded according to this feature. In particular, groups of realtime datasets that compose one or more associations can have different update frequencies. We stress that, in order to secure the right document execution, the group frequency do not affect the other ones and each group is reloaded at different times. In addition, realtime dataset that are not involved in any association can have their own frequency.
 
 .. _frequsettexample:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image204.png
+.. figure:: media/image204.png
 
     Frequency settings example.
 
@@ -2470,7 +2468,7 @@ Variables
 
 In this tab the user can define the variables that will be available inside the cockpit.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image496.png
+.. figure:: media/image496.png
 
     Variables tab
 
@@ -2489,7 +2487,7 @@ Template
 
 In this tab the user can find the json code (at the current stage of the work) which composes the template. Figure below shows an example.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image205.png
+.. figure:: media/image205.png
 
    Template example.
 
@@ -2499,14 +2497,14 @@ Selections
 
 Is possible to keep track of the **Selections** applied to your widgets, namely the possibility to filter widget data according to selection made through the click on a specific item of the cockpit (cell value, chart bar, etc.), also from the cockpit menu. You can check which selections are active on your cockpit at anytime thanks to the *Selections list* functionality. Previously, we already described how to add the *“Active Selections”* widget inside the cockpit area. If the user don't want to add a widget that stay visible inside the cockpit, selections can still be accessed and managed through the cockpit menu by clicking on the *“Selections”* icon (see the figure).
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image206.png
+.. figure:: media/image206.png
 
     Selections icon from cockpit menu.
 
 Here all selections and associations are listed, as shown in Figure below. The “Delete” button is available just aside each row to let the user to remove that specific selections. Click on the “Cancel” button to exit the window.
 
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image206-2.png
+.. figure:: media/image206.png
 
     Selection window.
 
@@ -2527,7 +2525,7 @@ Multisheet functionality
 
 The Cockpit engine allows to manage contents in multiple sheets. In each sheet the user can find and employ the features shown above. Indeed, it is possible to perform a new analysis (as highlighted in Figure below) selecting different datasets and gadgets. The multisheet functionality is particularly useful to focus the analysis in a single spot and have a general overview over it in few clicks at the same time.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-image207-bis.png
+.. figure:: media/image207_bis.png
 
     Multisheet cockpit example.
 
@@ -2540,7 +2538,7 @@ Export cockpit
 
 Cockpit document allows to export data into csv file without executing document. This is very useful when you produce data using a heavy query. This option is available if your document has parameters. When you start execution of your document, you will get opened filter panel so you can fill values. To start export, you should click on drop down menu, next to execute button, as on image below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-exportcockpitdrop.png
+.. figure:: media/exportCockpitDrop.png
 
 	Export cockpit into csv.
 
@@ -2551,6 +2549,6 @@ After process is finished, you will get notification on **download** icon |downl
 
 Clicking on download icon, **Download manager** will open, and you will be able to download zip file that contains csv file/files, depends of how many widgets (chart or table) you have in your document.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-dashboard-index-downloadmanager.png
+.. figure:: media/downloadManager.png
 
 	Download manager section.

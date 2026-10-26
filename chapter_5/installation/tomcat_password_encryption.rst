@@ -1,10 +1,6 @@
 Encrypted Passwords for Tomcat DataSources
 ========================================================================================================================
 
-Use the password tool and encryption configuration shipped with your 9.1
-distribution. Back up the encryption material and keep it stable across
-restarts and upgrades so the deployment can continue to read stored secrets.
-
 This feature allows you to store encrypted JNDI DataSource passwords in server.xml (prefixed with “#encr#…”) while keeping the decryption key protected outside server.xml.
 
 Goals:

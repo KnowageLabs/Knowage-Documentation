@@ -1,89 +1,232 @@
-Community Edition with Docker or Podman
-========================================
+KNOWAGE Community  Installation using Docker
+########################################################################################################################
 
-Use the public Docker recipe as a starting configuration and select application
-images corresponding to the release you intend to install.
+In this guide, you will find instructions on how to install KNOWAGE Community Edition using Docker.
+You can install Knowage by connecting it to an existing external database, or by loading the Docker image of the MariaDB database as well.
 
-.. important::
-
-   The Docker recipe accompanying the 9.1 source update references
-   ``9.1-SNAPSHOT`` images. A snapshot tag alone does not identify the
-   released 9.1.0 binaries. Confirm the release image or immutable digest from
-   your distribution channel before deployment. For the published 9.1.0 WARs,
-   follow :doc:`manual_installation`.
-
-Prepare the Compose project
----------------------------
+Repository cloning
+------------------------------------------------------------------------------------------------------------------------
+First f all, to install Knowage CE via Docker, you need to clone the GitHub repository:
 
 .. code-block:: bash
+   :caption: git command
 
-   git clone https://github.com/KnowageLabs/Knowage-Server-Docker.git
-   cd Knowage-Server-Docker/Knowage-Server-Docker
+        git clone https://github.com/KnowageLabs/Knowage-Server-Docker.git
 
-Inspect ``docker-compose.yml`` and the supplied ``.env``. The recipe provides
-services for Knowage, Python, Hazelcast, metadata storage and cache storage.
-Set your own database passwords and encryption secrets before starting it.
+Preparation of the Environment
+------------------------------------------------------------------------------------------------------------------------
+Access the project directory:
 
-.. list-table:: Main environment settings
-   :header-rows: 1
-   :widths: 35 65
+.. code-block:: bash
+   :caption: shell command
 
-   * - Variable group
-     - Purpose
-   * - ``DB_HOST``, ``DB_PORT``, ``DB_DB``, ``DB_USER``, ``DB_PASS``
-     - Metadata database connection.
-   * - ``CACHE_DB_HOST``, ``CACHE_DB_PORT``, ``CACHE_DB_DB``, ``CACHE_DB_USER``, ``CACHE_DB_PASS``
-     - Cache database connection.
-   * - ``HMAC_KEY``
-     - Shared token authentication key for the participating services.
-   * - ``PASSWORD_ENCRYPTION_SECRET``, ``SENSIBLE_DATA_ENCRYPTION_SECRET``
-     - Persistent secrets for the configured encryption mechanisms.
-   * - ``PUBLIC_ADDRESS``
-     - Host name through which clients reach the deployment.
-   * - ``HAZELCAST_HOSTS``, ``HAZELCAST_PORT``
-     - Hazelcast service connection.
-   * - ``DB_TYPE``, ``CACHE_DB_TYPE``
-     - Database types selected in the Compose environment.
-   * - ``DB_DO_INITIALIZATION``
-     - Metadata initialization control. Use ``false`` for an existing schema.
+      cd Knowage-Server-Docker/Knowage-Server-Docker
 
-Some values are set directly in ``docker-compose.yml`` rather than passed
-through ``.env``. Review both files. Preserve encryption secrets across
-container replacement and upgrades.
+Configuration of Environment Variables
+------------------------------------------------------------------------------------------------------------------------
 
-Start and verify
-----------------
+Knowage requires several variables to be configured to launch correctly. 
 
-After choosing the approved release images and configuring the environment:
+These can be defined in the ``.env`` file present in the project directory.
+KNOWAGE need to use 2 DB schema, one for the metadata and una for the temporary cache.
+
+For a local evaluation, review the supplied database configuration and set
+your own credentials. The example uses MariaDB 10.3; use the qualified
+database version for a production deployment.
+You must change them if you are using an existing external database — see **Using External Databases** section.
+
+Data base parameters:
+
+• **DB_HOST**: database host
+
+• **DB_PORT**: database port
+
+• **DB_DB**: database name
+
+• **DB_USER**: database user
+
+• **DB_PASS**: user password
+
+• **CACHE_DB_HOST**: cache database host
+
+• **CACHE_DB_PORT**: cache database port
+
+• **CACHE_DB_DB**: name of the cache database
+
+• **CACHE_DB_USER**: cache database user
+
+• **CACHE_DB_PASS**: cache user password
+
+• **HMAC_KEY**: HMAC key to configure in Tomcat, it is important to configure it carefully, avoiding the use of trivial or predictable strings, as this setup is used to generate the token.
+
+• **PASSWORD_ENCRYPTION_SECRET**: key for password encryption. Key used to securely store user passwords
+
+• **SENSIBLE_DATA_ENCRYPTION_SECRET**: key for encrypting sensitive data. It is used for data decryption functionalities.
+
+
+
+Parameters in the docker-compose.yml file
+------------------------------------------------------------------------------------------------------------------------
+
+• **DB_DO_INITIALIZATION**: Defaults to true; Set to false to avoid initializing the database. This is useful when using an already initialized external database, see **Using External Databases** section.
+
+• **HAZELCAST_HOSTS**: Comma-separated Hazelcast hosts (e.g., "host1,host2,host3")
+
+• **HAZELCAST_PORT**: Hazelcast port (e.g., "5701")
+
+• **PUBLIC_ADDRESS**: IP or hostname visible from the outside (e.g. http://$PUBLIC_ADDRESS:18080/knowage)  
+
+• **DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
+
+• **CACHE_DB_TYPE**: database type (default: MYSQL; options: MYSQL, MARIADB, ORACLE, POSTGRES)
+
+Release images
+--------------------------------------------------------------------------------
+
+The public Compose files use **9.1-SNAPSHOT** application and Python-service
+images. Before installing release 9.1.0, replace those references with the
+release images or digests approved for your distribution. Do not assume a
+tag named 9.1.0 exists in every image repository.
+
+Complete Installation
+------------------------------------------------------------------------------------------------------------------------
+To install all Knowage components without demo content, run:
+
+.. code-block:: bash
+   :caption: docker command
+
+      docker compose up -d
+
+Instead, if you want to  install the demo version with preconfigured reports, run:
+
+.. code-block:: bash
+   :caption: docker command
+
+      docker compose -f docker-compose-demo.yml up -d
+
+
+Components Installed
+------------------------------------------------------------------------------------------------------------------------
+• Knowage Tomcat with all packages
+
+• Hazelcast
+
+• KnowagePython for Python integration
+
+• KnowageDB (metadata)
+
+• KnowageCache (cache)
+
+Access the web interface: http://localhost:18080/knowage
+
+
+Changing the Access Port
+------------------------------------------------------------------------------------------------------------------------
+
+To change the port on which Knowage is exposed, edit the **docker-compose.yml** file in the knowage service section.
+
+.. code-block:: bash
+   :caption: docker command
+
+      services:
+        knowage:
+          ports:
+            - "18080:8080"
+
+This is a fragment of the existing service definition. Change only the host
+port; preserve its image, environment, volumes and dependencies.
+
+
+
+Using External Databases
+------------------------------------------------------------------------------------------------------------------------
+It may be useful to use an existing external database instead of the one included in the standard distribution. In that case, you should:
+
+- Remove the knowagedb service from `docker-compose.yml`.
+
+.. code-block:: bash
+   :caption: docker compose fragment
+
+        knowagedb:
+          image: mariadb:10.3
+          environment:
+            - MYSQL_USER=$DB_USER
+            - MYSQL_PASSWORD=$DB_PASS
+            - MYSQL_DATABASE=$DB_DB
+            - MYSQL_RANDOM_ROOT_PASSWORD=yes
+          networks:
+            - main
+          volumes:
+            - "db:/var/lib/mysql"
+
+- Install the Knowage schema on your database via DDL, you can find here the  `DDL <https://github.com/KnowageLabs/Knowage-Server/tree/v9.1.0/knowagedatabasescripts>`_.
+
+- Update the parameters in the `.env` file.
+
+- Set **DB_DO_INITIALIZATION** : false.
+
+The same applies to using an external database for the cache (knowagecache).
+
+Adding JNDI Resources
+------------------------------------------------------------------------------------------------------------------------
+To add new JNDI resources, edit the following files:
+
+• conf/context.xml.d/extContext
+
+• conf/server.xml.d/extGlobalResources
+
+Example of ResourceLink in extContext:
+
+.. code-block:: xml
+   :linenos:
+
+      <ResourceLink global="jdbc/foodmart" name="jdbc/foodmart" type="javax.sql.DataSource" />
+
+Example of Resource in extGlobalResources:
+
+.. code-block:: xml
+   :linenos:
+
+      <Resource
+    auth="Container"
+    driverClassName="<DRIVER JDBC>"
+    logAbandoned="true"
+    maxTotal="20"
+    maxIdle="4"
+    maxWait="300"
+    minEvictableIdleTimeMillis="60000"
+    name="jdbc/<JNDI NAME>"
+    password="<PASSWORD>"
+    removeAbandoned="true"
+    removeAbandonedTimeout="3600"
+    testOnReturn="true"
+    testWhileIdle="true"
+    timeBetweenEvictionRunsMillis="10000"
+    type="javax.sql.DataSource"
+    url="jdbc:mysql://<IP ADRESS>:<PORT>/<DB NAME>"
+    username="<USERNAME>"/>
+
+Mounting volumes in ``docker-compose.yml`` in the volumes section of the knowage service:
+
+- ./conf/server.xml.d:/home/knowage/apache-tomcat/conf/server.xml.d
+
+- ./conf/context.xml.d:/home/knowage/apache-tomcat/conf/context.xml.d
+
+
+
+How upgrade KNOWAGE version
+------------------------------------------------------------------------------------------------------------------------
+
+Back up the metadata and cache databases, resources, volumes and configuration
+before updating an existing installation. For a 9.0 to 9.1 upgrade, follow
+:doc:`/chapter_5/upgrade/how_upgrade_9_0_to_9_1` and migrate the metadata schema
+as required. Update the image references to the approved release artifacts,
+then recreate the services without deleting their persistent volumes:
 
 .. code-block:: bash
 
    docker compose pull
    docker compose up -d
-   docker compose ps
-   docker compose logs --tail=100 knowage
 
-The sample Compose file maps host port **18080** to container port **8080**.
-With its local defaults, open ``http://localhost:18080/knowage``. Adapt the
-address to your public host, port mapping and reverse proxy. An existing proxy
-must route the deployed Knowage application contexts consistently.
-
-Podman users can use the corresponding ``podman compose`` commands with a
-configured Compose provider.
-
-The recipe mounts ``./resources`` and uses named database volumes. Retain these
-when replacing containers. Check sign-in, a dataset, a document and the optional
-Python service before making the environment available to users.
-
-External databases and upgrades
--------------------------------
-
-For external databases, configure both metadata and cache connections, adjust
-the service dependencies and select the correct DBMS types. Initialize a new
-metadata schema using the 9.1.0 creation scripts, or upgrade an existing schema
-with :doc:`/chapter_5/upgrade/how_upgrade_9_0_to_9_1`. Set
-``DB_DO_INITIALIZATION=false`` when reusing that schema.
-
-Updating a container image does not execute the required release migration.
-Back up the metadata database, resources and configuration together before
-changing a deployed release.
+Check startup logs, login, document execution and exports before reopening
+the installation to users.

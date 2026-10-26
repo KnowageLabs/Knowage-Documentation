@@ -3,7 +3,7 @@ Scheduler
 
 Knowage scheduler allows to schedule the execution of one or more analytical documents published on the Server. Documents executed by the scheduler can then be distributed along different dispatching channels. In the following we describe how to create an activity, schedule it and dispatch the results.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-scheduler.png
+.. figure:: media/scheduler.png
 
    Scheduler from menu
 
@@ -12,27 +12,27 @@ Create an Activity
 
 In order to define a new scheduled activity the administrator must specify which documents compose the activity and how to execute them. The list of all scheduled activities can be seen selecting **Tools** > **Scheduler**. To create a new activity click the “Plus” icon at the top of the page in the left area. The below image shows the main scheduler page and the new activity GUI.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image4041-new.png
+.. figure:: media/image4041_new.png
 
    Left: scheduler main page. Right: New activity GUI
 
 After ginving a name and a description to the new activity select the documents that compose it by clicking *Add*. A pop-up will open to select all your documents, see Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image42-new.png
+.. figure:: media/image42_new.png
 
    Adding a document to an activity.
 
 The new activity can contain documents with or without parameters. The below image shows an activity with documents with and without parameters.
 In case of parameters an icon will signal the need to specify them by using the pencil icon.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image42-b.png
+.. figure:: media/image42_b.png
 
    Adding a documents with and without parameters.
 
 In case of parameters you need to specify how the scheduler will handle the analytical drivers of each selected document having parameters.
 
 .. _manageparameters:
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image43-new.png
+.. figure:: media/image43_new.png
 
    Manage parameters.
 
@@ -51,7 +51,7 @@ You can manage your activity at any time just clicking on the name of the schedu
 To see and modify the list of the schedules associated to an activity, click the *ADD* option of the "Timing & Output" panel. Similarly, click on the same option to associate schedules
 to the newly created activities. The below image shows the *Timing & Output* panel.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image45-new.png
+.. figure:: media/image45_new.png
 
     Timing & Output panel.
 
@@ -80,7 +80,7 @@ If you choose **Dataset**, you have to select a right structured dataset. It has
 
 Once you are done, switch to the **Output** tab.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image46-new.png
+.. figure:: media/image46_new.png
 
     Output panel.
 
@@ -93,7 +93,7 @@ Here you can find the dispatch configurations, that can be different for all the
 
 In the following sections we explain them in detail.
 
-As shown in the image of the Output panel, there is a new option for the *Output type* that allows to choose the type of the document to be produced as a result of the process: the formats supported by the selected engine, including PDF, XLSX and HTML where enabled.
+As shown in the image of the Output panel, there is a new option for the *Output type* that allows to choose the output format offered for the selected document and engine.
 
 Save as snapshot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,7 +102,7 @@ The executed document can be saved as snapshots in cyclic buffers of configurabl
 
 The list of all snapshots contained in the buffer can be accessed from the **Show scheduled executions** contained in the **Shortcuts** menu. You can find it in the document toolbar at the top right corner. Each snapshot can be opened or deleted from this panel. These steps are shown in the following figure. A snapshot contains data queried from the database at the moment of its execution performed by the scheduler.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image47-b.png
+.. figure:: media/image47_b.png
 
     Steps to open saved snapshots
 
@@ -111,7 +111,7 @@ Save as file
 
 The executed document can be saved as file on the filesystem in the path /knowage-<version> /resources (if no destination folder is specified). Otherwise, you can create the relative path of this subfolder by writing your subfolder name. For instance, if you write “MyFirstScheduler” as file name and “Schedulation” as destination folder, after the schedulation execution a subfolder Schedulation containing the file “MyFirstScheduler” is created in /knowage-<version> /resources. If the subfolder Schedulation already exist your file is added to this subfolder. You can have a look at the form in Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image51-new.png
+.. figure:: media/image51_new.png
 
    Save as File Option.
 
@@ -145,7 +145,7 @@ The executed document can be sent to one or more mail recipients. The list of ma
 
 In Figure below you can have a look at the mail form. In the following we will focus on each typology, clicking on the info icon you get detailed information.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image52-new.png
+.. figure:: media/image52_new.png
 
     Sending mail form.
 
@@ -164,7 +164,7 @@ In this case, you have to define a two-column dataset:
 
    You can see an example of dataset in the following Figure.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image54.png
+.. figure:: media/image54.png
 
 Example of mapping dataset for dynamic distribution list
 
@@ -189,7 +189,7 @@ To conclude our overview on the scheduler features, save your settings and go ba
 
 Here you can select one of the available scheduled activities to explore details.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image55a-new.png
+.. figure:: media/image55a_new.png
 
     Details of a scheduled activity in Timing & Output panel.
 
@@ -210,36 +210,22 @@ Scheduler Monitor
 
 You can monitor the whole scheduling agenda by entering the **Scheduler Monitor** item from the Knowage Menu.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-scheduler-m.png
+.. figure:: media/scheduler_m.png
 
     Details of a scheduled activity in Timing & Output panel.
 
 This feature allows you to check which schedulations are active in a certain future time interval and, eventually, to be redirected to the schedulation area in order to modify the selected schedulation.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-image59-new.png
+.. figure:: media/image59_new.png
 
     Schedulation Agenda
 
-Scheduled output formats in 9.1
--------------------------------
+Output formats in 9.1
+---------------------
 
-The 9.1 scheduler supports combined outputs through the relevant engine and
-integration. In the standard scheduling dialog, select the **Output type**
-offered for the document. The 9.1.0 dialog provides a single format selection;
-a spreadsheet output can be labelled **XLS** by its engine.
-
-1. Open the activity and its **Timing & Output** configuration.
-2. Select a document in **Output**, choose an available format and configure
-   the required dispatch channels.
-3. Complete filenames, destinations and channel-specific settings, then save.
-4. Use **Execute now** and inspect each output before relying on the recurring
-   schedule.
-
-To produce several formats through this dialog, create a Timing & Output entry
-for each offered format and keep their timing consistent. For a single combined
-PDF, XLSX and HTML execution, have the administrator configure the supported
-integration. Availability depends on the engine, edition and dispatch channel.
-
-.. figure:: /_static/screenshots/9.1/chapter-4-schedule-9-1-scheduler-formats.png
-
-   Scheduled output format and dispatch configuration.
+In **Timing & Output**, select the document and choose an available **Output
+type**. The standard 9.1.0 dialog selects one format at a time; a spreadsheet
+format can be labelled **XLS**. Configure the destination and save the timing.
+Use **Execute now** to check the output with the selected engine and dispatch
+channel. The release notes also describe combined scheduled exports; this
+does not add a multiple-format selector to this dialog.

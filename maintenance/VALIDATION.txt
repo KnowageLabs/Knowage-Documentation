@@ -1,0 +1,16 @@
+Strict Sphinx build: PASSED (no errors or warnings)
+Command: python -m sphinx -q -E -n -W --keep-going -b html . _build/html
+Local links, anchors, inventory and static PNG checks: PASSED
+80 HTML pages; 5611 local references checked.
+17 screenshot entries; 17 captures pending.
+Source files: 79 (78 navigable + included Tomcat source)
+Original files restored byte-for-byte: 41
+Original content retained with whitespace/markup fixes only: 2
+Existing source files with targeted changes: 31
+New 9.1 source files: 5
+Referenced original images: 728 (byte-for-byte verified)
+Removed obsolete static placeholders: 678
+Remaining static PNG placeholders: 17
+Additional textual screenshot placeholder: My Account
+Live Knowage / database / EE service tests: NOT EXECUTED
+External link availability: NOT EXHAUSTIVELY CHECKED

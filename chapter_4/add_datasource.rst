@@ -1,11 +1,6 @@
 Add new Data Source
 ########################################################################################################################
 
-Open **Modules** > **Data Providers** > **Data Source** to maintain
-connections. Configure and test the JDBC connection or JNDI name, select its
-intended usage and save. Test it through a dataset before publishing analyses
-that depend on the source.
-
 To let all the BI tools work properly, you need to configure DB connection. There are two different options available for the configuration, **JNDI** (recommended) and **JDBC**.
 
 Connect to your data
@@ -26,20 +21,20 @@ Knowage manages two types of data source connections:
 
 To add a new connection, first add the relative JDBC driver to the folder ``TOMCAT_HOME/lib`` and restart Knowage. Then, log in as administrator (user: *biadmin*, password: *biadmin* are the default credentials) and select the **Data source** item from the **Data provider** panel in the administrator menu.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-ds.png
+.. figure:: media/ds.png
 
      Data source management
 
 By clicking the **Add** button on the top right corner of the left panel, an empty panel will be displayed on the right.
 
 
-.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-image25-8-1.png
+.. figure:: media/image25_8.1.png
 
      Add a new data source
 
 Below how the panel looks like and information needed to create a datasource:
 
-.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-image26-8-1.png
+.. figure:: media/image26_8.1.png
 
      Data source details - JDBC.
 
@@ -100,7 +95,7 @@ Below how the panel looks like and information needed to create a datasource:
          - **JNDI Name**, depends on the application server. For instance, in case of Tomcat 7, the format ``java:comp/env/jdbc/<resource_name>`` is used. If the data source is multischema, then the format is ``java:comp/env/jdbc/<prefix>``.
 
 
-.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-image-jndi-8-1.png
+.. figure:: media/image_JNDI_8.1.png
 
      Data source details - JNDI.
 
@@ -129,7 +124,7 @@ Every distribution of Hadoop provides its JDBC driver for Hive. We suggest you t
 
 For example suppose you want to connect to Hive using Apache driver you should include these libraries (according to your Hive version) shown in Figure below.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-add-datasource-image27.png
+.. figure:: /chapter_3/create_datasource/media/image27.png
 
    Libraries to include in the apache driver.
 

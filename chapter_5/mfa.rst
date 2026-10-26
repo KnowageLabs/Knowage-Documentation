@@ -1,9 +1,9 @@
 Multi Factor Authentication
 ########################################################################################################################
 
-When MFA is enabled for your account, the enrollment screen appears after the initial credential check. This step is necessary to increase account security.
+When MFA is enabled for your account, the enrollment screen appears after the initial credential check (Figure 1). This step is necessary to increase account security.
 
-.. figure:: /_static/screenshots/9.1/chapter-5-mfa-mfa-1.png
+.. figure:: media/mfa_1.jpg
 
    Figure 1
 
@@ -28,7 +28,7 @@ After linking the app, it will start generating temporary codes (OTP). Enter the
 
 For future logins, you will not need to repeat the initial configuration. A simplified screen will appear (Figure 2) with a single field for the One-Time Code.
 
-.. figure:: /_static/screenshots/9.1/chapter-5-mfa-mfa-2.png
+.. figure:: media/mfa_2.jpg
 
    Figure 2
 

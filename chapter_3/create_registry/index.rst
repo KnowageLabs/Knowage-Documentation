@@ -1,17 +1,12 @@
 Create a new Registry
 ########################################################################################################################
 
-A Registry document edits data according to its configured template and data
-source permissions. Use an account authorized for the intended read/write
-operations. Verify validation, filters and persistence with representative
-rows before publishing the document.
-
-A *Registry* document allows users to write, delete and modify the items of a datamart.
-Knowage allows users to implement a registry document through the **Qbe Engine**.
+A *Registry* document allows users to write, delete and modify the items of a datamart. 
+Knowage allows users to implement a registry document through the **Qbe Engine**. 
 In this case, the graphical interface is different from the Qbe one. Below an exmple of a registry document.
 In the next chapters we will see how to navigate a Registry document (see *Registry features* paragraph for more details) and how to create a new one (see *Registry development* paragraph for more details).
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-registry-index-image339.png
+.. figure:: media/image339.png
 
     Example of a Registry document.
 
@@ -20,17 +15,17 @@ Registry features
 
 The execution of a Registry document opens a plain table: the records are shown in rows and they can be browsed using the pagination available at the bottom of the window. We underline that it is possible to edit each item of the table if inside template that column is set to be editable. Just click on a cell you may wish to rearrange and type a string or a numeric value accordingly. Some examples are highlighted below.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-registry-index-image340.png
+.. figure:: media/image340.png
 
     Editing table cells in a registry.
 
-You can add new rows from scratch selecting the *Add row* icon as shown in the image below.
+You can add new rows from scratch selecting the *Add row* icon as shown in the image below. 
 Just type in in each cell the corresponding value depending on the type: string, number or date. The *Add row* functionality will be available if the template configuration contains the following: *<CONFIGURATION name="enableAddRecords" value="true"/>*.
 
 .. |image335| image:: media/image341.png
    :width: 30
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-registry-index-image343.png
+.. figure:: media/image343.png
 
     Adding a new row to a registry.
 
@@ -42,7 +37,7 @@ You can delete one or more rows using the *Trash* icon |image338|. The *Trash* b
 Changes are applied to the datamart by clicking the *Save* icon as shown below.
 
 .. _functionalitybar:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-registry-index-image345.png
+.. figure:: media/image345.png
 
     Registry - Save icon.
 
@@ -52,7 +47,7 @@ Additional functionalities are *Filter* and *Cancel*. Click *Filter* to apply th
    :width: 30
 
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-registry-index-image348.png
+.. figure:: media/image348.png
 
     Select one field from a combobox.
 
@@ -62,11 +57,11 @@ Pivot Registry characteristics
 There is also the possibility to implement a *Pivot* Registry document. The graphical features are very similar to the ones exposed in *Registry development* paragraph. An example is given below.
 
 .. _examplejpivotregdoc:
-.. figure:: /_static/screenshots/9.1/chapter-3-create-registry-index-image349.png
+.. figure:: media/image349.png
 
     Example of Pivot Registry document.
 
-The table above shows columns organized in a hierarchical way by grouping them. From the left to the right the columns contain fields at different detail levels. The last column in our example in the figure above contains numeric data.
+The table above shows columns organized in a hierarchical way by grouping them. From the left to the right the columns contain fields at different detail levels. The last column in our example in the figure above contains numeric data. 
 Such a field is grouped for every *Family* category at the *Brand* level. The grouping level depends on the configurations made on template building.
 
 In the Pivot instance it is not allowed to add, modify or cancel rows. Furthermore, it is not permitted to edit cells which contain string items while the numeric ones are still changeable. If implemented, filters are still available.
@@ -206,7 +201,7 @@ In this way, the profile attribute value will be treated as a list of values and
 Pivot Registry instance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The syntax below shows a *Registry* instance used to develop a pivot table.
+The syntax below shows a *Registry* instance used to develop a pivot table. 
 
 .. code-block:: xml
     :linenos:
@@ -257,21 +252,51 @@ into the ``TOMCAT_HOME/logs/knowageQbeEngineAudit.log`` file.
 
 In case you want those information to be stored into a database table (for analytical and visualization purposes), you have to create it and then to configure the engine logging system accordingly, following the below example based on MySQL.
 
-The QBE engine's ``WEB-INF/classes/log4j2.xml`` configures the Registry audit
-logger and its tenant-specific log destination. The supplied logger is:
+Let's create a table:
 
-.. code-block:: xml
+.. code-block:: sql
+   :linenos:
 
-   <logger name="it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger"
-           additivity="false" level="info">
-       <AppenderRef ref="KNOWAGE_QBE_ENGINE_AUDIT" />
-   </logger>
+   CREATE TABLE `LOG_REGISTRY` (
+      `AUDIT_ID` INT NOT NULL AUTO_INCREMENT,
+      `AUDIT_DATETIME` DATETIME NULL,
+      `AUDIT_OPERATION` VARCHAR(45) NULL,
+      `AUDIT_USER` VARCHAR(100) NULL,
+      `AUDIT_CHANGES_NO` INT NULL,
+      `ENTITY_NAME` VARCHAR(100) NULL,
+      `MODEL_NAME` VARCHAR(100) NULL,
+      `ATTRIBUTES_OLD` TEXT NULL,
+      `ATTRIBUTES_NEW` TEXT NULL,
+      PRIMARY KEY (`AUDIT_ID`));
 
-The supplied audit appender writes ``knowageQbeAudit.log`` under the configured
-Tomcat logs directory for the tenant. Verify the logged user, operation and
-record changes after an insert, update and delete. Database audit storage
-requires an explicitly configured Log4j 2 appender and the corresponding
-schema; use the deployment's approved audit configuration.
+then edit ``TOMCAT_HOME/webapps/knowageqbeengine/WEB-INF/classes/log4j.properties`` and add:
+
+.. code-block:: jproperties
+   :linenos:
+   
+   # Define the SQL appender
+   log4j.appender.sql=it.eng.spagobi.utilities.logging.Log4jJNDIAppender
+   # JNDI connection to be used
+   log4j.appender.sql.jndi=java:comp/env/jdbc/knowage
+   # Set the SQL statement to be executed.
+   log4j.appender.sql.sql=INSERT INTO LOG_REGISTRY (AUDIT_DATETIME,AUDIT_OPERATION,AUDIT_USER,AUDIT_CHANGES_NO,ENTITY_NAME,MODEL_NAME,ATTRIBUTES_OLD,ATTRIBUTES_NEW) VALUES (now(),'%X{operation}','%X{userId}',%X{variations},'%X{entityName}','%X{modelName}','%X{oldRecord}','%X{newRecord}')
+   # Define the xml layout for file appender
+   log4j.appender.sql.layout=org.apache.log4j.PatternLayout
+
+   log4j.logger.it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger=INFO, FILE_AUDIT
+   log4j.additivity.it.eng.qbe.datasource.jpa.audit.JPAPersistenceManagerAuditLogger=false
+
+pay attention to the JNDI name (in case you created the table within Knowage metadata database, then ``java:comp/env/jdbc/knowage`` is fine) then restart Knowage server: this way, when user is interacting with a registry document, the ``LOG_REGISTRY`` (as per the SQL script above) table will contain:
+
+- ``AUDIT_DATETIME``: the date and time when the operation was performed
+- ``AUDIT_OPERATION``: one of the following values: INSERTION/UPDATE/DELETION
+- ``AUDIT_USER``: the user who performed the operation
+- ``AUDIT_CHANGES_NO``: number of attributes that were actually changed in case of an UPDATE, null otherwise
+- ``ENTITY_NAME``: name of the modified entity type
+- ``MODEL_NAME``: name of the business model
+- ``ATTRIBUTES_OLD``: previous attributes state in case of an UPDATE or DELETION
+- ``ATTRIBUTES_NEW``: new attributes state in case of an INSERTION or UPDATE
+
 
 Auditing with columns of technical tables
 ------------------------------------------------------------------------------------------------------------------------
@@ -340,3 +365,4 @@ Some notes:
 - all audit columns can be set to be not visible; of course, setting the "deleted" column to be invisible does not make much sense, since it means that nobody will be able to exploit it and to logically delete records;
 - when cloning a record, audit columns are NOT cloned;
 - physical deletion is permitted, you can enable it in case you need.
+

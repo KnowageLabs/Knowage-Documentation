@@ -1,10 +1,6 @@
 Repository Management
 ########################################################################################################################
 
-Open **Modules** > **Profile Management** > **Functionalities Management** to
-organize the document folders and their role permissions. Check execution and
-authoring rights separately, then test the published documents as an end user.
-
 Repository structure and rights
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -16,9 +12,9 @@ By default *permissions are set at folder level*. This guarantees that a user ca
 
 Besides visibility limitations inherited by the containing folders, the developer can add further restrictions to a single document.
 
-To create a new folder, select **Profile Management** > **Functionalities Management**.
+To create a new folder, select **Profile Management** > **Functionalities Management**. 
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-repository-management-image34-a.png
+.. figure:: media/image34_a.png
 
    Functionalities Management
 
@@ -33,7 +29,7 @@ The functionality tree is shown. Clicking on an item you can select one of the f
 Once you click the *Plus* icon, the functionality details section opens.
 
 .. _createnewfolder:
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-repository-management-image34.png
+.. figure:: media/image34.png
 
    Create a new folder and assign permissions.
 
