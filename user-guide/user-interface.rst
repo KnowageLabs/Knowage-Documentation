@@ -12,11 +12,11 @@ The administrator will provide you a username and a password to log in Knowage e
 
    Login page
 
-These credential identifies you as user and are associated to your *role*.
+These credentials identify you as a user and are associated to your *role*.
 
 In Knowage suite, roles represent categorizations of group of users, granting each user with different rights and visibility criteria on documents and data, according to their business profile.
 
-This is what is called *Behavioural Model*. It allows to:
+This is what is called *Behavioural Model* and allows you to:
 
 -  reduce the required number of analytical documents,
 -  code only once the behavioural and visibility rules on data,
@@ -58,7 +58,7 @@ The main menu gives access to your documents, personal workspace and authorized
 modules. Expand the menu to read the labels. Your organization's configuration
 and active roles determine the entries you see.
 
-.. figure:: /_static/screenshots/9.1/user-guide-user-interface-9-1-navigation.png
+.. figure:: media/biAndGeneralMenu.png
    :alt: Knowage 9.1 main menu, document browser and account menu.
 
    Main navigation in Knowage 9.1.
@@ -93,7 +93,7 @@ My Account
       **My Account** is visible only when ``SPAGOBI.SECURITY.MY_ACCOUNT_MENU`` configuration is enabled.
   
 
-*My account* button, if enabled, allows user to access Modify profile page. Here you can change your password and, when enabled, permanently delete your account.
+The *My account* button, if enabled, allows user to access Modify profile page. Here you can change your password and, when enabled, permanently delete your account.
 
 Modify
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -173,7 +173,7 @@ Document Browser overview
 
 Select **Documents Browser** in the main menu.
 
-.. figure:: /_static/screenshots/9.1/user-guide-user-interface-9-1-document-browser.png
+.. figure:: main/document-browser.png
 
    Document Browser
 
@@ -185,7 +185,4 @@ Each line shows the label, the name, the author and the type of the document, wh
 
    Documents details expanded.
 
-.. |image24| image:: media/image24.png
-   :width: 30
-
-At the top of this side panel you find the |image24| button, the same one you see at the end of each document line. Click on it to execute the document.
+Click the *Execute* button to run the document.
