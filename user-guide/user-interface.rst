@@ -8,7 +8,7 @@ Preliminary information
 
 The administrator will provide you a username and a password to log in Knowage environment.
 
-.. figure:: media/image6.png
+.. figure:: media/log_in.png
 
    Login page
 
