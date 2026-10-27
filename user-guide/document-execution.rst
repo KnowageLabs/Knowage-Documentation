@@ -14,7 +14,7 @@ Parameters management
 
 Knowage documents may have associated parameters. If any, you will be asked to select the chosen parameter’s values in a collapsible panel located at the top or on the right side of the page. If this is the case, choose the parameters values and then click the **Execute** button to run the document. In case there are only optional parameters or default values are already defined, the document is directly executed after the first click on its relative icon.
 
-.. figure:: /_static/screenshots/9.1/user-guide-document-execution-9-1-parameters.png
+.. figure:: media/parameters.png
 
    Parameters panel
 
@@ -43,7 +43,7 @@ copy a link or obtain HTML embedding code.
 
 .. _documenttoolbar:
 .. _toolbarcontexmenu:
-.. figure:: /_static/screenshots/9.1/user-guide-document-execution-9-1-document-toolbar.png
+.. figure:: media/toolbar.png
 
    Document toolbar in Knowage 9.1.
 
@@ -53,7 +53,11 @@ Exporters
 
 Each Knowage document can be exported into several formats, depending on the options offered by the engine.
 
-Clicking **Export** in the document toolbar you will see the available formats for the current document. Select one and check the exported document.
+Clicking the **Export** functionality in the document toolbar you will see the available formats for the current document. Select one and check the exported document.
+
+.. figure:: media/export.png
+
+   View document metadata
 
 Business and structural metadata
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,7 +80,7 @@ When you are satisfied with what you wrote just click on the **SAVE** button. We
 
 .. figure:: media/image3435.png
 
-   Left: General and short metadata, Right: editing long metadata
+   Editing metadata
 
 Notes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -117,7 +121,7 @@ After loading the document and setting the desired values, choose
 available to your role. Reopen the view to restore its saved configuration.
 Views retain the access rules of the underlying document and data.
 
-.. figure:: /_static/screenshots/9.1/user-guide-document-execution-9-1-saved-views.png
+.. figure:: main/saved-views.png
    :alt: Views menu and saved views list before dashboard execution.
 
    Opening a saved view.
