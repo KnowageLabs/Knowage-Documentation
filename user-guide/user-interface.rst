@@ -173,7 +173,7 @@ Document Browser overview
 
 Select **Documents Browser** in the main menu.
 
-.. figure:: main/document-browser.png
+.. figure:: media/document-browser.png
 
    Document Browser
 

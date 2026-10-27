@@ -121,7 +121,7 @@ After loading the document and setting the desired values, choose
 available to your role. Reopen the view to restore its saved configuration.
 Views retain the access rules of the underlying document and data.
 
-.. figure:: main/saved-views.png
+.. figure:: media/saved-views.png
    :alt: Views menu and saved views list before dashboard execution.
 
    Opening a saved view.
