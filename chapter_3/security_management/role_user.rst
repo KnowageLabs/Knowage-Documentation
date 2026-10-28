@@ -68,7 +68,7 @@ Authentication can be handled internally by Knowage or delegated to an external 
 
 As for profiles, users' roles are loaded when they log in into Knowage. Roles are managed internally. In case of multiple roles, they will be asked to choose one.
 
-Alternatively, from the Knowage Administrator menu *PROFILE MANAGEMENT > Users* it is possible to select a default role that will be kept valid until logging out.
+Alternatively, from the Knowage Administrator menu *Modules>PROFILE MANAGEMENT > Users* it is possible to select a default role that will be kept valid until logging out.
 
 .. figure:: media/image28_b.png
 
@@ -146,7 +146,7 @@ There is a last tab **Usage** that represents a summary tab of the usage of that
 
 .. figure:: media/image3031_c.png
 
-   Usage tab in Roles Management.
+   The *Usage* tab in Roles Management.
 
 User Management
 ------------------------------------------------------------------------------------------------------------------------
