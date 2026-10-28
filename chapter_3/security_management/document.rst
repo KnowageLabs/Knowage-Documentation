@@ -337,29 +337,14 @@ It is possible to configure the associations between input/output parameters by 
 
     Setting the cross navigation.
 
+The last step consists in setting up the modality. Choose between Normal or pop-up. In the last case the target document will be opened in a pop-up window.
 
-Once set, the association is highlighted as in Figure below.
+.. figure:: media/modality.png
 
-.. figure:: media/image89.png
+   Setting modality for a cross-navigation.
+   
+   Below an example for bread-crumbs with parameters.
 
-    Association between parameters.
+.. figure:: media/bread.png
 
-To assign fixed values to target parameters it is necessary to edit first the box labelled **Fixed value parameter** and click on the **plus** icon. Then the value can be associated as fixed value of the one or more target parameters. Remember to click on the **Ok** button to save the cross navigation just set.
-
-It is possible to define multiple cross navigation starting by the same document. In this case the system will show a popup window to choose the one that you want execute.
-It is possible set a specific description for each cross navigation so that will be easy to recognize the right navigation definition to use. In the same way it is possible set the text of the bread crumb and personalize it.
-For both attributes it is possible to show parameters (of input or output type) values through the syntax $P{parameter_name}. Just parameters of source documents are available.
-
-.. figure:: media/cross_05.png
-
-   Example of parametric description and breadcrumb text
-
-.. figure:: media/image91.png
-
-   Example of popup selection for more cross navigation definition (with params)
-
-Please bear in mind that for breadcrumbs as the case below, you need to set the *modality* to *Normal*.
-
-.. figure:: media/cross_06.png
-
-   Example of breadcrumbs with params
+   Example of bread-crumbs with params
