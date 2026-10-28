@@ -18,7 +18,7 @@ To add a new connection, first add the relative JDBC driver to the folder ``TOMC
 
 By clicking the **Add** button on the top right corner of the left panel, an empty form will be displayed on the right.
 
-.. figure:: media/image25.png
+.. figure:: media/image25_ds.png
 
      Add a new data source
 
