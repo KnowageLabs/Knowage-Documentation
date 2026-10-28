@@ -142,6 +142,6 @@ query or values, and test the returned columns. Choose its value and description
 columns, save it, then associate the copy with the intended driver use mode.
 Existing drivers continue to refer to the original LOV until you change them.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-lov-9-1-lov-clone.png
+.. figure:: media/lov-clone.png
 
    Cloning and testing a list of values.
