@@ -136,7 +136,7 @@ Text widget
 By clicking the **Text Widget** icon you can add text to your dashboard. The widget editor opens showing the two sections
 formerly introduced.
 Using the *Data* section it is possible to associate dataset values to the text to show real time values at each execution.
-You can drag a single column into the *Selected Columns* area or just all of them by using the arrow next to the *Add Column* button.
+You can drag a single column into the *Selected Columns* area or just all of them by clicking the *Add Column* button.
 
 .. figure:: media/image009.png
 
