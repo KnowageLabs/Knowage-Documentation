@@ -161,7 +161,7 @@ The **Users Management** section includes a left panel that allows the administr
 
 .. _bulk_user_insertion:
 
-Bulk User Insertion
+Bulk insertion of users
 ~~~~~~~~~~~~~~~~~~~
 
 Knowage allows the administrator to perform a massive insertion of new users simultaneously by uploading a structured file. The supported file formats are **CSV** (UTF-8 with a semicolon ``;`` separator) and **XLSX**. Use XLSX for Excel imports; the upload chooser also lists the legacy XLS extension.
@@ -169,10 +169,6 @@ Knowage allows the administrator to perform a massive insertion of new users sim
 To access this feature, navigate to the User Management section and click on the **Import** action in the Users Management toolbar.
 
 .. figure:: media/massiveUser01.png
-
-.. figure:: media/massiveUser02.png
-
-.. figure:: media/massiveUser03.png
 
 
 
@@ -257,7 +253,7 @@ Each item in the response contains:
    ]
 
 
-User unlock
+Unlock Users
 ~~~~~~~~~~~
 
 If a user reaches the maximum number of failed login attempts (editable in advanced configurations), that user will be blocked by Knowage and access will be denied.
@@ -269,7 +265,7 @@ After that, the user will be able to log in using the latest set of credentials.
     Users Management - Roles settings example
 
 
-Roles settings
+Setting roles
 ~~~~~~~~~~~~~~
 
 Clicking on the ROLES tab you have to select one o more roles to associate with the user.
@@ -292,14 +288,3 @@ The below image, shows an example. The attribute *par_family* that has been form
 
     Users Management - Attributes tab
 
-Bulk maintenance
-----------------
-
-Users Management supports selecting several users for bulk actions. Review
-the selected identities before applying role or profile-attribute changes;
-inspect the per-user result report afterwards. Imported roles and profile
-attributes should already be defined in the target tenant.
-
-.. figure:: /_static/screenshots/9.1/chapter-3-security-management-role-user-9-1-users-bulk-actions.png
-
-   User selection, bulk maintenance and per-user results.
