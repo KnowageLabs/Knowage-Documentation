@@ -162,7 +162,7 @@ The **Users Management** section includes a left panel that allows the administr
 .. _bulk_user_insertion:
 
 Bulk insertion of users
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowage allows the administrator to perform a massive insertion of new users simultaneously by uploading a structured file. The supported file formats are **CSV** (UTF-8 with a semicolon ``;`` separator) and **XLSX**. Use XLSX for Excel imports; the upload chooser also lists the legacy XLS extension.
 
@@ -254,7 +254,7 @@ Each item in the response contains:
 
 
 Unlock Users
-~~~~~~~~~~~
+~~~~~~~~~~~~
 
 If a user reaches the maximum number of failed login attempts (editable in advanced configurations), that user will be blocked by Knowage and access will be denied.
 By accessing Knowage with management privileges, the blocked user will be displayed with a red warning sign and it will be possible to unlock it by using the "unlock user" button.
@@ -266,7 +266,7 @@ After that, the user will be able to log in using the latest set of credentials.
 
 
 Setting roles
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 Clicking on the ROLES tab you have to select one o more roles to associate with the user.
 After that, if more than one role is associated to the user, you can choose the default role by selecting it from the combo box on the top of the page.
@@ -287,4 +287,3 @@ The below image, shows an example. The attribute *par_family* that has been form
 .. figure:: media/attributes.png
 
     Users Management - Attributes tab
-
