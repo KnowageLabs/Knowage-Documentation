@@ -25,11 +25,11 @@ Knowage default checks are:
 .. |image46| image:: media/image45.png
    :width: 30
 
-If the administrator needs to create additional validation rules, he can click on |image46| to open the rule creation interface. Here he  can define a customized validation rule using the available check options:
+If the administrator needs to create additional validation rules, he can click the *Plus* icon to open the wizard to define a customized validation rule using the available check options:
 
-- **Date**: here you can set a customized format type of date;
+- **Date**: to set a customized format type of date;
 - **Regular Expression**: to set a regular expression validation rule;
-- **Max/Min Length**: it lets you set the maximum and/or minimum character parameters length;
+- **Max/Min Length**: to set the maximum and/or minimum character parameters length;
 - **Range**: to set a range the parameters value has to satisfy;
 - **Decimal**: to set a maximal decimal places for the parameters.
 
