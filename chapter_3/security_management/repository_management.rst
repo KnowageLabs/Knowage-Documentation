@@ -12,13 +12,13 @@ By default *permissions are set at folder level*. This guarantees that a user ca
 
 Besides visibility limitations inherited by the containing folders, the developer can add further restrictions to a single document.
 
-To create a new folder, select **Modules** >**Profile Management** > **Functionalities Management**. 
+To create a new folder, select **Modules** > **Profile Management** > **Functionalities Management**. 
 
 .. figure:: media/image34_a.png
 
    Functionalities Management
 
-The functionality tree is shown. Clicking on an item you can select one of the following options:
+The functionality tree is displayed on the left side of the page. Clicking an item provides access to the following options:
 
 -  Insert: to add a new child to the tree. Select this to create a new folder and go to the next step.
 -  Detail: to see details of an item.
