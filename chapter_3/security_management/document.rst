@@ -196,7 +196,7 @@ If you want to set it as a required parameter just click on **true**. In this ca
 
 Similarly to set a parameter as multivalue click on **true**, in this way the user can perform multiple selections on among its values.
 
-After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times you want. At this point you may wish to change the order of parameters (i.e., how they are presented to the user). To do so, click on the arrow in the list of drivers.
+After you have completed the definition of a parameter you can save it by clicking on main **Save** button in the upper right corner. To add further parameters, click on the **Add** button. Repeat the same procedure as many times as needed. After that it would be necessary to change the order of parameters to show to the user). To do so, click on the arrow in the list of drivers.
 
 .. figure:: media/image75.png
 
