@@ -79,13 +79,13 @@ For each document, the list shows information as type, name, label, author, stat
 Clicking anywhere else on a document row opens a side panel on the right side of the page. This panel provides additional information and metadata about the selected document, including its description, status, and creation date together
 with a panel that allow to perform the following operations:
 
-- execute the document;
+- execute the document
 
-- access document details;
+- access document details
 
-- clone the item;
+- clone the item
 
-- delete the document.
+- delete the document
 
 To create a new document just click the *Create +* button with the following options: **Generic Document**, **Cockpit** for older versions of Knowage and **Dashboard** for newer versions such as this one. 
 Please note that not all of them are available in all Knowage products.
@@ -95,6 +95,18 @@ The below image shows the graphical interface for a *Dashboard* document.
 .. figure:: media/dashboard.png
 
     New dashboard.
+
+Steps to follow:
+
+- adding a dataset
+
+- adding widgets
+
+.. figure:: media/ds.png
+
+    Adding dataset(s) to a dashboard.
+
+Previous steps will be better described when talking about creating new dashboards.
 
 Document lifecycle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
