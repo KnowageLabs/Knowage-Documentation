@@ -12,7 +12,7 @@ By default *permissions are set at folder level*. This guarantees that a user ca
 
 Besides visibility limitations inherited by the containing folders, the developer can add further restrictions to a single document.
 
-To create a new folder, select **Profile Management** > **Functionalities Management**. 
+To create a new folder, select **Modules** >**Profile Management** > **Functionalities Management**. 
 
 .. figure:: media/image34_a.png
 
