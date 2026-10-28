@@ -72,68 +72,29 @@ First of all click on **Documents Browser** from the BI functionalities menu, as
 
     Documents Browser functionality.
 
-By default the page is divided into two parts, as shown in figure below: in the left side there is the functionality tree representing the folder structure, while on the right you can see the list of all documents contained in the selected folder.
+By default, the page appears divided into two main sections, as shown in the figure above. The functionality tree on the left represents the folder structure, while the area on the right displays the documents available in the selected folder.
 
-.. figure:: media/image59.png
+For each document, the list shows information as type, name, label, author, status, and visibility. The *Play* button at the end of each row allows users to execute the corresponding document.
 
-    Documents Development section.
+Clicking anywhere else on a document row opens a side panel on the right side of the page. This panel provides additional information and metadata about the selected document, including its description, status, and creation date together
+with a panel that allow to perform the following operations:
 
-Each line shows the label, the name, the author and the type of the document, while the play button at the end of each row executes the document. Moreover, clicking on a line opens a side panel on the right of the page. Here you can see more metadata information such as the document description, the state and the creation date.
+- execute the document;
 
-.. figure:: media/image61.png
+- access document details;
 
-    Side panel.
+- clone the item;
 
-At the top of this side panel you find four button:
+- delete the document.
 
-- |image60| execute the document;
+To create a new document just click the *Create +* button with the following options: **Generic Document**, **Cockpit** for older versions of Knowage and **Dashboard** for newer versions such as this one. 
+Please note that not all of them are available in all Knowage products.
 
-.. |image60| image:: media/image62.png
-   :width: 30
+The below image shows the graphical interface for a *Dashboard* document.
 
-- |image61| access document details;
+.. figure:: media/dashboard.png
 
-.. |image61| image:: media/image63.png
-   :width: 30
-
-- |image62| clone the item;
-
-.. |image62| image:: media/image64.png
-   :width: 30
-
-- |image63| delete the document.
-
-.. |image63| image:: media/image65.png
-   :width: 30
-
-The figure below shows the detail panel of a document. On the left, document details are shown, including name, type, dataset and state. On the right, you can see the functionality tree and the document position. If you want to copy or move a document from a folder into another, check or uncheck the corresponding folders.
-
-.. _detailpanelofknowanalydoc:
-.. figure:: media/image66.png
-
-    Detail panel of an Analytical document.
-
-In order to create a new document you need to click on the red plus button in the top right corner of the **Document Development** page. The different types of documents that you can create are: **Cockpit** and **Generic Document**. Please note that not all of them are available in all Knowage products.
-
-To create a new generic document click the above-mentioned button and select **Generic Document**. You will be shown a window like the one in figure above but with empty fields, in order to allow you to define the document details.
-
-First of all, choose a label, a name and a description. It is important to point out that the label is the unique identifier of the document in Knowage Server. Then, select the type of document and the appropriate engine from the drop down menus, according to the document you are developing (see figure below).
-
-.. figure:: media/image67.png
-
-    Select Type and Engine for a new document.
-
-Now you have to select the datasource that will feed your document with data.
-
-.. figure:: media/image68.png
-
-    Selecting a datasource for the document.
-
-You can select the data source from the drop down menu. And select the dataset from the pop-up window and click save.
-
-Note that some types of document do not require the definition of a dataset at this point because they use embedded datasets.
-
-It is advisable to regularly save the document in this process, by clicking the related button save at the top right corner of the window.
+    New dashboard.
 
 Document lifecycle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
