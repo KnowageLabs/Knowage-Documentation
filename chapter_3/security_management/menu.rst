@@ -6,9 +6,9 @@ Menu configuration
 
 Knowage allows the definition of a menu for the end user. This menu will be displayed in the left bar of Knowage homepage, under the Knowage icon. It is possible to associate to each node a static page, a document, a functionality (as a folder) or nothing (empty node). Every node can be associated to different roles. This menu structure can be created and modified exclusively by the administrator in the **Tools** area. To access the Menu configuration area, go to **Profile Management** > **Menu Configuration** from the Main Menu.
 
-It's sufficient to click on the “Plus” of the Menu Configuration page to add a new folder to the **Menu Tree**. When selecting one node of the tree and clicking on the “Plus” icon, the user can add a new folder as a child of the former one.
+Just click the “Plus” of the Menu Configuration page to add a new folder to the **Menu Tree**. When selecting one node of the tree and clicking on the “Plus” icon, the user can add a new folder as a child of the former one.
 
-.. figure:: media/image35.png
+.. figure:: media/menu.png
 
    Menu tree actions.
 
@@ -33,28 +33,10 @@ Creating a menu, you can choose an icon to be shown in the main menu. **This fea
 
    Menu choose icon feature
 
-To associate an icon to the menu, select the name of your menu and click the *CHOOSE ICON* functionality and you can:
+To associate an icon to the menu, select the name of your menu and click the icon highlighted in red.
 
 -  pick an icon from the predefined icons included in Knowage;
 -  upload a new file containing a custom icon (*File types allowed are .ico, .svg, .png and the maximum size allowed is 50 KB*).
-
-Dialog shown in figure below allows you to select an icon or click on "Browse..." to choose the image on your pc and upload it. After choose is completed, click on "*CHOOSE*" button to apply the changes. If no errors occurred, you'll come back to menu configuration and see the icon you choose. If you want to filter predefined icons, you can start writing in the text field on the top of the dialog.
-
-.. figure:: media/image107.png
-
-   Menu choose icon dialog
-
-If you decide to choose a predefined icon, select it click on "CHOOSE" to apply the changes.
-
-.. figure:: media/image108.png
-
-   Menu choose selected icon
-
-If you decide to upload a new image, click on "*Browse...*" and select your file. After that, the icon will be displayed as in the image below.
-
-.. figure:: media/image109.png
-
-   Selecting a new file as icon
 
 In case you need to delete an icon, the image below shows how to do it.
 
