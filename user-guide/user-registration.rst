@@ -6,14 +6,14 @@ User registration
 
 From the login page, new users can register their self to Knowage clicking on **Signup** button:
 
-.. figure:: media/image6.png
+.. figure:: media/register.png
 
    Login page
 
 That bring the user to the registration page:
 
-   .. figure:: media/image59.png
+   .. figure:: media/register_2.png
 
       User registration page
 
-Where the user can insert his personal data, his username and his password (password constraints can be set using advanced configuration). After the registration the user will receive the email that let him verify himself. After email confirmation, account will be enabled and user will access Knowage.
+Where the user can fill in personal information such as username and password (password constraints can be set using advanced configuration). After the registration the user will receive an email for confirmation. The account will be enabled only after confirmation.
