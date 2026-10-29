@@ -362,7 +362,7 @@ The area of each slice corresponds to the value of the node. Even if sunburst ch
 they enable users to represent *hierarchies* in a more immediate and fascinating way.
 
 To create a sunburst chart select at least two attributes describing the hierarchy and just one measure representing the width of the
-slices. An example of dataset for the sunburst chart is shown below.
+slices. An example is shown below.
 
 .. figure:: media/image065.png
 
