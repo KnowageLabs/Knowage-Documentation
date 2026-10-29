@@ -26,7 +26,7 @@ history or open the artifact panel. Changing the business model can require
 confirmation before the current conversation is replaced. Minimize the panel
 to return to your analysis and reopen it when needed.
 
-.. figure:: /_static/screenshots/9.1/user-guide-ai-assistant-9-1-ai-assistant.png
+.. figure:: media/virtual_ai.png
 
    AI model selection, question, answer and result artifacts.
 
