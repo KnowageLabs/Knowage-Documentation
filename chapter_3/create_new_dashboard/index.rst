@@ -576,22 +576,16 @@ After clicking the *Add widget* button or icon pick up *Chart* and then the *Act
 
    Activity Gauge example
 
-Below you can see how to set the aliases. From the drop down menu you can choose the column(s) previously selected as measures and rename them.
+You can use the Aliases section to customise the names of the measures displayed in the chart. 
+Simply select one of the previously defined measures from the drop-down menu and enter the alias you wish to use.
 
 .. figure:: media/image018.png
 
-   Setting Alias example
+   Setting Aliases
 
-The below image shows how changes are applied after renaming the measures.
-
-.. figure:: media/image019.png
-
-   Setting Series example
-
-If you want to set properties for the Tooltip just click Tooltip and set Bold and Backgroud color as shown in the below image
+If you want to set properties for the appearance of a tooltip just click the *Tooltip* section and set up the specific properties you want to change.
 
 .. figure:: media/image020.png
-
 
    Setting Tooltip example
 
