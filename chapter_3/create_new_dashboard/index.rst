@@ -1245,14 +1245,14 @@ A layer allows different ways to display the data on the map: markers, balloons,
 
 The *Settings* section contains this functionality.
 
-.. figure:: media/image109_n.png
+.. figure:: media/image109_b.png
 
         Add visualizations for layers
 
 By clicking the *Add Visualization* button you will see all the options as shown below.
 
 
-.. figure:: media/image109.png
+.. figure:: media/image109_c.png
 
         Data type visualization for layers
 
