@@ -601,14 +601,6 @@ After clicking the *Add widget* button pick up Chart and then the Bubble chart f
 
    Bubble chart - dragging and dropping measures and attributes
 
-You can set some properties for the series. It is possible to define them for all series or just for one.
-As shown in the below image in the last case just press the *plus* icon and the drop down menu will show you the list of
-columns.
-
-.. figure:: media/image022.png
-
-   Bubble chart - setting series
-
 An example of bubble chart is shown below, bubbles color has been set through the *Color* property inside Settings section.
 
 .. figure:: media/image023.png
