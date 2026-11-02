@@ -140,7 +140,7 @@ Knowage uses a schema to manage metadata, that is all those information required
     +---------------------+---------------+------------------+
     |    Certified        | MySql         | 5.7, 8           |
     +---------------------+---------------+------------------+
-    |    Certified        | PostgreSQL    | 8.2, 9.1, 12.3   |
+    |    Certified        | PostgreSQL    | 8.2, 9.1, 12.3, 18  |
     +---------------------+---------------+------------------+
     |    Certified        | MariaDB       | 10.1, 10.2, 10.3 |
     +---------------------+---------------+------------------+
