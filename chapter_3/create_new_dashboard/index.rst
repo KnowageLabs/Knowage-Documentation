@@ -2121,15 +2121,13 @@ The below image shows where to enable the drill-down functionality.
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
 To manage the cache and frequency of your data you need to select the dataset form the list of the available ones
-and switching on the sliding button for the *Cache* option as shown in the below image.
+and switching on the sliding button for the *Cache* option as shown in the below image. You can also manage index columns.
 
 .. figure:: media/image046.png
 
-   Managing cache and frequency
+   Managing cache and frequency and indexes on fields
 
-You can also index columns.
 
-.. figure:: media/image047.png
 
    Managing indexes on columns
 
@@ -2146,11 +2144,8 @@ Steps to add a calculated field:
    Adding a calculated field
 
 Once the new field has been added you will see the new column appearing toghether with the ones of your dataset.
-By using the icon highlighted in the below image you can reopen the details pop-up.
+By using the second icon highlighted in the above image you can reopen the details pop-up.
 
-.. figure:: media/image045.png
-
-   Reopen details of a calculated field
 
 Widget Theme and Title
 ------------------------------------------------------------------------------------------------------------------------
