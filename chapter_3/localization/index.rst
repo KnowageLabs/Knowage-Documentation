@@ -21,7 +21,7 @@ It is also possible to change the default language to use the first time the use
 -  Open the menu and select under Server Settings, Configuration Management
 -  Change the property SPAGOBI.LANGUAGE_SUPPORTED.LANGUAGE.default and insert the locale under the column *valueCheck* using the format languageCode, nationalVariety (e.g.: en,US)
 
-The currently supported languages for system labels are:
+The main supported languages for system labels are:
 -  Italian
 -  English
 -  French
