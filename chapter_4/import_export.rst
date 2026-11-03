@@ -17,45 +17,28 @@ Artifacts
 **Export**
 
 It is possible to export widgets and functions to a zip file to use afterwards as a *source* to be imported to a different environment.
-As shown below, select the items of your interest and click on *EXPORT*.
+As shown below, select the items of your interest and click the *EXPORT* icon.
 
-.. figure:: media/impexp_gallery1.png
+.. figure:: media/impexp.png
 
     Artifacts Export
 
-.. figure:: media/impexp_gallery2.png
-
-    Artifacts Export - Items selection
-
 After the selection, give a name to the file and confirm with *Export* button.
 
-.. figure:: media/impexp_gallery3.png
+.. figure:: media/impexp_2.png
 
     Artifacts Export - setting name for zip file
 
 **Import**
 
-You can import the zip file formerly exported just clicking on *IMPORT* and then clicking the *CHOOSE* button to select the file. See below image:
+You can import the zip file formerly exported just clicking the *IMPORT* icon and then clicking the *Drag and drop file here* area to select the file. See below image:
 You can also drag the file.
 
-.. figure:: media/impexp_gallery4.png
+.. figure:: media/impexp_3.png
 
     Artifacts Import - Export file selection #1
 
-After selecting the file to import the *NEXT* button will became available.
-
-.. figure:: media/impexp_gallery5.png
-
-    Artifacts Import - Export file selection #2
-
-Clicking on *NEXT*, it is possible to see and select the items to be imported..
-
-.. figure:: media/impexp_gallery6.png
-
-    Artifacts Import - items selection
-
-
-Click on the *IMPORT* button to make selected widgets and functions available in the new environment.
+After selecting the file to import the *NEXT* button will became available to select Users and Roles subsequently.
 
 
 Documents
