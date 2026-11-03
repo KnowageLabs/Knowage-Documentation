@@ -2133,6 +2133,26 @@ and switching on the sliding button for the *Cache* option as shown in the below
 
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------
+The *Calculated Field* functionality allows you to create a new field based on an expression that combines existing dataset fields, functions and mathematical operators.
+
+To create a calculated field, first specify its name in the *Field Name* field. You can then build the expression in the visual workspace by selecting the required elements from the *Fields*, *Functions* and *Math* sections.
+
+Functions can be associated with dataset fields to perform specific calculations. For example, you can use the *SUM* function and select the field whose values you want to aggregate.
+
+The selected elements must be connected to the *Calculated Field* block to define the complete expression.
+
+The *Validation* section at the bottom of the window automatically checks the expression and reports any configuration errors, such as unconnected blocks or a missing expression in the root block.
+
+When the expression is correctly configured and no validation errors are displayed, click *APPLY* to create the calculated field.
+
+A calculated field can be created using either the Visual or the Text mode. The Visual mode allows you to build the expression graphically, while the Text mode allows you to enter the expression directly as text.
+
+Once the calculated field has been saved using one of these modes, it can only be edited in the same mode. It is not possible to switch from Visual to Text mode, or vice versa, when editing an existing calculated field
+
+.. figure:: media/new_calculated_f.png
+
+    Cockpit document example.
+
 Steps to add a calculated field:
 - select a dataset
 - click on the *Add Columns* button as shown in the below image.
