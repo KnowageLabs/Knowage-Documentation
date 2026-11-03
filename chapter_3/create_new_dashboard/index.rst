@@ -2057,7 +2057,7 @@ the name of the dataset and select the type of parameter.
 
 For static parameters just put the value otherwise specify the name of the parameter that will contain the value.
 
-Cross Navigation
+Enabling Cross Navigation
 ------------------------------------------------------------------------------------------------------------------------
 The cross navigation allows navigation from one document to another.
 You will find the cross navigation functionality in the *Settings* section of a widget. Just click on *Interactions* as shown below.
