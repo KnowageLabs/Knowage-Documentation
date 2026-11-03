@@ -48,14 +48,14 @@ A scheduled activity can be composed by more than one report. Once all desired d
 
 You can manage your activity at any time just clicking on the name of the scheduling item (left side of the window) and all its features will be displayed aside (right half part of the window).
 
-To see and modify the list of the schedules associated to an activity, click the *ADD* option of the "Timing & Output" panel. Similarly, click on the same option to associate schedules
-to the newly created activities. The below image shows the *Timing & Output* panel.
+To see and modify the list of the schedules associated to an activity, click the *ADD Trigger* option of the "Timing & Output" panel. Similarly, click on the same option to associate schedules
+to the newly created activities. The below image shows the *Trigger* panel.
 
 .. figure:: media/image45_new.png
 
-    Timing & Output panel.
+    New Trigger: Timing & Output panel.
 
-It is composed by two areas: **Timing** and **Output**.
+It is composed by two areas: **Timing** and **Outputs**.
 The Timing tab let you set all properties of you schedulation. Indeed here you decide its description and timing.
 A schedulation can be made in a chosen date and time if you choose **Single Execution** as type.
 Otherwise it can be realized for fixed periods or start on a fixed event.
@@ -65,7 +65,7 @@ You can decide it, by choosing the schedulation type.
 Available schedulation type are:
 
 -  Single Execution;
--  Periodic Execution;
+-  Recurring Execution;
 -  Event Execution.
 
 A **Single Execution** is a fixed execution for a date and a time which happens only once. A **Periodic Execution** repeats your schedulation periodically according to your settings. The **Event Execution** starts the scheduling when an event happens.
@@ -78,11 +78,11 @@ You can choose among these event types:
 
 If you choose **Dataset**, you have to select a right structured dataset. It has to give as results only true or false. Then set the frequency in seconds. This is the frequency the dataset will be verified. For example if you set it on 10 seconds it means that each 10 seconds the dataset is executed. If the result of its execution is true, the schedulation is trigged otherwise it isn’t.
 
-Once you are done, switch to the **Output** tab.
+Once you are done, switch to the **Outputs** tab.
 
 .. figure:: media/image46_new.png
 
-    Output panel.
+    Outputs panel.
 
 Here you can find the dispatch configurations, that can be different for all the documents that compose the scheduled activity. All documents that compose the activity have their own dispatch configuration and the same document can be distributed along multiple dispatch channels. You can switch among the documents included in your activity by clicking on their name in the upper toolbar. There are many different possible dispatch channels that can be used to distribute the results of the execution of a scheduled activity:
 
