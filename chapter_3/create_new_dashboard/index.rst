@@ -1290,9 +1290,9 @@ This is because a combination between a dataset and a topojoson file has been us
 
 .. figure:: media/image111.png
 
-        Example of map with *Join* settings
+        Setting a *Join* for a map
 
-The goal is to show the measure *POPULATION* for each region when hovered over with the mouse.
+The goal is to show the measure *AMOUNT* for each region when hovered over with the mouse.
 To do this, you will need to enable a *Tooltip* by choosing the layer and property to display.
 
 .. figure:: media/image112_map.png
