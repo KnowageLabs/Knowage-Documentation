@@ -16,7 +16,7 @@ In order to define a new scheduled activity the administrator must specify which
 
    Left: scheduler main page. Right: New activity GUI
 
-After ginving a name and a description to the new activity select the documents that compose it by clicking *Add*. A pop-up will open to select all your documents, see Figure below.
+After ginving a name and a description to the new activity select the documents that compose it by clicking *Add documents*. A pop-up will open to select all your documents, see Figure below.
 
 .. figure:: media/image42_new.png
 
