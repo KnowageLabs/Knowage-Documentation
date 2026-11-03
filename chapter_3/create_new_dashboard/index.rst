@@ -2047,13 +2047,8 @@ By clicking on them you need to click the *Add Datset* button to display the lis
 
    Selecting a dataset from a list
 
-The below image shows the datset that have been selected for the new dashboard.
 
-   .. figure:: media/add_ds_3.png
-
-   List of dataset for a dashboard
-
-As you can see, the above list contains a dataset with parameters. In case you need to set up the value of the parameterjust click
+The below image shows list with a dataset containing parameters. In case you need to set up the value of the parameter just click
 the name of the dataset and select the type of parameter.
 
    .. figure:: media/add_ds_4.png
