@@ -1257,16 +1257,8 @@ In case a marker is visualized as Icon an example of map can be the following.
 
         Map with markers as Icon
 
-Below another example of a map using a choroplet visualization and created by using two layers, a topojson file and a dataset.
-Bear in mind the the *Data Connection* section allows also the retrieving of a measure by using the same layer.
 
-.. figure:: media/image112_3.png
-
-        Layers of a map with a dataset and topojson file
-
-The topojson file was previously created under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
-
-Furtherly the figure below shows also the definition of the *Data Connection* as *Join*.
+The figure below shows also the definition of the *Data Connection* as *Join*.
 This is because a combination between a dataset and a topojoson file has been used as both of them have in common the column ID_1.
 
 .. figure:: media/image111.png
