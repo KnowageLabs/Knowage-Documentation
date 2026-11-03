@@ -8,7 +8,7 @@ Create a new Timespan
 
 The Timespan functionality is available under the *CATALOGS* section of the Knowage main menu. 
 
-.. figure:: media/imageTS001.png
+.. figure:: media/timespan.png
 
    Timespan
 
