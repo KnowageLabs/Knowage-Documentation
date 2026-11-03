@@ -2212,10 +2212,6 @@ Creating a variable - step 2
 
 Type in the variable name, the type and *Save*
 
-.. figure:: media/image076.png
-
-   Creating a variable - step 3
-
 Types of variables:
 
    - Static: a static number or string
