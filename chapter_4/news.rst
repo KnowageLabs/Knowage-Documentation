@@ -10,7 +10,7 @@ To add a news is mandatory to have administration priviledges. An admin user can
 
 .. figure:: media/image01_8.1.png
 
-    News Management list item.
+    News Management.
     
 A new page opens where the left side contains the list of all the already inserted news whereas the right side shows the details of the selected news from the list. 
 
