@@ -2007,7 +2007,7 @@ The editor widget allows embedding a Python script. Before writing the code it i
    
 See below image
 
-.. figure:: media/image111.png
+.. figure:: media/image111_py.png
 
    Python widget editor
 
