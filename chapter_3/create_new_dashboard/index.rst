@@ -1205,7 +1205,7 @@ The Map Widget is useful when a user needs to visualize data related to a geogra
 
     Map widget example.
 
-Unlike the most of the widgets that have a *Data* section for data configuration here we find the *Layer* section where the user can add and remove layers,
+Unlike most of the widgets which have a *Data* section for data configuration here we find the *Layer* section where the user can add and remove layers,
 set the format of a spatial attribute to use and specify the attributes to display on the map and on the detail popup.
 
 
