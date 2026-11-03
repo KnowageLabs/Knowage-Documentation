@@ -1297,10 +1297,6 @@ be visible and clickable to open the list. On each item of the list a *trash* ic
  
 To get the result shown in the above image just go to the *Settings* and select the *Style* property
 
-.. figure:: media/image053.png
-
-   Active selections widget - Style property
-
 Be aware that a selection can be locked. In this case it will be not possible to delete that selection until unlocked. This can only be done by admin users.
 This forces the final user to run the dashboard with that selection that will not be removed as locked by the admin user.
 
@@ -1312,7 +1308,7 @@ After choosing the column to use as a filter just move to the *Setting* section 
 
 .. figure:: media/image054.png
 
-   Active selections widget
+   Selector widget
 
 Custom chart widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
