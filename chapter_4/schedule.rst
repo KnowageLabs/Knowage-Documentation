@@ -193,16 +193,10 @@ Here you can select one of the available scheduled activities to explore details
 
     Details of a scheduled activity in Timing & Output panel.
 
-Here you find the following information:
 
-- **Schedulation informations**, gives some extra information about your schedulation concerning sending emails
-
-- **Schedulation detail**, opens the scheduling configuration and let you change them.
-- **Execute now**, by clicking it you immediately start the execution of your schedulation.
-- **Pause schedulation**, it lets you pause your schedulation.
-- **Resume schedulation**, it appears after having paused a schedulation, it enables you to resume it.
-
-In case, use the recycle bin icon to delete the scheduling.
+To show scheduling details just click.
+The trigger can be disabled just by turning off the green icon or use the recycle bin icon to delete the scheduling.
+The information will be visible untill it is not performed.
 
 
 Scheduler Monitor
