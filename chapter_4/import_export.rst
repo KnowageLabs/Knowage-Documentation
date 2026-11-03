@@ -40,7 +40,14 @@ You can also drag the file.
 
 After selecting the file to import the *NEXT* button will became available to select Users and Roles subsequently.
 
+The below image shows the other artifacts that can be imported/exported:
 
+
+.. figure:: media/all_artifacts.png
+
+    Import/Export options
+
+    
 Documents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -68,13 +75,6 @@ After clicking the *Export* button you can decide whether to include or not the 
 To import documents click on the *IMPORT* link, choose or drag your file and click the *NEXT* button.
 
 .. figure:: media/image68.png
-
-The below image shows the other artifacts that can be imported/exported:
-
-
-.. figure:: media/all_artifacts.png
-
-    Import/Export options
 
 
 
