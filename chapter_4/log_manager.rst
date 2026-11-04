@@ -6,9 +6,9 @@ The **Log Manager** functionality is available under the **Tools** section of th
 Log Manager functionalities
 ------------------------------------------------------------------------------------------------------------------------
 
-The Log Manager window is subdivided in two sections, on the left the tree structure representing existing logs system and on the right the content of the selected file.
+The Log Manager window is divided in two sections, on the left the tree structure representing existing logs system and on the right the content of the selected file.
 
-.. figure:: media/log_mng_0.png
+.. figure:: media/log_mng.png
 
 
 **Tree functionalities**
