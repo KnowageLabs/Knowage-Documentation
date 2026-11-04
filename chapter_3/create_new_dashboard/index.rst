@@ -1284,7 +1284,8 @@ Instead of a tooltip it can also be used a dialog box.
 
         Defining a dialog for a map
 
-Remember that when using a dataset, the *Layer* Metadata section, allows setting all those attributes previously defined as *Spatial*. These attributes will be used to display markers on the map.
+Remember that when using a dataset, the *Layer* Metadata section, allows setting all those attributes representing geographical information as *Spatial*.
+These attributes will be used to display markers on the map.
 Currently, the following spatial attribute types are supported:
 -  String format: where the value specifies two decimal numbers representing latitude and longitude separated by space;
 -  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
@@ -1293,22 +1294,6 @@ Currently, the following spatial attribute types are supported:
 .. figure:: media/image105_n.png
 
         Setting metadata for *Spatial* attributes
-
-.. important::
-         **Geographic coordinates format**
-         For every type defined above the user has to specify the format of the geographic coordinate that is wether latitude comes first or vice versa.
-
-.. figure:: media/image106_n.png
-
-        Geographic coordinates
-Below another example of a map using a choroplet visualization and created by using two layers, a topojson file and a dataset.
-Bear in mind the the *Data Connection* section allows also the retrieving of a measure by using the same layer.
-
-.. figure:: media/image112_3.png
-
-        Layers of a map with a dataset and a topojson file
-
-The topojson file was previously created under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
 
 
 Active selections widget
