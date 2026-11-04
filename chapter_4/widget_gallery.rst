@@ -15,11 +15,11 @@ This functionality is available for the following types of widgets:
 Gallery management
 ------------------------------------------------------------------------------------------------------------------------
 
-To open the *Gallery Management*, select **Gallery Management** from the *CATALOGS* option of the Knowage main menu.
+To open the *Widget Gallery* management panel, select **Gallery Management** from the *CATALOGS* option of the Knowage main menu.
 The first step consists in creating a new template or importing a template not available in the list.
 
 
-.. figure:: media/image2_8.1.png
+.. figure:: media/gallery_mng.png
 
     Gallery management example.
 
