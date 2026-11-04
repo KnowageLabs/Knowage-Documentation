@@ -20,10 +20,8 @@ The tree shows all log files of the service grouped in separate folders. On the 
 
 Pay attention that to download files, users must select them by clicking on the box placed at log file's left. All the files grouped inside a folder can be selected by selecting that folder.
 
-Users can apply filters to all log files showing only those that meet the requirements. Using **Search** files are filtered by name and by interacting with the **Date icon** users can select dates and filter files based on them.
-
-.. figure:: media/log_mng_1_bis.png
-
+Users can apply filters to all log files showing only those that meet the requirements. 
+Using the **Search** functionality files are filtered by name and by interacting with the **Date icon** users can select dates and filter files based on them.
 
 Pay attention that by default date filter selects only the current date, in the date menu **Reset** button resets to default date filter. To select / deselect a specific date click on it.
 
