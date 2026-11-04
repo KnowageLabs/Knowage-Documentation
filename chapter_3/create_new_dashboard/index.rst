@@ -1307,6 +1307,10 @@ Currently, the following spatial attribute types are supported:
 
         Setting metadata for *Spatial* attributes
 
+For every type defined above there is the need to specify the format of the geographic coordinate that is to be used: wether the latitude comes first or vice versa.
+
+.. figure:: media/image106_n.png
+
 
 
 Active selections widget
