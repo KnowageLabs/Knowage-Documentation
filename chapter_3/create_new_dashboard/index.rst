@@ -1284,7 +1284,6 @@ Instead of a tooltip it can also be used a dialog box.
 
         Defining a dialog for a map
 
-
 Remember that when using a dataset, the *Layer* Metadata section, allows setting all those attributes previously defined as *Spatial*. These attributes will be used to display markers on the map.
 Currently, the following spatial attribute types are supported:
 -  String format: where the value specifies two decimal numbers representing latitude and longitude separated by space;
@@ -1310,6 +1309,7 @@ Bear in mind the the *Data Connection* section allows also the retrieving of a m
         Layers of a map with a dataset and a topojson file
 
 The topojson file was previously created under the *CATALOGS>Layers* menu item and will be added as a layer to the map widget.
+
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
