@@ -2456,7 +2456,7 @@ configuration and save the Dashboard.
 The Map widget is distinct from a standalone GIS document. Review the layer
 configuration when migrating an existing Cockpit map.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-map-wizard.png
+.. figure:: media/image111.png
 
    Map wizard: visualization type and data connection.
 
