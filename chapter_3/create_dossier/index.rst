@@ -166,7 +166,7 @@ Each line allows you to see useful information on the activity such as the value
 Dossier Wizard
 ------------------------------------------------------------------------------------------------------------------------
 
-Starting from Knowage 8.2 it is possible to configure the dossier template document and his xml template easily using the Dossier Wizard.
+Starting from Knowage 8.2 it is possible to configure the dossier template document and his xml template easily by using the Dossier Wizard.
 
 You can use this feature opening the wizard from an dossier document already saved or directly from the workspace.
 
@@ -174,13 +174,13 @@ Starting from a saved document
 ------------------------------------------------------------------------------------------------------------------------
 Click the *Open Designer* link inside the dossier document.
 
-.. figure:: media/image004.png
+.. figure:: media/dossier_designer.png
 
    Document Designer.
 
 The following wizard page appears requesting the document template (docx or pptx format) and the image prefix.
 
-.. figure:: media/image005.png
+.. figure:: media/dossier_designer_3.png
 
     Dossier Wizard
 
