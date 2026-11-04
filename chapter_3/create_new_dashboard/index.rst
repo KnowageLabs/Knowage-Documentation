@@ -2397,7 +2397,7 @@ Dashboard variable. The placeholders are ``$P{driver}`` and ``$V{variable}``.
 For example, ``Sales for $P{year} - $V{region}`` displays the current values.
 Check the title after changing the corresponding input and save the Dashboard.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-dynamic-title.png
+.. figure:: media/title.png
 
    A widget title containing a driver and a variable.
 
