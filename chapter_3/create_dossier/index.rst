@@ -187,40 +187,30 @@ The following wizard page appears requesting the document template (docx or pptx
 
 The Uploadable/Downloadable features can be enabled in order to allow the downloading and updating of the document template inside the dossier document.
 
-By clicking on *NEXT* the new popup will show the list of image placeholders found inside the document template.
+Fill in the image prefix and click the *Findplaceholders* button to hook-up the placeholders to the document.
 
-.. figure:: media/image005_b.png
+.. figure:: media/dossier_designer_5.png
 
     Image placeholders
 
-By clicking the *Plus* button it is possible to link a source document to the image placeholder.
+By clicking the icon highlighted in the above image it is possible to link a source document or view to the image placeholder.
 
 
-.. figure:: media/image005_c.png
+.. figure:: media/dossier_designer_4.png
 
     Linking documents to placeholders 
 
 After selecting the document you need to select the parameters (drivers or views) to be linked to the placeholder.
-In the example above there is one driver *Family*. The wizard allows to specify how the parameter of the driver should be feed by
-selecting the *Link  Type* to the driver: *Dynamic, Static or Inherit* type. Inherit means that the parameter selected will be the same used in the selected source document.
+In the example above there is one driver *Family*. The wizard allows to specify how the parameter of the driver should be fed by
+selecting the *Link  Type* to the driver: *Dynamic, Static or Inherit* type. 
+Inherit means that the parameter selected will be the same used in the selected source document.
 We kindly suggest to use "Inherit" for simplifying configuration assets.
 
-On the other hand by clicking the *Plus* icon the image placeholders can be linked also to *Views*.
-
-.. figure:: media/image011_a.png
-
-    Linking to Views.
-
-To rollback and reset changes, just click the "Reset placeholder" icon on the image placeholders panel.
-
-.. figure:: media/image005_d.png
-
-    Reset placeholder functionality.
-
-As a last step remains clicking *SAVE* or *Save and Run*. By saving the xml template should be updated and visible on the *History* tab.
+As last steps save and run the document. 
+By saving the xml template should be updated and visible on the *History* tab.
 
 
-.. figure:: media/image013.png
+.. figure:: media/dossier_history.png
 
     Xml template.
 
