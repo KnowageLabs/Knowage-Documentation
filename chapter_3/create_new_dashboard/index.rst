@@ -2481,6 +2481,8 @@ and variables. Chart spreadsheet exports support drill-down data; PDF table
 settings include portrait, landscape and custom dimensions. Export commands and
 formats depend on the widget type, edition and installed export services.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-export-options.png
+.. figure:: media/general_export.png
 
    Dashboard export filename and widget worksheet settings.
+
+As seen in the above image the name of the parameters are automatically displayed. Just click the one you want to see in the name to export.
