@@ -120,9 +120,10 @@ Password change
 
 If user wants to change his password, he must fill *Password* and *Confirm Password* fields and the click on *MODIFY* button. A confirmation message will be displayed if the update has been successful.
 
-.. admonition:: Screenshot to update
+.. figure:: media/myaccount.png
 
-   Knowage 9.1 My Account dialog: user identifier, password fields and actions.
+    My Account dialog: user identifier, password fields and actions.
+
 
 
 Document Browser
