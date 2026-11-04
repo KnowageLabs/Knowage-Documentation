@@ -140,13 +140,13 @@ My first dossier
 
 You can create a dossier document by using the plus button and choosing "Generic Document". Proceed by filling in the necessary fields, selecting "Collaboration" as the type and "Dossier engine" as the engine and then choosing the XML template. If the documents to be executed have one or more analytical drivers, these drivers must be added to the dossier document from the DRIVER tab.
 
-.. figure:: media/image000.png
+.. figure:: media/dossier_doc.png
 
     Dossier document creation interface.
 
 After saving the document, you can access the dossier activity page by clicking the play button.
 
-.. figure:: media/image001.png
+.. figure:: media/dossier_act.png
 
     Dossier activity interface.
 
