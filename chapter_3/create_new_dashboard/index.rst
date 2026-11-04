@@ -1311,7 +1311,7 @@ For every type defined above there is the need to specify the format of the geog
 
 .. figure:: media/image106_n.png
 
-
+The above image refers to an example of a map where a dataset with geografical information is used.
 
 Active selections widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
