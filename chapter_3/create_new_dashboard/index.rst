@@ -1259,7 +1259,7 @@ In case a marker is visualized as Icon an example of map can be the following.
 
 
 The figure below shows also the definition of the *Data Connection* as *Join*.
-This is because a combination between a dataset and a topojoson file has been used as both of them have in common the column ID_1.
+This is because a combination between a dataset and a geojson file has been used as both of them have in common the column ID_1.
 
 .. figure:: media/image111.png
 
@@ -1285,8 +1285,20 @@ Instead of a tooltip it can also be used a dialog box.
         Defining a dialog for a map
 
 Remember that when using a dataset, the *Layer* Metadata section, allows setting all those attributes representing geographical information as *Spatial*.
-These attributes will be used to display markers on the map.
+These attributes will be used to display i.e. markers on the map.
+
+.. figure:: media/ds_coord.png
+
+        Dataset with geographical information
+
+The below image shows where to change the type of an attribute as *Spatial*.
+
+.. figure:: media/ds_coord_2.png
+
+        Setting *Spatial* attributes in dataset metadata
+
 Currently, the following spatial attribute types are supported:
+
 -  String format: where the value specifies two decimal numbers representing latitude and longitude separated by space;
 -  JSON: where the value is a text string in `GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_ format;
 -  WKT: where the value is a text string in `Well-known Text <https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry>`_ format;
@@ -1294,6 +1306,7 @@ Currently, the following spatial attribute types are supported:
 .. figure:: media/image105_n.png
 
         Setting metadata for *Spatial* attributes
+
 
 
 Active selections widget
