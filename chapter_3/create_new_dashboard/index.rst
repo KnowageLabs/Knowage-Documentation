@@ -1309,7 +1309,7 @@ Currently, the following spatial attribute types are supported:
 
 For every type defined above there is the need to specify the format of the geographic coordinate that is to be used: wether the latitude comes first or vice versa.
 
-.. figure:: media/image106_n.png
+.. figure:: media/lon_lat_2.png
 
 The above image refers to an example of a map where a dataset with geografical information is used.
 
