@@ -20,6 +20,6 @@ page preserves the document's permission checks.
 For a role-specific entry, use **Reset to default** to remove the override
 and return to the default configuration.
 
-.. figure:: /_static/screenshots/9.1/chapter-4-home-management-9-1-home-management.png
+.. figure:: media/home_mng.png
 
    Home page type, role assignment and preview.

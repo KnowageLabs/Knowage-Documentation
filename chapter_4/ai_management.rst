@@ -24,7 +24,7 @@ questions, queries and expected business meaning aligned with that model's
 schema. Recheck synchronization after changing model metadata or the available
 source structure.
 
-.. figure:: media/ai-mng.png
+.. figure:: media/ai_mng.png
 
    AI engine status, model inclusion and synchronization.
 
