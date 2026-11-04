@@ -2430,7 +2430,7 @@ Dashboard variable. Select the target columns, variable, comparison and value;
 check both the displayed columns and summary settings. Table search can use
 column aliases, so readers can search the labels shown in the table.
 
-.. figure:: /_static/screenshots/9.1/chapter-3-create-new-dashboard-index-9-1-dynamic-columns.png
+.. figure:: media/visibility.png
 
    Mapping a column source and configuring variable-driven visibility.
 
