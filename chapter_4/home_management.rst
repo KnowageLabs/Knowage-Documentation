@@ -22,4 +22,9 @@ and return to the default configuration.
 
 .. figure:: media/home_mng.png
 
+   Home management from main menu
+
+
+   .. figure:: media/home_mng_2.png
+
    Home page type, role assignment and preview.
