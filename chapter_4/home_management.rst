@@ -25,6 +25,6 @@ and return to the default configuration.
    Home management from main menu
 
 
-   .. figure:: media/home_mng_2.png
+.. figure:: media/home_mng_2.png
 
    Home page type, role assignment and preview.
