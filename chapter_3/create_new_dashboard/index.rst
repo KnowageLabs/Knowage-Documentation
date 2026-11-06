@@ -2149,15 +2149,14 @@ The below image shows where to enable the drill-down functionality.
 Manage Cache/Frequency
 ------------------------------------------------------------------------------------------------------------------------
 To manage the cache and frequency of your data you need to select the dataset from the list of the available ones
-and switching on the sliding button for the *Cache* option as shown in the below image. You can also manage indexes on columns.
+Switch the sliding button for the *Cache* option as shown in the below image to enable caching on the server. 
+You can also manage indexes on columns.
 
 .. figure:: media/cache.png
 
    Managing cache and frequency and indexes on fields
 
-
-
-   Managing indexes on columns
+Frequency and cache can be activated separately as frequency indicates the regularity of refreshing time of your dataset and can be specified also having the caching disabled. 
 
 Add a Calculated Field
 ------------------------------------------------------------------------------------------------------------------------

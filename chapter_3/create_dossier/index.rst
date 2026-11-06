@@ -159,14 +159,14 @@ If upload/download are enabled, docx file template can be uploaded/downloaded us
        This feature is available only for image replacing procedure.
 
 
-To execute the document, enter a name for the activity and click *LAUNCH ACTIVITY*. A new task will be started in the STARTED state and a new row will be visible in the table below. At the end of the execution of the task, the processed file can be downloaded with the appropriate download icon.
+After associating a template to the document, to execute the document, enter a name for the activity and click *LAUNCH ACTIVITY*. A new task will be started in the STARTED state and a new row will be visible in the table below. At the end of the execution of the task, the processed file can be downloaded with the appropriate download icon.
 
 Each line allows you to see useful information on the activity such as the values of the drivers used for the execution by clicking on the info icon, download the processed file by clicking on the download icon and remove itself by clicking on the trash icon.
 
 Dossier Wizard
 ------------------------------------------------------------------------------------------------------------------------
 
-Starting from Knowage 8.2 it is possible to configure the dossier template document and his xml template easily by using the Dossier Wizard.
+Starting from Knowage 8.2 it is possible to configure the dossier template document and the relevant xml template easily by using the Dossier Wizard.
 
 You can use this feature opening the wizard from an dossier document already saved or directly from the workspace.
 
@@ -187,7 +187,7 @@ The following wizard page appears requesting the document template (docx or pptx
 
 The Uploadable/Downloadable features can be enabled in order to allow the downloading and updating of the document template inside the dossier document.
 
-Fill in the image prefix and click the *Findplaceholders* button to hook-up the placeholders to the document.
+Fill in the image prefix and click the *Find placeholders* button to retrieve and furtherly hook-up the placeholders to the document.
 
 .. figure:: media/dossier_designer_5.png
 
@@ -200,14 +200,14 @@ By clicking the icon highlighted in the above image it is possible to link a sou
 
     Linking documents to placeholders 
 
-After selecting the document you need to select the parameters (drivers or views) to be linked to the placeholder.
+After selecting the document you need to specify the parameters (drivers or views) to be linked to the placeholder.
 In the example above there is one driver *Family*. The wizard allows to specify how the parameter of the driver should be fed by
 selecting the *Link  Type* to the driver: *Dynamic, Static or Inherit* type. 
 Inherit means that the parameter selected will be the same used in the selected source document.
 We kindly suggest to use "Inherit" for simplifying configuration assets.
 
 As last steps save and run the document. 
-By saving the xml template should be updated and visible on the *History* tab.
+By saving the document the associated xml template will be visible in the *History* tab.
 
 
 .. figure:: media/dossier_history.png
