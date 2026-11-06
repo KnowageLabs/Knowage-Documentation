@@ -7,6 +7,7 @@ Create Report
    :maxdepth: 10
    
    birt.rst
+   birt_static_resources.rst
    jasper.rst
 
 .. Indices and tables

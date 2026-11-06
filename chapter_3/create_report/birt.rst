@@ -22,6 +22,9 @@ BIRT, acronim for **Business Intelligence and Reporting Tools**, is an open sour
 Developing a BIRT report
 ------------------------------------------------------------------------------------------------------------------------
 
+To use shared images published through Knowage resources, see the
+:doc:`BIRT static resources configuration guide <birt_static_resources>`.
+
 Firt of all you have to download the Birt report designer from here `Download Eclipse`_.
 
 Here you can find some information about how install and use Birt report designer: `How  install and use birt`_
