@@ -26,6 +26,10 @@ source structure.
 
 .. figure:: media/ai_mng.png
 
+   AI Management functionality.
+
+.. figure:: media/ai_2.png
+
    AI engine status, model inclusion and synchronization.
 
 The external AI service, model configuration and connectivity are deployment
