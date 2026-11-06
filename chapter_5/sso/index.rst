@@ -7,6 +7,7 @@ How to configure the KNOWAGE Single Sign On
    :maxdepth: 10
    
    cas.rst
+   saml.rst
    azure.rst
    ldap.rst
    google.rst
