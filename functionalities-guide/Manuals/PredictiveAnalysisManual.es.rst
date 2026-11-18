@@ -1,0 +1,11 @@
+.. incluír::.. /booksStructure/booksStructureForPredictiveAnalysis.rst
+.. incluír::.. /Misdatos/ka_user_my_data.rst
+.. incluír::.. /Dataset/ka_dev_dataset.rst
+.. incluír::.. /BehavioralModel/ka_dev_behavioralmodel.rst
+.. incluír::.. /AnalyticalDocument/ka_dev_analyticaldoc.rst
+.. incluír::.. /Datamining/ka_user_datamining.rst
+.. incluír::.. /Datamining/ka_dev_datamining.rst
+.. incluír::.. /OLAP/ka_user_OLAP.rst
+.. incluír::.. /OLAP/ka_dev_OLAP.rst
+.. incluír::.. /WhatIf/ka_user_whatif.rst
+.. incluír::.. /WhatIf/ka_dev_whatif.rst

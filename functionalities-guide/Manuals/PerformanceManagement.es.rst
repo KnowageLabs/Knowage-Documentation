@@ -1,0 +1,9 @@
+.. incluír::.. /bookStructures/bookStructureForPerformanceManagement.rst
+.. incluír::.. /Misdatos/ka_user_my_data.rst
+.. incluír::.. /Dataset/ka_dev_dataset.rst
+.. incluír::.. /BehavioralModel/ka_dev_behavioralmodel.rst
+.. incluír::.. /AnalyticalDocument/ka_dev_analyticaldoc.rst
+.. incluír::.. /Gráfico/ka_dev_chart.rst
+.. incluír::.. /KPI/ka_KPI.rst
+.. incluír::.. /ScoreCard/ka_Scorecard.rst
+.. incluír::.. /Alerta/ka_Alert.rst
