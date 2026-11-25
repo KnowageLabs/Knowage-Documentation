@@ -33,9 +33,11 @@ libraries download service. The executing user must have a valid, expiring Knowa
 Keep the existing SSO and token-signing configuration consistent between Knowage, the BIRT engine and the API.
 Do not configure a shared technical token or a password in the report.
 
-The API must be reachable over HTTPS from the BIRT server. Its hostname must resolve there, and its certificate and
-certificate chain must be trusted by the BIRT server runtime. A URL that works only in the administrator's browser is
-not sufficient.
+The public API URL must be reachable by users' browsers. BIRT also downloads some resources server-side, including
+background images, so connectivity from the BIRT server must be checked separately. For HTTPS downloads, the hostname
+must resolve there, and its certificate and certificate chain must be trusted by the BIRT server runtime.
+A URL that works only in the administrator's browser is not sufficient. An optional internal base URL can be configured
+for background images as described below.
 
 Publish the files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -69,7 +71,7 @@ can receive the download request.
    files requiring document-specific access restrictions in this folder. Subdirectories and links pointing outside
    the permitted resource folder cannot be used to reference resources.
 
-Configure the BIRT API base URL
+Configure the BIRT API base URLs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Edit ``engine-config.xml`` in the deployed ``knowagebirtreportengine`` application. In a standard exploded Tomcat
@@ -79,8 +81,8 @@ deployment, the file is located at:
 
    TOMCAT_HOME\webapps\knowagebirtreportengine\WEB-INF\classes\engine-config.xml
 
-Inside the existing ``ENGINE-CONFIGURATION`` element, set ``EXTERNAL_LIBRARIES_API_BASE_URL`` to the HTTPS API base URL.
-For the standard API deployment:
+Inside the existing ``ENGINE-CONFIGURATION`` element, set ``EXTERNAL_LIBRARIES_API_BASE_URL`` to the public HTTPS API
+base URL. For the standard API deployment:
 
 .. code-block:: xml
 
@@ -103,6 +105,52 @@ Apply this setting on every BIRT node, restart the BIRT application after changi
 in your deployment procedure so that a redeployment does not overwrite it.
 Reports without external-resource placeholders do not require this setting.
 
+Optional internal URL for server-side images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On BIRT engine versions that provide ``EXTERNAL_LIBRARIES_INTERNAL_API_BASE_URL``, this optional setting selects a
+different API base URL for placeholders inside BIRT ``<property name="backgroundImage">`` elements. Engines with
+PDF-aware resource routing also use it for all external-library placeholders when the requested output is PDF.
+These resources are downloaded by BIRT during report generation. In HTML output, ordinary HTTPS images in ``<img src="...">`` tags can
+instead be downloaded by the browser. The browser and the BIRT server may have different access to the public address.
+
+For example, when the Knowage API and BIRT engine run in the same Tomcat, configure:
+
+.. code-block:: xml
+
+   <EXTERNAL_LIBRARIES_API_BASE_URL>https://bi.example.org/knowage-api/api</EXTERNAL_LIBRARIES_API_BASE_URL>
+   <EXTERNAL_LIBRARIES_INTERNAL_API_BASE_URL>http://127.0.0.1:8080/knowage-api/api</EXTERNAL_LIBRARIES_INTERNAL_API_BASE_URL>
+
+For PDF output, the resolver uses the internal base URL for all placeholders, including image URI expressions and
+HTML ``<img>`` tags. For HTML and other outputs, only ``backgroundImage`` properties use the internal URL; other
+placeholders keep the public base URL. The same file-name encoding and executing-user
+JWT authentication apply to both URLs; the internal setting does not bypass authentication or tenant selection.
+The stored ``.rptdesign`` does not need to be changed.
+
+The internal value must be an absolute HTTPS URL, or an HTTP URL whose host is exactly ``localhost``, ``127.0.0.1`` or
+``[::1]`` (case-insensitive for ``localhost``). Embedded credentials, query parameters and fragments are not accepted.
+HTTP is not accepted for non-loopback hosts. Include the REST application path, normally ``/knowage-api/api``; the
+resolver appends ``/2.0/resources/external-libraries`` just as it does for the public URL.
+An omitted, empty or whitespace-only internal value preserves the existing behavior: all resources use the
+public base URL. An invalid internal URL is rejected when a PDF resource or a background-image placeholder requires it.
+
+.. important::
+
+   Loopback refers to the BIRT process's network environment. In separate containers, ``127.0.0.1`` normally does not
+   reach the API container. Use a reachable HTTPS internal service address in that case, with a certificate trusted
+   by BIRT. Do not replace the public base URL with localhost: URLs sent to the browser would refer to the user's
+   computer instead of the Knowage server.
+
+PDF routing follows the requested output format (``outputType=pdf``, case-insensitive, with the existing parameter-name
+fallbacks). It also applies to reports without background images. Other server-rendered formats may still download
+ordinary images using the public URL; these resources must remain reachable from BIRT.
+This setting changes routing only: it does not add download timeouts.
+
+Apply the internal configuration on every BIRT node and restart the BIRT application. Before enabling it, verify the
+endpoint from the same server or container as BIRT. A quick ``401`` or ``403`` without credentials shows that an HTTP
+responder is reachable, not that the authenticated file download succeeds. Complete the check with a fresh report
+execution and verify that the background is visible.
+
 Authentication parameter and logging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -117,7 +165,8 @@ Do not add a token manually to the template or reuse a URL generated by a previo
 .. warning::
 
    The generated resource URL contains a user token in its query string. Configure reverse proxies, web access logs
-   and monitoring tools to omit or redact the authentication parameter. Treat generated URLs and execution artifacts
+   and monitoring tools to omit or redact the authentication parameter, including local Tomcat access logs when using
+   the internal URL. Treat generated URLs and execution artifacts
    containing them as credentials: do not publish them, paste them into tickets or store them in shared templates.
    Do not configure shared proxy caching for authenticated resource downloads.
 
@@ -152,6 +201,20 @@ For reference, the image configuration in the report's **XML Source** can look l
 
 This is an example of an image element inside a report, not a complete report template. When editing an existing
 element, retain its identifier and the other layout properties.
+
+Reference a background image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use the same placeholder in the background-image property of the report element or master page:
+
+.. code-block:: xml
+
+   <property name="backgroundImage">${KNOWAGE_EXTERNAL_LIBRARY:cover.png}</property>
+   <property name="backgroundImageType">url</property>
+
+When configured, ``EXTERNAL_LIBRARIES_INTERNAL_API_BASE_URL`` is used for this placeholder. Ordinary image placeholders
+also use it for PDF output, but keep ``EXTERNAL_LIBRARIES_API_BASE_URL`` for HTML. Keep the existing layout settings, such as background size and
+position, and publish ``cover.png`` in the executing tenant's resource folder.
 
 Placeholder rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -190,7 +253,21 @@ expiring user token; an interactive test alone does not establish this.
      - Checks and action
    * - Report fails when an external resource is referenced
      - Check that ``EXTERNAL_LIBRARIES_API_BASE_URL`` is set to an absolute HTTPS API base URL and that the user has
-       a valid, expiring token. Check that placeholders have a closing brace and a valid file name.
+       a valid, expiring token. If an internal background URL is set, check its scheme, host and complete API path too.
+       Check that placeholders have a closing brace and a valid file name.
+   * - Report generation pauses for several minutes when a background image is enabled
+     - BIRT downloads the background synchronously. Check the selected API URL from the BIRT server or container,
+       not just from the browser. Check DNS, TCP connectivity, TLS and response time. If the public route is not
+       reachable internally, configure the optional internal background URL. BIRT 4.4.2 does not set explicit
+       connection/read timeouts in this image-download path.
+   * - Other HTML images load but the background is slow or missing
+     - The browser can download ordinary HTTPS images while BIRT retrieves the background server-side.
+       Browser success does not establish server connectivity. Verify the internal URL, if configured, and the
+       authenticated download separately.
+   * - HTML works but PDF export pauses while loading images
+     - PDF generation retrieves ordinary images server-side too. Use an engine with PDF-aware internal resource
+       routing and configure ``EXTERNAL_LIBRARIES_INTERNAL_API_BASE_URL``. Test authenticated downloads from BIRT's
+       network environment; browser access does not verify this route.
    * - Resource request reaches the wrong page or returns a routing error
      - Check the API context path, including ``/api`` in a standard deployment, and the reverse proxy mapping.
        The resource service suffix must not already be included in the base URL.
@@ -205,7 +282,8 @@ expiring user token; an interactive test alone does not establish this.
        source is configured as URI rather than as an embedded or local file.
    * - HTTPS connection or certificate error
      - Check connectivity and hostname resolution from the BIRT server, the certificate hostname and the trusted
-       certificate chain. Do not switch to HTTP as a workaround.
+       certificate chain. Do not disable certificate checks or switch a remote endpoint to HTTP. HTTP is supported
+       only for an explicitly configured internal loopback URL.
    * - Image is missing only in standalone Designer preview
      - Execute the report in Knowage; standalone preview does not resolve the placeholder.
 
